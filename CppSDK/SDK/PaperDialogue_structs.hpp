@@ -421,596 +421,46 @@ static_assert(offsetof(FPaperDialogueActorAnimations, Line) == 0x000130, "Member
 static_assert(offsetof(FPaperDialogueActorAnimations, LookAt) == 0x000170, "Member 'FPaperDialogueActorAnimations::LookAt' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueActorAnimations, DialogueAudio) == 0x0001F8, "Member 'FPaperDialogueActorAnimations::DialogueAudio' has a wrong offset!");
 
-// ScriptStruct PaperDialogue.PaperDialogueGenerationSetupFadeStruct
-// 0x0038 (0x0038 - 0x0000)
-struct FPaperDialogueGenerationSetupFadeStruct final
-{
-public:
-	TSoftClassPtr<class UClass>                   OverrideFaceTrackClass;                            // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPaperDialogueFadeType                        FadeType;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FadeTime;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceClearFadeSection;                            // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddBreak;                                         // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBreakAllowSkip;                                   // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBreakAutoPlayNextPart;                            // 0x0033(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bChangeCompletionMode;                             // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationSetupFadeStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationSetupFadeStruct");
-static_assert(sizeof(FPaperDialogueGenerationSetupFadeStruct) == 0x000038, "Wrong size on FPaperDialogueGenerationSetupFadeStruct");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, OverrideFaceTrackClass) == 0x000000, "Member 'FPaperDialogueGenerationSetupFadeStruct::OverrideFaceTrackClass' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, FadeType) == 0x000028, "Member 'FPaperDialogueGenerationSetupFadeStruct::FadeType' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, FadeTime) == 0x00002C, "Member 'FPaperDialogueGenerationSetupFadeStruct::FadeTime' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bForceClearFadeSection) == 0x000030, "Member 'FPaperDialogueGenerationSetupFadeStruct::bForceClearFadeSection' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bAddBreak) == 0x000031, "Member 'FPaperDialogueGenerationSetupFadeStruct::bAddBreak' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bBreakAllowSkip) == 0x000032, "Member 'FPaperDialogueGenerationSetupFadeStruct::bBreakAllowSkip' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bBreakAutoPlayNextPart) == 0x000033, "Member 'FPaperDialogueGenerationSetupFadeStruct::bBreakAutoPlayNextPart' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bChangeCompletionMode) == 0x000034, "Member 'FPaperDialogueGenerationSetupFadeStruct::bChangeCompletionMode' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, CompletionMode) == 0x000035, "Member 'FPaperDialogueGenerationSetupFadeStruct::CompletionMode' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationCameraShakeTracks
-// 0x0030 (0x0030 - 0x0000)
-struct FPaperDialogueGenerationCameraShakeTracks final
-{
-public:
-	bool                                          bRecreateCameraShakeTracks;                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   CameraShakeBP;                                     // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationCameraShakeTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCameraShakeTracks");
-static_assert(sizeof(FPaperDialogueGenerationCameraShakeTracks) == 0x000030, "Wrong size on FPaperDialogueGenerationCameraShakeTracks");
-static_assert(offsetof(FPaperDialogueGenerationCameraShakeTracks, bRecreateCameraShakeTracks) == 0x000000, "Member 'FPaperDialogueGenerationCameraShakeTracks::bRecreateCameraShakeTracks' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationCameraShakeTracks, CameraShakeBP) == 0x000008, "Member 'FPaperDialogueGenerationCameraShakeTracks::CameraShakeBP' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationAnimationTrackConfig
-// 0x0014 (0x0014 - 0x0000)
-struct FPaperDialogueGenerationAnimationTrackConfig final
-{
-public:
-	class FName                                   OverrideCharacterMeshName;                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TrackAndSlotName;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRecreateAnimTracks;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationAnimationTrackConfig) == 0x000004, "Wrong alignment on FPaperDialogueGenerationAnimationTrackConfig");
-static_assert(sizeof(FPaperDialogueGenerationAnimationTrackConfig) == 0x000014, "Wrong size on FPaperDialogueGenerationAnimationTrackConfig");
-static_assert(offsetof(FPaperDialogueGenerationAnimationTrackConfig, OverrideCharacterMeshName) == 0x000000, "Member 'FPaperDialogueGenerationAnimationTrackConfig::OverrideCharacterMeshName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationAnimationTrackConfig, TrackAndSlotName) == 0x000008, "Member 'FPaperDialogueGenerationAnimationTrackConfig::TrackAndSlotName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationAnimationTrackConfig, bRecreateAnimTracks) == 0x000010, "Member 'FPaperDialogueGenerationAnimationTrackConfig::bRecreateAnimTracks' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationAnimationTracks
-// 0x0020 (0x0020 - 0x0000)
-struct FPaperDialogueGenerationAnimationTracks final
-{
-public:
-	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperDialogueGenerationAnimationTrackConfig> TrackAndSlotConfigs;                 // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationAnimationTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationAnimationTracks");
-static_assert(sizeof(FPaperDialogueGenerationAnimationTracks) == 0x000020, "Wrong size on FPaperDialogueGenerationAnimationTracks");
-static_assert(offsetof(FPaperDialogueGenerationAnimationTracks, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationAnimationTracks::bCreateCharacterMesh' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationAnimationTracks, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationAnimationTracks::CharacterMeshName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationAnimationTracks, TrackAndSlotConfigs) == 0x000010, "Member 'FPaperDialogueGenerationAnimationTracks::TrackAndSlotConfigs' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationRootMotionTracks
-// 0x0008 (0x0008 - 0x0000)
-struct FPaperDialogueGenerationRootMotionTracks final
-{
-public:
-	EMovieSceneBlendType                          RootMotionSectionBlendType;                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPaperDialogueGenerationRootMotionDirectin    RootMotionDirectin;                                // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReverse;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseManualDegree;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ManualDegree;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationRootMotionTracks) == 0x000004, "Wrong alignment on FPaperDialogueGenerationRootMotionTracks");
-static_assert(sizeof(FPaperDialogueGenerationRootMotionTracks) == 0x000008, "Wrong size on FPaperDialogueGenerationRootMotionTracks");
-static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, RootMotionSectionBlendType) == 0x000000, "Member 'FPaperDialogueGenerationRootMotionTracks::RootMotionSectionBlendType' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, RootMotionDirectin) == 0x000001, "Member 'FPaperDialogueGenerationRootMotionTracks::RootMotionDirectin' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, bReverse) == 0x000002, "Member 'FPaperDialogueGenerationRootMotionTracks::bReverse' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, bUseManualDegree) == 0x000003, "Member 'FPaperDialogueGenerationRootMotionTracks::bUseManualDegree' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, ManualDegree) == 0x000004, "Member 'FPaperDialogueGenerationRootMotionTracks::ManualDegree' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationFullBodyStruct
-// 0x0024 (0x0024 - 0x0000)
-struct FPaperDialogueGenerationFullBodyStruct final
-{
-public:
-	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   DefaultSlotName;                                   // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   DefaultSlotEmotionName;                            // 0x0014(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   DefaultSlotFacialName;                             // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationFullBodyStruct) == 0x000004, "Wrong alignment on FPaperDialogueGenerationFullBodyStruct");
-static_assert(sizeof(FPaperDialogueGenerationFullBodyStruct) == 0x000024, "Wrong size on FPaperDialogueGenerationFullBodyStruct");
-static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationFullBodyStruct::bCreateCharacterMesh' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationFullBodyStruct::CharacterMeshName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, DefaultSlotName) == 0x00000C, "Member 'FPaperDialogueGenerationFullBodyStruct::DefaultSlotName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, DefaultSlotEmotionName) == 0x000014, "Member 'FPaperDialogueGenerationFullBodyStruct::DefaultSlotEmotionName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, DefaultSlotFacialName) == 0x00001C, "Member 'FPaperDialogueGenerationFullBodyStruct::DefaultSlotFacialName' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationCameraFramingLevelStruct
-// 0x0018 (0x0018 - 0x0000)
-struct FPaperDialogueGenerationCameraFramingLevelStruct final
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaximumUse;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationCameraFramingLevelStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCameraFramingLevelStruct");
-static_assert(sizeof(FPaperDialogueGenerationCameraFramingLevelStruct) == 0x000018, "Wrong size on FPaperDialogueGenerationCameraFramingLevelStruct");
-static_assert(offsetof(FPaperDialogueGenerationCameraFramingLevelStruct, Name) == 0x000000, "Member 'FPaperDialogueGenerationCameraFramingLevelStruct::Name' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationCameraFramingLevelStruct, MaximumUse) == 0x000010, "Member 'FPaperDialogueGenerationCameraFramingLevelStruct::MaximumUse' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationSetupCameraStruct
-// 0x0020 (0x0020 - 0x0000)
-struct FPaperDialogueGenerationSetupCameraStruct final
-{
-public:
-	bool                                          bForceClearCameraTrack;                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCameraRule;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bX6SimplifiedCameraRule;                           // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCombineNeighborCameras;                           // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperDialogueGenerationCameraFramingLevelStruct> CameraFramingLevelMax;           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationSetupCameraStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationSetupCameraStruct");
-static_assert(sizeof(FPaperDialogueGenerationSetupCameraStruct) == 0x000020, "Wrong size on FPaperDialogueGenerationSetupCameraStruct");
-static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bForceClearCameraTrack) == 0x000000, "Member 'FPaperDialogueGenerationSetupCameraStruct::bForceClearCameraTrack' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bUseCameraRule) == 0x000001, "Member 'FPaperDialogueGenerationSetupCameraStruct::bUseCameraRule' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bX6SimplifiedCameraRule) == 0x000002, "Member 'FPaperDialogueGenerationSetupCameraStruct::bX6SimplifiedCameraRule' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bCombineNeighborCameras) == 0x000003, "Member 'FPaperDialogueGenerationSetupCameraStruct::bCombineNeighborCameras' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, CameraFramingLevelMax) == 0x000008, "Member 'FPaperDialogueGenerationSetupCameraStruct::CameraFramingLevelMax' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationIdleAnimationStruct
-// 0x0020 (0x0020 - 0x0000)
-struct FPaperDialogueGenerationIdleAnimationStruct final
-{
-public:
-	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DefaultIdleAnimationTag;                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationIdleAnimationStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationIdleAnimationStruct");
-static_assert(sizeof(FPaperDialogueGenerationIdleAnimationStruct) == 0x000020, "Wrong size on FPaperDialogueGenerationIdleAnimationStruct");
-static_assert(offsetof(FPaperDialogueGenerationIdleAnimationStruct, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationIdleAnimationStruct::bCreateCharacterMesh' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationIdleAnimationStruct, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationIdleAnimationStruct::CharacterMeshName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationIdleAnimationStruct, DefaultIdleAnimationTag) == 0x000010, "Member 'FPaperDialogueGenerationIdleAnimationStruct::DefaultIdleAnimationTag' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationLightTracks
-// 0x0014 (0x0014 - 0x0000)
-struct FPaperDialogueGenerationLightTracks final
-{
-public:
-	bool                                          bRecreateVisibilityTrack;                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMergeConsequentVisibilityFrame;                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAttachToTargetActor;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPCDLightGenerateRule                         GenerateRule;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPlaceInFolder;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   FolderName;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 FolderColor;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationLightTracks) == 0x000004, "Wrong alignment on FPaperDialogueGenerationLightTracks");
-static_assert(sizeof(FPaperDialogueGenerationLightTracks) == 0x000014, "Wrong size on FPaperDialogueGenerationLightTracks");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, bRecreateVisibilityTrack) == 0x000000, "Member 'FPaperDialogueGenerationLightTracks::bRecreateVisibilityTrack' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, bMergeConsequentVisibilityFrame) == 0x000001, "Member 'FPaperDialogueGenerationLightTracks::bMergeConsequentVisibilityFrame' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, bAttachToTargetActor) == 0x000002, "Member 'FPaperDialogueGenerationLightTracks::bAttachToTargetActor' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, CompletionMode) == 0x000003, "Member 'FPaperDialogueGenerationLightTracks::CompletionMode' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, GenerateRule) == 0x000004, "Member 'FPaperDialogueGenerationLightTracks::GenerateRule' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, bPlaceInFolder) == 0x000005, "Member 'FPaperDialogueGenerationLightTracks::bPlaceInFolder' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, FolderName) == 0x000008, "Member 'FPaperDialogueGenerationLightTracks::FolderName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLightTracks, FolderColor) == 0x000010, "Member 'FPaperDialogueGenerationLightTracks::FolderColor' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationCustomTrackConfig
-// 0x0090 (0x0090 - 0x0000)
-struct FPaperDialogueGenerationCustomTrackConfig final
-{
-public:
-	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TrackAndSlotName;                                  // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRecreateTracks;                                   // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCreateSectionAtBegining;                          // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   CustomTrackClass;                                  // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_68[0x28];                                      // 0x0068(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationCustomTrackConfig) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCustomTrackConfig");
-static_assert(sizeof(FPaperDialogueGenerationCustomTrackConfig) == 0x000090, "Wrong size on FPaperDialogueGenerationCustomTrackConfig");
-static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, TrackAndSlotName) == 0x000030, "Member 'FPaperDialogueGenerationCustomTrackConfig::TrackAndSlotName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, bRecreateTracks) == 0x000038, "Member 'FPaperDialogueGenerationCustomTrackConfig::bRecreateTracks' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, bCreateSectionAtBegining) == 0x000039, "Member 'FPaperDialogueGenerationCustomTrackConfig::bCreateSectionAtBegining' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, CustomTrackClass) == 0x000040, "Member 'FPaperDialogueGenerationCustomTrackConfig::CustomTrackClass' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationCustomTracks
-// 0x0010 (0x0010 - 0x0000)
-struct FPaperDialogueGenerationCustomTracks final
-{
-public:
-	TArray<struct FPaperDialogueGenerationCustomTrackConfig> TrackAndSlotConfigs;                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationCustomTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCustomTracks");
-static_assert(sizeof(FPaperDialogueGenerationCustomTracks) == 0x000010, "Wrong size on FPaperDialogueGenerationCustomTracks");
-static_assert(offsetof(FPaperDialogueGenerationCustomTracks, TrackAndSlotConfigs) == 0x000000, "Member 'FPaperDialogueGenerationCustomTracks::TrackAndSlotConfigs' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationLookAtAutoKeyValue
-// 0x0048 (0x0048 - 0x0000)
-struct FPaperDialogueGenerationLookAtAutoKeyValue final
-{
-public:
-	bool                                          bAutoKeyFrames;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 EnableLookAtPropertyName;                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LookAtTargetPropertyName;                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LookAtTargetSocketPropertyName;                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LookAtTargetSocketName;                            // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationLookAtAutoKeyValue) == 0x000008, "Wrong alignment on FPaperDialogueGenerationLookAtAutoKeyValue");
-static_assert(sizeof(FPaperDialogueGenerationLookAtAutoKeyValue) == 0x000048, "Wrong size on FPaperDialogueGenerationLookAtAutoKeyValue");
-static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, bAutoKeyFrames) == 0x000000, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::bAutoKeyFrames' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, EnableLookAtPropertyName) == 0x000008, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::EnableLookAtPropertyName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, LookAtTargetPropertyName) == 0x000018, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::LookAtTargetPropertyName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, LookAtTargetSocketPropertyName) == 0x000028, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::LookAtTargetSocketPropertyName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, LookAtTargetSocketName) == 0x000038, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::LookAtTargetSocketName' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationLookAtExtraSettings
-// 0x0040 (0x0040 - 0x0000)
-struct FPaperDialogueGenerationLookAtExtraSettings final
-{
-public:
-	bool                                          bAttachToActor;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BoneName;                                          // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Direction;                                         // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Distance;                                          // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExposeAppointProperty;                            // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           PropertyToExpose;                                  // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationLookAtExtraSettings) == 0x000008, "Wrong alignment on FPaperDialogueGenerationLookAtExtraSettings");
-static_assert(sizeof(FPaperDialogueGenerationLookAtExtraSettings) == 0x000040, "Wrong size on FPaperDialogueGenerationLookAtExtraSettings");
-static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, bAttachToActor) == 0x000000, "Member 'FPaperDialogueGenerationLookAtExtraSettings::bAttachToActor' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, BoneName) == 0x000004, "Member 'FPaperDialogueGenerationLookAtExtraSettings::BoneName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, Direction) == 0x000010, "Member 'FPaperDialogueGenerationLookAtExtraSettings::Direction' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, Distance) == 0x000028, "Member 'FPaperDialogueGenerationLookAtExtraSettings::Distance' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, bExposeAppointProperty) == 0x00002C, "Member 'FPaperDialogueGenerationLookAtExtraSettings::bExposeAppointProperty' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, PropertyToExpose) == 0x000030, "Member 'FPaperDialogueGenerationLookAtExtraSettings::PropertyToExpose' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationLookAtTracks
-// 0x00B8 (0x00B8 - 0x0000)
-struct FPaperDialogueGenerationLookAtTracks final
-{
-public:
-	struct FSoftClassPath                         LookAtActorClass;                                  // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20[0x1];                                       // 0x0020(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bPlaceInFolder;                                    // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   FolderName;                                        // 0x0024(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 FolderColor;                                       // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationLookAtExtraSettings ExtraSettingConfig;                           // 0x0030(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationLookAtAutoKeyValue AutoKeyFrameConfig;                            // 0x0070(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationLookAtTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationLookAtTracks");
-static_assert(sizeof(FPaperDialogueGenerationLookAtTracks) == 0x0000B8, "Wrong size on FPaperDialogueGenerationLookAtTracks");
-static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, LookAtActorClass) == 0x000000, "Member 'FPaperDialogueGenerationLookAtTracks::LookAtActorClass' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, bPlaceInFolder) == 0x000021, "Member 'FPaperDialogueGenerationLookAtTracks::bPlaceInFolder' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, FolderName) == 0x000024, "Member 'FPaperDialogueGenerationLookAtTracks::FolderName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, FolderColor) == 0x00002C, "Member 'FPaperDialogueGenerationLookAtTracks::FolderColor' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, ExtraSettingConfig) == 0x000030, "Member 'FPaperDialogueGenerationLookAtTracks::ExtraSettingConfig' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, AutoKeyFrameConfig) == 0x000070, "Member 'FPaperDialogueGenerationLookAtTracks::AutoKeyFrameConfig' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationCharacterNameableTracks
-// 0x0050 (0x0050 - 0x0000)
-struct FPaperDialogueGenerationCharacterNameableTracks final
-{
-public:
-	TMap<class FString, TSoftClassPtr<class UClass>> CharacterNameableTracks;                        // 0x0000(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationCharacterNameableTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCharacterNameableTracks");
-static_assert(sizeof(FPaperDialogueGenerationCharacterNameableTracks) == 0x000050, "Wrong size on FPaperDialogueGenerationCharacterNameableTracks");
-static_assert(offsetof(FPaperDialogueGenerationCharacterNameableTracks, CharacterNameableTracks) == 0x000000, "Member 'FPaperDialogueGenerationCharacterNameableTracks::CharacterNameableTracks' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationTransformTracks
-// 0x0020 (0x0020 - 0x0000)
-struct FPaperDialogueGenerationTransformTracks final
-{
-public:
-	bool                                          bAddTransformTracks;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EMovieSceneBlendType>                  TransformTracksToAdd;                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bModifyCompletionMode;                             // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationTransformTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationTransformTracks");
-static_assert(sizeof(FPaperDialogueGenerationTransformTracks) == 0x000020, "Wrong size on FPaperDialogueGenerationTransformTracks");
-static_assert(offsetof(FPaperDialogueGenerationTransformTracks, bAddTransformTracks) == 0x000000, "Member 'FPaperDialogueGenerationTransformTracks::bAddTransformTracks' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationTransformTracks, TransformTracksToAdd) == 0x000008, "Member 'FPaperDialogueGenerationTransformTracks::TransformTracksToAdd' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationTransformTracks, bModifyCompletionMode) == 0x000018, "Member 'FPaperDialogueGenerationTransformTracks::bModifyCompletionMode' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationTransformTracks, CompletionMode) == 0x000019, "Member 'FPaperDialogueGenerationTransformTracks::CompletionMode' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueInsertWalkTrackConfig
-// 0x0010 (0x0010 - 0x0000)
-struct FPaperDialogueInsertWalkTrackConfig final
-{
-public:
-	float                                         WalkTime;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TurnAroundTime;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InsertWalkAtGroupIndex;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPaperDialogueWalkType                        WalkType;                                          // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueInsertWalkTrackConfig) == 0x000004, "Wrong alignment on FPaperDialogueInsertWalkTrackConfig");
-static_assert(sizeof(FPaperDialogueInsertWalkTrackConfig) == 0x000010, "Wrong size on FPaperDialogueInsertWalkTrackConfig");
-static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, WalkTime) == 0x000000, "Member 'FPaperDialogueInsertWalkTrackConfig::WalkTime' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, TurnAroundTime) == 0x000004, "Member 'FPaperDialogueInsertWalkTrackConfig::TurnAroundTime' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, InsertWalkAtGroupIndex) == 0x000008, "Member 'FPaperDialogueInsertWalkTrackConfig::InsertWalkAtGroupIndex' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, WalkType) == 0x00000C, "Member 'FPaperDialogueInsertWalkTrackConfig::WalkType' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.DialogueSetWalkPointInfo
-// 0x00B0 (0x00B0 - 0x0000)
-struct FDialogueSetWalkPointInfo final
-{
-public:
-	bool                                          bOpen;                                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         WalkPointIndex;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             WalkPointTransform;                                // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCreateCharacterMesh;                              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CharacterMeshName;                                 // 0x0074(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   DefaultSlotName;                                   // 0x007C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EaseFrames;                                        // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        WalkAnimSequence;                                  // 0x0088(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDialogueSetWalkPointExecuteType              ExecuteType;                                       // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDialogueSetWalkPointVisibility               ForceVisibility;                                   // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDialogueSetWalkPointInfo) == 0x000010, "Wrong alignment on FDialogueSetWalkPointInfo");
-static_assert(sizeof(FDialogueSetWalkPointInfo) == 0x0000B0, "Wrong size on FDialogueSetWalkPointInfo");
-static_assert(offsetof(FDialogueSetWalkPointInfo, bOpen) == 0x000000, "Member 'FDialogueSetWalkPointInfo::bOpen' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, WalkPointIndex) == 0x000004, "Member 'FDialogueSetWalkPointInfo::WalkPointIndex' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, WalkPointTransform) == 0x000010, "Member 'FDialogueSetWalkPointInfo::WalkPointTransform' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, bCreateCharacterMesh) == 0x000070, "Member 'FDialogueSetWalkPointInfo::bCreateCharacterMesh' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, CharacterMeshName) == 0x000074, "Member 'FDialogueSetWalkPointInfo::CharacterMeshName' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, DefaultSlotName) == 0x00007C, "Member 'FDialogueSetWalkPointInfo::DefaultSlotName' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, EaseFrames) == 0x000084, "Member 'FDialogueSetWalkPointInfo::EaseFrames' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, WalkAnimSequence) == 0x000088, "Member 'FDialogueSetWalkPointInfo::WalkAnimSequence' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, ExecuteType) == 0x0000A8, "Member 'FDialogueSetWalkPointInfo::ExecuteType' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointInfo, ForceVisibility) == 0x0000A9, "Member 'FDialogueSetWalkPointInfo::ForceVisibility' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.DialogueSetWalkPointSettings
-// 0x01D0 (0x01D0 - 0x0000)
-struct FDialogueSetWalkPointSettings final
-{
-public:
-	class FName                                   SpeakerTag;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         CharacterSlotIndex;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CharacterSlotTransform;                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDialogueSetWalkPointInfo              WalkInSettings;                                    // 0x0070(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FDialogueSetWalkPointInfo              WalkOutSettings;                                   // 0x0120(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDialogueSetWalkPointSettings) == 0x000010, "Wrong alignment on FDialogueSetWalkPointSettings");
-static_assert(sizeof(FDialogueSetWalkPointSettings) == 0x0001D0, "Wrong size on FDialogueSetWalkPointSettings");
-static_assert(offsetof(FDialogueSetWalkPointSettings, SpeakerTag) == 0x000000, "Member 'FDialogueSetWalkPointSettings::SpeakerTag' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointSettings, CharacterSlotIndex) == 0x000008, "Member 'FDialogueSetWalkPointSettings::CharacterSlotIndex' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointSettings, CharacterSlotTransform) == 0x000010, "Member 'FDialogueSetWalkPointSettings::CharacterSlotTransform' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointSettings, WalkInSettings) == 0x000070, "Member 'FDialogueSetWalkPointSettings::WalkInSettings' has a wrong offset!");
-static_assert(offsetof(FDialogueSetWalkPointSettings, WalkOutSettings) == 0x000120, "Member 'FDialogueSetWalkPointSettings::WalkOutSettings' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationWalkInAndOutTracks
-// 0x0030 (0x0030 - 0x0000)
-struct FPaperDialogueGenerationWalkInAndOutTracks final
-{
-public:
-	float                                         WalkInTime;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WalkOutTime;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TurnAroundTime;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bInsertWalk : 1;                                   // 0x000C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPaperDialogueInsertWalkTrackConfig    InsertWalkConfig;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FDialogueSetWalkPointSettings>  WalkPointSettings;                                 // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationWalkInAndOutTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationWalkInAndOutTracks");
-static_assert(sizeof(FPaperDialogueGenerationWalkInAndOutTracks) == 0x000030, "Wrong size on FPaperDialogueGenerationWalkInAndOutTracks");
-static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, WalkInTime) == 0x000000, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::WalkInTime' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, WalkOutTime) == 0x000004, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::WalkOutTime' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, TurnAroundTime) == 0x000008, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::TurnAroundTime' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, InsertWalkConfig) == 0x000010, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::InsertWalkConfig' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, WalkPointSettings) == 0x000020, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::WalkPointSettings' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationHighHeelTracks
-// 0x0068 (0x0068 - 0x0000)
-struct FPaperDialogueGenerationHighHeelTracks final
-{
-public:
-	bool                                          bRecreateHighHeelTracks;                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   HighHeelActorBP;                                   // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRemoveDefaultTransformTrack;                      // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPlaceInFolder;                                    // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   FolderName;                                        // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FColor                                 FolderColor;                                       // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAttachToActor;                                    // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           TargetActorName;                                   // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TargetActorComponentName;                          // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TargetActorBoneName;                               // 0x0054(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   PropertyExposeToCinematic;                         // 0x005C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoMakeKeyframes;                                // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPaperDialogueGenerationHighHeelTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationHighHeelTracks");
-static_assert(sizeof(FPaperDialogueGenerationHighHeelTracks) == 0x000068, "Wrong size on FPaperDialogueGenerationHighHeelTracks");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bRecreateHighHeelTracks) == 0x000000, "Member 'FPaperDialogueGenerationHighHeelTracks::bRecreateHighHeelTracks' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, HighHeelActorBP) == 0x000008, "Member 'FPaperDialogueGenerationHighHeelTracks::HighHeelActorBP' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bRemoveDefaultTransformTrack) == 0x000030, "Member 'FPaperDialogueGenerationHighHeelTracks::bRemoveDefaultTransformTrack' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bPlaceInFolder) == 0x000031, "Member 'FPaperDialogueGenerationHighHeelTracks::bPlaceInFolder' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, FolderName) == 0x000034, "Member 'FPaperDialogueGenerationHighHeelTracks::FolderName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, FolderColor) == 0x00003C, "Member 'FPaperDialogueGenerationHighHeelTracks::FolderColor' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bAttachToActor) == 0x000040, "Member 'FPaperDialogueGenerationHighHeelTracks::bAttachToActor' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, TargetActorName) == 0x000044, "Member 'FPaperDialogueGenerationHighHeelTracks::TargetActorName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, TargetActorComponentName) == 0x00004C, "Member 'FPaperDialogueGenerationHighHeelTracks::TargetActorComponentName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, TargetActorBoneName) == 0x000054, "Member 'FPaperDialogueGenerationHighHeelTracks::TargetActorBoneName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, PropertyExposeToCinematic) == 0x00005C, "Member 'FPaperDialogueGenerationHighHeelTracks::PropertyExposeToCinematic' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bAutoMakeKeyframes) == 0x000064, "Member 'FPaperDialogueGenerationHighHeelTracks::bAutoMakeKeyframes' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationResimulationTracks
-// 0x0028 (0x0028 - 0x0000)
-struct FPaperDialogueGenerationResimulationTracks final
-{
-public:
-	TSoftClassPtr<class UClass>                   ResimulationTrackBP;                               // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationResimulationTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationResimulationTracks");
-static_assert(sizeof(FPaperDialogueGenerationResimulationTracks) == 0x000028, "Wrong size on FPaperDialogueGenerationResimulationTracks");
-static_assert(offsetof(FPaperDialogueGenerationResimulationTracks, ResimulationTrackBP) == 0x000000, "Member 'FPaperDialogueGenerationResimulationTracks::ResimulationTrackBP' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationGestureTracks
-// 0x0050 (0x0050 - 0x0000)
-struct FPaperDialogueGenerationGestureTracks final
-{
-public:
-	TSoftClassPtr<class UClass>                   GestureTrackBP;                                    // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   GestureTagPropertyName;                            // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddSectionEvenGestureTagIsNone;                   // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SpeakerGestureIntervalMin;                         // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpeakerGestureIntervalMax;                         // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpeakerGestureDifferentGap;                        // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ListenerSilenceLineCount;                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ListenerGestureIntervalMin;                        // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ListenerGestureIntervalMax;                        // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ListenerGestureDifferentGap;                       // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationGestureTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationGestureTracks");
-static_assert(sizeof(FPaperDialogueGenerationGestureTracks) == 0x000050, "Wrong size on FPaperDialogueGenerationGestureTracks");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, GestureTrackBP) == 0x000000, "Member 'FPaperDialogueGenerationGestureTracks::GestureTrackBP' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, GestureTagPropertyName) == 0x000028, "Member 'FPaperDialogueGenerationGestureTracks::GestureTagPropertyName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, bAddSectionEvenGestureTagIsNone) == 0x000030, "Member 'FPaperDialogueGenerationGestureTracks::bAddSectionEvenGestureTagIsNone' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, SpeakerGestureIntervalMin) == 0x000034, "Member 'FPaperDialogueGenerationGestureTracks::SpeakerGestureIntervalMin' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, SpeakerGestureIntervalMax) == 0x000038, "Member 'FPaperDialogueGenerationGestureTracks::SpeakerGestureIntervalMax' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, SpeakerGestureDifferentGap) == 0x00003C, "Member 'FPaperDialogueGenerationGestureTracks::SpeakerGestureDifferentGap' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerSilenceLineCount) == 0x000040, "Member 'FPaperDialogueGenerationGestureTracks::ListenerSilenceLineCount' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerGestureIntervalMin) == 0x000044, "Member 'FPaperDialogueGenerationGestureTracks::ListenerGestureIntervalMin' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerGestureIntervalMax) == 0x000048, "Member 'FPaperDialogueGenerationGestureTracks::ListenerGestureIntervalMax' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerGestureDifferentGap) == 0x00004C, "Member 'FPaperDialogueGenerationGestureTracks::ListenerGestureDifferentGap' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationUnifiedAnimationTracks
+// ScriptStruct PaperDialogue.PCDAIAnimationMotionMatchingLineParamNetData
 // 0x0078 (0x0078 - 0x0000)
-struct FPaperDialogueGenerationUnifiedAnimationTracks final
+struct FPCDAIAnimationMotionMatchingLineParamNetData final
 {
 public:
-	int32                                         OverrideEaseInFrames;                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OverrideEaseOutFrames;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FSoftObjectPath>     UnifiedAnimationSequenceMap;                       // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationAnimationTracks GenerationAnimationTracks;                        // 0x0058(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	double                                        word_nums_per_sec;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        words_min_interval_duration;                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        word_acoustic_weight;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        word_concept_weight;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        local_anim_duration_weight;                        // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        local_anim_pitch_weight;                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        local_anim_handedness_weight;                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         local_matching_cand_anim_num;                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        global_anim_overlap_weight;                        // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        global_anim_repeat_nums_weight;                    // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        global_anim_time_bias_weight;                      // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        global_anim_max_speed_diff_weight;                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        relative_local_weight;                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        relative_global_weight;                            // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          random_flag;                                       // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPaperDialogueGenerationUnifiedAnimationTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationUnifiedAnimationTracks");
-static_assert(sizeof(FPaperDialogueGenerationUnifiedAnimationTracks) == 0x000078, "Wrong size on FPaperDialogueGenerationUnifiedAnimationTracks");
-static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, OverrideEaseInFrames) == 0x000000, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::OverrideEaseInFrames' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, OverrideEaseOutFrames) == 0x000004, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::OverrideEaseOutFrames' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, UnifiedAnimationSequenceMap) == 0x000008, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::UnifiedAnimationSequenceMap' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, GenerationAnimationTracks) == 0x000058, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::GenerationAnimationTracks' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationEmotionAnimationConfig
-// 0x0020 (0x0020 - 0x0000)
-struct FPaperDialogueGenerationEmotionAnimationConfig final
-{
-public:
-	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationAnimationTrackConfig TrackAndSlotConfig;                          // 0x000C(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationEmotionAnimationConfig) == 0x000004, "Wrong alignment on FPaperDialogueGenerationEmotionAnimationConfig");
-static_assert(sizeof(FPaperDialogueGenerationEmotionAnimationConfig) == 0x000020, "Wrong size on FPaperDialogueGenerationEmotionAnimationConfig");
-static_assert(offsetof(FPaperDialogueGenerationEmotionAnimationConfig, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationEmotionAnimationConfig::bCreateCharacterMesh' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationEmotionAnimationConfig, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationEmotionAnimationConfig::CharacterMeshName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationEmotionAnimationConfig, TrackAndSlotConfig) == 0x00000C, "Member 'FPaperDialogueGenerationEmotionAnimationConfig::TrackAndSlotConfig' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationEmotionTracks
-// 0x00C0 (0x00C0 - 0x0000)
-struct FPaperDialogueGenerationEmotionTracks final
-{
-public:
-	int32                                         OverrideEaseInOutFrames;                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieSceneBuiltInEasing                      BuiltInEaseInOutType;                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPaperDialogueGenerationEmotionAnimationConfig DialogueUpperFaceConfig;                   // 0x0008(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   IdleFacePropertyName;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationCustomTrackConfig DialogueIdleFaceConfig;                         // 0x0030(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationEmotionTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationEmotionTracks");
-static_assert(sizeof(FPaperDialogueGenerationEmotionTracks) == 0x0000C0, "Wrong size on FPaperDialogueGenerationEmotionTracks");
-static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, OverrideEaseInOutFrames) == 0x000000, "Member 'FPaperDialogueGenerationEmotionTracks::OverrideEaseInOutFrames' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, BuiltInEaseInOutType) == 0x000004, "Member 'FPaperDialogueGenerationEmotionTracks::BuiltInEaseInOutType' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, DialogueUpperFaceConfig) == 0x000008, "Member 'FPaperDialogueGenerationEmotionTracks::DialogueUpperFaceConfig' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, IdleFacePropertyName) == 0x000028, "Member 'FPaperDialogueGenerationEmotionTracks::IdleFacePropertyName' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, DialogueIdleFaceConfig) == 0x000030, "Member 'FPaperDialogueGenerationEmotionTracks::DialogueIdleFaceConfig' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PaperDialogueGenerationSetUpStruct
-// 0x0490 (0x0490 - 0x0000)
-struct FPaperDialogueGenerationSetUpStruct final
-{
-public:
-	struct FPaperDialogueGenerationSetupFadeStruct FadeSettings;                                     // 0x0000(0x0038)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationFullBodyStruct FullBodySettings;                                  // 0x0038(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPaperDialogueGenerationSetupCameraStruct CameraSettings;                                 // 0x0060(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationIdleAnimationStruct IdleAnimationSettings;                        // 0x0080(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationAnimationTracks AnimationTrackSettings;                           // 0x00A0(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationCustomTracks   CustomTrackSettings;                               // 0x00C0(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationLightTracks    LightTrackSettings;                                // 0x00D0(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPaperDialogueGenerationLookAtTracks   LookAtTrackSettings;                               // 0x00E8(0x00B8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationCharacterNameableTracks CharacterNameableTrackSettings;           // 0x01A0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationTransformTracks TransformTrackSettings;                           // 0x01F0(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationWalkInAndOutTracks WalkInAndOutSettings;                          // 0x0210(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationRootMotionTracks RootMotionSettings;                              // 0x0240(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationCameraShakeTracks CameraShakeSettings;                            // 0x0248(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationHighHeelTracks HighHeelSettings;                                  // 0x0278(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationResimulationTracks ResimulationSettings;                          // 0x02E0(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationGestureTracks  GestureSettings;                                   // 0x0308(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationUnifiedAnimationTracks UnifiedAnimationTrackSettings;             // 0x0358(0x0078)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPaperDialogueGenerationEmotionTracks  EmotionSettings;                                   // 0x03D0(0x00C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPaperDialogueGenerationSetUpStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationSetUpStruct");
-static_assert(sizeof(FPaperDialogueGenerationSetUpStruct) == 0x000490, "Wrong size on FPaperDialogueGenerationSetUpStruct");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, FadeSettings) == 0x000000, "Member 'FPaperDialogueGenerationSetUpStruct::FadeSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, FullBodySettings) == 0x000038, "Member 'FPaperDialogueGenerationSetUpStruct::FullBodySettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CameraSettings) == 0x000060, "Member 'FPaperDialogueGenerationSetUpStruct::CameraSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, IdleAnimationSettings) == 0x000080, "Member 'FPaperDialogueGenerationSetUpStruct::IdleAnimationSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, AnimationTrackSettings) == 0x0000A0, "Member 'FPaperDialogueGenerationSetUpStruct::AnimationTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CustomTrackSettings) == 0x0000C0, "Member 'FPaperDialogueGenerationSetUpStruct::CustomTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, LightTrackSettings) == 0x0000D0, "Member 'FPaperDialogueGenerationSetUpStruct::LightTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, LookAtTrackSettings) == 0x0000E8, "Member 'FPaperDialogueGenerationSetUpStruct::LookAtTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CharacterNameableTrackSettings) == 0x0001A0, "Member 'FPaperDialogueGenerationSetUpStruct::CharacterNameableTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, TransformTrackSettings) == 0x0001F0, "Member 'FPaperDialogueGenerationSetUpStruct::TransformTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, WalkInAndOutSettings) == 0x000210, "Member 'FPaperDialogueGenerationSetUpStruct::WalkInAndOutSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, RootMotionSettings) == 0x000240, "Member 'FPaperDialogueGenerationSetUpStruct::RootMotionSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CameraShakeSettings) == 0x000248, "Member 'FPaperDialogueGenerationSetUpStruct::CameraShakeSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, HighHeelSettings) == 0x000278, "Member 'FPaperDialogueGenerationSetUpStruct::HighHeelSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, ResimulationSettings) == 0x0002E0, "Member 'FPaperDialogueGenerationSetUpStruct::ResimulationSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, GestureSettings) == 0x000308, "Member 'FPaperDialogueGenerationSetUpStruct::GestureSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, UnifiedAnimationTrackSettings) == 0x000358, "Member 'FPaperDialogueGenerationSetUpStruct::UnifiedAnimationTrackSettings' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, EmotionSettings) == 0x0003D0, "Member 'FPaperDialogueGenerationSetUpStruct::EmotionSettings' has a wrong offset!");
+static_assert(alignof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000008, "Wrong alignment on FPCDAIAnimationMotionMatchingLineParamNetData");
+static_assert(sizeof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000078, "Wrong size on FPCDAIAnimationMotionMatchingLineParamNetData");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_nums_per_sec) == 0x000000, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_nums_per_sec' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, words_min_interval_duration) == 0x000008, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::words_min_interval_duration' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_acoustic_weight) == 0x000010, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_acoustic_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_concept_weight) == 0x000018, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_concept_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_duration_weight) == 0x000020, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_duration_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_pitch_weight) == 0x000028, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_pitch_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_handedness_weight) == 0x000030, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_handedness_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_matching_cand_anim_num) == 0x000038, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_matching_cand_anim_num' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_overlap_weight) == 0x000040, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_overlap_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_repeat_nums_weight) == 0x000048, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_repeat_nums_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_time_bias_weight) == 0x000050, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_time_bias_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_max_speed_diff_weight) == 0x000058, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_max_speed_diff_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_local_weight) == 0x000060, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_local_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_global_weight) == 0x000068, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_global_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, random_flag) == 0x000070, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::random_flag' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueActorInfo
 // 0x0200 (0x0200 - 0x0000)
@@ -1723,28 +1173,6 @@ static_assert(sizeof(FPaperDialogueLineGroupStruct) == 0x000020, "Wrong size on 
 static_assert(offsetof(FPaperDialogueLineGroupStruct, DialogueLineGroupKey) == 0x000008, "Member 'FPaperDialogueLineGroupStruct::DialogueLineGroupKey' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueLineGroupStruct, DialogueLineID) == 0x000010, "Member 'FPaperDialogueLineGroupStruct::DialogueLineID' has a wrong offset!");
 
-// ScriptStruct PaperDialogue.DialogueCharacterSlotDetail
-// 0x0080 (0x0080 - 0x0000)
-struct FDialogueCharacterSlotDetail final
-{
-public:
-	class FString                                 ActorName;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AvatarName;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UPrimaryDataAsset>       AvatarDataAsset;                                   // 0x0020(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   PreviewActor;                                      // 0x0048(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SlotIndex;                                         // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   FixTemplate;                                       // 0x0074(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDialogueCharacterSlotDetail) == 0x000008, "Wrong alignment on FDialogueCharacterSlotDetail");
-static_assert(sizeof(FDialogueCharacterSlotDetail) == 0x000080, "Wrong size on FDialogueCharacterSlotDetail");
-static_assert(offsetof(FDialogueCharacterSlotDetail, ActorName) == 0x000000, "Member 'FDialogueCharacterSlotDetail::ActorName' has a wrong offset!");
-static_assert(offsetof(FDialogueCharacterSlotDetail, AvatarName) == 0x000010, "Member 'FDialogueCharacterSlotDetail::AvatarName' has a wrong offset!");
-static_assert(offsetof(FDialogueCharacterSlotDetail, AvatarDataAsset) == 0x000020, "Member 'FDialogueCharacterSlotDetail::AvatarDataAsset' has a wrong offset!");
-static_assert(offsetof(FDialogueCharacterSlotDetail, PreviewActor) == 0x000048, "Member 'FDialogueCharacterSlotDetail::PreviewActor' has a wrong offset!");
-static_assert(offsetof(FDialogueCharacterSlotDetail, SlotIndex) == 0x000070, "Member 'FDialogueCharacterSlotDetail::SlotIndex' has a wrong offset!");
-static_assert(offsetof(FDialogueCharacterSlotDetail, FixTemplate) == 0x000074, "Member 'FDialogueCharacterSlotDetail::FixTemplate' has a wrong offset!");
-
 // ScriptStruct PaperDialogue.PaperDialogueStringListStruct
 // 0x0018 (0x0020 - 0x0008)
 struct FPaperDialogueStringListStruct final : public FTableRowBase
@@ -1757,6 +1185,41 @@ static_assert(alignof(FPaperDialogueStringListStruct) == 0x000008, "Wrong alignm
 static_assert(sizeof(FPaperDialogueStringListStruct) == 0x000020, "Wrong size on FPaperDialogueStringListStruct");
 static_assert(offsetof(FPaperDialogueStringListStruct, StringID) == 0x000008, "Member 'FPaperDialogueStringListStruct::StringID' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueStringListStruct, Text) == 0x000010, "Member 'FPaperDialogueStringListStruct::Text' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.DialogueStageAutomaticConfig
+// 0x000D (0x000D - 0x0000)
+struct FDialogueStageAutomaticConfig final
+{
+public:
+	bool                                          bAutoConnection;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoAlign;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCameras;                              // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateAnimTracks;                           // 0x0003(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCustomTracks;                         // 0x0004(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateLightTracks;                          // 0x0005(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateLookAtTracks;                         // 0x0006(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCharacterNameableTracks;              // 0x0007(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCameraShakeTracks;                    // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateHighHeelTracks;                       // 0x0009(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateResimulationTracks;                   // 0x000A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateEmotionTracks;                        // 0x000B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateTransformTracks;                      // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDialogueStageAutomaticConfig) == 0x000001, "Wrong alignment on FDialogueStageAutomaticConfig");
+static_assert(sizeof(FDialogueStageAutomaticConfig) == 0x00000D, "Wrong size on FDialogueStageAutomaticConfig");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoConnection) == 0x000000, "Member 'FDialogueStageAutomaticConfig::bAutoConnection' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoAlign) == 0x000001, "Member 'FDialogueStageAutomaticConfig::bAutoAlign' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameras) == 0x000002, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameras' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateAnimTracks) == 0x000003, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateAnimTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCustomTracks) == 0x000004, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCustomTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLightTracks) == 0x000005, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLightTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLookAtTracks) == 0x000006, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLookAtTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCharacterNameableTracks) == 0x000007, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCharacterNameableTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameraShakeTracks) == 0x000008, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameraShakeTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateHighHeelTracks) == 0x000009, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateHighHeelTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateResimulationTracks) == 0x00000A, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateResimulationTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateEmotionTracks) == 0x00000B, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateEmotionTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateTransformTracks) == 0x00000C, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateTransformTracks' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueVoiceListStruct
 // 0x0028 (0x0030 - 0x0008)
@@ -1913,6 +1376,550 @@ static_assert(alignof(FDialogueInternalData) == 0x000008, "Wrong alignment on FD
 static_assert(sizeof(FDialogueInternalData) == 0x000020, "Wrong size on FDialogueInternalData");
 static_assert(offsetof(FDialogueInternalData, AnimMontage) == 0x000000, "Member 'FDialogueInternalData::AnimMontage' has a wrong offset!");
 
+// ScriptStruct PaperDialogue.DialogueSetWalkPointInfo
+// 0x00B0 (0x00B0 - 0x0000)
+struct FDialogueSetWalkPointInfo final
+{
+public:
+	bool                                          bOpen;                                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         WalkPointIndex;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             WalkPointTransform;                                // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCreateCharacterMesh;                              // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CharacterMeshName;                                 // 0x0074(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DefaultSlotName;                                   // 0x007C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EaseFrames;                                        // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        WalkAnimSequence;                                  // 0x0088(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDialogueSetWalkPointExecuteType              ExecuteType;                                       // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDialogueSetWalkPointVisibility               ForceVisibility;                                   // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AA[0x6];                                       // 0x00AA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FDialogueSetWalkPointInfo) == 0x000010, "Wrong alignment on FDialogueSetWalkPointInfo");
+static_assert(sizeof(FDialogueSetWalkPointInfo) == 0x0000B0, "Wrong size on FDialogueSetWalkPointInfo");
+static_assert(offsetof(FDialogueSetWalkPointInfo, bOpen) == 0x000000, "Member 'FDialogueSetWalkPointInfo::bOpen' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, WalkPointIndex) == 0x000004, "Member 'FDialogueSetWalkPointInfo::WalkPointIndex' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, WalkPointTransform) == 0x000010, "Member 'FDialogueSetWalkPointInfo::WalkPointTransform' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, bCreateCharacterMesh) == 0x000070, "Member 'FDialogueSetWalkPointInfo::bCreateCharacterMesh' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, CharacterMeshName) == 0x000074, "Member 'FDialogueSetWalkPointInfo::CharacterMeshName' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, DefaultSlotName) == 0x00007C, "Member 'FDialogueSetWalkPointInfo::DefaultSlotName' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, EaseFrames) == 0x000084, "Member 'FDialogueSetWalkPointInfo::EaseFrames' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, WalkAnimSequence) == 0x000088, "Member 'FDialogueSetWalkPointInfo::WalkAnimSequence' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, ExecuteType) == 0x0000A8, "Member 'FDialogueSetWalkPointInfo::ExecuteType' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointInfo, ForceVisibility) == 0x0000A9, "Member 'FDialogueSetWalkPointInfo::ForceVisibility' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.DialogueSetWalkPointSettings
+// 0x01D0 (0x01D0 - 0x0000)
+struct FDialogueSetWalkPointSettings final
+{
+public:
+	class FName                                   SpeakerTag;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CharacterSlotIndex;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CharacterSlotTransform;                            // 0x0010(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDialogueSetWalkPointInfo              WalkInSettings;                                    // 0x0070(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FDialogueSetWalkPointInfo              WalkOutSettings;                                   // 0x0120(0x00B0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDialogueSetWalkPointSettings) == 0x000010, "Wrong alignment on FDialogueSetWalkPointSettings");
+static_assert(sizeof(FDialogueSetWalkPointSettings) == 0x0001D0, "Wrong size on FDialogueSetWalkPointSettings");
+static_assert(offsetof(FDialogueSetWalkPointSettings, SpeakerTag) == 0x000000, "Member 'FDialogueSetWalkPointSettings::SpeakerTag' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointSettings, CharacterSlotIndex) == 0x000008, "Member 'FDialogueSetWalkPointSettings::CharacterSlotIndex' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointSettings, CharacterSlotTransform) == 0x000010, "Member 'FDialogueSetWalkPointSettings::CharacterSlotTransform' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointSettings, WalkInSettings) == 0x000070, "Member 'FDialogueSetWalkPointSettings::WalkInSettings' has a wrong offset!");
+static_assert(offsetof(FDialogueSetWalkPointSettings, WalkOutSettings) == 0x000120, "Member 'FDialogueSetWalkPointSettings::WalkOutSettings' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationSetupFadeStruct
+// 0x0038 (0x0038 - 0x0000)
+struct FPaperDialogueGenerationSetupFadeStruct final
+{
+public:
+	TSoftClassPtr<class UClass>                   OverrideFaceTrackClass;                            // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPaperDialogueFadeType                        FadeType;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FadeTime;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceClearFadeSection;                            // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddBreak;                                         // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBreakAllowSkip;                                   // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBreakAutoPlayNextPart;                            // 0x0033(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bChangeCompletionMode;                             // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0035(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationSetupFadeStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationSetupFadeStruct");
+static_assert(sizeof(FPaperDialogueGenerationSetupFadeStruct) == 0x000038, "Wrong size on FPaperDialogueGenerationSetupFadeStruct");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, OverrideFaceTrackClass) == 0x000000, "Member 'FPaperDialogueGenerationSetupFadeStruct::OverrideFaceTrackClass' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, FadeType) == 0x000028, "Member 'FPaperDialogueGenerationSetupFadeStruct::FadeType' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, FadeTime) == 0x00002C, "Member 'FPaperDialogueGenerationSetupFadeStruct::FadeTime' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bForceClearFadeSection) == 0x000030, "Member 'FPaperDialogueGenerationSetupFadeStruct::bForceClearFadeSection' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bAddBreak) == 0x000031, "Member 'FPaperDialogueGenerationSetupFadeStruct::bAddBreak' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bBreakAllowSkip) == 0x000032, "Member 'FPaperDialogueGenerationSetupFadeStruct::bBreakAllowSkip' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bBreakAutoPlayNextPart) == 0x000033, "Member 'FPaperDialogueGenerationSetupFadeStruct::bBreakAutoPlayNextPart' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, bChangeCompletionMode) == 0x000034, "Member 'FPaperDialogueGenerationSetupFadeStruct::bChangeCompletionMode' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupFadeStruct, CompletionMode) == 0x000035, "Member 'FPaperDialogueGenerationSetupFadeStruct::CompletionMode' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationFullBodyStruct
+// 0x0024 (0x0024 - 0x0000)
+struct FPaperDialogueGenerationFullBodyStruct final
+{
+public:
+	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DefaultSlotName;                                   // 0x000C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DefaultSlotEmotionName;                            // 0x0014(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DefaultSlotFacialName;                             // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationFullBodyStruct) == 0x000004, "Wrong alignment on FPaperDialogueGenerationFullBodyStruct");
+static_assert(sizeof(FPaperDialogueGenerationFullBodyStruct) == 0x000024, "Wrong size on FPaperDialogueGenerationFullBodyStruct");
+static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationFullBodyStruct::bCreateCharacterMesh' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationFullBodyStruct::CharacterMeshName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, DefaultSlotName) == 0x00000C, "Member 'FPaperDialogueGenerationFullBodyStruct::DefaultSlotName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, DefaultSlotEmotionName) == 0x000014, "Member 'FPaperDialogueGenerationFullBodyStruct::DefaultSlotEmotionName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationFullBodyStruct, DefaultSlotFacialName) == 0x00001C, "Member 'FPaperDialogueGenerationFullBodyStruct::DefaultSlotFacialName' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationIdleAnimationStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FPaperDialogueGenerationIdleAnimationStruct final
+{
+public:
+	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DefaultIdleAnimationTag;                           // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationIdleAnimationStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationIdleAnimationStruct");
+static_assert(sizeof(FPaperDialogueGenerationIdleAnimationStruct) == 0x000020, "Wrong size on FPaperDialogueGenerationIdleAnimationStruct");
+static_assert(offsetof(FPaperDialogueGenerationIdleAnimationStruct, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationIdleAnimationStruct::bCreateCharacterMesh' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationIdleAnimationStruct, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationIdleAnimationStruct::CharacterMeshName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationIdleAnimationStruct, DefaultIdleAnimationTag) == 0x000010, "Member 'FPaperDialogueGenerationIdleAnimationStruct::DefaultIdleAnimationTag' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationAnimationTrackConfig
+// 0x0014 (0x0014 - 0x0000)
+struct FPaperDialogueGenerationAnimationTrackConfig final
+{
+public:
+	class FName                                   OverrideCharacterMeshName;                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TrackAndSlotName;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecreateAnimTracks;                               // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationAnimationTrackConfig) == 0x000004, "Wrong alignment on FPaperDialogueGenerationAnimationTrackConfig");
+static_assert(sizeof(FPaperDialogueGenerationAnimationTrackConfig) == 0x000014, "Wrong size on FPaperDialogueGenerationAnimationTrackConfig");
+static_assert(offsetof(FPaperDialogueGenerationAnimationTrackConfig, OverrideCharacterMeshName) == 0x000000, "Member 'FPaperDialogueGenerationAnimationTrackConfig::OverrideCharacterMeshName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationAnimationTrackConfig, TrackAndSlotName) == 0x000008, "Member 'FPaperDialogueGenerationAnimationTrackConfig::TrackAndSlotName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationAnimationTrackConfig, bRecreateAnimTracks) == 0x000010, "Member 'FPaperDialogueGenerationAnimationTrackConfig::bRecreateAnimTracks' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationCustomTrackConfig
+// 0x0090 (0x0090 - 0x0000)
+struct FPaperDialogueGenerationCustomTrackConfig final
+{
+public:
+	uint8                                         Pad_0[0x30];                                       // 0x0000(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TrackAndSlotName;                                  // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecreateTracks;                                   // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCreateSectionAtBegining;                          // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   CustomTrackClass;                                  // 0x0040(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_68[0x28];                                      // 0x0068(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationCustomTrackConfig) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCustomTrackConfig");
+static_assert(sizeof(FPaperDialogueGenerationCustomTrackConfig) == 0x000090, "Wrong size on FPaperDialogueGenerationCustomTrackConfig");
+static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, TrackAndSlotName) == 0x000030, "Member 'FPaperDialogueGenerationCustomTrackConfig::TrackAndSlotName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, bRecreateTracks) == 0x000038, "Member 'FPaperDialogueGenerationCustomTrackConfig::bRecreateTracks' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, bCreateSectionAtBegining) == 0x000039, "Member 'FPaperDialogueGenerationCustomTrackConfig::bCreateSectionAtBegining' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationCustomTrackConfig, CustomTrackClass) == 0x000040, "Member 'FPaperDialogueGenerationCustomTrackConfig::CustomTrackClass' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationCameraFramingLevelStruct
+// 0x0018 (0x0018 - 0x0000)
+struct FPaperDialogueGenerationCameraFramingLevelStruct final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaximumUse;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationCameraFramingLevelStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCameraFramingLevelStruct");
+static_assert(sizeof(FPaperDialogueGenerationCameraFramingLevelStruct) == 0x000018, "Wrong size on FPaperDialogueGenerationCameraFramingLevelStruct");
+static_assert(offsetof(FPaperDialogueGenerationCameraFramingLevelStruct, Name) == 0x000000, "Member 'FPaperDialogueGenerationCameraFramingLevelStruct::Name' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationCameraFramingLevelStruct, MaximumUse) == 0x000010, "Member 'FPaperDialogueGenerationCameraFramingLevelStruct::MaximumUse' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationSetupCameraStruct
+// 0x0020 (0x0020 - 0x0000)
+struct FPaperDialogueGenerationSetupCameraStruct final
+{
+public:
+	bool                                          bForceClearCameraTrack;                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCameraRule;                                    // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bX6SimplifiedCameraRule;                           // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCombineNeighborCameras;                           // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPaperDialogueGenerationCameraFramingLevelStruct> CameraFramingLevelMax;           // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationSetupCameraStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationSetupCameraStruct");
+static_assert(sizeof(FPaperDialogueGenerationSetupCameraStruct) == 0x000020, "Wrong size on FPaperDialogueGenerationSetupCameraStruct");
+static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bForceClearCameraTrack) == 0x000000, "Member 'FPaperDialogueGenerationSetupCameraStruct::bForceClearCameraTrack' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bUseCameraRule) == 0x000001, "Member 'FPaperDialogueGenerationSetupCameraStruct::bUseCameraRule' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bX6SimplifiedCameraRule) == 0x000002, "Member 'FPaperDialogueGenerationSetupCameraStruct::bX6SimplifiedCameraRule' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, bCombineNeighborCameras) == 0x000003, "Member 'FPaperDialogueGenerationSetupCameraStruct::bCombineNeighborCameras' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetupCameraStruct, CameraFramingLevelMax) == 0x000008, "Member 'FPaperDialogueGenerationSetupCameraStruct::CameraFramingLevelMax' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationCustomTracks
+// 0x0010 (0x0010 - 0x0000)
+struct FPaperDialogueGenerationCustomTracks final
+{
+public:
+	TArray<struct FPaperDialogueGenerationCustomTrackConfig> TrackAndSlotConfigs;                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationCustomTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCustomTracks");
+static_assert(sizeof(FPaperDialogueGenerationCustomTracks) == 0x000010, "Wrong size on FPaperDialogueGenerationCustomTracks");
+static_assert(offsetof(FPaperDialogueGenerationCustomTracks, TrackAndSlotConfigs) == 0x000000, "Member 'FPaperDialogueGenerationCustomTracks::TrackAndSlotConfigs' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationAnimationTracks
+// 0x0020 (0x0020 - 0x0000)
+struct FPaperDialogueGenerationAnimationTracks final
+{
+public:
+	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPaperDialogueGenerationAnimationTrackConfig> TrackAndSlotConfigs;                 // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationAnimationTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationAnimationTracks");
+static_assert(sizeof(FPaperDialogueGenerationAnimationTracks) == 0x000020, "Wrong size on FPaperDialogueGenerationAnimationTracks");
+static_assert(offsetof(FPaperDialogueGenerationAnimationTracks, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationAnimationTracks::bCreateCharacterMesh' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationAnimationTracks, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationAnimationTracks::CharacterMeshName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationAnimationTracks, TrackAndSlotConfigs) == 0x000010, "Member 'FPaperDialogueGenerationAnimationTracks::TrackAndSlotConfigs' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationUnifiedAnimationTracks
+// 0x0078 (0x0078 - 0x0000)
+struct FPaperDialogueGenerationUnifiedAnimationTracks final
+{
+public:
+	int32                                         OverrideEaseInFrames;                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OverrideEaseOutFrames;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FSoftObjectPath>     UnifiedAnimationSequenceMap;                       // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationAnimationTracks GenerationAnimationTracks;                        // 0x0058(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationUnifiedAnimationTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationUnifiedAnimationTracks");
+static_assert(sizeof(FPaperDialogueGenerationUnifiedAnimationTracks) == 0x000078, "Wrong size on FPaperDialogueGenerationUnifiedAnimationTracks");
+static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, OverrideEaseInFrames) == 0x000000, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::OverrideEaseInFrames' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, OverrideEaseOutFrames) == 0x000004, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::OverrideEaseOutFrames' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, UnifiedAnimationSequenceMap) == 0x000008, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::UnifiedAnimationSequenceMap' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationUnifiedAnimationTracks, GenerationAnimationTracks) == 0x000058, "Member 'FPaperDialogueGenerationUnifiedAnimationTracks::GenerationAnimationTracks' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationLightTracks
+// 0x0014 (0x0014 - 0x0000)
+struct FPaperDialogueGenerationLightTracks final
+{
+public:
+	bool                                          bRecreateVisibilityTrack;                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMergeConsequentVisibilityFrame;                   // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAttachToTargetActor;                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPCDLightGenerateRule                         GenerateRule;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPlaceInFolder;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   FolderName;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 FolderColor;                                       // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationLightTracks) == 0x000004, "Wrong alignment on FPaperDialogueGenerationLightTracks");
+static_assert(sizeof(FPaperDialogueGenerationLightTracks) == 0x000014, "Wrong size on FPaperDialogueGenerationLightTracks");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, bRecreateVisibilityTrack) == 0x000000, "Member 'FPaperDialogueGenerationLightTracks::bRecreateVisibilityTrack' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, bMergeConsequentVisibilityFrame) == 0x000001, "Member 'FPaperDialogueGenerationLightTracks::bMergeConsequentVisibilityFrame' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, bAttachToTargetActor) == 0x000002, "Member 'FPaperDialogueGenerationLightTracks::bAttachToTargetActor' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, CompletionMode) == 0x000003, "Member 'FPaperDialogueGenerationLightTracks::CompletionMode' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, GenerateRule) == 0x000004, "Member 'FPaperDialogueGenerationLightTracks::GenerateRule' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, bPlaceInFolder) == 0x000005, "Member 'FPaperDialogueGenerationLightTracks::bPlaceInFolder' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, FolderName) == 0x000008, "Member 'FPaperDialogueGenerationLightTracks::FolderName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLightTracks, FolderColor) == 0x000010, "Member 'FPaperDialogueGenerationLightTracks::FolderColor' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationLookAtAutoKeyValue
+// 0x0048 (0x0048 - 0x0000)
+struct FPaperDialogueGenerationLookAtAutoKeyValue final
+{
+public:
+	bool                                          bAutoKeyFrames;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 EnableLookAtPropertyName;                          // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LookAtTargetPropertyName;                          // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LookAtTargetSocketPropertyName;                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LookAtTargetSocketName;                            // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationLookAtAutoKeyValue) == 0x000008, "Wrong alignment on FPaperDialogueGenerationLookAtAutoKeyValue");
+static_assert(sizeof(FPaperDialogueGenerationLookAtAutoKeyValue) == 0x000048, "Wrong size on FPaperDialogueGenerationLookAtAutoKeyValue");
+static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, bAutoKeyFrames) == 0x000000, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::bAutoKeyFrames' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, EnableLookAtPropertyName) == 0x000008, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::EnableLookAtPropertyName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, LookAtTargetPropertyName) == 0x000018, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::LookAtTargetPropertyName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, LookAtTargetSocketPropertyName) == 0x000028, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::LookAtTargetSocketPropertyName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtAutoKeyValue, LookAtTargetSocketName) == 0x000038, "Member 'FPaperDialogueGenerationLookAtAutoKeyValue::LookAtTargetSocketName' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationLookAtExtraSettings
+// 0x0040 (0x0040 - 0x0000)
+struct FPaperDialogueGenerationLookAtExtraSettings final
+{
+public:
+	bool                                          bAttachToActor;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BoneName;                                          // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Direction;                                         // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Distance;                                          // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bExposeAppointProperty;                            // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           PropertyToExpose;                                  // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationLookAtExtraSettings) == 0x000008, "Wrong alignment on FPaperDialogueGenerationLookAtExtraSettings");
+static_assert(sizeof(FPaperDialogueGenerationLookAtExtraSettings) == 0x000040, "Wrong size on FPaperDialogueGenerationLookAtExtraSettings");
+static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, bAttachToActor) == 0x000000, "Member 'FPaperDialogueGenerationLookAtExtraSettings::bAttachToActor' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, BoneName) == 0x000004, "Member 'FPaperDialogueGenerationLookAtExtraSettings::BoneName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, Direction) == 0x000010, "Member 'FPaperDialogueGenerationLookAtExtraSettings::Direction' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, Distance) == 0x000028, "Member 'FPaperDialogueGenerationLookAtExtraSettings::Distance' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, bExposeAppointProperty) == 0x00002C, "Member 'FPaperDialogueGenerationLookAtExtraSettings::bExposeAppointProperty' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtExtraSettings, PropertyToExpose) == 0x000030, "Member 'FPaperDialogueGenerationLookAtExtraSettings::PropertyToExpose' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationLookAtTracks
+// 0x00B8 (0x00B8 - 0x0000)
+struct FPaperDialogueGenerationLookAtTracks final
+{
+public:
+	struct FSoftClassPath                         LookAtActorClass;                                  // 0x0000(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x1];                                       // 0x0020(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bPlaceInFolder;                                    // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   FolderName;                                        // 0x0024(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 FolderColor;                                       // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationLookAtExtraSettings ExtraSettingConfig;                           // 0x0030(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationLookAtAutoKeyValue AutoKeyFrameConfig;                            // 0x0070(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationLookAtTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationLookAtTracks");
+static_assert(sizeof(FPaperDialogueGenerationLookAtTracks) == 0x0000B8, "Wrong size on FPaperDialogueGenerationLookAtTracks");
+static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, LookAtActorClass) == 0x000000, "Member 'FPaperDialogueGenerationLookAtTracks::LookAtActorClass' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, bPlaceInFolder) == 0x000021, "Member 'FPaperDialogueGenerationLookAtTracks::bPlaceInFolder' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, FolderName) == 0x000024, "Member 'FPaperDialogueGenerationLookAtTracks::FolderName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, FolderColor) == 0x00002C, "Member 'FPaperDialogueGenerationLookAtTracks::FolderColor' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, ExtraSettingConfig) == 0x000030, "Member 'FPaperDialogueGenerationLookAtTracks::ExtraSettingConfig' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationLookAtTracks, AutoKeyFrameConfig) == 0x000070, "Member 'FPaperDialogueGenerationLookAtTracks::AutoKeyFrameConfig' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationCharacterNameableTracks
+// 0x0050 (0x0050 - 0x0000)
+struct FPaperDialogueGenerationCharacterNameableTracks final
+{
+public:
+	TMap<class FString, TSoftClassPtr<class UClass>> CharacterNameableTracks;                        // 0x0000(0x0050)(Edit, BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationCharacterNameableTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCharacterNameableTracks");
+static_assert(sizeof(FPaperDialogueGenerationCharacterNameableTracks) == 0x000050, "Wrong size on FPaperDialogueGenerationCharacterNameableTracks");
+static_assert(offsetof(FPaperDialogueGenerationCharacterNameableTracks, CharacterNameableTracks) == 0x000000, "Member 'FPaperDialogueGenerationCharacterNameableTracks::CharacterNameableTracks' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationTransformTracks
+// 0x0020 (0x0020 - 0x0000)
+struct FPaperDialogueGenerationTransformTracks final
+{
+public:
+	bool                                          bAddTransformTracks;                               // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EMovieSceneBlendType>                  TransformTracksToAdd;                              // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bModifyCompletionMode;                             // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneCompletionMode                     CompletionMode;                                    // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationTransformTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationTransformTracks");
+static_assert(sizeof(FPaperDialogueGenerationTransformTracks) == 0x000020, "Wrong size on FPaperDialogueGenerationTransformTracks");
+static_assert(offsetof(FPaperDialogueGenerationTransformTracks, bAddTransformTracks) == 0x000000, "Member 'FPaperDialogueGenerationTransformTracks::bAddTransformTracks' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationTransformTracks, TransformTracksToAdd) == 0x000008, "Member 'FPaperDialogueGenerationTransformTracks::TransformTracksToAdd' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationTransformTracks, bModifyCompletionMode) == 0x000018, "Member 'FPaperDialogueGenerationTransformTracks::bModifyCompletionMode' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationTransformTracks, CompletionMode) == 0x000019, "Member 'FPaperDialogueGenerationTransformTracks::CompletionMode' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueInsertWalkTrackConfig
+// 0x0010 (0x0010 - 0x0000)
+struct FPaperDialogueInsertWalkTrackConfig final
+{
+public:
+	float                                         WalkTime;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TurnAroundTime;                                    // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InsertWalkAtGroupIndex;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPaperDialogueWalkType                        WalkType;                                          // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueInsertWalkTrackConfig) == 0x000004, "Wrong alignment on FPaperDialogueInsertWalkTrackConfig");
+static_assert(sizeof(FPaperDialogueInsertWalkTrackConfig) == 0x000010, "Wrong size on FPaperDialogueInsertWalkTrackConfig");
+static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, WalkTime) == 0x000000, "Member 'FPaperDialogueInsertWalkTrackConfig::WalkTime' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, TurnAroundTime) == 0x000004, "Member 'FPaperDialogueInsertWalkTrackConfig::TurnAroundTime' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, InsertWalkAtGroupIndex) == 0x000008, "Member 'FPaperDialogueInsertWalkTrackConfig::InsertWalkAtGroupIndex' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueInsertWalkTrackConfig, WalkType) == 0x00000C, "Member 'FPaperDialogueInsertWalkTrackConfig::WalkType' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationWalkInAndOutTracks
+// 0x0030 (0x0030 - 0x0000)
+struct FPaperDialogueGenerationWalkInAndOutTracks final
+{
+public:
+	float                                         WalkInTime;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WalkOutTime;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TurnAroundTime;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bInsertWalk : 1;                                   // 0x000C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPaperDialogueInsertWalkTrackConfig    InsertWalkConfig;                                  // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FDialogueSetWalkPointSettings>  WalkPointSettings;                                 // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationWalkInAndOutTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationWalkInAndOutTracks");
+static_assert(sizeof(FPaperDialogueGenerationWalkInAndOutTracks) == 0x000030, "Wrong size on FPaperDialogueGenerationWalkInAndOutTracks");
+static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, WalkInTime) == 0x000000, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::WalkInTime' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, WalkOutTime) == 0x000004, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::WalkOutTime' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, TurnAroundTime) == 0x000008, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::TurnAroundTime' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, InsertWalkConfig) == 0x000010, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::InsertWalkConfig' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationWalkInAndOutTracks, WalkPointSettings) == 0x000020, "Member 'FPaperDialogueGenerationWalkInAndOutTracks::WalkPointSettings' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationRootMotionTracks
+// 0x0008 (0x0008 - 0x0000)
+struct FPaperDialogueGenerationRootMotionTracks final
+{
+public:
+	EMovieSceneBlendType                          RootMotionSectionBlendType;                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPaperDialogueGenerationRootMotionDirectin    RootMotionDirectin;                                // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReverse;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseManualDegree;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ManualDegree;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationRootMotionTracks) == 0x000004, "Wrong alignment on FPaperDialogueGenerationRootMotionTracks");
+static_assert(sizeof(FPaperDialogueGenerationRootMotionTracks) == 0x000008, "Wrong size on FPaperDialogueGenerationRootMotionTracks");
+static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, RootMotionSectionBlendType) == 0x000000, "Member 'FPaperDialogueGenerationRootMotionTracks::RootMotionSectionBlendType' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, RootMotionDirectin) == 0x000001, "Member 'FPaperDialogueGenerationRootMotionTracks::RootMotionDirectin' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, bReverse) == 0x000002, "Member 'FPaperDialogueGenerationRootMotionTracks::bReverse' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, bUseManualDegree) == 0x000003, "Member 'FPaperDialogueGenerationRootMotionTracks::bUseManualDegree' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationRootMotionTracks, ManualDegree) == 0x000004, "Member 'FPaperDialogueGenerationRootMotionTracks::ManualDegree' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationCameraShakeTracks
+// 0x0030 (0x0030 - 0x0000)
+struct FPaperDialogueGenerationCameraShakeTracks final
+{
+public:
+	bool                                          bRecreateCameraShakeTracks;                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   CameraShakeBP;                                     // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationCameraShakeTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationCameraShakeTracks");
+static_assert(sizeof(FPaperDialogueGenerationCameraShakeTracks) == 0x000030, "Wrong size on FPaperDialogueGenerationCameraShakeTracks");
+static_assert(offsetof(FPaperDialogueGenerationCameraShakeTracks, bRecreateCameraShakeTracks) == 0x000000, "Member 'FPaperDialogueGenerationCameraShakeTracks::bRecreateCameraShakeTracks' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationCameraShakeTracks, CameraShakeBP) == 0x000008, "Member 'FPaperDialogueGenerationCameraShakeTracks::CameraShakeBP' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationHighHeelTracks
+// 0x0068 (0x0068 - 0x0000)
+struct FPaperDialogueGenerationHighHeelTracks final
+{
+public:
+	bool                                          bRecreateHighHeelTracks;                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   HighHeelActorBP;                                   // 0x0008(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRemoveDefaultTransformTrack;                      // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPlaceInFolder;                                    // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x2];                                       // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   FolderName;                                        // 0x0034(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FColor                                 FolderColor;                                       // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAttachToActor;                                    // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           TargetActorName;                                   // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetActorComponentName;                          // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetActorBoneName;                               // 0x0054(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   PropertyExposeToCinematic;                         // 0x005C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoMakeKeyframes;                                // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_65[0x3];                                       // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperDialogueGenerationHighHeelTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationHighHeelTracks");
+static_assert(sizeof(FPaperDialogueGenerationHighHeelTracks) == 0x000068, "Wrong size on FPaperDialogueGenerationHighHeelTracks");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bRecreateHighHeelTracks) == 0x000000, "Member 'FPaperDialogueGenerationHighHeelTracks::bRecreateHighHeelTracks' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, HighHeelActorBP) == 0x000008, "Member 'FPaperDialogueGenerationHighHeelTracks::HighHeelActorBP' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bRemoveDefaultTransformTrack) == 0x000030, "Member 'FPaperDialogueGenerationHighHeelTracks::bRemoveDefaultTransformTrack' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bPlaceInFolder) == 0x000031, "Member 'FPaperDialogueGenerationHighHeelTracks::bPlaceInFolder' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, FolderName) == 0x000034, "Member 'FPaperDialogueGenerationHighHeelTracks::FolderName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, FolderColor) == 0x00003C, "Member 'FPaperDialogueGenerationHighHeelTracks::FolderColor' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bAttachToActor) == 0x000040, "Member 'FPaperDialogueGenerationHighHeelTracks::bAttachToActor' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, TargetActorName) == 0x000044, "Member 'FPaperDialogueGenerationHighHeelTracks::TargetActorName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, TargetActorComponentName) == 0x00004C, "Member 'FPaperDialogueGenerationHighHeelTracks::TargetActorComponentName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, TargetActorBoneName) == 0x000054, "Member 'FPaperDialogueGenerationHighHeelTracks::TargetActorBoneName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, PropertyExposeToCinematic) == 0x00005C, "Member 'FPaperDialogueGenerationHighHeelTracks::PropertyExposeToCinematic' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationHighHeelTracks, bAutoMakeKeyframes) == 0x000064, "Member 'FPaperDialogueGenerationHighHeelTracks::bAutoMakeKeyframes' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationResimulationTracks
+// 0x0028 (0x0028 - 0x0000)
+struct FPaperDialogueGenerationResimulationTracks final
+{
+public:
+	TSoftClassPtr<class UClass>                   ResimulationTrackBP;                               // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationResimulationTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationResimulationTracks");
+static_assert(sizeof(FPaperDialogueGenerationResimulationTracks) == 0x000028, "Wrong size on FPaperDialogueGenerationResimulationTracks");
+static_assert(offsetof(FPaperDialogueGenerationResimulationTracks, ResimulationTrackBP) == 0x000000, "Member 'FPaperDialogueGenerationResimulationTracks::ResimulationTrackBP' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationGestureTracks
+// 0x0050 (0x0050 - 0x0000)
+struct FPaperDialogueGenerationGestureTracks final
+{
+public:
+	TSoftClassPtr<class UClass>                   GestureTrackBP;                                    // 0x0000(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   GestureTagPropertyName;                            // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddSectionEvenGestureTagIsNone;                   // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SpeakerGestureIntervalMin;                         // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpeakerGestureIntervalMax;                         // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpeakerGestureDifferentGap;                        // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ListenerSilenceLineCount;                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ListenerGestureIntervalMin;                        // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ListenerGestureIntervalMax;                        // 0x0048(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ListenerGestureDifferentGap;                       // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationGestureTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationGestureTracks");
+static_assert(sizeof(FPaperDialogueGenerationGestureTracks) == 0x000050, "Wrong size on FPaperDialogueGenerationGestureTracks");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, GestureTrackBP) == 0x000000, "Member 'FPaperDialogueGenerationGestureTracks::GestureTrackBP' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, GestureTagPropertyName) == 0x000028, "Member 'FPaperDialogueGenerationGestureTracks::GestureTagPropertyName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, bAddSectionEvenGestureTagIsNone) == 0x000030, "Member 'FPaperDialogueGenerationGestureTracks::bAddSectionEvenGestureTagIsNone' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, SpeakerGestureIntervalMin) == 0x000034, "Member 'FPaperDialogueGenerationGestureTracks::SpeakerGestureIntervalMin' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, SpeakerGestureIntervalMax) == 0x000038, "Member 'FPaperDialogueGenerationGestureTracks::SpeakerGestureIntervalMax' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, SpeakerGestureDifferentGap) == 0x00003C, "Member 'FPaperDialogueGenerationGestureTracks::SpeakerGestureDifferentGap' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerSilenceLineCount) == 0x000040, "Member 'FPaperDialogueGenerationGestureTracks::ListenerSilenceLineCount' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerGestureIntervalMin) == 0x000044, "Member 'FPaperDialogueGenerationGestureTracks::ListenerGestureIntervalMin' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerGestureIntervalMax) == 0x000048, "Member 'FPaperDialogueGenerationGestureTracks::ListenerGestureIntervalMax' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationGestureTracks, ListenerGestureDifferentGap) == 0x00004C, "Member 'FPaperDialogueGenerationGestureTracks::ListenerGestureDifferentGap' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationEmotionAnimationConfig
+// 0x0020 (0x0020 - 0x0000)
+struct FPaperDialogueGenerationEmotionAnimationConfig final
+{
+public:
+	bool                                          bCreateCharacterMesh;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CharacterMeshName;                                 // 0x0004(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationAnimationTrackConfig TrackAndSlotConfig;                          // 0x000C(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationEmotionAnimationConfig) == 0x000004, "Wrong alignment on FPaperDialogueGenerationEmotionAnimationConfig");
+static_assert(sizeof(FPaperDialogueGenerationEmotionAnimationConfig) == 0x000020, "Wrong size on FPaperDialogueGenerationEmotionAnimationConfig");
+static_assert(offsetof(FPaperDialogueGenerationEmotionAnimationConfig, bCreateCharacterMesh) == 0x000000, "Member 'FPaperDialogueGenerationEmotionAnimationConfig::bCreateCharacterMesh' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationEmotionAnimationConfig, CharacterMeshName) == 0x000004, "Member 'FPaperDialogueGenerationEmotionAnimationConfig::CharacterMeshName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationEmotionAnimationConfig, TrackAndSlotConfig) == 0x00000C, "Member 'FPaperDialogueGenerationEmotionAnimationConfig::TrackAndSlotConfig' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.PaperDialogueGenerationEmotionTracks
+// 0x00C0 (0x00C0 - 0x0000)
+struct FPaperDialogueGenerationEmotionTracks final
+{
+public:
+	int32                                         OverrideEaseInOutFrames;                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieSceneBuiltInEasing                      BuiltInEaseInOutType;                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPaperDialogueGenerationEmotionAnimationConfig DialogueUpperFaceConfig;                   // 0x0008(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   IdleFacePropertyName;                              // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationCustomTrackConfig DialogueIdleFaceConfig;                         // 0x0030(0x0090)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPaperDialogueGenerationEmotionTracks) == 0x000008, "Wrong alignment on FPaperDialogueGenerationEmotionTracks");
+static_assert(sizeof(FPaperDialogueGenerationEmotionTracks) == 0x0000C0, "Wrong size on FPaperDialogueGenerationEmotionTracks");
+static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, OverrideEaseInOutFrames) == 0x000000, "Member 'FPaperDialogueGenerationEmotionTracks::OverrideEaseInOutFrames' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, BuiltInEaseInOutType) == 0x000004, "Member 'FPaperDialogueGenerationEmotionTracks::BuiltInEaseInOutType' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, DialogueUpperFaceConfig) == 0x000008, "Member 'FPaperDialogueGenerationEmotionTracks::DialogueUpperFaceConfig' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, IdleFacePropertyName) == 0x000028, "Member 'FPaperDialogueGenerationEmotionTracks::IdleFacePropertyName' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationEmotionTracks, DialogueIdleFaceConfig) == 0x000030, "Member 'FPaperDialogueGenerationEmotionTracks::DialogueIdleFaceConfig' has a wrong offset!");
+
 // ScriptStruct PaperDialogue.PaperDialogueGenerationSetUpStateStruct
 // 0x0003 (0x0003 - 0x0000)
 struct FPaperDialogueGenerationSetUpStateStruct final
@@ -1941,46 +1948,52 @@ public:
 static_assert(alignof(FPaperDialogueGenerationSetUpStateStruct) == 0x000001, "Wrong alignment on FPaperDialogueGenerationSetUpStateStruct");
 static_assert(sizeof(FPaperDialogueGenerationSetUpStateStruct) == 0x000003, "Wrong size on FPaperDialogueGenerationSetUpStateStruct");
 
-// ScriptStruct PaperDialogue.PCDAIAnimationMotionMatchingLineParamNetData
-// 0x0078 (0x0078 - 0x0000)
-struct FPCDAIAnimationMotionMatchingLineParamNetData final
+// ScriptStruct PaperDialogue.PaperDialogueGenerationSetUpStruct
+// 0x0490 (0x0490 - 0x0000)
+struct FPaperDialogueGenerationSetUpStruct final
 {
 public:
-	double                                        word_nums_per_sec;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        words_min_interval_duration;                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        word_acoustic_weight;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        word_concept_weight;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        local_anim_duration_weight;                        // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        local_anim_pitch_weight;                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        local_anim_handedness_weight;                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         local_matching_cand_anim_num;                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        global_anim_overlap_weight;                        // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        global_anim_repeat_nums_weight;                    // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        global_anim_time_bias_weight;                      // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        global_anim_max_speed_diff_weight;                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        relative_local_weight;                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        relative_global_weight;                            // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          random_flag;                                       // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaperDialogueGenerationSetupFadeStruct FadeSettings;                                     // 0x0000(0x0038)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationFullBodyStruct FullBodySettings;                                  // 0x0038(0x0024)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPaperDialogueGenerationSetupCameraStruct CameraSettings;                                 // 0x0060(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationIdleAnimationStruct IdleAnimationSettings;                        // 0x0080(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationAnimationTracks AnimationTrackSettings;                           // 0x00A0(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationCustomTracks   CustomTrackSettings;                               // 0x00C0(0x0010)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationLightTracks    LightTrackSettings;                                // 0x00D0(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPaperDialogueGenerationLookAtTracks   LookAtTrackSettings;                               // 0x00E8(0x00B8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationCharacterNameableTracks CharacterNameableTrackSettings;           // 0x01A0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationTransformTracks TransformTrackSettings;                           // 0x01F0(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationWalkInAndOutTracks WalkInAndOutSettings;                          // 0x0210(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationRootMotionTracks RootMotionSettings;                              // 0x0240(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationCameraShakeTracks CameraShakeSettings;                            // 0x0248(0x0030)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationHighHeelTracks HighHeelSettings;                                  // 0x0278(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationResimulationTracks ResimulationSettings;                          // 0x02E0(0x0028)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationGestureTracks  GestureSettings;                                   // 0x0308(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationUnifiedAnimationTracks UnifiedAnimationTrackSettings;             // 0x0358(0x0078)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPaperDialogueGenerationEmotionTracks  EmotionSettings;                                   // 0x03D0(0x00C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000008, "Wrong alignment on FPCDAIAnimationMotionMatchingLineParamNetData");
-static_assert(sizeof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000078, "Wrong size on FPCDAIAnimationMotionMatchingLineParamNetData");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_nums_per_sec) == 0x000000, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_nums_per_sec' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, words_min_interval_duration) == 0x000008, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::words_min_interval_duration' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_acoustic_weight) == 0x000010, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_acoustic_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_concept_weight) == 0x000018, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_concept_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_duration_weight) == 0x000020, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_duration_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_pitch_weight) == 0x000028, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_pitch_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_handedness_weight) == 0x000030, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_handedness_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_matching_cand_anim_num) == 0x000038, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_matching_cand_anim_num' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_overlap_weight) == 0x000040, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_overlap_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_repeat_nums_weight) == 0x000048, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_repeat_nums_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_time_bias_weight) == 0x000050, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_time_bias_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_max_speed_diff_weight) == 0x000058, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_max_speed_diff_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_local_weight) == 0x000060, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_local_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_global_weight) == 0x000068, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_global_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, random_flag) == 0x000070, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::random_flag' has a wrong offset!");
+static_assert(alignof(FPaperDialogueGenerationSetUpStruct) == 0x000008, "Wrong alignment on FPaperDialogueGenerationSetUpStruct");
+static_assert(sizeof(FPaperDialogueGenerationSetUpStruct) == 0x000490, "Wrong size on FPaperDialogueGenerationSetUpStruct");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, FadeSettings) == 0x000000, "Member 'FPaperDialogueGenerationSetUpStruct::FadeSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, FullBodySettings) == 0x000038, "Member 'FPaperDialogueGenerationSetUpStruct::FullBodySettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CameraSettings) == 0x000060, "Member 'FPaperDialogueGenerationSetUpStruct::CameraSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, IdleAnimationSettings) == 0x000080, "Member 'FPaperDialogueGenerationSetUpStruct::IdleAnimationSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, AnimationTrackSettings) == 0x0000A0, "Member 'FPaperDialogueGenerationSetUpStruct::AnimationTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CustomTrackSettings) == 0x0000C0, "Member 'FPaperDialogueGenerationSetUpStruct::CustomTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, LightTrackSettings) == 0x0000D0, "Member 'FPaperDialogueGenerationSetUpStruct::LightTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, LookAtTrackSettings) == 0x0000E8, "Member 'FPaperDialogueGenerationSetUpStruct::LookAtTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CharacterNameableTrackSettings) == 0x0001A0, "Member 'FPaperDialogueGenerationSetUpStruct::CharacterNameableTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, TransformTrackSettings) == 0x0001F0, "Member 'FPaperDialogueGenerationSetUpStruct::TransformTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, WalkInAndOutSettings) == 0x000210, "Member 'FPaperDialogueGenerationSetUpStruct::WalkInAndOutSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, RootMotionSettings) == 0x000240, "Member 'FPaperDialogueGenerationSetUpStruct::RootMotionSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, CameraShakeSettings) == 0x000248, "Member 'FPaperDialogueGenerationSetUpStruct::CameraShakeSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, HighHeelSettings) == 0x000278, "Member 'FPaperDialogueGenerationSetUpStruct::HighHeelSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, ResimulationSettings) == 0x0002E0, "Member 'FPaperDialogueGenerationSetUpStruct::ResimulationSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, GestureSettings) == 0x000308, "Member 'FPaperDialogueGenerationSetUpStruct::GestureSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, UnifiedAnimationTrackSettings) == 0x000358, "Member 'FPaperDialogueGenerationSetUpStruct::UnifiedAnimationTrackSettings' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, EmotionSettings) == 0x0003D0, "Member 'FPaperDialogueGenerationSetUpStruct::EmotionSettings' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueGenerationAIAnimationStruct
 // 0x0058 (0x0058 - 0x0000)
@@ -2014,40 +2027,27 @@ static_assert(sizeof(FPaperDialogueStageTextStruct) == 0x000020, "Wrong size on 
 static_assert(offsetof(FPaperDialogueStageTextStruct, StringID) == 0x000008, "Member 'FPaperDialogueStageTextStruct::StringID' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueStageTextStruct, Text) == 0x000010, "Member 'FPaperDialogueStageTextStruct::Text' has a wrong offset!");
 
-// ScriptStruct PaperDialogue.DialogueStageAutomaticConfig
-// 0x000D (0x000D - 0x0000)
-struct FDialogueStageAutomaticConfig final
+// ScriptStruct PaperDialogue.DialogueCharacterSlotDetail
+// 0x0080 (0x0080 - 0x0000)
+struct FDialogueCharacterSlotDetail final
 {
 public:
-	bool                                          bAutoConnection;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoAlign;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCameras;                              // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateAnimTracks;                           // 0x0003(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCustomTracks;                         // 0x0004(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateLightTracks;                          // 0x0005(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateLookAtTracks;                         // 0x0006(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCharacterNameableTracks;              // 0x0007(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCameraShakeTracks;                    // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateHighHeelTracks;                       // 0x0009(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateResimulationTracks;                   // 0x000A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateEmotionTracks;                        // 0x000B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateTransformTracks;                      // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ActorName;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AvatarName;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UPrimaryDataAsset>       AvatarDataAsset;                                   // 0x0020(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   PreviewActor;                                      // 0x0048(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SlotIndex;                                         // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   FixTemplate;                                       // 0x0074(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDialogueStageAutomaticConfig) == 0x000001, "Wrong alignment on FDialogueStageAutomaticConfig");
-static_assert(sizeof(FDialogueStageAutomaticConfig) == 0x00000D, "Wrong size on FDialogueStageAutomaticConfig");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoConnection) == 0x000000, "Member 'FDialogueStageAutomaticConfig::bAutoConnection' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoAlign) == 0x000001, "Member 'FDialogueStageAutomaticConfig::bAutoAlign' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameras) == 0x000002, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameras' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateAnimTracks) == 0x000003, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateAnimTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCustomTracks) == 0x000004, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCustomTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLightTracks) == 0x000005, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLightTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLookAtTracks) == 0x000006, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLookAtTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCharacterNameableTracks) == 0x000007, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCharacterNameableTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameraShakeTracks) == 0x000008, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameraShakeTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateHighHeelTracks) == 0x000009, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateHighHeelTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateResimulationTracks) == 0x00000A, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateResimulationTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateEmotionTracks) == 0x00000B, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateEmotionTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateTransformTracks) == 0x00000C, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateTransformTracks' has a wrong offset!");
+static_assert(alignof(FDialogueCharacterSlotDetail) == 0x000008, "Wrong alignment on FDialogueCharacterSlotDetail");
+static_assert(sizeof(FDialogueCharacterSlotDetail) == 0x000080, "Wrong size on FDialogueCharacterSlotDetail");
+static_assert(offsetof(FDialogueCharacterSlotDetail, ActorName) == 0x000000, "Member 'FDialogueCharacterSlotDetail::ActorName' has a wrong offset!");
+static_assert(offsetof(FDialogueCharacterSlotDetail, AvatarName) == 0x000010, "Member 'FDialogueCharacterSlotDetail::AvatarName' has a wrong offset!");
+static_assert(offsetof(FDialogueCharacterSlotDetail, AvatarDataAsset) == 0x000020, "Member 'FDialogueCharacterSlotDetail::AvatarDataAsset' has a wrong offset!");
+static_assert(offsetof(FDialogueCharacterSlotDetail, PreviewActor) == 0x000048, "Member 'FDialogueCharacterSlotDetail::PreviewActor' has a wrong offset!");
+static_assert(offsetof(FDialogueCharacterSlotDetail, SlotIndex) == 0x000070, "Member 'FDialogueCharacterSlotDetail::SlotIndex' has a wrong offset!");
+static_assert(offsetof(FDialogueCharacterSlotDetail, FixTemplate) == 0x000074, "Member 'FDialogueCharacterSlotDetail::FixTemplate' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperEdGraphSchemaAction_NewNode
 // 0x0008 (0x00E8 - 0x00E0)

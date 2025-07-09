@@ -110,7 +110,7 @@ static_assert(sizeof(UIPFTypes) == 0x000100, "Wrong size on UIPFTypes");
 
 // Class UIPF.UIPFInteractor
 // 0x00C0 (0x02F0 - 0x0230)
-class UUIPFInteractor final : public USceneComponent
+class UUIPFInteractor : public USceneComponent
 {
 public:
 	uint8                                         Pad_230[0x20];                                     // 0x0230(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
@@ -184,7 +184,7 @@ static_assert(offsetof(UUIPFInteractor, UIPFManagerect) == 0x0002DC, "Member 'UU
 
 // Class UIPF.UIPFManager
 // 0x0250 (0x05F8 - 0x03A8)
-class AUIPFManager final : public AActor
+class AUIPFManager : public AActor
 {
 public:
 	uint8                                         Pad_3A8[0x12];                                     // 0x03A8(0x0012)(Fixing Size After Last Property [ Dumper-7 ])

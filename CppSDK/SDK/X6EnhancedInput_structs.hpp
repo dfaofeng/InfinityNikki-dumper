@@ -157,6 +157,25 @@ enum class EX6TriggerType : uint8
 	EX6TriggerType_MAX                       = 3,
 };
 
+// ScriptStruct X6EnhancedInput.X6InputActionSoundInfo
+// 0x0040 (0x0040 - 0x0000)
+struct FX6InputActionSoundInfo final
+{
+public:
+	class UX6InputAction*                         InputAction;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6TriggerEvent                               TriggerEvent;                                      // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAkAudioEvent>           AudioEventPtr;                                     // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNeedBind;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FX6InputActionSoundInfo) == 0x000008, "Wrong alignment on FX6InputActionSoundInfo");
+static_assert(sizeof(FX6InputActionSoundInfo) == 0x000040, "Wrong size on FX6InputActionSoundInfo");
+static_assert(offsetof(FX6InputActionSoundInfo, InputAction) == 0x000000, "Member 'FX6InputActionSoundInfo::InputAction' has a wrong offset!");
+static_assert(offsetof(FX6InputActionSoundInfo, TriggerEvent) == 0x000008, "Member 'FX6InputActionSoundInfo::TriggerEvent' has a wrong offset!");
+static_assert(offsetof(FX6InputActionSoundInfo, AudioEventPtr) == 0x000010, "Member 'FX6InputActionSoundInfo::AudioEventPtr' has a wrong offset!");
+static_assert(offsetof(FX6InputActionSoundInfo, bNeedBind) == 0x000038, "Member 'FX6InputActionSoundInfo::bNeedBind' has a wrong offset!");
+
 // ScriptStruct X6EnhancedInput.X6InputActionTriggerKeyData
 // 0x0058 (0x0058 - 0x0000)
 struct FX6InputActionTriggerKeyData final
@@ -177,24 +196,21 @@ static_assert(offsetof(FX6InputActionTriggerKeyData, KeyMenuCategory) == 0x00002
 static_assert(offsetof(FX6InputActionTriggerKeyData, EventClass) == 0x000028, "Member 'FX6InputActionTriggerKeyData::EventClass' has a wrong offset!");
 static_assert(offsetof(FX6InputActionTriggerKeyData, EventPropertyName) == 0x000050, "Member 'FX6InputActionTriggerKeyData::EventPropertyName' has a wrong offset!");
 
-// ScriptStruct X6EnhancedInput.X6InputActionSoundInfo
-// 0x0040 (0x0040 - 0x0000)
-struct FX6InputActionSoundInfo final
+// ScriptStruct X6EnhancedInput.X6MappingQueryIssue
+// 0x0018 (0x0018 - 0x0000)
+struct FX6MappingQueryIssue final
 {
 public:
-	class UX6InputAction*                         InputAction;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6TriggerEvent                               TriggerEvent;                                      // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAkAudioEvent>           AudioEventPtr;                                     // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNeedBind;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EX6MappingQueryIssue                          Issue;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6InputMappingContext*                 BlockingContext;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UX6InputAction*                         BlockingAction;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FX6InputActionSoundInfo) == 0x000008, "Wrong alignment on FX6InputActionSoundInfo");
-static_assert(sizeof(FX6InputActionSoundInfo) == 0x000040, "Wrong size on FX6InputActionSoundInfo");
-static_assert(offsetof(FX6InputActionSoundInfo, InputAction) == 0x000000, "Member 'FX6InputActionSoundInfo::InputAction' has a wrong offset!");
-static_assert(offsetof(FX6InputActionSoundInfo, TriggerEvent) == 0x000008, "Member 'FX6InputActionSoundInfo::TriggerEvent' has a wrong offset!");
-static_assert(offsetof(FX6InputActionSoundInfo, AudioEventPtr) == 0x000010, "Member 'FX6InputActionSoundInfo::AudioEventPtr' has a wrong offset!");
-static_assert(offsetof(FX6InputActionSoundInfo, bNeedBind) == 0x000038, "Member 'FX6InputActionSoundInfo::bNeedBind' has a wrong offset!");
+static_assert(alignof(FX6MappingQueryIssue) == 0x000008, "Wrong alignment on FX6MappingQueryIssue");
+static_assert(sizeof(FX6MappingQueryIssue) == 0x000018, "Wrong size on FX6MappingQueryIssue");
+static_assert(offsetof(FX6MappingQueryIssue, Issue) == 0x000000, "Member 'FX6MappingQueryIssue::Issue' has a wrong offset!");
+static_assert(offsetof(FX6MappingQueryIssue, BlockingContext) == 0x000008, "Member 'FX6MappingQueryIssue::BlockingContext' has a wrong offset!");
+static_assert(offsetof(FX6MappingQueryIssue, BlockingAction) == 0x000010, "Member 'FX6MappingQueryIssue::BlockingAction' has a wrong offset!");
 
 // ScriptStruct X6EnhancedInput.X6InputActionValue
 // 0x0020 (0x0020 - 0x0000)
@@ -305,22 +321,6 @@ static_assert(offsetof(FX6InputActionInstance, FinalValueModifiers) == 0x000040,
 static_assert(offsetof(FX6InputActionInstance, ElapsedProcessedTime) == 0x000070, "Member 'FX6InputActionInstance::ElapsedProcessedTime' has a wrong offset!");
 static_assert(offsetof(FX6InputActionInstance, ElapsedTriggeredTime) == 0x000074, "Member 'FX6InputActionInstance::ElapsedTriggeredTime' has a wrong offset!");
 static_assert(offsetof(FX6InputActionInstance, TriggerEvent) == 0x000078, "Member 'FX6InputActionInstance::TriggerEvent' has a wrong offset!");
-
-// ScriptStruct X6EnhancedInput.X6MappingQueryIssue
-// 0x0018 (0x0018 - 0x0000)
-struct FX6MappingQueryIssue final
-{
-public:
-	EX6MappingQueryIssue                          Issue;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6InputMappingContext*                 BlockingContext;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UX6InputAction*                         BlockingAction;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6MappingQueryIssue) == 0x000008, "Wrong alignment on FX6MappingQueryIssue");
-static_assert(sizeof(FX6MappingQueryIssue) == 0x000018, "Wrong size on FX6MappingQueryIssue");
-static_assert(offsetof(FX6MappingQueryIssue, Issue) == 0x000000, "Member 'FX6MappingQueryIssue::Issue' has a wrong offset!");
-static_assert(offsetof(FX6MappingQueryIssue, BlockingContext) == 0x000008, "Member 'FX6MappingQueryIssue::BlockingContext' has a wrong offset!");
-static_assert(offsetof(FX6MappingQueryIssue, BlockingAction) == 0x000010, "Member 'FX6MappingQueryIssue::BlockingAction' has a wrong offset!");
 
 }
 

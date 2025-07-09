@@ -226,63 +226,132 @@ static_assert(offsetof(FX6CameraConfigBlendParams, bOverrideTransitionParams) ==
 static_assert(offsetof(FX6CameraConfigBlendParams, bCacheCameraSettingsWhenLockOutgoingBlend) == 0x000001, "Member 'FX6CameraConfigBlendParams::bCacheCameraSettingsWhenLockOutgoingBlend' has a wrong offset!");
 static_assert(offsetof(FX6CameraConfigBlendParams, TransitionParams) == 0x000008, "Member 'FX6CameraConfigBlendParams::TransitionParams' has a wrong offset!");
 
-// ScriptStruct X6Camera.CameraModifier_PostProcess
-// 0x0020 (0x0020 - 0x0000)
-struct FCameraModifier_PostProcess final
+// ScriptStruct X6Camera.CameraOrientationSyncConfig
+// 0x00B8 (0x00B8 - 0x0000)
+struct FCameraOrientationSyncConfig final
 {
 public:
-	ECameraValueModifyType                        CameraValueModifyType;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ValueScale;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeScale;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            Curve;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UCameraModifier>            CameraModifierSource;                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCameraModifier_PostProcess) == 0x000008, "Wrong alignment on FCameraModifier_PostProcess");
-static_assert(sizeof(FCameraModifier_PostProcess) == 0x000020, "Wrong size on FCameraModifier_PostProcess");
-static_assert(offsetof(FCameraModifier_PostProcess, CameraValueModifyType) == 0x000000, "Member 'FCameraModifier_PostProcess::CameraValueModifyType' has a wrong offset!");
-static_assert(offsetof(FCameraModifier_PostProcess, ValueScale) == 0x000004, "Member 'FCameraModifier_PostProcess::ValueScale' has a wrong offset!");
-static_assert(offsetof(FCameraModifier_PostProcess, TimeScale) == 0x000008, "Member 'FCameraModifier_PostProcess::TimeScale' has a wrong offset!");
-static_assert(offsetof(FCameraModifier_PostProcess, Curve) == 0x000010, "Member 'FCameraModifier_PostProcess::Curve' has a wrong offset!");
-static_assert(offsetof(FCameraModifier_PostProcess, CameraModifierSource) == 0x000018, "Member 'FCameraModifier_PostProcess::CameraModifierSource' has a wrong offset!");
-
-// ScriptStruct X6Camera.CameraModifierSpecHandle
-// 0x000C (0x000C - 0x0000)
-struct FCameraModifierSpecHandle final
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Handle;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FCameraModifierSpecHandle) == 0x000004, "Wrong alignment on FCameraModifierSpecHandle");
-static_assert(sizeof(FCameraModifierSpecHandle) == 0x00000C, "Wrong size on FCameraModifierSpecHandle");
-static_assert(offsetof(FCameraModifierSpecHandle, Handle) == 0x000008, "Member 'FCameraModifierSpecHandle::Handle' has a wrong offset!");
-
-// ScriptStruct X6Camera.CameraPostProcess_ModifierSpec
-// 0x0038 (0x0038 - 0x0000)
-struct FCameraPostProcess_ModifierSpec final
-{
-public:
-	struct FCameraModifier_PostProcess            Modifier;                                          // 0x0000(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bActive;                                           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisabled;                                         // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPendingDisable;                                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRemove;                                           // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6CameraDataPriority                         Priority;                                          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StopYawSyncInputAngularThreshold;                  // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterruptResetInputAngularThreshold;               // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ResetYawSyncDelayTimeInputAngularThreshold;        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OwnerIsMovingSpeedTolerance;                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            ResetRotationAngularSpeedCurve;                    // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ResetRotationAngularSpeedIncreaseInterpSpeed;      // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableYawSync;                                    // 0x001C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoYawSyncWhenNotMoving;                           // 0x001D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStopYawSyncInAir;                                 // 0x001E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StopYawSyncInAirDelaySeconds;                      // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraRotationYawSyncMode                    YawSyncMode;                                       // 0x0024(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraModifierSpecHandle              Handle;                                            // 0x0028(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         EnableCameraRotationSyncMinAngle;                  // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EnableCameraRotationSyncMaxAngle;                  // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EnableForwardRotationSyncMaxAngle;                 // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLockFollowCameraWhenNoCameraInput;                // 0x0034(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartLockFollowCameraTolerance;                    // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartRotationSyncAngle;                            // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            RotationYawSyncAngularSpeedCurve;                  // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            RotationYawSyncAngularSpeedScaleCurve;             // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawSyncAngularSpeedIncreaseInterpSpeed;            // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartRotationYawSyncDelay;                         // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationSyncEaseTime;                              // 0x0058(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEasingFunc                                   RotationSyncEaseType;                              // 0x005C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCombatYawSync;                                    // 0x005D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DelayForFirstEngage;                               // 0x0060(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHorizontalDistance;                             // 0x0064(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxVerticalDistance;                               // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StopRotationSyncMaxAngle;                          // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalCharacterRotationWeight;                      // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecreaseForCharacterRotation;                      // 0x0074(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalCharacterDistanceWeight;                      // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecreaseForCharacterDistance;                      // 0x007C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TotalCameraRotationWeight;                         // 0x0080(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecreaseForCameraRotation;                         // 0x0084(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwitchThresholdRate;                               // 0x0088(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinimumWeightToEnableSync;                         // 0x008C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePitchSync;                                  // 0x0090(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StartRotationPitchSyncDelay;                       // 0x0094(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchSyncSpringSmoothTime;                         // 0x0098(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchSyncSpringDamp;                               // 0x009C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveVector*                           RotationPitchSyncMapCurve;                         // 0x00A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchCheckChangeLength;                            // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchCheckYawRange;                                // 0x00AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirLandPitch;                                      // 0x00B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FCameraPostProcess_ModifierSpec) == 0x000008, "Wrong alignment on FCameraPostProcess_ModifierSpec");
-static_assert(sizeof(FCameraPostProcess_ModifierSpec) == 0x000038, "Wrong size on FCameraPostProcess_ModifierSpec");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, Modifier) == 0x000000, "Member 'FCameraPostProcess_ModifierSpec::Modifier' has a wrong offset!");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, bActive) == 0x000020, "Member 'FCameraPostProcess_ModifierSpec::bActive' has a wrong offset!");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, bDisabled) == 0x000021, "Member 'FCameraPostProcess_ModifierSpec::bDisabled' has a wrong offset!");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, bPendingDisable) == 0x000022, "Member 'FCameraPostProcess_ModifierSpec::bPendingDisable' has a wrong offset!");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, bRemove) == 0x000023, "Member 'FCameraPostProcess_ModifierSpec::bRemove' has a wrong offset!");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, Priority) == 0x000024, "Member 'FCameraPostProcess_ModifierSpec::Priority' has a wrong offset!");
-static_assert(offsetof(FCameraPostProcess_ModifierSpec, Handle) == 0x000028, "Member 'FCameraPostProcess_ModifierSpec::Handle' has a wrong offset!");
+static_assert(alignof(FCameraOrientationSyncConfig) == 0x000008, "Wrong alignment on FCameraOrientationSyncConfig");
+static_assert(sizeof(FCameraOrientationSyncConfig) == 0x0000B8, "Wrong size on FCameraOrientationSyncConfig");
+static_assert(offsetof(FCameraOrientationSyncConfig, StopYawSyncInputAngularThreshold) == 0x000000, "Member 'FCameraOrientationSyncConfig::StopYawSyncInputAngularThreshold' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, InterruptResetInputAngularThreshold) == 0x000004, "Member 'FCameraOrientationSyncConfig::InterruptResetInputAngularThreshold' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, ResetYawSyncDelayTimeInputAngularThreshold) == 0x000008, "Member 'FCameraOrientationSyncConfig::ResetYawSyncDelayTimeInputAngularThreshold' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, OwnerIsMovingSpeedTolerance) == 0x00000C, "Member 'FCameraOrientationSyncConfig::OwnerIsMovingSpeedTolerance' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, ResetRotationAngularSpeedCurve) == 0x000010, "Member 'FCameraOrientationSyncConfig::ResetRotationAngularSpeedCurve' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, ResetRotationAngularSpeedIncreaseInterpSpeed) == 0x000018, "Member 'FCameraOrientationSyncConfig::ResetRotationAngularSpeedIncreaseInterpSpeed' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, bEnableYawSync) == 0x00001C, "Member 'FCameraOrientationSyncConfig::bEnableYawSync' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, bDoYawSyncWhenNotMoving) == 0x00001D, "Member 'FCameraOrientationSyncConfig::bDoYawSyncWhenNotMoving' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, bStopYawSyncInAir) == 0x00001E, "Member 'FCameraOrientationSyncConfig::bStopYawSyncInAir' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, StopYawSyncInAirDelaySeconds) == 0x000020, "Member 'FCameraOrientationSyncConfig::StopYawSyncInAirDelaySeconds' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, YawSyncMode) == 0x000024, "Member 'FCameraOrientationSyncConfig::YawSyncMode' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, EnableCameraRotationSyncMinAngle) == 0x000028, "Member 'FCameraOrientationSyncConfig::EnableCameraRotationSyncMinAngle' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, EnableCameraRotationSyncMaxAngle) == 0x00002C, "Member 'FCameraOrientationSyncConfig::EnableCameraRotationSyncMaxAngle' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, EnableForwardRotationSyncMaxAngle) == 0x000030, "Member 'FCameraOrientationSyncConfig::EnableForwardRotationSyncMaxAngle' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, bLockFollowCameraWhenNoCameraInput) == 0x000034, "Member 'FCameraOrientationSyncConfig::bLockFollowCameraWhenNoCameraInput' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, StartLockFollowCameraTolerance) == 0x000038, "Member 'FCameraOrientationSyncConfig::StartLockFollowCameraTolerance' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, StartRotationSyncAngle) == 0x00003C, "Member 'FCameraOrientationSyncConfig::StartRotationSyncAngle' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, RotationYawSyncAngularSpeedCurve) == 0x000040, "Member 'FCameraOrientationSyncConfig::RotationYawSyncAngularSpeedCurve' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, RotationYawSyncAngularSpeedScaleCurve) == 0x000048, "Member 'FCameraOrientationSyncConfig::RotationYawSyncAngularSpeedScaleCurve' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, YawSyncAngularSpeedIncreaseInterpSpeed) == 0x000050, "Member 'FCameraOrientationSyncConfig::YawSyncAngularSpeedIncreaseInterpSpeed' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, StartRotationYawSyncDelay) == 0x000054, "Member 'FCameraOrientationSyncConfig::StartRotationYawSyncDelay' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, RotationSyncEaseTime) == 0x000058, "Member 'FCameraOrientationSyncConfig::RotationSyncEaseTime' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, RotationSyncEaseType) == 0x00005C, "Member 'FCameraOrientationSyncConfig::RotationSyncEaseType' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, bCombatYawSync) == 0x00005D, "Member 'FCameraOrientationSyncConfig::bCombatYawSync' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, DelayForFirstEngage) == 0x000060, "Member 'FCameraOrientationSyncConfig::DelayForFirstEngage' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, MaxHorizontalDistance) == 0x000064, "Member 'FCameraOrientationSyncConfig::MaxHorizontalDistance' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, MaxVerticalDistance) == 0x000068, "Member 'FCameraOrientationSyncConfig::MaxVerticalDistance' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, StopRotationSyncMaxAngle) == 0x00006C, "Member 'FCameraOrientationSyncConfig::StopRotationSyncMaxAngle' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, TotalCharacterRotationWeight) == 0x000070, "Member 'FCameraOrientationSyncConfig::TotalCharacterRotationWeight' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, DecreaseForCharacterRotation) == 0x000074, "Member 'FCameraOrientationSyncConfig::DecreaseForCharacterRotation' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, TotalCharacterDistanceWeight) == 0x000078, "Member 'FCameraOrientationSyncConfig::TotalCharacterDistanceWeight' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, DecreaseForCharacterDistance) == 0x00007C, "Member 'FCameraOrientationSyncConfig::DecreaseForCharacterDistance' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, TotalCameraRotationWeight) == 0x000080, "Member 'FCameraOrientationSyncConfig::TotalCameraRotationWeight' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, DecreaseForCameraRotation) == 0x000084, "Member 'FCameraOrientationSyncConfig::DecreaseForCameraRotation' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, SwitchThresholdRate) == 0x000088, "Member 'FCameraOrientationSyncConfig::SwitchThresholdRate' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, MinimumWeightToEnableSync) == 0x00008C, "Member 'FCameraOrientationSyncConfig::MinimumWeightToEnableSync' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, bEnablePitchSync) == 0x000090, "Member 'FCameraOrientationSyncConfig::bEnablePitchSync' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, StartRotationPitchSyncDelay) == 0x000094, "Member 'FCameraOrientationSyncConfig::StartRotationPitchSyncDelay' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, PitchSyncSpringSmoothTime) == 0x000098, "Member 'FCameraOrientationSyncConfig::PitchSyncSpringSmoothTime' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, PitchSyncSpringDamp) == 0x00009C, "Member 'FCameraOrientationSyncConfig::PitchSyncSpringDamp' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, RotationPitchSyncMapCurve) == 0x0000A0, "Member 'FCameraOrientationSyncConfig::RotationPitchSyncMapCurve' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, PitchCheckChangeLength) == 0x0000A8, "Member 'FCameraOrientationSyncConfig::PitchCheckChangeLength' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, PitchCheckYawRange) == 0x0000AC, "Member 'FCameraOrientationSyncConfig::PitchCheckYawRange' has a wrong offset!");
+static_assert(offsetof(FCameraOrientationSyncConfig, AirLandPitch) == 0x0000B0, "Member 'FCameraOrientationSyncConfig::AirLandPitch' has a wrong offset!");
+
+// ScriptStruct X6Camera.X6CameraInputConfig
+// 0x00D0 (0x00D0 - 0x0000)
+struct FX6CameraInputConfig final
+{
+public:
+	uint8                                         bOverride_bAcceptInput : 1;                        // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bAcceptInput;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_InputXRotateSpeedFactor : 1;             // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InputXRotateSpeedFactor;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_InputYRotateSpeedFactor : 1;             // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InputYRotateSpeedFactor;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_CameraOrientationSyncConfig : 1;         // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraOrientationSyncConfig           CameraOrientationSyncConfig;                       // 0x0018(0x00B8)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6CameraInputConfig) == 0x000008, "Wrong alignment on FX6CameraInputConfig");
+static_assert(sizeof(FX6CameraInputConfig) == 0x0000D0, "Wrong size on FX6CameraInputConfig");
+static_assert(offsetof(FX6CameraInputConfig, bAcceptInput) == 0x000001, "Member 'FX6CameraInputConfig::bAcceptInput' has a wrong offset!");
+static_assert(offsetof(FX6CameraInputConfig, InputXRotateSpeedFactor) == 0x000004, "Member 'FX6CameraInputConfig::InputXRotateSpeedFactor' has a wrong offset!");
+static_assert(offsetof(FX6CameraInputConfig, InputYRotateSpeedFactor) == 0x00000C, "Member 'FX6CameraInputConfig::InputYRotateSpeedFactor' has a wrong offset!");
+static_assert(offsetof(FX6CameraInputConfig, CameraOrientationSyncConfig) == 0x000018, "Member 'FX6CameraInputConfig::CameraOrientationSyncConfig' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraTaskEventData
 // 0x0090 (0x0090 - 0x0000)
@@ -425,109 +494,6 @@ static_assert(offsetof(FCameraInputOptimizationConfig, FirstFrameAllowMaxSpeed) 
 static_assert(offsetof(FCameraInputOptimizationConfig, AllowMaxSpeed) == 0x00001C, "Member 'FCameraInputOptimizationConfig::AllowMaxSpeed' has a wrong offset!");
 static_assert(offsetof(FCameraInputOptimizationConfig, SpeedMapScaleCurve) == 0x000020, "Member 'FCameraInputOptimizationConfig::SpeedMapScaleCurve' has a wrong offset!");
 
-// ScriptStruct X6Camera.CameraOrientationSyncConfig
-// 0x00B8 (0x00B8 - 0x0000)
-struct FCameraOrientationSyncConfig final
-{
-public:
-	float                                         StopYawSyncInputAngularThreshold;                  // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterruptResetInputAngularThreshold;               // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ResetYawSyncDelayTimeInputAngularThreshold;        // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OwnerIsMovingSpeedTolerance;                       // 0x000C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            ResetRotationAngularSpeedCurve;                    // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ResetRotationAngularSpeedIncreaseInterpSpeed;      // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableYawSync;                                    // 0x001C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoYawSyncWhenNotMoving;                           // 0x001D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStopYawSyncInAir;                                 // 0x001E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StopYawSyncInAirDelaySeconds;                      // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraRotationYawSyncMode                    YawSyncMode;                                       // 0x0024(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EnableCameraRotationSyncMinAngle;                  // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EnableCameraRotationSyncMaxAngle;                  // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EnableForwardRotationSyncMaxAngle;                 // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLockFollowCameraWhenNoCameraInput;                // 0x0034(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartLockFollowCameraTolerance;                    // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartRotationSyncAngle;                            // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            RotationYawSyncAngularSpeedCurve;                  // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveFloat*                            RotationYawSyncAngularSpeedScaleCurve;             // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         YawSyncAngularSpeedIncreaseInterpSpeed;            // 0x0050(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartRotationYawSyncDelay;                         // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationSyncEaseTime;                              // 0x0058(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEasingFunc                                   RotationSyncEaseType;                              // 0x005C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCombatYawSync;                                    // 0x005D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E[0x2];                                       // 0x005E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DelayForFirstEngage;                               // 0x0060(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHorizontalDistance;                             // 0x0064(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxVerticalDistance;                               // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StopRotationSyncMaxAngle;                          // 0x006C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalCharacterRotationWeight;                      // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecreaseForCharacterRotation;                      // 0x0074(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalCharacterDistanceWeight;                      // 0x0078(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecreaseForCharacterDistance;                      // 0x007C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TotalCameraRotationWeight;                         // 0x0080(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecreaseForCameraRotation;                         // 0x0084(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SwitchThresholdRate;                               // 0x0088(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinimumWeightToEnableSync;                         // 0x008C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePitchSync;                                  // 0x0090(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StartRotationPitchSyncDelay;                       // 0x0094(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchSyncSpringSmoothTime;                         // 0x0098(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchSyncSpringDamp;                               // 0x009C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveVector*                           RotationPitchSyncMapCurve;                         // 0x00A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchCheckChangeLength;                            // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PitchCheckYawRange;                                // 0x00AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AirLandPitch;                                      // 0x00B0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FCameraOrientationSyncConfig) == 0x000008, "Wrong alignment on FCameraOrientationSyncConfig");
-static_assert(sizeof(FCameraOrientationSyncConfig) == 0x0000B8, "Wrong size on FCameraOrientationSyncConfig");
-static_assert(offsetof(FCameraOrientationSyncConfig, StopYawSyncInputAngularThreshold) == 0x000000, "Member 'FCameraOrientationSyncConfig::StopYawSyncInputAngularThreshold' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, InterruptResetInputAngularThreshold) == 0x000004, "Member 'FCameraOrientationSyncConfig::InterruptResetInputAngularThreshold' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, ResetYawSyncDelayTimeInputAngularThreshold) == 0x000008, "Member 'FCameraOrientationSyncConfig::ResetYawSyncDelayTimeInputAngularThreshold' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, OwnerIsMovingSpeedTolerance) == 0x00000C, "Member 'FCameraOrientationSyncConfig::OwnerIsMovingSpeedTolerance' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, ResetRotationAngularSpeedCurve) == 0x000010, "Member 'FCameraOrientationSyncConfig::ResetRotationAngularSpeedCurve' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, ResetRotationAngularSpeedIncreaseInterpSpeed) == 0x000018, "Member 'FCameraOrientationSyncConfig::ResetRotationAngularSpeedIncreaseInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, bEnableYawSync) == 0x00001C, "Member 'FCameraOrientationSyncConfig::bEnableYawSync' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, bDoYawSyncWhenNotMoving) == 0x00001D, "Member 'FCameraOrientationSyncConfig::bDoYawSyncWhenNotMoving' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, bStopYawSyncInAir) == 0x00001E, "Member 'FCameraOrientationSyncConfig::bStopYawSyncInAir' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, StopYawSyncInAirDelaySeconds) == 0x000020, "Member 'FCameraOrientationSyncConfig::StopYawSyncInAirDelaySeconds' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, YawSyncMode) == 0x000024, "Member 'FCameraOrientationSyncConfig::YawSyncMode' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, EnableCameraRotationSyncMinAngle) == 0x000028, "Member 'FCameraOrientationSyncConfig::EnableCameraRotationSyncMinAngle' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, EnableCameraRotationSyncMaxAngle) == 0x00002C, "Member 'FCameraOrientationSyncConfig::EnableCameraRotationSyncMaxAngle' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, EnableForwardRotationSyncMaxAngle) == 0x000030, "Member 'FCameraOrientationSyncConfig::EnableForwardRotationSyncMaxAngle' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, bLockFollowCameraWhenNoCameraInput) == 0x000034, "Member 'FCameraOrientationSyncConfig::bLockFollowCameraWhenNoCameraInput' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, StartLockFollowCameraTolerance) == 0x000038, "Member 'FCameraOrientationSyncConfig::StartLockFollowCameraTolerance' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, StartRotationSyncAngle) == 0x00003C, "Member 'FCameraOrientationSyncConfig::StartRotationSyncAngle' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, RotationYawSyncAngularSpeedCurve) == 0x000040, "Member 'FCameraOrientationSyncConfig::RotationYawSyncAngularSpeedCurve' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, RotationYawSyncAngularSpeedScaleCurve) == 0x000048, "Member 'FCameraOrientationSyncConfig::RotationYawSyncAngularSpeedScaleCurve' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, YawSyncAngularSpeedIncreaseInterpSpeed) == 0x000050, "Member 'FCameraOrientationSyncConfig::YawSyncAngularSpeedIncreaseInterpSpeed' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, StartRotationYawSyncDelay) == 0x000054, "Member 'FCameraOrientationSyncConfig::StartRotationYawSyncDelay' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, RotationSyncEaseTime) == 0x000058, "Member 'FCameraOrientationSyncConfig::RotationSyncEaseTime' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, RotationSyncEaseType) == 0x00005C, "Member 'FCameraOrientationSyncConfig::RotationSyncEaseType' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, bCombatYawSync) == 0x00005D, "Member 'FCameraOrientationSyncConfig::bCombatYawSync' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, DelayForFirstEngage) == 0x000060, "Member 'FCameraOrientationSyncConfig::DelayForFirstEngage' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, MaxHorizontalDistance) == 0x000064, "Member 'FCameraOrientationSyncConfig::MaxHorizontalDistance' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, MaxVerticalDistance) == 0x000068, "Member 'FCameraOrientationSyncConfig::MaxVerticalDistance' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, StopRotationSyncMaxAngle) == 0x00006C, "Member 'FCameraOrientationSyncConfig::StopRotationSyncMaxAngle' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, TotalCharacterRotationWeight) == 0x000070, "Member 'FCameraOrientationSyncConfig::TotalCharacterRotationWeight' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, DecreaseForCharacterRotation) == 0x000074, "Member 'FCameraOrientationSyncConfig::DecreaseForCharacterRotation' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, TotalCharacterDistanceWeight) == 0x000078, "Member 'FCameraOrientationSyncConfig::TotalCharacterDistanceWeight' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, DecreaseForCharacterDistance) == 0x00007C, "Member 'FCameraOrientationSyncConfig::DecreaseForCharacterDistance' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, TotalCameraRotationWeight) == 0x000080, "Member 'FCameraOrientationSyncConfig::TotalCameraRotationWeight' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, DecreaseForCameraRotation) == 0x000084, "Member 'FCameraOrientationSyncConfig::DecreaseForCameraRotation' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, SwitchThresholdRate) == 0x000088, "Member 'FCameraOrientationSyncConfig::SwitchThresholdRate' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, MinimumWeightToEnableSync) == 0x00008C, "Member 'FCameraOrientationSyncConfig::MinimumWeightToEnableSync' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, bEnablePitchSync) == 0x000090, "Member 'FCameraOrientationSyncConfig::bEnablePitchSync' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, StartRotationPitchSyncDelay) == 0x000094, "Member 'FCameraOrientationSyncConfig::StartRotationPitchSyncDelay' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, PitchSyncSpringSmoothTime) == 0x000098, "Member 'FCameraOrientationSyncConfig::PitchSyncSpringSmoothTime' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, PitchSyncSpringDamp) == 0x00009C, "Member 'FCameraOrientationSyncConfig::PitchSyncSpringDamp' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, RotationPitchSyncMapCurve) == 0x0000A0, "Member 'FCameraOrientationSyncConfig::RotationPitchSyncMapCurve' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, PitchCheckChangeLength) == 0x0000A8, "Member 'FCameraOrientationSyncConfig::PitchCheckChangeLength' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, PitchCheckYawRange) == 0x0000AC, "Member 'FCameraOrientationSyncConfig::PitchCheckYawRange' has a wrong offset!");
-static_assert(offsetof(FCameraOrientationSyncConfig, AirLandPitch) == 0x0000B0, "Member 'FCameraOrientationSyncConfig::AirLandPitch' has a wrong offset!");
-
 // ScriptStruct X6Camera.X6CameraBlendableSettings
 // 0x0118 (0x0118 - 0x0000)
 struct FX6CameraBlendableSettings
@@ -604,30 +570,6 @@ static_assert(offsetof(FX6CameraBlendableSettings, OffsetCurveByPitch) == 0x0000
 static_assert(offsetof(FX6CameraBlendableSettings, SocketOffset) == 0x0000C0, "Member 'FX6CameraBlendableSettings::SocketOffset' has a wrong offset!");
 static_assert(offsetof(FX6CameraBlendableSettings, SocketRotationOffset) == 0x0000E0, "Member 'FX6CameraBlendableSettings::SocketRotationOffset' has a wrong offset!");
 static_assert(offsetof(FX6CameraBlendableSettings, TargetOffset) == 0x000100, "Member 'FX6CameraBlendableSettings::TargetOffset' has a wrong offset!");
-
-// ScriptStruct X6Camera.X6CameraInputConfig
-// 0x00D0 (0x00D0 - 0x0000)
-struct FX6CameraInputConfig final
-{
-public:
-	uint8                                         bOverride_bAcceptInput : 1;                        // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bAcceptInput;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_InputXRotateSpeedFactor : 1;             // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InputXRotateSpeedFactor;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_InputYRotateSpeedFactor : 1;             // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InputYRotateSpeedFactor;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_CameraOrientationSyncConfig : 1;         // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraOrientationSyncConfig           CameraOrientationSyncConfig;                       // 0x0018(0x00B8)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6CameraInputConfig) == 0x000008, "Wrong alignment on FX6CameraInputConfig");
-static_assert(sizeof(FX6CameraInputConfig) == 0x0000D0, "Wrong size on FX6CameraInputConfig");
-static_assert(offsetof(FX6CameraInputConfig, bAcceptInput) == 0x000001, "Member 'FX6CameraInputConfig::bAcceptInput' has a wrong offset!");
-static_assert(offsetof(FX6CameraInputConfig, InputXRotateSpeedFactor) == 0x000004, "Member 'FX6CameraInputConfig::InputXRotateSpeedFactor' has a wrong offset!");
-static_assert(offsetof(FX6CameraInputConfig, InputYRotateSpeedFactor) == 0x00000C, "Member 'FX6CameraInputConfig::InputYRotateSpeedFactor' has a wrong offset!");
-static_assert(offsetof(FX6CameraInputConfig, CameraOrientationSyncConfig) == 0x000018, "Member 'FX6CameraInputConfig::CameraOrientationSyncConfig' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraBaseParamsDefine
 // 0x0048 (0x0160 - 0x0118)
@@ -876,6 +818,27 @@ static_assert(sizeof(FCameraModifier_VFX) == 0x000010, "Wrong size on FCameraMod
 static_assert(offsetof(FCameraModifier_VFX, VFXType) == 0x000000, "Member 'FCameraModifier_VFX::VFXType' has a wrong offset!");
 static_assert(offsetof(FCameraModifier_VFX, Curve) == 0x000008, "Member 'FCameraModifier_VFX::Curve' has a wrong offset!");
 
+// ScriptStruct X6Camera.CameraModifier_PostProcess
+// 0x0020 (0x0020 - 0x0000)
+struct FCameraModifier_PostProcess final
+{
+public:
+	ECameraValueModifyType                        CameraValueModifyType;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ValueScale;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeScale;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            Curve;                                             // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraModifier>            CameraModifierSource;                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCameraModifier_PostProcess) == 0x000008, "Wrong alignment on FCameraModifier_PostProcess");
+static_assert(sizeof(FCameraModifier_PostProcess) == 0x000020, "Wrong size on FCameraModifier_PostProcess");
+static_assert(offsetof(FCameraModifier_PostProcess, CameraValueModifyType) == 0x000000, "Member 'FCameraModifier_PostProcess::CameraValueModifyType' has a wrong offset!");
+static_assert(offsetof(FCameraModifier_PostProcess, ValueScale) == 0x000004, "Member 'FCameraModifier_PostProcess::ValueScale' has a wrong offset!");
+static_assert(offsetof(FCameraModifier_PostProcess, TimeScale) == 0x000008, "Member 'FCameraModifier_PostProcess::TimeScale' has a wrong offset!");
+static_assert(offsetof(FCameraModifier_PostProcess, Curve) == 0x000010, "Member 'FCameraModifier_PostProcess::Curve' has a wrong offset!");
+static_assert(offsetof(FCameraModifier_PostProcess, CameraModifierSource) == 0x000018, "Member 'FCameraModifier_PostProcess::CameraModifierSource' has a wrong offset!");
+
 // ScriptStruct X6Camera.CameraModifier_InterpLookAtLocData
 // 0x0018 (0x0018 - 0x0000)
 struct FCameraModifier_InterpLookAtLocData final
@@ -958,6 +921,18 @@ static_assert(offsetof(FCameraModifierEffect, Priority) == 0x000000, "Member 'FC
 static_assert(offsetof(FCameraModifierEffect, CameraLayer) == 0x000001, "Member 'FCameraModifierEffect::CameraLayer' has a wrong offset!");
 static_assert(offsetof(FCameraModifierEffect, ModifierConfigData) == 0x000008, "Member 'FCameraModifierEffect::ModifierConfigData' has a wrong offset!");
 static_assert(offsetof(FCameraModifierEffect, LifeSpan) == 0x0000D8, "Member 'FCameraModifierEffect::LifeSpan' has a wrong offset!");
+
+// ScriptStruct X6Camera.CameraModifierSpecHandle
+// 0x000C (0x000C - 0x0000)
+struct FCameraModifierSpecHandle final
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Handle;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FCameraModifierSpecHandle) == 0x000004, "Wrong alignment on FCameraModifierSpecHandle");
+static_assert(sizeof(FCameraModifierSpecHandle) == 0x00000C, "Wrong size on FCameraModifierSpecHandle");
+static_assert(offsetof(FCameraModifierSpecHandle, Handle) == 0x000008, "Member 'FCameraModifierSpecHandle::Handle' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraModifierEffectSpec
 // 0x0118 (0x0118 - 0x0000)
@@ -1429,6 +1404,31 @@ static_assert(alignof(FCameraFOV) == 0x000004, "Wrong alignment on FCameraFOV");
 static_assert(sizeof(FCameraFOV) == 0x000008, "Wrong size on FCameraFOV");
 static_assert(offsetof(FCameraFOV, FOVModifier) == 0x000000, "Member 'FCameraFOV::FOVModifier' has a wrong offset!");
 static_assert(offsetof(FCameraFOV, CameraValueModifyType) == 0x000004, "Member 'FCameraFOV::CameraValueModifyType' has a wrong offset!");
+
+// ScriptStruct X6Camera.CameraPostProcess_ModifierSpec
+// 0x0038 (0x0038 - 0x0000)
+struct FCameraPostProcess_ModifierSpec final
+{
+public:
+	struct FCameraModifier_PostProcess            Modifier;                                          // 0x0000(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bActive;                                           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisabled;                                         // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPendingDisable;                                   // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRemove;                                           // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6CameraDataPriority                         Priority;                                          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraModifierSpecHandle              Handle;                                            // 0x0028(0x000C)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FCameraPostProcess_ModifierSpec) == 0x000008, "Wrong alignment on FCameraPostProcess_ModifierSpec");
+static_assert(sizeof(FCameraPostProcess_ModifierSpec) == 0x000038, "Wrong size on FCameraPostProcess_ModifierSpec");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, Modifier) == 0x000000, "Member 'FCameraPostProcess_ModifierSpec::Modifier' has a wrong offset!");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, bActive) == 0x000020, "Member 'FCameraPostProcess_ModifierSpec::bActive' has a wrong offset!");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, bDisabled) == 0x000021, "Member 'FCameraPostProcess_ModifierSpec::bDisabled' has a wrong offset!");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, bPendingDisable) == 0x000022, "Member 'FCameraPostProcess_ModifierSpec::bPendingDisable' has a wrong offset!");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, bRemove) == 0x000023, "Member 'FCameraPostProcess_ModifierSpec::bRemove' has a wrong offset!");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, Priority) == 0x000024, "Member 'FCameraPostProcess_ModifierSpec::Priority' has a wrong offset!");
+static_assert(offsetof(FCameraPostProcess_ModifierSpec, Handle) == 0x000028, "Member 'FCameraPostProcess_ModifierSpec::Handle' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraShake_ModifierSpec
 // 0x0020 (0x0020 - 0x0000)

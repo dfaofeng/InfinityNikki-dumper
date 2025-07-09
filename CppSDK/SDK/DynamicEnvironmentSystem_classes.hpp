@@ -62,7 +62,7 @@ static_assert(sizeof(UDynamicEnvironmentSystemBPLibrary) == 0x000028, "Wrong siz
 
 // Class DynamicEnvironmentSystem.DynamicEnvironmentSystemManager
 // 0x1278 (0x1620 - 0x03A8)
-class alignas(0x10) ADynamicEnvironmentSystemManager final : public AActor
+class alignas(0x10) ADynamicEnvironmentSystemManager : public AActor
 {
 public:
 	uint8                                         Pad_3A8[0x10C8];                                   // 0x03A8(0x10C8)(Fixing Size After Last Property [ Dumper-7 ])
@@ -208,7 +208,7 @@ static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyLightIntensityOverri
 
 // Class DynamicEnvironmentSystem.TODPresetConfig
 // 0x0A18 (0x0A40 - 0x0028)
-class UTODPresetConfig final : public UObject
+class UTODPresetConfig : public UObject
 {
 public:
 	struct FTODLerpConfig                         TODSetting;                                        // 0x0028(0x0840)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
@@ -322,7 +322,7 @@ static_assert(offsetof(UEnvironmentConfig, EnvironmentSetting) == 0x000028, "Mem
 
 // Class DynamicEnvironmentSystem.PostprocessPresetConfig
 // 0x08B8 (0x08E0 - 0x0028)
-class UPostprocessPresetConfig final : public UObject
+class UPostprocessPresetConfig : public UObject
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -346,7 +346,7 @@ static_assert(offsetof(UPostprocessPresetConfig, MobilePPSetting) == 0x000880, "
 
 // Class DynamicEnvironmentSystem.WeatherPresetConfig
 // 0x0310 (0x0338 - 0x0028)
-class UWeatherPresetConfig final : public UObject
+class UWeatherPresetConfig : public UObject
 {
 public:
 	struct FWeatherBaseLerpConfig                 WeatherControl;                                    // 0x0028(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
@@ -367,7 +367,7 @@ static_assert(offsetof(UWeatherPresetConfig, WeatherControl) == 0x000028, "Membe
 
 // Class DynamicEnvironmentSystem.CharacterPresetConfig
 // 0x0130 (0x0158 - 0x0028)
-class UCharacterPresetConfig final : public UObject
+class UCharacterPresetConfig : public UObject
 {
 public:
 	struct FCharacterLerpConfig                   CharacterSetting;                                  // 0x0028(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
@@ -485,7 +485,7 @@ static_assert(offsetof(UDynamicWeatherAmbianceComponent, BlendWeight) == 0x002B0
 
 // Class DynamicEnvironmentSystem.DynamicWeatherComponent
 // 0x0030 (0x0260 - 0x0230)
-class UDynamicWeatherComponent final : public USceneComponent
+class UDynamicWeatherComponent : public USceneComponent
 {
 public:
 	uint8                                         Pad_230[0x18];                                     // 0x0230(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
@@ -521,7 +521,7 @@ static_assert(offsetof(UDynamicWeatherComponent, BlendWeight) == 0x000250, "Memb
 
 // Class DynamicEnvironmentSystem.DynamicWeatherManager
 // 0x0118 (0x04C0 - 0x03A8)
-class ADynamicWeatherManager final : public AActor
+class ADynamicWeatherManager : public AActor
 {
 public:
 	uint8                                         Pad_3A8[0x30];                                     // 0x03A8(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
@@ -573,7 +573,7 @@ static_assert(offsetof(ADynamicWeatherManager, WeatherList) == 0x0004B0, "Member
 
 // Class DynamicEnvironmentSystem.DynamicWeatherOccluder
 // 0x0018 (0x03C0 - 0x03A8)
-class ADynamicWeatherOccluder final : public AActor
+class ADynamicWeatherOccluder : public AActor
 {
 public:
 	class UTopdownDepthCaptureComponent*          ShadowLightComponent;                              // 0x03A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -740,7 +740,7 @@ static_assert(offsetof(UDynamicWetnessComponent, WetnessParams) == 0x000230, "Me
 
 // Class DynamicEnvironmentSystem.EnvironmentLevelConfigActor
 // 0x06C8 (0x0A70 - 0x03A8)
-class AEnvironmentLevelConfigActor final : public AActor
+class AEnvironmentLevelConfigActor : public AActor
 {
 public:
 	class FString                                 EnvironmentWeatherName;                            // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -777,7 +777,7 @@ static_assert(offsetof(AEnvironmentLevelConfigActor, ConsoleVariables) == 0x000A
 
 // Class DynamicEnvironmentSystem.EnvironmentLevelConfigManager
 // 0x06E8 (0x0A90 - 0x03A8)
-class AEnvironmentLevelConfigManager final : public AActor
+class AEnvironmentLevelConfigManager : public AActor
 {
 public:
 	class ADynamicEnvironmentSystemManager*       TODSystem;                                         // 0x03A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "Enum_HatredTickParams_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
 
 

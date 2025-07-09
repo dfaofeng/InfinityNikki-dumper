@@ -41,6 +41,17 @@ enum class ETargetingTraceType : uint8
 	ETargetingTraceType_MAX                  = 4,
 };
 
+// ScriptStruct TargetingSystem.TargetingTaskSet
+// 0x0010 (0x0010 - 0x0000)
+struct FTargetingTaskSet final
+{
+public:
+	TArray<class UTargetingTask*>                 Tasks;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FTargetingTaskSet) == 0x000008, "Wrong alignment on FTargetingTaskSet");
+static_assert(sizeof(FTargetingTaskSet) == 0x000010, "Wrong size on FTargetingTaskSet");
+static_assert(offsetof(FTargetingTaskSet, Tasks) == 0x000000, "Member 'FTargetingTaskSet::Tasks' has a wrong offset!");
+
 // ScriptStruct TargetingSystem.TargetingRequestHandle
 // 0x0004 (0x0004 - 0x0000)
 struct alignas(0x04) FTargetingRequestHandle final
@@ -61,17 +72,6 @@ public:
 static_assert(alignof(FCollisionQueryTaskData) == 0x000008, "Wrong alignment on FCollisionQueryTaskData");
 static_assert(sizeof(FCollisionQueryTaskData) == 0x000010, "Wrong size on FCollisionQueryTaskData");
 static_assert(offsetof(FCollisionQueryTaskData, IgnoredActors) == 0x000000, "Member 'FCollisionQueryTaskData::IgnoredActors' has a wrong offset!");
-
-// ScriptStruct TargetingSystem.TargetingTaskSet
-// 0x0010 (0x0010 - 0x0000)
-struct FTargetingTaskSet final
-{
-public:
-	TArray<class UTargetingTask*>                 Tasks;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FTargetingTaskSet) == 0x000008, "Wrong alignment on FTargetingTaskSet");
-static_assert(sizeof(FTargetingTaskSet) == 0x000010, "Wrong size on FTargetingTaskSet");
-static_assert(offsetof(FTargetingTaskSet, Tasks) == 0x000000, "Member 'FTargetingTaskSet::Tasks' has a wrong offset!");
 
 // ScriptStruct TargetingSystem.TargetingDefaultResultData
 // 0x0100 (0x0100 - 0x0000)

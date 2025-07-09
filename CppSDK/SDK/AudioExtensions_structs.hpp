@@ -54,6 +54,39 @@ enum class EAudioParameterType : uint8
 	EAudioParameterType_MAX                  = 14,
 };
 
+// ScriptStruct AudioExtensions.SoundGeneratorOutput
+// 0x0008 (0x0008 - 0x0000)
+struct FSoundGeneratorOutput
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSoundGeneratorOutput) == 0x000004, "Wrong alignment on FSoundGeneratorOutput");
+static_assert(sizeof(FSoundGeneratorOutput) == 0x000008, "Wrong size on FSoundGeneratorOutput");
+static_assert(offsetof(FSoundGeneratorOutput, Name) == 0x000000, "Member 'FSoundGeneratorOutput::Name' has a wrong offset!");
+
+// ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformProjectSettings
+// 0x0001 (0x0001 - 0x0000)
+struct FSoundWaveCloudStreamingPlatformProjectSettings final
+{
+public:
+	ESoundWaveCloudStreamingPlatformProjectEnableType EnablementSetting;                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSoundWaveCloudStreamingPlatformProjectSettings) == 0x000001, "Wrong alignment on FSoundWaveCloudStreamingPlatformProjectSettings");
+static_assert(sizeof(FSoundWaveCloudStreamingPlatformProjectSettings) == 0x000001, "Wrong size on FSoundWaveCloudStreamingPlatformProjectSettings");
+static_assert(offsetof(FSoundWaveCloudStreamingPlatformProjectSettings, EnablementSetting) == 0x000000, "Member 'FSoundWaveCloudStreamingPlatformProjectSettings::EnablementSetting' has a wrong offset!");
+
+// ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformSettings
+// 0x0001 (0x0001 - 0x0000)
+struct FSoundWaveCloudStreamingPlatformSettings final
+{
+public:
+	ESoundWaveCloudStreamingPlatformEnableType    EnablementSetting;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSoundWaveCloudStreamingPlatformSettings) == 0x000001, "Wrong alignment on FSoundWaveCloudStreamingPlatformSettings");
+static_assert(sizeof(FSoundWaveCloudStreamingPlatformSettings) == 0x000001, "Wrong size on FSoundWaveCloudStreamingPlatformSettings");
+static_assert(offsetof(FSoundWaveCloudStreamingPlatformSettings, EnablementSetting) == 0x000000, "Member 'FSoundWaveCloudStreamingPlatformSettings::EnablementSetting' has a wrong offset!");
+
 // ScriptStruct AudioExtensions.AudioParameter
 // 0x00A0 (0x00A0 - 0x0000)
 struct FAudioParameter
@@ -92,39 +125,6 @@ static_assert(offsetof(FAudioParameter, ArrayObjectParam) == 0x000060, "Member '
 static_assert(offsetof(FAudioParameter, ArrayStringParam) == 0x000070, "Member 'FAudioParameter::ArrayStringParam' has a wrong offset!");
 static_assert(offsetof(FAudioParameter, ParamType) == 0x000080, "Member 'FAudioParameter::ParamType' has a wrong offset!");
 static_assert(offsetof(FAudioParameter, TypeName) == 0x000084, "Member 'FAudioParameter::TypeName' has a wrong offset!");
-
-// ScriptStruct AudioExtensions.SoundGeneratorOutput
-// 0x0008 (0x0008 - 0x0000)
-struct FSoundGeneratorOutput
-{
-public:
-	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSoundGeneratorOutput) == 0x000004, "Wrong alignment on FSoundGeneratorOutput");
-static_assert(sizeof(FSoundGeneratorOutput) == 0x000008, "Wrong size on FSoundGeneratorOutput");
-static_assert(offsetof(FSoundGeneratorOutput, Name) == 0x000000, "Member 'FSoundGeneratorOutput::Name' has a wrong offset!");
-
-// ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformProjectSettings
-// 0x0001 (0x0001 - 0x0000)
-struct FSoundWaveCloudStreamingPlatformProjectSettings final
-{
-public:
-	ESoundWaveCloudStreamingPlatformProjectEnableType EnablementSetting;                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSoundWaveCloudStreamingPlatformProjectSettings) == 0x000001, "Wrong alignment on FSoundWaveCloudStreamingPlatformProjectSettings");
-static_assert(sizeof(FSoundWaveCloudStreamingPlatformProjectSettings) == 0x000001, "Wrong size on FSoundWaveCloudStreamingPlatformProjectSettings");
-static_assert(offsetof(FSoundWaveCloudStreamingPlatformProjectSettings, EnablementSetting) == 0x000000, "Member 'FSoundWaveCloudStreamingPlatformProjectSettings::EnablementSetting' has a wrong offset!");
-
-// ScriptStruct AudioExtensions.SoundWaveCloudStreamingPlatformSettings
-// 0x0001 (0x0001 - 0x0000)
-struct FSoundWaveCloudStreamingPlatformSettings final
-{
-public:
-	ESoundWaveCloudStreamingPlatformEnableType    EnablementSetting;                                 // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSoundWaveCloudStreamingPlatformSettings) == 0x000001, "Wrong alignment on FSoundWaveCloudStreamingPlatformSettings");
-static_assert(sizeof(FSoundWaveCloudStreamingPlatformSettings) == 0x000001, "Wrong size on FSoundWaveCloudStreamingPlatformSettings");
-static_assert(offsetof(FSoundWaveCloudStreamingPlatformSettings, EnablementSetting) == 0x000000, "Member 'FSoundWaveCloudStreamingPlatformSettings::EnablementSetting' has a wrong offset!");
 
 }
 

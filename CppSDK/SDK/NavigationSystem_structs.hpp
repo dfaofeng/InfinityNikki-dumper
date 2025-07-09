@@ -150,19 +150,6 @@ public:
 static_assert(alignof(FNavigationFilterFlags) == 0x000004, "Wrong alignment on FNavigationFilterFlags");
 static_assert(sizeof(FNavigationFilterFlags) == 0x000004, "Wrong size on FNavigationFilterFlags");
 
-// ScriptStruct NavigationSystem.NavLinkCustomInstanceData
-// 0x0010 (0x0078 - 0x0068)
-struct FNavLinkCustomInstanceData final : public FActorComponentInstanceData
-{
-public:
-	struct FNavLinkId                             CustomLinkId;                                      // 0x0068(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNavLinkAuxiliaryId                    AuxiliaryCustomLinkId;                             // 0x0070(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FNavLinkCustomInstanceData) == 0x000008, "Wrong alignment on FNavLinkCustomInstanceData");
-static_assert(sizeof(FNavLinkCustomInstanceData) == 0x000078, "Wrong size on FNavLinkCustomInstanceData");
-static_assert(offsetof(FNavLinkCustomInstanceData, CustomLinkId) == 0x000068, "Member 'FNavLinkCustomInstanceData::CustomLinkId' has a wrong offset!");
-static_assert(offsetof(FNavLinkCustomInstanceData, AuxiliaryCustomLinkId) == 0x000070, "Member 'FNavLinkCustomInstanceData::AuxiliaryCustomLinkId' has a wrong offset!");
-
 // ScriptStruct NavigationSystem.NavGraphEdge
 // 0x0018 (0x0018 - 0x0000)
 struct alignas(0x08) FNavGraphEdge final
@@ -200,6 +187,19 @@ static_assert(sizeof(FSupportedAreaData) == 0x000020, "Wrong size on FSupportedA
 static_assert(offsetof(FSupportedAreaData, AreaClassName) == 0x000000, "Member 'FSupportedAreaData::AreaClassName' has a wrong offset!");
 static_assert(offsetof(FSupportedAreaData, AreaID) == 0x000010, "Member 'FSupportedAreaData::AreaID' has a wrong offset!");
 static_assert(offsetof(FSupportedAreaData, AreaClass) == 0x000018, "Member 'FSupportedAreaData::AreaClass' has a wrong offset!");
+
+// ScriptStruct NavigationSystem.NavLinkCustomInstanceData
+// 0x0010 (0x0078 - 0x0068)
+struct FNavLinkCustomInstanceData final : public FActorComponentInstanceData
+{
+public:
+	struct FNavLinkId                             CustomLinkId;                                      // 0x0068(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNavLinkAuxiliaryId                    AuxiliaryCustomLinkId;                             // 0x0070(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNavLinkCustomInstanceData) == 0x000008, "Wrong alignment on FNavLinkCustomInstanceData");
+static_assert(sizeof(FNavLinkCustomInstanceData) == 0x000078, "Wrong size on FNavLinkCustomInstanceData");
+static_assert(offsetof(FNavLinkCustomInstanceData, CustomLinkId) == 0x000068, "Member 'FNavLinkCustomInstanceData::CustomLinkId' has a wrong offset!");
+static_assert(offsetof(FNavLinkCustomInstanceData, AuxiliaryCustomLinkId) == 0x000070, "Member 'FNavLinkCustomInstanceData::AuxiliaryCustomLinkId' has a wrong offset!");
 
 // ScriptStruct NavigationSystem.RecastNavMeshGenerationProperties
 // 0x0040 (0x0040 - 0x0000)

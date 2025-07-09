@@ -535,7 +535,7 @@ static_assert(offsetof(UCameraBaseParamsData, bCacheCameraSettingsWhenLockOutgoi
 
 // Class X6Camera.CameraCollisionProcess
 // 0x0148 (0x01F0 - 0x00A8)
-class UCameraCollisionProcess final : public UActorComponent
+class UCameraCollisionProcess : public UActorComponent
 {
 public:
 	class UCameraCollisionConfig*                 CollisionConfig;                                   // 0x00A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -660,7 +660,7 @@ static_assert(offsetof(UCameraEffectComponent, bStandAloneToUse) == 0x0000C7, "M
 
 // Class X6Camera.CameraLagProcess
 // 0x0220 (0x02C8 - 0x00A8)
-class UCameraLagProcess final : public UActorComponent
+class UCameraLagProcess : public UActorComponent
 {
 public:
 	bool                                          bDrawLagDebug;                                     // 0x00A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

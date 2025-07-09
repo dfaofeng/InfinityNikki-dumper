@@ -18,7 +18,7 @@ namespace SDK
 
 // Class PaperEffects.PaperDissolveManager
 // 0x0000 (0x03A8 - 0x03A8)
-class APaperDissolveManager final : public AActor
+class APaperDissolveManager : public AActor
 {
 public:
 	void OnInstancedFoliageDissolve(const TArray<struct FNeedDissolveItemInfo>& ISMs);

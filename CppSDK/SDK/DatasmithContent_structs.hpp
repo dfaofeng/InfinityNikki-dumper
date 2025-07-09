@@ -137,68 +137,6 @@ enum class EDatasmithCADRetessellationRule : uint8
 	EDatasmithCADRetessellationRule_MAX      = 2,
 };
 
-// ScriptStruct DatasmithContent.DatasmithCameraLensSettingsTemplate
-// 0x0004 (0x0004 - 0x0000)
-struct FDatasmithCameraLensSettingsTemplate final
-{
-public:
-	float                                         MaxFStop;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDatasmithCameraLensSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraLensSettingsTemplate");
-static_assert(sizeof(FDatasmithCameraLensSettingsTemplate) == 0x000004, "Wrong size on FDatasmithCameraLensSettingsTemplate");
-static_assert(offsetof(FDatasmithCameraLensSettingsTemplate, MaxFStop) == 0x000000, "Member 'FDatasmithCameraLensSettingsTemplate::MaxFStop' has a wrong offset!");
-
-// ScriptStruct DatasmithContent.DatasmithImportInfo
-// 0x0001 (0x0001 - 0x0000)
-struct FDatasmithImportInfo final
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDatasmithImportInfo) == 0x000001, "Wrong alignment on FDatasmithImportInfo");
-static_assert(sizeof(FDatasmithImportInfo) == 0x000001, "Wrong size on FDatasmithImportInfo");
-
-// ScriptStruct DatasmithContent.DatasmithCameraLookatTrackingSettingsTemplate
-// 0x0030 (0x0030 - 0x0000)
-struct FDatasmithCameraLookatTrackingSettingsTemplate final
-{
-public:
-	uint8                                         bEnableLookAtTracking : 1;                         // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bAllowRoll : 1;                                    // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class AActor>                  ActorToTrack;                                      // 0x0008(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDatasmithCameraLookatTrackingSettingsTemplate) == 0x000008, "Wrong alignment on FDatasmithCameraLookatTrackingSettingsTemplate");
-static_assert(sizeof(FDatasmithCameraLookatTrackingSettingsTemplate) == 0x000030, "Wrong size on FDatasmithCameraLookatTrackingSettingsTemplate");
-static_assert(offsetof(FDatasmithCameraLookatTrackingSettingsTemplate, ActorToTrack) == 0x000008, "Member 'FDatasmithCameraLookatTrackingSettingsTemplate::ActorToTrack' has a wrong offset!");
-
-// ScriptStruct DatasmithContent.DatasmithCameraFilmbackSettingsTemplate
-// 0x0008 (0x0008 - 0x0000)
-struct FDatasmithCameraFilmbackSettingsTemplate final
-{
-public:
-	float                                         SensorWidth;                                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SensorHeight;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDatasmithCameraFilmbackSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraFilmbackSettingsTemplate");
-static_assert(sizeof(FDatasmithCameraFilmbackSettingsTemplate) == 0x000008, "Wrong size on FDatasmithCameraFilmbackSettingsTemplate");
-static_assert(offsetof(FDatasmithCameraFilmbackSettingsTemplate, SensorWidth) == 0x000000, "Member 'FDatasmithCameraFilmbackSettingsTemplate::SensorWidth' has a wrong offset!");
-static_assert(offsetof(FDatasmithCameraFilmbackSettingsTemplate, SensorHeight) == 0x000004, "Member 'FDatasmithCameraFilmbackSettingsTemplate::SensorHeight' has a wrong offset!");
-
-// ScriptStruct DatasmithContent.DatasmithCameraFocusSettingsTemplate
-// 0x0008 (0x0008 - 0x0000)
-struct FDatasmithCameraFocusSettingsTemplate final
-{
-public:
-	ECameraFocusMethod                            FocusMethod;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ManualFocusDistance;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDatasmithCameraFocusSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraFocusSettingsTemplate");
-static_assert(sizeof(FDatasmithCameraFocusSettingsTemplate) == 0x000008, "Wrong size on FDatasmithCameraFocusSettingsTemplate");
-static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, FocusMethod) == 0x000000, "Member 'FDatasmithCameraFocusSettingsTemplate::FocusMethod' has a wrong offset!");
-static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, ManualFocusDistance) == 0x000004, "Member 'FDatasmithCameraFocusSettingsTemplate::ManualFocusDistance' has a wrong offset!");
-
 // ScriptStruct DatasmithContent.DatasmithPostProcessSettingsTemplate
 // 0x0040 (0x0040 - 0x0000)
 struct FDatasmithPostProcessSettingsTemplate final
@@ -232,6 +170,68 @@ static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, AutoExposureMethod
 static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, CameraISO) == 0x000034, "Member 'FDatasmithPostProcessSettingsTemplate::CameraISO' has a wrong offset!");
 static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, CameraShutterSpeed) == 0x000038, "Member 'FDatasmithPostProcessSettingsTemplate::CameraShutterSpeed' has a wrong offset!");
 static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, DepthOfFieldFstop) == 0x00003C, "Member 'FDatasmithPostProcessSettingsTemplate::DepthOfFieldFstop' has a wrong offset!");
+
+// ScriptStruct DatasmithContent.DatasmithImportInfo
+// 0x0001 (0x0001 - 0x0000)
+struct FDatasmithImportInfo final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FDatasmithImportInfo) == 0x000001, "Wrong alignment on FDatasmithImportInfo");
+static_assert(sizeof(FDatasmithImportInfo) == 0x000001, "Wrong size on FDatasmithImportInfo");
+
+// ScriptStruct DatasmithContent.DatasmithCameraFocusSettingsTemplate
+// 0x0008 (0x0008 - 0x0000)
+struct FDatasmithCameraFocusSettingsTemplate final
+{
+public:
+	ECameraFocusMethod                            FocusMethod;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ManualFocusDistance;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDatasmithCameraFocusSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraFocusSettingsTemplate");
+static_assert(sizeof(FDatasmithCameraFocusSettingsTemplate) == 0x000008, "Wrong size on FDatasmithCameraFocusSettingsTemplate");
+static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, FocusMethod) == 0x000000, "Member 'FDatasmithCameraFocusSettingsTemplate::FocusMethod' has a wrong offset!");
+static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, ManualFocusDistance) == 0x000004, "Member 'FDatasmithCameraFocusSettingsTemplate::ManualFocusDistance' has a wrong offset!");
+
+// ScriptStruct DatasmithContent.DatasmithCameraLookatTrackingSettingsTemplate
+// 0x0030 (0x0030 - 0x0000)
+struct FDatasmithCameraLookatTrackingSettingsTemplate final
+{
+public:
+	uint8                                         bEnableLookAtTracking : 1;                         // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bAllowRoll : 1;                                    // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class AActor>                  ActorToTrack;                                      // 0x0008(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDatasmithCameraLookatTrackingSettingsTemplate) == 0x000008, "Wrong alignment on FDatasmithCameraLookatTrackingSettingsTemplate");
+static_assert(sizeof(FDatasmithCameraLookatTrackingSettingsTemplate) == 0x000030, "Wrong size on FDatasmithCameraLookatTrackingSettingsTemplate");
+static_assert(offsetof(FDatasmithCameraLookatTrackingSettingsTemplate, ActorToTrack) == 0x000008, "Member 'FDatasmithCameraLookatTrackingSettingsTemplate::ActorToTrack' has a wrong offset!");
+
+// ScriptStruct DatasmithContent.DatasmithCameraFilmbackSettingsTemplate
+// 0x0008 (0x0008 - 0x0000)
+struct FDatasmithCameraFilmbackSettingsTemplate final
+{
+public:
+	float                                         SensorWidth;                                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SensorHeight;                                      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDatasmithCameraFilmbackSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraFilmbackSettingsTemplate");
+static_assert(sizeof(FDatasmithCameraFilmbackSettingsTemplate) == 0x000008, "Wrong size on FDatasmithCameraFilmbackSettingsTemplate");
+static_assert(offsetof(FDatasmithCameraFilmbackSettingsTemplate, SensorWidth) == 0x000000, "Member 'FDatasmithCameraFilmbackSettingsTemplate::SensorWidth' has a wrong offset!");
+static_assert(offsetof(FDatasmithCameraFilmbackSettingsTemplate, SensorHeight) == 0x000004, "Member 'FDatasmithCameraFilmbackSettingsTemplate::SensorHeight' has a wrong offset!");
+
+// ScriptStruct DatasmithContent.DatasmithCameraLensSettingsTemplate
+// 0x0004 (0x0004 - 0x0000)
+struct FDatasmithCameraLensSettingsTemplate final
+{
+public:
+	float                                         MaxFStop;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDatasmithCameraLensSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraLensSettingsTemplate");
+static_assert(sizeof(FDatasmithCameraLensSettingsTemplate) == 0x000004, "Wrong size on FDatasmithCameraLensSettingsTemplate");
+static_assert(offsetof(FDatasmithCameraLensSettingsTemplate, MaxFStop) == 0x000000, "Member 'FDatasmithCameraLensSettingsTemplate::MaxFStop' has a wrong offset!");
 
 // ScriptStruct DatasmithContent.DatasmithAssetImportOptions
 // 0x0008 (0x0008 - 0x0000)

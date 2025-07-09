@@ -158,6 +158,16 @@ static_assert(alignof(FPointWeightMap) == 0x000008, "Wrong alignment on FPointWe
 static_assert(sizeof(FPointWeightMap) == 0x000010, "Wrong size on FPointWeightMap");
 static_assert(offsetof(FPointWeightMap, Values) == 0x000000, "Member 'FPointWeightMap::Values' has a wrong offset!");
 
+// ScriptStruct ClothingSystemRuntimeCommon.ClothTetherData
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FClothTetherData final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FClothTetherData) == 0x000008, "Wrong alignment on FClothTetherData");
+static_assert(sizeof(FClothTetherData) == 0x000010, "Wrong size on FClothTetherData");
+
 // ScriptStruct ClothingSystemRuntimeCommon.IntArrayData
 // 0x0010 (0x0010 - 0x0000)
 struct FIntArrayData final
@@ -168,32 +178,6 @@ public:
 static_assert(alignof(FIntArrayData) == 0x000008, "Wrong alignment on FIntArrayData");
 static_assert(sizeof(FIntArrayData) == 0x000010, "Wrong size on FIntArrayData");
 static_assert(offsetof(FIntArrayData, IntArrayData) == 0x000000, "Member 'FIntArrayData::IntArrayData' has a wrong offset!");
-
-// ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalSpringData
-// 0x0040 (0x0040 - 0x0000)
-struct FClothPhysicalSpringData final
-{
-public:
-	TArray<struct FIntArrayData>                  ConstraintsPerColorIntArray;                       // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Constraints;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 Dists;                                             // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FClothPhysicalSpringData) == 0x000008, "Wrong alignment on FClothPhysicalSpringData");
-static_assert(sizeof(FClothPhysicalSpringData) == 0x000040, "Wrong size on FClothPhysicalSpringData");
-static_assert(offsetof(FClothPhysicalSpringData, ConstraintsPerColorIntArray) == 0x000000, "Member 'FClothPhysicalSpringData::ConstraintsPerColorIntArray' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalSpringData, Constraints) == 0x000010, "Member 'FClothPhysicalSpringData::Constraints' has a wrong offset!");
-static_assert(offsetof(FClothPhysicalSpringData, Dists) == 0x000020, "Member 'FClothPhysicalSpringData::Dists' has a wrong offset!");
-
-// ScriptStruct ClothingSystemRuntimeCommon.ClothTetherData
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FClothTetherData final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FClothTetherData) == 0x000008, "Wrong alignment on FClothTetherData");
-static_assert(sizeof(FClothTetherData) == 0x000010, "Wrong size on FClothTetherData");
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalTriangleData
 // 0x0048 (0x0048 - 0x0000)
@@ -212,6 +196,22 @@ static_assert(offsetof(FClothPhysicalTriangleData, Elements) == 0x000000, "Membe
 static_assert(offsetof(FClothPhysicalTriangleData, PointToTriangleMapIntArray) == 0x000010, "Member 'FClothPhysicalTriangleData::PointToTriangleMapIntArray' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalTriangleData, BendingElements) == 0x000020, "Member 'FClothPhysicalTriangleData::BendingElements' has a wrong offset!");
 static_assert(offsetof(FClothPhysicalTriangleData, NumIndices) == 0x000030, "Member 'FClothPhysicalTriangleData::NumIndices' has a wrong offset!");
+
+// ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalSpringData
+// 0x0040 (0x0040 - 0x0000)
+struct FClothPhysicalSpringData final
+{
+public:
+	TArray<struct FIntArrayData>                  ConstraintsPerColorIntArray;                       // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Constraints;                                       // 0x0010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 Dists;                                             // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0x10];                                      // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FClothPhysicalSpringData) == 0x000008, "Wrong alignment on FClothPhysicalSpringData");
+static_assert(sizeof(FClothPhysicalSpringData) == 0x000040, "Wrong size on FClothPhysicalSpringData");
+static_assert(offsetof(FClothPhysicalSpringData, ConstraintsPerColorIntArray) == 0x000000, "Member 'FClothPhysicalSpringData::ConstraintsPerColorIntArray' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalSpringData, Constraints) == 0x000010, "Member 'FClothPhysicalSpringData::Constraints' has a wrong offset!");
+static_assert(offsetof(FClothPhysicalSpringData, Dists) == 0x000020, "Member 'FClothPhysicalSpringData::Dists' has a wrong offset!");
 
 // ScriptStruct ClothingSystemRuntimeCommon.ClothPhysicalBendingData
 // 0x0040 (0x0040 - 0x0000)

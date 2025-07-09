@@ -149,7 +149,7 @@ static_assert(sizeof(UClothVisibilityAndOffsetBlueprintLiabrary) == 0x000028, "W
 
 // Class NikkiFitCloth.MatchPropertyAssetUserData
 // 0x0030 (0x0058 - 0x0028)
-class UMatchPropertyAssetUserData final : public UAssetUserData
+class UMatchPropertyAssetUserData : public UAssetUserData
 {
 public:
 	TSoftObjectPtr<class UFitClothCacheAsset>     FitClothCacheAsset;                                // 0x0028(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -193,7 +193,7 @@ static_assert(offsetof(UClothTagAssetUserData, LODVertexIndicesArray) == 0x00002
 
 // Class NikkiFitCloth.ClothPropertyAssetUserData
 // 0x0048 (0x0070 - 0x0028)
-class UClothPropertyAssetUserData final : public UAssetUserData
+class UClothPropertyAssetUserData : public UAssetUserData
 {
 public:
 	TArray<struct FClothLODSectionMapInfos>       GuideInnerSections;                                // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)

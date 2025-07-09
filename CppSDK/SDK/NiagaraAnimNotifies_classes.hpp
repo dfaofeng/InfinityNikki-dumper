@@ -90,7 +90,7 @@ static_assert(offsetof(UAnimNotifyState_TimedNiagaraEffectAdvanced, AnimCurves) 
 
 // Class NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect
 // 0x0098 (0x00D0 - 0x0038)
-class alignas(0x10) UAnimNotify_PlayNiagaraEffect final : public UAnimNotify
+class alignas(0x10) UAnimNotify_PlayNiagaraEffect : public UAnimNotify
 {
 public:
 	class UNiagaraSystem*                         Template;                                          // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)

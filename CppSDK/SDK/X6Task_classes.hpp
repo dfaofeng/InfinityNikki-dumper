@@ -51,7 +51,7 @@ static_assert(offsetof(UX6TaskBase, bEnableTick) == 0x000040, "Member 'UX6TaskBa
 
 // Class X6Task.X6TaskAsyncBase
 // 0x0000 (0x0048 - 0x0048)
-class UX6TaskAsyncBase final : public UX6TaskBase
+class UX6TaskAsyncBase : public UX6TaskBase
 {
 public:
 	void InovkeAsyncTaskStart(class FName* EventName);

@@ -303,7 +303,7 @@ static_assert(offsetof(USMConduitInstance, bCanEvaluate) == 0x0000A9, "Member 'U
 
 // Class SMSystem.SMInstance
 // 0x05D0 (0x05F8 - 0x0028)
-class USMInstance final : public UObject
+class USMInstance : public UObject
 {
 public:
 	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
@@ -526,7 +526,7 @@ static_assert(sizeof(USMStateInstance) == 0x0000A8, "Wrong size on USMStateInsta
 
 // Class SMSystem.SMStateMachineComponent
 // 0x0160 (0x0208 - 0x00A8)
-class USMStateMachineComponent final : public UActorComponent
+class USMStateMachineComponent : public UActorComponent
 {
 public:
 	uint8                                         Pad_A8[0x10];                                      // 0x00A8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])

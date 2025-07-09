@@ -12,10 +12,10 @@
 
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "Chaos_structs.hpp"
 #include "ChaosSolverEngine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Chaos_structs.hpp"
 
 
 namespace SDK

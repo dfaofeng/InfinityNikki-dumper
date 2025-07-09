@@ -267,7 +267,7 @@ static_assert(offsetof(UAnimNotifyState_MirrorRootMotion, Scale) == 0x000030, "M
 
 // Class X6Animation.ANS_LocoCannotInterupt
 // 0x0008 (0x0038 - 0x0030)
-class UANS_LocoCannotInterupt final : public UAnimNotifyState
+class UANS_LocoCannotInterupt : public UAnimNotifyState
 {
 public:
 	class FName                                   AnimTag;                                           // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -288,7 +288,7 @@ static_assert(offsetof(UANS_LocoCannotInterupt, AnimTag) == 0x000030, "Member 'U
 
 // Class X6Animation.ANS_LocoStartExitAnimType
 // 0x0008 (0x0038 - 0x0030)
-class UANS_LocoStartExitAnimType final : public UAnimNotifyState
+class UANS_LocoStartExitAnimType : public UAnimNotifyState
 {
 public:
 	ELocoExitAnimType                             LocoExitAnimType;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -337,7 +337,7 @@ static_assert(offsetof(UANS_MantleRootMotionControl, LinkedAnimInstanceCLS) == 0
 
 // Class X6Animation.ANS_SeqPlayerDisableRootMotion
 // 0x0008 (0x0038 - 0x0030)
-class UANS_SeqPlayerDisableRootMotion final : public UAnimNotifyState
+class UANS_SeqPlayerDisableRootMotion : public UAnimNotifyState
 {
 public:
 	uint8                                         Pad_30[0x1];                                       // 0x0030(0x0001)(Fixing Size After Last Property [ Dumper-7 ])

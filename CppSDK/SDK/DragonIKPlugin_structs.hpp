@@ -139,32 +139,32 @@ static_assert(offsetof(FAnimNode_DragonControlBase, AlphaBoolBlend) == 0x000038,
 static_assert(offsetof(FAnimNode_DragonControlBase, AlphaCurveName) == 0x000080, "Member 'FAnimNode_DragonControlBase::AlphaCurveName' has a wrong offset!");
 static_assert(offsetof(FAnimNode_DragonControlBase, AlphaScaleBiasClamp) == 0x000088, "Member 'FAnimNode_DragonControlBase::AlphaScaleBiasClamp' has a wrong offset!");
 
-// ScriptStruct DragonIKPlugin.DragonData_ArmSizeStruct
-// 0x000C (0x000C - 0x0000)
-struct FDragonData_ArmSizeStruct final
+// ScriptStruct DragonIKPlugin.DragonData_SingleArmElement
+// 0x0080 (0x0080 - 0x0000)
+struct FDragonData_SingleArmElement final
 {
 public:
-	bool                                          Use_Custom_Arm_Sizes;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         custom_upperArm_length;                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         custom_lowerArm_length;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Overrided_Arm_Transform;                           // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Arm_Alpha;                                         // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               rotation_offset;                                   // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDragonData_ArmSizeStruct) == 0x000004, "Wrong alignment on FDragonData_ArmSizeStruct");
-static_assert(sizeof(FDragonData_ArmSizeStruct) == 0x00000C, "Wrong size on FDragonData_ArmSizeStruct");
-static_assert(offsetof(FDragonData_ArmSizeStruct, Use_Custom_Arm_Sizes) == 0x000000, "Member 'FDragonData_ArmSizeStruct::Use_Custom_Arm_Sizes' has a wrong offset!");
-static_assert(offsetof(FDragonData_ArmSizeStruct, custom_upperArm_length) == 0x000004, "Member 'FDragonData_ArmSizeStruct::custom_upperArm_length' has a wrong offset!");
-static_assert(offsetof(FDragonData_ArmSizeStruct, custom_lowerArm_length) == 0x000008, "Member 'FDragonData_ArmSizeStruct::custom_lowerArm_length' has a wrong offset!");
+static_assert(alignof(FDragonData_SingleArmElement) == 0x000010, "Wrong alignment on FDragonData_SingleArmElement");
+static_assert(sizeof(FDragonData_SingleArmElement) == 0x000080, "Wrong size on FDragonData_SingleArmElement");
+static_assert(offsetof(FDragonData_SingleArmElement, Overrided_Arm_Transform) == 0x000000, "Member 'FDragonData_SingleArmElement::Overrided_Arm_Transform' has a wrong offset!");
+static_assert(offsetof(FDragonData_SingleArmElement, Arm_Alpha) == 0x000060, "Member 'FDragonData_SingleArmElement::Arm_Alpha' has a wrong offset!");
+static_assert(offsetof(FDragonData_SingleArmElement, rotation_offset) == 0x000068, "Member 'FDragonData_SingleArmElement::rotation_offset' has a wrong offset!");
 
-// ScriptStruct DragonIKPlugin.DragonData_CustomArmLengths
+// ScriptStruct DragonIKPlugin.DragonData_Overrided_Location_Data
 // 0x0010 (0x0010 - 0x0000)
-struct FDragonData_CustomArmLengths final
+struct FDragonData_Overrided_Location_Data final
 {
 public:
-	TArray<struct FDragonData_ArmSizeStruct>      CustomArmSizeArray;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDragonData_SingleArmElement>   Arm_TargetLocation_Overrides;                      // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDragonData_CustomArmLengths) == 0x000008, "Wrong alignment on FDragonData_CustomArmLengths");
-static_assert(sizeof(FDragonData_CustomArmLengths) == 0x000010, "Wrong size on FDragonData_CustomArmLengths");
-static_assert(offsetof(FDragonData_CustomArmLengths, CustomArmSizeArray) == 0x000000, "Member 'FDragonData_CustomArmLengths::CustomArmSizeArray' has a wrong offset!");
+static_assert(alignof(FDragonData_Overrided_Location_Data) == 0x000008, "Wrong alignment on FDragonData_Overrided_Location_Data");
+static_assert(sizeof(FDragonData_Overrided_Location_Data) == 0x000010, "Wrong size on FDragonData_Overrided_Location_Data");
+static_assert(offsetof(FDragonData_Overrided_Location_Data, Arm_TargetLocation_Overrides) == 0x000000, "Member 'FDragonData_Overrided_Location_Data::Arm_TargetLocation_Overrides' has a wrong offset!");
 
 // ScriptStruct DragonIKPlugin.DragonData_FingerData
 // 0x0030 (0x0030 - 0x0000)
@@ -326,32 +326,32 @@ static_assert(offsetof(FDragonData_ArmsData, Shoulder_Outer_Clamp) == 0x000180, 
 static_assert(offsetof(FDragonData_ArmsData, ForeArm_Angle_Limit) == 0x000190, "Member 'FDragonData_ArmsData::ForeArm_Angle_Limit' has a wrong offset!");
 static_assert(offsetof(FDragonData_ArmsData, Twist_Offset_Reverse) == 0x0001A0, "Member 'FDragonData_ArmsData::Twist_Offset_Reverse' has a wrong offset!");
 
-// ScriptStruct DragonIKPlugin.DragonData_SingleArmElement
-// 0x0080 (0x0080 - 0x0000)
-struct FDragonData_SingleArmElement final
+// ScriptStruct DragonIKPlugin.DragonData_ArmSizeStruct
+// 0x000C (0x000C - 0x0000)
+struct FDragonData_ArmSizeStruct final
 {
 public:
-	struct FTransform                             Overrided_Arm_Transform;                           // 0x0000(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Arm_Alpha;                                         // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               rotation_offset;                                   // 0x0068(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          Use_Custom_Arm_Sizes;                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         custom_upperArm_length;                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         custom_lowerArm_length;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDragonData_SingleArmElement) == 0x000010, "Wrong alignment on FDragonData_SingleArmElement");
-static_assert(sizeof(FDragonData_SingleArmElement) == 0x000080, "Wrong size on FDragonData_SingleArmElement");
-static_assert(offsetof(FDragonData_SingleArmElement, Overrided_Arm_Transform) == 0x000000, "Member 'FDragonData_SingleArmElement::Overrided_Arm_Transform' has a wrong offset!");
-static_assert(offsetof(FDragonData_SingleArmElement, Arm_Alpha) == 0x000060, "Member 'FDragonData_SingleArmElement::Arm_Alpha' has a wrong offset!");
-static_assert(offsetof(FDragonData_SingleArmElement, rotation_offset) == 0x000068, "Member 'FDragonData_SingleArmElement::rotation_offset' has a wrong offset!");
+static_assert(alignof(FDragonData_ArmSizeStruct) == 0x000004, "Wrong alignment on FDragonData_ArmSizeStruct");
+static_assert(sizeof(FDragonData_ArmSizeStruct) == 0x00000C, "Wrong size on FDragonData_ArmSizeStruct");
+static_assert(offsetof(FDragonData_ArmSizeStruct, Use_Custom_Arm_Sizes) == 0x000000, "Member 'FDragonData_ArmSizeStruct::Use_Custom_Arm_Sizes' has a wrong offset!");
+static_assert(offsetof(FDragonData_ArmSizeStruct, custom_upperArm_length) == 0x000004, "Member 'FDragonData_ArmSizeStruct::custom_upperArm_length' has a wrong offset!");
+static_assert(offsetof(FDragonData_ArmSizeStruct, custom_lowerArm_length) == 0x000008, "Member 'FDragonData_ArmSizeStruct::custom_lowerArm_length' has a wrong offset!");
 
-// ScriptStruct DragonIKPlugin.DragonData_Overrided_Location_Data
+// ScriptStruct DragonIKPlugin.DragonData_CustomArmLengths
 // 0x0010 (0x0010 - 0x0000)
-struct FDragonData_Overrided_Location_Data final
+struct FDragonData_CustomArmLengths final
 {
 public:
-	TArray<struct FDragonData_SingleArmElement>   Arm_TargetLocation_Overrides;                      // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FDragonData_ArmSizeStruct>      CustomArmSizeArray;                                // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FDragonData_Overrided_Location_Data) == 0x000008, "Wrong alignment on FDragonData_Overrided_Location_Data");
-static_assert(sizeof(FDragonData_Overrided_Location_Data) == 0x000010, "Wrong size on FDragonData_Overrided_Location_Data");
-static_assert(offsetof(FDragonData_Overrided_Location_Data, Arm_TargetLocation_Overrides) == 0x000000, "Member 'FDragonData_Overrided_Location_Data::Arm_TargetLocation_Overrides' has a wrong offset!");
+static_assert(alignof(FDragonData_CustomArmLengths) == 0x000008, "Wrong alignment on FDragonData_CustomArmLengths");
+static_assert(sizeof(FDragonData_CustomArmLengths) == 0x000010, "Wrong size on FDragonData_CustomArmLengths");
+static_assert(offsetof(FDragonData_CustomArmLengths, CustomArmSizeArray) == 0x000000, "Member 'FDragonData_CustomArmLengths::CustomArmSizeArray' has a wrong offset!");
 
 // ScriptStruct DragonIKPlugin.AnimNode_DragonAimSolver
 // 0x0C18 (0x0CE0 - 0x00C8)

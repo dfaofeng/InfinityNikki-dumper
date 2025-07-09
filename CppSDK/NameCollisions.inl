@@ -9,5 +9,145 @@
 // FORWARD DECLARATIONS
 
 
+namespace ABP_WhaleGameplayContainer { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_PlayerDefaultEquipmentAdditive { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0045AHC { struct FAnimBlueprintGeneratedConstantData; }
+
 namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
+namespace ABP_S0045D { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0045H { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0045AEA { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_CheckpointBase { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0048AXQ { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0326AHE { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_damiao { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0048AHE { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_DaMiao_InteractionPerformanceBase { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0048AHC { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_PABS0043 { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0045AHE { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_DaMiao_AimOffset { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0048D { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Multiplayer_Airplane { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Multiplayer_Moonboat_Paddle { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Checkpoint_StarSea { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Multiplayer_MoonBoat { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_DaMiaoDefaulGameplayMode { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_PlayerDefaultBehaviorAdditive { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0048H { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_S0033AEA { struct FAnimBlueprintGeneratedConstantData; }
+
+
+namespace ABP_Player_RegularJump
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_PlayerDressUp
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Posedriver_Nikki
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_PlayerCombatMovement
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_DaMiaoCharacter
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Nikki_AimOffset
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_Player_RegularMovement
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_PlayerDefaultInteractionPerformance
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Player_AimOffset
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_PlayerStrafeMovement
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_Player_HandHolding
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace NikkiAnim_BPNew
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_PlayerDialogEmotion_Template
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_DaMiaoRegularMovement_V2
+{
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_Animal_ControlBase
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}

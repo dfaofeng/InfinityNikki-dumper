@@ -182,7 +182,7 @@ static_assert(sizeof(UX6SequencerNewLookAtTrackBP) == 0x000100, "Wrong size on U
 
 // Class X6CustomizableSequencerTracks.X6SequencerParameterSectionBP
 // 0x0120 (0x0260 - 0x0140)
-class UX6SequencerParameterSectionBP final : public UX6SequencerSectionBP
+class UX6SequencerParameterSectionBP : public UX6SequencerSectionBP
 {
 public:
 	TArray<struct FX6ScalarParameterNameAndCurve> ScalarParameterNamesAndCurves;                     // 0x0140(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
@@ -240,7 +240,7 @@ static_assert(offsetof(UX6SequencerParameterSectionBP, ObjectParameterNamesAndCu
 
 // Class X6CustomizableSequencerTracks.X6SequencerParameterTrackBP
 // 0x0000 (0x0100 - 0x0100)
-class UX6SequencerParameterTrackBP final : public UX6SequencerTrackBP
+class UX6SequencerParameterTrackBP : public UX6SequencerTrackBP
 {
 public:
 	static class UClass* StaticClass()
@@ -257,7 +257,7 @@ static_assert(sizeof(UX6SequencerParameterTrackBP) == 0x000100, "Wrong size on U
 
 // Class X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP
 // 0x0000 (0x0050 - 0x0050)
-class UX6SequencerTrackInstanceBP final : public UMovieSceneTrackInstance
+class UX6SequencerTrackInstanceBP : public UMovieSceneTrackInstance
 {
 public:
 	void K2_OnBeginUpdateInputs();

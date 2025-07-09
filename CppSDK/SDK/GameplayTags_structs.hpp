@@ -96,6 +96,39 @@ static_assert(sizeof(FGameplayTagContainer) == 0x000020, "Wrong size on FGamepla
 static_assert(offsetof(FGameplayTagContainer, GameplayTags) == 0x000000, "Member 'FGameplayTagContainer::GameplayTags' has a wrong offset!");
 static_assert(offsetof(FGameplayTagContainer, ParentTags) == 0x000010, "Member 'FGameplayTagContainer::ParentTags' has a wrong offset!");
 
+// ScriptStruct GameplayTags.GameplayTagNetSerializerConfig
+// 0x0000 (0x0010 - 0x0010)
+struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
+{
+};
+static_assert(alignof(FGameplayTagNetSerializerConfig) == 0x000008, "Wrong alignment on FGameplayTagNetSerializerConfig");
+static_assert(sizeof(FGameplayTagNetSerializerConfig) == 0x000010, "Wrong size on FGameplayTagNetSerializerConfig");
+
+// ScriptStruct GameplayTags.GameplayTagTableRow
+// 0x0018 (0x0020 - 0x0008)
+struct FGameplayTagTableRow : public FTableRowBase
+{
+public:
+	class FName                                   Tag;                                               // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DevComment;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGameplayTagTableRow) == 0x000008, "Wrong alignment on FGameplayTagTableRow");
+static_assert(sizeof(FGameplayTagTableRow) == 0x000020, "Wrong size on FGameplayTagTableRow");
+static_assert(offsetof(FGameplayTagTableRow, Tag) == 0x000008, "Member 'FGameplayTagTableRow::Tag' has a wrong offset!");
+static_assert(offsetof(FGameplayTagTableRow, DevComment) == 0x000010, "Member 'FGameplayTagTableRow::DevComment' has a wrong offset!");
+
+// ScriptStruct GameplayTags.RestrictedGameplayTagTableRow
+// 0x0008 (0x0028 - 0x0020)
+struct FRestrictedGameplayTagTableRow final : public FGameplayTagTableRow
+{
+public:
+	bool                                          bAllowNonRestrictedChildren;                       // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRestrictedGameplayTagTableRow) == 0x000008, "Wrong alignment on FRestrictedGameplayTagTableRow");
+static_assert(sizeof(FRestrictedGameplayTagTableRow) == 0x000028, "Wrong size on FRestrictedGameplayTagTableRow");
+static_assert(offsetof(FRestrictedGameplayTagTableRow, bAllowNonRestrictedChildren) == 0x000020, "Member 'FRestrictedGameplayTagTableRow::bAllowNonRestrictedChildren' has a wrong offset!");
+
 // ScriptStruct GameplayTags.GameplayTagQuery
 // 0x0048 (0x0048 - 0x0000)
 struct FGameplayTagQuery final
@@ -137,14 +170,6 @@ public:
 static_assert(alignof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong alignment on FGameplayTagCreationWidgetHelper");
 static_assert(sizeof(FGameplayTagCreationWidgetHelper) == 0x000001, "Wrong size on FGameplayTagCreationWidgetHelper");
 
-// ScriptStruct GameplayTags.GameplayTagNetSerializerConfig
-// 0x0000 (0x0010 - 0x0010)
-struct FGameplayTagNetSerializerConfig final : public FNetSerializerConfig
-{
-};
-static_assert(alignof(FGameplayTagNetSerializerConfig) == 0x000008, "Wrong alignment on FGameplayTagNetSerializerConfig");
-static_assert(sizeof(FGameplayTagNetSerializerConfig) == 0x000010, "Wrong size on FGameplayTagNetSerializerConfig");
-
 // ScriptStruct GameplayTags.GameplayTagRedirect
 // 0x0010 (0x0010 - 0x0000)
 struct FGameplayTagRedirect final
@@ -157,31 +182,6 @@ static_assert(alignof(FGameplayTagRedirect) == 0x000004, "Wrong alignment on FGa
 static_assert(sizeof(FGameplayTagRedirect) == 0x000010, "Wrong size on FGameplayTagRedirect");
 static_assert(offsetof(FGameplayTagRedirect, OldTagName) == 0x000000, "Member 'FGameplayTagRedirect::OldTagName' has a wrong offset!");
 static_assert(offsetof(FGameplayTagRedirect, NewTagName) == 0x000008, "Member 'FGameplayTagRedirect::NewTagName' has a wrong offset!");
-
-// ScriptStruct GameplayTags.GameplayTagTableRow
-// 0x0018 (0x0020 - 0x0008)
-struct FGameplayTagTableRow : public FTableRowBase
-{
-public:
-	class FName                                   Tag;                                               // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DevComment;                                        // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameplayTagTableRow) == 0x000008, "Wrong alignment on FGameplayTagTableRow");
-static_assert(sizeof(FGameplayTagTableRow) == 0x000020, "Wrong size on FGameplayTagTableRow");
-static_assert(offsetof(FGameplayTagTableRow, Tag) == 0x000008, "Member 'FGameplayTagTableRow::Tag' has a wrong offset!");
-static_assert(offsetof(FGameplayTagTableRow, DevComment) == 0x000010, "Member 'FGameplayTagTableRow::DevComment' has a wrong offset!");
-
-// ScriptStruct GameplayTags.RestrictedGameplayTagTableRow
-// 0x0008 (0x0028 - 0x0020)
-struct FRestrictedGameplayTagTableRow final : public FGameplayTagTableRow
-{
-public:
-	bool                                          bAllowNonRestrictedChildren;                       // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FRestrictedGameplayTagTableRow) == 0x000008, "Wrong alignment on FRestrictedGameplayTagTableRow");
-static_assert(sizeof(FRestrictedGameplayTagTableRow) == 0x000028, "Wrong size on FRestrictedGameplayTagTableRow");
-static_assert(offsetof(FRestrictedGameplayTagTableRow, bAllowNonRestrictedChildren) == 0x000020, "Member 'FRestrictedGameplayTagTableRow::bAllowNonRestrictedChildren' has a wrong offset!");
 
 // ScriptStruct GameplayTags.GameplayTagSource
 // 0x0020 (0x0020 - 0x0000)

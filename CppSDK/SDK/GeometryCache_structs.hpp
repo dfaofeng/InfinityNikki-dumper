@@ -26,16 +26,6 @@ public:
 static_assert(alignof(FTrackRenderData) == 0x000010, "Wrong alignment on FTrackRenderData");
 static_assert(sizeof(FTrackRenderData) == 0x0000C0, "Wrong size on FTrackRenderData");
 
-// ScriptStruct GeometryCache.GeometryCacheVertexInfo
-// 0x0009 (0x0009 - 0x0000)
-struct FGeometryCacheVertexInfo final
-{
-public:
-	uint8                                         Pad_0[0x9];                                        // 0x0000(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FGeometryCacheVertexInfo) == 0x000001, "Wrong alignment on FGeometryCacheVertexInfo");
-static_assert(sizeof(FGeometryCacheVertexInfo) == 0x000009, "Wrong size on FGeometryCacheVertexInfo");
-
 // ScriptStruct GeometryCache.GeometryCacheMeshBatchInfo
 // 0x000C (0x000C - 0x0000)
 struct alignas(0x04) FGeometryCacheMeshBatchInfo final
@@ -55,6 +45,16 @@ public:
 };
 static_assert(alignof(FGeometryCacheMeshData) == 0x000008, "Wrong alignment on FGeometryCacheMeshData");
 static_assert(sizeof(FGeometryCacheMeshData) == 0x0000C8, "Wrong size on FGeometryCacheMeshData");
+
+// ScriptStruct GeometryCache.GeometryCacheVertexInfo
+// 0x0009 (0x0009 - 0x0000)
+struct FGeometryCacheVertexInfo final
+{
+public:
+	uint8                                         Pad_0[0x9];                                        // 0x0000(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGeometryCacheVertexInfo) == 0x000001, "Wrong alignment on FGeometryCacheVertexInfo");
+static_assert(sizeof(FGeometryCacheVertexInfo) == 0x000009, "Wrong size on FGeometryCacheVertexInfo");
 
 // ScriptStruct GeometryCache.NiagaraGeometryCacheMICOverride
 // 0x0010 (0x0010 - 0x0000)

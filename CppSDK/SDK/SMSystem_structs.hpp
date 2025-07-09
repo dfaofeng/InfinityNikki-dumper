@@ -86,23 +86,6 @@ static_assert(offsetof(FSMInfo_Base, NodeGuid) == 0x000038, "Member 'FSMInfo_Bas
 static_assert(offsetof(FSMInfo_Base, OwnerNodeGuid) == 0x000048, "Member 'FSMInfo_Base::OwnerNodeGuid' has a wrong offset!");
 static_assert(offsetof(FSMInfo_Base, NodeInstance) == 0x000058, "Member 'FSMInfo_Base::NodeInstance' has a wrong offset!");
 
-// ScriptStruct SMSystem.SMStateHistory
-// 0x0020 (0x0020 - 0x0000)
-struct FSMStateHistory final
-{
-public:
-	struct FGuid                                  StateGuid;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              StartTime;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeInState;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ServerTimeInState;                                 // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSMStateHistory) == 0x000008, "Wrong alignment on FSMStateHistory");
-static_assert(sizeof(FSMStateHistory) == 0x000020, "Wrong size on FSMStateHistory");
-static_assert(offsetof(FSMStateHistory, StateGuid) == 0x000000, "Member 'FSMStateHistory::StateGuid' has a wrong offset!");
-static_assert(offsetof(FSMStateHistory, StartTime) == 0x000010, "Member 'FSMStateHistory::StartTime' has a wrong offset!");
-static_assert(offsetof(FSMStateHistory, TimeInState) == 0x000018, "Member 'FSMStateHistory::TimeInState' has a wrong offset!");
-static_assert(offsetof(FSMStateHistory, ServerTimeInState) == 0x00001C, "Member 'FSMStateHistory::ServerTimeInState' has a wrong offset!");
-
 // ScriptStruct SMSystem.SMTransitionInfo
 // 0x0038 (0x0098 - 0x0060)
 struct FSMTransitionInfo final : public FSMInfo_Base
@@ -135,6 +118,22 @@ static_assert(alignof(FSMStateInfo) == 0x000008, "Wrong alignment on FSMStateInf
 static_assert(sizeof(FSMStateInfo) == 0x000080, "Wrong size on FSMStateInfo");
 static_assert(offsetof(FSMStateInfo, OutgoingTransitions) == 0x000060, "Member 'FSMStateInfo::OutgoingTransitions' has a wrong offset!");
 static_assert(offsetof(FSMStateInfo, bIsEndState) == 0x000070, "Member 'FSMStateInfo::bIsEndState' has a wrong offset!");
+
+// ScriptStruct SMSystem.SMBlendSetting
+// 0x0020 (0x0020 - 0x0000)
+struct FSMBlendSetting final
+{
+public:
+	ETransitionLogicType                          LogicType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAlphaBlendArgs                        Blend;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   BlendProfileName;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSMBlendSetting) == 0x000008, "Wrong alignment on FSMBlendSetting");
+static_assert(sizeof(FSMBlendSetting) == 0x000020, "Wrong size on FSMBlendSetting");
+static_assert(offsetof(FSMBlendSetting, LogicType) == 0x000000, "Member 'FSMBlendSetting::LogicType' has a wrong offset!");
+static_assert(offsetof(FSMBlendSetting, Blend) == 0x000008, "Member 'FSMBlendSetting::Blend' has a wrong offset!");
+static_assert(offsetof(FSMBlendSetting, BlendProfileName) == 0x000018, "Member 'FSMBlendSetting::BlendProfileName' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMNode_Base
 // 0x0090 (0x0090 - 0x0000)
@@ -367,21 +366,22 @@ static_assert(offsetof(FSMNodeDescription, Name) == 0x000000, "Member 'FSMNodeDe
 static_assert(offsetof(FSMNodeDescription, Category) == 0x000008, "Member 'FSMNodeDescription::Category' has a wrong offset!");
 static_assert(offsetof(FSMNodeDescription, Description) == 0x000018, "Member 'FSMNodeDescription::Description' has a wrong offset!");
 
-// ScriptStruct SMSystem.SMBlendSetting
+// ScriptStruct SMSystem.SMStateHistory
 // 0x0020 (0x0020 - 0x0000)
-struct FSMBlendSetting final
+struct FSMStateHistory final
 {
 public:
-	ETransitionLogicType                          LogicType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAlphaBlendArgs                        Blend;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   BlendProfileName;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  StateGuid;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              StartTime;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeInState;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ServerTimeInState;                                 // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSMBlendSetting) == 0x000008, "Wrong alignment on FSMBlendSetting");
-static_assert(sizeof(FSMBlendSetting) == 0x000020, "Wrong size on FSMBlendSetting");
-static_assert(offsetof(FSMBlendSetting, LogicType) == 0x000000, "Member 'FSMBlendSetting::LogicType' has a wrong offset!");
-static_assert(offsetof(FSMBlendSetting, Blend) == 0x000008, "Member 'FSMBlendSetting::Blend' has a wrong offset!");
-static_assert(offsetof(FSMBlendSetting, BlendProfileName) == 0x000018, "Member 'FSMBlendSetting::BlendProfileName' has a wrong offset!");
+static_assert(alignof(FSMStateHistory) == 0x000008, "Wrong alignment on FSMStateHistory");
+static_assert(sizeof(FSMStateHistory) == 0x000020, "Wrong size on FSMStateHistory");
+static_assert(offsetof(FSMStateHistory, StateGuid) == 0x000000, "Member 'FSMStateHistory::StateGuid' has a wrong offset!");
+static_assert(offsetof(FSMStateHistory, StartTime) == 0x000010, "Member 'FSMStateHistory::StartTime' has a wrong offset!");
+static_assert(offsetof(FSMStateHistory, TimeInState) == 0x000018, "Member 'FSMStateHistory::TimeInState' has a wrong offset!");
+static_assert(offsetof(FSMStateHistory, ServerTimeInState) == 0x00001C, "Member 'FSMStateHistory::ServerTimeInState' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMState
 // 0x0000 (0x0100 - 0x0100)

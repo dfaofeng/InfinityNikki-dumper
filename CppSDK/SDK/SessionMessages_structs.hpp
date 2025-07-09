@@ -16,17 +16,6 @@
 namespace SDK
 {
 
-// ScriptStruct SessionMessages.SessionServicePing
-// 0x0010 (0x0010 - 0x0000)
-struct FSessionServicePing final
-{
-public:
-	class FString                                 UserName;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSessionServicePing) == 0x000008, "Wrong alignment on FSessionServicePing");
-static_assert(sizeof(FSessionServicePing) == 0x000010, "Wrong size on FSessionServicePing");
-static_assert(offsetof(FSessionServicePing, UserName) == 0x000000, "Member 'FSessionServicePing::UserName' has a wrong offset!");
-
 // ScriptStruct SessionMessages.SessionServicePong
 // 0x0090 (0x0090 - 0x0000)
 struct FSessionServicePong final
@@ -57,6 +46,17 @@ static_assert(offsetof(FSessionServicePong, SessionId) == 0x000058, "Member 'FSe
 static_assert(offsetof(FSessionServicePong, SessionName) == 0x000068, "Member 'FSessionServicePong::SessionName' has a wrong offset!");
 static_assert(offsetof(FSessionServicePong, SessionOwner) == 0x000078, "Member 'FSessionServicePong::SessionOwner' has a wrong offset!");
 static_assert(offsetof(FSessionServicePong, Standalone) == 0x000088, "Member 'FSessionServicePong::Standalone' has a wrong offset!");
+
+// ScriptStruct SessionMessages.SessionServicePing
+// 0x0010 (0x0010 - 0x0000)
+struct FSessionServicePing final
+{
+public:
+	class FString                                 UserName;                                          // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSessionServicePing) == 0x000008, "Wrong alignment on FSessionServicePing");
+static_assert(sizeof(FSessionServicePing) == 0x000010, "Wrong size on FSessionServicePing");
+static_assert(offsetof(FSessionServicePing, UserName) == 0x000000, "Member 'FSessionServicePing::UserName' has a wrong offset!");
 
 // ScriptStruct SessionMessages.SessionServiceLog
 // 0x0038 (0x0038 - 0x0000)

@@ -287,7 +287,7 @@ static_assert(offsetof(ULevelSequenceBurnIn, LevelSequenceActor) == 0x0003B8, "M
 
 // Class LevelSequence.LevelSequenceDirector
 // 0x0020 (0x0048 - 0x0028)
-class ULevelSequenceDirector final : public UObject
+class ULevelSequenceDirector : public UObject
 {
 public:
 	int32                                         SubSequenceID;                                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

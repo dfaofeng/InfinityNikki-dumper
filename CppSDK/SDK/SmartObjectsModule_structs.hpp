@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "PropertyBindingUtils_structs.hpp"
 #include "WorldConditions_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "StructUtils_structs.hpp"
+#include "PropertyBindingUtils_structs.hpp"
 
 
 namespace SDK
@@ -160,21 +160,6 @@ enum class ESmartObjectTraceType : uint8
 	ESmartObjectTraceType_MAX                = 3,
 };
 
-// ScriptStruct SmartObjectsModule.SmartObjectUserCapsuleParams
-// 0x000C (0x000C - 0x0000)
-struct FSmartObjectUserCapsuleParams final
-{
-public:
-	float                                         Radius;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StepHeight;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSmartObjectUserCapsuleParams) == 0x000004, "Wrong alignment on FSmartObjectUserCapsuleParams");
-static_assert(sizeof(FSmartObjectUserCapsuleParams) == 0x00000C, "Wrong size on FSmartObjectUserCapsuleParams");
-static_assert(offsetof(FSmartObjectUserCapsuleParams, Radius) == 0x000000, "Member 'FSmartObjectUserCapsuleParams::Radius' has a wrong offset!");
-static_assert(offsetof(FSmartObjectUserCapsuleParams, Height) == 0x000004, "Member 'FSmartObjectUserCapsuleParams::Height' has a wrong offset!");
-static_assert(offsetof(FSmartObjectUserCapsuleParams, StepHeight) == 0x000008, "Member 'FSmartObjectUserCapsuleParams::StepHeight' has a wrong offset!");
-
 // ScriptStruct SmartObjectsModule.SmartObjectHandle
 // 0x0008 (0x0008 - 0x0000)
 struct FSmartObjectHandle final
@@ -214,6 +199,21 @@ static_assert(offsetof(FSmartObjectEventData, SmartObjectHandle) == 0x000000, "M
 static_assert(offsetof(FSmartObjectEventData, SlotHandle) == 0x000008, "Member 'FSmartObjectEventData::SlotHandle' has a wrong offset!");
 static_assert(offsetof(FSmartObjectEventData, Reason) == 0x000018, "Member 'FSmartObjectEventData::Reason' has a wrong offset!");
 static_assert(offsetof(FSmartObjectEventData, Tag) == 0x00001C, "Member 'FSmartObjectEventData::Tag' has a wrong offset!");
+
+// ScriptStruct SmartObjectsModule.SmartObjectUserCapsuleParams
+// 0x000C (0x000C - 0x0000)
+struct FSmartObjectUserCapsuleParams final
+{
+public:
+	float                                         Radius;                                            // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StepHeight;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSmartObjectUserCapsuleParams) == 0x000004, "Wrong alignment on FSmartObjectUserCapsuleParams");
+static_assert(sizeof(FSmartObjectUserCapsuleParams) == 0x00000C, "Wrong size on FSmartObjectUserCapsuleParams");
+static_assert(offsetof(FSmartObjectUserCapsuleParams, Radius) == 0x000000, "Member 'FSmartObjectUserCapsuleParams::Radius' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUserCapsuleParams, Height) == 0x000004, "Member 'FSmartObjectUserCapsuleParams::Height' has a wrong offset!");
+static_assert(offsetof(FSmartObjectUserCapsuleParams, StepHeight) == 0x000008, "Member 'FSmartObjectUserCapsuleParams::StepHeight' has a wrong offset!");
 
 // ScriptStruct SmartObjectsModule.SmartObjectWorldConditionBase
 // 0x0000 (0x0010 - 0x0010)
@@ -518,18 +518,6 @@ static_assert(offsetof(FSmartObjectClaimHandle, SmartObjectHandle) == 0x000000, 
 static_assert(offsetof(FSmartObjectClaimHandle, SlotHandle) == 0x000008, "Member 'FSmartObjectClaimHandle::SlotHandle' has a wrong offset!");
 static_assert(offsetof(FSmartObjectClaimHandle, UserHandle) == 0x000018, "Member 'FSmartObjectClaimHandle::UserHandle' has a wrong offset!");
 
-// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionObjectTagQuery
-// 0x0060 (0x0070 - 0x0010)
-struct FSmartObjectWorldConditionObjectTagQuery final : public FSmartObjectWorldConditionBase
-{
-public:
-	uint8                                         Pad_10[0x18];                                      // 0x0010(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagQuery                      TagQuery;                                          // 0x0028(0x0048)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSmartObjectWorldConditionObjectTagQuery) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionObjectTagQuery");
-static_assert(sizeof(FSmartObjectWorldConditionObjectTagQuery) == 0x000070, "Wrong size on FSmartObjectWorldConditionObjectTagQuery");
-static_assert(offsetof(FSmartObjectWorldConditionObjectTagQuery, TagQuery) == 0x000028, "Member 'FSmartObjectWorldConditionObjectTagQuery::TagQuery' has a wrong offset!");
-
 // ScriptStruct SmartObjectsModule.SmartObjectSlotStateData
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -539,6 +527,16 @@ struct alignas(0x01) FSmartObjectSlotStateData
 #pragma pack(pop)
 static_assert(alignof(FSmartObjectSlotStateData) == 0x000001, "Wrong alignment on FSmartObjectSlotStateData");
 static_assert(sizeof(FSmartObjectSlotStateData) == 0x000001, "Wrong size on FSmartObjectSlotStateData");
+
+// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionSlotTagQueryState
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FSmartObjectWorldConditionSlotTagQueryState final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionSlotTagQueryState");
+static_assert(sizeof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000018, "Wrong size on FSmartObjectWorldConditionSlotTagQueryState");
 
 // ScriptStruct SmartObjectsModule.SmartObjectSlotTransform
 // 0x0060 (0x0060 - 0x0000)
@@ -608,18 +606,6 @@ static_assert(offsetof(FSmartObjectRuntime, Tags) == 0x0000C0, "Member 'FSmartOb
 static_assert(offsetof(FSmartObjectRuntime, RegisteredHandle) == 0x000108, "Member 'FSmartObjectRuntime::RegisteredHandle' has a wrong offset!");
 static_assert(offsetof(FSmartObjectRuntime, SpatialEntryData) == 0x000110, "Member 'FSmartObjectRuntime::SpatialEntryData' has a wrong offset!");
 static_assert(offsetof(FSmartObjectRuntime, DisableFlags) == 0x000120, "Member 'FSmartObjectRuntime::DisableFlags' has a wrong offset!");
-
-// ScriptStruct SmartObjectsModule.WorldCondition_SmartObjectActorTagQuery
-// 0x0058 (0x0068 - 0x0010)
-struct FWorldCondition_SmartObjectActorTagQuery final : public FSmartObjectWorldConditionBase
-{
-public:
-	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagQuery                      TagQuery;                                          // 0x0020(0x0048)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWorldCondition_SmartObjectActorTagQuery) == 0x000008, "Wrong alignment on FWorldCondition_SmartObjectActorTagQuery");
-static_assert(sizeof(FWorldCondition_SmartObjectActorTagQuery) == 0x000068, "Wrong size on FWorldCondition_SmartObjectActorTagQuery");
-static_assert(offsetof(FWorldCondition_SmartObjectActorTagQuery, TagQuery) == 0x000020, "Member 'FWorldCondition_SmartObjectActorTagQuery::TagQuery' has a wrong offset!");
 
 // ScriptStruct SmartObjectsModule.SmartObjectSlotView
 // 0x0020 (0x0020 - 0x0000)
@@ -843,15 +829,17 @@ public:
 static_assert(alignof(FSmartObjectWorldConditionObjectTagQueryState) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionObjectTagQueryState");
 static_assert(sizeof(FSmartObjectWorldConditionObjectTagQueryState) == 0x000008, "Wrong size on FSmartObjectWorldConditionObjectTagQueryState");
 
-// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionSlotTagQueryState
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FSmartObjectWorldConditionSlotTagQueryState final
+// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionObjectTagQuery
+// 0x0060 (0x0070 - 0x0010)
+struct FSmartObjectWorldConditionObjectTagQuery final : public FSmartObjectWorldConditionBase
 {
 public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_10[0x18];                                      // 0x0010(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagQuery                      TagQuery;                                          // 0x0028(0x0048)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionSlotTagQueryState");
-static_assert(sizeof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000018, "Wrong size on FSmartObjectWorldConditionSlotTagQueryState");
+static_assert(alignof(FSmartObjectWorldConditionObjectTagQuery) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionObjectTagQuery");
+static_assert(sizeof(FSmartObjectWorldConditionObjectTagQuery) == 0x000070, "Wrong size on FSmartObjectWorldConditionObjectTagQuery");
+static_assert(offsetof(FSmartObjectWorldConditionObjectTagQuery, TagQuery) == 0x000028, "Member 'FSmartObjectWorldConditionObjectTagQuery::TagQuery' has a wrong offset!");
 
 // ScriptStruct SmartObjectsModule.SmartObjectWorldConditionSlotTagQuery
 // 0x0060 (0x0070 - 0x0010)
@@ -874,6 +862,18 @@ public:
 };
 static_assert(alignof(FWorldCondition_SmartObjectActorTagQueryState) == 0x000008, "Wrong alignment on FWorldCondition_SmartObjectActorTagQueryState");
 static_assert(sizeof(FWorldCondition_SmartObjectActorTagQueryState) == 0x000008, "Wrong size on FWorldCondition_SmartObjectActorTagQueryState");
+
+// ScriptStruct SmartObjectsModule.WorldCondition_SmartObjectActorTagQuery
+// 0x0058 (0x0068 - 0x0010)
+struct FWorldCondition_SmartObjectActorTagQuery final : public FSmartObjectWorldConditionBase
+{
+public:
+	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagQuery                      TagQuery;                                          // 0x0020(0x0048)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FWorldCondition_SmartObjectActorTagQuery) == 0x000008, "Wrong alignment on FWorldCondition_SmartObjectActorTagQuery");
+static_assert(sizeof(FWorldCondition_SmartObjectActorTagQuery) == 0x000068, "Wrong size on FWorldCondition_SmartObjectActorTagQuery");
+static_assert(offsetof(FWorldCondition_SmartObjectActorTagQuery, TagQuery) == 0x000020, "Member 'FWorldCondition_SmartObjectActorTagQuery::TagQuery' has a wrong offset!");
 
 }
 

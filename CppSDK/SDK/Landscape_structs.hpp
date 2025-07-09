@@ -586,19 +586,6 @@ public:
 static_assert(alignof(FForeignSplineSegmentData) == 0x000001, "Wrong alignment on FForeignSplineSegmentData");
 static_assert(sizeof(FForeignSplineSegmentData) == 0x000001, "Wrong size on FForeignSplineSegmentData");
 
-// ScriptStruct Landscape.LandscapeInfoLayerSettings
-// 0x0010 (0x0010 - 0x0000)
-struct FLandscapeInfoLayerSettings final
-{
-public:
-	class ULandscapeLayerInfoObject*              LayerInfoObj;                                      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LayerName;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FLandscapeInfoLayerSettings) == 0x000008, "Wrong alignment on FLandscapeInfoLayerSettings");
-static_assert(sizeof(FLandscapeInfoLayerSettings) == 0x000010, "Wrong size on FLandscapeInfoLayerSettings");
-static_assert(offsetof(FLandscapeInfoLayerSettings, LayerInfoObj) == 0x000000, "Member 'FLandscapeInfoLayerSettings::LayerInfoObj' has a wrong offset!");
-static_assert(offsetof(FLandscapeInfoLayerSettings, LayerName) == 0x000008, "Member 'FLandscapeInfoLayerSettings::LayerName' has a wrong offset!");
-
 // ScriptStruct Landscape.ForeignWorldSplineData
 // 0x0001 (0x0001 - 0x0000)
 struct FForeignWorldSplineData final
@@ -608,6 +595,16 @@ public:
 };
 static_assert(alignof(FForeignWorldSplineData) == 0x000001, "Wrong alignment on FForeignWorldSplineData");
 static_assert(sizeof(FForeignWorldSplineData) == 0x000001, "Wrong size on FForeignWorldSplineData");
+
+// ScriptStruct Landscape.LandscapeEditorLayerSettings
+// 0x0001 (0x0001 - 0x0000)
+struct FLandscapeEditorLayerSettings final
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FLandscapeEditorLayerSettings) == 0x000001, "Wrong alignment on FLandscapeEditorLayerSettings");
+static_assert(sizeof(FLandscapeEditorLayerSettings) == 0x000001, "Wrong size on FLandscapeEditorLayerSettings");
 
 // ScriptStruct Landscape.LandscapeSplineInterpPoint
 // 0x00E0 (0x00E0 - 0x0000)
@@ -683,22 +680,6 @@ static_assert(offsetof(FLandscapeSplineMeshEntry, Orientation) == 0x000050, "Mem
 static_assert(offsetof(FLandscapeSplineMeshEntry, ForwardAxis) == 0x000051, "Member 'FLandscapeSplineMeshEntry::ForwardAxis' has a wrong offset!");
 static_assert(offsetof(FLandscapeSplineMeshEntry, UpAxis) == 0x000052, "Member 'FLandscapeSplineMeshEntry::UpAxis' has a wrong offset!");
 
-// ScriptStruct Landscape.LandscapeTexture2DMipMap
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FLandscapeTexture2DMipMap final
-{
-public:
-	int32                                         SizeX;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SizeY;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCompressed;                                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x2F];                                       // 0x0009(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FLandscapeTexture2DMipMap) == 0x000008, "Wrong alignment on FLandscapeTexture2DMipMap");
-static_assert(sizeof(FLandscapeTexture2DMipMap) == 0x000038, "Wrong size on FLandscapeTexture2DMipMap");
-static_assert(offsetof(FLandscapeTexture2DMipMap, SizeX) == 0x000000, "Member 'FLandscapeTexture2DMipMap::SizeX' has a wrong offset!");
-static_assert(offsetof(FLandscapeTexture2DMipMap, SizeY) == 0x000004, "Member 'FLandscapeTexture2DMipMap::SizeY' has a wrong offset!");
-static_assert(offsetof(FLandscapeTexture2DMipMap, bCompressed) == 0x000008, "Member 'FLandscapeTexture2DMipMap::bCompressed' has a wrong offset!");
-
 // ScriptStruct Landscape.GrassInput
 // 0x0068 (0x0068 - 0x0000)
 struct FGrassInput final
@@ -718,6 +699,19 @@ static_assert(offsetof(FGrassInput, DisturbZ) == 0x000008, "Member 'FGrassInput:
 static_assert(offsetof(FGrassInput, DisturbInput) == 0x000010, "Member 'FGrassInput::DisturbInput' has a wrong offset!");
 static_assert(offsetof(FGrassInput, GrassType) == 0x000038, "Member 'FGrassInput::GrassType' has a wrong offset!");
 static_assert(offsetof(FGrassInput, Input) == 0x000040, "Member 'FGrassInput::Input' has a wrong offset!");
+
+// ScriptStruct Landscape.PhysicalMaterialInput
+// 0x0030 (0x0030 - 0x0000)
+struct FPhysicalMaterialInput final
+{
+public:
+	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FExpressionInput                       Input;                                             // 0x0008(0x0028)(NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPhysicalMaterialInput) == 0x000008, "Wrong alignment on FPhysicalMaterialInput");
+static_assert(sizeof(FPhysicalMaterialInput) == 0x000030, "Wrong size on FPhysicalMaterialInput");
+static_assert(offsetof(FPhysicalMaterialInput, PhysicalMaterial) == 0x000000, "Member 'FPhysicalMaterialInput::PhysicalMaterial' has a wrong offset!");
+static_assert(offsetof(FPhysicalMaterialInput, Input) == 0x000008, "Member 'FPhysicalMaterialInput::Input' has a wrong offset!");
 
 // ScriptStruct Landscape.LayerBlendInput
 // 0x0088 (0x0088 - 0x0000)
@@ -761,15 +755,18 @@ static_assert(offsetof(FLandscapeBrushParameters, LayerType) == 0x000000, "Membe
 static_assert(offsetof(FLandscapeBrushParameters, CombinedResult) == 0x000008, "Member 'FLandscapeBrushParameters::CombinedResult' has a wrong offset!");
 static_assert(offsetof(FLandscapeBrushParameters, WeightmapLayerName) == 0x000010, "Member 'FLandscapeBrushParameters::WeightmapLayerName' has a wrong offset!");
 
-// ScriptStruct Landscape.LandscapeEditorLayerSettings
-// 0x0001 (0x0001 - 0x0000)
-struct FLandscapeEditorLayerSettings final
+// ScriptStruct Landscape.LandscapeInfoLayerSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FLandscapeInfoLayerSettings final
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ULandscapeLayerInfoObject*              LayerInfoObj;                                      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LayerName;                                         // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FLandscapeEditorLayerSettings) == 0x000001, "Wrong alignment on FLandscapeEditorLayerSettings");
-static_assert(sizeof(FLandscapeEditorLayerSettings) == 0x000001, "Wrong size on FLandscapeEditorLayerSettings");
+static_assert(alignof(FLandscapeInfoLayerSettings) == 0x000008, "Wrong alignment on FLandscapeInfoLayerSettings");
+static_assert(sizeof(FLandscapeInfoLayerSettings) == 0x000010, "Wrong size on FLandscapeInfoLayerSettings");
+static_assert(offsetof(FLandscapeInfoLayerSettings, LayerInfoObj) == 0x000000, "Member 'FLandscapeInfoLayerSettings::LayerInfoObj' has a wrong offset!");
+static_assert(offsetof(FLandscapeInfoLayerSettings, LayerName) == 0x000008, "Member 'FLandscapeInfoLayerSettings::LayerName' has a wrong offset!");
 
 // ScriptStruct Landscape.LandscapeImportLayerInfo
 // 0x0001 (0x0001 - 0x0000)
@@ -795,18 +792,21 @@ static_assert(sizeof(FLandscapeProxyMaterialOverride) == 0x000010, "Wrong size o
 static_assert(offsetof(FLandscapeProxyMaterialOverride, LODIndex) == 0x000000, "Member 'FLandscapeProxyMaterialOverride::LODIndex' has a wrong offset!");
 static_assert(offsetof(FLandscapeProxyMaterialOverride, Material) == 0x000008, "Member 'FLandscapeProxyMaterialOverride::Material' has a wrong offset!");
 
-// ScriptStruct Landscape.PhysicalMaterialInput
-// 0x0030 (0x0030 - 0x0000)
-struct FPhysicalMaterialInput final
+// ScriptStruct Landscape.LandscapeTexture2DMipMap
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FLandscapeTexture2DMipMap final
 {
 public:
-	class UPhysicalMaterial*                      PhysicalMaterial;                                  // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FExpressionInput                       Input;                                             // 0x0008(0x0028)(NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         SizeX;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeY;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCompressed;                                       // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x2F];                                       // 0x0009(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FPhysicalMaterialInput) == 0x000008, "Wrong alignment on FPhysicalMaterialInput");
-static_assert(sizeof(FPhysicalMaterialInput) == 0x000030, "Wrong size on FPhysicalMaterialInput");
-static_assert(offsetof(FPhysicalMaterialInput, PhysicalMaterial) == 0x000000, "Member 'FPhysicalMaterialInput::PhysicalMaterial' has a wrong offset!");
-static_assert(offsetof(FPhysicalMaterialInput, Input) == 0x000008, "Member 'FPhysicalMaterialInput::Input' has a wrong offset!");
+static_assert(alignof(FLandscapeTexture2DMipMap) == 0x000008, "Wrong alignment on FLandscapeTexture2DMipMap");
+static_assert(sizeof(FLandscapeTexture2DMipMap) == 0x000038, "Wrong size on FLandscapeTexture2DMipMap");
+static_assert(offsetof(FLandscapeTexture2DMipMap, SizeX) == 0x000000, "Member 'FLandscapeTexture2DMipMap::SizeX' has a wrong offset!");
+static_assert(offsetof(FLandscapeTexture2DMipMap, SizeY) == 0x000004, "Member 'FLandscapeTexture2DMipMap::SizeY' has a wrong offset!");
+static_assert(offsetof(FLandscapeTexture2DMipMap, bCompressed) == 0x000008, "Member 'FLandscapeTexture2DMipMap::bCompressed' has a wrong offset!");
 
 }
 

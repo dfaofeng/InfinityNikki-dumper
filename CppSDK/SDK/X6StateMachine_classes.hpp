@@ -19,7 +19,7 @@ namespace SDK
 
 // Class X6StateMachine.X6StateMachineComponent
 // 0x00F8 (0x01A0 - 0x00A8)
-class UX6StateMachineComponent final : public UActorComponent
+class UX6StateMachineComponent : public UActorComponent
 {
 public:
 	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])

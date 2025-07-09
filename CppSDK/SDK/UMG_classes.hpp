@@ -4401,7 +4401,7 @@ static_assert(offsetof(UViewport, BackgroundColor) == 0x0001A0, "Member 'UViewpo
 
 // Class UMG.WidgetComponent
 // 0x0140 (0x0780 - 0x0640)
-class UWidgetComponent final : public UMeshComponent
+class UWidgetComponent : public UMeshComponent
 {
 public:
 	EWidgetSpace                                  Space;                                             // 0x0640(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)

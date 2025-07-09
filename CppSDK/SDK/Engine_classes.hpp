@@ -17,18 +17,18 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "InputCore_structs.hpp"
-#include "MeshDescription_classes.hpp"
 #include "AudioPlatformConfiguration_structs.hpp"
-#include "Chaos_structs.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "PacketHandler_classes.hpp"
+#include "Chaos_structs.hpp"
+#include "MeshDescription_classes.hpp"
 #include "AudioExtensions_structs.hpp"
 #include "AudioExtensions_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "IrisCore_classes.hpp"
 #include "NetCore_structs.hpp"
 #include "NetCore_classes.hpp"
-#include "PacketHandler_classes.hpp"
 
 
 namespace SDK
@@ -28197,7 +28197,7 @@ static_assert(sizeof(UPluginBlueprintLibrary) == 0x000028, "Wrong size on UPlugi
 
 // Class Engine.PointLight
 // 0x0008 (0x03C0 - 0x03B8)
-class APointLight final : public ALight
+class APointLight : public ALight
 {
 public:
 	class UPointLightComponent*                   PointLightComponent;                               // 0x03B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -31525,7 +31525,7 @@ static_assert(offsetof(UChildActorComponent, ChildActorTemplate) == 0x000240, "M
 
 // Class Engine.DecalComponent
 // 0x0070 (0x02A0 - 0x0230)
-class UDecalComponent final : public USceneComponent
+class UDecalComponent : public USceneComponent
 {
 public:
 	class UMaterialInterface*                     DecalMaterial;                                     // 0x0230(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -32532,7 +32532,7 @@ static_assert(sizeof(USplineMetadata) == 0x000028, "Wrong size on USplineMetadat
 
 // Class Engine.SplineMeshComponent
 // 0x0140 (0x08E0 - 0x07A0)
-class USplineMeshComponent final : public UStaticMeshComponent
+class USplineMeshComponent : public UStaticMeshComponent
 {
 public:
 	uint8                                         Pad_798[0x8];                                      // 0x0798(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -38561,7 +38561,7 @@ static_assert(sizeof(APlayerStartPIE) == 0x0003D8, "Wrong size on APlayerStartPI
 
 // Class Engine.PlayerState
 // 0x00B8 (0x0460 - 0x03A8)
-class APlayerState final : public AInfo
+class APlayerState : public AInfo
 {
 public:
 	float                                         Score;                                             // 0x03A8(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
