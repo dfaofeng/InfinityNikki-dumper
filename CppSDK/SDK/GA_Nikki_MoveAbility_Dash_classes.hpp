@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "GA_AbilityMontageBase_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "X6Game_structs.hpp"
 
 
@@ -48,33 +48,33 @@ public:
 	class UAnimMontage*                           StopAM_cbt;                                        // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BackwardSection();
-	void ClampXYSpeed(double Max, class UMovementComponent* MovementComp);
-	void EnableRun(bool* Enable_Run_Operation);
-	void ExecuteUbergraph_GA_Nikki_MoveAbility_Dash(int32 EntryPoint);
-	ERegularLocomotionType GetRunOrWalk();
-	void GetSopAnim(class UAnimMontage** Montage);
-	void K2_ActivateAbility();
-	void K2_OnEndAbility(bool bWasCancelled);
-	bool NoInput_(class UCharacterMovementComponent* MovementComp);
-	void OnAccelChange_ED0C22024A69A9D7E2C857A38C23901A();
-	void OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
-	void OnBlendOut_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
-	void OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
-	void OnCancelled_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
-	void OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
-	void OnCompleted_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
-	void OnInputRecv(bool bPressOrRelease, const struct FGameplayTag& InputTag);
-	void OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
-	void OnInterrupted_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
-	void OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
-	void OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
-	void OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
-	void OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
-	void SpawnEffect();
-	void StageChange(ERegularFloatingJumpStage NewStage, ERegularFloatingJumpStage OldStage);
-	void SwitchJogOrSprint();
 	void UpdateSpeed();
+	void SwitchJogOrSprint();
+	void StageChange(ERegularFloatingJumpStage NewStage, ERegularFloatingJumpStage OldStage);
+	void SpawnEffect();
+	void OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
+	void OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
+	void OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
+	void OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
+	void OnInterrupted_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
+	void OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
+	void OnInputRecv(bool bPressOrRelease, const struct FGameplayTag& InputTag);
+	void OnCompleted_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
+	void OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
+	void OnCancelled_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
+	void OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
+	void OnBlendOut_D30DE7AB48AEA8E333DF909738541332(class FName NotifyName);
+	void OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0(class FName NotifyName);
+	void OnAccelChange_ED0C22024A69A9D7E2C857A38C23901A();
+	bool NoInput_(class UCharacterMovementComponent* MovementComp);
+	void K2_OnEndAbility(bool bWasCancelled);
+	void K2_ActivateAbility();
+	void GetSopAnim(class UAnimMontage** Montage);
+	ERegularLocomotionType GetRunOrWalk();
+	void GetEnableRun(bool* Enable_Run_Operation);
+	void ExecuteUbergraph_GA_Nikki_MoveAbility_Dash(int32 EntryPoint);
+	void ClampXYSpeed(double Max, class UMovementComponent* MovementComp);
+	void BackwardSection();
 
 public:
 	static class UClass* StaticClass()

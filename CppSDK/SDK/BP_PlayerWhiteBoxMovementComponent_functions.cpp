@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_PlayerWhiteBoxMovementComponent.BP_PlayerWhiteBoxMovementComponent_C.ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerWhiteBoxMovementComponent_C::ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerWhiteBoxMovementComponent_C", "ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent");
-
-	Params::BP_PlayerWhiteBoxMovementComponent_C_ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_PlayerWhiteBoxMovementComponent.BP_PlayerWhiteBoxMovementComponent_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UBP_PlayerWhiteBoxMovementComponent_C::ReceiveTick(float DeltaSeconds)
 	Params::BP_PlayerWhiteBoxMovementComponent_C_ReceiveTick Parms{};
 
 	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerWhiteBoxMovementComponent.BP_PlayerWhiteBoxMovementComponent_C.ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerWhiteBoxMovementComponent_C::ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerWhiteBoxMovementComponent_C", "ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent");
+
+	Params::BP_PlayerWhiteBoxMovementComponent_C_ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

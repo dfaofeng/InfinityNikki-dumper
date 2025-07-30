@@ -16,27 +16,16 @@
 namespace SDK::Params
 {
 
-// Function BP_MapFollower.BP_MapFollower_C.SetClipRange
+// Function BP_MapFollower.BP_MapFollower_C.SetMoveContentPosition
 // 0x0010 (0x0010 - 0x0000)
-struct BP_MapFollower_C_SetClipRange final
+struct BP_MapFollower_C_SetMoveContentPosition final
 {
 public:
-	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Pos;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapFollower_C_SetClipRange) == 0x000008, "Wrong alignment on BP_MapFollower_C_SetClipRange");
-static_assert(sizeof(BP_MapFollower_C_SetClipRange) == 0x000010, "Wrong size on BP_MapFollower_C_SetClipRange");
-static_assert(offsetof(BP_MapFollower_C_SetClipRange, Size) == 0x000000, "Member 'BP_MapFollower_C_SetClipRange::Size' has a wrong offset!");
-
-// Function BP_MapFollower.BP_MapFollower_C.SetContentScale
-// 0x0010 (0x0010 - 0x0000)
-struct BP_MapFollower_C_SetContentScale final
-{
-public:
-	struct FVector2D                              Scale;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_MapFollower_C_SetContentScale) == 0x000008, "Wrong alignment on BP_MapFollower_C_SetContentScale");
-static_assert(sizeof(BP_MapFollower_C_SetContentScale) == 0x000010, "Wrong size on BP_MapFollower_C_SetContentScale");
-static_assert(offsetof(BP_MapFollower_C_SetContentScale, Scale) == 0x000000, "Member 'BP_MapFollower_C_SetContentScale::Scale' has a wrong offset!");
+static_assert(alignof(BP_MapFollower_C_SetMoveContentPosition) == 0x000008, "Wrong alignment on BP_MapFollower_C_SetMoveContentPosition");
+static_assert(sizeof(BP_MapFollower_C_SetMoveContentPosition) == 0x000010, "Wrong size on BP_MapFollower_C_SetMoveContentPosition");
+static_assert(offsetof(BP_MapFollower_C_SetMoveContentPosition, Pos) == 0x000000, "Member 'BP_MapFollower_C_SetMoveContentPosition::Pos' has a wrong offset!");
 
 // Function BP_MapFollower.BP_MapFollower_C.SetContentSize
 // 0x0010 (0x0010 - 0x0000)
@@ -49,16 +38,27 @@ static_assert(alignof(BP_MapFollower_C_SetContentSize) == 0x000008, "Wrong align
 static_assert(sizeof(BP_MapFollower_C_SetContentSize) == 0x000010, "Wrong size on BP_MapFollower_C_SetContentSize");
 static_assert(offsetof(BP_MapFollower_C_SetContentSize, Size) == 0x000000, "Member 'BP_MapFollower_C_SetContentSize::Size' has a wrong offset!");
 
-// Function BP_MapFollower.BP_MapFollower_C.SetMoveContentPosition
+// Function BP_MapFollower.BP_MapFollower_C.SetContentScale
 // 0x0010 (0x0010 - 0x0000)
-struct BP_MapFollower_C_SetMoveContentPosition final
+struct BP_MapFollower_C_SetContentScale final
 {
 public:
-	struct FVector2D                              Pos;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              Scale;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_MapFollower_C_SetMoveContentPosition) == 0x000008, "Wrong alignment on BP_MapFollower_C_SetMoveContentPosition");
-static_assert(sizeof(BP_MapFollower_C_SetMoveContentPosition) == 0x000010, "Wrong size on BP_MapFollower_C_SetMoveContentPosition");
-static_assert(offsetof(BP_MapFollower_C_SetMoveContentPosition, Pos) == 0x000000, "Member 'BP_MapFollower_C_SetMoveContentPosition::Pos' has a wrong offset!");
+static_assert(alignof(BP_MapFollower_C_SetContentScale) == 0x000008, "Wrong alignment on BP_MapFollower_C_SetContentScale");
+static_assert(sizeof(BP_MapFollower_C_SetContentScale) == 0x000010, "Wrong size on BP_MapFollower_C_SetContentScale");
+static_assert(offsetof(BP_MapFollower_C_SetContentScale, Scale) == 0x000000, "Member 'BP_MapFollower_C_SetContentScale::Scale' has a wrong offset!");
+
+// Function BP_MapFollower.BP_MapFollower_C.SetClipRange
+// 0x0010 (0x0010 - 0x0000)
+struct BP_MapFollower_C_SetClipRange final
+{
+public:
+	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MapFollower_C_SetClipRange) == 0x000008, "Wrong alignment on BP_MapFollower_C_SetClipRange");
+static_assert(sizeof(BP_MapFollower_C_SetClipRange) == 0x000010, "Wrong size on BP_MapFollower_C_SetClipRange");
+static_assert(offsetof(BP_MapFollower_C_SetClipRange, Size) == 0x000000, "Member 'BP_MapFollower_C_SetClipRange::Size' has a wrong offset!");
 
 }
 

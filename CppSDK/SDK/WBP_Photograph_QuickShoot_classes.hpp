@@ -40,8 +40,8 @@ public:
 	class UImage*                                 Photo_Img;                                         // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Photograph_QuickShoot(int32 EntryPoint);
 	void sfx1();
+	void ExecuteUbergraph_WBP_Photograph_QuickShoot(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

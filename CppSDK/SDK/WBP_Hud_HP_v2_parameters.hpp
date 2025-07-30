@@ -16,18 +16,193 @@
 namespace SDK::Params
 {
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ContinueInjuredAnim
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddHP
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Hud_HP_v2_C_TestAddHP final
+{
+public:
+	int32                                         addHp;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_TestAddHP) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_TestAddHP");
+static_assert(sizeof(WBP_Hud_HP_v2_C_TestAddHP) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_TestAddHP");
+static_assert(offsetof(WBP_Hud_HP_v2_C_TestAddHP, addHp) == 0x000000, "Member 'WBP_Hud_HP_v2_C_TestAddHP::addHp' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddExtraMaxHP
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Hud_HP_v2_C_TestAddExtraMaxHP final
+{
+public:
+	int32                                         Num;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_TestAddExtraMaxHP) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_TestAddExtraMaxHP");
+static_assert(sizeof(WBP_Hud_HP_v2_C_TestAddExtraMaxHP) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_TestAddExtraMaxHP");
+static_assert(offsetof(WBP_Hud_HP_v2_C_TestAddExtraMaxHP, Num) == 0x000000, "Member 'WBP_Hud_HP_v2_C_TestAddExtraMaxHP::Num' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SetHpPosition
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_Hud_HP_v2_C_SetHpPosition final
+{
+public:
+	double                                        X;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_SetHpPosition) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SetHpPosition");
+static_assert(sizeof(WBP_Hud_HP_v2_C_SetHpPosition) == 0x000020, "Wrong size on WBP_Hud_HP_v2_C_SetHpPosition");
+static_assert(offsetof(WBP_Hud_HP_v2_C_SetHpPosition, X) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SetHpPosition::X' has a wrong offset!");
+static_assert(offsetof(WBP_Hud_HP_v2_C_SetHpPosition, CallFunc_MakeVector2D_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_SetHpPosition::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Hud_HP_v2_C_SetHpPosition, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000018, "Member 'WBP_Hud_HP_v2_C_SetHpPosition::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1 final
+{
+public:
+	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1");
+static_assert(sizeof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1");
+static_assert(offsetof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1::decorate' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0 final
+{
+public:
+	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0");
+static_assert(sizeof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0");
+static_assert(offsetof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0::decorate' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2 final
+{
+public:
+	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2");
+static_assert(sizeof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2");
+static_assert(offsetof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2::decorate' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ResetInjuredAnim
 // 0x0010 (0x0010 - 0x0000)
-struct WBP_Hud_HP_v2_C_ContinueInjuredAnim final
+struct WBP_Hud_HP_v2_C_ResetInjuredAnim final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationTimeRange_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_ResetInjuredAnim) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_ResetInjuredAnim");
+static_assert(sizeof(WBP_Hud_HP_v2_C_ResetInjuredAnim) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_ResetInjuredAnim");
+static_assert(offsetof(WBP_Hud_HP_v2_C_ResetInjuredAnim, CallFunc_PlayAnimationTimeRange_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_ResetInjuredAnim::CallFunc_PlayAnimationTimeRange_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Hud_HP_v2_C_ResetInjuredAnim, CallFunc_PauseAnimation_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_ResetInjuredAnim::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayShowLevel
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Hud_HP_v2_C_PlayShowLevel final
+{
+public:
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_PlayShowLevel) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayShowLevel");
+static_assert(sizeof(WBP_Hud_HP_v2_C_PlayShowLevel) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_PlayShowLevel");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PlayShowLevel, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayShowLevel::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PlayShowLevel, CallFunc_PlayAnimationForward_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_PlayShowLevel::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayLevelUp
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_PlayLevelUp final
 {
 public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_HP_v2_C_ContinueInjuredAnim) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_ContinueInjuredAnim");
-static_assert(sizeof(WBP_Hud_HP_v2_C_ContinueInjuredAnim) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_ContinueInjuredAnim");
-static_assert(offsetof(WBP_Hud_HP_v2_C_ContinueInjuredAnim, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_ContinueInjuredAnim::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Hud_HP_v2_C_ContinueInjuredAnim, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast) == 0x000008, "Member 'WBP_Hud_HP_v2_C_ContinueInjuredAnim::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast' has a wrong offset!");
+static_assert(alignof(WBP_Hud_HP_v2_C_PlayLevelUp) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayLevelUp");
+static_assert(sizeof(WBP_Hud_HP_v2_C_PlayLevelUp) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_PlayLevelUp");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PlayLevelUp, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayLevelUp::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayInjuredAnim
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_PlayInjuredAnim final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_PlayInjuredAnim) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayInjuredAnim");
+static_assert(sizeof(WBP_Hud_HP_v2_C_PlayInjuredAnim) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_PlayInjuredAnim");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PlayInjuredAnim, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayInjuredAnim::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayHideLevel
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Hud_HP_v2_C_PlayHideLevel final
+{
+public:
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_PlayHideLevel) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayHideLevel");
+static_assert(sizeof(WBP_Hud_HP_v2_C_PlayHideLevel) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_PlayHideLevel");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PlayHideLevel, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayHideLevel::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PlayHideLevel, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_PlayHideLevel::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PauseInjuredAnim
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Hud_HP_v2_C_PauseInjuredAnim final
+{
+public:
+	float                                         CallFunc_QueuePauseAnimation_ReturnValue;          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_PauseInjuredAnim) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_PauseInjuredAnim");
+static_assert(sizeof(WBP_Hud_HP_v2_C_PauseInjuredAnim) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_PauseInjuredAnim");
+static_assert(offsetof(WBP_Hud_HP_v2_C_PauseInjuredAnim, CallFunc_QueuePauseAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PauseInjuredAnim::CallFunc_QueuePauseAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnOffsetHpItem
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_OnOffsetHpItem final
+{
+public:
+	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_OnOffsetHpItem) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_OnOffsetHpItem");
+static_assert(sizeof(WBP_Hud_HP_v2_C_OnOffsetHpItem) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_OnOffsetHpItem");
+static_assert(offsetof(WBP_Hud_HP_v2_C_OnOffsetHpItem, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnOffsetHpItem::decorate' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredWaited
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_OnInjuredWaited final
+{
+public:
+	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_OnInjuredWaited) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_OnInjuredWaited");
+static_assert(sizeof(WBP_Hud_HP_v2_C_OnInjuredWaited) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_OnInjuredWaited");
+static_assert(offsetof(WBP_Hud_HP_v2_C_OnInjuredWaited, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnInjuredWaited::decorate' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredFinished
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_HP_v2_C_OnInjuredFinished final
+{
+public:
+	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_OnInjuredFinished) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_OnInjuredFinished");
+static_assert(sizeof(WBP_Hud_HP_v2_C_OnInjuredFinished) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_OnInjuredFinished");
+static_assert(offsetof(WBP_Hud_HP_v2_C_OnInjuredFinished, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnInjuredFinished::decorate' has a wrong offset!");
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnHpItemFlyDown
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Hud_HP_v2_C_OnHpItemFlyDown final
+{
+public:
+	int32                                         ItemIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_HP_v2_C_OnHpItemFlyDown) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_OnHpItemFlyDown");
+static_assert(sizeof(WBP_Hud_HP_v2_C_OnHpItemFlyDown) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_OnHpItemFlyDown");
+static_assert(offsetof(WBP_Hud_HP_v2_C_OnHpItemFlyDown, ItemIndex) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnHpItemFlyDown::ItemIndex' has a wrong offset!");
 
 // Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ExecuteUbergraph_WBP_Hud_HP_v2
 // 0x00C8 (0x00C8 - 0x0000)
@@ -81,193 +256,18 @@ static_assert(offsetof(WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2, CallFunc_
 static_assert(offsetof(WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2, CallFunc_Conv_StringToInt_ReturnValue_3) == 0x0000C0, "Member 'WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2::CallFunc_Conv_StringToInt_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2, CallFunc_Multiply_IntInt_ReturnValue_2) == 0x0000C4, "Member 'WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2::CallFunc_Multiply_IntInt_ReturnValue_2' has a wrong offset!");
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnHpItemFlyDown
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Hud_HP_v2_C_OnHpItemFlyDown final
-{
-public:
-	int32                                         ItemIndex;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_OnHpItemFlyDown) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_OnHpItemFlyDown");
-static_assert(sizeof(WBP_Hud_HP_v2_C_OnHpItemFlyDown) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_OnHpItemFlyDown");
-static_assert(offsetof(WBP_Hud_HP_v2_C_OnHpItemFlyDown, ItemIndex) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnHpItemFlyDown::ItemIndex' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredFinished
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_OnInjuredFinished final
-{
-public:
-	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_OnInjuredFinished) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_OnInjuredFinished");
-static_assert(sizeof(WBP_Hud_HP_v2_C_OnInjuredFinished) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_OnInjuredFinished");
-static_assert(offsetof(WBP_Hud_HP_v2_C_OnInjuredFinished, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnInjuredFinished::decorate' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredWaited
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_OnInjuredWaited final
-{
-public:
-	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_OnInjuredWaited) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_OnInjuredWaited");
-static_assert(sizeof(WBP_Hud_HP_v2_C_OnInjuredWaited) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_OnInjuredWaited");
-static_assert(offsetof(WBP_Hud_HP_v2_C_OnInjuredWaited, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnInjuredWaited::decorate' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnOffsetHpItem
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_OnOffsetHpItem final
-{
-public:
-	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_OnOffsetHpItem) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_OnOffsetHpItem");
-static_assert(sizeof(WBP_Hud_HP_v2_C_OnOffsetHpItem) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_OnOffsetHpItem");
-static_assert(offsetof(WBP_Hud_HP_v2_C_OnOffsetHpItem, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_OnOffsetHpItem::decorate' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PauseInjuredAnim
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Hud_HP_v2_C_PauseInjuredAnim final
-{
-public:
-	float                                         CallFunc_QueuePauseAnimation_ReturnValue;          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_PauseInjuredAnim) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_PauseInjuredAnim");
-static_assert(sizeof(WBP_Hud_HP_v2_C_PauseInjuredAnim) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_PauseInjuredAnim");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PauseInjuredAnim, CallFunc_QueuePauseAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PauseInjuredAnim::CallFunc_QueuePauseAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayHideLevel
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ContinueInjuredAnim
 // 0x0010 (0x0010 - 0x0000)
-struct WBP_Hud_HP_v2_C_PlayHideLevel final
-{
-public:
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_PlayHideLevel) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayHideLevel");
-static_assert(sizeof(WBP_Hud_HP_v2_C_PlayHideLevel) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_PlayHideLevel");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PlayHideLevel, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayHideLevel::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PlayHideLevel, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_PlayHideLevel::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayInjuredAnim
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_PlayInjuredAnim final
+struct WBP_Hud_HP_v2_C_ContinueInjuredAnim final
 {
 public:
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_HP_v2_C_PlayInjuredAnim) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayInjuredAnim");
-static_assert(sizeof(WBP_Hud_HP_v2_C_PlayInjuredAnim) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_PlayInjuredAnim");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PlayInjuredAnim, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayInjuredAnim::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayLevelUp
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_PlayLevelUp final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_PlayLevelUp) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayLevelUp");
-static_assert(sizeof(WBP_Hud_HP_v2_C_PlayLevelUp) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_PlayLevelUp");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PlayLevelUp, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayLevelUp::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayShowLevel
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Hud_HP_v2_C_PlayShowLevel final
-{
-public:
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_PlayShowLevel) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_PlayShowLevel");
-static_assert(sizeof(WBP_Hud_HP_v2_C_PlayShowLevel) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_PlayShowLevel");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PlayShowLevel, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_PlayShowLevel::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Hud_HP_v2_C_PlayShowLevel, CallFunc_PlayAnimationForward_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_PlayShowLevel::CallFunc_PlayAnimationForward_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ResetInjuredAnim
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Hud_HP_v2_C_ResetInjuredAnim final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationTimeRange_ReturnValue;       // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_ResetInjuredAnim) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_ResetInjuredAnim");
-static_assert(sizeof(WBP_Hud_HP_v2_C_ResetInjuredAnim) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_ResetInjuredAnim");
-static_assert(offsetof(WBP_Hud_HP_v2_C_ResetInjuredAnim, CallFunc_PlayAnimationTimeRange_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_ResetInjuredAnim::CallFunc_PlayAnimationTimeRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Hud_HP_v2_C_ResetInjuredAnim, CallFunc_PauseAnimation_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_ResetInjuredAnim::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2 final
-{
-public:
-	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2");
-static_assert(sizeof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2");
-static_assert(offsetof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2::decorate' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0 final
-{
-public:
-	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0");
-static_assert(sizeof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0");
-static_assert(offsetof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0::decorate' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1 final
-{
-public:
-	class UHorizontalBox*                         decorate;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1");
-static_assert(sizeof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1) == 0x000008, "Wrong size on WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1");
-static_assert(offsetof(WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1, decorate) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1::decorate' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SetHpPosition
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_Hud_HP_v2_C_SetHpPosition final
-{
-public:
-	double                                        X;                                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_SetHpPosition) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_SetHpPosition");
-static_assert(sizeof(WBP_Hud_HP_v2_C_SetHpPosition) == 0x000020, "Wrong size on WBP_Hud_HP_v2_C_SetHpPosition");
-static_assert(offsetof(WBP_Hud_HP_v2_C_SetHpPosition, X) == 0x000000, "Member 'WBP_Hud_HP_v2_C_SetHpPosition::X' has a wrong offset!");
-static_assert(offsetof(WBP_Hud_HP_v2_C_SetHpPosition, CallFunc_MakeVector2D_ReturnValue) == 0x000008, "Member 'WBP_Hud_HP_v2_C_SetHpPosition::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Hud_HP_v2_C_SetHpPosition, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000018, "Member 'WBP_Hud_HP_v2_C_SetHpPosition::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddExtraMaxHP
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Hud_HP_v2_C_TestAddExtraMaxHP final
-{
-public:
-	int32                                         Num;                                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_TestAddExtraMaxHP) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_TestAddExtraMaxHP");
-static_assert(sizeof(WBP_Hud_HP_v2_C_TestAddExtraMaxHP) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_TestAddExtraMaxHP");
-static_assert(offsetof(WBP_Hud_HP_v2_C_TestAddExtraMaxHP, Num) == 0x000000, "Member 'WBP_Hud_HP_v2_C_TestAddExtraMaxHP::Num' has a wrong offset!");
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddHP
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Hud_HP_v2_C_TestAddHP final
-{
-public:
-	int32                                         addHp;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_HP_v2_C_TestAddHP) == 0x000004, "Wrong alignment on WBP_Hud_HP_v2_C_TestAddHP");
-static_assert(sizeof(WBP_Hud_HP_v2_C_TestAddHP) == 0x000004, "Wrong size on WBP_Hud_HP_v2_C_TestAddHP");
-static_assert(offsetof(WBP_Hud_HP_v2_C_TestAddHP, addHp) == 0x000000, "Member 'WBP_Hud_HP_v2_C_TestAddHP::addHp' has a wrong offset!");
+static_assert(alignof(WBP_Hud_HP_v2_C_ContinueInjuredAnim) == 0x000008, "Wrong alignment on WBP_Hud_HP_v2_C_ContinueInjuredAnim");
+static_assert(sizeof(WBP_Hud_HP_v2_C_ContinueInjuredAnim) == 0x000010, "Wrong size on WBP_Hud_HP_v2_C_ContinueInjuredAnim");
+static_assert(offsetof(WBP_Hud_HP_v2_C_ContinueInjuredAnim, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_HP_v2_C_ContinueInjuredAnim::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Hud_HP_v2_C_ContinueInjuredAnim, CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast) == 0x000008, "Member 'WBP_Hud_HP_v2_C_ContinueInjuredAnim::CallFunc_PlayAnimation_PlaybackSpeed_ImplicitCast' has a wrong offset!");
 
 // Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

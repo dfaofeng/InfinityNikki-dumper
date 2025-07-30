@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EnumBulletDestroyType_structs.hpp"
 #include "ESkillFlag_structs.hpp"
+#include "EnumBulletDestroyType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

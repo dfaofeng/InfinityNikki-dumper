@@ -100,33 +100,33 @@ public:
 	TMulticastInlineDelegate<void()>              NewEventDispatcher_0;                              // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void AniTransformEvent();
-	void BP_ClearItem();
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_Private_SetTextureByItemId(int64 ItemId);
-	void ClearTipsData(bool IsClearData);
-	void ExecuteUbergraph_WBP_UI_ItemSlot(int32 EntryPoint);
-	void GetTips(class UTipsEvent_C* Data);
-	void HideBlankSlotIcon(bool Hide);
-	void Lua_SwitchIcon();
-	void OnListItemObjectSetViaIndex(int32 Index_0);
-	void OnListItemValueChangedViaIndex(int32 Index_0);
-	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
-	struct FEventReply OnTouchEnded(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent);
-	struct FEventReply OnTouchGesture(const struct FGeometry& MyGeometry, const struct FPointerEvent& GestureEvent);
-	struct FEventReply OnTouchMoved(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent);
-	void PlayEntryAnimation();
-	void PlayEquippedAnimation();
-	void SequenceEvent();
-	void SequenceEvent__ENTRYPOINTWBP_UI_ItemSlot();
-	void SequenceEvent__ENTRYPOINTWBP_UI_ItemSlot_0();
-	void SetDressDisplayInfo(class USlotItemData_C* Data);
-	void SetQuality(int32 Quality);
-	void Update_on_Mark_Point_Collect(class USlotItemData_C* ItemData);
-	void UpdateData(class USlotItemData_C* data_);
 	void UpdateIcon(class USlotItemData_C* NewData);
+	void UpdateData(class USlotItemData_C* data_);
+	void Update_on_Mark_Point_Collect(class USlotItemData_C* ItemData);
+	void SetQuality(int32 Quality);
+	void SetDressDisplayInfo(class USlotItemData_C* Data);
+	void SequenceEvent__ENTRYPOINTWBP_UI_ItemSlot_0();
+	void SequenceEvent__ENTRYPOINTWBP_UI_ItemSlot();
+	void SequenceEvent();
+	void PlayEquippedAnimation();
+	void PlayEntryAnimation();
+	struct FEventReply OnTouchMoved(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent);
+	struct FEventReply OnTouchGesture(const struct FGeometry& MyGeometry, const struct FPointerEvent& GestureEvent);
+	struct FEventReply OnTouchEnded(const struct FGeometry& MyGeometry, const struct FPointerEvent& InTouchEvent);
+	struct FEventReply OnMouseButtonDoubleClick(const struct FGeometry& InMyGeometry, const struct FPointerEvent& InMouseEvent);
+	void OnListItemValueChangedViaIndex(int32 Index_0);
+	void OnListItemObjectSetViaIndex(int32 Index_0);
+	void Lua_SwitchIcon();
+	void HideBlankSlotIcon(bool Hide);
+	void GetTips(class UTipsEvent_C* Data);
+	void ExecuteUbergraph_WBP_UI_ItemSlot(int32 EntryPoint);
+	void ClearTipsData(bool IsClearData);
+	void BP_Private_SetTextureByItemId(int64 ItemId);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
+	void BP_ClearItem();
+	void AniTransformEvent();
 
 	class FString GetModuleName() const;
 

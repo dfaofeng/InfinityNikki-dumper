@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function CameraShootingPosition.CameraShootingPosition_C.DeletePhotographCamera_EditorOnly
+// 0x0001 (0x0001 - 0x0000)
+struct CameraShootingPosition_C_DeletePhotographCamera_EditorOnly final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CameraShootingPosition_C_DeletePhotographCamera_EditorOnly) == 0x000001, "Wrong alignment on CameraShootingPosition_C_DeletePhotographCamera_EditorOnly");
+static_assert(sizeof(CameraShootingPosition_C_DeletePhotographCamera_EditorOnly) == 0x000001, "Wrong size on CameraShootingPosition_C_DeletePhotographCamera_EditorOnly");
+static_assert(offsetof(CameraShootingPosition_C_DeletePhotographCamera_EditorOnly, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'CameraShootingPosition_C_DeletePhotographCamera_EditorOnly::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
 // Function CameraShootingPosition.CameraShootingPosition_C.SpawnPhotographCamera_EditorOnly
 // 0x0080 (0x0080 - 0x0000)
 struct CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly final
@@ -35,17 +46,6 @@ static_assert(offsetof(CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly
 static_assert(offsetof(CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x000068, "Member 'CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly, CallFunc_FinishSpawningActor_ReturnValue) == 0x000070, "Member 'CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
 static_assert(offsetof(CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly, CallFunc_K2_AttachToActor_ReturnValue) == 0x000078, "Member 'CameraShootingPosition_C_SpawnPhotographCamera_EditorOnly::CallFunc_K2_AttachToActor_ReturnValue' has a wrong offset!");
-
-// Function CameraShootingPosition.CameraShootingPosition_C.DeletePhotographCamera_EditorOnly
-// 0x0001 (0x0001 - 0x0000)
-struct CameraShootingPosition_C_DeletePhotographCamera_EditorOnly final
-{
-public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(CameraShootingPosition_C_DeletePhotographCamera_EditorOnly) == 0x000001, "Wrong alignment on CameraShootingPosition_C_DeletePhotographCamera_EditorOnly");
-static_assert(sizeof(CameraShootingPosition_C_DeletePhotographCamera_EditorOnly) == 0x000001, "Wrong size on CameraShootingPosition_C_DeletePhotographCamera_EditorOnly");
-static_assert(offsetof(CameraShootingPosition_C_DeletePhotographCamera_EditorOnly, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'CameraShootingPosition_C_DeletePhotographCamera_EditorOnly::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

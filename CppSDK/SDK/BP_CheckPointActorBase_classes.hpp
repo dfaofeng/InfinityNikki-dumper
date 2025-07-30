@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "ECombatStimulateType_structs.hpp"
 #include "EnumCheckpointStateType_structs.hpp"
 #include "X6StateMachine_structs.hpp"
-#include "ECombatStimulateType_structs.hpp"
 
 
 namespace SDK

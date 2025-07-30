@@ -17,6 +17,27 @@
 namespace SDK
 {
 
+// Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.CreateSceneMarkerCell
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_UI_SceneMarkerCell_C**       Cell                                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SceneMarkerPanel_C::CreateSceneMarkerCell(class UWBP_UI_SceneMarkerCell_C** Cell)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SceneMarkerPanel_C", "CreateSceneMarkerCell");
+
+	Params::WBP_SceneMarkerPanel_C_CreateSceneMarkerCell Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Cell != nullptr)
+		*Cell = Parms.Cell;
+}
+
+
 // Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.ConvertScreenPosToWidgetPos
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -38,27 +59,6 @@ void UWBP_SceneMarkerPanel_C::ConvertScreenPosToWidgetPos(const struct FVector2D
 
 	if (widgetPos != nullptr)
 		*widgetPos = std::move(Parms.widgetPos);
-}
-
-
-// Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.CreateSceneMarkerCell
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_UI_SceneMarkerCell_C**       Cell                                                   (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SceneMarkerPanel_C::CreateSceneMarkerCell(class UWBP_UI_SceneMarkerCell_C** Cell)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SceneMarkerPanel_C", "CreateSceneMarkerCell");
-
-	Params::WBP_SceneMarkerPanel_C_CreateSceneMarkerCell Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Cell != nullptr)
-		*Cell = Parms.Cell;
 }
 
 

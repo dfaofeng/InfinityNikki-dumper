@@ -34,9 +34,9 @@ public:
 	int32                                         KeyTip_Index;                                      // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Construct();
-	void ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC(int32 EntryPoint);
+	void Construct();
 
 public:
 	static class UClass* StaticClass()

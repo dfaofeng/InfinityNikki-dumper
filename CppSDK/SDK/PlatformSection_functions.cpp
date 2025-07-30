@@ -17,60 +17,65 @@
 namespace SDK
 {
 
-// Function PlatformSection.PlatformSection_C.ExecuteUbergraph_PlatformSection
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UPlatformSection_C::ExecuteUbergraph_PlatformSection(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PlatformSection_C", "ExecuteUbergraph_PlatformSection");
-
-	Params::PlatformSection_C_ExecuteUbergraph_PlatformSection Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PlatformSection.PlatformSection_C.GetCurrentPlatform
+// Function PlatformSection.PlatformSection_C.UpdateCondition
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<EPlatformType>*                  PlatformType                                           (Parm, OutParm)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CurrentCondition                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   FinalCondition                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPlatformSection_C::GetCurrentPlatform(TArray<EPlatformType>* PlatformType)
+void UPlatformSection_C::UpdateCondition(class AActor* Actor, bool CurrentCondition, bool* FinalCondition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlatformSection_C", "GetCurrentPlatform");
+		Func = Class->GetFunction("PlatformSection_C", "UpdateCondition");
 
-	Params::PlatformSection_C_GetCurrentPlatform Parms{};
+	Params::PlatformSection_C_UpdateCondition Parms{};
+
+	Parms.Actor = Actor;
+	Parms.CurrentCondition = CurrentCondition;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (PlatformType != nullptr)
-		*PlatformType = std::move(Parms.PlatformType);
+	if (FinalCondition != nullptr)
+		*FinalCondition = Parms.FinalCondition;
 }
 
 
-// Function PlatformSection.PlatformSection_C.K2_OnSectionBegin_WithBindingObject
+// Function PlatformSection.PlatformSection_C.SetPlatform
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPlatformType                           NewPlatform                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UPlatformSection_C::SetPlatform(EPlatformType NewPlatform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PlatformSection_C", "SetPlatform");
+
+	Params::PlatformSection_C_SetPlatform Parms{};
+
+	Parms.NewPlatform = NewPlatform;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PlatformSection.PlatformSection_C.K2_OnSectionUpdate_WithBindingObject
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UObject*                          BindingObject                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UPlatformSection_C::K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject)
+void UPlatformSection_C::K2_OnSectionUpdate_WithBindingObject(class UObject* BindingObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlatformSection_C", "K2_OnSectionBegin_WithBindingObject");
+		Func = Class->GetFunction("PlatformSection_C", "K2_OnSectionUpdate_WithBindingObject");
 
-	Params::PlatformSection_C_K2_OnSectionBegin_WithBindingObject Parms{};
+	Params::PlatformSection_C_K2_OnSectionUpdate_WithBindingObject Parms{};
 
 	Parms.BindingObject = BindingObject;
 
@@ -98,19 +103,19 @@ void UPlatformSection_C::K2_OnSectionEnd_WithBindingObject(class UObject* Bindin
 }
 
 
-// Function PlatformSection.PlatformSection_C.K2_OnSectionUpdate_WithBindingObject
+// Function PlatformSection.PlatformSection_C.K2_OnSectionBegin_WithBindingObject
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // class UObject*                          BindingObject                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UPlatformSection_C::K2_OnSectionUpdate_WithBindingObject(class UObject* BindingObject)
+void UPlatformSection_C::K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlatformSection_C", "K2_OnSectionUpdate_WithBindingObject");
+		Func = Class->GetFunction("PlatformSection_C", "K2_OnSectionBegin_WithBindingObject");
 
-	Params::PlatformSection_C_K2_OnSectionUpdate_WithBindingObject Parms{};
+	Params::PlatformSection_C_K2_OnSectionBegin_WithBindingObject Parms{};
 
 	Parms.BindingObject = BindingObject;
 
@@ -118,49 +123,44 @@ void UPlatformSection_C::K2_OnSectionUpdate_WithBindingObject(class UObject* Bin
 }
 
 
-// Function PlatformSection.PlatformSection_C.SetPlatform
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function PlatformSection.PlatformSection_C.GetCurrentPlatform
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EPlatformType                           NewPlatform                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<EPlatformType>*                  PlatformType                                           (Parm, OutParm)
 
-void UPlatformSection_C::SetPlatform(EPlatformType NewPlatform)
+void UPlatformSection_C::GetCurrentPlatform(TArray<EPlatformType>* PlatformType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlatformSection_C", "SetPlatform");
+		Func = Class->GetFunction("PlatformSection_C", "GetCurrentPlatform");
 
-	Params::PlatformSection_C_SetPlatform Parms{};
-
-	Parms.NewPlatform = NewPlatform;
+	Params::PlatformSection_C_GetCurrentPlatform Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlatformType != nullptr)
+		*PlatformType = std::move(Parms.PlatformType);
 }
 
 
-// Function PlatformSection.PlatformSection_C.UpdateCondition
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function PlatformSection.PlatformSection_C.ExecuteUbergraph_PlatformSection
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CurrentCondition                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   FinalCondition                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UPlatformSection_C::UpdateCondition(class AActor* Actor, bool CurrentCondition, bool* FinalCondition)
+void UPlatformSection_C::ExecuteUbergraph_PlatformSection(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PlatformSection_C", "UpdateCondition");
+		Func = Class->GetFunction("PlatformSection_C", "ExecuteUbergraph_PlatformSection");
 
-	Params::PlatformSection_C_UpdateCondition Parms{};
+	Params::PlatformSection_C_ExecuteUbergraph_PlatformSection Parms{};
 
-	Parms.Actor = Actor;
-	Parms.CurrentCondition = CurrentCondition;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (FinalCondition != nullptr)
-		*FinalCondition = Parms.FinalCondition;
 }
 
 }

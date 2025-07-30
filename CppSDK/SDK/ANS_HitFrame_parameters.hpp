@@ -16,28 +16,6 @@
 namespace SDK::Params
 {
 
-// Function ANS_HitFrame.ANS_HitFrame_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_HitFrame_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_HitFrame_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_HitFrame_C_GetModuleName");
-static_assert(sizeof(ANS_HitFrame_C_GetModuleName) == 0x000010, "Wrong size on ANS_HitFrame_C_GetModuleName");
-static_assert(offsetof(ANS_HitFrame_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_HitFrame_C_GetModuleName::ReturnValue' has a wrong offset!");
-
-// Function ANS_HitFrame.ANS_HitFrame_C.GetNotifyName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_HitFrame_C_GetNotifyName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_HitFrame_C_GetNotifyName) == 0x000008, "Wrong alignment on ANS_HitFrame_C_GetNotifyName");
-static_assert(sizeof(ANS_HitFrame_C_GetNotifyName) == 0x000010, "Wrong size on ANS_HitFrame_C_GetNotifyName");
-static_assert(offsetof(ANS_HitFrame_C_GetNotifyName, ReturnValue) == 0x000000, "Member 'ANS_HitFrame_C_GetNotifyName::ReturnValue' has a wrong offset!");
-
 // Function ANS_HitFrame.ANS_HitFrame_C.Received_NotifyTick
 // 0x0058 (0x0058 - 0x0000)
 struct ANS_HitFrame_C_Received_NotifyTick final
@@ -60,6 +38,28 @@ static_assert(offsetof(ANS_HitFrame_C_Received_NotifyTick, FrameDeltaTime) == 0x
 static_assert(offsetof(ANS_HitFrame_C_Received_NotifyTick, EventReference) == 0x000018, "Member 'ANS_HitFrame_C_Received_NotifyTick::EventReference' has a wrong offset!");
 static_assert(offsetof(ANS_HitFrame_C_Received_NotifyTick, ReturnValue) == 0x000048, "Member 'ANS_HitFrame_C_Received_NotifyTick::ReturnValue' has a wrong offset!");
 static_assert(offsetof(ANS_HitFrame_C_Received_NotifyTick, CallFunc_GetOwner_ReturnValue) == 0x000050, "Member 'ANS_HitFrame_C_Received_NotifyTick::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+
+// Function ANS_HitFrame.ANS_HitFrame_C.GetNotifyName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_HitFrame_C_GetNotifyName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_HitFrame_C_GetNotifyName) == 0x000008, "Wrong alignment on ANS_HitFrame_C_GetNotifyName");
+static_assert(sizeof(ANS_HitFrame_C_GetNotifyName) == 0x000010, "Wrong size on ANS_HitFrame_C_GetNotifyName");
+static_assert(offsetof(ANS_HitFrame_C_GetNotifyName, ReturnValue) == 0x000000, "Member 'ANS_HitFrame_C_GetNotifyName::ReturnValue' has a wrong offset!");
+
+// Function ANS_HitFrame.ANS_HitFrame_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_HitFrame_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_HitFrame_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_HitFrame_C_GetModuleName");
+static_assert(sizeof(ANS_HitFrame_C_GetModuleName) == 0x000010, "Wrong size on ANS_HitFrame_C_GetModuleName");
+static_assert(offsetof(ANS_HitFrame_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_HitFrame_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

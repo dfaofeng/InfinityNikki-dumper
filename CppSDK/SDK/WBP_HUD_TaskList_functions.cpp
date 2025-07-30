@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_HUD_TaskList.WBP_HUD_TaskList_C.Construct
+// Function WBP_HUD_TaskList.WBP_HUD_TaskList_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_TaskList_C::Construct()
+void UWBP_HUD_TaskList_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TaskList_C", "Construct");
+		Func = Class->GetFunction("WBP_HUD_TaskList_C", "PreConstruct");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_HUD_TaskList_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UWBP_HUD_TaskList_C::ExecuteUbergraph_WBP_HUD_TaskList(int32 EntryPoint)
 }
 
 
-// Function WBP_HUD_TaskList.WBP_HUD_TaskList_C.PreConstruct
+// Function WBP_HUD_TaskList.WBP_HUD_TaskList_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_TaskList_C::PreConstruct(bool IsDesignTime)
+void UWBP_HUD_TaskList_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TaskList_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_HUD_TaskList_C", "Construct");
 
-	Params::WBP_HUD_TaskList_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

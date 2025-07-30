@@ -27,6 +27,17 @@ static_assert(alignof(BPI_Weather_C_Manual_Operation_TOD) == 0x000008, "Wrong al
 static_assert(sizeof(BPI_Weather_C_Manual_Operation_TOD) == 0x000008, "Wrong size on BPI_Weather_C_Manual_Operation_TOD");
 static_assert(offsetof(BPI_Weather_C_Manual_Operation_TOD, Time) == 0x000000, "Member 'BPI_Weather_C_Manual_Operation_TOD::Time' has a wrong offset!");
 
+// Function BPI_Weather.BPI_Weather_C.BPI_TODTime
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_Weather_C_BPI_TODTime final
+{
+public:
+	double                                        Time;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPI_Weather_C_BPI_TODTime) == 0x000008, "Wrong alignment on BPI_Weather_C_BPI_TODTime");
+static_assert(sizeof(BPI_Weather_C_BPI_TODTime) == 0x000008, "Wrong size on BPI_Weather_C_BPI_TODTime");
+static_assert(offsetof(BPI_Weather_C_BPI_TODTime, Time) == 0x000000, "Member 'BPI_Weather_C_BPI_TODTime::Time' has a wrong offset!");
+
 // Function BPI_Weather.BPI_Weather_C.BPI_WeatherData
 // 0x0008 (0x0008 - 0x0000)
 struct BPI_Weather_C_BPI_WeatherData final
@@ -52,17 +63,6 @@ static_assert(sizeof(BPI_Weather_C_BPI_WeatherChanged) == 0x000030, "Wrong size 
 static_assert(offsetof(BPI_Weather_C_BPI_WeatherChanged, RegionName) == 0x000000, "Member 'BPI_Weather_C_BPI_WeatherChanged::RegionName' has a wrong offset!");
 static_assert(offsetof(BPI_Weather_C_BPI_WeatherChanged, UnloadWeatherName) == 0x000010, "Member 'BPI_Weather_C_BPI_WeatherChanged::UnloadWeatherName' has a wrong offset!");
 static_assert(offsetof(BPI_Weather_C_BPI_WeatherChanged, LoadWeatherName) == 0x000020, "Member 'BPI_Weather_C_BPI_WeatherChanged::LoadWeatherName' has a wrong offset!");
-
-// Function BPI_Weather.BPI_Weather_C.BPI_TODTime
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_Weather_C_BPI_TODTime final
-{
-public:
-	double                                        Time;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_Weather_C_BPI_TODTime) == 0x000008, "Wrong alignment on BPI_Weather_C_BPI_TODTime");
-static_assert(sizeof(BPI_Weather_C_BPI_TODTime) == 0x000008, "Wrong size on BPI_Weather_C_BPI_TODTime");
-static_assert(offsetof(BPI_Weather_C_BPI_TODTime, Time) == 0x000000, "Member 'BPI_Weather_C_BPI_TODTime::Time' has a wrong offset!");
 
 // Function BPI_Weather.BPI_Weather_C.BPI_SaveAsset
 // 0x0002 (0x0002 - 0x0000)

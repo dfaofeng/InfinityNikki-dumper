@@ -26,8 +26,8 @@ public:
 	TArray<class UBP_BuffConfig_C*>               BP_BuffDAList;                                     // 0x0038(0x0010)(Edit, BlueprintVisible)
 
 public:
-	class FString GetModuleName() const;
 	class FString GetNotifyName() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

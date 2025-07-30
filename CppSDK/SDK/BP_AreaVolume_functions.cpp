@@ -17,177 +17,21 @@
 namespace SDK
 {
 
-// Function BP_AreaVolume.BP_AreaVolume_C.DisableOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_AreaVolume_C::DisableOverlap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "DisableOverlap");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.EnableOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_AreaVolume_C::EnableOverlap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "EnableOverlap");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ExecuteUbergraph_BP_AreaVolume
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_AreaVolume_C::ExecuteUbergraph_BP_AreaVolume(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "ExecuteUbergraph_BP_AreaVolume");
-
-	Params::BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapBegin
+// Function BP_AreaVolume.BP_AreaVolume_C.ShowVolume
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanShow                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_AreaVolume_C::OnOverlapBegin(class AActor* Actor)
+void ABP_AreaVolume_C::ShowVolume(bool CanShow)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "OnOverlapBegin");
+		Func = Class->GetFunction("BP_AreaVolume_C", "ShowVolume");
 
-	Params::BP_AreaVolume_C_OnOverlapBegin Parms{};
+	Params::BP_AreaVolume_C_ShowVolume Parms{};
 
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapEnd
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_AreaVolume_C::OnOverlapEnd(class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "OnOverlapEnd");
-
-	Params::BP_AreaVolume_C_OnOverlapEnd Parms{};
-
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorBeginOverlap
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_AreaVolume_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveActorBeginOverlap");
-
-	Params::BP_AreaVolume_C_ReceiveActorBeginOverlap Parms{};
-
-	Parms.OtherActor = OtherActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorEndOverlap
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_AreaVolume_C::ReceiveActorEndOverlap(class AActor* OtherActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveActorEndOverlap");
-
-	Params::BP_AreaVolume_C_ReceiveActorEndOverlap Parms{};
-
-	Parms.OtherActor = OtherActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_AreaVolume_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
-
-void ABP_AreaVolume_C::ReceiveDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AreaVolume.BP_AreaVolume_C.SetMeshType
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   MeshType_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_AreaVolume_C::SetMeshType(int32 MeshType_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "SetMeshType");
-
-	Params::BP_AreaVolume_C_SetMeshType Parms{};
-
-	Parms.MeshType_0 = MeshType_0;
+	Parms.CanShow = CanShow;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -217,23 +61,179 @@ void ABP_AreaVolume_C::SetTransform(const struct FVector& Location, const struct
 }
 
 
-// Function BP_AreaVolume.BP_AreaVolume_C.ShowVolume
+// Function BP_AreaVolume.BP_AreaVolume_C.SetMeshType
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    CanShow                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   MeshType_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_AreaVolume_C::ShowVolume(bool CanShow)
+void ABP_AreaVolume_C::SetMeshType(int32 MeshType_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AreaVolume_C", "ShowVolume");
+		Func = Class->GetFunction("BP_AreaVolume_C", "SetMeshType");
 
-	Params::BP_AreaVolume_C_ShowVolume Parms{};
+	Params::BP_AreaVolume_C_SetMeshType Parms{};
 
-	Parms.CanShow = CanShow;
+	Parms.MeshType_0 = MeshType_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_AreaVolume_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_AreaVolume_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorEndOverlap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AreaVolume_C::ReceiveActorEndOverlap(class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveActorEndOverlap");
+
+	Params::BP_AreaVolume_C_ReceiveActorEndOverlap Parms{};
+
+	Parms.OtherActor = OtherActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorBeginOverlap
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AreaVolume_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "ReceiveActorBeginOverlap");
+
+	Params::BP_AreaVolume_C_ReceiveActorBeginOverlap Parms{};
+
+	Parms.OtherActor = OtherActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AreaVolume_C::OnOverlapEnd(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "OnOverlapEnd");
+
+	Params::BP_AreaVolume_C_OnOverlapEnd Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapBegin
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AreaVolume_C::OnOverlapBegin(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "OnOverlapBegin");
+
+	Params::BP_AreaVolume_C_OnOverlapBegin Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ExecuteUbergraph_BP_AreaVolume
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AreaVolume_C::ExecuteUbergraph_BP_AreaVolume(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "ExecuteUbergraph_BP_AreaVolume");
+
+	Params::BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.EnableOverlap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_AreaVolume_C::EnableOverlap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "EnableOverlap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AreaVolume.BP_AreaVolume_C.DisableOverlap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_AreaVolume_C::DisableOverlap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AreaVolume_C", "DisableOverlap");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

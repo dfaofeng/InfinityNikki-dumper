@@ -17,72 +17,6 @@
 namespace SDK::Params
 {
 
-// Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_ShowDeathDissolve_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ShowDeathDissolve_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ShowDeathDissolve_C_GetModuleName");
-static_assert(sizeof(ANS_ShowDeathDissolve_C_GetModuleName) == 0x000010, "Wrong size on ANS_ShowDeathDissolve_C_GetModuleName");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ShowDeathDissolve_C_GetModuleName::ReturnValue' has a wrong offset!");
-
-// Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.Received_NotifyBegin
-// 0x00A0 (0x00A0 - 0x0000)
-struct ANS_ShowDeathDissolve_C_Received_NotifyBegin final
-{
-public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         TotalDuration;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Temp_name_Variable;                                // 0x004C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_1;                              // 0x0054(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_2;                              // 0x005C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_3;                              // 0x0064(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_4;                              // 0x006C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_5;                              // 0x0074(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable_6;                              // 0x007C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ShowDeathDissolve_C_Received_NotifyBegin) == 0x000008, "Wrong alignment on ANS_ShowDeathDissolve_C_Received_NotifyBegin");
-static_assert(sizeof(ANS_ShowDeathDissolve_C_Received_NotifyBegin) == 0x0000A0, "Wrong size on ANS_ShowDeathDissolve_C_Received_NotifyBegin");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, MeshComp) == 0x000000, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::MeshComp' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Animation) == 0x000008, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Animation' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, TotalDuration) == 0x000010, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::TotalDuration' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, EventReference) == 0x000018, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::EventReference' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, ReturnValue) == 0x000048, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::ReturnValue' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable) == 0x00004C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_1) == 0x000054, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_1' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_2) == 0x00005C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_2' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_3) == 0x000064, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_3' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_4) == 0x00006C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_4' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_5) == 0x000074, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_5' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_6) == 0x00007C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_6' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000088, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
-
-// Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.Received_NotifyEnd
-// 0x0048 (0x0048 - 0x0000)
-struct ANS_ShowDeathDissolve_C_Received_NotifyEnd final
-{
-public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ShowDeathDissolve_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on ANS_ShowDeathDissolve_C_Received_NotifyEnd");
-static_assert(sizeof(ANS_ShowDeathDissolve_C_Received_NotifyEnd) == 0x000048, "Wrong size on ANS_ShowDeathDissolve_C_Received_NotifyEnd");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::Animation' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::EventReference' has a wrong offset!");
-static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
-
 // Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.Received_NotifyTick
 // 0x0148 (0x0148 - 0x0000)
 struct ANS_ShowDeathDissolve_C_Received_NotifyTick final
@@ -178,6 +112,72 @@ static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyTick, CallFunc_Get
 static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyTick, CallFunc_GetFloatValue_InTime_ImplicitCast_1) == 0x000134, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyTick::CallFunc_GetFloatValue_InTime_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyTick, CallFunc_Map_Add_Value_ImplicitCast) == 0x000138, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyTick::CallFunc_Map_Add_Value_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyTick, CallFunc_Map_Add_Value_ImplicitCast_1) == 0x000140, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyTick::CallFunc_Map_Add_Value_ImplicitCast_1' has a wrong offset!");
+
+// Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.Received_NotifyEnd
+// 0x0048 (0x0048 - 0x0000)
+struct ANS_ShowDeathDissolve_C_Received_NotifyEnd final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ShowDeathDissolve_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on ANS_ShowDeathDissolve_C_Received_NotifyEnd");
+static_assert(sizeof(ANS_ShowDeathDissolve_C_Received_NotifyEnd) == 0x000048, "Wrong size on ANS_ShowDeathDissolve_C_Received_NotifyEnd");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::Animation' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::EventReference' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
+
+// Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.Received_NotifyBegin
+// 0x00A0 (0x00A0 - 0x0000)
+struct ANS_ShowDeathDissolve_C_Received_NotifyBegin final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         TotalDuration;                                     // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Temp_name_Variable;                                // 0x004C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_1;                              // 0x0054(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_2;                              // 0x005C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_3;                              // 0x0064(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_4;                              // 0x006C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_5;                              // 0x0074(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable_6;                              // 0x007C(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ShowDeathDissolve_C_Received_NotifyBegin) == 0x000008, "Wrong alignment on ANS_ShowDeathDissolve_C_Received_NotifyBegin");
+static_assert(sizeof(ANS_ShowDeathDissolve_C_Received_NotifyBegin) == 0x0000A0, "Wrong size on ANS_ShowDeathDissolve_C_Received_NotifyBegin");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, MeshComp) == 0x000000, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::MeshComp' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Animation) == 0x000008, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Animation' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, TotalDuration) == 0x000010, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::TotalDuration' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, EventReference) == 0x000018, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::EventReference' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, ReturnValue) == 0x000048, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::ReturnValue' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable) == 0x00004C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_1) == 0x000054, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_1' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_2) == 0x00005C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_2' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_3) == 0x000064, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_3' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_4) == 0x00006C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_4' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_5) == 0x000074, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_5' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, Temp_name_Variable_6) == 0x00007C, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::Temp_name_Variable_6' has a wrong offset!");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_Received_NotifyBegin, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000088, "Member 'ANS_ShowDeathDissolve_C_Received_NotifyBegin::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
+
+// Function ANS_ShowDeathDissolve.ANS_ShowDeathDissolve_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_ShowDeathDissolve_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ShowDeathDissolve_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ShowDeathDissolve_C_GetModuleName");
+static_assert(sizeof(ANS_ShowDeathDissolve_C_GetModuleName) == 0x000010, "Wrong size on ANS_ShowDeathDissolve_C_GetModuleName");
+static_assert(offsetof(ANS_ShowDeathDissolve_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ShowDeathDissolve_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

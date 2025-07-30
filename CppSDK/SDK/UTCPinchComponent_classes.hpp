@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UTCComponent_classes.hpp"
 #include "InputCore_structs.hpp"
+#include "UTCComponent_classes.hpp"
 
 
 namespace SDK
@@ -69,7 +69,6 @@ public:
 	void On_Viewport_Size_Is_Changed();
 	void On_Event_Touch_Released(const struct FVector& Location, ETouchIndex FingerIndex);
 	void On_Event_Touch_Pressed(const struct FVector& Location, ETouchIndex FingerIndex);
-	void On_Event_Touch_Moved(const struct FVector& Location, ETouchIndex FingerIndex);
 	void On_Event_Touch_Canceled(const struct FVector& Location, ETouchIndex FingerIndex);
 	void Initialize_Debug_Widget();
 	void Get_Length_and_Angle(double* Length, double* Angle, struct FVector* Halfway_Vector);
@@ -77,6 +76,7 @@ public:
 	void CheckFingerLocationBan(const struct FVector& Location, ETouchIndex FingerIndex, bool* FixedBan);
 	void Check_Debug_Touch_Location();
 	void Add_Debug_Touch_Location(const struct FVector& Location);
+	void On_Event_Touch_Moved(const struct FVector& Location, ETouchIndex FingerIndex);
 
 public:
 	static class UClass* StaticClass()

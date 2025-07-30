@@ -121,12 +121,12 @@ public:
 	float                                         InUserSpecifiedScale;                              // 0x05E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_HUD_TopRightArea(int32 EntryPoint);
-	void OnFadeInQuickShoot();
-	void OnFadeInStart();
-	void PreConstruct(bool IsDesignTime);
-	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea();
 	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0();
+	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea();
+	void PreConstruct(bool IsDesignTime);
+	void OnFadeInStart();
+	void OnFadeInQuickShoot();
+	void ExecuteUbergraph_WBP_HUD_TopRightArea(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

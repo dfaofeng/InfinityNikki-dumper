@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum Enum_FunctionalAtmosphereType.Enum_FunctionalAtmosphereType
-// NumValues: 0x0014
+// NumValues: 0x0016
 enum class Enum_FunctionalAtmosphereType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -37,7 +37,9 @@ enum class Enum_FunctionalAtmosphereType : uint8
 	NewEnumerator17                          = 16,
 	NewEnumerator18                          = 17,
 	NewEnumerator19                          = 18,
-	Enum_MAX                                 = 19,
+	NewEnumerator20                          = 19,
+	NewEnumerator21                          = 20,
+	Enum_MAX                                 = 21,
 };
 
 }

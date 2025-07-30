@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_X6ActorComponent_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -32,18 +32,18 @@ public:
 	bool                                          bEnableInPlaying;                                  // 0x00CA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddRegister();
-	void Deinitialize();
-	void ExecuteUbergraph_BP_Foliage_Interactor_Component(int32 EntryPoint);
-	void Initialize();
-	void IsEnableInPlaying(bool* NewParam);
-	void OnPop();
-	void OnPostSignificanceChanged_Event(class AActor* Actor, float Significance, float TickInterval, bool TickPaused, ESignificanceLevel SignificanceLevel);
-	void OnPush();
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void RemoveRegister();
 	void SetEnableInPlaying(bool bEnable);
+	void RemoveRegister();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveBeginPlay();
+	void OnPush();
+	void OnPostSignificanceChanged_Event(class AActor* Actor, float Significance, float TickInterval, bool TickPaused, ESignificanceLevel SignificanceLevel);
+	void OnPop();
+	void IsEnableInPlaying(bool* NewParam);
+	void Initialize();
+	void ExecuteUbergraph_BP_Foliage_Interactor_Component(int32 EntryPoint);
+	void Deinitialize();
+	void AddRegister();
 
 public:
 	static class UClass* StaticClass()

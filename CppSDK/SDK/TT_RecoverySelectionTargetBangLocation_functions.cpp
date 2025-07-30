@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function TT_RecoverySelectionTargetBangLocation.TT_RecoverySelectionTargetBangLocation_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UTT_RecoverySelectionTargetBangLocation_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TT_RecoverySelectionTargetBangLocation_C", "GetModuleName");
-
-	Params::TT_RecoverySelectionTargetBangLocation_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function TT_RecoverySelectionTargetBangLocation.TT_RecoverySelectionTargetBangLocation_C.GetSourceLocation
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -53,6 +33,26 @@ struct FVector UTT_RecoverySelectionTargetBangLocation_C::GetSourceLocation(cons
 	Params::TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation Parms{};
 
 	Parms.TargetingHandle = std::move(TargetingHandle);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TT_RecoverySelectionTargetBangLocation.TT_RecoverySelectionTargetBangLocation_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UTT_RecoverySelectionTargetBangLocation_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TT_RecoverySelectionTargetBangLocation_C", "GetModuleName");
+
+	Params::TT_RecoverySelectionTargetBangLocation_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

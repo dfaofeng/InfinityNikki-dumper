@@ -29,13 +29,13 @@ public:
 	class FString                                 ActorName;                                         // 0x0270(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_PlatformSection(int32 EntryPoint);
-	void GetCurrentPlatform(TArray<EPlatformType>* PlatformType);
-	void K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject);
-	void K2_OnSectionEnd_WithBindingObject(class UObject* BindingObject);
-	void K2_OnSectionUpdate_WithBindingObject(class UObject* BindingObject);
-	void SetPlatform(EPlatformType NewPlatform);
 	void UpdateCondition(class AActor* Actor, bool CurrentCondition, bool* FinalCondition);
+	void SetPlatform(EPlatformType NewPlatform);
+	void K2_OnSectionUpdate_WithBindingObject(class UObject* BindingObject);
+	void K2_OnSectionEnd_WithBindingObject(class UObject* BindingObject);
+	void K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject);
+	void GetCurrentPlatform(TArray<EPlatformType>* PlatformType);
+	void ExecuteUbergraph_PlatformSection(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

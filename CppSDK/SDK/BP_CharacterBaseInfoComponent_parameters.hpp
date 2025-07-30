@@ -52,30 +52,6 @@ static_assert(alignof(BP_CharacterBaseInfoComponent_C_PlayerRemoveState) == 0x00
 static_assert(sizeof(BP_CharacterBaseInfoComponent_C_PlayerRemoveState) == 0x000004, "Wrong size on BP_CharacterBaseInfoComponent_C_PlayerRemoveState");
 static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerRemoveState, StateToRemove) == 0x000000, "Member 'BP_CharacterBaseInfoComponent_C_PlayerRemoveState::StateToRemove' has a wrong offset!");
 
-// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerHasState
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CharacterBaseInfoComponent_C_PlayerHasState final
-{
-public:
-	int32                                         CheckState;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Has;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CharacterBaseInfoComponent_C_PlayerHasState) == 0x000004, "Wrong alignment on BP_CharacterBaseInfoComponent_C_PlayerHasState");
-static_assert(sizeof(BP_CharacterBaseInfoComponent_C_PlayerHasState) == 0x000008, "Wrong size on BP_CharacterBaseInfoComponent_C_PlayerHasState");
-static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerHasState, CheckState) == 0x000000, "Member 'BP_CharacterBaseInfoComponent_C_PlayerHasState::CheckState' has a wrong offset!");
-static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerHasState, Has) == 0x000004, "Member 'BP_CharacterBaseInfoComponent_C_PlayerHasState::Has' has a wrong offset!");
-
-// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerAddState
-// 0x0004 (0x0004 - 0x0000)
-struct BP_CharacterBaseInfoComponent_C_PlayerAddState final
-{
-public:
-	int32                                         InNewState;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CharacterBaseInfoComponent_C_PlayerAddState) == 0x000004, "Wrong alignment on BP_CharacterBaseInfoComponent_C_PlayerAddState");
-static_assert(sizeof(BP_CharacterBaseInfoComponent_C_PlayerAddState) == 0x000004, "Wrong size on BP_CharacterBaseInfoComponent_C_PlayerAddState");
-static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerAddState, InNewState) == 0x000000, "Member 'BP_CharacterBaseInfoComponent_C_PlayerAddState::InNewState' has a wrong offset!");
-
 // Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.ExecuteUbergraph_BP_CharacterBaseInfoComponent
 // 0x0008 (0x0008 - 0x0000)
 struct BP_CharacterBaseInfoComponent_C_ExecuteUbergraph_BP_CharacterBaseInfoComponent final
@@ -125,6 +101,30 @@ public:
 static_assert(alignof(BP_CharacterBaseInfoComponent_C_BP_GetTransToRightFoot) == 0x000001, "Wrong alignment on BP_CharacterBaseInfoComponent_C_BP_GetTransToRightFoot");
 static_assert(sizeof(BP_CharacterBaseInfoComponent_C_BP_GetTransToRightFoot) == 0x000001, "Wrong size on BP_CharacterBaseInfoComponent_C_BP_GetTransToRightFoot");
 static_assert(offsetof(BP_CharacterBaseInfoComponent_C_BP_GetTransToRightFoot, bTransToRightFoot) == 0x000000, "Member 'BP_CharacterBaseInfoComponent_C_BP_GetTransToRightFoot::bTransToRightFoot' has a wrong offset!");
+
+// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerHasState
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CharacterBaseInfoComponent_C_PlayerHasState final
+{
+public:
+	int32                                         CheckState;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Has;                                               // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CharacterBaseInfoComponent_C_PlayerHasState) == 0x000004, "Wrong alignment on BP_CharacterBaseInfoComponent_C_PlayerHasState");
+static_assert(sizeof(BP_CharacterBaseInfoComponent_C_PlayerHasState) == 0x000008, "Wrong size on BP_CharacterBaseInfoComponent_C_PlayerHasState");
+static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerHasState, CheckState) == 0x000000, "Member 'BP_CharacterBaseInfoComponent_C_PlayerHasState::CheckState' has a wrong offset!");
+static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerHasState, Has) == 0x000004, "Member 'BP_CharacterBaseInfoComponent_C_PlayerHasState::Has' has a wrong offset!");
+
+// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerAddState
+// 0x0004 (0x0004 - 0x0000)
+struct BP_CharacterBaseInfoComponent_C_PlayerAddState final
+{
+public:
+	int32                                         InNewState;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CharacterBaseInfoComponent_C_PlayerAddState) == 0x000004, "Wrong alignment on BP_CharacterBaseInfoComponent_C_PlayerAddState");
+static_assert(sizeof(BP_CharacterBaseInfoComponent_C_PlayerAddState) == 0x000004, "Wrong size on BP_CharacterBaseInfoComponent_C_PlayerAddState");
+static_assert(offsetof(BP_CharacterBaseInfoComponent_C_PlayerAddState, InNewState) == 0x000000, "Member 'BP_CharacterBaseInfoComponent_C_PlayerAddState::InNewState' has a wrong offset!");
 
 // Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

@@ -16,80 +16,16 @@
 namespace SDK::Params
 {
 
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.UpdateIsSelfActive
-// 0x0018 (0x0018 - 0x0000)
-struct BP_AnimalTickManager_C_UpdateIsSelfActive final
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.BP_IsGlobalAnimalTickManagerActive
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive final
 {
 public:
-	TScriptInterface<class IBPI_AnimalTickManagement_C> K2Node_DynamicCast_AsBPI_Animal_Tick_Management; // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldRejectTickManagement_bReject;       // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_IsGlobalAnimalTickManagerActive_bActive; // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bActive;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AnimalTickManager_C_UpdateIsSelfActive) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_UpdateIsSelfActive");
-static_assert(sizeof(BP_AnimalTickManager_C_UpdateIsSelfActive) == 0x000018, "Wrong size on BP_AnimalTickManager_C_UpdateIsSelfActive");
-static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, K2Node_DynamicCast_AsBPI_Animal_Tick_Management) == 0x000000, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::K2Node_DynamicCast_AsBPI_Animal_Tick_Management' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, CallFunc_ShouldRejectTickManagement_bReject) == 0x000012, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::CallFunc_ShouldRejectTickManagement_bReject' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, CallFunc_BP_IsGlobalAnimalTickManagerActive_bActive) == 0x000013, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::CallFunc_BP_IsGlobalAnimalTickManagerActive_bActive' has a wrong offset!");
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.PostOwnerActorSignificanceChanged
-// 0x0018 (0x0018 - 0x0000)
-struct BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         Significance;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TickInterval;                                      // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          TickPaused;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ESignificanceLevel                            SignificanceLevel;                                 // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_ByteByte_ReturnValue;           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged");
-static_assert(sizeof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged) == 0x000018, "Wrong size on BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, Actor) == 0x000000, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::Actor' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, Significance) == 0x000008, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::Significance' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, TickInterval) == 0x00000C, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::TickInterval' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, TickPaused) == 0x000010, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::TickPaused' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, SignificanceLevel) == 0x000011, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::SignificanceLevel' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, CallFunc_MakeLiteralByte_ReturnValue) == 0x000012, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, CallFunc_Conv_IntToByte_ReturnValue) == 0x000013, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, CallFunc_LessEqual_ByteByte_ReturnValue) == 0x000014, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::CallFunc_LessEqual_ByteByte_ReturnValue' has a wrong offset!");
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.NotifyOwnerActorTickEnabled
-// 0x0020 (0x0020 - 0x0000)
-struct BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled final
-{
-public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class IBPI_AnimalTickManagement_C> K2Node_DynamicCast_AsBPI_Animal_Tick_Management; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetAnimalTickEnabled_bSuccess;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled");
-static_assert(sizeof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled) == 0x000020, "Wrong size on BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled");
-static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, bEnabled) == 0x000000, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::bEnabled' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000001, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, K2Node_DynamicCast_AsBPI_Animal_Tick_Management) == 0x000008, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::K2Node_DynamicCast_AsBPI_Animal_Tick_Management' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, CallFunc_SetAnimalTickEnabled_bSuccess) == 0x000019, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::CallFunc_SetAnimalTickEnabled_bSuccess' has a wrong offset!");
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.Init
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AnimalTickManager_C_Init final
-{
-public:
-	class AActor*                                 Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AnimalTickManager_C_Init) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_Init");
-static_assert(sizeof(BP_AnimalTickManager_C_Init) == 0x000008, "Wrong size on BP_AnimalTickManager_C_Init");
-static_assert(offsetof(BP_AnimalTickManager_C_Init, Owner) == 0x000000, "Member 'BP_AnimalTickManager_C_Init::Owner' has a wrong offset!");
+static_assert(alignof(BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive) == 0x000001, "Wrong alignment on BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive");
+static_assert(sizeof(BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive) == 0x000001, "Wrong size on BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive");
+static_assert(offsetof(BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive, bActive) == 0x000000, "Member 'BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive::bActive' has a wrong offset!");
 
 // Function BP_AnimalTickManager.BP_AnimalTickManager_C.ForceSetIsSelfActive
 // 0x002C (0x002C - 0x0000)
@@ -116,16 +52,80 @@ static_assert(offsetof(BP_AnimalTickManager_C_ForceSetIsSelfActive, CallFunc_IsV
 static_assert(offsetof(BP_AnimalTickManager_C_ForceSetIsSelfActive, CallFunc_GetSignificanceResultValueAsEnum_ReturnValue) == 0x000029, "Member 'BP_AnimalTickManager_C_ForceSetIsSelfActive::CallFunc_GetSignificanceResultValueAsEnum_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AnimalTickManager_C_ForceSetIsSelfActive, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x00002A, "Member 'BP_AnimalTickManager_C_ForceSetIsSelfActive::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
 
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.BP_IsGlobalAnimalTickManagerActive
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive final
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.Init
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AnimalTickManager_C_Init final
 {
 public:
-	bool                                          bActive;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive) == 0x000001, "Wrong alignment on BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive");
-static_assert(sizeof(BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive) == 0x000001, "Wrong size on BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive");
-static_assert(offsetof(BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive, bActive) == 0x000000, "Member 'BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive::bActive' has a wrong offset!");
+static_assert(alignof(BP_AnimalTickManager_C_Init) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_Init");
+static_assert(sizeof(BP_AnimalTickManager_C_Init) == 0x000008, "Wrong size on BP_AnimalTickManager_C_Init");
+static_assert(offsetof(BP_AnimalTickManager_C_Init, Owner) == 0x000000, "Member 'BP_AnimalTickManager_C_Init::Owner' has a wrong offset!");
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.NotifyOwnerActorTickEnabled
+// 0x0020 (0x0020 - 0x0000)
+struct BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_BoolBool_ReturnValue;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IBPI_AnimalTickManagement_C> K2Node_DynamicCast_AsBPI_Animal_Tick_Management; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetAnimalTickEnabled_bSuccess;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled");
+static_assert(sizeof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled) == 0x000020, "Wrong size on BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled");
+static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, bEnabled) == 0x000000, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::bEnabled' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, CallFunc_NotEqual_BoolBool_ReturnValue) == 0x000001, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::CallFunc_NotEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, K2Node_DynamicCast_AsBPI_Animal_Tick_Management) == 0x000008, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::K2Node_DynamicCast_AsBPI_Animal_Tick_Management' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled, CallFunc_SetAnimalTickEnabled_bSuccess) == 0x000019, "Member 'BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled::CallFunc_SetAnimalTickEnabled_bSuccess' has a wrong offset!");
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.PostOwnerActorSignificanceChanged
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         Significance;                                      // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TickInterval;                                      // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          TickPaused;                                        // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ESignificanceLevel                            SignificanceLevel;                                 // 0x0011(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_ByteByte_ReturnValue;           // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged");
+static_assert(sizeof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged) == 0x000018, "Wrong size on BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, Actor) == 0x000000, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::Actor' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, Significance) == 0x000008, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::Significance' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, TickInterval) == 0x00000C, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::TickInterval' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, TickPaused) == 0x000010, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::TickPaused' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, SignificanceLevel) == 0x000011, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::SignificanceLevel' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, CallFunc_MakeLiteralByte_ReturnValue) == 0x000012, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, CallFunc_Conv_IntToByte_ReturnValue) == 0x000013, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged, CallFunc_LessEqual_ByteByte_ReturnValue) == 0x000014, "Member 'BP_AnimalTickManager_C_PostOwnerActorSignificanceChanged::CallFunc_LessEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.UpdateIsSelfActive
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AnimalTickManager_C_UpdateIsSelfActive final
+{
+public:
+	TScriptInterface<class IBPI_AnimalTickManagement_C> K2Node_DynamicCast_AsBPI_Animal_Tick_Management; // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldRejectTickManagement_bReject;       // 0x0012(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_IsGlobalAnimalTickManagerActive_bActive; // 0x0013(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AnimalTickManager_C_UpdateIsSelfActive) == 0x000008, "Wrong alignment on BP_AnimalTickManager_C_UpdateIsSelfActive");
+static_assert(sizeof(BP_AnimalTickManager_C_UpdateIsSelfActive) == 0x000018, "Wrong size on BP_AnimalTickManager_C_UpdateIsSelfActive");
+static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, K2Node_DynamicCast_AsBPI_Animal_Tick_Management) == 0x000000, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::K2Node_DynamicCast_AsBPI_Animal_Tick_Management' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, CallFunc_IsValid_ReturnValue) == 0x000011, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, CallFunc_ShouldRejectTickManagement_bReject) == 0x000012, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::CallFunc_ShouldRejectTickManagement_bReject' has a wrong offset!");
+static_assert(offsetof(BP_AnimalTickManager_C_UpdateIsSelfActive, CallFunc_BP_IsGlobalAnimalTickManagerActive_bActive) == 0x000013, "Member 'BP_AnimalTickManager_C_UpdateIsSelfActive::CallFunc_BP_IsGlobalAnimalTickManagerActive_bActive' has a wrong offset!");
 
 // Function BP_AnimalTickManager.BP_AnimalTickManager_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

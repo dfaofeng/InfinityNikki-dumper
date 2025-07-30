@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Enum_HumanPositions_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "E_NPCPhotoReactionType_structs.hpp"
 #include "E_NPCPhotoReactionAnimType_structs.hpp"
 

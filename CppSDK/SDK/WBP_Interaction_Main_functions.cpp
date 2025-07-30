@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_Interaction_Main.WBP_Interaction_Main_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_Interaction_Main_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Interaction_Main_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Interaction_Main.WBP_Interaction_Main_C.ExecuteUbergraph_WBP_Interaction_Main
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_Interaction_Main_C::ExecuteUbergraph_WBP_Interaction_Main(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Interaction_Main.WBP_Interaction_Main_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_Interaction_Main_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Interaction_Main_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

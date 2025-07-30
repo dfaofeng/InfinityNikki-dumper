@@ -17,26 +17,39 @@
 namespace SDK
 {
 
-// Function AnimNotify_RunStepSoundV2.AnimNotify_RunStepSoundV2_C.Received_Notify
+// Function AnimNotify_RunStepSoundV2.AnimNotify_RunStepSoundV2_C.GetDefaultTriggerWeightThreshold
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UAnimNotify_RunStepSoundV2_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
+float UAnimNotify_RunStepSoundV2_C::GetDefaultTriggerWeightThreshold() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_RunStepSoundV2_C", "Received_Notify");
+		Func = Class->GetFunction("AnimNotify_RunStepSoundV2_C", "GetDefaultTriggerWeightThreshold");
 
-	Params::AnimNotify_RunStepSoundV2_C_Received_Notify Parms{};
+	Params::AnimNotify_RunStepSoundV2_C_GetDefaultTriggerWeightThreshold Parms{};
 
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.EventReference = std::move(EventReference);
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimNotify_RunStepSoundV2.AnimNotify_RunStepSoundV2_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UAnimNotify_RunStepSoundV2_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimNotify_RunStepSoundV2_C", "GetModuleName");
+
+	Params::AnimNotify_RunStepSoundV2_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -64,39 +77,26 @@ void UAnimNotify_RunStepSoundV2_C::PreviewPostAkEvent(class USceneComponent* Com
 }
 
 
-// Function AnimNotify_RunStepSoundV2.AnimNotify_RunStepSoundV2_C.GetModuleName
+// Function AnimNotify_RunStepSoundV2.AnimNotify_RunStepSoundV2_C.Received_Notify
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FAnimNotifyEventReference& EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class FString UAnimNotify_RunStepSoundV2_C::GetModuleName() const
+bool UAnimNotify_RunStepSoundV2_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_RunStepSoundV2_C", "GetModuleName");
+		Func = Class->GetFunction("AnimNotify_RunStepSoundV2_C", "Received_Notify");
 
-	Params::AnimNotify_RunStepSoundV2_C_GetModuleName Parms{};
+	Params::AnimNotify_RunStepSoundV2_C_Received_Notify Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimNotify_RunStepSoundV2.AnimNotify_RunStepSoundV2_C.GetDefaultTriggerWeightThreshold
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float UAnimNotify_RunStepSoundV2_C::GetDefaultTriggerWeightThreshold() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_RunStepSoundV2_C", "GetDefaultTriggerWeightThreshold");
-
-	Params::AnimNotify_RunStepSoundV2_C_GetDefaultTriggerWeightThreshold Parms{};
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.EventReference = std::move(EventReference);
 
 	UObject::ProcessEvent(Func, &Parms);
 

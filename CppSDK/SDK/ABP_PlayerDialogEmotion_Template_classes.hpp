@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "X6Animation_structs.hpp"
-#include "ABP_PlayerDialogEmotion_Template_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ABP_PlayerDialogEmotion_Template_structs.hpp"
+#include "X6Animation_structs.hpp"
 
 
 namespace SDK

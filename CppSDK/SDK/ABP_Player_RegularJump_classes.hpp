@@ -12,11 +12,11 @@
 
 #include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "X6Animation_structs.hpp"
+#include "ABP_Player_RegularJump_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "ABP_Player_RegularJump_structs.hpp"
 #include "EMantleType_structs.hpp"
-#include "X6Animation_structs.hpp"
 
 
 namespace SDK

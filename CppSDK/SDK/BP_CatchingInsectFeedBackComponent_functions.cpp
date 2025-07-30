@@ -17,35 +17,29 @@
 namespace SDK
 {
 
-// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.BP_CatchingDeadFeedBack
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_CatchingInsectFeedBackComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void UBP_CatchingInsectFeedBackComponent_C::BP_CatchingDeadFeedBack()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "BP_CatchingDeadFeedBack");
 
-	Params::BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.BP_DetectCatchingStop
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_CatchingInsectFeedBackComponent_C::ReceiveBeginPlay()
+void UBP_CatchingInsectFeedBackComponent_C::BP_DetectCatchingStop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "BP_DetectCatchingStop");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,31 +65,37 @@ void UBP_CatchingInsectFeedBackComponent_C::ExecuteUbergraph_BP_CatchingInsectFe
 }
 
 
-// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.BP_DetectCatchingStop
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBP_CatchingInsectFeedBackComponent_C::BP_DetectCatchingStop()
+void UBP_CatchingInsectFeedBackComponent_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "BP_DetectCatchingStop");
+		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.BP_CatchingDeadFeedBack
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_CatchingInsectFeedBackComponent_C::BP_CatchingDeadFeedBack()
+void UBP_CatchingInsectFeedBackComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "BP_CatchingDeadFeedBack");
+		Func = Class->GetFunction("BP_CatchingInsectFeedBackComponent_C", "ReceiveEndPlay");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

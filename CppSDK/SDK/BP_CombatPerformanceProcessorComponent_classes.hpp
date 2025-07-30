@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "ECombatCatTailClothAnimType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EHitReason_structs.hpp"
 #include "EFeedBackReason_structs.hpp"
@@ -20,13 +21,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CombatPerformanceProcessorComponent.BP_CombatPerformanceProcessorComponent_C
-// 0x0088 (0x0130 - 0x00A8)
+// 0x0090 (0x0138 - 0x00A8)
 class UBP_CombatPerformanceProcessorComponent_C final : public UX6CombatPerformanceProcessorComponent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	TMulticastInlineDelegate<void(class AActor* Attacker, class AActor* Instigater, double DamageValue, int32 DamageEffectType, int32 DamageType)> ReceiveAttack; // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          BP_bRestricted;                                    // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bRestricted;                                    // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_bContinuedState;                                // 0x00C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_bBlendRestrictedAnim;                           // 0x00C2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C3[0x5];                                       // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
@@ -46,6 +47,11 @@ public:
 	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(EHitReason HitReason, class UBP_CombatPartHitComponent_C* HitPartComp)> ReceiveHitMontageEnd; // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UBP_PawnData_C*                         CombatPawnData;                                    // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bEnableClothPhysics;                            // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bEnableEarPhysics;                              // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECombatCatTailClothAnimType                   BP_TailClothAnimType;                              // 0x0132(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bTailClothUpBody;                               // 0x0133(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECombatCatTailClothAnimType                   BP_ClothCoatAnimType;                              // 0x0134(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveTick(float DeltaSeconds);
@@ -69,7 +75,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_CombatPerformanceProcessorComponent_C) == 0x000008, "Wrong alignment on UBP_CombatPerformanceProcessorComponent_C");
-static_assert(sizeof(UBP_CombatPerformanceProcessorComponent_C) == 0x000130, "Wrong size on UBP_CombatPerformanceProcessorComponent_C");
+static_assert(sizeof(UBP_CombatPerformanceProcessorComponent_C) == 0x000138, "Wrong size on UBP_CombatPerformanceProcessorComponent_C");
 static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_CombatPerformanceProcessorComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, ReceiveAttack) == 0x0000B0, "Member 'UBP_CombatPerformanceProcessorComponent_C::ReceiveAttack' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, BP_bRestricted) == 0x0000C0, "Member 'UBP_CombatPerformanceProcessorComponent_C::BP_bRestricted' has a wrong offset!");
@@ -88,6 +94,11 @@ static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, ReceiveHealthD
 static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, bNeedMirror) == 0x000110, "Member 'UBP_CombatPerformanceProcessorComponent_C::bNeedMirror' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, ReceiveHitMontageEnd) == 0x000118, "Member 'UBP_CombatPerformanceProcessorComponent_C::ReceiveHitMontageEnd' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, CombatPawnData) == 0x000128, "Member 'UBP_CombatPerformanceProcessorComponent_C::CombatPawnData' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, BP_bEnableClothPhysics) == 0x000130, "Member 'UBP_CombatPerformanceProcessorComponent_C::BP_bEnableClothPhysics' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, BP_bEnableEarPhysics) == 0x000131, "Member 'UBP_CombatPerformanceProcessorComponent_C::BP_bEnableEarPhysics' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, BP_TailClothAnimType) == 0x000132, "Member 'UBP_CombatPerformanceProcessorComponent_C::BP_TailClothAnimType' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, BP_bTailClothUpBody) == 0x000133, "Member 'UBP_CombatPerformanceProcessorComponent_C::BP_bTailClothUpBody' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPerformanceProcessorComponent_C, BP_ClothCoatAnimType) == 0x000134, "Member 'UBP_CombatPerformanceProcessorComponent_C::BP_ClothCoatAnimType' has a wrong offset!");
 
 }
 

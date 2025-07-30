@@ -36,8 +36,8 @@ public:
 	class UWBP_UI_SocialTaskMarkerIcon_C*         WBP_UI_SocialTaskMarkerIcon;                       // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 

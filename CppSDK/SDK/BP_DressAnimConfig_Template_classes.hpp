@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "F_DressAnimConfig_Template_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
-#include "F_DressAnimConfig_Template_structs.hpp"
 
 
 namespace SDK

@@ -17,90 +17,107 @@
 namespace SDK
 {
 
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.BP_AnimalTickManagerResumeAI
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AnimalBase_Complete_C::UserConstructionScript()
+void ABP_AnimalBase_Complete_C::BP_AnimalTickManagerResumeAI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "BP_AnimalTickManagerResumeAI");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.ShouldRejectTickManagement
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   bReject                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.BP_AnimalTickManagerStopAI
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_AnimalBase_Complete_C::ShouldRejectTickManagement(bool* bReject)
+void ABP_AnimalBase_Complete_C::BP_AnimalTickManagerStopAI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "ShouldRejectTickManagement");
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "BP_AnimalTickManagerStopAI");
 
-	Params::BP_AnimalBase_Complete_C_ShouldRejectTickManagement Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.CreateAnimalTickManager
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_AnimalBase_Complete_C::CreateAnimalTickManager()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "CreateAnimalTickManager");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.ExecuteUbergraph_BP_AnimalBase_Complete
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AnimalBase_Complete_C::ExecuteUbergraph_BP_AnimalBase_Complete(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "ExecuteUbergraph_BP_AnimalBase_Complete");
+
+	Params::BP_AnimalBase_Complete_C_ExecuteUbergraph_BP_AnimalBase_Complete Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.GetAIObjectClass
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FString*                          LuaClassPath                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void ABP_AnimalBase_Complete_C::GetAIObjectClass(class FString* LuaClassPath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "GetAIObjectClass");
+
+	Params::BP_AnimalBase_Complete_C_GetAIObjectClass Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (bReject != nullptr)
-		*bReject = Parms.bReject;
+	if (LuaClassPath != nullptr)
+		*LuaClassPath = std::move(Parms.LuaClassPath);
 }
 
 
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.SetAnimalTickEnabled
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.GetAnimalTickManager
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bSuccess                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBP_AnimalTickManager_C**         AnimalTickManager_0                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_AnimalBase_Complete_C::SetAnimalTickEnabled(bool bEnabled, bool* bSuccess)
+void ABP_AnimalBase_Complete_C::GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "SetAnimalTickEnabled");
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "GetAnimalTickManager");
 
-	Params::BP_AnimalBase_Complete_C_SetAnimalTickEnabled Parms{};
-
-	Parms.bEnabled = bEnabled;
+	Params::BP_AnimalBase_Complete_C_GetAnimalTickManager Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (bSuccess != nullptr)
-		*bSuccess = Parms.bSuccess;
-}
-
-
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.OnUnbindEntity
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_AnimalBase_Complete_C::OnUnbindEntity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "OnUnbindEntity");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.OnBindEntity
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_AnimalBase_Complete_C::OnBindEntity()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "OnBindEntity");
-
-	UObject::ProcessEvent(Func, nullptr);
+	if (AnimalTickManager_0 != nullptr)
+		*AnimalTickManager_0 = Parms.AnimalTickManager_0;
 }
 
 
@@ -128,105 +145,88 @@ void ABP_AnimalBase_Complete_C::GetCurrentPlatformActorMeshScale(int64 ConfigID,
 }
 
 
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.GetAnimalTickManager
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBP_AnimalTickManager_C**         AnimalTickManager_0                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.OnBindEntity
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AnimalBase_Complete_C::GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager_0)
+void ABP_AnimalBase_Complete_C::OnBindEntity()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "GetAnimalTickManager");
-
-	Params::BP_AnimalBase_Complete_C_GetAnimalTickManager Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimalTickManager_0 != nullptr)
-		*AnimalTickManager_0 = Parms.AnimalTickManager_0;
-}
-
-
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.GetAIObjectClass
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FString*                          LuaClassPath                                           (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_AnimalBase_Complete_C::GetAIObjectClass(class FString* LuaClassPath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "GetAIObjectClass");
-
-	Params::BP_AnimalBase_Complete_C_GetAIObjectClass Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (LuaClassPath != nullptr)
-		*LuaClassPath = std::move(Parms.LuaClassPath);
-}
-
-
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.ExecuteUbergraph_BP_AnimalBase_Complete
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_AnimalBase_Complete_C::ExecuteUbergraph_BP_AnimalBase_Complete(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "ExecuteUbergraph_BP_AnimalBase_Complete");
-
-	Params::BP_AnimalBase_Complete_C_ExecuteUbergraph_BP_AnimalBase_Complete Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.CreateAnimalTickManager
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_AnimalBase_Complete_C::CreateAnimalTickManager()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "CreateAnimalTickManager");
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "OnBindEntity");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.BP_AnimalTickManagerStopAI
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.OnUnbindEntity
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_AnimalBase_Complete_C::BP_AnimalTickManagerStopAI()
+void ABP_AnimalBase_Complete_C::OnUnbindEntity()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "BP_AnimalTickManagerStopAI");
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "OnUnbindEntity");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.BP_AnimalTickManagerResumeAI
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.SetAnimalTickEnabled
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bSuccess                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_AnimalBase_Complete_C::BP_AnimalTickManagerResumeAI()
+void ABP_AnimalBase_Complete_C::SetAnimalTickEnabled(bool bEnabled, bool* bSuccess)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "BP_AnimalTickManagerResumeAI");
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "SetAnimalTickEnabled");
+
+	Params::BP_AnimalBase_Complete_C_SetAnimalTickEnabled Parms{};
+
+	Parms.bEnabled = bEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bSuccess != nullptr)
+		*bSuccess = Parms.bSuccess;
+}
+
+
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.ShouldRejectTickManagement
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   bReject                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_AnimalBase_Complete_C::ShouldRejectTickManagement(bool* bReject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "ShouldRejectTickManagement");
+
+	Params::BP_AnimalBase_Complete_C_ShouldRejectTickManagement Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bReject != nullptr)
+		*bReject = Parms.bReject;
+}
+
+
+// Function BP_AnimalBase_Complete.BP_AnimalBase_Complete_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_AnimalBase_Complete_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalBase_Complete_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

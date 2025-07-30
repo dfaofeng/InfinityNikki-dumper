@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

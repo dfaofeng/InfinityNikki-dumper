@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SysSocial_Waiting.WBP_SysSocial_Waiting_C
-// 0x0058 (0x0348 - 0x02F0)
+// 0x0050 (0x0340 - 0x02F0)
 class UWBP_SysSocial_Waiting_C final : public UUserWidget
 {
 public:
@@ -32,7 +32,6 @@ public:
 	class UImage*                                 dot_4;                                             // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 dot_5;                                             // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 dot_6;                                             // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_State;                                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_WBP_SysSocial_Waiting(int32 EntryPoint);
@@ -49,7 +48,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SysSocial_Waiting_C) == 0x000008, "Wrong alignment on UWBP_SysSocial_Waiting_C");
-static_assert(sizeof(UWBP_SysSocial_Waiting_C) == 0x000348, "Wrong size on UWBP_SysSocial_Waiting_C");
+static_assert(sizeof(UWBP_SysSocial_Waiting_C) == 0x000340, "Wrong size on UWBP_SysSocial_Waiting_C");
 static_assert(offsetof(UWBP_SysSocial_Waiting_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_SysSocial_Waiting_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_SysSocial_Waiting_C, Ani_waiting_loop) == 0x0002F8, "Member 'UWBP_SysSocial_Waiting_C::Ani_waiting_loop' has a wrong offset!");
 static_assert(offsetof(UWBP_SysSocial_Waiting_C, CanvasPanel_0) == 0x000300, "Member 'UWBP_SysSocial_Waiting_C::CanvasPanel_0' has a wrong offset!");
@@ -60,7 +59,6 @@ static_assert(offsetof(UWBP_SysSocial_Waiting_C, dot_3) == 0x000320, "Member 'UW
 static_assert(offsetof(UWBP_SysSocial_Waiting_C, dot_4) == 0x000328, "Member 'UWBP_SysSocial_Waiting_C::dot_4' has a wrong offset!");
 static_assert(offsetof(UWBP_SysSocial_Waiting_C, dot_5) == 0x000330, "Member 'UWBP_SysSocial_Waiting_C::dot_5' has a wrong offset!");
 static_assert(offsetof(UWBP_SysSocial_Waiting_C, dot_6) == 0x000338, "Member 'UWBP_SysSocial_Waiting_C::dot_6' has a wrong offset!");
-static_assert(offsetof(UWBP_SysSocial_Waiting_C, Image_State) == 0x000340, "Member 'UWBP_SysSocial_Waiting_C::Image_State' has a wrong offset!");
 
 }
 

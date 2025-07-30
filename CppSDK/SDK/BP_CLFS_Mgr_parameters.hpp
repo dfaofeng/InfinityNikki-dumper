@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "S_FaculaBrush_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "S_FaculaBrush_structs.hpp"
+#include "Engine_structs.hpp"
 #include "S_Lighter_structs.hpp"
 
 

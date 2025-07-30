@@ -17,65 +17,23 @@
 namespace SDK
 {
 
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.ExecuteUbergraph_BP_AgentTaskBase
-// (Final, UbergraphFunction)
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.RejectRecycle
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTaskBase_C::ExecuteUbergraph_BP_AgentTaskBase(int32 EntryPoint)
+bool UBP_AgentTaskBase_C::RejectRecycle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskBase_C", "ExecuteUbergraph_BP_AgentTaskBase");
+		Func = Class->GetFunction("BP_AgentTaskBase_C", "RejectRecycle");
 
-	Params::BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::BP_AgentTaskBase_C_RejectRecycle Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.OnPop
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentTaskBase_C::OnPop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskBase_C", "OnPop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.OnPreCreated
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentTaskBase_C::OnPreCreated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskBase_C", "OnPreCreated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.OnPush
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentTaskBase_C::OnPush()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskBase_C", "OnPush");
-
-	UObject::ProcessEvent(Func, nullptr);
+	return Parms.ReturnValue;
 }
 
 
@@ -101,23 +59,65 @@ void UBP_AgentTaskBase_C::ReceiveTickUncheck(class APawn* AgentPawn, double Delt
 }
 
 
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.RejectRecycle
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.OnPush
+// (Event, Public, BlueprintEvent)
 
-bool UBP_AgentTaskBase_C::RejectRecycle()
+void UBP_AgentTaskBase_C::OnPush()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskBase_C", "RejectRecycle");
+		Func = Class->GetFunction("BP_AgentTaskBase_C", "OnPush");
 
-	Params::BP_AgentTaskBase_C_RejectRecycle Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.OnPreCreated
+// (Event, Public, BlueprintEvent)
+
+void UBP_AgentTaskBase_C::OnPreCreated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskBase_C", "OnPreCreated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.OnPop
+// (Event, Public, BlueprintEvent)
+
+void UBP_AgentTaskBase_C::OnPop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskBase_C", "OnPop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.ExecuteUbergraph_BP_AgentTaskBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AgentTaskBase_C::ExecuteUbergraph_BP_AgentTaskBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskBase_C", "ExecuteUbergraph_BP_AgentTaskBase");
+
+	Params::BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 

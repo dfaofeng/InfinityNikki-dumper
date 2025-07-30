@@ -49,8 +49,9 @@ void UBP_PaperBlackScreenManager_C::RequestBlackScreenWait(int32* WaitHandle)
 // bool                                    bNoFadeOut                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FLinearColor&              FadeColor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bNoFadeIn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDisableWorldRendering                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PaperBlackScreenManager_C::EnterBlackScreen(Enum_BlackScreenSource BlackScreenSource, class UObject* Context, const class FString& FadeOutEndCallback, const class FString& FadeInStartCallback, const class FString& FadeInEndCallback, bool bNoFadeOut, const struct FLinearColor& FadeColor, bool bNoFadeIn)
+void UBP_PaperBlackScreenManager_C::EnterBlackScreen(Enum_BlackScreenSource BlackScreenSource, class UObject* Context, const class FString& FadeOutEndCallback, const class FString& FadeInStartCallback, const class FString& FadeInEndCallback, bool bNoFadeOut, const struct FLinearColor& FadeColor, bool bNoFadeIn, bool bDisableWorldRendering)
 {
 	static class UFunction* Func = nullptr;
 
@@ -67,6 +68,7 @@ void UBP_PaperBlackScreenManager_C::EnterBlackScreen(Enum_BlackScreenSource Blac
 	Parms.bNoFadeOut = bNoFadeOut;
 	Parms.FadeColor = std::move(FadeColor);
 	Parms.bNoFadeIn = bNoFadeIn;
+	Parms.bDisableWorldRendering = bDisableWorldRendering;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

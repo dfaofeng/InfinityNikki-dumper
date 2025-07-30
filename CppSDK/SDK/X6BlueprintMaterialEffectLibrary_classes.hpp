@@ -21,8 +21,8 @@ namespace SDK
 class UX6BlueprintMaterialEffectLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void AddScalarsByType(int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, class UObject* __WorldContext, TMap<class FName, double>* ScalarMap);
 	static void BP_SetActorEffect(class AActor* Actor, int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, const TMap<class FName, struct FVector>& ExtraVectors, class UObject* __WorldContext);
+	static void AddScalarsByType(int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, class UObject* __WorldContext, TMap<class FName, double>* ScalarMap);
 
 public:
 	static class UClass* StaticClass()

@@ -53,6 +53,7 @@ public:
 	void BP_StartMove();
 	void BP_StopMove();
 	void ExecuteUbergraph_BP_Multiplayer_PaperAirplane(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 	void SetInvisibleWall(bool bEnable);
 	void TriggerWallFX(bool bEnter);
 

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.ExecuteUbergraph_WoolenHeartPhantomSection
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWoolenHeartPhantomSection_C::ExecuteUbergraph_WoolenHeartPhantomSection(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WoolenHeartPhantomSection_C", "ExecuteUbergraph_WoolenHeartPhantomSection");
-
-	Params::WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.K2_OnSectionBegin_WithBindingObject
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWoolenHeartPhantomSection_C::K2_OnSectionBegin_WithBindingObject(class UOb
 	Params::WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject Parms{};
 
 	Parms.BindingObject = BindingObject;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.ExecuteUbergraph_WoolenHeartPhantomSection
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWoolenHeartPhantomSection_C::ExecuteUbergraph_WoolenHeartPhantomSection(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WoolenHeartPhantomSection_C", "ExecuteUbergraph_WoolenHeartPhantomSection");
+
+	Params::WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

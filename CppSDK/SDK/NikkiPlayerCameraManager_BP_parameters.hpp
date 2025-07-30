@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "FFocusOnCameraParams_structs.hpp"
 #include "X6Camera_structs.hpp"
-#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -215,6 +215,67 @@ static_assert(alignof(NikkiPlayerCameraManager_BP_C_EndFocusOn) == 0x000001, "Wr
 static_assert(sizeof(NikkiPlayerCameraManager_BP_C_EndFocusOn) == 0x000001, "Wrong size on NikkiPlayerCameraManager_BP_C_EndFocusOn");
 static_assert(offsetof(NikkiPlayerCameraManager_BP_C_EndFocusOn, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_EndFocusOn::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_UnregisterAnimDrivenCamera
+// 0x0008 (0x0008 - 0x0000)
+struct NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera final
+{
+public:
+	class FName                                   InCameraName;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera) == 0x000004, "Wrong alignment on NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera");
+static_assert(sizeof(NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera) == 0x000008, "Wrong size on NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera, InCameraName) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera::InCameraName' has a wrong offset!");
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_RemoveAnimDrivenCamera
+// 0x0030 (0x0030 - 0x0000)
+struct NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera final
+{
+public:
+	class FName                                   InCameraName;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideTransitionParams;                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0010(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera) == 0x000008, "Wrong alignment on NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera");
+static_assert(sizeof(NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera) == 0x000030, "Wrong size on NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera, InCameraName) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera::InCameraName' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera, bOverrideTransitionParams) == 0x000008, "Member 'NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera::bOverrideTransitionParams' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera, TransitionParams) == 0x000010, "Member 'NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera::TransitionParams' has a wrong offset!");
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_RegisterAnimDrivenCamera
+// 0x0020 (0x0020 - 0x0000)
+struct NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera final
+{
+public:
+	class FName                                   InCameraName;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECameraState                                  InCameraState;                                     // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 InCameraActor;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OutCameraActor;                                    // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera) == 0x000008, "Wrong alignment on NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera");
+static_assert(sizeof(NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera) == 0x000020, "Wrong size on NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera, InCameraName) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera::InCameraName' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera, InCameraState) == 0x000008, "Member 'NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera::InCameraState' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera, InCameraActor) == 0x000010, "Member 'NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera::InCameraActor' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera, OutCameraActor) == 0x000018, "Member 'NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera::OutCameraActor' has a wrong offset!");
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_PushAnimDrivenCamera
+// 0x0030 (0x0030 - 0x0000)
+struct NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera final
+{
+public:
+	class FName                                   InCameraName;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bOverrideTransitionParams;                         // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0010(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera) == 0x000008, "Wrong alignment on NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera");
+static_assert(sizeof(NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera) == 0x000030, "Wrong size on NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera, InCameraName) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera::InCameraName' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera, bOverrideTransitionParams) == 0x000008, "Member 'NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera::bOverrideTransitionParams' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera, TransitionParams) == 0x000010, "Member 'NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera::TransitionParams' has a wrong offset!");
+
 // Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_GetCameraVolumeTargetControlledActor
 // 0x0008 (0x0008 - 0x0000)
 struct NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor final
@@ -225,6 +286,19 @@ public:
 static_assert(alignof(NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor) == 0x000008, "Wrong alignment on NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor");
 static_assert(sizeof(NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor) == 0x000008, "Wrong size on NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor");
 static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor, ControlledActor) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_BP_GetCameraVolumeTargetControlledActor::ControlledActor' has a wrong offset!");
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_GetAnimDrivenCamera
+// 0x0010 (0x0010 - 0x0000)
+struct NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera final
+{
+public:
+	class FName                                   InCameraName;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OutCameraActor;                                    // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera) == 0x000008, "Wrong alignment on NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera");
+static_assert(sizeof(NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera) == 0x000010, "Wrong size on NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera, InCameraName) == 0x000000, "Member 'NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera::InCameraName' has a wrong offset!");
+static_assert(offsetof(NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera, OutCameraActor) == 0x000008, "Member 'NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera::OutCameraActor' has a wrong offset!");
 
 // Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_DebugDrawAllCameraVolume
 // 0x0150 (0x0150 - 0x0000)

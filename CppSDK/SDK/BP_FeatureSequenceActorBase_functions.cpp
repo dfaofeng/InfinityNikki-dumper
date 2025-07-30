@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_FeatureSequenceActorBase.BP_FeatureSequenceActorBase_C.ExecuteUbergraph_BP_FeatureSequenceActorBase
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_FeatureSequenceActorBase_C::ExecuteUbergraph_BP_FeatureSequenceActorBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FeatureSequenceActorBase_C", "ExecuteUbergraph_BP_FeatureSequenceActorBase");
-
-	Params::BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FeatureSequenceActorBase.BP_FeatureSequenceActorBase_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void ABP_FeatureSequenceActorBase_C::ReceiveTick(float DeltaSeconds)
 	Params::BP_FeatureSequenceActorBase_C_ReceiveTick Parms{};
 
 	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FeatureSequenceActorBase.BP_FeatureSequenceActorBase_C.ExecuteUbergraph_BP_FeatureSequenceActorBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_FeatureSequenceActorBase_C::ExecuteUbergraph_BP_FeatureSequenceActorBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FeatureSequenceActorBase_C", "ExecuteUbergraph_BP_FeatureSequenceActorBase");
+
+	Params::BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

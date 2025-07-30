@@ -18,18 +18,21 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_SysSocial_Marker.WBP_SysSocial_Marker_C
-// 0x0020 (0x0310 - 0x02F0)
+// 0x0038 (0x0328 - 0x02F0)
 class UWBP_SysSocial_Marker_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UX6MultiPlatformButton*                 Button_Click;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Icon;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Img_Arrow;                                         // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Loop;                                          // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UX6MultiPlatformButton*                 Button_Click;                                      // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Icon;                                        // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Img_Arrow;                                         // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   NS_Glow_1;                                         // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   NS_Glow_Frame;                                     // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 
@@ -44,11 +47,14 @@ public:
 	}
 };
 static_assert(alignof(UWBP_SysSocial_Marker_C) == 0x000008, "Wrong alignment on UWBP_SysSocial_Marker_C");
-static_assert(sizeof(UWBP_SysSocial_Marker_C) == 0x000310, "Wrong size on UWBP_SysSocial_Marker_C");
+static_assert(sizeof(UWBP_SysSocial_Marker_C) == 0x000328, "Wrong size on UWBP_SysSocial_Marker_C");
 static_assert(offsetof(UWBP_SysSocial_Marker_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_SysSocial_Marker_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_SysSocial_Marker_C, Button_Click) == 0x0002F8, "Member 'UWBP_SysSocial_Marker_C::Button_Click' has a wrong offset!");
-static_assert(offsetof(UWBP_SysSocial_Marker_C, Image_Icon) == 0x000300, "Member 'UWBP_SysSocial_Marker_C::Image_Icon' has a wrong offset!");
-static_assert(offsetof(UWBP_SysSocial_Marker_C, Img_Arrow) == 0x000308, "Member 'UWBP_SysSocial_Marker_C::Img_Arrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SysSocial_Marker_C, Ani_Loop) == 0x0002F8, "Member 'UWBP_SysSocial_Marker_C::Ani_Loop' has a wrong offset!");
+static_assert(offsetof(UWBP_SysSocial_Marker_C, Button_Click) == 0x000300, "Member 'UWBP_SysSocial_Marker_C::Button_Click' has a wrong offset!");
+static_assert(offsetof(UWBP_SysSocial_Marker_C, Image_Icon) == 0x000308, "Member 'UWBP_SysSocial_Marker_C::Image_Icon' has a wrong offset!");
+static_assert(offsetof(UWBP_SysSocial_Marker_C, Img_Arrow) == 0x000310, "Member 'UWBP_SysSocial_Marker_C::Img_Arrow' has a wrong offset!");
+static_assert(offsetof(UWBP_SysSocial_Marker_C, NS_Glow_1) == 0x000318, "Member 'UWBP_SysSocial_Marker_C::NS_Glow_1' has a wrong offset!");
+static_assert(offsetof(UWBP_SysSocial_Marker_C, NS_Glow_Frame) == 0x000320, "Member 'UWBP_SysSocial_Marker_C::NS_Glow_Frame' has a wrong offset!");
 
 }
 

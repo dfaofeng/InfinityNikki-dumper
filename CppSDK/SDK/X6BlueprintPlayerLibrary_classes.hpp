@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "Engine_classes.hpp"
 #include "EAbilityGroupType_structs.hpp"
-#include "EClothesMinorType_structs.hpp"
-#include "EX6EnvType_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "EX6EnvType_structs.hpp"
 #include "EPlayerActionTypes_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EClothesPropertyType_structs.hpp"
+#include "EClothesMinorType_structs.hpp"
 
 
 namespace SDK
@@ -56,9 +56,11 @@ public:
 	static void BP_SwitchGamePlayMovementMode(EPlayerGamePlayMovementMode NewGamePlayMovementMode, class AActor* ActorToSwitchMovement, class UObject* __WorldContext);
 	static void BP_StopPlayForceFeedback(class UForceFeedbackEffect* ForceFeedbackEffect, class FName TagName, class UObject* __WorldContext);
 	static void BP_SetWeaponMirrorDisabled(class AActor* Actor, bool bDisabled, const class FString& InModuleTag, class UObject* __WorldContext);
-	static void BP_SetWeaponAppearanceDisabled(class AActor* Actor, bool bDisabled, bool bImmediateRequest, const class FString& InModuleTag, class UObject* __WorldContext);
+	static void BP_SetWeaponAppearanceDisabled(class AActor* Actor, bool bDisabled, bool bImmediateRequest, const class FString& InModuleTag, bool bLocal, class UObject* __WorldContext);
 	static void BP_SetNPCCurrentLocalCharacteristicsState(class AActor* npcActor, uint8 State, class UObject* __WorldContext);
 	static void BP_SetNPCCurrentCharacteristicsState(class AActor* npcActor, uint8 State, class UObject* __WorldContext);
+	static void BP_SetLoongMaskVisibility(class AActor* InActor, bool Visible, class UObject* __WorldContext);
+	static void BP_SetIdlebreakDisabled(class AActor* InActor, bool bDisable, const class FString& InModuleTag, class UObject* __WorldContext);
 	static void BP_SetEnvironmentType(class AActor* Actor, EX6EnvType EnvType, bool bEnable, class UObject* __WorldContext);
 	static void BP_SetCompCfgCameraChannel(class UPrimitiveComponent* Comp, class UObject* __WorldContext);
 	static void BP_ReplayGetForceIngoreSit(class UObject* __WorldContext, bool* ShouldIngore);
@@ -69,10 +71,16 @@ public:
 	static void BP_IsSuitCollected(int32 SuitId, class UObject* __WorldContext, bool* Result);
 	static void BP_IsLocalPlayerRiding(class UObject* __WorldContext, bool* IsRiding);
 	static void BP_IsLocalPlayerCarrier(class UObject* Actor, class UObject* __WorldContext, bool* IsCarrier);
+	static void BP_GetWeaponCustomState(class AActor* InActor, class UObject* __WorldContext, struct FGameplayTag* Tag);
 	static void BP_GetNPCCurrentCharacteristicsState(class AActor* npcActor, class UObject* __WorldContext, uint8* State);
 	static void BP_GetForceRelation(class AActor*& Actor1, class AActor*& Actor2, class UObject* __WorldContext, int32* Relation);
+	static void BP_GetCurrentWeaponID(class AActor* InActor, class UObject* __WorldContext, int32* WeaponID);
+	static void BP_GetCurrentWeaponActor(class AActor* InActor, class UObject* __WorldContext, class AActor** Weapon);
 	static void BP_ExitGamePlayMovementMode(EPlayerGamePlayMovementMode MovementModeToExit, class AActor* ActorToExitMovement, class UObject* __WorldContext);
+	static void BP_EquipWeaponByID(class AActor* InActor, const class FString& WeaponID, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext);
+	static void BP_EquipWeaponByConfigPath(class AActor* InActor, const class FString& ConfigPath, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext);
 	static void BP_EquipWeaponByAbilityType(class AActor* Actor, EAbilityGroupType AbilityType, const class FString& SlotType, bool bImmediateRequest, bool bSync, class UObject* __WorldContext);
+	static void BP_DuplicateWeapon(class AActor* InActor, class UObject* __WorldContext, class AActor** DuplicatedWeapon);
 	static void BP_DoesLocalPlayerDressingAppointedSuit(int32 SuitId, class UObject* __WorldContext, bool* Result);
 	static void BP_DoesLocalPlayerDressingAppointedCloth(int32 ClothID, class UObject* __WorldContext, bool* Result);
 	static void BP_DoesLocalPlayerAppointedClothesMinorIsNullHelper(const class FString& AppointedClothesMinorTypeString, class UObject* __WorldContext, bool* IsNull);

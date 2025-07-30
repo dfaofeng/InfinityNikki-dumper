@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function GA_AbilityDeathBase.GA_AbilityDeathBase_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_AbilityDeathBase_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AbilityDeathBase_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_AbilityDeathBase.GA_AbilityDeathBase_C.ExecuteUbergraph_GA_AbilityDeathBase
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UGA_AbilityDeathBase_C::ExecuteUbergraph_GA_AbilityDeathBase(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_AbilityDeathBase.GA_AbilityDeathBase_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_AbilityDeathBase_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityDeathBase_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

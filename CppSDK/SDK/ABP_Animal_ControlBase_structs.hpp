@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// ScriptStruct ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimBlueprintGeneratedMutableData
-// 0x0007 (0x0008 - 0x0001)
-struct ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
-{
-public:
-	bool                                          __BoolProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_0;                                 // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData) == 0x000004, "Wrong alignment on ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData");
-static_assert(sizeof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData) == 0x000008, "Wrong size on ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData");
-static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData, __BoolProperty) == 0x000001, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData::__BoolProperty' has a wrong offset!");
-static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData, __FloatProperty_0) == 0x000004, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData::__FloatProperty_0' has a wrong offset!");
-
 // ScriptStruct ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimBlueprintGeneratedConstantData
 // 0x0367 (0x0368 - 0x0001)
 struct ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
@@ -111,6 +97,20 @@ static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantDa
 static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult) == 0x0002D8, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult' has a wrong offset!");
 static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine) == 0x000308, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine' has a wrong offset!");
 static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x000338, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
+
+// ScriptStruct ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimBlueprintGeneratedMutableData
+// 0x0007 (0x0008 - 0x0001)
+struct ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData final : public FAnimBlueprintMutableData
+{
+public:
+	bool                                          __BoolProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_0;                                 // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData) == 0x000004, "Wrong alignment on ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData");
+static_assert(sizeof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData) == 0x000008, "Wrong size on ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData");
+static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData, __BoolProperty) == 0x000001, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData::__BoolProperty' has a wrong offset!");
+static_assert(offsetof(ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData, __FloatProperty_0) == 0x000004, "Member 'ABP_Animal_ControlBase::FAnimBlueprintGeneratedMutableData::__FloatProperty_0' has a wrong offset!");
 
 }
 

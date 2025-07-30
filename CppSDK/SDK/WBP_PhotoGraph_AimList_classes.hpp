@@ -46,12 +46,12 @@ public:
 	bool                                          BP_IgnoreClickOnce;                                // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_PhotoGraph_AimList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__WBP_PhotoGraph_AimList_Button_Name_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature();
-	void BndEvt__WBP_PhotoGraph_AimList_ShowBtn_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();
-	void ExecuteUbergraph_WBP_PhotoGraph_AimList(int32 EntryPoint);
-	void SequenceEvent__ENTRYPOINTWBP_PhotoGraph_AimList();
 	void SFX();
+	void SequenceEvent__ENTRYPOINTWBP_PhotoGraph_AimList();
+	void ExecuteUbergraph_WBP_PhotoGraph_AimList(int32 EntryPoint);
+	void BndEvt__WBP_PhotoGraph_AimList_ShowBtn_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();
+	void BndEvt__WBP_PhotoGraph_AimList_Button_Name_K2Node_ComponentBoundEvent_2_OnButtonReleasedEvent__DelegateSignature();
+	void BndEvt__WBP_PhotoGraph_AimList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

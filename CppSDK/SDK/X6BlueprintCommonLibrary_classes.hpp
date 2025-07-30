@@ -13,11 +13,11 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "Enum_InformID_structs.hpp"
-#include "ECharacterType_structs.hpp"
 #include "E_SafezoneType_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "Enum_CenterInfoType_structs.hpp"
+#include "ECharacterType_structs.hpp"
 #include "MainHUDItem_structs.hpp"
+#include "Enum_CenterInfoType_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK

@@ -31,8 +31,8 @@ public:
 	TMulticastInlineDelegate<void()>              OnLoseParentActor;                                 // 0x03E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void ExecuteUbergraph_BP_FeatureSequenceActorBase(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_FeatureSequenceActorBase(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

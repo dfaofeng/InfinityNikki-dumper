@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
-#include "EWorldAITokenType_structs.hpp"
 #include "F_DynamicSenseConfig_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EWorldAITokenType_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Combat_AIConfig.BP_Combat_AIConfig_C
-// 0x0088 (0x00B8 - 0x0030)
+// 0x0090 (0x00C0 - 0x0030)
 class UBP_Combat_AIConfig_C final : public UPrimaryDataAsset
 {
 public:
@@ -34,6 +34,7 @@ public:
 	EWorldAITokenType                             token_type;                                        // 0x00A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FF_DynamicSenseConfig>          dynamic_hatred_config;                             // 0x00A8(0x0010)(Edit, BlueprintVisible)
+	bool                                          sense_bullet;                                      // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -46,7 +47,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_Combat_AIConfig_C) == 0x000008, "Wrong alignment on UBP_Combat_AIConfig_C");
-static_assert(sizeof(UBP_Combat_AIConfig_C) == 0x0000B8, "Wrong size on UBP_Combat_AIConfig_C");
+static_assert(sizeof(UBP_Combat_AIConfig_C) == 0x0000C0, "Wrong size on UBP_Combat_AIConfig_C");
 static_assert(offsetof(UBP_Combat_AIConfig_C, behavior_tree_config) == 0x000030, "Member 'UBP_Combat_AIConfig_C::behavior_tree_config' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIConfig_C, state_machine) == 0x000038, "Member 'UBP_Combat_AIConfig_C::state_machine' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIConfig_C, state_tree_map) == 0x000040, "Member 'UBP_Combat_AIConfig_C::state_tree_map' has a wrong offset!");
@@ -55,6 +56,7 @@ static_assert(offsetof(UBP_Combat_AIConfig_C, use_default_state_begin_anim) == 0
 static_assert(offsetof(UBP_Combat_AIConfig_C, hatred_config) == 0x000098, "Member 'UBP_Combat_AIConfig_C::hatred_config' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIConfig_C, token_type) == 0x0000A0, "Member 'UBP_Combat_AIConfig_C::token_type' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIConfig_C, dynamic_hatred_config) == 0x0000A8, "Member 'UBP_Combat_AIConfig_C::dynamic_hatred_config' has a wrong offset!");
+static_assert(offsetof(UBP_Combat_AIConfig_C, sense_bullet) == 0x0000B8, "Member 'UBP_Combat_AIConfig_C::sense_bullet' has a wrong offset!");
 
 }
 

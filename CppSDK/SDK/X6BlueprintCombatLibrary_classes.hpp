@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "EHitReason_structs.hpp"
+#include "EDamagePerformanceType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EHitReason_structs.hpp"
-#include "EScenarioCombatEventType_structs.hpp"
-#include "EFeedBackReason_structs.hpp"
-#include "EDamagePerformanceType_structs.hpp"
-#include "EHitDisMoveType_structs.hpp"
 #include "Enum_JumpToTaskTraceType_structs.hpp"
+#include "EScenarioCombatEventType_structs.hpp"
+#include "EHitDisMoveType_structs.hpp"
+#include "EFeedBackReason_structs.hpp"
 
 
 namespace SDK
@@ -30,11 +30,14 @@ class UX6BlueprintCombatLibrary_C final : public UBlueprintFunctionLibrary
 public:
 	static void LocalSpawnActorWithServerInit(class UClass* SpawnClass, const struct FVector& Postion, const struct FRotator& Rotation, bool bAddToSoloLevel, int32 ConfigID, class UObject* __WorldContext, class AActor** Actor);
 	static void BP_TryShowTreasurebox(class UObject* __WorldContext);
+	static void BP_SkillClimaxBurstQuit(class UObject* __WorldContext);
+	static void BP_SetSkillClimaxBurstBlock(bool EnableBlock, class UObject* __WorldContext);
 	static void BP_SetShieldState(class AActor* Actor, bool ShieldOpen, class UObject* __WorldContext);
 	static void BP_SetMonsterMarkerState(class AActor* Actor, bool ShowMarker, class UObject* __WorldContext);
 	static void BP_SetHighNavCostArea(const struct FVector& Center, double Radius, double Height, double LifeTime, class UObject* __WorldContext);
 	static void BP_ResetTokenType(class AActor* Actor, class UObject* __WorldContext);
 	static void BP_ResetAISightConfig(class AActor* Actor, class UObject* __WorldContext);
+	static void BP_RemoveMotionWarping(class AActor* Actor, const class FString& WarpKey, class UObject* __WorldContext, bool* bSuccess);
 	static void BP_RemoveBuff(class AActor* Actor, class UBP_BuffConfig_C* BuffDA, class UObject* __WorldContext);
 	static void BP_PlayShakeSourceByLocation(const struct FVector& Location, TSoftObjectPtr<class UBP_CameraAndForceShakeConfigTemplate_C> ConfigSoftRef, const class FString& ShakeSourceKey, class UObject* __WorldContext, class FString* Ret_ShakeSourceKey);
 	static void BP_PlayShakeSource(class AActor* Actor, TSoftObjectPtr<class UBP_CameraAndForceShakeConfigTemplate_C> ConfigSoftRef, bool IsAttach, const class FString& AttachSocketName, const class FString& ShakeSourceKey, class UObject* __WorldContext, class FString* Ret_ShakeSourceKey);
@@ -66,6 +69,7 @@ public:
 	static void BP_ChangeHatredValueByTag(class AActor* Actor, const struct FGameplayTag& TriggerTag, class UObject* __WorldContext);
 	static void BP_BlendCameraOut(class AActor* CameraOwnerActor, int32 CameraConfigIndex, const struct FViewTargetTransitionParams& BlendOutTransitionParams, class UObject* __WorldContext);
 	static void BP_BlendCameraIn(class AActor* CameraOwnerActor, class UCameraBaseParamsData* CameraToBlend, const struct FViewTargetTransitionParams& BlendInTransitionParams, class UObject* __WorldContext, int32* ConfigIndex);
+	static void BP_ApplyMotionWarping(class AActor* Actor, const class FString& WarpKey, const struct FVector& Location, const struct FRotator& Rotation, class UObject* __WorldContext, bool* bSuccess);
 	static void BP_AddBuff(class AActor* Actor, class UBP_BuffConfig_C* BuffDA, const struct FF_BuffDurationSet& OverrideDurationConfig, class UObject* __WorldContext);
 
 	void BP_DoSlomo(class AActor* TargetActor, double ActorSlomoDuration, double ActorSlomoRate, bool IsApplyGlobal, double GloabalSlomoDuration, double GloabalSlomoRate, class UObject* __WorldContext);

@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "S_BPWeatherParamterCollection_structs.hpp"
 #include "Weather_Preset_Master_classes.hpp"
 
 
@@ -17,9 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ExternalWeatherParamCollection.ExternalWeatherParamCollection_C
-// 0x0000 (0x0338 - 0x0338)
+// 0x0008 (0x0340 - 0x0338)
 class UExternalWeatherParamCollection_C final : public UWeather_Preset_Master_C
 {
+public:
+	struct FS_BPWeatherParamterCollection         BP_Weather_Parameter_Collection;                   // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -31,7 +35,8 @@ public:
 	}
 };
 static_assert(alignof(UExternalWeatherParamCollection_C) == 0x000008, "Wrong alignment on UExternalWeatherParamCollection_C");
-static_assert(sizeof(UExternalWeatherParamCollection_C) == 0x000338, "Wrong size on UExternalWeatherParamCollection_C");
+static_assert(sizeof(UExternalWeatherParamCollection_C) == 0x000340, "Wrong size on UExternalWeatherParamCollection_C");
+static_assert(offsetof(UExternalWeatherParamCollection_C, BP_Weather_Parameter_Collection) == 0x000338, "Member 'UExternalWeatherParamCollection_C::BP_Weather_Parameter_Collection' has a wrong offset!");
 
 }
 

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function X6BTTask_LuaBase.X6BTTask_LuaBase_C.K2_OnInstanceDestroyed
-// (Event, Protected, BlueprintEvent)
-
-void UX6BTTask_LuaBase_C::K2_OnInstanceDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("X6BTTask_LuaBase_C", "K2_OnInstanceDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function X6BTTask_LuaBase.X6BTTask_LuaBase_C.ExecuteUbergraph_X6BTTask_LuaBase
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UX6BTTask_LuaBase_C::ExecuteUbergraph_X6BTTask_LuaBase(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BTTask_LuaBase.X6BTTask_LuaBase_C.K2_OnInstanceDestroyed
+// (Event, Protected, BlueprintEvent)
+
+void UX6BTTask_LuaBase_C::K2_OnInstanceDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6BTTask_LuaBase_C", "K2_OnInstanceDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

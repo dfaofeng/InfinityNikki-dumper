@@ -37,68 +37,6 @@ bool UBP_BulletHitDamageModifier_C::CanShapeTrace()
 }
 
 
-// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UBP_BulletHitDamageModifier_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "GetModuleName");
-
-	Params::BP_BulletHitDamageModifier_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_Destroy
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
-
-void UBP_BulletHitDamageModifier_C::K2_Destroy() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "K2_Destroy");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_Init
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
-
-void UBP_BulletHitDamageModifier_C::K2_Init() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "K2_Init");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_OnAsyncLoadComplete
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
-
-void UBP_BulletHitDamageModifier_C::K2_OnAsyncLoadComplete() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "K2_OnAsyncLoadComplete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_ProcessHitResults
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -120,6 +58,68 @@ void UBP_BulletHitDamageModifier_C::K2_ProcessHitResults(const struct FVector& S
 	Parms.HitResults = std::move(HitResults);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_OnAsyncLoadComplete
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+
+void UBP_BulletHitDamageModifier_C::K2_OnAsyncLoadComplete() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "K2_OnAsyncLoadComplete");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_Init
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+
+void UBP_BulletHitDamageModifier_C::K2_Init() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "K2_Init");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.K2_Destroy
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+
+void UBP_BulletHitDamageModifier_C::K2_Destroy() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "K2_Destroy");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UBP_BulletHitDamageModifier_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BulletHitDamageModifier_C", "GetModuleName");
+
+	Params::BP_BulletHitDamageModifier_C_GetModuleName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

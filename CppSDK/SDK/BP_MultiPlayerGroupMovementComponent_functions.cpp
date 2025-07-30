@@ -227,6 +227,26 @@ void UBP_MultiPlayerGroupMovementComponent_C::BP_RevertFollowerGravityScale()
 }
 
 
+// Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.BP_RPC_SetEnableHandHoldingAnchorPull
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bValue                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MultiPlayerGroupMovementComponent_C::BP_RPC_SetEnableHandHoldingAnchorPull(bool bValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MultiPlayerGroupMovementComponent_C", "BP_RPC_SetEnableHandHoldingAnchorPull");
+
+	Params::BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull Parms{};
+
+	Parms.bValue = bValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.BP_SetEnableGroupConstraints
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -438,7 +458,7 @@ void UBP_MultiPlayerGroupMovementComponent_C::OnRep_BP_Rep_LDCanDoAnchorPushWith
 
 
 // Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.OnRep_BP_Replicated_EnableHandHoldingAnchorPull
-// (BlueprintCallable, BlueprintEvent)
+// (Private, BlueprintCallable, BlueprintEvent)
 
 void UBP_MultiPlayerGroupMovementComponent_C::OnRep_BP_Replicated_EnableHandHoldingAnchorPull()
 {

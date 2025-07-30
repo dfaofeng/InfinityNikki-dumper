@@ -107,6 +107,17 @@ static_assert(alignof(BP_MultiPlayerGroupMovementComponent_C_BP_Get_OtherCharact
 static_assert(sizeof(BP_MultiPlayerGroupMovementComponent_C_BP_Get_OtherCharacterToBeingHeldHand) == 0x000008, "Wrong size on BP_MultiPlayerGroupMovementComponent_C_BP_Get_OtherCharacterToBeingHeldHand");
 static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_BP_Get_OtherCharacterToBeingHeldHand, Ret) == 0x000000, "Member 'BP_MultiPlayerGroupMovementComponent_C_BP_Get_OtherCharacterToBeingHeldHand::Ret' has a wrong offset!");
 
+// Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.BP_RPC_SetEnableHandHoldingAnchorPull
+// 0x0001 (0x0001 - 0x0000)
+struct BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull final
+{
+public:
+	bool                                          bValue;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull) == 0x000001, "Wrong alignment on BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull");
+static_assert(sizeof(BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull) == 0x000001, "Wrong size on BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull");
+static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull, bValue) == 0x000000, "Member 'BP_MultiPlayerGroupMovementComponent_C_BP_RPC_SetEnableHandHoldingAnchorPull::bValue' has a wrong offset!");
+
 // Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.BP_SetEnableGroupConstraints
 // 0x0001 (0x0001 - 0x0000)
 struct BP_MultiPlayerGroupMovementComponent_C_BP_SetEnableGroupConstraints final
@@ -216,15 +227,16 @@ struct BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGro
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bValue;                         // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent) == 0x000004, "Wrong alignment on BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent");
 static_assert(sizeof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent) == 0x00000C, "Wrong size on BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent");
 static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent, EntryPoint) == 0x000000, "Member 'BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent, K2Node_Event_EndPlayReason) == 0x000004, "Member 'BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent, K2Node_Event_EndPlayReason) == 0x000008, "Member 'BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent, K2Node_CustomEvent_bValue) == 0x000009, "Member 'BP_MultiPlayerGroupMovementComponent_C_ExecuteUbergraph_BP_MultiPlayerGroupMovementComponent::K2Node_CustomEvent_bValue' has a wrong offset!");
 
 // Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)

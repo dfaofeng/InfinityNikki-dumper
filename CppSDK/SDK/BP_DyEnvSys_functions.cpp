@@ -302,6 +302,20 @@ void ABP_DyEnvSys_C::SetMoonCurve(const struct FFloatCurve& Curve)
 }
 
 
+// Function BP_DyEnvSys.BP_DyEnvSys_C.SetLightOnAndOffTime
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_DyEnvSys_C::SetLightOnAndOffTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvSys_C", "SetLightOnAndOffTime");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_DyEnvSys.BP_DyEnvSys_C.SetDenseFogColor
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -452,6 +466,28 @@ void ABP_DyEnvSys_C::OnActorBeginOverlapWithVolume(class ADynamicWeatherVolume* 
 }
 
 
+// Function BP_DyEnvSys.BP_DyEnvSys_C.NeedUpdateLight
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             MPC_ParamName                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ParamValue                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DyEnvSys_C::NeedUpdateLight(class FName MPC_ParamName, double ParamValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvSys_C", "NeedUpdateLight");
+
+	Params::BP_DyEnvSys_C_NeedUpdateLight Parms{};
+
+	Parms.MPC_ParamName = MPC_ParamName;
+	Parms.ParamValue = ParamValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Manual Operation TOD
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -481,20 +517,6 @@ void ABP_DyEnvSys_C::Low_Platform_SkyAtmosphere()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_DyEnvSys_C", "Low Platform SkyAtmosphere");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_DyEnvSys.BP_DyEnvSys_C.LoadCurrentLightInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_DyEnvSys_C::LoadCurrentLightInfo()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvSys_C", "LoadCurrentLightInfo");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -16,30 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_MiniMap.WBP_MiniMap_C.CreateMapTerrainCell
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_MiniMap_C_CreateMapTerrainCell final
-{
-public:
-	class UWBP_MapTerrainCell_C*                  Cell;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_MapTerrainCell_C*                  CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MiniMap_C_CreateMapTerrainCell) == 0x000008, "Wrong alignment on WBP_MiniMap_C_CreateMapTerrainCell");
-static_assert(sizeof(WBP_MiniMap_C_CreateMapTerrainCell) == 0x000010, "Wrong size on WBP_MiniMap_C_CreateMapTerrainCell");
-static_assert(offsetof(WBP_MiniMap_C_CreateMapTerrainCell, Cell) == 0x000000, "Member 'WBP_MiniMap_C_CreateMapTerrainCell::Cell' has a wrong offset!");
-static_assert(offsetof(WBP_MiniMap_C_CreateMapTerrainCell, CallFunc_Create_ReturnValue) == 0x000008, "Member 'WBP_MiniMap_C_CreateMapTerrainCell::CallFunc_Create_ReturnValue' has a wrong offset!");
-
-// Function WBP_MiniMap.WBP_MiniMap_C.ExecuteUbergraph_WBP_MiniMap
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap) == 0x000004, "Wrong alignment on WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap");
-static_assert(sizeof(WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap) == 0x000004, "Wrong size on WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap");
-static_assert(offsetof(WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap, EntryPoint) == 0x000000, "Member 'WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap::EntryPoint' has a wrong offset!");
-
 // Function WBP_MiniMap.WBP_MiniMap_C.InitRenderTarget
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_MiniMap_C_InitRenderTarget final
@@ -54,6 +30,30 @@ static_assert(sizeof(WBP_MiniMap_C_InitRenderTarget) == 0x000018, "Wrong size on
 static_assert(offsetof(WBP_MiniMap_C_InitRenderTarget, Size) == 0x000000, "Member 'WBP_MiniMap_C_InitRenderTarget::Size' has a wrong offset!");
 static_assert(offsetof(WBP_MiniMap_C_InitRenderTarget, Height) == 0x000010, "Member 'WBP_MiniMap_C_InitRenderTarget::Height' has a wrong offset!");
 static_assert(offsetof(WBP_MiniMap_C_InitRenderTarget, Width) == 0x000014, "Member 'WBP_MiniMap_C_InitRenderTarget::Width' has a wrong offset!");
+
+// Function WBP_MiniMap.WBP_MiniMap_C.ExecuteUbergraph_WBP_MiniMap
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap) == 0x000004, "Wrong alignment on WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap");
+static_assert(sizeof(WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap) == 0x000004, "Wrong size on WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap");
+static_assert(offsetof(WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap, EntryPoint) == 0x000000, "Member 'WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap::EntryPoint' has a wrong offset!");
+
+// Function WBP_MiniMap.WBP_MiniMap_C.CreateMapTerrainCell
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_MiniMap_C_CreateMapTerrainCell final
+{
+public:
+	class UWBP_MapTerrainCell_C*                  Cell;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_MapTerrainCell_C*                  CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MiniMap_C_CreateMapTerrainCell) == 0x000008, "Wrong alignment on WBP_MiniMap_C_CreateMapTerrainCell");
+static_assert(sizeof(WBP_MiniMap_C_CreateMapTerrainCell) == 0x000010, "Wrong size on WBP_MiniMap_C_CreateMapTerrainCell");
+static_assert(offsetof(WBP_MiniMap_C_CreateMapTerrainCell, Cell) == 0x000000, "Member 'WBP_MiniMap_C_CreateMapTerrainCell::Cell' has a wrong offset!");
+static_assert(offsetof(WBP_MiniMap_C_CreateMapTerrainCell, CallFunc_Create_ReturnValue) == 0x000008, "Member 'WBP_MiniMap_C_CreateMapTerrainCell::CallFunc_Create_ReturnValue' has a wrong offset!");
 
 // Function WBP_MiniMap.WBP_MiniMap_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

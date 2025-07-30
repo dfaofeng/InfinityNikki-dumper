@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_HUD_TaskList_Tab_Item.WBP_HUD_TaskList_Tab_Item_C.BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_HUD_TaskList_Tab_Item_C::BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TaskList_Tab_Item_C", "BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_TaskList_Tab_Item.WBP_HUD_TaskList_Tab_Item_C.BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_HUD_TaskList_Tab_Item_C::BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TaskList_Tab_Item_C", "BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_HUD_TaskList_Tab_Item.WBP_HUD_TaskList_Tab_Item_C.ExecuteUbergraph_WBP_HUD_TaskList_Tab_Item
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void UWBP_HUD_TaskList_Tab_Item_C::ExecuteUbergraph_WBP_HUD_TaskList_Tab_Item(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_TaskList_Tab_Item.WBP_HUD_TaskList_Tab_Item_C.BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_HUD_TaskList_Tab_Item_C::BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_TaskList_Tab_Item_C", "BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_TaskList_Tab_Item.WBP_HUD_TaskList_Tab_Item_C.BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_HUD_TaskList_Tab_Item_C::BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_TaskList_Tab_Item_C", "BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

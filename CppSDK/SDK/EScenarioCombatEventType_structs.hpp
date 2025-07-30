@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EScenarioCombatEventType.EScenarioCombatEventType
-// NumValues: 0x001F
+// NumValues: 0x0038
 enum class EScenarioCombatEventType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -48,7 +48,32 @@ enum class EScenarioCombatEventType : uint8
 	NewEnumerator27                          = 27,
 	NewEnumerator28                          = 28,
 	NewEnumerator29                          = 29,
-	EScenarioCombatEventType_MAX             = 30,
+	NewEnumerator30                          = 30,
+	NewEnumerator31                          = 31,
+	NewEnumerator32                          = 32,
+	NewEnumerator33                          = 33,
+	NewEnumerator34                          = 34,
+	NewEnumerator35                          = 35,
+	NewEnumerator36                          = 36,
+	NewEnumerator37                          = 37,
+	NewEnumerator38                          = 38,
+	NewEnumerator39                          = 39,
+	NewEnumerator40                          = 40,
+	NewEnumerator41                          = 41,
+	NewEnumerator42                          = 42,
+	NewEnumerator43                          = 43,
+	NewEnumerator44                          = 44,
+	NewEnumerator45                          = 45,
+	NewEnumerator46                          = 46,
+	NewEnumerator47                          = 47,
+	NewEnumerator48                          = 48,
+	NewEnumerator49                          = 49,
+	NewEnumerator50                          = 50,
+	NewEnumerator51                          = 51,
+	NewEnumerator52                          = 52,
+	NewEnumerator53                          = 53,
+	NewEnumerator54                          = 54,
+	EScenarioCombatEventType_MAX             = 55,
 };
 
 }

@@ -26,8 +26,8 @@ public:
 	bool                                          ShakeInWorldSpace;                                 // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
 	class FString GetNotifyName() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

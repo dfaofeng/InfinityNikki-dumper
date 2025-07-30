@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function AN_SpawnEffectWind.AN_SpawnEffectWind_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct AN_SpawnEffectWind_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(AN_SpawnEffectWind_C_GetModuleName) == 0x000008, "Wrong alignment on AN_SpawnEffectWind_C_GetModuleName");
-static_assert(sizeof(AN_SpawnEffectWind_C_GetModuleName) == 0x000010, "Wrong size on AN_SpawnEffectWind_C_GetModuleName");
-static_assert(offsetof(AN_SpawnEffectWind_C_GetModuleName, ReturnValue) == 0x000000, "Member 'AN_SpawnEffectWind_C_GetModuleName::ReturnValue' has a wrong offset!");
-
 // Function AN_SpawnEffectWind.AN_SpawnEffectWind_C.Received_Notify
 // 0x0048 (0x0048 - 0x0000)
 struct AN_SpawnEffectWind_C_Received_Notify final
@@ -43,6 +32,17 @@ static_assert(offsetof(AN_SpawnEffectWind_C_Received_Notify, MeshComp) == 0x0000
 static_assert(offsetof(AN_SpawnEffectWind_C_Received_Notify, Animation) == 0x000008, "Member 'AN_SpawnEffectWind_C_Received_Notify::Animation' has a wrong offset!");
 static_assert(offsetof(AN_SpawnEffectWind_C_Received_Notify, EventReference) == 0x000010, "Member 'AN_SpawnEffectWind_C_Received_Notify::EventReference' has a wrong offset!");
 static_assert(offsetof(AN_SpawnEffectWind_C_Received_Notify, ReturnValue) == 0x000040, "Member 'AN_SpawnEffectWind_C_Received_Notify::ReturnValue' has a wrong offset!");
+
+// Function AN_SpawnEffectWind.AN_SpawnEffectWind_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct AN_SpawnEffectWind_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(AN_SpawnEffectWind_C_GetModuleName) == 0x000008, "Wrong alignment on AN_SpawnEffectWind_C_GetModuleName");
+static_assert(sizeof(AN_SpawnEffectWind_C_GetModuleName) == 0x000010, "Wrong size on AN_SpawnEffectWind_C_GetModuleName");
+static_assert(offsetof(AN_SpawnEffectWind_C_GetModuleName, ReturnValue) == 0x000000, "Member 'AN_SpawnEffectWind_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

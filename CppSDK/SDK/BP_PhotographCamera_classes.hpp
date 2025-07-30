@@ -32,20 +32,20 @@ public:
 	bool                                          IsPlatFormMobile;                                  // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetVignetteIntensity(double InValue);
-	void SetFocusDistance(double InDistance);
-	void SetFocusActor(class AActor* InActor);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void InitAsFirstPersonCamera();
-	void GetVignetteIntensity(double* OutValue);
-	void GetDefaultVignetteIntensity(double* DefaultValue);
-	void GetCameraRelativeLocToNikki();
-	void FocusNikki(class AActor* InNikki);
-	void ExecuteUbergraph_BP_PhotographCamera(int32 EntryPoint);
-	void ConvertParamsToMobilePlatform();
-	void ClearFocusNikki();
 	void ClearFocusActor();
+	void ClearFocusNikki();
+	void ConvertParamsToMobilePlatform();
+	void ExecuteUbergraph_BP_PhotographCamera(int32 EntryPoint);
+	void FocusNikki(class AActor* InNikki);
+	void GetCameraRelativeLocToNikki();
+	void GetDefaultVignetteIntensity(double* DefaultValue);
+	void GetVignetteIntensity(double* OutValue);
+	void InitAsFirstPersonCamera();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SetFocusActor(class AActor* InActor);
+	void SetFocusDistance(double InDistance);
+	void SetVignetteIntensity(double InValue);
 
 public:
 	static class UClass* StaticClass()

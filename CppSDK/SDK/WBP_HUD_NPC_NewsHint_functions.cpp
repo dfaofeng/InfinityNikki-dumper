@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_HUD_NPC_NewsHint.WBP_HUD_NPC_NewsHint_C.ExecuteUbergraph_WBP_HUD_NPC_NewsHint
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_NPC_NewsHint_C::ExecuteUbergraph_WBP_HUD_NPC_NewsHint(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_NPC_NewsHint_C", "ExecuteUbergraph_WBP_HUD_NPC_NewsHint");
-
-	Params::WBP_HUD_NPC_NewsHint_C_ExecuteUbergraph_WBP_HUD_NPC_NewsHint Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_HUD_NPC_NewsHint.WBP_HUD_NPC_NewsHint_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_HUD_NPC_NewsHint_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_HUD_NPC_NewsHint_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_NPC_NewsHint.WBP_HUD_NPC_NewsHint_C.ExecuteUbergraph_WBP_HUD_NPC_NewsHint
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_NPC_NewsHint_C::ExecuteUbergraph_WBP_HUD_NPC_NewsHint(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_NPC_NewsHint_C", "ExecuteUbergraph_WBP_HUD_NPC_NewsHint");
+
+	Params::WBP_HUD_NPC_NewsHint_C_ExecuteUbergraph_WBP_HUD_NPC_NewsHint Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

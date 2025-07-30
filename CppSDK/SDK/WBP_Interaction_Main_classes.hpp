@@ -26,8 +26,8 @@ public:
 	class UCanvasPanel*                           CanvasPanel_All;                                   // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Interaction_Main(int32 EntryPoint);
 	void Construct();
+	void ExecuteUbergraph_WBP_Interaction_Main(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

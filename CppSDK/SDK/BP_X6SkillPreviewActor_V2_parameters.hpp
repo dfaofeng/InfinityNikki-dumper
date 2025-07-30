@@ -17,244 +17,63 @@
 namespace SDK::Params
 {
 
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.ExecuteUbergraph_BP_X6SkillPreviewActor_V2
-// 0x0008 (0x0008 - 0x0000)
-struct BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2 final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2) == 0x000004, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2");
-static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2) == 0x000008, "Wrong size on BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2, EntryPoint) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetOverriddenInfo
-// 0x0180 (0x0180 - 0x0000)
-struct BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo final
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.SetCollisionInfoByBulletData
+// 0x0088 (0x0088 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData final
 {
 public:
 	class UBP_BulletDataAsset_C*                  BulletData;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   OverrideSocket;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             OverrideTransform;                                 // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Socket;                                            // 0x0070(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-	struct FVector                                OffsetLocation;                                    // 0x0080(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               OffsetRotation;                                    // 0x0098(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class FString                                 SocketInfo;                                        // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	struct FRotator                               OffsetRotatorInfo;                                 // 0x00C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                OffsetLocationInfo;                                // 0x00D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_RotatorRotator_ReturnValue;      // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UX6BulletSimpleBasicModifier*           CallFunc_Array_Get_Item;                           // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_BulletHitDamageModifier_C*          K2Node_DynamicCast_AsBP_Bullet_Hit_Damage_Modifier; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_BulletCollisionModifier_C*          K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier; // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SphereTraceDataAsset_C*             K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset;   // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_BoxTraceDataAsset_C*                K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset;      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SphereTraceDataAsset_C*             K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset_1; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_BoxTraceDataAsset_C*                K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset_1;    // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_1; // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo");
-static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo) == 0x000180, "Wrong size on BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, BulletData) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::BulletData' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OverrideSocket) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OverrideSocket' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OverrideTransform) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OverrideTransform' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, Socket) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::Socket' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetLocation) == 0x000080, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetLocation' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetRotation) == 0x000098, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetRotation' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, SocketInfo) == 0x0000B0, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::SocketInfo' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetRotatorInfo) == 0x0000C0, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetRotatorInfo' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetLocationInfo) == 0x0000D8, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetLocationInfo' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_BreakTransform_Location) == 0x0000F0, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_BreakTransform_Rotation) == 0x000108, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_BreakTransform_Scale) == 0x000120, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_Conv_NameToString_ReturnValue) == 0x000138, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_NotEqual_RotatorRotator_ReturnValue) == 0x000148, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_NotEqual_RotatorRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_VSize_ReturnValue) == 0x000150, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000158, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000160, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_GetComponentByClass_ReturnValue) == 0x000170, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_DoesSocketExist_ReturnValue) == 0x000178, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetSocketTransform
-// 0x0120 (0x0120 - 0x0000)
-struct BP_X6SkillPreviewActor_V2_C_GetSocketTransform final
-{
-public:
-	class FString                                 ScoketName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FTransform                             SocketTransform;                                   // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_GetSocketTransform");
-static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform) == 0x000120, "Wrong size on BP_X6SkillPreviewActor_V2_C_GetSocketTransform");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, ScoketName) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::ScoketName' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, SocketTransform) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::SocketTransform' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_Conv_StringToName_ReturnValue) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000078, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_GetComponentByClass_ReturnValue) == 0x000090, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_IsValid_ReturnValue) == 0x000098, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_IsValid_ReturnValue_1) == 0x000099, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_GetSocketLocation_ReturnValue) == 0x0000A0, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_MakeTransform_ReturnValue) == 0x0000C0, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetTransformByOffset
-// 0x0240 (0x0240 - 0x0000)
-struct BP_X6SkillPreviewActor_V2_C_GetTransformByOffset final
-{
-public:
-	class FString                                 Socket;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	struct FVector                                OffsetLoc;                                         // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               OffsetRot;                                         // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                OutLoc;                                            // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               OutRot;                                            // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FTransform                             SocketTransform;                                   // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetSocketTransform_SocketTransform;       // 0x00D0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_TransformRotation_ReturnValue;            // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x01C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_TransformLocation_ReturnValue;            // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_GetTransformByOffset");
-static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset) == 0x000240, "Wrong size on BP_X6SkillPreviewActor_V2_C_GetTransformByOffset");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, Socket) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::Socket' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OffsetLoc) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OffsetLoc' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OffsetRot) == 0x000028, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OffsetRot' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OutLoc) == 0x000040, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OutLoc' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OutRot) == 0x000058, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OutRot' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, SocketTransform) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::SocketTransform' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_GetSocketTransform_SocketTransform) == 0x0000D0, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_GetSocketTransform_SocketTransform' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_BreakTransform_Location) == 0x000130, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_BreakTransform_Rotation) == 0x000148, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_BreakTransform_Scale) == 0x000160, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_MakeRotator_ReturnValue) == 0x000178, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_ComposeRotators_ReturnValue) == 0x000190, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_TransformRotation_ReturnValue) == 0x0001A8, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_TransformRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_MakeTransform_ReturnValue) == 0x0001C0, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_TransformLocation_ReturnValue) == 0x000220, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_TransformLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000238, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.Init
-// 0x02A0 (0x02A0 - 0x0000)
-struct BP_X6SkillPreviewActor_V2_C_Init final
-{
-public:
-	class UBP_BulletDataAsset_C*                  BulletData;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Owner_0;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Socket;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             OffsetTransform;                                   // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetOverriddenInfo_Socket;                 // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetOverriddenInfo_OffsetLocation;         // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetOverriddenInfo_OffsetRotation;         // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_GetTransformByOffset_OutLoc;              // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetTransformByOffset_OutRot;              // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x00F8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x01F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x3];                                      // 0x0211(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UX6BulletSimpleBasicModifier*           CallFunc_Array_Get_Item;                           // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_BulletCollisionModifier_C*          K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier; // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ObjectIsA_ReturnValue;                    // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_BoxTraceDataAsset_C*                K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset;      // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SphereTraceDataAsset_C*             K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset;   // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ObjectIsA_ReturnValue_1;                  // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ObjectIsA_ReturnValue_2;                  // 0x024A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ObjectIsA_ReturnValue_3;                  // 0x024B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x024C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24D[0x3];                                      // 0x024D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0254(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_255[0x3];                                      // 0x0255(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25D[0x3];                                      // 0x025D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0278(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast; // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_X6SkillPreviewActor_V2_C_Init) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_Init");
-static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_Init) == 0x0002A0, "Wrong size on BP_X6SkillPreviewActor_V2_C_Init");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, BulletData) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_Init::BulletData' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Owner_0) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Owner_0' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Socket) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Socket' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, OffsetTransform) == 0x000020, "Member 'BP_X6SkillPreviewActor_V2_C_Init::OffsetTransform' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetOverriddenInfo_Socket) == 0x000080, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetOverriddenInfo_Socket' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetOverriddenInfo_OffsetLocation) == 0x000090, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetOverriddenInfo_OffsetLocation' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetOverriddenInfo_OffsetRotation) == 0x0000A8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetOverriddenInfo_OffsetRotation' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetTransformByOffset_OutLoc) == 0x0000C0, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetTransformByOffset_OutLoc' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetTransformByOffset_OutRot) == 0x0000D8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetTransformByOffset_OutRot' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0000F0, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Array_Length_ReturnValue) == 0x0000F4, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x0000F8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0001F0, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x0001F8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Temp_bool_True_if_break_was_hit_Variable) == 0x000210, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Temp_int_Array_Index_Variable) == 0x000214, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Array_Get_Item) == 0x000218, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier) == 0x000220, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_bSuccess) == 0x000228, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue) == 0x000229, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset) == 0x000230, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_bSuccess_1) == 0x000238, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset) == 0x000240, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_bSuccess_2) == 0x000248, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue_1) == 0x000249, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue_2) == 0x00024A, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue_3) == 0x00024B, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Not_PreBool_ReturnValue) == 0x00024C, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Temp_int_Loop_Counter_Variable) == 0x000250, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Less_IntInt_ReturnValue) == 0x000254, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Add_IntInt_ReturnValue) == 0x000258, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_BooleanAND_ReturnValue) == 0x00025C, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetActorForwardVector_ReturnValue) == 0x000260, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000278, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast) == 0x000290, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x000298, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.InitSimple
-// 0x0050 (0x0050 - 0x0000)
-struct BP_X6SkillPreviewActor_V2_C_InitSimple final
-{
-public:
-	double                                        Speed;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_X6SkillPreviewActor_V2_C_InitSimple) == 0x000008, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_InitSimple");
-static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_InitSimple) == 0x000050, "Wrong size on BP_X6SkillPreviewActor_V2_C_InitSimple");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, Speed) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::Speed' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, CallFunc_GetActorForwardVector_ReturnValue) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000020, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000038, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData) == 0x000008, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData) == 0x000088, "Wrong size on BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, BulletData) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::BulletData' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, Temp_int_Array_Index_Variable) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, CallFunc_Array_Length_ReturnValue) == 0x00000C, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, CallFunc_Array_Get_Item) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_AsBP_Bullet_Hit_Damage_Modifier) == 0x000018, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_AsBP_Bullet_Hit_Damage_Modifier' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier) == 0x000028, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset) == 0x000038, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_bSuccess_2) == 0x000040, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset) == 0x000048, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_bSuccess_3) == 0x000050, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset_1) == 0x000058, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_bSuccess_4) == 0x000060, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset_1) == 0x000068, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, K2Node_DynamicCast_bSuccess_5) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, Temp_int_Loop_Counter_Variable) == 0x000074, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, CallFunc_Add_IntInt_ReturnValue) == 0x00007C, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x000080, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_1) == 0x000084, "Member 'BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_1' has a wrong offset!");
 
 // Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.PreviewRibbon
 // 0x0110 (0x0110 - 0x0000)
@@ -316,6 +135,248 @@ static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_PreviewRibbon, CallFunc_Add_I
 static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_PreviewRibbon, CallFunc_SelectInt_ReturnValue) == 0x0000F8, "Member 'BP_X6SkillPreviewActor_V2_C_PreviewRibbon::CallFunc_SelectInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_PreviewRibbon, CallFunc_Array_Length_ReturnValue) == 0x0000FC, "Member 'BP_X6SkillPreviewActor_V2_C_PreviewRibbon::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_PreviewRibbon, CallFunc_SetNiagaraArrayFloat_ArrayData_ImplicitCast) == 0x000100, "Member 'BP_X6SkillPreviewActor_V2_C_PreviewRibbon::CallFunc_SetNiagaraArrayFloat_ArrayData_ImplicitCast' has a wrong offset!");
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.InitSimple
+// 0x0050 (0x0050 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_InitSimple final
+{
+public:
+	double                                        Speed;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_InitSimple) == 0x000008, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_InitSimple");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_InitSimple) == 0x000050, "Wrong size on BP_X6SkillPreviewActor_V2_C_InitSimple");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, Speed) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::Speed' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, CallFunc_GetActorForwardVector_ReturnValue) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000020, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_InitSimple, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000038, "Member 'BP_X6SkillPreviewActor_V2_C_InitSimple::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.Init
+// 0x02B0 (0x02B0 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_Init final
+{
+public:
+	class UBP_BulletDataAsset_C*                  BulletData;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Owner_0;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Socket;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OffsetTransform;                                   // 0x0020(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDrawCollision;                                    // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetOverriddenInfo_Socket;                 // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetOverriddenInfo_OffsetLocation;         // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetOverriddenInfo_OffsetRotation;         // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetTransformByOffset_OutLoc;              // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetTransformByOffset_OutRot;              // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x0100(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0219(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21A[0x2];                                      // 0x021A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_224[0x4];                                      // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6BulletSimpleBasicModifier*           CallFunc_Array_Get_Item;                           // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_BulletCollisionModifier_C*          K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier; // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ObjectIsA_ReturnValue;                    // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23A[0x6];                                      // 0x023A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_BoxTraceDataAsset_C*                K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset;      // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SphereTraceDataAsset_C*             K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset;   // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ObjectIsA_ReturnValue_1;                  // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ObjectIsA_ReturnValue_2;                  // 0x025A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ObjectIsA_ReturnValue_3;                  // 0x025B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x025C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x025D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25E[0x2];                                      // 0x025E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_264[0x4];                                      // 0x0264(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast; // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_Init) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_Init");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_Init) == 0x0002B0, "Wrong size on BP_X6SkillPreviewActor_V2_C_Init");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, BulletData) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_Init::BulletData' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Owner_0) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Owner_0' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Socket) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Socket' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, OffsetTransform) == 0x000020, "Member 'BP_X6SkillPreviewActor_V2_C_Init::OffsetTransform' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, bDrawCollision) == 0x000080, "Member 'BP_X6SkillPreviewActor_V2_C_Init::bDrawCollision' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetOverriddenInfo_Socket) == 0x000088, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetOverriddenInfo_Socket' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetOverriddenInfo_OffsetLocation) == 0x000098, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetOverriddenInfo_OffsetLocation' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetOverriddenInfo_OffsetRotation) == 0x0000B0, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetOverriddenInfo_OffsetRotation' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetTransformByOffset_OutLoc) == 0x0000C8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetTransformByOffset_OutLoc' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetTransformByOffset_OutRot) == 0x0000E0, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetTransformByOffset_OutRot' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0000F8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x000100, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0001F8, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Array_Length_ReturnValue) == 0x0001FC, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000200, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Temp_bool_True_if_break_was_hit_Variable) == 0x000218, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Not_PreBool_ReturnValue) == 0x000219, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Temp_int_Array_Index_Variable) == 0x00021C, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, Temp_int_Loop_Counter_Variable) == 0x000220, "Member 'BP_X6SkillPreviewActor_V2_C_Init::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Array_Get_Item) == 0x000228, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier) == 0x000230, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_AsBP_Bullet_Collision_Modifier' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_bSuccess) == 0x000238, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue) == 0x000239, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset) == 0x000240, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_AsBP_Box_Trace_Data_Asset' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_bSuccess_1) == 0x000248, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset) == 0x000250, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_AsBP_Sphere_Trace_Data_Asset' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, K2Node_DynamicCast_bSuccess_2) == 0x000258, "Member 'BP_X6SkillPreviewActor_V2_C_Init::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue_1) == 0x000259, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue_2) == 0x00025A, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_ObjectIsA_ReturnValue_3) == 0x00025B, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_ObjectIsA_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Less_IntInt_ReturnValue) == 0x00025C, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_BooleanAND_ReturnValue) == 0x00025D, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Add_IntInt_ReturnValue) == 0x000260, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_GetActorForwardVector_ReturnValue) == 0x000268, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000280, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast) == 0x000298, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_Conv_DoubleToVector_InDouble_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_Init, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x0002A0, "Member 'BP_X6SkillPreviewActor_V2_C_Init::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetTransformByOffset
+// 0x0240 (0x0240 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_GetTransformByOffset final
+{
+public:
+	class FString                                 Socket;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                OffsetLoc;                                         // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               OffsetRot;                                         // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                OutLoc;                                            // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               OutRot;                                            // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FTransform                             SocketTransform;                                   // 0x0070(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetSocketTransform_SocketTransform;       // 0x00D0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0178(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_TransformRotation_ReturnValue;            // 0x01A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x01C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_TransformLocation_ReturnValue;            // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_GetTransformByOffset");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset) == 0x000240, "Wrong size on BP_X6SkillPreviewActor_V2_C_GetTransformByOffset");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, Socket) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::Socket' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OffsetLoc) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OffsetLoc' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OffsetRot) == 0x000028, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OffsetRot' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OutLoc) == 0x000040, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OutLoc' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, OutRot) == 0x000058, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::OutRot' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, SocketTransform) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::SocketTransform' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_GetSocketTransform_SocketTransform) == 0x0000D0, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_GetSocketTransform_SocketTransform' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_BreakTransform_Location) == 0x000130, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_BreakTransform_Rotation) == 0x000148, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_BreakTransform_Scale) == 0x000160, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_MakeRotator_ReturnValue) == 0x000178, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_ComposeRotators_ReturnValue) == 0x000190, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_TransformRotation_ReturnValue) == 0x0001A8, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_TransformRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_MakeTransform_ReturnValue) == 0x0001C0, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_TransformLocation_ReturnValue) == 0x000220, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_TransformLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetTransformByOffset, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000238, "Member 'BP_X6SkillPreviewActor_V2_C_GetTransformByOffset::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetSocketTransform
+// 0x0120 (0x0120 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_GetSocketTransform final
+{
+public:
+	class FString                                 ScoketName;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FTransform                             SocketTransform;                                   // 0x0010(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00C0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_GetSocketTransform");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform) == 0x000120, "Wrong size on BP_X6SkillPreviewActor_V2_C_GetSocketTransform");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, ScoketName) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::ScoketName' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, SocketTransform) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::SocketTransform' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_Conv_StringToName_ReturnValue) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000078, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_GetComponentByClass_ReturnValue) == 0x000090, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_IsValid_ReturnValue) == 0x000098, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_IsValid_ReturnValue_1) == 0x000099, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_GetSocketLocation_ReturnValue) == 0x0000A0, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetSocketTransform, CallFunc_MakeTransform_ReturnValue) == 0x0000C0, "Member 'BP_X6SkillPreviewActor_V2_C_GetSocketTransform::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetOverriddenInfo
+// 0x0180 (0x0180 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo final
+{
+public:
+	class UBP_BulletDataAsset_C*                  BulletData;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   OverrideSocket;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             OverrideTransform;                                 // 0x0010(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Socket;                                            // 0x0070(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                OffsetLocation;                                    // 0x0080(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               OffsetRotation;                                    // 0x0098(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FString                                 SocketInfo;                                        // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	struct FRotator                               OffsetRotatorInfo;                                 // 0x00C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                OffsetLocationInfo;                                // 0x00D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_RotatorRotator_ReturnValue;      // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo) == 0x000010, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo) == 0x000180, "Wrong size on BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, BulletData) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::BulletData' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OverrideSocket) == 0x000008, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OverrideSocket' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OverrideTransform) == 0x000010, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OverrideTransform' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, Socket) == 0x000070, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::Socket' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetLocation) == 0x000080, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetLocation' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetRotation) == 0x000098, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetRotation' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, SocketInfo) == 0x0000B0, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::SocketInfo' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetRotatorInfo) == 0x0000C0, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetRotatorInfo' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, OffsetLocationInfo) == 0x0000D8, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::OffsetLocationInfo' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_BreakTransform_Location) == 0x0000F0, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_BreakTransform_Rotation) == 0x000108, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_BreakTransform_Scale) == 0x000120, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_Conv_NameToString_ReturnValue) == 0x000138, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_NotEqual_RotatorRotator_ReturnValue) == 0x000148, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_NotEqual_RotatorRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_VSize_ReturnValue) == 0x000150, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_VSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000158, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000160, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_GetComponentByClass_ReturnValue) == 0x000170, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo, CallFunc_DoesSocketExist_ReturnValue) == 0x000178, "Member 'BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.ExecuteUbergraph_BP_X6SkillPreviewActor_V2
+// 0x0008 (0x0008 - 0x0000)
+struct BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2 final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2) == 0x000004, "Wrong alignment on BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2");
+static_assert(sizeof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2) == 0x000008, "Wrong size on BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2, EntryPoint) == 0x000000, "Member 'BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

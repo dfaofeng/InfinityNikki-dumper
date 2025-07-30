@@ -33,9 +33,9 @@ public:
 	int32                                         BP_HitCount;                                       // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
-	class FString GetNotifyName() const;
 	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
+	class FString GetNotifyName() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EnumBulletCompositionType_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EnumBulletCompositionType_structs.hpp"
 
 
 namespace SDK
@@ -27,11 +27,11 @@ public:
 	bool                                          bCollisionWaterDestroy;                            // 0x00E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
-	void K2_AsyncLoadComplete() const;
-	void K2_Destroy() const;
-	void K2_Init() const;
 	bool K2_ShouldDestroyByActor(class AActor* HitActor, const struct FHitResult& HitResult) const;
+	void K2_Init() const;
+	void K2_Destroy() const;
+	void K2_AsyncLoadComplete() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

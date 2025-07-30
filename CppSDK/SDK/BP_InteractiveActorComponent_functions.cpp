@@ -17,6 +17,28 @@
 namespace SDK
 {
 
+// Function BP_InteractiveActorComponent.BP_InteractiveActorComponent_C.UpdateCanInteractLocal
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ShowInteractUI                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CanInteract_0                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractiveActorComponent_C::UpdateCanInteractLocal(bool ShowInteractUI, bool CanInteract_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractiveActorComponent_C", "UpdateCanInteractLocal");
+
+	Params::BP_InteractiveActorComponent_C_UpdateCanInteractLocal Parms{};
+
+	Parms.ShowInteractUI = ShowInteractUI;
+	Parms.CanInteract_0 = CanInteract_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_InteractiveActorComponent.BP_InteractiveActorComponent_C.UpdateCanInteract
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

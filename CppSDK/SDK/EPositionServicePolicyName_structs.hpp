@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EPositionServicePolicyName.EPositionServicePolicyName
-// NumValues: 0x0016
+// NumValues: 0x0019
 enum class EPositionServicePolicyName : uint8
 {
 	NewEnumerator1                           = 0,
@@ -39,7 +39,10 @@ enum class EPositionServicePolicyName : uint8
 	NewEnumerator18                          = 18,
 	NewEnumerator20                          = 19,
 	NewEnumerator21                          = 20,
-	EPositionServicePolicyName_MAX           = 21,
+	NewEnumerator22                          = 21,
+	NewEnumerator23                          = 22,
+	NewEnumerator25                          = 23,
+	EPositionServicePolicyName_MAX           = 24,
 };
 
 }

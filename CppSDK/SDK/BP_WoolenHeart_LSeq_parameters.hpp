@@ -10,131 +10,195 @@
 
 #include "Basic.hpp"
 
+#include "F_GetWoolenHeartPerformanceInfo_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "F_GetWoolenHeartPerformanceInfo_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_CanAdjustPlayerYaw
-// 0x0001 (0x0001 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw final
-{
-public:
-	bool                                          bCanAdjust;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw) == 0x000001, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw) == 0x000001, "Wrong size on BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw, bCanAdjust) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw::bCanAdjust' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_CreateTimeStopZone
-// 0x0030 (0x0030 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone final
-{
-public:
-	TArray<class AActor*>                         WhiteListActorArray;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FVector                                Position;                                          // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Range;                                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone) == 0x000030, "Wrong size on BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone, WhiteListActorArray) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone::WhiteListActorArray' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone, Position) == 0x000010, "Member 'BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone::Position' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone, Range) == 0x000028, "Member 'BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone::Range' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_DisableRootMotion
-// 0x0001 (0x0001 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_DisableRootMotion final
-{
-public:
-	bool                                          NewParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_DisableRootMotion) == 0x000001, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_DisableRootMotion");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_DisableRootMotion) == 0x000001, "Wrong size on BP_WoolenHeart_LSeq_C_BP_DisableRootMotion");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_DisableRootMotion, NewParam) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_DisableRootMotion::NewParam' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_FireEventStartRewardUI
-// 0x0010 (0x0010 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI final
-{
-public:
-	class FText                                   Reward_Text;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI, Reward_Text) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI::Reward_Text' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_GetHandHoldingPlayer
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPossessedPlayer
 // 0x0008 (0x0008 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer final
+struct BP_WoolenHeart_LSeq_C_SetPossessedPlayer final
 {
 public:
-	class AActor*                                 HandHoldingPlayer;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             PossessedPlayer;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer) == 0x000008, "Wrong size on BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer, HandHoldingPlayer) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer::HandHoldingPlayer' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPossessedPlayer) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPossessedPlayer");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPossessedPlayer) == 0x000008, "Wrong size on BP_WoolenHeart_LSeq_C_SetPossessedPlayer");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPossessedPlayer, PossessedPlayer) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPossessedPlayer::PossessedPlayer' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_GetSpawnWoolenHeartSKMeshTransform
-// 0x00C0 (0x00C0 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform final
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPlayLevelSeq
+// 0x0058 (0x0058 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_SetPlayLevelSeq final
 {
 public:
-	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0060(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ULevelSequence*                         PlayLS;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, class AActor*>              AdditionalBindingTag2Actor_0;                      // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform) == 0x000010, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform) == 0x0000C0, "Wrong size on BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform, Transform) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform::Transform' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform, CallFunc_GetTransform_ReturnValue) == 0x000060, "Member 'BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPlayLevelSeq");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq) == 0x000058, "Wrong size on BP_WoolenHeart_LSeq_C_SetPlayLevelSeq");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq, PlayLS) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPlayLevelSeq::PlayLS' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq, AdditionalBindingTag2Actor_0) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_SetPlayLevelSeq::AdditionalBindingTag2Actor_0' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_IsPlayingGetWoolenHeartPerformance
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPlayUIText
 // 0x0010 (0x0010 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance final
+struct BP_WoolenHeart_LSeq_C_SetPlayUIText final
 {
 public:
-	int64                                         WoolenHeartEntiyID;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlaying;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   UIText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance, WoolenHeartEntiyID) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance::WoolenHeartEntiyID' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance, bPlaying) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance::bPlaying' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPlayUIText) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPlayUIText");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPlayUIText) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_SetPlayUIText");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPlayUIText, UIText) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPlayUIText::UIText' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_PlayFeatureSequence
-// 0x0028 (0x0028 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence final
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_ReceiveEndPlay final
 {
 public:
-	class ULevelSequence*                         LevelSequenceAsset;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          HideHUD;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 TransformActor;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ALevelSequenceActor*                    SequenceActor_0;                                   // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ULevelSequencePlayer*                   SequencePlayer_0;                                  // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence) == 0x000028, "Wrong size on BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, LevelSequenceAsset) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::LevelSequenceAsset' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, HideHUD) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::HideHUD' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, TransformActor) == 0x000010, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::TransformActor' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, SequenceActor_0) == 0x000018, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::SequenceActor_0' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, SequencePlayer_0) == 0x000020, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::SequencePlayer_0' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_WoolenHeart_LSeq_C_ReceiveEndPlay");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_WoolenHeart_LSeq_C_ReceiveEndPlay");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_SetPlayingGetWoolenHeartPerformance
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.OnLSObjectSpawned
 // 0x0010 (0x0010 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance final
+struct BP_WoolenHeart_LSeq_C_OnLSObjectSpawned final
 {
 public:
-	int64                                         WoolenHeartEntiyID;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bPlaying;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance, WoolenHeartEntiyID) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance::WoolenHeartEntiyID' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance, bPlaying) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance::bPlaying' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_OnLSObjectSpawned");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_OnLSObjectSpawned");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned, Object) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_OnLSObjectSpawned::Object' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned, CallFunc_Array_AddUnique_ReturnValue) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_OnLSObjectSpawned::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPerformacneInfo
+// 0x0100 (0x0100 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_SetPerformacneInfo final
+{
+public:
+	struct FF_GetWoolenHeartPerformanceInfo       PerformanceInfo_0;                                 // 0x0000(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPerformacneInfo) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPerformacneInfo");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPerformacneInfo) == 0x000100, "Wrong size on BP_WoolenHeart_LSeq_C_SetPerformacneInfo");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPerformacneInfo, PerformanceInfo_0) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPerformacneInfo::PerformanceInfo_0' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.OnLSFinishPlay
+// 0x0040 (0x0040 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_OnLSFinishPlay final
+{
+public:
+	class UBP_MultiPlayerGroupMovementComponent_C* GroupMovementComp;                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerRegularInAirMovementComp_C*   RegularInAirMovementComp;                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_MultiPlayerGroupMovementComponent_C* CallFunc_GetComponentByClass_ReturnValue_1;       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_Get_IsLeaderOrFollower_Ret;            // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_Get_IsHoldingHands_Ret;                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_PlayerRegularInAirMovementComp_C*   CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UX6GeneralAnimationDataComponent*       CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_OnLSFinishPlay");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay) == 0x000040, "Wrong size on BP_WoolenHeart_LSeq_C_OnLSFinishPlay");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, GroupMovementComp) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::GroupMovementComp' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, RegularInAirMovementComp) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::RegularInAirMovementComp' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_2) == 0x00001A, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000020, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_3) == 0x000028, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_4) == 0x000029, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_BP_Get_IsLeaderOrFollower_Ret) == 0x00002A, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_BP_Get_IsLeaderOrFollower_Ret' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_Not_PreBool_ReturnValue) == 0x00002B, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_BP_Get_IsHoldingHands_Ret) == 0x00002C, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_BP_Get_IsHoldingHands_Ret' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_BooleanAND_ReturnValue) == 0x00002D, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000030, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000038, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.OnLSBeginPlay
+// 0x0130 (0x0130 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_OnLSBeginPlay final
+{
+public:
+	class UBP_MultiPlayerGroupMovementComponent_C* GroupMovementComp;                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         TimeStopZoneWhiteList;                             // 0x0008(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	class AActor*                                 CallFunc_BP_GetHandHoldingPlayer_HandHoldingPlayer; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_IsPlayingGetWoolenHeartPerformance_bPlaying; // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_MultiPlayerGroupMovementComponent_C* CallFunc_GetComponentByClass_ReturnValue;         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0040(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_SharedWoolenHeartPerformance_C*     CallFunc_FinishSpawningActor_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_Map_Values_Values;                        // 0x00B8(0x0010)(ReferenceParm)
+	class ACharacter*                             CallFunc_GetPlayerControllingRole_ControllingRole; // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_BP_DisableRootMotion_NewParam;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_Get_IsLeaderOrFollower_Ret;            // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_Get_IsHoldingHands_Ret;                // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FE[0x2];                                       // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class INavMovementInterface> CallFunc_StopActiveMovement_self_CastInput;        // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesLocalPlayerHasState_Has;              // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6CharacterMovementComponent*          K2Node_DynamicCast_AsX6Character_Movement_Component; // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_LocalPlayerDoAction_Success;           // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6GeneralAnimationDataComponent*       CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay) == 0x000010, "Wrong alignment on BP_WoolenHeart_LSeq_C_OnLSBeginPlay");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay) == 0x000130, "Wrong size on BP_WoolenHeart_LSeq_C_OnLSBeginPlay");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, GroupMovementComp) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::GroupMovementComp' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, TimeStopZoneWhiteList) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::TimeStopZoneWhiteList' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_GetHandHoldingPlayer_HandHoldingPlayer) == 0x000018, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_GetHandHoldingPlayer_HandHoldingPlayer' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_IsPlayingGetWoolenHeartPerformance_bPlaying) == 0x000020, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_IsPlayingGetWoolenHeartPerformance_bPlaying' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetComponentByClass_ReturnValue) == 0x000028, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000030, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetTransform_ReturnValue) == 0x000040, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000A0, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000A8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue_2) == 0x0000B0, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_Map_Values_Values) == 0x0000B8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetPlayerControllingRole_ControllingRole) == 0x0000C8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetPlayerControllingRole_ControllingRole' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0000D0, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, K2Node_MakeArray_Array) == 0x0000E8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_DisableRootMotion_NewParam) == 0x0000F8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_DisableRootMotion_NewParam' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue_3) == 0x0000F9, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_Get_IsLeaderOrFollower_Ret) == 0x0000FA, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_Get_IsLeaderOrFollower_Ret' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_Not_PreBool_ReturnValue) == 0x0000FB, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_Get_IsHoldingHands_Ret) == 0x0000FC, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_Get_IsHoldingHands_Ret' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BooleanAND_ReturnValue) == 0x0000FD, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_StopActiveMovement_self_CastInput) == 0x000100, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_StopActiveMovement_self_CastInput' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_DoesLocalPlayerHasState_Has) == 0x000110, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_DoesLocalPlayerHasState_Has' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, K2Node_DynamicCast_AsX6Character_Movement_Component) == 0x000118, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::K2Node_DynamicCast_AsX6Character_Movement_Component' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, K2Node_DynamicCast_bSuccess) == 0x000120, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_LocalPlayerDoAction_Success) == 0x000121, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_LocalPlayerDoAction_Success' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000128, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
 
 // Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_UpdateWoolenHeartRewardLS
 // 0x0001 (0x0001 - 0x0000)
@@ -229,187 +293,123 @@ static_assert(offsetof(BP_WoolenHeart_LSeq_C_ExecuteUbergraph_BP_WoolenHeart_LSe
 static_assert(offsetof(BP_WoolenHeart_LSeq_C_ExecuteUbergraph_BP_WoolenHeart_LSeq, CallFunc_BP_CanAdjustPlayerYaw_bCanAdjust) == 0x000151, "Member 'BP_WoolenHeart_LSeq_C_ExecuteUbergraph_BP_WoolenHeart_LSeq::CallFunc_BP_CanAdjustPlayerYaw_bCanAdjust' has a wrong offset!");
 static_assert(offsetof(BP_WoolenHeart_LSeq_C_ExecuteUbergraph_BP_WoolenHeart_LSeq, K2Node_VariableSet_BP_PlayerYawOffsetDegree_ImplicitCast) == 0x000158, "Member 'BP_WoolenHeart_LSeq_C_ExecuteUbergraph_BP_WoolenHeart_LSeq::K2Node_VariableSet_BP_PlayerYawOffsetDegree_ImplicitCast' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.OnLSBeginPlay
-// 0x0130 (0x0130 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_OnLSBeginPlay final
-{
-public:
-	class UBP_MultiPlayerGroupMovementComponent_C* GroupMovementComp;                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         TimeStopZoneWhiteList;                             // 0x0008(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	class AActor*                                 CallFunc_BP_GetHandHoldingPlayer_HandHoldingPlayer; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_IsPlayingGetWoolenHeartPerformance_bPlaying; // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_MultiPlayerGroupMovementComponent_C* CallFunc_GetComponentByClass_ReturnValue;         // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0040(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_SharedWoolenHeartPerformance_C*     CallFunc_FinishSpawningActor_ReturnValue;          // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_Map_Values_Values;                        // 0x00B8(0x0010)(ReferenceParm)
-	class ACharacter*                             CallFunc_GetPlayerControllingRole_ControllingRole; // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x00E8(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_BP_DisableRootMotion_NewParam;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_Get_IsLeaderOrFollower_Ret;            // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_Get_IsHoldingHands_Ret;                // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FE[0x2];                                       // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TScriptInterface<class INavMovementInterface> CallFunc_StopActiveMovement_self_CastInput;        // 0x0100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesLocalPlayerHasState_Has;              // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6CharacterMovementComponent*          K2Node_DynamicCast_AsX6Character_Movement_Component; // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_LocalPlayerDoAction_Success;           // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6GeneralAnimationDataComponent*       CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay) == 0x000010, "Wrong alignment on BP_WoolenHeart_LSeq_C_OnLSBeginPlay");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay) == 0x000130, "Wrong size on BP_WoolenHeart_LSeq_C_OnLSBeginPlay");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, GroupMovementComp) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::GroupMovementComp' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, TimeStopZoneWhiteList) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::TimeStopZoneWhiteList' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_GetHandHoldingPlayer_HandHoldingPlayer) == 0x000018, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_GetHandHoldingPlayer_HandHoldingPlayer' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_IsPlayingGetWoolenHeartPerformance_bPlaying) == 0x000020, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_IsPlayingGetWoolenHeartPerformance_bPlaying' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetComponentByClass_ReturnValue) == 0x000028, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000030, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetTransform_ReturnValue) == 0x000040, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000A0, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000A8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue_2) == 0x0000B0, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_Map_Values_Values) == 0x0000B8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetPlayerControllingRole_ControllingRole) == 0x0000C8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetPlayerControllingRole_ControllingRole' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_K2_GetActorLocation_ReturnValue) == 0x0000D0, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, K2Node_MakeArray_Array) == 0x0000E8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_DisableRootMotion_NewParam) == 0x0000F8, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_DisableRootMotion_NewParam' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_IsValid_ReturnValue_3) == 0x0000F9, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_Get_IsLeaderOrFollower_Ret) == 0x0000FA, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_Get_IsLeaderOrFollower_Ret' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_Not_PreBool_ReturnValue) == 0x0000FB, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_Get_IsHoldingHands_Ret) == 0x0000FC, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_Get_IsHoldingHands_Ret' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BooleanAND_ReturnValue) == 0x0000FD, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_StopActiveMovement_self_CastInput) == 0x000100, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_StopActiveMovement_self_CastInput' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_DoesLocalPlayerHasState_Has) == 0x000110, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_DoesLocalPlayerHasState_Has' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, K2Node_DynamicCast_AsX6Character_Movement_Component) == 0x000118, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::K2Node_DynamicCast_AsX6Character_Movement_Component' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, K2Node_DynamicCast_bSuccess) == 0x000120, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_BP_LocalPlayerDoAction_Success) == 0x000121, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_BP_LocalPlayerDoAction_Success' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSBeginPlay, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000128, "Member 'BP_WoolenHeart_LSeq_C_OnLSBeginPlay::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.OnLSFinishPlay
-// 0x0040 (0x0040 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_OnLSFinishPlay final
-{
-public:
-	class UBP_MultiPlayerGroupMovementComponent_C* GroupMovementComp;                                // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerRegularInAirMovementComp_C*   RegularInAirMovementComp;                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B[0x5];                                       // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_MultiPlayerGroupMovementComponent_C* CallFunc_GetComponentByClass_ReturnValue_1;       // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_Get_IsLeaderOrFollower_Ret;            // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_Get_IsHoldingHands_Ret;                // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_PlayerRegularInAirMovementComp_C*   CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UX6GeneralAnimationDataComponent*       CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_OnLSFinishPlay");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay) == 0x000040, "Wrong size on BP_WoolenHeart_LSeq_C_OnLSFinishPlay");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, GroupMovementComp) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::GroupMovementComp' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, RegularInAirMovementComp) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::RegularInAirMovementComp' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_2) == 0x00001A, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000020, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_3) == 0x000028, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_IsValid_ReturnValue_4) == 0x000029, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_BP_Get_IsLeaderOrFollower_Ret) == 0x00002A, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_BP_Get_IsLeaderOrFollower_Ret' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_Not_PreBool_ReturnValue) == 0x00002B, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_BP_Get_IsHoldingHands_Ret) == 0x00002C, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_BP_Get_IsHoldingHands_Ret' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_BooleanAND_ReturnValue) == 0x00002D, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000030, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSFinishPlay, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000038, "Member 'BP_WoolenHeart_LSeq_C_OnLSFinishPlay::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.OnLSObjectSpawned
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_SetPlayingGetWoolenHeartPerformance
 // 0x0010 (0x0010 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_OnLSObjectSpawned final
+struct BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance final
 {
 public:
-	class UObject*                                Object;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         WoolenHeartEntiyID;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlaying;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_OnLSObjectSpawned");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_OnLSObjectSpawned");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned, Object) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_OnLSObjectSpawned::Object' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_OnLSObjectSpawned, CallFunc_Array_AddUnique_ReturnValue) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_OnLSObjectSpawned::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance, WoolenHeartEntiyID) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance::WoolenHeartEntiyID' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance, bPlaying) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_BP_SetPlayingGetWoolenHeartPerformance::bPlaying' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_WoolenHeart_LSeq_C_ReceiveEndPlay");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_WoolenHeart_LSeq_C_ReceiveEndPlay");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPerformacneInfo
-// 0x0100 (0x0100 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_SetPerformacneInfo final
-{
-public:
-	struct FF_GetWoolenHeartPerformanceInfo       PerformanceInfo_0;                                 // 0x0000(0x0100)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPerformacneInfo) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPerformacneInfo");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPerformacneInfo) == 0x000100, "Wrong size on BP_WoolenHeart_LSeq_C_SetPerformacneInfo");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPerformacneInfo, PerformanceInfo_0) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPerformacneInfo::PerformanceInfo_0' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPlayLevelSeq
-// 0x0058 (0x0058 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_SetPlayLevelSeq final
-{
-public:
-	class ULevelSequence*                         PlayLS;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, class AActor*>              AdditionalBindingTag2Actor_0;                      // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
-};
-static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPlayLevelSeq");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq) == 0x000058, "Wrong size on BP_WoolenHeart_LSeq_C_SetPlayLevelSeq");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq, PlayLS) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPlayLevelSeq::PlayLS' has a wrong offset!");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPlayLevelSeq, AdditionalBindingTag2Actor_0) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_SetPlayLevelSeq::AdditionalBindingTag2Actor_0' has a wrong offset!");
-
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPlayUIText
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_IsPlayingGetWoolenHeartPerformance
 // 0x0010 (0x0010 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_SetPlayUIText final
+struct BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance final
 {
 public:
-	class FText                                   UIText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int64                                         WoolenHeartEntiyID;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPlaying;                                          // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPlayUIText) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPlayUIText");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPlayUIText) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_SetPlayUIText");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPlayUIText, UIText) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPlayUIText::UIText' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance, WoolenHeartEntiyID) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance::WoolenHeartEntiyID' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance, bPlaying) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_BP_IsPlayingGetWoolenHeartPerformance::bPlaying' has a wrong offset!");
 
-// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.SetPossessedPlayer
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_PlayFeatureSequence
+// 0x0028 (0x0028 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence final
+{
+public:
+	class ULevelSequence*                         LevelSequenceAsset;                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          HideHUD;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TransformActor;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ALevelSequenceActor*                    SequenceActor_0;                                   // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ULevelSequencePlayer*                   SequencePlayer_0;                                  // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence) == 0x000028, "Wrong size on BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, LevelSequenceAsset) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::LevelSequenceAsset' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, HideHUD) == 0x000008, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::HideHUD' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, TransformActor) == 0x000010, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::TransformActor' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, SequenceActor_0) == 0x000018, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::SequenceActor_0' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence, SequencePlayer_0) == 0x000020, "Member 'BP_WoolenHeart_LSeq_C_BP_PlayFeatureSequence::SequencePlayer_0' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_GetSpawnWoolenHeartSKMeshTransform
+// 0x00C0 (0x00C0 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform final
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetTransform_ReturnValue;                 // 0x0060(0x0060)(ConstParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform) == 0x000010, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform) == 0x0000C0, "Wrong size on BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform, Transform) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform::Transform' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform, CallFunc_GetTransform_ReturnValue) == 0x000060, "Member 'BP_WoolenHeart_LSeq_C_BP_GetSpawnWoolenHeartSKMeshTransform::CallFunc_GetTransform_ReturnValue' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_FireEventStartRewardUI
+// 0x0010 (0x0010 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI final
+{
+public:
+	class FText                                   Reward_Text;                                       // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI) == 0x000010, "Wrong size on BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI, Reward_Text) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_FireEventStartRewardUI::Reward_Text' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_GetHandHoldingPlayer
 // 0x0008 (0x0008 - 0x0000)
-struct BP_WoolenHeart_LSeq_C_SetPossessedPlayer final
+struct BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer final
 {
 public:
-	class ACharacter*                             PossessedPlayer;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 HandHoldingPlayer;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_WoolenHeart_LSeq_C_SetPossessedPlayer) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_SetPossessedPlayer");
-static_assert(sizeof(BP_WoolenHeart_LSeq_C_SetPossessedPlayer) == 0x000008, "Wrong size on BP_WoolenHeart_LSeq_C_SetPossessedPlayer");
-static_assert(offsetof(BP_WoolenHeart_LSeq_C_SetPossessedPlayer, PossessedPlayer) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_SetPossessedPlayer::PossessedPlayer' has a wrong offset!");
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer) == 0x000008, "Wrong size on BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer, HandHoldingPlayer) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_GetHandHoldingPlayer::HandHoldingPlayer' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_DisableRootMotion
+// 0x0001 (0x0001 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_BP_DisableRootMotion final
+{
+public:
+	bool                                          NewParam;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_DisableRootMotion) == 0x000001, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_DisableRootMotion");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_DisableRootMotion) == 0x000001, "Wrong size on BP_WoolenHeart_LSeq_C_BP_DisableRootMotion");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_DisableRootMotion, NewParam) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_DisableRootMotion::NewParam' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_CanAdjustPlayerYaw
+// 0x0001 (0x0001 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw final
+{
+public:
+	bool                                          bCanAdjust;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw) == 0x000001, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw) == 0x000001, "Wrong size on BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw, bCanAdjust) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_CanAdjustPlayerYaw::bCanAdjust' has a wrong offset!");
+
+// Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.BP_CreateTimeStopZone
+// 0x0030 (0x0030 - 0x0000)
+struct BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone final
+{
+public:
+	TArray<class AActor*>                         WhiteListActorArray;                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                Position;                                          // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Range;                                             // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone) == 0x000008, "Wrong alignment on BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone");
+static_assert(sizeof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone) == 0x000030, "Wrong size on BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone, WhiteListActorArray) == 0x000000, "Member 'BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone::WhiteListActorArray' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone, Position) == 0x000010, "Member 'BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone::Position' has a wrong offset!");
+static_assert(offsetof(BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone, Range) == 0x000028, "Member 'BP_WoolenHeart_LSeq_C_BP_CreateTimeStopZone::Range' has a wrong offset!");
 
 // Function BP_WoolenHeart_LSeq.BP_WoolenHeart_LSeq_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

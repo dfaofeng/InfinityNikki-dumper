@@ -29,8 +29,8 @@ public:
 	class UWidgetAnimation*                       Loop_HightLight;                                   // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UButton*                                Button_Item;                                       // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           CanvasPanel_Placed;                                // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FX_Image_HighLight;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FX_Image_HighLight_2;                              // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Image_HighLight;                                // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Image_HighLight_2;                              // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Fx_Image_HighLight_Circle;                         // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Fx_Mobile_Image_circle_01;                         // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Fx_Mobile_Image_circle_01_1;                       // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -63,11 +63,11 @@ public:
 	float                                         InUserSpecifiedScale;                              // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_HUD_UseProps_PanelItem_Mobile_Button_Item_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
-	void ExecuteUbergraph_WBP_HUD_UseProps_PanelItem(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_HUD_UseProps_PanelItem(int32 EntryPoint);
+	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_PanelItem_Mobile_Button_Item_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 
@@ -89,8 +89,8 @@ static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, FadeOut_HighLight) == 0x00
 static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Loop_HightLight) == 0x000308, "Member 'UWBP_HUD_UseProps_PanelItem_C::Loop_HightLight' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Button_Item) == 0x000310, "Member 'UWBP_HUD_UseProps_PanelItem_C::Button_Item' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, CanvasPanel_Placed) == 0x000318, "Member 'UWBP_HUD_UseProps_PanelItem_C::CanvasPanel_Placed' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, FX_Image_HighLight) == 0x000320, "Member 'UWBP_HUD_UseProps_PanelItem_C::FX_Image_HighLight' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, FX_Image_HighLight_2) == 0x000328, "Member 'UWBP_HUD_UseProps_PanelItem_C::FX_Image_HighLight_2' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Fx_Image_HighLight) == 0x000320, "Member 'UWBP_HUD_UseProps_PanelItem_C::Fx_Image_HighLight' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Fx_Image_HighLight_2) == 0x000328, "Member 'UWBP_HUD_UseProps_PanelItem_C::Fx_Image_HighLight_2' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Fx_Image_HighLight_Circle) == 0x000330, "Member 'UWBP_HUD_UseProps_PanelItem_C::Fx_Image_HighLight_Circle' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Fx_Mobile_Image_circle_01) == 0x000338, "Member 'UWBP_HUD_UseProps_PanelItem_C::Fx_Mobile_Image_circle_01' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_UseProps_PanelItem_C, Fx_Mobile_Image_circle_01_1) == 0x000340, "Member 'UWBP_HUD_UseProps_PanelItem_C::Fx_Mobile_Image_circle_01_1' has a wrong offset!");

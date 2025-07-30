@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function GA_PlayComboAnimByTag.GA_PlayComboAnimByTag_C.ExecuteUbergraph_GA_PlayComboAnimByTag
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_PlayComboAnimByTag_C::ExecuteUbergraph_GA_PlayComboAnimByTag(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_PlayComboAnimByTag_C", "ExecuteUbergraph_GA_PlayComboAnimByTag");
-
-	Params::GA_PlayComboAnimByTag_C_ExecuteUbergraph_GA_PlayComboAnimByTag Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_PlayComboAnimByTag.GA_PlayComboAnimByTag_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UGA_PlayComboAnimByTag_C::K2_ActivateAbilityFromEvent(const struct FGamepla
 	Params::GA_PlayComboAnimByTag_C_K2_ActivateAbilityFromEvent Parms{};
 
 	Parms.EventData = std::move(EventData);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_PlayComboAnimByTag.GA_PlayComboAnimByTag_C.ExecuteUbergraph_GA_PlayComboAnimByTag
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_PlayComboAnimByTag_C::ExecuteUbergraph_GA_PlayComboAnimByTag(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_PlayComboAnimByTag_C", "ExecuteUbergraph_GA_PlayComboAnimByTag");
+
+	Params::GA_PlayComboAnimByTag_C_ExecuteUbergraph_GA_PlayComboAnimByTag Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

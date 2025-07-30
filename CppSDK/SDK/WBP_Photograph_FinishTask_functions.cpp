@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_Photograph_FinishTask.WBP_Photograph_FinishTask_C.sfx1
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Photograph_FinishTask_C::sfx1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Photograph_FinishTask_C", "sfx1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Photograph_FinishTask.WBP_Photograph_FinishTask_C.ExecuteUbergraph_WBP_Photograph_FinishTask
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_Photograph_FinishTask_C::ExecuteUbergraph_WBP_Photograph_FinishTask(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Photograph_FinishTask.WBP_Photograph_FinishTask_C.sfx1
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Photograph_FinishTask_C::sfx1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Photograph_FinishTask_C", "sfx1");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "GA_AbilityHitBase_classes.hpp"
 #include "EHitPlayerState_structs.hpp"
 #include "F_PlayerHitBackSet_structs.hpp"
-#include "GA_AbilityHitBase_classes.hpp"
 #include "ECombatHitDir_structs.hpp"
 
 

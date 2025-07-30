@@ -17,195 +17,285 @@
 namespace SDK
 {
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.__StopBgAnim
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.StopCurrentAnimation
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::__StopBgAnim()
+void UWBP_Hud_HP_Item_C::StopCurrentAnimation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "__StopBgAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "StopCurrentAnimation");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeBig
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowTrailEx
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::BecomeBig()
+void UWBP_Hud_HP_Item_C::ShowTrailEx()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeBig");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowTrailEx");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeBigToNormal
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowTrail
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::BecomeBigToNormal()
+void UWBP_Hud_HP_Item_C::ShowTrail()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeBigToNormal");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowTrail");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeNormalAtOnce
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowDotAtOnce
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::BecomeNormalAtOnce()
+void UWBP_Hud_HP_Item_C::ShowDotAtOnce()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeNormalAtOnce");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowDotAtOnce");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeSmallAtOnce
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowDot
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::BecomeSmallAtOnce()
+void UWBP_Hud_HP_Item_C::ShowDot()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeSmallAtOnce");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowDot");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeSmallToNormal
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowBgAtOnce
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::BecomeSmallToNormal()
+void UWBP_Hud_HP_Item_C::ShowBgAtOnce()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeSmallToNormal");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowBgAtOnce");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ExecuteUbergraph_WBP_Hud_HP_Item
-// (Final, UbergraphFunction)
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowBg
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::ShowBg()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowBg");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.SetHpState
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   hpState                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_Item_C::ExecuteUbergraph_WBP_Hud_HP_Item(int32 EntryPoint)
+void UWBP_Hud_HP_Item_C::SetHpState(int32 hpState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ExecuteUbergraph_WBP_Hud_HP_Item");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "SetHpState");
 
-	Params::WBP_Hud_HP_Item_C_ExecuteUbergraph_WBP_Hud_HP_Item Parms{};
+	Params::WBP_Hud_HP_Item_C_SetHpState Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.hpState = hpState;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideBg
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ResumeToSmall
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::HideBg()
+void UWBP_Hud_HP_Item_C::ResumeToSmall()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideBg");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ResumeToSmall");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideBgAtOnce
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayRightMinusAnimSpec
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::HideBgAtOnce()
+void UWBP_Hud_HP_Item_C::PlayRightMinusAnimSpec()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideBgAtOnce");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayRightMinusAnimSpec");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideDot
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayRightMinusAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::HideDot()
+void UWBP_Hud_HP_Item_C::PlayRightMinusAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideDot");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayRightMinusAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideTrail
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayRightAddAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::HideTrail()
+void UWBP_Hud_HP_Item_C::PlayRightAddAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideTrail");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayRightAddAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideTrailEx
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayResidualAnimationLooped
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::HideTrailEx()
+void UWBP_Hud_HP_Item_C::PlayResidualAnimationLooped()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideTrailEx");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayResidualAnimationLooped");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayResidualAnimation
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::PlayResidualAnimation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayResidualAnimation");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayLeftMinusAnimSpec
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::PlayLeftMinusAnimSpec()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayLeftMinusAnimSpec");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayLeftMinusAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::PlayLeftMinusAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayLeftMinusAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayLeftAddAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::PlayLeftAddAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayLeftAddAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayBothMinusAnim
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bSkipAnimation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_Item_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
+void UWBP_Hud_HP_Item_C::PlayBothMinusAnim(bool bSkipAnimation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "OnAnimationFinished");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayBothMinusAnim");
 
-	Params::WBP_Hud_HP_Item_C_OnAnimationFinished Parms{};
+	Params::WBP_Hud_HP_Item_C_PlayBothMinusAnim Parms{};
 
-	Parms.Animation = Animation;
+	Parms.bSkipAnimation = bSkipAnimation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayBothAddAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSkipAnimation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_HP_Item_C::PlayBothAddAnim(bool bSkipAnimation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayBothAddAnim");
+
+	Params::WBP_Hud_HP_Item_C_PlayBothAddAnim Parms{};
+
+	Parms.bSkipAnimation = bSkipAnimation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -233,285 +323,195 @@ void UWBP_Hud_HP_Item_C::PlayAnimationInternal(class UWidgetAnimation* Anim, boo
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayBothAddAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.OnAnimationFinished
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bSkipAnimation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_Item_C::PlayBothAddAnim(bool bSkipAnimation)
+void UWBP_Hud_HP_Item_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayBothAddAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "OnAnimationFinished");
 
-	Params::WBP_Hud_HP_Item_C_PlayBothAddAnim Parms{};
+	Params::WBP_Hud_HP_Item_C_OnAnimationFinished Parms{};
 
-	Parms.bSkipAnimation = bSkipAnimation;
+	Parms.Animation = Animation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayBothMinusAnim
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideTrailEx
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSkipAnimation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_Item_C::PlayBothMinusAnim(bool bSkipAnimation)
+void UWBP_Hud_HP_Item_C::HideTrailEx()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayBothMinusAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideTrailEx");
 
-	Params::WBP_Hud_HP_Item_C_PlayBothMinusAnim Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bSkipAnimation = bSkipAnimation;
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideTrail
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::HideTrail()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideTrail");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideDot
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::HideDot()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideDot");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideBgAtOnce
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::HideBgAtOnce()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideBgAtOnce");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.HideBg
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_Item_C::HideBg()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "HideBg");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ExecuteUbergraph_WBP_Hud_HP_Item
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_HP_Item_C::ExecuteUbergraph_WBP_Hud_HP_Item(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ExecuteUbergraph_WBP_Hud_HP_Item");
+
+	Params::WBP_Hud_HP_Item_C_ExecuteUbergraph_WBP_Hud_HP_Item Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayLeftAddAnim
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeSmallToNormal
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::PlayLeftAddAnim()
+void UWBP_Hud_HP_Item_C::BecomeSmallToNormal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayLeftAddAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeSmallToNormal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayLeftMinusAnim
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeSmallAtOnce
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::PlayLeftMinusAnim()
+void UWBP_Hud_HP_Item_C::BecomeSmallAtOnce()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayLeftMinusAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeSmallAtOnce");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayLeftMinusAnimSpec
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeNormalAtOnce
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::PlayLeftMinusAnimSpec()
+void UWBP_Hud_HP_Item_C::BecomeNormalAtOnce()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayLeftMinusAnimSpec");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeNormalAtOnce");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayResidualAnimation
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeBigToNormal
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::PlayResidualAnimation()
+void UWBP_Hud_HP_Item_C::BecomeBigToNormal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayResidualAnimation");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeBigToNormal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayResidualAnimationLooped
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.BecomeBig
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::PlayResidualAnimationLooped()
+void UWBP_Hud_HP_Item_C::BecomeBig()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayResidualAnimationLooped");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "BecomeBig");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayRightAddAnim
+// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.__StopBgAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_Item_C::PlayRightAddAnim()
+void UWBP_Hud_HP_Item_C::__StopBgAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayRightAddAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayRightMinusAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::PlayRightMinusAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayRightMinusAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.PlayRightMinusAnimSpec
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::PlayRightMinusAnimSpec()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "PlayRightMinusAnimSpec");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ResumeToSmall
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ResumeToSmall()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ResumeToSmall");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.SetHpState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   hpState                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_HP_Item_C::SetHpState(int32 hpState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "SetHpState");
-
-	Params::WBP_Hud_HP_Item_C_SetHpState Parms{};
-
-	Parms.hpState = hpState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowBg
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ShowBg()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowBg");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowBgAtOnce
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ShowBgAtOnce()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowBgAtOnce");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowDot
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ShowDot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowDot");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowDotAtOnce
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ShowDotAtOnce()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowDotAtOnce");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowTrail
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ShowTrail()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowTrail");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.ShowTrailEx
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::ShowTrailEx()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "ShowTrailEx");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_Item.WBP_Hud_HP_Item_C.StopCurrentAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_Item_C::StopCurrentAnimation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "StopCurrentAnimation");
+		Func = Class->GetFunction("WBP_Hud_HP_Item_C", "__StopBgAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

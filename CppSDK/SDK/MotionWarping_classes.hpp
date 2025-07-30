@@ -63,7 +63,7 @@ static_assert(offsetof(UMotionWarpingCharacterAdapter, TargetCharacter) == 0x000
 
 // Class MotionWarping.AnimNotifyState_MotionWarping
 // 0x0008 (0x0038 - 0x0030)
-class UAnimNotifyState_MotionWarping final : public UAnimNotifyState
+class UAnimNotifyState_MotionWarping : public UAnimNotifyState
 {
 public:
 	class URootMotionModifier*                    RootMotionModifier;                                // 0x0030(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)

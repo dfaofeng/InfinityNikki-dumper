@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ECleaningAnimalStage_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "ECleaningAnimalStage_structs.hpp"
 #include "BP_SimpleAbilityBase_classes.hpp"
 
 
@@ -45,17 +45,17 @@ public:
 	class UAnimMontage*                           TargetMontage;                                     // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void GetCleaningAnimalStage(ECleaningAnimalStage* Stage);
-	void ExecuteUbergraph_BP_CleaningAnimalComponent_V2(int32 EntryPoint);
-	void BPAnimNotify_ExitRealCleaning();
-	void BPAnimNotify_ExitQuickCleaning();
-	void BPAnimNotify_ExitCleaningInterrupt();
-	void BPAnimNotify_ExitCleanCamera(double BlendTime);
-	void BPAnimNotify_EnterCleanCamera(double BlendTime);
-	void BP_IsMoving(bool* IsMoving);
 	void BP_GetHandIKParams(double* IK_HandAlpha, struct FVector* IK_RightHandLocation_ComponentSpace, struct FRotator* IK_RightHandRotation_ComponentSpace);
+	void BP_IsMoving(bool* IsMoving);
+	void BPAnimNotify_EnterCleanCamera(double BlendTime);
+	void BPAnimNotify_ExitCleanCamera(double BlendTime);
+	void BPAnimNotify_ExitCleaningInterrupt();
+	void BPAnimNotify_ExitQuickCleaning();
+	void BPAnimNotify_ExitRealCleaning();
+	void ExecuteUbergraph_BP_CleaningAnimalComponent_V2(int32 EntryPoint);
+	void GetCleaningAnimalStage(ECleaningAnimalStage* Stage);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 	class FString GetModuleName() const;
 

@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DaMiaoRPCHelperComponent.BP_DaMiaoRPCHelperComponent_C
-// 0x0008 (0x0108 - 0x0100)
+// 0x0008 (0x0128 - 0x0120)
 class UBP_DaMiaoRPCHelperComponent_C final : public UBP_MainCharacterRPCHelperComponent_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DaMiaoRPCHelperComponent_C;      // 0x0100(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_DaMiaoRPCHelperComponent_C;      // 0x0120(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void BP_OnMulticast_EnterPole(const class FString& PoleActorPath);
@@ -44,8 +44,8 @@ public:
 	}
 };
 static_assert(alignof(UBP_DaMiaoRPCHelperComponent_C) == 0x000008, "Wrong alignment on UBP_DaMiaoRPCHelperComponent_C");
-static_assert(sizeof(UBP_DaMiaoRPCHelperComponent_C) == 0x000108, "Wrong size on UBP_DaMiaoRPCHelperComponent_C");
-static_assert(offsetof(UBP_DaMiaoRPCHelperComponent_C, UberGraphFrame_BP_DaMiaoRPCHelperComponent_C) == 0x000100, "Member 'UBP_DaMiaoRPCHelperComponent_C::UberGraphFrame_BP_DaMiaoRPCHelperComponent_C' has a wrong offset!");
+static_assert(sizeof(UBP_DaMiaoRPCHelperComponent_C) == 0x000128, "Wrong size on UBP_DaMiaoRPCHelperComponent_C");
+static_assert(offsetof(UBP_DaMiaoRPCHelperComponent_C, UberGraphFrame_BP_DaMiaoRPCHelperComponent_C) == 0x000120, "Member 'UBP_DaMiaoRPCHelperComponent_C::UberGraphFrame_BP_DaMiaoRPCHelperComponent_C' has a wrong offset!");
 
 }
 

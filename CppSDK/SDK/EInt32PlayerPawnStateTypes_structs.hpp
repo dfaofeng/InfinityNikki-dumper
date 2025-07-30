@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EInt32PlayerPawnStateTypes.EInt32PlayerPawnStateTypes
-// NumValues: 0x00F9
+// NumValues: 0x0100
 enum class EInt32PlayerPawnStateTypes : uint32
 {
 	NewEnumerator0                           = 0,
@@ -128,7 +128,10 @@ enum class EInt32PlayerPawnStateTypes : uint32
 	NewEnumerator321                         = 107,
 	NewEnumerator340                         = 108,
 	NewEnumerator341                         = 109,
-	NewEnumerator342                         = 110,
+	NewEnumerator350                         = 110,
+	NewEnumerator351                         = 111,
+	NewEnumerator352                         = 112,
+	NewEnumerator342                         = 113,
 	NewEnumerator100                         = 1000,
 	NewEnumerator96                          = 1001,
 	NewEnumerator97                          = 1002,
@@ -184,6 +187,7 @@ enum class EInt32PlayerPawnStateTypes : uint32
 	NewEnumerator335                         = 2046,
 	NewEnumerator343                         = 2047,
 	NewEnumerator344                         = 2048,
+	NewEnumerator353                         = 2049,
 	NewEnumerator130                         = 2999,
 	NewEnumerator116                         = 4000,
 	NewEnumerator117                         = 4001,
@@ -213,6 +217,8 @@ enum class EInt32PlayerPawnStateTypes : uint32
 	NewEnumerator160                         = 7001,
 	NewEnumerator307                         = 7002,
 	NewEnumerator345                         = 7003,
+	NewEnumerator354                         = 7004,
+	NewEnumerator355                         = 7005,
 	NewEnumerator162                         = 7099,
 	NewEnumerator213                         = 8000,
 	NewEnumerator271                         = 8001,
@@ -243,6 +249,7 @@ enum class EInt32PlayerPawnStateTypes : uint32
 	NewEnumerator230                         = 12000,
 	NewEnumerator347                         = 12001,
 	NewEnumerator348                         = 12002,
+	NewEnumerator356                         = 12003,
 	NewEnumerator232                         = 12999,
 	NewEnumerator243                         = 13000,
 	NewEnumerator244                         = 13001,

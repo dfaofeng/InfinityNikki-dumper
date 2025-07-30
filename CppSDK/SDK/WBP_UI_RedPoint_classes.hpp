@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "ERedPointID_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
@@ -45,12 +45,12 @@ public:
 	int32                                         RedPoint_Swither_Index;                            // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_UI_RedPoint(int32 EntryPoint);
-	void GetRedPointID();
-	void NewFunction_0();
-	void PreConstruct(bool IsDesignTime);
-	void SetUniqueId(int32 UId_0);
 	void UpdateState();
+	void SetUniqueId(int32 UId_0);
+	void PreConstruct(bool IsDesignTime);
+	void NewFunction_0();
+	void GetRedPointID();
+	void ExecuteUbergraph_WBP_UI_RedPoint(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

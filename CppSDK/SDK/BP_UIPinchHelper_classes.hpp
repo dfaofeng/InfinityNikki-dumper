@@ -31,15 +31,15 @@ public:
 	double                                        lastDistanceDelta;                                 // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void CalculateDistance(double* Distance);
-	void HandleMouseMove(const struct FPointerEvent& MouseEvent);
-	void HandleMousePress(const struct FPointerEvent& MouseEvent);
-	void HandleMouseRelease(const struct FPointerEvent& MouseEvent);
-	void HasOnePointerPressed(bool* bHas);
-	void HasTwoPointerPressed(bool* bHas);
-	void IsPointerIndexInArray(int32 PointerIndex, bool* bContain);
-	void SetBanMouse(bool bBanMouse);
 	void ShouldBanPointer(int32 PointerIndex, bool* shouldBan);
+	void SetBanMouse(bool bBanMouse);
+	void IsPointerIndexInArray(int32 PointerIndex, bool* bContain);
+	void HasTwoPointerPressed(bool* bHas);
+	void HasOnePointerPressed(bool* bHas);
+	void HandleMouseRelease(const struct FPointerEvent& MouseEvent);
+	void HandleMousePress(const struct FPointerEvent& MouseEvent);
+	void HandleMouseMove(const struct FPointerEvent& MouseEvent);
+	void CalculateDistance(double* Distance);
 
 public:
 	static class UClass* StaticClass()

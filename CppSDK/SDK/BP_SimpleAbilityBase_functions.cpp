@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_SimpleAbilityBase.BP_SimpleAbilityBase_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_SimpleAbilityBase_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SimpleAbilityBase_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_SimpleAbilityBase.BP_SimpleAbilityBase_C.ExecuteUbergraph_BP_SimpleAbilityBase
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UBP_SimpleAbilityBase_C::ExecuteUbergraph_BP_SimpleAbilityBase(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SimpleAbilityBase.BP_SimpleAbilityBase_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_SimpleAbilityBase_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SimpleAbilityBase_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

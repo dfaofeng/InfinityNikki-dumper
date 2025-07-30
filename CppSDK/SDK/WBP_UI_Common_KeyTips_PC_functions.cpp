@@ -17,41 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_PC
-// (Final, UbergraphFunction)
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKeyByInputAction
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ActionPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_KeyTips_PC_C::ExecuteUbergraph_WBP_UI_Common_KeyTips_PC(int32 EntryPoint)
+void UWBP_UI_Common_KeyTips_PC_C::SetKeyByInputAction(const class FString& ActionPath)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "SetKeyByInputAction");
 
-	Params::WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC Parms{};
+	Params::WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_Common_KeyTips_PC_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "PreConstruct");
-
-	Params::WBP_UI_Common_KeyTips_PC_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.ActionPath = std::move(ActionPath);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,21 +57,41 @@ void UWBP_UI_Common_KeyTips_PC_C::SetKey(const struct FKey& Key)
 }
 
 
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKeyByInputAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const class FString&                    ActionPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_KeyTips_PC_C::SetKeyByInputAction(const class FString& ActionPath)
+void UWBP_UI_Common_KeyTips_PC_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "SetKeyByInputAction");
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "PreConstruct");
 
-	Params::WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction Parms{};
+	Params::WBP_UI_Common_KeyTips_PC_C_PreConstruct Parms{};
 
-	Parms.ActionPath = std::move(ActionPath);
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_PC
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_Common_KeyTips_PC_C::ExecuteUbergraph_WBP_UI_Common_KeyTips_PC(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
+
+	Params::WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

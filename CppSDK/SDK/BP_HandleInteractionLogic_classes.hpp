@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "BP_X6ActorComponent_classes.hpp"
 #include "Engine_structs.hpp"
 #include "E_InteractiveAngleLocationType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK
@@ -35,8 +35,8 @@ public:
 	struct FVector                                BP_InteractAngleOffset;                            // 0x00D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_HandleInteractionLogic(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 	class FString GetModuleName() const;
 

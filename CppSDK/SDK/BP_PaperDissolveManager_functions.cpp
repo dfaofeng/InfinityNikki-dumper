@@ -17,23 +17,61 @@
 namespace SDK
 {
 
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.ExecuteUbergraph_BP_PaperDissolveManager
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Return
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_PaperDissolveManager_C::ExecuteUbergraph_BP_PaperDissolveManager(int32 EntryPoint)
+void ABP_PaperDissolveManager_C::Return()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PaperDissolveManager_C", "ExecuteUbergraph_BP_PaperDissolveManager");
+		Func = Class->GetFunction("BP_PaperDissolveManager_C", "Return");
 
-	Params::BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.OnInstancedFoliageDissolve
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<struct FNeedDissolveItemInfo>&ISMs                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+
+void ABP_PaperDissolveManager_C::OnInstancedFoliageDissolve(const TArray<struct FNeedDissolveItemInfo>& ISMs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PaperDissolveManager_C", "OnInstancedFoliageDissolve");
+
+	Params::BP_PaperDissolveManager_C_OnInstancedFoliageDissolve Parms{};
+
+	Parms.ISMs = std::move(ISMs);
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Is Actor Instanced Foliage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   CanDissolve                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PaperDissolveManager_C::Is_Actor_Instanced_Foliage(class AActor* Actor, bool* CanDissolve)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PaperDissolveManager_C", "Is Actor Instanced Foliage");
+
+	Params::BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CanDissolve != nullptr)
+		*CanDissolve = Parms.CanDissolve;
 }
 
 
@@ -73,61 +111,23 @@ void ABP_PaperDissolveManager_C::Is_Actor_Dissolveable_Item(class AActor* Actor,
 }
 
 
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Is Actor Instanced Foliage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.ExecuteUbergraph_BP_PaperDissolveManager
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   CanDissolve                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PaperDissolveManager_C::Is_Actor_Instanced_Foliage(class AActor* Actor, bool* CanDissolve)
+void ABP_PaperDissolveManager_C::ExecuteUbergraph_BP_PaperDissolveManager(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PaperDissolveManager_C", "Is Actor Instanced Foliage");
+		Func = Class->GetFunction("BP_PaperDissolveManager_C", "ExecuteUbergraph_BP_PaperDissolveManager");
 
-	Params::BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage Parms{};
+	Params::BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager Parms{};
 
-	Parms.Actor = Actor;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (CanDissolve != nullptr)
-		*CanDissolve = Parms.CanDissolve;
-}
-
-
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.OnInstancedFoliageDissolve
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FNeedDissolveItemInfo>&ISMs                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-
-void ABP_PaperDissolveManager_C::OnInstancedFoliageDissolve(const TArray<struct FNeedDissolveItemInfo>& ISMs)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PaperDissolveManager_C", "OnInstancedFoliageDissolve");
-
-	Params::BP_PaperDissolveManager_C_OnInstancedFoliageDissolve Parms{};
-
-	Parms.ISMs = std::move(ISMs);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Return
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_PaperDissolveManager_C::Return()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PaperDissolveManager_C", "Return");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -27,8 +27,8 @@ public:
 	struct FBlackboardKeySelector                 ProjectToNavMeshResultKey;                         // 0x00B8(0x0028)(Edit, BlueprintVisible)
 
 public:
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee(int32 EntryPoint);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 
 public:
 	static class UClass* StaticClass()

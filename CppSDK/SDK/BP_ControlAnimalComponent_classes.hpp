@@ -36,8 +36,8 @@ public:
 	class UBlendSpace1D*                          Cache_MoveBlendAnim;                               // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_ControlAnimalComponent(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 
 	class FString GetModuleName() const;
 

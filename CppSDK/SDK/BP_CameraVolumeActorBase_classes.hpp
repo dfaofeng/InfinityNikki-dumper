@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "ECameraVolumeCollisionShape_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "ECameraVolumeCollisionShape_structs.hpp"
 
 
 namespace SDK

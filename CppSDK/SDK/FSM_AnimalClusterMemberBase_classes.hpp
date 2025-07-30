@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "F_AnimalClusterBehaviorAssignmentInfo_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SMSystem_classes.hpp"
 
 
@@ -31,10 +31,10 @@ public:
 	struct FF_AnimalClusterBehaviorAssignmentInfo RunningBehaviorAssignmentInfo;                     // 0x0680(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void OnStateMachineStart();
-	void OnMemberBehaviorReceived(const struct FF_AnimalClusterBehaviorAssignmentInfo& AssignmentInfo);
-	void OnJoinGroup(class ABP_AnimalClusterBase_C* Cluster_0);
 	void ExecuteUbergraph_FSM_AnimalClusterMemberBase(int32 EntryPoint);
+	void OnJoinGroup(class ABP_AnimalClusterBase_C* Cluster_0);
+	void OnMemberBehaviorReceived(const struct FF_AnimalClusterBehaviorAssignmentInfo& AssignmentInfo);
+	void OnStateMachineStart();
 
 public:
 	static class UClass* StaticClass()

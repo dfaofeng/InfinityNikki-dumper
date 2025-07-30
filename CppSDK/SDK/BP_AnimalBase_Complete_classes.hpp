@@ -42,18 +42,18 @@ public:
 	class UBP_AnimalTickManager_C*                AnimalTickManager;                                 // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void ShouldRejectTickManagement(bool* bReject);
-	void SetAnimalTickEnabled(bool bEnabled, bool* bSuccess);
-	void OnUnbindEntity();
-	void OnBindEntity();
-	void GetCurrentPlatformActorMeshScale(int64 ConfigID, double* Scale);
-	void GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager_0);
-	void GetAIObjectClass(class FString* LuaClassPath);
-	void ExecuteUbergraph_BP_AnimalBase_Complete(int32 EntryPoint);
-	void CreateAnimalTickManager();
-	void BP_AnimalTickManagerStopAI();
 	void BP_AnimalTickManagerResumeAI();
+	void BP_AnimalTickManagerStopAI();
+	void CreateAnimalTickManager();
+	void ExecuteUbergraph_BP_AnimalBase_Complete(int32 EntryPoint);
+	void GetAIObjectClass(class FString* LuaClassPath);
+	void GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager_0);
+	void GetCurrentPlatformActorMeshScale(int64 ConfigID, double* Scale);
+	void OnBindEntity();
+	void OnUnbindEntity();
+	void SetAnimalTickEnabled(bool bEnabled, bool* bSuccess);
+	void ShouldRejectTickManagement(bool* bReject);
+	void UserConstructionScript();
 
 	class FString GetModuleName() const;
 

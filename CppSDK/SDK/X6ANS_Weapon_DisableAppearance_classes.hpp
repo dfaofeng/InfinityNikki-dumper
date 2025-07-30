@@ -17,15 +17,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass X6ANS_Weapon_DisableAppearance.X6ANS_Weapon_DisableAppearance_C
-// 0x0010 (0x0040 - 0x0030)
+// 0x0008 (0x0038 - 0x0030)
 class UX6ANS_Weapon_DisableAppearance_C final : public UAnimNotifyState
 {
 public:
-	class FString                                 ModuleTag;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          bImmediateHide;                                    // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bImmediateShow;                                    // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bLocal;                                            // 0x0032(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const;
 	bool Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()
@@ -38,8 +40,10 @@ public:
 	}
 };
 static_assert(alignof(UX6ANS_Weapon_DisableAppearance_C) == 0x000008, "Wrong alignment on UX6ANS_Weapon_DisableAppearance_C");
-static_assert(sizeof(UX6ANS_Weapon_DisableAppearance_C) == 0x000040, "Wrong size on UX6ANS_Weapon_DisableAppearance_C");
-static_assert(offsetof(UX6ANS_Weapon_DisableAppearance_C, ModuleTag) == 0x000030, "Member 'UX6ANS_Weapon_DisableAppearance_C::ModuleTag' has a wrong offset!");
+static_assert(sizeof(UX6ANS_Weapon_DisableAppearance_C) == 0x000038, "Wrong size on UX6ANS_Weapon_DisableAppearance_C");
+static_assert(offsetof(UX6ANS_Weapon_DisableAppearance_C, bImmediateHide) == 0x000030, "Member 'UX6ANS_Weapon_DisableAppearance_C::bImmediateHide' has a wrong offset!");
+static_assert(offsetof(UX6ANS_Weapon_DisableAppearance_C, bImmediateShow) == 0x000031, "Member 'UX6ANS_Weapon_DisableAppearance_C::bImmediateShow' has a wrong offset!");
+static_assert(offsetof(UX6ANS_Weapon_DisableAppearance_C, bLocal) == 0x000032, "Member 'UX6ANS_Weapon_DisableAppearance_C::bLocal' has a wrong offset!");
 
 }
 

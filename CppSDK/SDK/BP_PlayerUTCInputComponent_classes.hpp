@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "X6Game_structs.hpp"
-#include "X6Game_classes.hpp"
-#include "UTCConfigStruct_structs.hpp"
-#include "EDeviceScreenSizeType_structs.hpp"
-#include "F_UTCRatioConfig_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "EUTCJoystickMode_structs.hpp"
 #include "UTCControlTypeEnum_structs.hpp"
+#include "Engine_structs.hpp"
+#include "UTCConfigStruct_structs.hpp"
+#include "EDeviceScreenSizeType_structs.hpp"
+#include "F_UTCRatioConfig_structs.hpp"
+#include "X6Game_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK

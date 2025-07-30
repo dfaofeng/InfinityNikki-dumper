@@ -27,8 +27,8 @@ public:
 	TMap<int32, struct FGameplayTag>              OutlineGCMap;                                      // 0x0548(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void BP_IsMoving(bool* IsMoving);
 	void BP_SetEnbaleBulletFilter(bool bEnable);
+	void BP_IsMoving(bool* IsMoving);
 
 	class FString GetModuleName() const;
 

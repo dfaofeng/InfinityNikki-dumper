@@ -41,17 +41,17 @@ public:
 	struct FVector2D                              bp_widgetviewPortSize;                             // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BeginUpdateMapScale();
-	void BP_TraverseAllWidgets();
-	void EndUpdateMapScale();
-	void ExecuteUbergraph_WBP_HUD_MiniMap(int32 EntryPoint);
-	void OnFadeInBegin();
-	void OnFadeInEnd();
-	void ReportException(const class FString& NewParam);
-	void SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap();
-	void SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0();
-	void UpdateWidget(class UWidget* 目标);
 	void UpteWidgetSize(class UWidget* NewParam);
+	void UpdateWidget(class UWidget* 目标);
+	void SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0();
+	void SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap();
+	void ReportException(const class FString& NewParam);
+	void OnFadeInEnd();
+	void OnFadeInBegin();
+	void ExecuteUbergraph_WBP_HUD_MiniMap(int32 EntryPoint);
+	void EndUpdateMapScale();
+	void BP_TraverseAllWidgets();
+	void BeginUpdateMapScale();
 
 	class FString GetModuleName() const;
 

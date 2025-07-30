@@ -24,8 +24,8 @@ public:
 	bool                                          BP_ForbidFloat;                                    // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
 	class FString GetNotifyName() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

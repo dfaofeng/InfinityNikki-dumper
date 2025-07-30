@@ -14,38 +14,93 @@
 namespace SDK::Params
 {
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.BP_ShowOrHideEnergyLevelHud
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud final
+// Function WBP_Hud_PC.WBP_Hud_PC_C.StopFadeInFull
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Hud_PC_C_StopFadeInFull final
 {
 public:
-	bool                                          IsShow;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud) == 0x000001, "Wrong alignment on WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud");
-static_assert(sizeof(WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud) == 0x000001, "Wrong size on WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud");
-static_assert(offsetof(WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud, IsShow) == 0x000000, "Member 'WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud::IsShow' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_StopFadeInFull) == 0x000004, "Wrong alignment on WBP_Hud_PC_C_StopFadeInFull");
+static_assert(sizeof(WBP_Hud_PC_C_StopFadeInFull) == 0x000004, "Wrong size on WBP_Hud_PC_C_StopFadeInFull");
+static_assert(offsetof(WBP_Hud_PC_C_StopFadeInFull, CallFunc_PauseAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_PC_C_StopFadeInFull::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeIn
+// Function WBP_Hud_PC.WBP_Hud_PC_C.ShowHPParticle
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_Event_FadeIn final
+struct WBP_Hud_PC_C_ShowHPParticle final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_Event_FadeIn) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_Event_FadeIn");
-static_assert(sizeof(WBP_Hud_PC_C_Event_FadeIn) == 0x000008, "Wrong size on WBP_Hud_PC_C_Event_FadeIn");
-static_assert(offsetof(WBP_Hud_PC_C_Event_FadeIn, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_Event_FadeIn::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_ShowHPParticle) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_ShowHPParticle");
+static_assert(sizeof(WBP_Hud_PC_C_ShowHPParticle) == 0x000008, "Wrong size on WBP_Hud_PC_C_ShowHPParticle");
+static_assert(offsetof(WBP_Hud_PC_C_ShowHPParticle, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_ShowHPParticle::MainActivity_0' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeOut
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_19
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_Event_FadeOut final
+struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19 final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_Event_FadeOut) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_Event_FadeOut");
-static_assert(sizeof(WBP_Hud_PC_C_Event_FadeOut) == 0x000008, "Wrong size on WBP_Hud_PC_C_Event_FadeOut");
-static_assert(offsetof(WBP_Hud_PC_C_Event_FadeOut, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_Event_FadeOut::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19");
+static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19");
+static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19::MainActivity_0' has a wrong offset!");
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_18
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18 final
+{
+public:
+	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18");
+static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18");
+static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18::MainActivity_0' has a wrong offset!");
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_17
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17 final
+{
+public:
+	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17");
+static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17");
+static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17::MainActivity_0' has a wrong offset!");
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationStarted
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_PC_C_OnAnimationStarted final
+{
+public:
+	const class UWidgetAnimation*                 Animation;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_PC_C_OnAnimationStarted) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_OnAnimationStarted");
+static_assert(sizeof(WBP_Hud_PC_C_OnAnimationStarted) == 0x000008, "Wrong size on WBP_Hud_PC_C_OnAnimationStarted");
+static_assert(offsetof(WBP_Hud_PC_C_OnAnimationStarted, Animation) == 0x000000, "Member 'WBP_Hud_PC_C_OnAnimationStarted::Animation' has a wrong offset!");
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationFinished
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_PC_C_OnAnimationFinished final
+{
+public:
+	const class UWidgetAnimation*                 Animation;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_PC_C_OnAnimationFinished) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_OnAnimationFinished");
+static_assert(sizeof(WBP_Hud_PC_C_OnAnimationFinished) == 0x000008, "Wrong size on WBP_Hud_PC_C_OnAnimationFinished");
+static_assert(offsetof(WBP_Hud_PC_C_OnAnimationFinished, Animation) == 0x000000, "Member 'WBP_Hud_PC_C_OnAnimationFinished::Animation' has a wrong offset!");
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.HideHPParticle
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Hud_PC_C_HideHPParticle final
+{
+public:
+	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Hud_PC_C_HideHPParticle) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_HideHPParticle");
+static_assert(sizeof(WBP_Hud_PC_C_HideHPParticle) == 0x000008, "Wrong size on WBP_Hud_PC_C_HideHPParticle");
+static_assert(offsetof(WBP_Hud_PC_C_HideHPParticle, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_HideHPParticle::MainActivity_0' has a wrong offset!");
 
 // Function WBP_Hud_PC.WBP_Hud_PC_C.ExecuteUbergraph_WBP_Hud_PC
 // 0x00B0 (0x00B0 - 0x0000)
@@ -114,93 +169,38 @@ static_assert(offsetof(WBP_Hud_PC_C_ExecuteUbergraph_WBP_Hud_PC, CallFunc_Less_D
 static_assert(offsetof(WBP_Hud_PC_C_ExecuteUbergraph_WBP_Hud_PC, CallFunc_Less_DoubleDouble_B_ImplicitCast_1) == 0x0000A0, "Member 'WBP_Hud_PC_C_ExecuteUbergraph_WBP_Hud_PC::CallFunc_Less_DoubleDouble_B_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(WBP_Hud_PC_C_ExecuteUbergraph_WBP_Hud_PC, CallFunc_Less_DoubleDouble_A_ImplicitCast_1) == 0x0000A8, "Member 'WBP_Hud_PC_C_ExecuteUbergraph_WBP_Hud_PC::CallFunc_Less_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.HideHPParticle
+// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeOut
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_HideHPParticle final
+struct WBP_Hud_PC_C_Event_FadeOut final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_HideHPParticle) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_HideHPParticle");
-static_assert(sizeof(WBP_Hud_PC_C_HideHPParticle) == 0x000008, "Wrong size on WBP_Hud_PC_C_HideHPParticle");
-static_assert(offsetof(WBP_Hud_PC_C_HideHPParticle, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_HideHPParticle::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_Event_FadeOut) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_Event_FadeOut");
+static_assert(sizeof(WBP_Hud_PC_C_Event_FadeOut) == 0x000008, "Wrong size on WBP_Hud_PC_C_Event_FadeOut");
+static_assert(offsetof(WBP_Hud_PC_C_Event_FadeOut, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_Event_FadeOut::MainActivity_0' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationFinished
+// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeIn
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_OnAnimationFinished final
-{
-public:
-	const class UWidgetAnimation*                 Animation;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_PC_C_OnAnimationFinished) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_OnAnimationFinished");
-static_assert(sizeof(WBP_Hud_PC_C_OnAnimationFinished) == 0x000008, "Wrong size on WBP_Hud_PC_C_OnAnimationFinished");
-static_assert(offsetof(WBP_Hud_PC_C_OnAnimationFinished, Animation) == 0x000000, "Member 'WBP_Hud_PC_C_OnAnimationFinished::Animation' has a wrong offset!");
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationStarted
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_OnAnimationStarted final
-{
-public:
-	const class UWidgetAnimation*                 Animation;                                         // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_PC_C_OnAnimationStarted) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_OnAnimationStarted");
-static_assert(sizeof(WBP_Hud_PC_C_OnAnimationStarted) == 0x000008, "Wrong size on WBP_Hud_PC_C_OnAnimationStarted");
-static_assert(offsetof(WBP_Hud_PC_C_OnAnimationStarted, Animation) == 0x000000, "Member 'WBP_Hud_PC_C_OnAnimationStarted::Animation' has a wrong offset!");
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_4
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4 final
+struct WBP_Hud_PC_C_Event_FadeIn final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4");
-static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4");
-static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_Event_FadeIn) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_Event_FadeIn");
+static_assert(sizeof(WBP_Hud_PC_C_Event_FadeIn) == 0x000008, "Wrong size on WBP_Hud_PC_C_Event_FadeIn");
+static_assert(offsetof(WBP_Hud_PC_C_Event_FadeIn, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_Event_FadeIn::MainActivity_0' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_5
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5 final
+// Function WBP_Hud_PC.WBP_Hud_PC_C.BP_ShowOrHideEnergyLevelHud
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud final
 {
 public:
-	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsShow;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5");
-static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5");
-static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5::MainActivity_0' has a wrong offset!");
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_6
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6 final
-{
-public:
-	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6");
-static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6");
-static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6::MainActivity_0' has a wrong offset!");
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.ShowHPParticle
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_ShowHPParticle final
-{
-public:
-	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_PC_C_ShowHPParticle) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_ShowHPParticle");
-static_assert(sizeof(WBP_Hud_PC_C_ShowHPParticle) == 0x000008, "Wrong size on WBP_Hud_PC_C_ShowHPParticle");
-static_assert(offsetof(WBP_Hud_PC_C_ShowHPParticle, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_ShowHPParticle::MainActivity_0' has a wrong offset!");
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.StopFadeInFull
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Hud_PC_C_StopFadeInFull final
-{
-public:
-	float                                         CallFunc_PauseAnimation_ReturnValue;               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Hud_PC_C_StopFadeInFull) == 0x000004, "Wrong alignment on WBP_Hud_PC_C_StopFadeInFull");
-static_assert(sizeof(WBP_Hud_PC_C_StopFadeInFull) == 0x000004, "Wrong size on WBP_Hud_PC_C_StopFadeInFull");
-static_assert(offsetof(WBP_Hud_PC_C_StopFadeInFull, CallFunc_PauseAnimation_ReturnValue) == 0x000000, "Member 'WBP_Hud_PC_C_StopFadeInFull::CallFunc_PauseAnimation_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud) == 0x000001, "Wrong alignment on WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud");
+static_assert(sizeof(WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud) == 0x000001, "Wrong size on WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud");
+static_assert(offsetof(WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud, IsShow) == 0x000000, "Member 'WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud::IsShow' has a wrong offset!");
 
 // Function WBP_Hud_PC.WBP_Hud_PC_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

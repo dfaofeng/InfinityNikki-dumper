@@ -16,56 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.TaskBegin_3733FB3D497423EB48C054A1059843F8
-// 0x0008 (0x0008 - 0x0000)
-struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8 final
-{
-public:
-	class UX6TaskAsyncBase*                       Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8");
-static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8) == 0x000008, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8, Task) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8::Task' has a wrong offset!");
-
-// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.Success_3733FB3D497423EB48C054A1059843F8
-// 0x0018 (0x0018 - 0x0000)
-struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8 final
-{
-public:
-	struct FVector                                Loc;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8");
-static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8) == 0x000018, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8, Loc) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8::Loc' has a wrong offset!");
-
-// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.ReceiveTickAI
-// 0x0018 (0x0018 - 0x0000)
-struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  ControlledPawn_0;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         DeltaSeconds;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI");
-static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI) == 0x000018, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI, OwnerController) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI::OwnerController' has a wrong offset!");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI, ControlledPawn_0) == 0x000008, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI::ControlledPawn_0' has a wrong offset!");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI, DeltaSeconds) == 0x000010, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI::DeltaSeconds' has a wrong offset!");
-
-// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.ReceiveActivationAI
-// 0x0010 (0x0010 - 0x0000)
-struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  ControlledPawn_0;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI");
-static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI) == 0x000010, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI, OwnerController) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI::OwnerController' has a wrong offset!");
-static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI, ControlledPawn_0) == 0x000008, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI::ControlledPawn_0' has a wrong offset!");
-
 // Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams
 // 0x0160 (0x0160 - 0x0000)
 struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams final
@@ -143,6 +93,56 @@ static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbe
 static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams, CallFunc_Vector_Distance_ReturnValue) == 0x000140, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams, K2Node_CreateDelegate_OutputDelegate_2) == 0x000148, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
 static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000158, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
+
+// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.ReceiveActivationAI
+// 0x0010 (0x0010 - 0x0000)
+struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  ControlledPawn_0;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI");
+static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI) == 0x000010, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI, OwnerController) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI::OwnerController' has a wrong offset!");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI, ControlledPawn_0) == 0x000008, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveActivationAI::ControlledPawn_0' has a wrong offset!");
+
+// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.ReceiveTickAI
+// 0x0018 (0x0018 - 0x0000)
+struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  ControlledPawn_0;                                  // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI");
+static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI) == 0x000018, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI, OwnerController) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI::OwnerController' has a wrong offset!");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI, ControlledPawn_0) == 0x000008, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI::ControlledPawn_0' has a wrong offset!");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI, DeltaSeconds) == 0x000010, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_ReceiveTickAI::DeltaSeconds' has a wrong offset!");
+
+// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.Success_3733FB3D497423EB48C054A1059843F8
+// 0x0018 (0x0018 - 0x0000)
+struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8 final
+{
+public:
+	struct FVector                                Loc;                                               // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8");
+static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8) == 0x000018, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8, Loc) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_Success_3733FB3D497423EB48C054A1059843F8::Loc' has a wrong offset!");
+
+// Function BTS_QuadrupedAnimalReaction_UpdateFleeParams.BTS_QuadrupedAnimalReaction_UpdateFleeParams_C.TaskBegin_3733FB3D497423EB48C054A1059843F8
+// 0x0008 (0x0008 - 0x0000)
+struct BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8 final
+{
+public:
+	class UX6TaskAsyncBase*                       Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8) == 0x000008, "Wrong alignment on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8");
+static_assert(sizeof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8) == 0x000008, "Wrong size on BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8");
+static_assert(offsetof(BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8, Task) == 0x000000, "Member 'BTS_QuadrupedAnimalReaction_UpdateFleeParams_C_TaskBegin_3733FB3D497423EB48C054A1059843F8::Task' has a wrong offset!");
 
 }
 

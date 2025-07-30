@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BPC_Weather_Master_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BPC_Weather_Master_classes.hpp"
 
 
 namespace SDK
@@ -40,10 +40,10 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void OnFadeOutComplete();
 	void OnFadeOut(float Progress);
-	void OnFadeIn(float Progress);
 	void OnDestroyed();
 	void OnCreated();
 	void ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars(int32 EntryPoint);
+	void OnFadeIn(float Progress);
 
 public:
 	static class UClass* StaticClass()

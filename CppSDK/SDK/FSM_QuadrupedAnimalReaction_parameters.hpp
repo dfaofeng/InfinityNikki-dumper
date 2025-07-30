@@ -20,931 +20,129 @@
 namespace SDK::Params
 {
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.UpdateTurnByMontage
-// 0x0230 (0x0230 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage final
-{
-public:
-	double                                        DeltaTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      CurrentTurnAnim;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         OldMontagePosition;                                // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetPlayLength_ReturnValue;                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      K2Node_DynamicCast_AsAnim_Sequence_Base;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_ExtractRootMotionFromAnimation_ReturnValue; // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Multiply_RotatorFloat_ReturnValue;        // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_AddActorWorldRotation_SweepHitResult;  // 0x0110(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_FClamp_Max_ImplicitCast;                  // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_Min_ImplicitCast;                  // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_RotatorFloat_B_ImplicitCast;     // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_ExtractRootMotionFromAnimation_EndTime_ImplicitCast; // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_OldMontagePosition_ImplicitCast; // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage) == 0x000010, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage) == 0x000230, "Wrong size on FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, DeltaTime) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::DeltaTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CurrentTurnAnim) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CurrentTurnAnim' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, OldMontagePosition) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::OldMontagePosition' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_GetPlayLength_ReturnValue) == 0x000014, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_GetPlayLength_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, K2Node_DynamicCast_AsAnim_Sequence_Base) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::K2Node_DynamicCast_AsAnim_Sequence_Base' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_FClamp_ReturnValue) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_ExtractRootMotionFromAnimation_ReturnValue) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_ExtractRootMotionFromAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_BreakTransform_Location) == 0x0000B0, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_BreakTransform_Rotation) == 0x0000C8, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_BreakTransform_Scale) == 0x0000E0, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Multiply_RotatorFloat_ReturnValue) == 0x0000F8, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Multiply_RotatorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_K2_AddActorWorldRotation_SweepHitResult) == 0x000110, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_K2_AddActorWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_FClamp_Max_ImplicitCast) == 0x000208, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_FClamp_Max_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_FClamp_Min_ImplicitCast) == 0x000210, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_FClamp_Min_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Multiply_RotatorFloat_B_ImplicitCast) == 0x000218, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Multiply_RotatorFloat_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_ExtractRootMotionFromAnimation_EndTime_ImplicitCast) == 0x00021C, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_ExtractRootMotionFromAnimation_EndTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, K2Node_VariableSet_OldMontagePosition_ImplicitCast) == 0x000220, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::K2Node_VariableSet_OldMontagePosition_ImplicitCast' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.UpdateTurnByCurve
-// 0x0068 (0x0068 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve final
-{
-public:
-	double                                        DeltaTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_GetTimeRange_MinTime;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTimeRange_MaxTime;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFloatValue_InTime_ImplicitCast;        // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve) == 0x000068, "Wrong size on FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, DeltaTime) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::DeltaTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetFloatValue_ReturnValue) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_MakeRotator_ReturnValue) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetTimeRange_MinTime) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetTimeRange_MinTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetTimeRange_MaxTime) == 0x000044, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetTimeRange_MaxTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000049, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetFloatValue_InTime_ImplicitCast) == 0x00004C, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetFloatValue_InTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000058, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x000060, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryStartCuriousTurn
-// 0x0140 (0x0140 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn final
-{
-public:
-	bool                                          bTurnStarted;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TurnAngle_local;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue_1;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef;      // 0x0020(0x0028)(HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue_2;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1;    // 0x0058(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2;    // 0x0088(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3;    // 0x00B8(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_3; // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue_3;            // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetLookAtTargetTurnAngle_TurnAngle;       // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn) == 0x000140, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, bTurnStarted) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::bTurnStarted' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, TurnAngle_local) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::TurnAngle_local' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue_1) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue_2) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1) == 0x000058, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x000080, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2) == 0x000088, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x0000B0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3) == 0x0000B8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_3) == 0x0000E0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000F0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000F8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000100, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue_3) == 0x000108, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000110, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000111, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000118, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000120, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetLookAtTargetTurnAngle_TurnAngle) == 0x000128, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetLookAtTargetTurnAngle_TurnAngle' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000130, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000138, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryStartAlertTurn
-// 0x0120 (0x0120 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn final
-{
-public:
-	bool                                          bTurnStarted;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        TurnAngle_local;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef;      // 0x0010(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1;    // 0x0040(0x0028)(HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2;    // 0x0070(0x0028)(HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3;    // 0x00A8(0x0028)(HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_3; // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetLookAtTargetTurnAngle_TurnAngle;       // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn) == 0x000120, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, bTurnStarted) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::bTurnStarted' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, TurnAngle_local) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::TurnAngle_local' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000038, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x000068, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2) == 0x000070, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000098, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x0000A0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3) == 0x0000A8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000D0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_3) == 0x0000D8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000E0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x0000E9, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000F0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0000F8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000100, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_GetLookAtTargetTurnAngle_TurnAngle) == 0x000108, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_GetLookAtTargetTurnAngle_TurnAngle' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000110, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000118, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryFleeForReachMaxAlertDuration_OnTurnFinish
-// 0x0001 (0x0001 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish final
-{
-public:
-	bool                                          bTurnByCurve;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish, bTurnByCurve) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish::bTurnByCurve' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_AddReactionCollision
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd final
+struct FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision final
+{
+public:
+	class USphereComponent*                       Comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision, Comp) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision::Comp' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_CanCurStanceTransitionToThisStance
+// 0x000C (0x000C - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance final
 {
 public:
 	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	bool                                          bCanTransition;                                    // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd::StanceTag' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance) == 0x00000C, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance::StanceTag' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance, bCanTransition) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance::bCanTransition' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryEnterState
-// 0x0004 (0x0004 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TryEnterState final
-{
-public:
-	EQuadrupedAnimalReactionState                 NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSuccess;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryEnterState) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryEnterState");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryEnterState) == 0x000004, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryEnterState");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, NewState) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::NewState' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, bSuccess) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::bSuccess' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, CallFunc_GetCurrentState_State) == 0x000002, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::CallFunc_GetCurrentState_State' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000003, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TaskBegin_B2F1FD674D016BAA6C715DA17E929405
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_ForceDestroyComponent
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405 final
+struct FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent final
 {
 public:
-	class UX6TaskAsyncBase*                       Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405, Task) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405::Task' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent, Comp) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent::Comp' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B final
-{
-public:
-	class UX6TaskAsyncBase*                       Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B, Task) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B::Task' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.StartTurnCoolDown
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_GetGestureSoftRef
 // 0x0030 (0x0030 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown final
+struct FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef final
 {
 public:
-	double                                        CoolDown;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TurnCoolDown;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0020(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       GestureSoftRef;                                    // 0x0008(0x0028)(Parm, OutParm, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CoolDown) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CoolDown' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, TurnCoolDown) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::TurnCoolDown' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x00002C, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef, Tag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef::Tag' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef, GestureSoftRef) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef::GestureSoftRef' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.StartCuriousStance
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_GetStanceSoftRef
+// 0x0030 (0x0030 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef final
+{
+public:
+	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       StanceSoftRef;                                     // 0x0008(0x0028)(Parm, OutParm, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef, Tag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef::Tag' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef, StanceSoftRef) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef::StanceSoftRef' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_IsInTransition
 // 0x0001 (0x0001 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_StartCuriousStance final
+struct FSM_QuadrupedAnimalReaction_C_BP_IsInTransition final
 {
 public:
-	bool                                          bFastTransition;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInTransition;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_StartCuriousStance) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_StartCuriousStance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_StartCuriousStance) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_StartCuriousStance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartCuriousStance, bFastTransition) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_StartCuriousStance::bFastTransition' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_IsInTransition) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_IsInTransition");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_IsInTransition) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_IsInTransition");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_IsInTransition, bInTransition) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_IsInTransition::bInTransition' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.StartAlertStance
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_IsPlayingStance
 // 0x0001 (0x0001 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_StartAlertStance final
+struct FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance final
 {
 public:
-	bool                                          bFastTransition;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsPlayingStance;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_StartAlertStance) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_StartAlertStance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_StartAlertStance) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_StartAlertStance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartAlertStance, bFastTransition) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_StartAlertStance::bFastTransition' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance, bIsPlayingStance) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance::bIsPlayingStance' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF
-// 0x0004 (0x0004 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF) == 0x000004, "Wrong size on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF, DeltaSeconds) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF::DeltaSeconds' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194
-// 0x0004 (0x0004 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194 final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194) == 0x000004, "Wrong size on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194, DeltaSeconds) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194::DeltaSeconds' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.SetDataAsset
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_RequestStartGesture
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_SetDataAsset final
-{
-public:
-	class UBP_QuadrupedAnimalReactionDefinition_C* DataAsset_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_SetDataAsset) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_SetDataAsset");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_SetDataAsset) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_SetDataAsset");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_SetDataAsset, DataAsset_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_SetDataAsset::DataAsset_0' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.PostAIObjectInit
-// 0x0003 (0x0003 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_PostAIObjectInit final
-{
-public:
-	bool                                          CallFunc_HasStarted_ReturnValue;                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_PostAIObjectInit");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit) == 0x000003, "Wrong size on FSM_QuadrupedAnimalReaction_C_PostAIObjectInit");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit, CallFunc_HasStarted_ReturnValue) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_PostAIObjectInit::CallFunc_HasStarted_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit, CallFunc_GetCurrentState_State) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_PostAIObjectInit::CallFunc_GetCurrentState_State' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'FSM_QuadrupedAnimalReaction_C_PostAIObjectInit::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnTurnCoolDownFinished
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished final
-{
-public:
-	double                                        TurnCoolDown;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished, TurnCoolDown) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished::TurnCoolDown' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnStateMachineStateChanged
-// 0x0100 (0x0100 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged final
-{
-public:
-	struct FSMStateInfo                           ToState;                                           // 0x0000(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FSMStateInfo                           FromState;                                         // 0x0080(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged) == 0x000100, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged, ToState) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged::ToState' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged, FromState) == 0x000080, "Member 'FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged::FromState' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnStanceStop_Curious
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious final
-{
-public:
-	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious::StanceTag' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnStanceStop_Alert
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert final
-{
-public:
-	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert::StanceTag' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLoaded_FEB03CB44437EDB029A7E590C7692481
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481, Loaded) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481::Loaded' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5 final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5, Loaded) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5::Loaded' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLeaveAlertRangeEndOverlap
-// 0x0020 (0x0020 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OtherBodyIndex' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLeaveAlertRangeBeginOverlap
-// 0x0118 (0x0118 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::bFromSweep' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::SweepResult' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnInRangeActorStopHoldingBrush
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush, Actor) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush::Actor' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnInRangeActorStartHoldingBrush
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush, Actor) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush::Actor' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnGestureEnd_HandleTurn
-// 0x0028 (0x0028 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn final
-{
-public:
-	bool                                          bInterrupt;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           Tag;                                               // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequenceBase*                      CurrentTurnAnim_HandleTurn;                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn) == 0x000028, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, bInterrupt) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::bInterrupt' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, Tag) == 0x000004, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::Tag' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, CurrentTurnAnim_HandleTurn) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::CurrentTurnAnim_HandleTurn' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, CallFunc_GetAnimInstance_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnFleeCollisionEndOverlap
-// 0x0020 (0x0020 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OtherBodyIndex' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnFleeCollisionBeginOverlap
-// 0x0118 (0x0118 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::bFromSweep' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::SweepResult' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnEnterAlertRangeEndOverlap
-// 0x0020 (0x0020 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OtherBodyIndex' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnEnterAlertRangeBeginOverlap
-// 0x0118 (0x0118 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::bFromSweep' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::SweepResult' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnCuriousCollisionEndOverlap
-// 0x0020 (0x0020 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OtherBodyIndex' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnCuriousCollisionBeginOverlap
-// 0x0118 (0x0118 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap final
-{
-public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OtherActor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OtherComp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::bFromSweep' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::SweepResult' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnAnimTransitionEnd_ReturningNormal
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal final
-{
-public:
-	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal::StanceTag' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnAnimTransitionEnd_Normal
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal final
-{
-public:
-	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal::StanceTag' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnAnimTransitionEnd_HandleStopStance
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance final
-{
-public:
-	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance::StanceTag' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.MarkTransitionStateDirty
-// 0x0018 (0x0018 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty final
-{
-public:
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue; // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty) == 0x000018, "Wrong size on FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty, CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty::CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.IsTurning
-// 0x0002 (0x0002 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_IsTurning final
-{
-public:
-	bool                                          bIsTurning;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_IsTurning) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_IsTurning");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_IsTurning) == 0x000002, "Wrong size on FSM_QuadrupedAnimalReaction_C_IsTurning");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsTurning, bIsTurning) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_IsTurning::bIsTurning' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsTurning, CallFunc_BooleanOR_ReturnValue) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_IsTurning::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.IsCanTrigger
-// 0x0028 (0x0028 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_IsCanTrigger final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UActorComponent*                        Comp;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsCanTrigger_0;                                    // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             CallFunc_GetPlayerControllingRole_ControllingRole; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ComponentHasTag_ReturnValue;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsX6GameNikkiVisitor_ret;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_IsCanTrigger");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger) == 0x000028, "Wrong size on FSM_QuadrupedAnimalReaction_C_IsCanTrigger");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, Actor) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::Actor' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, Comp) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::Comp' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, IsCanTrigger_0) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::IsCanTrigger_0' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_GetPlayerControllingRole_ControllingRole) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_GetPlayerControllingRole_ControllingRole' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_ComponentHasTag_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_ComponentHasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000021, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_IsX6GameNikkiVisitor_ret) == 0x000022, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_IsX6GameNikkiVisitor_ret' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_BooleanOR_ReturnValue) == 0x000023, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_BooleanAND_ReturnValue) == 0x000024, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.InternalStartTurnByCurve
-// 0x0058 (0x0058 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve final
-{
-public:
-	double                                        TurnAngle_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            TurnCurve;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_GetHorizontalRotation_AdjustedRotator;    // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_TurnStartYaw_ImplicitCast;      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve) == 0x000058, "Wrong size on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, TurnAngle_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::TurnAngle_0' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, TurnCurve) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::TurnCurve' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_GetHorizontalRotation_AdjustedRotator) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_GetHorizontalRotation_AdjustedRotator' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_BreakRotator_Roll) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_BreakRotator_Pitch) == 0x000044, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_BreakRotator_Yaw) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, K2Node_VariableSet_TurnStartYaw_ImplicitCast) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::K2Node_VariableSet_TurnStartYaw_ImplicitCast' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.InternalStartTurnByAnim
-// 0x0040 (0x0040 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim final
+struct FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture final
 {
 public:
 	struct FGameplayTag                           GestureTag;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	double                                        TurnScale;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef;      // 0x0018(0x0028)(HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim) == 0x000040, "Wrong size on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, GestureTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::GestureTag' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, TurnScale) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::TurnScale' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, CallFunc_Abs_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, CallFunc_BP_GetGestureSoftRef_GestureSoftRef) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::CallFunc_BP_GetGestureSoftRef_GestureSoftRef' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture, GestureTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture::GestureTag' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetTurnTime
-// 0x0040 (0x0040 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetTurnTime final
-{
-public:
-	double                                        TurnTime;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetTimeRange_MinTime;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetTimeRange_MaxTime;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      K2Node_DynamicCast_AsAnim_Sequence_Base;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetPlayLength_ReturnValue;                // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_FunctionResult_TurnTime_ImplicitCast;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_FunctionResult_TurnTime_ImplicitCast_1;     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetTurnTime) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetTurnTime");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetTurnTime) == 0x000040, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetTurnTime");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, TurnTime) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::TurnTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_GetTimeRange_MinTime) == 0x00000C, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_GetTimeRange_MinTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_GetTimeRange_MaxTime) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_GetTimeRange_MaxTime' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_DynamicCast_AsAnim_Sequence_Base) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_DynamicCast_AsAnim_Sequence_Base' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_GetPlayLength_ReturnValue) == 0x00002C, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_GetPlayLength_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_FunctionResult_TurnTime_ImplicitCast) == 0x000030, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_FunctionResult_TurnTime_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_FunctionResult_TurnTime_ImplicitCast_1) == 0x000038, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_FunctionResult_TurnTime_ImplicitCast_1' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetStimuliSourceActor
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_RequestStartStance
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor final
+struct FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance final
 {
 public:
-	class AActor*                                 StimuliSourceActor_0;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor, StimuliSourceActor_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor::StimuliSourceActor_0' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance::StanceTag' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetLookAtTargetTurnAngle
-// 0x00D8 (0x00D8 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.EvalTransitionsWithResult
+// 0x0005 (0x0005 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult final
 {
 public:
-	double                                        TurnAngle_0;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ACharacter*                             CallFunc_GetLocalPlayerPawn_LocalPlayerPawn;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_GetHorizontalRotation_AdjustedRotator;    // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Percent_FloatFloat_ReturnValue;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bStateChanged;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 PrevState;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State_1;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle) == 0x0000D8, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, TurnAngle_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::TurnAngle_0' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_GetLocalPlayerPawn_LocalPlayerPawn) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_GetLocalPlayerPawn_LocalPlayerPawn' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Roll) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Pitch) == 0x000044, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Yaw) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_FindLookAtRotation_ReturnValue) == 0x000068, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_GetHorizontalRotation_AdjustedRotator) == 0x000080, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_GetHorizontalRotation_AdjustedRotator' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Roll_1) == 0x000098, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Pitch_1) == 0x00009C, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Yaw_1) == 0x0000A0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Percent_FloatFloat_ReturnValue) == 0x0000B8, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Percent_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000C0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x0000C8, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0000D0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetHorizontalRotation
-// 0x0090 (0x0090 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation final
-{
-public:
-	struct FRotator                               Rotator;                                           // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               AdjustedRotator;                                   // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Conv_RotatorToVector_ReturnValue;         // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation) == 0x000090, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, Rotator) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::Rotator' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, AdjustedRotator) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::AdjustedRotator' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_Conv_RotatorToVector_ReturnValue) == 0x000030, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_Conv_RotatorToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_BreakVector_X) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_BreakVector_Y) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_BreakVector_Z) == 0x000058, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_MakeVector_ReturnValue) == 0x000060, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_MakeRotFromX_ReturnValue) == 0x000078, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetFleeSucceedDistance
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance final
-{
-public:
-	double                                        FleeSucceedDistance;                               // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance, FleeSucceedDistance) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance::FleeSucceedDistance' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetFleeQueryParams
-// 0x0030 (0x0030 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams final
-{
-public:
-	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FleeRadius;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FleeStepDistMin;                                   // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FleeStepDistMax;                                   // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, Center) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::Center' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, FleeRadius) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::FleeRadius' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, FleeStepDistMin) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::FleeStepDistMin' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, FleeStepDistMax) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::FleeStepDistMax' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetCurrentState
-// 0x0001 (0x0001 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_GetCurrentState final
-{
-public:
-	EQuadrupedAnimalReactionState                 State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetCurrentState) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetCurrentState");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetCurrentState) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetCurrentState");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetCurrentState, State) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetCurrentState::State' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult) == 0x000005, "Wrong size on FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, bStateChanged) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::bStateChanged' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, PrevState) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::PrevState' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, CallFunc_GetCurrentState_State) == 0x000002, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::CallFunc_GetCurrentState_State' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000003, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, CallFunc_GetCurrentState_State_1) == 0x000004, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::CallFunc_GetCurrentState_State_1' has a wrong offset!");
 
 // Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.ExecuteUbergraph_FSM_QuadrupedAnimalReaction
 // 0x0F40 (0x0F40 - 0x0000)
@@ -1634,129 +832,931 @@ static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_ExecuteUbergraph_FSM_Quadru
 static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_ExecuteUbergraph_FSM_QuadrupedAnimalReaction, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_2) == 0x000F34, "Member 'FSM_QuadrupedAnimalReaction_C_ExecuteUbergraph_FSM_QuadrupedAnimalReaction::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_2' has a wrong offset!");
 static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_ExecuteUbergraph_FSM_QuadrupedAnimalReaction, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_3) == 0x000F38, "Member 'FSM_QuadrupedAnimalReaction_C_ExecuteUbergraph_FSM_QuadrupedAnimalReaction::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast_3' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.EvalTransitionsWithResult
-// 0x0005 (0x0005 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetCurrentState
+// 0x0001 (0x0001 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_GetCurrentState final
 {
 public:
-	bool                                          bStateChanged;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EQuadrupedAnimalReactionState                 PrevState;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State_1;                  // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 State;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult) == 0x000005, "Wrong size on FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, bStateChanged) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::bStateChanged' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, PrevState) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::PrevState' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, CallFunc_GetCurrentState_State) == 0x000002, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::CallFunc_GetCurrentState_State' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000003, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult, CallFunc_GetCurrentState_State_1) == 0x000004, "Member 'FSM_QuadrupedAnimalReaction_C_EvalTransitionsWithResult::CallFunc_GetCurrentState_State_1' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetCurrentState) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetCurrentState");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetCurrentState) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetCurrentState");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetCurrentState, State) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetCurrentState::State' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_RequestStartStance
-// 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetFleeQueryParams
+// 0x0030 (0x0030 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams final
 {
 public:
-	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FleeRadius;                                        // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FleeStepDistMin;                                   // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FleeStepDistMax;                                   // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_RequestStartStance::StanceTag' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, Center) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::Center' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, FleeRadius) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::FleeRadius' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, FleeStepDistMin) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::FleeStepDistMin' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams, FleeStepDistMax) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeQueryParams::FleeStepDistMax' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_RequestStartGesture
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetFleeSucceedDistance
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture final
+struct FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance final
+{
+public:
+	double                                        FleeSucceedDistance;                               // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance, FleeSucceedDistance) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetFleeSucceedDistance::FleeSucceedDistance' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetHorizontalRotation
+// 0x0090 (0x0090 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation final
+{
+public:
+	struct FRotator                               Rotator;                                           // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               AdjustedRotator;                                   // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_Conv_RotatorToVector_ReturnValue;         // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotFromX_ReturnValue;                 // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation) == 0x000090, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, Rotator) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::Rotator' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, AdjustedRotator) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::AdjustedRotator' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_Conv_RotatorToVector_ReturnValue) == 0x000030, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_Conv_RotatorToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_BreakVector_X) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_BreakVector_Y) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_BreakVector_Z) == 0x000058, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_MakeVector_ReturnValue) == 0x000060, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation, CallFunc_MakeRotFromX_ReturnValue) == 0x000078, "Member 'FSM_QuadrupedAnimalReaction_C_GetHorizontalRotation::CallFunc_MakeRotFromX_ReturnValue' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetLookAtTargetTurnAngle
+// 0x00D8 (0x00D8 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle final
+{
+public:
+	double                                        TurnAngle_0;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CallFunc_GetLocalPlayerPawn_LocalPlayerPawn;       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue_1;        // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_GetHorizontalRotation_AdjustedRotator;    // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll_1;                      // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch_1;                     // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw_1;                       // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Percent_FloatFloat_ReturnValue;           // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle) == 0x0000D8, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, TurnAngle_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::TurnAngle_0' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_GetLocalPlayerPawn_LocalPlayerPawn) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_GetLocalPlayerPawn_LocalPlayerPawn' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Roll) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Pitch) == 0x000044, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Yaw) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_K2_GetActorLocation_ReturnValue_1) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_K2_GetActorLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_FindLookAtRotation_ReturnValue) == 0x000068, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_GetHorizontalRotation_AdjustedRotator) == 0x000080, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_GetHorizontalRotation_AdjustedRotator' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Roll_1) == 0x000098, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Roll_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Pitch_1) == 0x00009C, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Pitch_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_BreakRotator_Yaw_1) == 0x0000A0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_BreakRotator_Yaw_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0000A8, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0000B0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Percent_FloatFloat_ReturnValue) == 0x0000B8, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Percent_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000C0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x0000C8, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0000D0, "Member 'FSM_QuadrupedAnimalReaction_C_GetLookAtTargetTurnAngle::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetStimuliSourceActor
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor final
+{
+public:
+	class AActor*                                 StimuliSourceActor_0;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor, StimuliSourceActor_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetStimuliSourceActor::StimuliSourceActor_0' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetTurnTime
+// 0x0040 (0x0040 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_GetTurnTime final
+{
+public:
+	double                                        TurnTime;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetTimeRange_MinTime;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTimeRange_MaxTime;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      K2Node_DynamicCast_AsAnim_Sequence_Base;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetPlayLength_ReturnValue;                // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_FunctionResult_TurnTime_ImplicitCast;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_FunctionResult_TurnTime_ImplicitCast_1;     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_GetTurnTime) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_GetTurnTime");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_GetTurnTime) == 0x000040, "Wrong size on FSM_QuadrupedAnimalReaction_C_GetTurnTime");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, TurnTime) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::TurnTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_GetTimeRange_MinTime) == 0x00000C, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_GetTimeRange_MinTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_GetTimeRange_MaxTime) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_GetTimeRange_MaxTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_DynamicCast_AsAnim_Sequence_Base) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_DynamicCast_AsAnim_Sequence_Base' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_IsValid_ReturnValue_1) == 0x000029, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, CallFunc_GetPlayLength_ReturnValue) == 0x00002C, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::CallFunc_GetPlayLength_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_FunctionResult_TurnTime_ImplicitCast) == 0x000030, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_FunctionResult_TurnTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_GetTurnTime, K2Node_FunctionResult_TurnTime_ImplicitCast_1) == 0x000038, "Member 'FSM_QuadrupedAnimalReaction_C_GetTurnTime::K2Node_FunctionResult_TurnTime_ImplicitCast_1' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.InternalStartTurnByAnim
+// 0x0040 (0x0040 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim final
 {
 public:
 	struct FGameplayTag                           GestureTag;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	double                                        TurnScale;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef;      // 0x0018(0x0028)(HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture, GestureTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_RequestStartGesture::GestureTag' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim) == 0x000040, "Wrong size on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, GestureTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::GestureTag' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, TurnScale) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::TurnScale' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, CallFunc_Abs_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim, CallFunc_BP_GetGestureSoftRef_GestureSoftRef) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByAnim::CallFunc_BP_GetGestureSoftRef_GestureSoftRef' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_IsPlayingStance
-// 0x0001 (0x0001 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.InternalStartTurnByCurve
+// 0x0058 (0x0058 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve final
 {
 public:
-	bool                                          bIsPlayingStance;                                  // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TurnAngle_0;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            TurnCurve;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_GetHorizontalRotation_AdjustedRotator;    // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_TurnStartYaw_ImplicitCast;      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance, bIsPlayingStance) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_IsPlayingStance::bIsPlayingStance' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve) == 0x000058, "Wrong size on FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, TurnAngle_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::TurnAngle_0' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, TurnCurve) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::TurnCurve' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_GetHorizontalRotation_AdjustedRotator) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_GetHorizontalRotation_AdjustedRotator' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_BreakRotator_Roll) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_BreakRotator_Pitch) == 0x000044, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, CallFunc_BreakRotator_Yaw) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve, K2Node_VariableSet_TurnStartYaw_ImplicitCast) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_InternalStartTurnByCurve::K2Node_VariableSet_TurnStartYaw_ImplicitCast' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_IsInTransition
-// 0x0001 (0x0001 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_IsInTransition final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.IsCanTrigger
+// 0x0028 (0x0028 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_IsCanTrigger final
 {
 public:
-	bool                                          bInTransition;                                     // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UActorComponent*                        Comp;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsCanTrigger_0;                                    // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             CallFunc_GetPlayerControllingRole_ControllingRole; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ComponentHasTag_ReturnValue;              // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsX6GameNikkiVisitor_ret;                 // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_IsInTransition) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_IsInTransition");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_IsInTransition) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_IsInTransition");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_IsInTransition, bInTransition) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_IsInTransition::bInTransition' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_IsCanTrigger");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger) == 0x000028, "Wrong size on FSM_QuadrupedAnimalReaction_C_IsCanTrigger");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, Actor) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::Actor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, Comp) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::Comp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, IsCanTrigger_0) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::IsCanTrigger_0' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_GetPlayerControllingRole_ControllingRole) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_GetPlayerControllingRole_ControllingRole' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_ComponentHasTag_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_ComponentHasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000021, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_IsX6GameNikkiVisitor_ret) == 0x000022, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_IsX6GameNikkiVisitor_ret' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_BooleanOR_ReturnValue) == 0x000023, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsCanTrigger, CallFunc_BooleanAND_ReturnValue) == 0x000024, "Member 'FSM_QuadrupedAnimalReaction_C_IsCanTrigger::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_GetStanceSoftRef
-// 0x0030 (0x0030 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.IsTurning
+// 0x0002 (0x0002 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_IsTurning final
 {
 public:
-	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimSequenceBase>       StanceSoftRef;                                     // 0x0008(0x0028)(Parm, OutParm, HasGetValueTypeHash)
+	bool                                          bIsTurning;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef, Tag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef::Tag' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef, StanceSoftRef) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetStanceSoftRef::StanceSoftRef' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_IsTurning) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_IsTurning");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_IsTurning) == 0x000002, "Wrong size on FSM_QuadrupedAnimalReaction_C_IsTurning");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsTurning, bIsTurning) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_IsTurning::bIsTurning' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_IsTurning, CallFunc_BooleanOR_ReturnValue) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_IsTurning::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_GetGestureSoftRef
-// 0x0030 (0x0030 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef final
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.MarkTransitionStateDirty
+// 0x0018 (0x0018 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty final
 {
 public:
-	struct FGameplayTag                           Tag;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimSequenceBase>       GestureSoftRef;                                    // 0x0008(0x0028)(Parm, OutParm, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue; // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef, Tag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef::Tag' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef, GestureSoftRef) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_BP_GetGestureSoftRef::GestureSoftRef' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty) == 0x000018, "Wrong size on FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty, CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_MarkTransitionStateDirty::CallFunc_K2_SetTimerForNextTickDelegate_ReturnValue' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_ForceDestroyComponent
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnAnimTransitionEnd_HandleStopStance
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent final
-{
-public:
-	class USphereComponent*                       Comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent, Comp) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_ForceDestroyComponent::Comp' has a wrong offset!");
-
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_CanCurStanceTransitionToThisStance
-// 0x000C (0x000C - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance final
+struct FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance final
 {
 public:
 	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCanTransition;                                    // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance) == 0x00000C, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance::StanceTag' has a wrong offset!");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance, bCanTransition) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_BP_CanCurStanceTransitionToThisStance::bCanTransition' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_HandleStopStance::StanceTag' has a wrong offset!");
 
-// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.BP_AddReactionCollision
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnAnimTransitionEnd_Normal
 // 0x0008 (0x0008 - 0x0000)
-struct FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision final
+struct FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal final
 {
 public:
-	class USphereComponent*                       Comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision");
-static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision");
-static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision, Comp) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_BP_AddReactionCollision::Comp' has a wrong offset!");
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_Normal::StanceTag' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnAnimTransitionEnd_ReturningNormal
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal final
+{
+public:
+	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnAnimTransitionEnd_ReturningNormal::StanceTag' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnCuriousCollisionBeginOverlap
+// 0x0118 (0x0118 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::bFromSweep' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionBeginOverlap::SweepResult' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnCuriousCollisionEndOverlap
+// 0x0020 (0x0020 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnCuriousCollisionEndOverlap::OtherBodyIndex' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnEnterAlertRangeBeginOverlap
+// 0x0118 (0x0118 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::bFromSweep' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeBeginOverlap::SweepResult' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnEnterAlertRangeEndOverlap
+// 0x0020 (0x0020 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnEnterAlertRangeEndOverlap::OtherBodyIndex' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnFleeCollisionBeginOverlap
+// 0x0118 (0x0118 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::bFromSweep' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionBeginOverlap::SweepResult' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnFleeCollisionEndOverlap
+// 0x0020 (0x0020 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnFleeCollisionEndOverlap::OtherBodyIndex' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnGestureEnd_HandleTurn
+// 0x0028 (0x0028 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn final
+{
+public:
+	bool                                          bInterrupt;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           Tag;                                               // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequenceBase*                      CurrentTurnAnim_HandleTurn;                        // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_GameplayTag_ReturnValue;       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn) == 0x000028, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, bInterrupt) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::bInterrupt' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, Tag) == 0x000004, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::Tag' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, CurrentTurnAnim_HandleTurn) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::CurrentTurnAnim_HandleTurn' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, CallFunc_GetAnimInstance_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn, CallFunc_EqualEqual_GameplayTag_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnGestureEnd_HandleTurn::CallFunc_EqualEqual_GameplayTag_ReturnValue' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnInRangeActorStartHoldingBrush
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush, Actor) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnInRangeActorStartHoldingBrush::Actor' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnInRangeActorStopHoldingBrush
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush, Actor) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnInRangeActorStopHoldingBrush::Actor' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLeaveAlertRangeBeginOverlap
+// 0x0118 (0x0118 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bFromSweep;                                        // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepResult;                                       // 0x0020(0x00F8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap) == 0x000118, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, bFromSweep) == 0x00001C, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::bFromSweep' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap, SweepResult) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeBeginOverlap::SweepResult' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLeaveAlertRangeEndOverlap
+// 0x0020 (0x0020 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap final
+{
+public:
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap) == 0x000020, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OverlappedComponent) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OtherActor) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OtherActor' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OtherComp) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OtherComp' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap, OtherBodyIndex) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_OnLeaveAlertRangeEndOverlap::OtherBodyIndex' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5, Loaded) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLoaded_A0C6596B46C0C8B8859ACEBEC7094AB5::Loaded' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnLoaded_FEB03CB44437EDB029A7E590C7692481
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481 final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481, Loaded) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnLoaded_FEB03CB44437EDB029A7E590C7692481::Loaded' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnStanceStop_Alert
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert final
+{
+public:
+	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnStanceStop_Alert::StanceTag' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnStanceStop_Curious
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious final
+{
+public:
+	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnStanceStop_Curious::StanceTag' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnStateMachineStateChanged
+// 0x0100 (0x0100 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged final
+{
+public:
+	struct FSMStateInfo                           ToState;                                           // 0x0000(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FSMStateInfo                           FromState;                                         // 0x0080(0x0080)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged) == 0x000100, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged, ToState) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged::ToState' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged, FromState) == 0x000080, "Member 'FSM_QuadrupedAnimalReaction_C_OnStateMachineStateChanged::FromState' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.OnTurnCoolDownFinished
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished final
+{
+public:
+	double                                        TurnCoolDown;                                      // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished, TurnCoolDown) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_OnTurnCoolDownFinished::TurnCoolDown' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.PostAIObjectInit
+// 0x0003 (0x0003 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_PostAIObjectInit final
+{
+public:
+	bool                                          CallFunc_HasStarted_ReturnValue;                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_PostAIObjectInit");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit) == 0x000003, "Wrong size on FSM_QuadrupedAnimalReaction_C_PostAIObjectInit");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit, CallFunc_HasStarted_ReturnValue) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_PostAIObjectInit::CallFunc_HasStarted_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit, CallFunc_GetCurrentState_State) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_PostAIObjectInit::CallFunc_GetCurrentState_State' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_PostAIObjectInit, K2Node_SwitchEnum_CmpSuccess) == 0x000002, "Member 'FSM_QuadrupedAnimalReaction_C_PostAIObjectInit::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.SetDataAsset
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_SetDataAsset final
+{
+public:
+	class UBP_QuadrupedAnimalReactionDefinition_C* DataAsset_0;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_SetDataAsset) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_SetDataAsset");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_SetDataAsset) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_SetDataAsset");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_SetDataAsset, DataAsset_0) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_SetDataAsset::DataAsset_0' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194
+// 0x0004 (0x0004 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194 final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194) == 0x000004, "Wrong size on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194, DeltaSeconds) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Alert_B03E0BFC4F2299D81B147ABF5ED89194::DeltaSeconds' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF
+// 0x0004 (0x0004 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF) == 0x000004, "Wrong size on FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF, DeltaSeconds) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_SMGraphK2Node_StateUpdateNode_DBF695D848A31221905EBE8EEA8A25FB_Curious_EA5D754F46FCB72AEA1264B0593EA4EF::DeltaSeconds' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.StartAlertStance
+// 0x0001 (0x0001 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_StartAlertStance final
+{
+public:
+	bool                                          bFastTransition;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_StartAlertStance) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_StartAlertStance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_StartAlertStance) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_StartAlertStance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartAlertStance, bFastTransition) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_StartAlertStance::bFastTransition' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.StartCuriousStance
+// 0x0001 (0x0001 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_StartCuriousStance final
+{
+public:
+	bool                                          bFastTransition;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_StartCuriousStance) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_StartCuriousStance");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_StartCuriousStance) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_StartCuriousStance");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartCuriousStance, bFastTransition) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_StartCuriousStance::bFastTransition' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.StartTurnCoolDown
+// 0x0030 (0x0030 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown final
+{
+public:
+	double                                        CoolDown;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TurnCoolDown;                                      // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0020(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_K2_SetTimerDelegate_Time_ImplicitCast;    // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown) == 0x000030, "Wrong size on FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CoolDown) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CoolDown' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, TurnCoolDown) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::TurnCoolDown' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown, CallFunc_K2_SetTimerDelegate_Time_ImplicitCast) == 0x00002C, "Member 'FSM_QuadrupedAnimalReaction_C_StartTurnCoolDown::CallFunc_K2_SetTimerDelegate_Time_ImplicitCast' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B final
+{
+public:
+	class UX6TaskAsyncBase*                       Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B, Task) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TaskBegin_51B4524846EAD7E8757D4D8F3326AF1B::Task' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TaskBegin_B2F1FD674D016BAA6C715DA17E929405
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405 final
+{
+public:
+	class UX6TaskAsyncBase*                       Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405, Task) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TaskBegin_B2F1FD674D016BAA6C715DA17E929405::Task' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryEnterState
+// 0x0004 (0x0004 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TryEnterState final
+{
+public:
+	EQuadrupedAnimalReactionState                 NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSuccess;                                          // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 CallFunc_GetCurrentState_State;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryEnterState) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryEnterState");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryEnterState) == 0x000004, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryEnterState");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, NewState) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::NewState' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, bSuccess) == 0x000001, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::bSuccess' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, CallFunc_GetCurrentState_State) == 0x000002, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::CallFunc_GetCurrentState_State' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryEnterState, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000003, "Member 'FSM_QuadrupedAnimalReaction_C_TryEnterState::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd
+// 0x0008 (0x0008 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd final
+{
+public:
+	struct FGameplayTag                           StanceTag;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd) == 0x000004, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd) == 0x000008, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd, StanceTag) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnAnimTransitionEnd::StanceTag' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryFleeForReachMaxAlertDuration_OnTurnFinish
+// 0x0001 (0x0001 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish final
+{
+public:
+	bool                                          bTurnByCurve;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish) == 0x000001, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish) == 0x000001, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish, bTurnByCurve) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryFleeForReachMaxAlertDuration_OnTurnFinish::bTurnByCurve' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryStartAlertTurn
+// 0x0120 (0x0120 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn final
+{
+public:
+	bool                                          bTurnStarted;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TurnAngle_local;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef;      // 0x0010(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1;    // 0x0040(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2;    // 0x0070(0x0028)(HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3;    // 0x00A8(0x0028)(HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_3; // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetLookAtTargetTurnAngle_TurnAngle;       // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn) == 0x000120, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, bTurnStarted) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::bTurnStarted' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, TurnAngle_local) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::TurnAngle_local' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000038, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x000068, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2) == 0x000070, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000098, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x0000A0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3) == 0x0000A8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000D0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_3) == 0x0000D8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000E0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x0000E9, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0000F0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x0000F8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000100, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_GetLookAtTargetTurnAngle_TurnAngle) == 0x000108, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_GetLookAtTargetTurnAngle_TurnAngle' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000110, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000118, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartAlertTurn::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.TryStartCuriousTurn
+// 0x0140 (0x0140 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn final
+{
+public:
+	bool                                          bTurnStarted;                                      // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        TurnAngle_local;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue_1;            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef;      // 0x0020(0x0028)(HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue_2;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1;    // 0x0058(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_1; // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2;    // 0x0088(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_2; // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimSequenceBase>       CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3;    // 0x00B8(0x0028)(HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue_3; // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_1;        // 0x00F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_2;        // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue_3;        // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue_3;            // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetLookAtTargetTurnAngle_TurnAngle;       // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn) == 0x000140, "Wrong size on FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, bTurnStarted) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::bTurnStarted' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, TurnAngle_local) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::TurnAngle_local' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue_1) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue_2) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1) == 0x000058, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_1) == 0x000080, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2) == 0x000088, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_2) == 0x0000B0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3) == 0x0000B8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_BP_GetGestureSoftRef_GestureSoftRef_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_IsValidSoftObjectReference_ReturnValue_3) == 0x0000E0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_IsValidSoftObjectReference_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue_1) == 0x0000F0, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue_2) == 0x0000F8, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Divide_DoubleDouble_ReturnValue_3) == 0x000100, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Divide_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetAnimInstance_ReturnValue_3) == 0x000108, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetAnimInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000110, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000111, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000118, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000120, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_GetLookAtTargetTurnAngle_TurnAngle) == 0x000128, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_GetLookAtTargetTurnAngle_TurnAngle' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000130, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000138, "Member 'FSM_QuadrupedAnimalReaction_C_TryStartCuriousTurn::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.UpdateTurnByCurve
+// 0x0068 (0x0068 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve final
+{
+public:
+	double                                        DeltaTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_GetTimeRange_MinTime;                     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetTimeRange_MaxTime;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFloatValue_InTime_ImplicitCast;        // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_B_ImplicitCast;     // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Greater_DoubleDouble_B_ImplicitCast;      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve) == 0x000008, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve) == 0x000068, "Wrong size on FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, DeltaTime) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::DeltaTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetFloatValue_ReturnValue) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_MakeRotator_ReturnValue) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetTimeRange_MinTime) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetTimeRange_MinTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetTimeRange_MaxTime) == 0x000044, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetTimeRange_MaxTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000048, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_K2_SetActorRotation_ReturnValue) == 0x000049, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_GetFloatValue_InTime_ImplicitCast) == 0x00004C, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_GetFloatValue_InTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Multiply_DoubleDouble_B_ImplicitCast) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Multiply_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x000058, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve, CallFunc_Greater_DoubleDouble_B_ImplicitCast) == 0x000060, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByCurve::CallFunc_Greater_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+
+// Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.UpdateTurnByMontage
+// 0x0230 (0x0230 - 0x0000)
+struct FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage final
+{
+public:
+	double                                        DeltaTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      CurrentTurnAnim;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         OldMontagePosition;                                // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetPlayLength_ReturnValue;                // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      K2Node_DynamicCast_AsAnim_Sequence_Base;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_ExtractRootMotionFromAnimation_ReturnValue; // 0x0050(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Multiply_RotatorFloat_ReturnValue;        // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_AddActorWorldRotation_SweepHitResult;  // 0x0110(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_FClamp_Max_ImplicitCast;                  // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_Min_ImplicitCast;                  // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_RotatorFloat_B_ImplicitCast;     // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_ExtractRootMotionFromAnimation_EndTime_ImplicitCast; // 0x021C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_OldMontagePosition_ImplicitCast; // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage) == 0x000010, "Wrong alignment on FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage");
+static_assert(sizeof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage) == 0x000230, "Wrong size on FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, DeltaTime) == 0x000000, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::DeltaTime' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CurrentTurnAnim) == 0x000008, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CurrentTurnAnim' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, OldMontagePosition) == 0x000010, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::OldMontagePosition' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_GetPlayLength_ReturnValue) == 0x000014, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_GetPlayLength_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000020, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, K2Node_DynamicCast_AsAnim_Sequence_Base) == 0x000028, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::K2Node_DynamicCast_AsAnim_Sequence_Base' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_FClamp_ReturnValue) == 0x000040, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_ExtractRootMotionFromAnimation_ReturnValue) == 0x000050, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_ExtractRootMotionFromAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_BreakTransform_Location) == 0x0000B0, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_BreakTransform_Rotation) == 0x0000C8, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_BreakTransform_Scale) == 0x0000E0, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Multiply_RotatorFloat_ReturnValue) == 0x0000F8, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Multiply_RotatorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_K2_AddActorWorldRotation_SweepHitResult) == 0x000110, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_K2_AddActorWorldRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_FClamp_Max_ImplicitCast) == 0x000208, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_FClamp_Max_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_FClamp_Min_ImplicitCast) == 0x000210, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_FClamp_Min_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_Multiply_RotatorFloat_B_ImplicitCast) == 0x000218, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_Multiply_RotatorFloat_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, CallFunc_ExtractRootMotionFromAnimation_EndTime_ImplicitCast) == 0x00021C, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::CallFunc_ExtractRootMotionFromAnimation_EndTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage, K2Node_VariableSet_OldMontagePosition_ImplicitCast) == 0x000220, "Member 'FSM_QuadrupedAnimalReaction_C_UpdateTurnByMontage::K2Node_VariableSet_OldMontagePosition_ImplicitCast' has a wrong offset!");
 
 // Function FSM_QuadrupedAnimalReaction.FSM_QuadrupedAnimalReaction_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

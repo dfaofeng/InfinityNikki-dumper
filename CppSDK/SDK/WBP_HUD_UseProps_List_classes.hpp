@@ -35,12 +35,12 @@ public:
 	class UWBP_UI_Common_KeyTips_C*               WBP_UI_Common_KeyTips;                             // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature();
-	class UWidget* DoCustomNavigation(EUINavigation Navigation_0);
 	void ExecuteUbergraph_WBP_HUD_UseProps_List(int32 EntryPoint);
+	class UWidget* DoCustomNavigation(EUINavigation Navigation_0);
+	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_1_OnButtonReleasedEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_List_Button_Setting_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

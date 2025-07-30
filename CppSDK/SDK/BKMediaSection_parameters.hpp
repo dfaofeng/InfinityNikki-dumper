@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BKMediaSection.BKMediaSection_C.StartLoad
-// 0x0010 (0x0010 - 0x0000)
-struct BKMediaSection_C_StartLoad final
-{
-public:
-	class FString                                 LevelSequenceName;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BKMediaSection_C_StartLoad) == 0x000008, "Wrong alignment on BKMediaSection_C_StartLoad");
-static_assert(sizeof(BKMediaSection_C_StartLoad) == 0x000010, "Wrong size on BKMediaSection_C_StartLoad");
-static_assert(offsetof(BKMediaSection_C_StartLoad, LevelSequenceName) == 0x000000, "Member 'BKMediaSection_C_StartLoad::LevelSequenceName' has a wrong offset!");
-
 // Function BKMediaSection.BKMediaSection_C.ExecuteUbergraph_BKMediaSection
 // 0x0018 (0x0018 - 0x0000)
 struct BKMediaSection_C_ExecuteUbergraph_BKMediaSection final
@@ -38,6 +27,17 @@ static_assert(alignof(BKMediaSection_C_ExecuteUbergraph_BKMediaSection) == 0x000
 static_assert(sizeof(BKMediaSection_C_ExecuteUbergraph_BKMediaSection) == 0x000018, "Wrong size on BKMediaSection_C_ExecuteUbergraph_BKMediaSection");
 static_assert(offsetof(BKMediaSection_C_ExecuteUbergraph_BKMediaSection, EntryPoint) == 0x000000, "Member 'BKMediaSection_C_ExecuteUbergraph_BKMediaSection::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BKMediaSection_C_ExecuteUbergraph_BKMediaSection, K2Node_Event_LevelSequenceName) == 0x000008, "Member 'BKMediaSection_C_ExecuteUbergraph_BKMediaSection::K2Node_Event_LevelSequenceName' has a wrong offset!");
+
+// Function BKMediaSection.BKMediaSection_C.StartLoad
+// 0x0010 (0x0010 - 0x0000)
+struct BKMediaSection_C_StartLoad final
+{
+public:
+	class FString                                 LevelSequenceName;                                 // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BKMediaSection_C_StartLoad) == 0x000008, "Wrong alignment on BKMediaSection_C_StartLoad");
+static_assert(sizeof(BKMediaSection_C_StartLoad) == 0x000010, "Wrong size on BKMediaSection_C_StartLoad");
+static_assert(offsetof(BKMediaSection_C_StartLoad, LevelSequenceName) == 0x000000, "Member 'BKMediaSection_C_StartLoad::LevelSequenceName' has a wrong offset!");
 
 // Function BKMediaSection.BKMediaSection_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

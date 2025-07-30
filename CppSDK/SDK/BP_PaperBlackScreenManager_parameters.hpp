@@ -44,6 +44,7 @@ public:
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           FadeColor;                                         // 0x0044(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bNoFadeIn;                                         // 0x0054(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDisableWorldRendering;                            // 0x0055(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PaperBlackScreenManager_C_EnterBlackScreen) == 0x000008, "Wrong alignment on BP_PaperBlackScreenManager_C_EnterBlackScreen");
 static_assert(sizeof(BP_PaperBlackScreenManager_C_EnterBlackScreen) == 0x000058, "Wrong size on BP_PaperBlackScreenManager_C_EnterBlackScreen");
@@ -55,6 +56,7 @@ static_assert(offsetof(BP_PaperBlackScreenManager_C_EnterBlackScreen, FadeInEndC
 static_assert(offsetof(BP_PaperBlackScreenManager_C_EnterBlackScreen, bNoFadeOut) == 0x000040, "Member 'BP_PaperBlackScreenManager_C_EnterBlackScreen::bNoFadeOut' has a wrong offset!");
 static_assert(offsetof(BP_PaperBlackScreenManager_C_EnterBlackScreen, FadeColor) == 0x000044, "Member 'BP_PaperBlackScreenManager_C_EnterBlackScreen::FadeColor' has a wrong offset!");
 static_assert(offsetof(BP_PaperBlackScreenManager_C_EnterBlackScreen, bNoFadeIn) == 0x000054, "Member 'BP_PaperBlackScreenManager_C_EnterBlackScreen::bNoFadeIn' has a wrong offset!");
+static_assert(offsetof(BP_PaperBlackScreenManager_C_EnterBlackScreen, bDisableWorldRendering) == 0x000055, "Member 'BP_PaperBlackScreenManager_C_EnterBlackScreen::bDisableWorldRendering' has a wrong offset!");
 
 // Function BP_PaperBlackScreenManager.BP_PaperBlackScreenManager_C.CancelBlackScreenWait
 // 0x0004 (0x0004 - 0x0000)

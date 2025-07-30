@@ -14,6 +14,20 @@
 namespace SDK::Params
 {
 
+// Function BP_PlayerCombatMovementComponent.BP_PlayerCombatMovementComponent_C.BP_ForbidCombatMove
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove final
+{
+public:
+	bool                                          bForbid;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Reason;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove) == 0x000008, "Wrong alignment on BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove");
+static_assert(sizeof(BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove) == 0x000018, "Wrong size on BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove");
+static_assert(offsetof(BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove, bForbid) == 0x000000, "Member 'BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove::bForbid' has a wrong offset!");
+static_assert(offsetof(BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove, Reason) == 0x000008, "Member 'BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove::Reason' has a wrong offset!");
+
 // Function BP_PlayerCombatMovementComponent.BP_PlayerCombatMovementComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)
 struct BP_PlayerCombatMovementComponent_C_GetModuleName final

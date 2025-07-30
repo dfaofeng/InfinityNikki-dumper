@@ -10,23 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "X6Animation_structs.hpp"
-#include "EPlayerRegularFlyingMovementType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EPlayerGamePlayMovementMode_structs.hpp"
-#include "EPlayerMovementScenarios_structs.hpp"
-#include "X6Game_structs.hpp"
-#include "X6Game_classes.hpp"
+#include "X6Animation_structs.hpp"
+#include "Enum_WeaponHandMode_structs.hpp"
 #include "EPlayerRegularMovementType_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "E_ClothesAnimationStateType_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "FStylizedSimplyPivotState_structs.hpp"
-#include "SMSystem_structs.hpp"
-#include "Enum_WeaponHandMode_structs.hpp"
-#include "ENPC_BodyType_structs.hpp"
-#include "EPawnAnimStateTypes_structs.hpp"
+#include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "X6Game_structs.hpp"
+#include "X6Game_classes.hpp"
 #include "FStylizedSimplyStartState_structs.hpp"
+#include "E_ClothesAnimationStateType_structs.hpp"
+#include "EPlayerMovementScenarios_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "SMSystem_structs.hpp"
+#include "ENPC_BodyType_structs.hpp"
+#include "FStylizedSimplyPivotState_structs.hpp"
+#include "EPlayerRegularFlyingMovementType_structs.hpp"
+#include "EPawnAnimStateTypes_structs.hpp"
 #include "FStylizedMirror_structs.hpp"
 
 
@@ -206,34 +206,34 @@ public:
 	struct FVector                                BP_BikeHandLockPosR;                               // 0x09D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_PlayerAnimStatesComponent(int32 EntryPoint);
-	void BPI_Get_CurrentAbilityStates(bool* IsLogicInStatePlayingSkill, bool* IsLogicInPlayingAbilityAnimState, double* CurrentAbilityAnimTimeRemaining, double* CurrentAbilityPlayRate, double* CurrentAbilityAnimTime);
-	void BP_SetUseFacialAnimFromSpecialFullBody(bool bUse, const class FString& Reason);
-	void BP_SetStylizedMirror(bool bMirror);
-	void BP_SetPawnAnimState(EPawnAnimStateTypes NewPawnAnimState);
-	void BP_SetFocusConfig(class ULookAtConfigTemplate* InFocusConfig);
-	void BP_SetEnableEmotionPerformance(bool bEnableEmotionPerformance);
-	void BP_SetCanInterruptPendingStopState(bool bCanInterrupt);
-	void BP_RemoveIdleBreakAnim(class UAnimSequence* AnimSequence);
-	void BP_RefreshClothThicknessData();
-	void BP_OverrideCanOwnerDoLookAt(bool bCanDoLookAt);
-	void BP_IsSkipStopStage(bool* SkipStopStage);
-	void BP_IsForceStopStage(bool* ForceStopFlag);
-	void BP_GetEnableEmotionPerformance(bool* EnableEmotionPerformance);
-	void BP_GetDefaultClothesList(TArray<int32>* DefaultClothesList);
-	void BP_GetCurrentDressID(int32* ID);
-	void BP_GetCurrentClothesID(TArray<int32>* ClothesIDArray);
-	void BP_EnableSkipStopStage();
-	void BP_EnableForceStopStage();
-	void BP_DisableSkipStopStage();
-	void BP_DisableForceStopStage();
-	void BP_ClearOverrideCanOwnerDoLookAt();
-	void BP_AnimNotify_OnPlayerReliveEffectFinished();
-	void BP_AnimNotify_OnPlayerMantleAnimationFinished();
-	void BP_AnimNotify_OnPlayerDeathAnimationFinished();
-	void BP_AnimNotify_InteractionPerformance_LeftGesture();
 	void BP_AddIdleBreakAnim(class UAnimSequence* AnimSequence);
+	void BP_AnimNotify_InteractionPerformance_LeftGesture();
+	void BP_AnimNotify_OnPlayerDeathAnimationFinished();
+	void BP_AnimNotify_OnPlayerMantleAnimationFinished();
+	void BP_AnimNotify_OnPlayerReliveEffectFinished();
+	void BP_ClearOverrideCanOwnerDoLookAt();
+	void BP_DisableForceStopStage();
+	void BP_DisableSkipStopStage();
+	void BP_EnableForceStopStage();
+	void BP_EnableSkipStopStage();
+	void BP_GetCurrentClothesID(TArray<int32>* ClothesIDArray);
+	void BP_GetCurrentDressID(int32* ID);
+	void BP_GetDefaultClothesList(TArray<int32>* DefaultClothesList);
+	void BP_GetEnableEmotionPerformance(bool* EnableEmotionPerformance);
+	void BP_IsForceStopStage(bool* ForceStopFlag);
+	void BP_IsSkipStopStage(bool* SkipStopStage);
+	void BP_OverrideCanOwnerDoLookAt(bool bCanDoLookAt);
+	void BP_RefreshClothThicknessData();
+	void BP_RemoveIdleBreakAnim(class UAnimSequence* AnimSequence);
+	void BP_SetCanInterruptPendingStopState(bool bCanInterrupt);
+	void BP_SetEnableEmotionPerformance(bool bEnableEmotionPerformance);
+	void BP_SetFocusConfig(class ULookAtConfigTemplate* InFocusConfig);
+	void BP_SetPawnAnimState(EPawnAnimStateTypes NewPawnAnimState);
+	void BP_SetStylizedMirror(bool bMirror);
+	void BP_SetUseFacialAnimFromSpecialFullBody(bool bUse, const class FString& Reason);
+	void BPI_Get_CurrentAbilityStates(bool* IsLogicInStatePlayingSkill, bool* IsLogicInPlayingAbilityAnimState, double* CurrentAbilityAnimTimeRemaining, double* CurrentAbilityPlayRate, double* CurrentAbilityAnimTime);
+	void ExecuteUbergraph_BP_PlayerAnimStatesComponent(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 	class FString GetModuleName() const;
 

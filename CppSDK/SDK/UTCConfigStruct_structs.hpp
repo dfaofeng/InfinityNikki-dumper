@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "UTCControlTypeEnum_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "F_UTCRatioConfig_structs.hpp"
 
 

@@ -7073,7 +7073,7 @@ static_assert(offsetof(UX6BulletEffectWindZoneModifier, DebugDrawType) == 0x0000
 
 // Class X6Game.X6BulletFilterTargetingPresetModifier
 // 0x0060 (0x00A0 - 0x0040)
-class UX6BulletFilterTargetingPresetModifier final : public UX6BulletSimpleBasicModifier
+class UX6BulletFilterTargetingPresetModifier : public UX6BulletSimpleBasicModifier
 {
 public:
 	bool                                          bLoopTargetingPreset;                              // 0x0040(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -8488,7 +8488,7 @@ static_assert(offsetof(UX6CircularListView, BP_OnItemIsHoveredChanged) == 0x0003
 
 // Class X6Game.X6CombatBossSlotMgrComponent
 // 0x0068 (0x0110 - 0x00A8)
-class UX6CombatBossSlotMgrComponent final : public UX6ActorComponent
+class UX6CombatBossSlotMgrComponent : public UX6ActorComponent
 {
 public:
 	TArray<struct FAttachSlotDefinition>          Slots;                                             // 0x00A8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
@@ -8794,7 +8794,7 @@ static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bPlayWithShadow) == 0x
 
 // Class X6Game.X6CombatSummonBase
 // 0x0000 (0x0460 - 0x0460)
-class AX6CombatSummonBase final : public AX6ActorWithTag
+class AX6CombatSummonBase : public AX6ActorWithTag
 {
 public:
 	static class UClass* StaticClass()
@@ -11176,7 +11176,7 @@ static_assert(offsetof(UX6ModularFeaturesContainerComp, PlayerShadowDecalProcess
 
 // Class X6Game.X6MonsterAnimInstance
 // 0x0010 (0x0400 - 0x03F0)
-class UX6MonsterAnimInstance final : public UX6AnimInstanceWithTag
+class UX6MonsterAnimInstance : public UX6AnimInstanceWithTag
 {
 public:
 	TWeakObjectPtr<class UX6CharacterMovementComponent> X6OwnerCharacterMovementComp;                // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -11836,7 +11836,7 @@ static_assert(offsetof(UX6RadialListView, ArcOrientation) == 0x00143C, "Member '
 
 // Class X6Game.X6ReceiveSkillBaseComponent
 // 0x0008 (0x00B0 - 0x00A8)
-class UX6ReceiveSkillBaseComponent final : public UX6ActorComponent
+class UX6ReceiveSkillBaseComponent : public UX6ActorComponent
 {
 public:
 	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])

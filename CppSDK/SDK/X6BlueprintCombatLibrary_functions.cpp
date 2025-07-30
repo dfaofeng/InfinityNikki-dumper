@@ -71,6 +71,48 @@ void UX6BlueprintCombatLibrary_C::BP_TryShowTreasurebox(class UObject* __WorldCo
 }
 
 
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_SkillClimaxBurstQuit
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCombatLibrary_C::BP_SkillClimaxBurstQuit(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCombatLibrary_C", "BP_SkillClimaxBurstQuit");
+
+	Params::X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_SetSkillClimaxBurstBlock
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    EnableBlock                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCombatLibrary_C::BP_SetSkillClimaxBurstBlock(bool EnableBlock, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCombatLibrary_C", "BP_SetSkillClimaxBurstBlock");
+
+	Params::X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock Parms{};
+
+	Parms.EnableBlock = EnableBlock;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_SetShieldState
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -188,6 +230,34 @@ void UX6BlueprintCombatLibrary_C::BP_ResetAISightConfig(class AActor* Actor, cla
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_RemoveMotionWarping
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    WarpKey                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bSuccess                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCombatLibrary_C::BP_RemoveMotionWarping(class AActor* Actor, const class FString& WarpKey, class UObject* __WorldContext, bool* bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCombatLibrary_C", "BP_RemoveMotionWarping");
+
+	Params::X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping Parms{};
+
+	Parms.Actor = Actor;
+	Parms.WarpKey = std::move(WarpKey);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (bSuccess != nullptr)
+		*bSuccess = Parms.bSuccess;
 }
 
 
@@ -1055,6 +1125,38 @@ void UX6BlueprintCombatLibrary_C::BP_BlendCameraIn(class AActor* CameraOwnerActo
 
 	if (ConfigIndex != nullptr)
 		*ConfigIndex = Parms.ConfigIndex;
+}
+
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_ApplyMotionWarping
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    WarpKey                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  Rotation                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bSuccess                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCombatLibrary_C::BP_ApplyMotionWarping(class AActor* Actor, const class FString& WarpKey, const struct FVector& Location, const struct FRotator& Rotation, class UObject* __WorldContext, bool* bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCombatLibrary_C", "BP_ApplyMotionWarping");
+
+	Params::X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping Parms{};
+
+	Parms.Actor = Actor;
+	Parms.WarpKey = std::move(WarpKey);
+	Parms.Location = std::move(Location);
+	Parms.Rotation = std::move(Rotation);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (bSuccess != nullptr)
+		*bSuccess = Parms.bSuccess;
 }
 
 

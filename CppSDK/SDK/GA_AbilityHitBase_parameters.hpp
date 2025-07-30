@@ -17,16 +17,16 @@
 namespace SDK::Params
 {
 
-// Function GA_AbilityHitBase.GA_AbilityHitBase_C.BP_GetHitActionType
-// 0x0001 (0x0001 - 0x0000)
-struct GA_AbilityHitBase_C_BP_GetHitActionType final
+// Function GA_AbilityHitBase.GA_AbilityHitBase_C.ExecuteUbergraph_GA_AbilityHitBase
+// 0x0004 (0x0004 - 0x0000)
+struct GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase final
 {
 public:
-	EHitActionType                                actionType;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_AbilityHitBase_C_BP_GetHitActionType) == 0x000001, "Wrong alignment on GA_AbilityHitBase_C_BP_GetHitActionType");
-static_assert(sizeof(GA_AbilityHitBase_C_BP_GetHitActionType) == 0x000001, "Wrong size on GA_AbilityHitBase_C_BP_GetHitActionType");
-static_assert(offsetof(GA_AbilityHitBase_C_BP_GetHitActionType, actionType) == 0x000000, "Member 'GA_AbilityHitBase_C_BP_GetHitActionType::actionType' has a wrong offset!");
+static_assert(alignof(GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase) == 0x000004, "Wrong alignment on GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase");
+static_assert(sizeof(GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase) == 0x000004, "Wrong size on GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase");
+static_assert(offsetof(GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase, EntryPoint) == 0x000000, "Member 'GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase::EntryPoint' has a wrong offset!");
 
 // Function GA_AbilityHitBase.GA_AbilityHitBase_C.BP_GetHitPoint
 // 0x0018 (0x0018 - 0x0000)
@@ -39,16 +39,16 @@ static_assert(alignof(GA_AbilityHitBase_C_BP_GetHitPoint) == 0x000008, "Wrong al
 static_assert(sizeof(GA_AbilityHitBase_C_BP_GetHitPoint) == 0x000018, "Wrong size on GA_AbilityHitBase_C_BP_GetHitPoint");
 static_assert(offsetof(GA_AbilityHitBase_C_BP_GetHitPoint, Point) == 0x000000, "Member 'GA_AbilityHitBase_C_BP_GetHitPoint::Point' has a wrong offset!");
 
-// Function GA_AbilityHitBase.GA_AbilityHitBase_C.ExecuteUbergraph_GA_AbilityHitBase
-// 0x0004 (0x0004 - 0x0000)
-struct GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase final
+// Function GA_AbilityHitBase.GA_AbilityHitBase_C.BP_GetHitActionType
+// 0x0001 (0x0001 - 0x0000)
+struct GA_AbilityHitBase_C_BP_GetHitActionType final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EHitActionType                                actionType;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase) == 0x000004, "Wrong alignment on GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase");
-static_assert(sizeof(GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase) == 0x000004, "Wrong size on GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase");
-static_assert(offsetof(GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase, EntryPoint) == 0x000000, "Member 'GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase::EntryPoint' has a wrong offset!");
+static_assert(alignof(GA_AbilityHitBase_C_BP_GetHitActionType) == 0x000001, "Wrong alignment on GA_AbilityHitBase_C_BP_GetHitActionType");
+static_assert(sizeof(GA_AbilityHitBase_C_BP_GetHitActionType) == 0x000001, "Wrong size on GA_AbilityHitBase_C_BP_GetHitActionType");
+static_assert(offsetof(GA_AbilityHitBase_C_BP_GetHitActionType, actionType) == 0x000000, "Member 'GA_AbilityHitBase_C_BP_GetHitActionType::actionType' has a wrong offset!");
 
 // Function GA_AbilityHitBase.GA_AbilityHitBase_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

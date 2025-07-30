@@ -17,55 +17,43 @@
 namespace SDK
 {
 
-// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.ExecuteUbergraph_BP_DissolveFoliageActor
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_DissolveFoliageActor_C::ExecuteUbergraph_BP_DissolveFoliageActor(int32 EntryPoint)
+void ABP_DissolveFoliageActor_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "ExecuteUbergraph_BP_DissolveFoliageActor");
+		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "UserConstructionScript");
 
-	Params::BP_DissolveFoliageActor_C_ExecuteUbergraph_BP_DissolveFoliageActor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.Opacity
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.Timeline_translucent__UpdateFunc
+// (BlueprintEvent)
 
-void ABP_DissolveFoliageActor_C::Opacity(bool On)
+void ABP_DissolveFoliageActor_C::Timeline_translucent__UpdateFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "Opacity");
+		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "Timeline_translucent__UpdateFunc");
 
-	Params::BP_DissolveFoliageActor_C_Opacity Parms{};
-
-	Parms.On = On;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.ReturnFolliage
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.Timeline_translucent__FinishedFunc
+// (BlueprintEvent)
 
-void ABP_DissolveFoliageActor_C::ReturnFolliage()
+void ABP_DissolveFoliageActor_C::Timeline_translucent__FinishedFunc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "ReturnFolliage");
+		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "Timeline_translucent__FinishedFunc");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,45 +81,57 @@ void ABP_DissolveFoliageActor_C::SetCollision(class UStaticMeshComponent* Old, c
 }
 
 
-// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.Timeline_translucent__FinishedFunc
-// (BlueprintEvent)
+// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.ReturnFolliage
+// (BlueprintCallable, BlueprintEvent)
 
-void ABP_DissolveFoliageActor_C::Timeline_translucent__FinishedFunc()
+void ABP_DissolveFoliageActor_C::ReturnFolliage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "Timeline_translucent__FinishedFunc");
+		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "ReturnFolliage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.Timeline_translucent__UpdateFunc
-// (BlueprintEvent)
+// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.Opacity
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_DissolveFoliageActor_C::Timeline_translucent__UpdateFunc()
+void ABP_DissolveFoliageActor_C::Opacity(bool On)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "Timeline_translucent__UpdateFunc");
+		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "Opacity");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_DissolveFoliageActor_C_Opacity Parms{};
+
+	Parms.On = On;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_DissolveFoliageActor.BP_DissolveFoliageActor_C.ExecuteUbergraph_BP_DissolveFoliageActor
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_DissolveFoliageActor_C::UserConstructionScript()
+void ABP_DissolveFoliageActor_C::ExecuteUbergraph_BP_DissolveFoliageActor(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_DissolveFoliageActor_C", "ExecuteUbergraph_BP_DissolveFoliageActor");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_DissolveFoliageActor_C_ExecuteUbergraph_BP_DissolveFoliageActor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

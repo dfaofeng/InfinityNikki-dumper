@@ -33,8 +33,8 @@ public:
 	class UNiagaraSystemWidget*                   UI_NS_Message_3;                                   // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Photograph_FinishTask(int32 EntryPoint);
 	void sfx1();
+	void ExecuteUbergraph_WBP_Photograph_FinishTask(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

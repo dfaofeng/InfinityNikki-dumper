@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_BulletCollisionModifier.BP_BulletCollisionModifier_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct BP_BulletCollisionModifier_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_BulletCollisionModifier_C_GetModuleName) == 0x000008, "Wrong alignment on BP_BulletCollisionModifier_C_GetModuleName");
-static_assert(sizeof(BP_BulletCollisionModifier_C_GetModuleName) == 0x000010, "Wrong size on BP_BulletCollisionModifier_C_GetModuleName");
-static_assert(offsetof(BP_BulletCollisionModifier_C_GetModuleName, ReturnValue) == 0x000000, "Member 'BP_BulletCollisionModifier_C_GetModuleName::ReturnValue' has a wrong offset!");
-
 // Function BP_BulletCollisionModifier.BP_BulletCollisionModifier_C.K2_ShouldDestroyByActor
 // 0x0108 (0x0108 - 0x0000)
 struct BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor final
@@ -41,6 +30,17 @@ static_assert(sizeof(BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor) == 0x
 static_assert(offsetof(BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor, HitActor) == 0x000000, "Member 'BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor::HitActor' has a wrong offset!");
 static_assert(offsetof(BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor, HitResult) == 0x000008, "Member 'BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor::HitResult' has a wrong offset!");
 static_assert(offsetof(BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor, ReturnValue) == 0x000100, "Member 'BP_BulletCollisionModifier_C_K2_ShouldDestroyByActor::ReturnValue' has a wrong offset!");
+
+// Function BP_BulletCollisionModifier.BP_BulletCollisionModifier_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct BP_BulletCollisionModifier_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_BulletCollisionModifier_C_GetModuleName) == 0x000008, "Wrong alignment on BP_BulletCollisionModifier_C_GetModuleName");
+static_assert(sizeof(BP_BulletCollisionModifier_C_GetModuleName) == 0x000010, "Wrong size on BP_BulletCollisionModifier_C_GetModuleName");
+static_assert(offsetof(BP_BulletCollisionModifier_C_GetModuleName, ReturnValue) == 0x000000, "Member 'BP_BulletCollisionModifier_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

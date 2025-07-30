@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "F_EquipModifierSet_structs.hpp"
-#include "F_SuitModifierSet_structs.hpp"
 #include "Engine_classes.hpp"
+#include "F_SuitModifierSet_structs.hpp"
 
 
 namespace SDK

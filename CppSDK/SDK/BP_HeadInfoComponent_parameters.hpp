@@ -14,38 +14,16 @@
 namespace SDK::Params
 {
 
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.ExecuteUbergraph_BP_HeadInfoComponent
-// 0x0004 (0x0004 - 0x0000)
-struct BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent) == 0x000004, "Wrong alignment on BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent");
-static_assert(sizeof(BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent) == 0x000004, "Wrong size on BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent");
-static_assert(offsetof(BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent, EntryPoint) == 0x000000, "Member 'BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent::EntryPoint' has a wrong offset!");
-
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconTexture
-// 0x0008 (0x0008 - 0x0000)
-struct BP_HeadInfoComponent_C_SetIconTexture final
-{
-public:
-	class UTexture*                               IconTexture;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_HeadInfoComponent_C_SetIconTexture) == 0x000008, "Wrong alignment on BP_HeadInfoComponent_C_SetIconTexture");
-static_assert(sizeof(BP_HeadInfoComponent_C_SetIconTexture) == 0x000008, "Wrong size on BP_HeadInfoComponent_C_SetIconTexture");
-static_assert(offsetof(BP_HeadInfoComponent_C_SetIconTexture, IconTexture) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetIconTexture::IconTexture' has a wrong offset!");
-
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconVisibility
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetTextVisibility
 // 0x0001 (0x0001 - 0x0000)
-struct BP_HeadInfoComponent_C_SetIconVisibility final
+struct BP_HeadInfoComponent_C_SetTextVisibility final
 {
 public:
-	bool                                          bShow;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NewParam;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HeadInfoComponent_C_SetIconVisibility) == 0x000001, "Wrong alignment on BP_HeadInfoComponent_C_SetIconVisibility");
-static_assert(sizeof(BP_HeadInfoComponent_C_SetIconVisibility) == 0x000001, "Wrong size on BP_HeadInfoComponent_C_SetIconVisibility");
-static_assert(offsetof(BP_HeadInfoComponent_C_SetIconVisibility, bShow) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetIconVisibility::bShow' has a wrong offset!");
+static_assert(alignof(BP_HeadInfoComponent_C_SetTextVisibility) == 0x000001, "Wrong alignment on BP_HeadInfoComponent_C_SetTextVisibility");
+static_assert(sizeof(BP_HeadInfoComponent_C_SetTextVisibility) == 0x000001, "Wrong size on BP_HeadInfoComponent_C_SetTextVisibility");
+static_assert(offsetof(BP_HeadInfoComponent_C_SetTextVisibility, NewParam) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetTextVisibility::NewParam' has a wrong offset!");
 
 // Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetInteractiveIconVisibility
 // 0x0001 (0x0001 - 0x0000)
@@ -58,16 +36,38 @@ static_assert(alignof(BP_HeadInfoComponent_C_SetInteractiveIconVisibility) == 0x
 static_assert(sizeof(BP_HeadInfoComponent_C_SetInteractiveIconVisibility) == 0x000001, "Wrong size on BP_HeadInfoComponent_C_SetInteractiveIconVisibility");
 static_assert(offsetof(BP_HeadInfoComponent_C_SetInteractiveIconVisibility, NewParam) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetInteractiveIconVisibility::NewParam' has a wrong offset!");
 
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetTextVisibility
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconVisibility
 // 0x0001 (0x0001 - 0x0000)
-struct BP_HeadInfoComponent_C_SetTextVisibility final
+struct BP_HeadInfoComponent_C_SetIconVisibility final
 {
 public:
-	bool                                          NewParam;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShow;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_HeadInfoComponent_C_SetTextVisibility) == 0x000001, "Wrong alignment on BP_HeadInfoComponent_C_SetTextVisibility");
-static_assert(sizeof(BP_HeadInfoComponent_C_SetTextVisibility) == 0x000001, "Wrong size on BP_HeadInfoComponent_C_SetTextVisibility");
-static_assert(offsetof(BP_HeadInfoComponent_C_SetTextVisibility, NewParam) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetTextVisibility::NewParam' has a wrong offset!");
+static_assert(alignof(BP_HeadInfoComponent_C_SetIconVisibility) == 0x000001, "Wrong alignment on BP_HeadInfoComponent_C_SetIconVisibility");
+static_assert(sizeof(BP_HeadInfoComponent_C_SetIconVisibility) == 0x000001, "Wrong size on BP_HeadInfoComponent_C_SetIconVisibility");
+static_assert(offsetof(BP_HeadInfoComponent_C_SetIconVisibility, bShow) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetIconVisibility::bShow' has a wrong offset!");
+
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconTexture
+// 0x0008 (0x0008 - 0x0000)
+struct BP_HeadInfoComponent_C_SetIconTexture final
+{
+public:
+	class UTexture*                               IconTexture;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_HeadInfoComponent_C_SetIconTexture) == 0x000008, "Wrong alignment on BP_HeadInfoComponent_C_SetIconTexture");
+static_assert(sizeof(BP_HeadInfoComponent_C_SetIconTexture) == 0x000008, "Wrong size on BP_HeadInfoComponent_C_SetIconTexture");
+static_assert(offsetof(BP_HeadInfoComponent_C_SetIconTexture, IconTexture) == 0x000000, "Member 'BP_HeadInfoComponent_C_SetIconTexture::IconTexture' has a wrong offset!");
+
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.ExecuteUbergraph_BP_HeadInfoComponent
+// 0x0004 (0x0004 - 0x0000)
+struct BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent) == 0x000004, "Wrong alignment on BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent");
+static_assert(sizeof(BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent) == 0x000004, "Wrong size on BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent");
+static_assert(offsetof(BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent, EntryPoint) == 0x000000, "Member 'BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent::EntryPoint' has a wrong offset!");
 
 // Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

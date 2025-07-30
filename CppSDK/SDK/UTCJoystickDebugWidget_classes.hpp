@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EUTCJoystickAxes_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EUTCJoystickAxes_structs.hpp"
 #include "UTCDebugWidget_classes.hpp"
 
 

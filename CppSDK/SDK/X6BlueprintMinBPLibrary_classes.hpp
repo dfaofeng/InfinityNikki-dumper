@@ -12,8 +12,8 @@
 
 #include "Engine_classes.hpp"
 #include "MessageHUDEnum_structs.hpp"
-#include "MessageBoxModeEnum_structs.hpp"
 #include "MessageHUDHead_structs.hpp"
+#include "MessageBoxModeEnum_structs.hpp"
 
 
 namespace SDK

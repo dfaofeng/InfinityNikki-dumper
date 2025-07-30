@@ -16,6 +16,68 @@
 namespace SDK::Params
 {
 
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.RemoveFX
+// 0x0008 (0x0008 - 0x0000)
+struct GC_NikkiChargeFX_SphereBullet_C_RemoveFX final
+{
+public:
+	class ACharacter*                             Char;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_RemoveFX) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_RemoveFX");
+static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_RemoveFX) == 0x000008, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_RemoveFX");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_RemoveFX, Char) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_RemoveFX::Char' has a wrong offset!");
+
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.PlayFX
+// 0x0008 (0x0008 - 0x0000)
+struct GC_NikkiChargeFX_SphereBullet_C_PlayFX final
+{
+public:
+	class ACharacter*                             Char;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_PlayFX) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_PlayFX");
+static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_PlayFX) == 0x000008, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_PlayFX");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_PlayFX, Char) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_PlayFX::Char' has a wrong offset!");
+
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.OnRemove
+// 0x00F8 (0x00F8 - 0x0000)
+struct GC_NikkiChargeFX_SphereBullet_C_OnRemove final
+{
+public:
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00D8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_OnRemove) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_OnRemove");
+static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_OnRemove) == 0x0000F8, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_OnRemove");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, MyTarget) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::MyTarget' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, Parameters) == 0x000008, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::Parameters' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, ReturnValue) == 0x0000E0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, K2Node_DynamicCast_AsCharacter) == 0x0000E8, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.OnActive
+// 0x00F8 (0x00F8 - 0x0000)
+struct GC_NikkiChargeFX_SphereBullet_C_OnActive final
+{
+public:
+	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00D8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_OnActive) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_OnActive");
+static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_OnActive) == 0x0000F8, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_OnActive");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, MyTarget) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::MyTarget' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, Parameters) == 0x000008, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::Parameters' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, ReturnValue) == 0x0000E0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, K2Node_DynamicCast_AsCharacter) == 0x0000E8, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
+static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
 // Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet
 // 0x0058 (0x0058 - 0x0000)
 struct GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet final
@@ -50,68 +112,6 @@ static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_Nikki
 static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet, K2Node_DynamicCast_AsCamera_Modifier_Camera_Blur_1) == 0x000040, "Member 'GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet::K2Node_DynamicCast_AsCamera_Modifier_Camera_Blur_1' has a wrong offset!");
 static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet, K2Node_DynamicCast_bSuccess_1) == 0x000048, "Member 'GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000050, "Member 'GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.OnActive
-// 0x00F8 (0x00F8 - 0x0000)
-struct GC_NikkiChargeFX_SphereBullet_C_OnActive final
-{
-public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00D8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_OnActive) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_OnActive");
-static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_OnActive) == 0x0000F8, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_OnActive");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, MyTarget) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::MyTarget' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, Parameters) == 0x000008, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::Parameters' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, ReturnValue) == 0x0000E0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::ReturnValue' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, K2Node_DynamicCast_AsCharacter) == 0x0000E8, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnActive, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnActive::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.OnRemove
-// 0x00F8 (0x00F8 - 0x0000)
-struct GC_NikkiChargeFX_SphereBullet_C_OnRemove final
-{
-public:
-	class AActor*                                 MyTarget;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayCueParameters                 Parameters;                                        // 0x0008(0x00D8)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_OnRemove) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_OnRemove");
-static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_OnRemove) == 0x0000F8, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_OnRemove");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, MyTarget) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::MyTarget' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, Parameters) == 0x000008, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::Parameters' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, ReturnValue) == 0x0000E0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::ReturnValue' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, K2Node_DynamicCast_AsCharacter) == 0x0000E8, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_OnRemove, K2Node_DynamicCast_bSuccess) == 0x0000F0, "Member 'GC_NikkiChargeFX_SphereBullet_C_OnRemove::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.PlayFX
-// 0x0008 (0x0008 - 0x0000)
-struct GC_NikkiChargeFX_SphereBullet_C_PlayFX final
-{
-public:
-	class ACharacter*                             Char;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_PlayFX) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_PlayFX");
-static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_PlayFX) == 0x000008, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_PlayFX");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_PlayFX, Char) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_PlayFX::Char' has a wrong offset!");
-
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.RemoveFX
-// 0x0008 (0x0008 - 0x0000)
-struct GC_NikkiChargeFX_SphereBullet_C_RemoveFX final
-{
-public:
-	class ACharacter*                             Char;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GC_NikkiChargeFX_SphereBullet_C_RemoveFX) == 0x000008, "Wrong alignment on GC_NikkiChargeFX_SphereBullet_C_RemoveFX");
-static_assert(sizeof(GC_NikkiChargeFX_SphereBullet_C_RemoveFX) == 0x000008, "Wrong size on GC_NikkiChargeFX_SphereBullet_C_RemoveFX");
-static_assert(offsetof(GC_NikkiChargeFX_SphereBullet_C_RemoveFX, Char) == 0x000000, "Member 'GC_NikkiChargeFX_SphereBullet_C_RemoveFX::Char' has a wrong offset!");
 
 // Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

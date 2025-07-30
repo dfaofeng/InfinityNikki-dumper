@@ -45,12 +45,12 @@ public:
 	double                                        BP_BlockDetectionInterval;                         // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName);
-	void K2_OnInstanceDestroyed();
 	void ExecuteUbergraph_BTT_Quadruped_DoMove(int32 EntryPoint);
+	void K2_OnInstanceDestroyed();
+	void OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName);
+	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 
 	class FString GetModuleName() const;
 

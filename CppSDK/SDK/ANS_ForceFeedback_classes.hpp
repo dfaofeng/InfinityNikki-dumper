@@ -27,8 +27,8 @@ public:
 	class UForceFeedbackEffect*                   BP_ForceFeedBackEffect;                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
 	class FString GetNotifyName() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

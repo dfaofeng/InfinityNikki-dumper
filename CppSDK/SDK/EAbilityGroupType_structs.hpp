@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EAbilityGroupType.EAbilityGroupType
-// NumValues: 0x002C
+// NumValues: 0x002F
 enum class EAbilityGroupType : uint8
 {
 	NewEnumerator1                           = 0,
@@ -55,13 +55,16 @@ enum class EAbilityGroupType : uint8
 	NewEnumerator42                          = 34,
 	NewEnumerator43                          = 35,
 	NewEnumerator44                          = 36,
-	NewEnumerator45                          = 37,
-	NewEnumerator46                          = 38,
-	NewEnumerator47                          = 39,
-	NewEnumerator48                          = 40,
-	NewEnumerator49                          = 41,
-	NewEnumerator50                          = 42,
-	EAbilityGroupType_MAX                    = 43,
+	NewEnumerator46                          = 37,
+	NewEnumerator47                          = 38,
+	NewEnumerator48                          = 39,
+	NewEnumerator49                          = 40,
+	NewEnumerator50                          = 41,
+	NewEnumerator55                          = 42,
+	NewEnumerator56                          = 43,
+	NewEnumerator59                          = 44,
+	NewEnumerator60                          = 45,
+	EAbilityGroupType_MAX                    = 46,
 };
 
 }

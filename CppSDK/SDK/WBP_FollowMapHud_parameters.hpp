@@ -16,6 +16,100 @@
 namespace SDK::Params
 {
 
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetMoveContentPositionInternal
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_FollowMapHud_C_SetMoveContentPositionInternal final
+{
+public:
+	struct FVector2D                              Pos;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetMoveContentPositionInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetMoveContentPositionInternal");
+static_assert(sizeof(WBP_FollowMapHud_C_SetMoveContentPositionInternal) == 0x000018, "Wrong size on WBP_FollowMapHud_C_SetMoveContentPositionInternal");
+static_assert(offsetof(WBP_FollowMapHud_C_SetMoveContentPositionInternal, Pos) == 0x000000, "Member 'WBP_FollowMapHud_C_SetMoveContentPositionInternal::Pos' has a wrong offset!");
+static_assert(offsetof(WBP_FollowMapHud_C_SetMoveContentPositionInternal, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000010, "Member 'WBP_FollowMapHud_C_SetMoveContentPositionInternal::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetMoveContentPosition
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_FollowMapHud_C_SetMoveContentPosition final
+{
+public:
+	struct FVector2D                              Pos;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetMoveContentPosition) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetMoveContentPosition");
+static_assert(sizeof(WBP_FollowMapHud_C_SetMoveContentPosition) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetMoveContentPosition");
+static_assert(offsetof(WBP_FollowMapHud_C_SetMoveContentPosition, Pos) == 0x000000, "Member 'WBP_FollowMapHud_C_SetMoveContentPosition::Pos' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSizeInternal
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_FollowMapHud_C_SetContentSizeInternal final
+{
+public:
+	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetContentSizeInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentSizeInternal");
+static_assert(sizeof(WBP_FollowMapHud_C_SetContentSizeInternal) == 0x000018, "Wrong size on WBP_FollowMapHud_C_SetContentSizeInternal");
+static_assert(offsetof(WBP_FollowMapHud_C_SetContentSizeInternal, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentSizeInternal::Size' has a wrong offset!");
+static_assert(offsetof(WBP_FollowMapHud_C_SetContentSizeInternal, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000010, "Member 'WBP_FollowMapHud_C_SetContentSizeInternal::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSize
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_FollowMapHud_C_SetContentSize final
+{
+public:
+	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetContentSize) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentSize");
+static_assert(sizeof(WBP_FollowMapHud_C_SetContentSize) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetContentSize");
+static_assert(offsetof(WBP_FollowMapHud_C_SetContentSize, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentSize::Size' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScaleInternal
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_FollowMapHud_C_SetContentScaleInternal final
+{
+public:
+	struct FVector2D                              Scale;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetContentScaleInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentScaleInternal");
+static_assert(sizeof(WBP_FollowMapHud_C_SetContentScaleInternal) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetContentScaleInternal");
+static_assert(offsetof(WBP_FollowMapHud_C_SetContentScaleInternal, Scale) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentScaleInternal::Scale' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScale
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_FollowMapHud_C_SetContentScale final
+{
+public:
+	struct FVector2D                              Scale;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetContentScale) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentScale");
+static_assert(sizeof(WBP_FollowMapHud_C_SetContentScale) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetContentScale");
+static_assert(offsetof(WBP_FollowMapHud_C_SetContentScale, Scale) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentScale::Scale' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRangeInternal
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_FollowMapHud_C_SetClipRangeInternal final
+{
+public:
+	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetClipRangeInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetClipRangeInternal");
+static_assert(sizeof(WBP_FollowMapHud_C_SetClipRangeInternal) == 0x000018, "Wrong size on WBP_FollowMapHud_C_SetClipRangeInternal");
+static_assert(offsetof(WBP_FollowMapHud_C_SetClipRangeInternal, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetClipRangeInternal::Size' has a wrong offset!");
+static_assert(offsetof(WBP_FollowMapHud_C_SetClipRangeInternal, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000010, "Member 'WBP_FollowMapHud_C_SetClipRangeInternal::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRange
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_FollowMapHud_C_SetClipRange final
+{
+public:
+	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_FollowMapHud_C_SetClipRange) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetClipRange");
+static_assert(sizeof(WBP_FollowMapHud_C_SetClipRange) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetClipRange");
+static_assert(offsetof(WBP_FollowMapHud_C_SetClipRange, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetClipRange::Size' has a wrong offset!");
+
 // Function WBP_FollowMapHud.WBP_FollowMapHud_C.ExecuteUbergraph_WBP_FollowMapHud
 // 0x0048 (0x0048 - 0x0000)
 struct WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud final
@@ -35,100 +129,6 @@ static_assert(offsetof(WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud, K2N
 static_assert(offsetof(WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud, K2Node_Event_Size_1) == 0x000018, "Member 'WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud::K2Node_Event_Size_1' has a wrong offset!");
 static_assert(offsetof(WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud, K2Node_Event_pos) == 0x000028, "Member 'WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud::K2Node_Event_pos' has a wrong offset!");
 static_assert(offsetof(WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud, K2Node_Event_scale) == 0x000038, "Member 'WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud::K2Node_Event_scale' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRange
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FollowMapHud_C_SetClipRange final
-{
-public:
-	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetClipRange) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetClipRange");
-static_assert(sizeof(WBP_FollowMapHud_C_SetClipRange) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetClipRange");
-static_assert(offsetof(WBP_FollowMapHud_C_SetClipRange, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetClipRange::Size' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRangeInternal
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_FollowMapHud_C_SetClipRangeInternal final
-{
-public:
-	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetClipRangeInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetClipRangeInternal");
-static_assert(sizeof(WBP_FollowMapHud_C_SetClipRangeInternal) == 0x000018, "Wrong size on WBP_FollowMapHud_C_SetClipRangeInternal");
-static_assert(offsetof(WBP_FollowMapHud_C_SetClipRangeInternal, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetClipRangeInternal::Size' has a wrong offset!");
-static_assert(offsetof(WBP_FollowMapHud_C_SetClipRangeInternal, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000010, "Member 'WBP_FollowMapHud_C_SetClipRangeInternal::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScale
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FollowMapHud_C_SetContentScale final
-{
-public:
-	struct FVector2D                              Scale;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetContentScale) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentScale");
-static_assert(sizeof(WBP_FollowMapHud_C_SetContentScale) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetContentScale");
-static_assert(offsetof(WBP_FollowMapHud_C_SetContentScale, Scale) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentScale::Scale' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScaleInternal
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FollowMapHud_C_SetContentScaleInternal final
-{
-public:
-	struct FVector2D                              Scale;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetContentScaleInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentScaleInternal");
-static_assert(sizeof(WBP_FollowMapHud_C_SetContentScaleInternal) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetContentScaleInternal");
-static_assert(offsetof(WBP_FollowMapHud_C_SetContentScaleInternal, Scale) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentScaleInternal::Scale' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSize
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FollowMapHud_C_SetContentSize final
-{
-public:
-	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetContentSize) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentSize");
-static_assert(sizeof(WBP_FollowMapHud_C_SetContentSize) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetContentSize");
-static_assert(offsetof(WBP_FollowMapHud_C_SetContentSize, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentSize::Size' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSizeInternal
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_FollowMapHud_C_SetContentSizeInternal final
-{
-public:
-	struct FVector2D                              Size;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetContentSizeInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetContentSizeInternal");
-static_assert(sizeof(WBP_FollowMapHud_C_SetContentSizeInternal) == 0x000018, "Wrong size on WBP_FollowMapHud_C_SetContentSizeInternal");
-static_assert(offsetof(WBP_FollowMapHud_C_SetContentSizeInternal, Size) == 0x000000, "Member 'WBP_FollowMapHud_C_SetContentSizeInternal::Size' has a wrong offset!");
-static_assert(offsetof(WBP_FollowMapHud_C_SetContentSizeInternal, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000010, "Member 'WBP_FollowMapHud_C_SetContentSizeInternal::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetMoveContentPosition
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_FollowMapHud_C_SetMoveContentPosition final
-{
-public:
-	struct FVector2D                              Pos;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetMoveContentPosition) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetMoveContentPosition");
-static_assert(sizeof(WBP_FollowMapHud_C_SetMoveContentPosition) == 0x000010, "Wrong size on WBP_FollowMapHud_C_SetMoveContentPosition");
-static_assert(offsetof(WBP_FollowMapHud_C_SetMoveContentPosition, Pos) == 0x000000, "Member 'WBP_FollowMapHud_C_SetMoveContentPosition::Pos' has a wrong offset!");
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetMoveContentPositionInternal
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_FollowMapHud_C_SetMoveContentPositionInternal final
-{
-public:
-	struct FVector2D                              Pos;                                               // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanelSlot*                       CallFunc_SlotAsCanvasSlot_ReturnValue;             // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_FollowMapHud_C_SetMoveContentPositionInternal) == 0x000008, "Wrong alignment on WBP_FollowMapHud_C_SetMoveContentPositionInternal");
-static_assert(sizeof(WBP_FollowMapHud_C_SetMoveContentPositionInternal) == 0x000018, "Wrong size on WBP_FollowMapHud_C_SetMoveContentPositionInternal");
-static_assert(offsetof(WBP_FollowMapHud_C_SetMoveContentPositionInternal, Pos) == 0x000000, "Member 'WBP_FollowMapHud_C_SetMoveContentPositionInternal::Pos' has a wrong offset!");
-static_assert(offsetof(WBP_FollowMapHud_C_SetMoveContentPositionInternal, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000010, "Member 'WBP_FollowMapHud_C_SetMoveContentPositionInternal::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
 
 }
 

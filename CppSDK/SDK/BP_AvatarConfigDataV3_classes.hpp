@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PartClothMeshInfo_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "PartClothMeshInfo_structs.hpp"
 #include "ENPC_BodyType_structs.hpp"
 #include "Engine_classes.hpp"
 

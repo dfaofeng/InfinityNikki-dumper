@@ -21,9 +21,9 @@ namespace SDK
 class IBPI_AnimalTickManagement_C final : public IInterface
 {
 public:
-	void ShouldRejectTickManagement(bool* bReject);
-	void SetAnimalTickEnabled(bool bEnabled, bool* bSuccess);
 	void GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager);
+	void SetAnimalTickEnabled(bool bEnabled, bool* bSuccess);
+	void ShouldRejectTickManagement(bool* bReject);
 
 public:
 	static class UClass* StaticClass()

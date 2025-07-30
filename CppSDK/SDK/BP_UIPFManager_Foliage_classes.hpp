@@ -31,10 +31,10 @@ public:
 	bool                                          bPlatformSupported;                                // 0x0629(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_UIPFManager_Foliage(int32 EntryPoint);
-	void OnCur_RT_Loaded(class UObject* Loaded);
-	void OnPre_RT_Loaded(class UObject* Loaded);
 	void ReceiveBeginPlay();
+	void OnPre_RT_Loaded(class UObject* Loaded);
+	void OnCur_RT_Loaded(class UObject* Loaded);
+	void ExecuteUbergraph_BP_UIPFManager_Foliage(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_CompsDataAsset_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "BP_CompsDataAsset_classes.hpp"
 
 
 namespace SDK

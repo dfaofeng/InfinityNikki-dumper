@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_UIWS_Manager_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_UIWS_Manager_classes.hpp"
 
 
 namespace SDK
@@ -33,23 +33,23 @@ public:
 	TSoftObjectPtr<class UObject>                 NormalRT;                                          // 0x0500(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 
 public:
-	void ExchangeHeight1(class UObject* Loaded);
-	void ExchangeNormal(class UObject* Loaded);
-	void ExecuteUbergraph_BP_UIWS_Manager_Impl(int32 EntryPoint);
-	void GetPlayerPos(struct FVector* PlayerPos);
-	void GetPlayerPos_LastFrame(struct FVector* PlayerPos);
-	void InitMat();
-	void InitRT();
-	void LoadCopyMat(class UObject* Loaded);
-	void LoadHeight1(class UObject* Loaded);
-	void LoadLowQualityNormalRTForHighQuality(class UObject* Loaded);
-	void LoadNormal(class UObject* Loaded);
-	void LoadNormalMat(class UObject* Loaded);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void SetInteractivity(bool NewValue);
-	void Use_High_Quality_Render_Target(bool NewValue);
 	void Use2ChannelHeightMap(bool NewValue);
+	void Use_High_Quality_Render_Target(bool NewValue);
+	void SetInteractivity(bool NewValue);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void LoadNormalMat(class UObject* Loaded);
+	void LoadNormal(class UObject* Loaded);
+	void LoadLowQualityNormalRTForHighQuality(class UObject* Loaded);
+	void LoadHeight1(class UObject* Loaded);
+	void LoadCopyMat(class UObject* Loaded);
+	void InitRT();
+	void InitMat();
+	void GetPlayerPos_LastFrame(struct FVector* PlayerPos);
+	void GetPlayerPos(struct FVector* PlayerPos);
+	void ExecuteUbergraph_BP_UIWS_Manager_Impl(int32 EntryPoint);
+	void ExchangeNormal(class UObject* Loaded);
+	void ExchangeHeight1(class UObject* Loaded);
 
 public:
 	static class UClass* StaticClass()

@@ -10,10 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "EShepherdessAnimState_structs.hpp"
 #include "Engine_structs.hpp"
-#include "X6Game_classes.hpp"
+#include "E_InteractiveStageEnum_structs.hpp"
+#include "ETirpleStateObject_StateEnum_structs.hpp"
+#include "Enum_InteractiveProcessType_structs.hpp"
+#include "EShepherdessAnimState_structs.hpp"
 #include "EPowerFrogStage_structs.hpp"
+#include "X6Game_classes.hpp"
 #include "EAthenaShowState_structs.hpp"
 #include "ECastPhantomStage_structs.hpp"
 #include "ECastGuardStage_structs.hpp"
@@ -26,7 +29,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C
-// 0x0058 (0x0100 - 0x00A8)
+// 0x0078 (0x0120 - 0x00A8)
 class UBP_MainCharacterRPCHelperComponent_C : public UX6ActorComponent
 {
 public:
@@ -44,7 +47,15 @@ public:
 	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<int32>                                 BP_SeamlessCaveLoadedMap;                          // 0x00E8(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify)
 	bool                                          BP_bSeamlessCaveLowQuality;                        // 0x00F8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bIsCopyMapReady;                                // 0x00F9(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bIsCopyMapReady;                                // 0x00F9(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	E_InteractiveStageEnum                        BP_InteractiveStage;                               // 0x00FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_InteractiveProcessType                   BP_InteractiveProcessType;                         // 0x00FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         BP_InteractObjEntityID;                            // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsInterProcessing_;                             // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	int64                                         BP_InteractObj_cfgID;                              // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         BP_InteractCharacterEntityID;                      // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID);
@@ -60,7 +71,7 @@ public:
 	void BP_OnMulticast_AbilitySpawnActor(EAbilityMultiPlayerHelperType NewParam5, const class FString& NewParam, const struct FTransform& NewParam1, const class FString& NewParam2);
 	void BP_OnMulticast_AbilitySpawnNS(EAbilityMultiPlayerHelperType NewParam5, const class FString& NewParam, const struct FTransform& NewParam1, const class FString& NewParam2, bool NewParam3, bool NewParam4);
 	void BP_OnMulticast_AdjustTransform(const struct FF_AdjustTransformRPCParam& AdjustParam);
-	void BP_OnMulticast_AfkIdle(bool inAfk, bool bImmediatelyStop);
+	void BP_OnMulticast_AfkIdle(bool inAfk);
 	void BP_OnMulticast_AthenaAbilityBegin(const class FString& ABPPath, const class FString& SeatAniPath, const struct FVector& SeatOffset, const struct FVector& SeatRotation);
 	void BP_OnMulticast_AthenaAbilityEnd();
 	void BP_OnMulticast_AthenaSwitchAnimStage(EAthenaShowState AniStage);
@@ -80,6 +91,10 @@ public:
 	void BP_OnMulticast_Buff(int64 EntityID, const class FString& BuffDAPath, bool bRemove);
 	void BP_OnMulticast_Bullet(const class FString& BulletDAPath, const struct FF_MulticastTriggerContext& BP_TriggerContext);
 	void BP_OnMulticast_CatchInsectSuccess(int64 InsectEntityID);
+	void BP_OnMulticast_CatEnd();
+	void BP_OnMulticast_CatPerformanceEnd();
+	void BP_OnMulticast_CatPositionSplineTargets(TArray<int32>& TargetIDs, TArray<struct FVector>& Locations, TArray<struct FRotator>& Rotations);
+	void BP_OnMulticast_CatStart();
 	void BP_OnMulticast_CelebrationGuardBegin(const class FString& NewParam);
 	void BP_OnMulticast_CelebrationGuardEnd();
 	void BP_OnMulticast_CelebrationGuardSwitchAnimStage(ECastGuardStage NewParam, bool NewParam1, bool NewParam2);
@@ -97,6 +112,8 @@ public:
 	void BP_OnMulticast_CrownDeerEndAnim();
 	void BP_OnMulticast_DamiaoPerformStart(const class FString& NewParam, const struct FVector& NewParam1, const struct FRotator& NewParam2, TArray<int32>& NewParam3);
 	void BP_OnMulticast_DamiaoPerformStop();
+	void BP_OnMulticast_DanQingBullet(int64 TargetEntityID, const class FString& SocketName, const struct FRotator& SpawnRotator, const struct FVector& OffsetLocation, double BulletDistance, const class FString& CompName);
+	void BP_OnMulticast_DanQingBulletHitItem(const struct FVector& HitPosition, int64 EntityID, const class FString& HitCompName);
 	void BP_OnMulticast_DayDreamBegin(int32 NewParam);
 	void BP_OnMulticast_DayDreamDestroyCloud();
 	void BP_OnMulticast_DayDreamEnd();
@@ -115,6 +132,7 @@ public:
 	void BP_OnMulticast_EndFishing(int64 FishEntityID);
 	void BP_OnMulticast_EndMusicBoxHypnosisAnimal();
 	void BP_OnMulticast_EnterFishingProcess(int64 FishEntityID);
+	void BP_OnMulticast_EnterGobangGame();
 	void BP_OnMulticast_EnterInstrument(Enum_InstrumentType NewParam);
 	void BP_OnMulticast_EquipWeaponByConfigPath(const class FString& WeaponConfigPath, const class FString& SlotType, bool bImmediateRequest, bool bInSync);
 	void BP_OnMulticast_EquipWeaponByID(int32 WeaponID, const class FString& SlotType, bool bImmediateRequest, bool bInSync, const struct FGameplayTag& CustomWeaponState);
@@ -124,6 +142,14 @@ public:
 	void BP_OnMulticast_FrozenPathAbility_DeInit();
 	void BP_OnMulticast_FrozenPathAbility_Init();
 	void BP_OnMulticast_GlowInsectNet(bool bGlow);
+	void BP_OnMulticast_GobangConfirmSelect();
+	void BP_OnMulticast_GobangExchange();
+	void BP_OnMulticast_GobangExit();
+	void BP_OnMulticast_GobangGameStart();
+	void BP_OnMulticast_GobangRestartReply(bool bCanRestart);
+	void BP_OnMulticast_GobangRestartRequest();
+	void BP_OnMulticast_GobangSelect(int32 Row, int32 Column);
+	void BP_OnMulticast_GobangSetTurn(int32 PlayerTurn);
 	void BP_OnMulticast_ImaginationFireworkBegin(const class FString& NewParam, const class FString& NewParam1, const struct FVector& NewParam2, const struct FRotator& NewParam3, const class FString& NewParam4);
 	void BP_OnMulticast_ImaginationFireworkEnd();
 	void BP_OnMulticast_ImaginationFireworkSwitchStage(EImaginationFireworkAnimState NewParam, bool NewParam1, bool NewParam2);
@@ -133,6 +159,7 @@ public:
 	void BP_OnMulticast_InstrumentDestroyNS(const class FString& NewParam);
 	void BP_OnMulticast_InstrumentSpawnActor(const class FString& ActorClassPath, const struct FTransform& Transform, const class FString& Handle);
 	void BP_OnMulticast_InstrumentSpawnNS(const class FString& NewParam, const struct FTransform& NewParam1, const class FString& NewParam2, bool NewParam3, bool NewParam4);
+	void BP_OnMultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 InteractObjEntityID, int64 InteractObj_cfgID, int64 InteractCharacterEntityID);
 	void BP_OnMulticast_MagicBanquetBegin();
 	void BP_OnMulticast_MagicBanquetDestroyTable();
 	void BP_OnMulticast_MagicBanquetEnd();
@@ -171,7 +198,7 @@ public:
 	void BP_OnMulticast_MusicBoxUpdateBaseRing(bool bVisible, int32 Level);
 	void BP_OnMulticast_NetSyncGlide(int32 GlideState);
 	void BP_OnMulticast_NetSyncWeapon(int64 RoleId, int32 WeaponID, const class FString& SlotType, int32 OverlayState, const class FString& CustomState);
-	void BP_OnMulticast_NotifyClothesChanged(TArray<int32>& inDressup, TArray<int32>& inUndress, int32 inChangeType, bool inNeedCover, int32 inAbilityEffectID);
+	void BP_OnMulticast_NotifyClothesChanged(TArray<int32>& inDressup, TArray<int32>& inUndress, int32 inChangeType, bool inNeedCover, int32 inAbilityEffectID, TArray<int32>& inPatternClothes, TArray<int32>& inPatternTypes);
 	void BP_OnMulticast_NotifyDaMiaoTransformToNikki();
 	void BP_OnMulticast_NotifyNikkiTransformToDaMiao();
 	void BP_OnMulticast_NotifySuitConfigChanged(int32 SuitId);
@@ -201,11 +228,18 @@ public:
 	void BP_OnMulticast_PowerFrogSwitchStage(EPowerFrogStage NewParam);
 	void BP_OnMulticast_PreExitInstrument();
 	void BP_OnMulticast_PressSyllable(Enum_InstrumentType InstrumentType, int32 Octace);
+	void BP_OnMulticast_PrincessKickEnd(const struct FVector& Location, const struct FVector& Velocity);
 	void BP_OnMulticast_QuickRelive(const struct FTransform& ReliveTransfom);
 	void BP_OnMulticast_QuitRibbonFish();
+	void BP_OnMulticast_RabbitMonsterBegin(const class FString& ABPPath, TArray<struct FFallbackStruct>& inNSGroup, TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, TArray<struct FFallbackStruct>& inNSGroupEnd, TArray<struct FFallbackStruct>& inTreeGroup);
+	void BP_OnMulticast_RabbitMonsterEnd();
+	void BP_OnMulticast_RabbitMonsterSpawnNS();
+	void BP_OnMulticast_RabbitMonsterSwitchStage(ETirpleStateObject_StateEnum Stage);
+	void BP_OnMulticast_RainSwordsPrepareExit();
 	void BP_OnMulticast_ReleaseSyllable(Enum_InstrumentType InstrumentType, int32 Octace);
-	void BP_OnMulticast_RemoveGC();
+	void BP_OnMulticast_RemoveGC(const struct FGameplayTag& CueTag);
 	void BP_OnMulticast_RemoveSlotWeapon(const class FString& SlotType, bool bImmediateRequest, bool bInSync);
+	void BP_OnMulticast_RequestRaftDash(int64 RaftSpawnerID);
 	void BP_OnMulticast_RequestStartGesture(const class FString& ActivePerformanceGestureTagName, bool bFullBodyGesture, bool bTrimGesture, double TrimStartTimeForGesture, double TrimEndTimeForGesture, bool bExpectedAdditive);
 	void BP_OnMulticast_RequestStartPerformance(const class FString& StanceTag, bool bAllowFlag, bool bNeedFireEvent, bool bFastTransition, bool bSkipTransition, bool bFullBodyStance);
 	void BP_OnMulticast_RequestStopGesture();
@@ -229,6 +263,7 @@ public:
 	void BP_OnMulticast_SirenEnd();
 	void BP_OnMulticast_SitOnInteractiveChair(int32 ParamType, bool bSit, bool bIsAttached, const class FString& ChairIdentifier, const class FString& ParentCompName, const struct FTransform& RelativeTransform);
 	void BP_OnMulticast_SkinChange();
+	void BP_OnMulticast_SpawnPictureScroll(int32 Index_0, const struct FVector& WorldLocation, const struct FRotator& WorldRotation);
 	void BP_OnMulticast_StartBlowBubble();
 	void BP_OnMulticast_StopAdjustTransform();
 	void BP_OnMulticast_StopAnimLocomotionState();
@@ -262,7 +297,7 @@ public:
 	void Multicast_AbilitySpawnActor(EAbilityMultiPlayerHelperType HelperType, const class FString& AssetPath, const struct FTransform& Transform, const class FString& Handle);
 	void Multicast_AbilitySpawnNS(EAbilityMultiPlayerHelperType HelperType, const class FString& AssetPath, const struct FTransform& Transform, const class FString& Handle, bool bAutoDestroy, bool bAutoActive);
 	void Multicast_AdjustTransform(const struct FF_AdjustTransformRPCParam& AdjustParam);
-	void Multicast_AfkIdle(bool inAfk, bool bImmediatelyStop);
+	void Multicast_AfkIdle(bool inAfk);
 	void Multicast_AthenaAbilityBegin(const class FString& ABPPath, const class FString& SeatAniPath, const struct FVector& SeatOffset, const struct FVector& SeatRotation);
 	void Multicast_AthenaAbilityEnd();
 	void Multicast_AthenaSwitchAnimStage(EAthenaShowState AnimStage);
@@ -281,6 +316,10 @@ public:
 	void Multicast_Buff(int64 EntityID, const class FString& BuffDAPath, bool bRemove);
 	void Multicast_Bullet(const class FString& BulletDAPath, const struct FF_MulticastTriggerContext& BP_TriggerContext);
 	void Multicast_CatchInsectSuccess(int64 InsectEntityID);
+	void Multicast_CatEnd();
+	void Multicast_CatPerformanceEnd();
+	void Multicast_CatPositionSplineTargets(const TArray<int32>& TargetIDs, const TArray<struct FVector>& Locations, const TArray<struct FRotator>& Rotations);
+	void Multicast_CatStart();
 	void Multicast_CelebrationGuardBegin(const class FString& ABPPath);
 	void Multicast_CelebrationGuardEnd();
 	void Multicast_CelebrationGuardSwitchAnimStage(ECastGuardStage AnimStage, bool bMoveState, bool RandomBool);
@@ -297,6 +336,8 @@ public:
 	void Multicast_CrownDeerEndAnim();
 	void Multicast_DamiaoPerformStart(const class FString& ActorClassPath, const struct FVector& Location, const struct FRotator& Rotation, const TArray<int32>& CloakID);
 	void Multicast_DamiaoPerformStop();
+	void Multicast_DanQingBullet(int64 TargetEntityID, const class FString& SocketName, const struct FRotator& SpawnRotator, const struct FVector& OffsetLocation, double BulletDistance, const class FString& CompName);
+	void Multicast_DanQingBulletHitItem(const struct FVector& HitPosition, int64 EntityID, const class FString& HitCompName);
 	void Multicast_DayDreamBegin(int32 NewParam);
 	void Multicast_DayDreamDestroyCloud();
 	void Multicast_DayDreamEnd();
@@ -320,7 +361,7 @@ public:
 	void Multicast_FishShadow();
 	void Multicast_FrozenPathAbility_DeInit();
 	void Multicast_FrozenPathAbility_Init();
-	void Multicast_GameplayCue();
+	void Multicast_GameplayCue(const struct FGameplayTag& CueTag);
 	void Multicast_GlowInsectNet(bool bGlow);
 	void Multicast_ImaginationFireworkBegin(const class FString& ABPAssetPath, const class FString& NSTailPath, const struct FVector& TailLocation, const struct FRotator& TailRotation, const class FString& NSHandheldPath);
 	void Multicast_ImaginationFireworkEnd();
@@ -330,6 +371,7 @@ public:
 	void Multicast_InstrumentDestroyNS(const class FString& Handle);
 	void Multicast_InstrumentSpawnActor(const class FString& ActorClassPath, const struct FTransform& Transform, const class FString& Handle);
 	void Multicast_InstrumentSpawnNS(const class FString& NSPath, const struct FTransform& Transform, const class FString& Handle, bool bAutoDestroy, bool bAutoActive);
+	void MultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjEntityID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID);
 	void Multicast_MagicBanquetBegin();
 	void Multicast_MagicBanquetDetroyTable();
 	void Multicast_MagicBanquetEnd();
@@ -340,6 +382,15 @@ public:
 	void Multicast_MidnightPromDestroyGhost();
 	void Multicast_MidnightPromShowGhost(const class FString& AssetPath, const struct FVector& RelativeLocation, double DissolveTime);
 	void Multicast_MultiCallVehicleFunction(int64 VehicleEntityId, int64 FuncId);
+	void Multicast_MultiEnterGobangGame();
+	void Multicast_MultiGobangConfirmSelect();
+	void Multicast_MultiGobangExchange();
+	void Multicast_MultiGobangExit();
+	void Multicast_MultiGobangGameStart();
+	void Multicast_MultiGobangRestartReply(bool bCanRestart);
+	void Multicast_MultiGobangRestartRequest();
+	void Multicast_MultiGobangSelect(int32 Row, int32 Column);
+	void Multicast_MultiGobangSetTurn(int32 PlayerTurn);
 	void Multicast_MultiPassengerBindEntity(int64 VehicleEntityId, int64 PassenegerID);
 	void Multicast_MultiPhotographConfirmInvite(int64 FromRoleID, bool BAccept);
 	void Multicast_MultiPhotographConfirmTransfer(bool BAccept, int64 PlyaerRoleID);
@@ -370,7 +421,7 @@ public:
 	void Multicast_NetSyncGlide(int32 GlideState);
 	void Multicast_NetSyncWeapon(int64 RoleId, int32 WeaponID, const class FString& SlotType, int32 OverlayState, const class FString& CustomState);
 	void Multicast_NikkiUpdateOverlayData(int32 PawnAnimState, int32 UpdatedState, bool bAdded);
-	void Multicast_NotifyClothesChanged(const TArray<int32>& inDressup, TArray<int32>& inUndress, int32 inChangeType, bool inNeedCover, int32 inAbilityEffectID);
+	void Multicast_NotifyClothesChanged(const TArray<int32>& inDressup, TArray<int32>& inUndress, int32 inChangeType, bool inNeedCover, int32 inAbilityEffectID, const TArray<int32>& inPatternClothes, const TArray<int32>& inPatternTypes);
 	void Multicast_NotifyDaMiaoTransformToNikki();
 	void Multicast_NotifyNikkiTransformToDaMiao();
 	void Multicast_NotifySuitConfigChanged(int32 SuitId);
@@ -400,10 +451,17 @@ public:
 	void Multicast_PowerFrogSwitchStage(EPowerFrogStage Stage);
 	void Multicast_PreExitInstrument();
 	void Multicast_PressSyllable(Enum_InstrumentType InstrumentType, int32 Octace);
+	void Multicast_PrincessKickEnd(const struct FVector& Location, const struct FVector& Velocity);
 	void Multicast_QuickRelive(const struct FTransform& ReliveTransform);
 	void Multicast_QuitRibbonFish();
+	void Multicast_RabbitMonsterBegin(const class FString& ABPPath, const TArray<struct FFallbackStruct>& inNSGroup, const TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, const TArray<struct FFallbackStruct>& inNSGroupEnd, TArray<struct FFallbackStruct>& inTreeGroup);
+	void Multicast_RabbitMonsterEnd();
+	void Multicast_RabbitMonsterSpawnNS();
+	void Multicast_RabbitMonsterSwitchStage(ETirpleStateObject_StateEnum Stage);
+	void Multicast_RainSwordsPrepareExit();
 	void Multicast_ReleaseSyllable(Enum_InstrumentType InstrumentType, int32 Octace);
 	void Multicast_RemoveSlotWeapon(const class FString& SlotType, bool bImmediateRequest, bool bInSync);
+	void Multicast_RequestRaftDash(int64 SpawnerID);
 	void Multicast_RequestStartGesture(const class FString& ActivePerformanceGestureTagName, bool bFullBodyGesture, bool bTrimGesture, double TrimStartTimeForGesture, double TrimEndTimeForGesture, bool bExpectedAdditive);
 	void Multicast_RequestStartPerformance(const class FString& StanceTag, bool bAllowFlag, bool bNeedFireEvent, bool bFastTransition, bool bSkipTransition, bool bFullBodyStance);
 	void Multicast_RequestStopGesture();
@@ -426,8 +484,9 @@ public:
 	void Multicast_SirenBegin();
 	void Multicast_SirenEnd();
 	void Multicast_SitOnBubbleCableCar(int64 EntityID, int64 playerEntityID, int32 Action, int64 extraInfo, int64 extraInfo2);
-	void Multicast_SitOnInteractiveChair(int32 ParamType, bool bSit, bool bIsAttached, const class FString& ChairIdentifier, const class FString& ParentCompName, const struct FTransform& RelativeTransfrom);
+	void Multicast_SitOnInteractiveChair(int32 ParamType, bool bSit, bool bIsAttached, const class FString& ChairIdentifier, const class FString& ParentCompName, const struct FTransform& RelativeTransform);
 	void Multicast_SkinChange();
+	void Multicast_SpawnPictureScroll(int32 Index_0, const struct FVector& WorldLocation, const struct FRotator& WorldRotation);
 	void Multicast_StartBlowBubble();
 	void Multicast_StopAdjustTransform();
 	void Multicast_StopBlowBubble(bool bImmediately);
@@ -471,7 +530,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_MainCharacterRPCHelperComponent_C) == 0x000008, "Wrong alignment on UBP_MainCharacterRPCHelperComponent_C");
-static_assert(sizeof(UBP_MainCharacterRPCHelperComponent_C) == 0x000100, "Wrong size on UBP_MainCharacterRPCHelperComponent_C");
+static_assert(sizeof(UBP_MainCharacterRPCHelperComponent_C) == 0x000120, "Wrong size on UBP_MainCharacterRPCHelperComponent_C");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_MainCharacterRPCHelperComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_bIsControllingDaMiao) == 0x0000B0, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_bIsControllingDaMiao' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_PlaneIndex) == 0x0000B8, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_PlaneIndex' has a wrong offset!");
@@ -483,6 +542,12 @@ static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_bIsInMusicBoxCl
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_SeamlessCaveLoadedMap) == 0x0000E8, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_SeamlessCaveLoadedMap' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_bSeamlessCaveLowQuality) == 0x0000F8, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_bSeamlessCaveLowQuality' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_bIsCopyMapReady) == 0x0000F9, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_bIsCopyMapReady' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractiveStage) == 0x0000FA, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractiveStage' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractiveProcessType) == 0x0000FB, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractiveProcessType' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractObjEntityID) == 0x000100, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractObjEntityID' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_IsInterProcessing_) == 0x000108, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_IsInterProcessing_' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractObj_cfgID) == 0x000110, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractObj_cfgID' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractCharacterEntityID) == 0x000118, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractCharacterEntityID' has a wrong offset!");
 
 }
 

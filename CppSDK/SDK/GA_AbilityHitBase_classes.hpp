@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EHitActionType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GA_AbilityMontageBase_classes.hpp"
+#include "EHitActionType_structs.hpp"
 
 
 namespace SDK
@@ -26,10 +26,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_AbilityHitBase_C;                // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BP_GetHitActionType(EHitActionType* actionType);
-	void BP_GetHitPoint(struct FVector* Point);
-	void ExecuteUbergraph_GA_AbilityHitBase(int32 EntryPoint);
 	void K2_ActivateAbility();
+	void ExecuteUbergraph_GA_AbilityHitBase(int32 EntryPoint);
+	void BP_GetHitPoint(struct FVector* Point);
+	void BP_GetHitActionType(EHitActionType* actionType);
 
 	class FString GetModuleName() const;
 

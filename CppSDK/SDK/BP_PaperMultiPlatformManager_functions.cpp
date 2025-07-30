@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.OnConnectedControllersChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.BP_OnConnectedControllersChange
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PaperMultiPlatformManager_C::OnConnectedControllersChange()
+void UBP_PaperMultiPlatformManager_C::BP_OnConnectedControllersChange(int32 NewParam)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PaperMultiPlatformManager_C", "OnConnectedControllersChange");
+		Func = Class->GetFunction("BP_PaperMultiPlatformManager_C", "BP_OnConnectedControllersChange");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange Parms{};
+
+	Parms.NewParam = NewParam;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void UBP_PaperMultiPlatformManager_C::ExecuteUbergraph_BP_PaperMultiPlatformMana
 }
 
 
-// Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.BP_OnConnectedControllersChange
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.OnConnectedControllersChange
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_PaperMultiPlatformManager_C::BP_OnConnectedControllersChange(int32 NewParam)
+void UBP_PaperMultiPlatformManager_C::OnConnectedControllersChange()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PaperMultiPlatformManager_C", "BP_OnConnectedControllersChange");
+		Func = Class->GetFunction("BP_PaperMultiPlatformManager_C", "OnConnectedControllersChange");
 
-	Params::BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange Parms{};
-
-	Parms.NewParam = NewParam;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

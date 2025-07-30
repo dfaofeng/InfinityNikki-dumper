@@ -25,12 +25,12 @@ public:
 	TArray<struct FFBlendOutCondition>            BlendOutSetting;                                   // 0x0030(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void AddJumpData(double Duration) const;
-	void AddMoveData(double Duration) const;
-	void CancelAbility(class ACharacter* InCharacter, class UAnimMontage* InMontage, bool* Ret) const;
-	class FString GetNotifyName() const;
-	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
 	void StopMontage(class ACharacter* InCharacter, class UAnimInstance* InAnimInstance, double InBlendOutTime, class UAnimMontage* InMontage) const;
+	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
+	class FString GetNotifyName() const;
+	void CancelAbility(class ACharacter* InCharacter, class UAnimMontage* InMontage, bool* Ret) const;
+	void AddMoveData(double Duration) const;
+	void AddJumpData(double Duration) const;
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GA_AbilityTargetingPreset_classes.hpp"
 #include "Engine_structs.hpp"
+#include "GA_AbilityTargetingPreset_classes.hpp"
 
 
 namespace SDK
@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_AbilityTargetingPreset_Stun_C;   // 0x0570(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_GA_AbilityTargetingPreset_Stun(int32 EntryPoint);
 	void K2_ActivateAbility();
+	void ExecuteUbergraph_GA_AbilityTargetingPreset_Stun(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -26,18 +26,18 @@ public:
 	int32                                         MeshType;                                          // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void DisableOverlap();
-	void EnableOverlap();
-	void ExecuteUbergraph_BP_AreaVolume(int32 EntryPoint);
-	void OnOverlapBegin(class AActor* Actor);
-	void OnOverlapEnd(class AActor* Actor);
-	void ReceiveActorBeginOverlap(class AActor* OtherActor);
-	void ReceiveActorEndOverlap(class AActor* OtherActor);
-	void ReceiveBeginPlay();
-	void ReceiveDestroyed();
-	void SetMeshType(int32 MeshType_0);
-	void SetTransform(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale);
 	void ShowVolume(bool CanShow);
+	void SetTransform(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale);
+	void SetMeshType(int32 MeshType_0);
+	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
+	void ReceiveActorEndOverlap(class AActor* OtherActor);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void OnOverlapEnd(class AActor* Actor);
+	void OnOverlapBegin(class AActor* Actor);
+	void ExecuteUbergraph_BP_AreaVolume(int32 EntryPoint);
+	void EnableOverlap();
+	void DisableOverlap();
 
 	class FString GetModuleName() const;
 

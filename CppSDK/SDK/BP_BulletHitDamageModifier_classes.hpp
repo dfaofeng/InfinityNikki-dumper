@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BulletHitDamageModifier.BP_BulletHitDamageModifier_C
-// 0x0040 (0x0118 - 0x00D8)
+// 0x0048 (0x0120 - 0x00D8)
 class UBP_BulletHitDamageModifier_C final : public UX6BulletHitDamageModifier
 {
 public:
@@ -31,15 +31,17 @@ public:
 	TArray<EFightCamp>                            TargetFilterCamp;                                  // 0x00F0(0x0010)(Edit, BlueprintVisible)
 	TArray<ECharacterType>                        TargetFilterType;                                  // 0x0100(0x0010)(Edit, BlueprintVisible)
 	double                                        DelayEffectiveTime;                                // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bPenetrateShieldOnly;                              // 0x0118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bRecoverySkipDamiao;                               // 0x0119(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanShapeTrace();
 
-	class FString GetModuleName() const;
-	void K2_Destroy() const;
-	void K2_Init() const;
-	void K2_OnAsyncLoadComplete() const;
 	void K2_ProcessHitResults(const struct FVector& StartLocation, const struct FVector& EndLocation, const TArray<struct FHitResult>& HitResults) const;
+	void K2_OnAsyncLoadComplete() const;
+	void K2_Init() const;
+	void K2_Destroy() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()
@@ -52,13 +54,15 @@ public:
 	}
 };
 static_assert(alignof(UBP_BulletHitDamageModifier_C) == 0x000008, "Wrong alignment on UBP_BulletHitDamageModifier_C");
-static_assert(sizeof(UBP_BulletHitDamageModifier_C) == 0x000118, "Wrong size on UBP_BulletHitDamageModifier_C");
+static_assert(sizeof(UBP_BulletHitDamageModifier_C) == 0x000120, "Wrong size on UBP_BulletHitDamageModifier_C");
 static_assert(offsetof(UBP_BulletHitDamageModifier_C, HitShape) == 0x0000D8, "Member 'UBP_BulletHitDamageModifier_C::HitShape' has a wrong offset!");
 static_assert(offsetof(UBP_BulletHitDamageModifier_C, DamageDataAsset) == 0x0000E0, "Member 'UBP_BulletHitDamageModifier_C::DamageDataAsset' has a wrong offset!");
 static_assert(offsetof(UBP_BulletHitDamageModifier_C, BulletCollisionType) == 0x0000E8, "Member 'UBP_BulletHitDamageModifier_C::BulletCollisionType' has a wrong offset!");
 static_assert(offsetof(UBP_BulletHitDamageModifier_C, TargetFilterCamp) == 0x0000F0, "Member 'UBP_BulletHitDamageModifier_C::TargetFilterCamp' has a wrong offset!");
 static_assert(offsetof(UBP_BulletHitDamageModifier_C, TargetFilterType) == 0x000100, "Member 'UBP_BulletHitDamageModifier_C::TargetFilterType' has a wrong offset!");
 static_assert(offsetof(UBP_BulletHitDamageModifier_C, DelayEffectiveTime) == 0x000110, "Member 'UBP_BulletHitDamageModifier_C::DelayEffectiveTime' has a wrong offset!");
+static_assert(offsetof(UBP_BulletHitDamageModifier_C, bPenetrateShieldOnly) == 0x000118, "Member 'UBP_BulletHitDamageModifier_C::bPenetrateShieldOnly' has a wrong offset!");
+static_assert(offsetof(UBP_BulletHitDamageModifier_C, bRecoverySkipDamiao) == 0x000119, "Member 'UBP_BulletHitDamageModifier_C::bRecoverySkipDamiao' has a wrong offset!");
 
 }
 

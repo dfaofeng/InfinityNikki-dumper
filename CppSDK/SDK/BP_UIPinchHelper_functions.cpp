@@ -17,126 +17,47 @@
 namespace SDK
 {
 
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.CalculateDistance
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.ShouldBanPointer
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// double*                                 Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PointerIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   shouldBan                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_UIPinchHelper_C::CalculateDistance(double* Distance)
+void UBP_UIPinchHelper_C::ShouldBanPointer(int32 PointerIndex, bool* shouldBan)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "CalculateDistance");
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "ShouldBanPointer");
 
-	Params::BP_UIPinchHelper_C_CalculateDistance Parms{};
+	Params::BP_UIPinchHelper_C_ShouldBanPointer Parms{};
+
+	Parms.PointerIndex = PointerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (Distance != nullptr)
-		*Distance = Parms.Distance;
+	if (shouldBan != nullptr)
+		*shouldBan = Parms.shouldBan;
 }
 
 
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HandleMouseMove
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.SetBanMouse
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                                    bBanMouse                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_UIPinchHelper_C::HandleMouseMove(const struct FPointerEvent& MouseEvent)
+void UBP_UIPinchHelper_C::SetBanMouse(bool bBanMouse)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "HandleMouseMove");
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "SetBanMouse");
 
-	Params::BP_UIPinchHelper_C_HandleMouseMove Parms{};
+	Params::BP_UIPinchHelper_C_SetBanMouse Parms{};
 
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HandleMousePress
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UBP_UIPinchHelper_C::HandleMousePress(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "HandleMousePress");
-
-	Params::BP_UIPinchHelper_C_HandleMousePress Parms{};
-
-	Parms.MouseEvent = std::move(MouseEvent);
+	Parms.bBanMouse = bBanMouse;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HandleMouseRelease
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UBP_UIPinchHelper_C::HandleMouseRelease(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "HandleMouseRelease");
-
-	Params::BP_UIPinchHelper_C_HandleMouseRelease Parms{};
-
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HasOnePointerPressed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   bHas                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_UIPinchHelper_C::HasOnePointerPressed(bool* bHas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "HasOnePointerPressed");
-
-	Params::BP_UIPinchHelper_C_HasOnePointerPressed Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bHas != nullptr)
-		*bHas = Parms.bHas;
-}
-
-
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HasTwoPointerPressed
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   bHas                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_UIPinchHelper_C::HasTwoPointerPressed(bool* bHas)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "HasTwoPointerPressed");
-
-	Params::BP_UIPinchHelper_C_HasTwoPointerPressed Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bHas != nullptr)
-		*bHas = Parms.bHas;
 }
 
 
@@ -164,47 +85,126 @@ void UBP_UIPinchHelper_C::IsPointerIndexInArray(int32 PointerIndex, bool* bConta
 }
 
 
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.SetBanMouse
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HasTwoPointerPressed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                                    bBanMouse                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bHas                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_UIPinchHelper_C::SetBanMouse(bool bBanMouse)
+void UBP_UIPinchHelper_C::HasTwoPointerPressed(bool* bHas)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "SetBanMouse");
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "HasTwoPointerPressed");
 
-	Params::BP_UIPinchHelper_C_SetBanMouse Parms{};
+	Params::BP_UIPinchHelper_C_HasTwoPointerPressed Parms{};
 
-	Parms.bBanMouse = bBanMouse;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bHas != nullptr)
+		*bHas = Parms.bHas;
+}
+
+
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HasOnePointerPressed
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   bHas                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_UIPinchHelper_C::HasOnePointerPressed(bool* bHas)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "HasOnePointerPressed");
+
+	Params::BP_UIPinchHelper_C_HasOnePointerPressed Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bHas != nullptr)
+		*bHas = Parms.bHas;
+}
+
+
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HandleMouseRelease
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             MouseEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_UIPinchHelper_C::HandleMouseRelease(const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "HandleMouseRelease");
+
+	Params::BP_UIPinchHelper_C_HandleMouseRelease Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_UIPinchHelper.BP_UIPinchHelper_C.ShouldBanPointer
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HandleMousePress
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   PointerIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   shouldBan                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FPointerEvent&             MouseEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_UIPinchHelper_C::ShouldBanPointer(int32 PointerIndex, bool* shouldBan)
+void UBP_UIPinchHelper_C::HandleMousePress(const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPinchHelper_C", "ShouldBanPointer");
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "HandleMousePress");
 
-	Params::BP_UIPinchHelper_C_ShouldBanPointer Parms{};
+	Params::BP_UIPinchHelper_C_HandleMousePress Parms{};
 
-	Parms.PointerIndex = PointerIndex;
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.HandleMouseMove
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FPointerEvent&             MouseEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_UIPinchHelper_C::HandleMouseMove(const struct FPointerEvent& MouseEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "HandleMouseMove");
+
+	Params::BP_UIPinchHelper_C_HandleMouseMove Parms{};
+
+	Parms.MouseEvent = std::move(MouseEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIPinchHelper.BP_UIPinchHelper_C.CalculateDistance
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double*                                 Distance                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_UIPinchHelper_C::CalculateDistance(double* Distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIPinchHelper_C", "CalculateDistance");
+
+	Params::BP_UIPinchHelper_C_CalculateDistance Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (shouldBan != nullptr)
-		*shouldBan = Parms.shouldBan;
+	if (Distance != nullptr)
+		*Distance = Parms.Distance;
 }
 
 }

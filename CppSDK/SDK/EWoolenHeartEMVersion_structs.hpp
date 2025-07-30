@@ -15,13 +15,14 @@ namespace SDK
 {
 
 // UserDefinedEnum EWoolenHeartEMVersion.EWoolenHeartEMVersion
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EWoolenHeartEMVersion : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,
 	NewEnumerator3                           = 2,
-	EWoolenHeartEMVersion_MAX                = 3,
+	NewEnumerator4                           = 3,
+	EWoolenHeartEMVersion_MAX                = 4,
 };
 
 }

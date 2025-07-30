@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum ESkillInputType.ESkillInputType
-// NumValues: 0x0008
+// NumValues: 0x0009
 enum class ESkillInputType : uint8
 {
 	NewEnumerator3                           = 0,
@@ -25,7 +25,8 @@ enum class ESkillInputType : uint8
 	NewEnumerator2                           = 4,
 	NewEnumerator5                           = 5,
 	NewEnumerator6                           = 6,
-	ESkillInputType_MAX                      = 7,
+	NewEnumerator7                           = 7,
+	ESkillInputType_MAX                      = 8,
 };
 
 }

@@ -17,6 +17,28 @@
 namespace SDK
 {
 
+// Function BP_PlayerCombatMovementComponent.BP_PlayerCombatMovementComponent_C.BP_ForbidCombatMove
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bForbid                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_PlayerCombatMovementComponent_C::BP_ForbidCombatMove(bool bForbid, const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerCombatMovementComponent_C", "BP_ForbidCombatMove");
+
+	Params::BP_PlayerCombatMovementComponent_C_BP_ForbidCombatMove Parms{};
+
+	Parms.bForbid = bForbid;
+	Parms.Reason = std::move(Reason);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_PlayerCombatMovementComponent.BP_PlayerCombatMovementComponent_C.GetModuleName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

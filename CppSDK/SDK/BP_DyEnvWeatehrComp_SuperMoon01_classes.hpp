@@ -31,13 +31,13 @@ public:
 	class FName                                   LevelName;                                         // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
-	void OnFadeOutComplete();
-	void OnFadeOut(float Progress);
-	void OnFadeIn(float Progress);
-	void OnDestroyed();
-	void OnCreated();
 	void ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01(int32 EntryPoint);
+	void OnCreated();
+	void OnDestroyed();
+	void OnFadeIn(float Progress);
+	void OnFadeOut(float Progress);
+	void OnFadeOutComplete();
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

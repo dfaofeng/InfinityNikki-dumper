@@ -151,6 +151,75 @@ static_assert(offsetof(BPFL_MatchCloth_C_MultiThread_ClothMatch, CallFunc_AsyncN
 static_assert(offsetof(BPFL_MatchCloth_C_MultiThread_ClothMatch, K2Node_DynamicCast_AsMatch_Cloth_Object) == 0x000050, "Member 'BPFL_MatchCloth_C_MultiThread_ClothMatch::K2Node_DynamicCast_AsMatch_Cloth_Object' has a wrong offset!");
 static_assert(offsetof(BPFL_MatchCloth_C_MultiThread_ClothMatch, K2Node_DynamicCast_bSuccess_1) == 0x000058, "Member 'BPFL_MatchCloth_C_MultiThread_ClothMatch::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.ReplaceCopyPoseParentComp
+// 0x00D8 (0x00D8 - 0x0000)
+struct BPFL_MatchCloth_C_ReplaceCopyPoseParentComp final
+{
+public:
+	class UAnimInstance*                          InAnimInstance;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 InCopyPoseSourceComp;                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          InCopyPoseSourceSkelMesh;                          // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SuitSubstring;                                     // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+	class FString                                 CompKey;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CopyPoseSourceComp;                                // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CopyPoseSourceSkelMesh;                            // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Reset;                                             // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetOwningComponent_ReturnValue;           // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_SuitDisplayComponent_C*             CallFunc_GetComponentByClass_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Map_Find_Value;                           // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable;                              // 0x0088(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue;         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Map_Find_Value_1;                         // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB[0x5];                                       // 0x00CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 K2Node_Select_Default;                             // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp) == 0x000008, "Wrong alignment on BPFL_MatchCloth_C_ReplaceCopyPoseParentComp");
+static_assert(sizeof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp) == 0x0000D8, "Wrong size on BPFL_MatchCloth_C_ReplaceCopyPoseParentComp");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, InAnimInstance) == 0x000000, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::InAnimInstance' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, InCopyPoseSourceComp) == 0x000008, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::InCopyPoseSourceComp' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, InCopyPoseSourceSkelMesh) == 0x000010, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::InCopyPoseSourceSkelMesh' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, SuitSubstring) == 0x000018, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::SuitSubstring' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CompKey) == 0x000028, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CompKey' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, __WorldContext) == 0x000038, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::__WorldContext' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CopyPoseSourceComp) == 0x000040, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CopyPoseSourceComp' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CopyPoseSourceSkelMesh) == 0x000048, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CopyPoseSourceSkelMesh' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, Reset) == 0x000050, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::Reset' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_IsValid_ReturnValue) == 0x000051, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_GetOwningComponent_ReturnValue) == 0x000058, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_GetOwningComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000060, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_GetComponentByClass_ReturnValue) == 0x000068, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, Temp_bool_Variable) == 0x000070, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_IsValid_ReturnValue_1) == 0x000071, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_Map_Find_Value) == 0x000078, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_Map_Find_ReturnValue) == 0x000080, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, Temp_string_Variable) == 0x000088, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_GetSkeletalMeshAsset_ReturnValue) == 0x000098, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_GetSkeletalMeshAsset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x0000A0, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_Map_Find_Value_1) == 0x0000A8, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_Map_Find_ReturnValue_1) == 0x0000B0, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_GetDisplayName_ReturnValue) == 0x0000B8, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_IsValid_ReturnValue_2) == 0x0000C8, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_Contains_ReturnValue) == 0x0000C9, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, CallFunc_BooleanAND_ReturnValue) == 0x0000CA, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPFL_MatchCloth_C_ReplaceCopyPoseParentComp, K2Node_Select_Default) == 0x0000D0, "Member 'BPFL_MatchCloth_C_ReplaceCopyPoseParentComp::K2Node_Select_Default' has a wrong offset!");
+
 // Function BPFL_MatchCloth.BPFL_MatchCloth_C.SingleMatchClothes
 // 0x0680 (0x0680 - 0x0000)
 struct BPFL_MatchCloth_C_SingleMatchClothes final

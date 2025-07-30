@@ -17,28 +17,31 @@
 namespace SDK
 {
 
-// Function WBP_Hud_Action_Rattle.WBP_Hud_Action_Rattle_C.OnMouseButtonUp
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// Function WBP_Hud_Action_Rattle.WBP_Hud_Action_Rattle_C.Lua_OnBtnPressed
+// (Public, BlueprintCallable, BlueprintEvent)
 
-struct FEventReply UWBP_Hud_Action_Rattle_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
+void UWBP_Hud_Action_Rattle_C::Lua_OnBtnPressed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_Action_Rattle_C", "OnMouseButtonUp");
+		Func = Class->GetFunction("WBP_Hud_Action_Rattle_C", "Lua_OnBtnPressed");
 
-	Params::WBP_Hud_Action_Rattle_C_OnMouseButtonUp Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_Hud_Action_Rattle.WBP_Hud_Action_Rattle_C.Lua_OnBtnReleased
+// (Public, BlueprintCallable, BlueprintEvent)
 
-	return Parms.ReturnValue;
+void UWBP_Hud_Action_Rattle_C::Lua_OnBtnReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_Action_Rattle_C", "Lua_OnBtnReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -67,31 +70,28 @@ struct FEventReply UWBP_Hud_Action_Rattle_C::OnMouseButtonDown(const struct FGeo
 }
 
 
-// Function WBP_Hud_Action_Rattle.WBP_Hud_Action_Rattle_C.Lua_OnBtnReleased
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_Action_Rattle.WBP_Hud_Action_Rattle_C.OnMouseButtonUp
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
 
-void UWBP_Hud_Action_Rattle_C::Lua_OnBtnReleased()
+struct FEventReply UWBP_Hud_Action_Rattle_C::OnMouseButtonUp(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_Action_Rattle_C", "Lua_OnBtnReleased");
+		Func = Class->GetFunction("WBP_Hud_Action_Rattle_C", "OnMouseButtonUp");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::WBP_Hud_Action_Rattle_C_OnMouseButtonUp Parms{};
 
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.MouseEvent = std::move(MouseEvent);
 
-// Function WBP_Hud_Action_Rattle.WBP_Hud_Action_Rattle_C.Lua_OnBtnPressed
-// (Public, BlueprintCallable, BlueprintEvent)
+	UObject::ProcessEvent(Func, &Parms);
 
-void UWBP_Hud_Action_Rattle_C::Lua_OnBtnPressed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_Action_Rattle_C", "Lua_OnBtnPressed");
-
-	UObject::ProcessEvent(Func, nullptr);
+	return Parms.ReturnValue;
 }
 
 

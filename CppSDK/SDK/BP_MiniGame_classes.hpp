@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Enum_MiniGameRoleType_structs.hpp"
 #include "X6ExportRuntime_structs.hpp"
+#include "Enum_MiniGameRoleType_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

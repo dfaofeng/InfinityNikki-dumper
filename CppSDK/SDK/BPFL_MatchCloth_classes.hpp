@@ -25,6 +25,7 @@ public:
 	static void FindOrCreateMatchClothObject(class UMatchClothObject_C* InMatchClothObject, class UObject* InParent, class UObject* __WorldContext, class UMatchClothObject_C** ResultMatchClothObject, bool* IsNew);
 	static void MatchClothSetupToRun(class UMatchClothObject_C* InMatchClothObject, class UObject* InParent, const TMap<class FString, class USkeletalMeshComponent*>& SuitPartsMap, class UObject* __WorldContext, bool* isNewObject, class UMatchClothObject_C** ResultMatchClothObject);
 	static void MultiThread_ClothMatch(class UObject* Parent, TArray<class USkeletalMesh*>& InputSkelMeshArray, class UObject* __WorldContext, class UMatchClothObject_C** ResultObject);
+	static void ReplaceCopyPoseParentComp(class UAnimInstance* InAnimInstance, class USkeletalMeshComponent*& InCopyPoseSourceComp, class USkeletalMesh*& InCopyPoseSourceSkelMesh, class FString& SuitSubstring, class FString& CompKey, class UObject* __WorldContext, class USkeletalMeshComponent** CopyPoseSourceComp, class USkeletalMesh** CopyPoseSourceSkelMesh, bool* Reset);
 	static void SingleMatchClothes(class USkeletalMeshComponent*& InnerSkelMeshComp, class USkeletalMeshComponent*& OuterSkelMeshComp, const struct FMatchClothParameter& InMatchClothesParam, bool IsAdditive, class UObject* __WorldContext);
 	static void SingleMatchClothes_OrnamentPair(class USkeletalMeshComponent*& InnerSkelMeshComp, class USkeletalMeshComponent*& OuterSkelMeshComp, class UObject* __WorldContext);
 

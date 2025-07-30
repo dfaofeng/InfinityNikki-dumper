@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.BP_SetEnbaleBulletFilter
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_AbilityMontageBase_C::BP_SetEnbaleBulletFilter(bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AbilityMontageBase_C", "BP_SetEnbaleBulletFilter");
+
+	Params::GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter Parms{};
+
+	Parms.bEnable = bEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.BP_IsMoving
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -35,26 +55,6 @@ void UGA_AbilityMontageBase_C::BP_IsMoving(bool* IsMoving)
 
 	if (IsMoving != nullptr)
 		*IsMoving = Parms.IsMoving;
-}
-
-
-// Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.BP_SetEnbaleBulletFilter
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_AbilityMontageBase_C::BP_SetEnbaleBulletFilter(bool bEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityMontageBase_C", "BP_SetEnbaleBulletFilter");
-
-	Params::GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter Parms{};
-
-	Parms.bEnable = bEnable;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -17,89 +17,21 @@
 namespace SDK
 {
 
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.BP_RefreshLocation
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_HeadInfoComponent_C::BP_RefreshLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HeadInfoComponent_C", "BP_RefreshLocation");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.ExecuteUbergraph_BP_HeadInfoComponent
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HeadInfoComponent_C::ExecuteUbergraph_BP_HeadInfoComponent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HeadInfoComponent_C", "ExecuteUbergraph_BP_HeadInfoComponent");
-
-	Params::BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_HeadInfoComponent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HeadInfoComponent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconTexture
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetTextVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTexture*                         IconTexture                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_HeadInfoComponent_C::SetIconTexture(class UTexture* IconTexture)
+void UBP_HeadInfoComponent_C::SetTextVisibility(bool NewParam)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HeadInfoComponent_C", "SetIconTexture");
+		Func = Class->GetFunction("BP_HeadInfoComponent_C", "SetTextVisibility");
 
-	Params::BP_HeadInfoComponent_C_SetIconTexture Parms{};
+	Params::BP_HeadInfoComponent_C_SetTextVisibility Parms{};
 
-	Parms.IconTexture = IconTexture;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bShow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_HeadInfoComponent_C::SetIconVisibility(bool bShow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HeadInfoComponent_C", "SetIconVisibility");
-
-	Params::BP_HeadInfoComponent_C_SetIconVisibility Parms{};
-
-	Parms.bShow = bShow;
+	Parms.NewParam = NewParam;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -125,23 +57,91 @@ void UBP_HeadInfoComponent_C::SetInteractiveIconVisibility(bool NewParam)
 }
 
 
-// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetTextVisibility
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bShow                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_HeadInfoComponent_C::SetTextVisibility(bool NewParam)
+void UBP_HeadInfoComponent_C::SetIconVisibility(bool bShow)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HeadInfoComponent_C", "SetTextVisibility");
+		Func = Class->GetFunction("BP_HeadInfoComponent_C", "SetIconVisibility");
 
-	Params::BP_HeadInfoComponent_C_SetTextVisibility Parms{};
+	Params::BP_HeadInfoComponent_C_SetIconVisibility Parms{};
 
-	Parms.NewParam = NewParam;
+	Parms.bShow = bShow;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.SetIconTexture
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture*                         IconTexture                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HeadInfoComponent_C::SetIconTexture(class UTexture* IconTexture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HeadInfoComponent_C", "SetIconTexture");
+
+	Params::BP_HeadInfoComponent_C_SetIconTexture Parms{};
+
+	Parms.IconTexture = IconTexture;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_HeadInfoComponent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HeadInfoComponent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.ExecuteUbergraph_BP_HeadInfoComponent
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_HeadInfoComponent_C::ExecuteUbergraph_BP_HeadInfoComponent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HeadInfoComponent_C", "ExecuteUbergraph_BP_HeadInfoComponent");
+
+	Params::BP_HeadInfoComponent_C_ExecuteUbergraph_BP_HeadInfoComponent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_HeadInfoComponent.BP_HeadInfoComponent_C.BP_RefreshLocation
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_HeadInfoComponent_C::BP_RefreshLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HeadInfoComponent_C", "BP_RefreshLocation");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

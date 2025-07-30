@@ -17,47 +17,57 @@
 namespace SDK
 {
 
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ExecuteUbergraph_BTT_Quadruped_DoMove
+// (Final, UbergraphFunction)
 // Parameters:
-// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBTT_Quadruped_DoMove_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+void UBTT_Quadruped_DoMove_C::ExecuteUbergraph_BTT_Quadruped_DoMove(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "ReceiveTickAI");
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "ExecuteUbergraph_BTT_Quadruped_DoMove");
 
-	Params::BTT_Quadruped_DoMove_C_ReceiveTickAI Parms{};
+	Params::BTT_Quadruped_DoMove_C_ExecuteUbergraph_BTT_Quadruped_DoMove Parms{};
 
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ReceiveExecuteAI
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.K2_OnInstanceDestroyed
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBTT_Quadruped_DoMove_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_Quadruped_DoMove_C::K2_OnInstanceDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "ReceiveExecuteAI");
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "K2_OnInstanceDestroyed");
 
-	Params::BTT_Quadruped_DoMove_C_ReceiveExecuteAI Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.OwnerController = OwnerController;
-	Parms.ControlledPawn = ControlledPawn;
+
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.OnBlackboardKeyValueChange
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UBlackboardComponent*       Blackboard                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             KeyName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTT_Quadruped_DoMove_C::OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "OnBlackboardKeyValueChange");
+
+	Params::BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange Parms{};
+
+	Parms.Blackboard = Blackboard;
+	Parms.KeyName = KeyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -85,57 +95,47 @@ void UBTT_Quadruped_DoMove_C::ReceiveAbortAI(class AAIController* OwnerControlle
 }
 
 
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.OnBlackboardKeyValueChange
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ReceiveExecuteAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// const class UBlackboardComponent*       Blackboard                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             KeyName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBTT_Quadruped_DoMove_C::OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName)
+void UBTT_Quadruped_DoMove_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "OnBlackboardKeyValueChange");
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "ReceiveExecuteAI");
 
-	Params::BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange Parms{};
+	Params::BTT_Quadruped_DoMove_C_ReceiveExecuteAI Parms{};
 
-	Parms.Blackboard = Blackboard;
-	Parms.KeyName = KeyName;
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.K2_OnInstanceDestroyed
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
-
-void UBTT_Quadruped_DoMove_C::K2_OnInstanceDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "K2_OnInstanceDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ExecuteUbergraph_BTT_Quadruped_DoMove
-// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBTT_Quadruped_DoMove_C::ExecuteUbergraph_BTT_Quadruped_DoMove(int32 EntryPoint)
+void UBTT_Quadruped_DoMove_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "ExecuteUbergraph_BTT_Quadruped_DoMove");
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "ReceiveTickAI");
 
-	Params::BTT_Quadruped_DoMove_C_ExecuteUbergraph_BTT_Quadruped_DoMove Parms{};
+	Params::BTT_Quadruped_DoMove_C_ReceiveTickAI Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.OwnerController = OwnerController;
+	Parms.ControlledPawn = ControlledPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -17,15 +17,63 @@
 namespace SDK
 {
 
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.TestSet
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_HUD_Collection_item_C::BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UWBP_UI_HUD_Collection_item_C::TestSet(int32 Count)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "TestSet");
+
+	Params::WBP_UI_HUD_Collection_item_C_TestSet Parms{};
+
+	Parms.Count = Count;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayPurpleCoinAdd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_HUD_Collection_item_C::PlayPurpleCoinAdd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "PlayPurpleCoinAdd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMoonCoinAdd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_HUD_Collection_item_C::PlayMoonCoinAdd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "PlayMoonCoinAdd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMinus
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_HUD_Collection_item_C::PlayMinus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "PlayMinus");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -51,65 +99,17 @@ void UWBP_UI_HUD_Collection_item_C::ExecuteUbergraph_WBP_UI_HUD_Collection_item(
 }
 
 
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMinus
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_UI_HUD_Collection_item_C::PlayMinus()
+void UWBP_UI_HUD_Collection_item_C::BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "PlayMinus");
+		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMoonCoinAdd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_UI_HUD_Collection_item_C::PlayMoonCoinAdd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "PlayMoonCoinAdd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayPurpleCoinAdd
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_UI_HUD_Collection_item_C::PlayPurpleCoinAdd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "PlayPurpleCoinAdd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.TestSet
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Count                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_HUD_Collection_item_C::TestSet(int32 Count)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_HUD_Collection_item_C", "TestSet");
-
-	Params::WBP_UI_HUD_Collection_item_C_TestSet Parms{};
-
-	Parms.Count = Count;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

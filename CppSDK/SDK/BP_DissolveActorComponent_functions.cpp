@@ -57,46 +57,6 @@ void UBP_DissolveActorComponent_C::SetDissolve(bool Toggle)
 }
 
 
-// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_DissolveActorComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveEndPlay");
-
-	Params::BP_DissolveActorComponent_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.Opacity
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_DissolveActorComponent_C::Opacity(bool On)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveActorComponent_C", "Opacity");
-
-	Params::BP_DissolveActorComponent_C_Opacity Parms{};
-
-	Parms.On = On;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -117,6 +77,26 @@ void UBP_DissolveActorComponent_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_DissolveActorComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveEndPlay");
+
+	Params::BP_DissolveActorComponent_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveBeginPlay
 // (Event, Public, BlueprintEvent)
 
@@ -128,6 +108,26 @@ void UBP_DissolveActorComponent_C::ReceiveBeginPlay()
 		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.Opacity
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    On                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_DissolveActorComponent_C::Opacity(bool On)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DissolveActorComponent_C", "Opacity");
+
+	Params::BP_DissolveActorComponent_C_Opacity Parms{};
+
+	Parms.On = On;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -45,18 +45,18 @@ public:
 	bool                                          StopUnlockAnim;                                    // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_MainHudItemTab_Interact_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature();
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_PLayActivitySound();
-	void BP_PLayBagSound();
-	void BP_PLayClothSpiritSound();
-	void BP_PLayGachaSound();
-	void ExecuteUbergraph_WBP_MainHudItemTab(int32 EntryPoint);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	void PlayUnlock(int32 unlockStyle);
 	void UpdateUnlockState(bool isUnlocked, int32 unlockStyle);
+	void PlayUnlock(int32 unlockStyle);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void ExecuteUbergraph_WBP_MainHudItemTab(int32 EntryPoint);
+	void BP_PLayGachaSound();
+	void BP_PLayClothSpiritSound();
+	void BP_PLayBagSound();
+	void BP_PLayActivitySound();
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
+	void BndEvt__WBP_MainHudItemTab_Interact_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

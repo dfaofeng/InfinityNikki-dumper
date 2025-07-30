@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_X6ActorComponent_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -43,7 +43,7 @@ public:
 	bool                                          BP_EnableHoldingHandsIK;                           // 0x0151(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_EnableWeaklyholdingHandsMoving;                 // 0x0152(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_IsHoldingHandsFloatMoving;                      // 0x0153(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_Replicated_EnableHandHoldingAnchorPull;         // 0x0154(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_Replicated_EnableHandHoldingAnchorPull;         // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_EnableHandHoldingAnchorPull;                    // 0x0155(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_IsBeingPulledToAnchorPoint;                     // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_Replicated_EnableHandInHandGesture;             // 0x0157(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
@@ -67,6 +67,7 @@ public:
 	void BP_ReleaseHandHoldingMode();
 	void BP_ResetFollowerWalkRelativeLocation();
 	void BP_RevertFollowerGravityScale();
+	void BP_RPC_SetEnableHandHoldingAnchorPull(bool bValue);
 	void BP_SetEnableGroupConstraints(bool bEnable);
 	void BP_SetEnableHoldingHandsIK(bool bEnable);
 	void BP_SetEnableWeaklyholdingHandsMoving(bool bEnable);

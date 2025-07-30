@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass AN_SpawnBullet.AN_SpawnBullet_C
-// 0x0088 (0x00C0 - 0x0038)
+// 0x0098 (0x00D0 - 0x0038)
 class UAN_SpawnBullet_C final : public UAnimNotify
 {
 public:
@@ -28,10 +28,11 @@ public:
 	class FName                                   BP_Socket;                                         // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_54[0xC];                                       // 0x0054(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             BP_OffsetTransform;                                // 0x0060(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_PreviewCollision;                               // 0x00C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()
@@ -44,11 +45,12 @@ public:
 	}
 };
 static_assert(alignof(UAN_SpawnBullet_C) == 0x000010, "Wrong alignment on UAN_SpawnBullet_C");
-static_assert(sizeof(UAN_SpawnBullet_C) == 0x0000C0, "Wrong size on UAN_SpawnBullet_C");
+static_assert(sizeof(UAN_SpawnBullet_C) == 0x0000D0, "Wrong size on UAN_SpawnBullet_C");
 static_assert(offsetof(UAN_SpawnBullet_C, BP_BulletDatas) == 0x000038, "Member 'UAN_SpawnBullet_C::BP_BulletDatas' has a wrong offset!");
 static_assert(offsetof(UAN_SpawnBullet_C, IsLastBullet) == 0x000048, "Member 'UAN_SpawnBullet_C::IsLastBullet' has a wrong offset!");
 static_assert(offsetof(UAN_SpawnBullet_C, BP_Socket) == 0x00004C, "Member 'UAN_SpawnBullet_C::BP_Socket' has a wrong offset!");
 static_assert(offsetof(UAN_SpawnBullet_C, BP_OffsetTransform) == 0x000060, "Member 'UAN_SpawnBullet_C::BP_OffsetTransform' has a wrong offset!");
+static_assert(offsetof(UAN_SpawnBullet_C, BP_PreviewCollision) == 0x0000C0, "Member 'UAN_SpawnBullet_C::BP_PreviewCollision' has a wrong offset!");
 
 }
 

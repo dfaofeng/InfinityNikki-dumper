@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "FActionPointGestureData_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "FActionPointGestureData_structs.hpp"
 
 
 namespace SDK

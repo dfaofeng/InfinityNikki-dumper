@@ -17,35 +17,449 @@
 namespace SDK
 {
 
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AddIdleBreakAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimSequence*                    AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerAnimStatesComponent_C::ReceiveBeginPlay()
+void UBP_PlayerAnimStatesComponent_C::BP_AddIdleBreakAnim(class UAnimSequence* AnimSequence)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AddIdleBreakAnim");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_AddIdleBreakAnim Parms{};
+
+	Parms.AnimSequence = AnimSequence;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_InteractionPerformance_LeftGesture
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_InteractionPerformance_LeftGesture()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_InteractionPerformance_LeftGesture");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.ExecuteUbergraph_BP_PlayerAnimStatesComponent
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_OnPlayerDeathAnimationFinished
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_PlayerAnimStatesComponent_C::ExecuteUbergraph_BP_PlayerAnimStatesComponent(int32 EntryPoint)
+void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_OnPlayerDeathAnimationFinished()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "ExecuteUbergraph_BP_PlayerAnimStatesComponent");
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_OnPlayerDeathAnimationFinished");
 
-	Params::BP_PlayerAnimStatesComponent_C_ExecuteUbergraph_BP_PlayerAnimStatesComponent Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_OnPlayerMantleAnimationFinished
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_OnPlayerMantleAnimationFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_OnPlayerMantleAnimationFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_OnPlayerReliveEffectFinished
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_OnPlayerReliveEffectFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_OnPlayerReliveEffectFinished");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_ClearOverrideCanOwnerDoLookAt
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_ClearOverrideCanOwnerDoLookAt()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_ClearOverrideCanOwnerDoLookAt");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_DisableForceStopStage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_DisableForceStopStage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_DisableForceStopStage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_DisableSkipStopStage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_DisableSkipStopStage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_DisableSkipStopStage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_EnableForceStopStage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_EnableForceStopStage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_EnableForceStopStage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_EnableSkipStopStage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_EnableSkipStopStage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_EnableSkipStopStage");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetCurrentClothesID
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<int32>*                          ClothesIDArray                                         (Parm, OutParm)
+
+void UBP_PlayerAnimStatesComponent_C::BP_GetCurrentClothesID(TArray<int32>* ClothesIDArray)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetCurrentClothesID");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_GetCurrentClothesID Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ClothesIDArray != nullptr)
+		*ClothesIDArray = std::move(Parms.ClothesIDArray);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetCurrentDressID
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32*                                  ID                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_GetCurrentDressID(int32* ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetCurrentDressID");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_GetCurrentDressID Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ID != nullptr)
+		*ID = Parms.ID;
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetDefaultClothesList
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<int32>*                          DefaultClothesList                                     (Parm, OutParm)
+
+void UBP_PlayerAnimStatesComponent_C::BP_GetDefaultClothesList(TArray<int32>* DefaultClothesList)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetDefaultClothesList");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_GetDefaultClothesList Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DefaultClothesList != nullptr)
+		*DefaultClothesList = std::move(Parms.DefaultClothesList);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetEnableEmotionPerformance
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   EnableEmotionPerformance                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_GetEnableEmotionPerformance(bool* EnableEmotionPerformance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetEnableEmotionPerformance");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_GetEnableEmotionPerformance Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (EnableEmotionPerformance != nullptr)
+		*EnableEmotionPerformance = Parms.EnableEmotionPerformance;
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_IsForceStopStage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   ForceStopFlag                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_IsForceStopStage(bool* ForceStopFlag)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_IsForceStopStage");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_IsForceStopStage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ForceStopFlag != nullptr)
+		*ForceStopFlag = Parms.ForceStopFlag;
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_IsSkipStopStage
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   SkipStopStage                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_IsSkipStopStage(bool* SkipStopStage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_IsSkipStopStage");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_IsSkipStopStage Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SkipStopStage != nullptr)
+		*SkipStopStage = Parms.SkipStopStage;
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_OverrideCanOwnerDoLookAt
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bCanDoLookAt                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_OverrideCanOwnerDoLookAt(bool bCanDoLookAt)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_OverrideCanOwnerDoLookAt");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_OverrideCanOwnerDoLookAt Parms{};
+
+	Parms.bCanDoLookAt = bCanDoLookAt;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_RefreshClothThicknessData
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerAnimStatesComponent_C::BP_RefreshClothThicknessData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_RefreshClothThicknessData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_RemoveIdleBreakAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimSequence*                    AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_RemoveIdleBreakAnim(class UAnimSequence* AnimSequence)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_RemoveIdleBreakAnim");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_RemoveIdleBreakAnim Parms{};
+
+	Parms.AnimSequence = AnimSequence;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetCanInterruptPendingStopState
+// (Private, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bCanInterrupt                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_SetCanInterruptPendingStopState(bool bCanInterrupt)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetCanInterruptPendingStopState");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_SetCanInterruptPendingStopState Parms{};
+
+	Parms.bCanInterrupt = bCanInterrupt;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetEnableEmotionPerformance
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnableEmotionPerformance                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_SetEnableEmotionPerformance(bool bEnableEmotionPerformance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetEnableEmotionPerformance");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_SetEnableEmotionPerformance Parms{};
+
+	Parms.bEnableEmotionPerformance = bEnableEmotionPerformance;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetFocusConfig
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ULookAtConfigTemplate*            InFocusConfig                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_SetFocusConfig(class ULookAtConfigTemplate* InFocusConfig)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetFocusConfig");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_SetFocusConfig Parms{};
+
+	Parms.InFocusConfig = InFocusConfig;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetPawnAnimState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPawnAnimStateTypes                     NewPawnAnimState                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_SetPawnAnimState(EPawnAnimStateTypes NewPawnAnimState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetPawnAnimState");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_SetPawnAnimState Parms{};
+
+	Parms.NewPawnAnimState = NewPawnAnimState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetStylizedMirror
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bMirror                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_SetStylizedMirror(bool bMirror)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetStylizedMirror");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_SetStylizedMirror Parms{};
+
+	Parms.bMirror = bMirror;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetUseFacialAnimFromSpecialFullBody
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bUse                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_PlayerAnimStatesComponent_C::BP_SetUseFacialAnimFromSpecialFullBody(bool bUse, const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetUseFacialAnimFromSpecialFullBody");
+
+	Params::BP_PlayerAnimStatesComponent_C_BP_SetUseFacialAnimFromSpecialFullBody Parms{};
+
+	Parms.bUse = bUse;
+	Parms.Reason = std::move(Reason);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -88,451 +502,37 @@ void UBP_PlayerAnimStatesComponent_C::BPI_Get_CurrentAbilityStates(bool* IsLogic
 }
 
 
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetUseFacialAnimFromSpecialFullBody
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.ExecuteUbergraph_BP_PlayerAnimStatesComponent
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bUse                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerAnimStatesComponent_C::BP_SetUseFacialAnimFromSpecialFullBody(bool bUse, const class FString& Reason)
+void UBP_PlayerAnimStatesComponent_C::ExecuteUbergraph_BP_PlayerAnimStatesComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetUseFacialAnimFromSpecialFullBody");
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "ExecuteUbergraph_BP_PlayerAnimStatesComponent");
 
-	Params::BP_PlayerAnimStatesComponent_C_BP_SetUseFacialAnimFromSpecialFullBody Parms{};
+	Params::BP_PlayerAnimStatesComponent_C_ExecuteUbergraph_BP_PlayerAnimStatesComponent Parms{};
 
-	Parms.bUse = bUse;
-	Parms.Reason = std::move(Reason);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetStylizedMirror
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bMirror                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBP_PlayerAnimStatesComponent_C::BP_SetStylizedMirror(bool bMirror)
+void UBP_PlayerAnimStatesComponent_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetStylizedMirror");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_SetStylizedMirror Parms{};
-
-	Parms.bMirror = bMirror;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetPawnAnimState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EPawnAnimStateTypes                     NewPawnAnimState                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_SetPawnAnimState(EPawnAnimStateTypes NewPawnAnimState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetPawnAnimState");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_SetPawnAnimState Parms{};
-
-	Parms.NewPawnAnimState = NewPawnAnimState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetFocusConfig
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ULookAtConfigTemplate*            InFocusConfig                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_SetFocusConfig(class ULookAtConfigTemplate* InFocusConfig)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetFocusConfig");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_SetFocusConfig Parms{};
-
-	Parms.InFocusConfig = InFocusConfig;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetEnableEmotionPerformance
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bEnableEmotionPerformance                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_SetEnableEmotionPerformance(bool bEnableEmotionPerformance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetEnableEmotionPerformance");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_SetEnableEmotionPerformance Parms{};
-
-	Parms.bEnableEmotionPerformance = bEnableEmotionPerformance;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_SetCanInterruptPendingStopState
-// (Private, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bCanInterrupt                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_SetCanInterruptPendingStopState(bool bCanInterrupt)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_SetCanInterruptPendingStopState");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_SetCanInterruptPendingStopState Parms{};
-
-	Parms.bCanInterrupt = bCanInterrupt;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_RemoveIdleBreakAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAnimSequence*                    AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_RemoveIdleBreakAnim(class UAnimSequence* AnimSequence)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_RemoveIdleBreakAnim");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_RemoveIdleBreakAnim Parms{};
-
-	Parms.AnimSequence = AnimSequence;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_RefreshClothThicknessData
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_RefreshClothThicknessData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_RefreshClothThicknessData");
+		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_OverrideCanOwnerDoLookAt
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bCanDoLookAt                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_OverrideCanOwnerDoLookAt(bool bCanDoLookAt)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_OverrideCanOwnerDoLookAt");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_OverrideCanOwnerDoLookAt Parms{};
-
-	Parms.bCanDoLookAt = bCanDoLookAt;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_IsSkipStopStage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   SkipStopStage                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_IsSkipStopStage(bool* SkipStopStage)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_IsSkipStopStage");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_IsSkipStopStage Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SkipStopStage != nullptr)
-		*SkipStopStage = Parms.SkipStopStage;
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_IsForceStopStage
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   ForceStopFlag                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_IsForceStopStage(bool* ForceStopFlag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_IsForceStopStage");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_IsForceStopStage Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ForceStopFlag != nullptr)
-		*ForceStopFlag = Parms.ForceStopFlag;
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetEnableEmotionPerformance
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool*                                   EnableEmotionPerformance                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_GetEnableEmotionPerformance(bool* EnableEmotionPerformance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetEnableEmotionPerformance");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_GetEnableEmotionPerformance Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (EnableEmotionPerformance != nullptr)
-		*EnableEmotionPerformance = Parms.EnableEmotionPerformance;
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetDefaultClothesList
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<int32>*                          DefaultClothesList                                     (Parm, OutParm)
-
-void UBP_PlayerAnimStatesComponent_C::BP_GetDefaultClothesList(TArray<int32>* DefaultClothesList)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetDefaultClothesList");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_GetDefaultClothesList Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DefaultClothesList != nullptr)
-		*DefaultClothesList = std::move(Parms.DefaultClothesList);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetCurrentDressID
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32*                                  ID                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_GetCurrentDressID(int32* ID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetCurrentDressID");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_GetCurrentDressID Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ID != nullptr)
-		*ID = Parms.ID;
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_GetCurrentClothesID
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<int32>*                          ClothesIDArray                                         (Parm, OutParm)
-
-void UBP_PlayerAnimStatesComponent_C::BP_GetCurrentClothesID(TArray<int32>* ClothesIDArray)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_GetCurrentClothesID");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_GetCurrentClothesID Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ClothesIDArray != nullptr)
-		*ClothesIDArray = std::move(Parms.ClothesIDArray);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_EnableSkipStopStage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_EnableSkipStopStage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_EnableSkipStopStage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_EnableForceStopStage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_EnableForceStopStage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_EnableForceStopStage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_DisableSkipStopStage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_DisableSkipStopStage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_DisableSkipStopStage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_DisableForceStopStage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_DisableForceStopStage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_DisableForceStopStage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_ClearOverrideCanOwnerDoLookAt
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_ClearOverrideCanOwnerDoLookAt()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_ClearOverrideCanOwnerDoLookAt");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_OnPlayerReliveEffectFinished
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_OnPlayerReliveEffectFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_OnPlayerReliveEffectFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_OnPlayerMantleAnimationFinished
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_OnPlayerMantleAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_OnPlayerMantleAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_OnPlayerDeathAnimationFinished
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_OnPlayerDeathAnimationFinished()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_OnPlayerDeathAnimationFinished");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AnimNotify_InteractionPerformance_LeftGesture
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerAnimStatesComponent_C::BP_AnimNotify_InteractionPerformance_LeftGesture()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AnimNotify_InteractionPerformance_LeftGesture");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C.BP_AddIdleBreakAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAnimSequence*                    AnimSequence                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerAnimStatesComponent_C::BP_AddIdleBreakAnim(class UAnimSequence* AnimSequence)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerAnimStatesComponent_C", "BP_AddIdleBreakAnim");
-
-	Params::BP_PlayerAnimStatesComponent_C_BP_AddIdleBreakAnim Parms{};
-
-	Parms.AnimSequence = AnimSequence;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

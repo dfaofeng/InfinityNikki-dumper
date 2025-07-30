@@ -59,9 +59,9 @@ public:
 	class FString                                 SlotEnumName;                                      // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile(int32 EntryPoint);
-	void NotifyIconRefresh();
 	void PreConstruct(bool IsDesignTime);
+	void NotifyIconRefresh();
+	void ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

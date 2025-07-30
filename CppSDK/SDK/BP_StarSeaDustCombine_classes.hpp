@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "X6Game_classes.hpp"
 #include "E_InteractiveObjType_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK

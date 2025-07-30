@@ -10,19 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "F_FilterTargetingPresetConfig_structs.hpp"
 #include "Engine_classes.hpp"
+#include "F_FilterTargetingPresetConfig_structs.hpp"
+#include "F_CrashFilterTargetingPresetConfig_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FilterTargetingPresetDataAsset.BP_FilterTargetingPresetDataAsset_C
-// 0x0010 (0x0040 - 0x0030)
+// 0x0020 (0x0050 - 0x0030)
 class UBP_FilterTargetingPresetDataAsset_C final : public UPrimaryDataAsset
 {
 public:
 	TArray<struct FF_FilterTargetingPresetConfig> TargetingFilterList;                               // 0x0030(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FF_CrashFilterTargetingPresetConfig> CrashTargetingFilterList;                     // 0x0040(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
@@ -35,8 +37,9 @@ public:
 	}
 };
 static_assert(alignof(UBP_FilterTargetingPresetDataAsset_C) == 0x000008, "Wrong alignment on UBP_FilterTargetingPresetDataAsset_C");
-static_assert(sizeof(UBP_FilterTargetingPresetDataAsset_C) == 0x000040, "Wrong size on UBP_FilterTargetingPresetDataAsset_C");
+static_assert(sizeof(UBP_FilterTargetingPresetDataAsset_C) == 0x000050, "Wrong size on UBP_FilterTargetingPresetDataAsset_C");
 static_assert(offsetof(UBP_FilterTargetingPresetDataAsset_C, TargetingFilterList) == 0x000030, "Member 'UBP_FilterTargetingPresetDataAsset_C::TargetingFilterList' has a wrong offset!");
+static_assert(offsetof(UBP_FilterTargetingPresetDataAsset_C, CrashTargetingFilterList) == 0x000040, "Member 'UBP_FilterTargetingPresetDataAsset_C::CrashTargetingFilterList' has a wrong offset!");
 
 }
 

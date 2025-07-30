@@ -17,21 +17,43 @@
 namespace SDK
 {
 
-// Function BP_AgentTask_Birth.BP_AgentTask_Birth_C.ExecuteUbergraph_BP_AgentTask_Birth
-// (Final, UbergraphFunction)
+// Function BP_AgentTask_Birth.BP_AgentTask_Birth_C.ReceiveTick
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            AgentPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTask_Birth_C::ExecuteUbergraph_BP_AgentTask_Birth(int32 EntryPoint)
+void UBP_AgentTask_Birth_C::ReceiveTick(class APawn* AgentPawn, double DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTask_Birth_C", "ExecuteUbergraph_BP_AgentTask_Birth");
+		Func = Class->GetFunction("BP_AgentTask_Birth_C", "ReceiveTick");
 
-	Params::BP_AgentTask_Birth_C_ExecuteUbergraph_BP_AgentTask_Birth Parms{};
+	Params::BP_AgentTask_Birth_C_ReceiveTick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.AgentPawn = AgentPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AgentTask_Birth.BP_AgentTask_Birth_C.ReceiveExecute
+// (BlueprintEvent)
+// Parameters:
+// class APawn*                            AgentPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AgentTask_Birth_C::ReceiveExecute(class APawn* AgentPawn)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTask_Birth_C", "ReceiveExecute");
+
+	Params::BP_AgentTask_Birth_C_ReceiveExecute Parms{};
+
+	Parms.AgentPawn = AgentPawn;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -59,43 +81,21 @@ void UBP_AgentTask_Birth_C::ReceiveAbort(class APawn* AgentPawn, int32 AbortFlag
 }
 
 
-// Function BP_AgentTask_Birth.BP_AgentTask_Birth_C.ReceiveExecute
-// (BlueprintEvent)
+// Function BP_AgentTask_Birth.BP_AgentTask_Birth_C.ExecuteUbergraph_BP_AgentTask_Birth
+// (Final, UbergraphFunction)
 // Parameters:
-// class APawn*                            AgentPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTask_Birth_C::ReceiveExecute(class APawn* AgentPawn)
+void UBP_AgentTask_Birth_C::ExecuteUbergraph_BP_AgentTask_Birth(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTask_Birth_C", "ReceiveExecute");
+		Func = Class->GetFunction("BP_AgentTask_Birth_C", "ExecuteUbergraph_BP_AgentTask_Birth");
 
-	Params::BP_AgentTask_Birth_C_ReceiveExecute Parms{};
+	Params::BP_AgentTask_Birth_C_ExecuteUbergraph_BP_AgentTask_Birth Parms{};
 
-	Parms.AgentPawn = AgentPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AgentTask_Birth.BP_AgentTask_Birth_C.ReceiveTick
-// (BlueprintEvent)
-// Parameters:
-// class APawn*                            AgentPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AgentTask_Birth_C::ReceiveTick(class APawn* AgentPawn, double DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTask_Birth_C", "ReceiveTick");
-
-	Params::BP_AgentTask_Birth_C_ReceiveTick Parms{};
-
-	Parms.AgentPawn = AgentPawn;
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

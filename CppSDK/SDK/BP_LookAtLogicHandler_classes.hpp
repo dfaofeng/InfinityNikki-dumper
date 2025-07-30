@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "X6Game_classes.hpp"
 #include "EPlayerActionTypes_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK

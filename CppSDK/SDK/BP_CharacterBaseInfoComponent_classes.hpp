@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "Engine_structs.hpp"
 #include "BP_X6ActorComponent_classes.hpp"
+#include "Engine_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK
@@ -42,12 +42,12 @@ public:
 	void UpdateActorListenPlayerState(bool AddOrRemove, class AActor* ActorListenPlayerState);
 	void ReceiveTick(float DeltaSeconds);
 	void PlayerRemoveState(int32 StateToRemove);
-	void PlayerHasState(int32 CheckState, bool* Has);
-	void PlayerAddState(int32 InNewState);
 	void ExecuteUbergraph_BP_CharacterBaseInfoComponent(int32 EntryPoint);
 	void CanPlayerDoAction(int32 NewAction, bool* Can);
 	void BP_ListenPlayerStateUpdate(TArray<EInt32PlayerPawnStateTypes>& States, class AActor* ActorListenPlayerState);
 	void BP_GetTransToRightFoot(bool* bTransToRightFoot);
+	void PlayerHasState(int32 CheckState, bool* Has);
+	void PlayerAddState(int32 InNewState);
 
 	class FString GetModuleName() const;
 

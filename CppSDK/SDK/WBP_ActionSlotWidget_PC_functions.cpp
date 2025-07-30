@@ -17,35 +17,15 @@
 namespace SDK
 {
 
-// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.ExecuteUbergraph_WBP_ActionSlotWidget_PC
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_ActionSlotWidget_PC_C::ExecuteUbergraph_WBP_ActionSlotWidget_PC(int32 EntryPoint)
+void UWBP_ActionSlotWidget_PC_C::SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "ExecuteUbergraph_WBP_ActionSlotWidget_PC");
-
-	Params::WBP_ActionSlotWidget_PC_C_ExecuteUbergraph_WBP_ActionSlotWidget_PC Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.NotifyIconRefresh
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_ActionSlotWidget_PC_C::NotifyIconRefresh()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "NotifyIconRefresh");
+		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -71,17 +51,37 @@ void UWBP_ActionSlotWidget_PC_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.NotifyIconRefresh
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_ActionSlotWidget_PC_C::SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC()
+void UWBP_ActionSlotWidget_PC_C::NotifyIconRefresh()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC");
+		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "NotifyIconRefresh");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.ExecuteUbergraph_WBP_ActionSlotWidget_PC
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_ActionSlotWidget_PC_C::ExecuteUbergraph_WBP_ActionSlotWidget_PC(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "ExecuteUbergraph_WBP_ActionSlotWidget_PC");
+
+	Params::WBP_ActionSlotWidget_PC_C_ExecuteUbergraph_WBP_ActionSlotWidget_PC Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

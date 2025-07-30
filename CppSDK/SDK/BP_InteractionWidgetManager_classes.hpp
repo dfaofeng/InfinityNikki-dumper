@@ -27,9 +27,9 @@ public:
 	class UBP_InteractionWidgtComponent_C*        BP_InteractionWidgtComponent;                      // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_RotateWithCameraRotation();
-	void ExecuteUbergraph_BP_InteractionWidgetManager(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_InteractionWidgetManager(int32 EntryPoint);
+	void BP_RotateWithCameraRotation();
 
 	class FString GetModuleName() const;
 

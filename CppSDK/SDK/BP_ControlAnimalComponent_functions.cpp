@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_ControlAnimalComponent.BP_ControlAnimalComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_ControlAnimalComponent_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ControlAnimalComponent_C", "ReceiveTick");
-
-	Params::BP_ControlAnimalComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ControlAnimalComponent.BP_ControlAnimalComponent_C.ExecuteUbergraph_BP_ControlAnimalComponent
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void UBP_ControlAnimalComponent_C::ExecuteUbergraph_BP_ControlAnimalComponent(in
 	Params::BP_ControlAnimalComponent_C_ExecuteUbergraph_BP_ControlAnimalComponent Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ControlAnimalComponent.BP_ControlAnimalComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_ControlAnimalComponent_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ControlAnimalComponent_C", "ReceiveTick");
+
+	Params::BP_ControlAnimalComponent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

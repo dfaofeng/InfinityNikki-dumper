@@ -21,6 +21,8 @@ namespace SDK
 class UBP_PlayerCombatMovementComponent_C final : public UX6CombatMovementComponent
 {
 public:
+	void BP_ForbidCombatMove(bool bForbid, const class FString& Reason);
+
 	class FString GetModuleName() const;
 
 public:

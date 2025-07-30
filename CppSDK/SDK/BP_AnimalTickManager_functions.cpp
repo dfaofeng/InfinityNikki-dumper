@@ -17,17 +17,98 @@
 namespace SDK
 {
 
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.UpdateIsSelfActive
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.BP_IsGlobalAnimalTickManagerActive
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   bActive                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AnimalTickManager_C::UpdateIsSelfActive()
+void UBP_AnimalTickManager_C::BP_IsGlobalAnimalTickManagerActive(bool* bActive)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalTickManager_C", "UpdateIsSelfActive");
+		Func = Class->GetFunction("BP_AnimalTickManager_C", "BP_IsGlobalAnimalTickManagerActive");
+
+	Params::BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bActive != nullptr)
+		*bActive = Parms.bActive;
+}
+
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.DeInit
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_AnimalTickManager_C::DeInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalTickManager_C", "DeInit");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.ForceSetIsSelfActive
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bNewActive                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AnimalTickManager_C::ForceSetIsSelfActive(bool bNewActive)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalTickManager_C", "ForceSetIsSelfActive");
+
+	Params::BP_AnimalTickManager_C_ForceSetIsSelfActive Parms{};
+
+	Parms.bNewActive = bNewActive;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.Init
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AnimalTickManager_C::Init(class AActor* Owner)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalTickManager_C", "Init");
+
+	Params::BP_AnimalTickManager_C_Init Parms{};
+
+	Parms.Owner = Owner;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.NotifyOwnerActorTickEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AnimalTickManager_C::NotifyOwnerActorTickEnabled(bool bEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AnimalTickManager_C", "NotifyOwnerActorTickEnabled");
+
+	Params::BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled Parms{};
+
+	Parms.bEnabled = bEnabled;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -59,98 +140,17 @@ void UBP_AnimalTickManager_C::PostOwnerActorSignificanceChanged(class AActor* Ac
 }
 
 
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.NotifyOwnerActorTickEnabled
+// Function BP_AnimalTickManager.BP_AnimalTickManager_C.UpdateIsSelfActive
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AnimalTickManager_C::NotifyOwnerActorTickEnabled(bool bEnabled)
+void UBP_AnimalTickManager_C::UpdateIsSelfActive()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalTickManager_C", "NotifyOwnerActorTickEnabled");
-
-	Params::BP_AnimalTickManager_C_NotifyOwnerActorTickEnabled Parms{};
-
-	Parms.bEnabled = bEnabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.Init
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AnimalTickManager_C::Init(class AActor* Owner)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalTickManager_C", "Init");
-
-	Params::BP_AnimalTickManager_C_Init Parms{};
-
-	Parms.Owner = Owner;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.ForceSetIsSelfActive
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bNewActive                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AnimalTickManager_C::ForceSetIsSelfActive(bool bNewActive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalTickManager_C", "ForceSetIsSelfActive");
-
-	Params::BP_AnimalTickManager_C_ForceSetIsSelfActive Parms{};
-
-	Parms.bNewActive = bNewActive;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.DeInit
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_AnimalTickManager_C::DeInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalTickManager_C", "DeInit");
+		Func = Class->GetFunction("BP_AnimalTickManager_C", "UpdateIsSelfActive");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AnimalTickManager.BP_AnimalTickManager_C.BP_IsGlobalAnimalTickManagerActive
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   bActive                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AnimalTickManager_C::BP_IsGlobalAnimalTickManagerActive(bool* bActive)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AnimalTickManager_C", "BP_IsGlobalAnimalTickManagerActive");
-
-	Params::BP_AnimalTickManager_C_BP_IsGlobalAnimalTickManagerActive Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bActive != nullptr)
-		*bActive = Parms.bActive;
 }
 
 

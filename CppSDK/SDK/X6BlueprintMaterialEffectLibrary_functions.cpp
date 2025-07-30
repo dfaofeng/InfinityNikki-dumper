@@ -17,36 +17,6 @@
 namespace SDK
 {
 
-// Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.AddScalarsByType
-// (Static, Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int32                                   EffectType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const TMap<class FName, double>&        ExtraScalars                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TMap<class FName, double>*              ScalarMap                                              (Parm, OutParm)
-
-void UX6BlueprintMaterialEffectLibrary_C::AddScalarsByType(int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, class UObject* __WorldContext, TMap<class FName, double>* ScalarMap)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintMaterialEffectLibrary_C", "AddScalarsByType");
-
-	Params::X6BlueprintMaterialEffectLibrary_C_AddScalarsByType Parms{};
-
-	Parms.EffectType = EffectType;
-	Parms.Value = Value;
-	Parms.ExtraScalars = std::move(ExtraScalars);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (ScalarMap != nullptr)
-		*ScalarMap = std::move(Parms.ScalarMap);
-}
-
-
 // Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.BP_SetActorEffect
 // (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -74,6 +44,36 @@ void UX6BlueprintMaterialEffectLibrary_C::BP_SetActorEffect(class AActor* Actor,
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.AddScalarsByType
+// (Static, Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   EffectType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<class FName, double>&        ExtraScalars                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TMap<class FName, double>*              ScalarMap                                              (Parm, OutParm)
+
+void UX6BlueprintMaterialEffectLibrary_C::AddScalarsByType(int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, class UObject* __WorldContext, TMap<class FName, double>* ScalarMap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintMaterialEffectLibrary_C", "AddScalarsByType");
+
+	Params::X6BlueprintMaterialEffectLibrary_C_AddScalarsByType Parms{};
+
+	Parms.EffectType = EffectType;
+	Parms.Value = Value;
+	Parms.ExtraScalars = std::move(ExtraScalars);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (ScalarMap != nullptr)
+		*ScalarMap = std::move(Parms.ScalarMap);
 }
 
 }

@@ -1005,6 +1005,20 @@ void UABP_Player_RegularMovement_C::DetermineStartBS()
 }
 
 
+// Function ABP_Player_RegularMovement.ABP_Player_RegularMovement_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_0D83FB8F40626A1A1B897B95E386B157
+// (BlueprintEvent)
+
+void UABP_Player_RegularMovement_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_0D83FB8F40626A1A1B897B95E386B157()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Player_RegularMovement_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_0D83FB8F40626A1A1B897B95E386B157");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_Player_RegularMovement.ABP_Player_RegularMovement_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_408D5BE942695FEFB56119A4D3D9B735
 // (BlueprintEvent)
 
@@ -3610,6 +3624,20 @@ void UABP_Player_RegularMovement_C::UpdateContextual()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_Player_RegularMovement_C", "UpdateContextual");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_Player_RegularMovement.ABP_Player_RegularMovement_C.UpdateCycleSlopeAlpha
+// (Private, BlueprintCallable, BlueprintEvent)
+
+void UABP_Player_RegularMovement_C::UpdateCycleSlopeAlpha()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Player_RegularMovement_C", "UpdateCycleSlopeAlpha");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "FMatchClothParaArray_structs.hpp"
+#include "Struct_ClothMatchCombineParam_structs.hpp"
 #include "Struct_ClothMatchNameArray_structs.hpp"
-#include "E_MatchClothType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Struct_ClothMatchSkelMap_structs.hpp"
+#include "E_MatchClothType_structs.hpp"
+#include "FMatchClothParaArray_structs.hpp"
 #include "NikkiFitCloth_structs.hpp"
 #include "Struct_ClothMatchStrsArray_structs.hpp"
 #include "Struct_OrnamentPair_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "Struct_ClothMatchCombineParam_structs.hpp"
 
 
 namespace SDK::Params
@@ -60,224 +60,266 @@ static_assert(offsetof(MatchClothObject_C_AllResetData, CallFunc_Less_IntInt_Ret
 static_assert(offsetof(MatchClothObject_C_AllResetData, CallFunc_Add_IntInt_ReturnValue) == 0x00004C, "Member 'MatchClothObject_C_AllResetData::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function MatchClothObject.MatchClothObject_C.ApplyMatchDataV2
-// 0x0340 (0x0340 - 0x0000)
+// 0x0508 (0x0508 - 0x0000)
 struct MatchClothObject_C_ApplyMatchDataV2 final
 {
 public:
-	class USkeletalMesh*                          OuterSkelMesh1;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          InnerSkelMesh1;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          NewLocalVar;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           Temp_AI_AnimBones;                                 // 0x0018(0x0010)(Edit, BlueprintVisible)
-	TArray<class FName>                           Temp_AI_ColliderBones;                             // 0x0028(0x0010)(Edit, BlueprintVisible)
-	class USkeletalMeshComponent*                 OuterSkelComp;                                     // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 InnerSkelComp;                                     // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue_1;              // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value;                           // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones; // 0x00B0(0x0010)(ReferenceParm)
-	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones;  // 0x00C0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue;   // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray;      // 0x00D8(0x0010)(HasGetValueTypeHash)
-	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_1;    // 0x00E8(0x0010)(HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          CallFunc_GetPostProcessInstance_ReturnValue;       // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_1;                         // 0x0110(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasNikkiPhysicsNode_ReturnValue;          // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_2;                         // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_3;                         // 0x0138(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones_1; // 0x0148(0x0010)(ReferenceParm)
-	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones_1; // 0x0158(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue_1; // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue;         // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue_1;       // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_2;    // 0x0180(0x0010)(HasGetValueTypeHash)
-	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_3;    // 0x0190(0x0010)(HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetPostProcessInstance_ReturnValue_1;     // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_4;                         // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_5;                         // 0x01B8(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C9[0x7];                                      // 0x01C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_6;                         // 0x01D0(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_6;                   // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasNikkiPhysicsNode_ReturnValue_1;        // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E3[0x5];                                      // 0x01E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UAnimInstance*>                  CallFunc_Map_Keys_Keys;                            // 0x01E8(0x0010)(ReferenceParm)
-	TArray<class FString>                         CallFunc_Map_Keys_Keys_1;                          // 0x01F8(0x0010)(ReferenceParm)
-	class UAnimInstance*                          CallFunc_Array_Get_Item;                           // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item_1;                         // 0x0210(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_7;                         // 0x0220(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_7;                   // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchSkelMap              CallFunc_Map_Find_Value_8;                         // 0x0238(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_8;                   // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_289[0x7];                                      // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_9;                         // 0x0290(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_9;                   // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_IsNotEmpty_ReturnValue;               // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A2[0x6];                                      // 0x02A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class USkeletalMesh*>                  CallFunc_Map_Keys_Keys_2;                          // 0x02A8(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2BC[0x4];                                      // 0x02BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          CallFunc_Array_Get_Item_2;                         // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C9[0x7];                                      // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          CallFunc_Map_Find_Value_10;                        // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_10;                  // 0x02D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D9[0x3];                                      // 0x02D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x02DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x02E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x02E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x02E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_Value_11;                        // 0x02E7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_11;                  // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_Map_Find_Value_12;                        // 0x02F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_12;                  // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x02FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2FB[0x5];                                      // 0x02FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_Map_Find_Value_13;                        // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_13;                  // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     K2Node_Select_Default;                             // 0x0310(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Array_Get_Item_3;                         // 0x031C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x032C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x032D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x032E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x032F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_331[0x3];                                      // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           Temp_AI_AnimBones_Outer;                           // 0x0000(0x0010)(Edit, BlueprintVisible)
+	class USkeletalMesh*                          OuterSkelMesh1;                                    // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          InnerSkelMesh1;                                    // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          NewLocalVar;                                       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           Temp_AI_AnimBones;                                 // 0x0028(0x0010)(Edit, BlueprintVisible)
+	TArray<class FName>                           Temp_AI_ColliderBones;                             // 0x0038(0x0010)(Edit, BlueprintVisible)
+	class USkeletalMeshComponent*                 OuterSkelComp;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 InnerSkelComp;                                     // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray;      // 0x0070(0x0010)(HasGetValueTypeHash)
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_1;    // 0x0080(0x0010)(HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetPostProcessInstance_ReturnValue;       // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetPostProcessInstance_ReturnValue_1;     // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_2;    // 0x00A0(0x0010)(HasGetValueTypeHash)
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_3;    // 0x00B0(0x0010)(HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_1;              // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_2;              // 0x0108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_3;              // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value;                           // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_152[0x6];                                      // 0x0152(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_1;                         // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones; // 0x0168(0x0010)(ReferenceParm)
+	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones;  // 0x0178(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue;   // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_189[0x7];                                      // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_2;                         // 0x0190(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_3;                         // 0x01A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_4;                         // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BA[0x6];                                      // 0x01BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones_1; // 0x01C0(0x0010)(ReferenceParm)
+	TArray<class FName>                           CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones_1; // 0x01D0(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue_1; // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     K2Node_Select_Default;                             // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x01F5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F6[0x2];                                      // 0x01F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_4;    // 0x01F8(0x0010)(HasGetValueTypeHash)
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             K2Node_DynamicCast_AsData_Table;                   // 0x0210(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_5;    // 0x0220(0x0010)(HasGetValueTypeHash)
+	struct FStruct_ClothMatchCombineParam         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0230(0x0100)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesDataTableRowExist_ReturnValue;        // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0332(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_333[0x5];                                      // 0x0333(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetPostProcessInstance_ReturnValue_2;     // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_345[0x3];                                      // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34C[0x4];                                      // 0x034C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_5;                         // 0x0350(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasNikkiPhysicsNode_ReturnValue;          // 0x0361(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_362[0x2];                                      // 0x0362(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0364(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Array_Get_Item;                           // 0x0368(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue;         // 0x0370(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x037C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_37D[0x3];                                      // 0x037D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMesh*                          CallFunc_GetSkeletalMeshAsset_ReturnValue_1;       // 0x0380(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_6;    // 0x0388(0x0010)(HasGetValueTypeHash)
+	struct FStruct_ClothMatchNameArray            K2Node_MakeStruct_Struct_ClothMatchNameArray_7;    // 0x0398(0x0010)(HasGetValueTypeHash)
+	class UAnimInstance*                          CallFunc_GetPostProcessInstance_ReturnValue_3;     // 0x03A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAnimInstance*>                  CallFunc_Map_Keys_Keys;                            // 0x03B0(0x0010)(ReferenceParm)
+	class UAnimInstance*                          CallFunc_Array_Get_Item_1;                         // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_6;                         // 0x03D0(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_6;                   // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x03E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E2[0x6];                                      // 0x03E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_7;                         // 0x03E8(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_7;                   // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_8;                         // 0x0400(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_8;                   // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchNameArray            CallFunc_Map_Find_Value_9;                         // 0x0418(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_9;                   // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasNikkiPhysicsNode_ReturnValue_1;        // 0x0429(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x042A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42B[0x5];                                      // 0x042B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         CallFunc_Map_Keys_Keys_1;                          // 0x0430(0x0010)(ReferenceParm)
+	class FString                                 CallFunc_Array_Get_Item_2;                         // 0x0440(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchSkelMap              CallFunc_Map_Find_Value_10;                        // 0x0458(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_10;                  // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x04A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_IsNotEmpty_ReturnValue;               // 0x04AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4AB[0x5];                                      // 0x04AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USkeletalMesh*>                  CallFunc_Map_Keys_Keys_2;                          // 0x04B0(0x0010)(ReferenceParm)
+	class USkeletalMesh*                          CallFunc_Array_Get_Item_3;                         // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x04C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMesh*                          CallFunc_Map_Find_Value_11;                        // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_11;                  // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x04D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DA[0x6];                                      // 0x04DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Map_Find_Value_12;                        // 0x04E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_12;                  // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Map_Find_Value_13;                        // 0x04F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_13;                  // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x04F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue_1;             // 0x04FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4FB[0x1];                                      // 0x04FB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x04FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MatchClothObject_C_ApplyMatchDataV2) == 0x000008, "Wrong alignment on MatchClothObject_C_ApplyMatchDataV2");
-static_assert(sizeof(MatchClothObject_C_ApplyMatchDataV2) == 0x000340, "Wrong size on MatchClothObject_C_ApplyMatchDataV2");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, OuterSkelMesh1) == 0x000000, "Member 'MatchClothObject_C_ApplyMatchDataV2::OuterSkelMesh1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, InnerSkelMesh1) == 0x000008, "Member 'MatchClothObject_C_ApplyMatchDataV2::InnerSkelMesh1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, NewLocalVar) == 0x000010, "Member 'MatchClothObject_C_ApplyMatchDataV2::NewLocalVar' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_AI_AnimBones) == 0x000018, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_AI_AnimBones' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_AI_ColliderBones) == 0x000028, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_AI_ColliderBones' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, OuterSkelComp) == 0x000038, "Member 'MatchClothObject_C_ApplyMatchDataV2::OuterSkelComp' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, InnerSkelComp) == 0x000040, "Member 'MatchClothObject_C_ApplyMatchDataV2::InnerSkelComp' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Array_Index_Variable) == 0x000048, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Loop_Counter_Variable) == 0x00004C, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Add_IntInt_ReturnValue) == 0x000050, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Array_Index_Variable_1) == 0x000054, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Loop_Counter_Variable_1) == 0x000058, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Add_IntInt_ReturnValue_1) == 0x00005C, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetObjectName_ReturnValue) == 0x000060, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetObjectName_ReturnValue_1) == 0x000070, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetObjectName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Concat_StrStr_ReturnValue) == 0x000080, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000090, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value) == 0x0000A0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue) == 0x0000A8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones) == 0x0000B0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones) == 0x0000C0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue) == 0x0000D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray) == 0x0000D8, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_1) == 0x0000E8, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Loop_Counter_Variable_2) == 0x0000F8, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetPostProcessInstance_ReturnValue) == 0x000100, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetPostProcessInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Add_IntInt_ReturnValue_2) == 0x000108, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_1) == 0x000110, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_1) == 0x000120, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_HasNikkiPhysicsNode_ReturnValue) == 0x000121, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_HasNikkiPhysicsNode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_2) == 0x000128, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_2) == 0x000130, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_3) == 0x000138, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_3) == 0x000140, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Array_Index_Variable_2) == 0x000144, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones_1) == 0x000148, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones_1) == 0x000158, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue_1) == 0x000168, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetSkeletalMeshAsset_ReturnValue) == 0x000170, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetSkeletalMeshAsset_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetSkeletalMeshAsset_ReturnValue_1) == 0x000178, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetSkeletalMeshAsset_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_2) == 0x000180, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_3) == 0x000190, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetPostProcessInstance_ReturnValue_1) == 0x0001A0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetPostProcessInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_4) == 0x0001A8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_4) == 0x0001B0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_5) == 0x0001B8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_5) == 0x0001C8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_6) == 0x0001D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_6) == 0x0001E0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue) == 0x0001E1, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_HasNikkiPhysicsNode_ReturnValue_1) == 0x0001E2, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_HasNikkiPhysicsNode_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Keys_Keys) == 0x0001E8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Keys_Keys_1) == 0x0001F8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Keys_Keys_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item) == 0x000208, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item_1) == 0x000210, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_7) == 0x000220, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_7) == 0x000230, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_8) == 0x000238, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_8' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_8) == 0x000288, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_9) == 0x000290, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_9' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_9) == 0x0002A0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_IsNotEmpty_ReturnValue) == 0x0002A1, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Keys_Keys_2) == 0x0002A8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Keys_Keys_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue) == 0x0002B8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item_2) == 0x0002C0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Less_IntInt_ReturnValue) == 0x0002C8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_10) == 0x0002D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_10' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_10) == 0x0002D8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue_1) == 0x0002DC, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue_2) == 0x0002E0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Greater_IntInt_ReturnValue) == 0x0002E4, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Less_IntInt_ReturnValue_1) == 0x0002E5, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_bool_Variable) == 0x0002E6, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_11) == 0x0002E7, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_11' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_11) == 0x0002E8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_12) == 0x0002F0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_12' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_12) == 0x0002F8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue_1) == 0x0002F9, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue_2) == 0x0002FA, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_13) == 0x000300, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_13' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_13) == 0x000308, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_Select_Default) == 0x000310, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue_3) == 0x000318, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item_3) == 0x00031C, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue_3) == 0x000324, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_AddUnique_ReturnValue) == 0x000328, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Less_IntInt_ReturnValue_2) == 0x00032C, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Contains_ReturnValue) == 0x00032D, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x00032E, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00032F, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Contains_ReturnValue_1) == 0x000330, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Contains_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_AddUnique_ReturnValue_1) == 0x000334, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Not_PreBool_ReturnValue) == 0x000338, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(sizeof(MatchClothObject_C_ApplyMatchDataV2) == 0x000508, "Wrong size on MatchClothObject_C_ApplyMatchDataV2");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_AI_AnimBones_Outer) == 0x000000, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_AI_AnimBones_Outer' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, OuterSkelMesh1) == 0x000010, "Member 'MatchClothObject_C_ApplyMatchDataV2::OuterSkelMesh1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, InnerSkelMesh1) == 0x000018, "Member 'MatchClothObject_C_ApplyMatchDataV2::InnerSkelMesh1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, NewLocalVar) == 0x000020, "Member 'MatchClothObject_C_ApplyMatchDataV2::NewLocalVar' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_AI_AnimBones) == 0x000028, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_AI_AnimBones' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_AI_ColliderBones) == 0x000038, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_AI_ColliderBones' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, OuterSkelComp) == 0x000048, "Member 'MatchClothObject_C_ApplyMatchDataV2::OuterSkelComp' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, InnerSkelComp) == 0x000050, "Member 'MatchClothObject_C_ApplyMatchDataV2::InnerSkelComp' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Loop_Counter_Variable) == 0x000058, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Add_IntInt_ReturnValue) == 0x00005C, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Array_Index_Variable) == 0x000060, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Loop_Counter_Variable_1) == 0x000064, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Add_IntInt_ReturnValue_1) == 0x000068, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Array_Index_Variable_1) == 0x00006C, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray) == 0x000070, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_1) == 0x000080, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetPostProcessInstance_ReturnValue) == 0x000090, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetPostProcessInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetPostProcessInstance_ReturnValue_1) == 0x000098, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetPostProcessInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_2) == 0x0000A0, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_3) == 0x0000B0, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetObjectName_ReturnValue) == 0x0000C0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Concat_StrStr_ReturnValue) == 0x0000D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetObjectName_ReturnValue_1) == 0x0000E0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetObjectName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0000F0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Conv_StringToName_ReturnValue) == 0x000100, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetObjectName_ReturnValue_2) == 0x000108, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetObjectName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000118, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetObjectName_ReturnValue_3) == 0x000128, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetObjectName_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_bool_Variable) == 0x000138, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000140, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value) == 0x000150, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue) == 0x000151, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_1) == 0x000158, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_1) == 0x000160, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue) == 0x000161, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones) == 0x000168, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones) == 0x000178, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue) == 0x000188, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_2) == 0x000190, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_2) == 0x000198, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_3) == 0x0001A0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_3) == 0x0001A8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_4) == 0x0001B0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_4) == 0x0001B8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue_1) == 0x0001B9, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones_1) == 0x0001C0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutColliderBones_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones_1) == 0x0001D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_OutAnimBones_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue_1) == 0x0001E0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetNikkiPhysicsBoneWeights_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_Select_Default) == 0x0001E8, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue) == 0x0001F0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001F4, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x0001F5, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_4) == 0x0001F8, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000208, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_DynamicCast_AsData_Table) == 0x000210, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_DynamicCast_AsData_Table' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_DynamicCast_bSuccess) == 0x000218, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_5) == 0x000220, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetDataTableRowFromName_OutRow) == 0x000230, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000330, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_DoesDataTableRowExist_ReturnValue) == 0x000331, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_DoesDataTableRowExist_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_IsValid_ReturnValue) == 0x000332, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetPostProcessInstance_ReturnValue_2) == 0x000338, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetPostProcessInstance_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Loop_Counter_Variable_2) == 0x000340, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Less_IntInt_ReturnValue) == 0x000344, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Add_IntInt_ReturnValue_2) == 0x000348, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_5) == 0x000350, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_5) == 0x000360, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_HasNikkiPhysicsNode_ReturnValue) == 0x000361, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_HasNikkiPhysicsNode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, Temp_int_Array_Index_Variable_2) == 0x000364, "Member 'MatchClothObject_C_ApplyMatchDataV2::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item) == 0x000368, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetSkeletalMeshAsset_ReturnValue) == 0x000370, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetSkeletalMeshAsset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_AddUnique_ReturnValue) == 0x000378, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Contains_ReturnValue) == 0x00037C, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetSkeletalMeshAsset_ReturnValue_1) == 0x000380, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetSkeletalMeshAsset_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_6) == 0x000388, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, K2Node_MakeStruct_Struct_ClothMatchNameArray_7) == 0x000398, "Member 'MatchClothObject_C_ApplyMatchDataV2::K2Node_MakeStruct_Struct_ClothMatchNameArray_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_GetPostProcessInstance_ReturnValue_3) == 0x0003A8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_GetPostProcessInstance_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Keys_Keys) == 0x0003B0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item_1) == 0x0003C0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue_1) == 0x0003C8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_6) == 0x0003D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_6) == 0x0003E0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Less_IntInt_ReturnValue_1) == 0x0003E1, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_7) == 0x0003E8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_7) == 0x0003F8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_8) == 0x000400, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_8' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_8) == 0x000410, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_9) == 0x000418, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_9' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_9) == 0x000428, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_HasNikkiPhysicsNode_ReturnValue_1) == 0x000429, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_HasNikkiPhysicsNode_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue_2) == 0x00042A, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Keys_Keys_1) == 0x000430, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Keys_Keys_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item_2) == 0x000440, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue_2) == 0x000450, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_10) == 0x000458, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_10' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_10) == 0x0004A8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Less_IntInt_ReturnValue_2) == 0x0004A9, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_IsNotEmpty_ReturnValue) == 0x0004AA, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Keys_Keys_2) == 0x0004B0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Keys_Keys_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Get_Item_3) == 0x0004C0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Length_ReturnValue_3) == 0x0004C8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_11) == 0x0004D0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_11' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_11) == 0x0004D8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Greater_IntInt_ReturnValue) == 0x0004D9, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_12) == 0x0004E0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_12' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_12) == 0x0004E8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_Value_13) == 0x0004F0, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_Value_13' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Map_Find_ReturnValue_13) == 0x0004F8, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Map_Find_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_BooleanAND_ReturnValue_3) == 0x0004F9, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_Contains_ReturnValue_1) == 0x0004FA, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_Contains_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Array_AddUnique_ReturnValue_1) == 0x0004FC, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Array_AddUnique_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ApplyMatchDataV2, CallFunc_Not_PreBool_ReturnValue) == 0x000500, "Member 'MatchClothObject_C_ApplyMatchDataV2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function MatchClothObject.MatchClothObject_C.ComputeClothesCombineV2
-// 0x0470 (0x0470 - 0x0000)
+// 0x0498 (0x0498 - 0x0000)
 struct MatchClothObject_C_ComputeClothesCombineV2 final
 {
 public:
@@ -323,14 +365,14 @@ public:
 	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_7;                         // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_7;                   // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_Variable;                                // 0x0101(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_102[0x6];                                      // 0x0102(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_8;                         // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_8;                   // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_9;                         // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_9;                   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0121(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_122[0x6];                                      // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_10;                        // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_10;                  // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -346,74 +388,74 @@ public:
 	int32                                         Temp_int_Variable;                                 // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          CallFunc_Array_Get_Item;                           // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          CallFunc_Array_Get_Item_1;                         // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class USkeletalMesh*>                  K2Node_MakeArray_Array;                            // 0x01A8(0x0010)(ReferenceParm)
-	class FString                                 CallFunc_GetObjectName_ReturnValue_2;              // 0x01B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue_3;              // 0x01C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x01D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UDataTable*                             K2Node_DynamicCast_AsData_Table;                   // 0x0200(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x020C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0214(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_215[0x3];                                      // 0x0215(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchCombineParam         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0218(0x00E0)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_Value_12;                        // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_12;                  // 0x02FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x02FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesDataTableRowExist_ReturnValue;        // 0x02FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2FD[0x3];                                      // 0x02FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_13;                        // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_13;                  // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_309[0x7];                                      // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_14;                        // 0x0310(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_14;                  // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMatchType_Result;                      // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetMatchType_Result_1;                    // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0324(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0325(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_326[0x2];                                      // 0x0326(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_15;                        // 0x0328(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_15;                  // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_331[0x7];                                      // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_16;                        // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_16;                  // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_342[0x6];                                      // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class USkeletalMesh*, class USkeletalMesh*> K2Node_MakeMap_Map;                             // 0x0348(0x0050)()
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x0398(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchSkelMap              K2Node_MakeStruct_Struct_ClothMatchSkelMap;        // 0x03A0(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_isIgnoreConfig_ReturnValue;               // 0x03F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3F2[0x6];                                      // 0x03F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue_4;              // 0x03F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_isSameSuit_ReturnValue;                   // 0x0409(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x040A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40B[0x5];                                      // 0x040B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue_5;              // 0x0410(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0428(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0440(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          CallFunc_Array_Get_Item_2;                         // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          CallFunc_Array_Get_Item_3;                         // 0x0458(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0464(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsIgnoreArm_ReturnValue;                  // 0x0465(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_466[0x2];                                      // 0x0466(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0198(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             K2Node_DynamicCast_AsData_Table;                   // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1AA[0x6];                                      // 0x01AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMesh*                          CallFunc_Array_Get_Item;                           // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CallFunc_Array_Get_Item_1;                         // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class USkeletalMesh*>                  K2Node_MakeArray_Array;                            // 0x01C0(0x0010)(ReferenceParm)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_2;              // 0x01D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_3;              // 0x01E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x01F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0200(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_12;                        // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_12;                  // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchCombineParam         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0228(0x0100)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_329[0x3];                                      // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMatchType_Result;                      // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value_13;                        // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_13;                  // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0332(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesDataTableRowExist_ReturnValue;        // 0x0333(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_334[0x4];                                      // 0x0334(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_14;                        // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_14;                  // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_15;                        // 0x0348(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_15;                  // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0351(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_352[0x6];                                      // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class USkeletalMesh*, class USkeletalMesh*> K2Node_MakeMap_Map;                             // 0x0358(0x0050)()
+	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x03A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchSkelMap              K2Node_MakeStruct_Struct_ClothMatchSkelMap;        // 0x03B0(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_isIgnoreConfig_ReturnValue;               // 0x0401(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_402[0x6];                                      // 0x0402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue_4;              // 0x0408(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_isSameSuit_ReturnValue;                   // 0x0419(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x041A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41B[0x5];                                      // 0x041B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue_5;              // 0x0420(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0438(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0450(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CallFunc_Array_Get_Item_2;                         // 0x0460(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CallFunc_Array_Get_Item_3;                         // 0x0468(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0474(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsIgnoreArm_ReturnValue;                  // 0x0475(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_476[0x2];                                      // 0x0476(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_16;                        // 0x0480(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_16;                  // 0x0488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_489[0x3];                                      // 0x0489(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMatchType_Result_1;                    // 0x048C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0491(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MatchClothObject_C_ComputeClothesCombineV2) == 0x000008, "Wrong alignment on MatchClothObject_C_ComputeClothesCombineV2");
-static_assert(sizeof(MatchClothObject_C_ComputeClothesCombineV2) == 0x000470, "Wrong size on MatchClothObject_C_ComputeClothesCombineV2");
+static_assert(sizeof(MatchClothObject_C_ComputeClothesCombineV2) == 0x000498, "Wrong size on MatchClothObject_C_ComputeClothesCombineV2");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, InSkelMeshArray) == 0x000000, "Member 'MatchClothObject_C_ComputeClothesCombineV2::InSkelMeshArray' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, InMatchType) == 0x000010, "Member 'MatchClothObject_C_ComputeClothesCombineV2::InMatchType' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, SkelMesh_temp) == 0x000018, "Member 'MatchClothObject_C_ComputeClothesCombineV2::SkelMesh_temp' has a wrong offset!");
@@ -446,11 +488,11 @@ static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_6) == 0x0000F0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_6' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_7) == 0x0000F8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_7' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_7) == 0x000100, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, Temp_bool_Variable) == 0x000101, "Member 'MatchClothObject_C_ComputeClothesCombineV2::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_8) == 0x000108, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_8' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_8) == 0x000110, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_8' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_9) == 0x000118, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_9' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_9) == 0x000120, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, Temp_bool_Variable) == 0x000121, "Member 'MatchClothObject_C_ComputeClothesCombineV2::Temp_bool_Variable' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_10) == 0x000128, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_10' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_10) == 0x000130, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_10' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_11) == 0x000138, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_11' has a wrong offset!");
@@ -462,60 +504,60 @@ static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Conc
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_SwitchEnum_CmpSuccess) == 0x000188, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, Temp_int_Variable) == 0x00018C, "Member 'MatchClothObject_C_ComputeClothesCombineV2::Temp_int_Variable' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Add_IntInt_ReturnValue_2) == 0x000190, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item) == 0x000198, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item_1) == 0x0001A0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_MakeArray_Array) == 0x0001A8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_2) == 0x0001B8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_3) == 0x0001C8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0001D8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x0001E8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0001F0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_DynamicCast_AsData_Table) == 0x000200, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_DynamicCast_AsData_Table' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_DynamicCast_bSuccess_2) == 0x000208, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Conv_StringToName_ReturnValue) == 0x00020C, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_IsValid_ReturnValue) == 0x000214, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetDataTableRowFromName_OutRow) == 0x000218, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0002F8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_12) == 0x0002F9, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_12' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_12) == 0x0002FA, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanAND_ReturnValue) == 0x0002FB, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_DoesDataTableRowExist_ReturnValue) == 0x0002FC, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_DoesDataTableRowExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_13) == 0x000300, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_13' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_13) == 0x000308, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_14) == 0x000310, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_14' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_14) == 0x000318, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetMatchType_Result) == 0x00031C, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetMatchType_Result' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetMatchType_Result_1) == 0x000320, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetMatchType_Result_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000324, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Not_PreBool_ReturnValue) == 0x000325, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_15) == 0x000328, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_15' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_15) == 0x000330, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_16) == 0x000338, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_16' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_16) == 0x000340, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanOR_ReturnValue) == 0x000341, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_MakeMap_Map) == 0x000348, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_MakeMap_Map' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_LastIndex_ReturnValue) == 0x000398, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_MakeStruct_Struct_ClothMatchSkelMap) == 0x0003A0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_MakeStruct_Struct_ClothMatchSkelMap' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_LessEqual_IntInt_ReturnValue) == 0x0003F0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_isIgnoreConfig_ReturnValue) == 0x0003F1, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_isIgnoreConfig_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_4) == 0x0003F8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Not_PreBool_ReturnValue_1) == 0x000408, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_isSameSuit_ReturnValue) == 0x000409, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_isSameSuit_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Not_PreBool_ReturnValue_2) == 0x00040A, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_5) == 0x000410, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanOR_ReturnValue_1) == 0x000420, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000428, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanAND_ReturnValue_1) == 0x000438, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000440, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item_2) == 0x000450, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item_3) == 0x000458, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Length_ReturnValue) == 0x000460, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Less_IntInt_ReturnValue) == 0x000464, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_IsIgnoreArm_ReturnValue) == 0x000465, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_IsIgnoreArm_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Add_ReturnValue) == 0x000468, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000198, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_DynamicCast_AsData_Table) == 0x0001A0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_DynamicCast_AsData_Table' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_DynamicCast_bSuccess_2) == 0x0001A8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_IsValid_ReturnValue) == 0x0001A9, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item) == 0x0001B0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item_1) == 0x0001B8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_MakeArray_Array) == 0x0001C0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_2) == 0x0001D0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_3) == 0x0001E0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0001F0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000200, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Conv_StringToName_ReturnValue) == 0x000210, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_12) == 0x000218, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_12' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_12) == 0x000220, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetDataTableRowFromName_OutRow) == 0x000228, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000328, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetMatchType_Result) == 0x00032C, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetMatchType_Result' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_13) == 0x000330, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_13' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_13) == 0x000331, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanAND_ReturnValue) == 0x000332, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_DoesDataTableRowExist_ReturnValue) == 0x000333, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_DoesDataTableRowExist_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_14) == 0x000338, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_14' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_14) == 0x000340, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_15) == 0x000348, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_15' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_15) == 0x000350, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanOR_ReturnValue) == 0x000351, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_MakeMap_Map) == 0x000358, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_MakeMap_Map' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_LastIndex_ReturnValue) == 0x0003A8, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, K2Node_MakeStruct_Struct_ClothMatchSkelMap) == 0x0003B0, "Member 'MatchClothObject_C_ComputeClothesCombineV2::K2Node_MakeStruct_Struct_ClothMatchSkelMap' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000400, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_isIgnoreConfig_ReturnValue) == 0x000401, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_isIgnoreConfig_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_4) == 0x000408, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Not_PreBool_ReturnValue) == 0x000418, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_isSameSuit_ReturnValue) == 0x000419, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_isSameSuit_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Not_PreBool_ReturnValue_1) == 0x00041A, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetObjectName_ReturnValue_5) == 0x000420, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetObjectName_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanOR_ReturnValue_1) == 0x000430, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000438, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_BooleanAND_ReturnValue_1) == 0x000448, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000450, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item_2) == 0x000460, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Get_Item_3) == 0x000468, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Length_ReturnValue) == 0x000470, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Less_IntInt_ReturnValue) == 0x000474, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_IsIgnoreArm_ReturnValue) == 0x000475, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_IsIgnoreArm_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Array_Add_ReturnValue) == 0x000478, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_Value_16) == 0x000480, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_Value_16' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Map_Find_ReturnValue_16) == 0x000488, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Map_Find_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_GetMatchType_Result_1) == 0x00048C, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_GetMatchType_Result_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000490, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeClothesCombineV2, CallFunc_Not_PreBool_ReturnValue_2) == 0x000491, "Member 'MatchClothObject_C_ComputeClothesCombineV2::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
 
 // Function MatchClothObject.MatchClothObject_C.ComputeMatchClothesV2
-// 0x06C8 (0x06C8 - 0x0000)
+// 0x06F8 (0x06F8 - 0x0000)
 struct MatchClothObject_C_ComputeMatchClothesV2 final
 {
 public:
@@ -535,159 +577,164 @@ public:
 	int32                                         Local_LayerIndex;                                  // 0x01D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                          OuterSkel;                                         // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                          InnerSkel;                                         // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 Temp_int_Variable;                                 // 0x01F0(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable_1;                              // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSectionValuePair>              Temp_struct_Variable;                              // 0x01F0(0x0010)(ReferenceParm)
+	bool                                          Temp_bool_Variable;                                // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 Temp_int_Variable_1;                               // 0x0208(0x0010)(ReferenceParm)
-	TArray<int32>                                 Temp_int_Variable_2;                               // 0x0218(0x0010)(ReferenceParm)
-	bool                                          Temp_bool_Variable_2;                              // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22A[0x6];                                      // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             K2Node_DynamicCast_AsData_Table;                   // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EProjectDataType                              Temp_byte_Variable;                                // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x024A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EProjectDataType                              Temp_byte_Variable_1;                              // 0x024B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_3;                               // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0250(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x025C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0264(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchClothParameter                   CallFunc_Map_Find_Value;                           // 0x0270(0x0028)()
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29A[0x2];                                      // 0x029A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_GetOrnamentBoneTransform_OutBoneNames;    // 0x02A0(0x0010)(ReferenceParm)
-	TArray<struct FTransform>                     CallFunc_GetOrnamentBoneTransform_OutBoneTransforms; // 0x02B0(0x0010)(ReferenceParm)
-	bool                                          CallFunc_GetOrnamentBoneTransform_ReturnValue;     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x02C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x02C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C4[0x4];                                      // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_Select_Default;                             // 0x02C8(0x0010)(ReferenceParm)
-	TArray<int32>                                 K2Node_Select_Default_1;                           // 0x02D8(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 K2Node_Select_Default_2;                           // 0x02F0(0x0010)(ReferenceParm)
-	struct FMatchClothParameter                   CallFunc_Map_Find_Value_1;                         // 0x0300(0x0028)()
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0329(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32A[0x2];                                      // 0x032A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_2;                         // 0x0330(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_339[0x7];                                      // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0340(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TArray<struct FSectionValuePair>              Temp_struct_Variable;                              // 0x0350(0x0010)(ReferenceParm)
-	class FString                                 CallFunc_GetObjectName_ReturnValue_1;              // 0x0360(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0370(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0380(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0390(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_Value_3;                         // 0x0391(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0392(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_393[0x1];                                      // 0x0393(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMatchType_Result;                      // 0x0394(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x0399(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x039A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x039B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x039C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x039D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default_3;                           // 0x039E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x039F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A4[0x4];                                      // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue_2;              // 0x03A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	EProjectDataType                              K2Node_Select_Default_4;                           // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FMatchClothProjectDataTypeParameter    K2Node_MakeStruct_MatchClothProjectDataTypeParameter; // 0x03B9(0x0001)(NoDestructor)
-	uint8                                         Pad_3BA[0x6];                                      // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue_3;              // 0x03C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x03D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_4;                         // 0x03E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x03E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E9[0x7];                                      // 0x03E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x03F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_5;                         // 0x0400(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x0408(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_Value_6;                         // 0x0409(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_6;                   // 0x040A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x040B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue_4;              // 0x0410(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421[0x3];                                      // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0424(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue_5;              // 0x0428(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0438(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0450(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0468(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_46C[0x4];                                      // 0x046C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchCombineParam         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0470(0x00E0)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0550(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0551(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesDataTableRowExist_ReturnValue;        // 0x0552(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_553[0x1];                                      // 0x0553(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetMatchType_Result_1;                    // 0x0554(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_Conv_IntToByte_ReturnValue_1;             // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_559[0x7];                                      // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchClothParameter                   CallFunc_Map_Find_Value_7;                         // 0x0560(0x0028)()
-	bool                                          CallFunc_Map_Find_ReturnValue_7;                   // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_FindValidPairData_ReturnValue;            // 0x0589(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x058A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x058B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_58C[0x4];                                      // 0x058C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSectionValuePair>              K2Node_Select_Default_5;                           // 0x0590(0x0010)(ReferenceParm)
-	struct FMatchClothOuterSectionParameter       K2Node_MakeStruct_MatchClothOuterSectionParameter; // 0x05A0(0x0040)()
-	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_8;                         // 0x05E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_8;                   // 0x05E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x05E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x05EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EB[0x5];                                      // 0x05EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFitMatchSetting_C*                     K2Node_Select_Default_6;                           // 0x05F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UFitMatchSetting_C*                     K2Node_Select_Default_7;                           // 0x05F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FStruct_ClothMatchStrsArray            CallFunc_Map_Find_Value_9;                         // 0x0600(0x0010)(HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_9;                   // 0x0610(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_611[0x3];                                      // 0x0611(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_4;                               // 0x0614(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_4;         // 0x0618(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0619(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61A[0x2];                                      // 0x061A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x061C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0620(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_631[0x7];                                      // 0x0631(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_ClothMatchSkelMap              CallFunc_Map_Find_Value_10;                        // 0x0638(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_10;                  // 0x0688(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x0689(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68A[0x2];                                      // 0x068A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x068C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class USkeletalMesh*>                  CallFunc_Map_Keys_Keys;                            // 0x0690(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x06A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6A1[0x7];                                      // 0x06A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          CallFunc_Array_Get_Item_1;                         // 0x06A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMesh*                          CallFunc_Map_Find_Value_11;                        // 0x06B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue_11;                  // 0x06B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B9[0x3];                                      // 0x06B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x06BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x06C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C1[0x3];                                      // 0x06C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x06C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue; // 0x0208(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 Temp_int_Variable;                                 // 0x0210(0x0010)(ReferenceParm)
+	class UDataTable*                             K2Node_DynamicCast_AsData_Table;                   // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x022A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22B[0x1];                                      // 0x022B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x023C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EProjectDataType                              Temp_byte_Variable;                                // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_241[0x3];                                      // 0x0241(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable_2;                  // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EProjectDataType                              Temp_byte_Variable_1;                              // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_252[0x2];                                      // 0x0252(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_1;                               // 0x0254(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 Temp_int_Variable_2;                               // 0x0258(0x0010)(ReferenceParm)
+	struct FMatchClothParameter                   CallFunc_Map_Find_Value;                           // 0x0268(0x0028)()
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_292[0x2];                                      // 0x0292(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x029C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue;           // 0x029D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29E[0x2];                                      // 0x029E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_3;                 // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A4[0x4];                                      // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           CallFunc_GetOrnamentBoneTransform_OutBoneNames;    // 0x02A8(0x0010)(ReferenceParm)
+	TArray<struct FTransform>                     CallFunc_GetOrnamentBoneTransform_OutBoneTransforms; // 0x02B8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_GetOrnamentBoneTransform_ReturnValue;     // 0x02C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x02C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_1;         // 0x02CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2CB[0x5];                                      // 0x02CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSectionValuePair>              K2Node_Select_Default;                             // 0x02D0(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_2;         // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_3;         // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E2[0x6];                                      // 0x02E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_Select_Default_1;                           // 0x02E8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsValidIndex_ReturnValue_4;         // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_Select_Default_2;                           // 0x0300(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue;             // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_311[0x7];                                      // 0x0311(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchClothParameter                   CallFunc_Map_Find_Value_1;                         // 0x0318(0x0028)()
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0341(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0342(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_343[0x1];                                      // 0x0343(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_2;                         // 0x0348(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_2;                   // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0351(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_352[0x6];                                      // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_3;                         // 0x0358(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_3;                   // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0368(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TArray<int32>                                 Temp_int_Variable_4;                               // 0x0378(0x0010)(ReferenceParm)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_1;              // 0x0388(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0398(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x03A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value_4;                         // 0x03B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_4;                   // 0x03BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3BB[0x1];                                      // 0x03BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMatchType_Result;                      // 0x03BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue;               // 0x03C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x03C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x03C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x03C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x03C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x03C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C7[0x1];                                      // 0x03C7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x03C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue_2;              // 0x03D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	EProjectDataType                              K2Node_Select_Default_3;                           // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E1[0x7];                                      // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue_3;              // 0x03E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FMatchClothProjectDataTypeParameter    K2Node_MakeStruct_MatchClothProjectDataTypeParameter; // 0x03F8(0x0001)(NoDestructor)
+	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0400(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0410(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_5;                         // 0x0420(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_5;                   // 0x0428(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_Value_6;                         // 0x0429(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_6;                   // 0x042A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_42B[0x5];                                      // 0x042B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     CallFunc_Map_Find_Value_7;                         // 0x0430(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_7;                   // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x0439(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x043A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43B[0x5];                                      // 0x043B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue_4;              // 0x0440(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UFitMatchSetting_C*                     K2Node_Select_Default_4;                           // 0x0450(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue_5;              // 0x0458(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x0468(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_5;              // 0x0478(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0488(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_ClothMatchCombineParam         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0490(0x0100)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesDataTableRowExist_ReturnValue;        // 0x0591(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_IsNotEmpty_ReturnValue_1;           // 0x0592(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593[0x1];                                      // 0x0593(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetMatchType_Result_1;                    // 0x0594(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_Conv_IntToByte_ReturnValue_1;             // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_599[0x7];                                      // 0x0599(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchClothParameter                   CallFunc_Map_Find_Value_8;                         // 0x05A0(0x0028)()
+	bool                                          CallFunc_Map_Find_ReturnValue_8;                   // 0x05C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x05C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_FindValidPairData_ReturnValue;            // 0x05CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x05CB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5CC[0x4];                                      // 0x05CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 K2Node_Select_Default_5;                           // 0x05D0(0x0010)(ReferenceParm)
+	struct FMatchClothOuterSectionParameter       K2Node_MakeStruct_MatchClothOuterSectionParameter; // 0x05E0(0x0040)()
+	bool                                          Temp_bool_Variable_5;                              // 0x0620(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_621[0x7];                                      // 0x0621(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFitMatchSetting_C*                     K2Node_Select_Default_6;                           // 0x0628(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_ClothMatchStrsArray            CallFunc_Map_Find_Value_9;                         // 0x0630(0x0010)(HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_9;                   // 0x0640(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_641[0x7];                                      // 0x0641(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0648(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0658(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_659[0x7];                                      // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FStruct_ClothMatchSkelMap              CallFunc_Map_Find_Value_10;                        // 0x0660(0x0050)(ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_10;                  // 0x06B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x06B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6B2[0x2];                                      // 0x06B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x06B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USkeletalMesh*>                  CallFunc_Map_Keys_Keys;                            // 0x06B8(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x06C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C9[0x7];                                      // 0x06C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMesh*                          CallFunc_Array_Get_Item_1;                         // 0x06D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMesh*                          CallFunc_Map_Find_Value_11;                        // 0x06D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_11;                  // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E1[0x3];                                      // 0x06E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x06E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x06E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6E9[0x3];                                      // 0x06E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_LastIndex_ReturnValue;              // 0x06EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x06F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x06F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_7;                           // 0x06F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MatchClothObject_C_ComputeMatchClothesV2) == 0x000008, "Wrong alignment on MatchClothObject_C_ComputeMatchClothesV2");
-static_assert(sizeof(MatchClothObject_C_ComputeMatchClothesV2) == 0x0006C8, "Wrong size on MatchClothObject_C_ComputeMatchClothesV2");
+static_assert(sizeof(MatchClothObject_C_ComputeMatchClothesV2) == 0x0006F8, "Wrong size on MatchClothObject_C_ComputeMatchClothesV2");
 static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, InMatchType) == 0x000000, "Member 'MatchClothObject_C_ComputeMatchClothesV2::InMatchType' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, InMatchClothesPara) == 0x000008, "Member 'MatchClothObject_C_ComputeMatchClothesV2::InMatchClothesPara' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, InSpacialTypeParam) == 0x000030, "Member 'MatchClothObject_C_ComputeMatchClothesV2::InSpacialTypeParam' has a wrong offset!");
@@ -702,127 +749,129 @@ static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Local_LayerCoun
 static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Local_LayerIndex) == 0x0001D4, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Local_LayerIndex' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, OuterSkel) == 0x0001D8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::OuterSkel' has a wrong offset!");
 static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, InnerSkel) == 0x0001E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::InnerSkel' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable) == 0x0001E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable) == 0x0001F0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_1) == 0x000200, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_1) == 0x000208, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_2) == 0x000218, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_2) == 0x000228, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_3) == 0x000229, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000230, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_4) == 0x000238, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_DynamicCast_AsData_Table) == 0x000240, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_DynamicCast_AsData_Table' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_DynamicCast_bSuccess) == 0x000248, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_byte_Variable) == 0x000249, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_IsValid_ReturnValue) == 0x00024A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_byte_Variable_1) == 0x00024B, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_3) == 0x00024C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Loop_Counter_Variable) == 0x000250, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue) == 0x000254, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Array_Index_Variable) == 0x000258, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Loop_Counter_Variable_1) == 0x00025C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue_1) == 0x000260, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Array_Index_Variable_1) == 0x000264, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Array_Index_Variable_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Array_Index_Variable_2) == 0x000268, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Array_Index_Variable_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value) == 0x000270, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue) == 0x000298, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue) == 0x000299, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Add_ReturnValue) == 0x00029C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetOrnamentBoneTransform_OutBoneNames) == 0x0002A0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetOrnamentBoneTransform_OutBoneNames' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetOrnamentBoneTransform_OutBoneTransforms) == 0x0002B0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetOrnamentBoneTransform_OutBoneTransforms' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetOrnamentBoneTransform_ReturnValue) == 0x0002C0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetOrnamentBoneTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue) == 0x0002C1, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0002C2, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x0002C3, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default) == 0x0002C8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_1) == 0x0002D8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x0002E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_2) == 0x0002F0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_1) == 0x000300, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_1) == 0x000328, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_1) == 0x000329, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Length_ReturnValue) == 0x00032C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_2) == 0x000330, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_2) == 0x000338, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue) == 0x000340, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_struct_Variable) == 0x000350, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_1) == 0x000360, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue) == 0x000370, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000380, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000390, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_3) == 0x000391, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_3) == 0x000392, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetMatchType_Result) == 0x000394, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetMatchType_Result' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_2) == 0x000398, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_IntToByte_ReturnValue) == 0x000399, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_3) == 0x00039A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetValidValue_ReturnValue) == 0x00039B, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00039C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_4) == 0x00039D, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_3) == 0x00039E, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_5) == 0x00039F, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_BoolToInt_ReturnValue) == 0x0003A0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_BoolToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_2) == 0x0003A8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_4) == 0x0003B8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_MakeStruct_MatchClothProjectDataTypeParameter) == 0x0003B9, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_MakeStruct_MatchClothProjectDataTypeParameter' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_3) == 0x0003C0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0003D0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_4) == 0x0003E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_4) == 0x0003E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0003F0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_5) == 0x000400, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_5) == 0x000408, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_6) == 0x000409, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_6) == 0x00040A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_6) == 0x00040B, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_4) == 0x000410, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_7) == 0x000420, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Loop_Counter_Variable_2) == 0x000424, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_5) == 0x000428, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000438, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Less_IntInt_ReturnValue) == 0x000448, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000450, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_StringToName_ReturnValue) == 0x000460, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue_2) == 0x000468, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetDataTableRowFromName_OutRow) == 0x000470, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000550, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000551, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_DoesDataTableRowExist_ReturnValue) == 0x000552, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_DoesDataTableRowExist_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetMatchType_Result_1) == 0x000554, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetMatchType_Result_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_IntToByte_ReturnValue_1) == 0x000558, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_IntToByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_7) == 0x000560, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_7) == 0x000588, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_FindValidPairData_ReturnValue) == 0x000589, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_FindValidPairData_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_5) == 0x00058A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Not_PreBool_ReturnValue) == 0x00058B, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_5) == 0x000590, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_5' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_MakeStruct_MatchClothOuterSectionParameter) == 0x0005A0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_MakeStruct_MatchClothOuterSectionParameter' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_8) == 0x0005E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_8' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_8) == 0x0005E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_6) == 0x0005E9, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_7) == 0x0005EA, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_6) == 0x0005F0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_6' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_7) == 0x0005F8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_7' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_9) == 0x000600, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_9' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_9) == 0x000610, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_4) == 0x000614, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_4) == 0x000618, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000619, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue_3) == 0x00061C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Get_Item) == 0x000620, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000630, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_10) == 0x000638, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_10' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_10) == 0x000688, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_8) == 0x000689, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Length_ReturnValue_1) == 0x00068C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Keys_Keys) == 0x000690, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Less_IntInt_ReturnValue_1) == 0x0006A0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Get_Item_1) == 0x0006A8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_11) == 0x0006B0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_11' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_11) == 0x0006B8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Length_ReturnValue_2) == 0x0006BC, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Less_IntInt_ReturnValue_2) == 0x0006C0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_LastIndex_ReturnValue) == 0x0006C4, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Array_Index_Variable) == 0x0001E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_struct_Variable) == 0x0001F0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable) == 0x000200, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue) == 0x000208, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable) == 0x000210, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_DynamicCast_AsData_Table) == 0x000220, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_DynamicCast_AsData_Table' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_DynamicCast_bSuccess) == 0x000228, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_IsValid_ReturnValue) == 0x000229, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_1) == 0x00022A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Loop_Counter_Variable) == 0x00022C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue) == 0x000230, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Array_Index_Variable_1) == 0x000234, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Loop_Counter_Variable_1) == 0x000238, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue_1) == 0x00023C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_byte_Variable) == 0x000240, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Loop_Counter_Variable_2) == 0x000244, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Loop_Counter_Variable_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue_2) == 0x000248, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Array_Index_Variable_2) == 0x00024C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Array_Index_Variable_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_byte_Variable_1) == 0x000250, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_2) == 0x000251, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_1) == 0x000254, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_2) == 0x000258, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value) == 0x000268, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue) == 0x000290, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue) == 0x000291, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Add_ReturnValue) == 0x000294, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_3) == 0x000298, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_LessEqual_IntInt_ReturnValue) == 0x00029C, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue) == 0x00029D, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Add_IntInt_ReturnValue_3) == 0x0002A0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Add_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetOrnamentBoneTransform_OutBoneNames) == 0x0002A8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetOrnamentBoneTransform_OutBoneNames' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetOrnamentBoneTransform_OutBoneTransforms) == 0x0002B8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetOrnamentBoneTransform_OutBoneTransforms' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetOrnamentBoneTransform_ReturnValue) == 0x0002C8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetOrnamentBoneTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_3) == 0x0002C9, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_1) == 0x0002CA, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default) == 0x0002D0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_2) == 0x0002E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_3) == 0x0002E1, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_1) == 0x0002E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsValidIndex_ReturnValue_4) == 0x0002F8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsValidIndex_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_2) == 0x000300, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsNotEmpty_ReturnValue) == 0x000310, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_1) == 0x000318, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_1) == 0x000340, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_1) == 0x000341, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_2) == 0x000342, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Length_ReturnValue) == 0x000344, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_2) == 0x000348, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_2) == 0x000350, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Less_IntInt_ReturnValue) == 0x000351, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_3) == 0x000358, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_3) == 0x000360, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue) == 0x000368, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_int_Variable_4) == 0x000378, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_1) == 0x000388, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue) == 0x000398, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0003A8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0003B8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_4) == 0x0003B9, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_4) == 0x0003BA, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetMatchType_Result) == 0x0003BC, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetMatchType_Result' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_3) == 0x0003C0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_IntToByte_ReturnValue) == 0x0003C1, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_IntToByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_4) == 0x0003C2, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetValidValue_ReturnValue) == 0x0003C3, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0003C4, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_5) == 0x0003C5, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_6) == 0x0003C6, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_BoolToInt_ReturnValue) == 0x0003C8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_BoolToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_2) == 0x0003D0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_3) == 0x0003E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_3) == 0x0003E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_MakeStruct_MatchClothProjectDataTypeParameter) == 0x0003F8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_MakeStruct_MatchClothProjectDataTypeParameter' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_2) == 0x000400, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_3) == 0x000410, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_5) == 0x000420, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_5) == 0x000428, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_6) == 0x000429, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_6) == 0x00042A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_7) == 0x000430, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_7) == 0x000438, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_7) == 0x000439, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_8) == 0x00043A, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_4) == 0x000440, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_4) == 0x000450, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetObjectName_ReturnValue_5) == 0x000458, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetObjectName_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_4) == 0x000468, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Concat_StrStr_ReturnValue_5) == 0x000478, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Concat_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_StringToName_ReturnValue) == 0x000488, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetDataTableRowFromName_OutRow) == 0x000490, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000590, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_DoesDataTableRowExist_ReturnValue) == 0x000591, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_DoesDataTableRowExist_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_IsNotEmpty_ReturnValue_1) == 0x000592, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_IsNotEmpty_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_GetMatchType_Result_1) == 0x000594, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_GetMatchType_Result_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Conv_IntToByte_ReturnValue_1) == 0x000598, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Conv_IntToByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_8) == 0x0005A0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_8' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_8) == 0x0005C8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_4) == 0x0005C9, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_FindValidPairData_ReturnValue) == 0x0005CA, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_FindValidPairData_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Not_PreBool_ReturnValue) == 0x0005CB, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_5) == 0x0005D0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_MakeStruct_MatchClothOuterSectionParameter) == 0x0005E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_MakeStruct_MatchClothOuterSectionParameter' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_5) == 0x000620, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_6) == 0x000628, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_9) == 0x000630, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_9' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_9) == 0x000640, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Get_Item) == 0x000648, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000658, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_10) == 0x000660, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_10' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_10) == 0x0006B0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_BooleanAND_ReturnValue_9) == 0x0006B1, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Length_ReturnValue_1) == 0x0006B4, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Keys_Keys) == 0x0006B8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Less_IntInt_ReturnValue_1) == 0x0006C8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Get_Item_1) == 0x0006D0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_Value_11) == 0x0006D8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_Value_11' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Map_Find_ReturnValue_11) == 0x0006E0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Map_Find_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_Length_ReturnValue_2) == 0x0006E4, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Less_IntInt_ReturnValue_2) == 0x0006E8, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, CallFunc_Array_LastIndex_ReturnValue) == 0x0006EC, "Member 'MatchClothObject_C_ComputeMatchClothesV2::CallFunc_Array_LastIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_6) == 0x0006F0, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, Temp_bool_Variable_7) == 0x0006F1, "Member 'MatchClothObject_C_ComputeMatchClothesV2::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(MatchClothObject_C_ComputeMatchClothesV2, K2Node_Select_Default_7) == 0x0006F2, "Member 'MatchClothObject_C_ComputeMatchClothesV2::K2Node_Select_Default_7' has a wrong offset!");
 
 // Function MatchClothObject.MatchClothObject_C.ComputeMatchCollectionV2
 // 0x00B8 (0x00B8 - 0x0000)

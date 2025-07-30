@@ -30,10 +30,10 @@ public:
 	class USkeletalMeshComponent*                 InsectMesh;                                        // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ServerInit(bool bServer);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_InsectVerticalShadow(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void ServerInit(bool bServer);
 
 public:
 	static class UClass* StaticClass()

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EPlayerActionTypes_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
+#include "EPlayerActionTypes_structs.hpp"
 #include "GA_AbilityMontageBase_classes.hpp"
 
 
@@ -33,11 +33,11 @@ public:
 	EInt32PlayerPawnStateTypes                    PlayerCombatStateType;                             // 0x05AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_GA_PlayMontageByTag(int32 EntryPoint);
 	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
+	void ExecuteUbergraph_GA_PlayMontageByTag(int32 EntryPoint);
 
-	class FString GetModuleName() const;
 	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

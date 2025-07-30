@@ -10,16 +10,29 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "E_InteractiveActorType_structs.hpp"
 #include "E_InteractiveStageEnum_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "E_InteractiveActorType_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "E_InteractionProcess_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function BP_InteractiveActorComponent.BP_InteractiveActorComponent_C.UpdateCanInteractLocal
+// 0x0002 (0x0002 - 0x0000)
+struct BP_InteractiveActorComponent_C_UpdateCanInteractLocal final
+{
+public:
+	bool                                          ShowInteractUI;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanInteract_0;                                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InteractiveActorComponent_C_UpdateCanInteractLocal) == 0x000001, "Wrong alignment on BP_InteractiveActorComponent_C_UpdateCanInteractLocal");
+static_assert(sizeof(BP_InteractiveActorComponent_C_UpdateCanInteractLocal) == 0x000002, "Wrong size on BP_InteractiveActorComponent_C_UpdateCanInteractLocal");
+static_assert(offsetof(BP_InteractiveActorComponent_C_UpdateCanInteractLocal, ShowInteractUI) == 0x000000, "Member 'BP_InteractiveActorComponent_C_UpdateCanInteractLocal::ShowInteractUI' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveActorComponent_C_UpdateCanInteractLocal, CanInteract_0) == 0x000001, "Member 'BP_InteractiveActorComponent_C_UpdateCanInteractLocal::CanInteract_0' has a wrong offset!");
 
 // Function BP_InteractiveActorComponent.BP_InteractiveActorComponent_C.UpdateCanInteract
 // 0x0002 (0x0002 - 0x0000)
@@ -57,15 +70,17 @@ static_assert(sizeof(BP_InteractiveActorComponent_C_GetInteractiveActorConfigID)
 static_assert(offsetof(BP_InteractiveActorComponent_C_GetInteractiveActorConfigID, ConfigID) == 0x000000, "Member 'BP_InteractiveActorComponent_C_GetInteractiveActorConfigID::ConfigID' has a wrong offset!");
 
 // Function BP_InteractiveActorComponent.BP_InteractiveActorComponent_C.GetCanInteract
-// 0x0001 (0x0001 - 0x0000)
+// 0x0002 (0x0002 - 0x0000)
 struct BP_InteractiveActorComponent_C_GetCanInteract final
 {
 public:
 	bool                                          Can;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_InteractiveActorComponent_C_GetCanInteract) == 0x000001, "Wrong alignment on BP_InteractiveActorComponent_C_GetCanInteract");
-static_assert(sizeof(BP_InteractiveActorComponent_C_GetCanInteract) == 0x000001, "Wrong size on BP_InteractiveActorComponent_C_GetCanInteract");
+static_assert(sizeof(BP_InteractiveActorComponent_C_GetCanInteract) == 0x000002, "Wrong size on BP_InteractiveActorComponent_C_GetCanInteract");
 static_assert(offsetof(BP_InteractiveActorComponent_C_GetCanInteract, Can) == 0x000000, "Member 'BP_InteractiveActorComponent_C_GetCanInteract::Can' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveActorComponent_C_GetCanInteract, CallFunc_BooleanAND_ReturnValue) == 0x000001, "Member 'BP_InteractiveActorComponent_C_GetCanInteract::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function BP_InteractiveActorComponent.BP_InteractiveActorComponent_C.BP_SetIsBlock
 // 0x0001 (0x0001 - 0x0000)

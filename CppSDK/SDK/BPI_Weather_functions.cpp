@@ -37,6 +37,26 @@ void IBPI_Weather_C::Manual_Operation_TOD(double Time)
 }
 
 
+// Function BPI_Weather.BPI_Weather_C.BPI_TODTime
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_Weather_C::BPI_TODTime(double Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_Weather_C", "BPI_TODTime");
+
+	Params::BPI_Weather_C_BPI_TODTime Parms{};
+
+	Parms.Time = Time;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BPI_Weather.BPI_Weather_C.BPI_WeatherData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -81,40 +101,6 @@ void IBPI_Weather_C::BPI_WeatherChanged(const class FString& RegionName, const c
 }
 
 
-// Function BPI_Weather.BPI_Weather_C.BPI_TODTime
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Time                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_Weather_C::BPI_TODTime(double Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Weather_C", "BPI_TODTime");
-
-	Params::BPI_Weather_C_BPI_TODTime Parms{};
-
-	Parms.Time = Time;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPI_Weather.BPI_Weather_C.BPI_TodState
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void IBPI_Weather_C::BPI_TodState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_Weather_C", "BPI_TodState");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BPI_Weather.BPI_Weather_C.BPI_SaveAsset
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -146,6 +132,20 @@ void IBPI_Weather_C::BPI_ReloadFile()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BPI_Weather_C", "BPI_ReloadFile");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BPI_Weather.BPI_Weather_C.BPI_TodState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void IBPI_Weather_C::BPI_TodState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_Weather_C", "BPI_TodState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

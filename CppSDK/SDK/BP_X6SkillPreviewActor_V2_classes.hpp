@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "X6Game_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C
-// 0x0050 (0x03F8 - 0x03A8)
+// 0x0078 (0x0420 - 0x03A8)
 class ABP_X6SkillPreviewActor_V2_C final : public AActor
 {
 public:
@@ -32,16 +33,18 @@ public:
 	class AActor*                                 TriggerOwner;                                      // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        YawOffset;                                         // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UNiagaraComponent*                      RibbonEffect;                                      // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FX6BulletShapeTraceContext             BulletShapeContext;                                // 0x03F8(0x0028)(Edit, BlueprintVisible, NoDestructor)
 
 public:
-	void ExecuteUbergraph_BP_X6SkillPreviewActor_V2(int32 EntryPoint);
-	void GetOverriddenInfo(class UBP_BulletDataAsset_C* BulletData, class FName OverrideSocket, const struct FTransform& OverrideTransform, class FString* Socket, struct FVector* OffsetLocation, struct FRotator* OffsetRotation);
-	void GetSocketTransform(const class FString& ScoketName, struct FTransform* SocketTransform);
-	void GetTransformByOffset(const class FString& Socket, const struct FVector& OffsetLoc, const struct FRotator& OffsetRot, struct FVector* OutLoc, struct FRotator* OutRot);
-	void Init(class UBP_BulletDataAsset_C* BulletData, class AActor* Owner_0, class FName Socket, const struct FTransform& OffsetTransform);
-	void InitSimple(double Speed);
-	void PreviewRibbon(TSoftObjectPtr<class UNiagaraSystem> NiagaraSystem, TSoftObjectPtr<class UMaterialInterface> RibbonMat, TArray<struct FVector>& LocationArray, TArray<struct FVector>& VelocityArray, bool bIsCircle, int32 CountPerLine, TArray<int32>& HitBalls, TArray<double>& Intensities);
+	void SetCollisionInfoByBulletData(class UBP_BulletDataAsset_C* BulletData);
 	void ReceiveDestroyed();
+	void PreviewRibbon(TSoftObjectPtr<class UNiagaraSystem> NiagaraSystem, TSoftObjectPtr<class UMaterialInterface> RibbonMat, TArray<struct FVector>& LocationArray, TArray<struct FVector>& VelocityArray, bool bIsCircle, int32 CountPerLine, TArray<int32>& HitBalls, TArray<double>& Intensities);
+	void InitSimple(double Speed);
+	void Init(class UBP_BulletDataAsset_C* BulletData, class AActor* Owner_0, class FName Socket, const struct FTransform& OffsetTransform, bool bDrawCollision);
+	void GetTransformByOffset(const class FString& Socket, const struct FVector& OffsetLoc, const struct FRotator& OffsetRot, struct FVector* OutLoc, struct FRotator* OutRot);
+	void GetSocketTransform(const class FString& ScoketName, struct FTransform* SocketTransform);
+	void GetOverriddenInfo(class UBP_BulletDataAsset_C* BulletData, class FName OverrideSocket, const struct FTransform& OverrideTransform, class FString* Socket, struct FVector* OffsetLocation, struct FRotator* OffsetRotation);
+	void ExecuteUbergraph_BP_X6SkillPreviewActor_V2(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -54,7 +57,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_X6SkillPreviewActor_V2_C) == 0x000008, "Wrong alignment on ABP_X6SkillPreviewActor_V2_C");
-static_assert(sizeof(ABP_X6SkillPreviewActor_V2_C) == 0x0003F8, "Wrong size on ABP_X6SkillPreviewActor_V2_C");
+static_assert(sizeof(ABP_X6SkillPreviewActor_V2_C) == 0x000420, "Wrong size on ABP_X6SkillPreviewActor_V2_C");
 static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, UberGraphFrame) == 0x0003A8, "Member 'ABP_X6SkillPreviewActor_V2_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, Box) == 0x0003B0, "Member 'ABP_X6SkillPreviewActor_V2_C::Box' has a wrong offset!");
 static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, Sphere) == 0x0003B8, "Member 'ABP_X6SkillPreviewActor_V2_C::Sphere' has a wrong offset!");
@@ -65,6 +68,7 @@ static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, ProjectileMovement) == 0x00
 static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, TriggerOwner) == 0x0003E0, "Member 'ABP_X6SkillPreviewActor_V2_C::TriggerOwner' has a wrong offset!");
 static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, YawOffset) == 0x0003E8, "Member 'ABP_X6SkillPreviewActor_V2_C::YawOffset' has a wrong offset!");
 static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, RibbonEffect) == 0x0003F0, "Member 'ABP_X6SkillPreviewActor_V2_C::RibbonEffect' has a wrong offset!");
+static_assert(offsetof(ABP_X6SkillPreviewActor_V2_C, BulletShapeContext) == 0x0003F8, "Member 'ABP_X6SkillPreviewActor_V2_C::BulletShapeContext' has a wrong offset!");
 
 }
 

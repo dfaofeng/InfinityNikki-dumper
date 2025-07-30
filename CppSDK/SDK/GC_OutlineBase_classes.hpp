@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayAbilities_classes.hpp"
 #include "F_OutlineStyleSelector_structs.hpp"
+#include "GameplayAbilities_classes.hpp"
 
 
 namespace SDK

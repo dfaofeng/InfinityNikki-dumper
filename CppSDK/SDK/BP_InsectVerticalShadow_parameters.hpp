@@ -16,28 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ServerInit
-// 0x0001 (0x0001 - 0x0000)
-struct BP_InsectVerticalShadow_C_ServerInit final
-{
-public:
-	bool                                          bServer;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InsectVerticalShadow_C_ServerInit) == 0x000001, "Wrong alignment on BP_InsectVerticalShadow_C_ServerInit");
-static_assert(sizeof(BP_InsectVerticalShadow_C_ServerInit) == 0x000001, "Wrong size on BP_InsectVerticalShadow_C_ServerInit");
-static_assert(offsetof(BP_InsectVerticalShadow_C_ServerInit, bServer) == 0x000000, "Member 'BP_InsectVerticalShadow_C_ServerInit::bServer' has a wrong offset!");
-
-// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_InsectVerticalShadow_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_InsectVerticalShadow_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_InsectVerticalShadow_C_ReceiveTick");
-static_assert(sizeof(BP_InsectVerticalShadow_C_ReceiveTick) == 0x000004, "Wrong size on BP_InsectVerticalShadow_C_ReceiveTick");
-static_assert(offsetof(BP_InsectVerticalShadow_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_InsectVerticalShadow_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
 // Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ExecuteUbergraph_BP_InsectVerticalShadow
 // 0x0090 (0x0090 - 0x0000)
 struct BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow final
@@ -75,6 +53,28 @@ static_assert(offsetof(BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerti
 static_assert(offsetof(BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000078, "Member 'BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow, CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1) == 0x000080, "Member 'BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow::CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000088, "Member 'BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+
+// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_InsectVerticalShadow_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InsectVerticalShadow_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_InsectVerticalShadow_C_ReceiveTick");
+static_assert(sizeof(BP_InsectVerticalShadow_C_ReceiveTick) == 0x000004, "Wrong size on BP_InsectVerticalShadow_C_ReceiveTick");
+static_assert(offsetof(BP_InsectVerticalShadow_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_InsectVerticalShadow_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ServerInit
+// 0x0001 (0x0001 - 0x0000)
+struct BP_InsectVerticalShadow_C_ServerInit final
+{
+public:
+	bool                                          bServer;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_InsectVerticalShadow_C_ServerInit) == 0x000001, "Wrong alignment on BP_InsectVerticalShadow_C_ServerInit");
+static_assert(sizeof(BP_InsectVerticalShadow_C_ServerInit) == 0x000001, "Wrong size on BP_InsectVerticalShadow_C_ServerInit");
+static_assert(offsetof(BP_InsectVerticalShadow_C_ServerInit, bServer) == 0x000000, "Member 'BP_InsectVerticalShadow_C_ServerInit::bServer' has a wrong offset!");
 
 }
 

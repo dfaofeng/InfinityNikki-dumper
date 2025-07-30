@@ -30,7 +30,7 @@ public:
 
 public:
 	void RequestBlackScreenWait(int32* WaitHandle);
-	void EnterBlackScreen(Enum_BlackScreenSource BlackScreenSource, class UObject* Context, const class FString& FadeOutEndCallback, const class FString& FadeInStartCallback, const class FString& FadeInEndCallback, bool bNoFadeOut, const struct FLinearColor& FadeColor, bool bNoFadeIn);
+	void EnterBlackScreen(Enum_BlackScreenSource BlackScreenSource, class UObject* Context, const class FString& FadeOutEndCallback, const class FString& FadeInStartCallback, const class FString& FadeInEndCallback, bool bNoFadeOut, const struct FLinearColor& FadeColor, bool bNoFadeIn, bool bDisableWorldRendering);
 	void CancelBlackScreenWait(int32 WaitHandle);
 	void BroadcastBlackScreenEvent(Enum_BlackScreenEvent Event, Enum_BlackScreenSource Source);
 

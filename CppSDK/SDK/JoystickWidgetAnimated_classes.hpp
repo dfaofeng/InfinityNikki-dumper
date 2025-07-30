@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "UTCControlTypeEnum_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
-#include "UTCControlTypeEnum_structs.hpp"
 #include "EUTCJoystickMode_structs.hpp"
 
 

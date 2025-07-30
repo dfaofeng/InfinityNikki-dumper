@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "X6Game_classes.hpp"
-#include "ESkillFlag_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EnumBulletDestroyType_structs.hpp"
+#include "ESkillFlag_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK
@@ -21,7 +21,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_EffectBulletBase_V2.BP_EffectBulletBase_V2_C
 // 0x0050 (0x0520 - 0x04D0)
-class ABP_EffectBulletBase_V2_C final : public AX6BulletActorBase
+class ABP_EffectBulletBase_V2_C : public AX6BulletActorBase
 {
 public:
 	class UAkComponent*                           Ak;                                                // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)

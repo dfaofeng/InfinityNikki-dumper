@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.ExecuteUbergraph_WBP_UI_headUI_name
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_headUI_name_C::ExecuteUbergraph_WBP_UI_headUI_name(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_headUI_name_C", "ExecuteUbergraph_WBP_UI_headUI_name");
+
+	Params::WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.GetHeight
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -35,26 +55,6 @@ void UWBP_UI_headUI_name_C::GetHeight(double* NewParam)
 
 	if (NewParam != nullptr)
 		*NewParam = Parms.NewParam;
-}
-
-
-// Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.ExecuteUbergraph_WBP_UI_headUI_name
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_headUI_name_C::ExecuteUbergraph_WBP_UI_headUI_name(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_headUI_name_C", "ExecuteUbergraph_WBP_UI_headUI_name");
-
-	Params::WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

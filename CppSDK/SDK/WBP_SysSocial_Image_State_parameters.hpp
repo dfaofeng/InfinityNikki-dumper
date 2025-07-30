@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_SysSocial_Image_State.WBP_SysSocial_Image_State_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_SysSocial_Image_State_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SysSocial_Image_State_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SysSocial_Image_State_C_PreConstruct");
-static_assert(sizeof(WBP_SysSocial_Image_State_C_PreConstruct) == 0x000001, "Wrong size on WBP_SysSocial_Image_State_C_PreConstruct");
-static_assert(offsetof(WBP_SysSocial_Image_State_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SysSocial_Image_State_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
 // Function WBP_SysSocial_Image_State.WBP_SysSocial_Image_State_C.ExecuteUbergraph_WBP_SysSocial_Image_State
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State final
@@ -37,6 +26,17 @@ static_assert(alignof(WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial
 static_assert(sizeof(WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State) == 0x000008, "Wrong size on WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State");
 static_assert(offsetof(WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State, EntryPoint) == 0x000000, "Member 'WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_SysSocial_Image_State_C_ExecuteUbergraph_WBP_SysSocial_Image_State::K2Node_Event_IsDesignTime' has a wrong offset!");
+
+// Function WBP_SysSocial_Image_State.WBP_SysSocial_Image_State_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_SysSocial_Image_State_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SysSocial_Image_State_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_SysSocial_Image_State_C_PreConstruct");
+static_assert(sizeof(WBP_SysSocial_Image_State_C_PreConstruct) == 0x000001, "Wrong size on WBP_SysSocial_Image_State_C_PreConstruct");
+static_assert(offsetof(WBP_SysSocial_Image_State_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_SysSocial_Image_State_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

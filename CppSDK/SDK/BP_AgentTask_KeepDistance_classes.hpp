@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_AgentTaskMoveBase_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "BP_AgentTaskMoveBase_classes.hpp"
 
 
 namespace SDK

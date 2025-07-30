@@ -25,8 +25,8 @@ public:
 	double                                        YawAngleLimit;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
 	void K2_OnAsyncLoadComplete() const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

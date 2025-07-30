@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function GA_AbilityReliveBase.GA_AbilityReliveBase_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_AbilityReliveBase_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AbilityReliveBase_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function GA_AbilityReliveBase.GA_AbilityReliveBase_C.ExecuteUbergraph_GA_AbilityReliveBase
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UGA_AbilityReliveBase_C::ExecuteUbergraph_GA_AbilityReliveBase(int32 EntryP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_AbilityReliveBase.GA_AbilityReliveBase_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_AbilityReliveBase_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityReliveBase_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

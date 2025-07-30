@@ -21,14 +21,14 @@ namespace SDK
 class UX6BlueprintAnimalLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetBelongingAnimalCluster(class AActor* Member, class UObject* __WorldContext, class ABP_AnimalClusterBase_C** AnimalCluster);
-	static void GetAnimalClusterMemberFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_AnimalClusterMemberBase_C** FSM);
-	static void GetAnimalReactionFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_QuadrupedAnimalReaction_C** FSM);
-	static void IsHoldingBrush(class AActor* Actor, class UObject* __WorldContext, bool* bHoldingBrush);
-	static void GetSimpleFleePoint(class AActor* Animal, const struct FVector& StimuliSourcePoint, const struct FVector& FleeCenter, double FleeRadius, class UObject* __WorldContext, struct FVector* FleePoint);
-	static void BP_ConvBehaviorType2CharAnimSetTag(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, struct FGameplayTag* CharAnimSetTag);
-	static void BP_ConvBehaviorType2AnimSeqSoftRef(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* AnimSeqSoftRef);
 	static void BP_IsGlobalAnimalTickManagerActive(class UObject* __WorldContext, bool* bActive);
+	static void BP_ConvBehaviorType2AnimSeqSoftRef(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* AnimSeqSoftRef);
+	static void BP_ConvBehaviorType2CharAnimSetTag(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, struct FGameplayTag* CharAnimSetTag);
+	static void GetSimpleFleePoint(class AActor* Animal, const struct FVector& StimuliSourcePoint, const struct FVector& FleeCenter, double FleeRadius, class UObject* __WorldContext, struct FVector* FleePoint);
+	static void IsHoldingBrush(class AActor* Actor, class UObject* __WorldContext, bool* bHoldingBrush);
+	static void GetAnimalReactionFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_QuadrupedAnimalReaction_C** FSM);
+	static void GetAnimalClusterMemberFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_AnimalClusterMemberBase_C** FSM);
+	static void GetBelongingAnimalCluster(class AActor* Member, class UObject* __WorldContext, class ABP_AnimalClusterBase_C** AnimalCluster);
 
 public:
 	static class UClass* StaticClass()

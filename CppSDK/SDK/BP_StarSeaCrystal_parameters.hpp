@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "X6StateMachine_structs.hpp"
 #include "E_InteractionProcess_structs.hpp"
 #include "E_EInteractSuccRet_structs.hpp"
-#include "X6StateMachine_structs.hpp"
 #include "E_InteractiveObjPhantomState_structs.hpp"
 
 

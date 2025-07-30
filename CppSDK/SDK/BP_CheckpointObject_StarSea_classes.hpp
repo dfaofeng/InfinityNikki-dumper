@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_CheckPointActorBase_classes.hpp"
+#include "Engine_structs.hpp"
 #include "AkAudio_structs.hpp"
 
 

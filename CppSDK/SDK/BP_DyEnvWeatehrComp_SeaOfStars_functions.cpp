@@ -71,26 +71,6 @@ void UBP_DyEnvWeatehrComp_SeaOfStars_C::OnFadeOut(float Progress)
 }
 
 
-// Function BP_DyEnvWeatehrComp_SeaOfStars.BP_DyEnvWeatehrComp_SeaOfStars_C.OnFadeIn
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_DyEnvWeatehrComp_SeaOfStars_C::OnFadeIn(float Progress)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvWeatehrComp_SeaOfStars_C", "OnFadeIn");
-
-	Params::BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn Parms{};
-
-	Parms.Progress = Progress;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_DyEnvWeatehrComp_SeaOfStars.BP_DyEnvWeatehrComp_SeaOfStars_C.OnDestroyed
 // (Event, Public, BlueprintEvent)
 
@@ -134,6 +114,26 @@ void UBP_DyEnvWeatehrComp_SeaOfStars_C::ExecuteUbergraph_BP_DyEnvWeatehrComp_Sea
 	Params::BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DyEnvWeatehrComp_SeaOfStars.BP_DyEnvWeatehrComp_SeaOfStars_C.OnFadeIn
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   Progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_DyEnvWeatehrComp_SeaOfStars_C::OnFadeIn(float Progress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvWeatehrComp_SeaOfStars_C", "OnFadeIn");
+
+	Params::BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn Parms{};
+
+	Parms.Progress = Progress;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

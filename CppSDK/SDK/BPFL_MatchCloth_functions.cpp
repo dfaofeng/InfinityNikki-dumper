@@ -137,6 +137,53 @@ void UBPFL_MatchCloth_C::MultiThread_ClothMatch(class UObject* Parent, TArray<cl
 }
 
 
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.ReplaceCopyPoseParentComp
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAnimInstance*                    InAnimInstance                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*&          InCopyPoseSourceComp                                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMesh*&                   InCopyPoseSourceSkelMesh                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class FString&                          SuitSubstring                                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+// class FString&                          CompKey                                                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent**          CopyPoseSourceComp                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMesh**                   CopyPoseSourceSkelMesh                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Reset                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_MatchCloth_C::ReplaceCopyPoseParentComp(class UAnimInstance* InAnimInstance, class USkeletalMeshComponent*& InCopyPoseSourceComp, class USkeletalMesh*& InCopyPoseSourceSkelMesh, class FString& SuitSubstring, class FString& CompKey, class UObject* __WorldContext, class USkeletalMeshComponent** CopyPoseSourceComp, class USkeletalMesh** CopyPoseSourceSkelMesh, bool* Reset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "ReplaceCopyPoseParentComp");
+
+	Params::BPFL_MatchCloth_C_ReplaceCopyPoseParentComp Parms{};
+
+	Parms.InAnimInstance = InAnimInstance;
+	Parms.InCopyPoseSourceComp = InCopyPoseSourceComp;
+	Parms.InCopyPoseSourceSkelMesh = InCopyPoseSourceSkelMesh;
+	Parms.SuitSubstring = std::move(SuitSubstring);
+	Parms.CompKey = std::move(CompKey);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InCopyPoseSourceComp = Parms.InCopyPoseSourceComp;
+	InCopyPoseSourceSkelMesh = Parms.InCopyPoseSourceSkelMesh;
+	SuitSubstring = std::move(Parms.SuitSubstring);
+	CompKey = std::move(Parms.CompKey);
+
+	if (CopyPoseSourceComp != nullptr)
+		*CopyPoseSourceComp = Parms.CopyPoseSourceComp;
+
+	if (CopyPoseSourceSkelMesh != nullptr)
+		*CopyPoseSourceSkelMesh = Parms.CopyPoseSourceSkelMesh;
+
+	if (Reset != nullptr)
+		*Reset = Parms.Reset;
+}
+
+
 // Function BPFL_MatchCloth.BPFL_MatchCloth_C.SingleMatchClothes
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

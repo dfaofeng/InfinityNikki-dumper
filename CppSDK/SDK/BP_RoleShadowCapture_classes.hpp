@@ -72,7 +72,9 @@ public:
 	void IsInLevelSequence(bool* Result);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
+	void SetCapsuleShadow();
 	void SetCastShadow(bool InCastShadowValue);
+	void SetInkCapsuleShadow();
 	void SetSetScaleParam(bool InCastShadowValue);
 	void SoftShadowDecal();
 	void TraceGroundDistance(double* Distance, struct FVector* Location, class UPhysicalMaterial** PhysMat);

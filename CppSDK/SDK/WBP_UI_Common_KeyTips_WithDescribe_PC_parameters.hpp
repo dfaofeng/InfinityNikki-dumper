@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_UI_Common_KeyTips_WithDescribe_PC.WBP_UI_Common_KeyTips_WithDescribe_PC_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct");
+static_assert(sizeof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct");
+static_assert(offsetof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_UI_Common_KeyTips_WithDescribe_PC.WBP_UI_Common_KeyTips_WithDescribe_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC final
@@ -33,17 +44,6 @@ static_assert(offsetof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_
 static_assert(offsetof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC, CallFunc_Conv_SoftObjectReferenceToString_ReturnValue) == 0x000008, "Member 'WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC::CallFunc_Conv_SoftObjectReferenceToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC, CallFunc_Key_IsValid_ReturnValue) == 0x000018, "Member 'WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC::CallFunc_Key_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000019, "Member 'WBP_UI_Common_KeyTips_WithDescribe_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_WithDescribe_PC::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-
-// Function WBP_UI_Common_KeyTips_WithDescribe_PC.WBP_UI_Common_KeyTips_WithDescribe_PC_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct");
-static_assert(sizeof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct");
-static_assert(offsetof(WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_Common_KeyTips_WithDescribe_PC_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 }
 

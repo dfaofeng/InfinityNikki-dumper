@@ -17,92 +17,57 @@
 namespace SDK
 {
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_charactor_name_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "Tick");
-
-	Params::WBP_UI_charactor_name_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.ResetState
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_HideIcon
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_UI_charactor_name_C::ResetState()
+void UWBP_UI_charactor_name_C::BP_HideIcon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "ResetState");
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_HideIcon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.GetVerticalBottomZ
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double*                                 NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_charactor_name_C::GetVerticalBottomZ(double* NewParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "GetVerticalBottomZ");
-
-	Params::WBP_UI_charactor_name_C_GetVerticalBottomZ Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (NewParam != nullptr)
-		*NewParam = Parms.NewParam;
-}
-
-
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.ExecuteUbergraph_WBP_UI_charactor_name
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_charactor_name_C::ExecuteUbergraph_WBP_UI_charactor_name(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "ExecuteUbergraph_WBP_UI_charactor_name");
-
-	Params::WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_SetTile
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_HideName
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_UI_charactor_name_C::BP_SetTile()
+void UWBP_UI_charactor_name_C::BP_HideName()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_SetTile");
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_HideName");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_HideTitle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_charactor_name_C::BP_HideTitle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_HideTitle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_SetIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_charactor_name_C::BP_SetIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_SetIcon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -128,59 +93,94 @@ void UWBP_UI_charactor_name_C::BP_SetName(const class FString& InText)
 }
 
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_SetIcon
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_SetTile
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_UI_charactor_name_C::BP_SetIcon()
+void UWBP_UI_charactor_name_C::BP_SetTile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_SetIcon");
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_SetTile");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_HideTitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.ExecuteUbergraph_WBP_UI_charactor_name
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_charactor_name_C::BP_HideTitle()
+void UWBP_UI_charactor_name_C::ExecuteUbergraph_WBP_UI_charactor_name(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_HideTitle");
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "ExecuteUbergraph_WBP_UI_charactor_name");
+
+	Params::WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.GetVerticalBottomZ
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double*                                 NewParam                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_charactor_name_C::GetVerticalBottomZ(double* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "GetVerticalBottomZ");
+
+	Params::WBP_UI_charactor_name_C_GetVerticalBottomZ Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (NewParam != nullptr)
+		*NewParam = Parms.NewParam;
+}
+
+
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.ResetState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_charactor_name_C::ResetState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "ResetState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_HideName
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_charactor_name_C::BP_HideName()
+void UWBP_UI_charactor_name_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_HideName");
+		Func = Class->GetFunction("WBP_UI_charactor_name_C", "Tick");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::WBP_UI_charactor_name_C_Tick Parms{};
 
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_HideIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_UI_charactor_name_C::BP_HideIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_charactor_name_C", "BP_HideIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

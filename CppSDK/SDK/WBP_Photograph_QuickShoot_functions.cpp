@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_Photograph_QuickShoot.WBP_Photograph_QuickShoot_C.sfx1
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Photograph_QuickShoot_C::sfx1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Photograph_QuickShoot_C", "sfx1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Photograph_QuickShoot.WBP_Photograph_QuickShoot_C.ExecuteUbergraph_WBP_Photograph_QuickShoot
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_Photograph_QuickShoot_C::ExecuteUbergraph_WBP_Photograph_QuickShoot(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Photograph_QuickShoot.WBP_Photograph_QuickShoot_C.sfx1
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Photograph_QuickShoot_C::sfx1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Photograph_QuickShoot_C", "sfx1");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

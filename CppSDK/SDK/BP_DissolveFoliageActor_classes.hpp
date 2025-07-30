@@ -40,13 +40,13 @@ public:
 	class ABP_PaperDissolveManager_C*             TraceToObjects;                                    // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_DissolveFoliageActor(int32 EntryPoint);
-	void Opacity(bool On);
-	void ReturnFolliage();
-	void SetCollision(class UStaticMeshComponent* Old, class UStaticMeshComponent* New);
-	void Timeline_translucent__FinishedFunc();
-	void Timeline_translucent__UpdateFunc();
 	void UserConstructionScript();
+	void Timeline_translucent__UpdateFunc();
+	void Timeline_translucent__FinishedFunc();
+	void SetCollision(class UStaticMeshComponent* Old, class UStaticMeshComponent* New);
+	void ReturnFolliage();
+	void Opacity(bool On);
+	void ExecuteUbergraph_BP_DissolveFoliageActor(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "MessageHUDHead_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MessageHUDEnum_structs.hpp"
 #include "MessageBoxModeEnum_structs.hpp"
-#include "MessageHUDHead_structs.hpp"
 #include "Engine_structs.hpp"
 
 

@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_InteractionWidgetManager.BP_InteractionWidgetManager_C.BP_RotateWithCameraRotation
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_InteractionWidgetManager.BP_InteractionWidgetManager_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_InteractionWidgetManager_C::BP_RotateWithCameraRotation()
+void ABP_InteractionWidgetManager_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractionWidgetManager_C", "BP_RotateWithCameraRotation");
+		Func = Class->GetFunction("BP_InteractionWidgetManager_C", "ReceiveTick");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_InteractionWidgetManager_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void ABP_InteractionWidgetManager_C::ExecuteUbergraph_BP_InteractionWidgetManage
 }
 
 
-// Function BP_InteractionWidgetManager.BP_InteractionWidgetManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_InteractionWidgetManager.BP_InteractionWidgetManager_C.BP_RotateWithCameraRotation
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_InteractionWidgetManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_InteractionWidgetManager_C::BP_RotateWithCameraRotation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractionWidgetManager_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_InteractionWidgetManager_C", "BP_RotateWithCameraRotation");
 
-	Params::BP_InteractionWidgetManager_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

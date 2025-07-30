@@ -37,15 +37,17 @@ public:
 	uint8                                         Pad_774[0x4];                                      // 0x0774(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        BP_MobileSizeMultiplier;                           // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DepthBias;                                         // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseFantiFont;                                      // 0x0788(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseFantiFont_JP;                                   // 0x0789(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_RefreshLocation();
-	void ExecuteUbergraph_BP_HeadInfoComponent(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void SetIconTexture(class UTexture* IconTexture);
-	void SetIconVisibility(bool bShow);
-	void SetInteractiveIconVisibility(bool NewParam);
 	void SetTextVisibility(bool NewParam);
+	void SetInteractiveIconVisibility(bool NewParam);
+	void SetIconVisibility(bool bShow);
+	void SetIconTexture(class UTexture* IconTexture);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_HeadInfoComponent(int32 EntryPoint);
+	void BP_RefreshLocation();
 
 	class FString GetModuleName() const;
 
@@ -74,6 +76,8 @@ static_assert(offsetof(UBP_HeadInfoComponent_C, BP_TextExtraOffset) == 0x00076C,
 static_assert(offsetof(UBP_HeadInfoComponent_C, BP_IconExtraOffset) == 0x000770, "Member 'UBP_HeadInfoComponent_C::BP_IconExtraOffset' has a wrong offset!");
 static_assert(offsetof(UBP_HeadInfoComponent_C, BP_MobileSizeMultiplier) == 0x000778, "Member 'UBP_HeadInfoComponent_C::BP_MobileSizeMultiplier' has a wrong offset!");
 static_assert(offsetof(UBP_HeadInfoComponent_C, DepthBias) == 0x000780, "Member 'UBP_HeadInfoComponent_C::DepthBias' has a wrong offset!");
+static_assert(offsetof(UBP_HeadInfoComponent_C, UseFantiFont) == 0x000788, "Member 'UBP_HeadInfoComponent_C::UseFantiFont' has a wrong offset!");
+static_assert(offsetof(UBP_HeadInfoComponent_C, UseFantiFont_JP) == 0x000789, "Member 'UBP_HeadInfoComponent_C::UseFantiFont_JP' has a wrong offset!");
 
 }
 

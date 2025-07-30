@@ -10,20 +10,20 @@
 
 #include "Basic.hpp"
 
+#include "FStylizedSimplyPivotState_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
+#include "X6Animation_structs.hpp"
+#include "EInputDeviceKeyType_structs.hpp"
+#include "ABP_Player_RegularMovement_structs.hpp"
+#include "FStylizedMirror_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "ABP_Player_RegularMovement_structs.hpp"
-#include "EMantleType_structs.hpp"
-#include "X6Animation_structs.hpp"
-#include "FStylizedSimplyPivotState_structs.hpp"
-#include "FStylizedMirror_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "FStylizedSimplyStartState_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EMantleType_structs.hpp"
 #include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "EPlayerAdditiveMovementMode_structs.hpp"
-#include "EInputDeviceKeyType_structs.hpp"
 #include "EPlayerMovementScenarios_structs.hpp"
 #include "EPawnAnimStateTypes_structs.hpp"
 
@@ -32,7 +32,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Player_RegularMovement.ABP_Player_RegularMovement_C
-// 0x16070 (0x16670 - 0x0600)
+// 0x16090 (0x16690 - 0x0600)
 class UABP_Player_RegularMovement_C final : public UX6NikkiGroundAnimInstance
 {
 public:
@@ -835,160 +835,166 @@ public:
 	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x15F68(0x00B8)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x16020(0x0020)()
 	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x16040(0x00C8)()
-	struct FRotator                               K2Node_PropertyAccess_5;                           // 0x16108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               K2Node_PropertyAccess_4;                           // 0x16120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               K2Node_PropertyAccess_3;                           // 0x16138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               K2Node_PropertyAccess_2;                           // 0x16150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UBlendSpace1D*                          K2Node_PropertyAccess_1;                           // 0x16168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          K2Node_PropertyAccess;                             // 0x16170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerMoveableComponent_C*          BP_PlayerMoveableComp;                             // 0x16178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     BP_PrevJumpStage;                                  // 0x16180(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     BP_JumpStage;                                      // 0x16181(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16182[0x6];                                    // 0x16182(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharacterMovementComponent*            BP_CharacterMovement;                              // 0x16188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_PivotAnim;                                      // 0x16190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_FallHighSpeedValue;                             // 0x16198(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerInAirMoveableComponent_C*     BP_InAirMovementComp;                              // 0x161A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLandStatic;                                   // 0x161A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161A9[0x7];                                    // 0x161A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 BP_SkeletonMeshComp;                               // 0x161B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerRegularMovementCompV3_C*      BP_PlayerMovementComp;                             // 0x161B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_OnGroundPlayStop;                               // 0x161C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_Fast_IsStepExit;                                // 0x161C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_Fast_IsShuffleExit;                             // 0x161C2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_Fast_IsCycleExit;                               // 0x161C3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_GaitChangedPending;                             // 0x161C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_JumpIsRightFoot;                                // 0x161C5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsInplaceExit;                                  // 0x161C6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ELocomotionGait                               BP_StopGait;                                       // 0x161C7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_StartPercent;                                   // 0x161C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_StartRotator;                                   // 0x161D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_TotalRotator;                                   // 0x161D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               BP_StartVector;                                    // 0x161E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          BP_EnableStartBSRootmotion;                        // 0x161F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_AimSwtichState;                                 // 0x161F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161FA[0x6];                                    // 0x161FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          BP_CycleStop;                                      // 0x16200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_BlockedStop;                                    // 0x16208(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BP_CurveMatchName;                                 // 0x16210(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_CurveMatchBeginFrame;                           // 0x16218(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_CurveMatchEndFrame;                             // 0x1621C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UX6RMWalkingComponent*                  BP_RMWalkingComponent;                             // 0x16220(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_StaticLandingAnim;                              // 0x16228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_WalkSlowLandingAnim;                            // 0x16230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_WalkFastLandingAnim;                            // 0x16238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_JogLandingAnim;                                 // 0x16240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_SprintLandingAnim;                              // 0x16248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        BP_AnimStatesAComp;                                // 0x16250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ECharacterSituationType                       BP_ContextualType;                                 // 0x16258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16259[0x7];                                    // 0x16259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             BP_ContextualDT;                                   // 0x16260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_ContextualAlpha;                                // 0x16268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_ContextualTimer_Rain;                           // 0x16270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLandingHeavy;                                 // 0x16278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16279[0x7];                                    // 0x16279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             DT_StylizedClothAnims;                             // 0x16280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableClothStylized;                            // 0x16288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16289[0x3];                                    // 0x16289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BP_ContextualKey;                                  // 0x1628C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_ContextAnimFinished;                            // 0x16294(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_PlayContextualIdle;                             // 0x16295(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_PlayContextualIdleFinished;                     // 0x16296(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16297[0x1];                                    // 0x16297(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_AimPlayRate;                                    // 0x16298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             BP_DT_ClothStylized;                               // 0x162A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          BP_Anim_Stylized_Idle;                             // 0x162A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FStylizedStartState                    BP_Stylized_Start;                                 // 0x162B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FFStylizedSimplyStartState             BP_Stylized_SimplyStart;                           // 0x162C0(0x0078)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FFStylizedSimplyPivotState             BP_Stylized_SimplyPivot;                           // 0x16338(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FStylizedLoopState                     BP_Stylized_Walk_Loop;                             // 0x16350(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FStylizedLoopState                     BP_Stylized_Jog_Loop;                              // 0x16368(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FStylizedLoopState                     BP_Stylized_WalkSlow_Loop;                         // 0x16380(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FStylizedLoopState                     BP_Stylized_Sprint_Loop;                           // 0x16398(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FStylizedStopState                     BP_Stylized_Stop;                                  // 0x163B0(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FFStylizedMirror                       BP_Stylized_Mirror;                                // 0x163F0(0x0002)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_163F2[0x6];                                    // 0x163F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          BP_Anim_Stylized_Relax_Idle;                       // 0x163F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_PlayStylizedStop;                               // 0x16400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_OnGroundPlayMoving;                             // 0x16401(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16402[0x6];                                    // 0x16402(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_StartPlayRate;                                  // 0x16408(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLogicInStatePlayingSkill;                     // 0x16410(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_SkipStopFlag;                                   // 0x16411(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_ForceStopFlag;                                  // 0x16412(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableHandLiftAdditive;                         // 0x16413(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_ForceEnterAimSwtichState;                       // 0x16414(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLogicInStateAdjustForInteraction;             // 0x16415(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16416[0x2];                                    // 0x16416(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          BP_Anim_Default_Idle;                              // 0x16418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_CyclePlayRate;                                  // 0x16420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_EnterClothStylizedIdleWaitTime;                 // 0x16428(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_CurDefaultIdleTime;                             // 0x16430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bNeedRefreshDefaultIdle;                        // 0x16438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_DefaultIdleIsMirrored;                          // 0x16439(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bForceSetDefaultIdleMirror;                     // 0x1643A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLogicInLevelSequenceState;                    // 0x1643B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLogicCanDoAction_MovementSituationalFeedbackPerformance; // 0x1643C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bForceStylizedIdle;                             // 0x1643D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1643E[0x2];                                    // 0x1643E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LFSyncMarkerTime;                                  // 0x16440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         RFSyncMarkerTime;                                  // 0x16444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerMantleComponent_C*            BP_MantleComp;                                     // 0x16448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EMantleType                                   MantleType;                                        // 0x16450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16451[0x7];                                    // 0x16451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          BP_IdleTransitionAnim;                             // 0x16458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_DoIdleTransition;                               // 0x16460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_HasIdleTransition;                              // 0x16461(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16462[0x6];                                    // 0x16462(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          BP_CurrentIdleBreakAnim;                           // 0x16468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IdleBreakTrigger;                               // 0x16470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IdleBreakEnabled;                               // 0x16471(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16472[0x6];                                    // 0x16472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, double>                     BP_ModifyCurves;                                   // 0x16478(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class UBlendSpace1D*                          BP_LandingMovementAnim_BS;                         // 0x164C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_StartState_IsNotBlendingOut;                    // 0x164D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_164D1[0x7];                                    // 0x164D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlendSpace*                            BP_PivotAnim_BlendSpace;                           // 0x164D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBP_FloatingJumpAnimConfig_C*           BP_FloatingJumpAnimSet;                            // 0x164E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          FloatAnimPrepared;                                 // 0x164E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_PropertyAccess_7;                           // 0x16108(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UMultiCurve*                            K2Node_PropertyAccess_6;                           // 0x16118(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	struct FRotator                               K2Node_PropertyAccess_5;                           // 0x16120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               K2Node_PropertyAccess_4;                           // 0x16138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               K2Node_PropertyAccess_3;                           // 0x16150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               K2Node_PropertyAccess_2;                           // 0x16168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UBlendSpace1D*                          K2Node_PropertyAccess_1;                           // 0x16180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          K2Node_PropertyAccess;                             // 0x16188(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerMoveableComponent_C*          BP_PlayerMoveableComp;                             // 0x16190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     BP_PrevJumpStage;                                  // 0x16198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     BP_JumpStage;                                      // 0x16199(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1619A[0x6];                                    // 0x1619A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCharacterMovementComponent*            BP_CharacterMovement;                              // 0x161A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_PivotAnim;                                      // 0x161A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_FallHighSpeedValue;                             // 0x161B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerInAirMoveableComponent_C*     BP_InAirMovementComp;                              // 0x161B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLandStatic;                                   // 0x161C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_161C1[0x7];                                    // 0x161C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 BP_SkeletonMeshComp;                               // 0x161C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerRegularMovementCompV3_C*      BP_PlayerMovementComp;                             // 0x161D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_OnGroundPlayStop;                               // 0x161D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_Fast_IsStepExit;                                // 0x161D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_Fast_IsShuffleExit;                             // 0x161DA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_Fast_IsCycleExit;                               // 0x161DB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_GaitChangedPending;                             // 0x161DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_JumpIsRightFoot;                                // 0x161DD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsInplaceExit;                                  // 0x161DE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ELocomotionGait                               BP_StopGait;                                       // 0x161DF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_StartPercent;                                   // 0x161E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_StartRotator;                                   // 0x161E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_TotalRotator;                                   // 0x161F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               BP_StartVector;                                    // 0x161F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          BP_EnableStartBSRootmotion;                        // 0x16210(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_AimSwtichState;                                 // 0x16211(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16212[0x6];                                    // 0x16212(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          BP_CycleStop;                                      // 0x16218(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_BlockedStop;                                    // 0x16220(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   BP_CurveMatchName;                                 // 0x16228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CurveMatchBeginFrame;                           // 0x16230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_CurveMatchEndFrame;                             // 0x16234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UX6RMWalkingComponent*                  BP_RMWalkingComponent;                             // 0x16238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_StaticLandingAnim;                              // 0x16240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_WalkSlowLandingAnim;                            // 0x16248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_WalkFastLandingAnim;                            // 0x16250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_JogLandingAnim;                                 // 0x16258(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_SprintLandingAnim;                              // 0x16260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        BP_AnimStatesAComp;                                // 0x16268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ECharacterSituationType                       BP_ContextualType;                                 // 0x16270(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16271[0x7];                                    // 0x16271(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             BP_ContextualDT;                                   // 0x16278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_ContextualAlpha;                                // 0x16280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_ContextualTimer_Rain;                           // 0x16288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLandingHeavy;                                 // 0x16290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16291[0x7];                                    // 0x16291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             DT_StylizedClothAnims;                             // 0x16298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableClothStylized;                            // 0x162A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162A1[0x3];                                    // 0x162A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BP_ContextualKey;                                  // 0x162A4(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_ContextAnimFinished;                            // 0x162AC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_PlayContextualIdle;                             // 0x162AD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_PlayContextualIdleFinished;                     // 0x162AE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_162AF[0x1];                                    // 0x162AF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_AimPlayRate;                                    // 0x162B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             BP_DT_ClothStylized;                               // 0x162B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          BP_Anim_Stylized_Idle;                             // 0x162C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FStylizedStartState                    BP_Stylized_Start;                                 // 0x162C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FFStylizedSimplyStartState             BP_Stylized_SimplyStart;                           // 0x162D8(0x0078)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFStylizedSimplyPivotState             BP_Stylized_SimplyPivot;                           // 0x16350(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FStylizedLoopState                     BP_Stylized_Walk_Loop;                             // 0x16368(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FStylizedLoopState                     BP_Stylized_Jog_Loop;                              // 0x16380(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FStylizedLoopState                     BP_Stylized_WalkSlow_Loop;                         // 0x16398(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FStylizedLoopState                     BP_Stylized_Sprint_Loop;                           // 0x163B0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FStylizedStopState                     BP_Stylized_Stop;                                  // 0x163C8(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FFStylizedMirror                       BP_Stylized_Mirror;                                // 0x16408(0x0002)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1640A[0x6];                                    // 0x1640A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          BP_Anim_Stylized_Relax_Idle;                       // 0x16410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_PlayStylizedStop;                               // 0x16418(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_OnGroundPlayMoving;                             // 0x16419(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1641A[0x6];                                    // 0x1641A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_StartPlayRate;                                  // 0x16420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLogicInStatePlayingSkill;                     // 0x16428(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_SkipStopFlag;                                   // 0x16429(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_ForceStopFlag;                                  // 0x1642A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableHandLiftAdditive;                         // 0x1642B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_ForceEnterAimSwtichState;                       // 0x1642C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLogicInStateAdjustForInteraction;             // 0x1642D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1642E[0x2];                                    // 0x1642E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          BP_Anim_Default_Idle;                              // 0x16430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_CyclePlayRate;                                  // 0x16438(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_EnterClothStylizedIdleWaitTime;                 // 0x16440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_CurDefaultIdleTime;                             // 0x16448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bNeedRefreshDefaultIdle;                        // 0x16450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_DefaultIdleIsMirrored;                          // 0x16451(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bForceSetDefaultIdleMirror;                     // 0x16452(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLogicInLevelSequenceState;                    // 0x16453(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLogicCanDoAction_MovementSituationalFeedbackPerformance; // 0x16454(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bForceStylizedIdle;                             // 0x16455(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16456[0x2];                                    // 0x16456(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LFSyncMarkerTime;                                  // 0x16458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RFSyncMarkerTime;                                  // 0x1645C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerMantleComponent_C*            BP_MantleComp;                                     // 0x16460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EMantleType                                   MantleType;                                        // 0x16468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16469[0x7];                                    // 0x16469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          BP_IdleTransitionAnim;                             // 0x16470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_DoIdleTransition;                               // 0x16478(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_HasIdleTransition;                              // 0x16479(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1647A[0x6];                                    // 0x1647A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          BP_CurrentIdleBreakAnim;                           // 0x16480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IdleBreakTrigger;                               // 0x16488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IdleBreakEnabled;                               // 0x16489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1648A[0x6];                                    // 0x1648A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, double>                     BP_ModifyCurves;                                   // 0x16490(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UBlendSpace1D*                          BP_LandingMovementAnim_BS;                         // 0x164E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_StartState_IsNotBlendingOut;                    // 0x164E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_164E9[0x7];                                    // 0x164E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_MainCharacterInAirMovementComp_C*   PlayerRegularInAir;                                // 0x164F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EPlayerGamePlayMovementMode                   BP_CurOnGroundGameplayMode;                        // 0x164F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsInRegularMovementMode;                        // 0x164F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_164FA[0x6];                                    // 0x164FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_TimeToStartRotating;                            // 0x16500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_PivotTurnAroundAngle;                           // 0x16508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsRePivot;                                      // 0x1650C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1650D[0x3];                                    // 0x1650D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                BP_PivotMovementInputVec;                          // 0x16510(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_CurPivotTime;                                   // 0x16528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1652C[0x4];                                    // 0x1652C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_TimeToEndRotating;                              // 0x16530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class URMConfigContext_OnGround*              RMConfigContext;                                   // 0x16538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_PivotState_IsNotBlendingOut;                    // 0x16540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16541[0x3];                                    // 0x16541(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BP_Pivot_WalkAlpha;                                // 0x16544(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_Pivot_JogAlpha;                                 // 0x16548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_PivotState_RelevantAnimTime_Remaining;          // 0x1654C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_StartState_RelevantAnimTime_Remaining;          // 0x16550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_Start_JogAlpha;                                 // 0x16554(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_Start_WalkAlpha;                                // 0x16558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1655C[0x4];                                    // 0x1655C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_StartAnimTimeRecord;                            // 0x16560(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsPlayingRegularStartMovingAnim;                // 0x16568(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_16569[0x3];                                    // 0x16569(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFloatSpringState                      BP_SpringState_Start_JogAlpha;                     // 0x1656C(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	struct FFloatSpringState                      BP_SpringState_Start_WalkAlpha;                    // 0x16578(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_16584[0x4];                                    // 0x16584(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<double, double>                          BP_CurMaxWeightStartAnimRemainTimeIfAnimIsRelevant; // 0x16588(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<double, double>                          BP_CurMaxWeightStartAnimCurrentAnimTimeIfAnimIsRelevant; // 0x165D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         BP_StartState_RelevantAnimTime_CurrentAnimTime;    // 0x16628(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1662C[0x4];                                    // 0x1662C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_StopAnim_StartPosition;                         // 0x16630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_ShuffleStopTurnAngle;                           // 0x16638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               BP_ShuffleStopVector;                              // 0x16640(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	double                                        BP_ShuffleAnimBlendAlpha;                          // 0x16658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IdleBreakIgnoreFootMatch;                       // 0x16660(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendSpace*                            BP_PivotAnim_BlendSpace;                           // 0x164F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UBP_FloatingJumpAnimConfig_C*           BP_FloatingJumpAnimSet;                            // 0x164F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          FloatAnimPrepared;                                 // 0x16500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16501[0x7];                                    // 0x16501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_MainCharacterInAirMovementComp_C*   PlayerRegularInAir;                                // 0x16508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EPlayerGamePlayMovementMode                   BP_CurOnGroundGameplayMode;                        // 0x16510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsInRegularMovementMode;                        // 0x16511(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16512[0x6];                                    // 0x16512(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_TimeToStartRotating;                            // 0x16518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_PivotTurnAroundAngle;                           // 0x16520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsRePivot;                                      // 0x16524(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16525[0x3];                                    // 0x16525(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BP_PivotMovementInputVec;                          // 0x16528(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_CurPivotTime;                                   // 0x16540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16544[0x4];                                    // 0x16544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_TimeToEndRotating;                              // 0x16548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class URMConfigContext_OnGround*              RMConfigContext;                                   // 0x16550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_PivotState_IsNotBlendingOut;                    // 0x16558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16559[0x3];                                    // 0x16559(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BP_Pivot_WalkAlpha;                                // 0x1655C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_Pivot_JogAlpha;                                 // 0x16560(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_PivotState_RelevantAnimTime_Remaining;          // 0x16564(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_StartState_RelevantAnimTime_Remaining;          // 0x16568(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_Start_JogAlpha;                                 // 0x1656C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_Start_WalkAlpha;                                // 0x16570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16574[0x4];                                    // 0x16574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_StartAnimTimeRecord;                            // 0x16578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsPlayingRegularStartMovingAnim;                // 0x16580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16581[0x3];                                    // 0x16581(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFloatSpringState                      BP_SpringState_Start_JogAlpha;                     // 0x16584(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FFloatSpringState                      BP_SpringState_Start_WalkAlpha;                    // 0x16590(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	uint8                                         Pad_1659C[0x4];                                    // 0x1659C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<double, double>                          BP_CurMaxWeightStartAnimRemainTimeIfAnimIsRelevant; // 0x165A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<double, double>                          BP_CurMaxWeightStartAnimCurrentAnimTimeIfAnimIsRelevant; // 0x165F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         BP_StartState_RelevantAnimTime_CurrentAnimTime;    // 0x16640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_16644[0x4];                                    // 0x16644(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_StopAnim_StartPosition;                         // 0x16648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_ShuffleStopTurnAngle;                           // 0x16650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               BP_ShuffleStopVector;                              // 0x16658(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	double                                        BP_ShuffleAnimBlendAlpha;                          // 0x16670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IdleBreakIgnoreFootMatch;                       // 0x16678(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_DisableIdleBreakMirror;                         // 0x16679(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1667A[0x2];                                    // 0x1667A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BP_Slope_JogAlpha;                                 // 0x1667C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_Slope_WalkAlpha;                                // 0x16680(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AllowGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType OldGait);
@@ -1047,6 +1053,7 @@ public:
 	void Determine_Pivot_Anim(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node);
 	void DetermineLandingAnimInfo();
 	void DetermineStartBS();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_0D83FB8F40626A1A1B897B95E386B157();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_408D5BE942695FEFB56119A4D3D9B735();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_6321DAA74FF4614B45DF86B4AC57079E();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Player_RegularMovement_AnimGraphNode_BlendListByBool_6AD9C7BC43142F17A3BD0B876143DCD1();
@@ -1216,6 +1223,7 @@ public:
 	void UpdateAimingInfo();
 	void UpdateAnimStateFastPath();
 	void UpdateContextual();
+	void UpdateCycleSlopeAlpha();
 	void UpdateEssentialStates();
 	void UpdateEssentialValues();
 	void UpdateGroundAnimationAndAlpha();
@@ -1243,7 +1251,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_Player_RegularMovement_C) == 0x000010, "Wrong alignment on UABP_Player_RegularMovement_C");
-static_assert(sizeof(UABP_Player_RegularMovement_C) == 0x016670, "Wrong size on UABP_Player_RegularMovement_C");
+static_assert(sizeof(UABP_Player_RegularMovement_C) == 0x016690, "Wrong size on UABP_Player_RegularMovement_C");
 static_assert(offsetof(UABP_Player_RegularMovement_C, UberGraphFrame) == 0x000600, "Member 'UABP_Player_RegularMovement_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_Player_RegularMovement_C, __AnimBlueprintMutables) == 0x000608, "Member 'UABP_Player_RegularMovement_C::__AnimBlueprintMutables' has a wrong offset!");
 static_assert(offsetof(UABP_Player_RegularMovement_C, AnimBlueprintExtension_PropertyAccess) == 0x000930, "Member 'UABP_Player_RegularMovement_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
@@ -2042,136 +2050,141 @@ static_assert(offsetof(UABP_Player_RegularMovement_C, AnimGraphNode_Root_1) == 0
 static_assert(offsetof(UABP_Player_RegularMovement_C, AnimGraphNode_LinkedInputPose) == 0x015F68, "Member 'UABP_Player_RegularMovement_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
 static_assert(offsetof(UABP_Player_RegularMovement_C, AnimGraphNode_Root) == 0x016020, "Member 'UABP_Player_RegularMovement_C::AnimGraphNode_Root' has a wrong offset!");
 static_assert(offsetof(UABP_Player_RegularMovement_C, AnimGraphNode_LinkedAnimLayer) == 0x016040, "Member 'UABP_Player_RegularMovement_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_5) == 0x016108, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_5' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_4) == 0x016120, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_4' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_3) == 0x016138, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_3' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_2) == 0x016150, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_2' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_1) == 0x016168, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_1' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess) == 0x016170, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayerMoveableComp) == 0x016178, "Member 'UABP_Player_RegularMovement_C::BP_PlayerMoveableComp' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PrevJumpStage) == 0x016180, "Member 'UABP_Player_RegularMovement_C::BP_PrevJumpStage' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_JumpStage) == 0x016181, "Member 'UABP_Player_RegularMovement_C::BP_JumpStage' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CharacterMovement) == 0x016188, "Member 'UABP_Player_RegularMovement_C::BP_CharacterMovement' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotAnim) == 0x016190, "Member 'UABP_Player_RegularMovement_C::BP_PivotAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_FallHighSpeedValue) == 0x016198, "Member 'UABP_Player_RegularMovement_C::BP_FallHighSpeedValue' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_InAirMovementComp) == 0x0161A0, "Member 'UABP_Player_RegularMovement_C::BP_InAirMovementComp' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLandStatic) == 0x0161A8, "Member 'UABP_Player_RegularMovement_C::BP_IsLandStatic' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SkeletonMeshComp) == 0x0161B0, "Member 'UABP_Player_RegularMovement_C::BP_SkeletonMeshComp' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayerMovementComp) == 0x0161B8, "Member 'UABP_Player_RegularMovement_C::BP_PlayerMovementComp' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_OnGroundPlayStop) == 0x0161C0, "Member 'UABP_Player_RegularMovement_C::BP_OnGroundPlayStop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Fast_IsStepExit) == 0x0161C1, "Member 'UABP_Player_RegularMovement_C::BP_Fast_IsStepExit' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Fast_IsShuffleExit) == 0x0161C2, "Member 'UABP_Player_RegularMovement_C::BP_Fast_IsShuffleExit' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Fast_IsCycleExit) == 0x0161C3, "Member 'UABP_Player_RegularMovement_C::BP_Fast_IsCycleExit' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_GaitChangedPending) == 0x0161C4, "Member 'UABP_Player_RegularMovement_C::BP_GaitChangedPending' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_JumpIsRightFoot) == 0x0161C5, "Member 'UABP_Player_RegularMovement_C::BP_JumpIsRightFoot' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsInplaceExit) == 0x0161C6, "Member 'UABP_Player_RegularMovement_C::BP_IsInplaceExit' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StopGait) == 0x0161C7, "Member 'UABP_Player_RegularMovement_C::BP_StopGait' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartPercent) == 0x0161C8, "Member 'UABP_Player_RegularMovement_C::BP_StartPercent' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartRotator) == 0x0161D0, "Member 'UABP_Player_RegularMovement_C::BP_StartRotator' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_TotalRotator) == 0x0161D8, "Member 'UABP_Player_RegularMovement_C::BP_TotalRotator' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartVector) == 0x0161E0, "Member 'UABP_Player_RegularMovement_C::BP_StartVector' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnableStartBSRootmotion) == 0x0161F8, "Member 'UABP_Player_RegularMovement_C::BP_EnableStartBSRootmotion' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_AimSwtichState) == 0x0161F9, "Member 'UABP_Player_RegularMovement_C::BP_AimSwtichState' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CycleStop) == 0x016200, "Member 'UABP_Player_RegularMovement_C::BP_CycleStop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_BlockedStop) == 0x016208, "Member 'UABP_Player_RegularMovement_C::BP_BlockedStop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurveMatchName) == 0x016210, "Member 'UABP_Player_RegularMovement_C::BP_CurveMatchName' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurveMatchBeginFrame) == 0x016218, "Member 'UABP_Player_RegularMovement_C::BP_CurveMatchBeginFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurveMatchEndFrame) == 0x01621C, "Member 'UABP_Player_RegularMovement_C::BP_CurveMatchEndFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_RMWalkingComponent) == 0x016220, "Member 'UABP_Player_RegularMovement_C::BP_RMWalkingComponent' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StaticLandingAnim) == 0x016228, "Member 'UABP_Player_RegularMovement_C::BP_StaticLandingAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_WalkSlowLandingAnim) == 0x016230, "Member 'UABP_Player_RegularMovement_C::BP_WalkSlowLandingAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_WalkFastLandingAnim) == 0x016238, "Member 'UABP_Player_RegularMovement_C::BP_WalkFastLandingAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_JogLandingAnim) == 0x016240, "Member 'UABP_Player_RegularMovement_C::BP_JogLandingAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SprintLandingAnim) == 0x016248, "Member 'UABP_Player_RegularMovement_C::BP_SprintLandingAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_AnimStatesAComp) == 0x016250, "Member 'UABP_Player_RegularMovement_C::BP_AnimStatesAComp' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualType) == 0x016258, "Member 'UABP_Player_RegularMovement_C::BP_ContextualType' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualDT) == 0x016260, "Member 'UABP_Player_RegularMovement_C::BP_ContextualDT' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualAlpha) == 0x016268, "Member 'UABP_Player_RegularMovement_C::BP_ContextualAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualTimer_Rain) == 0x016270, "Member 'UABP_Player_RegularMovement_C::BP_ContextualTimer_Rain' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLandingHeavy) == 0x016278, "Member 'UABP_Player_RegularMovement_C::BP_IsLandingHeavy' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, DT_StylizedClothAnims) == 0x016280, "Member 'UABP_Player_RegularMovement_C::DT_StylizedClothAnims' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnableClothStylized) == 0x016288, "Member 'UABP_Player_RegularMovement_C::BP_EnableClothStylized' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualKey) == 0x01628C, "Member 'UABP_Player_RegularMovement_C::BP_ContextualKey' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextAnimFinished) == 0x016294, "Member 'UABP_Player_RegularMovement_C::BP_ContextAnimFinished' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayContextualIdle) == 0x016295, "Member 'UABP_Player_RegularMovement_C::BP_PlayContextualIdle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayContextualIdleFinished) == 0x016296, "Member 'UABP_Player_RegularMovement_C::BP_PlayContextualIdleFinished' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_AimPlayRate) == 0x016298, "Member 'UABP_Player_RegularMovement_C::BP_AimPlayRate' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DT_ClothStylized) == 0x0162A0, "Member 'UABP_Player_RegularMovement_C::BP_DT_ClothStylized' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Anim_Stylized_Idle) == 0x0162A8, "Member 'UABP_Player_RegularMovement_C::BP_Anim_Stylized_Idle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Start) == 0x0162B0, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Start' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_SimplyStart) == 0x0162C0, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_SimplyStart' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_SimplyPivot) == 0x016338, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_SimplyPivot' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Walk_Loop) == 0x016350, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Walk_Loop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Jog_Loop) == 0x016368, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Jog_Loop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_WalkSlow_Loop) == 0x016380, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_WalkSlow_Loop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Sprint_Loop) == 0x016398, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Sprint_Loop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Stop) == 0x0163B0, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Stop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Mirror) == 0x0163F0, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Mirror' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Anim_Stylized_Relax_Idle) == 0x0163F8, "Member 'UABP_Player_RegularMovement_C::BP_Anim_Stylized_Relax_Idle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayStylizedStop) == 0x016400, "Member 'UABP_Player_RegularMovement_C::BP_PlayStylizedStop' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_OnGroundPlayMoving) == 0x016401, "Member 'UABP_Player_RegularMovement_C::BP_OnGroundPlayMoving' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartPlayRate) == 0x016408, "Member 'UABP_Player_RegularMovement_C::BP_StartPlayRate' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicInStatePlayingSkill) == 0x016410, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicInStatePlayingSkill' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SkipStopFlag) == 0x016411, "Member 'UABP_Player_RegularMovement_C::BP_SkipStopFlag' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ForceStopFlag) == 0x016412, "Member 'UABP_Player_RegularMovement_C::BP_ForceStopFlag' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnableHandLiftAdditive) == 0x016413, "Member 'UABP_Player_RegularMovement_C::BP_EnableHandLiftAdditive' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ForceEnterAimSwtichState) == 0x016414, "Member 'UABP_Player_RegularMovement_C::BP_ForceEnterAimSwtichState' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicInStateAdjustForInteraction) == 0x016415, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicInStateAdjustForInteraction' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Anim_Default_Idle) == 0x016418, "Member 'UABP_Player_RegularMovement_C::BP_Anim_Default_Idle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CyclePlayRate) == 0x016420, "Member 'UABP_Player_RegularMovement_C::BP_CyclePlayRate' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnterClothStylizedIdleWaitTime) == 0x016428, "Member 'UABP_Player_RegularMovement_C::BP_EnterClothStylizedIdleWaitTime' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurDefaultIdleTime) == 0x016430, "Member 'UABP_Player_RegularMovement_C::BP_CurDefaultIdleTime' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_bNeedRefreshDefaultIdle) == 0x016438, "Member 'UABP_Player_RegularMovement_C::BP_bNeedRefreshDefaultIdle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DefaultIdleIsMirrored) == 0x016439, "Member 'UABP_Player_RegularMovement_C::BP_DefaultIdleIsMirrored' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_bForceSetDefaultIdleMirror) == 0x01643A, "Member 'UABP_Player_RegularMovement_C::BP_bForceSetDefaultIdleMirror' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicInLevelSequenceState) == 0x01643B, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicInLevelSequenceState' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicCanDoAction_MovementSituationalFeedbackPerformance) == 0x01643C, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicCanDoAction_MovementSituationalFeedbackPerformance' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_bForceStylizedIdle) == 0x01643D, "Member 'UABP_Player_RegularMovement_C::BP_bForceStylizedIdle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, LFSyncMarkerTime) == 0x016440, "Member 'UABP_Player_RegularMovement_C::LFSyncMarkerTime' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, RFSyncMarkerTime) == 0x016444, "Member 'UABP_Player_RegularMovement_C::RFSyncMarkerTime' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_MantleComp) == 0x016448, "Member 'UABP_Player_RegularMovement_C::BP_MantleComp' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, MantleType) == 0x016450, "Member 'UABP_Player_RegularMovement_C::MantleType' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleTransitionAnim) == 0x016458, "Member 'UABP_Player_RegularMovement_C::BP_IdleTransitionAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DoIdleTransition) == 0x016460, "Member 'UABP_Player_RegularMovement_C::BP_DoIdleTransition' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_HasIdleTransition) == 0x016461, "Member 'UABP_Player_RegularMovement_C::BP_HasIdleTransition' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurrentIdleBreakAnim) == 0x016468, "Member 'UABP_Player_RegularMovement_C::BP_CurrentIdleBreakAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleBreakTrigger) == 0x016470, "Member 'UABP_Player_RegularMovement_C::BP_IdleBreakTrigger' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleBreakEnabled) == 0x016471, "Member 'UABP_Player_RegularMovement_C::BP_IdleBreakEnabled' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ModifyCurves) == 0x016478, "Member 'UABP_Player_RegularMovement_C::BP_ModifyCurves' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_LandingMovementAnim_BS) == 0x0164C8, "Member 'UABP_Player_RegularMovement_C::BP_LandingMovementAnim_BS' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartState_IsNotBlendingOut) == 0x0164D0, "Member 'UABP_Player_RegularMovement_C::BP_StartState_IsNotBlendingOut' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotAnim_BlendSpace) == 0x0164D8, "Member 'UABP_Player_RegularMovement_C::BP_PivotAnim_BlendSpace' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_FloatingJumpAnimSet) == 0x0164E0, "Member 'UABP_Player_RegularMovement_C::BP_FloatingJumpAnimSet' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, FloatAnimPrepared) == 0x0164E8, "Member 'UABP_Player_RegularMovement_C::FloatAnimPrepared' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, PlayerRegularInAir) == 0x0164F0, "Member 'UABP_Player_RegularMovement_C::PlayerRegularInAir' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurOnGroundGameplayMode) == 0x0164F8, "Member 'UABP_Player_RegularMovement_C::BP_CurOnGroundGameplayMode' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsInRegularMovementMode) == 0x0164F9, "Member 'UABP_Player_RegularMovement_C::BP_IsInRegularMovementMode' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_TimeToStartRotating) == 0x016500, "Member 'UABP_Player_RegularMovement_C::BP_TimeToStartRotating' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotTurnAroundAngle) == 0x016508, "Member 'UABP_Player_RegularMovement_C::BP_PivotTurnAroundAngle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsRePivot) == 0x01650C, "Member 'UABP_Player_RegularMovement_C::BP_IsRePivot' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotMovementInputVec) == 0x016510, "Member 'UABP_Player_RegularMovement_C::BP_PivotMovementInputVec' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurPivotTime) == 0x016528, "Member 'UABP_Player_RegularMovement_C::BP_CurPivotTime' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_TimeToEndRotating) == 0x016530, "Member 'UABP_Player_RegularMovement_C::BP_TimeToEndRotating' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, RMConfigContext) == 0x016538, "Member 'UABP_Player_RegularMovement_C::RMConfigContext' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotState_IsNotBlendingOut) == 0x016540, "Member 'UABP_Player_RegularMovement_C::BP_PivotState_IsNotBlendingOut' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Pivot_WalkAlpha) == 0x016544, "Member 'UABP_Player_RegularMovement_C::BP_Pivot_WalkAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Pivot_JogAlpha) == 0x016548, "Member 'UABP_Player_RegularMovement_C::BP_Pivot_JogAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotState_RelevantAnimTime_Remaining) == 0x01654C, "Member 'UABP_Player_RegularMovement_C::BP_PivotState_RelevantAnimTime_Remaining' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartState_RelevantAnimTime_Remaining) == 0x016550, "Member 'UABP_Player_RegularMovement_C::BP_StartState_RelevantAnimTime_Remaining' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Start_JogAlpha) == 0x016554, "Member 'UABP_Player_RegularMovement_C::BP_Start_JogAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Start_WalkAlpha) == 0x016558, "Member 'UABP_Player_RegularMovement_C::BP_Start_WalkAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartAnimTimeRecord) == 0x016560, "Member 'UABP_Player_RegularMovement_C::BP_StartAnimTimeRecord' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsPlayingRegularStartMovingAnim) == 0x016568, "Member 'UABP_Player_RegularMovement_C::BP_IsPlayingRegularStartMovingAnim' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SpringState_Start_JogAlpha) == 0x01656C, "Member 'UABP_Player_RegularMovement_C::BP_SpringState_Start_JogAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SpringState_Start_WalkAlpha) == 0x016578, "Member 'UABP_Player_RegularMovement_C::BP_SpringState_Start_WalkAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurMaxWeightStartAnimRemainTimeIfAnimIsRelevant) == 0x016588, "Member 'UABP_Player_RegularMovement_C::BP_CurMaxWeightStartAnimRemainTimeIfAnimIsRelevant' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurMaxWeightStartAnimCurrentAnimTimeIfAnimIsRelevant) == 0x0165D8, "Member 'UABP_Player_RegularMovement_C::BP_CurMaxWeightStartAnimCurrentAnimTimeIfAnimIsRelevant' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartState_RelevantAnimTime_CurrentAnimTime) == 0x016628, "Member 'UABP_Player_RegularMovement_C::BP_StartState_RelevantAnimTime_CurrentAnimTime' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StopAnim_StartPosition) == 0x016630, "Member 'UABP_Player_RegularMovement_C::BP_StopAnim_StartPosition' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ShuffleStopTurnAngle) == 0x016638, "Member 'UABP_Player_RegularMovement_C::BP_ShuffleStopTurnAngle' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ShuffleStopVector) == 0x016640, "Member 'UABP_Player_RegularMovement_C::BP_ShuffleStopVector' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ShuffleAnimBlendAlpha) == 0x016658, "Member 'UABP_Player_RegularMovement_C::BP_ShuffleAnimBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleBreakIgnoreFootMatch) == 0x016660, "Member 'UABP_Player_RegularMovement_C::BP_IdleBreakIgnoreFootMatch' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_7) == 0x016108, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_7' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_6) == 0x016118, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_6' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_5) == 0x016120, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_5' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_4) == 0x016138, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_4' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_3) == 0x016150, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_3' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_2) == 0x016168, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_2' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess_1) == 0x016180, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess_1' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, K2Node_PropertyAccess) == 0x016188, "Member 'UABP_Player_RegularMovement_C::K2Node_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayerMoveableComp) == 0x016190, "Member 'UABP_Player_RegularMovement_C::BP_PlayerMoveableComp' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PrevJumpStage) == 0x016198, "Member 'UABP_Player_RegularMovement_C::BP_PrevJumpStage' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_JumpStage) == 0x016199, "Member 'UABP_Player_RegularMovement_C::BP_JumpStage' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CharacterMovement) == 0x0161A0, "Member 'UABP_Player_RegularMovement_C::BP_CharacterMovement' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotAnim) == 0x0161A8, "Member 'UABP_Player_RegularMovement_C::BP_PivotAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_FallHighSpeedValue) == 0x0161B0, "Member 'UABP_Player_RegularMovement_C::BP_FallHighSpeedValue' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_InAirMovementComp) == 0x0161B8, "Member 'UABP_Player_RegularMovement_C::BP_InAirMovementComp' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLandStatic) == 0x0161C0, "Member 'UABP_Player_RegularMovement_C::BP_IsLandStatic' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SkeletonMeshComp) == 0x0161C8, "Member 'UABP_Player_RegularMovement_C::BP_SkeletonMeshComp' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayerMovementComp) == 0x0161D0, "Member 'UABP_Player_RegularMovement_C::BP_PlayerMovementComp' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_OnGroundPlayStop) == 0x0161D8, "Member 'UABP_Player_RegularMovement_C::BP_OnGroundPlayStop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Fast_IsStepExit) == 0x0161D9, "Member 'UABP_Player_RegularMovement_C::BP_Fast_IsStepExit' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Fast_IsShuffleExit) == 0x0161DA, "Member 'UABP_Player_RegularMovement_C::BP_Fast_IsShuffleExit' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Fast_IsCycleExit) == 0x0161DB, "Member 'UABP_Player_RegularMovement_C::BP_Fast_IsCycleExit' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_GaitChangedPending) == 0x0161DC, "Member 'UABP_Player_RegularMovement_C::BP_GaitChangedPending' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_JumpIsRightFoot) == 0x0161DD, "Member 'UABP_Player_RegularMovement_C::BP_JumpIsRightFoot' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsInplaceExit) == 0x0161DE, "Member 'UABP_Player_RegularMovement_C::BP_IsInplaceExit' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StopGait) == 0x0161DF, "Member 'UABP_Player_RegularMovement_C::BP_StopGait' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartPercent) == 0x0161E0, "Member 'UABP_Player_RegularMovement_C::BP_StartPercent' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartRotator) == 0x0161E8, "Member 'UABP_Player_RegularMovement_C::BP_StartRotator' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_TotalRotator) == 0x0161F0, "Member 'UABP_Player_RegularMovement_C::BP_TotalRotator' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartVector) == 0x0161F8, "Member 'UABP_Player_RegularMovement_C::BP_StartVector' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnableStartBSRootmotion) == 0x016210, "Member 'UABP_Player_RegularMovement_C::BP_EnableStartBSRootmotion' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_AimSwtichState) == 0x016211, "Member 'UABP_Player_RegularMovement_C::BP_AimSwtichState' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CycleStop) == 0x016218, "Member 'UABP_Player_RegularMovement_C::BP_CycleStop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_BlockedStop) == 0x016220, "Member 'UABP_Player_RegularMovement_C::BP_BlockedStop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurveMatchName) == 0x016228, "Member 'UABP_Player_RegularMovement_C::BP_CurveMatchName' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurveMatchBeginFrame) == 0x016230, "Member 'UABP_Player_RegularMovement_C::BP_CurveMatchBeginFrame' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurveMatchEndFrame) == 0x016234, "Member 'UABP_Player_RegularMovement_C::BP_CurveMatchEndFrame' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_RMWalkingComponent) == 0x016238, "Member 'UABP_Player_RegularMovement_C::BP_RMWalkingComponent' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StaticLandingAnim) == 0x016240, "Member 'UABP_Player_RegularMovement_C::BP_StaticLandingAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_WalkSlowLandingAnim) == 0x016248, "Member 'UABP_Player_RegularMovement_C::BP_WalkSlowLandingAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_WalkFastLandingAnim) == 0x016250, "Member 'UABP_Player_RegularMovement_C::BP_WalkFastLandingAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_JogLandingAnim) == 0x016258, "Member 'UABP_Player_RegularMovement_C::BP_JogLandingAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SprintLandingAnim) == 0x016260, "Member 'UABP_Player_RegularMovement_C::BP_SprintLandingAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_AnimStatesAComp) == 0x016268, "Member 'UABP_Player_RegularMovement_C::BP_AnimStatesAComp' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualType) == 0x016270, "Member 'UABP_Player_RegularMovement_C::BP_ContextualType' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualDT) == 0x016278, "Member 'UABP_Player_RegularMovement_C::BP_ContextualDT' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualAlpha) == 0x016280, "Member 'UABP_Player_RegularMovement_C::BP_ContextualAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualTimer_Rain) == 0x016288, "Member 'UABP_Player_RegularMovement_C::BP_ContextualTimer_Rain' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLandingHeavy) == 0x016290, "Member 'UABP_Player_RegularMovement_C::BP_IsLandingHeavy' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, DT_StylizedClothAnims) == 0x016298, "Member 'UABP_Player_RegularMovement_C::DT_StylizedClothAnims' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnableClothStylized) == 0x0162A0, "Member 'UABP_Player_RegularMovement_C::BP_EnableClothStylized' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextualKey) == 0x0162A4, "Member 'UABP_Player_RegularMovement_C::BP_ContextualKey' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ContextAnimFinished) == 0x0162AC, "Member 'UABP_Player_RegularMovement_C::BP_ContextAnimFinished' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayContextualIdle) == 0x0162AD, "Member 'UABP_Player_RegularMovement_C::BP_PlayContextualIdle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayContextualIdleFinished) == 0x0162AE, "Member 'UABP_Player_RegularMovement_C::BP_PlayContextualIdleFinished' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_AimPlayRate) == 0x0162B0, "Member 'UABP_Player_RegularMovement_C::BP_AimPlayRate' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DT_ClothStylized) == 0x0162B8, "Member 'UABP_Player_RegularMovement_C::BP_DT_ClothStylized' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Anim_Stylized_Idle) == 0x0162C0, "Member 'UABP_Player_RegularMovement_C::BP_Anim_Stylized_Idle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Start) == 0x0162C8, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Start' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_SimplyStart) == 0x0162D8, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_SimplyStart' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_SimplyPivot) == 0x016350, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_SimplyPivot' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Walk_Loop) == 0x016368, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Walk_Loop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Jog_Loop) == 0x016380, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Jog_Loop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_WalkSlow_Loop) == 0x016398, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_WalkSlow_Loop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Sprint_Loop) == 0x0163B0, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Sprint_Loop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Stop) == 0x0163C8, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Stop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Stylized_Mirror) == 0x016408, "Member 'UABP_Player_RegularMovement_C::BP_Stylized_Mirror' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Anim_Stylized_Relax_Idle) == 0x016410, "Member 'UABP_Player_RegularMovement_C::BP_Anim_Stylized_Relax_Idle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PlayStylizedStop) == 0x016418, "Member 'UABP_Player_RegularMovement_C::BP_PlayStylizedStop' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_OnGroundPlayMoving) == 0x016419, "Member 'UABP_Player_RegularMovement_C::BP_OnGroundPlayMoving' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartPlayRate) == 0x016420, "Member 'UABP_Player_RegularMovement_C::BP_StartPlayRate' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicInStatePlayingSkill) == 0x016428, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicInStatePlayingSkill' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SkipStopFlag) == 0x016429, "Member 'UABP_Player_RegularMovement_C::BP_SkipStopFlag' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ForceStopFlag) == 0x01642A, "Member 'UABP_Player_RegularMovement_C::BP_ForceStopFlag' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnableHandLiftAdditive) == 0x01642B, "Member 'UABP_Player_RegularMovement_C::BP_EnableHandLiftAdditive' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ForceEnterAimSwtichState) == 0x01642C, "Member 'UABP_Player_RegularMovement_C::BP_ForceEnterAimSwtichState' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicInStateAdjustForInteraction) == 0x01642D, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicInStateAdjustForInteraction' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Anim_Default_Idle) == 0x016430, "Member 'UABP_Player_RegularMovement_C::BP_Anim_Default_Idle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CyclePlayRate) == 0x016438, "Member 'UABP_Player_RegularMovement_C::BP_CyclePlayRate' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_EnterClothStylizedIdleWaitTime) == 0x016440, "Member 'UABP_Player_RegularMovement_C::BP_EnterClothStylizedIdleWaitTime' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurDefaultIdleTime) == 0x016448, "Member 'UABP_Player_RegularMovement_C::BP_CurDefaultIdleTime' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_bNeedRefreshDefaultIdle) == 0x016450, "Member 'UABP_Player_RegularMovement_C::BP_bNeedRefreshDefaultIdle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DefaultIdleIsMirrored) == 0x016451, "Member 'UABP_Player_RegularMovement_C::BP_DefaultIdleIsMirrored' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_bForceSetDefaultIdleMirror) == 0x016452, "Member 'UABP_Player_RegularMovement_C::BP_bForceSetDefaultIdleMirror' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicInLevelSequenceState) == 0x016453, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicInLevelSequenceState' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsLogicCanDoAction_MovementSituationalFeedbackPerformance) == 0x016454, "Member 'UABP_Player_RegularMovement_C::BP_IsLogicCanDoAction_MovementSituationalFeedbackPerformance' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_bForceStylizedIdle) == 0x016455, "Member 'UABP_Player_RegularMovement_C::BP_bForceStylizedIdle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, LFSyncMarkerTime) == 0x016458, "Member 'UABP_Player_RegularMovement_C::LFSyncMarkerTime' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, RFSyncMarkerTime) == 0x01645C, "Member 'UABP_Player_RegularMovement_C::RFSyncMarkerTime' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_MantleComp) == 0x016460, "Member 'UABP_Player_RegularMovement_C::BP_MantleComp' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, MantleType) == 0x016468, "Member 'UABP_Player_RegularMovement_C::MantleType' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleTransitionAnim) == 0x016470, "Member 'UABP_Player_RegularMovement_C::BP_IdleTransitionAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DoIdleTransition) == 0x016478, "Member 'UABP_Player_RegularMovement_C::BP_DoIdleTransition' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_HasIdleTransition) == 0x016479, "Member 'UABP_Player_RegularMovement_C::BP_HasIdleTransition' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurrentIdleBreakAnim) == 0x016480, "Member 'UABP_Player_RegularMovement_C::BP_CurrentIdleBreakAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleBreakTrigger) == 0x016488, "Member 'UABP_Player_RegularMovement_C::BP_IdleBreakTrigger' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleBreakEnabled) == 0x016489, "Member 'UABP_Player_RegularMovement_C::BP_IdleBreakEnabled' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ModifyCurves) == 0x016490, "Member 'UABP_Player_RegularMovement_C::BP_ModifyCurves' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_LandingMovementAnim_BS) == 0x0164E0, "Member 'UABP_Player_RegularMovement_C::BP_LandingMovementAnim_BS' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartState_IsNotBlendingOut) == 0x0164E8, "Member 'UABP_Player_RegularMovement_C::BP_StartState_IsNotBlendingOut' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotAnim_BlendSpace) == 0x0164F0, "Member 'UABP_Player_RegularMovement_C::BP_PivotAnim_BlendSpace' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_FloatingJumpAnimSet) == 0x0164F8, "Member 'UABP_Player_RegularMovement_C::BP_FloatingJumpAnimSet' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, FloatAnimPrepared) == 0x016500, "Member 'UABP_Player_RegularMovement_C::FloatAnimPrepared' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, PlayerRegularInAir) == 0x016508, "Member 'UABP_Player_RegularMovement_C::PlayerRegularInAir' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurOnGroundGameplayMode) == 0x016510, "Member 'UABP_Player_RegularMovement_C::BP_CurOnGroundGameplayMode' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsInRegularMovementMode) == 0x016511, "Member 'UABP_Player_RegularMovement_C::BP_IsInRegularMovementMode' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_TimeToStartRotating) == 0x016518, "Member 'UABP_Player_RegularMovement_C::BP_TimeToStartRotating' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotTurnAroundAngle) == 0x016520, "Member 'UABP_Player_RegularMovement_C::BP_PivotTurnAroundAngle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsRePivot) == 0x016524, "Member 'UABP_Player_RegularMovement_C::BP_IsRePivot' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotMovementInputVec) == 0x016528, "Member 'UABP_Player_RegularMovement_C::BP_PivotMovementInputVec' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurPivotTime) == 0x016540, "Member 'UABP_Player_RegularMovement_C::BP_CurPivotTime' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_TimeToEndRotating) == 0x016548, "Member 'UABP_Player_RegularMovement_C::BP_TimeToEndRotating' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, RMConfigContext) == 0x016550, "Member 'UABP_Player_RegularMovement_C::RMConfigContext' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotState_IsNotBlendingOut) == 0x016558, "Member 'UABP_Player_RegularMovement_C::BP_PivotState_IsNotBlendingOut' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Pivot_WalkAlpha) == 0x01655C, "Member 'UABP_Player_RegularMovement_C::BP_Pivot_WalkAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Pivot_JogAlpha) == 0x016560, "Member 'UABP_Player_RegularMovement_C::BP_Pivot_JogAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_PivotState_RelevantAnimTime_Remaining) == 0x016564, "Member 'UABP_Player_RegularMovement_C::BP_PivotState_RelevantAnimTime_Remaining' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartState_RelevantAnimTime_Remaining) == 0x016568, "Member 'UABP_Player_RegularMovement_C::BP_StartState_RelevantAnimTime_Remaining' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Start_JogAlpha) == 0x01656C, "Member 'UABP_Player_RegularMovement_C::BP_Start_JogAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Start_WalkAlpha) == 0x016570, "Member 'UABP_Player_RegularMovement_C::BP_Start_WalkAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartAnimTimeRecord) == 0x016578, "Member 'UABP_Player_RegularMovement_C::BP_StartAnimTimeRecord' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IsPlayingRegularStartMovingAnim) == 0x016580, "Member 'UABP_Player_RegularMovement_C::BP_IsPlayingRegularStartMovingAnim' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SpringState_Start_JogAlpha) == 0x016584, "Member 'UABP_Player_RegularMovement_C::BP_SpringState_Start_JogAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_SpringState_Start_WalkAlpha) == 0x016590, "Member 'UABP_Player_RegularMovement_C::BP_SpringState_Start_WalkAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurMaxWeightStartAnimRemainTimeIfAnimIsRelevant) == 0x0165A0, "Member 'UABP_Player_RegularMovement_C::BP_CurMaxWeightStartAnimRemainTimeIfAnimIsRelevant' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_CurMaxWeightStartAnimCurrentAnimTimeIfAnimIsRelevant) == 0x0165F0, "Member 'UABP_Player_RegularMovement_C::BP_CurMaxWeightStartAnimCurrentAnimTimeIfAnimIsRelevant' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StartState_RelevantAnimTime_CurrentAnimTime) == 0x016640, "Member 'UABP_Player_RegularMovement_C::BP_StartState_RelevantAnimTime_CurrentAnimTime' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_StopAnim_StartPosition) == 0x016648, "Member 'UABP_Player_RegularMovement_C::BP_StopAnim_StartPosition' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ShuffleStopTurnAngle) == 0x016650, "Member 'UABP_Player_RegularMovement_C::BP_ShuffleStopTurnAngle' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ShuffleStopVector) == 0x016658, "Member 'UABP_Player_RegularMovement_C::BP_ShuffleStopVector' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_ShuffleAnimBlendAlpha) == 0x016670, "Member 'UABP_Player_RegularMovement_C::BP_ShuffleAnimBlendAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_IdleBreakIgnoreFootMatch) == 0x016678, "Member 'UABP_Player_RegularMovement_C::BP_IdleBreakIgnoreFootMatch' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_DisableIdleBreakMirror) == 0x016679, "Member 'UABP_Player_RegularMovement_C::BP_DisableIdleBreakMirror' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Slope_JogAlpha) == 0x01667C, "Member 'UABP_Player_RegularMovement_C::BP_Slope_JogAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_Player_RegularMovement_C, BP_Slope_WalkAlpha) == 0x016680, "Member 'UABP_Player_RegularMovement_C::BP_Slope_WalkAlpha' has a wrong offset!");
 
 }
 

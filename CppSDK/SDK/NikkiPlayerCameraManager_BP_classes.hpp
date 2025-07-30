@@ -54,6 +54,7 @@ public:
 	uint8                                         Pad_7544[0x4];                                     // 0x7544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class AActor* NewControlledRole)> EventOnControlledRoleChanged;    // 0x7548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(class AActor* ControlledActor, class AActor* LastControlledActor)> EventOnCameraVolumeTargetControlledActorChanged; // 0x7558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FName                                   BP_CameraSocketName;                               // 0x7568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateCameraDissolveParams();
@@ -69,7 +70,12 @@ public:
 	void EndFocusOnTarget();
 	void EndFocusOn();
 	void BP_UpdateInteractionTime();
+	void BP_UnregisterAnimDrivenCamera(class FName InCameraName);
+	void BP_RemoveAnimDrivenCamera(class FName InCameraName, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
+	void BP_RegisterAnimDrivenCamera(class FName InCameraName, ECameraState InCameraState, class AActor* InCameraActor, class AActor** OutCameraActor);
+	void BP_PushAnimDrivenCamera(class FName InCameraName, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
 	void BP_GetCameraVolumeTargetControlledActor(class AActor** ControlledActor);
+	void BP_GetAnimDrivenCamera(class FName InCameraName, class AActor** OutCameraActor);
 	void BP_DestroyInteractionCameraResetArea();
 	void BP_DebugDrawAllCameraVolume();
 	void BP_CreateInteractionCameraResetArea();
@@ -120,6 +126,7 @@ static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, bCameraResetDebug) == 0x0
 static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, GameplayTag) == 0x00753C, "Member 'ANikkiPlayerCameraManager_BP_C::GameplayTag' has a wrong offset!");
 static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnControlledRoleChanged) == 0x007548, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnControlledRoleChanged' has a wrong offset!");
 static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnCameraVolumeTargetControlledActorChanged) == 0x007558, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnCameraVolumeTargetControlledActorChanged' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraSocketName) == 0x007568, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraSocketName' has a wrong offset!");
 
 }
 

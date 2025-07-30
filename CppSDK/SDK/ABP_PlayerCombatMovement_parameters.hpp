@@ -56,6 +56,19 @@ static_assert(sizeof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorAdditiveMode) 
 static_assert(offsetof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorAdditiveMode, InPoseForPlayerBehavior) == 0x000000, "Member 'ABP_PlayerCombatMovement_C_AnimLayer_BehaviorAdditiveMode::InPoseForPlayerBehavior' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorAdditiveMode, AnimLayer_BehaviorAdditiveMode_0) == 0x000010, "Member 'ABP_PlayerCombatMovement_C_AnimLayer_BehaviorAdditiveMode::AnimLayer_BehaviorAdditiveMode_0' has a wrong offset!");
 
+// Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.AnimLayer_BehaviorConnectionMode
+// 0x0020 (0x0020 - 0x0000)
+struct ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode final
+{
+public:
+	struct FPoseLink                              InPoseToConnectionMode;                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	struct FPoseLink                              AnimLayer_BehaviorConnectionMode_0;                // 0x0010(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode) == 0x000008, "Wrong alignment on ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode");
+static_assert(sizeof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode) == 0x000020, "Wrong size on ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode, InPoseToConnectionMode) == 0x000000, "Member 'ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode::InPoseToConnectionMode' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode, AnimLayer_BehaviorConnectionMode_0) == 0x000010, "Member 'ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode::AnimLayer_BehaviorConnectionMode_0' has a wrong offset!");
+
 // Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.AnimLayer_CombatMovement
 // 0x0010 (0x0010 - 0x0000)
 struct ABP_PlayerCombatMovement_C_AnimLayer_CombatMovement final
@@ -291,7 +304,7 @@ static_assert(offsetof(ABP_PlayerCombatMovement_C_Event_OnPlayerFloatingJumpStag
 static_assert(offsetof(ABP_PlayerCombatMovement_C_Event_OnPlayerFloatingJumpStageChanged_Event, OldStage) == 0x000001, "Member 'ABP_PlayerCombatMovement_C_Event_OnPlayerFloatingJumpStageChanged_Event::OldStage' has a wrong offset!");
 
 // Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.ExecuteUbergraph_ABP_PlayerCombatMovement
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement final
 {
 public:
@@ -303,52 +316,55 @@ public:
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(ERegularFloatingJumpStage NewStage, ERegularFloatingJumpStage OldStage)> K2Node_CreateDelegate_OutputDelegate; // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTime_ReturnValue_1;        // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTime_ReturnValue_2;        // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_CustomEvent_Mode;                           // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_CustomEvent_PreMode;                        // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DeterminTransToRightFoot_bTranstoRight;   // 0x003F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ERegularFloatingJumpStage NewStage, ERegularFloatingJumpStage OldStage)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_CustomEvent_Mode;                           // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_CustomEvent_PreMode;                        // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0037(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x003E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3F[0x1];                                       // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRelevantAnimTime_ReturnValue_1;        // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetRelevantAnimTime_ReturnValue_2;        // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_2;       // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_6;                 // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_7;                 // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DeterminTransToRightFoot_bTranstoRight;   // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x004F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_8;                 // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_9;                 // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_PlayerRegularInAirMovementComp_C*   CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerCombatMovementComponent_C*    CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerMoveableComponent_C*          CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     K2Node_CustomEvent_NewStage;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     K2Node_CustomEvent_OldStage;                       // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x0073(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EMovementMode PrevMode, EMovementMode NewMode)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0074(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_2;    // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerRegularInAirMovementComp_C*   CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0070(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerCombatMovementComponent_C*    CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0078(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerMoveableComponent_C*          CallFunc_GetComponentByClass_ReturnValue_3;        // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     K2Node_CustomEvent_NewStage;                       // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     K2Node_CustomEvent_OldStage;                       // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x008B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EMovementMode PrevMode, EMovementMode NewMode)> K2Node_CreateDelegate_OutputDelegate_2; // 0x008C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_1;    // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast_2;    // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement) == 0x000008, "Wrong alignment on ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement");
-static_assert(sizeof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement) == 0x0000A0, "Wrong size on ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement");
+static_assert(sizeof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement) == 0x0000B8, "Wrong size on ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, EntryPoint) == 0x000000, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::EntryPoint' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue) == 0x000004, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetRelevantAnimTime_ReturnValue) == 0x000008, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetRelevantAnimTime_ReturnValue' has a wrong offset!");
@@ -358,42 +374,45 @@ static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCom
 static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_1) == 0x00000F, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_2) == 0x000020, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetRelevantAnimTime_ReturnValue_1) == 0x000024, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetRelevantAnimTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000028, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_3) == 0x000029, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetRelevantAnimTime_ReturnValue_2) == 0x00002C, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetRelevantAnimTime_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_4) == 0x000030, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x000031, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_Mode) == 0x000032, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_Mode' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_PreMode) == 0x000033, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_PreMode' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000034, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000035, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000036, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x000037, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_5) == 0x000038, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_6) == 0x000039, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanOR_ReturnValue) == 0x00003A, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_2) == 0x00003B, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_3) == 0x00003C, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_4) == 0x00003D, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_7) == 0x00003E, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_DeterminTransToRightFoot_bTranstoRight) == 0x00003F, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_DeterminTransToRightFoot_bTranstoRight' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_5) == 0x000040, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_8) == 0x000041, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000048, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_9) == 0x000050, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_IsValid_ReturnValue) == 0x000051, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue) == 0x000058, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000060, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000068, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_NewStage) == 0x000070, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_NewStage' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_OldStage) == 0x000071, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_OldStage' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000072, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x000073, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CreateDelegate_OutputDelegate_1) == 0x000074, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000088, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_A_ImplicitCast_1) == 0x000090, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_A_ImplicitCast_2) == 0x000098, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CreateDelegate_OutputDelegate_1) == 0x000024, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_2) == 0x000034, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_Mode) == 0x000035, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_Mode' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_PreMode) == 0x000036, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_PreMode' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_3) == 0x000037, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000038, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x000039, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00003A, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x00003B, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_3) == 0x00003C, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_4) == 0x00003D, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanOR_ReturnValue) == 0x00003E, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetRelevantAnimTime_ReturnValue_1) == 0x000040, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetRelevantAnimTime_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetRelevantAnimTime_ReturnValue_2) == 0x000044, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetRelevantAnimTime_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000048, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_ReturnValue_2) == 0x000049, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_5) == 0x00004A, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_6) == 0x00004B, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_7) == 0x00004C, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_4) == 0x00004D, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_DeterminTransToRightFoot_bTranstoRight) == 0x00004E, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_DeterminTransToRightFoot_bTranstoRight' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Not_PreBool_ReturnValue_5) == 0x00004F, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_8) == 0x000050, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_BooleanAND_ReturnValue_9) == 0x000051, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_BooleanAND_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000058, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue) == 0x000068, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000070, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000078, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000080, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_IsValid_ReturnValue_1) == 0x000088, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_NewStage) == 0x000089, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_NewStage' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CustomEvent_OldStage) == 0x00008A, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CustomEvent_OldStage' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x00008B, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, K2Node_CreateDelegate_OutputDelegate_2) == 0x00008C, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x00009C, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x0000A0, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_A_ImplicitCast_1) == 0x0000A8, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement, CallFunc_Greater_DoubleDouble_A_ImplicitCast_2) == 0x0000B0, "Member 'ABP_PlayerCombatMovement_C_ExecuteUbergraph_ABP_PlayerCombatMovement::CallFunc_Greater_DoubleDouble_A_ImplicitCast_2' has a wrong offset!");
 
 // Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.On Movement Mode Changed
 // 0x0002 (0x0002 - 0x0000)
@@ -472,6 +491,39 @@ static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateMovementData, CallFunc_B
 static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateMovementData, CallFunc_SetAllowSpeed_InAllowWalkSpeed_ImplicitCast) == 0x000030, "Member 'ABP_PlayerCombatMovement_C_UpdateMovementData::CallFunc_SetAllowSpeed_InAllowWalkSpeed_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateMovementData, CallFunc_SetAllowSpeed_InAllowRunSpeed_ImplicitCast) == 0x000034, "Member 'ABP_PlayerCombatMovement_C_UpdateMovementData::CallFunc_SetAllowSpeed_InAllowRunSpeed_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateMovementData, CallFunc_SetAllowSpeed_InAllowSprintSpeed_ImplicitCast) == 0x000038, "Member 'ABP_PlayerCombatMovement_C_UpdateMovementData::CallFunc_SetAllowSpeed_InAllowSprintSpeed_ImplicitCast' has a wrong offset!");
+
+// Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.UpdateSytlizedClothAnim
+// 0x0020 (0x0020 - 0x0000)
+struct ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim final
+{
+public:
+	bool                                          bFound;                                            // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Get_Item;                           // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim) == 0x000004, "Wrong alignment on ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim");
+static_assert(sizeof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim) == 0x000020, "Wrong size on ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, bFound) == 0x000000, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::bFound' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, Temp_bool_True_if_break_was_hit_Variable) == 0x000001, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, Temp_int_Array_Index_Variable) == 0x000004, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, Temp_int_Loop_Counter_Variable) == 0x00000C, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_Array_Get_Item) == 0x000010, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_Less_IntInt_ReturnValue) == 0x00001C, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_BooleanAND_ReturnValue) == 0x00001D, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x00001E, "Member 'ABP_PlayerCombatMovement_C_UpdateSytlizedClothAnim::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
 
 }
 

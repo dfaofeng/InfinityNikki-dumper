@@ -207,28 +207,6 @@ void UUTCPinchComponent_C::On_Event_Touch_Pressed(const struct FVector& Location
 }
 
 
-// Function UTCPinchComponent.UTCPinchComponent_C.On Event Touch Moved
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ETouchIndex                             FingerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUTCPinchComponent_C::On_Event_Touch_Moved(const struct FVector& Location, ETouchIndex FingerIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UTCPinchComponent_C", "On Event Touch Moved");
-
-	Params::UTCPinchComponent_C_On_Event_Touch_Moved Parms{};
-
-	Parms.Location = std::move(Location);
-	Parms.FingerIndex = FingerIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function UTCPinchComponent.UTCPinchComponent_C.On Event Touch Canceled
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -369,6 +347,28 @@ void UUTCPinchComponent_C::Add_Debug_Touch_Location(const struct FVector& Locati
 	Params::UTCPinchComponent_C_Add_Debug_Touch_Location Parms{};
 
 	Parms.Location = std::move(Location);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UTCPinchComponent.UTCPinchComponent_C.On Event Touch Moved
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ETouchIndex                             FingerIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUTCPinchComponent_C::On_Event_Touch_Moved(const struct FVector& Location, ETouchIndex FingerIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UTCPinchComponent_C", "On Event Touch Moved");
+
+	Params::UTCPinchComponent_C_On_Event_Touch_Moved Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.FingerIndex = FingerIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

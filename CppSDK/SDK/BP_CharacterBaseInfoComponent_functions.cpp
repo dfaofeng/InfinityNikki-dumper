@@ -79,50 +79,6 @@ void UBP_CharacterBaseInfoComponent_C::PlayerRemoveState(int32 StateToRemove)
 }
 
 
-// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerHasState
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CheckState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Has                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_CharacterBaseInfoComponent_C::PlayerHasState(int32 CheckState, bool* Has)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharacterBaseInfoComponent_C", "PlayerHasState");
-
-	Params::BP_CharacterBaseInfoComponent_C_PlayerHasState Parms{};
-
-	Parms.CheckState = CheckState;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Has != nullptr)
-		*Has = Parms.Has;
-}
-
-
-// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerAddState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   InNewState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_CharacterBaseInfoComponent_C::PlayerAddState(int32 InNewState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharacterBaseInfoComponent_C", "PlayerAddState");
-
-	Params::BP_CharacterBaseInfoComponent_C_PlayerAddState Parms{};
-
-	Parms.InNewState = InNewState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.ExecuteUbergraph_BP_CharacterBaseInfoComponent
 // (Final, UbergraphFunction)
 // Parameters:
@@ -209,6 +165,50 @@ void UBP_CharacterBaseInfoComponent_C::BP_GetTransToRightFoot(bool* bTransToRigh
 
 	if (bTransToRightFoot != nullptr)
 		*bTransToRightFoot = Parms.bTransToRightFoot;
+}
+
+
+// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerHasState
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CheckState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Has                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_CharacterBaseInfoComponent_C::PlayerHasState(int32 CheckState, bool* Has)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CharacterBaseInfoComponent_C", "PlayerHasState");
+
+	Params::BP_CharacterBaseInfoComponent_C_PlayerHasState Parms{};
+
+	Parms.CheckState = CheckState;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Has != nullptr)
+		*Has = Parms.Has;
+}
+
+
+// Function BP_CharacterBaseInfoComponent.BP_CharacterBaseInfoComponent_C.PlayerAddState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   InNewState                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_CharacterBaseInfoComponent_C::PlayerAddState(int32 InNewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CharacterBaseInfoComponent_C", "PlayerAddState");
+
+	Params::BP_CharacterBaseInfoComponent_C_PlayerAddState Parms{};
+
+	Parms.InNewState = InNewState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

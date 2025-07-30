@@ -12,8 +12,8 @@
 
 #include "E_WeatherTable_structs.hpp"
 #include "DynamicEnvironmentSystem_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "S_WeatherState_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -71,6 +71,17 @@ static_assert(offsetof(BP_DyEnvWeathers_C_Weather_Rain, CallFunc_IsValid_ReturnV
 static_assert(offsetof(BP_DyEnvWeathers_C_Weather_Rain, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000320, "Member 'BP_DyEnvWeathers_C_Weather_Rain::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeathers_C_Weather_Rain, CallFunc_Check_Rain_Wetness_Factor_ImplicitCast) == 0x000328, "Member 'BP_DyEnvWeathers_C_Weather_Rain::CallFunc_Check_Rain_Wetness_Factor_ImplicitCast' has a wrong offset!");
 
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.UserConstructionScript
+// 0x0010 (0x0010 - 0x0000)
+struct BP_DyEnvWeathers_C_UserConstructionScript final
+{
+public:
+	TArray<class UDynamicWeatherComponent*>       K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm, ContainsInstancedReference)
+};
+static_assert(alignof(BP_DyEnvWeathers_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_DyEnvWeathers_C_UserConstructionScript");
+static_assert(sizeof(BP_DyEnvWeathers_C_UserConstructionScript) == 0x000010, "Wrong size on BP_DyEnvWeathers_C_UserConstructionScript");
+static_assert(offsetof(BP_DyEnvWeathers_C_UserConstructionScript, K2Node_MakeArray_Array) == 0x000000, "Member 'BP_DyEnvWeathers_C_UserConstructionScript::K2Node_MakeArray_Array' has a wrong offset!");
+
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Weather NoRain
 // 0x0002 (0x0002 - 0x0000)
 struct BP_DyEnvWeathers_C_Weather_NoRain final
@@ -83,17 +94,6 @@ static_assert(alignof(BP_DyEnvWeathers_C_Weather_NoRain) == 0x000001, "Wrong ali
 static_assert(sizeof(BP_DyEnvWeathers_C_Weather_NoRain) == 0x000002, "Wrong size on BP_DyEnvWeathers_C_Weather_NoRain");
 static_assert(offsetof(BP_DyEnvWeathers_C_Weather_NoRain, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_DyEnvWeathers_C_Weather_NoRain::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeathers_C_Weather_NoRain, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_DyEnvWeathers_C_Weather_NoRain::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.UserConstructionScript
-// 0x0010 (0x0010 - 0x0000)
-struct BP_DyEnvWeathers_C_UserConstructionScript final
-{
-public:
-	TArray<class UDynamicWeatherComponent*>       K2Node_MakeArray_Array;                            // 0x0000(0x0010)(ReferenceParm, ContainsInstancedReference)
-};
-static_assert(alignof(BP_DyEnvWeathers_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_DyEnvWeathers_C_UserConstructionScript");
-static_assert(sizeof(BP_DyEnvWeathers_C_UserConstructionScript) == 0x000010, "Wrong size on BP_DyEnvWeathers_C_UserConstructionScript");
-static_assert(offsetof(BP_DyEnvWeathers_C_UserConstructionScript, K2Node_MakeArray_Array) == 0x000000, "Member 'BP_DyEnvWeathers_C_UserConstructionScript::K2Node_MakeArray_Array' has a wrong offset!");
 
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.UpdateNightParam
 // 0x11B0 (0x11B0 - 0x0000)
@@ -260,39 +260,6 @@ static_assert(offsetof(BP_DyEnvWeathers_C_SendPresetToObject, K2Node_Select_Defa
 static_assert(offsetof(BP_DyEnvWeathers_C_SendPresetToObject, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000038, "Member 'BP_DyEnvWeathers_C_SendPresetToObject::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeathers_C_SendPresetToObject, K2Node_Select_Default_1) == 0x000040, "Member 'BP_DyEnvWeathers_C_SendPresetToObject::K2Node_Select_Default_1' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeathers_C_SendPresetToObject, K2Node_MakeStruct_WeatherTexturesConfig) == 0x000048, "Member 'BP_DyEnvWeathers_C_SendPresetToObject::K2Node_MakeStruct_WeatherTexturesConfig' has a wrong offset!");
-
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Send DataTable to Volume
-// 0x0010 (0x0010 - 0x0000)
-struct BP_DyEnvWeathers_C_Send_DataTable_to_Volume final
-{
-public:
-	class UDataTable*                             CallFunc_Map_Find_Value;                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume) == 0x000008, "Wrong alignment on BP_DyEnvWeathers_C_Send_DataTable_to_Volume");
-static_assert(sizeof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume) == 0x000010, "Wrong size on BP_DyEnvWeathers_C_Send_DataTable_to_Volume");
-static_assert(offsetof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume, CallFunc_Map_Find_Value) == 0x000000, "Member 'BP_DyEnvWeathers_C_Send_DataTable_to_Volume::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume, CallFunc_Map_Find_ReturnValue) == 0x000008, "Member 'BP_DyEnvWeathers_C_Send_DataTable_to_Volume::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_DyEnvWeathers_C_Send_DataTable_to_Volume::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.RemoveSwapWeatherVolume
-// 0x0018 (0x0018 - 0x0000)
-struct BP_DyEnvWeathers_C_RemoveSwapWeatherVolume final
-{
-public:
-	class ADynamicWeatherVolume*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADynamicWeatherVolume*                  K2Node_Select_Default;                             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume) == 0x000008, "Wrong alignment on BP_DyEnvWeathers_C_RemoveSwapWeatherVolume");
-static_assert(sizeof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume) == 0x000018, "Wrong size on BP_DyEnvWeathers_C_RemoveSwapWeatherVolume");
-static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, ReturnValue) == 0x000000, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, Temp_bool_Variable) == 0x000008, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, CallFunc_Not_PreBool_ReturnValue) == 0x000009, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, K2Node_Select_Default) == 0x000010, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::K2Node_Select_Default' has a wrong offset!");
 
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.RemoveBlendWeight
 // 0x0028 (0x0028 - 0x0000)
@@ -530,6 +497,39 @@ static_assert(offsetof(BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1, CallFun
 static_assert(offsetof(BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1, K2Node_FunctionResult_ReturnValue_ImplicitCast) == 0x000048, "Member 'BP_DyEnvWeathers_C_GetSwapCurveFactorRemapped0_1::K2Node_FunctionResult_ReturnValue_ImplicitCast' has a wrong offset!");
+
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Send DataTable to Volume
+// 0x0010 (0x0010 - 0x0000)
+struct BP_DyEnvWeathers_C_Send_DataTable_to_Volume final
+{
+public:
+	class UDataTable*                             CallFunc_Map_Find_Value;                           // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume) == 0x000008, "Wrong alignment on BP_DyEnvWeathers_C_Send_DataTable_to_Volume");
+static_assert(sizeof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume) == 0x000010, "Wrong size on BP_DyEnvWeathers_C_Send_DataTable_to_Volume");
+static_assert(offsetof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume, CallFunc_Map_Find_Value) == 0x000000, "Member 'BP_DyEnvWeathers_C_Send_DataTable_to_Volume::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume, CallFunc_Map_Find_ReturnValue) == 0x000008, "Member 'BP_DyEnvWeathers_C_Send_DataTable_to_Volume::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvWeathers_C_Send_DataTable_to_Volume, CallFunc_IsValid_ReturnValue) == 0x000009, "Member 'BP_DyEnvWeathers_C_Send_DataTable_to_Volume::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.RemoveSwapWeatherVolume
+// 0x0018 (0x0018 - 0x0000)
+struct BP_DyEnvWeathers_C_RemoveSwapWeatherVolume final
+{
+public:
+	class ADynamicWeatherVolume*                  ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ADynamicWeatherVolume*                  K2Node_Select_Default;                             // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume) == 0x000008, "Wrong alignment on BP_DyEnvWeathers_C_RemoveSwapWeatherVolume");
+static_assert(sizeof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume) == 0x000018, "Wrong size on BP_DyEnvWeathers_C_RemoveSwapWeatherVolume");
+static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, ReturnValue) == 0x000000, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, Temp_bool_Variable) == 0x000008, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, CallFunc_Not_PreBool_ReturnValue) == 0x000009, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvWeathers_C_RemoveSwapWeatherVolume, K2Node_Select_Default) == 0x000010, "Member 'BP_DyEnvWeathers_C_RemoveSwapWeatherVolume::K2Node_Select_Default' has a wrong offset!");
 
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Get Final Sun Rotator Value
 // 0x00D8 (0x00D8 - 0x0000)

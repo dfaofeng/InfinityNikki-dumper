@@ -16,29 +16,16 @@
 namespace SDK::Params
 {
 
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_PC
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC final
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKeyByInputAction
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 ActionPath;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC) == 0x000004, "Wrong alignment on WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
-static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC) == 0x000008, "Wrong size on WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
-static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC, EntryPoint) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_UI_Common_KeyTips_PC_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_Common_KeyTips_PC_C_PreConstruct");
-static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_Common_KeyTips_PC_C_PreConstruct");
-static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_PreConstruct::IsDesignTime' has a wrong offset!");
+static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction) == 0x000008, "Wrong alignment on WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction");
+static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction) == 0x000010, "Wrong size on WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction");
+static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction, ActionPath) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction::ActionPath' has a wrong offset!");
 
 // Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKey
 // 0x0018 (0x0018 - 0x0000)
@@ -51,16 +38,29 @@ static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_SetKey) == 0x000008, "Wrong ali
 static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_SetKey) == 0x000018, "Wrong size on WBP_UI_Common_KeyTips_PC_C_SetKey");
 static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_SetKey, Key) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_SetKey::Key' has a wrong offset!");
 
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKeyByInputAction
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction final
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_UI_Common_KeyTips_PC_C_PreConstruct final
 {
 public:
-	class FString                                 ActionPath;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction) == 0x000008, "Wrong alignment on WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction");
-static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction) == 0x000010, "Wrong size on WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction");
-static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction, ActionPath) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction::ActionPath' has a wrong offset!");
+static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_Common_KeyTips_PC_C_PreConstruct");
+static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_Common_KeyTips_PC_C_PreConstruct");
+static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_PC
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC) == 0x000004, "Wrong alignment on WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
+static_assert(sizeof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC) == 0x000008, "Wrong size on WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
+static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC, EntryPoint) == 0x000000, "Member 'WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC::K2Node_Event_IsDesignTime' has a wrong offset!");
 
 // Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

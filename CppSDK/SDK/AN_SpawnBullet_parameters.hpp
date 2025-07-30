@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function AN_SpawnBullet.AN_SpawnBullet_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct AN_SpawnBullet_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(AN_SpawnBullet_C_GetModuleName) == 0x000008, "Wrong alignment on AN_SpawnBullet_C_GetModuleName");
-static_assert(sizeof(AN_SpawnBullet_C_GetModuleName) == 0x000010, "Wrong size on AN_SpawnBullet_C_GetModuleName");
-static_assert(offsetof(AN_SpawnBullet_C_GetModuleName, ReturnValue) == 0x000000, "Member 'AN_SpawnBullet_C_GetModuleName::ReturnValue' has a wrong offset!");
-
 // Function AN_SpawnBullet.AN_SpawnBullet_C.Received_Notify
 // 0x0088 (0x0088 - 0x0000)
 struct AN_SpawnBullet_C_Received_Notify final
@@ -67,6 +56,17 @@ static_assert(offsetof(AN_SpawnBullet_C_Received_Notify, CallFunc_Array_Length_R
 static_assert(offsetof(AN_SpawnBullet_C_Received_Notify, Temp_int_Loop_Counter_Variable) == 0x00007C, "Member 'AN_SpawnBullet_C_Received_Notify::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(AN_SpawnBullet_C_Received_Notify, CallFunc_Less_IntInt_ReturnValue) == 0x000080, "Member 'AN_SpawnBullet_C_Received_Notify::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AN_SpawnBullet_C_Received_Notify, CallFunc_Add_IntInt_ReturnValue) == 0x000084, "Member 'AN_SpawnBullet_C_Received_Notify::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function AN_SpawnBullet.AN_SpawnBullet_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct AN_SpawnBullet_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(AN_SpawnBullet_C_GetModuleName) == 0x000008, "Wrong alignment on AN_SpawnBullet_C_GetModuleName");
+static_assert(sizeof(AN_SpawnBullet_C_GetModuleName) == 0x000010, "Wrong size on AN_SpawnBullet_C_GetModuleName");
+static_assert(offsetof(AN_SpawnBullet_C_GetModuleName, ReturnValue) == 0x000000, "Member 'AN_SpawnBullet_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

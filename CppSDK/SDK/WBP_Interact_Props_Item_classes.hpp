@@ -37,12 +37,12 @@ public:
 	int64                                         TotalCount;                                        // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ChangeTextColorToRed();
-	void ChangeTextColorToWhite();
-	void ExecuteUbergraph_WBP_Interact_Props_Item(int32 EntryPoint);
-	void ReduceItem(int64 InReduceNum);
-	void SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item();
 	void SubItemEvent();
+	void SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item();
+	void ReduceItem(int64 InReduceNum);
+	void ExecuteUbergraph_WBP_Interact_Props_Item(int32 EntryPoint);
+	void ChangeTextColorToWhite();
+	void ChangeTextColorToRed();
 
 	class FString GetModuleName() const;
 

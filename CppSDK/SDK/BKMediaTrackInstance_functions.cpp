@@ -17,117 +17,70 @@
 namespace SDK
 {
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.UnluaLog
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.ExecuteUbergraph_BKMediaTrackInstance
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// const class FString&                    LogString                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBKMediaTrackInstance_C::UnluaLog(const class FString& LogString)
+void UBKMediaTrackInstance_C::ExecuteUbergraph_BKMediaTrackInstance(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "UnluaLog");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "ExecuteUbergraph_BKMediaTrackInstance");
 
-	Params::BKMediaTrackInstance_C_UnluaLog Parms{};
+	Params::BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance Parms{};
 
-	Parms.LogString = std::move(LogString);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetEnableWorldRenderingHandleEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UBKMediaTrackInstance_C::SetEnableWorldRenderingHandleEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "SetEnableWorldRenderingHandleEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetEnableWorldRendering
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.GetNikkiSkin
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32*                                  Skin                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBKMediaTrackInstance_C::SetEnableWorldRendering(bool bEnable)
+void UBKMediaTrackInstance_C::GetNikkiSkin(int32* Skin)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "SetEnableWorldRendering");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "GetNikkiSkin");
 
-	Params::BKMediaTrackInstance_C_SetEnableWorldRendering Parms{};
-
-	Parms.bEnable = bEnable;
+	Params::BKMediaTrackInstance_C_GetNikkiSkin Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Skin != nullptr)
+		*Skin = Parms.Skin;
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetBinkMediaPlayer
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBinkMediaPlayer*                 BinkMediaPlayer_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.K2_OnDestroyed
+// (Event, Public, BlueprintEvent)
 
-void UBKMediaTrackInstance_C::SetBinkMediaPlayer(class UBinkMediaPlayer* BinkMediaPlayer_0)
+void UBKMediaTrackInstance_C::K2_OnDestroyed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "SetBinkMediaPlayer");
-
-	Params::BKMediaTrackInstance_C_SetBinkMediaPlayer Parms{};
-
-	Parms.BinkMediaPlayer_0 = BinkMediaPlayer_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.PostSetBinkMediaPlayer
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBKMediaTrackInstance_C::PostSetBinkMediaPlayer()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "PostSetBinkMediaPlayer");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "K2_OnDestroyed");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.OnInitialize_Interal
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.K2_OnInitialize
+// (Event, Public, BlueprintEvent)
 
-void UBKMediaTrackInstance_C::OnInitialize_Interal()
+void UBKMediaTrackInstance_C::K2_OnInitialize()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "OnInitialize_Interal");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.OnDestroyed_Interal
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBKMediaTrackInstance_C::OnDestroyed_Interal()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "OnDestroyed_Interal");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "K2_OnInitialize");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,70 +106,117 @@ void UBKMediaTrackInstance_C::K2_OnInputAdded(const struct FX6SequencerTrackInst
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.K2_OnInitialize
-// (Event, Public, BlueprintEvent)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.OnDestroyed_Interal
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBKMediaTrackInstance_C::K2_OnInitialize()
+void UBKMediaTrackInstance_C::OnDestroyed_Interal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "K2_OnInitialize");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "OnDestroyed_Interal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.K2_OnDestroyed
-// (Event, Public, BlueprintEvent)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.OnInitialize_Interal
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBKMediaTrackInstance_C::K2_OnDestroyed()
+void UBKMediaTrackInstance_C::OnInitialize_Interal()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "K2_OnDestroyed");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "OnInitialize_Interal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.GetNikkiSkin
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.PostSetBinkMediaPlayer
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBKMediaTrackInstance_C::PostSetBinkMediaPlayer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "PostSetBinkMediaPlayer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetBinkMediaPlayer
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32*                                  Skin                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBinkMediaPlayer*                 BinkMediaPlayer_0                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBKMediaTrackInstance_C::GetNikkiSkin(int32* Skin)
+void UBKMediaTrackInstance_C::SetBinkMediaPlayer(class UBinkMediaPlayer* BinkMediaPlayer_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "GetNikkiSkin");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "SetBinkMediaPlayer");
 
-	Params::BKMediaTrackInstance_C_GetNikkiSkin Parms{};
+	Params::BKMediaTrackInstance_C_SetBinkMediaPlayer Parms{};
+
+	Parms.BinkMediaPlayer_0 = BinkMediaPlayer_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Skin != nullptr)
-		*Skin = Parms.Skin;
 }
 
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.ExecuteUbergraph_BKMediaTrackInstance
-// (Final, UbergraphFunction, HasDefaults)
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetEnableWorldRendering
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBKMediaTrackInstance_C::ExecuteUbergraph_BKMediaTrackInstance(int32 EntryPoint)
+void UBKMediaTrackInstance_C::SetEnableWorldRendering(bool bEnable)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaTrackInstance_C", "ExecuteUbergraph_BKMediaTrackInstance");
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "SetEnableWorldRendering");
 
-	Params::BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance Parms{};
+	Params::BKMediaTrackInstance_C_SetEnableWorldRendering Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bEnable = bEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetEnableWorldRenderingHandleEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UBKMediaTrackInstance_C::SetEnableWorldRenderingHandleEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "SetEnableWorldRenderingHandleEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.UnluaLog
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    LogString                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBKMediaTrackInstance_C::UnluaLog(const class FString& LogString)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BKMediaTrackInstance_C", "UnluaLog");
+
+	Params::BKMediaTrackInstance_C_UnluaLog Parms{};
+
+	Parms.LogString = std::move(LogString);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

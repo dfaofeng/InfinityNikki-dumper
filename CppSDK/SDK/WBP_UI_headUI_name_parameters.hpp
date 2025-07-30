@@ -16,19 +16,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.GetHeight
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_UI_headUI_name_C_GetHeight final
-{
-public:
-	double                                        NewParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_FunctionResult_NewParam_ImplicitCast;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_headUI_name_C_GetHeight) == 0x000008, "Wrong alignment on WBP_UI_headUI_name_C_GetHeight");
-static_assert(sizeof(WBP_UI_headUI_name_C_GetHeight) == 0x000010, "Wrong size on WBP_UI_headUI_name_C_GetHeight");
-static_assert(offsetof(WBP_UI_headUI_name_C_GetHeight, NewParam) == 0x000000, "Member 'WBP_UI_headUI_name_C_GetHeight::NewParam' has a wrong offset!");
-static_assert(offsetof(WBP_UI_headUI_name_C_GetHeight, K2Node_FunctionResult_NewParam_ImplicitCast) == 0x000008, "Member 'WBP_UI_headUI_name_C_GetHeight::K2Node_FunctionResult_NewParam_ImplicitCast' has a wrong offset!");
-
 // Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.ExecuteUbergraph_WBP_UI_headUI_name
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name final
@@ -50,6 +37,19 @@ static_assert(offsetof(WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name,
 static_assert(offsetof(WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name, K2Node_SwitchEnum_CmpSuccess_2) == 0x000006, "Member 'WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
 static_assert(offsetof(WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_UI_headUI_name_C_ExecuteUbergraph_WBP_UI_headUI_name::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+
+// Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.GetHeight
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_UI_headUI_name_C_GetHeight final
+{
+public:
+	double                                        NewParam;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_FunctionResult_NewParam_ImplicitCast;       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_headUI_name_C_GetHeight) == 0x000008, "Wrong alignment on WBP_UI_headUI_name_C_GetHeight");
+static_assert(sizeof(WBP_UI_headUI_name_C_GetHeight) == 0x000010, "Wrong size on WBP_UI_headUI_name_C_GetHeight");
+static_assert(offsetof(WBP_UI_headUI_name_C_GetHeight, NewParam) == 0x000000, "Member 'WBP_UI_headUI_name_C_GetHeight::NewParam' has a wrong offset!");
+static_assert(offsetof(WBP_UI_headUI_name_C_GetHeight, K2Node_FunctionResult_NewParam_ImplicitCast) == 0x000008, "Member 'WBP_UI_headUI_name_C_GetHeight::K2Node_FunctionResult_NewParam_ImplicitCast' has a wrong offset!");
 
 // Function WBP_UI_headUI_name.WBP_UI_headUI_name_C.SwitchVisibility
 // 0x0030 (0x0030 - 0x0000)

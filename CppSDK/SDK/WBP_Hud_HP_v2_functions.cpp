@@ -17,315 +17,205 @@
 namespace SDK
 {
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BP_HideHPParticle
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddHP
 // (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::BP_HideHPParticle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BP_HideHPParticle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BP_ShowHPParticle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::BP_ShowHPParticle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BP_ShowHPParticle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ContinueInjuredAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::ContinueInjuredAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "ContinueInjuredAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ExecuteUbergraph_WBP_Hud_HP_v2
-// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   addHp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::ExecuteUbergraph_WBP_Hud_HP_v2(int32 EntryPoint)
+void UWBP_Hud_HP_v2_C::TestAddHP(int32 addHp)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "ExecuteUbergraph_WBP_Hud_HP_v2");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "TestAddHP");
 
-	Params::WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2 Parms{};
+	Params::WBP_Hud_HP_v2_C_TestAddHP Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.addHp = addHp;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnHpItemFlyDown
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddExtraMaxHP
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   ItemIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::OnHpItemFlyDown(int32 ItemIndex)
+void UWBP_Hud_HP_v2_C::TestAddExtraMaxHP(int32 Num)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnHpItemFlyDown");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "TestAddExtraMaxHP");
 
-	Params::WBP_Hud_HP_v2_C_OnHpItemFlyDown Parms{};
+	Params::WBP_Hud_HP_v2_C_TestAddExtraMaxHP Parms{};
 
-	Parms.ItemIndex = ItemIndex;
+	Parms.Num = Num;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredFinished
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SetHpPosition
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  X                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::OnInjuredFinished(class UHorizontalBox* decorate)
+void UWBP_Hud_HP_v2_C::SetHpPosition(double X)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnInjuredFinished");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SetHpPosition");
 
-	Params::WBP_Hud_HP_v2_C_OnInjuredFinished Parms{};
+	Params::WBP_Hud_HP_v2_C_SetHpPosition Parms{};
 
-	Parms.decorate = decorate;
+	Parms.X = X;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredWaited
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_HP_v2_C::OnInjuredWaited(class UHorizontalBox* decorate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnInjuredWaited");
-
-	Params::WBP_Hud_HP_v2_C_OnInjuredWaited Parms{};
-
-	Parms.decorate = decorate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnOffsetHpItem
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_HP_v2_C::OnOffsetHpItem(class UHorizontalBox* decorate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnOffsetHpItem");
-
-	Params::WBP_Hud_HP_v2_C_OnOffsetHpItem Parms{};
-
-	Parms.decorate = decorate;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnSwitchRoleNameLevelNum
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::OnSwitchRoleNameLevelNum()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnSwitchRoleNameLevelNum");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PauseInjuredAnim
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::PauseInjuredAnim()
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PauseInjuredAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayHideLevel
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::PlayHideLevel()
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayHideLevel");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayInjuredAnim
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::PlayInjuredAnim()
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayInjuredAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayLevelUp
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::PlayLevelUp()
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayLevelUp");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayShowLevel
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::PlayShowLevel()
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayShowLevel");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ResetInjuredAnim
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::ResetInjuredAnim()
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "ResetInjuredAnim");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2(class UHorizontalBox* decorate)
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1(class UHorizontalBox* decorate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1");
 
-	Params::WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2 Parms{};
+	Params::WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1 Parms{};
 
 	Parms.decorate = decorate;
 
@@ -353,19 +243,19 @@ void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0(class UHorizonta
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1(class UHorizontalBox* decorate)
+void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2(class UHorizontalBox* decorate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2");
 
-	Params::WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1 Parms{};
+	Params::WBP_Hud_HP_v2_C_SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2 Parms{};
 
 	Parms.decorate = decorate;
 
@@ -373,189 +263,299 @@ void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1(class UHorizonta
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ResetInjuredAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10()
+void UWBP_Hud_HP_v2_C::ResetInjuredAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "ResetInjuredAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayShowLevel
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2()
+void UWBP_Hud_HP_v2_C::PlayShowLevel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayShowLevel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayLevelUp
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3()
+void UWBP_Hud_HP_v2_C::PlayLevelUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayLevelUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayInjuredAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4()
+void UWBP_Hud_HP_v2_C::PlayInjuredAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayInjuredAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PlayHideLevel
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5()
+void UWBP_Hud_HP_v2_C::PlayHideLevel()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PlayHideLevel");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.PauseInjuredAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6()
+void UWBP_Hud_HP_v2_C::PauseInjuredAnim()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "PauseInjuredAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnSwitchRoleNameLevelNum
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7()
+void UWBP_Hud_HP_v2_C::OnSwitchRoleNameLevelNum()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnSwitchRoleNameLevelNum");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_HP_v2_C::SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.SetHpPosition
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnOffsetHpItem
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  X                                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::SetHpPosition(double X)
+void UWBP_Hud_HP_v2_C::OnOffsetHpItem(class UHorizontalBox* decorate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "SetHpPosition");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnOffsetHpItem");
 
-	Params::WBP_Hud_HP_v2_C_SetHpPosition Parms{};
+	Params::WBP_Hud_HP_v2_C_OnOffsetHpItem Parms{};
 
-	Parms.X = X;
+	Parms.decorate = decorate;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddExtraMaxHP
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredWaited
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::TestAddExtraMaxHP(int32 Num)
+void UWBP_Hud_HP_v2_C::OnInjuredWaited(class UHorizontalBox* decorate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "TestAddExtraMaxHP");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnInjuredWaited");
 
-	Params::WBP_Hud_HP_v2_C_TestAddExtraMaxHP Parms{};
+	Params::WBP_Hud_HP_v2_C_OnInjuredWaited Parms{};
 
-	Parms.Num = Num;
+	Parms.decorate = decorate;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.TestAddHP
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnInjuredFinished
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   addHp                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UHorizontalBox*                   decorate                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_HP_v2_C::TestAddHP(int32 addHp)
+void UWBP_Hud_HP_v2_C::OnInjuredFinished(class UHorizontalBox* decorate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "TestAddHP");
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnInjuredFinished");
 
-	Params::WBP_Hud_HP_v2_C_TestAddHP Parms{};
+	Params::WBP_Hud_HP_v2_C_OnInjuredFinished Parms{};
 
-	Parms.addHp = addHp;
+	Parms.decorate = decorate;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.OnHpItemFlyDown
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ItemIndex                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_HP_v2_C::OnHpItemFlyDown(int32 ItemIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "OnHpItemFlyDown");
+
+	Params::WBP_Hud_HP_v2_C_OnHpItemFlyDown Parms{};
+
+	Parms.ItemIndex = ItemIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ExecuteUbergraph_WBP_Hud_HP_v2
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_HP_v2_C::ExecuteUbergraph_WBP_Hud_HP_v2(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "ExecuteUbergraph_WBP_Hud_HP_v2");
+
+	Params::WBP_Hud_HP_v2_C_ExecuteUbergraph_WBP_Hud_HP_v2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.ContinueInjuredAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::ContinueInjuredAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "ContinueInjuredAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BP_ShowHPParticle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::BP_ShowHPParticle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BP_ShowHPParticle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BP_HideHPParticle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::BP_HideHPParticle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BP_HideHPParticle");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_HP_v2.WBP_Hud_HP_v2_C.BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Hud_HP_v2_C::BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_HP_v2_C", "BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

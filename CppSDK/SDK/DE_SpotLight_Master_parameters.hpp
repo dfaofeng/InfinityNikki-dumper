@@ -53,47 +53,48 @@ static_assert(offsetof(DE_SpotLight_Master_C_UseMultiplyParam, CallFunc_SelectFl
 static_assert(offsetof(DE_SpotLight_Master_C_UseMultiplyParam, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000028, "Member 'DE_SpotLight_Master_C_UseMultiplyParam::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 
 // Function DE_SpotLight_Master.DE_SpotLight_Master_C.UpdateDELight
-// 0x0038 (0x0038 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct DE_SpotLight_Master_C_UpdateDELight final
 {
 public:
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPlayingInEditor_ReturnValue;            // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_Mode_inEditor;                   // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetFinalIntensity_ReturnValue;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_Mode_inEditor_1;                 // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_Mode_inEditor;                   // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetFinalIntensity_ReturnValue;            // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_Mode_inEditor_1;                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(DE_SpotLight_Master_C_UpdateDELight) == 0x000008, "Wrong alignment on DE_SpotLight_Master_C_UpdateDELight");
-static_assert(sizeof(DE_SpotLight_Master_C_UpdateDELight) == 0x000038, "Wrong size on DE_SpotLight_Master_C_UpdateDELight");
+static_assert(sizeof(DE_SpotLight_Master_C_UpdateDELight) == 0x000058, "Wrong size on DE_SpotLight_Master_C_UpdateDELight");
 static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, Temp_bool_Has_Been_Initd_Variable) == 0x000000, "Member 'DE_SpotLight_Master_C_UpdateDELight::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
 static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, Temp_bool_IsClosed_Variable) == 0x000001, "Member 'DE_SpotLight_Master_C_UpdateDELight::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_IsPlayingInEditor_ReturnValue) == 0x000002, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_IsPlayingInEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000003, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_IsEditor_Mode_inEditor) == 0x000004, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_IsEditor_Mode_inEditor' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_GetFinalIntensity_ReturnValue) == 0x000008, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_GetFinalIntensity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_GetScalarParameterValue_ReturnValue) == 0x00000C, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000010, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000014, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000015, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_IsEditor_Mode_inEditor_1) == 0x000016, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_IsEditor_Mode_inEditor_1' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_BooleanOR_ReturnValue) == 0x000017, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, K2Node_SwitchEnum_CmpSuccess) == 0x000018, "Member 'DE_SpotLight_Master_C_UpdateDELight::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x000020, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000028, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000030, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Conv_IntToString_ReturnValue) == 0x000008, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Concat_StrStr_ReturnValue) == 0x000018, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Conv_StringToName_ReturnValue) == 0x000028, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000030, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000034, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_IsEditor_Mode_inEditor) == 0x000035, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_IsEditor_Mode_inEditor' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_GetFinalIntensity_ReturnValue) == 0x000038, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_GetFinalIntensity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x00003C, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_IsEditor_Mode_inEditor_1) == 0x000040, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_IsEditor_Mode_inEditor_1' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000041, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_BooleanOR_ReturnValue) == 0x000042, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, K2Node_SwitchEnum_CmpSuccess) == 0x000043, "Member 'DE_SpotLight_Master_C_UpdateDELight::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(DE_SpotLight_Master_C_UpdateDELight, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000050, "Member 'DE_SpotLight_Master_C_UpdateDELight::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function DE_SpotLight_Master.DE_SpotLight_Master_C.GetFinalIntensity
 // 0x0030 (0x0030 - 0x0000)

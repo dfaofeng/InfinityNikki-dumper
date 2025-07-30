@@ -16,45 +16,16 @@
 namespace SDK::Params
 {
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.ExecuteUbergraph_WBP_HUD_MiniMap
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap final
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpteWidgetSize
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUD_MiniMap_C_UpteWidgetSize final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UUserWidget*>                    CallFunc_GetAllWidgetsOfClass_FoundWidgets;        // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWidget*                                NewParam;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap) == 0x000008, "Wrong alignment on WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap");
-static_assert(sizeof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap) == 0x000048, "Wrong size on WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, EntryPoint) == 0x000000, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_GetAllWidgetsOfClass_FoundWidgets) == 0x000008, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_GetAllWidgetsOfClass_FoundWidgets' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Array_Get_Item) == 0x000020, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_GetDisplayName_ReturnValue) == 0x000028, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.ReportException
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_HUD_MiniMap_C_ReportException final
-{
-public:
-	class FString                                 NewParam;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_MiniMap_C_ReportException) == 0x000008, "Wrong alignment on WBP_HUD_MiniMap_C_ReportException");
-static_assert(sizeof(WBP_HUD_MiniMap_C_ReportException) == 0x000010, "Wrong size on WBP_HUD_MiniMap_C_ReportException");
-static_assert(offsetof(WBP_HUD_MiniMap_C_ReportException, NewParam) == 0x000000, "Member 'WBP_HUD_MiniMap_C_ReportException::NewParam' has a wrong offset!");
+static_assert(alignof(WBP_HUD_MiniMap_C_UpteWidgetSize) == 0x000008, "Wrong alignment on WBP_HUD_MiniMap_C_UpteWidgetSize");
+static_assert(sizeof(WBP_HUD_MiniMap_C_UpteWidgetSize) == 0x000008, "Wrong size on WBP_HUD_MiniMap_C_UpteWidgetSize");
+static_assert(offsetof(WBP_HUD_MiniMap_C_UpteWidgetSize, NewParam) == 0x000000, "Member 'WBP_HUD_MiniMap_C_UpteWidgetSize::NewParam' has a wrong offset!");
 
 // Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpdateWidget
 // 0x01B8 (0x01B8 - 0x0000)
@@ -159,16 +130,45 @@ static_assert(offsetof(WBP_HUD_MiniMap_C_UpdateWidget, CallFunc_Add_IntInt_Retur
 static_assert(offsetof(WBP_HUD_MiniMap_C_UpdateWidget, CallFunc_Concat_StrStr_ReturnValue_7) == 0x000198, "Member 'WBP_HUD_MiniMap_C_UpdateWidget::CallFunc_Concat_StrStr_ReturnValue_7' has a wrong offset!");
 static_assert(offsetof(WBP_HUD_MiniMap_C_UpdateWidget, CallFunc_Concat_StrStr_ReturnValue_8) == 0x0001A8, "Member 'WBP_HUD_MiniMap_C_UpdateWidget::CallFunc_Concat_StrStr_ReturnValue_8' has a wrong offset!");
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpteWidgetSize
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_MiniMap_C_UpteWidgetSize final
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.ReportException
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_HUD_MiniMap_C_ReportException final
 {
 public:
-	class UWidget*                                NewParam;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 NewParam;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_MiniMap_C_UpteWidgetSize) == 0x000008, "Wrong alignment on WBP_HUD_MiniMap_C_UpteWidgetSize");
-static_assert(sizeof(WBP_HUD_MiniMap_C_UpteWidgetSize) == 0x000008, "Wrong size on WBP_HUD_MiniMap_C_UpteWidgetSize");
-static_assert(offsetof(WBP_HUD_MiniMap_C_UpteWidgetSize, NewParam) == 0x000000, "Member 'WBP_HUD_MiniMap_C_UpteWidgetSize::NewParam' has a wrong offset!");
+static_assert(alignof(WBP_HUD_MiniMap_C_ReportException) == 0x000008, "Wrong alignment on WBP_HUD_MiniMap_C_ReportException");
+static_assert(sizeof(WBP_HUD_MiniMap_C_ReportException) == 0x000010, "Wrong size on WBP_HUD_MiniMap_C_ReportException");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ReportException, NewParam) == 0x000000, "Member 'WBP_HUD_MiniMap_C_ReportException::NewParam' has a wrong offset!");
+
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.ExecuteUbergraph_WBP_HUD_MiniMap
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UUserWidget*>                    CallFunc_GetAllWidgetsOfClass_FoundWidgets;        // 0x0008(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            CallFunc_Array_Get_Item;                           // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap) == 0x000008, "Wrong alignment on WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap");
+static_assert(sizeof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap) == 0x000048, "Wrong size on WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, EntryPoint) == 0x000000, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_GetAllWidgetsOfClass_FoundWidgets) == 0x000008, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_GetAllWidgetsOfClass_FoundWidgets' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Array_Length_ReturnValue) == 0x000018, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Array_Get_Item) == 0x000020, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_GetDisplayName_ReturnValue) == 0x000028, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, Temp_int_Loop_Counter_Variable) == 0x000038, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Less_IntInt_ReturnValue) == 0x00003C, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap, CallFunc_Add_IntInt_ReturnValue) == 0x000040, "Member 'WBP_HUD_MiniMap_C_ExecuteUbergraph_WBP_HUD_MiniMap::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

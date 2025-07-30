@@ -34,10 +34,10 @@ public:
 public:
 	void SetDissolveProgress(double Progress);
 	void SetDissolve(bool Toggle);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void Opacity(bool On);
 	void ReceiveTick(float DeltaSeconds);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveBeginPlay();
+	void Opacity(bool On);
 	void ExecuteUbergraph_BP_DissolveActorComponent(int32 EntryPoint);
 
 public:

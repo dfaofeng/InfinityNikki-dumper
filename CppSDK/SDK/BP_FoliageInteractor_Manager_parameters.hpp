@@ -17,16 +17,57 @@
 namespace SDK::Params
 {
 
-// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.BP_SetTickEnable
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FoliageInteractor_Manager_C_BP_SetTickEnable final
+// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FoliageInteractor_Manager_C_ReceiveTick final
 {
 public:
-	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FoliageInteractor_Manager_C_BP_SetTickEnable) == 0x000001, "Wrong alignment on BP_FoliageInteractor_Manager_C_BP_SetTickEnable");
-static_assert(sizeof(BP_FoliageInteractor_Manager_C_BP_SetTickEnable) == 0x000001, "Wrong size on BP_FoliageInteractor_Manager_C_BP_SetTickEnable");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_BP_SetTickEnable, Enable) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_BP_SetTickEnable::Enable' has a wrong offset!");
+static_assert(alignof(BP_FoliageInteractor_Manager_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_FoliageInteractor_Manager_C_ReceiveTick");
+static_assert(sizeof(BP_FoliageInteractor_Manager_C_ReceiveTick) == 0x000004, "Wrong size on BP_FoliageInteractor_Manager_C_ReceiveTick");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FoliageInteractor_Manager_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FoliageInteractor_Manager_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_FoliageInteractor_Manager_C_ReceiveEndPlay");
+static_assert(sizeof(BP_FoliageInteractor_Manager_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_FoliageInteractor_Manager_C_ReceiveEndPlay");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.OnPre_RT_Loaded
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded) == 0x000008, "Wrong alignment on BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded");
+static_assert(sizeof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded) == 0x000018, "Wrong size on BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded, Loaded) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.OnCur_RT_Loaded
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded) == 0x000008, "Wrong alignment on BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded");
+static_assert(sizeof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded) == 0x000018, "Wrong size on BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded, Loaded) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.ExecuteUbergraph_BP_FoliageInteractor_Manager
 // 0x02C0 (0x02C0 - 0x0000)
@@ -219,57 +260,16 @@ static_assert(offsetof(BP_FoliageInteractor_Manager_C_ExecuteUbergraph_BP_Foliag
 static_assert(offsetof(BP_FoliageInteractor_Manager_C_ExecuteUbergraph_BP_FoliageInteractor_Manager, CallFunc_MakeVector2D_X_ImplicitCast) == 0x0002B0, "Member 'BP_FoliageInteractor_Manager_C_ExecuteUbergraph_BP_FoliageInteractor_Manager::CallFunc_MakeVector2D_X_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_FoliageInteractor_Manager_C_ExecuteUbergraph_BP_FoliageInteractor_Manager, CallFunc_MakeVector2D_Y_ImplicitCast) == 0x0002B8, "Member 'BP_FoliageInteractor_Manager_C_ExecuteUbergraph_BP_FoliageInteractor_Manager::CallFunc_MakeVector2D_Y_ImplicitCast' has a wrong offset!");
 
-// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.OnCur_RT_Loaded
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded) == 0x000008, "Wrong alignment on BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded");
-static_assert(sizeof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded) == 0x000018, "Wrong size on BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded, Loaded) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_FoliageInteractor_Manager_C_OnCur_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.OnPre_RT_Loaded
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded) == 0x000008, "Wrong alignment on BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded");
-static_assert(sizeof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded) == 0x000018, "Wrong size on BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded, Loaded) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_FoliageInteractor_Manager_C_OnPre_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.ReceiveEndPlay
+// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.BP_SetTickEnable
 // 0x0001 (0x0001 - 0x0000)
-struct BP_FoliageInteractor_Manager_C_ReceiveEndPlay final
+struct BP_FoliageInteractor_Manager_C_BP_SetTickEnable final
 {
 public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_FoliageInteractor_Manager_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_FoliageInteractor_Manager_C_ReceiveEndPlay");
-static_assert(sizeof(BP_FoliageInteractor_Manager_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_FoliageInteractor_Manager_C_ReceiveEndPlay");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
-// Function BP_FoliageInteractor_Manager.BP_FoliageInteractor_Manager_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_FoliageInteractor_Manager_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FoliageInteractor_Manager_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_FoliageInteractor_Manager_C_ReceiveTick");
-static_assert(sizeof(BP_FoliageInteractor_Manager_C_ReceiveTick) == 0x000004, "Wrong size on BP_FoliageInteractor_Manager_C_ReceiveTick");
-static_assert(offsetof(BP_FoliageInteractor_Manager_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+static_assert(alignof(BP_FoliageInteractor_Manager_C_BP_SetTickEnable) == 0x000001, "Wrong alignment on BP_FoliageInteractor_Manager_C_BP_SetTickEnable");
+static_assert(sizeof(BP_FoliageInteractor_Manager_C_BP_SetTickEnable) == 0x000001, "Wrong size on BP_FoliageInteractor_Manager_C_BP_SetTickEnable");
+static_assert(offsetof(BP_FoliageInteractor_Manager_C_BP_SetTickEnable, Enable) == 0x000000, "Member 'BP_FoliageInteractor_Manager_C_BP_SetTickEnable::Enable' has a wrong offset!");
 
 }
 

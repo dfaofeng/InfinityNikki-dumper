@@ -10,17 +10,19 @@
 
 #include "Basic.hpp"
 
+#include "S_UrbanLight_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BP_TODSystem_Master_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "DynamicEnvironmentSystem_structs.hpp"
-#include "BP_TODSystem_Master_classes.hpp"
+#include "S_TimeRange_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DyEnvSys.BP_DyEnvSys_C
-// 0x0400 (0x1A90 - 0x1690)
+// 0x04A0 (0x1B30 - 0x1690)
 class ABP_DyEnvSys_C final : public ABP_TODSystem_Master_C
 {
 public:
@@ -53,17 +55,18 @@ public:
 	class UCurveFloat*                            FocusShadowCurve;                                  // 0x1A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPause;                                            // 0x1A50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1A51[0x7];                                     // 0x1A51(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LightOnTime;                                       // 0x1A58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LightOffTime;                                      // 0x1A60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SA_LUTFrameDistribute;                             // 0x1A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          SA_LUTFrameDistribute_Intervention;                // 0x1A70(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsStarSea;                                         // 0x1A71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A72[0x2];                                     // 0x1A72(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         StarSeaDayMode;                                    // 0x1A74(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LerpingToHost;                                     // 0x1A78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1A79[0x7];                                     // 0x1A79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LerpingSpeed;                                      // 0x1A80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ErrorTolerance;                                    // 0x1A88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SA_LUTFrameDistribute;                             // 0x1A58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          SA_LUTFrameDistribute_Intervention;                // 0x1A60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LerpingToHost;                                     // 0x1A61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A62[0x6];                                     // 0x1A62(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LerpingSpeed;                                      // 0x1A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ErrorTolerance;                                    // 0x1A70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, struct FS_UrbanLight>       UrbanlightInfo;                                    // 0x1A78(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<int32, struct FS_TimeRange>              LightTimeInfo;                                     // 0x1AC8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          IsInitial;                                         // 0x1B18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B19[0x3];                                     // 0x1B19(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FrameCounter;                                      // 0x1B1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsNeedUpdateLight;                                 // 0x1B20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void World_Debug_Ash_Change(double Value);
@@ -82,6 +85,7 @@ public:
 	void SetUseServerTime(bool CanUse);
 	void SetRegionLamps(double Percent, int32 RegionId);
 	void SetMoonCurve(const struct FFloatCurve& Curve);
+	void SetLightOnAndOffTime();
 	void SetDenseFogColor(const struct FLinearColor& Color);
 	void SetDenseFog(double Intensity, double TransitionTime_0);
 	void ReceiveTick(float DeltaSeconds);
@@ -90,9 +94,9 @@ public:
 	void PrecisionShadow(bool isEnter);
 	void PostConstruct();
 	void OnActorBeginOverlapWithVolume(class ADynamicWeatherVolume* SrcVolume);
+	void NeedUpdateLight(class FName MPC_ParamName, double ParamValue);
 	void Manual_Operation_TOD(double Time);
 	void Low_Platform_SkyAtmosphere();
-	void LoadCurrentLightInfo();
 	void Initi_Tod_Sys();
 	void InitForLua();
 	void GetWeatherFinal(struct FWeatherBaseLerpConfig* Weather_Setting);
@@ -131,7 +135,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_DyEnvSys_C) == 0x000010, "Wrong alignment on ABP_DyEnvSys_C");
-static_assert(sizeof(ABP_DyEnvSys_C) == 0x001A90, "Wrong size on ABP_DyEnvSys_C");
+static_assert(sizeof(ABP_DyEnvSys_C) == 0x001B30, "Wrong size on ABP_DyEnvSys_C");
 static_assert(offsetof(ABP_DyEnvSys_C, UberGraphFrame_BP_DyEnvSys_C) == 0x001688, "Member 'ABP_DyEnvSys_C::UberGraphFrame_BP_DyEnvSys_C' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSys_C, PostProcessLut) == 0x001690, "Member 'ABP_DyEnvSys_C::PostProcessLut' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSys_C, EdCameraLocation) == 0x001698, "Member 'ABP_DyEnvSys_C::EdCameraLocation' has a wrong offset!");
@@ -156,15 +160,16 @@ static_assert(offsetof(ABP_DyEnvSys_C, UpdatePlayerPos) == 0x001A40, "Member 'AB
 static_assert(offsetof(ABP_DyEnvSys_C, PrecisionFocusShadowScale) == 0x001A44, "Member 'ABP_DyEnvSys_C::PrecisionFocusShadowScale' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSys_C, FocusShadowCurve) == 0x001A48, "Member 'ABP_DyEnvSys_C::FocusShadowCurve' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSys_C, bPause) == 0x001A50, "Member 'ABP_DyEnvSys_C::bPause' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, LightOnTime) == 0x001A58, "Member 'ABP_DyEnvSys_C::LightOnTime' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, LightOffTime) == 0x001A60, "Member 'ABP_DyEnvSys_C::LightOffTime' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, SA_LUTFrameDistribute) == 0x001A68, "Member 'ABP_DyEnvSys_C::SA_LUTFrameDistribute' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, SA_LUTFrameDistribute_Intervention) == 0x001A70, "Member 'ABP_DyEnvSys_C::SA_LUTFrameDistribute_Intervention' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, IsStarSea) == 0x001A71, "Member 'ABP_DyEnvSys_C::IsStarSea' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, StarSeaDayMode) == 0x001A74, "Member 'ABP_DyEnvSys_C::StarSeaDayMode' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, LerpingToHost) == 0x001A78, "Member 'ABP_DyEnvSys_C::LerpingToHost' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, LerpingSpeed) == 0x001A80, "Member 'ABP_DyEnvSys_C::LerpingSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSys_C, ErrorTolerance) == 0x001A88, "Member 'ABP_DyEnvSys_C::ErrorTolerance' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, SA_LUTFrameDistribute) == 0x001A58, "Member 'ABP_DyEnvSys_C::SA_LUTFrameDistribute' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, SA_LUTFrameDistribute_Intervention) == 0x001A60, "Member 'ABP_DyEnvSys_C::SA_LUTFrameDistribute_Intervention' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, LerpingToHost) == 0x001A61, "Member 'ABP_DyEnvSys_C::LerpingToHost' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, LerpingSpeed) == 0x001A68, "Member 'ABP_DyEnvSys_C::LerpingSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, ErrorTolerance) == 0x001A70, "Member 'ABP_DyEnvSys_C::ErrorTolerance' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, UrbanlightInfo) == 0x001A78, "Member 'ABP_DyEnvSys_C::UrbanlightInfo' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, LightTimeInfo) == 0x001AC8, "Member 'ABP_DyEnvSys_C::LightTimeInfo' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, IsInitial) == 0x001B18, "Member 'ABP_DyEnvSys_C::IsInitial' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, FrameCounter) == 0x001B1C, "Member 'ABP_DyEnvSys_C::FrameCounter' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSys_C, IsNeedUpdateLight) == 0x001B20, "Member 'ABP_DyEnvSys_C::IsNeedUpdateLight' has a wrong offset!");
 
 }
 

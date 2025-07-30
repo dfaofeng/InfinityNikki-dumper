@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function ANS_ChangeMovementInfo.ANS_ChangeMovementInfo_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_ChangeMovementInfo_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ChangeMovementInfo_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ChangeMovementInfo_C_GetModuleName");
-static_assert(sizeof(ANS_ChangeMovementInfo_C_GetModuleName) == 0x000010, "Wrong size on ANS_ChangeMovementInfo_C_GetModuleName");
-static_assert(offsetof(ANS_ChangeMovementInfo_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ChangeMovementInfo_C_GetModuleName::ReturnValue' has a wrong offset!");
-
 // Function ANS_ChangeMovementInfo.ANS_ChangeMovementInfo_C.GetNotifyName
 // 0x0010 (0x0010 - 0x0000)
 struct ANS_ChangeMovementInfo_C_GetNotifyName final
@@ -35,6 +24,17 @@ public:
 static_assert(alignof(ANS_ChangeMovementInfo_C_GetNotifyName) == 0x000008, "Wrong alignment on ANS_ChangeMovementInfo_C_GetNotifyName");
 static_assert(sizeof(ANS_ChangeMovementInfo_C_GetNotifyName) == 0x000010, "Wrong size on ANS_ChangeMovementInfo_C_GetNotifyName");
 static_assert(offsetof(ANS_ChangeMovementInfo_C_GetNotifyName, ReturnValue) == 0x000000, "Member 'ANS_ChangeMovementInfo_C_GetNotifyName::ReturnValue' has a wrong offset!");
+
+// Function ANS_ChangeMovementInfo.ANS_ChangeMovementInfo_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_ChangeMovementInfo_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ChangeMovementInfo_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ChangeMovementInfo_C_GetModuleName");
+static_assert(sizeof(ANS_ChangeMovementInfo_C_GetModuleName) == 0x000010, "Wrong size on ANS_ChangeMovementInfo_C_GetModuleName");
+static_assert(offsetof(ANS_ChangeMovementInfo_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ChangeMovementInfo_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

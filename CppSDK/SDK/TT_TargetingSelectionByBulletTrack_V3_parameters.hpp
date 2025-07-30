@@ -16,16 +16,19 @@
 namespace SDK::Params
 {
 
-// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName final
+// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.SelectTargets
+// 0x0050 (0x0050 - 0x0000)
+struct TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets final
 {
 public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTargetingSourceContext                SourceContext;                                     // 0x0008(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
-static_assert(alignof(TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName) == 0x000008, "Wrong alignment on TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName");
-static_assert(sizeof(TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName) == 0x000010, "Wrong size on TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName");
-static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName, ReturnValue) == 0x000000, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName::ReturnValue' has a wrong offset!");
+static_assert(alignof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets) == 0x000008, "Wrong alignment on TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets");
+static_assert(sizeof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets) == 0x000050, "Wrong size on TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets");
+static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets, TargetingHandle) == 0x000000, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets::TargetingHandle' has a wrong offset!");
+static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets, SourceContext) == 0x000008, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets::SourceContext' has a wrong offset!");
 
 // Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.K2_CanSelect
 // 0x0058 (0x0058 - 0x0000)
@@ -43,19 +46,16 @@ static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_K2_CanSelect, Tar
 static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_K2_CanSelect, SourceContext) == 0x000008, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_K2_CanSelect::SourceContext' has a wrong offset!");
 static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_K2_CanSelect, ReturnValue) == 0x000050, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_K2_CanSelect::ReturnValue' has a wrong offset!");
 
-// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.SelectTargets
-// 0x0050 (0x0050 - 0x0000)
-struct TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets final
+// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName final
 {
 public:
-	struct FTargetingRequestHandle                TargetingHandle;                                   // 0x0000(0x0004)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTargetingSourceContext                SourceContext;                                     // 0x0008(0x0048)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 };
-static_assert(alignof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets) == 0x000008, "Wrong alignment on TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets");
-static_assert(sizeof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets) == 0x000050, "Wrong size on TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets");
-static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets, TargetingHandle) == 0x000000, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets::TargetingHandle' has a wrong offset!");
-static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets, SourceContext) == 0x000008, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets::SourceContext' has a wrong offset!");
+static_assert(alignof(TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName) == 0x000008, "Wrong alignment on TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName");
+static_assert(sizeof(TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName) == 0x000010, "Wrong size on TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName");
+static_assert(offsetof(TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName, ReturnValue) == 0x000000, "Member 'TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

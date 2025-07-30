@@ -30,8 +30,8 @@ public:
 	bool                                          bPlayWithShadow;                                   // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetCurBlockedTags(struct FGameplayTagContainer* Result);
 	void GetCurRequiredTags(struct FGameplayTagContainer* Result);
+	void GetCurBlockedTags(struct FGameplayTagContainer* Result);
 
 	class FString GetModuleName() const;
 

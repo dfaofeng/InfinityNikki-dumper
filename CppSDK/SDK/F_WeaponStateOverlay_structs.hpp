@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EPawnAnimStateTypes_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK

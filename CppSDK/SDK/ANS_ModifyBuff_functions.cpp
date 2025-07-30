@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function ANS_ModifyBuff.ANS_ModifyBuff_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UANS_ModifyBuff_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_ModifyBuff_C", "GetModuleName");
-
-	Params::ANS_ModifyBuff_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ANS_ModifyBuff.ANS_ModifyBuff_C.GetNotifyName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -50,6 +30,26 @@ class FString UANS_ModifyBuff_C::GetNotifyName() const
 		Func = Class->GetFunction("ANS_ModifyBuff_C", "GetNotifyName");
 
 	Params::ANS_ModifyBuff_C_GetNotifyName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ANS_ModifyBuff.ANS_ModifyBuff_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UANS_ModifyBuff_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_ModifyBuff_C", "GetModuleName");
+
+	Params::ANS_ModifyBuff_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

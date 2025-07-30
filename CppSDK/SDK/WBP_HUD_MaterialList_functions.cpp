@@ -17,29 +17,15 @@
 namespace SDK
 {
 
-// Function WBP_HUD_MaterialList.WBP_HUD_MaterialList_C.BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_HUD_MaterialList.WBP_HUD_MaterialList_C.Get_Text_Complete_Text
+// (Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UWBP_HUD_MaterialList_C::BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+void UWBP_HUD_MaterialList_C::Get_Text_Complete_Text()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_C", "BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_MaterialList.WBP_HUD_MaterialList_C.BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_HUD_MaterialList_C::BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_C", "BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_HUD_MaterialList_C", "Get_Text_Complete_Text");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,15 +51,29 @@ void UWBP_HUD_MaterialList_C::ExecuteUbergraph_WBP_HUD_MaterialList(int32 EntryP
 }
 
 
-// Function WBP_HUD_MaterialList.WBP_HUD_MaterialList_C.Get_Text_Complete_Text
-// (Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function WBP_HUD_MaterialList.WBP_HUD_MaterialList_C.BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_HUD_MaterialList_C::Get_Text_Complete_Text()
+void UWBP_HUD_MaterialList_C::BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_C", "Get_Text_Complete_Text");
+		Func = Class->GetFunction("WBP_HUD_MaterialList_C", "BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_MaterialList.WBP_HUD_MaterialList_C.BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_HUD_MaterialList_C::BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MaterialList_C", "BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -28,8 +28,8 @@ public:
 	class UClass*                                 WindActorClass;                                    // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetModuleName() const;
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

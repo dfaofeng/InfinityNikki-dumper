@@ -17,356 +17,156 @@
 namespace SDK::Params
 {
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ChangeInteractorType
-// 0x0028 (0x0028 - 0x0000)
-struct BP_UIWS_Interactor_C_ChangeInteractorType final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.SetInteractivity
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIWS_Interactor_C_SetInteractivity final
 {
 public:
-	int32                                         NewType;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ANiagaraActor*                          CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_ChangeInteractorType) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_ChangeInteractorType");
-static_assert(sizeof(BP_UIWS_Interactor_C_ChangeInteractorType) == 0x000028, "Wrong size on BP_UIWS_Interactor_C_ChangeInteractorType");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, NewType) == 0x000000, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::NewType' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_SetInteractivity) == 0x000001, "Wrong alignment on BP_UIWS_Interactor_C_SetInteractivity");
+static_assert(sizeof(BP_UIWS_Interactor_C_SetInteractivity) == 0x000001, "Wrong size on BP_UIWS_Interactor_C_SetInteractivity");
+static_assert(offsetof(BP_UIWS_Interactor_C_SetInteractivity, NewValue) == 0x000000, "Member 'BP_UIWS_Interactor_C_SetInteractivity::NewValue' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.CreateInteractor
-// 0x01C8 (0x01C8 - 0x0000)
-struct BP_UIWS_Interactor_C_CreateInteractor final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_UIWS_Interactor_C_ReceiveTick final
 {
 public:
-	class FName                                   SocketName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalComp;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Interactor;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Interactor_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_UIWS_Interactor_C_ReceiveTick");
+static_assert(sizeof(BP_UIWS_Interactor_C_ReceiveTick) == 0x000004, "Wrong size on BP_UIWS_Interactor_C_ReceiveTick");
+static_assert(offsetof(BP_UIWS_Interactor_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_UIWS_Interactor_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIWS_Interactor_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Interactor_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_UIWS_Interactor_C_ReceiveEndPlay");
+static_assert(sizeof(BP_UIWS_Interactor_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_UIWS_Interactor_C_ReceiveEndPlay");
+static_assert(offsetof(BP_UIWS_Interactor_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_UIWS_Interactor_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.LoadNiagara
+// 0x0018 (0x0018 - 0x0000)
+struct BP_UIWS_Interactor_C_LoadNiagara final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         K2Node_DynamicCast_AsNiagara_System;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Interactor_C_LoadNiagara) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_LoadNiagara");
+static_assert(sizeof(BP_UIWS_Interactor_C_LoadNiagara) == 0x000018, "Wrong size on BP_UIWS_Interactor_C_LoadNiagara");
+static_assert(offsetof(BP_UIWS_Interactor_C_LoadNiagara, Loaded) == 0x000000, "Member 'BP_UIWS_Interactor_C_LoadNiagara::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_LoadNiagara, K2Node_DynamicCast_AsNiagara_System) == 0x000008, "Member 'BP_UIWS_Interactor_C_LoadNiagara::K2Node_DynamicCast_AsNiagara_System' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_LoadNiagara, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Interactor_C_LoadNiagara::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.IsMobilePlatform
+// 0x0020 (0x0020 - 0x0000)
+struct BP_UIWS_Interactor_C_IsMobilePlatform final
+{
+public:
+	bool                                          Condition;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Interactor_C_IsMobilePlatform) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_IsMobilePlatform");
+static_assert(sizeof(BP_UIWS_Interactor_C_IsMobilePlatform) == 0x000020, "Wrong size on BP_UIWS_Interactor_C_IsMobilePlatform");
+static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, Condition) == 0x000000, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::Condition' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000019, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_BooleanOR_ReturnValue) == 0x00001A, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetVelocity
+// 0x0078 (0x0078 - 0x0000)
+struct BP_UIWS_Interactor_C_GetVelocity final
+{
+public:
+	struct FVector                                Velocity;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMeshComponent*                         K2Node_DynamicCast_AsMesh_Component;               // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UShapeComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetComponentVelocity_ReturnValue;         // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Interactor_C_GetVelocity) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetVelocity");
+static_assert(sizeof(BP_UIWS_Interactor_C_GetVelocity) == 0x000078, "Wrong size on BP_UIWS_Interactor_C_GetVelocity");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, Velocity) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetVelocity::Velocity' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetVelocity_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000038, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, K2Node_DynamicCast_AsMesh_Component) == 0x000040, "Member 'BP_UIWS_Interactor_C_GetVelocity::K2Node_DynamicCast_AsMesh_Component' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_UIWS_Interactor_C_GetVelocity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_IsValid_ReturnValue) == 0x000049, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetComponentByClass_ReturnValue) == 0x000050, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetComponentVelocity_ReturnValue) == 0x000060, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetComponentVelocity_ReturnValue' has a wrong offset!");
+
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetUIWSManagerToRegister
+// 0x0038 (0x0038 - 0x0000)
+struct BP_UIWS_Interactor_C_GetUIWSManagerToRegister final
+{
+public:
+	class ABP_UIWS_Manager_C*                     manager;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UX6GameInstance*                        K2Node_DynamicCast_AsX6Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_CulcForceIntensity_Intensity;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_CulcForceIntensity_UnderWaterDistance;    // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CulcForceIntensity_Hit;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetPosition_Position;                     // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_SpawnActor_ReturnValue;                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ANiagaraActor*                          K2Node_DynamicCast_AsNiagara_Actor;                // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x00C0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToActor_ReturnValue;             // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1BB[0x1];                                      // 0x01BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_1;   // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_2;   // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetUIWSManager_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_UIWS_Manager_C*                     K2Node_DynamicCast_AsBP_UIWS_Manager;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_CreateInteractor) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_CreateInteractor");
-static_assert(sizeof(BP_UIWS_Interactor_C_CreateInteractor) == 0x0001C8, "Wrong size on BP_UIWS_Interactor_C_CreateInteractor");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, SocketName) == 0x000000, "Member 'BP_UIWS_Interactor_C_CreateInteractor::SocketName' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, SkeletalComp) == 0x000008, "Member 'BP_UIWS_Interactor_C_CreateInteractor::SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, Interactor) == 0x000010, "Member 'BP_UIWS_Interactor_C_CreateInteractor::Interactor' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_BooleanOR_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_BooleanOR_ReturnValue_1) == 0x000038, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_Conv_NameToString_ReturnValue) == 0x000040, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_Contains_ReturnValue) == 0x000050, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000060, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_CulcForceIntensity_Intensity) == 0x000078, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_CulcForceIntensity_Intensity' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_CulcForceIntensity_UnderWaterDistance) == 0x000080, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_CulcForceIntensity_UnderWaterDistance' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_CulcForceIntensity_Hit) == 0x000088, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_CulcForceIntensity_Hit' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_GetPosition_Position) == 0x000090, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_GetPosition_Position' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SpawnActor_ReturnValue) == 0x0000A8, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SpawnActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, K2Node_DynamicCast_AsNiagara_Actor) == 0x0000B0, "Member 'BP_UIWS_Interactor_C_CreateInteractor::K2Node_DynamicCast_AsNiagara_Actor' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'BP_UIWS_Interactor_C_CreateInteractor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_Array_Add_ReturnValue) == 0x0000BC, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x0000C0, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0001B8, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0001B9, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_AttachToActor_ReturnValue) == 0x0001BA, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_AttachToActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0001BC, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SetFloatParameter_Param_ImplicitCast_1) == 0x0001C0, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SetFloatParameter_Param_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SetFloatParameter_Param_ImplicitCast_2) == 0x0001C4, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SetFloatParameter_Param_ImplicitCast_2' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetUIWSManagerToRegister");
+static_assert(sizeof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister) == 0x000038, "Wrong size on BP_UIWS_Interactor_C_GetUIWSManagerToRegister");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, manager) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::manager' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_AsX6Game_Instance) == 0x000010, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_AsX6Game_Instance' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, CallFunc_GetUIWSManager_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::CallFunc_GetUIWSManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_AsBP_UIWS_Manager) == 0x000028, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_AsBP_UIWS_Manager' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.CulcForceIntensity
-// 0x04F8 (0x04F8 - 0x0000)
-struct BP_UIWS_Interactor_C_CulcForceIntensity final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetSize
+// 0x0008 (0x0008 - 0x0000)
+struct BP_UIWS_Interactor_C_GetSize final
 {
 public:
-	double                                        HeightOffset_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Position;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Multiplier;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          OcclutionDetection;                                // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Intensity;                                         // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        UnderWaterDistance;                                // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Hit;                                               // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ConstParm, ReferenceParm)
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x0080(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Temp_object_Variable;                              // 0x00C0(0x0010)(ConstParm, ReferenceParm)
-	TArray<class AActor*>                         Temp_object_Variable_1;                            // 0x00D0(0x0010)(ConstParm, ReferenceParm)
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x00E0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DB[0x1];                                      // 0x01DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FHitResult>                     CallFunc_LineTraceMultiForObjects_OutHits;         // 0x02B0(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceMultiForObjects_ReturnValue;     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_Array_Get_Item;                           // 0x02D8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x03D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DA[0x2];                                      // 0x03DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x03E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0400(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0418(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x0430(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x0458(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName_1;                // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x0474(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x0480(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x0498(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECollisionEnabled                             CallFunc_GetCollisionEnabled_ReturnValue;          // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D1[0x7];                                      // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x04E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E2[0x2];                                      // 0x04E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x04E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Size;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_CulcForceIntensity) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_CulcForceIntensity");
-static_assert(sizeof(BP_UIWS_Interactor_C_CulcForceIntensity) == 0x0004F8, "Wrong size on BP_UIWS_Interactor_C_CulcForceIntensity");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, HeightOffset_0) == 0x000000, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::HeightOffset_0' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Position) == 0x000008, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Position' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Multiplier) == 0x000020, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Multiplier' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, OcclutionDetection) == 0x000028, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::OcclutionDetection' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Intensity) == 0x000030, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Intensity' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, UnderWaterDistance) == 0x000038, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::UnderWaterDistance' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Hit) == 0x000040, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Hit' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000048, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_int_Array_Index_Variable) == 0x000060, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_int_Loop_Counter_Variable) == 0x000064, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Add_IntInt_ReturnValue) == 0x000068, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, K2Node_MakeArray_Array_1) == 0x000080, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_MakeVector_ReturnValue) == 0x000090, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Add_VectorVector_ReturnValue) == 0x0000A8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_object_Variable) == 0x0000C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_object_Variable_1) == 0x0000D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceSingleForObjects_OutHit) == 0x0000E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0001D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bBlockingHit) == 0x0001D9, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001DA, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Time) == 0x0001DC, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Distance) == 0x0001E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Location) == 0x0001E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactPoint) == 0x000200, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Normal) == 0x000218, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactNormal) == 0x000230, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_PhysMat) == 0x000248, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitActor) == 0x000250, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitComponent) == 0x000258, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitBoneName) == 0x000260, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_BoneName) == 0x000268, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitItem) == 0x000270, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ElementIndex) == 0x000274, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_FaceIndex) == 0x000278, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceStart) == 0x000280, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceEnd) == 0x000298, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceMultiForObjects_OutHits) == 0x0002B0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceMultiForObjects_OutHits' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceMultiForObjects_ReturnValue) == 0x0002C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceMultiForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0002C8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0002D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Array_Get_Item) == 0x0002D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0003D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bBlockingHit_1) == 0x0003D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bBlockingHit_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bInitialOverlap_1) == 0x0003D9, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bInitialOverlap_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Time_1) == 0x0003DC, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Time_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Distance_1) == 0x0003E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Distance_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Location_1) == 0x0003E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Location_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactPoint_1) == 0x000400, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactPoint_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Normal_1) == 0x000418, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Normal_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactNormal_1) == 0x000430, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactNormal_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_PhysMat_1) == 0x000448, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_PhysMat_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitActor_1) == 0x000450, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitActor_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitComponent_1) == 0x000458, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitComponent_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitBoneName_1) == 0x000460, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitBoneName_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_BoneName_1) == 0x000468, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_BoneName_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitItem_1) == 0x000470, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitItem_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ElementIndex_1) == 0x000474, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ElementIndex_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_FaceIndex_1) == 0x000478, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_FaceIndex_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceStart_1) == 0x000480, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceStart_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceEnd_1) == 0x000498, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0004B0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_IsValid_ReturnValue) == 0x0004B8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_FClamp_ReturnValue) == 0x0004C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0004C8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_GetCollisionEnabled_ReturnValue) == 0x0004D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_GetCollisionEnabled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0004D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0004E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BooleanOR_ReturnValue) == 0x0004E1, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Array_Length_ReturnValue) == 0x0004E4, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Less_IntInt_ReturnValue) == 0x0004E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0004F0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_GetSize) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetSize");
+static_assert(sizeof(BP_UIWS_Interactor_C_GetSize) == 0x000008, "Wrong size on BP_UIWS_Interactor_C_GetSize");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetSize, Size) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetSize::Size' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.CulcForceIntensity_Sand
-// 0x0218 (0x0218 - 0x0000)
-struct BP_UIWS_Interactor_C_CulcForceIntensity_Sand final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetPosition
+// 0x0038 (0x0038 - 0x0000)
+struct BP_UIWS_Interactor_C_GetPosition final
 {
 public:
-	struct FVector                                Start;                                             // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Distance;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0020(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x0048(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_143[0x1];                                      // 0x0143(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Position;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_CulcForceIntensity_Sand");
-static_assert(sizeof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand) == 0x000218, "Wrong size on BP_UIWS_Interactor_C_CulcForceIntensity_Sand");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, Start) == 0x000000, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::Start' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, Distance) == 0x000018, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::Distance' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, Temp_object_Variable) == 0x000020, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000030, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_LineTraceSingle_OutHit) == 0x000048, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_LineTraceSingle_ReturnValue) == 0x000140, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_bBlockingHit) == 0x000141, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_bInitialOverlap) == 0x000142, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Time) == 0x000144, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Distance) == 0x000148, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Location) == 0x000150, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_ImpactPoint) == 0x000168, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Normal) == 0x000180, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_ImpactNormal) == 0x000198, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_PhysMat) == 0x0001B0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitActor) == 0x0001B8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitComponent) == 0x0001C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitBoneName) == 0x0001C8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_BoneName) == 0x0001D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitItem) == 0x0001D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_ElementIndex) == 0x0001DC, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_FaceIndex) == 0x0001E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_TraceStart) == 0x0001E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_TraceEnd) == 0x000200, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.DisableInteract
-// 0x0030 (0x0030 - 0x0000)
-struct BP_UIWS_Interactor_C_DisableInteract final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ANiagaraActor*                          CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27[0x1];                                       // 0x0027(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetLifeSpan_InLifespan_ImplicitCast;      // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Interactor_C_DisableInteract) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_DisableInteract");
-static_assert(sizeof(BP_UIWS_Interactor_C_DisableInteract) == 0x000030, "Wrong size on BP_UIWS_Interactor_C_DisableInteract");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_UIWS_Interactor_C_DisableInteract::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_UIWS_Interactor_C_DisableInteract::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_FMax_ReturnValue) == 0x000010, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_IsValid_ReturnValue) == 0x000024, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Less_IntInt_ReturnValue) == 0x000025, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_IsValid_ReturnValue_1) == 0x000026, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_SetLifeSpan_InLifespan_ImplicitCast) == 0x000028, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_SetLifeSpan_InLifespan_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_GetPosition) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetPosition");
+static_assert(sizeof(BP_UIWS_Interactor_C_GetPosition) == 0x000038, "Wrong size on BP_UIWS_Interactor_C_GetPosition");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetPosition, Position) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetPosition::Position' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetPosition, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_GetPosition::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_GetPosition, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_GetPosition::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 
 // Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ExecuteUbergraph_BP_UIWS_Interactor
 // 0x0368 (0x0368 - 0x0000)
@@ -633,156 +433,356 @@ static_assert(offsetof(BP_UIWS_Interactor_C_ExecuteUbergraph_BP_UIWS_Interactor,
 static_assert(offsetof(BP_UIWS_Interactor_C_ExecuteUbergraph_BP_UIWS_Interactor, CallFunc_SetFloatParameter_Param_ImplicitCast_7) == 0x000360, "Member 'BP_UIWS_Interactor_C_ExecuteUbergraph_BP_UIWS_Interactor::CallFunc_SetFloatParameter_Param_ImplicitCast_7' has a wrong offset!");
 static_assert(offsetof(BP_UIWS_Interactor_C_ExecuteUbergraph_BP_UIWS_Interactor, CallFunc_SetFloatParameter_Param_ImplicitCast_8) == 0x000364, "Member 'BP_UIWS_Interactor_C_ExecuteUbergraph_BP_UIWS_Interactor::CallFunc_SetFloatParameter_Param_ImplicitCast_8' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetPosition
-// 0x0038 (0x0038 - 0x0000)
-struct BP_UIWS_Interactor_C_GetPosition final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.DisableInteract
+// 0x0030 (0x0030 - 0x0000)
+struct BP_UIWS_Interactor_C_DisableInteract final
 {
 public:
-	struct FVector                                Position;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ANiagaraActor*                          CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27[0x1];                                       // 0x0027(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetLifeSpan_InLifespan_ImplicitCast;      // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_GetPosition) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetPosition");
-static_assert(sizeof(BP_UIWS_Interactor_C_GetPosition) == 0x000038, "Wrong size on BP_UIWS_Interactor_C_GetPosition");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetPosition, Position) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetPosition::Position' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetPosition, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_GetPosition::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetPosition, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_GetPosition::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_DisableInteract) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_DisableInteract");
+static_assert(sizeof(BP_UIWS_Interactor_C_DisableInteract) == 0x000030, "Wrong size on BP_UIWS_Interactor_C_DisableInteract");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_UIWS_Interactor_C_DisableInteract::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_UIWS_Interactor_C_DisableInteract::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_FMax_ReturnValue) == 0x000010, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_IsValid_ReturnValue) == 0x000024, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_Less_IntInt_ReturnValue) == 0x000025, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_IsValid_ReturnValue_1) == 0x000026, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_DisableInteract, CallFunc_SetLifeSpan_InLifespan_ImplicitCast) == 0x000028, "Member 'BP_UIWS_Interactor_C_DisableInteract::CallFunc_SetLifeSpan_InLifespan_ImplicitCast' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetSize
-// 0x0008 (0x0008 - 0x0000)
-struct BP_UIWS_Interactor_C_GetSize final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.CulcForceIntensity_Sand
+// 0x0218 (0x0218 - 0x0000)
+struct BP_UIWS_Interactor_C_CulcForceIntensity_Sand final
 {
 public:
-	double                                        Size;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Start;                                             // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Distance;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0020(0x0010)(ConstParm, ReferenceParm)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_LineTraceSingle_OutHit;                   // 0x0048(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_143[0x1];                                      // 0x0143(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0198(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x01C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_GetSize) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetSize");
-static_assert(sizeof(BP_UIWS_Interactor_C_GetSize) == 0x000008, "Wrong size on BP_UIWS_Interactor_C_GetSize");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetSize, Size) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetSize::Size' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_CulcForceIntensity_Sand");
+static_assert(sizeof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand) == 0x000218, "Wrong size on BP_UIWS_Interactor_C_CulcForceIntensity_Sand");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, Start) == 0x000000, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::Start' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, Distance) == 0x000018, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::Distance' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, Temp_object_Variable) == 0x000020, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000030, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_LineTraceSingle_OutHit) == 0x000048, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_LineTraceSingle_OutHit' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_LineTraceSingle_ReturnValue) == 0x000140, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_LineTraceSingle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_bBlockingHit) == 0x000141, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_bInitialOverlap) == 0x000142, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Time) == 0x000144, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Distance) == 0x000148, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Location) == 0x000150, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_ImpactPoint) == 0x000168, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_Normal) == 0x000180, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_ImpactNormal) == 0x000198, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_PhysMat) == 0x0001B0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitActor) == 0x0001B8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitComponent) == 0x0001C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitBoneName) == 0x0001C8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_BoneName) == 0x0001D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_HitItem) == 0x0001D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_ElementIndex) == 0x0001DC, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_FaceIndex) == 0x0001E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_TraceStart) == 0x0001E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity_Sand, CallFunc_BreakHitResult_TraceEnd) == 0x000200, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity_Sand::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetUIWSManagerToRegister
-// 0x0038 (0x0038 - 0x0000)
-struct BP_UIWS_Interactor_C_GetUIWSManagerToRegister final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.CulcForceIntensity
+// 0x04F8 (0x04F8 - 0x0000)
+struct BP_UIWS_Interactor_C_CulcForceIntensity final
 {
 public:
-	class ABP_UIWS_Manager_C*                     manager;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UX6GameInstance*                        K2Node_DynamicCast_AsX6Game_Instance;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HeightOffset_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Position;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Multiplier;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          OcclutionDetection;                                // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Intensity;                                         // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        UnderWaterDistance;                                // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Hit;                                               // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6C[0x4];                                       // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ConstParm, ReferenceParm)
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array_1;                          // 0x0080(0x0010)(ConstParm, ReferenceParm)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Temp_object_Variable;                              // 0x00C0(0x0010)(ConstParm, ReferenceParm)
+	TArray<class AActor*>                         Temp_object_Variable_1;                            // 0x00D0(0x0010)(ConstParm, ReferenceParm)
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x00E0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1DB[0x1];                                      // 0x01DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x0258(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FHitResult>                     CallFunc_LineTraceMultiForObjects_OutHits;         // 0x02B0(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceMultiForObjects_ReturnValue;     // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C1[0x7];                                      // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_Array_Get_Item;                           // 0x02D8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x03D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3DA[0x2];                                      // 0x03DA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x03DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x03E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x03E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0400(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0418(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal_1;            // 0x0430(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat_1;                 // 0x0448(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor_1;                // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent_1;            // 0x0458(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName_1;             // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName_1;                // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x0470(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x0474(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x0478(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x0480(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x0498(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x04B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x04C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionEnabled                             CallFunc_GetCollisionEnabled_ReturnValue;          // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D1[0x7];                                      // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x04D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x04E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E2[0x2];                                      // 0x04E2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x04E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E9[0x7];                                      // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x04F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Interactor_C_CulcForceIntensity) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_CulcForceIntensity");
+static_assert(sizeof(BP_UIWS_Interactor_C_CulcForceIntensity) == 0x0004F8, "Wrong size on BP_UIWS_Interactor_C_CulcForceIntensity");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, HeightOffset_0) == 0x000000, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::HeightOffset_0' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Position) == 0x000008, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Position' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Multiplier) == 0x000020, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Multiplier' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, OcclutionDetection) == 0x000028, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::OcclutionDetection' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Intensity) == 0x000030, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Intensity' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, UnderWaterDistance) == 0x000038, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::UnderWaterDistance' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Hit) == 0x000040, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Hit' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000048, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_int_Array_Index_Variable) == 0x000060, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_int_Loop_Counter_Variable) == 0x000064, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Add_IntInt_ReturnValue) == 0x000068, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, K2Node_MakeArray_Array_1) == 0x000080, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_MakeVector_ReturnValue) == 0x000090, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Add_VectorVector_ReturnValue) == 0x0000A8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_object_Variable) == 0x0000C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, Temp_object_Variable_1) == 0x0000D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::Temp_object_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceSingleForObjects_OutHit) == 0x0000E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x0001D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bBlockingHit) == 0x0001D9, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bInitialOverlap) == 0x0001DA, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Time) == 0x0001DC, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Distance) == 0x0001E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Location) == 0x0001E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactPoint) == 0x000200, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Normal) == 0x000218, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactNormal) == 0x000230, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_PhysMat) == 0x000248, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitActor) == 0x000250, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitComponent) == 0x000258, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitBoneName) == 0x000260, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_BoneName) == 0x000268, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitItem) == 0x000270, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ElementIndex) == 0x000274, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_FaceIndex) == 0x000278, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceStart) == 0x000280, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceEnd) == 0x000298, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceMultiForObjects_OutHits) == 0x0002B0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceMultiForObjects_OutHits' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_LineTraceMultiForObjects_ReturnValue) == 0x0002C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_LineTraceMultiForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0002C8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0002D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Array_Get_Item) == 0x0002D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0003D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bBlockingHit_1) == 0x0003D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bBlockingHit_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_bInitialOverlap_1) == 0x0003D9, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_bInitialOverlap_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Time_1) == 0x0003DC, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Time_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Distance_1) == 0x0003E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Distance_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Location_1) == 0x0003E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Location_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactPoint_1) == 0x000400, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactPoint_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_Normal_1) == 0x000418, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_Normal_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ImpactNormal_1) == 0x000430, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ImpactNormal_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_PhysMat_1) == 0x000448, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_PhysMat_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitActor_1) == 0x000450, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitActor_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitComponent_1) == 0x000458, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitComponent_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitBoneName_1) == 0x000460, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitBoneName_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_BoneName_1) == 0x000468, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_BoneName_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_HitItem_1) == 0x000470, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_HitItem_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_ElementIndex_1) == 0x000474, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_ElementIndex_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_FaceIndex_1) == 0x000478, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_FaceIndex_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceStart_1) == 0x000480, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceStart_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BreakHitResult_TraceEnd_1) == 0x000498, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0004B0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_IsValid_ReturnValue) == 0x0004B8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_FClamp_ReturnValue) == 0x0004C0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0004C8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_GetCollisionEnabled_ReturnValue) == 0x0004D0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_GetCollisionEnabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0004D8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0004E0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_BooleanOR_ReturnValue) == 0x0004E1, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Array_Length_ReturnValue) == 0x0004E4, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Less_IntInt_ReturnValue) == 0x0004E8, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CulcForceIntensity, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0004F0, "Member 'BP_UIWS_Interactor_C_CulcForceIntensity::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.CreateInteractor
+// 0x01C8 (0x01C8 - 0x0000)
+struct BP_UIWS_Interactor_C_CreateInteractor final
+{
+public:
+	class FName                                   SocketName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalComp;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Interactor;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetUIWSManager_ReturnValue;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_UIWS_Manager_C*                     K2Node_DynamicCast_AsBP_UIWS_Manager;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_CulcForceIntensity_Intensity;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_CulcForceIntensity_UnderWaterDistance;    // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CulcForceIntensity_Hit;                   // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetPosition_Position;                     // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_SpawnActor_ReturnValue;                   // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ANiagaraActor*                          K2Node_DynamicCast_AsNiagara_Actor;                // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocation_SweepHitResult;       // 0x00C0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocation_ReturnValue;          // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToActor_ReturnValue;             // 0x01BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BB[0x1];                                      // 0x01BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x01BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_1;   // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_2;   // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetUIWSManagerToRegister");
-static_assert(sizeof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister) == 0x000038, "Wrong size on BP_UIWS_Interactor_C_GetUIWSManagerToRegister");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, manager) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::manager' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, CallFunc_GetGameInstance_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_AsX6Game_Instance) == 0x000010, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_AsX6Game_Instance' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, CallFunc_GetUIWSManager_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::CallFunc_GetUIWSManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_AsBP_UIWS_Manager) == 0x000028, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_AsBP_UIWS_Manager' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, K2Node_DynamicCast_bSuccess_1) == 0x000030, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetUIWSManagerToRegister, CallFunc_IsValid_ReturnValue) == 0x000031, "Member 'BP_UIWS_Interactor_C_GetUIWSManagerToRegister::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_CreateInteractor) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_CreateInteractor");
+static_assert(sizeof(BP_UIWS_Interactor_C_CreateInteractor) == 0x0001C8, "Wrong size on BP_UIWS_Interactor_C_CreateInteractor");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, SocketName) == 0x000000, "Member 'BP_UIWS_Interactor_C_CreateInteractor::SocketName' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, SkeletalComp) == 0x000008, "Member 'BP_UIWS_Interactor_C_CreateInteractor::SkeletalComp' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, Interactor) == 0x000010, "Member 'BP_UIWS_Interactor_C_CreateInteractor::Interactor' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_BooleanOR_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_BooleanOR_ReturnValue_1) == 0x000038, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_Conv_NameToString_ReturnValue) == 0x000040, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_Contains_ReturnValue) == 0x000050, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000060, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_CulcForceIntensity_Intensity) == 0x000078, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_CulcForceIntensity_Intensity' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_CulcForceIntensity_UnderWaterDistance) == 0x000080, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_CulcForceIntensity_UnderWaterDistance' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_CulcForceIntensity_Hit) == 0x000088, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_CulcForceIntensity_Hit' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_GetPosition_Position) == 0x000090, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_GetPosition_Position' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SpawnActor_ReturnValue) == 0x0000A8, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SpawnActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, K2Node_DynamicCast_AsNiagara_Actor) == 0x0000B0, "Member 'BP_UIWS_Interactor_C_CreateInteractor::K2Node_DynamicCast_AsNiagara_Actor' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, K2Node_DynamicCast_bSuccess) == 0x0000B8, "Member 'BP_UIWS_Interactor_C_CreateInteractor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_Array_Add_ReturnValue) == 0x0000BC, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_SetActorLocation_SweepHitResult) == 0x0000C0, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_SetActorLocation_ReturnValue) == 0x0001B8, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0001B9, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_K2_AttachToActor_ReturnValue) == 0x0001BA, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_K2_AttachToActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0001BC, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SetFloatParameter_Param_ImplicitCast_1) == 0x0001C0, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SetFloatParameter_Param_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_CreateInteractor, CallFunc_SetFloatParameter_Param_ImplicitCast_2) == 0x0001C4, "Member 'BP_UIWS_Interactor_C_CreateInteractor::CallFunc_SetFloatParameter_Param_ImplicitCast_2' has a wrong offset!");
 
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.GetVelocity
-// 0x0078 (0x0078 - 0x0000)
-struct BP_UIWS_Interactor_C_GetVelocity final
+// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ChangeInteractorType
+// 0x0028 (0x0028 - 0x0000)
+struct BP_UIWS_Interactor_C_ChangeInteractorType final
 {
 public:
-	struct FVector                                Velocity;                                          // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMeshComponent*                         K2Node_DynamicCast_AsMesh_Component;               // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A[0x6];                                       // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UShapeComponent*                        CallFunc_GetComponentByClass_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetComponentVelocity_ReturnValue;         // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NewType;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ANiagaraActor*                          CallFunc_Array_Get_Item;                           // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Interactor_C_GetVelocity) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_GetVelocity");
-static_assert(sizeof(BP_UIWS_Interactor_C_GetVelocity) == 0x000078, "Wrong size on BP_UIWS_Interactor_C_GetVelocity");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, Velocity) == 0x000000, "Member 'BP_UIWS_Interactor_C_GetVelocity::Velocity' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetOwner_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetVelocity_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000038, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, K2Node_DynamicCast_AsMesh_Component) == 0x000040, "Member 'BP_UIWS_Interactor_C_GetVelocity::K2Node_DynamicCast_AsMesh_Component' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_UIWS_Interactor_C_GetVelocity::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_IsValid_ReturnValue) == 0x000049, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetComponentByClass_ReturnValue) == 0x000050, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_GetVelocity, CallFunc_GetComponentVelocity_ReturnValue) == 0x000060, "Member 'BP_UIWS_Interactor_C_GetVelocity::CallFunc_GetComponentVelocity_ReturnValue' has a wrong offset!");
-
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.IsMobilePlatform
-// 0x0020 (0x0020 - 0x0000)
-struct BP_UIWS_Interactor_C_IsMobilePlatform final
-{
-public:
-	bool                                          Condition;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Interactor_C_IsMobilePlatform) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_IsMobilePlatform");
-static_assert(sizeof(BP_UIWS_Interactor_C_IsMobilePlatform) == 0x000020, "Wrong size on BP_UIWS_Interactor_C_IsMobilePlatform");
-static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, Condition) == 0x000000, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::Condition' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000018, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000019, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_IsMobilePlatform, CallFunc_BooleanOR_ReturnValue) == 0x00001A, "Member 'BP_UIWS_Interactor_C_IsMobilePlatform::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.LoadNiagara
-// 0x0018 (0x0018 - 0x0000)
-struct BP_UIWS_Interactor_C_LoadNiagara final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         K2Node_DynamicCast_AsNiagara_System;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Interactor_C_LoadNiagara) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_LoadNiagara");
-static_assert(sizeof(BP_UIWS_Interactor_C_LoadNiagara) == 0x000018, "Wrong size on BP_UIWS_Interactor_C_LoadNiagara");
-static_assert(offsetof(BP_UIWS_Interactor_C_LoadNiagara, Loaded) == 0x000000, "Member 'BP_UIWS_Interactor_C_LoadNiagara::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_LoadNiagara, K2Node_DynamicCast_AsNiagara_System) == 0x000008, "Member 'BP_UIWS_Interactor_C_LoadNiagara::K2Node_DynamicCast_AsNiagara_System' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Interactor_C_LoadNiagara, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Interactor_C_LoadNiagara::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIWS_Interactor_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Interactor_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_UIWS_Interactor_C_ReceiveEndPlay");
-static_assert(sizeof(BP_UIWS_Interactor_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_UIWS_Interactor_C_ReceiveEndPlay");
-static_assert(offsetof(BP_UIWS_Interactor_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_UIWS_Interactor_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_UIWS_Interactor_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Interactor_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_UIWS_Interactor_C_ReceiveTick");
-static_assert(sizeof(BP_UIWS_Interactor_C_ReceiveTick) == 0x000004, "Wrong size on BP_UIWS_Interactor_C_ReceiveTick");
-static_assert(offsetof(BP_UIWS_Interactor_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_UIWS_Interactor_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_UIWS_Interactor.BP_UIWS_Interactor_C.SetInteractivity
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIWS_Interactor_C_SetInteractivity final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Interactor_C_SetInteractivity) == 0x000001, "Wrong alignment on BP_UIWS_Interactor_C_SetInteractivity");
-static_assert(sizeof(BP_UIWS_Interactor_C_SetInteractivity) == 0x000001, "Wrong size on BP_UIWS_Interactor_C_SetInteractivity");
-static_assert(offsetof(BP_UIWS_Interactor_C_SetInteractivity, NewValue) == 0x000000, "Member 'BP_UIWS_Interactor_C_SetInteractivity::NewValue' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Interactor_C_ChangeInteractorType) == 0x000008, "Wrong alignment on BP_UIWS_Interactor_C_ChangeInteractorType");
+static_assert(sizeof(BP_UIWS_Interactor_C_ChangeInteractorType) == 0x000028, "Wrong size on BP_UIWS_Interactor_C_ChangeInteractorType");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, NewType) == 0x000000, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::NewType' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, Temp_int_Array_Index_Variable) == 0x00000C, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Interactor_C_ChangeInteractorType, CallFunc_IsValid_ReturnValue) == 0x000021, "Member 'BP_UIWS_Interactor_C_ChangeInteractorType::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 }
 

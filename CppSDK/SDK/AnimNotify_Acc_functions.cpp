@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function AnimNotify_Acc.AnimNotify_Acc_C.PreviewPostAkEvent
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UAnimNotify_Acc_C::PreviewPostAkEvent(class USceneComponent* Comp) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimNotify_Acc_C", "PreviewPostAkEvent");
+
+	Params::AnimNotify_Acc_C_PreviewPostAkEvent Parms{};
+
+	Parms.Comp = Comp;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function AnimNotify_Acc.AnimNotify_Acc_C.Received_Notify
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -41,26 +61,6 @@ bool UAnimNotify_Acc_C::Received_Notify(class USkeletalMeshComponent* MeshComp, 
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function AnimNotify_Acc.AnimNotify_Acc_C.PreviewPostAkEvent
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAnimNotify_Acc_C::PreviewPostAkEvent(class USceneComponent* Comp) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_Acc_C", "PreviewPostAkEvent");
-
-	Params::AnimNotify_Acc_C_PreviewPostAkEvent Parms{};
-
-	Parms.Comp = Comp;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

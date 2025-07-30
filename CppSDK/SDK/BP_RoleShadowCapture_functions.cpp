@@ -204,6 +204,20 @@ void ABP_RoleShadowCapture_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_RoleShadowCapture.BP_RoleShadowCapture_C.SetCapsuleShadow
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_RoleShadowCapture_C::SetCapsuleShadow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RoleShadowCapture_C", "SetCapsuleShadow");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_RoleShadowCapture.BP_RoleShadowCapture_C.SetCastShadow
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -221,6 +235,20 @@ void ABP_RoleShadowCapture_C::SetCastShadow(bool InCastShadowValue)
 	Parms.InCastShadowValue = InCastShadowValue;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_RoleShadowCapture.BP_RoleShadowCapture_C.SetInkCapsuleShadow
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_RoleShadowCapture_C::SetInkCapsuleShadow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_RoleShadowCapture_C", "SetInkCapsuleShadow");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

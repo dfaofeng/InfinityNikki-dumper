@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "F_Character_MaterialEffectBySuitMap_structs.hpp"
 #include "F_Character_ParticleEffectBySuitMap_structs.hpp"
+#include "F_Character_MaterialEffectBySuitMap_structs.hpp"
 #include "F_CharacterEffectList_structs.hpp"
 #include "Engine_classes.hpp"
 

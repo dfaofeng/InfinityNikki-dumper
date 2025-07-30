@@ -16,6 +16,32 @@
 namespace SDK::Params
 {
 
+// Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.BP_SetActorEffect
+// 0x0160 (0x0160 - 0x0000)
+struct X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         EffectType;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Value;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, double>                     ExtraScalars;                                      // 0x0018(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
+	TMap<class FName, struct FVector>             ExtraVectors;                                      // 0x0068(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UObject*                                __WorldContext;                                    // 0x00B8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, double>                     CallFunc_AddScalarsByType_ScalarMap;               // 0x00C0(0x0050)()
+	TMap<class FName, float>                      CallFunc_X6SetActorEffect_ScalarParams_ImplicitCast; // 0x0110(0x0050)(ConstParm)
+};
+static_assert(alignof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect) == 0x000008, "Wrong alignment on X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect");
+static_assert(sizeof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect) == 0x000160, "Wrong size on X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, Actor) == 0x000000, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, EffectType) == 0x000008, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::EffectType' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, Value) == 0x000010, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::Value' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, ExtraScalars) == 0x000018, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::ExtraScalars' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, ExtraVectors) == 0x000068, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::ExtraVectors' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, __WorldContext) == 0x0000B8, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, CallFunc_AddScalarsByType_ScalarMap) == 0x0000C0, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::CallFunc_AddScalarsByType_ScalarMap' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, CallFunc_X6SetActorEffect_ScalarParams_ImplicitCast) == 0x000110, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::CallFunc_X6SetActorEffect_ScalarParams_ImplicitCast' has a wrong offset!");
+
 // Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.AddScalarsByType
 // 0x01B0 (0x01B0 - 0x0000)
 struct X6BlueprintMaterialEffectLibrary_C_AddScalarsByType final
@@ -98,32 +124,6 @@ static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_AddScalarsByType, Temp
 static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_AddScalarsByType, CallFunc_Less_IntInt_ReturnValue_1) == 0x000194, "Member 'X6BlueprintMaterialEffectLibrary_C_AddScalarsByType::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_AddScalarsByType, CallFunc_Add_IntInt_ReturnValue_1) == 0x000198, "Member 'X6BlueprintMaterialEffectLibrary_C_AddScalarsByType::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_AddScalarsByType, K2Node_MakeArray_Array) == 0x0001A0, "Member 'X6BlueprintMaterialEffectLibrary_C_AddScalarsByType::K2Node_MakeArray_Array' has a wrong offset!");
-
-// Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.BP_SetActorEffect
-// 0x0160 (0x0160 - 0x0000)
-struct X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         EffectType;                                        // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Value;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, double>                     ExtraScalars;                                      // 0x0018(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
-	TMap<class FName, struct FVector>             ExtraVectors;                                      // 0x0068(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UObject*                                __WorldContext;                                    // 0x00B8(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, double>                     CallFunc_AddScalarsByType_ScalarMap;               // 0x00C0(0x0050)()
-	TMap<class FName, float>                      CallFunc_X6SetActorEffect_ScalarParams_ImplicitCast; // 0x0110(0x0050)(ConstParm)
-};
-static_assert(alignof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect) == 0x000008, "Wrong alignment on X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect");
-static_assert(sizeof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect) == 0x000160, "Wrong size on X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, Actor) == 0x000000, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::Actor' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, EffectType) == 0x000008, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::EffectType' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, Value) == 0x000010, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::Value' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, ExtraScalars) == 0x000018, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::ExtraScalars' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, ExtraVectors) == 0x000068, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::ExtraVectors' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, __WorldContext) == 0x0000B8, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, CallFunc_AddScalarsByType_ScalarMap) == 0x0000C0, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::CallFunc_AddScalarsByType_ScalarMap' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect, CallFunc_X6SetActorEffect_ScalarParams_ImplicitCast) == 0x000110, "Member 'X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect::CallFunc_X6SetActorEffect_ScalarParams_ImplicitCast' has a wrong offset!");
 
 }
 

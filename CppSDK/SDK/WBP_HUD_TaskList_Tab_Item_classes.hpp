@@ -38,9 +38,9 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher;                                    // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
 	void ExecuteUbergraph_WBP_HUD_TaskList_Tab_Item(int32 EntryPoint);
+	void BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_TaskList_Tab_Item_Button_Touch_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

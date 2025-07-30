@@ -17,41 +17,187 @@
 namespace SDK
 {
 
-// Function BP_PhotographCamera.BP_PhotographCamera_C.SetVignetteIntensity
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PhotographCamera.BP_PhotographCamera_C.ClearFocusActor
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_PhotographCamera_C::SetVignetteIntensity(double InValue)
+void ABP_PhotographCamera_C::ClearFocusActor()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "SetVignetteIntensity");
+		Func = Class->GetFunction("BP_PhotographCamera_C", "ClearFocusActor");
 
-	Params::BP_PhotographCamera_C_SetVignetteIntensity Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InValue = InValue;
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.ClearFocusNikki
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PhotographCamera_C::ClearFocusNikki()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "ClearFocusNikki");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.ConvertParamsToMobilePlatform
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PhotographCamera_C::ConvertParamsToMobilePlatform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "ConvertParamsToMobilePlatform");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.ExecuteUbergraph_BP_PhotographCamera
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PhotographCamera_C::ExecuteUbergraph_BP_PhotographCamera(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "ExecuteUbergraph_BP_PhotographCamera");
+
+	Params::BP_PhotographCamera_C_ExecuteUbergraph_BP_PhotographCamera Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PhotographCamera.BP_PhotographCamera_C.SetFocusDistance
+// Function BP_PhotographCamera.BP_PhotographCamera_C.FocusNikki
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  InDistance                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           InNikki                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PhotographCamera_C::SetFocusDistance(double InDistance)
+void ABP_PhotographCamera_C::FocusNikki(class AActor* InNikki)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "SetFocusDistance");
+		Func = Class->GetFunction("BP_PhotographCamera_C", "FocusNikki");
 
-	Params::BP_PhotographCamera_C_SetFocusDistance Parms{};
+	Params::BP_PhotographCamera_C_FocusNikki Parms{};
 
-	Parms.InDistance = InDistance;
+	Parms.InNikki = InNikki;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.GetCameraRelativeLocToNikki
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PhotographCamera_C::GetCameraRelativeLocToNikki()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "GetCameraRelativeLocToNikki");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.GetDefaultVignetteIntensity
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double*                                 DefaultValue                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PhotographCamera_C::GetDefaultVignetteIntensity(double* DefaultValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "GetDefaultVignetteIntensity");
+
+	Params::BP_PhotographCamera_C_GetDefaultVignetteIntensity Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (DefaultValue != nullptr)
+		*DefaultValue = Parms.DefaultValue;
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.GetVignetteIntensity
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double*                                 OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PhotographCamera_C::GetVignetteIntensity(double* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "GetVignetteIntensity");
+
+	Params::BP_PhotographCamera_C_GetVignetteIntensity Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.InitAsFirstPersonCamera
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_PhotographCamera_C::InitAsFirstPersonCamera()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "InitAsFirstPersonCamera");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_PhotographCamera_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_PhotographCamera.BP_PhotographCamera_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PhotographCamera_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographCamera_C", "ReceiveTick");
+
+	Params::BP_PhotographCamera_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,189 +223,43 @@ void ABP_PhotographCamera_C::SetFocusActor(class AActor* InActor)
 }
 
 
-// Function BP_PhotographCamera.BP_PhotographCamera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PhotographCamera_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "ReceiveTick");
-
-	Params::BP_PhotographCamera_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_PhotographCamera_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.InitAsFirstPersonCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_PhotographCamera_C::InitAsFirstPersonCamera()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "InitAsFirstPersonCamera");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.GetVignetteIntensity
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double*                                 OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PhotographCamera_C::GetVignetteIntensity(double* OutValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "GetVignetteIntensity");
-
-	Params::BP_PhotographCamera_C_GetVignetteIntensity Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutValue != nullptr)
-		*OutValue = Parms.OutValue;
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.GetDefaultVignetteIntensity
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double*                                 DefaultValue                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PhotographCamera_C::GetDefaultVignetteIntensity(double* DefaultValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "GetDefaultVignetteIntensity");
-
-	Params::BP_PhotographCamera_C_GetDefaultVignetteIntensity Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (DefaultValue != nullptr)
-		*DefaultValue = Parms.DefaultValue;
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.GetCameraRelativeLocToNikki
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PhotographCamera_C::GetCameraRelativeLocToNikki()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "GetCameraRelativeLocToNikki");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.FocusNikki
+// Function BP_PhotographCamera.BP_PhotographCamera_C.SetFocusDistance
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           InNikki                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  InDistance                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PhotographCamera_C::FocusNikki(class AActor* InNikki)
+void ABP_PhotographCamera_C::SetFocusDistance(double InDistance)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "FocusNikki");
+		Func = Class->GetFunction("BP_PhotographCamera_C", "SetFocusDistance");
 
-	Params::BP_PhotographCamera_C_FocusNikki Parms{};
+	Params::BP_PhotographCamera_C_SetFocusDistance Parms{};
 
-	Parms.InNikki = InNikki;
+	Parms.InDistance = InDistance;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PhotographCamera.BP_PhotographCamera_C.ExecuteUbergraph_BP_PhotographCamera
-// (Final, UbergraphFunction)
+// Function BP_PhotographCamera.BP_PhotographCamera_C.SetVignetteIntensity
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  InValue                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_PhotographCamera_C::ExecuteUbergraph_BP_PhotographCamera(int32 EntryPoint)
+void ABP_PhotographCamera_C::SetVignetteIntensity(double InValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "ExecuteUbergraph_BP_PhotographCamera");
+		Func = Class->GetFunction("BP_PhotographCamera_C", "SetVignetteIntensity");
 
-	Params::BP_PhotographCamera_C_ExecuteUbergraph_BP_PhotographCamera Parms{};
+	Params::BP_PhotographCamera_C_SetVignetteIntensity Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InValue = InValue;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.ConvertParamsToMobilePlatform
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PhotographCamera_C::ConvertParamsToMobilePlatform()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "ConvertParamsToMobilePlatform");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.ClearFocusNikki
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PhotographCamera_C::ClearFocusNikki()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "ClearFocusNikki");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_PhotographCamera.BP_PhotographCamera_C.ClearFocusActor
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_PhotographCamera_C::ClearFocusActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographCamera_C", "ClearFocusActor");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

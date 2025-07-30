@@ -21,8 +21,8 @@ namespace SDK
 class UTT_RecoverySelectionTargetBangLocation_C final : public UX6TargetingSelectionTask_AOE
 {
 public:
-	class FString GetModuleName() const;
 	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()

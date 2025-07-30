@@ -79,15 +79,15 @@ void ABP_StarSeaDayNight_C::Get_Moon_Boat()
 }
 
 
-// Function BP_StarSeaDayNight.BP_StarSeaDayNight_C.Get TOD System
+// Function BP_StarSeaDayNight.BP_StarSeaDayNight_C.Init DayNight BlendWeight
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_StarSeaDayNight_C::Get_TOD_System()
+void ABP_StarSeaDayNight_C::Init_DayNight_BlendWeight()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_StarSeaDayNight_C", "Get TOD System");
+		Func = Class->GetFunction("BP_StarSeaDayNight_C", "Init DayNight BlendWeight");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -155,6 +155,26 @@ void ABP_StarSeaDayNight_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_StarSeaDayNight.BP_StarSeaDayNight_C.Update DayNight BlengWight
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_StarSeaDayNight_C::Update_DayNight_BlengWight(double DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaDayNight_C", "Update DayNight BlengWight");
+
+	Params::BP_StarSeaDayNight_C_Update_DayNight_BlengWight Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_StarSeaDayNight.BP_StarSeaDayNight_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -166,6 +186,26 @@ void ABP_StarSeaDayNight_C::UserConstructionScript()
 		Func = Class->GetFunction("BP_StarSeaDayNight_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_StarSeaDayNight.BP_StarSeaDayNight_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString ABP_StarSeaDayNight_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaDayNight_C", "GetModuleName");
+
+	Params::BP_StarSeaDayNight_C_GetModuleName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

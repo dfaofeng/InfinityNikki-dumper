@@ -46,7 +46,7 @@ void UBP_StarSeaCameraModifier_C::BlueprintModifyPostProcess(float DeltaTime, fl
 
 
 // Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_SetDynamicMat
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInstanceDynamic*         Mat                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 

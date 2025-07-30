@@ -30,12 +30,12 @@ public:
 	class UWBP_UI_ItemSlot_C*                     WBP_UI_ItemSlot;                                   // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void ExecuteUbergraph_WBP_HUD_MaterialList_Item(int32 EntryPoint);
-	void OnListItemObjectSetViaIndex(int32 Index_0);
 	void OnListItemValueChangedViaIndex(int32 Index_0);
+	void OnListItemObjectSetViaIndex(int32 Index_0);
+	void ExecuteUbergraph_WBP_HUD_MaterialList_Item(int32 EntryPoint);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
 
 	class FString GetModuleName() const;
 

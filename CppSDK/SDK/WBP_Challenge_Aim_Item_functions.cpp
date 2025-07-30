@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_Challenge_Aim_Item.WBP_Challenge_Aim_Item_C.ExecuteUbergraph_WBP_Challenge_Aim_Item
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Challenge_Aim_Item_C::ExecuteUbergraph_WBP_Challenge_Aim_Item(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Challenge_Aim_Item_C", "ExecuteUbergraph_WBP_Challenge_Aim_Item");
-
-	Params::WBP_Challenge_Aim_Item_C_ExecuteUbergraph_WBP_Challenge_Aim_Item Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Challenge_Aim_Item.WBP_Challenge_Aim_Item_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_Challenge_Aim_Item_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_Challenge_Aim_Item_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Challenge_Aim_Item.WBP_Challenge_Aim_Item_C.ExecuteUbergraph_WBP_Challenge_Aim_Item
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Challenge_Aim_Item_C::ExecuteUbergraph_WBP_Challenge_Aim_Item(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Challenge_Aim_Item_C", "ExecuteUbergraph_WBP_Challenge_Aim_Item");
+
+	Params::WBP_Challenge_Aim_Item_C_ExecuteUbergraph_WBP_Challenge_Aim_Item Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

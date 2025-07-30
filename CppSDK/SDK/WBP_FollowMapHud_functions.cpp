@@ -17,141 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.ExecuteUbergraph_WBP_FollowMapHud
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FollowMapHud_C::ExecuteUbergraph_WBP_FollowMapHud(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "ExecuteUbergraph_WBP_FollowMapHud");
-
-	Params::WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRange
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetMoveContentPositionInternal
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Pos                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FollowMapHud_C::SetClipRange(const struct FVector2D& Size)
+void UWBP_FollowMapHud_C::SetMoveContentPositionInternal(const struct FVector2D& Pos)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetClipRange");
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetMoveContentPositionInternal");
 
-	Params::WBP_FollowMapHud_C_SetClipRange Parms{};
+	Params::WBP_FollowMapHud_C_SetMoveContentPositionInternal Parms{};
 
-	Parms.Size = std::move(Size);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRangeInternal
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FollowMapHud_C::SetClipRangeInternal(const struct FVector2D& Size)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetClipRangeInternal");
-
-	Params::WBP_FollowMapHud_C_SetClipRangeInternal Parms{};
-
-	Parms.Size = std::move(Size);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScale
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FollowMapHud_C::SetContentScale(const struct FVector2D& Scale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentScale");
-
-	Params::WBP_FollowMapHud_C_SetContentScale Parms{};
-
-	Parms.Scale = std::move(Scale);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScaleInternal
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FollowMapHud_C::SetContentScaleInternal(const struct FVector2D& Scale)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentScaleInternal");
-
-	Params::WBP_FollowMapHud_C_SetContentScaleInternal Parms{};
-
-	Parms.Scale = std::move(Scale);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSize
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FollowMapHud_C::SetContentSize(const struct FVector2D& Size)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentSize");
-
-	Params::WBP_FollowMapHud_C_SetContentSize Parms{};
-
-	Parms.Size = std::move(Size);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSizeInternal
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_FollowMapHud_C::SetContentSizeInternal(const struct FVector2D& Size)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentSizeInternal");
-
-	Params::WBP_FollowMapHud_C_SetContentSizeInternal Parms{};
-
-	Parms.Size = std::move(Size);
+	Parms.Pos = std::move(Pos);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -177,21 +57,141 @@ void UWBP_FollowMapHud_C::SetMoveContentPosition(const struct FVector2D& Pos)
 }
 
 
-// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetMoveContentPositionInternal
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSizeInternal
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector2D&                 Pos                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_FollowMapHud_C::SetMoveContentPositionInternal(const struct FVector2D& Pos)
+void UWBP_FollowMapHud_C::SetContentSizeInternal(const struct FVector2D& Size)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetMoveContentPositionInternal");
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentSizeInternal");
 
-	Params::WBP_FollowMapHud_C_SetMoveContentPositionInternal Parms{};
+	Params::WBP_FollowMapHud_C_SetContentSizeInternal Parms{};
 
-	Parms.Pos = std::move(Pos);
+	Parms.Size = std::move(Size);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentSize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FollowMapHud_C::SetContentSize(const struct FVector2D& Size)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentSize");
+
+	Params::WBP_FollowMapHud_C_SetContentSize Parms{};
+
+	Parms.Size = std::move(Size);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScaleInternal
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FollowMapHud_C::SetContentScaleInternal(const struct FVector2D& Scale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentScaleInternal");
+
+	Params::WBP_FollowMapHud_C_SetContentScaleInternal Parms{};
+
+	Parms.Scale = std::move(Scale);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetContentScale
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FollowMapHud_C::SetContentScale(const struct FVector2D& Scale)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetContentScale");
+
+	Params::WBP_FollowMapHud_C_SetContentScale Parms{};
+
+	Parms.Scale = std::move(Scale);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRangeInternal
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FollowMapHud_C::SetClipRangeInternal(const struct FVector2D& Size)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetClipRangeInternal");
+
+	Params::WBP_FollowMapHud_C_SetClipRangeInternal Parms{};
+
+	Parms.Size = std::move(Size);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.SetClipRange
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FollowMapHud_C::SetClipRange(const struct FVector2D& Size)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "SetClipRange");
+
+	Params::WBP_FollowMapHud_C_SetClipRange Parms{};
+
+	Parms.Size = std::move(Size);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_FollowMapHud.WBP_FollowMapHud_C.ExecuteUbergraph_WBP_FollowMapHud
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_FollowMapHud_C::ExecuteUbergraph_WBP_FollowMapHud(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_FollowMapHud_C", "ExecuteUbergraph_WBP_FollowMapHud");
+
+	Params::WBP_FollowMapHud_C_ExecuteUbergraph_WBP_FollowMapHud Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

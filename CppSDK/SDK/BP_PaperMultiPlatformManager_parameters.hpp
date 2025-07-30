@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.BP_OnConnectedControllersChange
+// 0x0004 (0x0004 - 0x0000)
+struct BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange final
+{
+public:
+	int32                                         NewParam;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange) == 0x000004, "Wrong alignment on BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange");
+static_assert(sizeof(BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange) == 0x000004, "Wrong size on BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange");
+static_assert(offsetof(BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange, NewParam) == 0x000000, "Member 'BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange::NewParam' has a wrong offset!");
+
 // Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.ExecuteUbergraph_BP_PaperMultiPlatformManager
 // 0x0010 (0x0010 - 0x0000)
 struct BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager final
@@ -30,17 +41,6 @@ static_assert(sizeof(BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMul
 static_assert(offsetof(BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager, EntryPoint) == 0x000000, "Member 'BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager, K2Node_CustomEvent_NewParam) == 0x000004, "Member 'BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager::K2Node_CustomEvent_NewParam' has a wrong offset!");
 static_assert(offsetof(BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager, CallFunc_K2_SetTimerForNextTick_ReturnValue) == 0x000008, "Member 'BP_PaperMultiPlatformManager_C_ExecuteUbergraph_BP_PaperMultiPlatformManager::CallFunc_K2_SetTimerForNextTick_ReturnValue' has a wrong offset!");
-
-// Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.BP_OnConnectedControllersChange
-// 0x0004 (0x0004 - 0x0000)
-struct BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange final
-{
-public:
-	int32                                         NewParam;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange) == 0x000004, "Wrong alignment on BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange");
-static_assert(sizeof(BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange) == 0x000004, "Wrong size on BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange");
-static_assert(offsetof(BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange, NewParam) == 0x000000, "Member 'BP_PaperMultiPlatformManager_C_BP_OnConnectedControllersChange::NewParam' has a wrong offset!");
 
 // Function BP_PaperMultiPlatformManager.BP_PaperMultiPlatformManager_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

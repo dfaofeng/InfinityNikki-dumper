@@ -29,11 +29,11 @@ public:
 	int32                                         Tag;                                               // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Lua_EndOverlap();
-	void Lua_BeginOverlap(int32 CheckInID);
-	void ExecuteUbergraph_BP_PhotographDailyAttendanceArea(int32 EntryPoint);
-	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void ExecuteUbergraph_BP_PhotographDailyAttendanceArea(int32 EntryPoint);
+	void Lua_BeginOverlap(int32 CheckInID);
+	void Lua_EndOverlap();
 
 	class FString GetModuleName() const;
 

@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "EGroundedLocomotionScenarioType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "SMSystem_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EGroundedLocomotionScenarioType_structs.hpp"
 
 
 namespace SDK

@@ -17,109 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_Friends_Head.WBP_Friends_Head_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UWBP_Friends_Head_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friends_Head.WBP_Friends_Head_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friends_Head_C::BP_OnItemExpansionChanged(bool bIsExpanded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "BP_OnItemExpansionChanged");
-
-	Params::WBP_Friends_Head_C_BP_OnItemExpansionChanged Parms{};
-
-	Parms.bIsExpanded = bIsExpanded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friends_Head.WBP_Friends_Head_C.BP_OnItemSelectionChanged
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friends_Head_C::BP_OnItemSelectionChanged(bool bIsSelected)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "BP_OnItemSelectionChanged");
-
-	Params::WBP_Friends_Head_C_BP_OnItemSelectionChanged Parms{};
-
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friends_Head.WBP_Friends_Head_C.Construct
+// Function WBP_Friends_Head.WBP_Friends_Head_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_Friends_Head_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Friends_Head.WBP_Friends_Head_C.ExecuteUbergraph_WBP_Friends_Head
-// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friends_Head_C::ExecuteUbergraph_WBP_Friends_Head(int32 EntryPoint)
+void UWBP_Friends_Head_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "ExecuteUbergraph_WBP_Friends_Head");
+		Func = Class->GetFunction("WBP_Friends_Head_C", "PreConstruct");
 
-	Params::WBP_Friends_Head_C_ExecuteUbergraph_WBP_Friends_Head Parms{};
+	Params::WBP_Friends_Head_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Friends_Head.WBP_Friends_Head_C.OnListItemObjectSetViaIndex
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Friends_Head_C::OnListItemObjectSetViaIndex(int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "OnListItemObjectSetViaIndex");
-
-	Params::WBP_Friends_Head_C_OnListItemObjectSetViaIndex Parms{};
-
-	Parms.Index_0 = Index_0;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -145,23 +57,111 @@ void UWBP_Friends_Head_C::OnListItemValueChangedViaIndex(int32 Index_0)
 }
 
 
-// Function WBP_Friends_Head.WBP_Friends_Head_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Friends_Head.WBP_Friends_Head_C.OnListItemObjectSetViaIndex
+// (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Friends_Head_C::PreConstruct(bool IsDesignTime)
+void UWBP_Friends_Head_C::OnListItemObjectSetViaIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Friends_Head_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_Friends_Head_C", "OnListItemObjectSetViaIndex");
 
-	Params::WBP_Friends_Head_C_PreConstruct Parms{};
+	Params::WBP_Friends_Head_C_OnListItemObjectSetViaIndex Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friends_Head.WBP_Friends_Head_C.ExecuteUbergraph_WBP_Friends_Head
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friends_Head_C::ExecuteUbergraph_WBP_Friends_Head(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friends_Head_C", "ExecuteUbergraph_WBP_Friends_Head");
+
+	Params::WBP_Friends_Head_C_ExecuteUbergraph_WBP_Friends_Head Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friends_Head.WBP_Friends_Head_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_Friends_Head_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friends_Head_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Friends_Head.WBP_Friends_Head_C.BP_OnItemSelectionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friends_Head_C::BP_OnItemSelectionChanged(bool bIsSelected)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friends_Head_C", "BP_OnItemSelectionChanged");
+
+	Params::WBP_Friends_Head_C_BP_OnItemSelectionChanged Parms{};
+
+	Parms.bIsSelected = bIsSelected;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friends_Head.WBP_Friends_Head_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Friends_Head_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friends_Head_C", "BP_OnItemExpansionChanged");
+
+	Params::WBP_Friends_Head_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Friends_Head.WBP_Friends_Head_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_Friends_Head_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Friends_Head_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

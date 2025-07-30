@@ -26,11 +26,11 @@ public:
 	TMulticastInlineDelegate<void()>              ReceiveDead;                                       // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_CatchingInsectFeedBackComponent(int32 EntryPoint);
-	void BP_DetectCatchingStop();
 	void BP_CatchingDeadFeedBack();
+	void BP_DetectCatchingStop();
+	void ExecuteUbergraph_BP_CatchingInsectFeedBackComponent(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 
 	class FString GetModuleName() const;
 

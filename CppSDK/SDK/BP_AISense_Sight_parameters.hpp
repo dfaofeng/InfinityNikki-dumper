@@ -16,23 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_AISense_Sight.BP_AISense_Sight_C.IsInterestedTarget
-// 0x0020 (0x0020 - 0x0000)
-struct BP_AISense_Sight_C_IsInterestedTarget final
-{
-public:
-	const class AActor*                           ListenerActor;                                     // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 TargetActor;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UX6AISenseConfig_Sight*                 Config;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AISense_Sight_C_IsInterestedTarget) == 0x000008, "Wrong alignment on BP_AISense_Sight_C_IsInterestedTarget");
-static_assert(sizeof(BP_AISense_Sight_C_IsInterestedTarget) == 0x000020, "Wrong size on BP_AISense_Sight_C_IsInterestedTarget");
-static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, ListenerActor) == 0x000000, "Member 'BP_AISense_Sight_C_IsInterestedTarget::ListenerActor' has a wrong offset!");
-static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, TargetActor) == 0x000008, "Member 'BP_AISense_Sight_C_IsInterestedTarget::TargetActor' has a wrong offset!");
-static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, Config) == 0x000010, "Member 'BP_AISense_Sight_C_IsInterestedTarget::Config' has a wrong offset!");
-static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, ReturnValue) == 0x000018, "Member 'BP_AISense_Sight_C_IsInterestedTarget::ReturnValue' has a wrong offset!");
-
 // Function BP_AISense_Sight.BP_AISense_Sight_C.ReportStimulus
 // 0x0020 (0x0020 - 0x0000)
 struct BP_AISense_Sight_C_ReportStimulus final
@@ -53,6 +36,23 @@ static_assert(offsetof(BP_AISense_Sight_C_ReportStimulus, Config) == 0x000010, "
 static_assert(offsetof(BP_AISense_Sight_C_ReportStimulus, ResultType) == 0x000018, "Member 'BP_AISense_Sight_C_ReportStimulus::ResultType' has a wrong offset!");
 static_assert(offsetof(BP_AISense_Sight_C_ReportStimulus, bLastResult) == 0x000019, "Member 'BP_AISense_Sight_C_ReportStimulus::bLastResult' has a wrong offset!");
 static_assert(offsetof(BP_AISense_Sight_C_ReportStimulus, ReturnValue) == 0x00001A, "Member 'BP_AISense_Sight_C_ReportStimulus::ReturnValue' has a wrong offset!");
+
+// Function BP_AISense_Sight.BP_AISense_Sight_C.IsInterestedTarget
+// 0x0020 (0x0020 - 0x0000)
+struct BP_AISense_Sight_C_IsInterestedTarget final
+{
+public:
+	const class AActor*                           ListenerActor;                                     // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 TargetActor;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UX6AISenseConfig_Sight*                 Config;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AISense_Sight_C_IsInterestedTarget) == 0x000008, "Wrong alignment on BP_AISense_Sight_C_IsInterestedTarget");
+static_assert(sizeof(BP_AISense_Sight_C_IsInterestedTarget) == 0x000020, "Wrong size on BP_AISense_Sight_C_IsInterestedTarget");
+static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, ListenerActor) == 0x000000, "Member 'BP_AISense_Sight_C_IsInterestedTarget::ListenerActor' has a wrong offset!");
+static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, TargetActor) == 0x000008, "Member 'BP_AISense_Sight_C_IsInterestedTarget::TargetActor' has a wrong offset!");
+static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, Config) == 0x000010, "Member 'BP_AISense_Sight_C_IsInterestedTarget::Config' has a wrong offset!");
+static_assert(offsetof(BP_AISense_Sight_C_IsInterestedTarget, ReturnValue) == 0x000018, "Member 'BP_AISense_Sight_C_IsInterestedTarget::ReturnValue' has a wrong offset!");
 
 // Function BP_AISense_Sight.BP_AISense_Sight_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

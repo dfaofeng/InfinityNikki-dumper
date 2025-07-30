@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EClothesType.EClothesType
-// NumValues: 0x000B
+// NumValues: 0x000D
 enum class EClothesType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -28,7 +28,9 @@ enum class EClothesType : uint8
 	NewEnumerator8                           = 7,
 	NewEnumerator9                           = 8,
 	NewEnumerator10                          = 9,
-	EClothesType_MAX                         = 10,
+	NewEnumerator11                          = 10,
+	NewEnumerator12                          = 11,
+	EClothesType_MAX                         = 12,
 };
 
 }

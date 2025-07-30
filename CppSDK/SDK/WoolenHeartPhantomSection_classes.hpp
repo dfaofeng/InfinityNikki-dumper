@@ -27,8 +27,8 @@ public:
 	class ABP_WoolenHeart_SimulatedLSeq_C*        BP_WoolenHeartSimulatedLSeq;                       // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WoolenHeartPhantomSection(int32 EntryPoint);
 	void K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject);
+	void ExecuteUbergraph_WoolenHeartPhantomSection(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

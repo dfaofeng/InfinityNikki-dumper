@@ -16,28 +16,6 @@
 namespace SDK::Params
 {
 
-// Function ANS_ForceTowardAccel.ANS_ForceTowardAccel_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_ForceTowardAccel_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ForceTowardAccel_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ForceTowardAccel_C_GetModuleName");
-static_assert(sizeof(ANS_ForceTowardAccel_C_GetModuleName) == 0x000010, "Wrong size on ANS_ForceTowardAccel_C_GetModuleName");
-static_assert(offsetof(ANS_ForceTowardAccel_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ForceTowardAccel_C_GetModuleName::ReturnValue' has a wrong offset!");
-
-// Function ANS_ForceTowardAccel.ANS_ForceTowardAccel_C.GetNotifyName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_ForceTowardAccel_C_GetNotifyName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ForceTowardAccel_C_GetNotifyName) == 0x000008, "Wrong alignment on ANS_ForceTowardAccel_C_GetNotifyName");
-static_assert(sizeof(ANS_ForceTowardAccel_C_GetNotifyName) == 0x000010, "Wrong size on ANS_ForceTowardAccel_C_GetNotifyName");
-static_assert(offsetof(ANS_ForceTowardAccel_C_GetNotifyName, ReturnValue) == 0x000000, "Member 'ANS_ForceTowardAccel_C_GetNotifyName::ReturnValue' has a wrong offset!");
-
 // Function ANS_ForceTowardAccel.ANS_ForceTowardAccel_C.Received_NotifyTick
 // 0x0050 (0x0050 - 0x0000)
 struct ANS_ForceTowardAccel_C_Received_NotifyTick final
@@ -57,6 +35,28 @@ static_assert(offsetof(ANS_ForceTowardAccel_C_Received_NotifyTick, Animation) ==
 static_assert(offsetof(ANS_ForceTowardAccel_C_Received_NotifyTick, FrameDeltaTime) == 0x000010, "Member 'ANS_ForceTowardAccel_C_Received_NotifyTick::FrameDeltaTime' has a wrong offset!");
 static_assert(offsetof(ANS_ForceTowardAccel_C_Received_NotifyTick, EventReference) == 0x000018, "Member 'ANS_ForceTowardAccel_C_Received_NotifyTick::EventReference' has a wrong offset!");
 static_assert(offsetof(ANS_ForceTowardAccel_C_Received_NotifyTick, ReturnValue) == 0x000048, "Member 'ANS_ForceTowardAccel_C_Received_NotifyTick::ReturnValue' has a wrong offset!");
+
+// Function ANS_ForceTowardAccel.ANS_ForceTowardAccel_C.GetNotifyName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_ForceTowardAccel_C_GetNotifyName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ForceTowardAccel_C_GetNotifyName) == 0x000008, "Wrong alignment on ANS_ForceTowardAccel_C_GetNotifyName");
+static_assert(sizeof(ANS_ForceTowardAccel_C_GetNotifyName) == 0x000010, "Wrong size on ANS_ForceTowardAccel_C_GetNotifyName");
+static_assert(offsetof(ANS_ForceTowardAccel_C_GetNotifyName, ReturnValue) == 0x000000, "Member 'ANS_ForceTowardAccel_C_GetNotifyName::ReturnValue' has a wrong offset!");
+
+// Function ANS_ForceTowardAccel.ANS_ForceTowardAccel_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_ForceTowardAccel_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ForceTowardAccel_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ForceTowardAccel_C_GetModuleName");
+static_assert(sizeof(ANS_ForceTowardAccel_C_GetModuleName) == 0x000010, "Wrong size on ANS_ForceTowardAccel_C_GetModuleName");
+static_assert(offsetof(ANS_ForceTowardAccel_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ForceTowardAccel_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

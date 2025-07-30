@@ -17,6 +17,19 @@
 namespace SDK::Params
 {
 
+// Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.CreateSceneMarkerCell
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_SceneMarkerPanel_C_CreateSceneMarkerCell final
+{
+public:
+	class UWBP_UI_SceneMarkerCell_C*              Cell;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWBP_UI_SceneMarkerCell_C*              CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell) == 0x000008, "Wrong alignment on WBP_SceneMarkerPanel_C_CreateSceneMarkerCell");
+static_assert(sizeof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell) == 0x000010, "Wrong size on WBP_SceneMarkerPanel_C_CreateSceneMarkerCell");
+static_assert(offsetof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell, Cell) == 0x000000, "Member 'WBP_SceneMarkerPanel_C_CreateSceneMarkerCell::Cell' has a wrong offset!");
+static_assert(offsetof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell, CallFunc_Create_ReturnValue) == 0x000008, "Member 'WBP_SceneMarkerPanel_C_CreateSceneMarkerCell::CallFunc_Create_ReturnValue' has a wrong offset!");
+
 // Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.ConvertScreenPosToWidgetPos
 // 0x00D8 (0x00D8 - 0x0000)
 struct WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos final
@@ -46,19 +59,6 @@ static_assert(offsetof(WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos, CallF
 static_assert(offsetof(WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos, CallFunc_AbsoluteToLocal_ReturnValue) == 0x0000B0, "Member 'WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos::CallFunc_AbsoluteToLocal_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos, CallFunc_Divide_Vector2DFloat_ReturnValue) == 0x0000C0, "Member 'WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos::CallFunc_Divide_Vector2DFloat_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos, CallFunc_Divide_Vector2DFloat_B_ImplicitCast) == 0x0000D0, "Member 'WBP_SceneMarkerPanel_C_ConvertScreenPosToWidgetPos::CallFunc_Divide_Vector2DFloat_B_ImplicitCast' has a wrong offset!");
-
-// Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.CreateSceneMarkerCell
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_SceneMarkerPanel_C_CreateSceneMarkerCell final
-{
-public:
-	class UWBP_UI_SceneMarkerCell_C*              Cell;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UWBP_UI_SceneMarkerCell_C*              CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell) == 0x000008, "Wrong alignment on WBP_SceneMarkerPanel_C_CreateSceneMarkerCell");
-static_assert(sizeof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell) == 0x000010, "Wrong size on WBP_SceneMarkerPanel_C_CreateSceneMarkerCell");
-static_assert(offsetof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell, Cell) == 0x000000, "Member 'WBP_SceneMarkerPanel_C_CreateSceneMarkerCell::Cell' has a wrong offset!");
-static_assert(offsetof(WBP_SceneMarkerPanel_C_CreateSceneMarkerCell, CallFunc_Create_ReturnValue) == 0x000008, "Member 'WBP_SceneMarkerPanel_C_CreateSceneMarkerCell::CallFunc_Create_ReturnValue' has a wrong offset!");
 
 // Function WBP_SceneMarkerPanel.WBP_SceneMarkerPanel_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

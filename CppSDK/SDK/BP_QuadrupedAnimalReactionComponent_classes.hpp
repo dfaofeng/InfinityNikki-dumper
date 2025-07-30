@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "E_CleaningAbilityType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SMSystem_classes.hpp"
 #include "EQuadrupedAnimalReactionState_structs.hpp"
-#include "E_CleaningAbilityType_structs.hpp"
 
 
 namespace SDK
@@ -30,11 +30,11 @@ public:
 	class UFSM_QuadrupedAnimalReaction_C*         FSM;                                               // 0x0220(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ServerInit();
-	void OnCleanStateChanged(bool bIsClean);
-	void OnCleaningStarted(class AActor* CleaningPlayer, E_CleaningAbilityType CleaningAbilityType);
-	void ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent(int32 EntryPoint);
 	void BP_SetState(EQuadrupedAnimalReactionState NewState);
+	void ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent(int32 EntryPoint);
+	void OnCleaningStarted(class AActor* CleaningPlayer, E_CleaningAbilityType CleaningAbilityType);
+	void OnCleanStateChanged(bool bIsClean);
+	void ServerInit();
 
 	class FString GetModuleName() const;
 

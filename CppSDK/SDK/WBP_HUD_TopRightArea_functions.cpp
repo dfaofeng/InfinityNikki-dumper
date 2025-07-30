@@ -17,49 +17,29 @@
 namespace SDK
 {
 
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.ExecuteUbergraph_WBP_HUD_TopRightArea
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_TopRightArea_C::ExecuteUbergraph_WBP_HUD_TopRightArea(int32 EntryPoint)
+void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "ExecuteUbergraph_WBP_HUD_TopRightArea");
-
-	Params::WBP_HUD_TopRightArea_C_ExecuteUbergraph_WBP_HUD_TopRightArea Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.OnFadeInQuickShoot
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_TopRightArea_C::OnFadeInQuickShoot()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "OnFadeInQuickShoot");
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.OnFadeInStart
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_TopRightArea_C::OnFadeInStart()
+void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "OnFadeInStart");
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -85,31 +65,51 @@ void UWBP_HUD_TopRightArea_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.OnFadeInStart
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea()
+void UWBP_HUD_TopRightArea_C::OnFadeInStart()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea");
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "OnFadeInStart");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.OnFadeInQuickShoot
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0()
+void UWBP_HUD_TopRightArea_C::OnFadeInQuickShoot()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0");
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "OnFadeInQuickShoot");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.ExecuteUbergraph_WBP_HUD_TopRightArea
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_TopRightArea_C::ExecuteUbergraph_WBP_HUD_TopRightArea(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "ExecuteUbergraph_WBP_HUD_TopRightArea");
+
+	Params::WBP_HUD_TopRightArea_C_ExecuteUbergraph_WBP_HUD_TopRightArea Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

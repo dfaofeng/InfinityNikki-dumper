@@ -35,9 +35,9 @@ public:
 	EMovieSceneNetPolicy                          FadeNetPolicy;                                     // 0x0165(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BlackScreenSection(int32 EntryPoint);
-	void K2_OnSectionBegin();
 	void K2_OnSectionEnd();
+	void K2_OnSectionBegin();
+	void ExecuteUbergraph_BlackScreenSection(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

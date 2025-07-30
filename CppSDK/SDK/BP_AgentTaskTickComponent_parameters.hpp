@@ -16,18 +16,51 @@
 namespace SDK::Params
 {
 
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.AddTickableTask
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.RemoveTickableTask
 // 0x0010 (0x0010 - 0x0000)
-struct BP_AgentTaskTickComponent_C_AddTickableTask final
+struct BP_AgentTaskTickComponent_C_RemoveTickableTask final
 {
 public:
 	class UBP_AgentTaskBase_C*                    Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AgentTaskTickComponent_C_AddTickableTask) == 0x000008, "Wrong alignment on BP_AgentTaskTickComponent_C_AddTickableTask");
-static_assert(sizeof(BP_AgentTaskTickComponent_C_AddTickableTask) == 0x000010, "Wrong size on BP_AgentTaskTickComponent_C_AddTickableTask");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_AddTickableTask, Task) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_AddTickableTask::Task' has a wrong offset!");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_AddTickableTask, CallFunc_Array_AddUnique_ReturnValue) == 0x000008, "Member 'BP_AgentTaskTickComponent_C_AddTickableTask::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_AgentTaskTickComponent_C_RemoveTickableTask) == 0x000008, "Wrong alignment on BP_AgentTaskTickComponent_C_RemoveTickableTask");
+static_assert(sizeof(BP_AgentTaskTickComponent_C_RemoveTickableTask) == 0x000010, "Wrong size on BP_AgentTaskTickComponent_C_RemoveTickableTask");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_RemoveTickableTask, Task) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_RemoveTickableTask::Task' has a wrong offset!");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_RemoveTickableTask, CallFunc_Array_RemoveItem_ReturnValue) == 0x000008, "Member 'BP_AgentTaskTickComponent_C_RemoveTickableTask::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.RejectRecycle
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AgentTaskTickComponent_C_RejectRecycle final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AgentTaskTickComponent_C_RejectRecycle) == 0x000001, "Wrong alignment on BP_AgentTaskTickComponent_C_RejectRecycle");
+static_assert(sizeof(BP_AgentTaskTickComponent_C_RejectRecycle) == 0x000001, "Wrong size on BP_AgentTaskTickComponent_C_RejectRecycle");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_RejectRecycle, ReturnValue) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_RejectRecycle::ReturnValue' has a wrong offset!");
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AgentTaskTickComponent_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AgentTaskTickComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AgentTaskTickComponent_C_ReceiveTick");
+static_assert(sizeof(BP_AgentTaskTickComponent_C_ReceiveTick) == 0x000004, "Wrong size on BP_AgentTaskTickComponent_C_ReceiveTick");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AgentTaskTickComponent_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AgentTaskTickComponent_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_AgentTaskTickComponent_C_ReceiveEndPlay");
+static_assert(sizeof(BP_AgentTaskTickComponent_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_AgentTaskTickComponent_C_ReceiveEndPlay");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ExecuteUbergraph_BP_AgentTaskTickComponent
 // 0x0050 (0x0050 - 0x0000)
@@ -71,51 +104,18 @@ static_assert(offsetof(BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTask
 static_assert(offsetof(BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTaskTickComponent, CallFunc_ReceiveTickUncheck_DeltaTime_ImplicitCast) == 0x000040, "Member 'BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTaskTickComponent::CallFunc_ReceiveTickUncheck_DeltaTime_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTaskTickComponent, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000048, "Member 'BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTaskTickComponent::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AgentTaskTickComponent_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AgentTaskTickComponent_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_AgentTaskTickComponent_C_ReceiveEndPlay");
-static_assert(sizeof(BP_AgentTaskTickComponent_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_AgentTaskTickComponent_C_ReceiveEndPlay");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AgentTaskTickComponent_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AgentTaskTickComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AgentTaskTickComponent_C_ReceiveTick");
-static_assert(sizeof(BP_AgentTaskTickComponent_C_ReceiveTick) == 0x000004, "Wrong size on BP_AgentTaskTickComponent_C_ReceiveTick");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.RejectRecycle
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AgentTaskTickComponent_C_RejectRecycle final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AgentTaskTickComponent_C_RejectRecycle) == 0x000001, "Wrong alignment on BP_AgentTaskTickComponent_C_RejectRecycle");
-static_assert(sizeof(BP_AgentTaskTickComponent_C_RejectRecycle) == 0x000001, "Wrong size on BP_AgentTaskTickComponent_C_RejectRecycle");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_RejectRecycle, ReturnValue) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_RejectRecycle::ReturnValue' has a wrong offset!");
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.RemoveTickableTask
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.AddTickableTask
 // 0x0010 (0x0010 - 0x0000)
-struct BP_AgentTaskTickComponent_C_RemoveTickableTask final
+struct BP_AgentTaskTickComponent_C_AddTickableTask final
 {
 public:
 	class UBP_AgentTaskBase_C*                    Task;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_RemoveItem_ReturnValue;             // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AgentTaskTickComponent_C_RemoveTickableTask) == 0x000008, "Wrong alignment on BP_AgentTaskTickComponent_C_RemoveTickableTask");
-static_assert(sizeof(BP_AgentTaskTickComponent_C_RemoveTickableTask) == 0x000010, "Wrong size on BP_AgentTaskTickComponent_C_RemoveTickableTask");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_RemoveTickableTask, Task) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_RemoveTickableTask::Task' has a wrong offset!");
-static_assert(offsetof(BP_AgentTaskTickComponent_C_RemoveTickableTask, CallFunc_Array_RemoveItem_ReturnValue) == 0x000008, "Member 'BP_AgentTaskTickComponent_C_RemoveTickableTask::CallFunc_Array_RemoveItem_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_AgentTaskTickComponent_C_AddTickableTask) == 0x000008, "Wrong alignment on BP_AgentTaskTickComponent_C_AddTickableTask");
+static_assert(sizeof(BP_AgentTaskTickComponent_C_AddTickableTask) == 0x000010, "Wrong size on BP_AgentTaskTickComponent_C_AddTickableTask");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_AddTickableTask, Task) == 0x000000, "Member 'BP_AgentTaskTickComponent_C_AddTickableTask::Task' has a wrong offset!");
+static_assert(offsetof(BP_AgentTaskTickComponent_C_AddTickableTask, CallFunc_Array_AddUnique_ReturnValue) == 0x000008, "Member 'BP_AgentTaskTickComponent_C_AddTickableTask::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
 
 }
 

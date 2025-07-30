@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void K2_OnInstanceDestroyed();
 	void ExecuteUbergraph_X6BTTask_LuaBase(int32 EntryPoint);
+	void K2_OnInstanceDestroyed();
 
 	class FString GetModuleName() const;
 

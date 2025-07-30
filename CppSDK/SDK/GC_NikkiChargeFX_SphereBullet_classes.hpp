@@ -32,11 +32,11 @@ public:
 	class FName                                   AttachPointName;                                   // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet(int32 EntryPoint);
-	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
-	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
-	void PlayFX(class ACharacter* Char);
 	void RemoveFX(class ACharacter* Char);
+	void PlayFX(class ACharacter* Char);
+	bool OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	bool OnActive(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters);
+	void ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

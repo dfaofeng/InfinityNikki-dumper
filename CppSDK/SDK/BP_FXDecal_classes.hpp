@@ -30,8 +30,8 @@ public:
 	struct FColor                                 Color;                                             // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_FXDecal(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_FXDecal(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -21,8 +21,8 @@ namespace SDK
 class IBPI_CustomWidgetFadeAnimation_C final : public IInterface
 {
 public:
-	void GetFadeOutAnimation(class UWidgetAnimation** Anim);
 	void GetFadeInAnimation(class UWidgetAnimation** Anim);
+	void GetFadeOutAnimation(class UWidgetAnimation** Anim);
 
 public:
 	static class UClass* StaticClass()

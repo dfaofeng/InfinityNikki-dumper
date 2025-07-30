@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "Struct_ClothMatchStrsArray_structs.hpp"
 #include "E_MatchClothType_structs.hpp"
-#include "Struct_ClothMatchSkelMap_structs.hpp"
 #include "Struct_ClothMatchSkelCompMap_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "Struct_ClothMatchSkelMap_structs.hpp"
 #include "Struct_ClothMatchNameArray_structs.hpp"
 #include "NikkiFitCloth_structs.hpp"
 

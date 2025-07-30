@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function ANS_ForceFeedback.ANS_ForceFeedback_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UANS_ForceFeedback_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_ForceFeedback_C", "GetModuleName");
-
-	Params::ANS_ForceFeedback_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ANS_ForceFeedback.ANS_ForceFeedback_C.GetNotifyName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -50,6 +30,26 @@ class FString UANS_ForceFeedback_C::GetNotifyName() const
 		Func = Class->GetFunction("ANS_ForceFeedback_C", "GetNotifyName");
 
 	Params::ANS_ForceFeedback_C_GetNotifyName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ANS_ForceFeedback.ANS_ForceFeedback_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UANS_ForceFeedback_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_ForceFeedback_C", "GetModuleName");
+
+	Params::ANS_ForceFeedback_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

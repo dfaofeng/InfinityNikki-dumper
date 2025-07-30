@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "EDamagePerformanceType_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "EScenarioCombatEventType_structs.hpp"
 #include "F_BuffDurationSet_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "EScenarioCombatEventType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EDamagePerformanceType_structs.hpp"
 #include "EHitDisMoveType_structs.hpp"
 #include "EHitReason_structs.hpp"
 #include "EFeedBackReason_structs.hpp"
@@ -66,6 +66,31 @@ public:
 static_assert(alignof(X6BlueprintCombatLibrary_C_BP_TryShowTreasurebox) == 0x000008, "Wrong alignment on X6BlueprintCombatLibrary_C_BP_TryShowTreasurebox");
 static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_TryShowTreasurebox) == 0x000008, "Wrong size on X6BlueprintCombatLibrary_C_BP_TryShowTreasurebox");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_TryShowTreasurebox, __WorldContext) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_TryShowTreasurebox::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_SkillClimaxBurstQuit
+// 0x0008 (0x0008 - 0x0000)
+struct X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit) == 0x000008, "Wrong alignment on X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit");
+static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit) == 0x000008, "Wrong size on X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit, __WorldContext) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_SkillClimaxBurstQuit::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_SetSkillClimaxBurstBlock
+// 0x0010 (0x0010 - 0x0000)
+struct X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock final
+{
+public:
+	bool                                          EnableBlock;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock) == 0x000008, "Wrong alignment on X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock");
+static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock) == 0x000010, "Wrong size on X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock, EnableBlock) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock::EnableBlock' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock, __WorldContext) == 0x000008, "Member 'X6BlueprintCombatLibrary_C_BP_SetSkillClimaxBurstBlock::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_SetShieldState
 // 0x0018 (0x0018 - 0x0000)
@@ -143,6 +168,23 @@ static_assert(alignof(X6BlueprintCombatLibrary_C_BP_ResetAISightConfig) == 0x000
 static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_ResetAISightConfig) == 0x000010, "Wrong size on X6BlueprintCombatLibrary_C_BP_ResetAISightConfig");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ResetAISightConfig, Actor) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_ResetAISightConfig::Actor' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ResetAISightConfig, __WorldContext) == 0x000008, "Member 'X6BlueprintCombatLibrary_C_BP_ResetAISightConfig::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_RemoveMotionWarping
+// 0x0028 (0x0028 - 0x0000)
+struct X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 WarpKey;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSuccess;                                          // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping) == 0x000008, "Wrong alignment on X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping");
+static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping) == 0x000028, "Wrong size on X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping, Actor) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping, WarpKey) == 0x000008, "Member 'X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping::WarpKey' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping, __WorldContext) == 0x000018, "Member 'X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping, bSuccess) == 0x000020, "Member 'X6BlueprintCombatLibrary_C_BP_RemoveMotionWarping::bSuccess' has a wrong offset!");
 
 // Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_RemoveBuff
 // 0x0018 (0x0018 - 0x0000)
@@ -723,6 +765,27 @@ static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_BlendCameraIn, CameraToBlen
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_BlendCameraIn, BlendInTransitionParams) == 0x000010, "Member 'X6BlueprintCombatLibrary_C_BP_BlendCameraIn::BlendInTransitionParams' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_BlendCameraIn, __WorldContext) == 0x000030, "Member 'X6BlueprintCombatLibrary_C_BP_BlendCameraIn::__WorldContext' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_BlendCameraIn, ConfigIndex) == 0x000038, "Member 'X6BlueprintCombatLibrary_C_BP_BlendCameraIn::ConfigIndex' has a wrong offset!");
+
+// Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_ApplyMotionWarping
+// 0x0058 (0x0058 - 0x0000)
+struct X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 WarpKey;                                           // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Rotation;                                          // 0x0030(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                __WorldContext;                                    // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSuccess;                                          // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping) == 0x000008, "Wrong alignment on X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping");
+static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping) == 0x000058, "Wrong size on X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping, Actor) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping, WarpKey) == 0x000008, "Member 'X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping::WarpKey' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping, Location) == 0x000018, "Member 'X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping::Location' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping, Rotation) == 0x000030, "Member 'X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping::Rotation' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping, __WorldContext) == 0x000048, "Member 'X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping, bSuccess) == 0x000050, "Member 'X6BlueprintCombatLibrary_C_BP_ApplyMotionWarping::bSuccess' has a wrong offset!");
 
 // Function X6BlueprintCombatLibrary.X6BlueprintCombatLibrary_C.BP_AddBuff
 // 0x0028 (0x0028 - 0x0000)

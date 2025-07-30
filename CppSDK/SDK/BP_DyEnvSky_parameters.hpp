@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "DynamicEnvironmentSystem_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -133,7 +133,7 @@ static_assert(sizeof(BP_DyEnvSky_C_Manual_Operation_TOD) == 0x000008, "Wrong siz
 static_assert(offsetof(BP_DyEnvSky_C_Manual_Operation_TOD, Time) == 0x000000, "Member 'BP_DyEnvSky_C_Manual_Operation_TOD::Time' has a wrong offset!");
 
 // Function BP_DyEnvSky.BP_DyEnvSky_C.LimitSunRotator
-// 0x2208 (0x2208 - 0x0000)
+// 0x21D0 (0x21D0 - 0x0000)
 struct BP_DyEnvSky_C_LimitSunRotator final
 {
 public:
@@ -143,171 +143,151 @@ public:
 	double                                        Free;                                              // 0x0138(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Limited;                                           // 0x0140(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Swap_Factor;                                       // 0x0148(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0150(0x0E08)(ConstParm)
-	double                                        CallFunc_BreakVector_X;                            // 0x0F58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0F60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0F68(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0F70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_RLerp_ReturnValue;                        // 0x0F88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0FA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0FA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x0FC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Is_PC_Platform_Low_ReturnValue;           // 0x0FD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FD9[0x3];                                      // 0x0FD9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0FDC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x0FE0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FE1[0x7];                                      // 0x0FE1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0FE8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0FF0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FF4[0x4];                                      // 0x0FF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVectorValue_ReturnValue;               // 0x0FF8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x1010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x1028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x1038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x103C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x1040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1044[0x4];                                     // 0x1044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue_2;                // 0x1048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue_1;    // 0x1060(0x0E08)(ConstParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1E68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E69[0x7];                                     // 0x1E69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x1E70(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x1E80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x1E81(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x1E82(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E83[0x5];                                     // 0x1E83(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_RLerp_ReturnValue_1;                      // 0x1E88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x1EA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1EA1[0x7];                                     // 0x1EA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x1EA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x1EC0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x1FB8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_2;           // 0x1FD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_3;           // 0x1FE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x2000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x2008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue_4;           // 0x2010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x2028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x2040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x2058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x2070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_SelectRotator_ReturnValue;                // 0x2088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_RLerp_ReturnValue_2;                      // 0x20A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x20B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x20D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x20E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_VLerp_ReturnValue_1;                      // 0x20F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x2108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x2110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x2120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x2128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue_1;       // 0x2140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_RLerp_ReturnValue_3;                      // 0x2158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_VLerp_ReturnValue_2;                      // 0x2170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x2188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x21A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0150(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0168(0x0E08)(ConstParm)
+	struct FRotator                               CallFunc_RLerp_ReturnValue;                        // 0x0F70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_BreakVector_X;                            // 0x0F88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x0F90(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x0F98(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0FA0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0FB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Is_PC_Platform_Low_ReturnValue;           // 0x0FC0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC1[0x7];                                      // 0x0FC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_1;                // 0x0FC8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0FE0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FE4[0x4];                                      // 0x0FE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVectorValue_ReturnValue;               // 0x0FE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x1000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1011[0x7];                                     // 0x1011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x1018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x1020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1021[0x7];                                     // 0x1021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x1028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x1040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x1044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x1048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_104C[0x4];                                     // 0x104C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue_2;                // 0x1050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x1068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1069[0x7];                                     // 0x1069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue_1;    // 0x1070(0x0E08)(ConstParm)
+	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x1E78(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x1E88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x1E89(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x1E8A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1E8B[0x5];                                     // 0x1E8B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_RLerp_ReturnValue_1;                      // 0x1E90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x1EA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1EA9[0x7];                                     // 0x1EA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x1EB0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x1EC8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_1;           // 0x1FC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_2;           // 0x1FD8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_3;           // 0x1FF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x2008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue_1;        // 0x2010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x2028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x2030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VLerp_ReturnValue;                        // 0x2048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VLerp_ReturnValue_1;                      // 0x2060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_SelectVector_ReturnValue;                 // 0x2078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x2090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_VLerp_ReturnValue_2;                      // 0x20A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x20B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Normal_ReturnValue;                       // 0x20D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x20E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_2;   // 0x2100(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_RLerp_ReturnValue_2;                      // 0x2110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue_4;           // 0x2128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue_1;      // 0x2140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue_1;       // 0x2158(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_SelectRotator_ReturnValue;                // 0x2170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_RLerp_ReturnValue_3;                      // 0x2188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x21A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_21A1[0x3];                                     // 0x21A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_2;   // 0x21A4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_SetActorRotation_ReturnValue;          // 0x21B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21B5[0x3];                                     // 0x21B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x21B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x21C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21C1[0x3];                                     // 0x21C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RLerp_Alpha_ImplicitCast;                 // 0x21C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x21C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x21CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x21D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x21D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RLerp_Alpha_ImplicitCast_1;               // 0x21D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21DC[0x4];                                     // 0x21DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast; // 0x21E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1; // 0x21E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21EC[0x4];                                     // 0x21EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_CalculatorFinalDirLitRot_InRotFreeMoon_ImplicitCast; // 0x21F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_RLerp_Alpha_ImplicitCast_2;               // 0x21F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_VLerp_Alpha_ImplicitCast;                 // 0x21FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x2200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RLerp_Alpha_ImplicitCast;                 // 0x21A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x21A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Roll_ImplicitCast;            // 0x21AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x21B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x21B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RLerp_Alpha_ImplicitCast_1;               // 0x21B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21BC[0x4];                                     // 0x21BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_CalculatorFinalDirLitRot_InRotFreeMoon_ImplicitCast; // 0x21C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_RLerp_Alpha_ImplicitCast_2;               // 0x21C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_VLerp_Alpha_ImplicitCast;                 // 0x21CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_DyEnvSky_C_LimitSunRotator) == 0x000008, "Wrong alignment on BP_DyEnvSky_C_LimitSunRotator");
-static_assert(sizeof(BP_DyEnvSky_C_LimitSunRotator) == 0x002208, "Wrong size on BP_DyEnvSky_C_LimitSunRotator");
+static_assert(sizeof(BP_DyEnvSky_C_LimitSunRotator) == 0x0021D0, "Wrong size on BP_DyEnvSky_C_LimitSunRotator");
 static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, Final_Sun_Light_Setting) == 0x000000, "Member 'BP_DyEnvSky_C_LimitSunRotator::Final_Sun_Light_Setting' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, Sun_Light) == 0x000128, "Member 'BP_DyEnvSky_C_LimitSunRotator::Sun_Light' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, Moon_Light) == 0x000130, "Member 'BP_DyEnvSky_C_LimitSunRotator::Moon_Light' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, Free) == 0x000138, "Member 'BP_DyEnvSky_C_LimitSunRotator::Free' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, Limited) == 0x000140, "Member 'BP_DyEnvSky_C_LimitSunRotator::Limited' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, Swap_Factor) == 0x000148, "Member 'BP_DyEnvSky_C_LimitSunRotator::Swap_Factor' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000150, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakVector_X) == 0x000F58, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakVector_Y) == 0x000F60, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakVector_Z) == 0x000F68, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_ReturnValue) == 0x000F70, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue) == 0x000F88, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000FA0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000FA8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_ReturnValue_1) == 0x000FC0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Is_PC_Platform_Low_ReturnValue) == 0x000FD8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Is_PC_Platform_Low_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000FDC, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GreaterEqual_DoubleDouble_ReturnValue) == 0x000FE0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GreaterEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SelectFloat_ReturnValue) == 0x000FE8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000FF0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetVectorValue_ReturnValue) == 0x000FF8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetVectorValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x001010, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x001028, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakRotator_Roll) == 0x001038, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakRotator_Pitch) == 0x00103C, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakRotator_Yaw) == 0x001040, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_ReturnValue_2) == 0x001048, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetFinalWeatherSettings_ReturnValue_1) == 0x001060, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetFinalWeatherSettings_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_IsValid_ReturnValue) == 0x001E68, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x001E70, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x001E80, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x001E81, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BooleanOR_ReturnValue) == 0x001E82, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue_1) == 0x001E88, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BooleanOR_ReturnValue_1) == 0x001EA0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue) == 0x001EA8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x001EC0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_1) == 0x001FB8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_2) == 0x001FD0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_3) == 0x001FE8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x002000, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x002008, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_4) == 0x002010, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_ReturnValue) == 0x002028, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_VectorVector_ReturnValue) == 0x002040, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SelectVector_ReturnValue) == 0x002058, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x002070, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SelectRotator_ReturnValue) == 0x002088, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SelectRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue_2) == 0x0020A0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x0020B8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0020D0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x0020E8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_ReturnValue_1) == 0x0020F0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x002108, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x002110, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_FClamp_ReturnValue) == 0x002120, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x002128, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToRotator_ReturnValue_1) == 0x002140, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToRotator_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue_3) == 0x002158, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_ReturnValue_2) == 0x002170, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Normal_ReturnValue) == 0x002188, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Normal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_IsValid_ReturnValue_1) == 0x0021A0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToLinearColor_ReturnValue_2) == 0x0021A4, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToLinearColor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0021B4, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x0021B8, "Member 'BP_DyEnvSky_C_LimitSunRotator::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, K2Node_DynamicCast_bSuccess) == 0x0021C0, "Member 'BP_DyEnvSky_C_LimitSunRotator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_Alpha_ImplicitCast) == 0x0021C4, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x0021C8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x0021CC, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0021D0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x0021D4, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_Alpha_ImplicitCast_1) == 0x0021D8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_Alpha_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast) == 0x0021E0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GreaterEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1) == 0x0021E8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_CalculatorFinalDirLitRot_InRotFreeMoon_ImplicitCast) == 0x0021F0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_CalculatorFinalDirLitRot_InRotFreeMoon_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_Alpha_ImplicitCast_2) == 0x0021F8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_Alpha_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_Alpha_ImplicitCast) == 0x0021FC, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_Alpha_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x002200, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000150, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000168, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue) == 0x000F70, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakVector_X) == 0x000F88, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakVector_Y) == 0x000F90, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakVector_Z) == 0x000F98, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_ReturnValue) == 0x000FA0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000FB8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Is_PC_Platform_Low_ReturnValue) == 0x000FC0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Is_PC_Platform_Low_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_ReturnValue_1) == 0x000FC8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000FE0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetVectorValue_ReturnValue) == 0x000FE8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetVectorValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x001000, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_IsValid_ReturnValue) == 0x001010, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x001018, "Member 'BP_DyEnvSky_C_LimitSunRotator::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, K2Node_DynamicCast_bSuccess) == 0x001020, "Member 'BP_DyEnvSky_C_LimitSunRotator::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_K2_GetComponentRotation_ReturnValue) == 0x001028, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_K2_GetComponentRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakRotator_Roll) == 0x001040, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakRotator_Pitch) == 0x001044, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BreakRotator_Yaw) == 0x001048, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_ReturnValue_2) == 0x001050, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_IsValid_ReturnValue_1) == 0x001068, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetFinalWeatherSettings_ReturnValue_1) == 0x001070, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetFinalWeatherSettings_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x001E78, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x001E88, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x001E89, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BooleanOR_ReturnValue) == 0x001E8A, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue_1) == 0x001E90, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_BooleanOR_ReturnValue_1) == 0x001EA8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue) == 0x001EB0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x001EC8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_1) == 0x001FC0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_2) == 0x001FD8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_3) == 0x001FF0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Add_DoubleDouble_ReturnValue) == 0x002008, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_DoubleToVector_ReturnValue_1) == 0x002010, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_DoubleToVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x002028, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_VectorVector_ReturnValue) == 0x002030, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_ReturnValue) == 0x002048, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_ReturnValue_1) == 0x002060, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SelectVector_ReturnValue) == 0x002078, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SelectVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x002090, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_ReturnValue_2) == 0x0020A0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x0020B8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Normal_ReturnValue) == 0x0020D0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Normal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x0020E8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToLinearColor_ReturnValue_2) == 0x002100, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToLinearColor_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue_2) == 0x002110, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_GetForwardVector_ReturnValue_4) == 0x002128, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_GetForwardVector_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x002140, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_Conv_VectorToRotator_ReturnValue_1) == 0x002158, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_Conv_VectorToRotator_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SelectRotator_ReturnValue) == 0x002170, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SelectRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_ReturnValue_3) == 0x002188, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_K2_SetActorRotation_ReturnValue) == 0x0021A0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_K2_SetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_Alpha_ImplicitCast) == 0x0021A4, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_Alpha_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x0021A8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_Roll_ImplicitCast) == 0x0021AC, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_Roll_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x0021B0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0021B4, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_Alpha_ImplicitCast_1) == 0x0021B8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_Alpha_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_CalculatorFinalDirLitRot_InRotFreeMoon_ImplicitCast) == 0x0021C0, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_CalculatorFinalDirLitRot_InRotFreeMoon_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_RLerp_Alpha_ImplicitCast_2) == 0x0021C8, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_RLerp_Alpha_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSky_C_LimitSunRotator, CallFunc_VLerp_Alpha_ImplicitCast) == 0x0021CC, "Member 'BP_DyEnvSky_C_LimitSunRotator::CallFunc_VLerp_Alpha_ImplicitCast' has a wrong offset!");
 
 // Function BP_DyEnvSky.BP_DyEnvSky_C.Gizmo
 // 0x0018 (0x0018 - 0x0000)

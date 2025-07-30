@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Enum_WeaponPoseType_structs.hpp"
-#include "Enum_WeaponHandMode_structs.hpp"
 #include "EInt32_WeaponPoseAnimType_structs.hpp"
+#include "Enum_WeaponHandMode_structs.hpp"
 
 
 namespace SDK

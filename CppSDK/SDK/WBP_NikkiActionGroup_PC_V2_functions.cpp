@@ -17,35 +17,15 @@
 namespace SDK
 {
 
-// Function WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C.ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C.SetDefaultActionIcon
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_NikkiActionGroup_PC_V2_C::ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2(int32 EntryPoint)
+void UWBP_NikkiActionGroup_PC_V2_C::SetDefaultActionIcon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V2_C", "ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2");
-
-	Params::WBP_NikkiActionGroup_PC_V2_C_ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C.NotifyRefreshSuitIcon
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_NikkiActionGroup_PC_V2_C::NotifyRefreshSuitIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V2_C", "NotifyRefreshSuitIcon");
+		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V2_C", "SetDefaultActionIcon");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,17 +45,37 @@ void UWBP_NikkiActionGroup_PC_V2_C::SequenceEvent__ENTRYPOINTWBP_NikkiActionGrou
 }
 
 
-// Function WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C.SetDefaultActionIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C.NotifyRefreshSuitIcon
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_NikkiActionGroup_PC_V2_C::SetDefaultActionIcon()
+void UWBP_NikkiActionGroup_PC_V2_C::NotifyRefreshSuitIcon()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V2_C", "SetDefaultActionIcon");
+		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V2_C", "NotifyRefreshSuitIcon");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C.ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_NikkiActionGroup_PC_V2_C::ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V2_C", "ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2");
+
+	Params::WBP_NikkiActionGroup_PC_V2_C_ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2 Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "X6Game_classes.hpp"
 #include "ECombatHitMainType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EPlayerPartMaterialType_structs.hpp"
-#include "X6Game_classes.hpp"
 #include "ESkillFlag_structs.hpp"
+#include "EPlayerPartMaterialType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -48,8 +48,9 @@ public:
 	bool                                          BP_FilterApplyOwnerBlock;                          // 0x0688(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESkillFlag                                    BP_IgnoreSkillFlag;                                // 0x0689(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_ApplyMultipleDamage;                            // 0x068A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_68B[0x5];                                      // 0x068B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool bModifyHPSuccess, bool bHitSuccess, const struct FVector& HItPoint, class AActor* Attacker)> OnDamageOrHitSuccessful; // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          BP_CloseHitProcess;                                // 0x068B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bModifyHPSuccess, bool bHitSuccess, const struct FVector& HItPoint, class AActor* Attacker, const struct FVector& HitDirection)> OnDamageOrHitSuccessful; // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ReceiveBeginPlay();
@@ -87,6 +88,7 @@ static_assert(offsetof(UBP_CombatPartHitComponent_C, BP_FilterComboFactorCurve) 
 static_assert(offsetof(UBP_CombatPartHitComponent_C, BP_FilterApplyOwnerBlock) == 0x000688, "Member 'UBP_CombatPartHitComponent_C::BP_FilterApplyOwnerBlock' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPartHitComponent_C, BP_IgnoreSkillFlag) == 0x000689, "Member 'UBP_CombatPartHitComponent_C::BP_IgnoreSkillFlag' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPartHitComponent_C, BP_ApplyMultipleDamage) == 0x00068A, "Member 'UBP_CombatPartHitComponent_C::BP_ApplyMultipleDamage' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPartHitComponent_C, BP_CloseHitProcess) == 0x00068B, "Member 'UBP_CombatPartHitComponent_C::BP_CloseHitProcess' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPartHitComponent_C, OnDamageOrHitSuccessful) == 0x000690, "Member 'UBP_CombatPartHitComponent_C::OnDamageOrHitSuccessful' has a wrong offset!");
 
 }

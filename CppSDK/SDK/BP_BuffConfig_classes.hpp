@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "EBuffMulticastType_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "EBuffMulticastType_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "F_ModifyAttrSet_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "F_AddStateSet_structs.hpp"
 
 

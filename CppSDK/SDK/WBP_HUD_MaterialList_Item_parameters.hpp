@@ -14,27 +14,27 @@
 namespace SDK::Params
 {
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged final
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemValueChangedViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex");
+static_assert(sizeof(WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex");
+static_assert(offsetof(WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged final
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemObjectSetViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex");
+static_assert(sizeof(WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex");
+static_assert(offsetof(WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
 
 // Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.ExecuteUbergraph_WBP_HUD_MaterialList_Item
 // 0x0010 (0x0010 - 0x0000)
@@ -56,27 +56,27 @@ static_assert(offsetof(WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_Mate
 static_assert(offsetof(WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_MaterialList_Item, K2Node_Event_bIsSelected) == 0x000009, "Member 'WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_MaterialList_Item::K2Node_Event_bIsSelected' has a wrong offset!");
 static_assert(offsetof(WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_MaterialList_Item, K2Node_Event_index_1) == 0x00000C, "Member 'WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_MaterialList_Item::K2Node_Event_index_1' has a wrong offset!");
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemObjectSetViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex final
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex");
-static_assert(sizeof(WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex");
-static_assert(offsetof(WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
+static_assert(alignof(WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemValueChangedViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex final
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex");
-static_assert(sizeof(WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex");
-static_assert(offsetof(WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
+static_assert(alignof(WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
 // Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

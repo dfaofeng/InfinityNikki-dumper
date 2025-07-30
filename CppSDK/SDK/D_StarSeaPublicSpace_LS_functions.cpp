@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.AAAA
-// (BlueprintCallable, BlueprintEvent)
-
-void AD_StarSeaPublicSpace_LS_C::AAAA()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("D_StarSeaPublicSpace_LS_C", "AAAA");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.ExecuteUbergraph_D_StarSeaPublicSpace_LS
 // (Final, UbergraphFunction)
 // Parameters:

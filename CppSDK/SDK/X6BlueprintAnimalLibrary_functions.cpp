@@ -17,107 +17,83 @@
 namespace SDK
 {
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetBelongingAnimalCluster
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_IsGlobalAnimalTickManagerActive
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           Member                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class ABP_AnimalClusterBase_C**         AnimalCluster                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bActive                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintAnimalLibrary_C::GetBelongingAnimalCluster(class AActor* Member, class UObject* __WorldContext, class ABP_AnimalClusterBase_C** AnimalCluster)
+void UX6BlueprintAnimalLibrary_C::BP_IsGlobalAnimalTickManagerActive(class UObject* __WorldContext, bool* bActive)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "GetBelongingAnimalCluster");
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "BP_IsGlobalAnimalTickManagerActive");
 
-	Params::X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster Parms{};
+	Params::X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive Parms{};
 
-	Parms.Member = Member;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (AnimalCluster != nullptr)
-		*AnimalCluster = Parms.AnimalCluster;
+	if (bActive != nullptr)
+		*bActive = Parms.bActive;
 }
 
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalClusterMemberFSM
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2AnimSeqSoftRef
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           AnimalActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              BehaviorType                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UFSM_AnimalClusterMemberBase_C**  FSM                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAnimSequenceBase>*AnimSeqSoftRef                                         (Parm, OutParm, HasGetValueTypeHash)
 
-void UX6BlueprintAnimalLibrary_C::GetAnimalClusterMemberFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_AnimalClusterMemberBase_C** FSM)
+void UX6BlueprintAnimalLibrary_C::BP_ConvBehaviorType2AnimSeqSoftRef(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* AnimSeqSoftRef)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "GetAnimalClusterMemberFSM");
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "BP_ConvBehaviorType2AnimSeqSoftRef");
 
-	Params::X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM Parms{};
+	Params::X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef Parms{};
 
-	Parms.Actor = Actor;
+	Parms.AnimalActor = AnimalActor;
+	Parms.BehaviorType = std::move(BehaviorType);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (FSM != nullptr)
-		*FSM = Parms.FSM;
+	if (AnimSeqSoftRef != nullptr)
+		*AnimSeqSoftRef = Parms.AnimSeqSoftRef;
 }
 
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalReactionFSM
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2CharAnimSetTag
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           AnimalActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              BehaviorType                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UFSM_QuadrupedAnimalReaction_C**  FSM                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FGameplayTag*                    CharAnimSetTag                                         (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintAnimalLibrary_C::GetAnimalReactionFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_QuadrupedAnimalReaction_C** FSM)
+void UX6BlueprintAnimalLibrary_C::BP_ConvBehaviorType2CharAnimSetTag(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, struct FGameplayTag* CharAnimSetTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "GetAnimalReactionFSM");
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "BP_ConvBehaviorType2CharAnimSetTag");
 
-	Params::X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM Parms{};
+	Params::X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag Parms{};
 
-	Parms.Actor = Actor;
+	Parms.AnimalActor = AnimalActor;
+	Parms.BehaviorType = std::move(BehaviorType);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (FSM != nullptr)
-		*FSM = Parms.FSM;
-}
-
-
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.IsHoldingBrush
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bHoldingBrush                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UX6BlueprintAnimalLibrary_C::IsHoldingBrush(class AActor* Actor, class UObject* __WorldContext, bool* bHoldingBrush)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "IsHoldingBrush");
-
-	Params::X6BlueprintAnimalLibrary_C_IsHoldingBrush Parms{};
-
-	Parms.Actor = Actor;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (bHoldingBrush != nullptr)
-		*bHoldingBrush = Parms.bHoldingBrush;
+	if (CharAnimSetTag != nullptr)
+		*CharAnimSetTag = std::move(Parms.CharAnimSetTag);
 }
 
 
@@ -153,83 +129,107 @@ void UX6BlueprintAnimalLibrary_C::GetSimpleFleePoint(class AActor* Animal, const
 }
 
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2CharAnimSetTag
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.IsHoldingBrush
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           AnimalActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              BehaviorType                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FGameplayTag*                    CharAnimSetTag                                         (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bHoldingBrush                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintAnimalLibrary_C::BP_ConvBehaviorType2CharAnimSetTag(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, struct FGameplayTag* CharAnimSetTag)
+void UX6BlueprintAnimalLibrary_C::IsHoldingBrush(class AActor* Actor, class UObject* __WorldContext, bool* bHoldingBrush)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "BP_ConvBehaviorType2CharAnimSetTag");
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "IsHoldingBrush");
 
-	Params::X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag Parms{};
+	Params::X6BlueprintAnimalLibrary_C_IsHoldingBrush Parms{};
 
-	Parms.AnimalActor = AnimalActor;
-	Parms.BehaviorType = std::move(BehaviorType);
+	Parms.Actor = Actor;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (CharAnimSetTag != nullptr)
-		*CharAnimSetTag = std::move(Parms.CharAnimSetTag);
+	if (bHoldingBrush != nullptr)
+		*bHoldingBrush = Parms.bHoldingBrush;
 }
 
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2AnimSeqSoftRef
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalReactionFSM
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           AnimalActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              BehaviorType                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAnimSequenceBase>*AnimSeqSoftRef                                         (Parm, OutParm, HasGetValueTypeHash)
+// class UFSM_QuadrupedAnimalReaction_C**  FSM                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintAnimalLibrary_C::BP_ConvBehaviorType2AnimSeqSoftRef(class AActor* AnimalActor, const struct FGameplayTag& BehaviorType, class UObject* __WorldContext, TSoftObjectPtr<class UAnimSequenceBase>* AnimSeqSoftRef)
+void UX6BlueprintAnimalLibrary_C::GetAnimalReactionFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_QuadrupedAnimalReaction_C** FSM)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "BP_ConvBehaviorType2AnimSeqSoftRef");
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "GetAnimalReactionFSM");
 
-	Params::X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef Parms{};
+	Params::X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM Parms{};
 
-	Parms.AnimalActor = AnimalActor;
-	Parms.BehaviorType = std::move(BehaviorType);
+	Parms.Actor = Actor;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (AnimSeqSoftRef != nullptr)
-		*AnimSeqSoftRef = Parms.AnimSeqSoftRef;
+	if (FSM != nullptr)
+		*FSM = Parms.FSM;
 }
 
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_IsGlobalAnimalTickManagerActive
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalClusterMemberFSM
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   bActive                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFSM_AnimalClusterMemberBase_C**  FSM                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintAnimalLibrary_C::BP_IsGlobalAnimalTickManagerActive(class UObject* __WorldContext, bool* bActive)
+void UX6BlueprintAnimalLibrary_C::GetAnimalClusterMemberFSM(class AActor* Actor, class UObject* __WorldContext, class UFSM_AnimalClusterMemberBase_C** FSM)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "BP_IsGlobalAnimalTickManagerActive");
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "GetAnimalClusterMemberFSM");
 
-	Params::X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive Parms{};
+	Params::X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM Parms{};
 
+	Parms.Actor = Actor;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (bActive != nullptr)
-		*bActive = Parms.bActive;
+	if (FSM != nullptr)
+		*FSM = Parms.FSM;
+}
+
+
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetBelongingAnimalCluster
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                           Member                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ABP_AnimalClusterBase_C**         AnimalCluster                                          (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintAnimalLibrary_C::GetBelongingAnimalCluster(class AActor* Member, class UObject* __WorldContext, class ABP_AnimalClusterBase_C** AnimalCluster)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintAnimalLibrary_C", "GetBelongingAnimalCluster");
+
+	Params::X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster Parms{};
+
+	Parms.Member = Member;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (AnimalCluster != nullptr)
+		*AnimalCluster = Parms.AnimalCluster;
 }
 
 }

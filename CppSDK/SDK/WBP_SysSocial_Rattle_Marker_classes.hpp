@@ -32,8 +32,8 @@ public:
 	class UTextBlock*                             Text_Name;                                         // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_SysSocial_Rattle_Marker(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 

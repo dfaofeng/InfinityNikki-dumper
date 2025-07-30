@@ -17,29 +17,35 @@
 namespace SDK
 {
 
-// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.BP_AnimToHypnosis
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MusicBoxHypnosisComponent_C::BP_AnimToHypnosis()
+void UBP_MusicBoxHypnosisComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "BP_AnimToHypnosis");
+		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "ReceiveTick");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_MusicBoxHypnosisComponent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.BP_RecoverFromHypnosis
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBP_MusicBoxHypnosisComponent_C::BP_RecoverFromHypnosis()
+void UBP_MusicBoxHypnosisComponent_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "BP_RecoverFromHypnosis");
+		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,37 +71,31 @@ void UBP_MusicBoxHypnosisComponent_C::ExecuteUbergraph_BP_MusicBoxHypnosisCompon
 }
 
 
-// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.BP_RecoverFromHypnosis
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_MusicBoxHypnosisComponent_C::ReceiveBeginPlay()
+void UBP_MusicBoxHypnosisComponent_C::BP_RecoverFromHypnosis()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "BP_RecoverFromHypnosis");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C.BP_AnimToHypnosis
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_MusicBoxHypnosisComponent_C::ReceiveTick(float DeltaSeconds)
+void UBP_MusicBoxHypnosisComponent_C::BP_AnimToHypnosis()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_MusicBoxHypnosisComponent_C", "BP_AnimToHypnosis");
 
-	Params::BP_MusicBoxHypnosisComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

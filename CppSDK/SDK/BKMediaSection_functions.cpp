@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BKMediaSection.BKMediaSection_C.StartLoad
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FString&                    LevelSequenceName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UBKMediaSection_C::StartLoad(const class FString& LevelSequenceName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BKMediaSection_C", "StartLoad");
-
-	Params::BKMediaSection_C_StartLoad Parms{};
-
-	Parms.LevelSequenceName = std::move(LevelSequenceName);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BKMediaSection.BKMediaSection_C.ExecuteUbergraph_BKMediaSection
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void UBKMediaSection_C::ExecuteUbergraph_BKMediaSection(int32 EntryPoint)
 	Params::BKMediaSection_C_ExecuteUbergraph_BKMediaSection Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BKMediaSection.BKMediaSection_C.StartLoad
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FString&                    LevelSequenceName                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBKMediaSection_C::StartLoad(const class FString& LevelSequenceName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BKMediaSection_C", "StartLoad");
+
+	Params::BKMediaSection_C_StartLoad Parms{};
+
+	Parms.LevelSequenceName = std::move(LevelSequenceName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

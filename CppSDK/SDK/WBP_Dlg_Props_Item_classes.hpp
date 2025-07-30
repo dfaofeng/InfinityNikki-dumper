@@ -38,14 +38,14 @@ public:
 	int32                                         DisplayType;                                       // 0x0358(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_ForceStopSubtractAnim();
-	void ChangeTextColorToRed();
-	void ChangeTextColorToWhite();
-	void ExecuteUbergraph_WBP_Dlg_Props_Item(int32 EntryPoint);
-	void ReduceItem(double InReduceNum);
-	void SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item();
-	void SetNumText(double InFloat, int32 DisplayType_0, class UTextBlock* TextWidget);
 	void SubItemEvent();
+	void SetNumText(double InFloat, int32 DisplayType_0, class UTextBlock* TextWidget);
+	void SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item();
+	void ReduceItem(double InReduceNum);
+	void ExecuteUbergraph_WBP_Dlg_Props_Item(int32 EntryPoint);
+	void ChangeTextColorToWhite();
+	void ChangeTextColorToRed();
+	void BP_ForceStopSubtractAnim();
 
 	class FString GetModuleName() const;
 

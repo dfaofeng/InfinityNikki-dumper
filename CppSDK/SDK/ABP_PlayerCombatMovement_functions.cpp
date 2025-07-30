@@ -86,6 +86,30 @@ void UABP_PlayerCombatMovement_C::AnimLayer_BehaviorAdditiveMode(const struct FP
 }
 
 
+// Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.AnimLayer_BehaviorConnectionMode
+// (HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FPoseLink&                 InPoseToConnectionMode                                 (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FPoseLink*                       AnimLayer_BehaviorConnectionMode_0                     (Parm, OutParm, NoDestructor)
+
+void UABP_PlayerCombatMovement_C::AnimLayer_BehaviorConnectionMode(const struct FPoseLink& InPoseToConnectionMode, struct FPoseLink* AnimLayer_BehaviorConnectionMode_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_PlayerCombatMovement_C", "AnimLayer_BehaviorConnectionMode");
+
+	Params::ABP_PlayerCombatMovement_C_AnimLayer_BehaviorConnectionMode Parms{};
+
+	Parms.InPoseToConnectionMode = std::move(InPoseToConnectionMode);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimLayer_BehaviorConnectionMode_0 != nullptr)
+		*AnimLayer_BehaviorConnectionMode_0 = std::move(Parms.AnimLayer_BehaviorConnectionMode_0);
+}
+
+
 // Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.AnimLayer_CombatMovement
 // (HasOutParams, BlueprintCallable)
 // Parameters:
@@ -536,6 +560,20 @@ void UABP_PlayerCombatMovement_C::On_Movement_Mode_Changed(EMovementMode Mode, E
 }
 
 
+// Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.OnStylizedClothChanged
+// (BlueprintCallable, BlueprintEvent)
+
+void UABP_PlayerCombatMovement_C::OnStylizedClothChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_PlayerCombatMovement_C", "OnStylizedClothChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.UpdateCycleAnim
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -587,6 +625,20 @@ void UABP_PlayerCombatMovement_C::UpdateMovementData()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("ABP_PlayerCombatMovement_C", "UpdateMovementData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_PlayerCombatMovement.ABP_PlayerCombatMovement_C.UpdateSytlizedClothAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UABP_PlayerCombatMovement_C::UpdateSytlizedClothAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_PlayerCombatMovement_C", "UpdateSytlizedClothAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

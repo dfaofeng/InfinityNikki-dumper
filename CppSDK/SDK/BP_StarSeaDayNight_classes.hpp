@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_StarSeaDayNight.BP_StarSeaDayNight_C
-// 0x0050 (0x03F8 - 0x03A8)
+// 0x0058 (0x0400 - 0x03A8)
 class ABP_StarSeaDayNight_C final : public AActor
 {
 public:
@@ -34,20 +34,26 @@ public:
 	ETimelineDirection                            DayOut__Direction_34FCAB914EAB127341834DB4C0A1DEFE; // 0x03DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3DD[0x3];                                      // 0x03DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     DayOut;                                            // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class ABP_DyEnvSys_C*                         TODSystem;                                         // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	bool                                          RuntimeLocalDebug;                                 // 0x03E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3E9[0x3];                                      // 0x03E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StarSeaDayMode;                                    // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ABP_Multiplayer_MoonBoat_C*             MoonBoat;                                          // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	int32                                         StarSeaDayModeDebug;                               // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DayOut__FinishedFunc();
 	void DayOut__UpdateFunc();
 	void ExecuteUbergraph_BP_StarSeaDayNight(int32 EntryPoint);
 	void Get_Moon_Boat();
-	void Get_TOD_System();
+	void Init_DayNight_BlendWeight();
 	void NightOut__FinishedFunc();
 	void NightOut__UpdateFunc();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
+	void Update_DayNight_BlengWight(double DeltaTime);
 	void UserConstructionScript();
+
+	class FString GetModuleName() const;
 
 public:
 	static class UClass* StaticClass()
@@ -60,7 +66,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_StarSeaDayNight_C) == 0x000008, "Wrong alignment on ABP_StarSeaDayNight_C");
-static_assert(sizeof(ABP_StarSeaDayNight_C) == 0x0003F8, "Wrong size on ABP_StarSeaDayNight_C");
+static_assert(sizeof(ABP_StarSeaDayNight_C) == 0x000400, "Wrong size on ABP_StarSeaDayNight_C");
 static_assert(offsetof(ABP_StarSeaDayNight_C, UberGraphFrame) == 0x0003A8, "Member 'ABP_StarSeaDayNight_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_StarSeaDayNight_C, Day) == 0x0003B0, "Member 'ABP_StarSeaDayNight_C::Day' has a wrong offset!");
 static_assert(offsetof(ABP_StarSeaDayNight_C, Night) == 0x0003B8, "Member 'ABP_StarSeaDayNight_C::Night' has a wrong offset!");
@@ -71,8 +77,10 @@ static_assert(offsetof(ABP_StarSeaDayNight_C, NightOut) == 0x0003D0, "Member 'AB
 static_assert(offsetof(ABP_StarSeaDayNight_C, DayOut_Alpha_34FCAB914EAB127341834DB4C0A1DEFE) == 0x0003D8, "Member 'ABP_StarSeaDayNight_C::DayOut_Alpha_34FCAB914EAB127341834DB4C0A1DEFE' has a wrong offset!");
 static_assert(offsetof(ABP_StarSeaDayNight_C, DayOut__Direction_34FCAB914EAB127341834DB4C0A1DEFE) == 0x0003DC, "Member 'ABP_StarSeaDayNight_C::DayOut__Direction_34FCAB914EAB127341834DB4C0A1DEFE' has a wrong offset!");
 static_assert(offsetof(ABP_StarSeaDayNight_C, DayOut) == 0x0003E0, "Member 'ABP_StarSeaDayNight_C::DayOut' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDayNight_C, TODSystem) == 0x0003E8, "Member 'ABP_StarSeaDayNight_C::TODSystem' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDayNight_C, RuntimeLocalDebug) == 0x0003E8, "Member 'ABP_StarSeaDayNight_C::RuntimeLocalDebug' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDayNight_C, StarSeaDayMode) == 0x0003EC, "Member 'ABP_StarSeaDayNight_C::StarSeaDayMode' has a wrong offset!");
 static_assert(offsetof(ABP_StarSeaDayNight_C, MoonBoat) == 0x0003F0, "Member 'ABP_StarSeaDayNight_C::MoonBoat' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDayNight_C, StarSeaDayModeDebug) == 0x0003F8, "Member 'ABP_StarSeaDayNight_C::StarSeaDayModeDebug' has a wrong offset!");
 
 }
 

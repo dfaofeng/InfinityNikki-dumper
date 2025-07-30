@@ -49,15 +49,15 @@ public:
 	EWoolenHeartEMVersion                         EMVersion;                                         // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_Deinit();
-	void BP_FinishFlyToPlayerPerformance();
-	void BP_FireEventStartRewardUI();
-	void BP_Init(class AActor* InTargetPlayer, EWoolenHeartEMVersion EMVersion_0, class UStaticMesh* mesh, const struct FF_SharedWoolenHeartConfig& SharedWoolenHeartConfig_0);
-	void ChangeGravityScale();
-	void ExecuteUbergraph_BP_SharedWoolenHeartPerformance(int32 EntryPoint);
-	void FlyUpTimeline__1__EventFunc();
-	void FlyUpTimeline__FinishedFunc();
 	void FlyUpTimeline__UpdateFunc();
+	void FlyUpTimeline__FinishedFunc();
+	void FlyUpTimeline__1__EventFunc();
+	void ExecuteUbergraph_BP_SharedWoolenHeartPerformance(int32 EntryPoint);
+	void ChangeGravityScale();
+	void BP_Init(class AActor* InTargetPlayer, EWoolenHeartEMVersion EMVersion_0, class UStaticMesh* mesh, const struct FF_SharedWoolenHeartConfig& SharedWoolenHeartConfig_0);
+	void BP_FireEventStartRewardUI();
+	void BP_FinishFlyToPlayerPerformance();
+	void BP_Deinit();
 
 	class FString GetModuleName() const;
 

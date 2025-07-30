@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function BP_PlayerGlideMovementComponent.BP_PlayerGlideMovementComponent_C.ExecuteUbergraph_BP_PlayerGlideMovementComponent
-// (Final, UbergraphFunction)
+// Function BP_PlayerGlideMovementComponent.BP_PlayerGlideMovementComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerGlideMovementComponent_C::ExecuteUbergraph_BP_PlayerGlideMovementComponent(int32 EntryPoint)
+void UBP_PlayerGlideMovementComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerGlideMovementComponent_C", "ExecuteUbergraph_BP_PlayerGlideMovementComponent");
+		Func = Class->GetFunction("BP_PlayerGlideMovementComponent_C", "ReceiveTick");
 
-	Params::BP_PlayerGlideMovementComponent_C_ExecuteUbergraph_BP_PlayerGlideMovementComponent Parms{};
+	Params::BP_PlayerGlideMovementComponent_C_ReceiveTick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,21 +51,21 @@ void UBP_PlayerGlideMovementComponent_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_PlayerGlideMovementComponent.BP_PlayerGlideMovementComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_PlayerGlideMovementComponent.BP_PlayerGlideMovementComponent_C.ExecuteUbergraph_BP_PlayerGlideMovementComponent
+// (Final, UbergraphFunction)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerGlideMovementComponent_C::ReceiveTick(float DeltaSeconds)
+void UBP_PlayerGlideMovementComponent_C::ExecuteUbergraph_BP_PlayerGlideMovementComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerGlideMovementComponent_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_PlayerGlideMovementComponent_C", "ExecuteUbergraph_BP_PlayerGlideMovementComponent");
 
-	Params::BP_PlayerGlideMovementComponent_C_ReceiveTick Parms{};
+	Params::BP_PlayerGlideMovementComponent_C_ExecuteUbergraph_BP_PlayerGlideMovementComponent Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

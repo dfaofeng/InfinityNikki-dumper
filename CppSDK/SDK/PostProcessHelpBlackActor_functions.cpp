@@ -17,71 +17,45 @@
 namespace SDK
 {
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.ExecuteUbergraph_PostProcessHelpBlackActor
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void APostProcessHelpBlackActor_C::ExecuteUbergraph_PostProcessHelpBlackActor(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "ExecuteUbergraph_PostProcessHelpBlackActor");
-
-	Params::PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeIn
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.NewFunction_1
 // (BlueprintCallable, BlueprintEvent)
 
-void APostProcessHelpBlackActor_C::FadeIn()
+void APostProcessHelpBlackActor_C::NewFunction_1()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "FadeIn");
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "NewFunction_1");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeInAndDestroy
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.NewFunction_0
 // (BlueprintCallable, BlueprintEvent)
 
-void APostProcessHelpBlackActor_C::FadeInAndDestroy()
+void APostProcessHelpBlackActor_C::NewFunction_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "FadeInAndDestroy");
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "NewFunction_0");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeOut
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.NewFunction
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FLinearColor&              FadeOutColor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APostProcessHelpBlackActor_C::FadeOut(const struct FLinearColor& FadeOutColor_0)
+void APostProcessHelpBlackActor_C::NewFunction()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "FadeOut");
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "NewFunction");
 
-	Params::PostProcessHelpBlackActor_C_FadeOut Parms{};
-
-	Parms.FadeOutColor_0 = std::move(FadeOutColor_0);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -106,45 +80,71 @@ void APostProcessHelpBlackActor_C::GetOrAddPostProcessMaterialInstance(class UMa
 }
 
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.NewFunction
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeOut
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FLinearColor&              FadeOutColor_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APostProcessHelpBlackActor_C::NewFunction()
+void APostProcessHelpBlackActor_C::FadeOut(const struct FLinearColor& FadeOutColor_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "NewFunction");
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "FadeOut");
+
+	Params::PostProcessHelpBlackActor_C_FadeOut Parms{};
+
+	Parms.FadeOutColor_0 = std::move(FadeOutColor_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeInAndDestroy
+// (BlueprintCallable, BlueprintEvent)
+
+void APostProcessHelpBlackActor_C::FadeInAndDestroy()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "FadeInAndDestroy");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.NewFunction_0
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeIn
 // (BlueprintCallable, BlueprintEvent)
 
-void APostProcessHelpBlackActor_C::NewFunction_0()
+void APostProcessHelpBlackActor_C::FadeIn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "NewFunction_0");
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "FadeIn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.NewFunction_1
-// (BlueprintCallable, BlueprintEvent)
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.ExecuteUbergraph_PostProcessHelpBlackActor
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void APostProcessHelpBlackActor_C::NewFunction_1()
+void APostProcessHelpBlackActor_C::ExecuteUbergraph_PostProcessHelpBlackActor(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "NewFunction_1");
+		Func = Class->GetFunction("PostProcessHelpBlackActor_C", "ExecuteUbergraph_PostProcessHelpBlackActor");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

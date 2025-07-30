@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "E_InteractiveActorType_structs.hpp"
 #include "E_InteractiveShapeType_structs.hpp"
+#include "E_InteractiveActorType_structs.hpp"
+#include "E_InteractionProcess_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
+#include "E_InteractiveStageEnum_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "E_InteractionProcess_structs.hpp"
-#include "E_InteractiveStageEnum_structs.hpp"
-#include "E_InteractiveTraceLocationType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "F_AdvanceInteractOperationData_structs.hpp"
+#include "E_InteractiveTraceLocationType_structs.hpp"
 #include "E_InteractiveTraceModeType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "E_InterObjOccupyType_structs.hpp"
 
 
@@ -83,10 +83,12 @@ public:
 	struct FVector                                AbilityInteractWidgetOffset;                       // 0x0398(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMulticastInlineDelegate<void(int64 InteractMasterNetID, class AActor* InteractMasterActor, class AActor* InteractedActor)> PreInteractSuccess; // 0x03B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	E_InterObjOccupyType                          BP_OccupyType;                                     // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CanInteractLocal;                                  // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C2[0x6];                                      // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(bool ShowInteractionUI, bool CanInteract)> OnUpdateCanInteract;    // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
+	void UpdateCanInteractLocal(bool ShowInteractUI, bool CanInteract_0);
 	void UpdateCanInteract(bool ShowInteractUI, bool CanInteract_0);
 	void GetInteractiveActorType(E_InteractiveActorType* ActorType);
 	void GetInteractiveActorConfigID(int64* ConfigID);
@@ -154,6 +156,7 @@ static_assert(offsetof(UBP_InteractiveActorComponent_C, BP_WhitePointWidgetCompo
 static_assert(offsetof(UBP_InteractiveActorComponent_C, AbilityInteractWidgetOffset) == 0x000398, "Member 'UBP_InteractiveActorComponent_C::AbilityInteractWidgetOffset' has a wrong offset!");
 static_assert(offsetof(UBP_InteractiveActorComponent_C, PreInteractSuccess) == 0x0003B0, "Member 'UBP_InteractiveActorComponent_C::PreInteractSuccess' has a wrong offset!");
 static_assert(offsetof(UBP_InteractiveActorComponent_C, BP_OccupyType) == 0x0003C0, "Member 'UBP_InteractiveActorComponent_C::BP_OccupyType' has a wrong offset!");
+static_assert(offsetof(UBP_InteractiveActorComponent_C, CanInteractLocal) == 0x0003C1, "Member 'UBP_InteractiveActorComponent_C::CanInteractLocal' has a wrong offset!");
 static_assert(offsetof(UBP_InteractiveActorComponent_C, OnUpdateCanInteract) == 0x0003C8, "Member 'UBP_InteractiveActorComponent_C::OnUpdateCanInteract' has a wrong offset!");
 
 }

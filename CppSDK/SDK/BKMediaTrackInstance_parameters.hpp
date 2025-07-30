@@ -18,65 +18,6 @@
 namespace SDK::Params
 {
 
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.UnluaLog
-// 0x0010 (0x0010 - 0x0000)
-struct BKMediaTrackInstance_C_UnluaLog final
-{
-public:
-	class FString                                 LogString;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BKMediaTrackInstance_C_UnluaLog) == 0x000008, "Wrong alignment on BKMediaTrackInstance_C_UnluaLog");
-static_assert(sizeof(BKMediaTrackInstance_C_UnluaLog) == 0x000010, "Wrong size on BKMediaTrackInstance_C_UnluaLog");
-static_assert(offsetof(BKMediaTrackInstance_C_UnluaLog, LogString) == 0x000000, "Member 'BKMediaTrackInstance_C_UnluaLog::LogString' has a wrong offset!");
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetEnableWorldRendering
-// 0x0001 (0x0001 - 0x0000)
-struct BKMediaTrackInstance_C_SetEnableWorldRendering final
-{
-public:
-	bool                                          bEnable;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BKMediaTrackInstance_C_SetEnableWorldRendering) == 0x000001, "Wrong alignment on BKMediaTrackInstance_C_SetEnableWorldRendering");
-static_assert(sizeof(BKMediaTrackInstance_C_SetEnableWorldRendering) == 0x000001, "Wrong size on BKMediaTrackInstance_C_SetEnableWorldRendering");
-static_assert(offsetof(BKMediaTrackInstance_C_SetEnableWorldRendering, bEnable) == 0x000000, "Member 'BKMediaTrackInstance_C_SetEnableWorldRendering::bEnable' has a wrong offset!");
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetBinkMediaPlayer
-// 0x0010 (0x0010 - 0x0000)
-struct BKMediaTrackInstance_C_SetBinkMediaPlayer final
-{
-public:
-	class UBinkMediaPlayer*                       BinkMediaPlayer_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BKMediaTrackInstance_C_SetBinkMediaPlayer) == 0x000008, "Wrong alignment on BKMediaTrackInstance_C_SetBinkMediaPlayer");
-static_assert(sizeof(BKMediaTrackInstance_C_SetBinkMediaPlayer) == 0x000010, "Wrong size on BKMediaTrackInstance_C_SetBinkMediaPlayer");
-static_assert(offsetof(BKMediaTrackInstance_C_SetBinkMediaPlayer, BinkMediaPlayer_0) == 0x000000, "Member 'BKMediaTrackInstance_C_SetBinkMediaPlayer::BinkMediaPlayer_0' has a wrong offset!");
-static_assert(offsetof(BKMediaTrackInstance_C_SetBinkMediaPlayer, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BKMediaTrackInstance_C_SetBinkMediaPlayer::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BKMediaTrackInstance_C_SetBinkMediaPlayer, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000009, "Member 'BKMediaTrackInstance_C_SetBinkMediaPlayer::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.K2_OnInputAdded
-// 0x0070 (0x0070 - 0x0000)
-struct BKMediaTrackInstance_C_K2_OnInputAdded final
-{
-public:
-	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-};
-static_assert(alignof(BKMediaTrackInstance_C_K2_OnInputAdded) == 0x000008, "Wrong alignment on BKMediaTrackInstance_C_K2_OnInputAdded");
-static_assert(sizeof(BKMediaTrackInstance_C_K2_OnInputAdded) == 0x000070, "Wrong size on BKMediaTrackInstance_C_K2_OnInputAdded");
-static_assert(offsetof(BKMediaTrackInstance_C_K2_OnInputAdded, Input) == 0x000000, "Member 'BKMediaTrackInstance_C_K2_OnInputAdded::Input' has a wrong offset!");
-
-// Function BKMediaTrackInstance.BKMediaTrackInstance_C.GetNikkiSkin
-// 0x0004 (0x0004 - 0x0000)
-struct BKMediaTrackInstance_C_GetNikkiSkin final
-{
-public:
-	int32                                         Skin;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BKMediaTrackInstance_C_GetNikkiSkin) == 0x000004, "Wrong alignment on BKMediaTrackInstance_C_GetNikkiSkin");
-static_assert(sizeof(BKMediaTrackInstance_C_GetNikkiSkin) == 0x000004, "Wrong size on BKMediaTrackInstance_C_GetNikkiSkin");
-static_assert(offsetof(BKMediaTrackInstance_C_GetNikkiSkin, Skin) == 0x000000, "Member 'BKMediaTrackInstance_C_GetNikkiSkin::Skin' has a wrong offset!");
-
 // Function BKMediaTrackInstance.BKMediaTrackInstance_C.ExecuteUbergraph_BKMediaTrackInstance
 // 0x0270 (0x0270 - 0x0000)
 struct BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance final
@@ -169,6 +110,65 @@ static_assert(offsetof(BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInsta
 static_assert(offsetof(BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance, CallFunc_Conv_IntToString_ReturnValue) == 0x000240, "Member 'BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance, CallFunc_Concat_StrStr_ReturnValue_8) == 0x000250, "Member 'BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance::CallFunc_Concat_StrStr_ReturnValue_8' has a wrong offset!");
 static_assert(offsetof(BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance, CallFunc_Concat_StrStr_ReturnValue_9) == 0x000260, "Member 'BKMediaTrackInstance_C_ExecuteUbergraph_BKMediaTrackInstance::CallFunc_Concat_StrStr_ReturnValue_9' has a wrong offset!");
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.GetNikkiSkin
+// 0x0004 (0x0004 - 0x0000)
+struct BKMediaTrackInstance_C_GetNikkiSkin final
+{
+public:
+	int32                                         Skin;                                              // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BKMediaTrackInstance_C_GetNikkiSkin) == 0x000004, "Wrong alignment on BKMediaTrackInstance_C_GetNikkiSkin");
+static_assert(sizeof(BKMediaTrackInstance_C_GetNikkiSkin) == 0x000004, "Wrong size on BKMediaTrackInstance_C_GetNikkiSkin");
+static_assert(offsetof(BKMediaTrackInstance_C_GetNikkiSkin, Skin) == 0x000000, "Member 'BKMediaTrackInstance_C_GetNikkiSkin::Skin' has a wrong offset!");
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.K2_OnInputAdded
+// 0x0070 (0x0070 - 0x0000)
+struct BKMediaTrackInstance_C_K2_OnInputAdded final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+};
+static_assert(alignof(BKMediaTrackInstance_C_K2_OnInputAdded) == 0x000008, "Wrong alignment on BKMediaTrackInstance_C_K2_OnInputAdded");
+static_assert(sizeof(BKMediaTrackInstance_C_K2_OnInputAdded) == 0x000070, "Wrong size on BKMediaTrackInstance_C_K2_OnInputAdded");
+static_assert(offsetof(BKMediaTrackInstance_C_K2_OnInputAdded, Input) == 0x000000, "Member 'BKMediaTrackInstance_C_K2_OnInputAdded::Input' has a wrong offset!");
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetBinkMediaPlayer
+// 0x0010 (0x0010 - 0x0000)
+struct BKMediaTrackInstance_C_SetBinkMediaPlayer final
+{
+public:
+	class UBinkMediaPlayer*                       BinkMediaPlayer_0;                                 // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BKMediaTrackInstance_C_SetBinkMediaPlayer) == 0x000008, "Wrong alignment on BKMediaTrackInstance_C_SetBinkMediaPlayer");
+static_assert(sizeof(BKMediaTrackInstance_C_SetBinkMediaPlayer) == 0x000010, "Wrong size on BKMediaTrackInstance_C_SetBinkMediaPlayer");
+static_assert(offsetof(BKMediaTrackInstance_C_SetBinkMediaPlayer, BinkMediaPlayer_0) == 0x000000, "Member 'BKMediaTrackInstance_C_SetBinkMediaPlayer::BinkMediaPlayer_0' has a wrong offset!");
+static_assert(offsetof(BKMediaTrackInstance_C_SetBinkMediaPlayer, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BKMediaTrackInstance_C_SetBinkMediaPlayer::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BKMediaTrackInstance_C_SetBinkMediaPlayer, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000009, "Member 'BKMediaTrackInstance_C_SetBinkMediaPlayer::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.SetEnableWorldRendering
+// 0x0001 (0x0001 - 0x0000)
+struct BKMediaTrackInstance_C_SetEnableWorldRendering final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BKMediaTrackInstance_C_SetEnableWorldRendering) == 0x000001, "Wrong alignment on BKMediaTrackInstance_C_SetEnableWorldRendering");
+static_assert(sizeof(BKMediaTrackInstance_C_SetEnableWorldRendering) == 0x000001, "Wrong size on BKMediaTrackInstance_C_SetEnableWorldRendering");
+static_assert(offsetof(BKMediaTrackInstance_C_SetEnableWorldRendering, bEnable) == 0x000000, "Member 'BKMediaTrackInstance_C_SetEnableWorldRendering::bEnable' has a wrong offset!");
+
+// Function BKMediaTrackInstance.BKMediaTrackInstance_C.UnluaLog
+// 0x0010 (0x0010 - 0x0000)
+struct BKMediaTrackInstance_C_UnluaLog final
+{
+public:
+	class FString                                 LogString;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BKMediaTrackInstance_C_UnluaLog) == 0x000008, "Wrong alignment on BKMediaTrackInstance_C_UnluaLog");
+static_assert(sizeof(BKMediaTrackInstance_C_UnluaLog) == 0x000010, "Wrong size on BKMediaTrackInstance_C_UnluaLog");
+static_assert(offsetof(BKMediaTrackInstance_C_UnluaLog, LogString) == 0x000000, "Member 'BKMediaTrackInstance_C_UnluaLog::LogString' has a wrong offset!");
 
 // Function BKMediaTrackInstance.BKMediaTrackInstance_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

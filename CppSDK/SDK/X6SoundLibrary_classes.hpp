@@ -21,16 +21,16 @@ namespace SDK
 class UX6SoundLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void StopStoryMusic(class UAkAudioEvent* Event, class UObject* __WorldContext);
-	static void ResumeActorVolume(class AActor* Actor, class UObject* __WorldContext);
-	static void IsActorMuted(class AActor* Actor, class UObject* __WorldContext, bool* Result);
-	static void GetDefaultEmitterActor(class UObject* __WorldContext, class AActor** Actor);
-	static void DisableActorVolume(class AActor* Actor, double ResumeDelay, class UObject* __WorldContext);
-	static void ChangeStoryMusic(class UAkAudioEvent* Event, class UAkStateValue* State, class UAkAudioEvent* EndEvent, class UObject* __WorldContext);
-	static void BP_SetAkSwitch(class UAkSwitchValue* SWITCH, class UObject* __WorldContext);
-	static void BP_PostEventAsync(class UAkAudioEvent* Event, class UObject* __WorldContext);
-	static void BP_PostEvent(class UAkAudioEvent* Event, class UObject* __WorldContext);
 	static void BP_PlayUIBtnSound(class UAkAudioEvent* Event, class UObject* __WorldContext);
+	static void BP_PostEvent(class UAkAudioEvent* Event, class UObject* __WorldContext);
+	static void BP_PostEventAsync(class UAkAudioEvent* Event, class UObject* __WorldContext);
+	static void BP_SetAkSwitch(class UAkSwitchValue* SWITCH, class UObject* __WorldContext);
+	static void ChangeStoryMusic(class UAkAudioEvent* Event, class UAkStateValue* State, class UAkAudioEvent* EndEvent, class UObject* __WorldContext);
+	static void DisableActorVolume(class AActor* Actor, double ResumeDelay, class UObject* __WorldContext);
+	static void GetDefaultEmitterActor(class UObject* __WorldContext, class AActor** Actor);
+	static void IsActorMuted(class AActor* Actor, class UObject* __WorldContext, bool* Result);
+	static void ResumeActorVolume(class AActor* Actor, class UObject* __WorldContext);
+	static void StopStoryMusic(class UAkAudioEvent* Event, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

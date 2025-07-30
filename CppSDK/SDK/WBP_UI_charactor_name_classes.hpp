@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EHeadUIState_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EHeadUIState_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -30,16 +30,16 @@ public:
 	EHeadUIState                                  CurrentShowState;                                  // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ResetState();
-	void GetVerticalBottomZ(double* NewParam);
-	void ExecuteUbergraph_WBP_UI_charactor_name(int32 EntryPoint);
-	void BP_SetTile();
-	void BP_SetName(const class FString& InText);
-	void BP_SetIcon();
-	void BP_HideTitle();
-	void BP_HideName();
 	void BP_HideIcon();
+	void BP_HideName();
+	void BP_HideTitle();
+	void BP_SetIcon();
+	void BP_SetName(const class FString& InText);
+	void BP_SetTile();
+	void ExecuteUbergraph_WBP_UI_charactor_name(int32 EntryPoint);
+	void GetVerticalBottomZ(double* NewParam);
+	void ResetState();
+	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 
 	class FString GetModuleName() const;
 

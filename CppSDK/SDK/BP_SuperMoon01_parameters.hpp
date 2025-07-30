@@ -17,125 +17,6 @@
 namespace SDK::Params
 {
 
-// Function BP_SuperMoon01.BP_SuperMoon01_C.Set To Component
-// 0x0060 (0x0060 - 0x0000)
-struct BP_SuperMoon01_C_Set_To_Component final
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_DyEnvWeathers_C*                    CallFunc_GetActorOfClass_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UDynamicWeatherComponent*>       CallFunc_Map_Values_Values;                        // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicWeatherComponent*               CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_DyEnvWeatehrComp_SuperMoon01_C*     K2Node_DynamicCast_AsBP_Dy_Env_Weatehr_Comp_Super_Moon_01; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_SuperMoon01_C_Set_To_Component) == 0x000008, "Wrong alignment on BP_SuperMoon01_C_Set_To_Component");
-static_assert(sizeof(BP_SuperMoon01_C_Set_To_Component) == 0x000060, "Wrong size on BP_SuperMoon01_C_Set_To_Component");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_SuperMoon01_C_Set_To_Component::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_SuperMoon01_C_Set_To_Component::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_GetActorOfClass_ReturnValue) == 0x000010, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_GetActorOfClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Map_Values_Values) == 0x000018, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Map_Values_Values' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, K2Node_DynamicCast_AsBP_Dy_Env_Weatehr_Comp_Super_Moon_01) == 0x000040, "Member 'BP_SuperMoon01_C_Set_To_Component::K2Node_DynamicCast_AsBP_Dy_Env_Weatehr_Comp_Super_Moon_01' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_SuperMoon01_C_Set_To_Component::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_GetObjectClass_ReturnValue) == 0x000050, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000058, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
-
-// Function BP_SuperMoon01.BP_SuperMoon01_C.RotAroundAxis
-// 0x01B8 (0x01B8 - 0x0000)
-struct BP_SuperMoon01_C_RotAroundAxis final
-{
-public:
-	float                                         AngleDeg_0;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               K2Node_Select_Default;                             // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetActorLocationAndRotation_SweepHitResult; // 0x00B8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_SetActorLocationAndRotation_ReturnValue; // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_SuperMoon01_C_RotAroundAxis) == 0x000008, "Wrong alignment on BP_SuperMoon01_C_RotAroundAxis");
-static_assert(sizeof(BP_SuperMoon01_C_RotAroundAxis) == 0x0001B8, "Wrong size on BP_SuperMoon01_C_RotAroundAxis");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, AngleDeg_0) == 0x000000, "Member 'BP_SuperMoon01_C_RotAroundAxis::AngleDeg_0' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000008, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, Temp_bool_Variable) == 0x000020, "Member 'BP_SuperMoon01_C_RotAroundAxis::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_MakeVector_ReturnValue) == 0x000028, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000040, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_FindLookAtRotation_ReturnValue) == 0x000058, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, K2Node_Select_Default) == 0x000070, "Member 'BP_SuperMoon01_C_RotAroundAxis::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000088, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_RotateAngleAxis_ReturnValue) == 0x0000A0, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_K2_SetActorLocationAndRotation_SweepHitResult) == 0x0000B8, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_K2_SetActorLocationAndRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_K2_SetActorLocationAndRotation_ReturnValue) == 0x0001B0, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_K2_SetActorLocationAndRotation_ReturnValue' has a wrong offset!");
-
-// Function BP_SuperMoon01.BP_SuperMoon01_C.Remapped1015p
-// 0x0040 (0x0040 - 0x0000)
-struct BP_SuperMoon01_C_Remapped1015p final
-{
-public:
-	float                                         InputPin;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Percent_FloatFloat_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_SuperMoon01_C_Remapped1015p) == 0x000008, "Wrong alignment on BP_SuperMoon01_C_Remapped1015p");
-static_assert(sizeof(BP_SuperMoon01_C_Remapped1015p) == 0x000040, "Wrong size on BP_SuperMoon01_C_Remapped1015p");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, InputPin) == 0x000000, "Member 'BP_SuperMoon01_C_Remapped1015p::InputPin' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, ReturnValue) == 0x000008, "Member 'BP_SuperMoon01_C_Remapped1015p::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Percent_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Percent_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_SelectFloat_ReturnValue) == 0x000028, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000030, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000038, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-
-// Function BP_SuperMoon01.BP_SuperMoon01_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_SuperMoon01_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_SuperMoon01_C_ReceiveTick");
-static_assert(sizeof(BP_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong size on BP_SuperMoon01_C_ReceiveTick");
-static_assert(offsetof(BP_SuperMoon01_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_SuperMoon01_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_SuperMoon01.BP_SuperMoon01_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_SuperMoon01_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_SuperMoon01_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_SuperMoon01_C_ReceiveEndPlay");
-static_assert(sizeof(BP_SuperMoon01_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_SuperMoon01_C_ReceiveEndPlay");
-static_assert(offsetof(BP_SuperMoon01_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_SuperMoon01_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
-
 // Function BP_SuperMoon01.BP_SuperMoon01_C.ExecuteUbergraph_BP_SuperMoon01
 // 0x0520 (0x0520 - 0x0000)
 struct BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01 final
@@ -257,6 +138,125 @@ static_assert(offsetof(BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01, K2Node_
 static_assert(offsetof(BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01, CallFunc_GetFloatValue_InTime_ImplicitCast) == 0x000508, "Member 'BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01::CallFunc_GetFloatValue_InTime_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01, K2Node_Select_Option_0_ImplicitCast) == 0x00050C, "Member 'BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01, CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast) == 0x000510, "Member 'BP_SuperMoon01_C_ExecuteUbergraph_BP_SuperMoon01::CallFunc_RotateAngleAxis_AngleDeg_ImplicitCast' has a wrong offset!");
+
+// Function BP_SuperMoon01.BP_SuperMoon01_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_SuperMoon01_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_SuperMoon01_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_SuperMoon01_C_ReceiveEndPlay");
+static_assert(sizeof(BP_SuperMoon01_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_SuperMoon01_C_ReceiveEndPlay");
+static_assert(offsetof(BP_SuperMoon01_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_SuperMoon01_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function BP_SuperMoon01.BP_SuperMoon01_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_SuperMoon01_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_SuperMoon01_C_ReceiveTick");
+static_assert(sizeof(BP_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong size on BP_SuperMoon01_C_ReceiveTick");
+static_assert(offsetof(BP_SuperMoon01_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_SuperMoon01_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_SuperMoon01.BP_SuperMoon01_C.Remapped1015p
+// 0x0040 (0x0040 - 0x0000)
+struct BP_SuperMoon01_C_Remapped1015p final
+{
+public:
+	float                                         InputPin;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Percent_FloatFloat_ReturnValue;           // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_SuperMoon01_C_Remapped1015p) == 0x000008, "Wrong alignment on BP_SuperMoon01_C_Remapped1015p");
+static_assert(sizeof(BP_SuperMoon01_C_Remapped1015p) == 0x000040, "Wrong size on BP_SuperMoon01_C_Remapped1015p");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, InputPin) == 0x000000, "Member 'BP_SuperMoon01_C_Remapped1015p::InputPin' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, ReturnValue) == 0x000008, "Member 'BP_SuperMoon01_C_Remapped1015p::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000010, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Percent_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Percent_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_SelectFloat_ReturnValue) == 0x000028, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000030, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Remapped1015p, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000038, "Member 'BP_SuperMoon01_C_Remapped1015p::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+
+// Function BP_SuperMoon01.BP_SuperMoon01_C.RotAroundAxis
+// 0x01B8 (0x01B8 - 0x0000)
+struct BP_SuperMoon01_C_RotAroundAxis final
+{
+public:
+	float                                         AngleDeg_0;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_FindLookAtRotation_ReturnValue;           // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               K2Node_Select_Default;                             // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_Multiply_VectorVector_ReturnValue;        // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_RotateAngleAxis_ReturnValue;              // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetActorLocationAndRotation_SweepHitResult; // 0x00B8(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_SetActorLocationAndRotation_ReturnValue; // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_SuperMoon01_C_RotAroundAxis) == 0x000008, "Wrong alignment on BP_SuperMoon01_C_RotAroundAxis");
+static_assert(sizeof(BP_SuperMoon01_C_RotAroundAxis) == 0x0001B8, "Wrong size on BP_SuperMoon01_C_RotAroundAxis");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, AngleDeg_0) == 0x000000, "Member 'BP_SuperMoon01_C_RotAroundAxis::AngleDeg_0' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000008, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, Temp_bool_Variable) == 0x000020, "Member 'BP_SuperMoon01_C_RotAroundAxis::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_MakeVector_ReturnValue) == 0x000028, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000040, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_FindLookAtRotation_ReturnValue) == 0x000058, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_FindLookAtRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, K2Node_Select_Default) == 0x000070, "Member 'BP_SuperMoon01_C_RotAroundAxis::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_Multiply_VectorVector_ReturnValue) == 0x000088, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_Multiply_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_RotateAngleAxis_ReturnValue) == 0x0000A0, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_RotateAngleAxis_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_K2_SetActorLocationAndRotation_SweepHitResult) == 0x0000B8, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_K2_SetActorLocationAndRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_RotAroundAxis, CallFunc_K2_SetActorLocationAndRotation_ReturnValue) == 0x0001B0, "Member 'BP_SuperMoon01_C_RotAroundAxis::CallFunc_K2_SetActorLocationAndRotation_ReturnValue' has a wrong offset!");
+
+// Function BP_SuperMoon01.BP_SuperMoon01_C.Set To Component
+// 0x0060 (0x0060 - 0x0000)
+struct BP_SuperMoon01_C_Set_To_Component final
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_DyEnvWeathers_C*                    CallFunc_GetActorOfClass_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UDynamicWeatherComponent*>       CallFunc_Map_Values_Values;                        // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicWeatherComponent*               CallFunc_Array_Get_Item;                           // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_DyEnvWeatehrComp_SuperMoon01_C*     K2Node_DynamicCast_AsBP_Dy_Env_Weatehr_Comp_Super_Moon_01; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ClassClass_ReturnValue;        // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_SuperMoon01_C_Set_To_Component) == 0x000008, "Wrong alignment on BP_SuperMoon01_C_Set_To_Component");
+static_assert(sizeof(BP_SuperMoon01_C_Set_To_Component) == 0x000060, "Wrong size on BP_SuperMoon01_C_Set_To_Component");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, Temp_int_Array_Index_Variable) == 0x000000, "Member 'BP_SuperMoon01_C_Set_To_Component::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'BP_SuperMoon01_C_Set_To_Component::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_GetActorOfClass_ReturnValue) == 0x000010, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_GetActorOfClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Map_Values_Values) == 0x000018, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Map_Values_Values' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Array_Get_Item) == 0x000030, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_Less_IntInt_ReturnValue) == 0x000038, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, K2Node_DynamicCast_AsBP_Dy_Env_Weatehr_Comp_Super_Moon_01) == 0x000040, "Member 'BP_SuperMoon01_C_Set_To_Component::K2Node_DynamicCast_AsBP_Dy_Env_Weatehr_Comp_Super_Moon_01' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, K2Node_DynamicCast_bSuccess) == 0x000048, "Member 'BP_SuperMoon01_C_Set_To_Component::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_GetObjectClass_ReturnValue) == 0x000050, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_SuperMoon01_C_Set_To_Component, CallFunc_EqualEqual_ClassClass_ReturnValue) == 0x000058, "Member 'BP_SuperMoon01_C_Set_To_Component::CallFunc_EqualEqual_ClassClass_ReturnValue' has a wrong offset!");
 
 }
 

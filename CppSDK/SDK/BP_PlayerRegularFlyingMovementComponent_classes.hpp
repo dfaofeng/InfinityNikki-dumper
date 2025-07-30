@@ -30,17 +30,17 @@ public:
 	double                                        BP_CurFlyingMovementConfigSpeedValue;              // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_ChangeFlyingMovementSpeedType(EPlayerRegularFlyingMovementSpeedType NewFlyingMovementSpeedType);
-	void BP_GetCurrentFlyingSpeedType(EPlayerRegularFlyingMovementSpeedType* Result);
-	void BP_ModifyBrakingDecelerationFlyingConfigValue(double Value);
-	void BP_ModifyMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType, double Value);
-	void BP_ResetBrakingDecelerationFlyingConfigValue();
-	void BP_ResetMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType);
-	void BP_SetCurrenntFlyingMovementType(EPlayerRegularFlyingMovementType NewFlyingMovementType);
-	void BPI_Get_RegularFlyingConfigData(double* LowFlyingSpeed, double* NormalFlyingSpeed, double* TopFlyingSpeed);
-	void ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent(int32 EntryPoint);
+	void BPI_Get_RegularFlyingConfigData(double* LowFlyingSpeed, double* NormalFlyingSpeed, double* TopFlyingSpeed);
+	void BP_SetCurrenntFlyingMovementType(EPlayerRegularFlyingMovementType NewFlyingMovementType);
+	void BP_ResetMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType);
+	void BP_ResetBrakingDecelerationFlyingConfigValue();
+	void BP_ModifyMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType, double Value);
+	void BP_ModifyBrakingDecelerationFlyingConfigValue(double Value);
+	void BP_GetCurrentFlyingSpeedType(EPlayerRegularFlyingMovementSpeedType* Result);
+	void BP_ChangeFlyingMovementSpeedType(EPlayerRegularFlyingMovementSpeedType NewFlyingMovementSpeedType);
 
 	class FString GetModuleName() const;
 

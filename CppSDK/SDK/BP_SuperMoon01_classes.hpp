@@ -50,19 +50,19 @@ public:
 	double                                        TransitionFogDensity;                              // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void Timeline__UpdateFunc();
-	void Timeline__FinishedFunc();
-	void Set_To_Component();
-	void RotAroundAxis(float AngleDeg_0);
-	double Remapped1015p(float InputPin);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void PostContrust();
-	void ExecuteUbergraph_BP_SuperMoon01(int32 EntryPoint);
-	void EditorUpdate();
 	void DrawTracks();
+	void EditorUpdate();
+	void ExecuteUbergraph_BP_SuperMoon01(int32 EntryPoint);
+	void PostContrust();
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	double Remapped1015p(float InputPin);
+	void RotAroundAxis(float AngleDeg_0);
+	void Set_To_Component();
+	void Timeline__FinishedFunc();
+	void Timeline__UpdateFunc();
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

@@ -251,6 +251,102 @@ void ANikkiPlayerCameraManager_BP_C::BP_UpdateInteractionTime()
 }
 
 
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_UnregisterAnimDrivenCamera
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCameraName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ANikkiPlayerCameraManager_BP_C::BP_UnregisterAnimDrivenCamera(class FName InCameraName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPlayerCameraManager_BP_C", "BP_UnregisterAnimDrivenCamera");
+
+	Params::NikkiPlayerCameraManager_BP_C_BP_UnregisterAnimDrivenCamera Parms{};
+
+	Parms.InCameraName = InCameraName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_RemoveAnimDrivenCamera
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCameraName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOverrideTransitionParams                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FViewTargetTransitionParams&TransitionParams                                       (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void ANikkiPlayerCameraManager_BP_C::BP_RemoveAnimDrivenCamera(class FName InCameraName, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPlayerCameraManager_BP_C", "BP_RemoveAnimDrivenCamera");
+
+	Params::NikkiPlayerCameraManager_BP_C_BP_RemoveAnimDrivenCamera Parms{};
+
+	Parms.InCameraName = InCameraName;
+	Parms.bOverrideTransitionParams = bOverrideTransitionParams;
+	Parms.TransitionParams = std::move(TransitionParams);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_RegisterAnimDrivenCamera
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCameraName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECameraState                            InCameraState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           InCameraActor                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          OutCameraActor                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ANikkiPlayerCameraManager_BP_C::BP_RegisterAnimDrivenCamera(class FName InCameraName, ECameraState InCameraState, class AActor* InCameraActor, class AActor** OutCameraActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPlayerCameraManager_BP_C", "BP_RegisterAnimDrivenCamera");
+
+	Params::NikkiPlayerCameraManager_BP_C_BP_RegisterAnimDrivenCamera Parms{};
+
+	Parms.InCameraName = InCameraName;
+	Parms.InCameraState = InCameraState;
+	Parms.InCameraActor = InCameraActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutCameraActor != nullptr)
+		*OutCameraActor = Parms.OutCameraActor;
+}
+
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_PushAnimDrivenCamera
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCameraName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOverrideTransitionParams                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FViewTargetTransitionParams&TransitionParams                                       (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void ANikkiPlayerCameraManager_BP_C::BP_PushAnimDrivenCamera(class FName InCameraName, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPlayerCameraManager_BP_C", "BP_PushAnimDrivenCamera");
+
+	Params::NikkiPlayerCameraManager_BP_C_BP_PushAnimDrivenCamera Parms{};
+
+	Parms.InCameraName = InCameraName;
+	Parms.bOverrideTransitionParams = bOverrideTransitionParams;
+	Parms.TransitionParams = std::move(TransitionParams);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_GetCameraVolumeTargetControlledActor
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -269,6 +365,30 @@ void ANikkiPlayerCameraManager_BP_C::BP_GetCameraVolumeTargetControlledActor(cla
 
 	if (ControlledActor != nullptr)
 		*ControlledActor = Parms.ControlledActor;
+}
+
+
+// Function NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C.BP_GetAnimDrivenCamera
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             InCameraName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          OutCameraActor                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ANikkiPlayerCameraManager_BP_C::BP_GetAnimDrivenCamera(class FName InCameraName, class AActor** OutCameraActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPlayerCameraManager_BP_C", "BP_GetAnimDrivenCamera");
+
+	Params::NikkiPlayerCameraManager_BP_C_BP_GetAnimDrivenCamera Parms{};
+
+	Parms.InCameraName = InCameraName;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutCameraActor != nullptr)
+		*OutCameraActor = Parms.OutCameraActor;
 }
 
 

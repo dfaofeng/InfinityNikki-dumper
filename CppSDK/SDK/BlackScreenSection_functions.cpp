@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function BlackScreenSection.BlackScreenSection_C.ExecuteUbergraph_BlackScreenSection
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BlackScreenSection.BlackScreenSection_C.K2_OnSectionEnd
+// (Event, Protected, BlueprintEvent)
 
-void UBlackScreenSection_C::ExecuteUbergraph_BlackScreenSection(int32 EntryPoint)
+void UBlackScreenSection_C::K2_OnSectionEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlackScreenSection_C", "ExecuteUbergraph_BlackScreenSection");
+		Func = Class->GetFunction("BlackScreenSection_C", "K2_OnSectionEnd");
 
-	Params::BlackScreenSection_C_ExecuteUbergraph_BlackScreenSection Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -51,17 +45,23 @@ void UBlackScreenSection_C::K2_OnSectionBegin()
 }
 
 
-// Function BlackScreenSection.BlackScreenSection_C.K2_OnSectionEnd
-// (Event, Protected, BlueprintEvent)
+// Function BlackScreenSection.BlackScreenSection_C.ExecuteUbergraph_BlackScreenSection
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBlackScreenSection_C::K2_OnSectionEnd()
+void UBlackScreenSection_C::ExecuteUbergraph_BlackScreenSection(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BlackScreenSection_C", "K2_OnSectionEnd");
+		Func = Class->GetFunction("BlackScreenSection_C", "ExecuteUbergraph_BlackScreenSection");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BlackScreenSection_C_ExecuteUbergraph_BlackScreenSection Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

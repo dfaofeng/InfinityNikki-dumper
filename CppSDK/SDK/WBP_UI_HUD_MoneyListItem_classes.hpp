@@ -58,19 +58,19 @@ public:
 	double                                        BP_SetGoldDoneDurationOffset;                      // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddGoldWithEffect(int32 gold);
-	void BndEvt__WBP_UI_HUD_MoneyListItem_Button_124_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_UI_HUD_MoneyListItem_Button_TestSetGold_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
-	void Construct();
-	void ExecuteUbergraph_WBP_UI_HUD_MoneyListItem(int32 EntryPoint);
-	void Init();
-	void PendingAddGold(int32 gold);
-	void PlayHitGoldEffect();
-	void PlaySetDoneEffect();
-	void PreAddGoldWithEffect();
-	void SetGoldWithEffect(int32 gold);
-	void TestAddGold();
 	void TestSetGold(int32 gold);
+	void TestAddGold();
+	void SetGoldWithEffect(int32 gold);
+	void PreAddGoldWithEffect();
+	void PlaySetDoneEffect();
+	void PlayHitGoldEffect();
+	void PendingAddGold(int32 gold);
+	void Init();
+	void ExecuteUbergraph_WBP_UI_HUD_MoneyListItem(int32 EntryPoint);
+	void Construct();
+	void BndEvt__WBP_UI_HUD_MoneyListItem_Button_TestSetGold_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_UI_HUD_MoneyListItem_Button_124_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void AddGoldWithEffect(int32 gold);
 
 	class FString GetModuleName() const;
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "EFeedBackReason_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EFeedBackReason_structs.hpp"
 
 
 namespace SDK
@@ -21,7 +21,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_X6MonsterrCharacter.BP_X6MonsterrCharacter_C
 // 0x00A0 (0x0970 - 0x08D0)
-class ABP_X6MonsterrCharacter_C final : public AX6PlayerCharacterBase
+class ABP_X6MonsterrCharacter_C : public AX6PlayerCharacterBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

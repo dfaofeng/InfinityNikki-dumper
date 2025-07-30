@@ -25,9 +25,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_BP_PlayerGlideMovementComponent(int32 EntryPoint);
-	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_PlayerGlideMovementComponent(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

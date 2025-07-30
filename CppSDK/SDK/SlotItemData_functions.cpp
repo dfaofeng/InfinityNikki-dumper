@@ -17,6 +17,34 @@
 namespace SDK
 {
 
+// Function SlotItemData.SlotItemData_C.UpdateIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USlotItemData_C::UpdateIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SlotItemData_C", "UpdateIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SlotItemData.SlotItemData_C.UpdateData
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void USlotItemData_C::UpdateData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SlotItemData_C", "UpdateData");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SlotItemData.SlotItemData_C.IsNull
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -35,34 +63,6 @@ void USlotItemData_C::IsNull(bool* Valid)
 
 	if (Valid != nullptr)
 		*Valid = Parms.Valid;
-}
-
-
-// Function SlotItemData.SlotItemData_C.UpdateData
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void USlotItemData_C::UpdateData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SlotItemData_C", "UpdateData");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SlotItemData.SlotItemData_C.UpdateIcon
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void USlotItemData_C::UpdateIcon()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SlotItemData_C", "UpdateIcon");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

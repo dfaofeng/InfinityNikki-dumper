@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "PhysicsCore_structs.hpp"
 #include "F_FootstepSurfaceTypeSoundStruct_structs.hpp"
+#include "Enum_ShrubEnum_structs.hpp"
 #include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "X6Game_structs.hpp"
-#include "Enum_ShrubEnum_structs.hpp"
 #include "BP_CharacterEffectBaseComponent_classes.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
 namespace SDK
@@ -46,30 +46,30 @@ public:
 	bool                                          bEnableFootstepSound;                              // 0x0780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetVolumeSurfaceTypeValue(const struct FF_FootstepSurfaceTypeSoundStruct& SurfaceTypeValue);
-	void SetIsInFSTSwitchVolume(bool bInFSTSwitchVolume_0);
-	void OnDataTableLoaded();
-	void IsInBush(bool* bInBush_0);
-	void GetSoftObjectPtrByPath(const class FString& PathString, bool* Found, TSoftObjectPtr<class UObject>* SWITCH);
-	void GetShrubType(Enum_ShrubEnum* ShrubType);
-	void GetShoeSwitchPath(class USceneComponent* Comp, class FString* ShoeSwitchPaths);
-	void GetFootstepSoundMaterialSwitchPath(class FString* OutMaterialTag, class FString* OutTypeTag);
-	void GetFootstepSoundGaitSwitch(const class FString& InStr, TSoftObjectPtr<class UAkSwitchValue> DefaultAkSwitch, TSoftObjectPtr<class UAkSwitchValue>* OutAkSwitch);
-	void GetFootstepSoundFloorSwitch(TSoftObjectPtr<class UAkSwitchValue>* SwitchValue);
-	void CompressPosition(const struct FVector& InPosition, int32 Offset_X, int32 Offset_Y, int32 Offset_Z, struct FVector* CompressdPosition);
-	void BPAnimNotify_OnX6PlayFootstepEffect(class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bDestroyImmediately, bool bAttached, double Duration, const class FString& RowName);
-	void BPAnimNotify_OnUpdateMaterialEffect(class UObject* NotifyObject, double FrameDeltaTime);
-	void BPAnimNotify_OnRunStepSoundEffectV2(TSoftObjectPtr<class UAkAudioEvent> AkEvent, const class FString& MaterialTag, class USceneComponent* Comp, class FName AttachName);
-	void BPAnimNotify_OnRunStepSoundEffect(TSoftObjectPtr<class UAkAudioEvent> AkEvent, class USceneComponent* Comp, class FName AttachName, const class FString& AnimName, TSoftObjectPtr<class UAkSwitchValue> DefaultGaitAkSwitch);
-	void BPAnimNotify_OnPlayRejumpEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
-	void BPAnimNotify_OnPlayMaterialEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, double TotalDuration);
-	void BPAnimNotify_OnPlayLSEffect(const class UAnimNotifyState* NotifyObject, TSoftObjectPtr<class ULevelSequence> LevelSequenceRef, double TotalDuration);
-	void BPAnimNotify_OnPlayCharacterEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
-	void BPAnimNotify_OnEndMaterialEffect(class UObject* NotifyObject);
-	void BPAnimNotify_OnEndLSEffect(const class UAnimNotifyState* NotifyObject, bool bWaitForLSFinish);
-	void BPAnimNotify_OnEndCharacterEffect(class UObject* NotifyObject, class USkeletalMeshComponent* MeshComponent, bool bDestroyAtEnd);
-	void BPAnimNotify_OnClothesTypeEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
 	void BPAnimNotify_OnClothesMaterialEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
+	void BPAnimNotify_OnClothesTypeEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
+	void BPAnimNotify_OnEndCharacterEffect(class UObject* NotifyObject, class USkeletalMeshComponent* MeshComponent, bool bDestroyAtEnd);
+	void BPAnimNotify_OnEndLSEffect(const class UAnimNotifyState* NotifyObject, bool bWaitForLSFinish);
+	void BPAnimNotify_OnEndMaterialEffect(class UObject* NotifyObject);
+	void BPAnimNotify_OnPlayCharacterEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
+	void BPAnimNotify_OnPlayLSEffect(const class UAnimNotifyState* NotifyObject, TSoftObjectPtr<class ULevelSequence> LevelSequenceRef, double TotalDuration);
+	void BPAnimNotify_OnPlayMaterialEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, double TotalDuration);
+	void BPAnimNotify_OnPlayRejumpEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
+	void BPAnimNotify_OnRunStepSoundEffect(TSoftObjectPtr<class UAkAudioEvent> AkEvent, class USceneComponent* Comp, class FName AttachName, const class FString& AnimName, TSoftObjectPtr<class UAkSwitchValue> DefaultGaitAkSwitch);
+	void BPAnimNotify_OnRunStepSoundEffectV2(TSoftObjectPtr<class UAkAudioEvent> AkEvent, const class FString& MaterialTag, class USceneComponent* Comp, class FName AttachName);
+	void BPAnimNotify_OnUpdateMaterialEffect(class UObject* NotifyObject, double FrameDeltaTime);
+	void BPAnimNotify_OnX6PlayFootstepEffect(class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bDestroyImmediately, bool bAttached, double Duration, const class FString& RowName);
+	void CompressPosition(const struct FVector& InPosition, int32 Offset_X, int32 Offset_Y, int32 Offset_Z, struct FVector* CompressdPosition);
+	void GetFootstepSoundFloorSwitch(TSoftObjectPtr<class UAkSwitchValue>* SwitchValue);
+	void GetFootstepSoundGaitSwitch(const class FString& InStr, TSoftObjectPtr<class UAkSwitchValue> DefaultAkSwitch, TSoftObjectPtr<class UAkSwitchValue>* OutAkSwitch);
+	void GetFootstepSoundMaterialSwitchPath(class FString* OutMaterialTag, class FString* OutTypeTag);
+	void GetShoeSwitchPath(class USceneComponent* Comp, class FString* ShoeSwitchPaths);
+	void GetShrubType(Enum_ShrubEnum* ShrubType);
+	void GetSoftObjectPtrByPath(const class FString& PathString, bool* Found, TSoftObjectPtr<class UObject>* SWITCH);
+	void IsInBush(bool* bInBush_0);
+	void OnDataTableLoaded();
+	void SetIsInFSTSwitchVolume(bool bInFSTSwitchVolume_0);
+	void SetVolumeSurfaceTypeValue(const struct FF_FootstepSurfaceTypeSoundStruct& SurfaceTypeValue);
 
 	class FString GetModuleName() const;
 

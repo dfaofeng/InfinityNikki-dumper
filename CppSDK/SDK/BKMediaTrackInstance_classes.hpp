@@ -29,18 +29,18 @@ public:
 	struct FTimerHandle                           SetEnableWorldRenderingHandle;                     // 0x0098(0x0008)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UnluaLog(const class FString& LogString);
-	void SetEnableWorldRenderingHandleEvent();
-	void SetEnableWorldRendering(bool bEnable);
-	void SetBinkMediaPlayer(class UBinkMediaPlayer* BinkMediaPlayer_0);
-	void PostSetBinkMediaPlayer();
-	void OnInitialize_Interal();
-	void OnDestroyed_Interal();
-	void K2_OnInputAdded(const struct FX6SequencerTrackInstanceInput& Input);
-	void K2_OnInitialize();
-	void K2_OnDestroyed();
-	void GetNikkiSkin(int32* Skin);
 	void ExecuteUbergraph_BKMediaTrackInstance(int32 EntryPoint);
+	void GetNikkiSkin(int32* Skin);
+	void K2_OnDestroyed();
+	void K2_OnInitialize();
+	void K2_OnInputAdded(const struct FX6SequencerTrackInstanceInput& Input);
+	void OnDestroyed_Interal();
+	void OnInitialize_Interal();
+	void PostSetBinkMediaPlayer();
+	void SetBinkMediaPlayer(class UBinkMediaPlayer* BinkMediaPlayer_0);
+	void SetEnableWorldRendering(bool bEnable);
+	void SetEnableWorldRenderingHandleEvent();
+	void UnluaLog(const class FString& LogString);
 
 	class FString GetModuleName() const;
 

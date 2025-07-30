@@ -21,7 +21,7 @@ namespace SDK
 class UWBP_ActionSlotKeyTip_PC_C final : public UUserWidget
 {
 public:
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_PC;                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_C*               WBP_UI_Common_KeyTips;                             // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class FString                                 SlotEnumName;                                      // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
@@ -39,7 +39,7 @@ public:
 };
 static_assert(alignof(UWBP_ActionSlotKeyTip_PC_C) == 0x000008, "Wrong alignment on UWBP_ActionSlotKeyTip_PC_C");
 static_assert(sizeof(UWBP_ActionSlotKeyTip_PC_C) == 0x000308, "Wrong size on UWBP_ActionSlotKeyTip_PC_C");
-static_assert(offsetof(UWBP_ActionSlotKeyTip_PC_C, WBP_UI_Common_KeyTips_PC) == 0x0002F0, "Member 'UWBP_ActionSlotKeyTip_PC_C::WBP_UI_Common_KeyTips_PC' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotKeyTip_PC_C, WBP_UI_Common_KeyTips) == 0x0002F0, "Member 'UWBP_ActionSlotKeyTip_PC_C::WBP_UI_Common_KeyTips' has a wrong offset!");
 static_assert(offsetof(UWBP_ActionSlotKeyTip_PC_C, SlotEnumName) == 0x0002F8, "Member 'UWBP_ActionSlotKeyTip_PC_C::SlotEnumName' has a wrong offset!");
 
 }

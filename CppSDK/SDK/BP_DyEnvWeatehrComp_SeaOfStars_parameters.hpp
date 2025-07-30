@@ -36,17 +36,6 @@ static_assert(alignof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeOut) == 0x000004, "
 static_assert(sizeof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeOut) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeOut");
 static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeOut, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeOut::Progress' has a wrong offset!");
 
-// Function BP_DyEnvWeatehrComp_SeaOfStars.BP_DyEnvWeatehrComp_SeaOfStars_C.OnFadeIn
-// 0x0004 (0x0004 - 0x0000)
-struct BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn final
-{
-public:
-	float                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn");
-static_assert(sizeof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn");
-static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn::Progress' has a wrong offset!");
-
 // Function BP_DyEnvWeatehrComp_SeaOfStars.BP_DyEnvWeatehrComp_SeaOfStars_C.ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars
 // 0x00B0 (0x00B0 - 0x0000)
 struct BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars final
@@ -121,6 +110,17 @@ static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEn
 static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x000098, "Member 'BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1) == 0x0000A0, "Member 'BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x0000A8, "Member 'BP_DyEnvWeatehrComp_SeaOfStars_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+
+// Function BP_DyEnvWeatehrComp_SeaOfStars.BP_DyEnvWeatehrComp_SeaOfStars_C.OnFadeIn
+// 0x0004 (0x0004 - 0x0000)
+struct BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn final
+{
+public:
+	float                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn");
+static_assert(sizeof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn");
+static_assert(offsetof(BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SeaOfStars_C_OnFadeIn::Progress' has a wrong offset!");
 
 }
 

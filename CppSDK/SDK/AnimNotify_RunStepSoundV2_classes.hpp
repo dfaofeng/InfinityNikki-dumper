@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_FootstepSoundType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Enum_FootstepSoundType_structs.hpp"
 
 
 namespace SDK
@@ -31,10 +31,10 @@ public:
 	TSoftObjectPtr<class UAkAudioEvent>           PreviewEvent;                                      // 0x0058(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
-	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
-	void PreviewPostAkEvent(class USceneComponent* Comp) const;
-	class FString GetModuleName() const;
 	float GetDefaultTriggerWeightThreshold() const;
+	class FString GetModuleName() const;
+	void PreviewPostAkEvent(class USceneComponent* Comp) const;
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()

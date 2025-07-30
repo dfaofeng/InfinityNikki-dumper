@@ -22,8 +22,8 @@ namespace SDK
 class UBP_AISense_Sight_C final : public UX6AISense_Sight
 {
 public:
-	bool IsInterestedTarget(const class AActor* ListenerActor, class AActor* TargetActor, class UX6AISenseConfig_Sight* Config);
 	bool ReportStimulus(const class AActor* ListenerActor, class AActor* TargetActor, class UX6AISenseConfig_Sight* Config, EX6AISenseSightResultType ResultType, bool bLastResult);
+	bool IsInterestedTarget(const class AActor* ListenerActor, class AActor* TargetActor, class UX6AISenseConfig_Sight* Config);
 
 	class FString GetModuleName() const;
 

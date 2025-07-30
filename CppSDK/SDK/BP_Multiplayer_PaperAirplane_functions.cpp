@@ -267,6 +267,26 @@ void ABP_Multiplayer_PaperAirplane_C::ExecuteUbergraph_BP_Multiplayer_PaperAirpl
 }
 
 
+// Function BP_Multiplayer_PaperAirplane.BP_Multiplayer_PaperAirplane_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_Multiplayer_PaperAirplane_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Multiplayer_PaperAirplane_C", "ReceiveTick");
+
+	Params::BP_Multiplayer_PaperAirplane_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_Multiplayer_PaperAirplane.BP_Multiplayer_PaperAirplane_C.SetInvisibleWall
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

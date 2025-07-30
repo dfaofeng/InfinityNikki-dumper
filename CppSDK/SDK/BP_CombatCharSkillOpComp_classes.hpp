@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "ESkillInputType_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

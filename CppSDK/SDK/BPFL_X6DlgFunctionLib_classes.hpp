@@ -23,17 +23,17 @@ namespace SDK
 class UBPFL_X6DlgFunctionLib_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void BP_UnmountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext);
-	static void BP_UnmountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext);
-	static void BP_ShowDlgSubtitleByIDV2(const class FString& DlgLineID, double ShowDuration, bool bPlayVoice, bool bUseSpecialWidget, TSoftClassPtr<class UClass> Widget, ESubtitleShowEffectType ShowEffect, ESubtitleSourceType SourceType, class UObject* __WorldContext);
-	static void BP_PrintDlgDebugInfo(const class FString& InDebugInfo, class UObject* __WorldContext);
-	static void BP_PlayDialogue(const class FString& DialogueName, int64 TargetId, class UObject* __WorldContext);
-	static void BP_MountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext);
-	static void BP_MountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext);
-	static void BP_GetVoicePathByLineID(class FName DlgLineID, class UObject* __WorldContext, struct FSoftObjectPath* AkEventSoftPath);
-	static void BP_GetTransformBySemPointID(int64 PlayPointID, class UObject* __WorldContext, struct FTransform* Transform);
-	static void BP_GetFloorSufaceZ(class UObject* __WorldContext, double* LocationZ);
 	static void BP_GetDlgActorFloorTransform(class AActor* Actor, class UObject* __WorldContext, struct FTransform* Tranform);
+	static void BP_GetFloorSufaceZ(class UObject* __WorldContext, double* LocationZ);
+	static void BP_GetTransformBySemPointID(int64 PlayPointID, class UObject* __WorldContext, struct FTransform* Transform);
+	static void BP_GetVoicePathByLineID(class FName DlgLineID, class UObject* __WorldContext, struct FSoftObjectPath* AkEventSoftPath);
+	static void BP_MountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext);
+	static void BP_MountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext);
+	static void BP_PlayDialogue(const class FString& DialogueName, int64 TargetId, class UObject* __WorldContext);
+	static void BP_PrintDlgDebugInfo(const class FString& InDebugInfo, class UObject* __WorldContext);
+	static void BP_ShowDlgSubtitleByIDV2(const class FString& DlgLineID, double ShowDuration, bool bPlayVoice, bool bUseSpecialWidget, TSoftClassPtr<class UClass> Widget, ESubtitleShowEffectType ShowEffect, ESubtitleSourceType SourceType, class UObject* __WorldContext);
+	static void BP_UnmountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext);
+	static void BP_UnmountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

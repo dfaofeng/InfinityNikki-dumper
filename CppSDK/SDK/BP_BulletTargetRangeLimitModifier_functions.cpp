@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function BP_BulletTargetRangeLimitModifier.BP_BulletTargetRangeLimitModifier_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+// Function BP_BulletTargetRangeLimitModifier.BP_BulletTargetRangeLimitModifier_C.K2_OnAsyncLoadComplete
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
 
-class FString UBP_BulletTargetRangeLimitModifier_C::GetModuleName() const
+void UBP_BulletTargetRangeLimitModifier_C::K2_OnAsyncLoadComplete() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletTargetRangeLimitModifier_C", "GetModuleName");
+		Func = Class->GetFunction("BP_BulletTargetRangeLimitModifier_C", "K2_OnAsyncLoadComplete");
 
-	Params::BP_BulletTargetRangeLimitModifier_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -51,17 +45,23 @@ void UBP_BulletTargetRangeLimitModifier_C::K2_Destroy() const
 }
 
 
-// Function BP_BulletTargetRangeLimitModifier.BP_BulletTargetRangeLimitModifier_C.K2_OnAsyncLoadComplete
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+// Function BP_BulletTargetRangeLimitModifier.BP_BulletTargetRangeLimitModifier_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-void UBP_BulletTargetRangeLimitModifier_C::K2_OnAsyncLoadComplete() const
+class FString UBP_BulletTargetRangeLimitModifier_C::GetModuleName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletTargetRangeLimitModifier_C", "K2_OnAsyncLoadComplete");
+		Func = Class->GetFunction("BP_BulletTargetRangeLimitModifier_C", "GetModuleName");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_BulletTargetRangeLimitModifier_C_GetModuleName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

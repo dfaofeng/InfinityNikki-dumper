@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_classes.hpp"
-#include "Engine_structs.hpp"
 #include "EInputDeviceKeyType_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

@@ -35,8 +35,8 @@ public:
 	class UImage*                                 Up;                                                // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_UI_SceneMarkerCell(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 

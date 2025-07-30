@@ -14,27 +14,101 @@
 namespace SDK::Params
 {
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.Collection_item_01_Event_0
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_Collection_item_01_Event_0 final
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.TestID
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_HUD_Collection_List_C_TestID final
 {
 public:
-	class UWBP_UI_HUD_Collection_item_C*          Collection_item_01_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_Collection_List_C_Collection_item_01_Event_0) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_Collection_item_01_Event_0");
-static_assert(sizeof(WBP_HUD_Collection_List_C_Collection_item_01_Event_0) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_Collection_item_01_Event_0");
-static_assert(offsetof(WBP_HUD_Collection_List_C_Collection_item_01_Event_0, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_Collection_item_01_Event_0::Collection_item_01_0' has a wrong offset!");
+static_assert(alignof(WBP_HUD_Collection_List_C_TestID) == 0x000004, "Wrong alignment on WBP_HUD_Collection_List_C_TestID");
+static_assert(sizeof(WBP_HUD_Collection_List_C_TestID) == 0x000004, "Wrong size on WBP_HUD_Collection_List_C_TestID");
+static_assert(offsetof(WBP_HUD_Collection_List_C_TestID, ID) == 0x000000, "Member 'WBP_HUD_Collection_List_C_TestID::ID' has a wrong offset!");
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.Collection_item_01_Event_1
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_Collection_item_01_Event_1 final
+struct WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0 final
 {
 public:
 	class UWBP_UI_HUD_Collection_item_C*          Collection_item_01_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_Collection_List_C_Collection_item_01_Event_1) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_Collection_item_01_Event_1");
-static_assert(sizeof(WBP_HUD_Collection_List_C_Collection_item_01_Event_1) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_Collection_item_01_Event_1");
-static_assert(offsetof(WBP_HUD_Collection_List_C_Collection_item_01_Event_1, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_Collection_item_01_Event_1::Collection_item_01_0' has a wrong offset!");
+static_assert(alignof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0");
+static_assert(sizeof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0");
+static_assert(offsetof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0::Collection_item_01_0' has a wrong offset!");
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List final
+{
+public:
+	class UWBP_UI_HUD_Collection_item_C*          Collection_item_01_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List");
+static_assert(sizeof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List");
+static_assert(offsetof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List::Collection_item_01_0' has a wrong offset!");
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.PlayOutAnim
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUD_Collection_List_C_PlayOutAnim final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_Collection_List_C_PlayOutAnim) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_PlayOutAnim");
+static_assert(sizeof(WBP_HUD_Collection_List_C_PlayOutAnim) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_PlayOutAnim");
+static_assert(offsetof(WBP_HUD_Collection_List_C_PlayOutAnim, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_PlayOutAnim::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeOut
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_HUD_Collection_List_C_OnFadeOut final
+{
+public:
+	float                                         CallFunc_GetEndTime_ReturnValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetEndTime_ReturnValue_1;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_Collection_List_C_OnFadeOut) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_OnFadeOut");
+static_assert(sizeof(WBP_HUD_Collection_List_C_OnFadeOut) == 0x000018, "Wrong size on WBP_HUD_Collection_List_C_OnFadeOut");
+static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_GetEndTime_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_GetEndTime_ReturnValue_1) == 0x000004, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_GetEndTime_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeIn
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_HUD_Collection_List_C_OnFadeIn final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_Collection_List_C_OnFadeIn) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_OnFadeIn");
+static_assert(sizeof(WBP_HUD_Collection_List_C_OnFadeIn) == 0x000010, "Wrong size on WBP_HUD_Collection_List_C_OnFadeIn");
+static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeIn, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_OnFadeIn::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeIn, CallFunc_PlayAnimation_ReturnValue_1) == 0x000008, "Member 'WBP_HUD_Collection_List_C_OnFadeIn::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInOtherCoin
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUD_Collection_List_C_FadeInOtherCoin final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_Collection_List_C_FadeInOtherCoin) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_FadeInOtherCoin");
+static_assert(sizeof(WBP_HUD_Collection_List_C_FadeInOtherCoin) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_FadeInOtherCoin");
+static_assert(offsetof(WBP_HUD_Collection_List_C_FadeInOtherCoin, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_FadeInOtherCoin::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInMoonCoin
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_HUD_Collection_List_C_FadeInMoonCoin final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_Collection_List_C_FadeInMoonCoin) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_FadeInMoonCoin");
+static_assert(sizeof(WBP_HUD_Collection_List_C_FadeInMoonCoin) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_FadeInMoonCoin");
+static_assert(offsetof(WBP_HUD_Collection_List_C_FadeInMoonCoin, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_FadeInMoonCoin::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 
 // Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.ExecuteUbergraph_WBP_HUD_Collection_List
 // 0x0048 (0x0048 - 0x0000)
@@ -61,101 +135,27 @@ static_assert(offsetof(WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collec
 static_assert(offsetof(WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collection_List, CallFunc_PlayAnimation_ReturnValue) == 0x000038, "Member 'WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collection_List::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collection_List, K2Node_CustomEvent_Collection_item_01) == 0x000040, "Member 'WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collection_List::K2Node_CustomEvent_Collection_item_01' has a wrong offset!");
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInMoonCoin
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.Collection_item_01_Event_1
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_FadeInMoonCoin final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_Collection_List_C_FadeInMoonCoin) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_FadeInMoonCoin");
-static_assert(sizeof(WBP_HUD_Collection_List_C_FadeInMoonCoin) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_FadeInMoonCoin");
-static_assert(offsetof(WBP_HUD_Collection_List_C_FadeInMoonCoin, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_FadeInMoonCoin::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInOtherCoin
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_FadeInOtherCoin final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_Collection_List_C_FadeInOtherCoin) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_FadeInOtherCoin");
-static_assert(sizeof(WBP_HUD_Collection_List_C_FadeInOtherCoin) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_FadeInOtherCoin");
-static_assert(offsetof(WBP_HUD_Collection_List_C_FadeInOtherCoin, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_FadeInOtherCoin::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeIn
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_HUD_Collection_List_C_OnFadeIn final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_Collection_List_C_OnFadeIn) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_OnFadeIn");
-static_assert(sizeof(WBP_HUD_Collection_List_C_OnFadeIn) == 0x000010, "Wrong size on WBP_HUD_Collection_List_C_OnFadeIn");
-static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeIn, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_OnFadeIn::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeIn, CallFunc_PlayAnimation_ReturnValue_1) == 0x000008, "Member 'WBP_HUD_Collection_List_C_OnFadeIn::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeOut
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_HUD_Collection_List_C_OnFadeOut final
-{
-public:
-	float                                         CallFunc_GetEndTime_ReturnValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetEndTime_ReturnValue_1;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_Collection_List_C_OnFadeOut) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_OnFadeOut");
-static_assert(sizeof(WBP_HUD_Collection_List_C_OnFadeOut) == 0x000018, "Wrong size on WBP_HUD_Collection_List_C_OnFadeOut");
-static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_GetEndTime_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_GetEndTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_GetEndTime_ReturnValue_1) == 0x000004, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_GetEndTime_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_Collection_List_C_OnFadeOut, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_HUD_Collection_List_C_OnFadeOut::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.PlayOutAnim
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_PlayOutAnim final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_Collection_List_C_PlayOutAnim) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_PlayOutAnim");
-static_assert(sizeof(WBP_HUD_Collection_List_C_PlayOutAnim) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_PlayOutAnim");
-static_assert(offsetof(WBP_HUD_Collection_List_C_PlayOutAnim, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_HUD_Collection_List_C_PlayOutAnim::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List final
+struct WBP_HUD_Collection_List_C_Collection_item_01_Event_1 final
 {
 public:
 	class UWBP_UI_HUD_Collection_item_C*          Collection_item_01_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List");
-static_assert(sizeof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List");
-static_assert(offsetof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List::Collection_item_01_0' has a wrong offset!");
+static_assert(alignof(WBP_HUD_Collection_List_C_Collection_item_01_Event_1) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_Collection_item_01_Event_1");
+static_assert(sizeof(WBP_HUD_Collection_List_C_Collection_item_01_Event_1) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_Collection_item_01_Event_1");
+static_assert(offsetof(WBP_HUD_Collection_List_C_Collection_item_01_Event_1, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_Collection_item_01_Event_1::Collection_item_01_0' has a wrong offset!");
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.Collection_item_01_Event_0
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0 final
+struct WBP_HUD_Collection_List_C_Collection_item_01_Event_0 final
 {
 public:
 	class UWBP_UI_HUD_Collection_item_C*          Collection_item_01_0;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0");
-static_assert(sizeof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0");
-static_assert(offsetof(WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0::Collection_item_01_0' has a wrong offset!");
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.TestID
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_HUD_Collection_List_C_TestID final
-{
-public:
-	int32                                         ID;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_Collection_List_C_TestID) == 0x000004, "Wrong alignment on WBP_HUD_Collection_List_C_TestID");
-static_assert(sizeof(WBP_HUD_Collection_List_C_TestID) == 0x000004, "Wrong size on WBP_HUD_Collection_List_C_TestID");
-static_assert(offsetof(WBP_HUD_Collection_List_C_TestID, ID) == 0x000000, "Member 'WBP_HUD_Collection_List_C_TestID::ID' has a wrong offset!");
+static_assert(alignof(WBP_HUD_Collection_List_C_Collection_item_01_Event_0) == 0x000008, "Wrong alignment on WBP_HUD_Collection_List_C_Collection_item_01_Event_0");
+static_assert(sizeof(WBP_HUD_Collection_List_C_Collection_item_01_Event_0) == 0x000008, "Wrong size on WBP_HUD_Collection_List_C_Collection_item_01_Event_0");
+static_assert(offsetof(WBP_HUD_Collection_List_C_Collection_item_01_Event_0, Collection_item_01_0) == 0x000000, "Member 'WBP_HUD_Collection_List_C_Collection_item_01_Event_0::Collection_item_01_0' has a wrong offset!");
 
 // Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

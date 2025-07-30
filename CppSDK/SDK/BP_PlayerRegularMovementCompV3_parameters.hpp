@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "EInputDeviceKeyType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EPlayerMovementScenarios_structs.hpp"
-#include "X6Game_structs.hpp"
 #include "EPlayerAdditiveMovementMode_structs.hpp"
+#include "X6Game_structs.hpp"
+#include "EInputDeviceKeyType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

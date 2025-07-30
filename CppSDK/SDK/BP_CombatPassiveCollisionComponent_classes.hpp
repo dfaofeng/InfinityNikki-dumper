@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ECombatPassiveCollisionType_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "ECombatPassiveCollisionType_structs.hpp"
 
 
 namespace SDK

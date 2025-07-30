@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_PlayComboAnimByTag_C;            // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_GA_PlayComboAnimByTag(int32 EntryPoint);
 	void K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData);
+	void ExecuteUbergraph_GA_PlayComboAnimByTag(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

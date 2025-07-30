@@ -17,18 +17,31 @@
 namespace SDK::Params
 {
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_UI_charactor_name_C_Tick final
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_SetName
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_UI_charactor_name_C_BP_SetName final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_UI_charactor_name_C_Tick) == 0x000004, "Wrong alignment on WBP_UI_charactor_name_C_Tick");
-static_assert(sizeof(WBP_UI_charactor_name_C_Tick) == 0x00003C, "Wrong size on WBP_UI_charactor_name_C_Tick");
-static_assert(offsetof(WBP_UI_charactor_name_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_UI_charactor_name_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_UI_charactor_name_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_UI_charactor_name_C_Tick::InDeltaTime' has a wrong offset!");
+static_assert(alignof(WBP_UI_charactor_name_C_BP_SetName) == 0x000008, "Wrong alignment on WBP_UI_charactor_name_C_BP_SetName");
+static_assert(sizeof(WBP_UI_charactor_name_C_BP_SetName) == 0x000010, "Wrong size on WBP_UI_charactor_name_C_BP_SetName");
+static_assert(offsetof(WBP_UI_charactor_name_C_BP_SetName, InText) == 0x000000, "Member 'WBP_UI_charactor_name_C_BP_SetName::InText' has a wrong offset!");
+
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.ExecuteUbergraph_WBP_UI_charactor_name
+// 0x0040 (0x0040 - 0x0000)
+struct WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
+	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name) == 0x000004, "Wrong alignment on WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name");
+static_assert(sizeof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name) == 0x000040, "Wrong size on WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name");
+static_assert(offsetof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name, EntryPoint) == 0x000000, "Member 'WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name, K2Node_Event_MyGeometry) == 0x000004, "Member 'WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name::K2Node_Event_MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name::K2Node_Event_InDeltaTime' has a wrong offset!");
 
 // Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.GetVerticalBottomZ
 // 0x0060 (0x0060 - 0x0000)
@@ -59,31 +72,18 @@ static_assert(offsetof(WBP_UI_charactor_name_C_GetVerticalBottomZ, CallFunc_Brea
 static_assert(offsetof(WBP_UI_charactor_name_C_GetVerticalBottomZ, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000050, "Member 'WBP_UI_charactor_name_C_GetVerticalBottomZ::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_charactor_name_C_GetVerticalBottomZ, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000058, "Member 'WBP_UI_charactor_name_C_GetVerticalBottomZ::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.ExecuteUbergraph_WBP_UI_charactor_name
-// 0x0040 (0x0040 - 0x0000)
-struct WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name final
+// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_UI_charactor_name_C_Tick final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0004(0x0038)(IsPlainOldData, NoDestructor)
-	float                                         K2Node_Event_InDeltaTime;                          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name) == 0x000004, "Wrong alignment on WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name");
-static_assert(sizeof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name) == 0x000040, "Wrong size on WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name");
-static_assert(offsetof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name, EntryPoint) == 0x000000, "Member 'WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name, K2Node_Event_MyGeometry) == 0x000004, "Member 'WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name::K2Node_Event_MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name, K2Node_Event_InDeltaTime) == 0x00003C, "Member 'WBP_UI_charactor_name_C_ExecuteUbergraph_WBP_UI_charactor_name::K2Node_Event_InDeltaTime' has a wrong offset!");
-
-// Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.BP_SetName
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_UI_charactor_name_C_BP_SetName final
-{
-public:
-	class FString                                 InText;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_charactor_name_C_BP_SetName) == 0x000008, "Wrong alignment on WBP_UI_charactor_name_C_BP_SetName");
-static_assert(sizeof(WBP_UI_charactor_name_C_BP_SetName) == 0x000010, "Wrong size on WBP_UI_charactor_name_C_BP_SetName");
-static_assert(offsetof(WBP_UI_charactor_name_C_BP_SetName, InText) == 0x000000, "Member 'WBP_UI_charactor_name_C_BP_SetName::InText' has a wrong offset!");
+static_assert(alignof(WBP_UI_charactor_name_C_Tick) == 0x000004, "Wrong alignment on WBP_UI_charactor_name_C_Tick");
+static_assert(sizeof(WBP_UI_charactor_name_C_Tick) == 0x00003C, "Wrong size on WBP_UI_charactor_name_C_Tick");
+static_assert(offsetof(WBP_UI_charactor_name_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_UI_charactor_name_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_UI_charactor_name_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_UI_charactor_name_C_Tick::InDeltaTime' has a wrong offset!");
 
 // Function WBP_UI_charactor_name.WBP_UI_charactor_name_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

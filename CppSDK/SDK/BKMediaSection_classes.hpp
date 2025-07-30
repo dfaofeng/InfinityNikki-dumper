@@ -28,8 +28,8 @@ public:
 	bool                                          bUseMultiSkin;                                     // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StartLoad(const class FString& LevelSequenceName);
 	void ExecuteUbergraph_BKMediaSection(int32 EntryPoint);
+	void StartLoad(const class FString& LevelSequenceName);
 
 	class FString GetModuleName() const;
 

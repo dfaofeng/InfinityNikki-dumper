@@ -33,8 +33,8 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcherDone;                                // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Challenge_Aim_Item(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_Challenge_Aim_Item(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

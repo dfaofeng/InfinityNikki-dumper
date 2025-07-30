@@ -35,14 +35,14 @@ public:
 	class UMaterialInstanceDynamic*               DMI;                                               // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_PostProcessHelpBlackActor(int32 EntryPoint);
-	void FadeIn();
-	void FadeInAndDestroy();
-	void FadeOut(const struct FLinearColor& FadeOutColor_0);
-	void GetOrAddPostProcessMaterialInstance(class UMaterialInstanceDynamic** ReturnMaterial);
-	void NewFunction();
-	void NewFunction_0();
 	void NewFunction_1();
+	void NewFunction_0();
+	void NewFunction();
+	void GetOrAddPostProcessMaterialInstance(class UMaterialInstanceDynamic** ReturnMaterial);
+	void FadeOut(const struct FLinearColor& FadeOutColor_0);
+	void FadeInAndDestroy();
+	void FadeIn();
+	void ExecuteUbergraph_PostProcessHelpBlackActor(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

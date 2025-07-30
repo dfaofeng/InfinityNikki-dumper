@@ -27,13 +27,13 @@ public:
 	bool                                          bIsSelfActive;                                     // 0x0031(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateIsSelfActive();
-	void PostOwnerActorSignificanceChanged(class AActor* Actor, float Significance, float TickInterval, bool TickPaused, ESignificanceLevel SignificanceLevel);
-	void NotifyOwnerActorTickEnabled(bool bEnabled);
-	void Init(class AActor* Owner);
-	void ForceSetIsSelfActive(bool bNewActive);
-	void DeInit();
 	void BP_IsGlobalAnimalTickManagerActive(bool* bActive);
+	void DeInit();
+	void ForceSetIsSelfActive(bool bNewActive);
+	void Init(class AActor* Owner);
+	void NotifyOwnerActorTickEnabled(bool bEnabled);
+	void PostOwnerActorSignificanceChanged(class AActor* Actor, float Significance, float TickInterval, bool TickPaused, ESignificanceLevel SignificanceLevel);
+	void UpdateIsSelfActive();
 
 	class FString GetModuleName() const;
 

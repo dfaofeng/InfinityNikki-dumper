@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_NikkiActionGroup_PC_V2.WBP_NikkiActionGroup_PC_V2_C
-// 0x02A8 (0x0598 - 0x02F0)
+// 0x02C0 (0x05B0 - 0x02F0)
 class UWBP_NikkiActionGroup_PC_V2_C final : public UUserWidget
 {
 public:
@@ -70,49 +70,52 @@ public:
 	class UImage*                                 NoSuit;                                            // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 NoSuit_1;                                          // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 NoSuit_2;                                          // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Photo;                                             // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_Entry_C*         RattleButtonKeyTip;                                // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Right;                                             // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UScaleBox*                              ScaleBox_Chat;                                     // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Cloth;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Rattle;                                    // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class USizeBox*                               SizeBox_Skill;                                     // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Skill_01;                                          // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Skill_02;                                          // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Skill_03;                                          // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Skill_04;                                          // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Skill_05;                                          // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           SkillButton;                                       // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           SkillButton_1;                                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           SkillButton_2;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_Entry_C*         SkillButtonKeyTip;                                 // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotWidget_PC_C*             Slot_1;                                            // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotWidget_PC_C*             Slot_2;                                            // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotWidget_PC_C*             Slot_3;                                            // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotWidget_PC_C*             Slot_4;                                            // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotWidget_PC_C*             Slot_5;                                            // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_1;                                         // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_2;                                         // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_3;                                         // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_4;                                         // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_5;                                         // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 SuitBg;                                            // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Change;                                      // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Finish;                                      // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Hud_AbilitySuit_Item_C*            WBP_Hud_AbilitySuit_Item;                          // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Hud_Action_Clothes_PCPS_C*         WBP_Hud_Action_Clothes_PCPS;                       // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Left_Chat_Item_C*                  WBP_Left_Chat_Item;                                // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_WithDescribe_PC_C* WBP_UI_Common_KeyTips_WithDescribe_PC_Default;   // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UDynamicEntryBox*                       WBP_UI_Common_KeyTips_WithDescribe_PC_List;        // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_0;                                  // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_1;                                  // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Suit;                               // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Panel_AbilitySkill_Ex1;                            // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Photo;                                             // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_Entry_C*         RattleButtonKeyTip;                                // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Right;                                             // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UScaleBox*                              ScaleBox_Chat;                                     // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Cloth;                                     // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Rattle;                                    // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class USizeBox*                               SizeBox_Skill;                                     // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Skill_01;                                          // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Skill_02;                                          // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Skill_03;                                          // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Skill_04;                                          // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Skill_05;                                          // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           SkillButton;                                       // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           SkillButton_1;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           SkillButton_2;                                     // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_Entry_C*         SkillButtonKeyTip;                                 // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotWidget_PC_C*             Slot_1;                                            // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotWidget_PC_C*             Slot_2;                                            // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotWidget_PC_C*             Slot_3;                                            // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotWidget_PC_C*             Slot_4;                                            // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotWidget_PC_C*             Slot_5;                                            // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotWidget_PC_C*             Slot_AbilitySkill_Ex1;                             // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_1;                                         // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_2;                                         // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_3;                                         // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_4;                                         // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_5;                                         // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_ActionSlotKeyTip_PC_C*             SlotTip_AbilitySkill_Ex1;                          // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 SuitBg;                                            // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Change;                                      // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Finish;                                      // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Hud_AbilitySuit_Item_C*            WBP_Hud_AbilitySuit_Item;                          // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Hud_Action_Clothes_PCPS_C*         WBP_Hud_Action_Clothes_PCPS;                       // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Left_Chat_Item_C*                  WBP_Left_Chat_Item;                                // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_WithDescribe_PC_C* WBP_UI_Common_KeyTips_WithDescribe_PC_Default;   // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDynamicEntryBox*                       WBP_UI_Common_KeyTips_WithDescribe_PC_List;        // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_0;                                  // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_1;                                  // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Suit;                               // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2(int32 EntryPoint);
-	void NotifyRefreshSuitIcon();
-	void SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V2();
 	void SetDefaultActionIcon();
+	void SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V2();
+	void NotifyRefreshSuitIcon();
+	void ExecuteUbergraph_WBP_NikkiActionGroup_PC_V2(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 
@@ -127,7 +130,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_NikkiActionGroup_PC_V2_C) == 0x000008, "Wrong alignment on UWBP_NikkiActionGroup_PC_V2_C");
-static_assert(sizeof(UWBP_NikkiActionGroup_PC_V2_C) == 0x000598, "Wrong size on UWBP_NikkiActionGroup_PC_V2_C");
+static_assert(sizeof(UWBP_NikkiActionGroup_PC_V2_C) == 0x0005B0, "Wrong size on UWBP_NikkiActionGroup_PC_V2_C");
 static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Ani_Finished) == 0x0002F8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Ani_Finished' has a wrong offset!");
 static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Hover_anim_4) == 0x000300, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Hover_anim_4' has a wrong offset!");
@@ -176,43 +179,46 @@ static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Left_V2) == 0x000450, "Mem
 static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, NoSuit) == 0x000458, "Member 'UWBP_NikkiActionGroup_PC_V2_C::NoSuit' has a wrong offset!");
 static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, NoSuit_1) == 0x000460, "Member 'UWBP_NikkiActionGroup_PC_V2_C::NoSuit_1' has a wrong offset!");
 static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, NoSuit_2) == 0x000468, "Member 'UWBP_NikkiActionGroup_PC_V2_C::NoSuit_2' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Photo) == 0x000470, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Photo' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, RattleButtonKeyTip) == 0x000478, "Member 'UWBP_NikkiActionGroup_PC_V2_C::RattleButtonKeyTip' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Right) == 0x000480, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Right' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, ScaleBox_Chat) == 0x000488, "Member 'UWBP_NikkiActionGroup_PC_V2_C::ScaleBox_Chat' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SizeBox_Cloth) == 0x000490, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SizeBox_Cloth' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SizeBox_Rattle) == 0x000498, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SizeBox_Rattle' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SizeBox_Skill) == 0x0004A0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SizeBox_Skill' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_01) == 0x0004A8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_01' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_02) == 0x0004B0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_02' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_03) == 0x0004B8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_03' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_04) == 0x0004C0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_04' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_05) == 0x0004C8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_05' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButton) == 0x0004D0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButton' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButton_1) == 0x0004D8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButton_1' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButton_2) == 0x0004E0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButton_2' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButtonKeyTip) == 0x0004E8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButtonKeyTip' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_1) == 0x0004F0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_1' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_2) == 0x0004F8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_2' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_3) == 0x000500, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_3' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_4) == 0x000508, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_4' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_5) == 0x000510, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_5' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_1) == 0x000518, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_1' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_2) == 0x000520, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_2' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_3) == 0x000528, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_3' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_4) == 0x000530, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_4' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_5) == 0x000538, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_5' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SuitBg) == 0x000540, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SuitBg' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, UI_NS_Change) == 0x000548, "Member 'UWBP_NikkiActionGroup_PC_V2_C::UI_NS_Change' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, UI_NS_Finish) == 0x000550, "Member 'UWBP_NikkiActionGroup_PC_V2_C::UI_NS_Finish' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_Hud_AbilitySuit_Item) == 0x000558, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_Hud_AbilitySuit_Item' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_Hud_Action_Clothes_PCPS) == 0x000560, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_Hud_Action_Clothes_PCPS' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_Left_Chat_Item) == 0x000568, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_Left_Chat_Item' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_UI_Common_KeyTips_WithDescribe_PC_Default) == 0x000570, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_UI_Common_KeyTips_WithDescribe_PC_Default' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_UI_Common_KeyTips_WithDescribe_PC_List) == 0x000578, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_UI_Common_KeyTips_WithDescribe_PC_List' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WidgetSwitcher_0) == 0x000580, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WidgetSwitcher_0' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WidgetSwitcher_1) == 0x000588, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WidgetSwitcher_1' has a wrong offset!");
-static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WidgetSwitcher_Suit) == 0x000590, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WidgetSwitcher_Suit' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Panel_AbilitySkill_Ex1) == 0x000470, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Panel_AbilitySkill_Ex1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Photo) == 0x000478, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Photo' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, RattleButtonKeyTip) == 0x000480, "Member 'UWBP_NikkiActionGroup_PC_V2_C::RattleButtonKeyTip' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Right) == 0x000488, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Right' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, ScaleBox_Chat) == 0x000490, "Member 'UWBP_NikkiActionGroup_PC_V2_C::ScaleBox_Chat' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SizeBox_Cloth) == 0x000498, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SizeBox_Cloth' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SizeBox_Rattle) == 0x0004A0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SizeBox_Rattle' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SizeBox_Skill) == 0x0004A8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SizeBox_Skill' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_01) == 0x0004B0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_01' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_02) == 0x0004B8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_02' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_03) == 0x0004C0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_03' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_04) == 0x0004C8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_04' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Skill_05) == 0x0004D0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Skill_05' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButton) == 0x0004D8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButton' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButton_1) == 0x0004E0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButton_1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButton_2) == 0x0004E8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButton_2' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SkillButtonKeyTip) == 0x0004F0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SkillButtonKeyTip' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_1) == 0x0004F8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_2) == 0x000500, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_2' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_3) == 0x000508, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_3' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_4) == 0x000510, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_4' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_5) == 0x000518, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_5' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, Slot_AbilitySkill_Ex1) == 0x000520, "Member 'UWBP_NikkiActionGroup_PC_V2_C::Slot_AbilitySkill_Ex1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_1) == 0x000528, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_2) == 0x000530, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_2' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_3) == 0x000538, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_3' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_4) == 0x000540, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_4' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_5) == 0x000548, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_5' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SlotTip_AbilitySkill_Ex1) == 0x000550, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SlotTip_AbilitySkill_Ex1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, SuitBg) == 0x000558, "Member 'UWBP_NikkiActionGroup_PC_V2_C::SuitBg' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, UI_NS_Change) == 0x000560, "Member 'UWBP_NikkiActionGroup_PC_V2_C::UI_NS_Change' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, UI_NS_Finish) == 0x000568, "Member 'UWBP_NikkiActionGroup_PC_V2_C::UI_NS_Finish' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_Hud_AbilitySuit_Item) == 0x000570, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_Hud_AbilitySuit_Item' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_Hud_Action_Clothes_PCPS) == 0x000578, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_Hud_Action_Clothes_PCPS' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_Left_Chat_Item) == 0x000580, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_Left_Chat_Item' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_UI_Common_KeyTips_WithDescribe_PC_Default) == 0x000588, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_UI_Common_KeyTips_WithDescribe_PC_Default' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WBP_UI_Common_KeyTips_WithDescribe_PC_List) == 0x000590, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WBP_UI_Common_KeyTips_WithDescribe_PC_List' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WidgetSwitcher_0) == 0x000598, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WidgetSwitcher_0' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WidgetSwitcher_1) == 0x0005A0, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WidgetSwitcher_1' has a wrong offset!");
+static_assert(offsetof(UWBP_NikkiActionGroup_PC_V2_C, WidgetSwitcher_Suit) == 0x0005A8, "Member 'UWBP_NikkiActionGroup_PC_V2_C::WidgetSwitcher_Suit' has a wrong offset!");
 
 }
 

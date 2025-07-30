@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function BP_FeatureSequenceActorBase.BP_FeatureSequenceActorBase_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_FeatureSequenceActorBase_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FeatureSequenceActorBase_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_FeatureSequenceActorBase_C_ReceiveTick");
+static_assert(sizeof(BP_FeatureSequenceActorBase_C_ReceiveTick) == 0x000004, "Wrong size on BP_FeatureSequenceActorBase_C_ReceiveTick");
+static_assert(offsetof(BP_FeatureSequenceActorBase_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_FeatureSequenceActorBase_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
 // Function BP_FeatureSequenceActorBase.BP_FeatureSequenceActorBase_C.ExecuteUbergraph_BP_FeatureSequenceActorBase
 // 0x0018 (0x0018 - 0x0000)
 struct BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase final
@@ -30,17 +41,6 @@ static_assert(offsetof(BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_Feature
 static_assert(offsetof(BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase, CallFunc_GetAttachParentActor_ReturnValue) == 0x000008, "Member 'BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase::CallFunc_GetAttachParentActor_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_FeatureSequenceActorBase_C_ExecuteUbergraph_BP_FeatureSequenceActorBase::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_FeatureSequenceActorBase.BP_FeatureSequenceActorBase_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_FeatureSequenceActorBase_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FeatureSequenceActorBase_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_FeatureSequenceActorBase_C_ReceiveTick");
-static_assert(sizeof(BP_FeatureSequenceActorBase_C_ReceiveTick) == 0x000004, "Wrong size on BP_FeatureSequenceActorBase_C_ReceiveTick");
-static_assert(offsetof(BP_FeatureSequenceActorBase_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_FeatureSequenceActorBase_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

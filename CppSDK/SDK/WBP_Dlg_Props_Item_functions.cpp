@@ -17,97 +17,15 @@
 namespace SDK
 {
 
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.BP_ForceStopSubtractAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.SubItemEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Dlg_Props_Item_C::BP_ForceStopSubtractAnim()
+void UWBP_Dlg_Props_Item_C::SubItemEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "BP_ForceStopSubtractAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ChangeTextColorToRed
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Dlg_Props_Item_C::ChangeTextColorToRed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ChangeTextColorToRed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ChangeTextColorToWhite
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Dlg_Props_Item_C::ChangeTextColorToWhite()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ChangeTextColorToWhite");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ExecuteUbergraph_WBP_Dlg_Props_Item
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Dlg_Props_Item_C::ExecuteUbergraph_WBP_Dlg_Props_Item(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ExecuteUbergraph_WBP_Dlg_Props_Item");
-
-	Params::WBP_Dlg_Props_Item_C_ExecuteUbergraph_WBP_Dlg_Props_Item Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ReduceItem
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  InReduceNum                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Dlg_Props_Item_C::ReduceItem(double InReduceNum)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ReduceItem");
-
-	Params::WBP_Dlg_Props_Item_C_ReduceItem Parms{};
-
-	Parms.InReduceNum = InReduceNum;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Dlg_Props_Item_C::SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item");
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "SubItemEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -137,15 +55,97 @@ void UWBP_Dlg_Props_Item_C::SetNumText(double InFloat, int32 DisplayType_0, clas
 }
 
 
-// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.SubItemEvent
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Dlg_Props_Item_C::SubItemEvent()
+void UWBP_Dlg_Props_Item_C::SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "SubItemEvent");
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "SequenceEvent__ENTRYPOINTWBP_Dlg_Props_Item");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ReduceItem
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  InReduceNum                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Dlg_Props_Item_C::ReduceItem(double InReduceNum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ReduceItem");
+
+	Params::WBP_Dlg_Props_Item_C_ReduceItem Parms{};
+
+	Parms.InReduceNum = InReduceNum;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ExecuteUbergraph_WBP_Dlg_Props_Item
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Dlg_Props_Item_C::ExecuteUbergraph_WBP_Dlg_Props_Item(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ExecuteUbergraph_WBP_Dlg_Props_Item");
+
+	Params::WBP_Dlg_Props_Item_C_ExecuteUbergraph_WBP_Dlg_Props_Item Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ChangeTextColorToWhite
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Dlg_Props_Item_C::ChangeTextColorToWhite()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ChangeTextColorToWhite");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.ChangeTextColorToRed
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Dlg_Props_Item_C::ChangeTextColorToRed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "ChangeTextColorToRed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Dlg_Props_Item.WBP_Dlg_Props_Item_C.BP_ForceStopSubtractAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Dlg_Props_Item_C::BP_ForceStopSubtractAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Dlg_Props_Item_C", "BP_ForceStopSubtractAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

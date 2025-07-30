@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_X6ActorComponent_classes.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK

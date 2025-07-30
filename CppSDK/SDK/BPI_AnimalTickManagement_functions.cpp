@@ -17,24 +17,24 @@
 namespace SDK
 {
 
-// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.ShouldRejectTickManagement
+// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.GetAnimalTickManager
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool*                                   bReject                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBP_AnimalTickManager_C**         AnimalTickManager                                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AnimalTickManagement_C::ShouldRejectTickManagement(bool* bReject)
+void IBPI_AnimalTickManagement_C::GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_AnimalTickManagement_C", "ShouldRejectTickManagement");
+		Func = Class->GetFunction("BPI_AnimalTickManagement_C", "GetAnimalTickManager");
 
-	Params::BPI_AnimalTickManagement_C_ShouldRejectTickManagement Parms{};
+	Params::BPI_AnimalTickManagement_C_GetAnimalTickManager Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (bReject != nullptr)
-		*bReject = Parms.bReject;
+	if (AnimalTickManager != nullptr)
+		*AnimalTickManager = Parms.AnimalTickManager;
 }
 
 
@@ -62,24 +62,24 @@ void IBPI_AnimalTickManagement_C::SetAnimalTickEnabled(bool bEnabled, bool* bSuc
 }
 
 
-// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.GetAnimalTickManager
+// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.ShouldRejectTickManagement
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UBP_AnimalTickManager_C**         AnimalTickManager                                      (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bReject                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_AnimalTickManagement_C::GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager)
+void IBPI_AnimalTickManagement_C::ShouldRejectTickManagement(bool* bReject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_AnimalTickManagement_C", "GetAnimalTickManager");
+		Func = Class->GetFunction("BPI_AnimalTickManagement_C", "ShouldRejectTickManagement");
 
-	Params::BPI_AnimalTickManagement_C_GetAnimalTickManager Parms{};
+	Params::BPI_AnimalTickManagement_C_ShouldRejectTickManagement Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (AnimalTickManager != nullptr)
-		*AnimalTickManager = Parms.AnimalTickManager;
+	if (bReject != nullptr)
+		*bReject = Parms.bReject;
 }
 
 }

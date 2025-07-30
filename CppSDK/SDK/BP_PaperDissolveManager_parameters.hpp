@@ -16,6 +16,64 @@
 namespace SDK::Params
 {
 
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.OnInstancedFoliageDissolve
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PaperDissolveManager_C_OnInstancedFoliageDissolve final
+{
+public:
+	TArray<struct FNeedDissolveItemInfo>          ISMs;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+};
+static_assert(alignof(BP_PaperDissolveManager_C_OnInstancedFoliageDissolve) == 0x000008, "Wrong alignment on BP_PaperDissolveManager_C_OnInstancedFoliageDissolve");
+static_assert(sizeof(BP_PaperDissolveManager_C_OnInstancedFoliageDissolve) == 0x000010, "Wrong size on BP_PaperDissolveManager_C_OnInstancedFoliageDissolve");
+static_assert(offsetof(BP_PaperDissolveManager_C_OnInstancedFoliageDissolve, ISMs) == 0x000000, "Member 'BP_PaperDissolveManager_C_OnInstancedFoliageDissolve::ISMs' has a wrong offset!");
+
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Is Actor Instanced Foliage
+// 0x0028 (0x0028 - 0x0000)
+struct BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDissolve;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage) == 0x000008, "Wrong alignment on BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage");
+static_assert(sizeof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage) == 0x000028, "Wrong size on BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, Actor) == 0x000000, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::Actor' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, CanDissolve) == 0x000008, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::CanDissolve' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, CallFunc_GetObjectName_ReturnValue) == 0x000010, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, CallFunc_Contains_ReturnValue) == 0x000020, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::CallFunc_Contains_ReturnValue' has a wrong offset!");
+
+// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Is Actor Dissolveable Item
+// 0x0040 (0x0040 - 0x0000)
+struct BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanDissolve;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OutActor;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Dissolving;                                        // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_DissolveActorComponent_C*           DissolveActor;                                     // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_DissolveActorComponent_C*           CallFunc_GetComponentByClass_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ActorHasTag_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item) == 0x000008, "Wrong alignment on BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item");
+static_assert(sizeof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item) == 0x000040, "Wrong size on BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, Actor) == 0x000000, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::Actor' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CanDissolve) == 0x000008, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CanDissolve' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, OutActor) == 0x000010, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::OutActor' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, Dissolving) == 0x000018, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::Dissolving' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, DissolveActor) == 0x000020, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::DissolveActor' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_MakeLiteralName_ReturnValue) == 0x000028, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_GetComponentByClass_ReturnValue) == 0x000030, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_ActorHasTag_ReturnValue) == 0x000038, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_ActorHasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
 // Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.ExecuteUbergraph_BP_PaperDissolveManager
 // 0x0090 (0x0090 - 0x0000)
 struct BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager final
@@ -74,64 +132,6 @@ static_assert(offsetof(BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissol
 static_assert(offsetof(BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager, CallFunc_IsValid_ReturnValue_2) == 0x000088, "Member 'BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager, CallFunc_Set_Contains_ReturnValue_1) == 0x000089, "Member 'BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager::CallFunc_Set_Contains_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager, CallFunc_IsValid_ReturnValue_3) == 0x00008A, "Member 'BP_PaperDissolveManager_C_ExecuteUbergraph_BP_PaperDissolveManager::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Is Actor Dissolveable Item
-// 0x0040 (0x0040 - 0x0000)
-struct BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanDissolve;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OutActor;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Dissolving;                                        // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_DissolveActorComponent_C*           DissolveActor;                                     // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_DissolveActorComponent_C*           CallFunc_GetComponentByClass_ReturnValue;          // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ActorHasTag_ReturnValue;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item) == 0x000008, "Wrong alignment on BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item");
-static_assert(sizeof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item) == 0x000040, "Wrong size on BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, Actor) == 0x000000, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::Actor' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CanDissolve) == 0x000008, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CanDissolve' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, OutActor) == 0x000010, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::OutActor' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, Dissolving) == 0x000018, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::Dissolving' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, DissolveActor) == 0x000020, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::DissolveActor' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_MakeLiteralName_ReturnValue) == 0x000028, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_GetComponentByClass_ReturnValue) == 0x000030, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_ActorHasTag_ReturnValue) == 0x000038, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_ActorHasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item, CallFunc_IsValid_ReturnValue) == 0x000039, "Member 'BP_PaperDissolveManager_C_Is_Actor_Dissolveable_Item::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.Is Actor Instanced Foliage
-// 0x0028 (0x0028 - 0x0000)
-struct BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CanDissolve;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage) == 0x000008, "Wrong alignment on BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage");
-static_assert(sizeof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage) == 0x000028, "Wrong size on BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, Actor) == 0x000000, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::Actor' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, CanDissolve) == 0x000008, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::CanDissolve' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, CallFunc_GetObjectName_ReturnValue) == 0x000010, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage, CallFunc_Contains_ReturnValue) == 0x000020, "Member 'BP_PaperDissolveManager_C_Is_Actor_Instanced_Foliage::CallFunc_Contains_ReturnValue' has a wrong offset!");
-
-// Function BP_PaperDissolveManager.BP_PaperDissolveManager_C.OnInstancedFoliageDissolve
-// 0x0010 (0x0010 - 0x0000)
-struct BP_PaperDissolveManager_C_OnInstancedFoliageDissolve final
-{
-public:
-	TArray<struct FNeedDissolveItemInfo>          ISMs;                                              // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-};
-static_assert(alignof(BP_PaperDissolveManager_C_OnInstancedFoliageDissolve) == 0x000008, "Wrong alignment on BP_PaperDissolveManager_C_OnInstancedFoliageDissolve");
-static_assert(sizeof(BP_PaperDissolveManager_C_OnInstancedFoliageDissolve) == 0x000010, "Wrong size on BP_PaperDissolveManager_C_OnInstancedFoliageDissolve");
-static_assert(offsetof(BP_PaperDissolveManager_C_OnInstancedFoliageDissolve, ISMs) == 0x000000, "Member 'BP_PaperDissolveManager_C_OnInstancedFoliageDissolve::ISMs' has a wrong offset!");
 
 }
 

@@ -33,8 +33,8 @@ public:
 	class FString                                 Tag;                                               // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void SpawnPhotographCamera_EditorOnly();
 	void DeletePhotographCamera_EditorOnly();
+	void SpawnPhotographCamera_EditorOnly();
 
 public:
 	static class UClass* StaticClass()

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "F_StylizedStopAnimConfig_structs.hpp"
 #include "FStylizedMirror_structs.hpp"
 #include "F_StylizedStartAnimConfig_structs.hpp"
+#include "F_StylizedStopAnimConfig_structs.hpp"
+#include "F_StylizedPivotAnimConfig_structs.hpp"
 #include "F_StylizedLoopAnimConfig_structs.hpp"
 #include "F_OverlayConfig_structs.hpp"
-#include "F_StylizedPivotAnimConfig_structs.hpp"
 
 
 namespace SDK

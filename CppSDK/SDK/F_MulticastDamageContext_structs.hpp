@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EDamagePerformanceType_structs.hpp"
-#include "EFeedBackReason_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EFeedBackReason_structs.hpp"
+#include "EDamagePerformanceType_structs.hpp"
 
 
 namespace SDK

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function AN_CameraShake.AN_CameraShake_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UAN_CameraShake_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AN_CameraShake_C", "GetModuleName");
-
-	Params::AN_CameraShake_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AN_CameraShake.AN_CameraShake_C.GetNotifyName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -50,6 +30,26 @@ class FString UAN_CameraShake_C::GetNotifyName() const
 		Func = Class->GetFunction("AN_CameraShake_C", "GetNotifyName");
 
 	Params::AN_CameraShake_C_GetNotifyName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AN_CameraShake.AN_CameraShake_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UAN_CameraShake_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AN_CameraShake_C", "GetModuleName");
+
+	Params::AN_CameraShake_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

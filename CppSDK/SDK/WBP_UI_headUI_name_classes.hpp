@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EHeadUIState_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EHeadUIState_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -33,8 +33,8 @@ public:
 	EHeadUIState                                  NextShowState;                                     // 0x0319(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void GetHeight(double* NewParam);
 	void ExecuteUbergraph_WBP_UI_headUI_name(int32 EntryPoint);
+	void GetHeight(double* NewParam);
 	void RefreshAnimState();
 	void SwitchVisibility(ESlateVisibility EVisibility);
 	void WidgetAnimationEvt_FadeIn_K2Node_WidgetAnimationEvent_0();

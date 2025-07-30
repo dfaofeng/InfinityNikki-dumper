@@ -21,10 +21,10 @@ namespace SDK
 class IBP_MapFollower_C final : public IInterface
 {
 public:
-	void SetClipRange(const struct FVector2D& Size);
-	void SetContentScale(const struct FVector2D& Scale);
-	void SetContentSize(const struct FVector2D& Size);
 	void SetMoveContentPosition(const struct FVector2D& Pos);
+	void SetContentSize(const struct FVector2D& Size);
+	void SetContentScale(const struct FVector2D& Scale);
+	void SetClipRange(const struct FVector2D& Size);
 
 public:
 	static class UClass* StaticClass()

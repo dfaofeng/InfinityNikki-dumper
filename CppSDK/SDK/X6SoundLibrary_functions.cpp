@@ -17,20 +17,20 @@
 namespace SDK
 {
 
-// Function X6SoundLibrary.X6SoundLibrary_C.StopStoryMusic
+// Function X6SoundLibrary.X6SoundLibrary_C.BP_PlayUIBtnSound
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6SoundLibrary_C::StopStoryMusic(class UAkAudioEvent* Event, class UObject* __WorldContext)
+void UX6SoundLibrary_C::BP_PlayUIBtnSound(class UAkAudioEvent* Event, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "StopStoryMusic");
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_PlayUIBtnSound");
 
-	Params::X6SoundLibrary_C_StopStoryMusic Parms{};
+	Params::X6SoundLibrary_C_BP_PlayUIBtnSound Parms{};
 
 	Parms.Event = Event;
 	Parms.__WorldContext = __WorldContext;
@@ -39,96 +39,66 @@ void UX6SoundLibrary_C::StopStoryMusic(class UAkAudioEvent* Event, class UObject
 }
 
 
-// Function X6SoundLibrary.X6SoundLibrary_C.ResumeActorVolume
+// Function X6SoundLibrary.X6SoundLibrary_C.BP_PostEvent
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6SoundLibrary_C::ResumeActorVolume(class AActor* Actor, class UObject* __WorldContext)
+void UX6SoundLibrary_C::BP_PostEvent(class UAkAudioEvent* Event, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "ResumeActorVolume");
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_PostEvent");
 
-	Params::X6SoundLibrary_C_ResumeActorVolume Parms{};
+	Params::X6SoundLibrary_C_BP_PostEvent Parms{};
 
-	Parms.Actor = Actor;
+	Parms.Event = Event;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
 
-// Function X6SoundLibrary.X6SoundLibrary_C.IsActorMuted
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UX6SoundLibrary_C::IsActorMuted(class AActor* Actor, class UObject* __WorldContext, bool* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "IsActorMuted");
-
-	Params::X6SoundLibrary_C_IsActorMuted Parms{};
-
-	Parms.Actor = Actor;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function X6SoundLibrary.X6SoundLibrary_C.GetDefaultEmitterActor
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor**                          Actor                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UX6SoundLibrary_C::GetDefaultEmitterActor(class UObject* __WorldContext, class AActor** Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "GetDefaultEmitterActor");
-
-	Params::X6SoundLibrary_C_GetDefaultEmitterActor Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Actor != nullptr)
-		*Actor = Parms.Actor;
-}
-
-
-// Function X6SoundLibrary.X6SoundLibrary_C.DisableActorVolume
+// Function X6SoundLibrary.X6SoundLibrary_C.BP_PostEventAsync
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  ResumeDelay                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6SoundLibrary_C::DisableActorVolume(class AActor* Actor, double ResumeDelay, class UObject* __WorldContext)
+void UX6SoundLibrary_C::BP_PostEventAsync(class UAkAudioEvent* Event, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "DisableActorVolume");
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_PostEventAsync");
 
-	Params::X6SoundLibrary_C_DisableActorVolume Parms{};
+	Params::X6SoundLibrary_C_BP_PostEventAsync Parms{};
 
-	Parms.Actor = Actor;
-	Parms.ResumeDelay = ResumeDelay;
+	Parms.Event = Event;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6SoundLibrary.X6SoundLibrary_C.BP_SetAkSwitch
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkSwitchValue*                   SWITCH                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6SoundLibrary_C::BP_SetAkSwitch(class UAkSwitchValue* SWITCH, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_SetAkSwitch");
+
+	Params::X6SoundLibrary_C_BP_SetAkSwitch Parms{};
+
+	Parms.SWITCH = SWITCH;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
@@ -161,86 +131,116 @@ void UX6SoundLibrary_C::ChangeStoryMusic(class UAkAudioEvent* Event, class UAkSt
 }
 
 
-// Function X6SoundLibrary.X6SoundLibrary_C.BP_SetAkSwitch
+// Function X6SoundLibrary.X6SoundLibrary_C.DisableActorVolume
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UAkSwitchValue*                   SWITCH                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  ResumeDelay                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6SoundLibrary_C::BP_SetAkSwitch(class UAkSwitchValue* SWITCH, class UObject* __WorldContext)
+void UX6SoundLibrary_C::DisableActorVolume(class AActor* Actor, double ResumeDelay, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_SetAkSwitch");
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "DisableActorVolume");
 
-	Params::X6SoundLibrary_C_BP_SetAkSwitch Parms{};
+	Params::X6SoundLibrary_C_DisableActorVolume Parms{};
 
-	Parms.SWITCH = SWITCH;
+	Parms.Actor = Actor;
+	Parms.ResumeDelay = ResumeDelay;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
 
-// Function X6SoundLibrary.X6SoundLibrary_C.BP_PostEventAsync
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Function X6SoundLibrary.X6SoundLibrary_C.GetDefaultEmitterActor
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor**                          Actor                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6SoundLibrary_C::BP_PostEventAsync(class UAkAudioEvent* Event, class UObject* __WorldContext)
+void UX6SoundLibrary_C::GetDefaultEmitterActor(class UObject* __WorldContext, class AActor** Actor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_PostEventAsync");
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "GetDefaultEmitterActor");
 
-	Params::X6SoundLibrary_C_BP_PostEventAsync Parms{};
+	Params::X6SoundLibrary_C_GetDefaultEmitterActor Parms{};
 
-	Parms.Event = Event;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Actor != nullptr)
+		*Actor = Parms.Actor;
+}
+
+
+// Function X6SoundLibrary.X6SoundLibrary_C.IsActorMuted
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6SoundLibrary_C::IsActorMuted(class AActor* Actor, class UObject* __WorldContext, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "IsActorMuted");
+
+	Params::X6SoundLibrary_C_IsActorMuted Parms{};
+
+	Parms.Actor = Actor;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function X6SoundLibrary.X6SoundLibrary_C.ResumeActorVolume
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6SoundLibrary_C::ResumeActorVolume(class AActor* Actor, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "ResumeActorVolume");
+
+	Params::X6SoundLibrary_C_ResumeActorVolume Parms{};
+
+	Parms.Actor = Actor;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
 
-// Function X6SoundLibrary.X6SoundLibrary_C.BP_PostEvent
+// Function X6SoundLibrary.X6SoundLibrary_C.StopStoryMusic
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6SoundLibrary_C::BP_PostEvent(class UAkAudioEvent* Event, class UObject* __WorldContext)
+void UX6SoundLibrary_C::StopStoryMusic(class UAkAudioEvent* Event, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_PostEvent");
+		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "StopStoryMusic");
 
-	Params::X6SoundLibrary_C_BP_PostEvent Parms{};
-
-	Parms.Event = Event;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function X6SoundLibrary.X6SoundLibrary_C.BP_PlayUIBtnSound
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UX6SoundLibrary_C::BP_PlayUIBtnSound(class UAkAudioEvent* Event, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6SoundLibrary_C", "BP_PlayUIBtnSound");
-
-	Params::X6SoundLibrary_C_BP_PlayUIBtnSound Parms{};
+	Params::X6SoundLibrary_C_StopStoryMusic Parms{};
 
 	Parms.Event = Event;
 	Parms.__WorldContext = __WorldContext;
