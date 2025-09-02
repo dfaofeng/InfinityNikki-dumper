@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AppleImageUtils_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "AppleImageUtils_structs.hpp"
 
 
 namespace SDK

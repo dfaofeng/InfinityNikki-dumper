@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BTT_QuadrupedAnimalReaction_InitAfterFlee.BTT_QuadrupedAnimalReaction_InitAfterFlee_C.ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTT_QuadrupedAnimalReaction_InitAfterFlee_C::ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_QuadrupedAnimalReaction_InitAfterFlee_C", "ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee");
-
-	Params::BTT_QuadrupedAnimalReaction_InitAfterFlee_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BTT_QuadrupedAnimalReaction_InitAfterFlee.BTT_QuadrupedAnimalReaction_InitAfterFlee_C.ReceiveExecuteAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -54,6 +34,26 @@ void UBTT_QuadrupedAnimalReaction_InitAfterFlee_C::ReceiveExecuteAI(class AAICon
 
 	Parms.OwnerController = OwnerController;
 	Parms.ControlledPawn = ControlledPawn;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTT_QuadrupedAnimalReaction_InitAfterFlee.BTT_QuadrupedAnimalReaction_InitAfterFlee_C.ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTT_QuadrupedAnimalReaction_InitAfterFlee_C::ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTT_QuadrupedAnimalReaction_InitAfterFlee_C", "ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee");
+
+	Params::BTT_QuadrupedAnimalReaction_InitAfterFlee_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitAfterFlee Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

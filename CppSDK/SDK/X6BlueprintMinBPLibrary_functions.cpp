@@ -179,10 +179,10 @@ void UX6BlueprintMinBPLibrary_C::SpawnActor(class UClass* SpawnClass, const stru
 // double                                  TextDuration                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMessageHUDEnum                         MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMessageHUDHead                         HeadImage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>&                  MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FString>&                  MessageId                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintMinBPLibrary_C::ShowMessageOnScreen(double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, TArray<class FString>& MessageID, class UObject* __WorldContext)
+void UX6BlueprintMinBPLibrary_C::ShowMessageOnScreen(double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, TArray<class FString>& MessageId, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,28 +194,28 @@ void UX6BlueprintMinBPLibrary_C::ShowMessageOnScreen(double TextDuration, EMessa
 	Parms.TextDuration = TextDuration;
 	Parms.MessageType = MessageType;
 	Parms.HeadImage = HeadImage;
-	Parms.MessageID = std::move(MessageID);
+	Parms.MessageId = std::move(MessageId);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	MessageID = std::move(Parms.MessageID);
+	MessageId = std::move(Parms.MessageId);
 }
 
 
 // Function X6BlueprintMinBPLibrary.X6BlueprintMinBPLibrary_C.ShowMessageHUDOnScreen
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class FText>&                    Messages                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FText>&                    messages                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // double                                  TextDuration                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMessageHUDEnum                         MessageType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMessageHUDHead                         HeadImage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EMessageBoxModeEnum                     PopupMode                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    DaMiaoHudTextAutoEnd                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class FString>&                  MessageID                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<class FString>&                  MessageId                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintMinBPLibrary_C::ShowMessageHUDOnScreen(TArray<class FText>& Messages, double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, EMessageBoxModeEnum PopupMode, bool DaMiaoHudTextAutoEnd, TArray<class FString>& MessageID, class UObject* __WorldContext)
+void UX6BlueprintMinBPLibrary_C::ShowMessageHUDOnScreen(TArray<class FText>& messages, double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, EMessageBoxModeEnum PopupMode, bool DaMiaoHudTextAutoEnd, TArray<class FString>& MessageId, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -224,19 +224,19 @@ void UX6BlueprintMinBPLibrary_C::ShowMessageHUDOnScreen(TArray<class FText>& Mes
 
 	Params::X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen Parms{};
 
-	Parms.Messages = std::move(Messages);
+	Parms.messages = std::move(messages);
 	Parms.TextDuration = TextDuration;
 	Parms.MessageType = MessageType;
 	Parms.HeadImage = HeadImage;
 	Parms.PopupMode = PopupMode;
 	Parms.DaMiaoHudTextAutoEnd = DaMiaoHudTextAutoEnd;
-	Parms.MessageID = std::move(MessageID);
+	Parms.MessageId = std::move(MessageId);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	Messages = std::move(Parms.Messages);
-	MessageID = std::move(Parms.MessageID);
+	messages = std::move(Parms.messages);
+	MessageId = std::move(Parms.MessageId);
 }
 
 

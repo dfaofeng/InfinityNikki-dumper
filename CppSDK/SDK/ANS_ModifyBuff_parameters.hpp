@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function ANS_ModifyBuff.ANS_ModifyBuff_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct ANS_ModifyBuff_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(ANS_ModifyBuff_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ModifyBuff_C_GetModuleName");
+static_assert(sizeof(ANS_ModifyBuff_C_GetModuleName) == 0x000010, "Wrong size on ANS_ModifyBuff_C_GetModuleName");
+static_assert(offsetof(ANS_ModifyBuff_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ModifyBuff_C_GetModuleName::ReturnValue' has a wrong offset!");
+
 // Function ANS_ModifyBuff.ANS_ModifyBuff_C.GetNotifyName
 // 0x0060 (0x0060 - 0x0000)
 struct ANS_ModifyBuff_C_GetNotifyName final
@@ -39,17 +50,6 @@ static_assert(offsetof(ANS_ModifyBuff_C_GetNotifyName, CallFunc_Array_Get_Item) 
 static_assert(offsetof(ANS_ModifyBuff_C_GetNotifyName, CallFunc_Conv_StringToName_ReturnValue) == 0x000040, "Member 'ANS_ModifyBuff_C_GetNotifyName::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ANS_ModifyBuff_C_GetNotifyName, CallFunc_Array_IsValidIndex_ReturnValue) == 0x000048, "Member 'ANS_ModifyBuff_C_GetNotifyName::CallFunc_Array_IsValidIndex_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ANS_ModifyBuff_C_GetNotifyName, CallFunc_BuildString_Name_ReturnValue) == 0x000050, "Member 'ANS_ModifyBuff_C_GetNotifyName::CallFunc_BuildString_Name_ReturnValue' has a wrong offset!");
-
-// Function ANS_ModifyBuff.ANS_ModifyBuff_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct ANS_ModifyBuff_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(ANS_ModifyBuff_C_GetModuleName) == 0x000008, "Wrong alignment on ANS_ModifyBuff_C_GetModuleName");
-static_assert(sizeof(ANS_ModifyBuff_C_GetModuleName) == 0x000010, "Wrong size on ANS_ModifyBuff_C_GetModuleName");
-static_assert(offsetof(ANS_ModifyBuff_C_GetModuleName, ReturnValue) == 0x000000, "Member 'ANS_ModifyBuff_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

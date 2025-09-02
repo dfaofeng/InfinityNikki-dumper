@@ -1335,6 +1335,31 @@ void UAdvancedCamera::SetPassiveDesiredRotationByTime(const struct FRotator& New
 }
 
 
+// Function X6Camera.AdvancedCamera.SetPlayerSettingArmLengthCurve
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAdvancedCamera::SetPlayerSettingArmLengthCurve(int32 InIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AdvancedCamera", "SetPlayerSettingArmLengthCurve");
+
+	Params::AdvancedCamera_SetPlayerSettingArmLengthCurve Parms{};
+
+	Parms.InIndex = InIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function X6Camera.AdvancedCamera.SetUsingGamepad
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1704,6 +1729,36 @@ void UAdvancedCamera::CollectSpringArmDebugOutput(TArray<class FString>* InOutDe
 
 	if (InOutDebugInfoLines != nullptr)
 		*InOutDebugInfoLines = std::move(Parms.InOutDebugInfoLines);
+}
+
+
+// Function X6Camera.AdvancedCamera.FixArmLengthByPlayerSetting
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FX6CameraBlendableSettings&InCameraSettings                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   InArmLength                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UAdvancedCamera::FixArmLengthByPlayerSetting(const struct FX6CameraBlendableSettings& InCameraSettings, float InArmLength) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AdvancedCamera", "FixArmLengthByPlayerSetting");
+
+	Params::AdvancedCamera_FixArmLengthByPlayerSetting Parms{};
+
+	Parms.InCameraSettings = std::move(InCameraSettings);
+	Parms.InArmLength = InArmLength;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -3132,6 +3187,34 @@ struct FTViewTarget AX6PlayerCameraManagerBase::GetCameraViewTarget() const
 }
 
 
+// Function X6Camera.X6PlayerCameraManagerBase.GetCurrentFOVWithoutPlayerSetting
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                           InTargetActor                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float AX6PlayerCameraManagerBase::GetCurrentFOVWithoutPlayerSetting(class AActor* InTargetActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6PlayerCameraManagerBase", "GetCurrentFOVWithoutPlayerSetting");
+
+	Params::X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting Parms{};
+
+	Parms.InTargetActor = InTargetActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function X6Camera.X6PlayerCameraManagerBase.GetEnableRotateInput
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -3872,6 +3955,176 @@ void ICameraModeInterface::OnCameraModeChanged()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.GetPlayerSettingFOVModifier
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UCameraModifier_PlayerSettingFOV* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UCameraModifier_PlayerSettingFOV* UCameraModifier_PlayerSettingFOV::GetPlayerSettingFOVModifier(const class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CameraModifier_PlayerSettingFOV", "GetPlayerSettingFOVModifier");
+
+	Params::CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.SetCameraAcceptEffect
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           InActorWithCamera                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAcceptEffect                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCameraModifier_PlayerSettingFOV::SetCameraAcceptEffect(class AActor* InActorWithCamera, bool bAcceptEffect)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CameraModifier_PlayerSettingFOV", "SetCameraAcceptEffect");
+
+	Params::CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect Parms{};
+
+	Parms.InActorWithCamera = InActorWithCamera;
+	Parms.bAcceptEffect = bAcceptEffect;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.OnViewTargetChanged
+// (Final, Native, Public)
+// Parameters:
+// class APlayerController*                PC                                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OldTarget                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           NewTarget                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCameraModifier_PlayerSettingFOV::OnViewTargetChanged(class APlayerController* PC, class AActor* OldTarget, class AActor* NewTarget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraModifier_PlayerSettingFOV", "OnViewTargetChanged");
+
+	Params::CameraModifier_PlayerSettingFOV_OnViewTargetChanged Parms{};
+
+	Parms.PC = PC;
+	Parms.OldTarget = OldTarget;
+	Parms.NewTarget = NewTarget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.GetFOVWithoutPlayerSetting
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// const class AActor*                     InActor                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InTargetFOV                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UCameraModifier_PlayerSettingFOV::GetFOVWithoutPlayerSetting(const class AActor* InActor, float InTargetFOV) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraModifier_PlayerSettingFOV", "GetFOVWithoutPlayerSetting");
+
+	Params::CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting Parms{};
+
+	Parms.InActor = InActor;
+	Parms.InTargetFOV = InTargetFOV;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.IfCameraUsePlayerSettingFOV
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// const class AActor*                     InActor                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UCameraModifier_PlayerSettingFOV::IfCameraUsePlayerSettingFOV(const class AActor* InActor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraModifier_PlayerSettingFOV", "IfCameraUsePlayerSettingFOV");
+
+	Params::CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV Parms{};
+
+	Parms.InActor = InActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.ModifyFOV
+// (Native, Event, Public, BlueprintEvent, Const)
+// Parameters:
+// float                                   InFOV                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UCameraModifier_PlayerSettingFOV::ModifyFOV(float InFOV) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraModifier_PlayerSettingFOV", "ModifyFOV");
+
+	Params::CameraModifier_PlayerSettingFOV_ModifyFOV Parms{};
+
+	Parms.InFOV = InFOV;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

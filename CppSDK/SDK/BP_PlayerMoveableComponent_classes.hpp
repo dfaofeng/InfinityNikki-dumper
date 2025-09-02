@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "EInputDeviceKeyType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EPlayerMovementScenarios_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
 #include "EPlayerGamePlayMovementMode_structs.hpp"
-#include "EInputDeviceKeyType_structs.hpp"
 
 
 namespace SDK
@@ -58,7 +58,7 @@ public:
 	void InputAction_Crash(bool PressedOrRelease);
 	void InputAction_Jump(bool PressedOrRelease);
 	void InputAction_Sprint(bool PressedOrRelease);
-	void InputAction_Walk(bool PressOrRelease);
+	void InputAction_Walk(bool pressOrRelease);
 	void OnMovementMoveXAxisAction(double AxisValue);
 	void OnMovementMoveYAxisAction(double AxisValue);
 	void ReceiveBeginPlay();

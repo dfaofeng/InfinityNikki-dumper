@@ -21,8 +21,8 @@ namespace SDK
 class UANS_SkillBackwardSection_C final : public UAnimNotifyState
 {
 public:
-	class FString GetNotifyName() const;
 	class FString GetModuleName() const;
+	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()

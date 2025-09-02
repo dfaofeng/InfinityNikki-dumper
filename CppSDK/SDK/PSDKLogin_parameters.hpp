@@ -14,6 +14,41 @@
 namespace SDK::Params
 {
 
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnCommitButton
+// 0x0002 (0x0002 - 0x0000)
+struct PSdkDeleteLoginCacheConfirmUI_OnCommitButton final
+{
+public:
+	bool                                          ClearLoginCache;                                   // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NotRemindAgain;                                    // 0x0001(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSdkDeleteLoginCacheConfirmUI_OnCommitButton) == 0x000001, "Wrong alignment on PSdkDeleteLoginCacheConfirmUI_OnCommitButton");
+static_assert(sizeof(PSdkDeleteLoginCacheConfirmUI_OnCommitButton) == 0x000002, "Wrong size on PSdkDeleteLoginCacheConfirmUI_OnCommitButton");
+static_assert(offsetof(PSdkDeleteLoginCacheConfirmUI_OnCommitButton, ClearLoginCache) == 0x000000, "Member 'PSdkDeleteLoginCacheConfirmUI_OnCommitButton::ClearLoginCache' has a wrong offset!");
+static_assert(offsetof(PSdkDeleteLoginCacheConfirmUI_OnCommitButton, NotRemindAgain) == 0x000001, "Member 'PSdkDeleteLoginCacheConfirmUI_OnCommitButton::NotRemindAgain' has a wrong offset!");
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnOneCheckedButton
+// 0x0001 (0x0001 - 0x0000)
+struct PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton) == 0x000001, "Wrong alignment on PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton");
+static_assert(sizeof(PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton) == 0x000001, "Wrong size on PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton");
+static_assert(offsetof(PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton, Checked) == 0x000000, "Member 'PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton::Checked' has a wrong offset!");
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnTwoCheckedButton
+// 0x0001 (0x0001 - 0x0000)
+struct PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton) == 0x000001, "Wrong alignment on PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton");
+static_assert(sizeof(PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton) == 0x000001, "Wrong size on PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton");
+static_assert(offsetof(PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton, Checked) == 0x000000, "Member 'PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton::Checked' has a wrong offset!");
+
 // Function PSDKLogin.PSdkHyperlinkDecorator.ClickFun
 // 0x0050 (0x0050 - 0x0000)
 struct PSdkHyperlinkDecorator_ClickFun final

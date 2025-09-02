@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "PaperGPUDrivenFoliage_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "PaperGPUDrivenFoliage_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -42,13 +43,13 @@ static_assert(sizeof(UPaperGPUDrivenFoliageClusterComponent) == 0x0005D0, "Wrong
 static_assert(offsetof(UPaperGPUDrivenFoliageClusterComponent, ClusterID) == 0x0005B8, "Member 'UPaperGPUDrivenFoliageClusterComponent::ClusterID' has a wrong offset!");
 
 // Class PaperGPUDrivenFoliage.CompressedStreamedGPUDrivenFoliageClusterInstanceAssetData
-// 0x0390 (0x03C0 - 0x0030)
+// 0x03D0 (0x0400 - 0x0030)
 class UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData final : public UDataAsset
 {
 public:
 	uint32                                        TotalInstanceNum;                                  // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        TotalPatchNum;                                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x388];                                     // 0x0038(0x0388)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38[0x3C8];                                     // 0x0038(0x03C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -61,27 +62,31 @@ public:
 	}
 };
 static_assert(alignof(UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData) == 0x000008, "Wrong alignment on UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData");
-static_assert(sizeof(UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData) == 0x0003C0, "Wrong size on UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData");
+static_assert(sizeof(UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData) == 0x000400, "Wrong size on UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData");
 static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData, TotalInstanceNum) == 0x000030, "Member 'UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData::TotalInstanceNum' has a wrong offset!");
 static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData, TotalPatchNum) == 0x000034, "Member 'UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData::TotalPatchNum' has a wrong offset!");
 
 // Class PaperGPUDrivenFoliage.CompressedStreamedGPUDrivenFoliageSectorInstanceAssetData
-// 0x04C0 (0x04F0 - 0x0030)
+// 0x0528 (0x0558 - 0x0030)
 class UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData final : public UDataAsset
 {
 public:
-	uint8                                         Pad_30[0x130];                                     // 0x0030(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        BuildMaxLODNum;                                    // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalInstanceNum;                                  // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalSplineInstanceNum;                            // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalMeshNum;                                      // 0x016C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalMeshSectionPairPageSectionNum;                // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalPatchNum;                                     // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalPageSectionNum;                               // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalPageNum;                                      // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalEnlightenAtlasNum;                            // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        TotalEnlightenInstanceUVNum;                       // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_188[0x368];                                    // 0x0188(0x0368)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x140];                                     // 0x0030(0x0140)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        BuildMaxLODNum;                                    // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalInstanceNum;                                  // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalSplineInstanceNum;                            // 0x0178(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalMeshNum;                                      // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalMeshSectionPairPageSectionNum;                // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalPatchNum;                                     // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalPageSectionNum;                               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalPageNum;                                      // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalEnlightenAtlasNum;                            // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalEnlightenInstanceUVNum;                       // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        TotalHLODNum;                                      // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 PageCompFirstSectionIndexMap;                      // 0x01A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 PageCompSectionNumMap;                             // 0x01B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C0[0x398];                                    // 0x01C0(0x0398)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -94,17 +99,20 @@ public:
 	}
 };
 static_assert(alignof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData) == 0x000008, "Wrong alignment on UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData");
-static_assert(sizeof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData) == 0x0004F0, "Wrong size on UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, BuildMaxLODNum) == 0x000160, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::BuildMaxLODNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalInstanceNum) == 0x000164, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalInstanceNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalSplineInstanceNum) == 0x000168, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalSplineInstanceNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalMeshNum) == 0x00016C, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalMeshNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalMeshSectionPairPageSectionNum) == 0x000170, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalMeshSectionPairPageSectionNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalPatchNum) == 0x000174, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalPatchNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalPageSectionNum) == 0x000178, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalPageSectionNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalPageNum) == 0x00017C, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalPageNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalEnlightenAtlasNum) == 0x000180, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalEnlightenAtlasNum' has a wrong offset!");
-static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalEnlightenInstanceUVNum) == 0x000184, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalEnlightenInstanceUVNum' has a wrong offset!");
+static_assert(sizeof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData) == 0x000558, "Wrong size on UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, BuildMaxLODNum) == 0x000170, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::BuildMaxLODNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalInstanceNum) == 0x000174, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalInstanceNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalSplineInstanceNum) == 0x000178, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalSplineInstanceNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalMeshNum) == 0x00017C, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalMeshNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalMeshSectionPairPageSectionNum) == 0x000180, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalMeshSectionPairPageSectionNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalPatchNum) == 0x000184, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalPatchNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalPageSectionNum) == 0x000188, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalPageSectionNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalPageNum) == 0x00018C, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalPageNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalEnlightenAtlasNum) == 0x000190, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalEnlightenAtlasNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalEnlightenInstanceUVNum) == 0x000194, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalEnlightenInstanceUVNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, TotalHLODNum) == 0x000198, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::TotalHLODNum' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, PageCompFirstSectionIndexMap) == 0x0001A0, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::PageCompFirstSectionIndexMap' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData, PageCompSectionNumMap) == 0x0001B0, "Member 'UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData::PageCompSectionNumMap' has a wrong offset!");
 
 // Class PaperGPUDrivenFoliage.GPUDrivenFoliageMeshVertexAssetData
 // 0x0200 (0x0230 - 0x0030)
@@ -237,75 +245,75 @@ static_assert(alignof(APaperGPUDrivenFoliageDLCVolume) == 0x000008, "Wrong align
 static_assert(sizeof(APaperGPUDrivenFoliageDLCVolume) == 0x0003E0, "Wrong size on APaperGPUDrivenFoliageDLCVolume");
 
 // Class PaperGPUDrivenFoliage.PaperGPUDrivenFoliageManager
-// 0x06E0 (0x0AC0 - 0x03E0)
+// 0x0720 (0x0B00 - 0x03E0)
 class APaperGPUDrivenFoliageManager final : public AVolume
 {
 public:
-	uint8                                         Pad_3E0[0x8];                                      // 0x03E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        SceneComp;                                         // 0x03E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AlwaysSortBeforeBuild;                             // 0x03F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F1[0x7];                                      // 0x03F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     RuntimeDebugFoliageMaterial;                       // 0x03F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AssetSaveDir;                                      // 0x0400(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReplaceMeshTableDir;                               // 0x0410(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReplaceGrassTableDir;                              // 0x0420(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DLCMapPath;                                        // 0x0430(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawAllSectorBound;                               // 0x0440(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildStaticMesh;                                  // 0x0441(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildGrass;                                       // 0x0442(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildFoliage;                                     // 0x0443(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildSplineMesh;                                  // 0x0444(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildDecal;                                       // 0x0445(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildMovableStaticMeshes;                         // 0x0446(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_447[0x1];                                      // 0x0447(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         StaticMeshInstanceThre;                            // 0x0448(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StaticMeshInstanceDistanceThre;                    // 0x044C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxBoundToIncludeBuild;                            // 0x0450(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxInstanceInOneSector;                            // 0x0454(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxPatchInOneSector;                               // 0x0458(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESectorDevideOptions                          SectorDivideOption;                                // 0x045C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_45D[0x3];                                      // 0x045D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         FixedGridX;                                        // 0x0460(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FixedGridY;                                        // 0x0464(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxKDTreeDevideTimes;                              // 0x0468(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDiscardEnlighten;                                 // 0x046C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseMobileDataToBuild;                             // 0x046D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_46E[0x2];                                      // 0x046E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GlobalDensityScaleForBuild;                        // 0x0470(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGenerateOptimizedTextureStreamingBound;           // 0x0474(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFilteredLevel;                                 // 0x0475(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMobile;                                           // 0x0476(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnorePlatform;                                   // 0x0477(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         SplineMeshActorTags;                               // 0x0478(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         IgnoreActorTags;                                   // 0x0488(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         IgnoreLevelTags;                                   // 0x0498(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class FString>                         UseFilteredLevels;                                 // 0x04A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         MaxAseestsLoadOneFrame;                            // 0x04B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxFrameToAccelerateLoad;                          // 0x04BC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxInstanceScreenSizeCalOneFrame;                  // 0x04C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SectorStreamingInScreenSize;                       // 0x04C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SectorStreamingOutScreenSize;                      // 0x04C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PagePerInstanceStreamindInScreenSize;              // 0x04CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PagePerInstanceStreamingOutScreenSize;             // 0x04D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxSectorCullingOneFrame;                          // 0x04D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugDrawSectorBound;                             // 0x04D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugDrawClusterBound;                            // 0x04D9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4DA[0x6];                                      // 0x04DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         AllStaticMeshPathNames;                            // 0x04E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic)
-	TArray<class UPackage*>                       TempBuildPackages;                                 // 0x04F0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	TArray<class FString>                         RelatedPageSectionStaticMeshNames;                 // 0x0500(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	struct FPaperGPUDrivenFoliageSectorData       MainSectorData;                                    // 0x0510(0x0238)(NativeAccessSpecifierPublic)
-	TArray<struct FPaperGPUDrivenFoliageClusterData> AllClusterDatas;                                // 0x0748(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UPaperGPUDrivenFoliagePageComponent*> RelatedFoliagePageComps;                      // 0x0758(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UPaperVirtualGrassPageComponent*> RelatedGrassPageComps;                            // 0x0768(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UPaperGPUDrivenFoliageCullingComponent*> RelatedFoliageCullingComps;                // 0x0778(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class UPaperGPUDrivenFoliageClusterComponent*> RelatedInstanceClusterComps;               // 0x0788(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class UPaperVirtualGrassCullingComponent*     GrassCullingComp;                                  // 0x0798(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVirtualGrassSharedData                GrassSharedData;                                   // 0x07A0(0x0040)(NativeAccessSpecifierPublic)
-	bool                                          bBuilt;                                            // 0x07E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7E1[0x8F];                                     // 0x07E1(0x008F)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class APaperGPUDrivenFoliageLevelMarker*> CollectedLevelMarkers;                            // 0x0870(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C0[0x200];                                    // 0x08C0(0x0200)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E0[0x10];                                     // 0x03E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        SceneComp;                                         // 0x03F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AlwaysSortBeforeBuild;                             // 0x03F8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     RuntimeDebugFoliageMaterial;                       // 0x0400(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AssetSaveDir;                                      // 0x0408(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReplaceMeshTableDir;                               // 0x0418(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReplaceGrassTableDir;                              // 0x0428(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DLCMapPath;                                        // 0x0438(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawAllSectorBound;                               // 0x0448(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildStaticMesh;                                  // 0x0449(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildGrass;                                       // 0x044A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildFoliage;                                     // 0x044B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildSplineMesh;                                  // 0x044C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildDecal;                                       // 0x044D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildHLOD;                                        // 0x044E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildMovableStaticMeshes;                         // 0x044F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StaticMeshInstanceThre;                            // 0x0450(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StaticMeshInstanceDistanceThre;                    // 0x0454(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxBoundToIncludeBuild;                            // 0x0458(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxInstanceInOneSector;                            // 0x045C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxPatchInOneSector;                               // 0x0460(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESectorDevideOptions                          SectorDivideOption;                                // 0x0464(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_465[0x3];                                      // 0x0465(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FixedGridX;                                        // 0x0468(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FixedGridY;                                        // 0x046C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxKDTreeDevideTimes;                              // 0x0470(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDiscardEnlighten;                                 // 0x0474(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseMobileDataToBuild;                             // 0x0475(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_476[0x2];                                      // 0x0476(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GlobalDensityScaleForBuild;                        // 0x0478(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGenerateOptimizedTextureStreamingBound;           // 0x047C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFilteredLevel;                                 // 0x047D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMobile;                                           // 0x047E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnorePlatform;                                   // 0x047F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         SplineMeshActorTags;                               // 0x0480(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         IgnoreActorTags;                                   // 0x0490(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         IgnoreLevelTags;                                   // 0x04A0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FString>                         UseFilteredLevels;                                 // 0x04B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         MaxAseestsLoadOneFrame;                            // 0x04C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxFrameToAccelerateLoad;                          // 0x04C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxInstanceScreenSizeCalOneFrame;                  // 0x04C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SectorStreamingInScreenSize;                       // 0x04CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SectorStreamingOutScreenSize;                      // 0x04D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PagePerInstanceStreamindInScreenSize;              // 0x04D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PagePerInstanceStreamingOutScreenSize;             // 0x04D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxSectorCullingOneFrame;                          // 0x04DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugDrawSectorBound;                             // 0x04E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugDrawClusterBound;                            // 0x04E1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4E2[0x6];                                      // 0x04E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         AllStaticMeshPathNames;                            // 0x04E8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic)
+	TArray<class UPackage*>                       TempBuildPackages;                                 // 0x04F8(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class FString>                         RelatedPageSectionStaticMeshNames;                 // 0x0508(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	struct FPaperGPUDrivenFoliageSectorData       MainSectorData;                                    // 0x0518(0x0268)(NativeAccessSpecifierPublic)
+	TArray<struct FPaperGPUDrivenFoliageClusterData> AllClusterDatas;                                // 0x0780(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class UPaperGPUDrivenFoliagePageComponent*> RelatedFoliagePageComps;                      // 0x0790(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UPaperVirtualGrassPageComponent*> RelatedGrassPageComps;                            // 0x07A0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UPaperGPUDrivenFoliageCullingComponent*> RelatedFoliageCullingComps;                // 0x07B0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UPaperGPUDrivenFoliageClusterComponent*> RelatedInstanceClusterComps;               // 0x07C0(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UPaperVirtualGrassCullingComponent*     GrassCullingComp;                                  // 0x07D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVirtualGrassSharedData                GrassSharedData;                                   // 0x07D8(0x0040)(NativeAccessSpecifierPublic)
+	bool                                          bBuilt;                                            // 0x0818(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_819[0x8F];                                     // 0x0819(0x008F)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class APaperGPUDrivenFoliageLevelMarker*> CollectedLevelMarkers;                            // 0x08A8(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8F8[0x208];                                    // 0x08F8(0x0208)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class APaperGPUDrivenFoliageManager* Get(class UObject* WorldContextObject);
@@ -323,64 +331,65 @@ public:
 	}
 };
 static_assert(alignof(APaperGPUDrivenFoliageManager) == 0x000008, "Wrong alignment on APaperGPUDrivenFoliageManager");
-static_assert(sizeof(APaperGPUDrivenFoliageManager) == 0x000AC0, "Wrong size on APaperGPUDrivenFoliageManager");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, SceneComp) == 0x0003E8, "Member 'APaperGPUDrivenFoliageManager::SceneComp' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, AlwaysSortBeforeBuild) == 0x0003F0, "Member 'APaperGPUDrivenFoliageManager::AlwaysSortBeforeBuild' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, RuntimeDebugFoliageMaterial) == 0x0003F8, "Member 'APaperGPUDrivenFoliageManager::RuntimeDebugFoliageMaterial' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, AssetSaveDir) == 0x000400, "Member 'APaperGPUDrivenFoliageManager::AssetSaveDir' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, ReplaceMeshTableDir) == 0x000410, "Member 'APaperGPUDrivenFoliageManager::ReplaceMeshTableDir' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, ReplaceGrassTableDir) == 0x000420, "Member 'APaperGPUDrivenFoliageManager::ReplaceGrassTableDir' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, DLCMapPath) == 0x000430, "Member 'APaperGPUDrivenFoliageManager::DLCMapPath' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bDrawAllSectorBound) == 0x000440, "Member 'APaperGPUDrivenFoliageManager::bDrawAllSectorBound' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildStaticMesh) == 0x000441, "Member 'APaperGPUDrivenFoliageManager::bBuildStaticMesh' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildGrass) == 0x000442, "Member 'APaperGPUDrivenFoliageManager::bBuildGrass' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildFoliage) == 0x000443, "Member 'APaperGPUDrivenFoliageManager::bBuildFoliage' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildSplineMesh) == 0x000444, "Member 'APaperGPUDrivenFoliageManager::bBuildSplineMesh' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildDecal) == 0x000445, "Member 'APaperGPUDrivenFoliageManager::bBuildDecal' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildMovableStaticMeshes) == 0x000446, "Member 'APaperGPUDrivenFoliageManager::bBuildMovableStaticMeshes' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, StaticMeshInstanceThre) == 0x000448, "Member 'APaperGPUDrivenFoliageManager::StaticMeshInstanceThre' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, StaticMeshInstanceDistanceThre) == 0x00044C, "Member 'APaperGPUDrivenFoliageManager::StaticMeshInstanceDistanceThre' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxBoundToIncludeBuild) == 0x000450, "Member 'APaperGPUDrivenFoliageManager::MaxBoundToIncludeBuild' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxInstanceInOneSector) == 0x000454, "Member 'APaperGPUDrivenFoliageManager::MaxInstanceInOneSector' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxPatchInOneSector) == 0x000458, "Member 'APaperGPUDrivenFoliageManager::MaxPatchInOneSector' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, SectorDivideOption) == 0x00045C, "Member 'APaperGPUDrivenFoliageManager::SectorDivideOption' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, FixedGridX) == 0x000460, "Member 'APaperGPUDrivenFoliageManager::FixedGridX' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, FixedGridY) == 0x000464, "Member 'APaperGPUDrivenFoliageManager::FixedGridY' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxKDTreeDevideTimes) == 0x000468, "Member 'APaperGPUDrivenFoliageManager::MaxKDTreeDevideTimes' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bDiscardEnlighten) == 0x00046C, "Member 'APaperGPUDrivenFoliageManager::bDiscardEnlighten' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bUseMobileDataToBuild) == 0x00046D, "Member 'APaperGPUDrivenFoliageManager::bUseMobileDataToBuild' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, GlobalDensityScaleForBuild) == 0x000470, "Member 'APaperGPUDrivenFoliageManager::GlobalDensityScaleForBuild' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bGenerateOptimizedTextureStreamingBound) == 0x000474, "Member 'APaperGPUDrivenFoliageManager::bGenerateOptimizedTextureStreamingBound' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bUseFilteredLevel) == 0x000475, "Member 'APaperGPUDrivenFoliageManager::bUseFilteredLevel' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bMobile) == 0x000476, "Member 'APaperGPUDrivenFoliageManager::bMobile' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bIgnorePlatform) == 0x000477, "Member 'APaperGPUDrivenFoliageManager::bIgnorePlatform' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, SplineMeshActorTags) == 0x000478, "Member 'APaperGPUDrivenFoliageManager::SplineMeshActorTags' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, IgnoreActorTags) == 0x000488, "Member 'APaperGPUDrivenFoliageManager::IgnoreActorTags' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, IgnoreLevelTags) == 0x000498, "Member 'APaperGPUDrivenFoliageManager::IgnoreLevelTags' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, UseFilteredLevels) == 0x0004A8, "Member 'APaperGPUDrivenFoliageManager::UseFilteredLevels' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxAseestsLoadOneFrame) == 0x0004B8, "Member 'APaperGPUDrivenFoliageManager::MaxAseestsLoadOneFrame' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxFrameToAccelerateLoad) == 0x0004BC, "Member 'APaperGPUDrivenFoliageManager::MaxFrameToAccelerateLoad' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxInstanceScreenSizeCalOneFrame) == 0x0004C0, "Member 'APaperGPUDrivenFoliageManager::MaxInstanceScreenSizeCalOneFrame' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, SectorStreamingInScreenSize) == 0x0004C4, "Member 'APaperGPUDrivenFoliageManager::SectorStreamingInScreenSize' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, SectorStreamingOutScreenSize) == 0x0004C8, "Member 'APaperGPUDrivenFoliageManager::SectorStreamingOutScreenSize' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, PagePerInstanceStreamindInScreenSize) == 0x0004CC, "Member 'APaperGPUDrivenFoliageManager::PagePerInstanceStreamindInScreenSize' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, PagePerInstanceStreamingOutScreenSize) == 0x0004D0, "Member 'APaperGPUDrivenFoliageManager::PagePerInstanceStreamingOutScreenSize' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxSectorCullingOneFrame) == 0x0004D4, "Member 'APaperGPUDrivenFoliageManager::MaxSectorCullingOneFrame' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bDebugDrawSectorBound) == 0x0004D8, "Member 'APaperGPUDrivenFoliageManager::bDebugDrawSectorBound' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bDebugDrawClusterBound) == 0x0004D9, "Member 'APaperGPUDrivenFoliageManager::bDebugDrawClusterBound' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, AllStaticMeshPathNames) == 0x0004E0, "Member 'APaperGPUDrivenFoliageManager::AllStaticMeshPathNames' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, TempBuildPackages) == 0x0004F0, "Member 'APaperGPUDrivenFoliageManager::TempBuildPackages' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedPageSectionStaticMeshNames) == 0x000500, "Member 'APaperGPUDrivenFoliageManager::RelatedPageSectionStaticMeshNames' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, MainSectorData) == 0x000510, "Member 'APaperGPUDrivenFoliageManager::MainSectorData' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, AllClusterDatas) == 0x000748, "Member 'APaperGPUDrivenFoliageManager::AllClusterDatas' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedFoliagePageComps) == 0x000758, "Member 'APaperGPUDrivenFoliageManager::RelatedFoliagePageComps' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedGrassPageComps) == 0x000768, "Member 'APaperGPUDrivenFoliageManager::RelatedGrassPageComps' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedFoliageCullingComps) == 0x000778, "Member 'APaperGPUDrivenFoliageManager::RelatedFoliageCullingComps' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedInstanceClusterComps) == 0x000788, "Member 'APaperGPUDrivenFoliageManager::RelatedInstanceClusterComps' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, GrassCullingComp) == 0x000798, "Member 'APaperGPUDrivenFoliageManager::GrassCullingComp' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, GrassSharedData) == 0x0007A0, "Member 'APaperGPUDrivenFoliageManager::GrassSharedData' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuilt) == 0x0007E0, "Member 'APaperGPUDrivenFoliageManager::bBuilt' has a wrong offset!");
-static_assert(offsetof(APaperGPUDrivenFoliageManager, CollectedLevelMarkers) == 0x000870, "Member 'APaperGPUDrivenFoliageManager::CollectedLevelMarkers' has a wrong offset!");
+static_assert(sizeof(APaperGPUDrivenFoliageManager) == 0x000B00, "Wrong size on APaperGPUDrivenFoliageManager");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, SceneComp) == 0x0003F0, "Member 'APaperGPUDrivenFoliageManager::SceneComp' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, AlwaysSortBeforeBuild) == 0x0003F8, "Member 'APaperGPUDrivenFoliageManager::AlwaysSortBeforeBuild' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, RuntimeDebugFoliageMaterial) == 0x000400, "Member 'APaperGPUDrivenFoliageManager::RuntimeDebugFoliageMaterial' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, AssetSaveDir) == 0x000408, "Member 'APaperGPUDrivenFoliageManager::AssetSaveDir' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, ReplaceMeshTableDir) == 0x000418, "Member 'APaperGPUDrivenFoliageManager::ReplaceMeshTableDir' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, ReplaceGrassTableDir) == 0x000428, "Member 'APaperGPUDrivenFoliageManager::ReplaceGrassTableDir' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, DLCMapPath) == 0x000438, "Member 'APaperGPUDrivenFoliageManager::DLCMapPath' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bDrawAllSectorBound) == 0x000448, "Member 'APaperGPUDrivenFoliageManager::bDrawAllSectorBound' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildStaticMesh) == 0x000449, "Member 'APaperGPUDrivenFoliageManager::bBuildStaticMesh' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildGrass) == 0x00044A, "Member 'APaperGPUDrivenFoliageManager::bBuildGrass' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildFoliage) == 0x00044B, "Member 'APaperGPUDrivenFoliageManager::bBuildFoliage' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildSplineMesh) == 0x00044C, "Member 'APaperGPUDrivenFoliageManager::bBuildSplineMesh' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildDecal) == 0x00044D, "Member 'APaperGPUDrivenFoliageManager::bBuildDecal' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildHLOD) == 0x00044E, "Member 'APaperGPUDrivenFoliageManager::bBuildHLOD' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuildMovableStaticMeshes) == 0x00044F, "Member 'APaperGPUDrivenFoliageManager::bBuildMovableStaticMeshes' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, StaticMeshInstanceThre) == 0x000450, "Member 'APaperGPUDrivenFoliageManager::StaticMeshInstanceThre' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, StaticMeshInstanceDistanceThre) == 0x000454, "Member 'APaperGPUDrivenFoliageManager::StaticMeshInstanceDistanceThre' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxBoundToIncludeBuild) == 0x000458, "Member 'APaperGPUDrivenFoliageManager::MaxBoundToIncludeBuild' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxInstanceInOneSector) == 0x00045C, "Member 'APaperGPUDrivenFoliageManager::MaxInstanceInOneSector' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxPatchInOneSector) == 0x000460, "Member 'APaperGPUDrivenFoliageManager::MaxPatchInOneSector' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, SectorDivideOption) == 0x000464, "Member 'APaperGPUDrivenFoliageManager::SectorDivideOption' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, FixedGridX) == 0x000468, "Member 'APaperGPUDrivenFoliageManager::FixedGridX' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, FixedGridY) == 0x00046C, "Member 'APaperGPUDrivenFoliageManager::FixedGridY' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxKDTreeDevideTimes) == 0x000470, "Member 'APaperGPUDrivenFoliageManager::MaxKDTreeDevideTimes' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bDiscardEnlighten) == 0x000474, "Member 'APaperGPUDrivenFoliageManager::bDiscardEnlighten' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bUseMobileDataToBuild) == 0x000475, "Member 'APaperGPUDrivenFoliageManager::bUseMobileDataToBuild' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, GlobalDensityScaleForBuild) == 0x000478, "Member 'APaperGPUDrivenFoliageManager::GlobalDensityScaleForBuild' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bGenerateOptimizedTextureStreamingBound) == 0x00047C, "Member 'APaperGPUDrivenFoliageManager::bGenerateOptimizedTextureStreamingBound' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bUseFilteredLevel) == 0x00047D, "Member 'APaperGPUDrivenFoliageManager::bUseFilteredLevel' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bMobile) == 0x00047E, "Member 'APaperGPUDrivenFoliageManager::bMobile' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bIgnorePlatform) == 0x00047F, "Member 'APaperGPUDrivenFoliageManager::bIgnorePlatform' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, SplineMeshActorTags) == 0x000480, "Member 'APaperGPUDrivenFoliageManager::SplineMeshActorTags' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, IgnoreActorTags) == 0x000490, "Member 'APaperGPUDrivenFoliageManager::IgnoreActorTags' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, IgnoreLevelTags) == 0x0004A0, "Member 'APaperGPUDrivenFoliageManager::IgnoreLevelTags' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, UseFilteredLevels) == 0x0004B0, "Member 'APaperGPUDrivenFoliageManager::UseFilteredLevels' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxAseestsLoadOneFrame) == 0x0004C0, "Member 'APaperGPUDrivenFoliageManager::MaxAseestsLoadOneFrame' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxFrameToAccelerateLoad) == 0x0004C4, "Member 'APaperGPUDrivenFoliageManager::MaxFrameToAccelerateLoad' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxInstanceScreenSizeCalOneFrame) == 0x0004C8, "Member 'APaperGPUDrivenFoliageManager::MaxInstanceScreenSizeCalOneFrame' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, SectorStreamingInScreenSize) == 0x0004CC, "Member 'APaperGPUDrivenFoliageManager::SectorStreamingInScreenSize' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, SectorStreamingOutScreenSize) == 0x0004D0, "Member 'APaperGPUDrivenFoliageManager::SectorStreamingOutScreenSize' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, PagePerInstanceStreamindInScreenSize) == 0x0004D4, "Member 'APaperGPUDrivenFoliageManager::PagePerInstanceStreamindInScreenSize' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, PagePerInstanceStreamingOutScreenSize) == 0x0004D8, "Member 'APaperGPUDrivenFoliageManager::PagePerInstanceStreamingOutScreenSize' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MaxSectorCullingOneFrame) == 0x0004DC, "Member 'APaperGPUDrivenFoliageManager::MaxSectorCullingOneFrame' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bDebugDrawSectorBound) == 0x0004E0, "Member 'APaperGPUDrivenFoliageManager::bDebugDrawSectorBound' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bDebugDrawClusterBound) == 0x0004E1, "Member 'APaperGPUDrivenFoliageManager::bDebugDrawClusterBound' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, AllStaticMeshPathNames) == 0x0004E8, "Member 'APaperGPUDrivenFoliageManager::AllStaticMeshPathNames' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, TempBuildPackages) == 0x0004F8, "Member 'APaperGPUDrivenFoliageManager::TempBuildPackages' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedPageSectionStaticMeshNames) == 0x000508, "Member 'APaperGPUDrivenFoliageManager::RelatedPageSectionStaticMeshNames' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, MainSectorData) == 0x000518, "Member 'APaperGPUDrivenFoliageManager::MainSectorData' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, AllClusterDatas) == 0x000780, "Member 'APaperGPUDrivenFoliageManager::AllClusterDatas' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedFoliagePageComps) == 0x000790, "Member 'APaperGPUDrivenFoliageManager::RelatedFoliagePageComps' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedGrassPageComps) == 0x0007A0, "Member 'APaperGPUDrivenFoliageManager::RelatedGrassPageComps' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedFoliageCullingComps) == 0x0007B0, "Member 'APaperGPUDrivenFoliageManager::RelatedFoliageCullingComps' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, RelatedInstanceClusterComps) == 0x0007C0, "Member 'APaperGPUDrivenFoliageManager::RelatedInstanceClusterComps' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, GrassCullingComp) == 0x0007D0, "Member 'APaperGPUDrivenFoliageManager::GrassCullingComp' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, GrassSharedData) == 0x0007D8, "Member 'APaperGPUDrivenFoliageManager::GrassSharedData' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, bBuilt) == 0x000818, "Member 'APaperGPUDrivenFoliageManager::bBuilt' has a wrong offset!");
+static_assert(offsetof(APaperGPUDrivenFoliageManager, CollectedLevelMarkers) == 0x0008A8, "Member 'APaperGPUDrivenFoliageManager::CollectedLevelMarkers' has a wrong offset!");
 
 // Class PaperGPUDrivenFoliage.PaperGPUDrivenFoliageLevelMarker
 // 0x0008 (0x03B0 - 0x03A8)
@@ -514,7 +523,7 @@ static_assert(alignof(UPaperGPUDrivenFoliageStreamingSubsystem) == 0x000008, "Wr
 static_assert(sizeof(UPaperGPUDrivenFoliageStreamingSubsystem) == 0x000048, "Wrong size on UPaperGPUDrivenFoliageStreamingSubsystem");
 
 // Class PaperGPUDrivenFoliage.PaperGPUDrivenInteractiveComponent
-// 0x0000 (0x12D0 - 0x12D0)
+// 0x0000 (0x1320 - 0x1320)
 class UPaperGPUDrivenInteractiveComponent final : public USkeletalMeshComponent
 {
 public:
@@ -528,10 +537,10 @@ public:
 	}
 };
 static_assert(alignof(UPaperGPUDrivenInteractiveComponent) == 0x000010, "Wrong alignment on UPaperGPUDrivenInteractiveComponent");
-static_assert(sizeof(UPaperGPUDrivenInteractiveComponent) == 0x0012D0, "Wrong size on UPaperGPUDrivenInteractiveComponent");
+static_assert(sizeof(UPaperGPUDrivenInteractiveComponent) == 0x001320, "Wrong size on UPaperGPUDrivenInteractiveComponent");
 
 // Class PaperGPUDrivenFoliage.CompressedStreamedVirtualGrassPageSectionData
-// 0x01F8 (0x0228 - 0x0030)
+// 0x0218 (0x0248 - 0x0030)
 class UCompressedStreamedVirtualGrassPageSectionData final : public UDataAsset
 {
 public:
@@ -541,7 +550,9 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FUintVector2>                   GrassVarietyKeys;                                  // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 GrassMeshMap;                                      // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60[0x1C8];                                     // 0x0060(0x01C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 PageCompFirstSectionIndexMap;                      // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 PageCompSectionNumMap;                             // 0x0070(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_80[0x1C8];                                     // 0x0080(0x01C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -554,11 +565,13 @@ public:
 	}
 };
 static_assert(alignof(UCompressedStreamedVirtualGrassPageSectionData) == 0x000008, "Wrong alignment on UCompressedStreamedVirtualGrassPageSectionData");
-static_assert(sizeof(UCompressedStreamedVirtualGrassPageSectionData) == 0x000228, "Wrong size on UCompressedStreamedVirtualGrassPageSectionData");
+static_assert(sizeof(UCompressedStreamedVirtualGrassPageSectionData) == 0x000248, "Wrong size on UCompressedStreamedVirtualGrassPageSectionData");
 static_assert(offsetof(UCompressedStreamedVirtualGrassPageSectionData, TotalGrassMeshNum) == 0x000034, "Member 'UCompressedStreamedVirtualGrassPageSectionData::TotalGrassMeshNum' has a wrong offset!");
 static_assert(offsetof(UCompressedStreamedVirtualGrassPageSectionData, TotalPageSectionsNum) == 0x000038, "Member 'UCompressedStreamedVirtualGrassPageSectionData::TotalPageSectionsNum' has a wrong offset!");
 static_assert(offsetof(UCompressedStreamedVirtualGrassPageSectionData, GrassVarietyKeys) == 0x000040, "Member 'UCompressedStreamedVirtualGrassPageSectionData::GrassVarietyKeys' has a wrong offset!");
 static_assert(offsetof(UCompressedStreamedVirtualGrassPageSectionData, GrassMeshMap) == 0x000050, "Member 'UCompressedStreamedVirtualGrassPageSectionData::GrassMeshMap' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedVirtualGrassPageSectionData, PageCompFirstSectionIndexMap) == 0x000060, "Member 'UCompressedStreamedVirtualGrassPageSectionData::PageCompFirstSectionIndexMap' has a wrong offset!");
+static_assert(offsetof(UCompressedStreamedVirtualGrassPageSectionData, PageCompSectionNumMap) == 0x000070, "Member 'UCompressedStreamedVirtualGrassPageSectionData::PageCompSectionNumMap' has a wrong offset!");
 
 // Class PaperGPUDrivenFoliage.PaperVirtualGrassCullingComponent
 // 0x0010 (0x05D0 - 0x05C0)
@@ -619,22 +632,41 @@ static_assert(offsetof(UPaperVirtualGrassPageComponent, PageUVChannelData) == 0x
 static_assert(offsetof(UPaperVirtualGrassPageComponent, TemptGrassPageVertexAssetData) == 0x000618, "Member 'UPaperVirtualGrassPageComponent::TemptGrassPageVertexAssetData' has a wrong offset!");
 
 // Class PaperGPUDrivenFoliage.PaperVirtualLandscapeComponent
-// 0x0050 (0x0610 - 0x05C0)
+// 0x00F0 (0x06B0 - 0x05C0)
 class UPaperVirtualLandscapeComponent final : public UPrimitiveComponent
 {
 public:
-	struct FPerPlatformFloat                      Space;                                             // 0x05B8(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformFloat                      Lod0Distribution;                                  // 0x05BC(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformFloat                      LodDistribution;                                   // 0x05C0(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformFloat                      LODScale;                                          // 0x05C4(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformInt                        LevelNum;                                          // 0x05C8(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPerPlatformInt                        FarLevelBegin;                                     // 0x05CC(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     SrcMaterial;                                       // 0x05D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     SrcFarDisMaterial;                                 // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     DebugToggleMaterial;                               // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             AreaMaskTexture;                                   // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              AreaMaskWorldPosSize;                              // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              AreaMaskWorldPosOffset;                            // 0x0600(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsWater;                                           // 0x05B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHiddenInEditor;                                   // 0x05B9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5BA[0x2];                                      // 0x05BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPerPlatformFloat                      Space;                                             // 0x05BC(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      Lod0Distribution;                                  // 0x05C0(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      LodDistribution;                                   // 0x05C4(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      GBufferVTLodDistribution;                          // 0x05C8(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      LODScale;                                          // 0x05CC(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      LodBiasScale;                                      // 0x05D0(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        LevelNum;                                          // 0x05D4(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        FarLevelBegin;                                     // 0x05D8(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5DC[0x4];                                      // 0x05DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     SrcMaterial;                                       // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     SrcFarDisMaterial;                                 // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     SrcMaskMaterial;                                   // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     DebugToggleMaterial;                               // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             AreaMaskTexture;                                   // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              AreaMaskWorldPosSize;                              // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              AreaMaskWorldPosOffset;                            // 0x0618(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class ARuntimeVirtualTextureVolume> VirtualTexture;                               // 0x0628(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ARuntimeVirtualTextureVolume*           VirtualTextureRef;                                 // 0x0650(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                VirtualTextureThumbnail;                           // 0x0658(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyBoundsButton;                                 // 0x0660(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_661[0x7];                                      // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPaperMinMaxTexture*                    MinMaxTexture;                                     // 0x0668(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumMinMaxTextureBuildLevels;                       // 0x0670(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildMinMaxTextureButton;                         // 0x0674(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_675[0x3];                                      // 0x0675(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class ARuntimeVirtualTextureVolume> GBufferVirtualTexture;                        // 0x0678(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ARuntimeVirtualTextureVolume*           GBufferVirtualTextureRef;                          // 0x06A0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                GBufferVirtualTextureThumbnail;                    // 0x06A8(0x0008)(Edit, ZeroConstructor, Transient, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -647,19 +679,415 @@ public:
 	}
 };
 static_assert(alignof(UPaperVirtualLandscapeComponent) == 0x000010, "Wrong alignment on UPaperVirtualLandscapeComponent");
-static_assert(sizeof(UPaperVirtualLandscapeComponent) == 0x000610, "Wrong size on UPaperVirtualLandscapeComponent");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, Space) == 0x0005B8, "Member 'UPaperVirtualLandscapeComponent::Space' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, Lod0Distribution) == 0x0005BC, "Member 'UPaperVirtualLandscapeComponent::Lod0Distribution' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, LodDistribution) == 0x0005C0, "Member 'UPaperVirtualLandscapeComponent::LodDistribution' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, LODScale) == 0x0005C4, "Member 'UPaperVirtualLandscapeComponent::LODScale' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, LevelNum) == 0x0005C8, "Member 'UPaperVirtualLandscapeComponent::LevelNum' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, FarLevelBegin) == 0x0005CC, "Member 'UPaperVirtualLandscapeComponent::FarLevelBegin' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, SrcMaterial) == 0x0005D0, "Member 'UPaperVirtualLandscapeComponent::SrcMaterial' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, SrcFarDisMaterial) == 0x0005D8, "Member 'UPaperVirtualLandscapeComponent::SrcFarDisMaterial' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, DebugToggleMaterial) == 0x0005E0, "Member 'UPaperVirtualLandscapeComponent::DebugToggleMaterial' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, AreaMaskTexture) == 0x0005E8, "Member 'UPaperVirtualLandscapeComponent::AreaMaskTexture' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, AreaMaskWorldPosSize) == 0x0005F0, "Member 'UPaperVirtualLandscapeComponent::AreaMaskWorldPosSize' has a wrong offset!");
-static_assert(offsetof(UPaperVirtualLandscapeComponent, AreaMaskWorldPosOffset) == 0x000600, "Member 'UPaperVirtualLandscapeComponent::AreaMaskWorldPosOffset' has a wrong offset!");
+static_assert(sizeof(UPaperVirtualLandscapeComponent) == 0x0006B0, "Wrong size on UPaperVirtualLandscapeComponent");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, IsWater) == 0x0005B8, "Member 'UPaperVirtualLandscapeComponent::IsWater' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, bHiddenInEditor) == 0x0005B9, "Member 'UPaperVirtualLandscapeComponent::bHiddenInEditor' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, Space) == 0x0005BC, "Member 'UPaperVirtualLandscapeComponent::Space' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, Lod0Distribution) == 0x0005C0, "Member 'UPaperVirtualLandscapeComponent::Lod0Distribution' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, LodDistribution) == 0x0005C4, "Member 'UPaperVirtualLandscapeComponent::LodDistribution' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, GBufferVTLodDistribution) == 0x0005C8, "Member 'UPaperVirtualLandscapeComponent::GBufferVTLodDistribution' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, LODScale) == 0x0005CC, "Member 'UPaperVirtualLandscapeComponent::LODScale' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, LodBiasScale) == 0x0005D0, "Member 'UPaperVirtualLandscapeComponent::LodBiasScale' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, LevelNum) == 0x0005D4, "Member 'UPaperVirtualLandscapeComponent::LevelNum' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, FarLevelBegin) == 0x0005D8, "Member 'UPaperVirtualLandscapeComponent::FarLevelBegin' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, SrcMaterial) == 0x0005E0, "Member 'UPaperVirtualLandscapeComponent::SrcMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, SrcFarDisMaterial) == 0x0005E8, "Member 'UPaperVirtualLandscapeComponent::SrcFarDisMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, SrcMaskMaterial) == 0x0005F0, "Member 'UPaperVirtualLandscapeComponent::SrcMaskMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, DebugToggleMaterial) == 0x0005F8, "Member 'UPaperVirtualLandscapeComponent::DebugToggleMaterial' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, AreaMaskTexture) == 0x000600, "Member 'UPaperVirtualLandscapeComponent::AreaMaskTexture' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, AreaMaskWorldPosSize) == 0x000608, "Member 'UPaperVirtualLandscapeComponent::AreaMaskWorldPosSize' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, AreaMaskWorldPosOffset) == 0x000618, "Member 'UPaperVirtualLandscapeComponent::AreaMaskWorldPosOffset' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, VirtualTexture) == 0x000628, "Member 'UPaperVirtualLandscapeComponent::VirtualTexture' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, VirtualTextureRef) == 0x000650, "Member 'UPaperVirtualLandscapeComponent::VirtualTextureRef' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, VirtualTextureThumbnail) == 0x000658, "Member 'UPaperVirtualLandscapeComponent::VirtualTextureThumbnail' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, bCopyBoundsButton) == 0x000660, "Member 'UPaperVirtualLandscapeComponent::bCopyBoundsButton' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, MinMaxTexture) == 0x000668, "Member 'UPaperVirtualLandscapeComponent::MinMaxTexture' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, NumMinMaxTextureBuildLevels) == 0x000670, "Member 'UPaperVirtualLandscapeComponent::NumMinMaxTextureBuildLevels' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, bBuildMinMaxTextureButton) == 0x000674, "Member 'UPaperVirtualLandscapeComponent::bBuildMinMaxTextureButton' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, GBufferVirtualTexture) == 0x000678, "Member 'UPaperVirtualLandscapeComponent::GBufferVirtualTexture' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, GBufferVirtualTextureRef) == 0x0006A0, "Member 'UPaperVirtualLandscapeComponent::GBufferVirtualTextureRef' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualLandscapeComponent, GBufferVirtualTextureThumbnail) == 0x0006A8, "Member 'UPaperVirtualLandscapeComponent::GBufferVirtualTextureThumbnail' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.VirtualMeshVertexData
+// 0x0248 (0x0270 - 0x0028)
+class UVirtualMeshVertexData final : public UObject
+{
+public:
+	int32                                         VirtualMeshAssetVersion;                           // 0x0028(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMobile;                                           // 0x002C(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D[0x3];                                       // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4f                              MeshBounds;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUVFullPrecision;                                  // 0x0040(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMobileUseQTangentCompress;                        // 0x0041(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        NumTexCoords;                                      // 0x0044(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUint32Index;                                      // 0x0048(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        NumVertices;                                       // 0x004C(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        NumIndices;                                        // 0x0050(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumSections;                                       // 0x0054(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FirstLODIndex;                                     // 0x0058(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODNum;                                            // 0x005C(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 VBKeyName;                                         // 0x0060(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDrawDistance;                                   // 0x0070(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinScreenSize;                                     // 0x0074(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x1F8];                                     // 0x0078(0x01F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VirtualMeshVertexData">();
+	}
+	static class UVirtualMeshVertexData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVirtualMeshVertexData>();
+	}
+};
+static_assert(alignof(UVirtualMeshVertexData) == 0x000010, "Wrong alignment on UVirtualMeshVertexData");
+static_assert(sizeof(UVirtualMeshVertexData) == 0x000270, "Wrong size on UVirtualMeshVertexData");
+static_assert(offsetof(UVirtualMeshVertexData, VirtualMeshAssetVersion) == 0x000028, "Member 'UVirtualMeshVertexData::VirtualMeshAssetVersion' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, bMobile) == 0x00002C, "Member 'UVirtualMeshVertexData::bMobile' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, MeshBounds) == 0x000030, "Member 'UVirtualMeshVertexData::MeshBounds' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, bUVFullPrecision) == 0x000040, "Member 'UVirtualMeshVertexData::bUVFullPrecision' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, bMobileUseQTangentCompress) == 0x000041, "Member 'UVirtualMeshVertexData::bMobileUseQTangentCompress' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, NumTexCoords) == 0x000044, "Member 'UVirtualMeshVertexData::NumTexCoords' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, bUint32Index) == 0x000048, "Member 'UVirtualMeshVertexData::bUint32Index' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, NumVertices) == 0x00004C, "Member 'UVirtualMeshVertexData::NumVertices' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, NumIndices) == 0x000050, "Member 'UVirtualMeshVertexData::NumIndices' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, NumSections) == 0x000054, "Member 'UVirtualMeshVertexData::NumSections' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, FirstLODIndex) == 0x000058, "Member 'UVirtualMeshVertexData::FirstLODIndex' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, LODNum) == 0x00005C, "Member 'UVirtualMeshVertexData::LODNum' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, VBKeyName) == 0x000060, "Member 'UVirtualMeshVertexData::VBKeyName' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, MaxDrawDistance) == 0x000070, "Member 'UVirtualMeshVertexData::MaxDrawDistance' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshVertexData, MinScreenSize) == 0x000074, "Member 'UVirtualMeshVertexData::MinScreenSize' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.VirtualMeshPlatformAssetData
+// 0x0078 (0x00A0 - 0x0028)
+class UVirtualMeshPlatformAssetData final : public UObject
+{
+public:
+	bool                                          bMobile;                                           // 0x0028(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FirstLOD;                                          // 0x002C(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       MeshLocalBound;                                    // 0x0030(0x0038)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FVirtualMeshMaterialData>       VirtualMeshMaterialResources;                      // 0x0068(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FVirtualMeshLODData>            LODDataResources;                                  // 0x0078(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FVirtualMeshSectionData>        SectionDataResources;                              // 0x0088(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	class UVirtualMeshVertexData*                 VirtualMeshVertxData;                              // 0x0098(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VirtualMeshPlatformAssetData">();
+	}
+	static class UVirtualMeshPlatformAssetData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVirtualMeshPlatformAssetData>();
+	}
+};
+static_assert(alignof(UVirtualMeshPlatformAssetData) == 0x000008, "Wrong alignment on UVirtualMeshPlatformAssetData");
+static_assert(sizeof(UVirtualMeshPlatformAssetData) == 0x0000A0, "Wrong size on UVirtualMeshPlatformAssetData");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, bMobile) == 0x000028, "Member 'UVirtualMeshPlatformAssetData::bMobile' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, FirstLOD) == 0x00002C, "Member 'UVirtualMeshPlatformAssetData::FirstLOD' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, MeshLocalBound) == 0x000030, "Member 'UVirtualMeshPlatformAssetData::MeshLocalBound' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, VirtualMeshMaterialResources) == 0x000068, "Member 'UVirtualMeshPlatformAssetData::VirtualMeshMaterialResources' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, LODDataResources) == 0x000078, "Member 'UVirtualMeshPlatformAssetData::LODDataResources' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, SectionDataResources) == 0x000088, "Member 'UVirtualMeshPlatformAssetData::SectionDataResources' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshPlatformAssetData, VirtualMeshVertxData) == 0x000098, "Member 'UVirtualMeshPlatformAssetData::VirtualMeshVertxData' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.VirtualMeshAssetData
+// 0x0020 (0x0048 - 0x0028)
+class UVirtualMeshAssetData final : public UAssetUserData
+{
+public:
+	class FString                                 SrcMeshPathName;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVirtualMeshPlatformAssetData*          PCVirtualMeshAssetData;                            // 0x0038(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVirtualMeshPlatformAssetData*          MobileVirtualMeshAssetData;                        // 0x0040(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VirtualMeshAssetData">();
+	}
+	static class UVirtualMeshAssetData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVirtualMeshAssetData>();
+	}
+};
+static_assert(alignof(UVirtualMeshAssetData) == 0x000008, "Wrong alignment on UVirtualMeshAssetData");
+static_assert(sizeof(UVirtualMeshAssetData) == 0x000048, "Wrong size on UVirtualMeshAssetData");
+static_assert(offsetof(UVirtualMeshAssetData, SrcMeshPathName) == 0x000028, "Member 'UVirtualMeshAssetData::SrcMeshPathName' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshAssetData, PCVirtualMeshAssetData) == 0x000038, "Member 'UVirtualMeshAssetData::PCVirtualMeshAssetData' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshAssetData, MobileVirtualMeshAssetData) == 0x000040, "Member 'UVirtualMeshAssetData::MobileVirtualMeshAssetData' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.VirtualMeshStreamingAssetData
+// 0x0058 (0x0080 - 0x0028)
+class UVirtualMeshStreamingAssetData final : public UAssetUserData
+{
+public:
+	class FString                                 SrcMeshPathName;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      MinScreenSize;                                     // 0x0038(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformFloat                      MaxDrawDistances;                                  // 0x003C(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        PCVirtualMeshAssetPath;                            // 0x0040(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        MobileVirtualMeshAssetPath;                        // 0x0060(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VirtualMeshStreamingAssetData">();
+	}
+	static class UVirtualMeshStreamingAssetData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVirtualMeshStreamingAssetData>();
+	}
+};
+static_assert(alignof(UVirtualMeshStreamingAssetData) == 0x000008, "Wrong alignment on UVirtualMeshStreamingAssetData");
+static_assert(sizeof(UVirtualMeshStreamingAssetData) == 0x000080, "Wrong size on UVirtualMeshStreamingAssetData");
+static_assert(offsetof(UVirtualMeshStreamingAssetData, SrcMeshPathName) == 0x000028, "Member 'UVirtualMeshStreamingAssetData::SrcMeshPathName' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshStreamingAssetData, MinScreenSize) == 0x000038, "Member 'UVirtualMeshStreamingAssetData::MinScreenSize' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshStreamingAssetData, MaxDrawDistances) == 0x00003C, "Member 'UVirtualMeshStreamingAssetData::MaxDrawDistances' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshStreamingAssetData, PCVirtualMeshAssetPath) == 0x000040, "Member 'UVirtualMeshStreamingAssetData::PCVirtualMeshAssetPath' has a wrong offset!");
+static_assert(offsetof(UVirtualMeshStreamingAssetData, MobileVirtualMeshAssetPath) == 0x000060, "Member 'UVirtualMeshStreamingAssetData::MobileVirtualMeshAssetPath' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.VirtualMeshSettings
+// 0x0010 (0x0038 - 0x0028)
+class UVirtualMeshSettings final : public UObject
+{
+public:
+	TArray<class FString>                         VirtualMeshBuildAssetPath;                         // 0x0028(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VirtualMeshSettings">();
+	}
+	static class UVirtualMeshSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVirtualMeshSettings>();
+	}
+};
+static_assert(alignof(UVirtualMeshSettings) == 0x000008, "Wrong alignment on UVirtualMeshSettings");
+static_assert(sizeof(UVirtualMeshSettings) == 0x000038, "Wrong size on UVirtualMeshSettings");
+static_assert(offsetof(UVirtualMeshSettings, VirtualMeshBuildAssetPath) == 0x000028, "Member 'UVirtualMeshSettings::VirtualMeshBuildAssetPath' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.PaperVirtualMeshCullingComponent
+// 0x0010 (0x05D0 - 0x05C0)
+class UPaperVirtualMeshCullingComponent final : public UPrimitiveComponent
+{
+public:
+	uint8                                         Pad_5B8[0x18];                                     // 0x05B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperVirtualMeshCullingComponent">();
+	}
+	static class UPaperVirtualMeshCullingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperVirtualMeshCullingComponent>();
+	}
+};
+static_assert(alignof(UPaperVirtualMeshCullingComponent) == 0x000010, "Wrong alignment on UPaperVirtualMeshCullingComponent");
+static_assert(sizeof(UPaperVirtualMeshCullingComponent) == 0x0005D0, "Wrong size on UPaperVirtualMeshCullingComponent");
+
+// Class PaperGPUDrivenFoliage.PaperVirtualMeshDebugActor
+// 0x0030 (0x03D8 - 0x03A8)
+class APaperVirtualMeshDebugActor final : public AActor
+{
+public:
+	TArray<struct FSoftObjectPath>                PCGenerateAssetPath;                               // 0x03A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FSoftObjectPath>                MobileGenerateAssetPath;                           // 0x03B8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<class UVirtualMeshPlatformAssetData*>  ReferencedAssets;                                  // 0x03C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPublic)
+
+public:
+	void FlushEditorVirtualMesh();
+	void Init();
+	void Release();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperVirtualMeshDebugActor">();
+	}
+	static class APaperVirtualMeshDebugActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<APaperVirtualMeshDebugActor>();
+	}
+};
+static_assert(alignof(APaperVirtualMeshDebugActor) == 0x000008, "Wrong alignment on APaperVirtualMeshDebugActor");
+static_assert(sizeof(APaperVirtualMeshDebugActor) == 0x0003D8, "Wrong size on APaperVirtualMeshDebugActor");
+static_assert(offsetof(APaperVirtualMeshDebugActor, PCGenerateAssetPath) == 0x0003A8, "Member 'APaperVirtualMeshDebugActor::PCGenerateAssetPath' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshDebugActor, MobileGenerateAssetPath) == 0x0003B8, "Member 'APaperVirtualMeshDebugActor::MobileGenerateAssetPath' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshDebugActor, ReferencedAssets) == 0x0003C8, "Member 'APaperVirtualMeshDebugActor::ReferencedAssets' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.PaperVirtualMeshISMComponent
+// 0x0080 (0x0640 - 0x05C0)
+class UPaperVirtualMeshISMComponent final : public UPrimitiveComponent
+{
+public:
+	class UStaticMesh*                            SrcMesh;                                           // 0x05B8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             UsedMaterials;                                     // 0x05C0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<struct FMeshUVChannelInfo>             MaterrialUVChannelDatas;                           // 0x05D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5E0[0x60];                                     // 0x05E0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperVirtualMeshISMComponent">();
+	}
+	static class UPaperVirtualMeshISMComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperVirtualMeshISMComponent>();
+	}
+};
+static_assert(alignof(UPaperVirtualMeshISMComponent) == 0x000010, "Wrong alignment on UPaperVirtualMeshISMComponent");
+static_assert(sizeof(UPaperVirtualMeshISMComponent) == 0x000640, "Wrong size on UPaperVirtualMeshISMComponent");
+static_assert(offsetof(UPaperVirtualMeshISMComponent, SrcMesh) == 0x0005B8, "Member 'UPaperVirtualMeshISMComponent::SrcMesh' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualMeshISMComponent, UsedMaterials) == 0x0005C0, "Member 'UPaperVirtualMeshISMComponent::UsedMaterials' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualMeshISMComponent, MaterrialUVChannelDatas) == 0x0005D0, "Member 'UPaperVirtualMeshISMComponent::MaterrialUVChannelDatas' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.PaperVirtualMeshManager
+// 0x0318 (0x06F8 - 0x03E0)
+class APaperVirtualMeshManager final : public AVolume
+{
+public:
+	class UMaterialInterface*                     RuntimeDebugVirtualMeshMaterial;                   // 0x03E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FUintVector2, int32>              CompGUIDToInstanceIDMap;                           // 0x03E8(0x0050)(Transient, NativeAccessSpecifierPublic)
+	TMap<struct FPVM_MeshMaterialCombine, int32>  StaticMeshCombineToMeshIDMap;                      // 0x0438(0x0050)(Transient, NativeAccessSpecifierPublic)
+	class UPaperVirtualMeshCullingComponent*      CullingComp;                                       // 0x0488(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UPaperVirtualMeshPageComponent*> VirtualMeshPageComponents;                         // 0x0490(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UPaperVirtualMeshISMComponent*>  VirtualMeshISMComponents;                          // 0x04A0(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<struct FGuid, int32>                     StreamedVirtualInstanceMap;                        // 0x04B0(0x0050)(Transient, NativeAccessSpecifierPublic)
+	TMap<class UVirtualMeshPlatformAssetData*, int32> StreamedVirtualMeshToMeshIDMap;                // 0x0500(0x0050)(Transient, NativeAccessSpecifierPublic)
+	uint8                                         Pad_550[0x1A8];                                    // 0x0550(0x01A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class APaperVirtualMeshManager* Get(class UObject* WorldContextObject);
+
+	bool AddStaticMeshInstance(class UStaticMeshComponent* InStaticMeshComp);
+	struct FGuid AddVirtualMesh(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, int32 PaperCustomData);
+	struct FGuid AddVirtualMeshWithFloat(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, float PaperCustomData);
+	void RemoveAllStaticMeshInstances(class UStaticMesh* RefMesh);
+	bool RemoveStaticMeshInstance(class UStaticMeshComponent* InStaticMeshComp);
+	void RemoveVirtualMesh(const struct FGuid& InInstanceGUID);
+	bool UpdateStaticMeshTransform(class UStaticMeshComponent* InStaticMeshComp);
+	void UpdateVirtualMesh(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform, int32 PaperCustomData);
+	void UpdateVirtualMesh2(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform);
+	void UpdateVirtualMesh3(const struct FGuid& InInstanceGUID, int32 PaperCustomData);
+	void UpdateVirtualMeshFloat(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform, float PaperCustomData);
+	void UpdateVirtualMeshFloatCustomData(const struct FGuid& InInstanceGUID, float PaperCustomData);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperVirtualMeshManager">();
+	}
+	static class APaperVirtualMeshManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<APaperVirtualMeshManager>();
+	}
+};
+static_assert(alignof(APaperVirtualMeshManager) == 0x000008, "Wrong alignment on APaperVirtualMeshManager");
+static_assert(sizeof(APaperVirtualMeshManager) == 0x0006F8, "Wrong size on APaperVirtualMeshManager");
+static_assert(offsetof(APaperVirtualMeshManager, RuntimeDebugVirtualMeshMaterial) == 0x0003E0, "Member 'APaperVirtualMeshManager::RuntimeDebugVirtualMeshMaterial' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, CompGUIDToInstanceIDMap) == 0x0003E8, "Member 'APaperVirtualMeshManager::CompGUIDToInstanceIDMap' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, StaticMeshCombineToMeshIDMap) == 0x000438, "Member 'APaperVirtualMeshManager::StaticMeshCombineToMeshIDMap' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, CullingComp) == 0x000488, "Member 'APaperVirtualMeshManager::CullingComp' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, VirtualMeshPageComponents) == 0x000490, "Member 'APaperVirtualMeshManager::VirtualMeshPageComponents' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, VirtualMeshISMComponents) == 0x0004A0, "Member 'APaperVirtualMeshManager::VirtualMeshISMComponents' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, StreamedVirtualInstanceMap) == 0x0004B0, "Member 'APaperVirtualMeshManager::StreamedVirtualInstanceMap' has a wrong offset!");
+static_assert(offsetof(APaperVirtualMeshManager, StreamedVirtualMeshToMeshIDMap) == 0x000500, "Member 'APaperVirtualMeshManager::StreamedVirtualMeshToMeshIDMap' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.PaperVirtualMeshPageComponent
+// 0x0060 (0x0620 - 0x05C0)
+class UPaperVirtualMeshPageComponent final : public UPrimitiveComponent
+{
+public:
+	class UVirtualMeshPlatformAssetData*          VirtualMeshAssetData;                              // 0x05B8(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     VirtualMeshDebugMaterial;                          // 0x05C0(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C8[0x58];                                     // 0x05C8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperVirtualMeshPageComponent">();
+	}
+	static class UPaperVirtualMeshPageComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperVirtualMeshPageComponent>();
+	}
+};
+static_assert(alignof(UPaperVirtualMeshPageComponent) == 0x000010, "Wrong alignment on UPaperVirtualMeshPageComponent");
+static_assert(sizeof(UPaperVirtualMeshPageComponent) == 0x000620, "Wrong size on UPaperVirtualMeshPageComponent");
+static_assert(offsetof(UPaperVirtualMeshPageComponent, VirtualMeshAssetData) == 0x0005B8, "Member 'UPaperVirtualMeshPageComponent::VirtualMeshAssetData' has a wrong offset!");
+static_assert(offsetof(UPaperVirtualMeshPageComponent, VirtualMeshDebugMaterial) == 0x0005C0, "Member 'UPaperVirtualMeshPageComponent::VirtualMeshDebugMaterial' has a wrong offset!");
+
+// Class PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem
+// 0x0018 (0x0048 - 0x0030)
+class UPaperVirtualMeshSubsystem final : public UPaperMeshSubsystem
+{
+public:
+	uint8                                         Pad_30[0x18];                                      // 0x0030(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPaperVirtualMeshSubsystem* Instance();
+
+	struct FGuid AddEditorVirtualMesh(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, int32 PaperCustomData);
+	struct FGuid AddVirtualMesh(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, int32 PaperCustomData);
+	struct FGuid AddVirtualMeshFloatCustomData(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, float PaperCustomData);
+	bool IsES31(class UObject* WorldContextObject);
+	void RemoveVirtualMesh(const struct FGuid& InInstanceGUID);
+	void UpdateVirtualMesh(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform, int32 PaperCustomData);
+	void UpdateVirtualMesh2(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform);
+	void UpdateVirtualMesh3(const struct FGuid& InInstanceGUID, int32 PaperCustomData);
+	void UpdateVirtualMeshFloatCustomData(const struct FGuid& InInstanceGUID, float PaperCustomData);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperVirtualMeshSubsystem">();
+	}
+	static class UPaperVirtualMeshSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperVirtualMeshSubsystem>();
+	}
+};
+static_assert(alignof(UPaperVirtualMeshSubsystem) == 0x000008, "Wrong alignment on UPaperVirtualMeshSubsystem");
+static_assert(sizeof(UPaperVirtualMeshSubsystem) == 0x000048, "Wrong size on UPaperVirtualMeshSubsystem");
+
+// Class PaperGPUDrivenFoliage.PaperMinMaxTexture
+// 0x0048 (0x0070 - 0x0028)
+class UPaperMinMaxTexture final : public UObject
+{
+public:
+	class UTexture2D*                             Texture;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             LodBiasTexture;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             LodBiasMinMaxTexture;                              // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxCPULevels;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector2D>                      TextureData;                                       // 0x0048(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FIntPoint                              TextureDataSize;                                   // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 TextureDataMips;                                   // 0x0060(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperMinMaxTexture">();
+	}
+	static class UPaperMinMaxTexture* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperMinMaxTexture>();
+	}
+};
+static_assert(alignof(UPaperMinMaxTexture) == 0x000008, "Wrong alignment on UPaperMinMaxTexture");
+static_assert(sizeof(UPaperMinMaxTexture) == 0x000070, "Wrong size on UPaperMinMaxTexture");
+static_assert(offsetof(UPaperMinMaxTexture, Texture) == 0x000028, "Member 'UPaperMinMaxTexture::Texture' has a wrong offset!");
+static_assert(offsetof(UPaperMinMaxTexture, LodBiasTexture) == 0x000030, "Member 'UPaperMinMaxTexture::LodBiasTexture' has a wrong offset!");
+static_assert(offsetof(UPaperMinMaxTexture, LodBiasMinMaxTexture) == 0x000038, "Member 'UPaperMinMaxTexture::LodBiasMinMaxTexture' has a wrong offset!");
+static_assert(offsetof(UPaperMinMaxTexture, MaxCPULevels) == 0x000040, "Member 'UPaperMinMaxTexture::MaxCPULevels' has a wrong offset!");
+static_assert(offsetof(UPaperMinMaxTexture, TextureData) == 0x000048, "Member 'UPaperMinMaxTexture::TextureData' has a wrong offset!");
+static_assert(offsetof(UPaperMinMaxTexture, TextureDataSize) == 0x000058, "Member 'UPaperMinMaxTexture::TextureDataSize' has a wrong offset!");
+static_assert(offsetof(UPaperMinMaxTexture, TextureDataMips) == 0x000060, "Member 'UPaperMinMaxTexture::TextureDataMips' has a wrong offset!");
 
 }
 

@@ -121,6 +121,15 @@ enum class EAndroidGraphicsDebugger : uint8
 	EAndroidGraphicsDebugger_MAX             = 3,
 };
 
+// Enum AndroidRuntimeSettings.ESoInstallLocation
+// NumValues: 0x0003
+enum class ESoInstallLocation : uint8
+{
+	Default                                  = 0,
+	Assets                                   = 1,
+	ESoInstallLocation_MAX                   = 2,
+};
+
 // ScriptStruct AndroidRuntimeSettings.GooglePlayAchievementMapping
 // 0x0020 (0x0020 - 0x0000)
 struct FGooglePlayAchievementMapping final
@@ -146,6 +155,22 @@ static_assert(alignof(FGooglePlayLeaderboardMapping) == 0x000008, "Wrong alignme
 static_assert(sizeof(FGooglePlayLeaderboardMapping) == 0x000020, "Wrong size on FGooglePlayLeaderboardMapping");
 static_assert(offsetof(FGooglePlayLeaderboardMapping, Name) == 0x000000, "Member 'FGooglePlayLeaderboardMapping::Name' has a wrong offset!");
 static_assert(offsetof(FGooglePlayLeaderboardMapping, LeaderboardID) == 0x000010, "Member 'FGooglePlayLeaderboardMapping::LeaderboardID' has a wrong offset!");
+
+// ScriptStruct AndroidRuntimeSettings.ReplacedSoInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FReplacedSoInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESoInstallLocation                            Location;                                          // 0x0010(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDontPreload;                                      // 0x0011(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FReplacedSoInfo) == 0x000008, "Wrong alignment on FReplacedSoInfo");
+static_assert(sizeof(FReplacedSoInfo) == 0x000018, "Wrong size on FReplacedSoInfo");
+static_assert(offsetof(FReplacedSoInfo, Name) == 0x000000, "Member 'FReplacedSoInfo::Name' has a wrong offset!");
+static_assert(offsetof(FReplacedSoInfo, Location) == 0x000010, "Member 'FReplacedSoInfo::Location' has a wrong offset!");
+static_assert(offsetof(FReplacedSoInfo, bDontPreload) == 0x000011, "Member 'FReplacedSoInfo::bDontPreload' has a wrong offset!");
 
 }
 

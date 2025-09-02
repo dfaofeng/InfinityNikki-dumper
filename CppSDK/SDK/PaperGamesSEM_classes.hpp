@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "PaperGamesSEM_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "PaperGamesSEM_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -535,12 +535,13 @@ static_assert(offsetof(UPaperGamesSEMSettings, GameFetureTagPath) == 0x000688, "
 static_assert(offsetof(UPaperGamesSEMSettings, SpawnTagPath) == 0x0006A8, "Member 'UPaperGamesSEMSettings::SpawnTagPath' has a wrong offset!");
 
 // Class PaperGamesSEM.PaperGamesSEMCustomLocalSettings
-// 0x0008 (0x0030 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UPaperGamesSEMCustomLocalSettings final : public UObject
 {
 public:
 	bool                                          IsDatalayerAutoOpenWhenEditorStart;                // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           DatalayerOutlinerTitleHiddenList;                  // 0x0030(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -553,8 +554,9 @@ public:
 	}
 };
 static_assert(alignof(UPaperGamesSEMCustomLocalSettings) == 0x000008, "Wrong alignment on UPaperGamesSEMCustomLocalSettings");
-static_assert(sizeof(UPaperGamesSEMCustomLocalSettings) == 0x000030, "Wrong size on UPaperGamesSEMCustomLocalSettings");
+static_assert(sizeof(UPaperGamesSEMCustomLocalSettings) == 0x000040, "Wrong size on UPaperGamesSEMCustomLocalSettings");
 static_assert(offsetof(UPaperGamesSEMCustomLocalSettings, IsDatalayerAutoOpenWhenEditorStart) == 0x000028, "Member 'UPaperGamesSEMCustomLocalSettings::IsDatalayerAutoOpenWhenEditorStart' has a wrong offset!");
+static_assert(offsetof(UPaperGamesSEMCustomLocalSettings, DatalayerOutlinerTitleHiddenList) == 0x000030, "Member 'UPaperGamesSEMCustomLocalSettings::DatalayerOutlinerTitleHiddenList' has a wrong offset!");
 
 // Class PaperGamesSEM.PaperGamesSEMPublishSettings
 // 0x0020 (0x0048 - 0x0028)

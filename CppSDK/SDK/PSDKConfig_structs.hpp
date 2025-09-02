@@ -196,7 +196,7 @@ static_assert(offsetof(FPSNetDiagnosis3, zoneId) == 0x000000, "Member 'FPSNetDia
 static_assert(offsetof(FPSNetDiagnosis3, netDiagnosis) == 0x000010, "Member 'FPSNetDiagnosis3::netDiagnosis' has a wrong offset!");
 
 // ScriptStruct PSDKConfig.PSConsoleConfig
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00D8 (0x00D8 - 0x0000)
 struct FPSConsoleConfig final
 {
 public:
@@ -228,9 +228,16 @@ public:
 	bool                                          psnEnableConsumeWhenReactived;                     // 0x00A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         psnConsumeWhenReactivedLimitInterval;              // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         adMaximumLatency;                                  // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         adMaxRetryCount;                                   // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 adReportBaseUrl;                                   // 0x00B8(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         enableNewAdReport;                                 // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         enableCustomToJson;                                // 0x00CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         queryProductMaxItems;                              // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPSConsoleConfig) == 0x000008, "Wrong alignment on FPSConsoleConfig");
-static_assert(sizeof(FPSConsoleConfig) == 0x0000B0, "Wrong size on FPSConsoleConfig");
+static_assert(sizeof(FPSConsoleConfig) == 0x0000D8, "Wrong size on FPSConsoleConfig");
 static_assert(offsetof(FPSConsoleConfig, deliver_retry_count) == 0x000000, "Member 'FPSConsoleConfig::deliver_retry_count' has a wrong offset!");
 static_assert(offsetof(FPSConsoleConfig, deliver_retry_round_times) == 0x000004, "Member 'FPSConsoleConfig::deliver_retry_round_times' has a wrong offset!");
 static_assert(offsetof(FPSConsoleConfig, payloadingtime) == 0x000008, "Member 'FPSConsoleConfig::payloadingtime' has a wrong offset!");
@@ -256,13 +263,19 @@ static_assert(offsetof(FPSConsoleConfig, netDiagnosis3) == 0x000098, "Member 'FP
 static_assert(offsetof(FPSConsoleConfig, psnUsePriceIgnoreCase) == 0x0000A8, "Member 'FPSConsoleConfig::psnUsePriceIgnoreCase' has a wrong offset!");
 static_assert(offsetof(FPSConsoleConfig, psnEnableConsumeWhenReactived) == 0x0000A9, "Member 'FPSConsoleConfig::psnEnableConsumeWhenReactived' has a wrong offset!");
 static_assert(offsetof(FPSConsoleConfig, psnConsumeWhenReactivedLimitInterval) == 0x0000AC, "Member 'FPSConsoleConfig::psnConsumeWhenReactivedLimitInterval' has a wrong offset!");
+static_assert(offsetof(FPSConsoleConfig, adMaximumLatency) == 0x0000B0, "Member 'FPSConsoleConfig::adMaximumLatency' has a wrong offset!");
+static_assert(offsetof(FPSConsoleConfig, adMaxRetryCount) == 0x0000B4, "Member 'FPSConsoleConfig::adMaxRetryCount' has a wrong offset!");
+static_assert(offsetof(FPSConsoleConfig, adReportBaseUrl) == 0x0000B8, "Member 'FPSConsoleConfig::adReportBaseUrl' has a wrong offset!");
+static_assert(offsetof(FPSConsoleConfig, enableNewAdReport) == 0x0000C8, "Member 'FPSConsoleConfig::enableNewAdReport' has a wrong offset!");
+static_assert(offsetof(FPSConsoleConfig, enableCustomToJson) == 0x0000CC, "Member 'FPSConsoleConfig::enableCustomToJson' has a wrong offset!");
+static_assert(offsetof(FPSConsoleConfig, queryProductMaxItems) == 0x0000D0, "Member 'FPSConsoleConfig::queryProductMaxItems' has a wrong offset!");
 
 // ScriptStruct PSDKConfig.PSDKCurrencyConfig
 // 0x0038 (0x0038 - 0x0000)
 struct FPSDKCurrencyConfig final
 {
 public:
-	class FString                                 Code;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 code;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         align;                                             // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Pattern;                                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -270,32 +283,74 @@ public:
 };
 static_assert(alignof(FPSDKCurrencyConfig) == 0x000008, "Wrong alignment on FPSDKCurrencyConfig");
 static_assert(sizeof(FPSDKCurrencyConfig) == 0x000038, "Wrong size on FPSDKCurrencyConfig");
-static_assert(offsetof(FPSDKCurrencyConfig, Code) == 0x000000, "Member 'FPSDKCurrencyConfig::Code' has a wrong offset!");
+static_assert(offsetof(FPSDKCurrencyConfig, code) == 0x000000, "Member 'FPSDKCurrencyConfig::code' has a wrong offset!");
 static_assert(offsetof(FPSDKCurrencyConfig, align) == 0x000010, "Member 'FPSDKCurrencyConfig::align' has a wrong offset!");
 static_assert(offsetof(FPSDKCurrencyConfig, Pattern) == 0x000018, "Member 'FPSDKCurrencyConfig::Pattern' has a wrong offset!");
 static_assert(offsetof(FPSDKCurrencyConfig, symbol) == 0x000028, "Member 'FPSDKCurrencyConfig::symbol' has a wrong offset!");
 
+// ScriptStruct PSDKConfig.PSdkDiscordActivityButton
+// 0x0020 (0x0020 - 0x0000)
+struct FPSdkDiscordActivityButton final
+{
+public:
+	class FString                                 Label;                                             // 0x0000(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 URL;                                               // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSdkDiscordActivityButton) == 0x000008, "Wrong alignment on FPSdkDiscordActivityButton");
+static_assert(sizeof(FPSdkDiscordActivityButton) == 0x000020, "Wrong size on FPSdkDiscordActivityButton");
+static_assert(offsetof(FPSdkDiscordActivityButton, Label) == 0x000000, "Member 'FPSdkDiscordActivityButton::Label' has a wrong offset!");
+static_assert(offsetof(FPSdkDiscordActivityButton, URL) == 0x000010, "Member 'FPSdkDiscordActivityButton::URL' has a wrong offset!");
+
+// ScriptStruct PSDKConfig.PSdkDiscord
+// 0x0028 (0x0028 - 0x0000)
+struct FPSdkDiscord final
+{
+public:
+	bool                                          Enable;                                            // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AppID;                                             // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPSdkDiscordActivityButton>     buttons;                                           // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSdkDiscord) == 0x000008, "Wrong alignment on FPSdkDiscord");
+static_assert(sizeof(FPSdkDiscord) == 0x000028, "Wrong size on FPSdkDiscord");
+static_assert(offsetof(FPSdkDiscord, Enable) == 0x000000, "Member 'FPSdkDiscord::Enable' has a wrong offset!");
+static_assert(offsetof(FPSdkDiscord, AppID) == 0x000008, "Member 'FPSdkDiscord::AppID' has a wrong offset!");
+static_assert(offsetof(FPSdkDiscord, buttons) == 0x000018, "Member 'FPSdkDiscord::buttons' has a wrong offset!");
+
+// ScriptStruct PSDKConfig.PSdkAccessoriesModel
+// 0x0028 (0x0028 - 0x0000)
+struct FPSdkAccessoriesModel final
+{
+public:
+	struct FPSdkDiscord                           discord;                                           // 0x0000(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSdkAccessoriesModel) == 0x000008, "Wrong alignment on FPSdkAccessoriesModel");
+static_assert(sizeof(FPSdkAccessoriesModel) == 0x000028, "Wrong size on FPSdkAccessoriesModel");
+static_assert(offsetof(FPSdkAccessoriesModel, discord) == 0x000000, "Member 'FPSdkAccessoriesModel::discord' has a wrong offset!");
+
 // ScriptStruct PSDKConfig.PSdkAccessoriesConfigDataModel
-// 0x0001 (0x0001 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FPSdkAccessoriesConfigDataModel final
 {
 public:
 	bool                                          ccr;                                               // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPSdkAccessoriesModel                  Config;                                            // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FPSdkAccessoriesConfigDataModel) == 0x000001, "Wrong alignment on FPSdkAccessoriesConfigDataModel");
-static_assert(sizeof(FPSdkAccessoriesConfigDataModel) == 0x000001, "Wrong size on FPSdkAccessoriesConfigDataModel");
+static_assert(alignof(FPSdkAccessoriesConfigDataModel) == 0x000008, "Wrong alignment on FPSdkAccessoriesConfigDataModel");
+static_assert(sizeof(FPSdkAccessoriesConfigDataModel) == 0x000030, "Wrong size on FPSdkAccessoriesConfigDataModel");
 static_assert(offsetof(FPSdkAccessoriesConfigDataModel, ccr) == 0x000000, "Member 'FPSdkAccessoriesConfigDataModel::ccr' has a wrong offset!");
+static_assert(offsetof(FPSdkAccessoriesConfigDataModel, Config) == 0x000008, "Member 'FPSdkAccessoriesConfigDataModel::Config' has a wrong offset!");
 
 // ScriptStruct PSDKConfig.PSdkAccessoriesConfigModel
-// 0x0008 (0x0040 - 0x0038)
+// 0x0030 (0x0068 - 0x0038)
 struct FPSdkAccessoriesConfigModel final : public FPSBffBasicModel
 {
 public:
-	struct FPSdkAccessoriesConfigDataModel        Data;                                              // 0x0038(0x0001)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPSdkAccessoriesConfigDataModel        Data;                                              // 0x0038(0x0030)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkAccessoriesConfigModel) == 0x000008, "Wrong alignment on FPSdkAccessoriesConfigModel");
-static_assert(sizeof(FPSdkAccessoriesConfigModel) == 0x000040, "Wrong size on FPSdkAccessoriesConfigModel");
+static_assert(sizeof(FPSdkAccessoriesConfigModel) == 0x000068, "Wrong size on FPSdkAccessoriesConfigModel");
 static_assert(offsetof(FPSdkAccessoriesConfigModel, Data) == 0x000038, "Member 'FPSdkAccessoriesConfigModel::Data' has a wrong offset!");
 
 // ScriptStruct PSDKConfig.PSdkCommonConfigDataModel

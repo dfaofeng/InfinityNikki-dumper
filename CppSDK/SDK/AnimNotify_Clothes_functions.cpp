@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function AnimNotify_Clothes.AnimNotify_Clothes_C.PreviewPostAkEvent
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UAnimNotify_Clothes_C::PreviewPostAkEvent(class USceneComponent* Comp) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AnimNotify_Clothes_C", "PreviewPostAkEvent");
-
-	Params::AnimNotify_Clothes_C_PreviewPostAkEvent Parms{};
-
-	Parms.Comp = Comp;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function AnimNotify_Clothes.AnimNotify_Clothes_C.Received_Notify
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -61,6 +41,26 @@ bool UAnimNotify_Clothes_C::Received_Notify(class USkeletalMeshComponent* MeshCo
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function AnimNotify_Clothes.AnimNotify_Clothes_C.PreviewPostAkEvent
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UAnimNotify_Clothes_C::PreviewPostAkEvent(class USceneComponent* Comp) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimNotify_Clothes_C", "PreviewPostAkEvent");
+
+	Params::AnimNotify_Clothes_C_PreviewPostAkEvent Parms{};
+
+	Parms.Comp = Comp;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

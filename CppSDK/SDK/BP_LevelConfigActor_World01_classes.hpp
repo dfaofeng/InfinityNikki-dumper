@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LevelConfigActor_World01.BP_LevelConfigActor_World01_C
-// 0x0000 (0x0B30 - 0x0B30)
+// 0x0000 (0x0B58 - 0x0B58)
 class ABP_LevelConfigActor_World01_C final : public ABP_LevelConfigActor_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_LevelConfigActor_World01_C) == 0x000008, "Wrong alignment on ABP_LevelConfigActor_World01_C");
-static_assert(sizeof(ABP_LevelConfigActor_World01_C) == 0x000B30, "Wrong size on ABP_LevelConfigActor_World01_C");
+static_assert(sizeof(ABP_LevelConfigActor_World01_C) == 0x000B58, "Wrong size on ABP_LevelConfigActor_World01_C");
 
 }
 

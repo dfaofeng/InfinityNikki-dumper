@@ -10,22 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "PaperMeshCapture_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PaperMeshCapture_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class PaperMeshCapture.PaperMeshCaptureComponent
-// 0x0050 (0x0610 - 0x05C0)
+// 0x0060 (0x0620 - 0x05C0)
 class UPaperMeshCaptureComponent final : public UPrimitiveComponent
 {
 public:
 	class UTextureRenderTarget*                   MeshColorCaptureRT;                                // 0x05B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTextureRenderTarget*                   MeshDepthCaptureRT;                                // 0x05C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         PaperMeshCaptureChannelIndex;                      // 0x05C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C9[0x3];                                      // 0x05C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PaperMeshCaptureChannelIndex;                      // 0x05C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CacheFOV;                                          // 0x05CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOrth;                                             // 0x05D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5D1[0x3];                                      // 0x05D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -42,10 +41,12 @@ public:
 	float                                         DistanceFromPlaneFadeoutEnd;                       // 0x05EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AngleFromPlaneFadeStart;                           // 0x05F0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AngleFromPlaneFadeEnd;                             // 0x05F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5F8[0x18];                                     // 0x05F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 FrameID)> CustomCaptureNitofyDelegate;                       // 0x05F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_608[0x18];                                     // 0x0608(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CaptureFrame();
+	int32 CaptureFrameWithFrameRel();
 	void SetEnable(bool bInEnable);
 	void SetNewCaptureIndex(int32 NewMeshCaptureChannelIndex);
 	void SetNewMeshColorTarget(class UTextureRenderTarget* NewMeshColorCaptureRT);
@@ -63,7 +64,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperMeshCaptureComponent) == 0x000010, "Wrong alignment on UPaperMeshCaptureComponent");
-static_assert(sizeof(UPaperMeshCaptureComponent) == 0x000610, "Wrong size on UPaperMeshCaptureComponent");
+static_assert(sizeof(UPaperMeshCaptureComponent) == 0x000620, "Wrong size on UPaperMeshCaptureComponent");
 static_assert(offsetof(UPaperMeshCaptureComponent, MeshColorCaptureRT) == 0x0005B8, "Member 'UPaperMeshCaptureComponent::MeshColorCaptureRT' has a wrong offset!");
 static_assert(offsetof(UPaperMeshCaptureComponent, MeshDepthCaptureRT) == 0x0005C0, "Member 'UPaperMeshCaptureComponent::MeshDepthCaptureRT' has a wrong offset!");
 static_assert(offsetof(UPaperMeshCaptureComponent, PaperMeshCaptureChannelIndex) == 0x0005C8, "Member 'UPaperMeshCaptureComponent::PaperMeshCaptureChannelIndex' has a wrong offset!");
@@ -81,6 +82,7 @@ static_assert(offsetof(UPaperMeshCaptureComponent, DistanceFromPlaneFadeoutStart
 static_assert(offsetof(UPaperMeshCaptureComponent, DistanceFromPlaneFadeoutEnd) == 0x0005EC, "Member 'UPaperMeshCaptureComponent::DistanceFromPlaneFadeoutEnd' has a wrong offset!");
 static_assert(offsetof(UPaperMeshCaptureComponent, AngleFromPlaneFadeStart) == 0x0005F0, "Member 'UPaperMeshCaptureComponent::AngleFromPlaneFadeStart' has a wrong offset!");
 static_assert(offsetof(UPaperMeshCaptureComponent, AngleFromPlaneFadeEnd) == 0x0005F4, "Member 'UPaperMeshCaptureComponent::AngleFromPlaneFadeEnd' has a wrong offset!");
+static_assert(offsetof(UPaperMeshCaptureComponent, CustomCaptureNitofyDelegate) == 0x0005F8, "Member 'UPaperMeshCaptureComponent::CustomCaptureNitofyDelegate' has a wrong offset!");
 
 }
 

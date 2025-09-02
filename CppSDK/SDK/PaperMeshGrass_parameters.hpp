@@ -14,6 +14,28 @@
 namespace SDK::Params
 {
 
+// Function PaperMeshGrass.PaperMeshGrassMeshComponent.SetAllowUpdateGrass
+// 0x0001 (0x0001 - 0x0000)
+struct PaperMeshGrassMeshComponent_SetAllowUpdateGrass final
+{
+public:
+	bool                                          InAllowUpdateGrass;                                // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperMeshGrassMeshComponent_SetAllowUpdateGrass) == 0x000001, "Wrong alignment on PaperMeshGrassMeshComponent_SetAllowUpdateGrass");
+static_assert(sizeof(PaperMeshGrassMeshComponent_SetAllowUpdateGrass) == 0x000001, "Wrong size on PaperMeshGrassMeshComponent_SetAllowUpdateGrass");
+static_assert(offsetof(PaperMeshGrassMeshComponent_SetAllowUpdateGrass, InAllowUpdateGrass) == 0x000000, "Member 'PaperMeshGrassMeshComponent_SetAllowUpdateGrass::InAllowUpdateGrass' has a wrong offset!");
+
+// Function PaperMeshGrass.PaperMeshGrassMeshComponent.SetGrassBakedData
+// 0x0008 (0x0008 - 0x0000)
+struct PaperMeshGrassMeshComponent_SetGrassBakedData final
+{
+public:
+	class UMeshGrassBakedData*                    InBakedData;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperMeshGrassMeshComponent_SetGrassBakedData) == 0x000008, "Wrong alignment on PaperMeshGrassMeshComponent_SetGrassBakedData");
+static_assert(sizeof(PaperMeshGrassMeshComponent_SetGrassBakedData) == 0x000008, "Wrong size on PaperMeshGrassMeshComponent_SetGrassBakedData");
+static_assert(offsetof(PaperMeshGrassMeshComponent_SetGrassBakedData, InBakedData) == 0x000000, "Member 'PaperMeshGrassMeshComponent_SetGrassBakedData::InBakedData' has a wrong offset!");
+
 // Function PaperMeshGrass.PaperMeshGrassMeshComponent.SetGrassGenerateTextures
 // 0x0010 (0x0010 - 0x0000)
 struct PaperMeshGrassMeshComponent_SetGrassGenerateTextures final

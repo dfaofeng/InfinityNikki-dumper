@@ -71,6 +71,26 @@ void AD_StarSeaPublicSpace_LS_C::ReceiveBeginPlay()
 }
 
 
+// Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AD_StarSeaPublicSpace_LS_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("D_StarSeaPublicSpace_LS_C", "ReceiveEndPlay");
+
+	Params::D_StarSeaPublicSpace_LS_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:

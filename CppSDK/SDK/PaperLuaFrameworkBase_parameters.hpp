@@ -1495,11 +1495,11 @@ static_assert(offsetof(PaperNetworkMgr_SetHandlerMode, Mode) == 0x000000, "Membe
 struct PaperNetworkMgr_SetHeartbeatInterval final
 {
 public:
-	float                                         Interval;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         interval;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PaperNetworkMgr_SetHeartbeatInterval) == 0x000004, "Wrong alignment on PaperNetworkMgr_SetHeartbeatInterval");
 static_assert(sizeof(PaperNetworkMgr_SetHeartbeatInterval) == 0x000004, "Wrong size on PaperNetworkMgr_SetHeartbeatInterval");
-static_assert(offsetof(PaperNetworkMgr_SetHeartbeatInterval, Interval) == 0x000000, "Member 'PaperNetworkMgr_SetHeartbeatInterval::Interval' has a wrong offset!");
+static_assert(offsetof(PaperNetworkMgr_SetHeartbeatInterval, interval) == 0x000000, "Member 'PaperNetworkMgr_SetHeartbeatInterval::interval' has a wrong offset!");
 
 // Function PaperLuaFrameworkBase.PaperNetworkMgr.SetNetProtoId
 // 0x0004 (0x0004 - 0x0000)
@@ -1988,17 +1988,19 @@ static_assert(sizeof(X6NetClientV2_IsMultiPlayerMode) == 0x000001, "Wrong size o
 static_assert(offsetof(X6NetClientV2_IsMultiPlayerMode, ReturnValue) == 0x000000, "Member 'X6NetClientV2_IsMultiPlayerMode::ReturnValue' has a wrong offset!");
 
 // Function PaperLuaFrameworkBase.X6NetClientV2.RegisterActorNetGUID_Lua
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct X6NetClientV2_RegisterActorNetGUID_Lua final
 {
 public:
 	int64                                         NetID;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         OldNetID;                                          // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6NetClientV2_RegisterActorNetGUID_Lua) == 0x000008, "Wrong alignment on X6NetClientV2_RegisterActorNetGUID_Lua");
-static_assert(sizeof(X6NetClientV2_RegisterActorNetGUID_Lua) == 0x000010, "Wrong size on X6NetClientV2_RegisterActorNetGUID_Lua");
+static_assert(sizeof(X6NetClientV2_RegisterActorNetGUID_Lua) == 0x000018, "Wrong size on X6NetClientV2_RegisterActorNetGUID_Lua");
 static_assert(offsetof(X6NetClientV2_RegisterActorNetGUID_Lua, NetID) == 0x000000, "Member 'X6NetClientV2_RegisterActorNetGUID_Lua::NetID' has a wrong offset!");
 static_assert(offsetof(X6NetClientV2_RegisterActorNetGUID_Lua, Actor) == 0x000008, "Member 'X6NetClientV2_RegisterActorNetGUID_Lua::Actor' has a wrong offset!");
+static_assert(offsetof(X6NetClientV2_RegisterActorNetGUID_Lua, OldNetID) == 0x000010, "Member 'X6NetClientV2_RegisterActorNetGUID_Lua::OldNetID' has a wrong offset!");
 
 // Function PaperLuaFrameworkBase.X6NetClientV2.RemovePlayer
 // 0x0008 (0x0008 - 0x0000)
@@ -2061,15 +2063,17 @@ static_assert(offsetof(X6NetClientV2_SetPlayerCustomReplicate, playerId) == 0x00
 static_assert(offsetof(X6NetClientV2_SetPlayerCustomReplicate, bCustomReplicate) == 0x000008, "Member 'X6NetClientV2_SetPlayerCustomReplicate::bCustomReplicate' has a wrong offset!");
 
 // Function PaperLuaFrameworkBase.X6NetClientV2.SetPlayerForceReplicate
-// 0x0008 (0x0008 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct X6NetClientV2_SetPlayerForceReplicate final
 {
 public:
 	int64                                         playerId;                                          // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int64>                                 ActorEntityIDList;                                 // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6NetClientV2_SetPlayerForceReplicate) == 0x000008, "Wrong alignment on X6NetClientV2_SetPlayerForceReplicate");
-static_assert(sizeof(X6NetClientV2_SetPlayerForceReplicate) == 0x000008, "Wrong size on X6NetClientV2_SetPlayerForceReplicate");
+static_assert(sizeof(X6NetClientV2_SetPlayerForceReplicate) == 0x000018, "Wrong size on X6NetClientV2_SetPlayerForceReplicate");
 static_assert(offsetof(X6NetClientV2_SetPlayerForceReplicate, playerId) == 0x000000, "Member 'X6NetClientV2_SetPlayerForceReplicate::playerId' has a wrong offset!");
+static_assert(offsetof(X6NetClientV2_SetPlayerForceReplicate, ActorEntityIDList) == 0x000008, "Member 'X6NetClientV2_SetPlayerForceReplicate::ActorEntityIDList' has a wrong offset!");
 
 // Function PaperLuaFrameworkBase.X6NetClientV2.SetPlayerLightweight
 // 0x0010 (0x0010 - 0x0000)

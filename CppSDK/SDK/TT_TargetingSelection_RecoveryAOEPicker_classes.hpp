@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "F_TargetingWeightConfig_structs.hpp"
 #include "F_TargetingPickerConfig_structs.hpp"
 #include "X6Game_classes.hpp"
@@ -39,11 +39,11 @@ public:
 	TArray<struct FF_TargetingPickerConfig>       FilterData;                                        // 0x0120(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
-	void K2_MarkHitResult(class AActor* Actor, class UPrimitiveComponent* Component, struct FHitResult* HitResult) const;
-	bool K2_CanSelect(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
-	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
 	class FString GetModuleName() const;
+	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	bool K2_CanSelect(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
+	void K2_MarkHitResult(class AActor* Actor, class UPrimitiveComponent* Component, struct FHitResult* HitResult) const;
+	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
 
 public:
 	static class UClass* StaticClass()

@@ -17,6 +17,178 @@
 namespace SDK
 {
 
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnCancelButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnCancelButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnCancelButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnCloseButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnCloseButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnCloseButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnCommitButton
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const bool                              ClearLoginCache                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              NotRemindAgain                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnCommitButton(const bool ClearLoginCache, const bool NotRemindAgain)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnCommitButton");
+
+	Params::PSdkDeleteLoginCacheConfirmUI_OnCommitButton Parms{};
+
+	Parms.ClearLoginCache = ClearLoginCache;
+	Parms.NotRemindAgain = NotRemindAgain;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnNotRemindButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnNotRemindButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnNotRemindButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnOneButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnOneButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnOneButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnOneCheckedButton
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const bool                              Checked                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnOneCheckedButton(const bool Checked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnOneCheckedButton");
+
+	Params::PSdkDeleteLoginCacheConfirmUI_OnOneCheckedButton Parms{};
+
+	Parms.Checked = Checked;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnTwoButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnTwoButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnTwoButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkDeleteLoginCacheConfirmUI.OnTwoCheckedButton
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// const bool                              Checked                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPSdkDeleteLoginCacheConfirmUI::OnTwoCheckedButton(const bool Checked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkDeleteLoginCacheConfirmUI", "OnTwoCheckedButton");
+
+	Params::PSdkDeleteLoginCacheConfirmUI_OnTwoCheckedButton Parms{};
+
+	Parms.Checked = Checked;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PSDKLogin.PSdkHyperlinkDecorator.ClickFun
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -37,6 +209,139 @@ void UPSdkHyperlinkDecorator::ClickFun(const TMap<class FString, class FString>&
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribe.OnCancelButtonClicked
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribe::OnCancelButtonClicked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribe", "OnCancelButtonClicked");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribe.OnCancelButtonHovered
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribe::OnCancelButtonHovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribe", "OnCancelButtonHovered");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribe.OnCancelButtonPressed
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribe::OnCancelButtonPressed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribe", "OnCancelButtonPressed");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribe.OnCancelButtonReleased
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribe::OnCancelButtonReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribe", "OnCancelButtonReleased");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribe.OnCancelButtonUnhovered
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribe::OnCancelButtonUnhovered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribe", "OnCancelButtonUnhovered");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribe.OnSubscribeButtonReleased
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribe::OnSubscribeButtonReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribe", "OnSubscribeButtonReleased");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKLogin.PSdkLoginUISubscribeRefuse.OnOkButton
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUISubscribeRefuse::OnOkButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUISubscribeRefuse", "OnOkButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

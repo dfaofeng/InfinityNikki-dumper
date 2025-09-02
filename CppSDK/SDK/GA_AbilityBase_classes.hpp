@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "ESkillCDStartCondition_structs.hpp"
-#include "EClothFlag_structs.hpp"
-#include "Engine_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EPlayerActionTypes_structs.hpp"
+#include "Engine_structs.hpp"
 #include "ESkillFlag_structs.hpp"
-#include "ECombatForwardRule_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EClothFlag_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
+#include "ECombatForwardRule_structs.hpp"
 
 
 namespace SDK
@@ -60,18 +60,18 @@ public:
 	TSoftObjectPtr<class UX6AbilityTagRelationshipMapping> TagRelationship;                          // 0x0518(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, HasGetValueTypeHash)
 
 public:
-	void K2_OnEndAbility(bool bWasCancelled);
-	void K2_ActivateAbility();
-	void JumpToAbility(const struct FGameplayTag& TriggerTag, const struct FGameplayEventData& Payload);
-	void ExecuteUbergraph_GA_AbilityBase(int32 EntryPoint);
-	void BP_StopCurrentLevelSequence();
-	void BP_PlayLevelSequence(class ULevelSequence* SequenceAsset, bool HideHUD, const struct FTransform& Transform, const struct FMovieSceneSequencePlaybackSettings& PlaybackSetting);
-	void BP_OnEndAbilityExcludeJumpToGA(bool bWasCancelled);
-	void BP_OnActivateAbility();
-	void BP_GetTargetActor(class AActor** TargetActor);
-	void BP_GetCD();
-	void BP_GetActorMaxHP(double* MaxHP);
 	void BP_GetActorHP(double* HP);
+	void BP_GetActorMaxHP(double* MaxHP);
+	void BP_GetCD();
+	void BP_GetTargetActor(class AActor** TargetActor);
+	void BP_OnActivateAbility();
+	void BP_OnEndAbilityExcludeJumpToGA(bool bWasCancelled);
+	void BP_PlayLevelSequence(class ULevelSequence* SequenceAsset, bool HideHUD, const struct FTransform& Transform, const struct FMovieSceneSequencePlaybackSettings& PlaybackSetting);
+	void BP_StopCurrentLevelSequence();
+	void ExecuteUbergraph_GA_AbilityBase(int32 EntryPoint);
+	void JumpToAbility(const struct FGameplayTag& TriggerTag, const struct FGameplayEventData& Payload);
+	void K2_ActivateAbility();
+	void K2_OnEndAbility(bool bWasCancelled);
 
 	class FString GetModuleName() const;
 

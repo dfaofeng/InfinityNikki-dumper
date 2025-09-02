@@ -17,6 +17,28 @@
 namespace SDK::Params
 {
 
+// Function ABP_CheckpointBase.ABP_CheckpointBase_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct ABP_CheckpointBase_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(ABP_CheckpointBase_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_CheckpointBase_C_AnimGraph");
+static_assert(sizeof(ABP_CheckpointBase_C_AnimGraph) == 0x000010, "Wrong size on ABP_CheckpointBase_C_AnimGraph");
+static_assert(offsetof(ABP_CheckpointBase_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_CheckpointBase_C_AnimGraph::AnimGraph_0' has a wrong offset!");
+
+// Function ABP_CheckpointBase.ABP_CheckpointBase_C.ExecuteUbergraph_ABP_CheckpointBase
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase) == 0x000004, "Wrong alignment on ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase");
+static_assert(sizeof(ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase) == 0x000004, "Wrong size on ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase");
+static_assert(offsetof(ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase, EntryPoint) == 0x000000, "Member 'ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase::EntryPoint' has a wrong offset!");
+
 // Function ABP_CheckpointBase.ABP_CheckpointBase_C.OnUpdate
 // 0x0040 (0x0040 - 0x0000)
 struct ABP_CheckpointBase_C_OnUpdate final
@@ -38,28 +60,6 @@ static_assert(offsetof(ABP_CheckpointBase_C_OnUpdate, CallFunc_ConvertToAnimatio
 static_assert(offsetof(ABP_CheckpointBase_C_OnUpdate, CallFunc_ConvertToAnimationStateMachinePure_Result) == 0x000030, "Member 'ABP_CheckpointBase_C_OnUpdate::CallFunc_ConvertToAnimationStateMachinePure_Result' has a wrong offset!");
 static_assert(offsetof(ABP_CheckpointBase_C_OnUpdate, CallFunc_GetState_ReturnValue) == 0x000034, "Member 'ABP_CheckpointBase_C_OnUpdate::CallFunc_GetState_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_CheckpointBase_C_OnUpdate, K2Node_SwitchName_CmpSuccess) == 0x00003C, "Member 'ABP_CheckpointBase_C_OnUpdate::K2Node_SwitchName_CmpSuccess' has a wrong offset!");
-
-// Function ABP_CheckpointBase.ABP_CheckpointBase_C.ExecuteUbergraph_ABP_CheckpointBase
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase) == 0x000004, "Wrong alignment on ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase");
-static_assert(sizeof(ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase) == 0x000004, "Wrong size on ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase");
-static_assert(offsetof(ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase, EntryPoint) == 0x000000, "Member 'ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase::EntryPoint' has a wrong offset!");
-
-// Function ABP_CheckpointBase.ABP_CheckpointBase_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct ABP_CheckpointBase_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(ABP_CheckpointBase_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_CheckpointBase_C_AnimGraph");
-static_assert(sizeof(ABP_CheckpointBase_C_AnimGraph) == 0x000010, "Wrong size on ABP_CheckpointBase_C_AnimGraph");
-static_assert(offsetof(ABP_CheckpointBase_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_CheckpointBase_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

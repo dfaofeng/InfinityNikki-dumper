@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_BulletLimitTargetRotatorModifier.BP_BulletLimitTargetRotatorModifier_C.K2_OnAsyncLoadComplete
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
-
-void UBP_BulletLimitTargetRotatorModifier_C::K2_OnAsyncLoadComplete() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BulletLimitTargetRotatorModifier_C", "K2_OnAsyncLoadComplete");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_BulletLimitTargetRotatorModifier.BP_BulletLimitTargetRotatorModifier_C.GetModuleName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -48,6 +34,20 @@ class FString UBP_BulletLimitTargetRotatorModifier_C::GetModuleName() const
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function BP_BulletLimitTargetRotatorModifier.BP_BulletLimitTargetRotatorModifier_C.K2_OnAsyncLoadComplete
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+
+void UBP_BulletLimitTargetRotatorModifier_C::K2_OnAsyncLoadComplete() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BulletLimitTargetRotatorModifier_C", "K2_OnAsyncLoadComplete");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

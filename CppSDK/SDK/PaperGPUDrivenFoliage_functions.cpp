@@ -132,5 +132,711 @@ void UPaperGPUDrivenFoliageStreamingSubsystem::UnFreeze()
 	Func->FunctionFlags = Flgs;
 }
 
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshDebugActor.FlushEditorVirtualMesh
+// (Final, Native, Public, BlueprintCallable)
+
+void APaperVirtualMeshDebugActor::FlushEditorVirtualMesh()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshDebugActor", "FlushEditorVirtualMesh");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshDebugActor.Init
+// (Final, Native, Public, BlueprintCallable)
+
+void APaperVirtualMeshDebugActor::Init()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshDebugActor", "Init");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshDebugActor.Release
+// (Final, Native, Public, BlueprintCallable)
+
+void APaperVirtualMeshDebugActor::Release()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshDebugActor", "Release");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.Get
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APaperVirtualMeshManager*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class APaperVirtualMeshManager* APaperVirtualMeshManager::Get(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PaperVirtualMeshManager", "Get");
+
+	Params::PaperVirtualMeshManager_Get Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.AddStaticMeshInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMeshComponent*             InStaticMeshComp                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool APaperVirtualMeshManager::AddStaticMeshInstance(class UStaticMeshComponent* InStaticMeshComp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "AddStaticMeshInstance");
+
+	Params::PaperVirtualMeshManager_AddStaticMeshInstance Parms{};
+
+	Parms.InStaticMeshComp = InStaticMeshComp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.AddVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVirtualMeshPlatformAssetData*    AssetData                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FGuid APaperVirtualMeshManager::AddVirtualMesh(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "AddVirtualMesh");
+
+	Params::PaperVirtualMeshManager_AddVirtualMesh Parms{};
+
+	Parms.AssetData = AssetData;
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.AddVirtualMeshWithFloat
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVirtualMeshPlatformAssetData*    AssetData                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FGuid APaperVirtualMeshManager::AddVirtualMeshWithFloat(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, float PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "AddVirtualMeshWithFloat");
+
+	Params::PaperVirtualMeshManager_AddVirtualMeshWithFloat Parms{};
+
+	Parms.AssetData = AssetData;
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.RemoveAllStaticMeshInstances
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMesh*                      RefMesh                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::RemoveAllStaticMeshInstances(class UStaticMesh* RefMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "RemoveAllStaticMeshInstances");
+
+	Params::PaperVirtualMeshManager_RemoveAllStaticMeshInstances Parms{};
+
+	Parms.RefMesh = RefMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.RemoveStaticMeshInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMeshComponent*             InStaticMeshComp                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool APaperVirtualMeshManager::RemoveStaticMeshInstance(class UStaticMeshComponent* InStaticMeshComp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "RemoveStaticMeshInstance");
+
+	Params::PaperVirtualMeshManager_RemoveStaticMeshInstance Parms{};
+
+	Parms.InStaticMeshComp = InStaticMeshComp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.RemoveVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::RemoveVirtualMesh(const struct FGuid& InInstanceGUID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "RemoveVirtualMesh");
+
+	Params::PaperVirtualMeshManager_RemoveVirtualMesh Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateStaticMeshTransform
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMeshComponent*             InStaticMeshComp                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool APaperVirtualMeshManager::UpdateStaticMeshTransform(class UStaticMeshComponent* InStaticMeshComp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "UpdateStaticMeshTransform");
+
+	Params::PaperVirtualMeshManager_UpdateStaticMeshTransform Parms{};
+
+	Parms.InStaticMeshComp = InStaticMeshComp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::UpdateVirtualMesh(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "UpdateVirtualMesh");
+
+	Params::PaperVirtualMeshManager_UpdateVirtualMesh Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMesh2
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::UpdateVirtualMesh2(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "UpdateVirtualMesh2");
+
+	Params::PaperVirtualMeshManager_UpdateVirtualMesh2 Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMesh3
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::UpdateVirtualMesh3(const struct FGuid& InInstanceGUID, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "UpdateVirtualMesh3");
+
+	Params::PaperVirtualMeshManager_UpdateVirtualMesh3 Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMeshFloat
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::UpdateVirtualMeshFloat(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform, float PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "UpdateVirtualMeshFloat");
+
+	Params::PaperVirtualMeshManager_UpdateVirtualMeshFloat Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMeshFloatCustomData
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void APaperVirtualMeshManager::UpdateVirtualMeshFloatCustomData(const struct FGuid& InInstanceGUID, float PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshManager", "UpdateVirtualMeshFloatCustomData");
+
+	Params::PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.Instance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPaperVirtualMeshSubsystem*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPaperVirtualMeshSubsystem* UPaperVirtualMeshSubsystem::Instance()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PaperVirtualMeshSubsystem", "Instance");
+
+	Params::PaperVirtualMeshSubsystem_Instance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.AddEditorVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVirtualMeshPlatformAssetData*    AssetData                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FGuid UPaperVirtualMeshSubsystem::AddEditorVirtualMesh(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "AddEditorVirtualMesh");
+
+	Params::PaperVirtualMeshSubsystem_AddEditorVirtualMesh Parms{};
+
+	Parms.AssetData = AssetData;
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.AddVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVirtualMeshPlatformAssetData*    AssetData                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FGuid UPaperVirtualMeshSubsystem::AddVirtualMesh(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "AddVirtualMesh");
+
+	Params::PaperVirtualMeshSubsystem_AddVirtualMesh Parms{};
+
+	Parms.AssetData = AssetData;
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.AddVirtualMeshFloatCustomData
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UVirtualMeshPlatformAssetData*    AssetData                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FGuid UPaperVirtualMeshSubsystem::AddVirtualMeshFloatCustomData(class UVirtualMeshPlatformAssetData* AssetData, const struct FTransform& InTransform, float PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "AddVirtualMeshFloatCustomData");
+
+	Params::PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData Parms{};
+
+	Parms.AssetData = AssetData;
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.IsES31
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UPaperVirtualMeshSubsystem::IsES31(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "IsES31");
+
+	Params::PaperVirtualMeshSubsystem_IsES31 Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.RemoveVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperVirtualMeshSubsystem::RemoveVirtualMesh(const struct FGuid& InInstanceGUID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "RemoveVirtualMesh");
+
+	Params::PaperVirtualMeshSubsystem_RemoveVirtualMesh Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperVirtualMeshSubsystem::UpdateVirtualMesh(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "UpdateVirtualMesh");
+
+	Params::PaperVirtualMeshSubsystem_UpdateVirtualMesh Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.InTransform = std::move(InTransform);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMesh2
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                InTransform                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperVirtualMeshSubsystem::UpdateVirtualMesh2(const struct FGuid& InInstanceGUID, const struct FTransform& InTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "UpdateVirtualMesh2");
+
+	Params::PaperVirtualMeshSubsystem_UpdateVirtualMesh2 Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.InTransform = std::move(InTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMesh3
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperVirtualMeshSubsystem::UpdateVirtualMesh3(const struct FGuid& InInstanceGUID, int32 PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "UpdateVirtualMesh3");
+
+	Params::PaperVirtualMeshSubsystem_UpdateVirtualMesh3 Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMeshFloatCustomData
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FGuid&                     InInstanceGUID                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PaperCustomData                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperVirtualMeshSubsystem::UpdateVirtualMeshFloatCustomData(const struct FGuid& InInstanceGUID, float PaperCustomData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperVirtualMeshSubsystem", "UpdateVirtualMeshFloatCustomData");
+
+	Params::PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData Parms{};
+
+	Parms.InInstanceGUID = std::move(InInstanceGUID);
+	Parms.PaperCustomData = PaperCustomData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

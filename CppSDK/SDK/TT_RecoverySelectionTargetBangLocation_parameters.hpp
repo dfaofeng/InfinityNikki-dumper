@@ -10,12 +10,23 @@
 
 #include "Basic.hpp"
 
-#include "TargetingSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "TargetingSystem_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function TT_RecoverySelectionTargetBangLocation.TT_RecoverySelectionTargetBangLocation_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct TT_RecoverySelectionTargetBangLocation_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(TT_RecoverySelectionTargetBangLocation_C_GetModuleName) == 0x000008, "Wrong alignment on TT_RecoverySelectionTargetBangLocation_C_GetModuleName");
+static_assert(sizeof(TT_RecoverySelectionTargetBangLocation_C_GetModuleName) == 0x000010, "Wrong size on TT_RecoverySelectionTargetBangLocation_C_GetModuleName");
+static_assert(offsetof(TT_RecoverySelectionTargetBangLocation_C_GetModuleName, ReturnValue) == 0x000000, "Member 'TT_RecoverySelectionTargetBangLocation_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 // Function TT_RecoverySelectionTargetBangLocation.TT_RecoverySelectionTargetBangLocation_C.GetSourceLocation
 // 0x0020 (0x0020 - 0x0000)
@@ -30,17 +41,6 @@ static_assert(alignof(TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation
 static_assert(sizeof(TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation) == 0x000020, "Wrong size on TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation");
 static_assert(offsetof(TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation, TargetingHandle) == 0x000000, "Member 'TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation::TargetingHandle' has a wrong offset!");
 static_assert(offsetof(TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation, ReturnValue) == 0x000008, "Member 'TT_RecoverySelectionTargetBangLocation_C_GetSourceLocation::ReturnValue' has a wrong offset!");
-
-// Function TT_RecoverySelectionTargetBangLocation.TT_RecoverySelectionTargetBangLocation_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct TT_RecoverySelectionTargetBangLocation_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(TT_RecoverySelectionTargetBangLocation_C_GetModuleName) == 0x000008, "Wrong alignment on TT_RecoverySelectionTargetBangLocation_C_GetModuleName");
-static_assert(sizeof(TT_RecoverySelectionTargetBangLocation_C_GetModuleName) == 0x000010, "Wrong size on TT_RecoverySelectionTargetBangLocation_C_GetModuleName");
-static_assert(offsetof(TT_RecoverySelectionTargetBangLocation_C_GetModuleName, ReturnValue) == 0x000000, "Member 'TT_RecoverySelectionTargetBangLocation_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

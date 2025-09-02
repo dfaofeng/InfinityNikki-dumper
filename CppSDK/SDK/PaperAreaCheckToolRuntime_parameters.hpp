@@ -76,33 +76,21 @@ static_assert(alignof(PaperAreaCheckSubsystem_CheckNikkiInAreaEdge) == 0x000001,
 static_assert(sizeof(PaperAreaCheckSubsystem_CheckNikkiInAreaEdge) == 0x000001, "Wrong size on PaperAreaCheckSubsystem_CheckNikkiInAreaEdge");
 static_assert(offsetof(PaperAreaCheckSubsystem_CheckNikkiInAreaEdge, ReturnValue) == 0x000000, "Member 'PaperAreaCheckSubsystem_CheckNikkiInAreaEdge::ReturnValue' has a wrong offset!");
 
-// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.EnterSubLevel
-// 0x0020 (0x0020 - 0x0000)
-struct PaperAreaCheckSubsystem_EnterSubLevel final
-{
-public:
-	int32                                         LevelID;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                PlayerPos;                                         // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PaperAreaCheckSubsystem_EnterSubLevel) == 0x000008, "Wrong alignment on PaperAreaCheckSubsystem_EnterSubLevel");
-static_assert(sizeof(PaperAreaCheckSubsystem_EnterSubLevel) == 0x000020, "Wrong size on PaperAreaCheckSubsystem_EnterSubLevel");
-static_assert(offsetof(PaperAreaCheckSubsystem_EnterSubLevel, LevelID) == 0x000000, "Member 'PaperAreaCheckSubsystem_EnterSubLevel::LevelID' has a wrong offset!");
-static_assert(offsetof(PaperAreaCheckSubsystem_EnterSubLevel, PlayerPos) == 0x000008, "Member 'PaperAreaCheckSubsystem_EnterSubLevel::PlayerPos' has a wrong offset!");
-
 // Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.GetAreaIDByWorldPosition
 // 0x0020 (0x0020 - 0x0000)
 struct PaperAreaCheckSubsystem_GetAreaIDByWorldPosition final
 {
 public:
 	struct FVector                                InWorldPosition;                                   // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bAsync;                                            // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PaperAreaCheckSubsystem_GetAreaIDByWorldPosition) == 0x000008, "Wrong alignment on PaperAreaCheckSubsystem_GetAreaIDByWorldPosition");
 static_assert(sizeof(PaperAreaCheckSubsystem_GetAreaIDByWorldPosition) == 0x000020, "Wrong size on PaperAreaCheckSubsystem_GetAreaIDByWorldPosition");
 static_assert(offsetof(PaperAreaCheckSubsystem_GetAreaIDByWorldPosition, InWorldPosition) == 0x000000, "Member 'PaperAreaCheckSubsystem_GetAreaIDByWorldPosition::InWorldPosition' has a wrong offset!");
-static_assert(offsetof(PaperAreaCheckSubsystem_GetAreaIDByWorldPosition, ReturnValue) == 0x000018, "Member 'PaperAreaCheckSubsystem_GetAreaIDByWorldPosition::ReturnValue' has a wrong offset!");
+static_assert(offsetof(PaperAreaCheckSubsystem_GetAreaIDByWorldPosition, bAsync) == 0x000018, "Member 'PaperAreaCheckSubsystem_GetAreaIDByWorldPosition::bAsync' has a wrong offset!");
+static_assert(offsetof(PaperAreaCheckSubsystem_GetAreaIDByWorldPosition, ReturnValue) == 0x00001C, "Member 'PaperAreaCheckSubsystem_GetAreaIDByWorldPosition::ReturnValue' has a wrong offset!");
 
 // Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.GetCurrentAreaID
 // 0x0004 (0x0004 - 0x0000)
@@ -139,6 +127,39 @@ static_assert(alignof(PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition) == 0x
 static_assert(sizeof(PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition) == 0x000020, "Wrong size on PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition");
 static_assert(offsetof(PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition, InPosition) == 0x000000, "Member 'PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition::InPosition' has a wrong offset!");
 static_assert(offsetof(PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition, ReturnValue) == 0x000018, "Member 'PaperAreaCheckSubsystem_GetShrubTypeByWorldPosition::ReturnValue' has a wrong offset!");
+
+// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.GetSpecialAreaByWorldPosition
+// 0x0028 (0x0028 - 0x0000)
+struct PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition final
+{
+public:
+	struct FVector                                Pos;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LevelId;                                           // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         inSpecialAreaEnum;                                 // 0x001C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition) == 0x000008, "Wrong alignment on PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition");
+static_assert(sizeof(PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition) == 0x000028, "Wrong size on PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition");
+static_assert(offsetof(PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition, Pos) == 0x000000, "Member 'PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition::Pos' has a wrong offset!");
+static_assert(offsetof(PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition, LevelId) == 0x000018, "Member 'PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition::LevelId' has a wrong offset!");
+static_assert(offsetof(PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition, inSpecialAreaEnum) == 0x00001C, "Member 'PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition::inSpecialAreaEnum' has a wrong offset!");
+static_assert(offsetof(PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition, ReturnValue) == 0x000020, "Member 'PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition::ReturnValue' has a wrong offset!");
+
+// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.OnEnterLevel
+// 0x0020 (0x0020 - 0x0000)
+struct PaperAreaCheckSubsystem_OnEnterLevel final
+{
+public:
+	int32                                         LevelId;                                           // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                PlayerPos;                                         // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperAreaCheckSubsystem_OnEnterLevel) == 0x000008, "Wrong alignment on PaperAreaCheckSubsystem_OnEnterLevel");
+static_assert(sizeof(PaperAreaCheckSubsystem_OnEnterLevel) == 0x000020, "Wrong size on PaperAreaCheckSubsystem_OnEnterLevel");
+static_assert(offsetof(PaperAreaCheckSubsystem_OnEnterLevel, LevelId) == 0x000000, "Member 'PaperAreaCheckSubsystem_OnEnterLevel::LevelId' has a wrong offset!");
+static_assert(offsetof(PaperAreaCheckSubsystem_OnEnterLevel, PlayerPos) == 0x000008, "Member 'PaperAreaCheckSubsystem_OnEnterLevel::PlayerPos' has a wrong offset!");
 
 // Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.RefreshAreaCheckState
 // 0x0018 (0x0018 - 0x0000)

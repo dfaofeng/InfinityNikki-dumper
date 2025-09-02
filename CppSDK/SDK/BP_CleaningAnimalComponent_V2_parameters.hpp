@@ -17,53 +17,27 @@
 namespace SDK::Params
 {
 
-// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BP_GetHandIKParams
-// 0x0038 (0x0038 - 0x0000)
-struct BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams final
+// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_CleaningAnimalComponent_V2_C_ReceiveTick final
 {
 public:
-	double                                        IK_HandAlpha;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                IK_RightHandLocation_ComponentSpace;               // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               IK_RightHandRotation_ComponentSpace;               // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams) == 0x000008, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams");
-static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams) == 0x000038, "Wrong size on BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams, IK_HandAlpha) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams::IK_HandAlpha' has a wrong offset!");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams, IK_RightHandLocation_ComponentSpace) == 0x000008, "Member 'BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams::IK_RightHandLocation_ComponentSpace' has a wrong offset!");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams, IK_RightHandRotation_ComponentSpace) == 0x000020, "Member 'BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams::IK_RightHandRotation_ComponentSpace' has a wrong offset!");
+static_assert(alignof(BP_CleaningAnimalComponent_V2_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_ReceiveTick");
+static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_ReceiveTick) == 0x000004, "Wrong size on BP_CleaningAnimalComponent_V2_C_ReceiveTick");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
-// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BP_IsMoving
+// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.GetCleaningAnimalStage
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CleaningAnimalComponent_V2_C_BP_IsMoving final
+struct BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage final
 {
 public:
-	bool                                          IsMoving;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECleaningAnimalStage                          Stage;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BP_IsMoving) == 0x000001, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BP_IsMoving");
-static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BP_IsMoving) == 0x000001, "Wrong size on BP_CleaningAnimalComponent_V2_C_BP_IsMoving");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_IsMoving, IsMoving) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BP_IsMoving::IsMoving' has a wrong offset!");
-
-// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BPAnimNotify_EnterCleanCamera
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera final
-{
-public:
-	double                                        BlendTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera) == 0x000008, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera");
-static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera) == 0x000008, "Wrong size on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera, BlendTime) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera::BlendTime' has a wrong offset!");
-
-// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BPAnimNotify_ExitCleanCamera
-// 0x0008 (0x0008 - 0x0000)
-struct BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera final
-{
-public:
-	double                                        BlendTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera) == 0x000008, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera");
-static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera) == 0x000008, "Wrong size on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera, BlendTime) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera::BlendTime' has a wrong offset!");
+static_assert(alignof(BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage) == 0x000001, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage");
+static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage) == 0x000001, "Wrong size on BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage, Stage) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage::Stage' has a wrong offset!");
 
 // Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.ExecuteUbergraph_BP_CleaningAnimalComponent_V2
 // 0x0008 (0x0008 - 0x0000)
@@ -78,27 +52,53 @@ static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_ExecuteUbergraph_BP_Cleanin
 static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_ExecuteUbergraph_BP_CleaningAnimalComponent_V2, EntryPoint) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_ExecuteUbergraph_BP_CleaningAnimalComponent_V2::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_ExecuteUbergraph_BP_CleaningAnimalComponent_V2, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_CleaningAnimalComponent_V2_C_ExecuteUbergraph_BP_CleaningAnimalComponent_V2::K2Node_Event_DeltaSeconds' has a wrong offset!");
 
-// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.GetCleaningAnimalStage
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage final
+// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BPAnimNotify_ExitCleanCamera
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera final
 {
 public:
-	ECleaningAnimalStage                          Stage;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BlendTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage) == 0x000001, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage");
-static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage) == 0x000001, "Wrong size on BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage, Stage) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_GetCleaningAnimalStage::Stage' has a wrong offset!");
+static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera) == 0x000008, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera");
+static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera) == 0x000008, "Wrong size on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera, BlendTime) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BPAnimNotify_ExitCleanCamera::BlendTime' has a wrong offset!");
 
-// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_CleaningAnimalComponent_V2_C_ReceiveTick final
+// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BPAnimNotify_EnterCleanCamera
+// 0x0008 (0x0008 - 0x0000)
+struct BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera final
 {
 public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BlendTime;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CleaningAnimalComponent_V2_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_ReceiveTick");
-static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_ReceiveTick) == 0x000004, "Wrong size on BP_CleaningAnimalComponent_V2_C_ReceiveTick");
-static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera) == 0x000008, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera");
+static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera) == 0x000008, "Wrong size on BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera, BlendTime) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BPAnimNotify_EnterCleanCamera::BlendTime' has a wrong offset!");
+
+// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BP_IsMoving
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CleaningAnimalComponent_V2_C_BP_IsMoving final
+{
+public:
+	bool                                          IsMoving;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BP_IsMoving) == 0x000001, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BP_IsMoving");
+static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BP_IsMoving) == 0x000001, "Wrong size on BP_CleaningAnimalComponent_V2_C_BP_IsMoving");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_IsMoving, IsMoving) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BP_IsMoving::IsMoving' has a wrong offset!");
+
+// Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.BP_GetHandIKParams
+// 0x0038 (0x0038 - 0x0000)
+struct BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams final
+{
+public:
+	double                                        IK_HandAlpha;                                      // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                IK_RightHandLocation_ComponentSpace;               // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               IK_RightHandRotation_ComponentSpace;               // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams) == 0x000008, "Wrong alignment on BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams");
+static_assert(sizeof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams) == 0x000038, "Wrong size on BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams, IK_HandAlpha) == 0x000000, "Member 'BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams::IK_HandAlpha' has a wrong offset!");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams, IK_RightHandLocation_ComponentSpace) == 0x000008, "Member 'BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams::IK_RightHandLocation_ComponentSpace' has a wrong offset!");
+static_assert(offsetof(BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams, IK_RightHandRotation_ComponentSpace) == 0x000020, "Member 'BP_CleaningAnimalComponent_V2_C_BP_GetHandIKParams::IK_RightHandRotation_ComponentSpace' has a wrong offset!");
 
 // Function BP_CleaningAnimalComponent_V2.BP_CleaningAnimalComponent_V2_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

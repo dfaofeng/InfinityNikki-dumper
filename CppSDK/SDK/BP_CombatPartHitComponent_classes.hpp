@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "X6Game_classes.hpp"
 #include "ECombatHitMainType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "ESkillFlag_structs.hpp"
-#include "EPlayerPartMaterialType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EPlayerPartMaterialType_structs.hpp"
+#include "ESkillFlag_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK
@@ -38,7 +38,7 @@ public:
 	class FName                                   BP_DamageBoxSocketEnd;                             // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPlayerPartMaterialType                       BP_HitMaterialType;                                // 0x0648(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(const struct FVector& HItPoint, class AActor* Attacker)> BeHit;    // 0x0650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const struct FVector& HitPoint, class AActor* Attacker)> BeHit;    // 0x0650(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          BP_BulletNoDamage;                                 // 0x0660(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_EffectZoneNoDamage;                             // 0x0661(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_662[0x6];                                      // 0x0662(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
@@ -50,7 +50,7 @@ public:
 	bool                                          BP_ApplyMultipleDamage;                            // 0x068A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_CloseHitProcess;                                // 0x068B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_68C[0x4];                                      // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool bModifyHPSuccess, bool bHitSuccess, const struct FVector& HItPoint, class AActor* Attacker, const struct FVector& HitDirection)> OnDamageOrHitSuccessful; // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool bModifyHPSuccess, bool bHitSuccess, const struct FVector& HitPoint, class AActor* Attacker, const struct FVector& HitDirection)> OnDamageOrHitSuccessful; // 0x0690(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ReceiveBeginPlay();

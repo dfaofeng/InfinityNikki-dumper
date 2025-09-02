@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function PaperMeshCapture.PaperMeshCaptureComponent.CaptureFrameWithFrameRel
+// 0x0004 (0x0004 - 0x0000)
+struct PaperMeshCaptureComponent_CaptureFrameWithFrameRel final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperMeshCaptureComponent_CaptureFrameWithFrameRel) == 0x000004, "Wrong alignment on PaperMeshCaptureComponent_CaptureFrameWithFrameRel");
+static_assert(sizeof(PaperMeshCaptureComponent_CaptureFrameWithFrameRel) == 0x000004, "Wrong size on PaperMeshCaptureComponent_CaptureFrameWithFrameRel");
+static_assert(offsetof(PaperMeshCaptureComponent_CaptureFrameWithFrameRel, ReturnValue) == 0x000000, "Member 'PaperMeshCaptureComponent_CaptureFrameWithFrameRel::ReturnValue' has a wrong offset!");
+
 // Function PaperMeshCapture.PaperMeshCaptureComponent.SetEnable
 // 0x0001 (0x0001 - 0x0000)
 struct PaperMeshCaptureComponent_SetEnable final

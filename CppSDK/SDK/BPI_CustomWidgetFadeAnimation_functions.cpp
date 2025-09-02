@@ -17,27 +17,6 @@
 namespace SDK
 {
 
-// Function BPI_CustomWidgetFadeAnimation.BPI_CustomWidgetFadeAnimation_C.GetFadeInAnimation
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidgetAnimation**                Anim                                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void IBPI_CustomWidgetFadeAnimation_C::GetFadeInAnimation(class UWidgetAnimation** Anim)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BPI_CustomWidgetFadeAnimation_C", "GetFadeInAnimation");
-
-	Params::BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Anim != nullptr)
-		*Anim = Parms.Anim;
-}
-
-
 // Function BPI_CustomWidgetFadeAnimation.BPI_CustomWidgetFadeAnimation_C.GetFadeOutAnimation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -51,6 +30,27 @@ void IBPI_CustomWidgetFadeAnimation_C::GetFadeOutAnimation(class UWidgetAnimatio
 		Func = Class->GetFunction("BPI_CustomWidgetFadeAnimation_C", "GetFadeOutAnimation");
 
 	Params::BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Anim != nullptr)
+		*Anim = Parms.Anim;
+}
+
+
+// Function BPI_CustomWidgetFadeAnimation.BPI_CustomWidgetFadeAnimation_C.GetFadeInAnimation
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidgetAnimation**                Anim                                                   (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void IBPI_CustomWidgetFadeAnimation_C::GetFadeInAnimation(class UWidgetAnimation** Anim)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BPI_CustomWidgetFadeAnimation_C", "GetFadeInAnimation");
+
+	Params::BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -41,13 +41,13 @@ public:
 	bool                                          UseFantiFont_JP;                                   // 0x0789(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetTextVisibility(bool NewParam);
-	void SetInteractiveIconVisibility(bool NewParam);
-	void SetIconVisibility(bool bShow);
-	void SetIconTexture(class UTexture* IconTexture);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_HeadInfoComponent(int32 EntryPoint);
 	void BP_RefreshLocation();
+	void ExecuteUbergraph_BP_HeadInfoComponent(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void SetIconTexture(class UTexture* IconTexture);
+	void SetIconVisibility(bool bShow);
+	void SetInteractiveIconVisibility(bool NewParam);
+	void SetTextVisibility(bool NewParam);
 
 	class FString GetModuleName() const;
 

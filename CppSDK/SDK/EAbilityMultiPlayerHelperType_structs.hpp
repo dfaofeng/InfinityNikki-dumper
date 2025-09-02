@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EAbilityMultiPlayerHelperType.EAbilityMultiPlayerHelperType
-// NumValues: 0x0022
+// NumValues: 0x0025
 enum class EAbilityMultiPlayerHelperType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -51,7 +51,10 @@ enum class EAbilityMultiPlayerHelperType : uint8
 	NewEnumerator39                          = 30,
 	NewEnumerator40                          = 31,
 	NewEnumerator41                          = 32,
-	EAbilityMultiPlayerHelperType_MAX        = 33,
+	NewEnumerator42                          = 33,
+	NewEnumerator43                          = 34,
+	NewEnumerator44                          = 35,
+	EAbilityMultiPlayerHelperType_MAX        = 36,
 };
 
 }

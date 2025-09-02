@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "PaperPartitionRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "PaperStreamingRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -45,6 +45,17 @@ public:
 static_assert(alignof(PaperPSOPrecachingApplyRenderTargetSettings_SetStartupQuality) == 0x000004, "Wrong alignment on PaperPSOPrecachingApplyRenderTargetSettings_SetStartupQuality");
 static_assert(sizeof(PaperPSOPrecachingApplyRenderTargetSettings_SetStartupQuality) == 0x000004, "Wrong size on PaperPSOPrecachingApplyRenderTargetSettings_SetStartupQuality");
 static_assert(offsetof(PaperPSOPrecachingApplyRenderTargetSettings_SetStartupQuality, InQuality) == 0x000000, "Member 'PaperPSOPrecachingApplyRenderTargetSettings_SetStartupQuality::InQuality' has a wrong offset!");
+
+// Function PaperStreamingRuntime.PaperPipelineStateCacheSettings.Get
+// 0x0008 (0x0008 - 0x0000)
+struct PaperPipelineStateCacheSettings_Get final
+{
+public:
+	class UPaperPipelineStateCacheSettings*       ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperPipelineStateCacheSettings_Get) == 0x000008, "Wrong alignment on PaperPipelineStateCacheSettings_Get");
+static_assert(sizeof(PaperPipelineStateCacheSettings_Get) == 0x000008, "Wrong size on PaperPipelineStateCacheSettings_Get");
+static_assert(offsetof(PaperPipelineStateCacheSettings_Get, ReturnValue) == 0x000000, "Member 'PaperPipelineStateCacheSettings_Get::ReturnValue' has a wrong offset!");
 
 // Function PaperStreamingRuntime.PaperStreamingSubsystem.GetActorLayers
 // 0x0018 (0x0018 - 0x0000)
@@ -224,6 +235,17 @@ static_assert(alignof(PaperStreamingSubsystem_GetAllSocketNames) == 0x000008, "W
 static_assert(sizeof(PaperStreamingSubsystem_GetAllSocketNames) == 0x000018, "Wrong size on PaperStreamingSubsystem_GetAllSocketNames");
 static_assert(offsetof(PaperStreamingSubsystem_GetAllSocketNames, InComponent) == 0x000000, "Member 'PaperStreamingSubsystem_GetAllSocketNames::InComponent' has a wrong offset!");
 static_assert(offsetof(PaperStreamingSubsystem_GetAllSocketNames, ReturnValue) == 0x000008, "Member 'PaperStreamingSubsystem_GetAllSocketNames::ReturnValue' has a wrong offset!");
+
+// Function PaperStreamingRuntime.PaperStreamingSubsystem.GetAvailablePhysical
+// 0x0008 (0x0008 - 0x0000)
+struct PaperStreamingSubsystem_GetAvailablePhysical final
+{
+public:
+	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperStreamingSubsystem_GetAvailablePhysical) == 0x000008, "Wrong alignment on PaperStreamingSubsystem_GetAvailablePhysical");
+static_assert(sizeof(PaperStreamingSubsystem_GetAvailablePhysical) == 0x000008, "Wrong size on PaperStreamingSubsystem_GetAvailablePhysical");
+static_assert(offsetof(PaperStreamingSubsystem_GetAvailablePhysical, ReturnValue) == 0x000000, "Member 'PaperStreamingSubsystem_GetAvailablePhysical::ReturnValue' has a wrong offset!");
 
 // Function PaperStreamingRuntime.PaperStreamingSubsystem.GetCellCollisionActiveCells
 // 0x0010 (0x0010 - 0x0000)
@@ -439,6 +461,17 @@ static_assert(offsetof(PaperStreamingSubsystem_GetSubLevelsByPath, bAlwaysLoaded
 static_assert(offsetof(PaperStreamingSubsystem_GetSubLevelsByPath, bSkipBigWorldNecessary) == 0x000019, "Member 'PaperStreamingSubsystem_GetSubLevelsByPath::bSkipBigWorldNecessary' has a wrong offset!");
 static_assert(offsetof(PaperStreamingSubsystem_GetSubLevelsByPath, OutSubLevels) == 0x000020, "Member 'PaperStreamingSubsystem_GetSubLevelsByPath::OutSubLevels' has a wrong offset!");
 static_assert(offsetof(PaperStreamingSubsystem_GetSubLevelsByPath, ReturnValue) == 0x000030, "Member 'PaperStreamingSubsystem_GetSubLevelsByPath::ReturnValue' has a wrong offset!");
+
+// Function PaperStreamingRuntime.PaperStreamingSubsystem.GetUsedPhysical
+// 0x0008 (0x0008 - 0x0000)
+struct PaperStreamingSubsystem_GetUsedPhysical final
+{
+public:
+	int64                                         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperStreamingSubsystem_GetUsedPhysical) == 0x000008, "Wrong alignment on PaperStreamingSubsystem_GetUsedPhysical");
+static_assert(sizeof(PaperStreamingSubsystem_GetUsedPhysical) == 0x000008, "Wrong size on PaperStreamingSubsystem_GetUsedPhysical");
+static_assert(offsetof(PaperStreamingSubsystem_GetUsedPhysical, ReturnValue) == 0x000000, "Member 'PaperStreamingSubsystem_GetUsedPhysical::ReturnValue' has a wrong offset!");
 
 // Function PaperStreamingRuntime.PaperStreamingSubsystem.HandleDetailModeComponentsPhys
 // 0x0008 (0x0008 - 0x0000)

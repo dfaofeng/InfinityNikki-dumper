@@ -14,39 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_MainActivity.WBP_MainActivity_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_MainActivity_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainActivity_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_MainActivity_C_PreConstruct");
-static_assert(sizeof(WBP_MainActivity_C_PreConstruct) == 0x000001, "Wrong size on WBP_MainActivity_C_PreConstruct");
-static_assert(offsetof(WBP_MainActivity_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_MainActivity_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
-// Function WBP_MainActivity.WBP_MainActivity_C.OnItemClicked
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_MainActivity_C_OnItemClicked final
-{
-public:
-	class UBP_MainHudObtainedContainerData_C*     Data;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainActivity_C_OnItemClicked) == 0x000008, "Wrong alignment on WBP_MainActivity_C_OnItemClicked");
-static_assert(sizeof(WBP_MainActivity_C_OnItemClicked) == 0x000008, "Wrong size on WBP_MainActivity_C_OnItemClicked");
-static_assert(offsetof(WBP_MainActivity_C_OnItemClicked, Data) == 0x000000, "Member 'WBP_MainActivity_C_OnItemClicked::Data' has a wrong offset!");
-
-// Function WBP_MainActivity.WBP_MainActivity_C.loadDesignDrawingWorld
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_MainActivity_C_loadDesignDrawingWorld final
-{
-public:
-	class FString                                 LevelPath;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainActivity_C_loadDesignDrawingWorld) == 0x000008, "Wrong alignment on WBP_MainActivity_C_loadDesignDrawingWorld");
-static_assert(sizeof(WBP_MainActivity_C_loadDesignDrawingWorld) == 0x000010, "Wrong size on WBP_MainActivity_C_loadDesignDrawingWorld");
-static_assert(offsetof(WBP_MainActivity_C_loadDesignDrawingWorld, LevelPath) == 0x000000, "Member 'WBP_MainActivity_C_loadDesignDrawingWorld::LevelPath' has a wrong offset!");
-
 // Function WBP_MainActivity.WBP_MainActivity_C.ExecuteUbergraph_WBP_MainActivity
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity final
@@ -69,6 +36,39 @@ static_assert(offsetof(WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity, Tem
 static_assert(offsetof(WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity, Temp_bool_IsClosed_Variable) == 0x000016, "Member 'WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity::Temp_bool_IsClosed_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity, CallFunc_LoadLevelInstance_bOutSuccess) == 0x000017, "Member 'WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity::CallFunc_LoadLevelInstance_bOutSuccess' has a wrong offset!");
 static_assert(offsetof(WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity, CallFunc_LoadLevelInstance_ReturnValue) == 0x000018, "Member 'WBP_MainActivity_C_ExecuteUbergraph_WBP_MainActivity::CallFunc_LoadLevelInstance_ReturnValue' has a wrong offset!");
+
+// Function WBP_MainActivity.WBP_MainActivity_C.loadDesignDrawingWorld
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_MainActivity_C_loadDesignDrawingWorld final
+{
+public:
+	class FString                                 LevelPath;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainActivity_C_loadDesignDrawingWorld) == 0x000008, "Wrong alignment on WBP_MainActivity_C_loadDesignDrawingWorld");
+static_assert(sizeof(WBP_MainActivity_C_loadDesignDrawingWorld) == 0x000010, "Wrong size on WBP_MainActivity_C_loadDesignDrawingWorld");
+static_assert(offsetof(WBP_MainActivity_C_loadDesignDrawingWorld, LevelPath) == 0x000000, "Member 'WBP_MainActivity_C_loadDesignDrawingWorld::LevelPath' has a wrong offset!");
+
+// Function WBP_MainActivity.WBP_MainActivity_C.OnItemClicked
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MainActivity_C_OnItemClicked final
+{
+public:
+	class UBP_MainHudObtainedContainerData_C*     Data;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainActivity_C_OnItemClicked) == 0x000008, "Wrong alignment on WBP_MainActivity_C_OnItemClicked");
+static_assert(sizeof(WBP_MainActivity_C_OnItemClicked) == 0x000008, "Wrong size on WBP_MainActivity_C_OnItemClicked");
+static_assert(offsetof(WBP_MainActivity_C_OnItemClicked, Data) == 0x000000, "Member 'WBP_MainActivity_C_OnItemClicked::Data' has a wrong offset!");
+
+// Function WBP_MainActivity.WBP_MainActivity_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_MainActivity_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainActivity_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_MainActivity_C_PreConstruct");
+static_assert(sizeof(WBP_MainActivity_C_PreConstruct) == 0x000001, "Wrong size on WBP_MainActivity_C_PreConstruct");
+static_assert(offsetof(WBP_MainActivity_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_MainActivity_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WBP_MainActivity.WBP_MainActivity_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

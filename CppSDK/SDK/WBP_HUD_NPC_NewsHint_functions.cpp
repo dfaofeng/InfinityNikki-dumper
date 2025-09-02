@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_HUD_NPC_NewsHint.WBP_HUD_NPC_NewsHint_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_NPC_NewsHint_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_NPC_NewsHint_C", "PreConstruct");
-
-	Params::WBP_HUD_NPC_NewsHint_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_HUD_NPC_NewsHint.WBP_HUD_NPC_NewsHint_C.ExecuteUbergraph_WBP_HUD_NPC_NewsHint
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_HUD_NPC_NewsHint_C::ExecuteUbergraph_WBP_HUD_NPC_NewsHint(int32 EntryP
 	Params::WBP_HUD_NPC_NewsHint_C_ExecuteUbergraph_WBP_HUD_NPC_NewsHint Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_NPC_NewsHint.WBP_HUD_NPC_NewsHint_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_NPC_NewsHint_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_NPC_NewsHint_C", "PreConstruct");
+
+	Params::WBP_HUD_NPC_NewsHint_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

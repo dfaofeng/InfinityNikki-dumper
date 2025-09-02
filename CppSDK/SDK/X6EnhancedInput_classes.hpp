@@ -10,10 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "X6EnhancedInput_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "X6EnhancedInput_structs.hpp"
+#include "Engine_classes.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -211,16 +212,17 @@ static_assert(alignof(UX6EnhancedInputLocalPlayerSubsystem) == 0x000008, "Wrong 
 static_assert(sizeof(UX6EnhancedInputLocalPlayerSubsystem) == 0x000140, "Wrong size on UX6EnhancedInputLocalPlayerSubsystem");
 
 // Class X6EnhancedInput.X6EnhancedPlayerInput
-// 0x0558 (0x09F0 - 0x0498)
+// 0x0568 (0x0A00 - 0x0498)
 class UX6EnhancedPlayerInput final : public UPlayerInput
 {
 public:
 	uint8                                         Pad_498[0x90];                                     // 0x0498(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class UX6InputMappingContext*, int32>    AppliedInputContexts;                              // 0x0528(0x0050)(Transient, NativeAccessSpecifierPrivate)
 	TArray<struct FX6EnhancedActionKeyMapping>    EnhancedActionMappings;                            // 0x0578(0x0010)(ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_588[0x50];                                     // 0x0588(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UX6InputAction*, struct FX6InputActionInstance> ActionInstanceData;                   // 0x05D8(0x0050)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_628[0x3C8];                                    // 0x0628(0x03C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ExclusiveActionIndex;                              // 0x0588(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_598[0x50];                                     // 0x0598(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UX6InputAction*, struct FX6InputActionInstance> ActionInstanceData;                   // 0x05E8(0x0050)(Transient, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_638[0x3C8];                                    // 0x0638(0x03C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -233,10 +235,11 @@ public:
 	}
 };
 static_assert(alignof(UX6EnhancedPlayerInput) == 0x000008, "Wrong alignment on UX6EnhancedPlayerInput");
-static_assert(sizeof(UX6EnhancedPlayerInput) == 0x0009F0, "Wrong size on UX6EnhancedPlayerInput");
+static_assert(sizeof(UX6EnhancedPlayerInput) == 0x000A00, "Wrong size on UX6EnhancedPlayerInput");
 static_assert(offsetof(UX6EnhancedPlayerInput, AppliedInputContexts) == 0x000528, "Member 'UX6EnhancedPlayerInput::AppliedInputContexts' has a wrong offset!");
 static_assert(offsetof(UX6EnhancedPlayerInput, EnhancedActionMappings) == 0x000578, "Member 'UX6EnhancedPlayerInput::EnhancedActionMappings' has a wrong offset!");
-static_assert(offsetof(UX6EnhancedPlayerInput, ActionInstanceData) == 0x0005D8, "Member 'UX6EnhancedPlayerInput::ActionInstanceData' has a wrong offset!");
+static_assert(offsetof(UX6EnhancedPlayerInput, ExclusiveActionIndex) == 0x000588, "Member 'UX6EnhancedPlayerInput::ExclusiveActionIndex' has a wrong offset!");
+static_assert(offsetof(UX6EnhancedPlayerInput, ActionInstanceData) == 0x0005E8, "Member 'UX6EnhancedPlayerInput::ActionInstanceData' has a wrong offset!");
 
 // Class X6EnhancedInput.X6InputAction
 // 0x0058 (0x0088 - 0x0030)
@@ -335,6 +338,57 @@ public:
 };
 static_assert(alignof(UX6InputModifier) == 0x000008, "Wrong alignment on UX6InputModifier");
 static_assert(sizeof(UX6InputModifier) == 0x000028, "Wrong size on UX6InputModifier");
+
+// Class X6EnhancedInput.X6InputTrigger
+// 0x0028 (0x0050 - 0x0028)
+class UX6InputTrigger : public UObject
+{
+public:
+	float                                         ActuationThreshold;                                // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FX6InputActionValue                    LastValue;                                         // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	EX6TriggerState UpdateState(const class UX6EnhancedPlayerInput* PlayerInput, const struct FX6InputActionValue& ModifiedValue, float DeltaTime);
+
+	EX6TriggerType GetTriggerType() const;
+	bool IsActuated(const struct FX6InputActionValue& ForValue) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6InputTrigger">();
+	}
+	static class UX6InputTrigger* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6InputTrigger>();
+	}
+};
+static_assert(alignof(UX6InputTrigger) == 0x000008, "Wrong alignment on UX6InputTrigger");
+static_assert(sizeof(UX6InputTrigger) == 0x000050, "Wrong size on UX6InputTrigger");
+static_assert(offsetof(UX6InputTrigger, ActuationThreshold) == 0x000028, "Member 'UX6InputTrigger::ActuationThreshold' has a wrong offset!");
+static_assert(offsetof(UX6InputTrigger, LastValue) == 0x000030, "Member 'UX6InputTrigger::LastValue' has a wrong offset!");
+
+// Class X6EnhancedInput.X6InputTriggerChordAction
+// 0x0008 (0x0058 - 0x0050)
+class UX6InputTriggerChordAction : public UX6InputTrigger
+{
+public:
+	class UX6InputAction*                         ChordAction;                                       // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6InputTriggerChordAction">();
+	}
+	static class UX6InputTriggerChordAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6InputTriggerChordAction>();
+	}
+};
+static_assert(alignof(UX6InputTriggerChordAction) == 0x000008, "Wrong alignment on UX6InputTriggerChordAction");
+static_assert(sizeof(UX6InputTriggerChordAction) == 0x000058, "Wrong size on UX6InputTriggerChordAction");
+static_assert(offsetof(UX6InputTriggerChordAction, ChordAction) == 0x000050, "Member 'UX6InputTriggerChordAction::ChordAction' has a wrong offset!");
 
 // Class X6EnhancedInput.X6InputModifierDeadZone
 // 0x0010 (0x0038 - 0x0028)
@@ -450,6 +504,23 @@ static_assert(alignof(UX6InputModifierResponseCurveExponential) == 0x000008, "Wr
 static_assert(sizeof(UX6InputModifierResponseCurveExponential) == 0x000040, "Wrong size on UX6InputModifierResponseCurveExponential");
 static_assert(offsetof(UX6InputModifierResponseCurveExponential, CurveExponent) == 0x000028, "Member 'UX6InputModifierResponseCurveExponential::CurveExponent' has a wrong offset!");
 
+// Class X6EnhancedInput.InputTriggerEventFire
+// 0x0000 (0x0050 - 0x0050)
+class UInputTriggerEventFire final : public UX6InputTrigger
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InputTriggerEventFire">();
+	}
+	static class UInputTriggerEventFire* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInputTriggerEventFire>();
+	}
+};
+static_assert(alignof(UInputTriggerEventFire) == 0x000008, "Wrong alignment on UInputTriggerEventFire");
+static_assert(sizeof(UInputTriggerEventFire) == 0x000050, "Wrong size on UInputTriggerEventFire");
+
 // Class X6EnhancedInput.X6InputModifierResponseCurveUser
 // 0x0018 (0x0040 - 0x0028)
 class UX6InputModifierResponseCurveUser final : public UX6InputModifier
@@ -562,35 +633,26 @@ static_assert(sizeof(UX6InputModifierCollection) == 0x000040, "Wrong size on UX6
 static_assert(offsetof(UX6InputModifierCollection, Modifiers) == 0x000028, "Member 'UX6InputModifierCollection::Modifiers' has a wrong offset!");
 static_assert(offsetof(UX6InputModifierCollection, bPermitValueTypeModification) == 0x000038, "Member 'UX6InputModifierCollection::bPermitValueTypeModification' has a wrong offset!");
 
-// Class X6EnhancedInput.X6InputTrigger
-// 0x0028 (0x0050 - 0x0028)
-class UX6InputTrigger : public UObject
+// Class X6EnhancedInput.X6InputModifierPressExclusive
+// 0x0018 (0x0040 - 0x0028)
+class UX6InputModifierPressExclusive final : public UX6InputModifier
 {
 public:
-	float                                         ActuationThreshold;                                // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FX6InputActionValue                    LastValue;                                         // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-
-public:
-	EX6TriggerState UpdateState(const class UX6EnhancedPlayerInput* PlayerInput, const struct FX6InputActionValue& ModifiedValue, float DeltaTime);
-
-	EX6TriggerType GetTriggerType() const;
-	bool IsActuated(const struct FX6InputActionValue& ForValue) const;
+	struct FKey                                   Key;                                               // 0x0028(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6InputTrigger">();
+		return StaticClassImpl<"X6InputModifierPressExclusive">();
 	}
-	static class UX6InputTrigger* GetDefaultObj()
+	static class UX6InputModifierPressExclusive* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6InputTrigger>();
+		return GetDefaultObjImpl<UX6InputModifierPressExclusive>();
 	}
 };
-static_assert(alignof(UX6InputTrigger) == 0x000008, "Wrong alignment on UX6InputTrigger");
-static_assert(sizeof(UX6InputTrigger) == 0x000050, "Wrong size on UX6InputTrigger");
-static_assert(offsetof(UX6InputTrigger, ActuationThreshold) == 0x000028, "Member 'UX6InputTrigger::ActuationThreshold' has a wrong offset!");
-static_assert(offsetof(UX6InputTrigger, LastValue) == 0x000030, "Member 'UX6InputTrigger::LastValue' has a wrong offset!");
+static_assert(alignof(UX6InputModifierPressExclusive) == 0x000008, "Wrong alignment on UX6InputModifierPressExclusive");
+static_assert(sizeof(UX6InputModifierPressExclusive) == 0x000040, "Wrong size on UX6InputModifierPressExclusive");
+static_assert(offsetof(UX6InputModifierPressExclusive, Key) == 0x000028, "Member 'UX6InputModifierPressExclusive::Key' has a wrong offset!");
 
 // Class X6EnhancedInput.X6InputTriggerTimedBase
 // 0x0008 (0x0058 - 0x0050)
@@ -734,27 +796,6 @@ static_assert(alignof(UX6InputTriggerTap) == 0x000008, "Wrong alignment on UX6In
 static_assert(sizeof(UX6InputTriggerTap) == 0x000060, "Wrong size on UX6InputTriggerTap");
 static_assert(offsetof(UX6InputTriggerTap, TapReleaseTimeThreshold) == 0x000058, "Member 'UX6InputTriggerTap::TapReleaseTimeThreshold' has a wrong offset!");
 
-// Class X6EnhancedInput.X6InputTriggerChordAction
-// 0x0008 (0x0058 - 0x0050)
-class UX6InputTriggerChordAction : public UX6InputTrigger
-{
-public:
-	class UX6InputAction*                         ChordAction;                                       // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6InputTriggerChordAction">();
-	}
-	static class UX6InputTriggerChordAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6InputTriggerChordAction>();
-	}
-};
-static_assert(alignof(UX6InputTriggerChordAction) == 0x000008, "Wrong alignment on UX6InputTriggerChordAction");
-static_assert(sizeof(UX6InputTriggerChordAction) == 0x000058, "Wrong size on UX6InputTriggerChordAction");
-static_assert(offsetof(UX6InputTriggerChordAction, ChordAction) == 0x000050, "Member 'UX6InputTriggerChordAction::ChordAction' has a wrong offset!");
-
 // Class X6EnhancedInput.X6InputTriggerChordBlocker
 // 0x0000 (0x0058 - 0x0058)
 class UX6InputTriggerChordBlocker final : public UX6InputTriggerChordAction
@@ -795,23 +836,6 @@ static_assert(alignof(UInputTriggerDoubleTap) == 0x000008, "Wrong alignment on U
 static_assert(sizeof(UInputTriggerDoubleTap) == 0x000068, "Wrong size on UInputTriggerDoubleTap");
 static_assert(offsetof(UInputTriggerDoubleTap, TapReleaseTimeThreshold) == 0x000050, "Member 'UInputTriggerDoubleTap::TapReleaseTimeThreshold' has a wrong offset!");
 static_assert(offsetof(UInputTriggerDoubleTap, TapBettwenTimeThreshold) == 0x000054, "Member 'UInputTriggerDoubleTap::TapBettwenTimeThreshold' has a wrong offset!");
-
-// Class X6EnhancedInput.InputTriggerEventFire
-// 0x0000 (0x0050 - 0x0050)
-class UInputTriggerEventFire final : public UX6InputTrigger
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InputTriggerEventFire">();
-	}
-	static class UInputTriggerEventFire* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInputTriggerEventFire>();
-	}
-};
-static_assert(alignof(UInputTriggerEventFire) == 0x000008, "Wrong alignment on UInputTriggerEventFire");
-static_assert(sizeof(UInputTriggerEventFire) == 0x000050, "Wrong size on UInputTriggerEventFire");
 
 }
 

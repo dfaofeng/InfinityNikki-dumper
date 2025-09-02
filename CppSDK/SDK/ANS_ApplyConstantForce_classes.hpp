@@ -19,18 +19,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ANS_ApplyConstantForce.ANS_ApplyConstantForce_C
-// 0x00F0 (0x0120 - 0x0030)
+// 0x0110 (0x0140 - 0x0030)
 class UANS_ApplyConstantForce_C final : public UAnimNotifyState
 {
 public:
-	struct FF_ConstantForceParameters             Config;                                            // 0x0030(0x0068)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FF_ConstantForceParameters             Config_SideScroll;                                 // 0x0098(0x0068)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCancelAbility;                                    // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           GameplayEvent;                                     // 0x0104(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_MovementAllConfigTemplate_C*        BeginMovementConfig;                               // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_MovementAllConfigTemplate_C*        EndMovementConfig_Battle;                          // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FF_ConstantForceParameters             Config;                                            // 0x0030(0x0070)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FF_ConstantForceParameters             Config_SideScroll;                                 // 0x00A0(0x0070)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	bool                                          bCancelAbility;                                    // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           GameplayEvent;                                     // 0x0114(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_MovementAllConfigTemplate_C*        BeginMovementConfig;                               // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_MovementAllConfigTemplate_C*        EndMovementConfig_Battle;                          // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDecelerateInAir;                                  // 0x0130(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InAirDeceleration;                                 // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FString GetModuleName() const;
@@ -46,13 +49,15 @@ public:
 	}
 };
 static_assert(alignof(UANS_ApplyConstantForce_C) == 0x000008, "Wrong alignment on UANS_ApplyConstantForce_C");
-static_assert(sizeof(UANS_ApplyConstantForce_C) == 0x000120, "Wrong size on UANS_ApplyConstantForce_C");
+static_assert(sizeof(UANS_ApplyConstantForce_C) == 0x000140, "Wrong size on UANS_ApplyConstantForce_C");
 static_assert(offsetof(UANS_ApplyConstantForce_C, Config) == 0x000030, "Member 'UANS_ApplyConstantForce_C::Config' has a wrong offset!");
-static_assert(offsetof(UANS_ApplyConstantForce_C, Config_SideScroll) == 0x000098, "Member 'UANS_ApplyConstantForce_C::Config_SideScroll' has a wrong offset!");
-static_assert(offsetof(UANS_ApplyConstantForce_C, bCancelAbility) == 0x000100, "Member 'UANS_ApplyConstantForce_C::bCancelAbility' has a wrong offset!");
-static_assert(offsetof(UANS_ApplyConstantForce_C, GameplayEvent) == 0x000104, "Member 'UANS_ApplyConstantForce_C::GameplayEvent' has a wrong offset!");
-static_assert(offsetof(UANS_ApplyConstantForce_C, BeginMovementConfig) == 0x000110, "Member 'UANS_ApplyConstantForce_C::BeginMovementConfig' has a wrong offset!");
-static_assert(offsetof(UANS_ApplyConstantForce_C, EndMovementConfig_Battle) == 0x000118, "Member 'UANS_ApplyConstantForce_C::EndMovementConfig_Battle' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, Config_SideScroll) == 0x0000A0, "Member 'UANS_ApplyConstantForce_C::Config_SideScroll' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, bCancelAbility) == 0x000110, "Member 'UANS_ApplyConstantForce_C::bCancelAbility' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, GameplayEvent) == 0x000114, "Member 'UANS_ApplyConstantForce_C::GameplayEvent' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, BeginMovementConfig) == 0x000120, "Member 'UANS_ApplyConstantForce_C::BeginMovementConfig' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, EndMovementConfig_Battle) == 0x000128, "Member 'UANS_ApplyConstantForce_C::EndMovementConfig_Battle' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, bDecelerateInAir) == 0x000130, "Member 'UANS_ApplyConstantForce_C::bDecelerateInAir' has a wrong offset!");
+static_assert(offsetof(UANS_ApplyConstantForce_C, InAirDeceleration) == 0x000138, "Member 'UANS_ApplyConstantForce_C::InAirDeceleration' has a wrong offset!");
 
 }
 

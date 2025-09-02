@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AIModule_structs.hpp"
 #include "X6BTTask_LuaBase_classes.hpp"
+#include "AIModule_structs.hpp"
 
 
 namespace SDK

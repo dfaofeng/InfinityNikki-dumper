@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Enum_TipsKeyTheme_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -33,12 +33,12 @@ public:
 	class FText                                   TextTip;                                           // 0x0318(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void BP_SetInputAction(class UX6InputAction* Action, bool bForceSimple);
-	void BP_SetJoinDark(bool bJoinDark);
-	void ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void SetKey(const struct FKey& Key);
 	void SetKeyByInputAction(const class FString& ActionPath);
+	void SetKey(const struct FKey& Key);
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry(int32 EntryPoint);
+	void BP_SetJoinDark(bool bJoinDark);
+	void BP_SetInputAction(class UX6InputAction* Action, bool bForceSimple);
 
 	class FString GetModuleName() const;
 

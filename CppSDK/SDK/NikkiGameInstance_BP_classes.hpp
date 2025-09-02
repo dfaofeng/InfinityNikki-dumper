@@ -29,15 +29,15 @@ public:
 	class UUserWidget*                            WBP_Loading;                                       // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetTODTime(double Progress);
-	void SetSystemStateNotifyManager(class ABP_SystemStateNotifyManager_C* SystemStateNotifyMgr);
-	void SetLoadingUI(class UUserWidget* LoadingUI);
-	void ReceiveInit();
-	void GetTODTime(double* Progress);
-	void GetSystemStateNotifyManager(class ABP_SystemStateNotifyManager_C** SystemStateNotifyMgr);
-	void GetLoadingUI(class UUserWidget** LoadingUI);
-	void GetDirLightVecFromDyEnv(struct FVector* LightVector);
 	void ExecuteUbergraph_NikkiGameInstance_BP(int32 EntryPoint);
+	void GetDirLightVecFromDyEnv(struct FVector* LightVector);
+	void GetLoadingUI(class UUserWidget** LoadingUI);
+	void GetSystemStateNotifyManager(class ABP_SystemStateNotifyManager_C** SystemStateNotifyMgr);
+	void GetTODTime(double* Progress);
+	void ReceiveInit();
+	void SetLoadingUI(class UUserWidget* LoadingUI);
+	void SetSystemStateNotifyManager(class ABP_SystemStateNotifyManager_C* SystemStateNotifyMgr);
+	void SetTODTime(double Progress);
 
 	class FString GetModuleName() const;
 

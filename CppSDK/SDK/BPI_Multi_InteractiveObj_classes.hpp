@@ -12,6 +12,7 @@
 
 #include "CoreUObject_classes.hpp"
 #include "E_EInteractSuccRet_structs.hpp"
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
 
 
 namespace SDK
@@ -23,7 +24,7 @@ class IBPI_Multi_InteractiveObj_C final : public IInterface
 {
 public:
 	void On_Multi_ActiveSuccess(class AActor* Other_player_actor, E_EInteractSuccRet Result);
-	void On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player);
+	void On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player, E_Multi_InteractiveObjActive_Type E_Multi_Type);
 
 public:
 	static class UClass* StaticClass()

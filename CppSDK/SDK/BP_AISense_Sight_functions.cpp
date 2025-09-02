@@ -17,6 +17,33 @@
 namespace SDK
 {
 
+// Function BP_AISense_Sight.BP_AISense_Sight_C.IsInterestedTarget
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class AActor*                     ListenerActor                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UX6AISenseConfig_Sight*           Config                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UBP_AISense_Sight_C::IsInterestedTarget(const class AActor* ListenerActor, class AActor* TargetActor, class UX6AISenseConfig_Sight* Config)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AISense_Sight_C", "IsInterestedTarget");
+
+	Params::BP_AISense_Sight_C_IsInterestedTarget Parms{};
+
+	Parms.ListenerActor = ListenerActor;
+	Parms.TargetActor = TargetActor;
+	Parms.Config = Config;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_AISense_Sight.BP_AISense_Sight_C.ReportStimulus
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -41,33 +68,6 @@ bool UBP_AISense_Sight_C::ReportStimulus(const class AActor* ListenerActor, clas
 	Parms.Config = Config;
 	Parms.ResultType = ResultType;
 	Parms.bLastResult = bLastResult;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function BP_AISense_Sight.BP_AISense_Sight_C.IsInterestedTarget
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class AActor*                     ListenerActor                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           TargetActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UX6AISenseConfig_Sight*           Config                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UBP_AISense_Sight_C::IsInterestedTarget(const class AActor* ListenerActor, class AActor* TargetActor, class UX6AISenseConfig_Sight* Config)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AISense_Sight_C", "IsInterestedTarget");
-
-	Params::BP_AISense_Sight_C_IsInterestedTarget Parms{};
-
-	Parms.ListenerActor = ListenerActor;
-	Parms.TargetActor = TargetActor;
-	Parms.Config = Config;
 
 	UObject::ProcessEvent(Func, &Parms);
 

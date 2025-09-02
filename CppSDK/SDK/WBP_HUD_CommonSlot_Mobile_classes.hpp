@@ -47,7 +47,7 @@ public:
 	TMulticastInlineDelegate<void(EInputEvent InputEvent)> OnActionClick;                            // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bImpressType;                                      // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PressTime;                                         // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        pressTime;                                         // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ButtonPressed;                                     // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        NeededPressTime;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -59,9 +59,9 @@ public:
 	class FString                                 SlotEnumName;                                      // 0x04B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void NotifyIconRefresh();
 	void ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile(int32 EntryPoint);
+	void NotifyIconRefresh();
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 
@@ -100,7 +100,7 @@ static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, UI_NS_Empty) == 0x000388, "
 static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, UI_NS_TouchButton) == 0x000390, "Member 'UWBP_HUD_CommonSlot_Mobile_C::UI_NS_TouchButton' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, OnActionClick) == 0x000398, "Member 'UWBP_HUD_CommonSlot_Mobile_C::OnActionClick' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, bImpressType) == 0x0003A8, "Member 'UWBP_HUD_CommonSlot_Mobile_C::bImpressType' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, PressTime) == 0x0003B0, "Member 'UWBP_HUD_CommonSlot_Mobile_C::PressTime' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, pressTime) == 0x0003B0, "Member 'UWBP_HUD_CommonSlot_Mobile_C::pressTime' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, ButtonPressed) == 0x0003B8, "Member 'UWBP_HUD_CommonSlot_Mobile_C::ButtonPressed' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, NeededPressTime) == 0x0003C0, "Member 'UWBP_HUD_CommonSlot_Mobile_C::NeededPressTime' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_CommonSlot_Mobile_C, CurrentIconMaterialIns) == 0x0003C8, "Member 'UWBP_HUD_CommonSlot_Mobile_C::CurrentIconMaterialIns' has a wrong offset!");

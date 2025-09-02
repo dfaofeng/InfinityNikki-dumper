@@ -17,68 +17,23 @@
 namespace SDK
 {
 
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.RemoveFX
-// (BlueprintCallable, BlueprintEvent)
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet
+// (Final, UbergraphFunction)
 // Parameters:
-// class ACharacter*                       Char                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGC_NikkiChargeFX_SphereBullet_C::RemoveFX(class ACharacter* Char)
+void AGC_NikkiChargeFX_SphereBullet_C::ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "RemoveFX");
+		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet");
 
-	Params::GC_NikkiChargeFX_SphereBullet_C_RemoveFX Parms{};
+	Params::GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet Parms{};
 
-	Parms.Char = Char;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.PlayFX
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ACharacter*                       Char                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void AGC_NikkiChargeFX_SphereBullet_C::PlayFX(class ACharacter* Char)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "PlayFX");
-
-	Params::GC_NikkiChargeFX_SphereBullet_C_PlayFX Parms{};
-
-	Parms.Char = Char;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.OnRemove
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool AGC_NikkiChargeFX_SphereBullet_C::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "OnRemove");
-
-	Params::GC_NikkiChargeFX_SphereBullet_C_OnRemove Parms{};
-
-	Parms.MyTarget = MyTarget;
-	Parms.Parameters = std::move(Parameters);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -107,21 +62,66 @@ bool AGC_NikkiChargeFX_SphereBullet_C::OnActive(class AActor* MyTarget, const st
 }
 
 
-// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet
-// (Final, UbergraphFunction)
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.OnRemove
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           MyTarget                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayCueParameters&    Parameters                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AGC_NikkiChargeFX_SphereBullet_C::ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet(int32 EntryPoint)
+bool AGC_NikkiChargeFX_SphereBullet_C::OnRemove(class AActor* MyTarget, const struct FGameplayCueParameters& Parameters)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet");
+		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "OnRemove");
 
-	Params::GC_NikkiChargeFX_SphereBullet_C_ExecuteUbergraph_GC_NikkiChargeFX_SphereBullet Parms{};
+	Params::GC_NikkiChargeFX_SphereBullet_C_OnRemove Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.MyTarget = MyTarget;
+	Parms.Parameters = std::move(Parameters);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.PlayFX
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ACharacter*                       Char                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AGC_NikkiChargeFX_SphereBullet_C::PlayFX(class ACharacter* Char)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "PlayFX");
+
+	Params::GC_NikkiChargeFX_SphereBullet_C_PlayFX Parms{};
+
+	Parms.Char = Char;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GC_NikkiChargeFX_SphereBullet.GC_NikkiChargeFX_SphereBullet_C.RemoveFX
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ACharacter*                       Char                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void AGC_NikkiChargeFX_SphereBullet_C::RemoveFX(class ACharacter* Char)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GC_NikkiChargeFX_SphereBullet_C", "RemoveFX");
+
+	Params::GC_NikkiChargeFX_SphereBullet_C_RemoveFX Parms{};
+
+	Parms.Char = Char;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

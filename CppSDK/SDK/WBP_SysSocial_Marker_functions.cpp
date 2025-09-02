@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_SysSocial_Marker.WBP_SysSocial_Marker_C.ExecuteUbergraph_WBP_SysSocial_Marker
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SysSocial_Marker_C::ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SysSocial_Marker_C", "ExecuteUbergraph_WBP_SysSocial_Marker");
-
-	Params::WBP_SysSocial_Marker_C_ExecuteUbergraph_WBP_SysSocial_Marker Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_SysSocial_Marker.WBP_SysSocial_Marker_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_SysSocial_Marker_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_SysSocial_Marker_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SysSocial_Marker.WBP_SysSocial_Marker_C.ExecuteUbergraph_WBP_SysSocial_Marker
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SysSocial_Marker_C::ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SysSocial_Marker_C", "ExecuteUbergraph_WBP_SysSocial_Marker");
+
+	Params::WBP_SysSocial_Marker_C_ExecuteUbergraph_WBP_SysSocial_Marker Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

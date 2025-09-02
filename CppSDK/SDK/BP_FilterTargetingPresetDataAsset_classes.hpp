@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "F_FilterTargetingPresetConfig_structs.hpp"
 #include "F_CrashFilterTargetingPresetConfig_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

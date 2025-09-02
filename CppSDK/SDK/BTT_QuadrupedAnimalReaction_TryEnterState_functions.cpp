@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function BTT_QuadrupedAnimalReaction_TryEnterState.BTT_QuadrupedAnimalReaction_TryEnterState_C.ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTT_QuadrupedAnimalReaction_TryEnterState_C::ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTT_QuadrupedAnimalReaction_TryEnterState_C", "ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState");
+
+	Params::BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BTT_QuadrupedAnimalReaction_TryEnterState.BTT_QuadrupedAnimalReaction_TryEnterState_C.ReceiveExecuteAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -34,26 +54,6 @@ void UBTT_QuadrupedAnimalReaction_TryEnterState_C::ReceiveExecuteAI(class AAICon
 
 	Parms.OwnerController = OwnerController;
 	Parms.ControlledPawn = ControlledPawn;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BTT_QuadrupedAnimalReaction_TryEnterState.BTT_QuadrupedAnimalReaction_TryEnterState_C.ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTT_QuadrupedAnimalReaction_TryEnterState_C::ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_QuadrupedAnimalReaction_TryEnterState_C", "ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState");
-
-	Params::BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

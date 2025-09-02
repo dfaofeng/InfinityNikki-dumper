@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_WindDirection_structs.hpp"
 #include "Enum_WindIntensity_structs.hpp"
+#include "Enum_WindDirection_structs.hpp"
 #include "Engine_classes.hpp"
 
 

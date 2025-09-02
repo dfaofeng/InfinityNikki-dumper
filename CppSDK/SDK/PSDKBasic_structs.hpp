@@ -84,14 +84,14 @@ static_assert(sizeof(FJsonData) == 0x0000B8, "Wrong size on FJsonData");
 struct FPSDKBackendResponseBase : public FJsonData
 {
 public:
-	int32                                         Code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 request_id;                                        // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSDKBackendResponseBase) == 0x000008, "Wrong alignment on FPSDKBackendResponseBase");
 static_assert(sizeof(FPSDKBackendResponseBase) == 0x0000E0, "Wrong size on FPSDKBackendResponseBase");
-static_assert(offsetof(FPSDKBackendResponseBase, Code) == 0x0000B8, "Member 'FPSDKBackendResponseBase::Code' has a wrong offset!");
+static_assert(offsetof(FPSDKBackendResponseBase, code) == 0x0000B8, "Member 'FPSDKBackendResponseBase::code' has a wrong offset!");
 static_assert(offsetof(FPSDKBackendResponseBase, Info) == 0x0000C0, "Member 'FPSDKBackendResponseBase::Info' has a wrong offset!");
 static_assert(offsetof(FPSDKBackendResponseBase, request_id) == 0x0000D0, "Member 'FPSDKBackendResponseBase::request_id' has a wrong offset!");
 
@@ -100,7 +100,7 @@ static_assert(offsetof(FPSDKBackendResponseBase, request_id) == 0x0000D0, "Membe
 struct FPSBffBasicModel
 {
 public:
-	int32                                         Code;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         code;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 request_id;                                        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -108,7 +108,7 @@ public:
 };
 static_assert(alignof(FPSBffBasicModel) == 0x000008, "Wrong alignment on FPSBffBasicModel");
 static_assert(sizeof(FPSBffBasicModel) == 0x000038, "Wrong size on FPSBffBasicModel");
-static_assert(offsetof(FPSBffBasicModel, Code) == 0x000000, "Member 'FPSBffBasicModel::Code' has a wrong offset!");
+static_assert(offsetof(FPSBffBasicModel, code) == 0x000000, "Member 'FPSBffBasicModel::code' has a wrong offset!");
 static_assert(offsetof(FPSBffBasicModel, Info) == 0x000008, "Member 'FPSBffBasicModel::Info' has a wrong offset!");
 static_assert(offsetof(FPSBffBasicModel, request_id) == 0x000018, "Member 'FPSBffBasicModel::request_id' has a wrong offset!");
 static_assert(offsetof(FPSBffBasicModel, ResponseString) == 0x000028, "Member 'FPSBffBasicModel::ResponseString' has a wrong offset!");

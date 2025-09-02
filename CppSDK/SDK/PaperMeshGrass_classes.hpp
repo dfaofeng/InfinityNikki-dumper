@@ -12,6 +12,7 @@
 
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -46,7 +47,7 @@ static_assert(offsetof(APaperMeshGrassManager, PendingRefreshGrassMeshComps) == 
 static_assert(offsetof(APaperMeshGrassManager, FoliageComponents) == 0x000468, "Member 'APaperMeshGrassManager::FoliageComponents' has a wrong offset!");
 
 // Class PaperMeshGrass.PaperMeshGrassMeshComponent
-// 0x0150 (0x08F0 - 0x07A0)
+// 0x01B0 (0x0950 - 0x07A0)
 class UPaperMeshGrassMeshComponent final : public UMeshGrassStaticMeshComponent
 {
 public:
@@ -55,12 +56,13 @@ public:
 	uint8                                         Pad_7A4[0x4];                                      // 0x07A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                TargetNormal;                                      // 0x07A8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RejectNormalBias;                                  // 0x07C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C4[0x4];                                      // 0x07C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bSupportTransform;                                 // 0x07C4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C5[0x3];                                      // 0x07C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               GrassGenerateMaterialMID;                          // 0x07C8(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasCachedTransform;                               // 0x07D0(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasCachedTransform;                               // 0x07D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_7D1[0x7];                                      // 0x07D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       LastGeneratedBoxSphereBound;                       // 0x07D8(0x0038)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             LastCachedTransform;                               // 0x0810(0x0060)(Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       LastGeneratedBoxSphereBound;                       // 0x07D8(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransform                             LastCachedTransform;                               // 0x0810(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FIntPoint                              PackedResolution;                                  // 0x0870(0x0008)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint16>                                PackedHeightData;                                  // 0x0878(0x0010)(ZeroConstructor, DuplicateTransient, NativeAccessSpecifierPublic)
 	TArray<uint32>                                PackedGrassEncodedWeightData;                      // 0x0888(0x0010)(ZeroConstructor, DuplicateTransient, NativeAccessSpecifierPublic)
@@ -69,11 +71,16 @@ public:
 	TArray<int32>                                 PackedDisturbIndices;                              // 0x08B8(0x0010)(ZeroConstructor, DuplicateTransient, NativeAccessSpecifierPublic)
 	TArray<class ULandscapeGrassType*>            PackedGrassTypes;                                  // 0x08C8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class UTexture2D*>                     GrassGenerateTextures;                             // 0x08D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8E8[0x8];                                      // 0x08E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UMeshGrassBakedData*                    GrassBakedData;                                    // 0x08E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BakedDataFilePath;                                 // 0x08F0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BakedDataFileName;                                 // 0x0900(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_910[0x40];                                     // 0x0910(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearGrassWeight();
 	void GenerateGrassWeights();
+	void SetAllowUpdateGrass(bool InAllowUpdateGrass);
+	void SetGrassBakedData(class UMeshGrassBakedData* InBakedData);
 	void SetGrassGenerateTextures(const TArray<class UTexture2D*>& InTextures);
 
 public:
@@ -87,11 +94,12 @@ public:
 	}
 };
 static_assert(alignof(UPaperMeshGrassMeshComponent) == 0x000010, "Wrong alignment on UPaperMeshGrassMeshComponent");
-static_assert(sizeof(UPaperMeshGrassMeshComponent) == 0x0008F0, "Wrong size on UPaperMeshGrassMeshComponent");
+static_assert(sizeof(UPaperMeshGrassMeshComponent) == 0x000950, "Wrong size on UPaperMeshGrassMeshComponent");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, GrassGenerateMaterial) == 0x000798, "Member 'UPaperMeshGrassMeshComponent::GrassGenerateMaterial' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, GrassWeightPixelWorldDistance) == 0x0007A0, "Member 'UPaperMeshGrassMeshComponent::GrassWeightPixelWorldDistance' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, TargetNormal) == 0x0007A8, "Member 'UPaperMeshGrassMeshComponent::TargetNormal' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, RejectNormalBias) == 0x0007C0, "Member 'UPaperMeshGrassMeshComponent::RejectNormalBias' has a wrong offset!");
+static_assert(offsetof(UPaperMeshGrassMeshComponent, bSupportTransform) == 0x0007C4, "Member 'UPaperMeshGrassMeshComponent::bSupportTransform' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, GrassGenerateMaterialMID) == 0x0007C8, "Member 'UPaperMeshGrassMeshComponent::GrassGenerateMaterialMID' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, bHasCachedTransform) == 0x0007D0, "Member 'UPaperMeshGrassMeshComponent::bHasCachedTransform' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, LastGeneratedBoxSphereBound) == 0x0007D8, "Member 'UPaperMeshGrassMeshComponent::LastGeneratedBoxSphereBound' has a wrong offset!");
@@ -104,6 +112,51 @@ static_assert(offsetof(UPaperMeshGrassMeshComponent, PackedWeightIndices) == 0x0
 static_assert(offsetof(UPaperMeshGrassMeshComponent, PackedDisturbIndices) == 0x0008B8, "Member 'UPaperMeshGrassMeshComponent::PackedDisturbIndices' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, PackedGrassTypes) == 0x0008C8, "Member 'UPaperMeshGrassMeshComponent::PackedGrassTypes' has a wrong offset!");
 static_assert(offsetof(UPaperMeshGrassMeshComponent, GrassGenerateTextures) == 0x0008D8, "Member 'UPaperMeshGrassMeshComponent::GrassGenerateTextures' has a wrong offset!");
+static_assert(offsetof(UPaperMeshGrassMeshComponent, GrassBakedData) == 0x0008E8, "Member 'UPaperMeshGrassMeshComponent::GrassBakedData' has a wrong offset!");
+static_assert(offsetof(UPaperMeshGrassMeshComponent, BakedDataFilePath) == 0x0008F0, "Member 'UPaperMeshGrassMeshComponent::BakedDataFilePath' has a wrong offset!");
+static_assert(offsetof(UPaperMeshGrassMeshComponent, BakedDataFileName) == 0x000900, "Member 'UPaperMeshGrassMeshComponent::BakedDataFileName' has a wrong offset!");
+
+// Class PaperMeshGrass.MeshGrassBakedData
+// 0x0118 (0x0140 - 0x0028)
+class UMeshGrassBakedData final : public UObject
+{
+public:
+	bool                                          bHasCachedTransform;                               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoxSphereBounds                       LastGeneratedBoxSphereBound;                       // 0x0030(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             LastCachedTransform;                               // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              PackedResolution;                                  // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint16>                                PackedHeightData;                                  // 0x00D8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<uint32>                                PackedGrassEncodedWeightData;                      // 0x00E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<uint32>                                PackedGrassEncodedDisturbData;                     // 0x00F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class ULandscapeGrassType*>            PackedGrassTypes;                                  // 0x0108(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 PackedWeightIndices;                               // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 PackedDisturbIndices;                              // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_138[0x8];                                      // 0x0138(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshGrassBakedData">();
+	}
+	static class UMeshGrassBakedData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshGrassBakedData>();
+	}
+};
+static_assert(alignof(UMeshGrassBakedData) == 0x000010, "Wrong alignment on UMeshGrassBakedData");
+static_assert(sizeof(UMeshGrassBakedData) == 0x000140, "Wrong size on UMeshGrassBakedData");
+static_assert(offsetof(UMeshGrassBakedData, bHasCachedTransform) == 0x000028, "Member 'UMeshGrassBakedData::bHasCachedTransform' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, LastGeneratedBoxSphereBound) == 0x000030, "Member 'UMeshGrassBakedData::LastGeneratedBoxSphereBound' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, LastCachedTransform) == 0x000070, "Member 'UMeshGrassBakedData::LastCachedTransform' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedResolution) == 0x0000D0, "Member 'UMeshGrassBakedData::PackedResolution' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedHeightData) == 0x0000D8, "Member 'UMeshGrassBakedData::PackedHeightData' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedGrassEncodedWeightData) == 0x0000E8, "Member 'UMeshGrassBakedData::PackedGrassEncodedWeightData' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedGrassEncodedDisturbData) == 0x0000F8, "Member 'UMeshGrassBakedData::PackedGrassEncodedDisturbData' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedGrassTypes) == 0x000108, "Member 'UMeshGrassBakedData::PackedGrassTypes' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedWeightIndices) == 0x000118, "Member 'UMeshGrassBakedData::PackedWeightIndices' has a wrong offset!");
+static_assert(offsetof(UMeshGrassBakedData, PackedDisturbIndices) == 0x000128, "Member 'UMeshGrassBakedData::PackedDisturbIndices' has a wrong offset!");
 
 }
 

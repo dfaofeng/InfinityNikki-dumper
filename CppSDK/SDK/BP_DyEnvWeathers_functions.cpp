@@ -77,20 +77,6 @@ void ABP_DyEnvWeathers_C::Weather_Rain(const struct FWeatherBaseLerpConfig& Weat
 }
 
 
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_DyEnvWeathers_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvWeathers_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Weather NoRain
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -100,6 +86,20 @@ void ABP_DyEnvWeathers_C::Weather_NoRain()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_DyEnvWeathers_C", "Weather NoRain");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.UserConstructionScript
+// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_DyEnvWeathers_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvWeathers_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -150,6 +150,28 @@ class ADynamicWeatherVolume* ABP_DyEnvWeathers_C::TargetWeatherVolume()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.SetWetnessCharacterSphereMask
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Intensity                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  SunnyReverse                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_DyEnvWeathers_C::SetWetnessCharacterSphereMask(float Intensity, double SunnyReverse)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvWeathers_C", "SetWetnessCharacterSphereMask");
+
+	Params::BP_DyEnvWeathers_C_SetWetnessCharacterSphereMask Parms{};
+
+	Parms.Intensity = Intensity;
+	Parms.SunnyReverse = SunnyReverse;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -230,6 +252,40 @@ void ABP_DyEnvWeathers_C::SendPresetToObject(class ADynamicWeatherVolume* Volume
 	Parms.Volume = Volume;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Send DataTable to Volume
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_DyEnvWeathers_C::Send_DataTable_to_Volume()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvWeathers_C", "Send DataTable to Volume");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.RemoveSwapWeatherVolume
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class ADynamicWeatherVolume*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class ADynamicWeatherVolume* ABP_DyEnvWeathers_C::RemoveSwapWeatherVolume()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvWeathers_C", "RemoveSwapWeatherVolume");
+
+	Params::BP_DyEnvWeathers_C_RemoveSwapWeatherVolume Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -483,40 +539,6 @@ float ABP_DyEnvWeathers_C::GetSwapCurveFactorRemapped0_1()
 }
 
 
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Send DataTable to Volume
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_DyEnvWeathers_C::Send_DataTable_to_Volume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvWeathers_C", "Send DataTable to Volume");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.RemoveSwapWeatherVolume
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class ADynamicWeatherVolume*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-
-class ADynamicWeatherVolume* ABP_DyEnvWeathers_C::RemoveSwapWeatherVolume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvWeathers_C", "RemoveSwapWeatherVolume");
-
-	Params::BP_DyEnvWeathers_C_RemoveSwapWeatherVolume Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.Get Final Sun Rotator Value
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -711,6 +733,20 @@ void ABP_DyEnvWeathers_C::BPI_TODTime(double Time)
 }
 
 
+// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.BPI_TodState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_DyEnvWeathers_C::BPI_TodState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DyEnvWeathers_C", "BPI_TodState");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.BPI_SaveAsset
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -790,20 +826,6 @@ void ABP_DyEnvWeathers_C::BPI_CLFSPostContruct()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_DyEnvWeathers_C", "BPI_CLFSPostContruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_DyEnvWeathers.BP_DyEnvWeathers_C.BPI_TodState
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_DyEnvWeathers_C::BPI_TodState()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvWeathers_C", "BPI_TodState");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

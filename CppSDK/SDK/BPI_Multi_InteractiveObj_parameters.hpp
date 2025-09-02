@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "E_EInteractSuccRet_structs.hpp"
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
 
 
 namespace SDK::Params
@@ -30,17 +31,19 @@ static_assert(offsetof(BPI_Multi_InteractiveObj_C_On_Multi_ActiveSuccess, Other_
 static_assert(offsetof(BPI_Multi_InteractiveObj_C_On_Multi_ActiveSuccess, Result) == 0x000008, "Member 'BPI_Multi_InteractiveObj_C_On_Multi_ActiveSuccess::Result' has a wrong offset!");
 
 // Function BPI_Multi_InteractiveObj.BPI_Multi_InteractiveObj_C.On_Multi_InteractiveObjActive
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive final
 {
 public:
 	class FString                                 Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 Player;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_Multi_InteractiveObjActive_Type             E_Multi_Type;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive) == 0x000008, "Wrong alignment on BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive");
-static_assert(sizeof(BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive) == 0x000018, "Wrong size on BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive");
+static_assert(sizeof(BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive) == 0x000020, "Wrong size on BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive");
 static_assert(offsetof(BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive, Data) == 0x000000, "Member 'BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive::Data' has a wrong offset!");
 static_assert(offsetof(BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive, Player) == 0x000010, "Member 'BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive::Player' has a wrong offset!");
+static_assert(offsetof(BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive, E_Multi_Type) == 0x000018, "Member 'BPI_Multi_InteractiveObj_C_On_Multi_InteractiveObjActive::E_Multi_Type' has a wrong offset!");
 
 }
 

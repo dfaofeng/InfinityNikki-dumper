@@ -12,10 +12,10 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "PaperRipples_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "DynamicEnvironmentSystem_structs.hpp"
-#include "PaperRipples_structs.hpp"
 
 
 namespace SDK
@@ -46,6 +46,8 @@ public:
 	static void SaveToPPConfig(TSoftClassPtr<class UClass> PPConfig, const struct FPostProcessSettings& InPPSetting, const struct FMobilePPSettings& InMobilePPSettings);
 	static void SaveToTODConfig(TSoftClassPtr<class UClass> TODConfig, const struct FTODLerpConfig& InTODSetting, const TMap<class FString, struct FRuntimeFloatCurve>& InCustomEnvironmentSettingsLerpCurve, const struct FEnvironmentLerpConfig& EnvironmentSetting, const struct FWeatherTexturesConfig& TextureSetting);
 	static void SaveToWeatherConfig(TSoftClassPtr<class UClass> WeatherConfig, const struct FWeatherBaseLerpConfig& InWeatherControl);
+	static void SetTargetOverridePropertyInCharacterLerpConfigByName(struct FCharacterLerpConfig& InCharacterLerpConfig, class FName InPropertyName, bool InValue);
+	static void SetTargetOverridePropertyInPPSettingByName(struct FPostProcessSettings& InPPSetting, class FName InPropertyName, bool InValue);
 
 public:
 	static class UClass* StaticClass()
@@ -61,73 +63,73 @@ static_assert(alignof(UDynamicEnvironmentSystemBPLibrary) == 0x000008, "Wrong al
 static_assert(sizeof(UDynamicEnvironmentSystemBPLibrary) == 0x000028, "Wrong size on UDynamicEnvironmentSystemBPLibrary");
 
 // Class DynamicEnvironmentSystem.DynamicEnvironmentSystemManager
-// 0x1278 (0x1620 - 0x03A8)
+// 0x1288 (0x1630 - 0x03A8)
 class alignas(0x10) ADynamicEnvironmentSystemManager : public AActor
 {
 public:
-	uint8                                         Pad_3A8[0x10C8];                                   // 0x03A8(0x10C8)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADirectionalLight*                      SunLight;                                          // 0x1470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ADirectionalLight*                      MoonLight;                                         // 0x1478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtraSunLightIntensity;                            // 0x1480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AddLightning;                                      // 0x1484(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtraMoonLightIntensity;                           // 0x1488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_148C[0x4];                                     // 0x148C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ASkyLight*                              SkyLight;                                          // 0x1490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ExtraSkyLightIntensity;                            // 0x1498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A8[0x10D8];                                   // 0x03A8(0x10D8)(Fixing Size After Last Property [ Dumper-7 ])
+	class ADirectionalLight*                      SunLight;                                          // 0x1480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ADirectionalLight*                      MoonLight;                                         // 0x1488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtraSunLightIntensity;                            // 0x1490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AddLightning;                                      // 0x1494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtraMoonLightIntensity;                           // 0x1498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_149C[0x4];                                     // 0x149C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 SkySphere;                                         // 0x14A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ASkyAtmosphere*                         SkyAtmosphere;                                     // 0x14A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AVolumetricCloud*                       VolumetricCloudActor;                              // 0x14B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ADynamicWeatherManager*                 WeatherManager;                                    // 0x14B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ALevelSequenceActor*                    TODLevelSequenceActor;                             // 0x14C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AExponentialHeightFog*                  HeightFog;                                         // 0x14C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSyncFogLocation;                                  // 0x14D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14D1[0x3];                                     // 0x14D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FogActorHeight;                                    // 0x14D4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRemapFogHeight;                                   // 0x14D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14D9[0x3];                                     // 0x14D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FogHeightRangeLow;                                 // 0x14DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FogHeightRangeHigh;                                // 0x14E0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14E4[0x4];                                     // 0x14E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AWindDirectionalSource*                 WindDirectionalSource;                             // 0x14E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseServerWind;                                    // 0x14F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14F1[0x7];                                     // 0x14F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                FinalWindVector;                                   // 0x14F8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FinalWindStrength;                                 // 0x1510(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1514[0x4];                                     // 0x1514(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ADynamicWeatherVolume*                  CurrentActiveTODWeatherVolume;                     // 0x1518(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             SkyBoxTextureBlack;                                // 0x1520(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsMobile;                                         // 0x1528(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEditor;                                         // 0x1529(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnlighten;                                      // 0x152A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLumen;                                          // 0x152B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_152C[0x4];                                     // 0x152C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 FinalVolumeName;                                   // 0x1530(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FinalTODBlendWeight;                               // 0x1540(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FinalVolumeBlendWeight;                            // 0x1544(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAnyWeatherSettingBlend;                           // 0x1548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEnvironmentChanging;                            // 0x1549(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_154A[0x6];                                     // 0x154A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialParameterCollection*           CommonMPC;                                         // 0x1550(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialParameterCollection*           WeatherMPC;                                        // 0x1558(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UNiagaraParameterCollection*            CommonNPC;                                         // 0x1560(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UWeatherPresetConfig>       CommonWPC;                                         // 0x1568(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterial*                              SkyMaterial;                                       // 0x1570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               Sky;                                               // 0x1578(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterial*                              CloudLayerMaterial;                                // 0x1580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               CloudLayer;                                        // 0x1588(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterial*                              VolumetricCloudMaterial;                           // 0x1590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               VolumetricCloud;                                   // 0x1598(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterial*                              DirLightFunctionMaterial;                          // 0x15A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               DirLightFunction;                                  // 0x15A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HourLength;                                        // 0x15B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NowTime;                                           // 0x15B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableTimeTick;                                    // 0x15B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15B9[0x3];                                     // 0x15B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SunLightIntensityOverride;                         // 0x15BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MoonLightIntensityOverride;                        // 0x15C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SkyLightIntensityOverride;                         // 0x15C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15C8[0x58];                                    // 0x15C8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class ASkyLight*                              SkyLight;                                          // 0x14A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtraSkyLightIntensity;                            // 0x14A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14AC[0x4];                                     // 0x14AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SkySphere;                                         // 0x14B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ASkyAtmosphere*                         SkyAtmosphere;                                     // 0x14B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AVolumetricCloud*                       VolumetricCloudActor;                              // 0x14C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ADynamicWeatherManager*                 WeatherManager;                                    // 0x14C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ALevelSequenceActor*                    TODLevelSequenceActor;                             // 0x14D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AExponentialHeightFog*                  HeightFog;                                         // 0x14D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSyncFogLocation;                                  // 0x14E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E1[0x3];                                     // 0x14E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FogActorHeight;                                    // 0x14E4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRemapFogHeight;                                   // 0x14E8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E9[0x3];                                     // 0x14E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FogHeightRangeLow;                                 // 0x14EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FogHeightRangeHigh;                                // 0x14F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14F4[0x4];                                     // 0x14F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AWindDirectionalSource*                 WindDirectionalSource;                             // 0x14F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseServerWind;                                    // 0x1500(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1501[0x7];                                     // 0x1501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                FinalWindVector;                                   // 0x1508(0x0018)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FinalWindStrength;                                 // 0x1520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1524[0x4];                                     // 0x1524(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ADynamicWeatherVolume*                  CurrentActiveTODWeatherVolume;                     // 0x1528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             SkyBoxTextureBlack;                                // 0x1530(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsMobile;                                         // 0x1538(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEditor;                                         // 0x1539(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnlighten;                                      // 0x153A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLumen;                                          // 0x153B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_153C[0x4];                                     // 0x153C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 FinalVolumeName;                                   // 0x1540(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FinalTODBlendWeight;                               // 0x1550(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FinalVolumeBlendWeight;                            // 0x1554(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAnyWeatherSettingBlend;                           // 0x1558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEnvironmentChanging;                            // 0x1559(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_155A[0x6];                                     // 0x155A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           CommonMPC;                                         // 0x1560(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialParameterCollection*           WeatherMPC;                                        // 0x1568(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UNiagaraParameterCollection*            CommonNPC;                                         // 0x1570(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UWeatherPresetConfig>       CommonWPC;                                         // 0x1578(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterial*                              SkyMaterial;                                       // 0x1580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               Sky;                                               // 0x1588(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterial*                              CloudLayerMaterial;                                // 0x1590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               CloudLayer;                                        // 0x1598(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterial*                              VolumetricCloudMaterial;                           // 0x15A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               VolumetricCloud;                                   // 0x15A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterial*                              DirLightFunctionMaterial;                          // 0x15B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               DirLightFunction;                                  // 0x15B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HourLength;                                        // 0x15C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NowTime;                                           // 0x15C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableTimeTick;                                    // 0x15C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15C9[0x3];                                     // 0x15C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SunLightIntensityOverride;                         // 0x15CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MoonLightIntensityOverride;                        // 0x15D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SkyLightIntensityOverride;                         // 0x15D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15D8[0x58];                                    // 0x15D8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BlendTextures();
@@ -153,68 +155,68 @@ public:
 	}
 };
 static_assert(alignof(ADynamicEnvironmentSystemManager) == 0x000010, "Wrong alignment on ADynamicEnvironmentSystemManager");
-static_assert(sizeof(ADynamicEnvironmentSystemManager) == 0x001620, "Wrong size on ADynamicEnvironmentSystemManager");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SunLight) == 0x001470, "Member 'ADynamicEnvironmentSystemManager::SunLight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, MoonLight) == 0x001478, "Member 'ADynamicEnvironmentSystemManager::MoonLight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, ExtraSunLightIntensity) == 0x001480, "Member 'ADynamicEnvironmentSystemManager::ExtraSunLightIntensity' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, AddLightning) == 0x001484, "Member 'ADynamicEnvironmentSystemManager::AddLightning' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, ExtraMoonLightIntensity) == 0x001488, "Member 'ADynamicEnvironmentSystemManager::ExtraMoonLightIntensity' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyLight) == 0x001490, "Member 'ADynamicEnvironmentSystemManager::SkyLight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, ExtraSkyLightIntensity) == 0x001498, "Member 'ADynamicEnvironmentSystemManager::ExtraSkyLightIntensity' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SkySphere) == 0x0014A0, "Member 'ADynamicEnvironmentSystemManager::SkySphere' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyAtmosphere) == 0x0014A8, "Member 'ADynamicEnvironmentSystemManager::SkyAtmosphere' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, VolumetricCloudActor) == 0x0014B0, "Member 'ADynamicEnvironmentSystemManager::VolumetricCloudActor' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, WeatherManager) == 0x0014B8, "Member 'ADynamicEnvironmentSystemManager::WeatherManager' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, TODLevelSequenceActor) == 0x0014C0, "Member 'ADynamicEnvironmentSystemManager::TODLevelSequenceActor' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, HeightFog) == 0x0014C8, "Member 'ADynamicEnvironmentSystemManager::HeightFog' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bSyncFogLocation) == 0x0014D0, "Member 'ADynamicEnvironmentSystemManager::bSyncFogLocation' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FogActorHeight) == 0x0014D4, "Member 'ADynamicEnvironmentSystemManager::FogActorHeight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bRemapFogHeight) == 0x0014D8, "Member 'ADynamicEnvironmentSystemManager::bRemapFogHeight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FogHeightRangeLow) == 0x0014DC, "Member 'ADynamicEnvironmentSystemManager::FogHeightRangeLow' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FogHeightRangeHigh) == 0x0014E0, "Member 'ADynamicEnvironmentSystemManager::FogHeightRangeHigh' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, WindDirectionalSource) == 0x0014E8, "Member 'ADynamicEnvironmentSystemManager::WindDirectionalSource' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bUseServerWind) == 0x0014F0, "Member 'ADynamicEnvironmentSystemManager::bUseServerWind' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalWindVector) == 0x0014F8, "Member 'ADynamicEnvironmentSystemManager::FinalWindVector' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalWindStrength) == 0x001510, "Member 'ADynamicEnvironmentSystemManager::FinalWindStrength' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, CurrentActiveTODWeatherVolume) == 0x001518, "Member 'ADynamicEnvironmentSystemManager::CurrentActiveTODWeatherVolume' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyBoxTextureBlack) == 0x001520, "Member 'ADynamicEnvironmentSystemManager::SkyBoxTextureBlack' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsMobile) == 0x001528, "Member 'ADynamicEnvironmentSystemManager::bIsMobile' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsEditor) == 0x001529, "Member 'ADynamicEnvironmentSystemManager::bIsEditor' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsEnlighten) == 0x00152A, "Member 'ADynamicEnvironmentSystemManager::bIsEnlighten' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsLumen) == 0x00152B, "Member 'ADynamicEnvironmentSystemManager::bIsLumen' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalVolumeName) == 0x001530, "Member 'ADynamicEnvironmentSystemManager::FinalVolumeName' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalTODBlendWeight) == 0x001540, "Member 'ADynamicEnvironmentSystemManager::FinalTODBlendWeight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalVolumeBlendWeight) == 0x001544, "Member 'ADynamicEnvironmentSystemManager::FinalVolumeBlendWeight' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bAnyWeatherSettingBlend) == 0x001548, "Member 'ADynamicEnvironmentSystemManager::bAnyWeatherSettingBlend' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsEnvironmentChanging) == 0x001549, "Member 'ADynamicEnvironmentSystemManager::bIsEnvironmentChanging' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, CommonMPC) == 0x001550, "Member 'ADynamicEnvironmentSystemManager::CommonMPC' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, WeatherMPC) == 0x001558, "Member 'ADynamicEnvironmentSystemManager::WeatherMPC' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, CommonNPC) == 0x001560, "Member 'ADynamicEnvironmentSystemManager::CommonNPC' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, CommonWPC) == 0x001568, "Member 'ADynamicEnvironmentSystemManager::CommonWPC' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyMaterial) == 0x001570, "Member 'ADynamicEnvironmentSystemManager::SkyMaterial' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, Sky) == 0x001578, "Member 'ADynamicEnvironmentSystemManager::Sky' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, CloudLayerMaterial) == 0x001580, "Member 'ADynamicEnvironmentSystemManager::CloudLayerMaterial' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, CloudLayer) == 0x001588, "Member 'ADynamicEnvironmentSystemManager::CloudLayer' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, VolumetricCloudMaterial) == 0x001590, "Member 'ADynamicEnvironmentSystemManager::VolumetricCloudMaterial' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, VolumetricCloud) == 0x001598, "Member 'ADynamicEnvironmentSystemManager::VolumetricCloud' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, DirLightFunctionMaterial) == 0x0015A0, "Member 'ADynamicEnvironmentSystemManager::DirLightFunctionMaterial' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, DirLightFunction) == 0x0015A8, "Member 'ADynamicEnvironmentSystemManager::DirLightFunction' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, HourLength) == 0x0015B0, "Member 'ADynamicEnvironmentSystemManager::HourLength' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, NowTime) == 0x0015B4, "Member 'ADynamicEnvironmentSystemManager::NowTime' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, EnableTimeTick) == 0x0015B8, "Member 'ADynamicEnvironmentSystemManager::EnableTimeTick' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SunLightIntensityOverride) == 0x0015BC, "Member 'ADynamicEnvironmentSystemManager::SunLightIntensityOverride' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, MoonLightIntensityOverride) == 0x0015C0, "Member 'ADynamicEnvironmentSystemManager::MoonLightIntensityOverride' has a wrong offset!");
-static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyLightIntensityOverride) == 0x0015C4, "Member 'ADynamicEnvironmentSystemManager::SkyLightIntensityOverride' has a wrong offset!");
+static_assert(sizeof(ADynamicEnvironmentSystemManager) == 0x001630, "Wrong size on ADynamicEnvironmentSystemManager");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SunLight) == 0x001480, "Member 'ADynamicEnvironmentSystemManager::SunLight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, MoonLight) == 0x001488, "Member 'ADynamicEnvironmentSystemManager::MoonLight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, ExtraSunLightIntensity) == 0x001490, "Member 'ADynamicEnvironmentSystemManager::ExtraSunLightIntensity' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, AddLightning) == 0x001494, "Member 'ADynamicEnvironmentSystemManager::AddLightning' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, ExtraMoonLightIntensity) == 0x001498, "Member 'ADynamicEnvironmentSystemManager::ExtraMoonLightIntensity' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyLight) == 0x0014A0, "Member 'ADynamicEnvironmentSystemManager::SkyLight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, ExtraSkyLightIntensity) == 0x0014A8, "Member 'ADynamicEnvironmentSystemManager::ExtraSkyLightIntensity' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SkySphere) == 0x0014B0, "Member 'ADynamicEnvironmentSystemManager::SkySphere' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyAtmosphere) == 0x0014B8, "Member 'ADynamicEnvironmentSystemManager::SkyAtmosphere' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, VolumetricCloudActor) == 0x0014C0, "Member 'ADynamicEnvironmentSystemManager::VolumetricCloudActor' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, WeatherManager) == 0x0014C8, "Member 'ADynamicEnvironmentSystemManager::WeatherManager' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, TODLevelSequenceActor) == 0x0014D0, "Member 'ADynamicEnvironmentSystemManager::TODLevelSequenceActor' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, HeightFog) == 0x0014D8, "Member 'ADynamicEnvironmentSystemManager::HeightFog' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bSyncFogLocation) == 0x0014E0, "Member 'ADynamicEnvironmentSystemManager::bSyncFogLocation' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FogActorHeight) == 0x0014E4, "Member 'ADynamicEnvironmentSystemManager::FogActorHeight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bRemapFogHeight) == 0x0014E8, "Member 'ADynamicEnvironmentSystemManager::bRemapFogHeight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FogHeightRangeLow) == 0x0014EC, "Member 'ADynamicEnvironmentSystemManager::FogHeightRangeLow' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FogHeightRangeHigh) == 0x0014F0, "Member 'ADynamicEnvironmentSystemManager::FogHeightRangeHigh' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, WindDirectionalSource) == 0x0014F8, "Member 'ADynamicEnvironmentSystemManager::WindDirectionalSource' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bUseServerWind) == 0x001500, "Member 'ADynamicEnvironmentSystemManager::bUseServerWind' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalWindVector) == 0x001508, "Member 'ADynamicEnvironmentSystemManager::FinalWindVector' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalWindStrength) == 0x001520, "Member 'ADynamicEnvironmentSystemManager::FinalWindStrength' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, CurrentActiveTODWeatherVolume) == 0x001528, "Member 'ADynamicEnvironmentSystemManager::CurrentActiveTODWeatherVolume' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyBoxTextureBlack) == 0x001530, "Member 'ADynamicEnvironmentSystemManager::SkyBoxTextureBlack' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsMobile) == 0x001538, "Member 'ADynamicEnvironmentSystemManager::bIsMobile' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsEditor) == 0x001539, "Member 'ADynamicEnvironmentSystemManager::bIsEditor' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsEnlighten) == 0x00153A, "Member 'ADynamicEnvironmentSystemManager::bIsEnlighten' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsLumen) == 0x00153B, "Member 'ADynamicEnvironmentSystemManager::bIsLumen' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalVolumeName) == 0x001540, "Member 'ADynamicEnvironmentSystemManager::FinalVolumeName' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalTODBlendWeight) == 0x001550, "Member 'ADynamicEnvironmentSystemManager::FinalTODBlendWeight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, FinalVolumeBlendWeight) == 0x001554, "Member 'ADynamicEnvironmentSystemManager::FinalVolumeBlendWeight' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bAnyWeatherSettingBlend) == 0x001558, "Member 'ADynamicEnvironmentSystemManager::bAnyWeatherSettingBlend' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, bIsEnvironmentChanging) == 0x001559, "Member 'ADynamicEnvironmentSystemManager::bIsEnvironmentChanging' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, CommonMPC) == 0x001560, "Member 'ADynamicEnvironmentSystemManager::CommonMPC' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, WeatherMPC) == 0x001568, "Member 'ADynamicEnvironmentSystemManager::WeatherMPC' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, CommonNPC) == 0x001570, "Member 'ADynamicEnvironmentSystemManager::CommonNPC' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, CommonWPC) == 0x001578, "Member 'ADynamicEnvironmentSystemManager::CommonWPC' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyMaterial) == 0x001580, "Member 'ADynamicEnvironmentSystemManager::SkyMaterial' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, Sky) == 0x001588, "Member 'ADynamicEnvironmentSystemManager::Sky' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, CloudLayerMaterial) == 0x001590, "Member 'ADynamicEnvironmentSystemManager::CloudLayerMaterial' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, CloudLayer) == 0x001598, "Member 'ADynamicEnvironmentSystemManager::CloudLayer' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, VolumetricCloudMaterial) == 0x0015A0, "Member 'ADynamicEnvironmentSystemManager::VolumetricCloudMaterial' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, VolumetricCloud) == 0x0015A8, "Member 'ADynamicEnvironmentSystemManager::VolumetricCloud' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, DirLightFunctionMaterial) == 0x0015B0, "Member 'ADynamicEnvironmentSystemManager::DirLightFunctionMaterial' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, DirLightFunction) == 0x0015B8, "Member 'ADynamicEnvironmentSystemManager::DirLightFunction' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, HourLength) == 0x0015C0, "Member 'ADynamicEnvironmentSystemManager::HourLength' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, NowTime) == 0x0015C4, "Member 'ADynamicEnvironmentSystemManager::NowTime' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, EnableTimeTick) == 0x0015C8, "Member 'ADynamicEnvironmentSystemManager::EnableTimeTick' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SunLightIntensityOverride) == 0x0015CC, "Member 'ADynamicEnvironmentSystemManager::SunLightIntensityOverride' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, MoonLightIntensityOverride) == 0x0015D0, "Member 'ADynamicEnvironmentSystemManager::MoonLightIntensityOverride' has a wrong offset!");
+static_assert(offsetof(ADynamicEnvironmentSystemManager, SkyLightIntensityOverride) == 0x0015D4, "Member 'ADynamicEnvironmentSystemManager::SkyLightIntensityOverride' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.TODPresetConfig
-// 0x0A18 (0x0A40 - 0x0028)
+// 0x0A20 (0x0A48 - 0x0028)
 class UTODPresetConfig : public UObject
 {
 public:
-	struct FTODLerpConfig                         TODSetting;                                        // 0x0028(0x0840)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FRuntimeFloatCurve> CustomEnvironmentSettingsLerpCurve;               // 0x0868(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x08B8(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWeatherTexturesConfig                 TextureSetting;                                    // 0x09D8(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FTODLerpConfig                         TODSetting;                                        // 0x0028(0x0848)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FRuntimeFloatCurve> CustomEnvironmentSettingsLerpCurve;               // 0x0870(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x08C0(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWeatherTexturesConfig                 TextureSetting;                                    // 0x09E0(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -227,19 +229,20 @@ public:
 	}
 };
 static_assert(alignof(UTODPresetConfig) == 0x000008, "Wrong alignment on UTODPresetConfig");
-static_assert(sizeof(UTODPresetConfig) == 0x000A40, "Wrong size on UTODPresetConfig");
+static_assert(sizeof(UTODPresetConfig) == 0x000A48, "Wrong size on UTODPresetConfig");
 static_assert(offsetof(UTODPresetConfig, TODSetting) == 0x000028, "Member 'UTODPresetConfig::TODSetting' has a wrong offset!");
-static_assert(offsetof(UTODPresetConfig, CustomEnvironmentSettingsLerpCurve) == 0x000868, "Member 'UTODPresetConfig::CustomEnvironmentSettingsLerpCurve' has a wrong offset!");
-static_assert(offsetof(UTODPresetConfig, EnvironmentSetting) == 0x0008B8, "Member 'UTODPresetConfig::EnvironmentSetting' has a wrong offset!");
-static_assert(offsetof(UTODPresetConfig, TextureSetting) == 0x0009D8, "Member 'UTODPresetConfig::TextureSetting' has a wrong offset!");
+static_assert(offsetof(UTODPresetConfig, CustomEnvironmentSettingsLerpCurve) == 0x000870, "Member 'UTODPresetConfig::CustomEnvironmentSettingsLerpCurve' has a wrong offset!");
+static_assert(offsetof(UTODPresetConfig, EnvironmentSetting) == 0x0008C0, "Member 'UTODPresetConfig::EnvironmentSetting' has a wrong offset!");
+static_assert(offsetof(UTODPresetConfig, TextureSetting) == 0x0009E0, "Member 'UTODPresetConfig::TextureSetting' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.SunAndSkyLightConfig
-// 0x01B0 (0x01D8 - 0x0028)
+// 0x01C0 (0x01E8 - 0x0028)
 class USunAndSkyLightConfig final : public UObject
 {
 public:
-	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x0028(0x0128)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0150(0x0088)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x0028(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0158(0x008C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -252,9 +255,9 @@ public:
 	}
 };
 static_assert(alignof(USunAndSkyLightConfig) == 0x000008, "Wrong alignment on USunAndSkyLightConfig");
-static_assert(sizeof(USunAndSkyLightConfig) == 0x0001D8, "Wrong size on USunAndSkyLightConfig");
+static_assert(sizeof(USunAndSkyLightConfig) == 0x0001E8, "Wrong size on USunAndSkyLightConfig");
 static_assert(offsetof(USunAndSkyLightConfig, SunLightSettings) == 0x000028, "Member 'USunAndSkyLightConfig::SunLightSettings' has a wrong offset!");
-static_assert(offsetof(USunAndSkyLightConfig, SkyLightSettings) == 0x000150, "Member 'USunAndSkyLightConfig::SkyLightSettings' has a wrong offset!");
+static_assert(offsetof(USunAndSkyLightConfig, SkyLightSettings) == 0x000158, "Member 'USunAndSkyLightConfig::SkyLightSettings' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.SkyAtmosphereConfig
 // 0x0080 (0x00A8 - 0x0028)
@@ -422,7 +425,7 @@ static_assert(alignof(ADynamicSkySphere) == 0x000008, "Wrong alignment on ADynam
 static_assert(sizeof(ADynamicSkySphere) == 0x0003A8, "Wrong size on ADynamicSkySphere");
 
 // Class DynamicEnvironmentSystem.DynamicWeatherAmbianceComponent
-// 0x28E0 (0x2B10 - 0x0230)
+// 0x28F0 (0x2B20 - 0x0230)
 class UDynamicWeatherAmbianceComponent final : public USceneComponent
 {
 public:
@@ -432,25 +435,26 @@ public:
 	struct FWeatherEnableOnGI                     EnableOnGI;                                        // 0x023A(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_23B[0x1];                                      // 0x023B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         WeatherID;                                         // 0x023C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x0240(0x0128)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0368(0x0088)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWeatherTexturesConfig                 WeatherTextureSettings;                            // 0x03F0(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0458(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4D4[0x4];                                      // 0x04D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x04D8(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0A00(0x0850)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FMobilePPSettings                      MobilePostProcessSettings;                         // 0x1250(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FEnvironmentLerpConfig                 EnvironmentSettings;                               // 0x12B0(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCharacterLerpConfig                   CharacterSettings;                                 // 0x13D0(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14FC[0x4];                                     // 0x14FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeatherBaseLerpConfig                 WeatherControls;                                   // 0x1500(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FCurve24H                              Curve24H;                                          // 0x1810(0x12F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         Priority;                                          // 0x2B00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendRadius;                                       // 0x2B04(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendWeight;                                       // 0x2B08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnabled : 1;                                      // 0x2B0C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUnbound : 1;                                      // 0x2B0C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2B0D[0x3];                                     // 0x2B0D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x0240(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0370(0x008C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherTexturesConfig                 WeatherTextureSettings;                            // 0x0400(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0468(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4E4[0x4];                                      // 0x04E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x04E8(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0A10(0x0850)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FMobilePPSettings                      MobilePostProcessSettings;                         // 0x1260(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FEnvironmentLerpConfig                 EnvironmentSettings;                               // 0x12C0(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCharacterLerpConfig                   CharacterSettings;                                 // 0x13E0(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_150C[0x4];                                     // 0x150C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherBaseLerpConfig                 WeatherControls;                                   // 0x1510(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FCurve24H                              Curve24H;                                          // 0x1820(0x12F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         Priority;                                          // 0x2B10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendRadius;                                       // 0x2B14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendWeight;                                       // 0x2B18(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnabled : 1;                                      // 0x2B1C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUnbound : 1;                                      // 0x2B1C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2B1D[0x3];                                     // 0x2B1D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -463,25 +467,25 @@ public:
 	}
 };
 static_assert(alignof(UDynamicWeatherAmbianceComponent) == 0x000010, "Wrong alignment on UDynamicWeatherAmbianceComponent");
-static_assert(sizeof(UDynamicWeatherAmbianceComponent) == 0x002B10, "Wrong size on UDynamicWeatherAmbianceComponent");
+static_assert(sizeof(UDynamicWeatherAmbianceComponent) == 0x002B20, "Wrong size on UDynamicWeatherAmbianceComponent");
 static_assert(offsetof(UDynamicWeatherAmbianceComponent, AmbianceType) == 0x000238, "Member 'UDynamicWeatherAmbianceComponent::AmbianceType' has a wrong offset!");
 static_assert(offsetof(UDynamicWeatherAmbianceComponent, EnableMode) == 0x000239, "Member 'UDynamicWeatherAmbianceComponent::EnableMode' has a wrong offset!");
 static_assert(offsetof(UDynamicWeatherAmbianceComponent, EnableOnGI) == 0x00023A, "Member 'UDynamicWeatherAmbianceComponent::EnableOnGI' has a wrong offset!");
 static_assert(offsetof(UDynamicWeatherAmbianceComponent, WeatherID) == 0x00023C, "Member 'UDynamicWeatherAmbianceComponent::WeatherID' has a wrong offset!");
 static_assert(offsetof(UDynamicWeatherAmbianceComponent, SunLightSettings) == 0x000240, "Member 'UDynamicWeatherAmbianceComponent::SunLightSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, SkyLightSettings) == 0x000368, "Member 'UDynamicWeatherAmbianceComponent::SkyLightSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, WeatherTextureSettings) == 0x0003F0, "Member 'UDynamicWeatherAmbianceComponent::WeatherTextureSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, SkyAtmosphereSettings) == 0x000458, "Member 'UDynamicWeatherAmbianceComponent::SkyAtmosphereSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, ExponentialHeightFogSettings) == 0x0004D8, "Member 'UDynamicWeatherAmbianceComponent::ExponentialHeightFogSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, PostProcessSettings) == 0x000A00, "Member 'UDynamicWeatherAmbianceComponent::PostProcessSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, MobilePostProcessSettings) == 0x001250, "Member 'UDynamicWeatherAmbianceComponent::MobilePostProcessSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, EnvironmentSettings) == 0x0012B0, "Member 'UDynamicWeatherAmbianceComponent::EnvironmentSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, CharacterSettings) == 0x0013D0, "Member 'UDynamicWeatherAmbianceComponent::CharacterSettings' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, WeatherControls) == 0x001500, "Member 'UDynamicWeatherAmbianceComponent::WeatherControls' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, Curve24H) == 0x001810, "Member 'UDynamicWeatherAmbianceComponent::Curve24H' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, Priority) == 0x002B00, "Member 'UDynamicWeatherAmbianceComponent::Priority' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, BlendRadius) == 0x002B04, "Member 'UDynamicWeatherAmbianceComponent::BlendRadius' has a wrong offset!");
-static_assert(offsetof(UDynamicWeatherAmbianceComponent, BlendWeight) == 0x002B08, "Member 'UDynamicWeatherAmbianceComponent::BlendWeight' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, SkyLightSettings) == 0x000370, "Member 'UDynamicWeatherAmbianceComponent::SkyLightSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, WeatherTextureSettings) == 0x000400, "Member 'UDynamicWeatherAmbianceComponent::WeatherTextureSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, SkyAtmosphereSettings) == 0x000468, "Member 'UDynamicWeatherAmbianceComponent::SkyAtmosphereSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, ExponentialHeightFogSettings) == 0x0004E8, "Member 'UDynamicWeatherAmbianceComponent::ExponentialHeightFogSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, PostProcessSettings) == 0x000A10, "Member 'UDynamicWeatherAmbianceComponent::PostProcessSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, MobilePostProcessSettings) == 0x001260, "Member 'UDynamicWeatherAmbianceComponent::MobilePostProcessSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, EnvironmentSettings) == 0x0012C0, "Member 'UDynamicWeatherAmbianceComponent::EnvironmentSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, CharacterSettings) == 0x0013E0, "Member 'UDynamicWeatherAmbianceComponent::CharacterSettings' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, WeatherControls) == 0x001510, "Member 'UDynamicWeatherAmbianceComponent::WeatherControls' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, Curve24H) == 0x001820, "Member 'UDynamicWeatherAmbianceComponent::Curve24H' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, Priority) == 0x002B10, "Member 'UDynamicWeatherAmbianceComponent::Priority' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, BlendRadius) == 0x002B14, "Member 'UDynamicWeatherAmbianceComponent::BlendRadius' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherAmbianceComponent, BlendWeight) == 0x002B18, "Member 'UDynamicWeatherAmbianceComponent::BlendWeight' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.DynamicWeatherComponent
 // 0x0030 (0x0260 - 0x0230)
@@ -493,7 +497,8 @@ public:
 	EWeatherEffectType                            WeatherEffectType;                                 // 0x024C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24D[0x3];                                      // 0x024D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BlendWeight;                                       // 0x0250(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_254[0xC];                                      // 0x0254(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bCanDirectDestroy;                                 // 0x0254(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_255[0xB];                                      // 0x0255(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnCreated();
@@ -518,6 +523,7 @@ static_assert(sizeof(UDynamicWeatherComponent) == 0x000260, "Wrong size on UDyna
 static_assert(offsetof(UDynamicWeatherComponent, WeatherType) == 0x000248, "Member 'UDynamicWeatherComponent::WeatherType' has a wrong offset!");
 static_assert(offsetof(UDynamicWeatherComponent, WeatherEffectType) == 0x00024C, "Member 'UDynamicWeatherComponent::WeatherEffectType' has a wrong offset!");
 static_assert(offsetof(UDynamicWeatherComponent, BlendWeight) == 0x000250, "Member 'UDynamicWeatherComponent::BlendWeight' has a wrong offset!");
+static_assert(offsetof(UDynamicWeatherComponent, bCanDirectDestroy) == 0x000254, "Member 'UDynamicWeatherComponent::bCanDirectDestroy' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.DynamicWeatherManager
 // 0x0118 (0x04C0 - 0x03A8)
@@ -598,7 +604,7 @@ static_assert(offsetof(ADynamicWeatherOccluder, WeatherManager) == 0x0003B0, "Me
 static_assert(offsetof(ADynamicWeatherOccluder, DeltaDistance) == 0x0003B8, "Member 'ADynamicWeatherOccluder::DeltaDistance' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.DynamicWeatherVolume
-// 0x2B40 (0x2F20 - 0x03E0)
+// 0x2B50 (0x2F30 - 0x03E0)
 class ADynamicWeatherVolume final : public AVolume
 {
 public:
@@ -608,41 +614,42 @@ public:
 	EWeatherEnableMode                            EnableMode;                                        // 0x03EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWeatherEnableOnGI                     EnableOnGI;                                        // 0x03EB(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         WeatherID;                                         // 0x03EC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x03F0(0x0128)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0518(0x0088)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWeatherTexturesConfig                 WeatherTextureSettings;                            // 0x05A0(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0608(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_684[0x4];                                      // 0x0684(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x0688(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FPostProcessSettings                   PPSetting;                                         // 0x0BB0(0x0850)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FMobilePPSettings                      MobilePPSetting;                                   // 0x1400(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x1460(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCharacterLerpConfig                   CharacterSetting;                                  // 0x1580(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16AC[0x4];                                     // 0x16AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeatherBaseLerpConfig                 WeatherControl;                                    // 0x16B0(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FCurve24H                              Curve24H;                                          // 0x19C0(0x12F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UDataTable*                             EnvironmentConfigFile;                             // 0x2CB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DataTablePath;                                     // 0x2CB8(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DataTableRowNum;                                   // 0x2CC8(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldSortTimeSpans;                              // 0x2CCC(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CCD[0x3];                                     // 0x2CCD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTimeSpanLerpConfig>            TimeSpans;                                         // 0x2CD0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FRotator                               SpotProxyOrientation;                              // 0x2CE0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         SpeakerSize;                                       // 0x2CF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Priority;                                          // 0x2CFC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendRadius;                                       // 0x2D00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendWeight;                                       // 0x2D04(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnabled : 1;                                      // 0x2D08(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bUnbound : 1;                                      // 0x2D08(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2D09[0xB7];                                    // 0x2D09(0x00B7)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, class UTODPresetConfig*>    TODLerpConfigMap;                                  // 0x2DC0(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TMap<class FName, class UPostprocessPresetConfig*> PPLerpConfigMap;                              // 0x2E10(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TMap<class FName, class UWeatherPresetConfig*> WeatherLerpConfigMap;                             // 0x2E60(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TMap<class FName, class UCharacterPresetConfig*> CharacterLerpConfigMap;                         // 0x2EB0(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               SkyMaterialInstance;                               // 0x2F00(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               CloudLayerMaterialInstance;                        // 0x2F08(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               VolumetricCloudMaterialInstance;                   // 0x2F10(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               DirLightFunctionMaterialInstance;                  // 0x2F18(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x03F0(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0520(0x008C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5AC[0x4];                                      // 0x05AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherTexturesConfig                 WeatherTextureSettings;                            // 0x05B0(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0618(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_694[0x4];                                      // 0x0694(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x0698(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FPostProcessSettings                   PPSetting;                                         // 0x0BC0(0x0850)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FMobilePPSettings                      MobilePPSetting;                                   // 0x1410(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x1470(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCharacterLerpConfig                   CharacterSetting;                                  // 0x1590(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16BC[0x4];                                     // 0x16BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherBaseLerpConfig                 WeatherControl;                                    // 0x16C0(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FCurve24H                              Curve24H;                                          // 0x19D0(0x12F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UDataTable*                             EnvironmentConfigFile;                             // 0x2CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DataTablePath;                                     // 0x2CC8(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DataTableRowNum;                                   // 0x2CD8(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldSortTimeSpans;                              // 0x2CDC(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CDD[0x3];                                     // 0x2CDD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTimeSpanLerpConfig>            TimeSpans;                                         // 0x2CE0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FRotator                               SpotProxyOrientation;                              // 0x2CF0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SpeakerSize;                                       // 0x2D08(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Priority;                                          // 0x2D0C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendRadius;                                       // 0x2D10(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendWeight;                                       // 0x2D14(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnabled : 1;                                      // 0x2D18(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bUnbound : 1;                                      // 0x2D18(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2D19[0xB7];                                    // 0x2D19(0x00B7)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, class UTODPresetConfig*>    TODLerpConfigMap;                                  // 0x2DD0(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<class FName, class UPostprocessPresetConfig*> PPLerpConfigMap;                              // 0x2E20(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<class FName, class UWeatherPresetConfig*> WeatherLerpConfigMap;                             // 0x2E70(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<class FName, class UCharacterPresetConfig*> CharacterLerpConfigMap;                         // 0x2EC0(0x0050)(Edit, BlueprintVisible, ExportObject, EditConst, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               SkyMaterialInstance;                               // 0x2F10(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               CloudLayerMaterialInstance;                        // 0x2F18(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               VolumetricCloudMaterialInstance;                   // 0x2F20(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               DirLightFunctionMaterialInstance;                  // 0x2F28(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void ClearMaterialInstancesCache();
@@ -669,56 +676,58 @@ public:
 	}
 };
 static_assert(alignof(ADynamicWeatherVolume) == 0x000010, "Wrong alignment on ADynamicWeatherVolume");
-static_assert(sizeof(ADynamicWeatherVolume) == 0x002F20, "Wrong size on ADynamicWeatherVolume");
+static_assert(sizeof(ADynamicWeatherVolume) == 0x002F30, "Wrong size on ADynamicWeatherVolume");
 static_assert(offsetof(ADynamicWeatherVolume, CollisionShape) == 0x0003E8, "Member 'ADynamicWeatherVolume::CollisionShape' has a wrong offset!");
 static_assert(offsetof(ADynamicWeatherVolume, VolumeType) == 0x0003E9, "Member 'ADynamicWeatherVolume::VolumeType' has a wrong offset!");
 static_assert(offsetof(ADynamicWeatherVolume, EnableMode) == 0x0003EA, "Member 'ADynamicWeatherVolume::EnableMode' has a wrong offset!");
 static_assert(offsetof(ADynamicWeatherVolume, EnableOnGI) == 0x0003EB, "Member 'ADynamicWeatherVolume::EnableOnGI' has a wrong offset!");
 static_assert(offsetof(ADynamicWeatherVolume, WeatherID) == 0x0003EC, "Member 'ADynamicWeatherVolume::WeatherID' has a wrong offset!");
 static_assert(offsetof(ADynamicWeatherVolume, SunLightSettings) == 0x0003F0, "Member 'ADynamicWeatherVolume::SunLightSettings' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, SkyLightSettings) == 0x000518, "Member 'ADynamicWeatherVolume::SkyLightSettings' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, WeatherTextureSettings) == 0x0005A0, "Member 'ADynamicWeatherVolume::WeatherTextureSettings' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, SkyAtmosphereSettings) == 0x000608, "Member 'ADynamicWeatherVolume::SkyAtmosphereSettings' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, ExponentialHeightFogSettings) == 0x000688, "Member 'ADynamicWeatherVolume::ExponentialHeightFogSettings' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, PPSetting) == 0x000BB0, "Member 'ADynamicWeatherVolume::PPSetting' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, MobilePPSetting) == 0x001400, "Member 'ADynamicWeatherVolume::MobilePPSetting' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, EnvironmentSetting) == 0x001460, "Member 'ADynamicWeatherVolume::EnvironmentSetting' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, CharacterSetting) == 0x001580, "Member 'ADynamicWeatherVolume::CharacterSetting' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, WeatherControl) == 0x0016B0, "Member 'ADynamicWeatherVolume::WeatherControl' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, Curve24H) == 0x0019C0, "Member 'ADynamicWeatherVolume::Curve24H' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, EnvironmentConfigFile) == 0x002CB0, "Member 'ADynamicWeatherVolume::EnvironmentConfigFile' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, DataTablePath) == 0x002CB8, "Member 'ADynamicWeatherVolume::DataTablePath' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, DataTableRowNum) == 0x002CC8, "Member 'ADynamicWeatherVolume::DataTableRowNum' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, bShouldSortTimeSpans) == 0x002CCC, "Member 'ADynamicWeatherVolume::bShouldSortTimeSpans' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, TimeSpans) == 0x002CD0, "Member 'ADynamicWeatherVolume::TimeSpans' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, SpotProxyOrientation) == 0x002CE0, "Member 'ADynamicWeatherVolume::SpotProxyOrientation' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, SpeakerSize) == 0x002CF8, "Member 'ADynamicWeatherVolume::SpeakerSize' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, Priority) == 0x002CFC, "Member 'ADynamicWeatherVolume::Priority' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, BlendRadius) == 0x002D00, "Member 'ADynamicWeatherVolume::BlendRadius' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, BlendWeight) == 0x002D04, "Member 'ADynamicWeatherVolume::BlendWeight' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, TODLerpConfigMap) == 0x002DC0, "Member 'ADynamicWeatherVolume::TODLerpConfigMap' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, PPLerpConfigMap) == 0x002E10, "Member 'ADynamicWeatherVolume::PPLerpConfigMap' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, WeatherLerpConfigMap) == 0x002E60, "Member 'ADynamicWeatherVolume::WeatherLerpConfigMap' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, CharacterLerpConfigMap) == 0x002EB0, "Member 'ADynamicWeatherVolume::CharacterLerpConfigMap' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, SkyMaterialInstance) == 0x002F00, "Member 'ADynamicWeatherVolume::SkyMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, CloudLayerMaterialInstance) == 0x002F08, "Member 'ADynamicWeatherVolume::CloudLayerMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, VolumetricCloudMaterialInstance) == 0x002F10, "Member 'ADynamicWeatherVolume::VolumetricCloudMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ADynamicWeatherVolume, DirLightFunctionMaterialInstance) == 0x002F18, "Member 'ADynamicWeatherVolume::DirLightFunctionMaterialInstance' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, SkyLightSettings) == 0x000520, "Member 'ADynamicWeatherVolume::SkyLightSettings' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, WeatherTextureSettings) == 0x0005B0, "Member 'ADynamicWeatherVolume::WeatherTextureSettings' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, SkyAtmosphereSettings) == 0x000618, "Member 'ADynamicWeatherVolume::SkyAtmosphereSettings' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, ExponentialHeightFogSettings) == 0x000698, "Member 'ADynamicWeatherVolume::ExponentialHeightFogSettings' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, PPSetting) == 0x000BC0, "Member 'ADynamicWeatherVolume::PPSetting' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, MobilePPSetting) == 0x001410, "Member 'ADynamicWeatherVolume::MobilePPSetting' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, EnvironmentSetting) == 0x001470, "Member 'ADynamicWeatherVolume::EnvironmentSetting' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, CharacterSetting) == 0x001590, "Member 'ADynamicWeatherVolume::CharacterSetting' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, WeatherControl) == 0x0016C0, "Member 'ADynamicWeatherVolume::WeatherControl' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, Curve24H) == 0x0019D0, "Member 'ADynamicWeatherVolume::Curve24H' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, EnvironmentConfigFile) == 0x002CC0, "Member 'ADynamicWeatherVolume::EnvironmentConfigFile' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, DataTablePath) == 0x002CC8, "Member 'ADynamicWeatherVolume::DataTablePath' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, DataTableRowNum) == 0x002CD8, "Member 'ADynamicWeatherVolume::DataTableRowNum' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, bShouldSortTimeSpans) == 0x002CDC, "Member 'ADynamicWeatherVolume::bShouldSortTimeSpans' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, TimeSpans) == 0x002CE0, "Member 'ADynamicWeatherVolume::TimeSpans' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, SpotProxyOrientation) == 0x002CF0, "Member 'ADynamicWeatherVolume::SpotProxyOrientation' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, SpeakerSize) == 0x002D08, "Member 'ADynamicWeatherVolume::SpeakerSize' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, Priority) == 0x002D0C, "Member 'ADynamicWeatherVolume::Priority' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, BlendRadius) == 0x002D10, "Member 'ADynamicWeatherVolume::BlendRadius' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, BlendWeight) == 0x002D14, "Member 'ADynamicWeatherVolume::BlendWeight' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, TODLerpConfigMap) == 0x002DD0, "Member 'ADynamicWeatherVolume::TODLerpConfigMap' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, PPLerpConfigMap) == 0x002E20, "Member 'ADynamicWeatherVolume::PPLerpConfigMap' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, WeatherLerpConfigMap) == 0x002E70, "Member 'ADynamicWeatherVolume::WeatherLerpConfigMap' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, CharacterLerpConfigMap) == 0x002EC0, "Member 'ADynamicWeatherVolume::CharacterLerpConfigMap' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, SkyMaterialInstance) == 0x002F10, "Member 'ADynamicWeatherVolume::SkyMaterialInstance' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, CloudLayerMaterialInstance) == 0x002F18, "Member 'ADynamicWeatherVolume::CloudLayerMaterialInstance' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, VolumetricCloudMaterialInstance) == 0x002F20, "Member 'ADynamicWeatherVolume::VolumetricCloudMaterialInstance' has a wrong offset!");
+static_assert(offsetof(ADynamicWeatherVolume, DirLightFunctionMaterialInstance) == 0x002F28, "Member 'ADynamicWeatherVolume::DirLightFunctionMaterialInstance' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.DynamicWetnessComponent
-// 0x04B0 (0x06E0 - 0x0230)
+// 0x04D0 (0x0700 - 0x0230)
 class UDynamicWetnessComponent final : public USceneComponent
 {
 public:
-	struct FWetnessConfigParameters               WetnessParams;                                     // 0x0230(0x04A8)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_6D8[0x8];                                      // 0x06D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FWetnessConfigParameters               WetnessParams;                                     // 0x0230(0x04D0)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 
 public:
+	void SetCharacterSphereMaskIntensity(float NewValue);
+	void SetCharacterSphereMaskSunnyReverse(float NewValue);
 	void SetLumenReflectionsSpecularScale(float NewValue);
 	void SetPuddleHeightOffset(float InValue, bool bToRain);
 	void SetRainIntensity(float NewValue);
 	void SetReflectionParameters(float InValue, bool bToRain);
 	void SetWetness(float InValue, bool bToRain);
+	void SetWetnessCharacterWorldPosition(const struct FVector& NewValue);
 	void SetWetnessOcclusionMultiply(float NewValue);
 	void SetWetnessSpecularFoliageMultiply(float NewValue);
 	void SetWetnessSpecularLandscapeMultiply(float NewValue);
@@ -735,22 +744,22 @@ public:
 	}
 };
 static_assert(alignof(UDynamicWetnessComponent) == 0x000010, "Wrong alignment on UDynamicWetnessComponent");
-static_assert(sizeof(UDynamicWetnessComponent) == 0x0006E0, "Wrong size on UDynamicWetnessComponent");
+static_assert(sizeof(UDynamicWetnessComponent) == 0x000700, "Wrong size on UDynamicWetnessComponent");
 static_assert(offsetof(UDynamicWetnessComponent, WetnessParams) == 0x000230, "Member 'UDynamicWetnessComponent::WetnessParams' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.EnvironmentLevelConfigActor
-// 0x06C8 (0x0A70 - 0x03A8)
+// 0x06F0 (0x0A98 - 0x03A8)
 class AEnvironmentLevelConfigActor : public AActor
 {
 public:
 	class FString                                 EnvironmentWeatherName;                            // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FEnvironmentLevelConfig                EnvironmentLevelConfig;                            // 0x03B8(0x01A0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FWetnessConfigParameters               WetnessConfig;                                     // 0x0558(0x04A8)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FRipplesConfigParameters               RipplesConfig;                                     // 0x0A00(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bEnabled;                                          // 0x0A18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A19[0x3];                                      // 0x0A19(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Priority;                                          // 0x0A1C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, float>                    ConsoleVariables;                                  // 0x0A20(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FWetnessConfigParameters               WetnessConfig;                                     // 0x0558(0x04D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FRipplesConfigParameters               RipplesConfig;                                     // 0x0A28(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnabled;                                          // 0x0A40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A41[0x3];                                      // 0x0A41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Priority;                                          // 0x0A44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, float>                    ConsoleVariables;                                  // 0x0A48(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	void SetConfigEnabled(bool bNewValue);
@@ -766,17 +775,17 @@ public:
 	}
 };
 static_assert(alignof(AEnvironmentLevelConfigActor) == 0x000008, "Wrong alignment on AEnvironmentLevelConfigActor");
-static_assert(sizeof(AEnvironmentLevelConfigActor) == 0x000A70, "Wrong size on AEnvironmentLevelConfigActor");
+static_assert(sizeof(AEnvironmentLevelConfigActor) == 0x000A98, "Wrong size on AEnvironmentLevelConfigActor");
 static_assert(offsetof(AEnvironmentLevelConfigActor, EnvironmentWeatherName) == 0x0003A8, "Member 'AEnvironmentLevelConfigActor::EnvironmentWeatherName' has a wrong offset!");
 static_assert(offsetof(AEnvironmentLevelConfigActor, EnvironmentLevelConfig) == 0x0003B8, "Member 'AEnvironmentLevelConfigActor::EnvironmentLevelConfig' has a wrong offset!");
 static_assert(offsetof(AEnvironmentLevelConfigActor, WetnessConfig) == 0x000558, "Member 'AEnvironmentLevelConfigActor::WetnessConfig' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigActor, RipplesConfig) == 0x000A00, "Member 'AEnvironmentLevelConfigActor::RipplesConfig' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigActor, bEnabled) == 0x000A18, "Member 'AEnvironmentLevelConfigActor::bEnabled' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigActor, Priority) == 0x000A1C, "Member 'AEnvironmentLevelConfigActor::Priority' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigActor, ConsoleVariables) == 0x000A20, "Member 'AEnvironmentLevelConfigActor::ConsoleVariables' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigActor, RipplesConfig) == 0x000A28, "Member 'AEnvironmentLevelConfigActor::RipplesConfig' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigActor, bEnabled) == 0x000A40, "Member 'AEnvironmentLevelConfigActor::bEnabled' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigActor, Priority) == 0x000A44, "Member 'AEnvironmentLevelConfigActor::Priority' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigActor, ConsoleVariables) == 0x000A48, "Member 'AEnvironmentLevelConfigActor::ConsoleVariables' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.EnvironmentLevelConfigManager
-// 0x06E8 (0x0A90 - 0x03A8)
+// 0x0710 (0x0AB8 - 0x03A8)
 class AEnvironmentLevelConfigManager : public AActor
 {
 public:
@@ -787,11 +796,11 @@ public:
 	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AEnvironmentLevelConfigActor*           FinalEnvironmentLevelConfigActor;                  // 0x03D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FEnvironmentLevelConfig                FinalEnvironmentLevelConfig;                       // 0x03D8(0x01A0)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FWetnessConfigParameters               FinalWetnessConfig;                                // 0x0578(0x04A8)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
-	struct FRipplesConfigParameters               FinalRipplesConfig;                                // 0x0A20(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TMap<class FString, float>                    FinalConsoleVariables;                             // 0x0A38(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
-	bool                                          bDistanceFieldShadowing;                           // 0x0A88(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A89[0x7];                                      // 0x0A89(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FWetnessConfigParameters               FinalWetnessConfig;                                // 0x0578(0x04D0)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
+	struct FRipplesConfigParameters               FinalRipplesConfig;                                // 0x0A48(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	TMap<class FString, float>                    FinalConsoleVariables;                             // 0x0A60(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, AdvancedDisplay, NativeAccessSpecifierPublic)
+	bool                                          bDistanceFieldShadowing;                           // 0x0AB0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AB1[0x7];                                      // 0x0AB1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnUpdateFinalEnvironmentLevelConfig();
@@ -808,7 +817,7 @@ public:
 	}
 };
 static_assert(alignof(AEnvironmentLevelConfigManager) == 0x000008, "Wrong alignment on AEnvironmentLevelConfigManager");
-static_assert(sizeof(AEnvironmentLevelConfigManager) == 0x000A90, "Wrong size on AEnvironmentLevelConfigManager");
+static_assert(sizeof(AEnvironmentLevelConfigManager) == 0x000AB8, "Wrong size on AEnvironmentLevelConfigManager");
 static_assert(offsetof(AEnvironmentLevelConfigManager, TODSystem) == 0x0003A8, "Member 'AEnvironmentLevelConfigManager::TODSystem' has a wrong offset!");
 static_assert(offsetof(AEnvironmentLevelConfigManager, LightFunctionSystem) == 0x0003B0, "Member 'AEnvironmentLevelConfigManager::LightFunctionSystem' has a wrong offset!");
 static_assert(offsetof(AEnvironmentLevelConfigManager, ActiveEnvironmentLevelConfigActors) == 0x0003B8, "Member 'AEnvironmentLevelConfigManager::ActiveEnvironmentLevelConfigActors' has a wrong offset!");
@@ -816,9 +825,40 @@ static_assert(offsetof(AEnvironmentLevelConfigManager, AllEnvironmentLevelConfig
 static_assert(offsetof(AEnvironmentLevelConfigManager, FinalEnvironmentLevelConfigActor) == 0x0003D0, "Member 'AEnvironmentLevelConfigManager::FinalEnvironmentLevelConfigActor' has a wrong offset!");
 static_assert(offsetof(AEnvironmentLevelConfigManager, FinalEnvironmentLevelConfig) == 0x0003D8, "Member 'AEnvironmentLevelConfigManager::FinalEnvironmentLevelConfig' has a wrong offset!");
 static_assert(offsetof(AEnvironmentLevelConfigManager, FinalWetnessConfig) == 0x000578, "Member 'AEnvironmentLevelConfigManager::FinalWetnessConfig' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigManager, FinalRipplesConfig) == 0x000A20, "Member 'AEnvironmentLevelConfigManager::FinalRipplesConfig' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigManager, FinalConsoleVariables) == 0x000A38, "Member 'AEnvironmentLevelConfigManager::FinalConsoleVariables' has a wrong offset!");
-static_assert(offsetof(AEnvironmentLevelConfigManager, bDistanceFieldShadowing) == 0x000A88, "Member 'AEnvironmentLevelConfigManager::bDistanceFieldShadowing' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigManager, FinalRipplesConfig) == 0x000A48, "Member 'AEnvironmentLevelConfigManager::FinalRipplesConfig' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigManager, FinalConsoleVariables) == 0x000A60, "Member 'AEnvironmentLevelConfigManager::FinalConsoleVariables' has a wrong offset!");
+static_assert(offsetof(AEnvironmentLevelConfigManager, bDistanceFieldShadowing) == 0x000AB0, "Member 'AEnvironmentLevelConfigManager::bDistanceFieldShadowing' has a wrong offset!");
+
+// Class DynamicEnvironmentSystem.SkyLightFunctionDataAsset
+// 0x0038 (0x0068 - 0x0030)
+class USkyLightFunctionDataAsset final : public UDataAsset
+{
+public:
+	class UTexture*                               SkyLightFunctionTexture;                           // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture*                               SkyLightHemisphereDiffuseTexture;                  // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SkyLightFunctionLocation;                          // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              SkyLightFunctionHeightRange;                       // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SkyLightFunctionSmoothHeight;                      // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SkyLightFunctionScale;                             // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SkyLightFunctionDataAsset">();
+	}
+	static class USkyLightFunctionDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USkyLightFunctionDataAsset>();
+	}
+};
+static_assert(alignof(USkyLightFunctionDataAsset) == 0x000008, "Wrong alignment on USkyLightFunctionDataAsset");
+static_assert(sizeof(USkyLightFunctionDataAsset) == 0x000068, "Wrong size on USkyLightFunctionDataAsset");
+static_assert(offsetof(USkyLightFunctionDataAsset, SkyLightFunctionTexture) == 0x000030, "Member 'USkyLightFunctionDataAsset::SkyLightFunctionTexture' has a wrong offset!");
+static_assert(offsetof(USkyLightFunctionDataAsset, SkyLightHemisphereDiffuseTexture) == 0x000038, "Member 'USkyLightFunctionDataAsset::SkyLightHemisphereDiffuseTexture' has a wrong offset!");
+static_assert(offsetof(USkyLightFunctionDataAsset, SkyLightFunctionLocation) == 0x000040, "Member 'USkyLightFunctionDataAsset::SkyLightFunctionLocation' has a wrong offset!");
+static_assert(offsetof(USkyLightFunctionDataAsset, SkyLightFunctionHeightRange) == 0x000050, "Member 'USkyLightFunctionDataAsset::SkyLightFunctionHeightRange' has a wrong offset!");
+static_assert(offsetof(USkyLightFunctionDataAsset, SkyLightFunctionSmoothHeight) == 0x000060, "Member 'USkyLightFunctionDataAsset::SkyLightFunctionSmoothHeight' has a wrong offset!");
+static_assert(offsetof(USkyLightFunctionDataAsset, SkyLightFunctionScale) == 0x000064, "Member 'USkyLightFunctionDataAsset::SkyLightFunctionScale' has a wrong offset!");
 
 // Class DynamicEnvironmentSystem.Interface_PCGEffectVolume
 // 0x0000 (0x0000 - 0x0000)

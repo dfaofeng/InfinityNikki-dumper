@@ -95,6 +95,26 @@ void UABP_Posedriver_Nikki_C::ExecuteUbergraph_ABP_Posedriver_Nikki(int32 EntryP
 }
 
 
+// Function ABP_Posedriver_Nikki.ABP_Posedriver_Nikki_C.GetRealHighHeelHeight
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+double UABP_Posedriver_Nikki_C::GetRealHighHeelHeight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Posedriver_Nikki_C", "GetRealHighHeelHeight");
+
+	Params::ABP_Posedriver_Nikki_C_GetRealHighHeelHeight Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ABP_Posedriver_Nikki.ABP_Posedriver_Nikki_C.UpdateAntiClippingAlpha
 // (Public, BlueprintCallable, BlueprintEvent)
 

@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.BP_IsMoving
+// 0x0001 (0x0001 - 0x0000)
+struct GA_AbilityMontageBase_C_BP_IsMoving final
+{
+public:
+	bool                                          IsMoving;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_AbilityMontageBase_C_BP_IsMoving) == 0x000001, "Wrong alignment on GA_AbilityMontageBase_C_BP_IsMoving");
+static_assert(sizeof(GA_AbilityMontageBase_C_BP_IsMoving) == 0x000001, "Wrong size on GA_AbilityMontageBase_C_BP_IsMoving");
+static_assert(offsetof(GA_AbilityMontageBase_C_BP_IsMoving, IsMoving) == 0x000000, "Member 'GA_AbilityMontageBase_C_BP_IsMoving::IsMoving' has a wrong offset!");
+
 // Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.BP_SetEnbaleBulletFilter
 // 0x0028 (0x0028 - 0x0000)
 struct GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter final
@@ -37,17 +48,6 @@ static_assert(offsetof(GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter, CallFun
 static_assert(offsetof(GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000018, "Member 'GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter, CallFunc_Map_Find_Value) == 0x00001C, "Member 'GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter::CallFunc_Map_Find_Value' has a wrong offset!");
 static_assert(offsetof(GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter, CallFunc_Map_Find_ReturnValue) == 0x000024, "Member 'GA_AbilityMontageBase_C_BP_SetEnbaleBulletFilter::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-
-// Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.BP_IsMoving
-// 0x0001 (0x0001 - 0x0000)
-struct GA_AbilityMontageBase_C_BP_IsMoving final
-{
-public:
-	bool                                          IsMoving;                                          // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_AbilityMontageBase_C_BP_IsMoving) == 0x000001, "Wrong alignment on GA_AbilityMontageBase_C_BP_IsMoving");
-static_assert(sizeof(GA_AbilityMontageBase_C_BP_IsMoving) == 0x000001, "Wrong size on GA_AbilityMontageBase_C_BP_IsMoving");
-static_assert(offsetof(GA_AbilityMontageBase_C_BP_IsMoving, IsMoving) == 0x000000, "Member 'GA_AbilityMontageBase_C_BP_IsMoving::IsMoving' has a wrong offset!");
 
 // Function GA_AbilityMontageBase.GA_AbilityMontageBase_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

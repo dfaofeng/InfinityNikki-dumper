@@ -18,14 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LevelConfigActor_Master.BP_LevelConfigActor_Master_C
-// 0x00C0 (0x0B30 - 0x0A70)
+// 0x00C0 (0x0B58 - 0x0A98)
 class ABP_LevelConfigActor_Master_C : public AEnvironmentLevelConfigActor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0A70(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Sun_Mobile_Fixed_Rotator;                          // 0x0A78(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TMap<class FString, double>                   Mobile_Scalability_Console_Variable;               // 0x0A90(0x0050)(Edit, BlueprintVisible)
-	TMap<class FString, double>                   PC_Scalability_Console_Variable;                   // 0x0AE0(0x0050)(Edit, BlueprintVisible)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0A98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Sun_Mobile_Fixed_Rotator;                          // 0x0AA0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TMap<class FString, double>                   Mobile_Scalability_Console_Variable;               // 0x0AB8(0x0050)(Edit, BlueprintVisible)
+	TMap<class FString, double>                   PC_Scalability_Console_Variable;                   // 0x0B08(0x0050)(Edit, BlueprintVisible)
 
 public:
 	static class UClass* StaticClass()
@@ -38,11 +38,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_LevelConfigActor_Master_C) == 0x000008, "Wrong alignment on ABP_LevelConfigActor_Master_C");
-static_assert(sizeof(ABP_LevelConfigActor_Master_C) == 0x000B30, "Wrong size on ABP_LevelConfigActor_Master_C");
-static_assert(offsetof(ABP_LevelConfigActor_Master_C, DefaultSceneRoot) == 0x000A70, "Member 'ABP_LevelConfigActor_Master_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigActor_Master_C, Sun_Mobile_Fixed_Rotator) == 0x000A78, "Member 'ABP_LevelConfigActor_Master_C::Sun_Mobile_Fixed_Rotator' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigActor_Master_C, Mobile_Scalability_Console_Variable) == 0x000A90, "Member 'ABP_LevelConfigActor_Master_C::Mobile_Scalability_Console_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigActor_Master_C, PC_Scalability_Console_Variable) == 0x000AE0, "Member 'ABP_LevelConfigActor_Master_C::PC_Scalability_Console_Variable' has a wrong offset!");
+static_assert(sizeof(ABP_LevelConfigActor_Master_C) == 0x000B58, "Wrong size on ABP_LevelConfigActor_Master_C");
+static_assert(offsetof(ABP_LevelConfigActor_Master_C, DefaultSceneRoot) == 0x000A98, "Member 'ABP_LevelConfigActor_Master_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigActor_Master_C, Sun_Mobile_Fixed_Rotator) == 0x000AA0, "Member 'ABP_LevelConfigActor_Master_C::Sun_Mobile_Fixed_Rotator' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigActor_Master_C, Mobile_Scalability_Console_Variable) == 0x000AB8, "Member 'ABP_LevelConfigActor_Master_C::Mobile_Scalability_Console_Variable' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigActor_Master_C, PC_Scalability_Console_Variable) == 0x000B08, "Member 'ABP_LevelConfigActor_Master_C::PC_Scalability_Console_Variable' has a wrong offset!");
 
 }
 

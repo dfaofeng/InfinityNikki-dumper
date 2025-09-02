@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "WwiseExtension_structs.hpp"
 #include "Engine_classes.hpp"
+#include "WwiseExtension_structs.hpp"
 
 
 namespace SDK

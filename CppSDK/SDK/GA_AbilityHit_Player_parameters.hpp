@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ECombatHitDir_structs.hpp"
 #include "EHitPlayerState_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "ECombatHitDir_structs.hpp"
 
 
 namespace SDK::Params

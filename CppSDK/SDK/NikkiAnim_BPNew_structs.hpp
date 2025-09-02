@@ -18,90 +18,90 @@ namespace SDK
 {
 
 // ScriptStruct NikkiAnim_BPNew.NikkiAnim_BPNew_C.AnimBlueprintGeneratedConstantData
-// 0x3F27 (0x3F28 - 0x0001)
+// 0x40A7 (0x40A8 - 0x0001)
 struct NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData final : public FAnimBlueprintConstantData
 {
 public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_1160;                               // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1161;                               // 0x000C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1162;                               // 0x0014(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1163;                               // 0x001C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1164;                               // 0x0024(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1165;                               // 0x002C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1166;                               // 0x0034(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1167;                               // 0x003C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1168;                               // 0x0044(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1169;                               // 0x004C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1170;                               // 0x0054(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1171;                               // 0x005C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1172;                               // 0x0064(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1173;                               // 0x006C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1174;                               // 0x0074(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1175;                               // 0x007C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1176;                               // 0x0084(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1177;                               // 0x008C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1178;                               // 0x0094(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1179;                               // 0x009C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1180;                               // 0x00A4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1181;                               // 0x00AC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1182;                               // 0x00B4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1183;                               // 0x00BC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1184;                               // 0x00C4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1185;                               // 0x00CC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1186;                               // 0x00D4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1187;                               // 0x00DC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1188;                               // 0x00E4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1189;                               // 0x00EC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1190;                               // 0x00F4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1191;                               // 0x00FC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1190;                               // 0x0004(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1191;                               // 0x000C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1192;                               // 0x0014(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1193;                               // 0x001C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1194;                               // 0x0024(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1195;                               // 0x002C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1196;                               // 0x0034(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1197;                               // 0x003C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1198;                               // 0x0044(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1199;                               // 0x004C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1200;                               // 0x0054(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1201;                               // 0x005C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1202;                               // 0x0064(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1203;                               // 0x006C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1204;                               // 0x0074(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1205;                               // 0x007C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1206;                               // 0x0084(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1207;                               // 0x008C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1208;                               // 0x0094(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1209;                               // 0x009C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1210;                               // 0x00A4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1211;                               // 0x00AC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1212;                               // 0x00B4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1213;                               // 0x00BC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1214;                               // 0x00C4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1215;                               // 0x00CC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1216;                               // 0x00D4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1217;                               // 0x00DC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1218;                               // 0x00E4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1219;                               // 0x00EC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1220;                               // 0x00F4(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1221;                               // 0x00FC(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 __ArrayProperty_1192;                              // 0x0108(0x0010)(BlueprintVisible)
-	EBlendListTransitionType                      __EnumProperty_1193;                               // 0x0118(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_1194;                              // 0x0120(0x0010)(BlueprintVisible, EditFixedSize)
-	TArray<int32>                                 __ArrayProperty_1195;                              // 0x0130(0x0010)(BlueprintVisible)
-	class FName                                   __NameProperty_1196;                               // 0x0140(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_1197;                                // 0x0148(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1198;                               // 0x014C(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_1199;                                // 0x0154(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<float>                                 __ArrayProperty_1200;                              // 0x0158(0x0010)(BlueprintVisible, EditFixedSize)
-	class FName                                   __NameProperty_1201;                               // 0x0168(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   __NameProperty_1202;                               // 0x0170(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         __IntProperty_1203;                                // 0x0178(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_1204;                              // 0x0180(0x0010)(BlueprintVisible, EditFixedSize)
-	struct FAnimNodeFunctionRef                   __StructProperty_1205;                             // 0x0190(0x0020)(BlueprintVisible, NoDestructor)
-	struct FAnimNodeFunctionRef                   __StructProperty_1206;                             // 0x01B0(0x0020)(BlueprintVisible, NoDestructor)
-	TArray<float>                                 __ArrayProperty_1207;                              // 0x01D0(0x0010)(BlueprintVisible, EditFixedSize)
-	struct FAnimNodeFunctionRef                   __StructProperty_1208;                             // 0x01E0(0x0020)(BlueprintVisible, NoDestructor)
-	ERefPoseType                                  __ByteProperty_1209;                               // 0x0200(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<float>                                 __ArrayProperty_1222;                              // 0x0108(0x0010)(BlueprintVisible, EditFixedSize)
+	TArray<int32>                                 __ArrayProperty_1223;                              // 0x0118(0x0010)(BlueprintVisible)
+	class FName                                   __NameProperty_1224;                               // 0x0128(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_1225;                                // 0x0130(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1226;                               // 0x0134(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_1227;                                // 0x013C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<float>                                 __ArrayProperty_1228;                              // 0x0140(0x0010)(BlueprintVisible, EditFixedSize)
+	class FName                                   __NameProperty_1229;                               // 0x0150(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   __NameProperty_1230;                               // 0x0158(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         __IntProperty_1231;                                // 0x0160(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_1232;                              // 0x0168(0x0010)(BlueprintVisible, EditFixedSize)
+	EBlendListTransitionType                      __EnumProperty_1233;                               // 0x0178(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 __ArrayProperty_1234;                              // 0x0180(0x0010)(BlueprintVisible)
+	struct FAnimNodeFunctionRef                   __StructProperty_1235;                             // 0x0190(0x0020)(BlueprintVisible, NoDestructor)
+	struct FAnimNodeFunctionRef                   __StructProperty_1236;                             // 0x01B0(0x0020)(BlueprintVisible, NoDestructor)
+	TArray<float>                                 __ArrayProperty_1237;                              // 0x01D0(0x0010)(BlueprintVisible, EditFixedSize)
+	struct FAnimNodeFunctionRef                   __StructProperty_1238;                             // 0x01E0(0x0020)(BlueprintVisible, NoDestructor)
+	ERefPoseType                                  __ByteProperty_1239;                               // 0x0200(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_201[0x7];                                      // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_1210;                              // 0x0208(0x0010)(BlueprintVisible, EditFixedSize)
-	struct FAnimNodeFunctionRef                   __StructProperty_1211;                             // 0x0218(0x0020)(BlueprintVisible, NoDestructor)
-	class UCurveFloat*                            __CurveFloat_1212;                                 // 0x0238(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	EAlphaBlendOption                             __EnumProperty_1213;                               // 0x0240(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_1214;                              // 0x0248(0x0010)(BlueprintVisible, EditFixedSize)
-	bool                                          __BoolProperty_1215;                               // 0x0258(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_259[0x3];                                      // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         __FloatProperty_1216;                              // 0x025C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FInputScaleBiasClampConstants          __StructProperty_1217;                             // 0x0260(0x002C)(BlueprintVisible, NoDestructor)
-	float                                         __FloatProperty_1218;                              // 0x028C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimSyncMethod                               __EnumProperty_1219;                               // 0x0290(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAnimGroupRole                                __ByteProperty_1220;                               // 0x0291(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_292[0x2];                                      // 0x0292(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   __NameProperty_1221;                               // 0x0294(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlendProfile*                          __BlendProfile_1222;                               // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UCurveFloat*                            __CurveFloat_1223;                                 // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          __BoolProperty_1224;                               // 0x02B0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAlphaBlendOption                             __EnumProperty_1225;                               // 0x02B1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBlendListTransitionType                      __EnumProperty_1226;                               // 0x02B2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B3[0x5];                                      // 0x02B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_1227;                              // 0x02B8(0x0010)(BlueprintVisible, EditFixedSize)
-	struct FAnimNodeFunctionRef                   __StructProperty_1228;                             // 0x02C8(0x0020)(BlueprintVisible, NoDestructor)
-	struct FAnimNodeFunctionRef                   __StructProperty_1229;                             // 0x02E8(0x0020)(BlueprintVisible, NoDestructor)
+	struct FAnimNodeFunctionRef                   __StructProperty_1240;                             // 0x0208(0x0020)(BlueprintVisible, NoDestructor)
+	class UCurveFloat*                            __CurveFloat_1241;                                 // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	EAlphaBlendOption                             __EnumProperty_1242;                               // 0x0230(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_1243;                              // 0x0238(0x0010)(BlueprintVisible, EditFixedSize)
+	bool                                          __BoolProperty_1244;                               // 0x0248(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_249[0x3];                                      // 0x0249(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         __FloatProperty_1245;                              // 0x024C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FInputScaleBiasClampConstants          __StructProperty_1246;                             // 0x0250(0x002C)(BlueprintVisible, NoDestructor)
+	float                                         __FloatProperty_1247;                              // 0x027C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimSyncMethod                               __EnumProperty_1248;                               // 0x0280(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAnimGroupRole                                __ByteProperty_1249;                               // 0x0281(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_282[0x2];                                      // 0x0282(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   __NameProperty_1250;                               // 0x0284(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_1251;                              // 0x0290(0x0010)(BlueprintVisible, EditFixedSize)
+	struct FAnimNodeFunctionRef                   __StructProperty_1252;                             // 0x02A0(0x0020)(BlueprintVisible, NoDestructor)
+	class UBlendProfile*                          __BlendProfile_1253;                               // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UCurveFloat*                            __CurveFloat_1254;                                 // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          __BoolProperty_1255;                               // 0x02D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAlphaBlendOption                             __EnumProperty_1256;                               // 0x02D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBlendListTransitionType                      __EnumProperty_1257;                               // 0x02D2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D3[0x5];                                      // 0x02D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_1258;                              // 0x02D8(0x0010)(BlueprintVisible, EditFixedSize)
+	struct FAnimNodeFunctionRef                   __StructProperty_1259;                             // 0x02E8(0x0020)(BlueprintVisible, NoDestructor)
 	struct FAnimSubsystem_Tag                     AnimBlueprintExtension_Tag;                        // 0x0308(0x0060)()
 	struct FAnimSubsystem_PropertyAccess          AnimBlueprintExtension_PropertyAccess;             // 0x0368(0x0080)()
 	struct FAnimSubsystem                         AnimBlueprintExtension_NodeRelevancy;              // 0x03E8(0x0008)()
@@ -147,215 +147,215 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_4;               // 0x0AD8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root_2;                         // 0x0B08(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedInputPose_1;              // 0x0B38(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_40;              // 0x0B68(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_39;              // 0x0B98(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_41;              // 0x0B68(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_40;              // 0x0B98(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root_1;                         // 0x0BC8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_87;               // 0x0BF8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_38;              // 0x0C28(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_86;               // 0x0C58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_85;               // 0x0C88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_89;               // 0x0BF8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_39;              // 0x0C28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_88;               // 0x0C58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_87;               // 0x0C88(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_MakeDynamicAdditive_1;          // 0x0CB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_37;              // 0x0CE8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_84;               // 0x0D18(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_83;               // 0x0D48(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_38;              // 0x0CE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_86;               // 0x0D18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_85;               // 0x0D48(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_MakeDynamicAdditive;            // 0x0D78(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_36;              // 0x0DA8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_37;              // 0x0DA8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_16;            // 0x0DD8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_82;               // 0x0E08(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_81;               // 0x0E38(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_84;               // 0x0E08(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_83;               // 0x0E38(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive_4;       // 0x0E68(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_35;              // 0x0E98(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_34;              // 0x0EC8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_80;               // 0x0EF8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_36;              // 0x0E98(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_35;              // 0x0EC8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_82;               // 0x0EF8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive_4;                // 0x0F28(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_79;               // 0x0F58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_33;              // 0x0F88(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_78;               // 0x0FB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_77;               // 0x0FE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_81;               // 0x0F58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_34;              // 0x0F88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_80;               // 0x0FB8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_79;               // 0x0FE8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_15;            // 0x1018(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive_3;                // 0x1048(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_76;               // 0x1078(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_75;               // 0x10A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_78;               // 0x1078(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_77;               // 0x10A8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive_3;       // 0x10D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_74;               // 0x1108(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_32;              // 0x1138(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_76;               // 0x1108(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_33;              // 0x1138(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_14;            // 0x1168(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_73;               // 0x1198(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_75;               // 0x1198(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6PoseFilter_1;                 // 0x11C8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedInputPose;                // 0x11F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_72;               // 0x1228(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_71;               // 0x1258(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_70;               // 0x1288(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_74;               // 0x1228(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_73;               // 0x1258(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_72;               // 0x1288(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive_2;       // 0x12B8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_31;              // 0x12E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_32;              // 0x12E8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive_1;       // 0x1318(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_7;                  // 0x1348(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_69;               // 0x1378(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_68;               // 0x13A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_71;               // 0x1378(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_70;               // 0x13A8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_6;                  // 0x13D8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_13;            // 0x1408(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_67;               // 0x1438(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_66;               // 0x1468(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_65;               // 0x1498(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_64;               // 0x14C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_69;               // 0x1438(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_68;               // 0x1468(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_67;               // 0x1498(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_66;               // 0x14C8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyMeshSpaceAdditive;         // 0x14F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_30;              // 0x1528(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_63;               // 0x1558(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_31;              // 0x1528(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_65;               // 0x1558(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_5;                  // 0x1588(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_62;               // 0x15B8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_61;               // 0x15E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_64;               // 0x15B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_63;               // 0x15E8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_12;            // 0x1618(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6PoseFilter;                   // 0x1648(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_13;                        // 0x1678(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Root;                           // 0x16A8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByEnum_1;              // 0x16D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_29;              // 0x1708(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_12;                        // 0x1738(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_11;            // 0x1768(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_11;                        // 0x1798(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_28;              // 0x17C8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_60;               // 0x17F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_10;                        // 0x1828(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_9;                         // 0x1858(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByEnum;                // 0x1888(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_10;            // 0x18B8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_59;               // 0x18E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_58;               // 0x1918(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_30;              // 0x16D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_12;                        // 0x1708(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_11;            // 0x1738(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_11;                        // 0x1768(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_29;              // 0x1798(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_10;                        // 0x17C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_9;                         // 0x17F8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByEnum_1;              // 0x1828(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_10;                  // 0x1858(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_14;             // 0x1888(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_28;              // 0x18B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_13;             // 0x18E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_62;               // 0x1918(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_27;              // 0x1948(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_13;             // 0x1978(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_26;              // 0x19A8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_12;             // 0x19D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_57;               // 0x1A08(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_25;              // 0x1A38(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_15;             // 0x1A68(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_14;             // 0x1A98(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_13;             // 0x1AC8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_12;             // 0x1AF8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_11;             // 0x1B28(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_10;             // 0x1B58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_56;               // 0x1B88(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_9;              // 0x1BB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_55;               // 0x1BE8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_9;                   // 0x1C18(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_24;              // 0x1C48(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_23;              // 0x1C78(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_5;             // 0x1CA8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_4;             // 0x1CD8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_3;             // 0x1D08(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_2;             // 0x1D38(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_1;             // 0x1D68(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult;               // 0x1D98(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_54;               // 0x1DC8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_2;                  // 0x1DF8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_53;               // 0x1E28(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_1;                  // 0x1E58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateMachine_1;                 // 0x1E88(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_22;              // 0x1EB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Inertialization;                // 0x1EE8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_8;                         // 0x1F18(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive_2;                // 0x1F48(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_IdentityPose_3;                 // 0x1F78(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_52;               // 0x1FA8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_51;               // 0x1FD8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_21;              // 0x2008(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_50;               // 0x2038(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_49;               // 0x2068(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_20;              // 0x2098(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_48;               // 0x20C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_15;             // 0x1978(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_14;             // 0x19A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_13;             // 0x19D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_12;             // 0x1A08(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_11;             // 0x1A38(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_10;             // 0x1A68(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace_3;        // 0x1A98(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace_3;        // 0x1AC8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_6;                     // 0x1AF8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_61;               // 0x1B28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_9;              // 0x1B58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_60;               // 0x1B88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_59;               // 0x1BB8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_9;                   // 0x1BE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_26;              // 0x1C18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_25;              // 0x1C48(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_5;             // 0x1C78(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_4;             // 0x1CA8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_3;             // 0x1CD8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_2;             // 0x1D08(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult_1;             // 0x1D38(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TransitionResult;               // 0x1D68(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_58;               // 0x1D98(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_2;                  // 0x1DC8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_57;               // 0x1DF8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult_1;                  // 0x1E28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateMachine_1;                 // 0x1E58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_24;              // 0x1E88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Inertialization;                // 0x1EB8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_8;                         // 0x1EE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive_2;                // 0x1F18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_IdentityPose_3;                 // 0x1F48(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_56;               // 0x1F78(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_55;               // 0x1FA8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_54;               // 0x1FD8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_23;              // 0x2008(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_53;               // 0x2038(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_52;               // 0x2068(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_22;              // 0x2098(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_51;               // 0x20C8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_3;               // 0x20F8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_8;              // 0x2128(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_11;             // 0x2158(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_12;             // 0x2158(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_7;              // 0x2188(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_8;                   // 0x21B8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_4;                  // 0x21E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_19;              // 0x2218(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_47;               // 0x2248(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_46;               // 0x2278(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_21;              // 0x2218(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_50;               // 0x2248(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_49;               // 0x2278(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_7;                   // 0x22A8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_18;              // 0x22D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_20;              // 0x22D8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_6;                   // 0x2308(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_45;               // 0x2338(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_10;             // 0x2368(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_44;               // 0x2398(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_48;               // 0x2338(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_11;             // 0x2368(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_47;               // 0x2398(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_5;                   // 0x23C8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateResult;                    // 0x23F8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_StateMachine;                   // 0x2428(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_17;              // 0x2458(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_7;                         // 0x2488(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_9;             // 0x24B8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_16;              // 0x24E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_43;               // 0x2518(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_42;               // 0x2548(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_15;              // 0x2578(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_41;               // 0x25A8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_40;               // 0x25D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_9;              // 0x2608(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_39;               // 0x2638(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_4;                   // 0x2668(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_6;              // 0x2698(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyCurve;                    // 0x26C8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_8;             // 0x26F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_6;                         // 0x2728(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive_1;                // 0x2758(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_IdentityPose_2;                 // 0x2788(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalRefPose;                   // 0x27B8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_38;               // 0x27E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_37;               // 0x2818(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_3;                   // 0x2848(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_7;             // 0x2878(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_5;                     // 0x28A8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_4;                     // 0x28D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace_2;        // 0x2908(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace_2;        // 0x2938(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_14;              // 0x2968(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_19;              // 0x2458(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_18;              // 0x2488(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_10;             // 0x24B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_7;                         // 0x24E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_10;            // 0x2518(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_17;              // 0x2548(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_46;               // 0x2578(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_45;               // 0x25A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_16;              // 0x25D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_44;               // 0x2608(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_43;               // 0x2638(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_9;              // 0x2668(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_42;               // 0x2698(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_4;                   // 0x26C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_6;              // 0x26F8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ModifyCurve;                    // 0x2728(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_9;             // 0x2758(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_6;                         // 0x2788(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive_1;                // 0x27B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_IdentityPose_2;                 // 0x27E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalRefPose;                   // 0x2818(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_41;               // 0x2848(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_3;                   // 0x2878(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_8;             // 0x28A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_5;                     // 0x28D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_4;                     // 0x2908(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace_2;        // 0x2938(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace_2;        // 0x2968(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_8;              // 0x2998(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_13;              // 0x29C8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_36;               // 0x29F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_35;               // 0x2A28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_15;              // 0x29C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_40;               // 0x29F8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_39;               // 0x2A28(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendSpacePlayer;               // 0x2A58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_6;             // 0x2A88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_7;             // 0x2A88(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_7;              // 0x2AB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_12;              // 0x2AE8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_34;               // 0x2B18(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_33;               // 0x2B48(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_32;               // 0x2B78(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_31;               // 0x2BA8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_5;             // 0x2BD8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_30;               // 0x2C08(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_14;              // 0x2AE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_38;               // 0x2B18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_37;               // 0x2B48(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_36;               // 0x2B78(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_6;             // 0x2BA8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByEnum;                // 0x2BD8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_35;               // 0x2C08(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_5;              // 0x2C38(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_4;              // 0x2C68(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_6;              // 0x2C98(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_5;             // 0x2C98(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_3;              // 0x2CC8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_2;              // 0x2CF8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_11;              // 0x2D28(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_29;               // 0x2D58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_28;               // 0x2D88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_13;              // 0x2D28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_34;               // 0x2D58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_33;               // 0x2D88(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_2;               // 0x2DB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_2;                   // 0x2DE8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_1;                   // 0x2E18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_32;               // 0x2DE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_31;               // 0x2E18(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer_1;              // 0x2E48(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_10;              // 0x2E78(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_12;              // 0x2E78(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_PoseBlendNode;                  // 0x2EA8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_5;               // 0x2ED8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_5;                         // 0x2F08(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_4;               // 0x2F38(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_PoseMatchRecorder;              // 0x2F68(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_5;              // 0x2F98(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_6;              // 0x2F98(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6AnimContext;                  // 0x2FC8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimGraph;                // 0x2FF8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_27;               // 0x3028(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_30;               // 0x3028(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_Stylized_1;      // 0x3058(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6StateMachineMarker;           // 0x3088(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_9;               // 0x30B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_11;              // 0x30B8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_Stylized;        // 0x30E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_26;               // 0x3118(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_29;               // 0x3118(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_3;               // 0x3148(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_25;               // 0x3178(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_4;              // 0x31A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_28;               // 0x3178(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_5;              // 0x31A8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_4;                         // 0x31D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_8;               // 0x3208(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_24;               // 0x3238(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_23;               // 0x3268(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_10;              // 0x3208(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_27;               // 0x3238(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_26;               // 0x3268(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_4;             // 0x3298(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ApplyAdditive;                  // 0x32C8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_3;             // 0x32F8(0x0030)()
@@ -365,137 +365,145 @@ public:
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace_1;        // 0x33B8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_3;                     // 0x33E8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace_1;        // 0x3418(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_7;               // 0x3448(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_9;               // 0x3448(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_3;                         // 0x3478(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_22;               // 0x34A8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_21;               // 0x34D8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_20;               // 0x3508(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_6;               // 0x3538(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_19;               // 0x3568(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_18;               // 0x3598(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_3;              // 0x35C8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_25;               // 0x34A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_24;               // 0x34D8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_23;               // 0x3508(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_8;               // 0x3538(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_22;               // 0x3568(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_21;               // 0x3598(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_4;              // 0x35C8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_2;                         // 0x35F8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_IdentityPose;                   // 0x3628(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_5;               // 0x3658(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_17;               // 0x3688(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_4;               // 0x36B8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_16;               // 0x36E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_2;              // 0x3718(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_7;               // 0x3658(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_20;               // 0x3688(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_6;               // 0x36B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_19;               // 0x36E8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_3;              // 0x3718(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend_1;             // 0x3748(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_15;               // 0x3778(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_14;               // 0x37A8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_18;               // 0x3778(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_17;               // 0x37A8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_2;                     // 0x37D8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LocalToComponentSpace;          // 0x3808(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone_1;                     // 0x3838(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_CopyBone;                       // 0x3868(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ComponentToLocalSpace;          // 0x3898(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LayeredBoneBlend;               // 0x38C8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_13;               // 0x38F8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_12;               // 0x3928(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_16;               // 0x38F8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_15;               // 0x3928(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_2;               // 0x3958(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_11;               // 0x3988(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_1;              // 0x39B8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_14;               // 0x3988(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_2;              // 0x39B8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_LinkedAnimLayer;                // 0x39E8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_3;               // 0x3A18(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_10;               // 0x3A48(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_5;               // 0x3A18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_13;               // 0x3A48(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend_1;               // 0x3A78(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot_1;                         // 0x3AA8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_9;                // 0x3AD8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_12;               // 0x3AD8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer_1;               // 0x3B08(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_2;               // 0x3B38(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_8;                // 0x3B68(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_4;               // 0x3B38(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_11;               // 0x3B68(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_X6OverlayBlend;                 // 0x3B98(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SequencePlayer;                 // 0x3BC8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_Slot;                           // 0x3BF8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_7;                // 0x3C28(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool;                // 0x3C58(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_6;                // 0x3C88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_10;               // 0x3C28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool_1;              // 0x3C58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_9;                // 0x3C88(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_3;                  // 0x3CB8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_1;               // 0x3CE8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_5;                // 0x3D18(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_4;                // 0x3D48(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_3;               // 0x3CE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_8;                // 0x3D18(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_7;                // 0x3D48(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_2;                  // 0x3D78(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_3;                // 0x3DA8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_6;                // 0x3DA8(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend_1;                  // 0x3DD8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_2;                // 0x3E08(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose;                 // 0x3E38(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                // 0x3E68(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_5;                // 0x3E08(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_2;               // 0x3E38(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_4;                // 0x3E68(0x0030)()
 	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_TwoWayBlend;                    // 0x3E98(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0x3EC8(0x0030)()
-	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig;                     // 0x3EF8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_3;                // 0x3EC8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_2;                   // 0x3EF8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose_1;               // 0x3F28(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig_1;                   // 0x3F58(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_ControlRig;                     // 0x3F88(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_BlendListByBool;                // 0x3FB8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_2;                // 0x3FE8(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose_1;                // 0x4018(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_SaveCachedPose;                 // 0x4048(0x0030)()
+	struct FAnimNodeExposedValueHandler_PropertyAccess AnimGraphNode_UseCachedPose;                  // 0x4078(0x0030)()
 };
 static_assert(alignof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData) == 0x000008, "Wrong alignment on NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData");
-static_assert(sizeof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData) == 0x003F28, "Wrong size on NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1160) == 0x000004, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1160' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1161) == 0x00000C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1161' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1162) == 0x000014, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1162' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1163) == 0x00001C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1163' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1164) == 0x000024, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1164' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1165) == 0x00002C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1165' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1166) == 0x000034, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1166' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1167) == 0x00003C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1167' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1168) == 0x000044, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1168' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1169) == 0x00004C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1169' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1170) == 0x000054, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1170' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1171) == 0x00005C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1171' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1172) == 0x000064, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1172' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1173) == 0x00006C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1173' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1174) == 0x000074, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1174' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1175) == 0x00007C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1175' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1176) == 0x000084, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1176' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1177) == 0x00008C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1177' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1178) == 0x000094, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1178' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1179) == 0x00009C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1179' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1180) == 0x0000A4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1180' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1181) == 0x0000AC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1181' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1182) == 0x0000B4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1182' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1183) == 0x0000BC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1183' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1184) == 0x0000C4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1184' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1185) == 0x0000CC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1185' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1186) == 0x0000D4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1186' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1187) == 0x0000DC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1187' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1188) == 0x0000E4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1188' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1189) == 0x0000EC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1189' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1190) == 0x0000F4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1190' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1191) == 0x0000FC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1191' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1192) == 0x000108, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1192' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1193) == 0x000118, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1193' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1194) == 0x000120, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1194' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1195) == 0x000130, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1195' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1196) == 0x000140, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1196' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __IntProperty_1197) == 0x000148, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__IntProperty_1197' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1198) == 0x00014C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1198' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __IntProperty_1199) == 0x000154, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__IntProperty_1199' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1200) == 0x000158, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1200' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1201) == 0x000168, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1201' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1202) == 0x000170, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1202' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __IntProperty_1203) == 0x000178, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__IntProperty_1203' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1204) == 0x000180, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1204' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1205) == 0x000190, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1205' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1206) == 0x0001B0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1206' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1207) == 0x0001D0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1207' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1208) == 0x0001E0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1208' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ByteProperty_1209) == 0x000200, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ByteProperty_1209' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1210) == 0x000208, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1210' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1211) == 0x000218, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1211' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __CurveFloat_1212) == 0x000238, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__CurveFloat_1212' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1213) == 0x000240, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1213' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1214) == 0x000248, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1214' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __BoolProperty_1215) == 0x000258, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__BoolProperty_1215' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __FloatProperty_1216) == 0x00025C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__FloatProperty_1216' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1217) == 0x000260, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1217' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __FloatProperty_1218) == 0x00028C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__FloatProperty_1218' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1219) == 0x000290, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1219' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ByteProperty_1220) == 0x000291, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ByteProperty_1220' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1221) == 0x000294, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1221' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __BlendProfile_1222) == 0x0002A0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__BlendProfile_1222' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __CurveFloat_1223) == 0x0002A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__CurveFloat_1223' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __BoolProperty_1224) == 0x0002B0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__BoolProperty_1224' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1225) == 0x0002B1, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1225' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1226) == 0x0002B2, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1226' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1227) == 0x0002B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1227' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1228) == 0x0002C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1228' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1229) == 0x0002E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1229' has a wrong offset!");
+static_assert(sizeof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData) == 0x0040A8, "Wrong size on NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1190) == 0x000004, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1190' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1191) == 0x00000C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1191' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1192) == 0x000014, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1192' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1193) == 0x00001C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1193' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1194) == 0x000024, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1194' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1195) == 0x00002C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1195' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1196) == 0x000034, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1196' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1197) == 0x00003C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1197' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1198) == 0x000044, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1198' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1199) == 0x00004C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1199' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1200) == 0x000054, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1200' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1201) == 0x00005C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1201' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1202) == 0x000064, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1202' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1203) == 0x00006C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1203' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1204) == 0x000074, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1204' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1205) == 0x00007C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1205' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1206) == 0x000084, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1206' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1207) == 0x00008C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1207' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1208) == 0x000094, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1208' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1209) == 0x00009C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1209' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1210) == 0x0000A4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1210' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1211) == 0x0000AC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1211' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1212) == 0x0000B4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1212' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1213) == 0x0000BC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1213' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1214) == 0x0000C4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1214' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1215) == 0x0000CC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1215' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1216) == 0x0000D4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1216' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1217) == 0x0000DC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1217' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1218) == 0x0000E4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1218' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1219) == 0x0000EC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1219' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1220) == 0x0000F4, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1220' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1221) == 0x0000FC, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1221' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1222) == 0x000108, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1222' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1223) == 0x000118, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1223' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1224) == 0x000128, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1224' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __IntProperty_1225) == 0x000130, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__IntProperty_1225' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1226) == 0x000134, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1226' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __IntProperty_1227) == 0x00013C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__IntProperty_1227' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1228) == 0x000140, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1228' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1229) == 0x000150, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1229' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1230) == 0x000158, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1230' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __IntProperty_1231) == 0x000160, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__IntProperty_1231' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1232) == 0x000168, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1232' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1233) == 0x000178, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1233' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1234) == 0x000180, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1234' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1235) == 0x000190, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1235' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1236) == 0x0001B0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1236' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1237) == 0x0001D0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1237' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1238) == 0x0001E0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1238' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ByteProperty_1239) == 0x000200, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ByteProperty_1239' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1240) == 0x000208, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1240' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __CurveFloat_1241) == 0x000228, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__CurveFloat_1241' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1242) == 0x000230, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1242' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1243) == 0x000238, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1243' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __BoolProperty_1244) == 0x000248, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__BoolProperty_1244' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __FloatProperty_1245) == 0x00024C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__FloatProperty_1245' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1246) == 0x000250, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1246' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __FloatProperty_1247) == 0x00027C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__FloatProperty_1247' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1248) == 0x000280, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1248' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ByteProperty_1249) == 0x000281, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ByteProperty_1249' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __NameProperty_1250) == 0x000284, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__NameProperty_1250' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1251) == 0x000290, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1251' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1252) == 0x0002A0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1252' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __BlendProfile_1253) == 0x0002C0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__BlendProfile_1253' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __CurveFloat_1254) == 0x0002C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__CurveFloat_1254' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __BoolProperty_1255) == 0x0002D0, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__BoolProperty_1255' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1256) == 0x0002D1, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1256' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __EnumProperty_1257) == 0x0002D2, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__EnumProperty_1257' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __ArrayProperty_1258) == 0x0002D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__ArrayProperty_1258' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, __StructProperty_1259) == 0x0002E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::__StructProperty_1259' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_Tag) == 0x000308, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_Tag' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_PropertyAccess) == 0x000368, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimBlueprintExtension_NodeRelevancy) == 0x0003E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimBlueprintExtension_NodeRelevancy' has a wrong offset!");
@@ -541,215 +549,215 @@ static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, Ani
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_4) == 0x000AD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root_2) == 0x000B08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root_2' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedInputPose_1) == 0x000B38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedInputPose_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_40) == 0x000B68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_40' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_39) == 0x000B98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_39' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_41) == 0x000B68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_41' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_40) == 0x000B98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_40' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root_1) == 0x000BC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_87) == 0x000BF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_87' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_38) == 0x000C28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_38' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_86) == 0x000C58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_86' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_85) == 0x000C88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_85' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_89) == 0x000BF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_89' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_39) == 0x000C28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_39' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_88) == 0x000C58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_88' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_87) == 0x000C88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_87' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_MakeDynamicAdditive_1) == 0x000CB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_MakeDynamicAdditive_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_37) == 0x000CE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_37' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_84) == 0x000D18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_84' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_83) == 0x000D48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_83' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_38) == 0x000CE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_38' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_86) == 0x000D18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_86' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_85) == 0x000D48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_85' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_MakeDynamicAdditive) == 0x000D78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_MakeDynamicAdditive' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_36) == 0x000DA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_36' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_37) == 0x000DA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_37' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_16) == 0x000DD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_16' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_82) == 0x000E08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_82' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_81) == 0x000E38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_81' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_84) == 0x000E08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_84' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_83) == 0x000E38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_83' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive_4) == 0x000E68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_35) == 0x000E98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_35' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_34) == 0x000EC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_34' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_80) == 0x000EF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_80' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_36) == 0x000E98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_36' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_35) == 0x000EC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_35' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_82) == 0x000EF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_82' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive_4) == 0x000F28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_79) == 0x000F58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_79' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_33) == 0x000F88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_33' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_78) == 0x000FB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_78' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_77) == 0x000FE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_77' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_81) == 0x000F58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_81' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_34) == 0x000F88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_34' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_80) == 0x000FB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_80' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_79) == 0x000FE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_79' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_15) == 0x001018, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_15' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive_3) == 0x001048, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_76) == 0x001078, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_76' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_75) == 0x0010A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_75' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_78) == 0x001078, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_78' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_77) == 0x0010A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_77' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive_3) == 0x0010D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_74) == 0x001108, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_74' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_32) == 0x001138, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_32' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_76) == 0x001108, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_76' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_33) == 0x001138, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_33' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_14) == 0x001168, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_14' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_73) == 0x001198, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_73' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_75) == 0x001198, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_75' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6PoseFilter_1) == 0x0011C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6PoseFilter_1' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedInputPose) == 0x0011F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_72) == 0x001228, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_72' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_71) == 0x001258, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_71' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_70) == 0x001288, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_70' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_74) == 0x001228, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_74' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_73) == 0x001258, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_73' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_72) == 0x001288, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_72' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive_2) == 0x0012B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_31) == 0x0012E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_31' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_32) == 0x0012E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_32' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive_1) == 0x001318, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive_1' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_7) == 0x001348, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_7' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_69) == 0x001378, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_69' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_68) == 0x0013A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_68' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_71) == 0x001378, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_71' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_70) == 0x0013A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_70' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_6) == 0x0013D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_6' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_13) == 0x001408, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_13' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_67) == 0x001438, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_67' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_66) == 0x001468, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_66' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_65) == 0x001498, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_65' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_64) == 0x0014C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_64' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_69) == 0x001438, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_69' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_68) == 0x001468, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_68' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_67) == 0x001498, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_67' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_66) == 0x0014C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_66' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyMeshSpaceAdditive) == 0x0014F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyMeshSpaceAdditive' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_30) == 0x001528, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_30' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_63) == 0x001558, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_63' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_31) == 0x001528, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_31' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_65) == 0x001558, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_65' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_5) == 0x001588, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_62) == 0x0015B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_62' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_61) == 0x0015E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_61' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_64) == 0x0015B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_64' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_63) == 0x0015E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_63' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_12) == 0x001618, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_12' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6PoseFilter) == 0x001648, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6PoseFilter' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_13) == 0x001678, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_13' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Root) == 0x0016A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByEnum_1) == 0x0016D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByEnum_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_29) == 0x001708, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_29' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_12) == 0x001738, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_12' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_11) == 0x001768, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_11' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_11) == 0x001798, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_11' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_28) == 0x0017C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_28' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_60) == 0x0017F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_60' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_10) == 0x001828, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_10' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_9) == 0x001858, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_9' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByEnum) == 0x001888, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByEnum' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_10) == 0x0018B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_10' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_59) == 0x0018E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_59' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_58) == 0x001918, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_58' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_30) == 0x0016D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_30' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_12) == 0x001708, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_12' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_11) == 0x001738, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_11' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_11) == 0x001768, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_11' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_29) == 0x001798, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_29' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_10) == 0x0017C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_9) == 0x0017F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByEnum_1) == 0x001828, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByEnum_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_10) == 0x001858, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_14) == 0x001888, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_14' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_28) == 0x0018B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_28' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_13) == 0x0018E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_13' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_62) == 0x001918, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_62' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_27) == 0x001948, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_27' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_13) == 0x001978, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_13' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_26) == 0x0019A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_26' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_12) == 0x0019D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_12' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_57) == 0x001A08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_57' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_25) == 0x001A38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_25' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_15) == 0x001A68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_15' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_14) == 0x001A98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_14' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_13) == 0x001AC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_13' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_12) == 0x001AF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_12' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_11) == 0x001B28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_11' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_10) == 0x001B58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_10' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_56) == 0x001B88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_56' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_9) == 0x001BB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_9' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_55) == 0x001BE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_55' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_9) == 0x001C18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_9' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_24) == 0x001C48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_24' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_23) == 0x001C78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_23' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_5) == 0x001CA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_4) == 0x001CD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_3) == 0x001D08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_2) == 0x001D38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_1) == 0x001D68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult) == 0x001D98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_54) == 0x001DC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_54' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_2) == 0x001DF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_53) == 0x001E28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_53' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_1) == 0x001E58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine_1) == 0x001E88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_22) == 0x001EB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_22' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Inertialization) == 0x001EE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_8) == 0x001F18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_8' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive_2) == 0x001F48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_IdentityPose_3) == 0x001F78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_IdentityPose_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_52) == 0x001FA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_52' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_51) == 0x001FD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_51' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_21) == 0x002008, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_21' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_50) == 0x002038, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_50' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_49) == 0x002068, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_49' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_20) == 0x002098, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_20' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_48) == 0x0020C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_48' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_15) == 0x001978, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_15' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_14) == 0x0019A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_14' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_13) == 0x0019D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_13' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_12) == 0x001A08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_12' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_11) == 0x001A38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_11' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_10) == 0x001A68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace_3) == 0x001A98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace_3) == 0x001AC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_6) == 0x001AF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_61) == 0x001B28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_61' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_9) == 0x001B58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_60) == 0x001B88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_60' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_59) == 0x001BB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_59' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_9) == 0x001BE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_26) == 0x001C18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_26' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_25) == 0x001C48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_25' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_5) == 0x001C78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_5' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_4) == 0x001CA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_3) == 0x001CD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_2) == 0x001D08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult_1) == 0x001D38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TransitionResult) == 0x001D68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_58) == 0x001D98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_58' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_2) == 0x001DC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_57) == 0x001DF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_57' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult_1) == 0x001E28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine_1) == 0x001E58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_24) == 0x001E88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_24' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Inertialization) == 0x001EB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Inertialization' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_8) == 0x001EE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_8' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive_2) == 0x001F18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_IdentityPose_3) == 0x001F48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_IdentityPose_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_56) == 0x001F78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_56' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_55) == 0x001FA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_55' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_54) == 0x001FD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_54' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_23) == 0x002008, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_23' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_53) == 0x002038, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_53' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_52) == 0x002068, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_52' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_22) == 0x002098, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_22' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_51) == 0x0020C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_51' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_3) == 0x0020F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_8) == 0x002128, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_8' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_11) == 0x002158, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_11' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_12) == 0x002158, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_12' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_7) == 0x002188, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_7' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_8) == 0x0021B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_8' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_4) == 0x0021E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_19) == 0x002218, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_19' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_47) == 0x002248, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_47' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_46) == 0x002278, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_46' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_21) == 0x002218, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_21' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_50) == 0x002248, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_50' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_49) == 0x002278, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_49' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_7) == 0x0022A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_7' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_18) == 0x0022D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_18' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_20) == 0x0022D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_20' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_6) == 0x002308, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_6' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_45) == 0x002338, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_45' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_10) == 0x002368, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_10' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_44) == 0x002398, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_44' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_48) == 0x002338, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_48' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_11) == 0x002368, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_11' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_47) == 0x002398, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_47' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_5) == 0x0023C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_5' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateResult) == 0x0023F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateResult' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_StateMachine) == 0x002428, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_17) == 0x002458, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_17' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_7) == 0x002488, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_7' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_9) == 0x0024B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_9' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_16) == 0x0024E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_16' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_43) == 0x002518, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_43' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_42) == 0x002548, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_42' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_15) == 0x002578, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_15' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_41) == 0x0025A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_41' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_40) == 0x0025D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_40' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_9) == 0x002608, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_9' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_39) == 0x002638, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_39' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_4) == 0x002668, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_6) == 0x002698, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_6' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyCurve) == 0x0026C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyCurve' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_8) == 0x0026F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_8' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_6) == 0x002728, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_6' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive_1) == 0x002758, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_IdentityPose_2) == 0x002788, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_IdentityPose_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalRefPose) == 0x0027B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalRefPose' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_38) == 0x0027E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_38' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_37) == 0x002818, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_37' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_3) == 0x002848, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_7) == 0x002878, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_7' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_5) == 0x0028A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_4) == 0x0028D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace_2) == 0x002908, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace_2) == 0x002938, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_14) == 0x002968, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_14' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_19) == 0x002458, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_19' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_18) == 0x002488, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_18' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_10) == 0x0024B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_7) == 0x0024E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_7' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_10) == 0x002518, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_17) == 0x002548, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_17' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_46) == 0x002578, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_46' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_45) == 0x0025A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_45' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_16) == 0x0025D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_16' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_44) == 0x002608, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_44' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_43) == 0x002638, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_43' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_9) == 0x002668, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_42) == 0x002698, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_42' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_4) == 0x0026C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_6) == 0x0026F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ModifyCurve) == 0x002728, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ModifyCurve' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_9) == 0x002758, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_6) == 0x002788, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive_1) == 0x0027B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_IdentityPose_2) == 0x0027E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_IdentityPose_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalRefPose) == 0x002818, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalRefPose' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_41) == 0x002848, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_41' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_3) == 0x002878, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_8) == 0x0028A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_8' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_5) == 0x0028D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_5' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_4) == 0x002908, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace_2) == 0x002938, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace_2) == 0x002968, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_8) == 0x002998, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_8' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_13) == 0x0029C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_13' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_36) == 0x0029F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_36' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_35) == 0x002A28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_35' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_15) == 0x0029C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_15' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_40) == 0x0029F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_40' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_39) == 0x002A28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_39' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendSpacePlayer) == 0x002A58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_6) == 0x002A88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_7) == 0x002A88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_7' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_7) == 0x002AB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_7' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_12) == 0x002AE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_12' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_34) == 0x002B18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_34' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_33) == 0x002B48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_33' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_32) == 0x002B78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_32' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_31) == 0x002BA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_31' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_5) == 0x002BD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_30) == 0x002C08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_30' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_14) == 0x002AE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_14' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_38) == 0x002B18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_38' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_37) == 0x002B48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_37' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_36) == 0x002B78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_36' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_6) == 0x002BA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByEnum) == 0x002BD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByEnum' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_35) == 0x002C08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_35' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_5) == 0x002C38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_5' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_4) == 0x002C68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_6) == 0x002C98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_5) == 0x002C98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_5' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_3) == 0x002CC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_3' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_2) == 0x002CF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_11) == 0x002D28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_11' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_29) == 0x002D58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_29' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_28) == 0x002D88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_28' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_13) == 0x002D28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_13' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_34) == 0x002D58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_34' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_33) == 0x002D88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_33' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_2) == 0x002DB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_2) == 0x002DE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_1) == 0x002E18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_32) == 0x002DE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_32' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_31) == 0x002E18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_31' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer_1) == 0x002E48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_10) == 0x002E78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_12) == 0x002E78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_12' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_PoseBlendNode) == 0x002EA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_PoseBlendNode' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_5) == 0x002ED8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_5' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_5) == 0x002F08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_5' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_4) == 0x002F38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_4' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_PoseMatchRecorder) == 0x002F68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_PoseMatchRecorder' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_5) == 0x002F98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_5' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_6) == 0x002F98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_6' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6AnimContext) == 0x002FC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6AnimContext' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimGraph) == 0x002FF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_27) == 0x003028, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_27' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_30) == 0x003028, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_30' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_Stylized_1) == 0x003058, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_Stylized_1' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6StateMachineMarker) == 0x003088, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6StateMachineMarker' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_9) == 0x0030B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_11) == 0x0030B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_11' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_Stylized) == 0x0030E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_Stylized' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_26) == 0x003118, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_26' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_29) == 0x003118, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_29' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_3) == 0x003148, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_25) == 0x003178, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_25' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_4) == 0x0031A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_28) == 0x003178, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_28' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_5) == 0x0031A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_5' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_4) == 0x0031D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_8) == 0x003208, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_8' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_24) == 0x003238, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_24' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_23) == 0x003268, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_23' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_10) == 0x003208, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_27) == 0x003238, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_27' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_26) == 0x003268, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_26' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_4) == 0x003298, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_4' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ApplyAdditive) == 0x0032C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ApplyAdditive' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_3) == 0x0032F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_3' has a wrong offset!");
@@ -759,64 +767,72 @@ static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, Ani
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace_1) == 0x0033B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_3) == 0x0033E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_3' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace_1) == 0x003418, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_7) == 0x003448, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_7' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_9) == 0x003448, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_9' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_3) == 0x003478, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_22) == 0x0034A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_22' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_21) == 0x0034D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_21' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_20) == 0x003508, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_20' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_6) == 0x003538, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_6' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_19) == 0x003568, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_19' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_18) == 0x003598, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_18' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_3) == 0x0035C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_25) == 0x0034A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_25' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_24) == 0x0034D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_24' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_23) == 0x003508, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_23' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_8) == 0x003538, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_8' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_22) == 0x003568, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_22' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_21) == 0x003598, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_21' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_4) == 0x0035C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_2) == 0x0035F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_2' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_IdentityPose) == 0x003628, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_IdentityPose' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_5) == 0x003658, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_17) == 0x003688, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_4) == 0x0036B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_16) == 0x0036E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_2) == 0x003718, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_7) == 0x003658, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_7' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_20) == 0x003688, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_20' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_6) == 0x0036B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_19) == 0x0036E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_19' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_3) == 0x003718, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend_1) == 0x003748, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_15) == 0x003778, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_14) == 0x0037A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_18) == 0x003778, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_18' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_17) == 0x0037A8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_2) == 0x0037D8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_2' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LocalToComponentSpace) == 0x003808, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone_1) == 0x003838, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone_1' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_CopyBone) == 0x003868, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_CopyBone' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ComponentToLocalSpace) == 0x003898, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LayeredBoneBlend) == 0x0038C8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_13) == 0x0038F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_12) == 0x003928, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_16) == 0x0038F8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_15) == 0x003928, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_2) == 0x003958, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_11) == 0x003988, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_1) == 0x0039B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_14) == 0x003988, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_2) == 0x0039B8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_LinkedAnimLayer) == 0x0039E8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_3) == 0x003A18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_10) == 0x003A48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_5) == 0x003A18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_5' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_13) == 0x003A48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend_1) == 0x003A78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend_1' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot_1) == 0x003AA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_9) == 0x003AD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_12) == 0x003AD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer_1) == 0x003B08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_2) == 0x003B38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_8) == 0x003B68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_4) == 0x003B38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_11) == 0x003B68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_X6OverlayBlend) == 0x003B98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_X6OverlayBlend' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SequencePlayer) == 0x003BC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SequencePlayer' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_Slot) == 0x003BF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_7) == 0x003C28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool) == 0x003C58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_6) == 0x003C88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_10) == 0x003C28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool_1) == 0x003C58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_9) == 0x003C88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_3) == 0x003CB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_1) == 0x003CE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_5) == 0x003D18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_4) == 0x003D48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_3) == 0x003CE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_8) == 0x003D18, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_7) == 0x003D48, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_2) == 0x003D78, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_3) == 0x003DA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_6) == 0x003DA8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend_1) == 0x003DD8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_2) == 0x003E08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose) == 0x003E38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_1) == 0x003E68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_5) == 0x003E08, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_2) == 0x003E38, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_4) == 0x003E68, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_TwoWayBlend) == 0x003E98, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_TwoWayBlend' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose) == 0x003EC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig) == 0x003EF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_3) == 0x003EC8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_2) == 0x003EF8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose_1) == 0x003F28, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig_1) == 0x003F58, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_ControlRig) == 0x003F88, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_ControlRig' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_BlendListByBool) == 0x003FB8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_2) == 0x003FE8, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose_1) == 0x004018, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_SaveCachedPose) == 0x004048, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData, AnimGraphNode_UseCachedPose) == 0x004078, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedConstantData::AnimGraphNode_UseCachedPose' has a wrong offset!");
 
 // ScriptStruct NikkiAnim_BPNew.NikkiAnim_BPNew_C.AnimBlueprintGeneratedMutableData
 // 0x0047 (0x0048 - 0x0001)
@@ -824,20 +840,20 @@ struct NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData final : public FAnimB
 {
 public:
 	uint8                                         __ByteProperty;                                    // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         __ByteProperty_0;                                  // 0x0002(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3[0x5];                                        // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 __ArrayProperty_1;                                 // 0x0008(0x0010)(BlueprintVisible, EditFixedSize)
-	bool                                          __BoolProperty_2;                                  // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_3;                                  // 0x0019(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_4;                                  // 0x001A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_5;                                  // 0x001B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_6;                                  // 0x001C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_7;                                  // 0x001D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 __ArrayProperty_0;                                 // 0x0008(0x0010)(BlueprintVisible, EditFixedSize)
+	bool                                          __BoolProperty_1;                                  // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_2;                                  // 0x0019(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_3;                                  // 0x001A(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_4;                                  // 0x001B(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_5;                                  // 0x001C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_6;                                  // 0x001D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_7;                                  // 0x001E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         __FloatProperty_8;                                 // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         __FloatProperty_9;                                 // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_10;                                 // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __BoolProperty_11;                                 // 0x0029(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         __ByteProperty_11;                                 // 0x0029(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 __ArrayProperty_12;                                // 0x0030(0x0010)(BlueprintVisible, EditFixedSize)
 	bool                                          __BoolProperty_13;                                 // 0x0040(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -846,22 +862,23 @@ public:
 	bool                                          __BoolProperty_16;                                 // 0x0043(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_17;                                 // 0x0044(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          __BoolProperty_18;                                 // 0x0045(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __BoolProperty_19;                                 // 0x0046(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData) == 0x000008, "Wrong alignment on NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData");
 static_assert(sizeof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData) == 0x000048, "Wrong size on NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __ByteProperty) == 0x000001, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__ByteProperty' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __ByteProperty_0) == 0x000002, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__ByteProperty_0' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __ArrayProperty_1) == 0x000008, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__ArrayProperty_1' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_2) == 0x000018, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_2' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_3) == 0x000019, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_3' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_4) == 0x00001A, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_4' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_5) == 0x00001B, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_5' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_6) == 0x00001C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_6' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_7) == 0x00001D, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_7' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __ArrayProperty_0) == 0x000008, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__ArrayProperty_0' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_1) == 0x000018, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_1' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_2) == 0x000019, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_2' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_3) == 0x00001A, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_3' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_4) == 0x00001B, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_4' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_5) == 0x00001C, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_5' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_6) == 0x00001D, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_6' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_7) == 0x00001E, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_7' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __FloatProperty_8) == 0x000020, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__FloatProperty_8' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __FloatProperty_9) == 0x000024, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__FloatProperty_9' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_10) == 0x000028, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_10' has a wrong offset!");
-static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_11) == 0x000029, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_11' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __ByteProperty_11) == 0x000029, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__ByteProperty_11' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __ArrayProperty_12) == 0x000030, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__ArrayProperty_12' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_13) == 0x000040, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_13' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_14) == 0x000041, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_14' has a wrong offset!");
@@ -869,6 +886,7 @@ static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __Bo
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_16) == 0x000043, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_16' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_17) == 0x000044, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_17' has a wrong offset!");
 static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_18) == 0x000045, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_18' has a wrong offset!");
+static_assert(offsetof(NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData, __BoolProperty_19) == 0x000046, "Member 'NikkiAnim_BPNew::FAnimBlueprintGeneratedMutableData::__BoolProperty_19' has a wrong offset!");
 
 }
 

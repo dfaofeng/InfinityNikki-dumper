@@ -917,11 +917,11 @@ void UX6BlueprintCommonLibrary_C::BPEnableActorSimulateBuoyancy(class AActor* Fl
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_UpdateUITips
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   LevelID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LevelId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   GameStage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintCommonLibrary_C::BP_UpdateUITips(int32 LevelID, int32 GameStage, class UObject* __WorldContext)
+void UX6BlueprintCommonLibrary_C::BP_UpdateUITips(int32 LevelId, int32 GameStage, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -930,7 +930,7 @@ void UX6BlueprintCommonLibrary_C::BP_UpdateUITips(int32 LevelID, int32 GameStage
 
 	Params::X6BlueprintCommonLibrary_C_BP_UpdateUITips Parms{};
 
-	Parms.LevelID = LevelID;
+	Parms.LevelId = LevelId;
 	Parms.GameStage = GameStage;
 	Parms.__WorldContext = __WorldContext;
 
@@ -1292,13 +1292,35 @@ void UX6BlueprintCommonLibrary_C::BP_SetActorEnableCollision(class AActor* Actor
 }
 
 
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_ScenarioHomeEventTrigger
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EScenarioHomeEventType                  HomeEventType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_ScenarioHomeEventTrigger(EScenarioHomeEventType HomeEventType, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_ScenarioHomeEventTrigger");
+
+	Params::X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger Parms{};
+
+	Parms.HomeEventType = HomeEventType;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_RequestEnterBattle
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   LevelID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LevelId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintCommonLibrary_C::BP_RequestEnterBattle(int32 LevelID, class UObject* __WorldContext)
+void UX6BlueprintCommonLibrary_C::BP_RequestEnterBattle(int32 LevelId, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1307,7 +1329,7 @@ void UX6BlueprintCommonLibrary_C::BP_RequestEnterBattle(int32 LevelID, class UOb
 
 	Params::X6BlueprintCommonLibrary_C_BP_RequestEnterBattle Parms{};
 
-	Parms.LevelID = LevelID;
+	Parms.LevelId = LevelId;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
@@ -1475,6 +1497,30 @@ void UX6BlueprintCommonLibrary_C::BP_NotifyLogicFadeInFinish(class UUserWidget* 
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_MultiPlatform_IsInGamepadMode
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsGamePad                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_MultiPlatform_IsInGamepadMode(class UObject* __WorldContext, bool* IsGamePad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_MultiPlatform_IsInGamepadMode");
+
+	Params::X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (IsGamePad != nullptr)
+		*IsGamePad = Parms.IsGamePad;
 }
 
 
@@ -2365,14 +2411,14 @@ void UX6BlueprintCommonLibrary_C::BP_SetCurrentGamePlayMode(int32 MainModeID, in
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_RequestLoadStreamingLevel
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   LevelID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   LevelId                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    LevelPath                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // const struct FVector&                   levelLocation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   PlayerLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FRotator&                  PlayerRotation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintCommonLibrary_C::BP_RequestLoadStreamingLevel(int32 LevelID, const class FString& LevelPath, const struct FVector& levelLocation, const struct FVector& PlayerLocation, const struct FRotator& PlayerRotation, class UObject* __WorldContext)
+void UX6BlueprintCommonLibrary_C::BP_RequestLoadStreamingLevel(int32 LevelId, const class FString& LevelPath, const struct FVector& levelLocation, const struct FVector& PlayerLocation, const struct FRotator& PlayerRotation, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2381,7 +2427,7 @@ void UX6BlueprintCommonLibrary_C::BP_RequestLoadStreamingLevel(int32 LevelID, co
 
 	Params::X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel Parms{};
 
-	Parms.LevelID = LevelID;
+	Parms.LevelId = LevelId;
 	Parms.LevelPath = std::move(LevelPath);
 	Parms.levelLocation = std::move(levelLocation);
 	Parms.PlayerLocation = std::move(PlayerLocation);

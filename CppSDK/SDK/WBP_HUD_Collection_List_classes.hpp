@@ -36,20 +36,20 @@ public:
 	class UWBP_HUD_Collection_Energy_C*           WBP_HUD_Collection_Energy;                         // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void TestID(int32 ID);
-	void SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
-	void SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
-	void PlayOutAnim();
-	void OnOutDone();
-	void OnInDone();
-	void OnFadeOut();
-	void OnFadeIn();
-	void FadeInOtherCoin();
-	void FadeInMoonCoin();
-	void ExecuteUbergraph_WBP_HUD_Collection_List(int32 EntryPoint);
-	void Collection_item_01_Event_1(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
-	void Collection_item_01_Event_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
 	void BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void Collection_item_01_Event_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
+	void Collection_item_01_Event_1(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
+	void ExecuteUbergraph_WBP_HUD_Collection_List(int32 EntryPoint);
+	void FadeInMoonCoin();
+	void FadeInOtherCoin();
+	void OnFadeIn();
+	void OnFadeOut();
+	void OnInDone();
+	void OnOutDone();
+	void PlayOutAnim();
+	void SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
+	void SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0);
+	void TestID(int32 ID);
 
 	class FString GetModuleName() const;
 

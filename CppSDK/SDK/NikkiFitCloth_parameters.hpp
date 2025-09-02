@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "NikkiFitCloth_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "NikkiFitCloth_structs.hpp"
 
 
 namespace SDK::Params
@@ -47,6 +47,33 @@ static_assert(sizeof(MatchTwoClothEvent_CheckSkeletalMeshBone) == 0x000010, "Wro
 static_assert(offsetof(MatchTwoClothEvent_CheckSkeletalMeshBone, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_CheckSkeletalMeshBone::SkeletalMesh' has a wrong offset!");
 static_assert(offsetof(MatchTwoClothEvent_CheckSkeletalMeshBone, ReturnValue) == 0x000008, "Member 'MatchTwoClothEvent_CheckSkeletalMeshBone::ReturnValue' has a wrong offset!");
 
+// Function NikkiFitCloth.MatchTwoClothEvent.CheckSkeletalMeshFitCacheVersion
+// 0x0010 (0x0010 - 0x0000)
+struct MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion final
+{
+public:
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VersionNumber;                                     // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion) == 0x000008, "Wrong alignment on MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion");
+static_assert(sizeof(MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion) == 0x000010, "Wrong size on MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion");
+static_assert(offsetof(MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion, VersionNumber) == 0x000008, "Member 'MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion::VersionNumber' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion, ReturnValue) == 0x00000C, "Member 'MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion::ReturnValue' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.ClearBoneInfluenceVertexIndicesForFitCache
+// 0x0008 (0x0008 - 0x0000)
+struct MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache final
+{
+public:
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache) == 0x000008, "Wrong alignment on MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache");
+static_assert(sizeof(MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache) == 0x000008, "Wrong size on MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache");
+static_assert(offsetof(MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache::SkeletalMesh' has a wrong offset!");
+
 // Function NikkiFitCloth.MatchTwoClothEvent.ClearPrebuildClothData
 // 0x0008 (0x0008 - 0x0000)
 struct MatchTwoClothEvent_ClearPrebuildClothData final
@@ -58,9 +85,72 @@ static_assert(alignof(MatchTwoClothEvent_ClearPrebuildClothData) == 0x000008, "W
 static_assert(sizeof(MatchTwoClothEvent_ClearPrebuildClothData) == 0x000008, "Wrong size on MatchTwoClothEvent_ClearPrebuildClothData");
 static_assert(offsetof(MatchTwoClothEvent_ClearPrebuildClothData, ClothSkelMesh) == 0x000000, "Member 'MatchTwoClothEvent_ClearPrebuildClothData::ClothSkelMesh' has a wrong offset!");
 
-// Function NikkiFitCloth.MatchTwoClothEvent.ExtractCPUSkinVertexPositionsToFitChache
+// Function NikkiFitCloth.MatchTwoClothEvent.ConvertSecondsToIntesectCounts
+// 0x0010 (0x0010 - 0x0000)
+struct MatchTwoClothEvent_ConvertSecondsToIntesectCounts final
+{
+public:
+	double                                        Seconds;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MatchTwoClothEvent_ConvertSecondsToIntesectCounts) == 0x000008, "Wrong alignment on MatchTwoClothEvent_ConvertSecondsToIntesectCounts");
+static_assert(sizeof(MatchTwoClothEvent_ConvertSecondsToIntesectCounts) == 0x000010, "Wrong size on MatchTwoClothEvent_ConvertSecondsToIntesectCounts");
+static_assert(offsetof(MatchTwoClothEvent_ConvertSecondsToIntesectCounts, Seconds) == 0x000000, "Member 'MatchTwoClothEvent_ConvertSecondsToIntesectCounts::Seconds' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ConvertSecondsToIntesectCounts, ReturnValue) == 0x000008, "Member 'MatchTwoClothEvent_ConvertSecondsToIntesectCounts::ReturnValue' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData
+// 0x0008 (0x0008 - 0x0000)
+struct MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData final
+{
+public:
+	class USkeletalMesh*                          ClothSkelMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData) == 0x000008, "Wrong alignment on MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData");
+static_assert(sizeof(MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData) == 0x000008, "Wrong size on MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData");
+static_assert(offsetof(MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData, ClothSkelMesh) == 0x000000, "Member 'MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData::ClothSkelMesh' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData
+// 0x0018 (0x0018 - 0x0000)
+struct MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData final
+{
+public:
+	class USkeletalMesh*                          ClothSkelMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MethodName;                                        // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData) == 0x000008, "Wrong alignment on MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData");
+static_assert(sizeof(MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData) == 0x000018, "Wrong size on MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData");
+static_assert(offsetof(MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData, ClothSkelMesh) == 0x000000, "Member 'MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData::ClothSkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData, MethodName) == 0x000008, "Member 'MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData::MethodName' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.ExtractCPUSkinVertexPositionsAndProjectionsToFitChache
+// 0x0058 (0x0058 - 0x0000)
+struct MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache final
+{
+public:
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 DisabledLODIndices;                                // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           InBoneNames;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     InBoneTransforms;                                  // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	EProjectDataType                              ProjectDataType;                                   // 0x0038(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ProjectName;                                       // 0x0040(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMultiplyBoneTransform;                            // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache) == 0x000008, "Wrong alignment on MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache");
+static_assert(sizeof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache) == 0x000058, "Wrong size on MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, DisabledLODIndices) == 0x000008, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::DisabledLODIndices' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, InBoneNames) == 0x000018, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::InBoneNames' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, InBoneTransforms) == 0x000028, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::InBoneTransforms' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, ProjectDataType) == 0x000038, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::ProjectDataType' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, ProjectName) == 0x000040, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::ProjectName' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache, bMultiplyBoneTransform) == 0x000050, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache::bMultiplyBoneTransform' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.ExtractCPUSkinVertexPositionsToFitChacheForOrnament
 // 0x0038 (0x0038 - 0x0000)
-struct MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache final
+struct MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament final
 {
 public:
 	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -68,29 +158,27 @@ public:
 	TArray<class FName>                           InBoneNames;                                       // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FTransform>                     InBoneTransforms;                                  // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache) == 0x000008, "Wrong alignment on MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache");
-static_assert(sizeof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache) == 0x000038, "Wrong size on MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache");
-static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache, DisabledLODIndices) == 0x000008, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache::DisabledLODIndices' has a wrong offset!");
-static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache, InBoneNames) == 0x000018, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache::InBoneNames' has a wrong offset!");
-static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache, InBoneTransforms) == 0x000028, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache::InBoneTransforms' has a wrong offset!");
+static_assert(alignof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament) == 0x000008, "Wrong alignment on MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament");
+static_assert(sizeof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament) == 0x000038, "Wrong size on MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament, DisabledLODIndices) == 0x000008, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament::DisabledLODIndices' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament, InBoneNames) == 0x000018, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament::InBoneNames' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament, InBoneTransforms) == 0x000028, "Member 'MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament::InBoneTransforms' has a wrong offset!");
 
 // Function NikkiFitCloth.MatchTwoClothEvent.FindBestMatchBetweenClothOfBody
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct MatchTwoClothEvent_FindBestMatchBetweenClothOfBody final
 {
 public:
 	class USkeletalMesh*                          InnerSkeletalMesh;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USkeletalMesh*                          OuterSkeletalMesh;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFitClothCacheAsset*                    BodyCacheAsset;                                    // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMatchClothParameter                   MatchParam;                                        // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMatchClothParameter                   MatchParam;                                        // 0x0010(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody) == 0x000008, "Wrong alignment on MatchTwoClothEvent_FindBestMatchBetweenClothOfBody");
-static_assert(sizeof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody) == 0x000040, "Wrong size on MatchTwoClothEvent_FindBestMatchBetweenClothOfBody");
+static_assert(sizeof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody) == 0x000038, "Wrong size on MatchTwoClothEvent_FindBestMatchBetweenClothOfBody");
 static_assert(offsetof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody, InnerSkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_FindBestMatchBetweenClothOfBody::InnerSkeletalMesh' has a wrong offset!");
 static_assert(offsetof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody, OuterSkeletalMesh) == 0x000008, "Member 'MatchTwoClothEvent_FindBestMatchBetweenClothOfBody::OuterSkeletalMesh' has a wrong offset!");
-static_assert(offsetof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody, BodyCacheAsset) == 0x000010, "Member 'MatchTwoClothEvent_FindBestMatchBetweenClothOfBody::BodyCacheAsset' has a wrong offset!");
-static_assert(offsetof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody, MatchParam) == 0x000018, "Member 'MatchTwoClothEvent_FindBestMatchBetweenClothOfBody::MatchParam' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_FindBestMatchBetweenClothOfBody, MatchParam) == 0x000010, "Member 'MatchTwoClothEvent_FindBestMatchBetweenClothOfBody::MatchParam' has a wrong offset!");
 
 // Function NikkiFitCloth.MatchTwoClothEvent.FindValidPairData
 // 0x0018 (0x0018 - 0x0000)
@@ -107,6 +195,19 @@ static_assert(sizeof(MatchTwoClothEvent_FindValidPairData) == 0x000018, "Wrong s
 static_assert(offsetof(MatchTwoClothEvent_FindValidPairData, InnerSkelMesh) == 0x000000, "Member 'MatchTwoClothEvent_FindValidPairData::InnerSkelMesh' has a wrong offset!");
 static_assert(offsetof(MatchTwoClothEvent_FindValidPairData, OuterSkelMesh) == 0x000008, "Member 'MatchTwoClothEvent_FindValidPairData::OuterSkelMesh' has a wrong offset!");
 static_assert(offsetof(MatchTwoClothEvent_FindValidPairData, ReturnValue) == 0x000010, "Member 'MatchTwoClothEvent_FindValidPairData::ReturnValue' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GenerateBoneInfluenceVertexIndicesForFitCache
+// 0x0018 (0x0018 - 0x0000)
+struct MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache final
+{
+public:
+	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           BoneNames;                                         // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache) == 0x000008, "Wrong alignment on MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache");
+static_assert(sizeof(MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache) == 0x000018, "Wrong size on MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache");
+static_assert(offsetof(MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache, SkeletalMesh) == 0x000000, "Member 'MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache, BoneNames) == 0x000008, "Member 'MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache::BoneNames' has a wrong offset!");
 
 // Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildBodyData
 // 0x0098 (0x0098 - 0x0000)
@@ -155,6 +256,23 @@ static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildClothSkirtData, BodySk
 static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildClothSkirtData, RenderBodySkelMesh) == 0x000010, "Member 'MatchTwoClothEvent_GeneratePrebuildClothSkirtData::RenderBodySkelMesh' has a wrong offset!");
 static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildClothSkirtData, MatchParam) == 0x000018, "Member 'MatchTwoClothEvent_GeneratePrebuildClothSkirtData::MatchParam' has a wrong offset!");
 
+// Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildOuterClothData
+// 0x00A8 (0x00A8 - 0x0000)
+struct MatchTwoClothEvent_GeneratePrebuildOuterClothData final
+{
+public:
+	class USkeletalMesh*                          ClothSkelMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          BodySkelMesh;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          RenderBodySkelMesh;                                // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMatchClothEditorParameter             MatchParam;                                        // 0x0018(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchTwoClothEvent_GeneratePrebuildOuterClothData) == 0x000008, "Wrong alignment on MatchTwoClothEvent_GeneratePrebuildOuterClothData");
+static_assert(sizeof(MatchTwoClothEvent_GeneratePrebuildOuterClothData) == 0x0000A8, "Wrong size on MatchTwoClothEvent_GeneratePrebuildOuterClothData");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildOuterClothData, ClothSkelMesh) == 0x000000, "Member 'MatchTwoClothEvent_GeneratePrebuildOuterClothData::ClothSkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildOuterClothData, BodySkelMesh) == 0x000008, "Member 'MatchTwoClothEvent_GeneratePrebuildOuterClothData::BodySkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildOuterClothData, RenderBodySkelMesh) == 0x000010, "Member 'MatchTwoClothEvent_GeneratePrebuildOuterClothData::RenderBodySkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildOuterClothData, MatchParam) == 0x000018, "Member 'MatchTwoClothEvent_GeneratePrebuildOuterClothData::MatchParam' has a wrong offset!");
+
 // Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildSkinClothData
 // 0x00D0 (0x00D0 - 0x0000)
 struct MatchTwoClothEvent_GeneratePrebuildSkinClothData final
@@ -179,6 +297,44 @@ static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildSkinClothData, InBoneN
 static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildSkinClothData, InBoneTransforms) == 0x0000B8, "Member 'MatchTwoClothEvent_GeneratePrebuildSkinClothData::InBoneTransforms' has a wrong offset!");
 static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildSkinClothData, bMultiplyBoneTransform) == 0x0000C8, "Member 'MatchTwoClothEvent_GeneratePrebuildSkinClothData::bMultiplyBoneTransform' has a wrong offset!");
 
+// Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildUserDefinedData
+// 0x0140 (0x0140 - 0x0000)
+struct MatchTwoClothEvent_GeneratePrebuildUserDefinedData final
+{
+public:
+	class USkeletalMesh*                          ClothSkelMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          ProjectBodySkelMesh;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          DistBodySkelMesh;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMatchClothEditorParameter             MatchParam;                                        // 0x0018(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FClothLODSectionIndices>        ProjectBodySectionIndices;                         // 0x00A8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FClothLODSectionIndices>        DistBodySectionIndices;                            // 0x00B8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FString                                 ProjectionTypeName;                                // 0x00C8(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           InClothBoneNames;                                  // 0x00D8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     InClothBoneTransforms;                             // 0x00E8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           InProjectBodyBoneNames;                            // 0x00F8(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     InProjectBodyBoneTransforms;                       // 0x0108(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class FName>                           InDistBodyBoneNames;                               // 0x0118(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     InDistBodyBoneTransforms;                          // 0x0128(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bMultiplyBoneTransform;                            // 0x0138(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_139[0x7];                                      // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData) == 0x000008, "Wrong alignment on MatchTwoClothEvent_GeneratePrebuildUserDefinedData");
+static_assert(sizeof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData) == 0x000140, "Wrong size on MatchTwoClothEvent_GeneratePrebuildUserDefinedData");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, ClothSkelMesh) == 0x000000, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::ClothSkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, ProjectBodySkelMesh) == 0x000008, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::ProjectBodySkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, DistBodySkelMesh) == 0x000010, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::DistBodySkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, MatchParam) == 0x000018, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::MatchParam' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, ProjectBodySectionIndices) == 0x0000A8, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::ProjectBodySectionIndices' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, DistBodySectionIndices) == 0x0000B8, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::DistBodySectionIndices' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, ProjectionTypeName) == 0x0000C8, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::ProjectionTypeName' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, InClothBoneNames) == 0x0000D8, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::InClothBoneNames' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, InClothBoneTransforms) == 0x0000E8, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::InClothBoneTransforms' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, InProjectBodyBoneNames) == 0x0000F8, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::InProjectBodyBoneNames' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, InProjectBodyBoneTransforms) == 0x000108, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::InProjectBodyBoneTransforms' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, InDistBodyBoneNames) == 0x000118, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::InDistBodyBoneNames' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, InDistBodyBoneTransforms) == 0x000128, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::InDistBodyBoneTransforms' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GeneratePrebuildUserDefinedData, bMultiplyBoneTransform) == 0x000138, "Member 'MatchTwoClothEvent_GeneratePrebuildUserDefinedData::bMultiplyBoneTransform' has a wrong offset!");
+
 // Function NikkiFitCloth.MatchTwoClothEvent.GetMaxPairCacheNum
 // 0x0004 (0x0004 - 0x0000)
 struct MatchTwoClothEvent_GetMaxPairCacheNum final
@@ -200,6 +356,51 @@ public:
 static_assert(alignof(MatchTwoClothEvent_GetPairCacheNum) == 0x000004, "Wrong alignment on MatchTwoClothEvent_GetPairCacheNum");
 static_assert(sizeof(MatchTwoClothEvent_GetPairCacheNum) == 0x000004, "Wrong size on MatchTwoClothEvent_GetPairCacheNum");
 static_assert(offsetof(MatchTwoClothEvent_GetPairCacheNum, ReturnValue) == 0x000000, "Member 'MatchTwoClothEvent_GetPairCacheNum::ReturnValue' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GetUserDefinedProjectMethodEnumsFromReferenceFitClothData
+// 0x0020 (0x0020 - 0x0000)
+struct MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData final
+{
+public:
+	TArray<EUserDefinedProjectMethod>             MethodEnums;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          ClothSkelMesh;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData) == 0x000008, "Wrong alignment on MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData");
+static_assert(sizeof(MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData) == 0x000020, "Wrong size on MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData");
+static_assert(offsetof(MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData, MethodEnums) == 0x000000, "Member 'MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData::MethodEnums' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData, ClothSkelMesh) == 0x000010, "Member 'MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData::ClothSkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData, LODIndex) == 0x000018, "Member 'MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData::LODIndex' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GetUserDefinedProjectMethodNamesFromReferenceFitClothData
+// 0x0020 (0x0020 - 0x0000)
+struct MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData final
+{
+public:
+	TArray<class FString>                         MethodNames;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          ClothSkelMesh;                                     // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData) == 0x000008, "Wrong alignment on MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData");
+static_assert(sizeof(MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData) == 0x000020, "Wrong size on MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData");
+static_assert(offsetof(MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData, MethodNames) == 0x000000, "Member 'MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData::MethodNames' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData, ClothSkelMesh) == 0x000010, "Member 'MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData::ClothSkelMesh' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData, LODIndex) == 0x000018, "Member 'MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData::LODIndex' has a wrong offset!");
+
+// Function NikkiFitCloth.MatchTwoClothEvent.InverseCPUSkinVertexOffsetsToFitChache
+// 0x0020 (0x0020 - 0x0000)
+struct MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache final
+{
+public:
+	TArray<class USkeletalMesh*>                  InnerSkeletalMeshes;                               // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class USkeletalMesh*>                  OuterSkeletalMeshes;                               // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache) == 0x000008, "Wrong alignment on MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache");
+static_assert(sizeof(MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache) == 0x000020, "Wrong size on MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache");
+static_assert(offsetof(MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache, InnerSkeletalMeshes) == 0x000000, "Member 'MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache::InnerSkeletalMeshes' has a wrong offset!");
+static_assert(offsetof(MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache, OuterSkeletalMeshes) == 0x000010, "Member 'MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache::OuterSkeletalMeshes' has a wrong offset!");
 
 // Function NikkiFitCloth.MatchTwoClothEvent.ReleasePairCacheDataExceptInput
 // 0x0020 (0x0020 - 0x0000)
@@ -389,6 +590,28 @@ static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysics
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeights, ColliderMaskRatioThrshold) == 0x00002C, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeights::ColliderMaskRatioThrshold' has a wrong offset!");
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeights, ReturnValue) == 0x000030, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeights::ReturnValue' has a wrong offset!");
 
+// Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.GetNikkiPhysicsBoneWeightsWithVertexInfluences
+// 0x0038 (0x0038 - 0x0000)
+struct ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences final
+{
+public:
+	TArray<class FName>                           OutColliderBones;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class FName>                           OutAnimBones;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          InnerSkeletalMesh;                                 // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimMaskRatioThrshold;                             // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ColliderMaskRatioThrshold;                         // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences) == 0x000008, "Wrong alignment on ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences");
+static_assert(sizeof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences) == 0x000038, "Wrong size on ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences, OutColliderBones) == 0x000000, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences::OutColliderBones' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences, OutAnimBones) == 0x000010, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences::OutAnimBones' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences, InnerSkeletalMesh) == 0x000020, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences::InnerSkeletalMesh' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences, AnimMaskRatioThrshold) == 0x000028, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences::AnimMaskRatioThrshold' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences, ColliderMaskRatioThrshold) == 0x00002C, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences::ColliderMaskRatioThrshold' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences, ReturnValue) == 0x000030, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences::ReturnValue' has a wrong offset!");
+
 // Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.GetSkeletalMeshVisibilityProperty
 // 0x0040 (0x0040 - 0x0000)
 struct ClothVisibilityAndOffsetBlueprintLiabrary_GetSkeletalMeshVisibilityProperty final
@@ -465,6 +688,29 @@ static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveCurrentClot
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveCurrentClothVisibilityAndOffsetProperty, LODIndex) == 0x000018, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveCurrentClothVisibilityAndOffsetProperty::LODIndex' has a wrong offset!");
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveCurrentClothVisibilityAndOffsetProperty, bKeepDisable) == 0x00001C, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveCurrentClothVisibilityAndOffsetProperty::bKeepDisable' has a wrong offset!");
 
+// Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.SaveNikkiFitClothObjForDebug
+// 0x0040 (0x0040 - 0x0000)
+struct ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug final
+{
+public:
+	class USkeletalMesh*                          InnerSkeletalMesh;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeletalMesh*                          OuterSkeletalMesh;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SaveDirectory;                                     // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikkiFitClothObjType                         NikkiFitClothObjType;                              // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ProjectName;                                       // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InLODIndex;                                        // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug) == 0x000008, "Wrong alignment on ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug");
+static_assert(sizeof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug) == 0x000040, "Wrong size on ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug, InnerSkeletalMesh) == 0x000000, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug::InnerSkeletalMesh' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug, OuterSkeletalMesh) == 0x000008, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug::OuterSkeletalMesh' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug, SaveDirectory) == 0x000010, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug::SaveDirectory' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug, NikkiFitClothObjType) == 0x000020, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug::NikkiFitClothObjType' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug, ProjectName) == 0x000028, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug::ProjectName' has a wrong offset!");
+static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug, InLODIndex) == 0x000038, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug::InLODIndex' has a wrong offset!");
+
 // Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.SetChaosClothFixedVertices
 // 0x0030 (0x0030 - 0x0000)
 struct ClothVisibilityAndOffsetBlueprintLiabrary_SetChaosClothFixedVertices final
@@ -502,6 +748,28 @@ static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNa
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNamePair, InBodyBoneName) == 0x000028, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNamePair::InBodyBoneName' has a wrong offset!");
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNamePair, InSkeletalMesh) == 0x000030, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNamePair::InSkeletalMesh' has a wrong offset!");
 static_assert(offsetof(ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNamePair, ReturnValue) == 0x000038, "Member 'ClothVisibilityAndOffsetBlueprintLiabrary_SetNameToBoneNamePair::ReturnValue' has a wrong offset!");
+
+// Function NikkiFitCloth.FitClothMutex.TryLock
+// 0x0001 (0x0001 - 0x0000)
+struct FitClothMutex_TryLock final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FitClothMutex_TryLock) == 0x000001, "Wrong alignment on FitClothMutex_TryLock");
+static_assert(sizeof(FitClothMutex_TryLock) == 0x000001, "Wrong size on FitClothMutex_TryLock");
+static_assert(offsetof(FitClothMutex_TryLock, ReturnValue) == 0x000000, "Member 'FitClothMutex_TryLock::ReturnValue' has a wrong offset!");
+
+// Function NikkiFitCloth.FitClothMutex.IsLocked
+// 0x0001 (0x0001 - 0x0000)
+struct FitClothMutex_IsLocked final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FitClothMutex_IsLocked) == 0x000001, "Wrong alignment on FitClothMutex_IsLocked");
+static_assert(sizeof(FitClothMutex_IsLocked) == 0x000001, "Wrong size on FitClothMutex_IsLocked");
+static_assert(offsetof(FitClothMutex_IsLocked, ReturnValue) == 0x000000, "Member 'FitClothMutex_IsLocked::ReturnValue' has a wrong offset!");
 
 }
 

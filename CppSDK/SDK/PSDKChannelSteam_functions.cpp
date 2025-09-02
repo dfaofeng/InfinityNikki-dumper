@@ -36,6 +36,44 @@ void UPSdkLoginSuccessToastSteam::SetupOnInitialized()
 }
 
 
+// Function PSDKChannelSteam.PSdkLoginUIBaseSteam.OnPrivacyPolicyButtonReleased
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUIBaseSteam::OnPrivacyPolicyButtonReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUIBaseSteam", "OnPrivacyPolicyButtonReleased");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKChannelSteam.PSdkLoginUIBaseSteam.OnUserContractButtonReleased
+// (Final, Native, Public, BlueprintCallable)
+
+void UPSdkLoginUIBaseSteam::OnUserContractButtonReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUIBaseSteam", "OnUserContractButtonReleased");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PSDKChannelSteam.PSdkLoginUIAccountNotExistSteam.OnCloseButtonClicked
 // (Final, Native, Protected, BlueprintCallable)
 
@@ -191,9 +229,9 @@ void UPSdkLoginUIBindExistingAccountSteam::OnBindButtonClicked()
 // Function PSDKChannelSteam.PSdkLoginUIBindExistingAccountSteam.OnCheckedButton
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                                    checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPSdkLoginUIBindExistingAccountSteam::OnCheckedButton(bool checked)
+void UPSdkLoginUIBindExistingAccountSteam::OnCheckedButton(bool Checked)
 {
 	static class UFunction* Func = nullptr;
 
@@ -202,7 +240,7 @@ void UPSdkLoginUIBindExistingAccountSteam::OnCheckedButton(bool checked)
 
 	Params::PSdkLoginUIBindExistingAccountSteam_OnCheckedButton Parms{};
 
-	Parms.checked = checked;
+	Parms.Checked = Checked;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -561,9 +599,9 @@ void UPSdkLoginUIBindExistingAccountSteamKr::OnCheckedBoxChanged()
 // Function PSDKChannelSteam.PSdkLoginUIBindExistingAccountSteamKr.OnCheckedButton
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                                    checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPSdkLoginUIBindExistingAccountSteamKr::OnCheckedButton(bool checked)
+void UPSdkLoginUIBindExistingAccountSteamKr::OnCheckedButton(bool Checked)
 {
 	static class UFunction* Func = nullptr;
 
@@ -572,7 +610,7 @@ void UPSdkLoginUIBindExistingAccountSteamKr::OnCheckedButton(bool checked)
 
 	Params::PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton Parms{};
 
-	Parms.checked = checked;
+	Parms.Checked = Checked;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -988,9 +1026,9 @@ void UPSdkLoginUIExitBindSteam::OnExitGameButtonClicked()
 // Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteam.OnCheckedButton
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// bool                                    checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPSdkLoginUIRegisterAndBindSteam::OnCheckedButton(bool checked)
+void UPSdkLoginUIRegisterAndBindSteam::OnCheckedButton(bool Checked)
 {
 	static class UFunction* Func = nullptr;
 
@@ -999,7 +1037,7 @@ void UPSdkLoginUIRegisterAndBindSteam::OnCheckedButton(bool checked)
 
 	Params::PSdkLoginUIRegisterAndBindSteam_OnCheckedButton Parms{};
 
-	Parms.checked = checked;
+	Parms.Checked = Checked;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1239,6 +1277,31 @@ void UPSdkLoginUIRegisterAndBindSteam::OnRegisterExistAccountButtonClicked()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteam.OnSubscribeCheckedButton
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// bool                                    Checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPSdkLoginUIRegisterAndBindSteam::OnSubscribeCheckedButton(bool Checked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUIRegisterAndBindSteam", "OnSubscribeCheckedButton");
+
+	Params::PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton Parms{};
+
+	Parms.Checked = Checked;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -1765,6 +1828,50 @@ void UPSdkLoginUIRegisterAndBindSteamKr::OnRegisterExistAccountButtonClicked()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PSdkLoginUIRegisterAndBindSteamKr", "OnRegisterExistAccountButtonClicked");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteamKr.OnSubscribeCheckedBoxChanged
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// bool                                    Checked                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPSdkLoginUIRegisterAndBindSteamKr::OnSubscribeCheckedBoxChanged(bool Checked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUIRegisterAndBindSteamKr", "OnSubscribeCheckedBoxChanged");
+
+	Params::PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged Parms{};
+
+	Parms.Checked = Checked;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteamKr.OnSubscribeCheckedButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkLoginUIRegisterAndBindSteamKr::OnSubscribeCheckedButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkLoginUIRegisterAndBindSteamKr", "OnSubscribeCheckedButton");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

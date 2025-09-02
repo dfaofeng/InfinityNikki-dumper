@@ -22,12 +22,12 @@ class IBPI_Weather_C final : public IInterface
 {
 public:
 	void Manual_Operation_TOD(double Time);
-	void BPI_TODTime(double Time);
 	void BPI_WeatherData(class UClass* WeatherPreset);
 	void BPI_WeatherChanged(const class FString& RegionName, const class FString& UnloadWeatherName, const class FString& LoadWeatherName);
+	void BPI_TODTime(double Time);
+	void BPI_TodState();
 	void BPI_SaveAsset(bool OnlySyncContent, bool OnlyWriteParam);
 	void BPI_ReloadFile();
-	void BPI_TodState();
 	void BPI_EditorUpdateRole(const struct FLinearColor& LocalLightColor);
 	void BPI_EditorUpdate();
 	void BPI_CLFSPostContruct();

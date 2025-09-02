@@ -16,6 +16,42 @@
 namespace SDK::Params
 {
 
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToRed
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_Interact_Props_Item_C_ChangeTextColorToRed final
+{
+public:
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0000(0x0014)()
+};
+static_assert(alignof(WBP_Interact_Props_Item_C_ChangeTextColorToRed) == 0x000004, "Wrong alignment on WBP_Interact_Props_Item_C_ChangeTextColorToRed");
+static_assert(sizeof(WBP_Interact_Props_Item_C_ChangeTextColorToRed) == 0x000014, "Wrong size on WBP_Interact_Props_Item_C_ChangeTextColorToRed");
+static_assert(offsetof(WBP_Interact_Props_Item_C_ChangeTextColorToRed, K2Node_MakeStruct_SlateColor) == 0x000000, "Member 'WBP_Interact_Props_Item_C_ChangeTextColorToRed::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToWhite
+// 0x0014 (0x0014 - 0x0000)
+struct WBP_Interact_Props_Item_C_ChangeTextColorToWhite final
+{
+public:
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0000(0x0014)()
+};
+static_assert(alignof(WBP_Interact_Props_Item_C_ChangeTextColorToWhite) == 0x000004, "Wrong alignment on WBP_Interact_Props_Item_C_ChangeTextColorToWhite");
+static_assert(sizeof(WBP_Interact_Props_Item_C_ChangeTextColorToWhite) == 0x000014, "Wrong size on WBP_Interact_Props_Item_C_ChangeTextColorToWhite");
+static_assert(offsetof(WBP_Interact_Props_Item_C_ChangeTextColorToWhite, K2Node_MakeStruct_SlateColor) == 0x000000, "Member 'WBP_Interact_Props_Item_C_ChangeTextColorToWhite::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ExecuteUbergraph_WBP_Interact_Props_Item
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue;             // 0x0008(0x0010)()
+};
+static_assert(alignof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item) == 0x000008, "Wrong alignment on WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item");
+static_assert(sizeof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item) == 0x000018, "Wrong size on WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item");
+static_assert(offsetof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item, EntryPoint) == 0x000000, "Member 'WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item, CallFunc_Conv_Int64ToText_ReturnValue) == 0x000008, "Member 'WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item::CallFunc_Conv_Int64ToText_ReturnValue' has a wrong offset!");
+
 // Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ReduceItem
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_Interact_Props_Item_C_ReduceItem final
@@ -32,42 +68,6 @@ static_assert(offsetof(WBP_Interact_Props_Item_C_ReduceItem, InReduceNum) == 0x0
 static_assert(offsetof(WBP_Interact_Props_Item_C_ReduceItem, CallFunc_Conv_Int64ToText_ReturnValue) == 0x000008, "Member 'WBP_Interact_Props_Item_C_ReduceItem::CallFunc_Conv_Int64ToText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Interact_Props_Item_C_ReduceItem, CallFunc_Add_Int64Int64_ReturnValue) == 0x000018, "Member 'WBP_Interact_Props_Item_C_ReduceItem::CallFunc_Add_Int64Int64_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Interact_Props_Item_C_ReduceItem, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'WBP_Interact_Props_Item_C_ReduceItem::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ExecuteUbergraph_WBP_Interact_Props_Item
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_Int64ToText_ReturnValue;             // 0x0008(0x0010)()
-};
-static_assert(alignof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item) == 0x000008, "Wrong alignment on WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item");
-static_assert(sizeof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item) == 0x000018, "Wrong size on WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item");
-static_assert(offsetof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item, EntryPoint) == 0x000000, "Member 'WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item, CallFunc_Conv_Int64ToText_ReturnValue) == 0x000008, "Member 'WBP_Interact_Props_Item_C_ExecuteUbergraph_WBP_Interact_Props_Item::CallFunc_Conv_Int64ToText_ReturnValue' has a wrong offset!");
-
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToWhite
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_Interact_Props_Item_C_ChangeTextColorToWhite final
-{
-public:
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0000(0x0014)()
-};
-static_assert(alignof(WBP_Interact_Props_Item_C_ChangeTextColorToWhite) == 0x000004, "Wrong alignment on WBP_Interact_Props_Item_C_ChangeTextColorToWhite");
-static_assert(sizeof(WBP_Interact_Props_Item_C_ChangeTextColorToWhite) == 0x000014, "Wrong size on WBP_Interact_Props_Item_C_ChangeTextColorToWhite");
-static_assert(offsetof(WBP_Interact_Props_Item_C_ChangeTextColorToWhite, K2Node_MakeStruct_SlateColor) == 0x000000, "Member 'WBP_Interact_Props_Item_C_ChangeTextColorToWhite::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToRed
-// 0x0014 (0x0014 - 0x0000)
-struct WBP_Interact_Props_Item_C_ChangeTextColorToRed final
-{
-public:
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0000(0x0014)()
-};
-static_assert(alignof(WBP_Interact_Props_Item_C_ChangeTextColorToRed) == 0x000004, "Wrong alignment on WBP_Interact_Props_Item_C_ChangeTextColorToRed");
-static_assert(sizeof(WBP_Interact_Props_Item_C_ChangeTextColorToRed) == 0x000014, "Wrong size on WBP_Interact_Props_Item_C_ChangeTextColorToRed");
-static_assert(offsetof(WBP_Interact_Props_Item_C_ChangeTextColorToRed, K2Node_MakeStruct_SlateColor) == 0x000000, "Member 'WBP_Interact_Props_Item_C_ChangeTextColorToRed::K2Node_MakeStruct_SlateColor' has a wrong offset!");
 
 // Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

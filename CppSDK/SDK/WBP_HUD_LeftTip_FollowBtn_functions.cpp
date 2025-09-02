@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_HUD_LeftTip_FollowBtn.WBP_HUD_LeftTip_FollowBtn_C.BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_HUD_LeftTip_FollowBtn_C::BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_LeftTip_FollowBtn_C", "BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_HUD_LeftTip_FollowBtn.WBP_HUD_LeftTip_FollowBtn_C.ExecuteUbergraph_WBP_HUD_LeftTip_FollowBtn
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_HUD_LeftTip_FollowBtn_C::ExecuteUbergraph_WBP_HUD_LeftTip_FollowBtn(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_LeftTip_FollowBtn.WBP_HUD_LeftTip_FollowBtn_C.BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_HUD_LeftTip_FollowBtn_C::BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_LeftTip_FollowBtn_C", "BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

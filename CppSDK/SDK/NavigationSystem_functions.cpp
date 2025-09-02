@@ -796,6 +796,50 @@ void UNavigationSystemV1::ResetMaxSimultaneousTileGenerationJobsCount()
 }
 
 
+// Function NavigationSystem.NavigationSystemV1.RuntimeAddNavigationBuildLock
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UNavigationSystemV1::RuntimeAddNavigationBuildLock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NavigationSystemV1", "RuntimeAddNavigationBuildLock");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NavigationSystem.NavigationSystemV1.RuntimeBuildNavMesh
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNavigationSystemV1::RuntimeBuildNavMesh(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NavigationSystemV1", "RuntimeBuildNavMesh");
+
+	Params::NavigationSystemV1_RuntimeBuildNavMesh Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NavigationSystem.NavigationSystemV1.RuntimeChangeRuntimeGenerationModeToDynamic
 // (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
@@ -841,6 +885,25 @@ void UNavigationSystemV1::RuntimeChangeRuntimeGenerationModeToStatic(class UObje
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NavigationSystem.NavigationSystemV1.RuntimeRemoveNavigationBuildLock
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UNavigationSystemV1::RuntimeRemoveNavigationBuildLock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NavigationSystemV1", "RuntimeRemoveNavigationBuildLock");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Nikki_JumpPlunge.GA_Nikki_JumpPlunge_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Nikki_JumpPlunge_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_JumpPlunge_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Nikki_JumpPlunge.GA_Nikki_JumpPlunge_C.ExecuteUbergraph_GA_Nikki_JumpPlunge
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UGA_Nikki_JumpPlunge_C::ExecuteUbergraph_GA_Nikki_JumpPlunge(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_JumpPlunge.GA_Nikki_JumpPlunge_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Nikki_JumpPlunge_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_JumpPlunge_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

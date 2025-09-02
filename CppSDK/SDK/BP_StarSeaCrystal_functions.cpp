@@ -343,6 +343,26 @@ void ABP_StarSeaCrystal_C::BP_IsEnergized(class AActor* Actor, bool* bIsEnergize
 }
 
 
+// Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_NotifyPenetrateEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_StarSeaCrystal_C::BP_NotifyPenetrateEffect(bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCrystal_C", "BP_NotifyPenetrateEffect");
+
+	Params::BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect Parms{};
+
+	Parms.bEnable = bEnable;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_NotifySpawned
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -584,8 +604,9 @@ void ABP_StarSeaCrystal_C::On_Multi_ActiveSuccess(class AActor* Other_player_act
 // Parameters:
 // const class FString&                    Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// E_Multi_InteractiveObjActive_Type       E_Multi_Type                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_StarSeaCrystal_C::On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player)
+void ABP_StarSeaCrystal_C::On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player, E_Multi_InteractiveObjActive_Type E_Multi_Type)
 {
 	static class UFunction* Func = nullptr;
 
@@ -596,6 +617,7 @@ void ABP_StarSeaCrystal_C::On_Multi_InteractiveObjActive(const class FString& Da
 
 	Parms.Data = std::move(Data);
 	Parms.Player = Player;
+	Parms.E_Multi_Type = E_Multi_Type;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

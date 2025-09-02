@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "F_FloatingJump_CT_Crash_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -25,8 +25,8 @@ public:
 	struct FF_FloatingJump_CT_Crash               CrashConfig;                                       // 0x0030(0x0040)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class FString GetNotifyName() const;
 	class FString GetModuleName() const;
+	class FString GetNotifyName() const;
 
 public:
 	static class UClass* StaticClass()

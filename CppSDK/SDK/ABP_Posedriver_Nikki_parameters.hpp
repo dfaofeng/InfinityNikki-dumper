@@ -72,6 +72,28 @@ static_assert(offsetof(ABP_Posedriver_Nikki_C_ExecuteUbergraph_ABP_Posedriver_Ni
 static_assert(offsetof(ABP_Posedriver_Nikki_C_ExecuteUbergraph_ABP_Posedriver_Nikki, CallFunc_GetComponentByClass_ReturnValue) == 0x000028, "Member 'ABP_Posedriver_Nikki_C_ExecuteUbergraph_ABP_Posedriver_Nikki::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_Posedriver_Nikki_C_ExecuteUbergraph_ABP_Posedriver_Nikki, K2Node_StructMemberSet_Alpha_ImplicitCast) == 0x000030, "Member 'ABP_Posedriver_Nikki_C_ExecuteUbergraph_ABP_Posedriver_Nikki::K2Node_StructMemberSet_Alpha_ImplicitCast' has a wrong offset!");
 
+// Function ABP_Posedriver_Nikki.ABP_Posedriver_Nikki_C.GetRealHighHeelHeight
+// 0x0028 (0x0028 - 0x0000)
+struct ABP_Posedriver_Nikki_C_GetRealHighHeelHeight final
+{
+public:
+	double                                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetCurveValueWithDefault_OutValue;        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetCurveValueWithDefault_ReturnValue;     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight) == 0x000008, "Wrong alignment on ABP_Posedriver_Nikki_C_GetRealHighHeelHeight");
+static_assert(sizeof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight) == 0x000028, "Wrong size on ABP_Posedriver_Nikki_C_GetRealHighHeelHeight");
+static_assert(offsetof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight, ReturnValue) == 0x000000, "Member 'ABP_Posedriver_Nikki_C_GetRealHighHeelHeight::ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight, CallFunc_GetCurveValueWithDefault_OutValue) == 0x000008, "Member 'ABP_Posedriver_Nikki_C_GetRealHighHeelHeight::CallFunc_GetCurveValueWithDefault_OutValue' has a wrong offset!");
+static_assert(offsetof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight, CallFunc_GetCurveValueWithDefault_ReturnValue) == 0x00000C, "Member 'ABP_Posedriver_Nikki_C_GetRealHighHeelHeight::CallFunc_GetCurveValueWithDefault_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight, CallFunc_FClamp_ReturnValue) == 0x000010, "Member 'ABP_Posedriver_Nikki_C_GetRealHighHeelHeight::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000018, "Member 'ABP_Posedriver_Nikki_C_GetRealHighHeelHeight::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Posedriver_Nikki_C_GetRealHighHeelHeight, CallFunc_FClamp_Value_ImplicitCast) == 0x000020, "Member 'ABP_Posedriver_Nikki_C_GetRealHighHeelHeight::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
+
 // Function ABP_Posedriver_Nikki.ABP_Posedriver_Nikki_C.UpdateAntiClippingAlpha
 // 0x0018 (0x0018 - 0x0000)
 struct ABP_Posedriver_Nikki_C_UpdateAntiClippingAlpha final

@@ -50,9 +50,9 @@ public:
 	int64                                         Star;                                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateIcon();
-	void UpdateData();
 	void IsNull(bool* Valid);
+	void UpdateData();
+	void UpdateIcon();
 
 public:
 	static class UClass* StaticClass()

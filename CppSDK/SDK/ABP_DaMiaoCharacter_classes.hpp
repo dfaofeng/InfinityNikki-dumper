@@ -11,14 +11,13 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ABP_DaMiaoCharacter_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
-#include "ControlRig_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "X6Animation_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "ABP_DaMiaoCharacter_structs.hpp"
 #include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
+#include "X6Animation_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "FEmotionPartBlendWeight_structs.hpp"
 
 
@@ -26,7 +25,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_DaMiaoCharacter.ABP_DaMiaoCharacter_C
-// 0x2BD0 (0x3050 - 0x0480)
+// 0x2B40 (0x2FC0 - 0x0480)
 class UABP_DaMiaoCharacter_C final : public UX6DaMiaoMainAnimInstance
 {
 public:
@@ -36,30 +35,30 @@ public:
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x04C8(0x0008)()
 	struct FAnimSubsystemInstance_NodeRelevancy   AnimBlueprintExtension_NodeRelevancy;              // 0x04D0(0x00A8)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0578(0x0008)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_24;                             // 0x0580(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_11;                  // 0x05A0(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_23;                             // 0x0658(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_10;                  // 0x0678(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_22;                             // 0x0730(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_9;                   // 0x0750(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_21;                             // 0x0808(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_8;                   // 0x0828(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_20;                             // 0x08E0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_7;                   // 0x0900(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_11;                  // 0x0580(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_24;                             // 0x0638(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_10;                  // 0x0658(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_23;                             // 0x0710(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_9;                   // 0x0730(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_22;                             // 0x07E8(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_8;                   // 0x0808(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_21;                             // 0x08C0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_7;                   // 0x08E0(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_20;                             // 0x0998(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_19;                             // 0x09B8(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_18;                             // 0x09D8(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_6;                   // 0x09F8(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_17;                             // 0x0AB0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_5;                   // 0x0AD0(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_6;                   // 0x09D8(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_18;                             // 0x0A90(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_5;                   // 0x0AB0(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_17;                             // 0x0B68(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_16;                             // 0x0B88(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_15;                             // 0x0BA8(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_14;                             // 0x0BC8(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_13;                             // 0x0BE8(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_4;                   // 0x0C08(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_12;                             // 0x0CC0(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_3;                   // 0x0CE0(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_11;                             // 0x0D98(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_2;                   // 0x0DB8(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_4;                   // 0x0BE8(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_13;                             // 0x0CA0(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_3;                   // 0x0CC0(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_12;                             // 0x0D78(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_2;                   // 0x0D98(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_11;                             // 0x0E50(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_10;                             // 0x0E70(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_9;                              // 0x0E90(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_8;                              // 0x0EB0(0x0020)()
@@ -67,126 +66,128 @@ public:
 	struct FAnimNode_Root                         AnimGraphNode_Root_6;                              // 0x0EF0(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_5;                              // 0x0F10(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_4;                              // 0x0F30(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_3;                              // 0x0F50(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_1;                   // 0x0F70(0x00B8)()
-	struct FAnimNode_Root                         AnimGraphNode_Root_2;                              // 0x1028(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x1048(0x00B8)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_1;                   // 0x0F50(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_3;                              // 0x1008(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x1028(0x00B8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root_2;                              // 0x10E0(0x0020)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x1100(0x0020)()
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1120(0x0020)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x1140(0x0048)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x1188(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_7;                   // 0x11D0(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_6;                   // 0x1298(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_5;                    // 0x1360(0x0080)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x13E0(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_5;                   // 0x1428(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_4;                   // 0x14F0(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_3;                   // 0x15B8(0x00C8)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1680(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_2;                   // 0x16C8(0x00C8)()
-	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x1790(0x0450)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_1;                   // 0x1BE0(0x00C8)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0x1CA8(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x2178(0x0080)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x21F8(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x2278(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x22A0(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x22E8(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x2310(0x00F0)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x2400(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x2448(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x2470(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x24F0(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x2518(0x0048)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x2560(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x2618(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x2640(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x2668(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x26E8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x2730(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x2758(0x0028)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x2780(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x27A0(0x0020)()
-	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x27C0(0x0128)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend;                      // 0x28E8(0x0258)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x2B40(0x0028)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x2B68(0x00C8)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x2C30(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x2C78(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x2CF8(0x0028)()
-	class UAnimSequence*                          __CustomProperty_BasicFacialAnim_A5F2C77A4B6EDBF8AC1C4C92EF703A53; // 0x2D20(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bForceInitFootPlacementIKParam_67A206294290F92C62B1FB872A9AA3F1; // 0x2D28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D29[0x7];                                     // 0x2D29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        __CustomProperty_SlopeAngle_67A206294290F92C62B1FB872A9AA3F1; // 0x2D30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RightFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2D38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_LeftFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2D40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RightFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2D48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_LeftFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2D50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_PelvisWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2D58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_PelvisOffset_67A206294290F92C62B1FB872A9AA3F1; // 0x2D60(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               __CustomProperty_AnkleRightOffsetRotation_67A206294290F92C62B1FB872A9AA3F1; // 0x2D78(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               __CustomProperty_AnkleLeftOffsetRotation_67A206294290F92C62B1FB872A9AA3F1; // 0x2D90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_AnkleRightOffsetLocation_67A206294290F92C62B1FB872A9AA3F1; // 0x2DA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_AnkleLeftOffsetLocation_67A206294290F92C62B1FB872A9AA3F1; // 0x2DC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimComp;                                    // 0x2DD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerRegularMovementCompV3_C*      PlayerRegularComp;                                 // 0x2DE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLogicInStateInAir;                            // 0x2DE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FreezeFootFront;                                   // 0x2DE9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          LeftFootIsFront;                                   // 0x2DEA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        CurrentJumpMovingType;                             // 0x2DEB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFallDangerous;                                   // 0x2DEC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     BP_CurrentFloatingJumpStage;                       // 0x2DED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2DEE[0x2];                                     // 0x2DEE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharacterMovementComponent*            MovementComponent;                                 // 0x2DF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        BP_CurLocomotionType;                              // 0x2DF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerGamePlayMovementMode                   BP_CurrentGamePlayMovementMode;                    // 0x2DF9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2DFA[0x6];                                     // 0x2DFA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ABP_Link_DialogueBehaviorCls;                      // 0x2E00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 ABP_Link_AimOffsetCls;                             // 0x2E08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasBegunPlay;                                     // 0x2E10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E11[0x7];                                     // 0x2E11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFEmotionPartBlendWeight               EmotionBaseBlendInfo;                              // 0x2E18(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFEmotionPartBlendWeight               One9AIBlendInfo;                                   // 0x2E58(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFEmotionPartBlendWeight               Five2AIBlendInfo;                                  // 0x2E98(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEnableEmotionPerformance;                         // 0x2ED8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bDisableAllFaicalBlendFlow;                        // 0x2ED9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EDA[0x2];                                     // 0x2EDA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BodyAndUpperFaceSlotName;                          // 0x2EDC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EE4[0x4];                                     // 0x2EE4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BodyAndUpperFaceSlotBlendAlpha;                    // 0x2EE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   UpperFaceTransitionSlotName;                       // 0x2EF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUpperFaceTransitionSlotActived;                   // 0x2EF8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EF9[0x7];                                     // 0x2EF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UClass*                                 ABP_Link_InteractionPerformance;                   // 0x2F00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        FootPlacementIKRigAlpha;                           // 0x2F08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEnableInteractionPerformance;                     // 0x2F10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F11[0x7];                                     // 0x2F11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DialogPerformanceBlendInTime;                      // 0x2F18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DialogPerformanceBlendOutTime;                     // 0x2F20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UX6NikkiCPPTickHelperComponent*         PlayerCPPTickHelperComponent;                      // 0x2F28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FFloatSpringState                      SpringState_FootPlacementIKAlpha;                  // 0x2F30(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	bool                                          BP_bEnableInteractionIK;                           // 0x2F3C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F3D[0x3];                                     // 0x2F3D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                BP_RootMLocation_WS;                               // 0x2F40(0x0018)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 IKSlotName_RootM_Default;                          // 0x2F58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, HasGetValueTypeHash)
-	double                                        FootTargetAlpha;                                   // 0x2F68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             LastRootMTrasnform_WS;                             // 0x2F70(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DefaultEmotionRatio;                               // 0x2FD0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DeltaTimeThisUpdate;                               // 0x2FD4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         InteractionIKLogicAlpha;                           // 0x2FD8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2FDC[0x4];                                     // 0x2FDC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        InteractionIKAlpha;                                // 0x2FE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InteractionIKAlphaInterpSpeed;                     // 0x2FE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 IKSlotName_RootM_DaMiao;                           // 0x2FF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FVector                                IKSlotOffset_RootM_Default;                        // 0x3000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_ForceInitFootPlacementIKParam;                  // 0x3018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3019[0x7];                                     // 0x3019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6OverlayData*                         WeaponOverlayData;                                 // 0x3020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	class UX6OverlayFrameSettings*                WeaponFrameSettings;                               // 0x3028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EquipmentAdditiveEnabled;                       // 0x3030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3031[0x7];                                     // 0x3031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_EquipmentAdditiveBlendTime;                     // 0x3038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerFeedBackPerformanceComponent_C* PlayerFeedBackPerformanceComponent;              // 0x3040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x1120(0x0048)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0x1168(0x0048)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_7;                   // 0x11B0(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_6;                   // 0x1278(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_5;                    // 0x1340(0x0080)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x13C0(0x0048)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_5;                   // 0x1408(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_4;                   // 0x14D0(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_3;                   // 0x1598(0x00C8)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1660(0x0048)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_2;                   // 0x16A8(0x00C8)()
+	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x1770(0x0450)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_1;                   // 0x1BC0(0x00C8)()
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x1C88(0x0020)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x1CA8(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x1D28(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x1DA8(0x0028)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x1DD0(0x0020)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0x1DF0(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x1E38(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x1E60(0x00F0)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0x1F50(0x0048)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0x1F98(0x0020)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x1FB8(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x2038(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0x2060(0x0048)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x20A8(0x00B8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x2160(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x2188(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x21B0(0x0080)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0x2230(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x2278(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x22A0(0x0028)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x22C8(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x22E8(0x0020)()
+	struct FAnimNode_ModifyBone                   AnimGraphNode_ModifyBone;                          // 0x2308(0x0128)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend;                      // 0x2430(0x0258)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x2688(0x0028)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0x26B0(0x00C8)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x2778(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x27C0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x2840(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x2868(0x0028)()
+	struct FAnimNode_X6FootPlacementIK            AnimGraphNode_X6FootPlacementIK;                   // 0x2890(0x0400)()
+	class UAnimSequence*                          __CustomProperty_BasicFacialAnim_A5F2C77A4B6EDBF8AC1C4C92EF703A53; // 0x2C90(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bForceInitFootPlacementIKParam_67A206294290F92C62B1FB872A9AA3F1; // 0x2C98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C99[0x7];                                     // 0x2C99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        __CustomProperty_SlopeAngle_67A206294290F92C62B1FB872A9AA3F1; // 0x2CA0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RightFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2CA8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_LeftFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2CB0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RightFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2CB8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_LeftFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2CC0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_PelvisWeight_67A206294290F92C62B1FB872A9AA3F1; // 0x2CC8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_PelvisOffset_67A206294290F92C62B1FB872A9AA3F1; // 0x2CD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_AnkleRightOffsetRotation_67A206294290F92C62B1FB872A9AA3F1; // 0x2CE8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               __CustomProperty_AnkleLeftOffsetRotation_67A206294290F92C62B1FB872A9AA3F1; // 0x2D00(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_AnkleRightOffsetLocation_67A206294290F92C62B1FB872A9AA3F1; // 0x2D18(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_AnkleLeftOffsetLocation_67A206294290F92C62B1FB872A9AA3F1; // 0x2D30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimComp;                                    // 0x2D48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerRegularMovementCompV3_C*      PlayerRegularComp;                                 // 0x2D50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLogicInStateInAir;                            // 0x2D58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FreezeFootFront;                                   // 0x2D59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LeftFootIsFront;                                   // 0x2D5A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        CurrentJumpMovingType;                             // 0x2D5B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFallDangerous;                                   // 0x2D5C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     BP_CurrentFloatingJumpStage;                       // 0x2D5D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D5E[0x2];                                     // 0x2D5E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCharacterMovementComponent*            MovementComponent;                                 // 0x2D60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        BP_CurLocomotionType;                              // 0x2D68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerGamePlayMovementMode                   BP_CurrentGamePlayMovementMode;                    // 0x2D69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D6A[0x6];                                     // 0x2D6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ABP_Link_DialogueBehaviorCls;                      // 0x2D70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 ABP_Link_AimOffsetCls;                             // 0x2D78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasBegunPlay;                                     // 0x2D80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2D81[0x7];                                     // 0x2D81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFEmotionPartBlendWeight               EmotionBaseBlendInfo;                              // 0x2D88(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFEmotionPartBlendWeight               One9AIBlendInfo;                                   // 0x2DC8(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFEmotionPartBlendWeight               Five2AIBlendInfo;                                  // 0x2E08(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableEmotionPerformance;                         // 0x2E48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDisableAllFaicalBlendFlow;                        // 0x2E49(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E4A[0x2];                                     // 0x2E4A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BodyAndUpperFaceSlotName;                          // 0x2E4C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E54[0x4];                                     // 0x2E54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BodyAndUpperFaceSlotBlendAlpha;                    // 0x2E58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   UpperFaceTransitionSlotName;                       // 0x2E60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUpperFaceTransitionSlotActived;                   // 0x2E68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E69[0x7];                                     // 0x2E69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 ABP_Link_InteractionPerformance;                   // 0x2E70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        FootPlacementIKRigAlpha;                           // 0x2E78(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableInteractionPerformance;                     // 0x2E80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E81[0x7];                                     // 0x2E81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DialogPerformanceBlendInTime;                      // 0x2E88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DialogPerformanceBlendOutTime;                     // 0x2E90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UX6NikkiCPPTickHelperComponent*         PlayerCPPTickHelperComponent;                      // 0x2E98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FFloatSpringState                      SpringState_FootPlacementIKAlpha;                  // 0x2EA0(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          BP_bEnableInteractionIK;                           // 0x2EAC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2EAD[0x3];                                     // 0x2EAD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BP_RootMLocation_WS;                               // 0x2EB0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 IKSlotName_RootM_Default;                          // 0x2EC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, HasGetValueTypeHash)
+	double                                        FootTargetAlpha;                                   // 0x2ED8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             LastRootMTrasnform_WS;                             // 0x2EE0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DefaultEmotionRatio;                               // 0x2F40(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DeltaTimeThisUpdate;                               // 0x2F44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         InteractionIKLogicAlpha;                           // 0x2F48(0x0004)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F4C[0x4];                                     // 0x2F4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        InteractionIKAlpha;                                // 0x2F50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InteractionIKAlphaInterpSpeed;                     // 0x2F58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 IKSlotName_RootM_DaMiao;                           // 0x2F60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FVector                                IKSlotOffset_RootM_Default;                        // 0x2F70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_ForceInitFootPlacementIKParam;                  // 0x2F88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F89[0x7];                                     // 0x2F89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6OverlayData*                         WeaponOverlayData;                                 // 0x2F90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	class UX6OverlayFrameSettings*                WeaponFrameSettings;                               // 0x2F98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EquipmentAdditiveEnabled;                       // 0x2FA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2FA1[0x7];                                     // 0x2FA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_EquipmentAdditiveBlendTime;                     // 0x2FA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerFeedBackPerformanceComponent_C* PlayerFeedBackPerformanceComponent;              // 0x2FB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Anim_Layer_Additive_Behavior(struct FPoseLink* Anim_Layer_Additive_Behavior_0);
@@ -246,37 +247,37 @@ public:
 	}
 };
 static_assert(alignof(UABP_DaMiaoCharacter_C) == 0x000010, "Wrong alignment on UABP_DaMiaoCharacter_C");
-static_assert(sizeof(UABP_DaMiaoCharacter_C) == 0x003050, "Wrong size on UABP_DaMiaoCharacter_C");
+static_assert(sizeof(UABP_DaMiaoCharacter_C) == 0x002FC0, "Wrong size on UABP_DaMiaoCharacter_C");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, UberGraphFrame) == 0x000480, "Member 'UABP_DaMiaoCharacter_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, __AnimBlueprintMutables) == 0x000488, "Member 'UABP_DaMiaoCharacter_C::__AnimBlueprintMutables' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimBlueprintExtension_Tag) == 0x0004C0, "Member 'UABP_DaMiaoCharacter_C::AnimBlueprintExtension_Tag' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimBlueprintExtension_PropertyAccess) == 0x0004C8, "Member 'UABP_DaMiaoCharacter_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimBlueprintExtension_NodeRelevancy) == 0x0004D0, "Member 'UABP_DaMiaoCharacter_C::AnimBlueprintExtension_NodeRelevancy' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimBlueprintExtension_Base) == 0x000578, "Member 'UABP_DaMiaoCharacter_C::AnimBlueprintExtension_Base' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_24) == 0x000580, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_24' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_11) == 0x0005A0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_11' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_23) == 0x000658, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_23' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_10) == 0x000678, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_10' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_22) == 0x000730, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_22' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_9) == 0x000750, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_9' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_21) == 0x000808, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_21' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_8) == 0x000828, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_8' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_20) == 0x0008E0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_20' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_7) == 0x000900, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_7' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_11) == 0x000580, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_11' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_24) == 0x000638, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_24' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_10) == 0x000658, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_10' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_23) == 0x000710, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_23' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_9) == 0x000730, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_9' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_22) == 0x0007E8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_22' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_8) == 0x000808, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_8' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_21) == 0x0008C0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_21' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_7) == 0x0008E0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_7' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_20) == 0x000998, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_20' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_19) == 0x0009B8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_19' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_18) == 0x0009D8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_18' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_6) == 0x0009F8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_6' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_17) == 0x000AB0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_17' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_5) == 0x000AD0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_5' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_6) == 0x0009D8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_6' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_18) == 0x000A90, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_18' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_5) == 0x000AB0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_5' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_17) == 0x000B68, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_17' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_16) == 0x000B88, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_16' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_15) == 0x000BA8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_15' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_14) == 0x000BC8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_14' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_13) == 0x000BE8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_13' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_4) == 0x000C08, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_4' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_12) == 0x000CC0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_12' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_3) == 0x000CE0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_3' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_11) == 0x000D98, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_11' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_2) == 0x000DB8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_2' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_4) == 0x000BE8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_4' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_13) == 0x000CA0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_13' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_3) == 0x000CC0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_3' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_12) == 0x000D78, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_12' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_2) == 0x000D98, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_2' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_11) == 0x000E50, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_11' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_10) == 0x000E70, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_10' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_9) == 0x000E90, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_9' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_8) == 0x000EB0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_8' has a wrong offset!");
@@ -284,114 +285,116 @@ static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_7) == 0x000ED0
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_6) == 0x000EF0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_6' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_5) == 0x000F10, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_5' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_4) == 0x000F30, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_4' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_3) == 0x000F50, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_3' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_1) == 0x000F70, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_2) == 0x001028, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_2' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose) == 0x001048, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose_1) == 0x000F50, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_3) == 0x001008, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_3' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedInputPose) == 0x001028, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_2) == 0x0010E0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_2' has a wrong offset!");
 static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root_1) == 0x001100, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root) == 0x001120, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByEnum) == 0x001140, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SequencePlayer_1) == 0x001188, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_7) == 0x0011D0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_7' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_6) == 0x001298, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_6' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_5) == 0x001360, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Slot_1) == 0x0013E0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_5) == 0x001428, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_5' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_4) == 0x0014F0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_4' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_3) == 0x0015B8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_3' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Slot) == 0x001680, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_2) == 0x0016C8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_2' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Inertialization) == 0x001790, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_1) == 0x001BE0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_ControlRig) == 0x001CA8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_ControlRig' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_4) == 0x002178, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_3) == 0x0021F8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_9) == 0x002278, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool_3) == 0x0022A0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_8) == 0x0022E8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LayeredBoneBlend) == 0x002310, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SequencePlayer) == 0x002400, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_7) == 0x002448, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_2) == 0x002470, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_6) == 0x0024F0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool_2) == 0x002518, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimGraph) == 0x002560, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_5) == 0x002618, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_4) == 0x002640, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_1) == 0x002668, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool_1) == 0x0026E8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_3) == 0x002730, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_2) == 0x002758, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LocalToComponentSpace) == 0x002780, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_ComponentToLocalSpace) == 0x0027A0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_ModifyBone) == 0x0027C0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_ModifyBone' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_X6OverlayBlend) == 0x0028E8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_X6OverlayBlend' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_1) == 0x002B40, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer) == 0x002B68, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool) == 0x002C30, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose) == 0x002C78, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose) == 0x002CF8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_BasicFacialAnim_A5F2C77A4B6EDBF8AC1C4C92EF703A53) == 0x002D20, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_BasicFacialAnim_A5F2C77A4B6EDBF8AC1C4C92EF703A53' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_bForceInitFootPlacementIKParam_67A206294290F92C62B1FB872A9AA3F1) == 0x002D28, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_bForceInitFootPlacementIKParam_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_SlopeAngle_67A206294290F92C62B1FB872A9AA3F1) == 0x002D30, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_SlopeAngle_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_RightFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002D38, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_RightFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_LeftFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002D40, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_LeftFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_RightFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002D48, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_RightFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_LeftFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002D50, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_LeftFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_PelvisWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002D58, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_PelvisWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_PelvisOffset_67A206294290F92C62B1FB872A9AA3F1) == 0x002D60, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_PelvisOffset_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleRightOffsetRotation_67A206294290F92C62B1FB872A9AA3F1) == 0x002D78, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleRightOffsetRotation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleLeftOffsetRotation_67A206294290F92C62B1FB872A9AA3F1) == 0x002D90, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleLeftOffsetRotation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleRightOffsetLocation_67A206294290F92C62B1FB872A9AA3F1) == 0x002DA8, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleRightOffsetLocation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleLeftOffsetLocation_67A206294290F92C62B1FB872A9AA3F1) == 0x002DC0, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleLeftOffsetLocation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerAnimComp) == 0x002DD8, "Member 'UABP_DaMiaoCharacter_C::PlayerAnimComp' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerRegularComp) == 0x002DE0, "Member 'UABP_DaMiaoCharacter_C::PlayerRegularComp' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_IsLogicInStateInAir) == 0x002DE8, "Member 'UABP_DaMiaoCharacter_C::BP_IsLogicInStateInAir' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, FreezeFootFront) == 0x002DE9, "Member 'UABP_DaMiaoCharacter_C::FreezeFootFront' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, LeftFootIsFront) == 0x002DEA, "Member 'UABP_DaMiaoCharacter_C::LeftFootIsFront' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, CurrentJumpMovingType) == 0x002DEB, "Member 'UABP_DaMiaoCharacter_C::CurrentJumpMovingType' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, IsFallDangerous) == 0x002DEC, "Member 'UABP_DaMiaoCharacter_C::IsFallDangerous' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_CurrentFloatingJumpStage) == 0x002DED, "Member 'UABP_DaMiaoCharacter_C::BP_CurrentFloatingJumpStage' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, MovementComponent) == 0x002DF0, "Member 'UABP_DaMiaoCharacter_C::MovementComponent' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_CurLocomotionType) == 0x002DF8, "Member 'UABP_DaMiaoCharacter_C::BP_CurLocomotionType' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_CurrentGamePlayMovementMode) == 0x002DF9, "Member 'UABP_DaMiaoCharacter_C::BP_CurrentGamePlayMovementMode' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, ABP_Link_DialogueBehaviorCls) == 0x002E00, "Member 'UABP_DaMiaoCharacter_C::ABP_Link_DialogueBehaviorCls' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, ABP_Link_AimOffsetCls) == 0x002E08, "Member 'UABP_DaMiaoCharacter_C::ABP_Link_AimOffsetCls' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, bHasBegunPlay) == 0x002E10, "Member 'UABP_DaMiaoCharacter_C::bHasBegunPlay' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, EmotionBaseBlendInfo) == 0x002E18, "Member 'UABP_DaMiaoCharacter_C::EmotionBaseBlendInfo' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, One9AIBlendInfo) == 0x002E58, "Member 'UABP_DaMiaoCharacter_C::One9AIBlendInfo' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, Five2AIBlendInfo) == 0x002E98, "Member 'UABP_DaMiaoCharacter_C::Five2AIBlendInfo' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, bEnableEmotionPerformance) == 0x002ED8, "Member 'UABP_DaMiaoCharacter_C::bEnableEmotionPerformance' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, bDisableAllFaicalBlendFlow) == 0x002ED9, "Member 'UABP_DaMiaoCharacter_C::bDisableAllFaicalBlendFlow' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BodyAndUpperFaceSlotName) == 0x002EDC, "Member 'UABP_DaMiaoCharacter_C::BodyAndUpperFaceSlotName' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BodyAndUpperFaceSlotBlendAlpha) == 0x002EE8, "Member 'UABP_DaMiaoCharacter_C::BodyAndUpperFaceSlotBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, UpperFaceTransitionSlotName) == 0x002EF0, "Member 'UABP_DaMiaoCharacter_C::UpperFaceTransitionSlotName' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, bUpperFaceTransitionSlotActived) == 0x002EF8, "Member 'UABP_DaMiaoCharacter_C::bUpperFaceTransitionSlotActived' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, ABP_Link_InteractionPerformance) == 0x002F00, "Member 'UABP_DaMiaoCharacter_C::ABP_Link_InteractionPerformance' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, FootPlacementIKRigAlpha) == 0x002F08, "Member 'UABP_DaMiaoCharacter_C::FootPlacementIKRigAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, bEnableInteractionPerformance) == 0x002F10, "Member 'UABP_DaMiaoCharacter_C::bEnableInteractionPerformance' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, DialogPerformanceBlendInTime) == 0x002F18, "Member 'UABP_DaMiaoCharacter_C::DialogPerformanceBlendInTime' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, DialogPerformanceBlendOutTime) == 0x002F20, "Member 'UABP_DaMiaoCharacter_C::DialogPerformanceBlendOutTime' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerCPPTickHelperComponent) == 0x002F28, "Member 'UABP_DaMiaoCharacter_C::PlayerCPPTickHelperComponent' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, SpringState_FootPlacementIKAlpha) == 0x002F30, "Member 'UABP_DaMiaoCharacter_C::SpringState_FootPlacementIKAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_bEnableInteractionIK) == 0x002F3C, "Member 'UABP_DaMiaoCharacter_C::BP_bEnableInteractionIK' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_RootMLocation_WS) == 0x002F40, "Member 'UABP_DaMiaoCharacter_C::BP_RootMLocation_WS' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, IKSlotName_RootM_Default) == 0x002F58, "Member 'UABP_DaMiaoCharacter_C::IKSlotName_RootM_Default' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, FootTargetAlpha) == 0x002F68, "Member 'UABP_DaMiaoCharacter_C::FootTargetAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, LastRootMTrasnform_WS) == 0x002F70, "Member 'UABP_DaMiaoCharacter_C::LastRootMTrasnform_WS' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, DefaultEmotionRatio) == 0x002FD0, "Member 'UABP_DaMiaoCharacter_C::DefaultEmotionRatio' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, DeltaTimeThisUpdate) == 0x002FD4, "Member 'UABP_DaMiaoCharacter_C::DeltaTimeThisUpdate' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, InteractionIKLogicAlpha) == 0x002FD8, "Member 'UABP_DaMiaoCharacter_C::InteractionIKLogicAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, InteractionIKAlpha) == 0x002FE0, "Member 'UABP_DaMiaoCharacter_C::InteractionIKAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, InteractionIKAlphaInterpSpeed) == 0x002FE8, "Member 'UABP_DaMiaoCharacter_C::InteractionIKAlphaInterpSpeed' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, IKSlotName_RootM_DaMiao) == 0x002FF0, "Member 'UABP_DaMiaoCharacter_C::IKSlotName_RootM_DaMiao' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, IKSlotOffset_RootM_Default) == 0x003000, "Member 'UABP_DaMiaoCharacter_C::IKSlotOffset_RootM_Default' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_ForceInitFootPlacementIKParam) == 0x003018, "Member 'UABP_DaMiaoCharacter_C::BP_ForceInitFootPlacementIKParam' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, WeaponOverlayData) == 0x003020, "Member 'UABP_DaMiaoCharacter_C::WeaponOverlayData' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, WeaponFrameSettings) == 0x003028, "Member 'UABP_DaMiaoCharacter_C::WeaponFrameSettings' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_EquipmentAdditiveEnabled) == 0x003030, "Member 'UABP_DaMiaoCharacter_C::BP_EquipmentAdditiveEnabled' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_EquipmentAdditiveBlendTime) == 0x003038, "Member 'UABP_DaMiaoCharacter_C::BP_EquipmentAdditiveBlendTime' has a wrong offset!");
-static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerFeedBackPerformanceComponent) == 0x003040, "Member 'UABP_DaMiaoCharacter_C::PlayerFeedBackPerformanceComponent' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByEnum) == 0x001120, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SequencePlayer_1) == 0x001168, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_7) == 0x0011B0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_7' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_6) == 0x001278, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_6' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_5) == 0x001340, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Slot_1) == 0x0013C0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_5) == 0x001408, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_5' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_4) == 0x0014D0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_4' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_3) == 0x001598, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_3' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Slot) == 0x001660, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_2) == 0x0016A8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_2' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Inertialization) == 0x001770, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Inertialization' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer_1) == 0x001BC0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_Root) == 0x001C88, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_4) == 0x001CA8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_3) == 0x001D28, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_9) == 0x001DA8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x001DD0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool_3) == 0x001DF0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_8) == 0x001E38, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LayeredBoneBlend) == 0x001E60, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SequencePlayer) == 0x001F50, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LocalToComponentSpace_1) == 0x001F98, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_2) == 0x001FB8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_7) == 0x002038, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool_2) == 0x002060, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimGraph) == 0x0020A8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_6) == 0x002160, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_5) == 0x002188, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose_1) == 0x0021B0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool_1) == 0x002230, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_4) == 0x002278, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_3) == 0x0022A0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LocalToComponentSpace) == 0x0022C8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_ComponentToLocalSpace) == 0x0022E8, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_ModifyBone) == 0x002308, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_ModifyBone' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_X6OverlayBlend) == 0x002430, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_X6OverlayBlend' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_2) == 0x002688, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_LinkedAnimLayer) == 0x0026B0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_BlendListByBool) == 0x002778, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_SaveCachedPose) == 0x0027C0, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose_1) == 0x002840, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_UseCachedPose) == 0x002868, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, AnimGraphNode_X6FootPlacementIK) == 0x002890, "Member 'UABP_DaMiaoCharacter_C::AnimGraphNode_X6FootPlacementIK' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_BasicFacialAnim_A5F2C77A4B6EDBF8AC1C4C92EF703A53) == 0x002C90, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_BasicFacialAnim_A5F2C77A4B6EDBF8AC1C4C92EF703A53' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_bForceInitFootPlacementIKParam_67A206294290F92C62B1FB872A9AA3F1) == 0x002C98, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_bForceInitFootPlacementIKParam_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_SlopeAngle_67A206294290F92C62B1FB872A9AA3F1) == 0x002CA0, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_SlopeAngle_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_RightFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002CA8, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_RightFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_LeftFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002CB0, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_LeftFootRotationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_RightFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002CB8, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_RightFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_LeftFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002CC0, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_LeftFootTranslationWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_PelvisWeight_67A206294290F92C62B1FB872A9AA3F1) == 0x002CC8, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_PelvisWeight_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_PelvisOffset_67A206294290F92C62B1FB872A9AA3F1) == 0x002CD0, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_PelvisOffset_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleRightOffsetRotation_67A206294290F92C62B1FB872A9AA3F1) == 0x002CE8, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleRightOffsetRotation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleLeftOffsetRotation_67A206294290F92C62B1FB872A9AA3F1) == 0x002D00, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleLeftOffsetRotation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleRightOffsetLocation_67A206294290F92C62B1FB872A9AA3F1) == 0x002D18, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleRightOffsetLocation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, __CustomProperty_AnkleLeftOffsetLocation_67A206294290F92C62B1FB872A9AA3F1) == 0x002D30, "Member 'UABP_DaMiaoCharacter_C::__CustomProperty_AnkleLeftOffsetLocation_67A206294290F92C62B1FB872A9AA3F1' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerAnimComp) == 0x002D48, "Member 'UABP_DaMiaoCharacter_C::PlayerAnimComp' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerRegularComp) == 0x002D50, "Member 'UABP_DaMiaoCharacter_C::PlayerRegularComp' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_IsLogicInStateInAir) == 0x002D58, "Member 'UABP_DaMiaoCharacter_C::BP_IsLogicInStateInAir' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, FreezeFootFront) == 0x002D59, "Member 'UABP_DaMiaoCharacter_C::FreezeFootFront' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, LeftFootIsFront) == 0x002D5A, "Member 'UABP_DaMiaoCharacter_C::LeftFootIsFront' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, CurrentJumpMovingType) == 0x002D5B, "Member 'UABP_DaMiaoCharacter_C::CurrentJumpMovingType' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, IsFallDangerous) == 0x002D5C, "Member 'UABP_DaMiaoCharacter_C::IsFallDangerous' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_CurrentFloatingJumpStage) == 0x002D5D, "Member 'UABP_DaMiaoCharacter_C::BP_CurrentFloatingJumpStage' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, MovementComponent) == 0x002D60, "Member 'UABP_DaMiaoCharacter_C::MovementComponent' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_CurLocomotionType) == 0x002D68, "Member 'UABP_DaMiaoCharacter_C::BP_CurLocomotionType' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_CurrentGamePlayMovementMode) == 0x002D69, "Member 'UABP_DaMiaoCharacter_C::BP_CurrentGamePlayMovementMode' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, ABP_Link_DialogueBehaviorCls) == 0x002D70, "Member 'UABP_DaMiaoCharacter_C::ABP_Link_DialogueBehaviorCls' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, ABP_Link_AimOffsetCls) == 0x002D78, "Member 'UABP_DaMiaoCharacter_C::ABP_Link_AimOffsetCls' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, bHasBegunPlay) == 0x002D80, "Member 'UABP_DaMiaoCharacter_C::bHasBegunPlay' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, EmotionBaseBlendInfo) == 0x002D88, "Member 'UABP_DaMiaoCharacter_C::EmotionBaseBlendInfo' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, One9AIBlendInfo) == 0x002DC8, "Member 'UABP_DaMiaoCharacter_C::One9AIBlendInfo' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, Five2AIBlendInfo) == 0x002E08, "Member 'UABP_DaMiaoCharacter_C::Five2AIBlendInfo' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, bEnableEmotionPerformance) == 0x002E48, "Member 'UABP_DaMiaoCharacter_C::bEnableEmotionPerformance' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, bDisableAllFaicalBlendFlow) == 0x002E49, "Member 'UABP_DaMiaoCharacter_C::bDisableAllFaicalBlendFlow' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BodyAndUpperFaceSlotName) == 0x002E4C, "Member 'UABP_DaMiaoCharacter_C::BodyAndUpperFaceSlotName' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BodyAndUpperFaceSlotBlendAlpha) == 0x002E58, "Member 'UABP_DaMiaoCharacter_C::BodyAndUpperFaceSlotBlendAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, UpperFaceTransitionSlotName) == 0x002E60, "Member 'UABP_DaMiaoCharacter_C::UpperFaceTransitionSlotName' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, bUpperFaceTransitionSlotActived) == 0x002E68, "Member 'UABP_DaMiaoCharacter_C::bUpperFaceTransitionSlotActived' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, ABP_Link_InteractionPerformance) == 0x002E70, "Member 'UABP_DaMiaoCharacter_C::ABP_Link_InteractionPerformance' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, FootPlacementIKRigAlpha) == 0x002E78, "Member 'UABP_DaMiaoCharacter_C::FootPlacementIKRigAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, bEnableInteractionPerformance) == 0x002E80, "Member 'UABP_DaMiaoCharacter_C::bEnableInteractionPerformance' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, DialogPerformanceBlendInTime) == 0x002E88, "Member 'UABP_DaMiaoCharacter_C::DialogPerformanceBlendInTime' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, DialogPerformanceBlendOutTime) == 0x002E90, "Member 'UABP_DaMiaoCharacter_C::DialogPerformanceBlendOutTime' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerCPPTickHelperComponent) == 0x002E98, "Member 'UABP_DaMiaoCharacter_C::PlayerCPPTickHelperComponent' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, SpringState_FootPlacementIKAlpha) == 0x002EA0, "Member 'UABP_DaMiaoCharacter_C::SpringState_FootPlacementIKAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_bEnableInteractionIK) == 0x002EAC, "Member 'UABP_DaMiaoCharacter_C::BP_bEnableInteractionIK' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_RootMLocation_WS) == 0x002EB0, "Member 'UABP_DaMiaoCharacter_C::BP_RootMLocation_WS' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, IKSlotName_RootM_Default) == 0x002EC8, "Member 'UABP_DaMiaoCharacter_C::IKSlotName_RootM_Default' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, FootTargetAlpha) == 0x002ED8, "Member 'UABP_DaMiaoCharacter_C::FootTargetAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, LastRootMTrasnform_WS) == 0x002EE0, "Member 'UABP_DaMiaoCharacter_C::LastRootMTrasnform_WS' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, DefaultEmotionRatio) == 0x002F40, "Member 'UABP_DaMiaoCharacter_C::DefaultEmotionRatio' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, DeltaTimeThisUpdate) == 0x002F44, "Member 'UABP_DaMiaoCharacter_C::DeltaTimeThisUpdate' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, InteractionIKLogicAlpha) == 0x002F48, "Member 'UABP_DaMiaoCharacter_C::InteractionIKLogicAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, InteractionIKAlpha) == 0x002F50, "Member 'UABP_DaMiaoCharacter_C::InteractionIKAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, InteractionIKAlphaInterpSpeed) == 0x002F58, "Member 'UABP_DaMiaoCharacter_C::InteractionIKAlphaInterpSpeed' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, IKSlotName_RootM_DaMiao) == 0x002F60, "Member 'UABP_DaMiaoCharacter_C::IKSlotName_RootM_DaMiao' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, IKSlotOffset_RootM_Default) == 0x002F70, "Member 'UABP_DaMiaoCharacter_C::IKSlotOffset_RootM_Default' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_ForceInitFootPlacementIKParam) == 0x002F88, "Member 'UABP_DaMiaoCharacter_C::BP_ForceInitFootPlacementIKParam' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, WeaponOverlayData) == 0x002F90, "Member 'UABP_DaMiaoCharacter_C::WeaponOverlayData' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, WeaponFrameSettings) == 0x002F98, "Member 'UABP_DaMiaoCharacter_C::WeaponFrameSettings' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_EquipmentAdditiveEnabled) == 0x002FA0, "Member 'UABP_DaMiaoCharacter_C::BP_EquipmentAdditiveEnabled' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, BP_EquipmentAdditiveBlendTime) == 0x002FA8, "Member 'UABP_DaMiaoCharacter_C::BP_EquipmentAdditiveBlendTime' has a wrong offset!");
+static_assert(offsetof(UABP_DaMiaoCharacter_C, PlayerFeedBackPerformanceComponent) == 0x002FB0, "Member 'UABP_DaMiaoCharacter_C::PlayerFeedBackPerformanceComponent' has a wrong offset!");
 
 }
 

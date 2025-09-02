@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "X6CustomizableSequencerTracks_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "Engine_classes.hpp"
-#include "X6CustomizableSequencerTracks_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -51,6 +51,10 @@ public:
 	static class UX6LevelSequenceAssetUserData* GetCustomUserAsset(class ULevelSequence* LevelSequence);
 	static double GetDoubleValueFromPreviewConfig(class FName Name_0);
 	static int32 GetIntValueFromPreviewConfig(class FName Name_0);
+	static TMap<class FString, class FString> GetStringToStringMapFromPreviewConfig(class FName Name_0);
+	static bool IsPreviewInEditor(class AActor* Actor);
+	static void SetStringToStringMapToPreviewConfig(class FName Name_0, const TMap<class FString, class FString>& NewMap);
+	static void SetVisibility(class AActor* Actor, const bool bNewVisibility);
 
 public:
 	static class UClass* StaticClass()
@@ -260,6 +264,20 @@ static_assert(sizeof(UX6SequencerParameterTrackBP) == 0x000100, "Wrong size on U
 class UX6SequencerTrackInstanceBP : public UMovieSceneTrackInstance
 {
 public:
+	class UObject* FindBindingObject(const struct FMovieSceneObjectBindingID& MovieSceneObjectBindingID);
+	class UObject* FindBindingObjectByInput(const struct FX6SequencerTrackInstanceInput& Input, const struct FMovieSceneObjectBindingID& MovieSceneObjectBindingID);
+	class AActor* FindProxyActor();
+	struct FFrameNumber GetBeginFrame();
+	struct FFrameNumber GetBeginFrameByInput(const struct FX6SequencerTrackInstanceInput& Input);
+	float GetBeginFrameSeconds();
+	float GetBeginFrameSecondsByInput(const struct FX6SequencerTrackInstanceInput& Input);
+	class UX6SequencerSectionBP* GetDefaultSectionBP();
+	struct FFrameNumber GetEndFrame();
+	struct FFrameNumber GetEndFrameByInput(const struct FX6SequencerTrackInstanceInput& Input);
+	float GetEndFrameSeconds();
+	float GetEndFrameSecondsByInput(const struct FX6SequencerTrackInstanceInput& Input);
+	class UMovieSceneSequencePlayer* GetMovieSceneSequencePlayer();
+	class UMovieSceneSequencePlayer* GetMovieSceneSequencePlayerByInput(const struct FX6SequencerTrackInstanceInput& Input);
 	void K2_OnBeginUpdateInputs();
 	void K2_OnDestroyed();
 	void K2_OnEndUpdateInputs();
@@ -285,6 +303,23 @@ public:
 };
 static_assert(alignof(UX6SequencerTrackInstanceBP) == 0x000008, "Wrong alignment on UX6SequencerTrackInstanceBP");
 static_assert(sizeof(UX6SequencerTrackInstanceBP) == 0x000050, "Wrong size on UX6SequencerTrackInstanceBP");
+
+// Class X6CustomizableSequencerTracks.X6SequencerParameterTrackInstanceBP
+// 0x0000 (0x0050 - 0x0050)
+class UX6SequencerParameterTrackInstanceBP final : public UX6SequencerTrackInstanceBP
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6SequencerParameterTrackInstanceBP">();
+	}
+	static class UX6SequencerParameterTrackInstanceBP* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6SequencerParameterTrackInstanceBP>();
+	}
+};
+static_assert(alignof(UX6SequencerParameterTrackInstanceBP) == 0x000008, "Wrong alignment on UX6SequencerParameterTrackInstanceBP");
+static_assert(sizeof(UX6SequencerParameterTrackInstanceBP) == 0x000050, "Wrong size on UX6SequencerParameterTrackInstanceBP");
 
 }
 

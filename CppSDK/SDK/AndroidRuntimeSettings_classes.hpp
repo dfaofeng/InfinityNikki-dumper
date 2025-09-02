@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
+#include "AudioPlatformConfiguration_structs.hpp"
 #include "AndroidRuntimeSettings_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "AudioPlatformConfiguration_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class AndroidRuntimeSettings.AndroidRuntimeSettings
-// 0x0340 (0x0368 - 0x0028)
+// 0x0348 (0x0370 - 0x0028)
 class UAndroidRuntimeSettings final : public UObject
 {
 public:
@@ -40,13 +40,14 @@ public:
 	bool                                          bDisableVerifyOBBOnStartUp;                        // 0x0074(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForceSmallOBBFiles;                               // 0x0075(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowLargeOBBFiles;                               // 0x0076(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowPatchOBBFile;                                // 0x0077(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowOverflowOBBFiles;                            // 0x0078(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDontBundleLibrariesInAPK;                         // 0x0079(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseExternalFilesDir;                              // 0x007A(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPublicLogFiles;                                   // 0x007B(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAndroidScreenOrientation                     Orientation;                                       // 0x007C(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAllowHugeOBBFiles;                                // 0x0077(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowPatchOBBFile;                                // 0x0078(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowOverflowOBBFiles;                            // 0x0079(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDontBundleLibrariesInAPK;                         // 0x007A(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseExternalFilesDir;                              // 0x007B(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPublicLogFiles;                                   // 0x007C(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAndroidScreenOrientation                     Orientation;                                       // 0x007D(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxAspectRatio;                                    // 0x0080(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseDisplayCutout;                                 // 0x0084(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowResizing;                                    // 0x0085(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -94,83 +95,85 @@ public:
 	bool                                          bSupportUnrealSoReplaced;                          // 0x0161(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_162[0x6];                                      // 0x0162(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 GradleBuildVersionOverride;                        // 0x0168(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         ThirdPartySoNamesReplaced;                         // 0x0178(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	struct FDirectoryPath                         DebugVulkanLayerDirectory;                         // 0x0188(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         DebugVulkanDeviceLayers;                           // 0x0198(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	TArray<class FString>                         DebugVulkanInstanceLayers;                         // 0x01A8(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	bool                                          bAndroidOpenGLSupportsBackbufferSampling;          // 0x01B8(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDetectVulkanByDefault;                            // 0x01B9(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBuildWithHiddenSymbolVisibility;                  // 0x01BA(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableStackProtector;                            // 0x01BB(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableLibCppSharedDependencyValidation;          // 0x01BC(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSaveSymbols;                                      // 0x01BD(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStripShaderReflection;                            // 0x01BE(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableGooglePlaySupport;                          // 0x01BF(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RequestCodeForPlayGamesActivities;                 // 0x01C0(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PlayGamesClientId;                                 // 0x01C8(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceRefreshToken;                                // 0x01D8(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 GamesAppID;                                        // 0x01E0(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FGooglePlayAchievementMapping>  AchievementMap;                                    // 0x01F0(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	TArray<struct FGooglePlayLeaderboardMapping>  LeaderboardMap;                                    // 0x0200(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	bool                                          bSupportAdMob;                                     // 0x0210(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AdMobAppID;                                        // 0x0218(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETagForChildDirectedTreatment                 TagForChildDirectedTreatment;                      // 0x0228(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETagForUnderAgeOfConsent                      TagForUnderAgeOfConsent;                           // 0x0229(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMaxAdContentRating                           MaxAdContentRating;                                // 0x022A(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B[0x5];                                      // 0x022B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AdMobAdUnitID;                                     // 0x0230(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         AdMobAdUnitIDs;                                    // 0x0240(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	class FString                                 GooglePlayLicenseKey;                              // 0x0250(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 GCMClientSenderID;                                 // 0x0260(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowLaunchImage;                                  // 0x0270(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowIMU;                                         // 0x0271(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowControllers;                                 // 0x0272(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBlockAndroidKeysOnControllers;                    // 0x0273(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bControllersBlockDeviceFeedback;                   // 0x0274(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAndroidAudio                                 AndroidAudio;                                      // 0x0275(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_276[0x2];                                      // 0x0276(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AudioSampleRate;                                   // 0x0278(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AudioCallbackBufferFrameSize;                      // 0x027C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AudioNumBuffersToEnqueue;                          // 0x0280(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AudioMaxChannels;                                  // 0x0284(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AudioNumSourceWorkers;                             // 0x0288(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SpatializationPlugin;                              // 0x0290(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SourceDataOverridePlugin;                          // 0x02A0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReverbPlugin;                                      // 0x02B0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OcclusionPlugin;                                   // 0x02C0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPlatformRuntimeAudioCompressionOverrides CompressionOverrides;                           // 0x02D0(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         CacheSizeKB;                                       // 0x02E0(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxChunkSizeOverrideKB;                            // 0x02E4(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResampleForDevice;                                // 0x02E8(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2E9[0x3];                                      // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SoundCueCookQualityIndex;                          // 0x02EC(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxSampleRate;                                     // 0x02F0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HighSampleRate;                                    // 0x02F4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MedSampleRate;                                     // 0x02F8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LowSampleRate;                                     // 0x02FC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinSampleRate;                                     // 0x0300(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CompressionQualityModifier;                        // 0x0304(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AutoStreamingThreshold;                            // 0x0308(0x0004)(ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAndroidGraphicsDebugger                      AndroidGraphicsDebugger;                           // 0x030C(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_30D[0x3];                                      // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDirectoryPath                         MaliGraphicsDebuggerPath;                          // 0x0310(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMaliPerfCounters;                           // 0x0320(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMultiTargetFormat_ETC2;                           // 0x0321(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMultiTargetFormat_DXT;                            // 0x0322(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMultiTargetFormat_ASTC;                           // 0x0323(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TextureFormatPriority_ETC2;                        // 0x0324(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TextureFormatPriority_DXT;                         // 0x0328(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TextureFormatPriority_ASTC;                        // 0x032C(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SDKAPILevelOverride;                               // 0x0330(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 NDKAPILevelOverride;                               // 0x0340(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BuildToolsOverride;                                // 0x0350(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStreamLandscapeMeshLODs;                          // 0x0360(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableDomStorage;                                 // 0x0361(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_362[0x6];                                      // 0x0362(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ESoInstallLocation                            UnrealSoInstallLocation;                           // 0x0178(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FReplacedSoInfo>                ThirdPartySoInfosReplaced;                         // 0x0180(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	struct FDirectoryPath                         DebugVulkanLayerDirectory;                         // 0x0190(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         DebugVulkanDeviceLayers;                           // 0x01A0(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	TArray<class FString>                         DebugVulkanInstanceLayers;                         // 0x01B0(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	bool                                          bAndroidOpenGLSupportsBackbufferSampling;          // 0x01C0(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDetectVulkanByDefault;                            // 0x01C1(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBuildWithHiddenSymbolVisibility;                  // 0x01C2(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableStackProtector;                            // 0x01C3(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableLibCppSharedDependencyValidation;          // 0x01C4(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSaveSymbols;                                      // 0x01C5(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStripShaderReflection;                            // 0x01C6(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableGooglePlaySupport;                          // 0x01C7(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RequestCodeForPlayGamesActivities;                 // 0x01C8(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PlayGamesClientId;                                 // 0x01D0(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceRefreshToken;                                // 0x01E0(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E1[0x7];                                      // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 GamesAppID;                                        // 0x01E8(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGooglePlayAchievementMapping>  AchievementMap;                                    // 0x01F8(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	TArray<struct FGooglePlayLeaderboardMapping>  LeaderboardMap;                                    // 0x0208(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	bool                                          bSupportAdMob;                                     // 0x0218(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AdMobAppID;                                        // 0x0220(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETagForChildDirectedTreatment                 TagForChildDirectedTreatment;                      // 0x0230(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETagForUnderAgeOfConsent                      TagForUnderAgeOfConsent;                           // 0x0231(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMaxAdContentRating                           MaxAdContentRating;                                // 0x0232(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_233[0x5];                                      // 0x0233(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AdMobAdUnitID;                                     // 0x0238(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         AdMobAdUnitIDs;                                    // 0x0248(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	class FString                                 GooglePlayLicenseKey;                              // 0x0258(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GCMClientSenderID;                                 // 0x0268(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowLaunchImage;                                  // 0x0278(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowIMU;                                         // 0x0279(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowControllers;                                 // 0x027A(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBlockAndroidKeysOnControllers;                    // 0x027B(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bControllersBlockDeviceFeedback;                   // 0x027C(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAndroidAudio                                 AndroidAudio;                                      // 0x027D(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_27E[0x2];                                      // 0x027E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AudioSampleRate;                                   // 0x0280(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AudioCallbackBufferFrameSize;                      // 0x0284(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AudioNumBuffersToEnqueue;                          // 0x0288(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AudioMaxChannels;                                  // 0x028C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AudioNumSourceWorkers;                             // 0x0290(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_294[0x4];                                      // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SpatializationPlugin;                              // 0x0298(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SourceDataOverridePlugin;                          // 0x02A8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReverbPlugin;                                      // 0x02B8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OcclusionPlugin;                                   // 0x02C8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlatformRuntimeAudioCompressionOverrides CompressionOverrides;                           // 0x02D8(0x0010)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         CacheSizeKB;                                       // 0x02E8(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxChunkSizeOverrideKB;                            // 0x02EC(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResampleForDevice;                                // 0x02F0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2F1[0x3];                                      // 0x02F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SoundCueCookQualityIndex;                          // 0x02F4(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSampleRate;                                     // 0x02F8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HighSampleRate;                                    // 0x02FC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MedSampleRate;                                     // 0x0300(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LowSampleRate;                                     // 0x0304(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinSampleRate;                                     // 0x0308(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CompressionQualityModifier;                        // 0x030C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AutoStreamingThreshold;                            // 0x0310(0x0004)(ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAndroidGraphicsDebugger                      AndroidGraphicsDebugger;                           // 0x0314(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315[0x3];                                      // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDirectoryPath                         MaliGraphicsDebuggerPath;                          // 0x0318(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableMaliPerfCounters;                           // 0x0328(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMultiTargetFormat_ETC2;                           // 0x0329(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMultiTargetFormat_DXT;                            // 0x032A(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMultiTargetFormat_ASTC;                           // 0x032B(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TextureFormatPriority_ETC2;                        // 0x032C(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TextureFormatPriority_DXT;                         // 0x0330(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TextureFormatPriority_ASTC;                        // 0x0334(0x0004)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SDKAPILevelOverride;                               // 0x0338(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 NDKAPILevelOverride;                               // 0x0348(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BuildToolsOverride;                                // 0x0358(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStreamLandscapeMeshLODs;                          // 0x0368(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableDomStorage;                                 // 0x0369(0x0001)(Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36A[0x6];                                      // 0x036A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -183,7 +186,7 @@ public:
 	}
 };
 static_assert(alignof(UAndroidRuntimeSettings) == 0x000008, "Wrong alignment on UAndroidRuntimeSettings");
-static_assert(sizeof(UAndroidRuntimeSettings) == 0x000368, "Wrong size on UAndroidRuntimeSettings");
+static_assert(sizeof(UAndroidRuntimeSettings) == 0x000370, "Wrong size on UAndroidRuntimeSettings");
 static_assert(offsetof(UAndroidRuntimeSettings, PackageName) == 0x000028, "Member 'UAndroidRuntimeSettings::PackageName' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, StoreVersion) == 0x000038, "Member 'UAndroidRuntimeSettings::StoreVersion' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, StoreVersionOffsetArm64) == 0x00003C, "Member 'UAndroidRuntimeSettings::StoreVersionOffsetArm64' has a wrong offset!");
@@ -199,12 +202,13 @@ static_assert(offsetof(UAndroidRuntimeSettings, bCreateAllPlatformsInstall) == 0
 static_assert(offsetof(UAndroidRuntimeSettings, bDisableVerifyOBBOnStartUp) == 0x000074, "Member 'UAndroidRuntimeSettings::bDisableVerifyOBBOnStartUp' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, bForceSmallOBBFiles) == 0x000075, "Member 'UAndroidRuntimeSettings::bForceSmallOBBFiles' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, bAllowLargeOBBFiles) == 0x000076, "Member 'UAndroidRuntimeSettings::bAllowLargeOBBFiles' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bAllowPatchOBBFile) == 0x000077, "Member 'UAndroidRuntimeSettings::bAllowPatchOBBFile' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bAllowOverflowOBBFiles) == 0x000078, "Member 'UAndroidRuntimeSettings::bAllowOverflowOBBFiles' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bDontBundleLibrariesInAPK) == 0x000079, "Member 'UAndroidRuntimeSettings::bDontBundleLibrariesInAPK' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bUseExternalFilesDir) == 0x00007A, "Member 'UAndroidRuntimeSettings::bUseExternalFilesDir' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bPublicLogFiles) == 0x00007B, "Member 'UAndroidRuntimeSettings::bPublicLogFiles' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, Orientation) == 0x00007C, "Member 'UAndroidRuntimeSettings::Orientation' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bAllowHugeOBBFiles) == 0x000077, "Member 'UAndroidRuntimeSettings::bAllowHugeOBBFiles' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bAllowPatchOBBFile) == 0x000078, "Member 'UAndroidRuntimeSettings::bAllowPatchOBBFile' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bAllowOverflowOBBFiles) == 0x000079, "Member 'UAndroidRuntimeSettings::bAllowOverflowOBBFiles' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bDontBundleLibrariesInAPK) == 0x00007A, "Member 'UAndroidRuntimeSettings::bDontBundleLibrariesInAPK' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bUseExternalFilesDir) == 0x00007B, "Member 'UAndroidRuntimeSettings::bUseExternalFilesDir' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bPublicLogFiles) == 0x00007C, "Member 'UAndroidRuntimeSettings::bPublicLogFiles' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, Orientation) == 0x00007D, "Member 'UAndroidRuntimeSettings::Orientation' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, MaxAspectRatio) == 0x000080, "Member 'UAndroidRuntimeSettings::MaxAspectRatio' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, bUseDisplayCutout) == 0x000084, "Member 'UAndroidRuntimeSettings::bUseDisplayCutout' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, bAllowResizing) == 0x000085, "Member 'UAndroidRuntimeSettings::bAllowResizing' has a wrong offset!");
@@ -248,74 +252,75 @@ static_assert(offsetof(UAndroidRuntimeSettings, bDisableDebuggableOverride) == 0
 static_assert(offsetof(UAndroidRuntimeSettings, bDisableMinifyOverride) == 0x000160, "Member 'UAndroidRuntimeSettings::bDisableMinifyOverride' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, bSupportUnrealSoReplaced) == 0x000161, "Member 'UAndroidRuntimeSettings::bSupportUnrealSoReplaced' has a wrong offset!");
 static_assert(offsetof(UAndroidRuntimeSettings, GradleBuildVersionOverride) == 0x000168, "Member 'UAndroidRuntimeSettings::GradleBuildVersionOverride' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, ThirdPartySoNamesReplaced) == 0x000178, "Member 'UAndroidRuntimeSettings::ThirdPartySoNamesReplaced' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, DebugVulkanLayerDirectory) == 0x000188, "Member 'UAndroidRuntimeSettings::DebugVulkanLayerDirectory' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, DebugVulkanDeviceLayers) == 0x000198, "Member 'UAndroidRuntimeSettings::DebugVulkanDeviceLayers' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, DebugVulkanInstanceLayers) == 0x0001A8, "Member 'UAndroidRuntimeSettings::DebugVulkanInstanceLayers' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bAndroidOpenGLSupportsBackbufferSampling) == 0x0001B8, "Member 'UAndroidRuntimeSettings::bAndroidOpenGLSupportsBackbufferSampling' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bDetectVulkanByDefault) == 0x0001B9, "Member 'UAndroidRuntimeSettings::bDetectVulkanByDefault' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bBuildWithHiddenSymbolVisibility) == 0x0001BA, "Member 'UAndroidRuntimeSettings::bBuildWithHiddenSymbolVisibility' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bDisableStackProtector) == 0x0001BB, "Member 'UAndroidRuntimeSettings::bDisableStackProtector' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bDisableLibCppSharedDependencyValidation) == 0x0001BC, "Member 'UAndroidRuntimeSettings::bDisableLibCppSharedDependencyValidation' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bSaveSymbols) == 0x0001BD, "Member 'UAndroidRuntimeSettings::bSaveSymbols' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bStripShaderReflection) == 0x0001BE, "Member 'UAndroidRuntimeSettings::bStripShaderReflection' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bEnableGooglePlaySupport) == 0x0001BF, "Member 'UAndroidRuntimeSettings::bEnableGooglePlaySupport' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, RequestCodeForPlayGamesActivities) == 0x0001C0, "Member 'UAndroidRuntimeSettings::RequestCodeForPlayGamesActivities' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, PlayGamesClientId) == 0x0001C8, "Member 'UAndroidRuntimeSettings::PlayGamesClientId' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bForceRefreshToken) == 0x0001D8, "Member 'UAndroidRuntimeSettings::bForceRefreshToken' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, GamesAppID) == 0x0001E0, "Member 'UAndroidRuntimeSettings::GamesAppID' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AchievementMap) == 0x0001F0, "Member 'UAndroidRuntimeSettings::AchievementMap' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, LeaderboardMap) == 0x000200, "Member 'UAndroidRuntimeSettings::LeaderboardMap' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bSupportAdMob) == 0x000210, "Member 'UAndroidRuntimeSettings::bSupportAdMob' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AdMobAppID) == 0x000218, "Member 'UAndroidRuntimeSettings::AdMobAppID' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, TagForChildDirectedTreatment) == 0x000228, "Member 'UAndroidRuntimeSettings::TagForChildDirectedTreatment' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, TagForUnderAgeOfConsent) == 0x000229, "Member 'UAndroidRuntimeSettings::TagForUnderAgeOfConsent' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, MaxAdContentRating) == 0x00022A, "Member 'UAndroidRuntimeSettings::MaxAdContentRating' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AdMobAdUnitID) == 0x000230, "Member 'UAndroidRuntimeSettings::AdMobAdUnitID' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AdMobAdUnitIDs) == 0x000240, "Member 'UAndroidRuntimeSettings::AdMobAdUnitIDs' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, GooglePlayLicenseKey) == 0x000250, "Member 'UAndroidRuntimeSettings::GooglePlayLicenseKey' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, GCMClientSenderID) == 0x000260, "Member 'UAndroidRuntimeSettings::GCMClientSenderID' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bShowLaunchImage) == 0x000270, "Member 'UAndroidRuntimeSettings::bShowLaunchImage' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bAllowIMU) == 0x000271, "Member 'UAndroidRuntimeSettings::bAllowIMU' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bAllowControllers) == 0x000272, "Member 'UAndroidRuntimeSettings::bAllowControllers' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bBlockAndroidKeysOnControllers) == 0x000273, "Member 'UAndroidRuntimeSettings::bBlockAndroidKeysOnControllers' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bControllersBlockDeviceFeedback) == 0x000274, "Member 'UAndroidRuntimeSettings::bControllersBlockDeviceFeedback' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AndroidAudio) == 0x000275, "Member 'UAndroidRuntimeSettings::AndroidAudio' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AudioSampleRate) == 0x000278, "Member 'UAndroidRuntimeSettings::AudioSampleRate' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AudioCallbackBufferFrameSize) == 0x00027C, "Member 'UAndroidRuntimeSettings::AudioCallbackBufferFrameSize' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AudioNumBuffersToEnqueue) == 0x000280, "Member 'UAndroidRuntimeSettings::AudioNumBuffersToEnqueue' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AudioMaxChannels) == 0x000284, "Member 'UAndroidRuntimeSettings::AudioMaxChannels' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AudioNumSourceWorkers) == 0x000288, "Member 'UAndroidRuntimeSettings::AudioNumSourceWorkers' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, SpatializationPlugin) == 0x000290, "Member 'UAndroidRuntimeSettings::SpatializationPlugin' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, SourceDataOverridePlugin) == 0x0002A0, "Member 'UAndroidRuntimeSettings::SourceDataOverridePlugin' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, ReverbPlugin) == 0x0002B0, "Member 'UAndroidRuntimeSettings::ReverbPlugin' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, OcclusionPlugin) == 0x0002C0, "Member 'UAndroidRuntimeSettings::OcclusionPlugin' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, CompressionOverrides) == 0x0002D0, "Member 'UAndroidRuntimeSettings::CompressionOverrides' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, CacheSizeKB) == 0x0002E0, "Member 'UAndroidRuntimeSettings::CacheSizeKB' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, MaxChunkSizeOverrideKB) == 0x0002E4, "Member 'UAndroidRuntimeSettings::MaxChunkSizeOverrideKB' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bResampleForDevice) == 0x0002E8, "Member 'UAndroidRuntimeSettings::bResampleForDevice' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, SoundCueCookQualityIndex) == 0x0002EC, "Member 'UAndroidRuntimeSettings::SoundCueCookQualityIndex' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, MaxSampleRate) == 0x0002F0, "Member 'UAndroidRuntimeSettings::MaxSampleRate' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, HighSampleRate) == 0x0002F4, "Member 'UAndroidRuntimeSettings::HighSampleRate' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, MedSampleRate) == 0x0002F8, "Member 'UAndroidRuntimeSettings::MedSampleRate' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, LowSampleRate) == 0x0002FC, "Member 'UAndroidRuntimeSettings::LowSampleRate' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, MinSampleRate) == 0x000300, "Member 'UAndroidRuntimeSettings::MinSampleRate' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, CompressionQualityModifier) == 0x000304, "Member 'UAndroidRuntimeSettings::CompressionQualityModifier' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AutoStreamingThreshold) == 0x000308, "Member 'UAndroidRuntimeSettings::AutoStreamingThreshold' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, AndroidGraphicsDebugger) == 0x00030C, "Member 'UAndroidRuntimeSettings::AndroidGraphicsDebugger' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, MaliGraphicsDebuggerPath) == 0x000310, "Member 'UAndroidRuntimeSettings::MaliGraphicsDebuggerPath' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bEnableMaliPerfCounters) == 0x000320, "Member 'UAndroidRuntimeSettings::bEnableMaliPerfCounters' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bMultiTargetFormat_ETC2) == 0x000321, "Member 'UAndroidRuntimeSettings::bMultiTargetFormat_ETC2' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bMultiTargetFormat_DXT) == 0x000322, "Member 'UAndroidRuntimeSettings::bMultiTargetFormat_DXT' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bMultiTargetFormat_ASTC) == 0x000323, "Member 'UAndroidRuntimeSettings::bMultiTargetFormat_ASTC' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, TextureFormatPriority_ETC2) == 0x000324, "Member 'UAndroidRuntimeSettings::TextureFormatPriority_ETC2' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, TextureFormatPriority_DXT) == 0x000328, "Member 'UAndroidRuntimeSettings::TextureFormatPriority_DXT' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, TextureFormatPriority_ASTC) == 0x00032C, "Member 'UAndroidRuntimeSettings::TextureFormatPriority_ASTC' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, SDKAPILevelOverride) == 0x000330, "Member 'UAndroidRuntimeSettings::SDKAPILevelOverride' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, NDKAPILevelOverride) == 0x000340, "Member 'UAndroidRuntimeSettings::NDKAPILevelOverride' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, BuildToolsOverride) == 0x000350, "Member 'UAndroidRuntimeSettings::BuildToolsOverride' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bStreamLandscapeMeshLODs) == 0x000360, "Member 'UAndroidRuntimeSettings::bStreamLandscapeMeshLODs' has a wrong offset!");
-static_assert(offsetof(UAndroidRuntimeSettings, bEnableDomStorage) == 0x000361, "Member 'UAndroidRuntimeSettings::bEnableDomStorage' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, UnrealSoInstallLocation) == 0x000178, "Member 'UAndroidRuntimeSettings::UnrealSoInstallLocation' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, ThirdPartySoInfosReplaced) == 0x000180, "Member 'UAndroidRuntimeSettings::ThirdPartySoInfosReplaced' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, DebugVulkanLayerDirectory) == 0x000190, "Member 'UAndroidRuntimeSettings::DebugVulkanLayerDirectory' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, DebugVulkanDeviceLayers) == 0x0001A0, "Member 'UAndroidRuntimeSettings::DebugVulkanDeviceLayers' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, DebugVulkanInstanceLayers) == 0x0001B0, "Member 'UAndroidRuntimeSettings::DebugVulkanInstanceLayers' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bAndroidOpenGLSupportsBackbufferSampling) == 0x0001C0, "Member 'UAndroidRuntimeSettings::bAndroidOpenGLSupportsBackbufferSampling' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bDetectVulkanByDefault) == 0x0001C1, "Member 'UAndroidRuntimeSettings::bDetectVulkanByDefault' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bBuildWithHiddenSymbolVisibility) == 0x0001C2, "Member 'UAndroidRuntimeSettings::bBuildWithHiddenSymbolVisibility' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bDisableStackProtector) == 0x0001C3, "Member 'UAndroidRuntimeSettings::bDisableStackProtector' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bDisableLibCppSharedDependencyValidation) == 0x0001C4, "Member 'UAndroidRuntimeSettings::bDisableLibCppSharedDependencyValidation' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bSaveSymbols) == 0x0001C5, "Member 'UAndroidRuntimeSettings::bSaveSymbols' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bStripShaderReflection) == 0x0001C6, "Member 'UAndroidRuntimeSettings::bStripShaderReflection' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bEnableGooglePlaySupport) == 0x0001C7, "Member 'UAndroidRuntimeSettings::bEnableGooglePlaySupport' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, RequestCodeForPlayGamesActivities) == 0x0001C8, "Member 'UAndroidRuntimeSettings::RequestCodeForPlayGamesActivities' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, PlayGamesClientId) == 0x0001D0, "Member 'UAndroidRuntimeSettings::PlayGamesClientId' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bForceRefreshToken) == 0x0001E0, "Member 'UAndroidRuntimeSettings::bForceRefreshToken' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, GamesAppID) == 0x0001E8, "Member 'UAndroidRuntimeSettings::GamesAppID' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AchievementMap) == 0x0001F8, "Member 'UAndroidRuntimeSettings::AchievementMap' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, LeaderboardMap) == 0x000208, "Member 'UAndroidRuntimeSettings::LeaderboardMap' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bSupportAdMob) == 0x000218, "Member 'UAndroidRuntimeSettings::bSupportAdMob' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AdMobAppID) == 0x000220, "Member 'UAndroidRuntimeSettings::AdMobAppID' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, TagForChildDirectedTreatment) == 0x000230, "Member 'UAndroidRuntimeSettings::TagForChildDirectedTreatment' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, TagForUnderAgeOfConsent) == 0x000231, "Member 'UAndroidRuntimeSettings::TagForUnderAgeOfConsent' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, MaxAdContentRating) == 0x000232, "Member 'UAndroidRuntimeSettings::MaxAdContentRating' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AdMobAdUnitID) == 0x000238, "Member 'UAndroidRuntimeSettings::AdMobAdUnitID' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AdMobAdUnitIDs) == 0x000248, "Member 'UAndroidRuntimeSettings::AdMobAdUnitIDs' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, GooglePlayLicenseKey) == 0x000258, "Member 'UAndroidRuntimeSettings::GooglePlayLicenseKey' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, GCMClientSenderID) == 0x000268, "Member 'UAndroidRuntimeSettings::GCMClientSenderID' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bShowLaunchImage) == 0x000278, "Member 'UAndroidRuntimeSettings::bShowLaunchImage' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bAllowIMU) == 0x000279, "Member 'UAndroidRuntimeSettings::bAllowIMU' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bAllowControllers) == 0x00027A, "Member 'UAndroidRuntimeSettings::bAllowControllers' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bBlockAndroidKeysOnControllers) == 0x00027B, "Member 'UAndroidRuntimeSettings::bBlockAndroidKeysOnControllers' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bControllersBlockDeviceFeedback) == 0x00027C, "Member 'UAndroidRuntimeSettings::bControllersBlockDeviceFeedback' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AndroidAudio) == 0x00027D, "Member 'UAndroidRuntimeSettings::AndroidAudio' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AudioSampleRate) == 0x000280, "Member 'UAndroidRuntimeSettings::AudioSampleRate' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AudioCallbackBufferFrameSize) == 0x000284, "Member 'UAndroidRuntimeSettings::AudioCallbackBufferFrameSize' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AudioNumBuffersToEnqueue) == 0x000288, "Member 'UAndroidRuntimeSettings::AudioNumBuffersToEnqueue' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AudioMaxChannels) == 0x00028C, "Member 'UAndroidRuntimeSettings::AudioMaxChannels' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AudioNumSourceWorkers) == 0x000290, "Member 'UAndroidRuntimeSettings::AudioNumSourceWorkers' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, SpatializationPlugin) == 0x000298, "Member 'UAndroidRuntimeSettings::SpatializationPlugin' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, SourceDataOverridePlugin) == 0x0002A8, "Member 'UAndroidRuntimeSettings::SourceDataOverridePlugin' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, ReverbPlugin) == 0x0002B8, "Member 'UAndroidRuntimeSettings::ReverbPlugin' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, OcclusionPlugin) == 0x0002C8, "Member 'UAndroidRuntimeSettings::OcclusionPlugin' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, CompressionOverrides) == 0x0002D8, "Member 'UAndroidRuntimeSettings::CompressionOverrides' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, CacheSizeKB) == 0x0002E8, "Member 'UAndroidRuntimeSettings::CacheSizeKB' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, MaxChunkSizeOverrideKB) == 0x0002EC, "Member 'UAndroidRuntimeSettings::MaxChunkSizeOverrideKB' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bResampleForDevice) == 0x0002F0, "Member 'UAndroidRuntimeSettings::bResampleForDevice' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, SoundCueCookQualityIndex) == 0x0002F4, "Member 'UAndroidRuntimeSettings::SoundCueCookQualityIndex' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, MaxSampleRate) == 0x0002F8, "Member 'UAndroidRuntimeSettings::MaxSampleRate' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, HighSampleRate) == 0x0002FC, "Member 'UAndroidRuntimeSettings::HighSampleRate' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, MedSampleRate) == 0x000300, "Member 'UAndroidRuntimeSettings::MedSampleRate' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, LowSampleRate) == 0x000304, "Member 'UAndroidRuntimeSettings::LowSampleRate' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, MinSampleRate) == 0x000308, "Member 'UAndroidRuntimeSettings::MinSampleRate' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, CompressionQualityModifier) == 0x00030C, "Member 'UAndroidRuntimeSettings::CompressionQualityModifier' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AutoStreamingThreshold) == 0x000310, "Member 'UAndroidRuntimeSettings::AutoStreamingThreshold' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, AndroidGraphicsDebugger) == 0x000314, "Member 'UAndroidRuntimeSettings::AndroidGraphicsDebugger' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, MaliGraphicsDebuggerPath) == 0x000318, "Member 'UAndroidRuntimeSettings::MaliGraphicsDebuggerPath' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bEnableMaliPerfCounters) == 0x000328, "Member 'UAndroidRuntimeSettings::bEnableMaliPerfCounters' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bMultiTargetFormat_ETC2) == 0x000329, "Member 'UAndroidRuntimeSettings::bMultiTargetFormat_ETC2' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bMultiTargetFormat_DXT) == 0x00032A, "Member 'UAndroidRuntimeSettings::bMultiTargetFormat_DXT' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bMultiTargetFormat_ASTC) == 0x00032B, "Member 'UAndroidRuntimeSettings::bMultiTargetFormat_ASTC' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, TextureFormatPriority_ETC2) == 0x00032C, "Member 'UAndroidRuntimeSettings::TextureFormatPriority_ETC2' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, TextureFormatPriority_DXT) == 0x000330, "Member 'UAndroidRuntimeSettings::TextureFormatPriority_DXT' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, TextureFormatPriority_ASTC) == 0x000334, "Member 'UAndroidRuntimeSettings::TextureFormatPriority_ASTC' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, SDKAPILevelOverride) == 0x000338, "Member 'UAndroidRuntimeSettings::SDKAPILevelOverride' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, NDKAPILevelOverride) == 0x000348, "Member 'UAndroidRuntimeSettings::NDKAPILevelOverride' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, BuildToolsOverride) == 0x000358, "Member 'UAndroidRuntimeSettings::BuildToolsOverride' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bStreamLandscapeMeshLODs) == 0x000368, "Member 'UAndroidRuntimeSettings::bStreamLandscapeMeshLODs' has a wrong offset!");
+static_assert(offsetof(UAndroidRuntimeSettings, bEnableDomStorage) == 0x000369, "Member 'UAndroidRuntimeSettings::bEnableDomStorage' has a wrong offset!");
 
 }
 

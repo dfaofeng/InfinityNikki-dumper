@@ -63,14 +63,14 @@ static_assert(offsetof(PerfSightHelper_EndExtTag, TagName) == 0x000000, "Member 
 struct PerfSightHelper_GetDeviceLevelByQcc final
 {
 public:
-	class FString                                 configName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ConfigName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 gpuFamily;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(PerfSightHelper_GetDeviceLevelByQcc) == 0x000008, "Wrong alignment on PerfSightHelper_GetDeviceLevelByQcc");
 static_assert(sizeof(PerfSightHelper_GetDeviceLevelByQcc) == 0x000028, "Wrong size on PerfSightHelper_GetDeviceLevelByQcc");
-static_assert(offsetof(PerfSightHelper_GetDeviceLevelByQcc, configName) == 0x000000, "Member 'PerfSightHelper_GetDeviceLevelByQcc::configName' has a wrong offset!");
+static_assert(offsetof(PerfSightHelper_GetDeviceLevelByQcc, ConfigName) == 0x000000, "Member 'PerfSightHelper_GetDeviceLevelByQcc::ConfigName' has a wrong offset!");
 static_assert(offsetof(PerfSightHelper_GetDeviceLevelByQcc, gpuFamily) == 0x000010, "Member 'PerfSightHelper_GetDeviceLevelByQcc::gpuFamily' has a wrong offset!");
 static_assert(offsetof(PerfSightHelper_GetDeviceLevelByQcc, ReturnValue) == 0x000020, "Member 'PerfSightHelper_GetDeviceLevelByQcc::ReturnValue' has a wrong offset!");
 

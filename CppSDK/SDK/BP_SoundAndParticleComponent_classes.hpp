@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C
-// 0x0140 (0x0788 - 0x0648)
+// 0x0148 (0x0790 - 0x0648)
 class UBP_SoundAndParticleComponent_C final : public UBP_CharacterEffectBaseComponent_C
 {
 public:
@@ -44,32 +44,34 @@ public:
 	uint8                                         Pad_74A[0x6];                                      // 0x074A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FF_FootstepSurfaceTypeSoundStruct      CurrentSurfaceOverride;                            // 0x0750(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          bEnableFootstepSound;                              // 0x0780(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_781[0x7];                                      // 0x0781(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_FootstepCountResetDelay;                        // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BPAnimNotify_OnClothesMaterialEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
-	void BPAnimNotify_OnClothesTypeEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
-	void BPAnimNotify_OnEndCharacterEffect(class UObject* NotifyObject, class USkeletalMeshComponent* MeshComponent, bool bDestroyAtEnd);
-	void BPAnimNotify_OnEndLSEffect(const class UAnimNotifyState* NotifyObject, bool bWaitForLSFinish);
-	void BPAnimNotify_OnEndMaterialEffect(class UObject* NotifyObject);
-	void BPAnimNotify_OnPlayCharacterEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
-	void BPAnimNotify_OnPlayLSEffect(const class UAnimNotifyState* NotifyObject, TSoftObjectPtr<class ULevelSequence> LevelSequenceRef, double TotalDuration);
-	void BPAnimNotify_OnPlayMaterialEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, double TotalDuration);
-	void BPAnimNotify_OnPlayRejumpEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
-	void BPAnimNotify_OnRunStepSoundEffect(TSoftObjectPtr<class UAkAudioEvent> AkEvent, class USceneComponent* Comp, class FName AttachName, const class FString& AnimName, TSoftObjectPtr<class UAkSwitchValue> DefaultGaitAkSwitch);
-	void BPAnimNotify_OnRunStepSoundEffectV2(TSoftObjectPtr<class UAkAudioEvent> AkEvent, const class FString& MaterialTag, class USceneComponent* Comp, class FName AttachName);
-	void BPAnimNotify_OnUpdateMaterialEffect(class UObject* NotifyObject, double FrameDeltaTime);
-	void BPAnimNotify_OnX6PlayFootstepEffect(class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bDestroyImmediately, bool bAttached, double Duration, const class FString& RowName);
-	void CompressPosition(const struct FVector& InPosition, int32 Offset_X, int32 Offset_Y, int32 Offset_Z, struct FVector* CompressdPosition);
-	void GetFootstepSoundFloorSwitch(TSoftObjectPtr<class UAkSwitchValue>* SwitchValue);
-	void GetFootstepSoundGaitSwitch(const class FString& InStr, TSoftObjectPtr<class UAkSwitchValue> DefaultAkSwitch, TSoftObjectPtr<class UAkSwitchValue>* OutAkSwitch);
-	void GetFootstepSoundMaterialSwitchPath(class FString* OutMaterialTag, class FString* OutTypeTag);
-	void GetShoeSwitchPath(class USceneComponent* Comp, class FString* ShoeSwitchPaths);
-	void GetShrubType(Enum_ShrubEnum* ShrubType);
-	void GetSoftObjectPtrByPath(const class FString& PathString, bool* Found, TSoftObjectPtr<class UObject>* SWITCH);
-	void IsInBush(bool* bInBush_0);
-	void OnDataTableLoaded();
-	void SetIsInFSTSwitchVolume(bool bInFSTSwitchVolume_0);
 	void SetVolumeSurfaceTypeValue(const struct FF_FootstepSurfaceTypeSoundStruct& SurfaceTypeValue);
+	void SetIsInFSTSwitchVolume(bool bInFSTSwitchVolume_0);
+	void OnDataTableLoaded();
+	void IsInBush(bool* bInBush_0);
+	void GetSoftObjectPtrByPath(const class FString& PathString, bool* Found, TSoftObjectPtr<class UObject>* SWITCH);
+	void GetShrubType(Enum_ShrubEnum* ShrubType);
+	void GetShoeSwitchPath(class USceneComponent* Comp, class FString* ShoeSwitchPaths);
+	void GetFootstepSoundMaterialSwitchPath(class FString* OutMaterialTag, class FString* OutTypeTag);
+	void GetFootstepSoundGaitSwitch(const class FString& InStr, TSoftObjectPtr<class UAkSwitchValue> DefaultAkSwitch, TSoftObjectPtr<class UAkSwitchValue>* OutAkSwitch);
+	void GetFootstepSoundFloorSwitch(TSoftObjectPtr<class UAkSwitchValue>* SwitchValue);
+	void CompressPosition(const struct FVector& InPosition, int32 Offset_X, int32 Offset_Y, int32 Offset_Z, struct FVector* CompressdPosition);
+	void BPAnimNotify_OnX6PlayFootstepEffect(class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bDestroyImmediately, bool bAttached, double Duration, const class FString& RowName);
+	void BPAnimNotify_OnUpdateMaterialEffect(class UObject* NotifyObject, double FrameDeltaTime);
+	void BPAnimNotify_OnRunStepSoundEffectV2(TSoftObjectPtr<class UAkAudioEvent> AkEvent, const class FString& MaterialTag, class USceneComponent* Comp, class FName AttachName);
+	void BPAnimNotify_OnRunStepSoundEffect(TSoftObjectPtr<class UAkAudioEvent> AkEvent, class USceneComponent* Comp, class FName AttachName, const class FString& AnimName, TSoftObjectPtr<class UAkSwitchValue> DefaultGaitAkSwitch);
+	void BPAnimNotify_OnPlayRejumpEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
+	void BPAnimNotify_OnPlayMaterialEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, double TotalDuration);
+	void BPAnimNotify_OnPlayLSEffect(const class UAnimNotifyState* NotifyObject, TSoftObjectPtr<class ULevelSequence> LevelSequenceRef, double TotalDuration);
+	void BPAnimNotify_OnPlayCharacterEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration);
+	void BPAnimNotify_OnEndMaterialEffect(class UObject* NotifyObject);
+	void BPAnimNotify_OnEndLSEffect(const class UAnimNotifyState* NotifyObject, bool bWaitForLSFinish);
+	void BPAnimNotify_OnEndCharacterEffect(class UObject* NotifyObject, class USkeletalMeshComponent* MeshComponent, bool bDestroyAtEnd);
+	void BPAnimNotify_OnClothesTypeEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
+	void BPAnimNotify_OnClothesMaterialEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent);
 
 	class FString GetModuleName() const;
 
@@ -84,7 +86,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_SoundAndParticleComponent_C) == 0x000008, "Wrong alignment on UBP_SoundAndParticleComponent_C");
-static_assert(sizeof(UBP_SoundAndParticleComponent_C) == 0x000788, "Wrong size on UBP_SoundAndParticleComponent_C");
+static_assert(sizeof(UBP_SoundAndParticleComponent_C) == 0x000790, "Wrong size on UBP_SoundAndParticleComponent_C");
 static_assert(offsetof(UBP_SoundAndParticleComponent_C, BP_TEnableAutoRestore) == 0x000648, "Member 'UBP_SoundAndParticleComponent_C::BP_TEnableAutoRestore' has a wrong offset!");
 static_assert(offsetof(UBP_SoundAndParticleComponent_C, BP_CfgFloorTraceLength) == 0x000658, "Member 'UBP_SoundAndParticleComponent_C::BP_CfgFloorTraceLength' has a wrong offset!");
 static_assert(offsetof(UBP_SoundAndParticleComponent_C, BP_CfgCharacterEffectConfigDataAsset) == 0x000660, "Member 'UBP_SoundAndParticleComponent_C::BP_CfgCharacterEffectConfigDataAsset' has a wrong offset!");
@@ -101,6 +103,7 @@ static_assert(offsetof(UBP_SoundAndParticleComponent_C, BP_CfgNeedReactToEnviron
 static_assert(offsetof(UBP_SoundAndParticleComponent_C, bInFSTSwitchVolume) == 0x000749, "Member 'UBP_SoundAndParticleComponent_C::bInFSTSwitchVolume' has a wrong offset!");
 static_assert(offsetof(UBP_SoundAndParticleComponent_C, CurrentSurfaceOverride) == 0x000750, "Member 'UBP_SoundAndParticleComponent_C::CurrentSurfaceOverride' has a wrong offset!");
 static_assert(offsetof(UBP_SoundAndParticleComponent_C, bEnableFootstepSound) == 0x000780, "Member 'UBP_SoundAndParticleComponent_C::bEnableFootstepSound' has a wrong offset!");
+static_assert(offsetof(UBP_SoundAndParticleComponent_C, BP_FootstepCountResetDelay) == 0x000788, "Member 'UBP_SoundAndParticleComponent_C::BP_FootstepCountResetDelay' has a wrong offset!");
 
 }
 

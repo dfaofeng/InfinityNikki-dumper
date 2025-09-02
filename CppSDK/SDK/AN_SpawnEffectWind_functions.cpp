@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function AN_SpawnEffectWind.AN_SpawnEffectWind_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UAN_SpawnEffectWind_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AN_SpawnEffectWind_C", "GetModuleName");
+
+	Params::AN_SpawnEffectWind_C_GetModuleName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AN_SpawnEffectWind.AN_SpawnEffectWind_C.Received_Notify
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -37,26 +57,6 @@ bool UAN_SpawnEffectWind_C::Received_Notify(class USkeletalMeshComponent* MeshCo
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 	Parms.EventReference = std::move(EventReference);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AN_SpawnEffectWind.AN_SpawnEffectWind_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UAN_SpawnEffectWind_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AN_SpawnEffectWind_C", "GetModuleName");
-
-	Params::AN_SpawnEffectWind_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -12,9 +12,9 @@
 
 #include "MetasoundEngine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "MetasoundFrontend_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MetasoundFrontend_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -159,113 +159,6 @@ static_assert(alignof(UMetaSoundOutputSubsystem) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UMetaSoundOutputSubsystem) == 0x000050, "Wrong size on UMetaSoundOutputSubsystem");
 static_assert(offsetof(UMetaSoundOutputSubsystem, TrackedGenerators) == 0x000040, "Member 'UMetaSoundOutputSubsystem::TrackedGenerators' has a wrong offset!");
 
-// Class MetasoundEngine.MetaSoundBuilderBase
-// 0x0040 (0x0068 - 0x0028)
-class UMetaSoundBuilderBase : public UObject
-{
-public:
-	struct FMetaSoundFrontendDocumentBuilder      Builder;                                           // 0x0028(0x0038)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput);
-	struct FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput);
-	void AddInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle AddNode(const TScriptInterface<class IMetaSoundDocumentInterface>& NodeClass, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult* OutResult, int32 MajorVersion);
-	TArray<struct FMetaSoundBuilderNodeOutputHandle> ConnectNodeInputsToMatchingGraphInterfaceInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
-	void ConnectNodeInputToGraphInput(class FName GraphInputName, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundBuilderNodeInputHandle> ConnectNodeOutputsToMatchingGraphInterfaceOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
-	void ConnectNodeOutputToGraphOutput(class FName GraphOutputName, const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult);
-	void ConnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
-	void ConnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult);
-	void ConvertFromPreset(EMetaSoundBuilderResult* OutResult);
-	void ConvertToPreset(const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedNodeClass, EMetaSoundBuilderResult* OutResult);
-	void DisconnectNodeInput(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
-	void DisconnectNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult);
-	void DisconnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
-	void DisconnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle FindGraphInputNode(class FName InputName, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle FindGraphOutputNode(class FName OutputName, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundNodeHandle> FindInterfaceInputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundNodeHandle> FindInterfaceOutputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
-	struct FMetasoundFrontendVersion FindNodeClassVersion(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundBuilderNodeInputHandle FindNodeInputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName InputName, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle FindNodeInputParent(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundBuilderNodeInputHandle> FindNodeInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundBuilderNodeInputHandle> FindNodeInputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType);
-	struct FMetaSoundBuilderNodeOutputHandle FindNodeOutputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName OutputName, EMetaSoundBuilderResult* OutResult);
-	struct FMetaSoundNodeHandle FindNodeOutputParent(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
-	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType);
-	struct FMetasoundFrontendLiteral GetNodeInputClassDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
-	struct FMetasoundFrontendLiteral GetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
-	void RemoveGraphInput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
-	void RemoveGraphOutput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
-	void RemoveInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
-	void RemoveNode(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
-	void RemoveNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
-	void SetGraphInputDefault(class FName InputName, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult);
-	void SetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult);
-
-	bool ContainsNode(const struct FMetaSoundNodeHandle& Node) const;
-	bool ContainsNodeInput(const struct FMetaSoundBuilderNodeInputHandle& Input) const;
-	bool ContainsNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& Output) const;
-	bool GetNodeInputIsConstructorPin(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
-	bool GetNodeOutputIsConstructorPin(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const;
-	class UObject* GetReferencedPresetAsset() const;
-	bool InterfaceIsDeclared(class FName InterfaceName) const;
-	bool IsPreset() const;
-	bool NodeInputIsConnected(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
-	bool NodeOutputIsConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const;
-	bool NodesAreConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MetaSoundBuilderBase">();
-	}
-	static class UMetaSoundBuilderBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMetaSoundBuilderBase>();
-	}
-};
-static_assert(alignof(UMetaSoundBuilderBase) == 0x000008, "Wrong alignment on UMetaSoundBuilderBase");
-static_assert(sizeof(UMetaSoundBuilderBase) == 0x000068, "Wrong size on UMetaSoundBuilderBase");
-static_assert(offsetof(UMetaSoundBuilderBase, Builder) == 0x000028, "Member 'UMetaSoundBuilderBase::Builder' has a wrong offset!");
-
-// Class MetasoundEngine.MetaSoundSourceBuilder
-// 0x0018 (0x0080 - 0x0068)
-class UMetaSoundSourceBuilder final : public UMetaSoundBuilderBase
-{
-public:
-	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void Audition(class UObject* Parent, class UAudioComponent* AudioComponent, TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)> OnCreateGenerator, bool bLiveUpdatesEnabled);
-	void SetBlockRateOverride(float BlockRate);
-	void SetFormat(EMetaSoundOutputAudioFormat OutputFormat, EMetaSoundBuilderResult* OutResult);
-	void SetQuality(class FName Quality);
-	void SetSampleRateOverride(int32 SampleRate);
-
-	TScriptInterface<class IMetaSoundDocumentInterface> Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const;
-	bool GetLiveUpdatesEnabled() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MetaSoundSourceBuilder">();
-	}
-	static class UMetaSoundSourceBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMetaSoundSourceBuilder>();
-	}
-};
-static_assert(alignof(UMetaSoundSourceBuilder) == 0x000008, "Wrong alignment on UMetaSoundSourceBuilder");
-static_assert(sizeof(UMetaSoundSourceBuilder) == 0x000080, "Wrong size on UMetaSoundSourceBuilder");
-
 // Class MetasoundEngine.MetaSoundQualityHelper
 // 0x0000 (0x0028 - 0x0028)
 class UMetaSoundQualityHelper final : public UObject
@@ -397,6 +290,83 @@ static_assert(alignof(UMetaSoundAssetSubsystem) == 0x000008, "Wrong alignment on
 static_assert(sizeof(UMetaSoundAssetSubsystem) == 0x0001E0, "Wrong size on UMetaSoundAssetSubsystem");
 static_assert(offsetof(UMetaSoundAssetSubsystem, LoadingDependencies) == 0x000038, "Member 'UMetaSoundAssetSubsystem::LoadingDependencies' has a wrong offset!");
 
+// Class MetasoundEngine.MetaSoundBuilderBase
+// 0x0040 (0x0068 - 0x0028)
+class UMetaSoundBuilderBase : public UObject
+{
+public:
+	struct FMetaSoundFrontendDocumentBuilder      Builder;                                           // 0x0028(0x0038)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FMetaSoundBuilderNodeOutputHandle AddGraphInputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorInput);
+	struct FMetaSoundBuilderNodeInputHandle AddGraphOutputNode(class FName Name_0, class FName DataType, const struct FMetasoundFrontendLiteral& DefaultValue, EMetaSoundBuilderResult* OutResult, bool bIsConstructorOutput);
+	void AddInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle AddNode(const TScriptInterface<class IMetaSoundDocumentInterface>& NodeClass, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle AddNodeByClassName(const struct FMetasoundFrontendClassName& ClassName, EMetaSoundBuilderResult* OutResult, int32 MajorVersion);
+	TArray<struct FMetaSoundBuilderNodeOutputHandle> ConnectNodeInputsToMatchingGraphInterfaceInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
+	void ConnectNodeInputToGraphInput(class FName GraphInputName, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundBuilderNodeInputHandle> ConnectNodeOutputsToMatchingGraphInterfaceOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
+	void ConnectNodeOutputToGraphOutput(class FName GraphOutputName, const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult);
+	void ConnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
+	void ConnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult);
+	void ConvertFromPreset(EMetaSoundBuilderResult* OutResult);
+	void ConvertToPreset(const TScriptInterface<class IMetaSoundDocumentInterface>& ReferencedNodeClass, EMetaSoundBuilderResult* OutResult);
+	void DisconnectNodeInput(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
+	void DisconnectNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, EMetaSoundBuilderResult* OutResult);
+	void DisconnectNodes(const struct FMetaSoundBuilderNodeOutputHandle& NodeOutputHandle, const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, EMetaSoundBuilderResult* OutResult);
+	void DisconnectNodesByInterfaceBindings(const struct FMetaSoundNodeHandle& FromNodeHandle, const struct FMetaSoundNodeHandle& ToNodeHandle, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle FindGraphInputNode(class FName InputName, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle FindGraphOutputNode(class FName OutputName, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundNodeHandle> FindInterfaceInputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundNodeHandle> FindInterfaceOutputNodes(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
+	struct FMetasoundFrontendVersion FindNodeClassVersion(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundBuilderNodeInputHandle FindNodeInputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName InputName, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle FindNodeInputParent(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundBuilderNodeInputHandle> FindNodeInputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundBuilderNodeInputHandle> FindNodeInputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType);
+	struct FMetaSoundBuilderNodeOutputHandle FindNodeOutputByName(const struct FMetaSoundNodeHandle& NodeHandle, class FName OutputName, EMetaSoundBuilderResult* OutResult);
+	struct FMetaSoundNodeHandle FindNodeOutputParent(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputs(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
+	TArray<struct FMetaSoundBuilderNodeOutputHandle> FindNodeOutputsByDataType(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult, class FName DataType);
+	struct FMetasoundFrontendLiteral GetNodeInputClassDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
+	void GetNodeInputData(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
+	struct FMetasoundFrontendLiteral GetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
+	void GetNodeOutputData(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, class FName* Name_0, class FName* DataType, EMetaSoundBuilderResult* OutResult);
+	void RemoveGraphInput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
+	void RemoveGraphOutput(class FName Name_0, EMetaSoundBuilderResult* OutResult);
+	void RemoveInterface(class FName InterfaceName, EMetaSoundBuilderResult* OutResult);
+	void RemoveNode(const struct FMetaSoundNodeHandle& NodeHandle, EMetaSoundBuilderResult* OutResult);
+	void RemoveNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& InputHandle, EMetaSoundBuilderResult* OutResult);
+	void SetGraphInputDefault(class FName InputName, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult);
+	void SetNodeInputDefault(const struct FMetaSoundBuilderNodeInputHandle& NodeInputHandle, const struct FMetasoundFrontendLiteral& Literal, EMetaSoundBuilderResult* OutResult);
+
+	bool ContainsNode(const struct FMetaSoundNodeHandle& Node) const;
+	bool ContainsNodeInput(const struct FMetaSoundBuilderNodeInputHandle& Input) const;
+	bool ContainsNodeOutput(const struct FMetaSoundBuilderNodeOutputHandle& Output) const;
+	bool GetNodeInputIsConstructorPin(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
+	bool GetNodeOutputIsConstructorPin(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const;
+	class UObject* GetReferencedPresetAsset() const;
+	bool InterfaceIsDeclared(class FName InterfaceName) const;
+	bool IsPreset() const;
+	bool NodeInputIsConnected(const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
+	bool NodeOutputIsConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle) const;
+	bool NodesAreConnected(const struct FMetaSoundBuilderNodeOutputHandle& OutputHandle, const struct FMetaSoundBuilderNodeInputHandle& InputHandle) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MetaSoundBuilderBase">();
+	}
+	static class UMetaSoundBuilderBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetaSoundBuilderBase>();
+	}
+};
+static_assert(alignof(UMetaSoundBuilderBase) == 0x000008, "Wrong alignment on UMetaSoundBuilderBase");
+static_assert(sizeof(UMetaSoundBuilderBase) == 0x000068, "Wrong size on UMetaSoundBuilderBase");
+static_assert(offsetof(UMetaSoundBuilderBase, Builder) == 0x000028, "Member 'UMetaSoundBuilderBase::Builder' has a wrong offset!");
+
 // Class MetasoundEngine.MetaSoundPatchBuilder
 // 0x0000 (0x0068 - 0x0068)
 class UMetaSoundPatchBuilder final : public UMetaSoundBuilderBase
@@ -416,6 +386,36 @@ public:
 };
 static_assert(alignof(UMetaSoundPatchBuilder) == 0x000008, "Wrong alignment on UMetaSoundPatchBuilder");
 static_assert(sizeof(UMetaSoundPatchBuilder) == 0x000068, "Wrong size on UMetaSoundPatchBuilder");
+
+// Class MetasoundEngine.MetaSoundSourceBuilder
+// 0x0018 (0x0080 - 0x0068)
+class UMetaSoundSourceBuilder final : public UMetaSoundBuilderBase
+{
+public:
+	uint8                                         Pad_68[0x18];                                      // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Audition(class UObject* Parent, class UAudioComponent* AudioComponent, TDelegate<void(class UMetasoundGeneratorHandle* GeneratorHandle)> OnCreateGenerator, bool bLiveUpdatesEnabled);
+	void SetBlockRateOverride(float BlockRate);
+	void SetFormat(EMetaSoundOutputAudioFormat OutputFormat, EMetaSoundBuilderResult* OutResult);
+	void SetQuality(class FName Quality);
+	void SetSampleRateOverride(int32 SampleRate);
+
+	TScriptInterface<class IMetaSoundDocumentInterface> Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const;
+	bool GetLiveUpdatesEnabled() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MetaSoundSourceBuilder">();
+	}
+	static class UMetaSoundSourceBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMetaSoundSourceBuilder>();
+	}
+};
+static_assert(alignof(UMetaSoundSourceBuilder) == 0x000008, "Wrong alignment on UMetaSoundSourceBuilder");
+static_assert(sizeof(UMetaSoundSourceBuilder) == 0x000080, "Wrong size on UMetaSoundSourceBuilder");
 
 // Class MetasoundEngine.MetaSoundBuilderSubsystem
 // 0x00F8 (0x0128 - 0x0030)

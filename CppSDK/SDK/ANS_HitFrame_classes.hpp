@@ -31,11 +31,12 @@ public:
 	class FString                                 BP_GroupName;                                      // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	double                                        BP_HitInterval;                                    // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         BP_HitCount;                                       // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_ShieldPenetrate;                                // 0x0094(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
-	class FString GetNotifyName() const;
 	class FString GetModuleName() const;
+	class FString GetNotifyName() const;
+	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()
@@ -58,6 +59,7 @@ static_assert(offsetof(UANS_HitFrame_C, BP_CheckSocket) == 0x000068, "Member 'UA
 static_assert(offsetof(UANS_HitFrame_C, BP_GroupName) == 0x000078, "Member 'UANS_HitFrame_C::BP_GroupName' has a wrong offset!");
 static_assert(offsetof(UANS_HitFrame_C, BP_HitInterval) == 0x000088, "Member 'UANS_HitFrame_C::BP_HitInterval' has a wrong offset!");
 static_assert(offsetof(UANS_HitFrame_C, BP_HitCount) == 0x000090, "Member 'UANS_HitFrame_C::BP_HitCount' has a wrong offset!");
+static_assert(offsetof(UANS_HitFrame_C, BP_ShieldPenetrate) == 0x000094, "Member 'UANS_HitFrame_C::BP_ShieldPenetrate' has a wrong offset!");
 
 }
 

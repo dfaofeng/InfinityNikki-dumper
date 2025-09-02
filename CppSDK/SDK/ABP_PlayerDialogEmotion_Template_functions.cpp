@@ -203,19 +203,5 @@ void UABP_PlayerDialogEmotion_Template_C::UpdateState()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-
-// Function ABP_PlayerDialogEmotion_Template.ABP_PlayerDialogEmotion_Template_C.UpdateUseDialogEmotionBlendBranch
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UABP_PlayerDialogEmotion_Template_C::UpdateUseDialogEmotionBlendBranch()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_PlayerDialogEmotion_Template_C", "UpdateUseDialogEmotionBlendBranch");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
 }
 

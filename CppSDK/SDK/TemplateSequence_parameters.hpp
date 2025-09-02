@@ -95,30 +95,30 @@ static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, OutA
 static_assert(offsetof(TemplateSequencePlayer_CreateTemplateSequencePlayer, ReturnValue) == 0x000040, "Member 'TemplateSequencePlayer_CreateTemplateSequencePlayer::ReturnValue' has a wrong offset!");
 
 // Function TemplateSequence.SequenceCameraShakeTestUtil.GetCameraCachePOV
-// 0x0980 (0x0980 - 0x0000)
+// 0x09A0 (0x09A0 - 0x0000)
 struct SequenceCameraShakeTestUtil_GetCameraCachePOV final
 {
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       ReturnValue;                                       // 0x0010(0x0970)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       ReturnValue;                                       // 0x0010(0x0990)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequenceCameraShakeTestUtil_GetCameraCachePOV) == 0x000010, "Wrong alignment on SequenceCameraShakeTestUtil_GetCameraCachePOV");
-static_assert(sizeof(SequenceCameraShakeTestUtil_GetCameraCachePOV) == 0x000980, "Wrong size on SequenceCameraShakeTestUtil_GetCameraCachePOV");
+static_assert(sizeof(SequenceCameraShakeTestUtil_GetCameraCachePOV) == 0x0009A0, "Wrong size on SequenceCameraShakeTestUtil_GetCameraCachePOV");
 static_assert(offsetof(SequenceCameraShakeTestUtil_GetCameraCachePOV, PlayerController) == 0x000000, "Member 'SequenceCameraShakeTestUtil_GetCameraCachePOV::PlayerController' has a wrong offset!");
 static_assert(offsetof(SequenceCameraShakeTestUtil_GetCameraCachePOV, ReturnValue) == 0x000010, "Member 'SequenceCameraShakeTestUtil_GetCameraCachePOV::ReturnValue' has a wrong offset!");
 
 // Function TemplateSequence.SequenceCameraShakeTestUtil.GetLastFrameCameraCachePOV
-// 0x0980 (0x0980 - 0x0000)
+// 0x09A0 (0x09A0 - 0x0000)
 struct SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV final
 {
 public:
 	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       ReturnValue;                                       // 0x0010(0x0970)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       ReturnValue;                                       // 0x0010(0x0990)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV) == 0x000010, "Wrong alignment on SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV");
-static_assert(sizeof(SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV) == 0x000980, "Wrong size on SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV");
+static_assert(sizeof(SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV) == 0x0009A0, "Wrong size on SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV");
 static_assert(offsetof(SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV, PlayerController) == 0x000000, "Member 'SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV::PlayerController' has a wrong offset!");
 static_assert(offsetof(SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV, ReturnValue) == 0x000010, "Member 'SequenceCameraShakeTestUtil_GetLastFrameCameraCachePOV::ReturnValue' has a wrong offset!");
 

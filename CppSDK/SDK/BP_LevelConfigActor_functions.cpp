@@ -37,20 +37,6 @@ void ABP_LevelConfigActor_C::ExecuteUbergraph_BP_LevelConfigActor(int32 EntryPoi
 }
 
 
-// Function BP_LevelConfigActor.BP_LevelConfigActor_C.PostConstruct
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_LevelConfigActor_C::PostConstruct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LevelConfigActor_C", "PostConstruct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_LevelConfigActor.BP_LevelConfigActor_C.ReceiveBeginPlay
 // (Event, Protected, BlueprintEvent)
 
@@ -82,20 +68,6 @@ void ABP_LevelConfigActor_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_LevelConfigActor.BP_LevelConfigActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_LevelConfigActor_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_LevelConfigActor_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "EDamagePerformanceType_structs.hpp"
 #include "EFeedBackReason_structs.hpp"
-#include "EHitDisMoveType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "EDamagePerformanceType_structs.hpp"
+#include "EHitDisMoveType_structs.hpp"
 
 
 namespace SDK

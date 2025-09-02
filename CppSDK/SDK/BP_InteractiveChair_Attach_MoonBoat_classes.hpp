@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_InteractiveChair_Attach_MoonBoat.BP_InteractiveChair_Attach_MoonBoat_C
-// 0x0000 (0x05A8 - 0x05A8)
+// 0x0000 (0x05F8 - 0x05F8)
 class ABP_InteractiveChair_Attach_MoonBoat_C final : public ABP_InteractiveChair_Attach_C
 {
 public:
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_InteractiveChair_Attach_MoonBoat_C) == 0x000008, "Wrong alignment on ABP_InteractiveChair_Attach_MoonBoat_C");
-static_assert(sizeof(ABP_InteractiveChair_Attach_MoonBoat_C) == 0x0005A8, "Wrong size on ABP_InteractiveChair_Attach_MoonBoat_C");
+static_assert(sizeof(ABP_InteractiveChair_Attach_MoonBoat_C) == 0x0005F8, "Wrong size on ABP_InteractiveChair_Attach_MoonBoat_C");
 
 }
 

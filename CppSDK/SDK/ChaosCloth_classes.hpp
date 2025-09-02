@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ChaosCloth_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "ClothingSystemRuntimeCommon_classes.hpp"
+#include "ChaosCloth_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
 
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // Class ChaosCloth.ChaosClothConfig
-// 0x0158 (0x0180 - 0x0028)
+// 0x0170 (0x0198 - 0x0028)
 class UChaosClothConfig final : public UClothConfigCommon
 {
 public:
@@ -73,37 +73,44 @@ public:
 	float                                         CriticalHeight;                                    // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoftThreshold;                                     // 0x00D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoftFactor;                                        // 0x00DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DampingCoefficient;                                // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAirDragForce;                                  // 0x00E4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AirDragCoefficient;                                // 0x00E8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalDampingCoefficient;                           // 0x00EC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePointBasedWindModel;                           // 0x00F0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WindStrength;                                      // 0x00F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FChaosClothWeightedValue               Drag;                                              // 0x00F8(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FChaosClothWeightedValue               Lift;                                              // 0x0100(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bUseGravityOverride;                               // 0x0108(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_109[0x3];                                      // 0x0109(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GravityScale;                                      // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Gravity;                                           // 0x0110(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FChaosClothWeightedValue               Pressure;                                          // 0x0128(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FChaosClothWeightedValue               AnimDriveStiffness;                                // 0x0130(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FChaosClothWeightedValue               AnimDriveMinStiffness;                             // 0x0138(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FChaosClothWeightedValue               AnimDriveDamping;                                  // 0x0140(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bAdaptiveAnimDrive;                                // 0x0148(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AnimDriveIncreaseFactor;                           // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimDriveDecreaseFactor;                           // 0x0150(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LinearVelocityScale;                               // 0x0158(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularVelocityScale;                              // 0x0170(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FictitiousAngularScale;                            // 0x0174(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAnimateInitPose;                               // 0x0178(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseTetrahedralConstraints;                        // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseThinShellVolumeConstraints;                    // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseContinuousCollisionDetection;                  // 0x017B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17C[0x4];                                      // 0x017C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         NumMaxPenetration;                                 // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumMaxSearch;                                      // 0x00E4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSortedHeightIndices;                           // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPerPlatformInt                        HeightfieldBatchSize;                              // 0x00EC(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        NumMaxPenetrationInBatch;                          // 0x00F0(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         DampingCoefficient;                                // 0x00F4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAirDragForce;                                  // 0x00F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AirDragCoefficient;                                // 0x00FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalDampingCoefficient;                           // 0x0100(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsePointBasedWindModel;                           // 0x0104(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_105[0x3];                                      // 0x0105(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WindStrength;                                      // 0x0108(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChaosClothWeightedValue               Drag;                                              // 0x010C(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FChaosClothWeightedValue               Lift;                                              // 0x0114(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bUseGravityOverride;                               // 0x011C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GravityScale;                                      // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Gravity;                                           // 0x0128(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChaosClothWeightedValue               Pressure;                                          // 0x0140(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FChaosClothWeightedValue               AnimDriveStiffness;                                // 0x0148(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FChaosClothWeightedValue               AnimDriveMinStiffness;                             // 0x0150(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FChaosClothWeightedValue               AnimDriveDamping;                                  // 0x0158(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bAdaptiveAnimDrive;                                // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AnimDriveIncreaseFactor;                           // 0x0164(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimDriveDecreaseFactor;                           // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LinearVelocityScale;                               // 0x0170(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularVelocityScale;                              // 0x0188(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FictitiousAngularScale;                            // 0x018C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAnimateInitPose;                               // 0x0190(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseTetrahedralConstraints;                        // 0x0191(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseThinShellVolumeConstraints;                    // 0x0192(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseContinuousCollisionDetection;                  // 0x0193(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -116,7 +123,7 @@ public:
 	}
 };
 static_assert(alignof(UChaosClothConfig) == 0x000008, "Wrong alignment on UChaosClothConfig");
-static_assert(sizeof(UChaosClothConfig) == 0x000180, "Wrong size on UChaosClothConfig");
+static_assert(sizeof(UChaosClothConfig) == 0x000198, "Wrong size on UChaosClothConfig");
 static_assert(offsetof(UChaosClothConfig, MassMode) == 0x000028, "Member 'UChaosClothConfig::MassMode' has a wrong offset!");
 static_assert(offsetof(UChaosClothConfig, UniformMass) == 0x00002C, "Member 'UChaosClothConfig::UniformMass' has a wrong offset!");
 static_assert(offsetof(UChaosClothConfig, TotalMass) == 0x000030, "Member 'UChaosClothConfig::TotalMass' has a wrong offset!");
@@ -157,40 +164,45 @@ static_assert(offsetof(UChaosClothConfig, GroundUpOffset) == 0x0000D0, "Member '
 static_assert(offsetof(UChaosClothConfig, CriticalHeight) == 0x0000D4, "Member 'UChaosClothConfig::CriticalHeight' has a wrong offset!");
 static_assert(offsetof(UChaosClothConfig, SoftThreshold) == 0x0000D8, "Member 'UChaosClothConfig::SoftThreshold' has a wrong offset!");
 static_assert(offsetof(UChaosClothConfig, SoftFactor) == 0x0000DC, "Member 'UChaosClothConfig::SoftFactor' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, DampingCoefficient) == 0x0000E0, "Member 'UChaosClothConfig::DampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseAirDragForce) == 0x0000E4, "Member 'UChaosClothConfig::bUseAirDragForce' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AirDragCoefficient) == 0x0000E8, "Member 'UChaosClothConfig::AirDragCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LocalDampingCoefficient) == 0x0000EC, "Member 'UChaosClothConfig::LocalDampingCoefficient' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUsePointBasedWindModel) == 0x0000F0, "Member 'UChaosClothConfig::bUsePointBasedWindModel' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, WindStrength) == 0x0000F4, "Member 'UChaosClothConfig::WindStrength' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Drag) == 0x0000F8, "Member 'UChaosClothConfig::Drag' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Lift) == 0x000100, "Member 'UChaosClothConfig::Lift' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseGravityOverride) == 0x000108, "Member 'UChaosClothConfig::bUseGravityOverride' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, GravityScale) == 0x00010C, "Member 'UChaosClothConfig::GravityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Gravity) == 0x000110, "Member 'UChaosClothConfig::Gravity' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, Pressure) == 0x000128, "Member 'UChaosClothConfig::Pressure' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveStiffness) == 0x000130, "Member 'UChaosClothConfig::AnimDriveStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveMinStiffness) == 0x000138, "Member 'UChaosClothConfig::AnimDriveMinStiffness' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveDamping) == 0x000140, "Member 'UChaosClothConfig::AnimDriveDamping' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bAdaptiveAnimDrive) == 0x000148, "Member 'UChaosClothConfig::bAdaptiveAnimDrive' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveIncreaseFactor) == 0x00014C, "Member 'UChaosClothConfig::AnimDriveIncreaseFactor' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AnimDriveDecreaseFactor) == 0x000150, "Member 'UChaosClothConfig::AnimDriveDecreaseFactor' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, LinearVelocityScale) == 0x000158, "Member 'UChaosClothConfig::LinearVelocityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, AngularVelocityScale) == 0x000170, "Member 'UChaosClothConfig::AngularVelocityScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, FictitiousAngularScale) == 0x000174, "Member 'UChaosClothConfig::FictitiousAngularScale' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseAnimateInitPose) == 0x000178, "Member 'UChaosClothConfig::bUseAnimateInitPose' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseTetrahedralConstraints) == 0x000179, "Member 'UChaosClothConfig::bUseTetrahedralConstraints' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseThinShellVolumeConstraints) == 0x00017A, "Member 'UChaosClothConfig::bUseThinShellVolumeConstraints' has a wrong offset!");
-static_assert(offsetof(UChaosClothConfig, bUseContinuousCollisionDetection) == 0x00017B, "Member 'UChaosClothConfig::bUseContinuousCollisionDetection' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, NumMaxPenetration) == 0x0000E0, "Member 'UChaosClothConfig::NumMaxPenetration' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, NumMaxSearch) == 0x0000E4, "Member 'UChaosClothConfig::NumMaxSearch' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseSortedHeightIndices) == 0x0000E8, "Member 'UChaosClothConfig::bUseSortedHeightIndices' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, HeightfieldBatchSize) == 0x0000EC, "Member 'UChaosClothConfig::HeightfieldBatchSize' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, NumMaxPenetrationInBatch) == 0x0000F0, "Member 'UChaosClothConfig::NumMaxPenetrationInBatch' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, DampingCoefficient) == 0x0000F4, "Member 'UChaosClothConfig::DampingCoefficient' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseAirDragForce) == 0x0000F8, "Member 'UChaosClothConfig::bUseAirDragForce' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AirDragCoefficient) == 0x0000FC, "Member 'UChaosClothConfig::AirDragCoefficient' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, LocalDampingCoefficient) == 0x000100, "Member 'UChaosClothConfig::LocalDampingCoefficient' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUsePointBasedWindModel) == 0x000104, "Member 'UChaosClothConfig::bUsePointBasedWindModel' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, WindStrength) == 0x000108, "Member 'UChaosClothConfig::WindStrength' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, Drag) == 0x00010C, "Member 'UChaosClothConfig::Drag' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, Lift) == 0x000114, "Member 'UChaosClothConfig::Lift' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseGravityOverride) == 0x00011C, "Member 'UChaosClothConfig::bUseGravityOverride' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, GravityScale) == 0x000120, "Member 'UChaosClothConfig::GravityScale' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, Gravity) == 0x000128, "Member 'UChaosClothConfig::Gravity' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, Pressure) == 0x000140, "Member 'UChaosClothConfig::Pressure' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AnimDriveStiffness) == 0x000148, "Member 'UChaosClothConfig::AnimDriveStiffness' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AnimDriveMinStiffness) == 0x000150, "Member 'UChaosClothConfig::AnimDriveMinStiffness' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AnimDriveDamping) == 0x000158, "Member 'UChaosClothConfig::AnimDriveDamping' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bAdaptiveAnimDrive) == 0x000160, "Member 'UChaosClothConfig::bAdaptiveAnimDrive' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AnimDriveIncreaseFactor) == 0x000164, "Member 'UChaosClothConfig::AnimDriveIncreaseFactor' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AnimDriveDecreaseFactor) == 0x000168, "Member 'UChaosClothConfig::AnimDriveDecreaseFactor' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, LinearVelocityScale) == 0x000170, "Member 'UChaosClothConfig::LinearVelocityScale' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, AngularVelocityScale) == 0x000188, "Member 'UChaosClothConfig::AngularVelocityScale' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, FictitiousAngularScale) == 0x00018C, "Member 'UChaosClothConfig::FictitiousAngularScale' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseAnimateInitPose) == 0x000190, "Member 'UChaosClothConfig::bUseAnimateInitPose' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseTetrahedralConstraints) == 0x000191, "Member 'UChaosClothConfig::bUseTetrahedralConstraints' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseThinShellVolumeConstraints) == 0x000192, "Member 'UChaosClothConfig::bUseThinShellVolumeConstraints' has a wrong offset!");
+static_assert(offsetof(UChaosClothConfig, bUseContinuousCollisionDetection) == 0x000193, "Member 'UChaosClothConfig::bUseContinuousCollisionDetection' has a wrong offset!");
 
 // Class ChaosCloth.ChaosClothSharedSimConfig
 // 0x0010 (0x0038 - 0x0028)
 class UChaosClothSharedSimConfig final : public UClothSharedConfigCommon
 {
 public:
-	int32                                         IterationCount;                                    // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxIterationCount;                                 // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SubdivisionCount;                                  // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        IterationCount;                                    // 0x0028(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        MaxIterationCount;                                 // 0x002C(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        SubdivisionCount;                                  // 0x0030(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bIterationCollision;                               // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseLocalSpaceSimulation;                          // 0x0035(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseXPBDConstraints;                               // 0x0036(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

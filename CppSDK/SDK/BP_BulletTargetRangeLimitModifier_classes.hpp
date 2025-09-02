@@ -35,9 +35,9 @@ public:
 	TArray<EObjectTypeQuery>                      TargetObjectTypes;                                 // 0x0090(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void K2_OnAsyncLoadComplete() const;
-	void K2_Destroy() const;
 	class FString GetModuleName() const;
+	void K2_Destroy() const;
+	void K2_OnAsyncLoadComplete() const;
 
 public:
 	static class UClass* StaticClass()

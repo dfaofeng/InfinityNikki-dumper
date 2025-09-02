@@ -16,37 +16,6 @@
 namespace SDK::Params
 {
 
-// Function AnimNotifyState_UseFacialAnimFromSpecialFullBody.AnimNotifyState_UseFacialAnimFromSpecialFullBody_C.Received_NotifyEnd
-// 0x0078 (0x0078 - 0x0000)
-struct AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd final
-{
-public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd");
-static_assert(sizeof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd) == 0x000078, "Wrong size on AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::Animation' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::EventReference' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_GetObjectName_ReturnValue) == 0x000050, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_GetComponentByClass_ReturnValue) == 0x000068, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue_2) == 0x000071, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-
 // Function AnimNotifyState_UseFacialAnimFromSpecialFullBody.AnimNotifyState_UseFacialAnimFromSpecialFullBody_C.Received_NotifyBegin
 // 0x0080 (0x0080 - 0x0000)
 struct AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin final
@@ -81,6 +50,37 @@ static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Receiv
 static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin, CallFunc_GetComponentByClass_ReturnValue) == 0x000060, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue_2) == 0x000068, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin, CallFunc_GetObjectName_ReturnValue) == 0x000070, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyBegin::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+
+// Function AnimNotifyState_UseFacialAnimFromSpecialFullBody.AnimNotifyState_UseFacialAnimFromSpecialFullBody_C.Received_NotifyEnd
+// 0x0078 (0x0078 - 0x0000)
+struct AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd");
+static_assert(sizeof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd) == 0x000078, "Wrong size on AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::Animation' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::EventReference' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_GetObjectName_ReturnValue) == 0x000050, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_GetComponentByClass_ReturnValue) == 0x000068, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue_2) == 0x000071, "Member 'AnimNotifyState_UseFacialAnimFromSpecialFullBody_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
 
 }
 

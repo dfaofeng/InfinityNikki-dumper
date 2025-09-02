@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -37,13 +37,13 @@ public:
 	double                                        SImpleFleeRadius;                                  // 0x01C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AddClosePointCount();
-	void ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitFleeParams(int32 EntryPoint);
-	void Fail_40570C8D4E1CD97EBDE2D591E971D6EA();
-	void OnQueryFail();
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn_0);
-	void Success_40570C8D4E1CD97EBDE2D591E971D6EA(const struct FVector& Loc);
 	void TaskBegin_40570C8D4E1CD97EBDE2D591E971D6EA(class UX6TaskAsyncBase* Task);
+	void Success_40570C8D4E1CD97EBDE2D591E971D6EA(const struct FVector& Loc);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn_0);
+	void OnQueryFail();
+	void Fail_40570C8D4E1CD97EBDE2D591E971D6EA();
+	void ExecuteUbergraph_BTT_QuadrupedAnimalReaction_InitFleeParams(int32 EntryPoint);
+	void AddClosePointCount();
 
 public:
 	static class UClass* StaticClass()

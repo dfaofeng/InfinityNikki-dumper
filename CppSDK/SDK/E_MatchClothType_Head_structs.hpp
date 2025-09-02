@@ -15,13 +15,17 @@ namespace SDK
 {
 
 // UserDefinedEnum E_MatchClothType_Head.E_MatchClothType_Head
-// NumValues: 0x0004
+// NumValues: 0x0008
 enum class E_MatchClothType_Head : uint8
 {
 	NewEnumerator4                           = 0,
 	NewEnumerator0                           = 1,
 	NewEnumerator7                           = 2,
-	E_MatchClothType_MAX                     = 3,
+	NewEnumerator8                           = 3,
+	NewEnumerator9                           = 4,
+	NewEnumerator11                          = 5,
+	NewEnumerator10                          = 6,
+	E_MatchClothType_MAX                     = 7,
 };
 
 }

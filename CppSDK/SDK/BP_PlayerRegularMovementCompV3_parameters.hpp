@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "EPlayerMovementScenarios_structs.hpp"
-#include "EPlayerAdditiveMovementMode_structs.hpp"
-#include "X6Game_structs.hpp"
 #include "EInputDeviceKeyType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "X6Game_structs.hpp"
+#include "EPlayerAdditiveMovementMode_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EPlayerMovementScenarios_structs.hpp"
 
 
 namespace SDK::Params
@@ -489,6 +489,20 @@ static_assert(alignof(BP_PlayerRegularMovementCompV3_C_BP_SetAIInplaceTurnAround
 static_assert(sizeof(BP_PlayerRegularMovementCompV3_C_BP_SetAIInplaceTurnAroundAngle) == 0x000008, "Wrong size on BP_PlayerRegularMovementCompV3_C_BP_SetAIInplaceTurnAroundAngle");
 static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_SetAIInplaceTurnAroundAngle, CurInplaceTurnAroundAngle) == 0x000000, "Member 'BP_PlayerRegularMovementCompV3_C_BP_SetAIInplaceTurnAroundAngle::CurInplaceTurnAroundAngle' has a wrong offset!");
 
+// Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ResetOwnerDefaultMovementConfig
+// 0x0010 (0x0010 - 0x0000)
+struct BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig final
+{
+public:
+	bool                                          bForceResetCurrentMovementConfig;                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_MovementAllConfigTemplate_C*        OldDefaultMovementConfigByModify;                  // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig) == 0x000008, "Wrong alignment on BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig");
+static_assert(sizeof(BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig) == 0x000010, "Wrong size on BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig");
+static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig, bForceResetCurrentMovementConfig) == 0x000000, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig::bForceResetCurrentMovementConfig' has a wrong offset!");
+static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig, OldDefaultMovementConfigByModify) == 0x000008, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig::OldDefaultMovementConfigByModify' has a wrong offset!");
+
 // Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ResetMaxAccelerationConfigValue
 // 0x0008 (0x0008 - 0x0000)
 struct BP_PlayerRegularMovementCompV3_C_BP_ResetMaxAccelerationConfigValue final
@@ -545,6 +559,22 @@ static_assert(alignof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementCon
 static_assert(sizeof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementConfigByDA) == 0x000010, "Wrong size on BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementConfigByDA");
 static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementConfigByDA, NewDataAsset) == 0x000000, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementConfigByDA::NewDataAsset' has a wrong offset!");
 static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementConfigByDA, OldDataAsset) == 0x000008, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerMovementConfigByDA::OldDataAsset' has a wrong offset!");
+
+// Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ModifyOwnerDefaultMovementConfigByDA
+// 0x0018 (0x0018 - 0x0000)
+struct BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA final
+{
+public:
+	class UBP_MovementAllConfigTemplate_C*        NewDefaultMovementConfigByModify;                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bForceResetCurrentMovementConfig;                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_MovementAllConfigTemplate_C*        OldDefaultMovementConfigByModify;                  // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA) == 0x000008, "Wrong alignment on BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA");
+static_assert(sizeof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA) == 0x000018, "Wrong size on BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA");
+static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA, NewDefaultMovementConfigByModify) == 0x000000, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA::NewDefaultMovementConfigByModify' has a wrong offset!");
+static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA, bForceResetCurrentMovementConfig) == 0x000008, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA::bForceResetCurrentMovementConfig' has a wrong offset!");
+static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA, OldDefaultMovementConfigByModify) == 0x000010, "Member 'BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA::OldDefaultMovementConfigByModify' has a wrong offset!");
 
 // Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ModifyMaxAccelerationConfigValue
 // 0x0008 (0x0008 - 0x0000)
@@ -702,6 +732,17 @@ public:
 static_assert(alignof(BP_PlayerRegularMovementCompV3_C_BP_GetDesiredGait) == 0x000001, "Wrong alignment on BP_PlayerRegularMovementCompV3_C_BP_GetDesiredGait");
 static_assert(sizeof(BP_PlayerRegularMovementCompV3_C_BP_GetDesiredGait) == 0x000001, "Wrong size on BP_PlayerRegularMovementCompV3_C_BP_GetDesiredGait");
 static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_GetDesiredGait, BP_CurrentAllowedGait_0) == 0x000000, "Member 'BP_PlayerRegularMovementCompV3_C_BP_GetDesiredGait::BP_CurrentAllowedGait_0' has a wrong offset!");
+
+// Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_GetCurrentDefaultMovementConfig
+// 0x0008 (0x0008 - 0x0000)
+struct BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig final
+{
+public:
+	class UBP_MovementAllConfigTemplate_C*        CurDefaultMovementConfig;                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig) == 0x000008, "Wrong alignment on BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig");
+static_assert(sizeof(BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig) == 0x000008, "Wrong size on BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig");
+static_assert(offsetof(BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig, CurDefaultMovementConfig) == 0x000000, "Member 'BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig::CurDefaultMovementConfig' has a wrong offset!");
 
 // Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_GetCurConfigMaxSpeed
 // 0x0018 (0x0018 - 0x0000)

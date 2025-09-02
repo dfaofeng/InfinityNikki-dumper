@@ -20,7 +20,7 @@ struct FArtifactSettings final
 {
 public:
 	class FString                                 ArtifactName;                                      // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ClientID;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ClientId;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ClientSecret;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 productID;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SandboxId;                                         // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -30,7 +30,7 @@ public:
 static_assert(alignof(FArtifactSettings) == 0x000008, "Wrong alignment on FArtifactSettings");
 static_assert(sizeof(FArtifactSettings) == 0x000070, "Wrong size on FArtifactSettings");
 static_assert(offsetof(FArtifactSettings, ArtifactName) == 0x000000, "Member 'FArtifactSettings::ArtifactName' has a wrong offset!");
-static_assert(offsetof(FArtifactSettings, ClientID) == 0x000010, "Member 'FArtifactSettings::ClientID' has a wrong offset!");
+static_assert(offsetof(FArtifactSettings, ClientId) == 0x000010, "Member 'FArtifactSettings::ClientId' has a wrong offset!");
 static_assert(offsetof(FArtifactSettings, ClientSecret) == 0x000020, "Member 'FArtifactSettings::ClientSecret' has a wrong offset!");
 static_assert(offsetof(FArtifactSettings, productID) == 0x000030, "Member 'FArtifactSettings::productID' has a wrong offset!");
 static_assert(offsetof(FArtifactSettings, SandboxId) == 0x000040, "Member 'FArtifactSettings::SandboxId' has a wrong offset!");

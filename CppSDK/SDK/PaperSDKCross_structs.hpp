@@ -134,7 +134,7 @@ static_assert(offsetof(FPSRoleInfoModel, AccntLevel) == 0x000010, "Member 'FPSRo
 static_assert(offsetof(FPSRoleInfoModel, AccntName) == 0x000018, "Member 'FPSRoleInfoModel::AccntName' has a wrong offset!");
 
 // ScriptStruct PaperSDKCross.PSAccountInfoModel
-// 0x01E8 (0x01E8 - 0x0000)
+// 0x0208 (0x0208 - 0x0000)
 struct FPSAccountInfoModel final
 {
 public:
@@ -159,16 +159,18 @@ public:
 	int32                                         IsNew;                                             // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         IsGuest;                                           // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AccountType;                                       // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RoleId;                                            // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Extra;                                             // 0x00A8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPSAccountYouthMsg                     Youth_Msg;                                         // 0x00B8(0x0068)(NativeAccessSpecifierPublic)
-	struct FPSThirdPartyDetailInfo                Detail;                                            // 0x0120(0x0060)(NativeAccessSpecifierPublic)
-	struct FPSAccountLocation                     Location;                                          // 0x0180(0x0060)(NativeAccessSpecifierPublic)
-	struct FPSBindAccount                         Bind_Account;                                      // 0x01E0(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 RoleId;                                            // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Subscribe_Remind;                                  // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Email;                                             // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Extra;                                             // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPSAccountYouthMsg                     Youth_Msg;                                         // 0x00D8(0x0068)(NativeAccessSpecifierPublic)
+	struct FPSThirdPartyDetailInfo                Detail;                                            // 0x0140(0x0060)(NativeAccessSpecifierPublic)
+	struct FPSAccountLocation                     Location;                                          // 0x01A0(0x0060)(NativeAccessSpecifierPublic)
+	struct FPSBindAccount                         Bind_Account;                                      // 0x0200(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSAccountInfoModel) == 0x000008, "Wrong alignment on FPSAccountInfoModel");
-static_assert(sizeof(FPSAccountInfoModel) == 0x0001E8, "Wrong size on FPSAccountInfoModel");
+static_assert(sizeof(FPSAccountInfoModel) == 0x000208, "Wrong size on FPSAccountInfoModel");
 static_assert(offsetof(FPSAccountInfoModel, Qrcode_Status) == 0x000000, "Member 'FPSAccountInfoModel::Qrcode_Status' has a wrong offset!");
 static_assert(offsetof(FPSAccountInfoModel, Action) == 0x000008, "Member 'FPSAccountInfoModel::Action' has a wrong offset!");
 static_assert(offsetof(FPSAccountInfoModel, RoleList) == 0x000018, "Member 'FPSAccountInfoModel::RoleList' has a wrong offset!");
@@ -188,21 +190,23 @@ static_assert(offsetof(FPSAccountInfoModel, IsNew) == 0x000094, "Member 'FPSAcco
 static_assert(offsetof(FPSAccountInfoModel, IsGuest) == 0x000098, "Member 'FPSAccountInfoModel::IsGuest' has a wrong offset!");
 static_assert(offsetof(FPSAccountInfoModel, AccountType) == 0x00009C, "Member 'FPSAccountInfoModel::AccountType' has a wrong offset!");
 static_assert(offsetof(FPSAccountInfoModel, RoleId) == 0x0000A0, "Member 'FPSAccountInfoModel::RoleId' has a wrong offset!");
-static_assert(offsetof(FPSAccountInfoModel, Extra) == 0x0000A8, "Member 'FPSAccountInfoModel::Extra' has a wrong offset!");
-static_assert(offsetof(FPSAccountInfoModel, Youth_Msg) == 0x0000B8, "Member 'FPSAccountInfoModel::Youth_Msg' has a wrong offset!");
-static_assert(offsetof(FPSAccountInfoModel, Detail) == 0x000120, "Member 'FPSAccountInfoModel::Detail' has a wrong offset!");
-static_assert(offsetof(FPSAccountInfoModel, Location) == 0x000180, "Member 'FPSAccountInfoModel::Location' has a wrong offset!");
-static_assert(offsetof(FPSAccountInfoModel, Bind_Account) == 0x0001E0, "Member 'FPSAccountInfoModel::Bind_Account' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Subscribe_Remind) == 0x0000B0, "Member 'FPSAccountInfoModel::Subscribe_Remind' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Email) == 0x0000B8, "Member 'FPSAccountInfoModel::Email' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Extra) == 0x0000C8, "Member 'FPSAccountInfoModel::Extra' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Youth_Msg) == 0x0000D8, "Member 'FPSAccountInfoModel::Youth_Msg' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Detail) == 0x000140, "Member 'FPSAccountInfoModel::Detail' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Location) == 0x0001A0, "Member 'FPSAccountInfoModel::Location' has a wrong offset!");
+static_assert(offsetof(FPSAccountInfoModel, Bind_Account) == 0x000200, "Member 'FPSAccountInfoModel::Bind_Account' has a wrong offset!");
 
 // ScriptStruct PaperSDKCross.PSBffLoginInfoModel
-// 0x01E8 (0x0220 - 0x0038)
+// 0x0208 (0x0240 - 0x0038)
 struct FPSBffLoginInfoModel final : public FPSBffBasicModel
 {
 public:
-	struct FPSAccountInfoModel                    Data;                                              // 0x0038(0x01E8)(NativeAccessSpecifierPublic)
+	struct FPSAccountInfoModel                    Data;                                              // 0x0038(0x0208)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSBffLoginInfoModel) == 0x000008, "Wrong alignment on FPSBffLoginInfoModel");
-static_assert(sizeof(FPSBffLoginInfoModel) == 0x000220, "Wrong size on FPSBffLoginInfoModel");
+static_assert(sizeof(FPSBffLoginInfoModel) == 0x000240, "Wrong size on FPSBffLoginInfoModel");
 static_assert(offsetof(FPSBffLoginInfoModel, Data) == 0x000038, "Member 'FPSBffLoginInfoModel::Data' has a wrong offset!");
 
 // ScriptStruct PaperSDKCross.PSRealNameInfoModel

@@ -17,61 +17,35 @@
 namespace SDK
 {
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemValueChangedViaIndex
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnEntryReleased
 // (Event, Protected, BlueprintEvent)
-// Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_MaterialList_Item_C::OnListItemValueChangedViaIndex(int32 Index_0)
+void UWBP_HUD_MaterialList_Item_C::BP_OnEntryReleased()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "OnListItemValueChangedViaIndex");
+		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "BP_OnEntryReleased");
 
-	Params::WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemObjectSetViaIndex
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnItemExpansionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_MaterialList_Item_C::OnListItemObjectSetViaIndex(int32 Index_0)
+void UWBP_HUD_MaterialList_Item_C::BP_OnItemExpansionChanged(bool bIsExpanded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "OnListItemObjectSetViaIndex");
+		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "BP_OnItemExpansionChanged");
 
-	Params::WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex Parms{};
+	Params::WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged Parms{};
 
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.ExecuteUbergraph_WBP_HUD_MaterialList_Item
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_MaterialList_Item_C::ExecuteUbergraph_WBP_HUD_MaterialList_Item(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "ExecuteUbergraph_WBP_HUD_MaterialList_Item");
-
-	Params::WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_MaterialList_Item Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.bIsExpanded = bIsExpanded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -97,37 +71,63 @@ void UWBP_HUD_MaterialList_Item_C::BP_OnItemSelectionChanged(bool bIsSelected)
 }
 
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnItemExpansionChanged
-// (Event, Protected, BlueprintEvent)
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.ExecuteUbergraph_WBP_HUD_MaterialList_Item
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_MaterialList_Item_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+void UWBP_HUD_MaterialList_Item_C::ExecuteUbergraph_WBP_HUD_MaterialList_Item(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "BP_OnItemExpansionChanged");
+		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "ExecuteUbergraph_WBP_HUD_MaterialList_Item");
 
-	Params::WBP_HUD_MaterialList_Item_C_BP_OnItemExpansionChanged Parms{};
+	Params::WBP_HUD_MaterialList_Item_C_ExecuteUbergraph_WBP_HUD_MaterialList_Item Parms{};
 
-	Parms.bIsExpanded = bIsExpanded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.BP_OnEntryReleased
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemObjectSetViaIndex
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_MaterialList_Item_C::BP_OnEntryReleased()
+void UWBP_HUD_MaterialList_Item_C::OnListItemObjectSetViaIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "BP_OnEntryReleased");
+		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "OnListItemObjectSetViaIndex");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_HUD_MaterialList_Item_C_OnListItemObjectSetViaIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_MaterialList_Item.WBP_HUD_MaterialList_Item_C.OnListItemValueChangedViaIndex
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_MaterialList_Item_C::OnListItemValueChangedViaIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MaterialList_Item_C", "OnListItemValueChangedViaIndex");
+
+	Params::WBP_HUD_MaterialList_Item_C_OnListItemValueChangedViaIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

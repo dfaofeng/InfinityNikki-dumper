@@ -73,7 +73,7 @@ public:
 	class FString                                 Name_0;                                            // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Reason;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StackTrace;                                        // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Extras;                                            // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 extras;                                            // 0x0038(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          quit;                                              // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         dumpNativeType;                                    // 0x004C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -84,7 +84,7 @@ static_assert(offsetof(PaperCrashSightLibrary_ReportException, Type) == 0x000000
 static_assert(offsetof(PaperCrashSightLibrary_ReportException, Name_0) == 0x000008, "Member 'PaperCrashSightLibrary_ReportException::Name_0' has a wrong offset!");
 static_assert(offsetof(PaperCrashSightLibrary_ReportException, Reason) == 0x000018, "Member 'PaperCrashSightLibrary_ReportException::Reason' has a wrong offset!");
 static_assert(offsetof(PaperCrashSightLibrary_ReportException, StackTrace) == 0x000028, "Member 'PaperCrashSightLibrary_ReportException::StackTrace' has a wrong offset!");
-static_assert(offsetof(PaperCrashSightLibrary_ReportException, Extras) == 0x000038, "Member 'PaperCrashSightLibrary_ReportException::Extras' has a wrong offset!");
+static_assert(offsetof(PaperCrashSightLibrary_ReportException, extras) == 0x000038, "Member 'PaperCrashSightLibrary_ReportException::extras' has a wrong offset!");
 static_assert(offsetof(PaperCrashSightLibrary_ReportException, quit) == 0x000048, "Member 'PaperCrashSightLibrary_ReportException::quit' has a wrong offset!");
 static_assert(offsetof(PaperCrashSightLibrary_ReportException, dumpNativeType) == 0x00004C, "Member 'PaperCrashSightLibrary_ReportException::dumpNativeType' has a wrong offset!");
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // Class PSDKCustomerServiceCommon.CustomerServicePSNQRCodeWidget
-// 0x0078 (0x0368 - 0x02F0)
+// 0x0080 (0x0370 - 0x02F0)
 class UCustomerServicePSNQRCodeWidget final : public UUserWidget
 {
 public:
@@ -29,7 +29,8 @@ public:
 	class UBackgroundBlur*                        QRCodeBackgroundBlur;                              // 0x0328(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UImage*                                 RefreshImage;                                      // 0x0330(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UHorizontalBox*                         RefreshQRCodeKeyTips;                              // 0x0338(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_340[0x28];                                     // 0x0340(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class URichTextBlock*                         ContactByEmail;                                    // 0x0340(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_348[0x28];                                     // 0x0348(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Init();
@@ -53,7 +54,7 @@ public:
 	}
 };
 static_assert(alignof(UCustomerServicePSNQRCodeWidget) == 0x000008, "Wrong alignment on UCustomerServicePSNQRCodeWidget");
-static_assert(sizeof(UCustomerServicePSNQRCodeWidget) == 0x000368, "Wrong size on UCustomerServicePSNQRCodeWidget");
+static_assert(sizeof(UCustomerServicePSNQRCodeWidget) == 0x000370, "Wrong size on UCustomerServicePSNQRCodeWidget");
 static_assert(offsetof(UCustomerServicePSNQRCodeWidget, QRCode) == 0x000308, "Member 'UCustomerServicePSNQRCodeWidget::QRCode' has a wrong offset!");
 static_assert(offsetof(UCustomerServicePSNQRCodeWidget, QRCodeTips) == 0x000310, "Member 'UCustomerServicePSNQRCodeWidget::QRCodeTips' has a wrong offset!");
 static_assert(offsetof(UCustomerServicePSNQRCodeWidget, BacktoGameText) == 0x000318, "Member 'UCustomerServicePSNQRCodeWidget::BacktoGameText' has a wrong offset!");
@@ -61,6 +62,7 @@ static_assert(offsetof(UCustomerServicePSNQRCodeWidget, RefreshQRCodeText) == 0x
 static_assert(offsetof(UCustomerServicePSNQRCodeWidget, QRCodeBackgroundBlur) == 0x000328, "Member 'UCustomerServicePSNQRCodeWidget::QRCodeBackgroundBlur' has a wrong offset!");
 static_assert(offsetof(UCustomerServicePSNQRCodeWidget, RefreshImage) == 0x000330, "Member 'UCustomerServicePSNQRCodeWidget::RefreshImage' has a wrong offset!");
 static_assert(offsetof(UCustomerServicePSNQRCodeWidget, RefreshQRCodeKeyTips) == 0x000338, "Member 'UCustomerServicePSNQRCodeWidget::RefreshQRCodeKeyTips' has a wrong offset!");
+static_assert(offsetof(UCustomerServicePSNQRCodeWidget, ContactByEmail) == 0x000340, "Member 'UCustomerServicePSNQRCodeWidget::ContactByEmail' has a wrong offset!");
 
 }
 

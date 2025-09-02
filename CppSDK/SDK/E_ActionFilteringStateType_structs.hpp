@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum E_ActionFilteringStateType.E_ActionFilteringStateType
-// NumValues: 0x0027
+// NumValues: 0x002F
 enum class E_ActionFilteringStateType : uint8
 {
 	NewEnumerator6                           = 0,
@@ -56,7 +56,15 @@ enum class E_ActionFilteringStateType : uint8
 	NewEnumerator42                          = 35,
 	NewEnumerator43                          = 36,
 	NewEnumerator44                          = 37,
-	E_MAX                                    = 38,
+	NewEnumerator45                          = 38,
+	NewEnumerator46                          = 39,
+	NewEnumerator47                          = 40,
+	NewEnumerator48                          = 41,
+	NewEnumerator49                          = 42,
+	NewEnumerator50                          = 43,
+	NewEnumerator51                          = 44,
+	NewEnumerator52                          = 45,
+	E_MAX                                    = 46,
 };
 
 }

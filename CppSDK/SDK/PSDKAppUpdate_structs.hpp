@@ -17,14 +17,6 @@
 namespace SDK
 {
 
-// ScriptStruct PSDKAppUpdate.PSdkAppUpdateLanguagesRow
-// 0x0000 (0x00D8 - 0x00D8)
-struct FPSdkAppUpdateLanguagesRow final : public FPSDKLanguageTableRowBase
-{
-};
-static_assert(alignof(FPSdkAppUpdateLanguagesRow) == 0x000008, "Wrong alignment on FPSdkAppUpdateLanguagesRow");
-static_assert(sizeof(FPSdkAppUpdateLanguagesRow) == 0x0000D8, "Wrong size on FPSdkAppUpdateLanguagesRow");
-
 // ScriptStruct PSDKAppUpdate.PSdkAppUpdateDataExtraModel
 // 0x0038 (0x0038 - 0x0000)
 struct FPSdkAppUpdateDataExtraModel final
@@ -76,6 +68,14 @@ public:
 static_assert(alignof(FPSdkAppUpdateModel) == 0x000008, "Wrong alignment on FPSdkAppUpdateModel");
 static_assert(sizeof(FPSdkAppUpdateModel) == 0x0000B0, "Wrong size on FPSdkAppUpdateModel");
 static_assert(offsetof(FPSdkAppUpdateModel, Data) == 0x000038, "Member 'FPSdkAppUpdateModel::Data' has a wrong offset!");
+
+// ScriptStruct PSDKAppUpdate.PSdkAppUpdateLanguagesRow
+// 0x0000 (0x00D8 - 0x00D8)
+struct FPSdkAppUpdateLanguagesRow final : public FPSDKLanguageTableRowBase
+{
+};
+static_assert(alignof(FPSdkAppUpdateLanguagesRow) == 0x000008, "Wrong alignment on FPSdkAppUpdateLanguagesRow");
+static_assert(sizeof(FPSdkAppUpdateLanguagesRow) == 0x0000D8, "Wrong size on FPSdkAppUpdateLanguagesRow");
 
 }
 

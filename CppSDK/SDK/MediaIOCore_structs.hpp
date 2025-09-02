@@ -278,7 +278,7 @@ static_assert(offsetof(FMediaIODevice, DeviceIdentifier) == 0x000008, "Member 'F
 struct FMediaIOConnection final
 {
 public:
-	struct FMediaIODevice                         Device;                                            // 0x0000(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMediaIODevice                         device;                                            // 0x0000(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	class FName                                   protocol;                                          // 0x000C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaIOTransportType                         TransportType;                                     // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaIOQuadLinkTransportType                 QuadTransportType;                                 // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -286,7 +286,7 @@ public:
 };
 static_assert(alignof(FMediaIOConnection) == 0x000004, "Wrong alignment on FMediaIOConnection");
 static_assert(sizeof(FMediaIOConnection) == 0x000020, "Wrong size on FMediaIOConnection");
-static_assert(offsetof(FMediaIOConnection, Device) == 0x000000, "Member 'FMediaIOConnection::Device' has a wrong offset!");
+static_assert(offsetof(FMediaIOConnection, device) == 0x000000, "Member 'FMediaIOConnection::device' has a wrong offset!");
 static_assert(offsetof(FMediaIOConnection, protocol) == 0x00000C, "Member 'FMediaIOConnection::protocol' has a wrong offset!");
 static_assert(offsetof(FMediaIOConnection, TransportType) == 0x000014, "Member 'FMediaIOConnection::TransportType' has a wrong offset!");
 static_assert(offsetof(FMediaIOConnection, QuadTransportType) == 0x000018, "Member 'FMediaIOConnection::QuadTransportType' has a wrong offset!");

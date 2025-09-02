@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "X6Game_structs.hpp"
 #include "X6Animation_structs.hpp"
+#include "X6Game_structs.hpp"
 
 
 namespace SDK

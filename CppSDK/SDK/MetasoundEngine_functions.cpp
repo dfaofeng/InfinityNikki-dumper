@@ -899,6 +899,81 @@ bool UMetaSoundOutputSubsystem::WatchOutput(class UAudioComponent* AudioComponen
 }
 
 
+// Function MetasoundEngine.MetaSoundQualityHelper.GetQualityList
+// (Final, Native, Static, Public)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UMetaSoundQualityHelper::GetQualityList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MetaSoundQualityHelper", "GetQualityList");
+
+	Params::MetaSoundQualityHelper_GetQualityList Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMetaSoundAssetSubsystem::RegisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundAssetSubsystem", "RegisterAssetClassesInDirectories");
+
+	Params::MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories Parms{};
+
+	Parms.Directories = std::move(Directories);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMetaSoundAssetSubsystem::UnregisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundAssetSubsystem", "UnregisterAssetClassesInDirectories");
+
+	Params::MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories Parms{};
+
+	Parms.Directories = std::move(Directories);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -2506,6 +2581,36 @@ bool UMetaSoundBuilderBase::NodesAreConnected(const struct FMetaSoundBuilderNode
 }
 
 
+// Function MetasoundEngine.MetaSoundPatchBuilder.Build
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UObject*                          Parent                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMetaSoundBuilderOptions&  Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundPatchBuilder::Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MetaSoundPatchBuilder", "Build");
+
+	Params::MetaSoundPatchBuilder_Build Parms{};
+
+	Parms.Parent = Parent;
+	Parms.Options = std::move(Options);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MetasoundEngine.MetaSoundSourceBuilder.Audition
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -2684,111 +2789,6 @@ bool UMetaSoundSourceBuilder::GetLiveUpdatesEnabled() const
 		Func = Class->GetFunction("MetaSoundSourceBuilder", "GetLiveUpdatesEnabled");
 
 	Params::MetaSoundSourceBuilder_GetLiveUpdatesEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundQualityHelper.GetQualityList
-// (Final, Native, Static, Public)
-// Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FName> UMetaSoundQualityHelper::GetQualityList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MetaSoundQualityHelper", "GetQualityList");
-
-	Params::MetaSoundQualityHelper_GetQualityList Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UMetaSoundAssetSubsystem::RegisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundAssetSubsystem", "RegisterAssetClassesInDirectories");
-
-	Params::MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories Parms{};
-
-	Parms.Directories = std::move(Directories);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TArray<struct FMetaSoundAssetDirectory>&Directories                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UMetaSoundAssetSubsystem::UnregisterAssetClassesInDirectories(const TArray<struct FMetaSoundAssetDirectory>& Directories)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundAssetSubsystem", "UnregisterAssetClassesInDirectories");
-
-	Params::MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories Parms{};
-
-	Parms.Directories = std::move(Directories);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MetasoundEngine.MetaSoundPatchBuilder.Build
-// (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UObject*                          Parent                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FMetaSoundBuilderOptions&  Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// TScriptInterface<class IMetaSoundDocumentInterface>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-TScriptInterface<class IMetaSoundDocumentInterface> UMetaSoundPatchBuilder::Build(class UObject* Parent, const struct FMetaSoundBuilderOptions& Options) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MetaSoundPatchBuilder", "Build");
-
-	Params::MetaSoundPatchBuilder_Build Parms{};
-
-	Parms.Parent = Parent;
-	Parms.Options = std::move(Options);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

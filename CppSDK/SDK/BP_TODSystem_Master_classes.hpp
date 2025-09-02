@@ -19,21 +19,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_TODSystem_Master.BP_TODSystem_Master_C
-// 0x0070 (0x1690 - 0x1620)
+// 0x0070 (0x16A0 - 0x1630)
 #pragma pack(push, 0x1)
 class alignas(0x10) ABP_TODSystem_Master_C : public ADynamicEnvironmentSystemManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1620(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBillboardComponent*                    Billboard;                                         // 0x1628(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        TodLerp;                                           // 0x1630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              ED_TimeSpanChange;                                 // 0x1638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FTimeSpanLerpConfig                    Span2;                                             // 0x1648(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        DeltaTime;                                         // 0x1668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          In_Editor;                                         // 0x1670(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1671[0x7];                                     // 0x1671(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LocalNowTime;                                      // 0x1678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SecondPerHour;                                     // 0x1680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1630(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBillboardComponent*                    Billboard;                                         // 0x1638(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        TodLerp;                                           // 0x1640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              ED_TimeSpanChange;                                 // 0x1648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FTimeSpanLerpConfig                    Span2;                                             // 0x1658(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        DeltaTime;                                         // 0x1678(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          In_Editor;                                         // 0x1680(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1681[0x7];                                     // 0x1681(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LocalNowTime;                                      // 0x1688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SecondPerHour;                                     // 0x1690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -60,16 +60,16 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ABP_TODSystem_Master_C) == 0x000010, "Wrong alignment on ABP_TODSystem_Master_C");
-static_assert(sizeof(ABP_TODSystem_Master_C) == 0x001690, "Wrong size on ABP_TODSystem_Master_C");
-static_assert(offsetof(ABP_TODSystem_Master_C, UberGraphFrame) == 0x001620, "Member 'ABP_TODSystem_Master_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, Billboard) == 0x001628, "Member 'ABP_TODSystem_Master_C::Billboard' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, TodLerp) == 0x001630, "Member 'ABP_TODSystem_Master_C::TodLerp' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, ED_TimeSpanChange) == 0x001638, "Member 'ABP_TODSystem_Master_C::ED_TimeSpanChange' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, Span2) == 0x001648, "Member 'ABP_TODSystem_Master_C::Span2' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, DeltaTime) == 0x001668, "Member 'ABP_TODSystem_Master_C::DeltaTime' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, In_Editor) == 0x001670, "Member 'ABP_TODSystem_Master_C::In_Editor' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, LocalNowTime) == 0x001678, "Member 'ABP_TODSystem_Master_C::LocalNowTime' has a wrong offset!");
-static_assert(offsetof(ABP_TODSystem_Master_C, SecondPerHour) == 0x001680, "Member 'ABP_TODSystem_Master_C::SecondPerHour' has a wrong offset!");
+static_assert(sizeof(ABP_TODSystem_Master_C) == 0x0016A0, "Wrong size on ABP_TODSystem_Master_C");
+static_assert(offsetof(ABP_TODSystem_Master_C, UberGraphFrame) == 0x001630, "Member 'ABP_TODSystem_Master_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, Billboard) == 0x001638, "Member 'ABP_TODSystem_Master_C::Billboard' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, TodLerp) == 0x001640, "Member 'ABP_TODSystem_Master_C::TodLerp' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, ED_TimeSpanChange) == 0x001648, "Member 'ABP_TODSystem_Master_C::ED_TimeSpanChange' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, Span2) == 0x001658, "Member 'ABP_TODSystem_Master_C::Span2' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, DeltaTime) == 0x001678, "Member 'ABP_TODSystem_Master_C::DeltaTime' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, In_Editor) == 0x001680, "Member 'ABP_TODSystem_Master_C::In_Editor' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, LocalNowTime) == 0x001688, "Member 'ABP_TODSystem_Master_C::LocalNowTime' has a wrong offset!");
+static_assert(offsetof(ABP_TODSystem_Master_C, SecondPerHour) == 0x001690, "Member 'ABP_TODSystem_Master_C::SecondPerHour' has a wrong offset!");
 
 }
 

@@ -14,6 +14,39 @@
 namespace SDK::Params
 {
 
+// Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick");
+static_assert(sizeof(BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick");
+static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.OnFadeOut
+// 0x0004 (0x0004 - 0x0000)
+struct BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut final
+{
+public:
+	float                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut");
+static_assert(sizeof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut");
+static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut::Progress' has a wrong offset!");
+
+// Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.OnFadeIn
+// 0x0004 (0x0004 - 0x0000)
+struct BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn final
+{
+public:
+	float                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn");
+static_assert(sizeof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn");
+static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn::Progress' has a wrong offset!");
+
 // Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01
 // 0x0048 (0x0048 - 0x0000)
 struct BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01 final
@@ -51,39 +84,6 @@ static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyE
 static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01, CallFunc_Conv_NameToString_ReturnValue) == 0x000028, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01, CallFunc_LoadLevelInstance_bOutSuccess) == 0x000038, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01::CallFunc_LoadLevelInstance_bOutSuccess' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01, CallFunc_LoadLevelInstance_ReturnValue) == 0x000040, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_ExecuteUbergraph_BP_DyEnvWeatehrComp_SuperMoon01::CallFunc_LoadLevelInstance_ReturnValue' has a wrong offset!");
-
-// Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.OnFadeIn
-// 0x0004 (0x0004 - 0x0000)
-struct BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn final
-{
-public:
-	float                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn");
-static_assert(sizeof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn");
-static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeIn::Progress' has a wrong offset!");
-
-// Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.OnFadeOut
-// 0x0004 (0x0004 - 0x0000)
-struct BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut final
-{
-public:
-	float                                         Progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut");
-static_assert(sizeof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut");
-static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut, Progress) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_OnFadeOut::Progress' has a wrong offset!");
-
-// Function BP_DyEnvWeatehrComp_SuperMoon01.BP_DyEnvWeatehrComp_SuperMoon01_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick");
-static_assert(sizeof(BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick) == 0x000004, "Wrong size on BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick");
-static_assert(offsetof(BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_DyEnvWeatehrComp_SuperMoon01_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 }
 

@@ -37,35 +37,47 @@ static_assert(sizeof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged) == 0x000001
 static_assert(offsetof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_Common_backbtn_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.ExecuteUbergraph_WBP_Common_backbtn
-// 0x0040 (0x0040 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsExpanded;                          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bIsSelected;                          // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue_1;       // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsExpanded;                          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bIsSelected;                          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A[0x6];                                       // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue_1;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue_2;       // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_2;              // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Event_TitleText;                            // 0x0058(0x0010)()
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue_3;       // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_3;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn) == 0x000008, "Wrong alignment on WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn");
-static_assert(sizeof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn) == 0x000040, "Wrong size on WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn");
+static_assert(sizeof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn) == 0x000078, "Wrong size on WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn");
 static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, EntryPoint) == 0x000000, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_bIsExpanded) == 0x000004, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_bIsExpanded' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_bIsSelected) == 0x000005, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_bIsSelected' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_ListItemObject) == 0x000008, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_ListItemObject' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_IsDesignTime) == 0x000010, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_IsDesignTime' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000018, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue) == 0x000020, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue_1) == 0x000028, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue_1) == 0x000030, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000038, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue) == 0x000008, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue) == 0x000010, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_bIsExpanded) == 0x000018, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_bIsExpanded' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_bIsSelected) == 0x000019, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_bIsSelected' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_ListItemObject) == 0x000020, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_ListItemObject' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_IsDesignTime) == 0x000028, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_IsDesignTime' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue_1) == 0x000030, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue_1) == 0x000038, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue_2) == 0x000040, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue_2) == 0x000048, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_Conv_ByteToInt_ReturnValue) == 0x000050, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, K2Node_Event_TitleText) == 0x000058, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::K2Node_Event_TitleText' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue_3) == 0x000068, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue_3) == 0x000070, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
 
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.OnListItemObjectSet
 // 0x0008 (0x0008 - 0x0000)
@@ -88,6 +100,17 @@ public:
 static_assert(alignof(WBP_Common_backbtn_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_PreConstruct");
 static_assert(sizeof(WBP_Common_backbtn_C_PreConstruct) == 0x000001, "Wrong size on WBP_Common_backbtn_C_PreConstruct");
 static_assert(offsetof(WBP_Common_backbtn_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_Common_backbtn_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.Set Title
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Common_backbtn_C_Set_Title final
+{
+public:
+	class FText                                   TitleText;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+};
+static_assert(alignof(WBP_Common_backbtn_C_Set_Title) == 0x000008, "Wrong alignment on WBP_Common_backbtn_C_Set_Title");
+static_assert(sizeof(WBP_Common_backbtn_C_Set_Title) == 0x000010, "Wrong size on WBP_Common_backbtn_C_Set_Title");
+static_assert(offsetof(WBP_Common_backbtn_C_Set_Title, TitleText) == 0x000000, "Member 'WBP_Common_backbtn_C_Set_Title::TitleText' has a wrong offset!");
 
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

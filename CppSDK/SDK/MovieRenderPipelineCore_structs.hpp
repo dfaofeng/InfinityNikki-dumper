@@ -258,6 +258,24 @@ static_assert(offsetof(FMoviePipelineOutputData, bSuccess) == 0x000010, "Member 
 static_assert(offsetof(FMoviePipelineOutputData, ShotData) == 0x000018, "Member 'FMoviePipelineOutputData::ShotData' has a wrong offset!");
 static_assert(offsetof(FMoviePipelineOutputData, GraphData) == 0x000028, "Member 'FMoviePipelineOutputData::GraphData' has a wrong offset!");
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphInitConfig
+// 0x0020 (0x0020 - 0x0000)
+struct FMovieGraphInitConfig final
+{
+public:
+	TSubclassOf<class UMovieGraphRendererBase>    RendererClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMovieGraphDataSourceBase>  DataSourceClass;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMovieGraphAudioRendererBase> AudioRendererClass;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRenderViewport;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FMovieGraphInitConfig) == 0x000008, "Wrong alignment on FMovieGraphInitConfig");
+static_assert(sizeof(FMovieGraphInitConfig) == 0x000020, "Wrong size on FMovieGraphInitConfig");
+static_assert(offsetof(FMovieGraphInitConfig, RendererClass) == 0x000000, "Member 'FMovieGraphInitConfig::RendererClass' has a wrong offset!");
+static_assert(offsetof(FMovieGraphInitConfig, DataSourceClass) == 0x000008, "Member 'FMovieGraphInitConfig::DataSourceClass' has a wrong offset!");
+static_assert(offsetof(FMovieGraphInitConfig, AudioRendererClass) == 0x000010, "Member 'FMovieGraphInitConfig::AudioRendererClass' has a wrong offset!");
+static_assert(offsetof(FMovieGraphInitConfig, bRenderViewport) == 0x000018, "Member 'FMovieGraphInitConfig::bRenderViewport' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedSettingsStack
 // 0x0010 (0x0010 - 0x0000)
 struct FMovieGraphEvaluatedSettingsStack final
@@ -268,43 +286,6 @@ public:
 static_assert(alignof(FMovieGraphEvaluatedSettingsStack) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedSettingsStack");
 static_assert(sizeof(FMovieGraphEvaluatedSettingsStack) == 0x000010, "Wrong size on FMovieGraphEvaluatedSettingsStack");
 static_assert(offsetof(FMovieGraphEvaluatedSettingsStack, NodeInstances) == 0x000000, "Member 'FMovieGraphEvaluatedSettingsStack::NodeInstances' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphNamedResolution
-// 0x0020 (0x0020 - 0x0000)
-struct FMovieGraphNamedResolution final
-{
-public:
-	class FName                                   ProfileName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FIntPoint                              Resolution;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieGraphNamedResolution) == 0x000008, "Wrong alignment on FMovieGraphNamedResolution");
-static_assert(sizeof(FMovieGraphNamedResolution) == 0x000020, "Wrong size on FMovieGraphNamedResolution");
-static_assert(offsetof(FMovieGraphNamedResolution, ProfileName) == 0x000000, "Member 'FMovieGraphNamedResolution::ProfileName' has a wrong offset!");
-static_assert(offsetof(FMovieGraphNamedResolution, Resolution) == 0x000008, "Member 'FMovieGraphNamedResolution::Resolution' has a wrong offset!");
-static_assert(offsetof(FMovieGraphNamedResolution, Description) == 0x000010, "Member 'FMovieGraphNamedResolution::Description' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluatedBranchConfig final
-{
-public:
-	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
-static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
-static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluationContext_VisitedNodeInfo final
-{
-public:
-	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000008, "Wrong alignment on FMovieGraphEvaluationContext_VisitedNodeInfo");
-static_assert(sizeof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000050, "Wrong size on FMovieGraphEvaluationContext_VisitedNodeInfo");
-static_assert(offsetof(FMovieGraphEvaluationContext_VisitedNodeInfo, VisitedNodes) == 0x000000, "Member 'FMovieGraphEvaluationContext_VisitedNodeInfo::VisitedNodes' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphTimeStepData
 // 0x0068 (0x0068 - 0x0000)
@@ -376,6 +357,17 @@ static_assert(offsetof(FMovieGraphTraversalContext, RootGraph) == 0x000018, "Mem
 static_assert(offsetof(FMovieGraphTraversalContext, RenderDataIdentifier) == 0x000020, "Member 'FMovieGraphTraversalContext::RenderDataIdentifier' has a wrong offset!");
 static_assert(offsetof(FMovieGraphTraversalContext, Time) == 0x000068, "Member 'FMovieGraphTraversalContext::Time' has a wrong offset!");
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluationContext_VisitedNodeInfo final
+{
+public:
+	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000008, "Wrong alignment on FMovieGraphEvaluationContext_VisitedNodeInfo");
+static_assert(sizeof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000050, "Wrong size on FMovieGraphEvaluationContext_VisitedNodeInfo");
+static_assert(offsetof(FMovieGraphEvaluationContext_VisitedNodeInfo, VisitedNodes) == 0x000000, "Member 'FMovieGraphEvaluationContext_VisitedNodeInfo::VisitedNodes' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext
 // 0x0160 (0x0160 - 0x0000)
 struct FMovieGraphEvaluationContext final
@@ -399,6 +391,17 @@ static_assert(offsetof(FMovieGraphEvaluationContext, SubgraphStack) == 0x000128,
 static_assert(offsetof(FMovieGraphEvaluationContext, bCircularGraphReferenceFound) == 0x000138, "Member 'FMovieGraphEvaluationContext::bCircularGraphReferenceFound' has a wrong offset!");
 static_assert(offsetof(FMovieGraphEvaluationContext, TraversalError) == 0x000140, "Member 'FMovieGraphEvaluationContext::TraversalError' has a wrong offset!");
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluatedBranchConfig final
+{
+public:
+	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
+static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
+static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MovieGraphImagePreviewData
 // 0x0050 (0x0050 - 0x0000)
 struct FMovieGraphImagePreviewData final
@@ -411,24 +414,6 @@ static_assert(alignof(FMovieGraphImagePreviewData) == 0x000008, "Wrong alignment
 static_assert(sizeof(FMovieGraphImagePreviewData) == 0x000050, "Wrong size on FMovieGraphImagePreviewData");
 static_assert(offsetof(FMovieGraphImagePreviewData, Texture) == 0x000000, "Member 'FMovieGraphImagePreviewData::Texture' has a wrong offset!");
 static_assert(offsetof(FMovieGraphImagePreviewData, Identifier) == 0x000008, "Member 'FMovieGraphImagePreviewData::Identifier' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MovieGraphInitConfig
-// 0x0020 (0x0020 - 0x0000)
-struct FMovieGraphInitConfig final
-{
-public:
-	TSubclassOf<class UMovieGraphRendererBase>    RendererClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UMovieGraphDataSourceBase>  DataSourceClass;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UMovieGraphAudioRendererBase> AudioRendererClass;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRenderViewport;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMovieGraphInitConfig) == 0x000008, "Wrong alignment on FMovieGraphInitConfig");
-static_assert(sizeof(FMovieGraphInitConfig) == 0x000020, "Wrong size on FMovieGraphInitConfig");
-static_assert(offsetof(FMovieGraphInitConfig, RendererClass) == 0x000000, "Member 'FMovieGraphInitConfig::RendererClass' has a wrong offset!");
-static_assert(offsetof(FMovieGraphInitConfig, DataSourceClass) == 0x000008, "Member 'FMovieGraphInitConfig::DataSourceClass' has a wrong offset!");
-static_assert(offsetof(FMovieGraphInitConfig, AudioRendererClass) == 0x000010, "Member 'FMovieGraphInitConfig::AudioRendererClass' has a wrong offset!");
-static_assert(offsetof(FMovieGraphInitConfig, bRenderViewport) == 0x000018, "Member 'FMovieGraphInitConfig::bRenderViewport' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphResolveArgs
 // 0x00A0 (0x00A0 - 0x0000)
@@ -507,6 +492,21 @@ static_assert(alignof(FMovieGraphVersioningSettings) == 0x000004, "Wrong alignme
 static_assert(sizeof(FMovieGraphVersioningSettings) == 0x000008, "Wrong size on FMovieGraphVersioningSettings");
 static_assert(offsetof(FMovieGraphVersioningSettings, bAutoVersioning) == 0x000000, "Member 'FMovieGraphVersioningSettings::bAutoVersioning' has a wrong offset!");
 static_assert(offsetof(FMovieGraphVersioningSettings, VersionNumber) == 0x000004, "Member 'FMovieGraphVersioningSettings::VersionNumber' has a wrong offset!");
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphNamedResolution
+// 0x0020 (0x0020 - 0x0000)
+struct FMovieGraphNamedResolution final
+{
+public:
+	class FName                                   ProfileName;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              Resolution;                                        // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieGraphNamedResolution) == 0x000008, "Wrong alignment on FMovieGraphNamedResolution");
+static_assert(sizeof(FMovieGraphNamedResolution) == 0x000020, "Wrong size on FMovieGraphNamedResolution");
+static_assert(offsetof(FMovieGraphNamedResolution, ProfileName) == 0x000000, "Member 'FMovieGraphNamedResolution::ProfileName' has a wrong offset!");
+static_assert(offsetof(FMovieGraphNamedResolution, Resolution) == 0x000008, "Member 'FMovieGraphNamedResolution::Resolution' has a wrong offset!");
+static_assert(offsetof(FMovieGraphNamedResolution, Description) == 0x000010, "Member 'FMovieGraphNamedResolution::Description' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphPropertyInfo
 // 0x0018 (0x0018 - 0x0000)

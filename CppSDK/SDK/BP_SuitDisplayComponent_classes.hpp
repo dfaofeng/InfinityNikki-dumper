@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Enum_AvatarTag_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "Enum_AvatarTag_structs.hpp"
 
 
 namespace SDK

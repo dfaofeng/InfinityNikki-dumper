@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum Enum_BlackScreenSource.Enum_BlackScreenSource
-// NumValues: 0x0018
+// NumValues: 0x001A
 enum class Enum_BlackScreenSource : uint8
 {
 	NewEnumerator0                           = 0,
@@ -41,7 +41,9 @@ enum class Enum_BlackScreenSource : uint8
 	NewEnumerator21                          = 20,
 	NewEnumerator22                          = 21,
 	NewEnumerator23                          = 22,
-	Enum_MAX                                 = 23,
+	NewEnumerator24                          = 23,
+	NewEnumerator25                          = 24,
+	Enum_MAX                                 = 25,
 };
 
 }

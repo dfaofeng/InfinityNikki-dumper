@@ -17,47 +17,43 @@
 namespace SDK
 {
 
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceRotation
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-struct FQuat UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceRotation");
-
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceRotation Parms{};
-
-	Parms.TargetingHandle = std::move(TargetingHandle);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceOffsetLocationFromMesh
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.BP_GetSourceMeshComp
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // const struct FTargetingRequestHandle&   TargetingHandle                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// class UMeshComponent*                   MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMeshComponent**                  MeshComp                                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceOffsetLocationFromMesh(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent* MeshComp) const
+void UTT_TargetingSelectionAOEIncludeRotation_C::BP_GetSourceMeshComp(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent** MeshComp) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceOffsetLocationFromMesh");
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "BP_GetSourceMeshComp");
 
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceOffsetLocationFromMesh Parms{};
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_BP_GetSourceMeshComp Parms{};
 
 	Parms.TargetingHandle = std::move(TargetingHandle);
-	Parms.MeshComp = MeshComp;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (MeshComp != nullptr)
+		*MeshComp = Parms.MeshComp;
+}
+
+
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UTT_TargetingSelectionAOEIncludeRotation_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetModuleName");
+
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -65,20 +61,43 @@ struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceOffsetLocati
 }
 
 
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceOffset
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetOffsetRotationInEditor
+// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// const class AActor*                     Actor                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FQuat UTT_TargetingSelectionAOEIncludeRotation_C::GetOffsetRotationInEditor(const class AActor* Actor) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetOffsetRotationInEditor");
+
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetOffsetRotationInEditor Parms{};
+
+	Parms.Actor = Actor;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceLocation
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const
+struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceOffset");
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceLocation");
 
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceOffset Parms{};
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceLocation Parms{};
 
 	Parms.TargetingHandle = std::move(TargetingHandle);
 
@@ -113,20 +132,20 @@ struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceLocationFrom
 }
 
 
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceLocation
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceOffset
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const
+struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceLocation");
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceOffset");
 
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceLocation Parms{};
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceOffset Parms{};
 
 	Parms.TargetingHandle = std::move(TargetingHandle);
 
@@ -136,70 +155,51 @@ struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceLocation(con
 }
 
 
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetOffsetRotationInEditor
-// (Event, Protected, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// const class AActor*                     Actor                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-struct FQuat UTT_TargetingSelectionAOEIncludeRotation_C::GetOffsetRotationInEditor(const class AActor* Actor) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetOffsetRotationInEditor");
-
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetOffsetRotationInEditor Parms{};
-
-	Parms.Actor = Actor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UTT_TargetingSelectionAOEIncludeRotation_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetModuleName");
-
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetModuleName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.BP_GetSourceMeshComp
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceOffsetLocationFromMesh
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // const struct FTargetingRequestHandle&   TargetingHandle                                        (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// class UMeshComponent**                  MeshComp                                               (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UMeshComponent*                   MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UTT_TargetingSelectionAOEIncludeRotation_C::BP_GetSourceMeshComp(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent** MeshComp) const
+struct FVector UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceOffsetLocationFromMesh(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent* MeshComp) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "BP_GetSourceMeshComp");
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceOffsetLocationFromMesh");
 
-	Params::TT_TargetingSelectionAOEIncludeRotation_C_BP_GetSourceMeshComp Parms{};
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceOffsetLocationFromMesh Parms{};
+
+	Parms.TargetingHandle = std::move(TargetingHandle);
+	Parms.MeshComp = MeshComp;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TT_TargetingSelectionAOEIncludeRotation.TT_TargetingSelectionAOEIncludeRotation_C.GetSourceRotation
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FQuat UTT_TargetingSelectionAOEIncludeRotation_C::GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TT_TargetingSelectionAOEIncludeRotation_C", "GetSourceRotation");
+
+	Params::TT_TargetingSelectionAOEIncludeRotation_C_GetSourceRotation Parms{};
 
 	Parms.TargetingHandle = std::move(TargetingHandle);
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (MeshComp != nullptr)
-		*MeshComp = Parms.MeshComp;
+	return Parms.ReturnValue;
 }
 
 }

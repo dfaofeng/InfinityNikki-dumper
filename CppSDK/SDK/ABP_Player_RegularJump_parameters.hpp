@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EMantleType_structs.hpp"
 #include "X6Game_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

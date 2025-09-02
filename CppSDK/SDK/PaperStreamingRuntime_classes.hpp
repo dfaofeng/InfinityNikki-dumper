@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PaperPartitionRuntime_structs.hpp"
 #include "PaperStreamingRuntime_structs.hpp"
+#include "PaperPartitionRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
@@ -184,14 +184,43 @@ static_assert(offsetof(UPaperPSOPrecachingApplyRenderTargetSettings, LowSettings
 static_assert(offsetof(UPaperPSOPrecachingApplyRenderTargetSettings, DeviceOverrideSettings) == 0x000180, "Member 'UPaperPSOPrecachingApplyRenderTargetSettings::DeviceOverrideSettings' has a wrong offset!");
 static_assert(offsetof(UPaperPSOPrecachingApplyRenderTargetSettings, _RTInfo) == 0x0001D0, "Member 'UPaperPSOPrecachingApplyRenderTargetSettings::_RTInfo' has a wrong offset!");
 
+// Class PaperStreamingRuntime.PaperPipelineStateCacheSettings
+// 0x0160 (0x0198 - 0x0038)
+class UPaperPipelineStateCacheSettings final : public UDeveloperSettings
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class FString>                           BlackListFilePSOShaderHash;                        // 0x0040(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x108];                                     // 0x0090(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UPaperPipelineStateCacheSettings* Get();
+
+	void RegisterExtension();
+	void UnregisterExtension();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PaperPipelineStateCacheSettings">();
+	}
+	static class UPaperPipelineStateCacheSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPaperPipelineStateCacheSettings>();
+	}
+};
+static_assert(alignof(UPaperPipelineStateCacheSettings) == 0x000008, "Wrong alignment on UPaperPipelineStateCacheSettings");
+static_assert(sizeof(UPaperPipelineStateCacheSettings) == 0x000198, "Wrong size on UPaperPipelineStateCacheSettings");
+static_assert(offsetof(UPaperPipelineStateCacheSettings, BlackListFilePSOShaderHash) == 0x000040, "Member 'UPaperPipelineStateCacheSettings::BlackListFilePSOShaderHash' has a wrong offset!");
+
 // Class PaperStreamingRuntime.PaperStreamingComposition
-// 0x0440 (0x0610 - 0x01D0)
+// 0x04F0 (0x06C0 - 0x01D0)
 class alignas(0x10) UPaperStreamingComposition final : public UWorldComposition
 {
 public:
 	uint8                                         Pad_1D0[0x18];                                     // 0x01D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         WPConvertSubLevelPaths;                            // 0x01E8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F8[0x418];                                    // 0x01F8(0x0418)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1F8[0x4C8];                                    // 0x01F8(0x04C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -204,11 +233,11 @@ public:
 	}
 };
 static_assert(alignof(UPaperStreamingComposition) == 0x000010, "Wrong alignment on UPaperStreamingComposition");
-static_assert(sizeof(UPaperStreamingComposition) == 0x000610, "Wrong size on UPaperStreamingComposition");
+static_assert(sizeof(UPaperStreamingComposition) == 0x0006C0, "Wrong size on UPaperStreamingComposition");
 static_assert(offsetof(UPaperStreamingComposition, WPConvertSubLevelPaths) == 0x0001E8, "Member 'UPaperStreamingComposition::WPConvertSubLevelPaths' has a wrong offset!");
 
 // Class PaperStreamingRuntime.PaperStreamingSettings
-// 0x0230 (0x0258 - 0x0028)
+// 0x0268 (0x0290 - 0x0028)
 class UPaperStreamingSettings final : public UObject
 {
 public:
@@ -226,10 +255,15 @@ public:
 	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         CollisionCellRelativedPaths;                       // 0x0178(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         CollisionCellWCBlackFlags;                         // 0x0188(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            LoadByPlatformSuffix;                              // 0x0198(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
-	TArray<class FString>                         BigWorldList;                                      // 0x01E8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TArray<struct FSoftObjectPath>                NotReuseUnloadedLevels;                            // 0x01F8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	TMap<struct FSoftObjectPath, int32>           ShouldUnloadFirstLevels;                           // 0x0208(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         CollisionCellWCBlackContains;                      // 0x0198(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            LoadByPlatformSuffix;                              // 0x01A8(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TArray<class FString>                         BigWorldList;                                      // 0x01F8(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TArray<struct FSoftObjectPath>                NotReuseUnloadedLevels;                            // 0x0208(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	TMap<struct FSoftObjectPath, int32>           ShouldUnloadFirstLevels;                           // 0x0218(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FVector2D                              PaperStreamingWorldBoxMin;                         // 0x0268(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              PaperStreamingWorldBoxMax;                         // 0x0278(0x0010)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperStreamingWorldCellSize;                       // 0x0288(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -242,7 +276,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperStreamingSettings) == 0x000008, "Wrong alignment on UPaperStreamingSettings");
-static_assert(sizeof(UPaperStreamingSettings) == 0x000258, "Wrong size on UPaperStreamingSettings");
+static_assert(sizeof(UPaperStreamingSettings) == 0x000290, "Wrong size on UPaperStreamingSettings");
 static_assert(offsetof(UPaperStreamingSettings, BigWorldMap) == 0x000028, "Member 'UPaperStreamingSettings::BigWorldMap' has a wrong offset!");
 static_assert(offsetof(UPaperStreamingSettings, BigWorldNecessities) == 0x000048, "Member 'UPaperStreamingSettings::BigWorldNecessities' has a wrong offset!");
 static_assert(offsetof(UPaperStreamingSettings, LevelAlwaysUnnecessities) == 0x000098, "Member 'UPaperStreamingSettings::LevelAlwaysUnnecessities' has a wrong offset!");
@@ -255,10 +289,14 @@ static_assert(offsetof(UPaperStreamingSettings, LevelBoundsThreshHold) == 0x0001
 static_assert(offsetof(UPaperStreamingSettings, bEnablePPCollisionTest) == 0x000174, "Member 'UPaperStreamingSettings::bEnablePPCollisionTest' has a wrong offset!");
 static_assert(offsetof(UPaperStreamingSettings, CollisionCellRelativedPaths) == 0x000178, "Member 'UPaperStreamingSettings::CollisionCellRelativedPaths' has a wrong offset!");
 static_assert(offsetof(UPaperStreamingSettings, CollisionCellWCBlackFlags) == 0x000188, "Member 'UPaperStreamingSettings::CollisionCellWCBlackFlags' has a wrong offset!");
-static_assert(offsetof(UPaperStreamingSettings, LoadByPlatformSuffix) == 0x000198, "Member 'UPaperStreamingSettings::LoadByPlatformSuffix' has a wrong offset!");
-static_assert(offsetof(UPaperStreamingSettings, BigWorldList) == 0x0001E8, "Member 'UPaperStreamingSettings::BigWorldList' has a wrong offset!");
-static_assert(offsetof(UPaperStreamingSettings, NotReuseUnloadedLevels) == 0x0001F8, "Member 'UPaperStreamingSettings::NotReuseUnloadedLevels' has a wrong offset!");
-static_assert(offsetof(UPaperStreamingSettings, ShouldUnloadFirstLevels) == 0x000208, "Member 'UPaperStreamingSettings::ShouldUnloadFirstLevels' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, CollisionCellWCBlackContains) == 0x000198, "Member 'UPaperStreamingSettings::CollisionCellWCBlackContains' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, LoadByPlatformSuffix) == 0x0001A8, "Member 'UPaperStreamingSettings::LoadByPlatformSuffix' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, BigWorldList) == 0x0001F8, "Member 'UPaperStreamingSettings::BigWorldList' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, NotReuseUnloadedLevels) == 0x000208, "Member 'UPaperStreamingSettings::NotReuseUnloadedLevels' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, ShouldUnloadFirstLevels) == 0x000218, "Member 'UPaperStreamingSettings::ShouldUnloadFirstLevels' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, PaperStreamingWorldBoxMin) == 0x000268, "Member 'UPaperStreamingSettings::PaperStreamingWorldBoxMin' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, PaperStreamingWorldBoxMax) == 0x000278, "Member 'UPaperStreamingSettings::PaperStreamingWorldBoxMax' has a wrong offset!");
+static_assert(offsetof(UPaperStreamingSettings, PaperStreamingWorldCellSize) == 0x000288, "Member 'UPaperStreamingSettings::PaperStreamingWorldCellSize' has a wrong offset!");
 
 // Class PaperStreamingRuntime.X6WorldPartitionConvertBriefData
 // 0x0050 (0x0078 - 0x0028)
@@ -320,6 +358,7 @@ public:
 	void GatherExternalLevels(class UObject* InWorldContextObject);
 	const TArray<class AActor*> GetActorsByLayer(const class FString& LayerName);
 	TArray<class FName> GetAllSocketNames(class USceneComponent* InComponent);
+	int64 GetAvailablePhysical();
 	TArray<struct FIntPoint> GetCellCollisionActiveCells();
 	TMap<struct FIntPoint, bool> GetCellCollisionStateInfo();
 	TArray<class FString> GetCellCollisionStateLevelInfo(int32 X, int32 Y);
@@ -335,6 +374,7 @@ public:
 	struct FRotator GetSocketRotation(class USceneComponent* InComponent, class FName InSocketName);
 	struct FTransform GetSocketTransform(class USceneComponent* InComponent, class FName InSocketName, ERelativeTransformSpace TransformSpace);
 	bool GetSubLevelsByPath(class UObject* InWorldContextObject, const class FString& LevelPath, bool bAlwaysLoadedOnly, bool bSkipBigWorldNecessary, TArray<class FString>* OutSubLevels);
+	int64 GetUsedPhysical();
 	void HandleDetailModeComponentsPhys(class ULevel* InLevel);
 	bool IsActorInLayer(class AActor* InActor, const class FString& InLayerName);
 	bool IsEnableCellCollisionTest();
@@ -347,6 +387,7 @@ public:
 	bool LoadMapsInVisible(const TArray<struct FLoadMapParams>& InLoadMapParams, const class FString& Options);
 	bool LoadSubLevels(const TArray<class FString>& SubLevelPaths, const TArray<struct FVector>& Locations, TDelegate<void(const TArray<class FString>& LevelPaths)> Callback);
 	bool LoadSubLevelToWorld(const class FString& SubLevelPath, const struct FVector& LoadLocation);
+	void ReInitPaperStreamingQuadTree();
 	void ReleaseShaderCodes();
 	void RemoveExternalDistance(const class FString& Path, int32 Distance);
 	void RemoveExtraStreamingSource(class UObject* InWorldContextObject, const class FString& InSourceTag);

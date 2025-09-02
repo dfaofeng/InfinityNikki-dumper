@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TOD_WorldBase01b_Morning.TOD_WorldBase01b_Morning_C
-// 0x0000 (0x0A48 - 0x0A48)
+// 0x0000 (0x0A50 - 0x0A50)
 class UTOD_WorldBase01b_Morning_C final : public UTOD_Preset_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UTOD_WorldBase01b_Morning_C) == 0x000008, "Wrong alignment on UTOD_WorldBase01b_Morning_C");
-static_assert(sizeof(UTOD_WorldBase01b_Morning_C) == 0x000A48, "Wrong size on UTOD_WorldBase01b_Morning_C");
+static_assert(sizeof(UTOD_WorldBase01b_Morning_C) == 0x000A50, "Wrong size on UTOD_WorldBase01b_Morning_C");
 
 }
 

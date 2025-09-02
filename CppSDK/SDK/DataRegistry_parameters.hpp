@@ -113,6 +113,19 @@ static_assert(offsetof(DataRegistryFunctionLibrary_GetDataRegistryRowNames, Regi
 static_assert(offsetof(DataRegistryFunctionLibrary_GetDataRegistryRowNames, OutRowNames) == 0x000008, "Member 'DataRegistryFunctionLibrary_GetDataRegistryRowNames::OutRowNames' has a wrong offset!");
 static_assert(offsetof(DataRegistryFunctionLibrary_GetDataRegistryRowNames, bCheckVersion) == 0x000018, "Member 'DataRegistryFunctionLibrary_GetDataRegistryRowNames::bCheckVersion' has a wrong offset!");
 
+// Function DataRegistry.DataRegistryFunctionLibrary.GetRegistryForType
+// 0x0010 (0x0010 - 0x0000)
+struct DataRegistryFunctionLibrary_GetRegistryForType final
+{
+public:
+	struct FDataRegistryType                      RegistryType;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataRegistry*                          ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DataRegistryFunctionLibrary_GetRegistryForType) == 0x000008, "Wrong alignment on DataRegistryFunctionLibrary_GetRegistryForType");
+static_assert(sizeof(DataRegistryFunctionLibrary_GetRegistryForType) == 0x000010, "Wrong size on DataRegistryFunctionLibrary_GetRegistryForType");
+static_assert(offsetof(DataRegistryFunctionLibrary_GetRegistryForType, RegistryType) == 0x000000, "Member 'DataRegistryFunctionLibrary_GetRegistryForType::RegistryType' has a wrong offset!");
+static_assert(offsetof(DataRegistryFunctionLibrary_GetRegistryForType, ReturnValue) == 0x000008, "Member 'DataRegistryFunctionLibrary_GetRegistryForType::ReturnValue' has a wrong offset!");
+
 // Function DataRegistry.DataRegistrySubsystem.AcquireItemBP
 // 0x0024 (0x0024 - 0x0000)
 struct DataRegistrySubsystem_AcquireItemBP final

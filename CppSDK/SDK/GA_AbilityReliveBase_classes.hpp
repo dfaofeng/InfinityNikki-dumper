@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_AbilityReliveBase_C;             // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void K2_ActivateAbility();
 	void ExecuteUbergraph_GA_AbilityReliveBase(int32 EntryPoint);
+	void K2_ActivateAbility();
 
 	class FString GetModuleName() const;
 

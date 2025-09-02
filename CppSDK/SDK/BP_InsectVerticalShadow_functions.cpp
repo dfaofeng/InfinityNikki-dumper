@@ -17,37 +17,23 @@
 namespace SDK
 {
 
-// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ExecuteUbergraph_BP_InsectVerticalShadow
-// (Final, UbergraphFunction)
+// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ServerInit
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bServer                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_InsectVerticalShadow_C::ExecuteUbergraph_BP_InsectVerticalShadow(int32 EntryPoint)
+void ABP_InsectVerticalShadow_C::ServerInit(bool bServer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InsectVerticalShadow_C", "ExecuteUbergraph_BP_InsectVerticalShadow");
+		Func = Class->GetFunction("BP_InsectVerticalShadow_C", "ServerInit");
 
-	Params::BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow Parms{};
+	Params::BP_InsectVerticalShadow_C_ServerInit Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bServer = bServer;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_InsectVerticalShadow_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InsectVerticalShadow_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -71,21 +57,35 @@ void ABP_InsectVerticalShadow_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ServerInit
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bServer                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_InsectVerticalShadow_C::ServerInit(bool bServer)
+void ABP_InsectVerticalShadow_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InsectVerticalShadow_C", "ServerInit");
+		Func = Class->GetFunction("BP_InsectVerticalShadow_C", "ReceiveBeginPlay");
 
-	Params::BP_InsectVerticalShadow_C_ServerInit Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bServer = bServer;
+
+// Function BP_InsectVerticalShadow.BP_InsectVerticalShadow_C.ExecuteUbergraph_BP_InsectVerticalShadow
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_InsectVerticalShadow_C::ExecuteUbergraph_BP_InsectVerticalShadow(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InsectVerticalShadow_C", "ExecuteUbergraph_BP_InsectVerticalShadow");
+
+	Params::BP_InsectVerticalShadow_C_ExecuteUbergraph_BP_InsectVerticalShadow Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

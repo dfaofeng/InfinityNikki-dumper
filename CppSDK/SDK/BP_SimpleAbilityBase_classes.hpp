@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_SimpleAbilityBase_C;             // 0x00E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_BP_SimpleAbilityBase(int32 EntryPoint);
 	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_SimpleAbilityBase(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

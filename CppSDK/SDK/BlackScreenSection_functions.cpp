@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function BlackScreenSection.BlackScreenSection_C.K2_OnSectionEnd
-// (Event, Protected, BlueprintEvent)
-
-void UBlackScreenSection_C::K2_OnSectionEnd()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BlackScreenSection_C", "K2_OnSectionEnd");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BlackScreenSection.BlackScreenSection_C.K2_OnSectionBegin
-// (Event, Protected, BlueprintEvent)
-
-void UBlackScreenSection_C::K2_OnSectionBegin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BlackScreenSection_C", "K2_OnSectionBegin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BlackScreenSection.BlackScreenSection_C.ExecuteUbergraph_BlackScreenSection
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -62,6 +34,34 @@ void UBlackScreenSection_C::ExecuteUbergraph_BlackScreenSection(int32 EntryPoint
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BlackScreenSection.BlackScreenSection_C.K2_OnSectionBegin
+// (Event, Protected, BlueprintEvent)
+
+void UBlackScreenSection_C::K2_OnSectionBegin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlackScreenSection_C", "K2_OnSectionBegin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BlackScreenSection.BlackScreenSection_C.K2_OnSectionEnd
+// (Event, Protected, BlueprintEvent)
+
+void UBlackScreenSection_C::K2_OnSectionEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BlackScreenSection_C", "K2_OnSectionEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

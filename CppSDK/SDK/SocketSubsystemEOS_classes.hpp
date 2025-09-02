@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class SocketSubsystemEOS.NetConnectionEOS
-// 0x0008 (0x1EA8 - 0x1EA0)
+// 0x0008 (0x1ED0 - 0x1EC8)
 class UNetConnectionEOS final : public UIpConnection
 {
 public:
-	uint8                                         Pad_1EA0[0x8];                                     // 0x1EA0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1EC8[0x8];                                     // 0x1EC8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UNetConnectionEOS) == 0x000008, "Wrong alignment on UNetConnectionEOS");
-static_assert(sizeof(UNetConnectionEOS) == 0x001EA8, "Wrong size on UNetConnectionEOS");
+static_assert(sizeof(UNetConnectionEOS) == 0x001ED0, "Wrong size on UNetConnectionEOS");
 
 // Class SocketSubsystemEOS.NetDriverEOSBase
 // 0x0008 (0x0980 - 0x0978)

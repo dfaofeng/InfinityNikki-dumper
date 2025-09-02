@@ -29,38 +29,15 @@ enum class EDonNavigationQueryStatus : uint8
 	EDonNavigationQueryStatus_MAX            = 6,
 };
 
-// ScriptStruct DonAINavigation.DoNNavigationDebugParams
-// 0x000C (0x000C - 0x0000)
-struct FDoNNavigationDebugParams
+// ScriptStruct DonAINavigation.DonNavigationVoxel
+// 0x0040 (0x0040 - 0x0000)
+struct alignas(0x08) FDonNavigationVoxel final
 {
 public:
-	bool                                          DrawDebugVolumes;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VisualizeRawPath;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VisualizeOptimizedPath;                            // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          VisualizeInRealTime;                               // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LineThickness;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LineDuration;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDoNNavigationDebugParams) == 0x000004, "Wrong alignment on FDoNNavigationDebugParams");
-static_assert(sizeof(FDoNNavigationDebugParams) == 0x00000C, "Wrong size on FDoNNavigationDebugParams");
-static_assert(offsetof(FDoNNavigationDebugParams, DrawDebugVolumes) == 0x000000, "Member 'FDoNNavigationDebugParams::DrawDebugVolumes' has a wrong offset!");
-static_assert(offsetof(FDoNNavigationDebugParams, VisualizeRawPath) == 0x000001, "Member 'FDoNNavigationDebugParams::VisualizeRawPath' has a wrong offset!");
-static_assert(offsetof(FDoNNavigationDebugParams, VisualizeOptimizedPath) == 0x000002, "Member 'FDoNNavigationDebugParams::VisualizeOptimizedPath' has a wrong offset!");
-static_assert(offsetof(FDoNNavigationDebugParams, VisualizeInRealTime) == 0x000003, "Member 'FDoNNavigationDebugParams::VisualizeInRealTime' has a wrong offset!");
-static_assert(offsetof(FDoNNavigationDebugParams, LineThickness) == 0x000004, "Member 'FDoNNavigationDebugParams::LineThickness' has a wrong offset!");
-static_assert(offsetof(FDoNNavigationDebugParams, LineDuration) == 0x000008, "Member 'FDoNNavigationDebugParams::LineDuration' has a wrong offset!");
-
-// ScriptStruct DonAINavigation.BT_FlyToTarget_DebugParams
-// 0x0004 (0x0010 - 0x000C)
-struct FBT_FlyToTarget_DebugParams final : public FDoNNavigationDebugParams
-{
-public:
-	bool                                          bVisualizePawnAsVoxels;                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FBT_FlyToTarget_DebugParams) == 0x000004, "Wrong alignment on FBT_FlyToTarget_DebugParams");
-static_assert(sizeof(FBT_FlyToTarget_DebugParams) == 0x000010, "Wrong size on FBT_FlyToTarget_DebugParams");
-static_assert(offsetof(FBT_FlyToTarget_DebugParams, bVisualizePawnAsVoxels) == 0x00000C, "Member 'FBT_FlyToTarget_DebugParams::bVisualizePawnAsVoxels' has a wrong offset!");
+static_assert(alignof(FDonNavigationVoxel) == 0x000008, "Wrong alignment on FDonNavigationVoxel");
+static_assert(sizeof(FDonNavigationVoxel) == 0x000040, "Wrong size on FDonNavigationVoxel");
 
 // ScriptStruct DonAINavigation.DonNavigationDynamicCollisionPayload
 // 0x0048 (0x0048 - 0x0000)
@@ -71,16 +48,6 @@ public:
 };
 static_assert(alignof(FDonNavigationDynamicCollisionPayload) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionPayload");
 static_assert(sizeof(FDonNavigationDynamicCollisionPayload) == 0x000048, "Wrong size on FDonNavigationDynamicCollisionPayload");
-
-// ScriptStruct DonAINavigation.DonVoxelCollisionProfile
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FDonVoxelCollisionProfile final
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDonVoxelCollisionProfile) == 0x000008, "Wrong alignment on FDonVoxelCollisionProfile");
-static_assert(sizeof(FDonVoxelCollisionProfile) == 0x000020, "Wrong size on FDonVoxelCollisionProfile");
 
 // ScriptStruct DonAINavigation.DoNNavigationQueryParams
 // 0x0028 (0x0028 - 0x0000)
@@ -142,16 +109,6 @@ static_assert(offsetof(FDoNNavigationQueryData, maxIterationsPerTask) == 0x0000C
 static_assert(offsetof(FDoNNavigationQueryData, PathSolutionOptimized) == 0x0002A8, "Member 'FDoNNavigationQueryData::PathSolutionOptimized' has a wrong offset!");
 static_assert(offsetof(FDoNNavigationQueryData, QueryStatus) == 0x0002B8, "Member 'FDoNNavigationQueryData::QueryStatus' has a wrong offset!");
 
-// ScriptStruct DonAINavigation.DonNavigationVoxel
-// 0x0040 (0x0040 - 0x0000)
-struct alignas(0x08) FDonNavigationVoxel final
-{
-public:
-	uint8                                         Pad_0[0x40];                                       // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDonNavigationVoxel) == 0x000008, "Wrong alignment on FDonNavigationVoxel");
-static_assert(sizeof(FDonNavigationVoxel) == 0x000040, "Wrong size on FDonNavigationVoxel");
-
 // ScriptStruct DonAINavigation.DonNavigationDynamicCollisionNotifyee
 // 0x0058 (0x0058 - 0x0000)
 struct alignas(0x08) FDonNavigationDynamicCollisionNotifyee final
@@ -163,6 +120,49 @@ public:
 static_assert(alignof(FDonNavigationDynamicCollisionNotifyee) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionNotifyee");
 static_assert(sizeof(FDonNavigationDynamicCollisionNotifyee) == 0x000058, "Wrong size on FDonNavigationDynamicCollisionNotifyee");
 static_assert(offsetof(FDonNavigationDynamicCollisionNotifyee, Listener) == 0x000000, "Member 'FDonNavigationDynamicCollisionNotifyee::Listener' has a wrong offset!");
+
+// ScriptStruct DonAINavigation.DoNNavigationDebugParams
+// 0x000C (0x000C - 0x0000)
+struct FDoNNavigationDebugParams
+{
+public:
+	bool                                          DrawDebugVolumes;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VisualizeRawPath;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VisualizeOptimizedPath;                            // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          VisualizeInRealTime;                               // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineThickness;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LineDuration;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDoNNavigationDebugParams) == 0x000004, "Wrong alignment on FDoNNavigationDebugParams");
+static_assert(sizeof(FDoNNavigationDebugParams) == 0x00000C, "Wrong size on FDoNNavigationDebugParams");
+static_assert(offsetof(FDoNNavigationDebugParams, DrawDebugVolumes) == 0x000000, "Member 'FDoNNavigationDebugParams::DrawDebugVolumes' has a wrong offset!");
+static_assert(offsetof(FDoNNavigationDebugParams, VisualizeRawPath) == 0x000001, "Member 'FDoNNavigationDebugParams::VisualizeRawPath' has a wrong offset!");
+static_assert(offsetof(FDoNNavigationDebugParams, VisualizeOptimizedPath) == 0x000002, "Member 'FDoNNavigationDebugParams::VisualizeOptimizedPath' has a wrong offset!");
+static_assert(offsetof(FDoNNavigationDebugParams, VisualizeInRealTime) == 0x000003, "Member 'FDoNNavigationDebugParams::VisualizeInRealTime' has a wrong offset!");
+static_assert(offsetof(FDoNNavigationDebugParams, LineThickness) == 0x000004, "Member 'FDoNNavigationDebugParams::LineThickness' has a wrong offset!");
+static_assert(offsetof(FDoNNavigationDebugParams, LineDuration) == 0x000008, "Member 'FDoNNavigationDebugParams::LineDuration' has a wrong offset!");
+
+// ScriptStruct DonAINavigation.BT_FlyToTarget_DebugParams
+// 0x0004 (0x0010 - 0x000C)
+struct FBT_FlyToTarget_DebugParams final : public FDoNNavigationDebugParams
+{
+public:
+	bool                                          bVisualizePawnAsVoxels;                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBT_FlyToTarget_DebugParams) == 0x000004, "Wrong alignment on FBT_FlyToTarget_DebugParams");
+static_assert(sizeof(FBT_FlyToTarget_DebugParams) == 0x000010, "Wrong size on FBT_FlyToTarget_DebugParams");
+static_assert(offsetof(FBT_FlyToTarget_DebugParams, bVisualizePawnAsVoxels) == 0x00000C, "Member 'FBT_FlyToTarget_DebugParams::bVisualizePawnAsVoxels' has a wrong offset!");
+
+// ScriptStruct DonAINavigation.DonVoxelCollisionProfile
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FDonVoxelCollisionProfile final
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FDonVoxelCollisionProfile) == 0x000008, "Wrong alignment on FDonVoxelCollisionProfile");
+static_assert(sizeof(FDonVoxelCollisionProfile) == 0x000020, "Wrong size on FDonVoxelCollisionProfile");
 
 // ScriptStruct DonAINavigation.DonNavVoxelY
 // 0x0010 (0x0010 - 0x0000)

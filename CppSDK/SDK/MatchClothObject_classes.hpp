@@ -11,19 +11,18 @@
 #include "Basic.hpp"
 
 #include "Struct_ClothMatchStrsArray_structs.hpp"
+#include "Struct_ClothMatchNameArray_structs.hpp"
 #include "E_MatchClothType_structs.hpp"
 #include "Struct_ClothMatchSkelCompMap_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "Struct_ClothMatchSkelMap_structs.hpp"
-#include "Struct_ClothMatchNameArray_structs.hpp"
-#include "NikkiFitCloth_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass MatchClothObject.MatchClothObject_C
-// 0x0398 (0x03C0 - 0x0028)
+// 0x03B0 (0x03D8 - 0x0028)
 class UMatchClothObject_C final : public UObject
 {
 public:
@@ -35,18 +34,20 @@ public:
 	TArray<class USkeletalMeshComponent*>         SkelMeshCompUpdata;                                // 0x00D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TMap<E_MatchClothType, struct FStruct_ClothMatchStrsArray> MatchType_CombineStrs;                // 0x00E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<class FString, struct FStruct_ClothMatchSkelCompMap> CombineStr_SkelMeshComp;               // 0x0138(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	class UFitClothCacheAsset*                    BodyCacheAsset;                                    // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<class USkeletalMesh*, class UFitMatchSetting_C*> InputSkelMeshArray;                        // 0x0190(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<class FString, struct FStruct_ClothMatchSkelMap> CombineStr_SkelMesh;                       // 0x01E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<class USkeletalMesh*, class USkeletalMeshComponent*> SkelMesh2CompMap;                      // 0x0230(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	TMap<class UAnimInstance*, struct FStruct_ClothMatchNameArray> AI_ColliderBones;                 // 0x0280(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class UAnimInstance*, struct FStruct_ClothMatchNameArray> AI_AnimBones;                     // 0x02D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FString, bool>                     CombineStr_OverwriteMatchType;                     // 0x0320(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class USkeletalMesh*, class UFitMatchSetting_C*> SkelMesh_OverwriteMatchType;               // 0x0370(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class USkeletalMesh*, class UFitMatchSetting_C*> InputSkelMeshArray;                        // 0x0188(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class FString, struct FStruct_ClothMatchSkelMap> CombineStr_SkelMesh;                       // 0x01D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class USkeletalMesh*, class USkeletalMeshComponent*> SkelMesh2CompMap;                      // 0x0228(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TMap<class UAnimInstance*, struct FStruct_ClothMatchNameArray> AI_ColliderBones;                 // 0x0278(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class UAnimInstance*, struct FStruct_ClothMatchNameArray> AI_AnimBones;                     // 0x02C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FString, bool>                     CombineStr_OverwriteMatchType;                     // 0x0318(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class USkeletalMesh*, class UFitMatchSetting_C*> SkelMesh_OverwriteMatchType;               // 0x0368(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	TArray<class USkeletalMesh*>                  InnerSkel_cpu;                                     // 0x03B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<class USkeletalMesh*>                  OuterSkel_cpu;                                     // 0x03C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void AllResetData(TArray<class FName>& InMatchPartStrs, E_MatchClothType InMatchType);
 	void ApplyMatchDataV2();
+	bool CheckCacheType(class USkeletalMesh* ClothSkelMesh, const class FString& ItemToFind);
 	void ClearPairCache();
 	void ComputeClothesCombineV2(TArray<class USkeletalMesh*>& InSkelMeshArray, E_MatchClothType InMatchType);
 	void ComputeMatchClothesV2(E_MatchClothType InMatchType, const struct FMatchClothParameter& InMatchClothesPara, const TMap<uint8, struct FMatchClothParameter>& InSpacialTypeParam);
@@ -78,7 +79,7 @@ public:
 	}
 };
 static_assert(alignof(UMatchClothObject_C) == 0x000008, "Wrong alignment on UMatchClothObject_C");
-static_assert(sizeof(UMatchClothObject_C) == 0x0003C0, "Wrong size on UMatchClothObject_C");
+static_assert(sizeof(UMatchClothObject_C) == 0x0003D8, "Wrong size on UMatchClothObject_C");
 static_assert(offsetof(UMatchClothObject_C, ClothMatchIgnoreConfig) == 0x000028, "Member 'UMatchClothObject_C::ClothMatchIgnoreConfig' has a wrong offset!");
 static_assert(offsetof(UMatchClothObject_C, SuitPartsMap) == 0x000078, "Member 'UMatchClothObject_C::SuitPartsMap' has a wrong offset!");
 static_assert(offsetof(UMatchClothObject_C, MatchClothConfig) == 0x0000C8, "Member 'UMatchClothObject_C::MatchClothConfig' has a wrong offset!");
@@ -86,14 +87,15 @@ static_assert(offsetof(UMatchClothObject_C, bDebug) == 0x0000D0, "Member 'UMatch
 static_assert(offsetof(UMatchClothObject_C, SkelMeshCompUpdata) == 0x0000D8, "Member 'UMatchClothObject_C::SkelMeshCompUpdata' has a wrong offset!");
 static_assert(offsetof(UMatchClothObject_C, MatchType_CombineStrs) == 0x0000E8, "Member 'UMatchClothObject_C::MatchType_CombineStrs' has a wrong offset!");
 static_assert(offsetof(UMatchClothObject_C, CombineStr_SkelMeshComp) == 0x000138, "Member 'UMatchClothObject_C::CombineStr_SkelMeshComp' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, BodyCacheAsset) == 0x000188, "Member 'UMatchClothObject_C::BodyCacheAsset' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, InputSkelMeshArray) == 0x000190, "Member 'UMatchClothObject_C::InputSkelMeshArray' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, CombineStr_SkelMesh) == 0x0001E0, "Member 'UMatchClothObject_C::CombineStr_SkelMesh' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, SkelMesh2CompMap) == 0x000230, "Member 'UMatchClothObject_C::SkelMesh2CompMap' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, AI_ColliderBones) == 0x000280, "Member 'UMatchClothObject_C::AI_ColliderBones' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, AI_AnimBones) == 0x0002D0, "Member 'UMatchClothObject_C::AI_AnimBones' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, CombineStr_OverwriteMatchType) == 0x000320, "Member 'UMatchClothObject_C::CombineStr_OverwriteMatchType' has a wrong offset!");
-static_assert(offsetof(UMatchClothObject_C, SkelMesh_OverwriteMatchType) == 0x000370, "Member 'UMatchClothObject_C::SkelMesh_OverwriteMatchType' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, InputSkelMeshArray) == 0x000188, "Member 'UMatchClothObject_C::InputSkelMeshArray' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, CombineStr_SkelMesh) == 0x0001D8, "Member 'UMatchClothObject_C::CombineStr_SkelMesh' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, SkelMesh2CompMap) == 0x000228, "Member 'UMatchClothObject_C::SkelMesh2CompMap' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, AI_ColliderBones) == 0x000278, "Member 'UMatchClothObject_C::AI_ColliderBones' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, AI_AnimBones) == 0x0002C8, "Member 'UMatchClothObject_C::AI_AnimBones' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, CombineStr_OverwriteMatchType) == 0x000318, "Member 'UMatchClothObject_C::CombineStr_OverwriteMatchType' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, SkelMesh_OverwriteMatchType) == 0x000368, "Member 'UMatchClothObject_C::SkelMesh_OverwriteMatchType' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, InnerSkel_cpu) == 0x0003B8, "Member 'UMatchClothObject_C::InnerSkel_cpu' has a wrong offset!");
+static_assert(offsetof(UMatchClothObject_C, OuterSkel_cpu) == 0x0003C8, "Member 'UMatchClothObject_C::OuterSkel_cpu' has a wrong offset!");
 
 }
 

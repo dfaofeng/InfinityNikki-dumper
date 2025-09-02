@@ -26,12 +26,12 @@ public:
 	bool                                          bAllocateFromObjectPool;                           // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	bool RejectRecycle();
-	void ReceiveTickUncheck(class APawn* AgentPawn, double DeltaTime);
-	void OnPush();
-	void OnPreCreated();
-	void OnPop();
 	void ExecuteUbergraph_BP_AgentTaskBase(int32 EntryPoint);
+	void OnPop();
+	void OnPreCreated();
+	void OnPush();
+	void ReceiveTickUncheck(class APawn* AgentPawn, double DeltaTime);
+	bool RejectRecycle();
 
 	class FString GetModuleName() const;
 

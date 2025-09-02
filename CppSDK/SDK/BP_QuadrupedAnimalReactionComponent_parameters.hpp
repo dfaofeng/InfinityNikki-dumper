@@ -17,16 +17,29 @@
 namespace SDK::Params
 {
 
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.BP_SetState
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.OnCleanStateChanged
 // 0x0001 (0x0001 - 0x0000)
-struct BP_QuadrupedAnimalReactionComponent_C_BP_SetState final
+struct BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged final
 {
 public:
-	EQuadrupedAnimalReactionState                 NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsClean;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_QuadrupedAnimalReactionComponent_C_BP_SetState) == 0x000001, "Wrong alignment on BP_QuadrupedAnimalReactionComponent_C_BP_SetState");
-static_assert(sizeof(BP_QuadrupedAnimalReactionComponent_C_BP_SetState) == 0x000001, "Wrong size on BP_QuadrupedAnimalReactionComponent_C_BP_SetState");
-static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_BP_SetState, NewState) == 0x000000, "Member 'BP_QuadrupedAnimalReactionComponent_C_BP_SetState::NewState' has a wrong offset!");
+static_assert(alignof(BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged) == 0x000001, "Wrong alignment on BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged");
+static_assert(sizeof(BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged) == 0x000001, "Wrong size on BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged");
+static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged, bIsClean) == 0x000000, "Member 'BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged::bIsClean' has a wrong offset!");
+
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.OnCleaningStarted
+// 0x0010 (0x0010 - 0x0000)
+struct BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted final
+{
+public:
+	class AActor*                                 CleaningPlayer;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_CleaningAbilityType                         CleaningAbilityType;                               // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted) == 0x000008, "Wrong alignment on BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted");
+static_assert(sizeof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted) == 0x000010, "Wrong size on BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted");
+static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted, CleaningPlayer) == 0x000000, "Member 'BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted::CleaningPlayer' has a wrong offset!");
+static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted, CleaningAbilityType) == 0x000008, "Member 'BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted::CleaningAbilityType' has a wrong offset!");
 
 // Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent
 // 0x0068 (0x0068 - 0x0000)
@@ -68,29 +81,16 @@ static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP
 static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent, K2Node_CustomEvent_CleaningPlayer) == 0x000058, "Member 'BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent::K2Node_CustomEvent_CleaningPlayer' has a wrong offset!");
 static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent, K2Node_CustomEvent_CleaningAbilityType) == 0x000060, "Member 'BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent::K2Node_CustomEvent_CleaningAbilityType' has a wrong offset!");
 
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.OnCleaningStarted
-// 0x0010 (0x0010 - 0x0000)
-struct BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted final
-{
-public:
-	class AActor*                                 CleaningPlayer;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_CleaningAbilityType                         CleaningAbilityType;                               // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted) == 0x000008, "Wrong alignment on BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted");
-static_assert(sizeof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted) == 0x000010, "Wrong size on BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted");
-static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted, CleaningPlayer) == 0x000000, "Member 'BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted::CleaningPlayer' has a wrong offset!");
-static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted, CleaningAbilityType) == 0x000008, "Member 'BP_QuadrupedAnimalReactionComponent_C_OnCleaningStarted::CleaningAbilityType' has a wrong offset!");
-
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.OnCleanStateChanged
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.BP_SetState
 // 0x0001 (0x0001 - 0x0000)
-struct BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged final
+struct BP_QuadrupedAnimalReactionComponent_C_BP_SetState final
 {
 public:
-	bool                                          bIsClean;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EQuadrupedAnimalReactionState                 NewState;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged) == 0x000001, "Wrong alignment on BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged");
-static_assert(sizeof(BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged) == 0x000001, "Wrong size on BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged");
-static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged, bIsClean) == 0x000000, "Member 'BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged::bIsClean' has a wrong offset!");
+static_assert(alignof(BP_QuadrupedAnimalReactionComponent_C_BP_SetState) == 0x000001, "Wrong alignment on BP_QuadrupedAnimalReactionComponent_C_BP_SetState");
+static_assert(sizeof(BP_QuadrupedAnimalReactionComponent_C_BP_SetState) == 0x000001, "Wrong size on BP_QuadrupedAnimalReactionComponent_C_BP_SetState");
+static_assert(offsetof(BP_QuadrupedAnimalReactionComponent_C_BP_SetState, NewState) == 0x000000, "Member 'BP_QuadrupedAnimalReactionComponent_C_BP_SetState::NewState' has a wrong offset!");
 
 // Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

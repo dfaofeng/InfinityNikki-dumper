@@ -41,7 +41,7 @@ public:
 	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             LevelNum;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           PanelLevel;                                        // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             RoleName;                                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             roleName;                                          // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UNiagaraSystemWidget*                   UI_NS_LevelUP;                                     // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Hud_HP_Node_C*                     WBP_Hud_HP_Node_1;                                 // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Hud_HP_Node_C*                     WBP_Hud_HP_Node_2;                                 // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -57,40 +57,40 @@ public:
 	bool                                          isShowLevel;                                       // 0x03F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void TestAddHP(int32 addHp);
-	void TestAddExtraMaxHP(int32 Num);
-	void SetHpPosition(double X);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1(class UHorizontalBox* decorate);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0(class UHorizontalBox* decorate);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2(class UHorizontalBox* decorate);
-	void ResetInjuredAnim();
-	void PlayShowLevel();
-	void PlayLevelUp();
-	void PlayInjuredAnim();
-	void PlayHideLevel();
-	void PauseInjuredAnim();
-	void OnSwitchRoleNameLevelNum();
-	void OnOffsetHpItem(class UHorizontalBox* decorate);
-	void OnInjuredWaited(class UHorizontalBox* decorate);
-	void OnInjuredFinished(class UHorizontalBox* decorate);
-	void OnHpItemFlyDown(int32 ItemIndex);
-	void ExecuteUbergraph_WBP_Hud_HP_v2(int32 EntryPoint);
-	void ContinueInjuredAnim();
-	void BP_ShowHPParticle();
-	void BP_HideHPParticle();
-	void BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__WBP_Hud_HP_Button_246_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_Hud_HP_Button_Add_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_Hud_HP_v2_Button_AddExtra_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_Hud_HP_v2_Button_MinusExtra_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BP_HideHPParticle();
+	void BP_ShowHPParticle();
+	void ContinueInjuredAnim();
+	void ExecuteUbergraph_WBP_Hud_HP_v2(int32 EntryPoint);
+	void OnHpItemFlyDown(int32 ItemIndex);
+	void OnInjuredFinished(class UHorizontalBox* decorate);
+	void OnInjuredWaited(class UHorizontalBox* decorate);
+	void OnOffsetHpItem(class UHorizontalBox* decorate);
+	void OnSwitchRoleNameLevelNum();
+	void PauseInjuredAnim();
+	void PlayHideLevel();
+	void PlayInjuredAnim();
+	void PlayLevelUp();
+	void PlayShowLevel();
+	void ResetInjuredAnim();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2(class UHorizontalBox* decorate);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_0(class UHorizontalBox* decorate);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_1(class UHorizontalBox* decorate);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_10();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_2();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_3();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_4();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_5();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_6();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_7();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_8();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_HP_v2_9();
+	void SetHpPosition(double X);
+	void TestAddExtraMaxHP(int32 Num);
+	void TestAddHP(int32 addHp);
 
 	class FString GetModuleName() const;
 
@@ -125,7 +125,7 @@ static_assert(offsetof(UWBP_Hud_HP_v2_C, Image_232) == 0x000368, "Member 'UWBP_H
 static_assert(offsetof(UWBP_Hud_HP_v2_C, InvalidationBox_0) == 0x000370, "Member 'UWBP_Hud_HP_v2_C::InvalidationBox_0' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_HP_v2_C, LevelNum) == 0x000378, "Member 'UWBP_Hud_HP_v2_C::LevelNum' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_HP_v2_C, PanelLevel) == 0x000380, "Member 'UWBP_Hud_HP_v2_C::PanelLevel' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_HP_v2_C, RoleName) == 0x000388, "Member 'UWBP_Hud_HP_v2_C::RoleName' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_HP_v2_C, roleName) == 0x000388, "Member 'UWBP_Hud_HP_v2_C::roleName' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_HP_v2_C, UI_NS_LevelUP) == 0x000390, "Member 'UWBP_Hud_HP_v2_C::UI_NS_LevelUP' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_HP_v2_C, WBP_Hud_HP_Node_1) == 0x000398, "Member 'UWBP_Hud_HP_v2_C::WBP_Hud_HP_Node_1' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_HP_v2_C, WBP_Hud_HP_Node_2) == 0x0003A0, "Member 'UWBP_Hud_HP_v2_C::WBP_Hud_HP_Node_2' has a wrong offset!");

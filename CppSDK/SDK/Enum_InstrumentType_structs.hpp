@@ -15,15 +15,19 @@ namespace SDK
 {
 
 // UserDefinedEnum Enum_InstrumentType.Enum_InstrumentType
-// NumValues: 0x0006
+// NumValues: 0x000A
 enum class Enum_InstrumentType : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,
 	NewEnumerator2                           = 2,
 	NewEnumerator3                           = 3,
-	NewEnumerator4                           = 4,
-	Enum_MAX                                 = 5,
+	NewEnumerator5                           = 4,
+	NewEnumerator6                           = 5,
+	NewEnumerator4                           = 6,
+	NewEnumerator7                           = 7,
+	NewEnumerator8                           = 8,
+	Enum_MAX                                 = 9,
 };
 
 }

@@ -4093,7 +4093,7 @@ static_assert(offsetof(UStackBoxSlot, HorizontalAlignment) == 0x000050, "Member 
 static_assert(offsetof(UStackBoxSlot, VerticalAlignment) == 0x000051, "Member 'UStackBoxSlot::VerticalAlignment' has a wrong offset!");
 
 // Class UMG.TextBlock
-// 0x01D0 (0x0380 - 0x01B0)
+// 0x01E0 (0x0390 - 0x01B0)
 class UTextBlock final : public UTextLayoutWidget
 {
 public:
@@ -4112,17 +4112,19 @@ public:
 	bool                                          bWrapWithInvalidationPanel;                        // 0x0364(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextTransformPolicy                          TextTransformPolicy;                               // 0x0365(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETextOverflowPolicy                           TextOverflowPolicy;                                // 0x0366(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSimpleTextMode;                                   // 0x0367(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_368[0x10];                                     // 0x0368(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bTempText;                                         // 0x0378(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6TextCategory                               X6TextCategory;                                    // 0x0379(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37A[0x6];                                      // 0x037A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          FillParentArea;                                    // 0x0367(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSimpleTextMode;                                   // 0x0368(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_369[0x17];                                     // 0x0369(0x0017)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bTempText;                                         // 0x0380(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6TextCategory                               X6TextCategory;                                    // 0x0381(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_382[0xE];                                      // 0x0382(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UMaterialInstanceDynamic* GetDynamicFontMaterial();
 	class UMaterialInstanceDynamic* GetDynamicOutlineMaterial();
 	void SetAutoWrapText(bool InAutoTextWrap);
 	void SetColorAndOpacity(const struct FSlateColor& InColorAndOpacity);
+	void SetFillParentArea(bool InFillParentArea);
 	void SetFont(const struct FSlateFontInfo& InFontInfo);
 	void SetFontMaterial(class UMaterialInterface* InMaterial);
 	void SetFontOutlineMaterial(class UMaterialInterface* InMaterial);
@@ -4135,6 +4137,7 @@ public:
 	void SetTextOverflowPolicy(ETextOverflowPolicy InOverflowPolicy);
 	void SetTextTransformPolicy(ETextTransformPolicy InTransformPolicy);
 
+	bool GetFillParentArea() const;
 	class FText GetText() const;
 
 public:
@@ -4148,7 +4151,7 @@ public:
 	}
 };
 static_assert(alignof(UTextBlock) == 0x000010, "Wrong alignment on UTextBlock");
-static_assert(sizeof(UTextBlock) == 0x000380, "Wrong size on UTextBlock");
+static_assert(sizeof(UTextBlock) == 0x000390, "Wrong size on UTextBlock");
 static_assert(offsetof(UTextBlock, Text) == 0x0001B0, "Member 'UTextBlock::Text' has a wrong offset!");
 static_assert(offsetof(UTextBlock, TextDelegate) == 0x0001C0, "Member 'UTextBlock::TextDelegate' has a wrong offset!");
 static_assert(offsetof(UTextBlock, ColorAndOpacity) == 0x0001D0, "Member 'UTextBlock::ColorAndOpacity' has a wrong offset!");
@@ -4162,9 +4165,10 @@ static_assert(offsetof(UTextBlock, MinDesiredWidth) == 0x000360, "Member 'UTextB
 static_assert(offsetof(UTextBlock, bWrapWithInvalidationPanel) == 0x000364, "Member 'UTextBlock::bWrapWithInvalidationPanel' has a wrong offset!");
 static_assert(offsetof(UTextBlock, TextTransformPolicy) == 0x000365, "Member 'UTextBlock::TextTransformPolicy' has a wrong offset!");
 static_assert(offsetof(UTextBlock, TextOverflowPolicy) == 0x000366, "Member 'UTextBlock::TextOverflowPolicy' has a wrong offset!");
-static_assert(offsetof(UTextBlock, bSimpleTextMode) == 0x000367, "Member 'UTextBlock::bSimpleTextMode' has a wrong offset!");
-static_assert(offsetof(UTextBlock, bTempText) == 0x000378, "Member 'UTextBlock::bTempText' has a wrong offset!");
-static_assert(offsetof(UTextBlock, X6TextCategory) == 0x000379, "Member 'UTextBlock::X6TextCategory' has a wrong offset!");
+static_assert(offsetof(UTextBlock, FillParentArea) == 0x000367, "Member 'UTextBlock::FillParentArea' has a wrong offset!");
+static_assert(offsetof(UTextBlock, bSimpleTextMode) == 0x000368, "Member 'UTextBlock::bSimpleTextMode' has a wrong offset!");
+static_assert(offsetof(UTextBlock, bTempText) == 0x000380, "Member 'UTextBlock::bTempText' has a wrong offset!");
+static_assert(offsetof(UTextBlock, X6TextCategory) == 0x000381, "Member 'UTextBlock::X6TextCategory' has a wrong offset!");
 
 // Class UMG.Throbber
 // 0x00E8 (0x0270 - 0x0188)

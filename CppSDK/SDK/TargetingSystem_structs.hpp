@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "StructUtils_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -41,16 +41,19 @@ enum class ETargetingTraceType : uint8
 	ETargetingTraceType_MAX                  = 4,
 };
 
-// ScriptStruct TargetingSystem.TargetingTaskSet
-// 0x0010 (0x0010 - 0x0000)
-struct FTargetingTaskSet final
+// ScriptStruct TargetingSystem.TargetingDefaultResultData
+// 0x0100 (0x0100 - 0x0000)
+struct FTargetingDefaultResultData final
 {
 public:
-	TArray<class UTargetingTask*>                 Tasks;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	struct FHitResult                             HitResult;                                         // 0x0000(0x00F8)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         Score;                                             // 0x00F8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FTargetingTaskSet) == 0x000008, "Wrong alignment on FTargetingTaskSet");
-static_assert(sizeof(FTargetingTaskSet) == 0x000010, "Wrong size on FTargetingTaskSet");
-static_assert(offsetof(FTargetingTaskSet, Tasks) == 0x000000, "Member 'FTargetingTaskSet::Tasks' has a wrong offset!");
+static_assert(alignof(FTargetingDefaultResultData) == 0x000008, "Wrong alignment on FTargetingDefaultResultData");
+static_assert(sizeof(FTargetingDefaultResultData) == 0x000100, "Wrong size on FTargetingDefaultResultData");
+static_assert(offsetof(FTargetingDefaultResultData, HitResult) == 0x000000, "Member 'FTargetingDefaultResultData::HitResult' has a wrong offset!");
+static_assert(offsetof(FTargetingDefaultResultData, Score) == 0x0000F8, "Member 'FTargetingDefaultResultData::Score' has a wrong offset!");
 
 // ScriptStruct TargetingSystem.TargetingRequestHandle
 // 0x0004 (0x0004 - 0x0000)
@@ -73,19 +76,16 @@ static_assert(alignof(FCollisionQueryTaskData) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(FCollisionQueryTaskData) == 0x000010, "Wrong size on FCollisionQueryTaskData");
 static_assert(offsetof(FCollisionQueryTaskData, IgnoredActors) == 0x000000, "Member 'FCollisionQueryTaskData::IgnoredActors' has a wrong offset!");
 
-// ScriptStruct TargetingSystem.TargetingDefaultResultData
-// 0x0100 (0x0100 - 0x0000)
-struct FTargetingDefaultResultData final
+// ScriptStruct TargetingSystem.TargetingTaskSet
+// 0x0010 (0x0010 - 0x0000)
+struct FTargetingTaskSet final
 {
 public:
-	struct FHitResult                             HitResult;                                         // 0x0000(0x00F8)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         Score;                                             // 0x00F8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UTargetingTask*>                 Tasks;                                             // 0x0000(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTargetingDefaultResultData) == 0x000008, "Wrong alignment on FTargetingDefaultResultData");
-static_assert(sizeof(FTargetingDefaultResultData) == 0x000100, "Wrong size on FTargetingDefaultResultData");
-static_assert(offsetof(FTargetingDefaultResultData, HitResult) == 0x000000, "Member 'FTargetingDefaultResultData::HitResult' has a wrong offset!");
-static_assert(offsetof(FTargetingDefaultResultData, Score) == 0x0000F8, "Member 'FTargetingDefaultResultData::Score' has a wrong offset!");
+static_assert(alignof(FTargetingTaskSet) == 0x000008, "Wrong alignment on FTargetingTaskSet");
+static_assert(sizeof(FTargetingTaskSet) == 0x000010, "Wrong size on FTargetingTaskSet");
+static_assert(offsetof(FTargetingTaskSet, Tasks) == 0x000000, "Member 'FTargetingTaskSet::Tasks' has a wrong offset!");
 
 // ScriptStruct TargetingSystem.TargetingDefaultResultsSet
 // 0x0010 (0x0010 - 0x0000)

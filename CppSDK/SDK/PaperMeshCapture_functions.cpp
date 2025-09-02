@@ -36,6 +36,31 @@ void UPaperMeshCaptureComponent::CaptureFrame()
 }
 
 
+// Function PaperMeshCapture.PaperMeshCaptureComponent.CaptureFrameWithFrameRel
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UPaperMeshCaptureComponent::CaptureFrameWithFrameRel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperMeshCaptureComponent", "CaptureFrameWithFrameRel");
+
+	Params::PaperMeshCaptureComponent_CaptureFrameWithFrameRel Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PaperMeshCapture.PaperMeshCaptureComponent.SetEnable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:

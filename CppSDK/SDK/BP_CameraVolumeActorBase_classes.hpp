@@ -10,48 +10,48 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "X6Game_classes.hpp"
 #include "ECameraVolumeCollisionShape_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CameraVolumeActorBase.BP_CameraVolumeActorBase_C
-// 0x01C8 (0x0600 - 0x0438)
+// 0x01C8 (0x0650 - 0x0488)
 #pragma pack(push, 0x1)
 class alignas(0x10) ABP_CameraVolumeActorBase_C : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Sphere;                                            // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cube;                                              // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Capsule_Sphere1;                                   // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Capsule_Cylinder;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Capsule_Sphere;                                    // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	ECameraVolumeCollisionShape                   VolumeShape;                                       // 0x0470(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_471[0x7];                                      // 0x0471(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UShapeComponent*                        CollisionComponent;                                // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CollisionRelativeTransform;                        // 0x0480(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BoxExtent;                                         // 0x04E0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        SphereRadiu;                                       // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CapsuleRadius;                                     // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CapsuleHalfHeight;                                 // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class USceneComponent*>                AllDebugMesh;                                      // 0x0510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
-	bool                                          bOffline;                                          // 0x0520(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_521[0x7];                                      // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    OverlappingOtherComponent;                         // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CollisionPresetName;                               // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSet<class AActor*>                           ProcessActors;                                     // 0x0538(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
-	class AActor*                                 ControlledActor;                                   // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 ControlledActorInVolume;                           // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CollisionTag;                                      // 0x0598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bNeedCheckProcessActors;                           // 0x05A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A1[0x7];                                      // 0x05A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<ECollisionChannel>                       OverlapObjectTypes;                                // 0x05A8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Sphere;                                            // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cube;                                              // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Capsule_Sphere1;                                   // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Capsule_Cylinder;                                  // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Capsule_Sphere;                                    // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	ECameraVolumeCollisionShape                   VolumeShape;                                       // 0x04C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C1[0x7];                                      // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UShapeComponent*                        CollisionComponent;                                // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CollisionRelativeTransform;                        // 0x04D0(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BoxExtent;                                         // 0x0530(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        SphereRadiu;                                       // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CapsuleRadius;                                     // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CapsuleHalfHeight;                                 // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class USceneComponent*>                AllDebugMesh;                                      // 0x0560(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	bool                                          bOffline;                                          // 0x0570(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    OverlappingOtherComponent;                         // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CollisionPresetName;                               // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSet<class AActor*>                           ProcessActors;                                     // 0x0588(0x0050)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
+	class AActor*                                 ControlledActor;                                   // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 ControlledActorInVolume;                           // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CollisionTag;                                      // 0x05E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bNeedCheckProcessActors;                           // 0x05F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5F1[0x7];                                      // 0x05F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<ECollisionChannel>                       OverlapObjectTypes;                                // 0x05F8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void EventOnProcessActorDestroyed(class AActor* DestroyedActor);
@@ -98,31 +98,31 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(ABP_CameraVolumeActorBase_C) == 0x000010, "Wrong alignment on ABP_CameraVolumeActorBase_C");
-static_assert(sizeof(ABP_CameraVolumeActorBase_C) == 0x000600, "Wrong size on ABP_CameraVolumeActorBase_C");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, UberGraphFrame) == 0x000438, "Member 'ABP_CameraVolumeActorBase_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, Sphere) == 0x000440, "Member 'ABP_CameraVolumeActorBase_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, Cube) == 0x000448, "Member 'ABP_CameraVolumeActorBase_C::Cube' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, Capsule_Sphere1) == 0x000450, "Member 'ABP_CameraVolumeActorBase_C::Capsule_Sphere1' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, Capsule_Cylinder) == 0x000458, "Member 'ABP_CameraVolumeActorBase_C::Capsule_Cylinder' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, Capsule_Sphere) == 0x000460, "Member 'ABP_CameraVolumeActorBase_C::Capsule_Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, DefaultSceneRoot) == 0x000468, "Member 'ABP_CameraVolumeActorBase_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, VolumeShape) == 0x000470, "Member 'ABP_CameraVolumeActorBase_C::VolumeShape' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionComponent) == 0x000478, "Member 'ABP_CameraVolumeActorBase_C::CollisionComponent' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionRelativeTransform) == 0x000480, "Member 'ABP_CameraVolumeActorBase_C::CollisionRelativeTransform' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, BoxExtent) == 0x0004E0, "Member 'ABP_CameraVolumeActorBase_C::BoxExtent' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, SphereRadiu) == 0x0004F8, "Member 'ABP_CameraVolumeActorBase_C::SphereRadiu' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, CapsuleRadius) == 0x000500, "Member 'ABP_CameraVolumeActorBase_C::CapsuleRadius' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, CapsuleHalfHeight) == 0x000508, "Member 'ABP_CameraVolumeActorBase_C::CapsuleHalfHeight' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, AllDebugMesh) == 0x000510, "Member 'ABP_CameraVolumeActorBase_C::AllDebugMesh' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, bOffline) == 0x000520, "Member 'ABP_CameraVolumeActorBase_C::bOffline' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, OverlappingOtherComponent) == 0x000528, "Member 'ABP_CameraVolumeActorBase_C::OverlappingOtherComponent' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionPresetName) == 0x000530, "Member 'ABP_CameraVolumeActorBase_C::CollisionPresetName' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, ProcessActors) == 0x000538, "Member 'ABP_CameraVolumeActorBase_C::ProcessActors' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, ControlledActor) == 0x000588, "Member 'ABP_CameraVolumeActorBase_C::ControlledActor' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, ControlledActorInVolume) == 0x000590, "Member 'ABP_CameraVolumeActorBase_C::ControlledActorInVolume' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionTag) == 0x000598, "Member 'ABP_CameraVolumeActorBase_C::CollisionTag' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, bNeedCheckProcessActors) == 0x0005A0, "Member 'ABP_CameraVolumeActorBase_C::bNeedCheckProcessActors' has a wrong offset!");
-static_assert(offsetof(ABP_CameraVolumeActorBase_C, OverlapObjectTypes) == 0x0005A8, "Member 'ABP_CameraVolumeActorBase_C::OverlapObjectTypes' has a wrong offset!");
+static_assert(sizeof(ABP_CameraVolumeActorBase_C) == 0x000650, "Wrong size on ABP_CameraVolumeActorBase_C");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, UberGraphFrame) == 0x000488, "Member 'ABP_CameraVolumeActorBase_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, Sphere) == 0x000490, "Member 'ABP_CameraVolumeActorBase_C::Sphere' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, Cube) == 0x000498, "Member 'ABP_CameraVolumeActorBase_C::Cube' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, Capsule_Sphere1) == 0x0004A0, "Member 'ABP_CameraVolumeActorBase_C::Capsule_Sphere1' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, Capsule_Cylinder) == 0x0004A8, "Member 'ABP_CameraVolumeActorBase_C::Capsule_Cylinder' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, Capsule_Sphere) == 0x0004B0, "Member 'ABP_CameraVolumeActorBase_C::Capsule_Sphere' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, DefaultSceneRoot) == 0x0004B8, "Member 'ABP_CameraVolumeActorBase_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, VolumeShape) == 0x0004C0, "Member 'ABP_CameraVolumeActorBase_C::VolumeShape' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionComponent) == 0x0004C8, "Member 'ABP_CameraVolumeActorBase_C::CollisionComponent' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionRelativeTransform) == 0x0004D0, "Member 'ABP_CameraVolumeActorBase_C::CollisionRelativeTransform' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, BoxExtent) == 0x000530, "Member 'ABP_CameraVolumeActorBase_C::BoxExtent' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, SphereRadiu) == 0x000548, "Member 'ABP_CameraVolumeActorBase_C::SphereRadiu' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, CapsuleRadius) == 0x000550, "Member 'ABP_CameraVolumeActorBase_C::CapsuleRadius' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, CapsuleHalfHeight) == 0x000558, "Member 'ABP_CameraVolumeActorBase_C::CapsuleHalfHeight' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, AllDebugMesh) == 0x000560, "Member 'ABP_CameraVolumeActorBase_C::AllDebugMesh' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, bOffline) == 0x000570, "Member 'ABP_CameraVolumeActorBase_C::bOffline' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, OverlappingOtherComponent) == 0x000578, "Member 'ABP_CameraVolumeActorBase_C::OverlappingOtherComponent' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionPresetName) == 0x000580, "Member 'ABP_CameraVolumeActorBase_C::CollisionPresetName' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, ProcessActors) == 0x000588, "Member 'ABP_CameraVolumeActorBase_C::ProcessActors' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, ControlledActor) == 0x0005D8, "Member 'ABP_CameraVolumeActorBase_C::ControlledActor' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, ControlledActorInVolume) == 0x0005E0, "Member 'ABP_CameraVolumeActorBase_C::ControlledActorInVolume' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, CollisionTag) == 0x0005E8, "Member 'ABP_CameraVolumeActorBase_C::CollisionTag' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, bNeedCheckProcessActors) == 0x0005F0, "Member 'ABP_CameraVolumeActorBase_C::bNeedCheckProcessActors' has a wrong offset!");
+static_assert(offsetof(ABP_CameraVolumeActorBase_C, OverlapObjectTypes) == 0x0005F8, "Member 'ABP_CameraVolumeActorBase_C::OverlapObjectTypes' has a wrong offset!");
 
 }
 

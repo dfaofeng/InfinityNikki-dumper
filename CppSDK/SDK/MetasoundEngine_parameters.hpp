@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MetasoundFrontend_structs.hpp"
 #include "AudioExtensions_structs.hpp"
+#include "MetasoundFrontend_structs.hpp"
 #include "MetasoundEngine_structs.hpp"
 
 
@@ -443,6 +443,39 @@ static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, OnOutputValueChange
 static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, AnalyzerName) == 0x000020, "Member 'MetaSoundOutputSubsystem_WatchOutput::AnalyzerName' has a wrong offset!");
 static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, AnalyzerOutputName) == 0x000028, "Member 'MetaSoundOutputSubsystem_WatchOutput::AnalyzerOutputName' has a wrong offset!");
 static_assert(offsetof(MetaSoundOutputSubsystem_WatchOutput, ReturnValue) == 0x000030, "Member 'MetaSoundOutputSubsystem_WatchOutput::ReturnValue' has a wrong offset!");
+
+// Function MetasoundEngine.MetaSoundQualityHelper.GetQualityList
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundQualityHelper_GetQualityList final
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MetaSoundQualityHelper_GetQualityList) == 0x000008, "Wrong alignment on MetaSoundQualityHelper_GetQualityList");
+static_assert(sizeof(MetaSoundQualityHelper_GetQualityList) == 0x000010, "Wrong size on MetaSoundQualityHelper_GetQualityList");
+static_assert(offsetof(MetaSoundQualityHelper_GetQualityList, ReturnValue) == 0x000000, "Member 'MetaSoundQualityHelper_GetQualityList::ReturnValue' has a wrong offset!");
+
+// Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories final
+{
+public:
+	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories) == 0x000008, "Wrong alignment on MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories");
+static_assert(sizeof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories) == 0x000010, "Wrong size on MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories");
+static_assert(offsetof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories, Directories) == 0x000000, "Member 'MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories::Directories' has a wrong offset!");
+
+// Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
+// 0x0010 (0x0010 - 0x0000)
+struct MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories final
+{
+public:
+	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories) == 0x000008, "Wrong alignment on MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories");
+static_assert(sizeof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories) == 0x000010, "Wrong size on MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories");
+static_assert(offsetof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories, Directories) == 0x000000, "Member 'MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories::Directories' has a wrong offset!");
 
 // Function MetasoundEngine.MetaSoundBuilderBase.AddGraphInputNode
 // 0x0090 (0x0090 - 0x0000)
@@ -1258,6 +1291,21 @@ static_assert(offsetof(MetaSoundBuilderBase_NodesAreConnected, OutputHandle) == 
 static_assert(offsetof(MetaSoundBuilderBase_NodesAreConnected, InputHandle) == 0x000020, "Member 'MetaSoundBuilderBase_NodesAreConnected::InputHandle' has a wrong offset!");
 static_assert(offsetof(MetaSoundBuilderBase_NodesAreConnected, ReturnValue) == 0x000040, "Member 'MetaSoundBuilderBase_NodesAreConnected::ReturnValue' has a wrong offset!");
 
+// Function MetasoundEngine.MetaSoundPatchBuilder.Build
+// 0x0038 (0x0038 - 0x0000)
+struct MetaSoundPatchBuilder_Build final
+{
+public:
+	class UObject*                                Parent;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMetaSoundBuilderOptions               Options;                                           // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MetaSoundPatchBuilder_Build) == 0x000008, "Wrong alignment on MetaSoundPatchBuilder_Build");
+static_assert(sizeof(MetaSoundPatchBuilder_Build) == 0x000038, "Wrong size on MetaSoundPatchBuilder_Build");
+static_assert(offsetof(MetaSoundPatchBuilder_Build, Parent) == 0x000000, "Member 'MetaSoundPatchBuilder_Build::Parent' has a wrong offset!");
+static_assert(offsetof(MetaSoundPatchBuilder_Build, Options) == 0x000008, "Member 'MetaSoundPatchBuilder_Build::Options' has a wrong offset!");
+static_assert(offsetof(MetaSoundPatchBuilder_Build, ReturnValue) == 0x000028, "Member 'MetaSoundPatchBuilder_Build::ReturnValue' has a wrong offset!");
+
 // Function MetasoundEngine.MetaSoundSourceBuilder.Audition
 // 0x0028 (0x0028 - 0x0000)
 struct MetaSoundSourceBuilder_Audition final
@@ -1347,54 +1395,6 @@ public:
 static_assert(alignof(MetaSoundSourceBuilder_GetLiveUpdatesEnabled) == 0x000001, "Wrong alignment on MetaSoundSourceBuilder_GetLiveUpdatesEnabled");
 static_assert(sizeof(MetaSoundSourceBuilder_GetLiveUpdatesEnabled) == 0x000001, "Wrong size on MetaSoundSourceBuilder_GetLiveUpdatesEnabled");
 static_assert(offsetof(MetaSoundSourceBuilder_GetLiveUpdatesEnabled, ReturnValue) == 0x000000, "Member 'MetaSoundSourceBuilder_GetLiveUpdatesEnabled::ReturnValue' has a wrong offset!");
-
-// Function MetasoundEngine.MetaSoundQualityHelper.GetQualityList
-// 0x0010 (0x0010 - 0x0000)
-struct MetaSoundQualityHelper_GetQualityList final
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MetaSoundQualityHelper_GetQualityList) == 0x000008, "Wrong alignment on MetaSoundQualityHelper_GetQualityList");
-static_assert(sizeof(MetaSoundQualityHelper_GetQualityList) == 0x000010, "Wrong size on MetaSoundQualityHelper_GetQualityList");
-static_assert(offsetof(MetaSoundQualityHelper_GetQualityList, ReturnValue) == 0x000000, "Member 'MetaSoundQualityHelper_GetQualityList::ReturnValue' has a wrong offset!");
-
-// Function MetasoundEngine.MetaSoundAssetSubsystem.RegisterAssetClassesInDirectories
-// 0x0010 (0x0010 - 0x0000)
-struct MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories final
-{
-public:
-	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories) == 0x000008, "Wrong alignment on MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories");
-static_assert(sizeof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories) == 0x000010, "Wrong size on MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories");
-static_assert(offsetof(MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories, Directories) == 0x000000, "Member 'MetaSoundAssetSubsystem_RegisterAssetClassesInDirectories::Directories' has a wrong offset!");
-
-// Function MetasoundEngine.MetaSoundAssetSubsystem.UnregisterAssetClassesInDirectories
-// 0x0010 (0x0010 - 0x0000)
-struct MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories final
-{
-public:
-	TArray<struct FMetaSoundAssetDirectory>       Directories;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories) == 0x000008, "Wrong alignment on MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories");
-static_assert(sizeof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories) == 0x000010, "Wrong size on MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories");
-static_assert(offsetof(MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories, Directories) == 0x000000, "Member 'MetaSoundAssetSubsystem_UnregisterAssetClassesInDirectories::Directories' has a wrong offset!");
-
-// Function MetasoundEngine.MetaSoundPatchBuilder.Build
-// 0x0038 (0x0038 - 0x0000)
-struct MetaSoundPatchBuilder_Build final
-{
-public:
-	class UObject*                                Parent;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMetaSoundBuilderOptions               Options;                                           // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	TScriptInterface<class IMetaSoundDocumentInterface> ReturnValue;                                 // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MetaSoundPatchBuilder_Build) == 0x000008, "Wrong alignment on MetaSoundPatchBuilder_Build");
-static_assert(sizeof(MetaSoundPatchBuilder_Build) == 0x000038, "Wrong size on MetaSoundPatchBuilder_Build");
-static_assert(offsetof(MetaSoundPatchBuilder_Build, Parent) == 0x000000, "Member 'MetaSoundPatchBuilder_Build::Parent' has a wrong offset!");
-static_assert(offsetof(MetaSoundPatchBuilder_Build, Options) == 0x000008, "Member 'MetaSoundPatchBuilder_Build::Options' has a wrong offset!");
-static_assert(offsetof(MetaSoundPatchBuilder_Build, ReturnValue) == 0x000028, "Member 'MetaSoundPatchBuilder_Build::ReturnValue' has a wrong offset!");
 
 // Function MetasoundEngine.MetaSoundBuilderSubsystem.CreateBoolArrayMetaSoundLiteral
 // 0x0070 (0x0070 - 0x0000)

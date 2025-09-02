@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "GA_AbilityMontageBase_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "GA_AbilityMontageBase_classes.hpp"
 
 
 namespace SDK

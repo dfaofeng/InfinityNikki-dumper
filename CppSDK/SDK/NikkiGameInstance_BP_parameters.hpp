@@ -16,91 +16,16 @@
 namespace SDK::Params
 {
 
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.SetTODTime
-// 0x0018 (0x0018 - 0x0000)
-struct NikkiGameInstance_BP_C_SetTODTime final
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.ExecuteUbergraph_NikkiGameInstance_BP
+// 0x0004 (0x0004 - 0x0000)
+struct NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP final
 {
 public:
-	double                                        Progress;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NikkiGameInstance_BP_C_SetTODTime) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_SetTODTime");
-static_assert(sizeof(NikkiGameInstance_BP_C_SetTODTime) == 0x000018, "Wrong size on NikkiGameInstance_BP_C_SetTODTime");
-static_assert(offsetof(NikkiGameInstance_BP_C_SetTODTime, Progress) == 0x000000, "Member 'NikkiGameInstance_BP_C_SetTODTime::Progress' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_SetTODTime, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000008, "Member 'NikkiGameInstance_BP_C_SetTODTime::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_SetTODTime, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x000010, "Member 'NikkiGameInstance_BP_C_SetTODTime::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
-
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.SetSystemStateNotifyManager
-// 0x0008 (0x0008 - 0x0000)
-struct NikkiGameInstance_BP_C_SetSystemStateNotifyManager final
-{
-public:
-	class ABP_SystemStateNotifyManager_C*         SystemStateNotifyMgr;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NikkiGameInstance_BP_C_SetSystemStateNotifyManager) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_SetSystemStateNotifyManager");
-static_assert(sizeof(NikkiGameInstance_BP_C_SetSystemStateNotifyManager) == 0x000008, "Wrong size on NikkiGameInstance_BP_C_SetSystemStateNotifyManager");
-static_assert(offsetof(NikkiGameInstance_BP_C_SetSystemStateNotifyManager, SystemStateNotifyMgr) == 0x000000, "Member 'NikkiGameInstance_BP_C_SetSystemStateNotifyManager::SystemStateNotifyMgr' has a wrong offset!");
-
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.SetLoadingUI
-// 0x0008 (0x0008 - 0x0000)
-struct NikkiGameInstance_BP_C_SetLoadingUI final
-{
-public:
-	class UUserWidget*                            LoadingUI;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NikkiGameInstance_BP_C_SetLoadingUI) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_SetLoadingUI");
-static_assert(sizeof(NikkiGameInstance_BP_C_SetLoadingUI) == 0x000008, "Wrong size on NikkiGameInstance_BP_C_SetLoadingUI");
-static_assert(offsetof(NikkiGameInstance_BP_C_SetLoadingUI, LoadingUI) == 0x000000, "Member 'NikkiGameInstance_BP_C_SetLoadingUI::LoadingUI' has a wrong offset!");
-
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetTODTime
-// 0x0020 (0x0020 - 0x0000)
-struct NikkiGameInstance_BP_C_GetTODTime final
-{
-public:
-	double                                        Progress;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NikkiGameInstance_BP_C_GetTODTime) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_GetTODTime");
-static_assert(sizeof(NikkiGameInstance_BP_C_GetTODTime) == 0x000020, "Wrong size on NikkiGameInstance_BP_C_GetTODTime");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, Progress) == 0x000000, "Member 'NikkiGameInstance_BP_C_GetTODTime::Progress' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000008, "Member 'NikkiGameInstance_BP_C_GetTODTime::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'NikkiGameInstance_BP_C_GetTODTime::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000018, "Member 'NikkiGameInstance_BP_C_GetTODTime::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetSystemStateNotifyManager
-// 0x0028 (0x0028 - 0x0000)
-struct NikkiGameInstance_BP_C_GetSystemStateNotifyManager final
-{
-public:
-	class ABP_SystemStateNotifyManager_C*         SystemStateNotifyMgr;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_SpawnActor_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_SystemStateNotifyManager_C*         K2Node_DynamicCast_AsBP_System_State_Notify_Manager; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_GetSystemStateNotifyManager");
-static_assert(sizeof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager) == 0x000028, "Wrong size on NikkiGameInstance_BP_C_GetSystemStateNotifyManager");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, SystemStateNotifyMgr) == 0x000000, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::SystemStateNotifyMgr' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, CallFunc_SpawnActor_ReturnValue) == 0x000008, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::CallFunc_SpawnActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, K2Node_DynamicCast_AsBP_System_State_Notify_Manager) == 0x000018, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::K2Node_DynamicCast_AsBP_System_State_Notify_Manager' has a wrong offset!");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetLoadingUI
-// 0x0008 (0x0008 - 0x0000)
-struct NikkiGameInstance_BP_C_GetLoadingUI final
-{
-public:
-	class UUserWidget*                            LoadingUI;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(NikkiGameInstance_BP_C_GetLoadingUI) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_GetLoadingUI");
-static_assert(sizeof(NikkiGameInstance_BP_C_GetLoadingUI) == 0x000008, "Wrong size on NikkiGameInstance_BP_C_GetLoadingUI");
-static_assert(offsetof(NikkiGameInstance_BP_C_GetLoadingUI, LoadingUI) == 0x000000, "Member 'NikkiGameInstance_BP_C_GetLoadingUI::LoadingUI' has a wrong offset!");
+static_assert(alignof(NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP) == 0x000004, "Wrong alignment on NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP");
+static_assert(sizeof(NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP) == 0x000004, "Wrong size on NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP");
+static_assert(offsetof(NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP, EntryPoint) == 0x000000, "Member 'NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP::EntryPoint' has a wrong offset!");
 
 // Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetDirLightVecFromDyEnv
 // 0x0058 (0x0058 - 0x0000)
@@ -123,16 +48,91 @@ static_assert(offsetof(NikkiGameInstance_BP_C_GetDirLightVecFromDyEnv, CallFunc_
 static_assert(offsetof(NikkiGameInstance_BP_C_GetDirLightVecFromDyEnv, CallFunc_MakeVector_Y_ImplicitCast) == 0x000048, "Member 'NikkiGameInstance_BP_C_GetDirLightVecFromDyEnv::CallFunc_MakeVector_Y_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(NikkiGameInstance_BP_C_GetDirLightVecFromDyEnv, CallFunc_MakeVector_Z_ImplicitCast) == 0x000050, "Member 'NikkiGameInstance_BP_C_GetDirLightVecFromDyEnv::CallFunc_MakeVector_Z_ImplicitCast' has a wrong offset!");
 
-// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.ExecuteUbergraph_NikkiGameInstance_BP
-// 0x0004 (0x0004 - 0x0000)
-struct NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP final
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetLoadingUI
+// 0x0008 (0x0008 - 0x0000)
+struct NikkiGameInstance_BP_C_GetLoadingUI final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUserWidget*                            LoadingUI;                                         // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP) == 0x000004, "Wrong alignment on NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP");
-static_assert(sizeof(NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP) == 0x000004, "Wrong size on NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP");
-static_assert(offsetof(NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP, EntryPoint) == 0x000000, "Member 'NikkiGameInstance_BP_C_ExecuteUbergraph_NikkiGameInstance_BP::EntryPoint' has a wrong offset!");
+static_assert(alignof(NikkiGameInstance_BP_C_GetLoadingUI) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_GetLoadingUI");
+static_assert(sizeof(NikkiGameInstance_BP_C_GetLoadingUI) == 0x000008, "Wrong size on NikkiGameInstance_BP_C_GetLoadingUI");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetLoadingUI, LoadingUI) == 0x000000, "Member 'NikkiGameInstance_BP_C_GetLoadingUI::LoadingUI' has a wrong offset!");
+
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetSystemStateNotifyManager
+// 0x0028 (0x0028 - 0x0000)
+struct NikkiGameInstance_BP_C_GetSystemStateNotifyManager final
+{
+public:
+	class ABP_SystemStateNotifyManager_C*         SystemStateNotifyMgr;                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_SpawnActor_ReturnValue;                   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_SystemStateNotifyManager_C*         K2Node_DynamicCast_AsBP_System_State_Notify_Manager; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_GetSystemStateNotifyManager");
+static_assert(sizeof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager) == 0x000028, "Wrong size on NikkiGameInstance_BP_C_GetSystemStateNotifyManager");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, SystemStateNotifyMgr) == 0x000000, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::SystemStateNotifyMgr' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, CallFunc_SpawnActor_ReturnValue) == 0x000008, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::CallFunc_SpawnActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, K2Node_DynamicCast_AsBP_System_State_Notify_Manager) == 0x000018, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::K2Node_DynamicCast_AsBP_System_State_Notify_Manager' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetSystemStateNotifyManager, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'NikkiGameInstance_BP_C_GetSystemStateNotifyManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetTODTime
+// 0x0020 (0x0020 - 0x0000)
+struct NikkiGameInstance_BP_C_GetTODTime final
+{
+public:
+	double                                        Progress;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_A_ImplicitCast;     // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiGameInstance_BP_C_GetTODTime) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_GetTODTime");
+static_assert(sizeof(NikkiGameInstance_BP_C_GetTODTime) == 0x000020, "Wrong size on NikkiGameInstance_BP_C_GetTODTime");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, Progress) == 0x000000, "Member 'NikkiGameInstance_BP_C_GetTODTime::Progress' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000008, "Member 'NikkiGameInstance_BP_C_GetTODTime::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000010, "Member 'NikkiGameInstance_BP_C_GetTODTime::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_GetTODTime, CallFunc_Multiply_DoubleDouble_A_ImplicitCast) == 0x000018, "Member 'NikkiGameInstance_BP_C_GetTODTime::CallFunc_Multiply_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.SetLoadingUI
+// 0x0008 (0x0008 - 0x0000)
+struct NikkiGameInstance_BP_C_SetLoadingUI final
+{
+public:
+	class UUserWidget*                            LoadingUI;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiGameInstance_BP_C_SetLoadingUI) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_SetLoadingUI");
+static_assert(sizeof(NikkiGameInstance_BP_C_SetLoadingUI) == 0x000008, "Wrong size on NikkiGameInstance_BP_C_SetLoadingUI");
+static_assert(offsetof(NikkiGameInstance_BP_C_SetLoadingUI, LoadingUI) == 0x000000, "Member 'NikkiGameInstance_BP_C_SetLoadingUI::LoadingUI' has a wrong offset!");
+
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.SetSystemStateNotifyManager
+// 0x0008 (0x0008 - 0x0000)
+struct NikkiGameInstance_BP_C_SetSystemStateNotifyManager final
+{
+public:
+	class ABP_SystemStateNotifyManager_C*         SystemStateNotifyMgr;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiGameInstance_BP_C_SetSystemStateNotifyManager) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_SetSystemStateNotifyManager");
+static_assert(sizeof(NikkiGameInstance_BP_C_SetSystemStateNotifyManager) == 0x000008, "Wrong size on NikkiGameInstance_BP_C_SetSystemStateNotifyManager");
+static_assert(offsetof(NikkiGameInstance_BP_C_SetSystemStateNotifyManager, SystemStateNotifyMgr) == 0x000000, "Member 'NikkiGameInstance_BP_C_SetSystemStateNotifyManager::SystemStateNotifyMgr' has a wrong offset!");
+
+// Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.SetTODTime
+// 0x0018 (0x0018 - 0x0000)
+struct NikkiGameInstance_BP_C_SetTODTime final
+{
+public:
+	double                                        Progress;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(NikkiGameInstance_BP_C_SetTODTime) == 0x000008, "Wrong alignment on NikkiGameInstance_BP_C_SetTODTime");
+static_assert(sizeof(NikkiGameInstance_BP_C_SetTODTime) == 0x000018, "Wrong size on NikkiGameInstance_BP_C_SetTODTime");
+static_assert(offsetof(NikkiGameInstance_BP_C_SetTODTime, Progress) == 0x000000, "Member 'NikkiGameInstance_BP_C_SetTODTime::Progress' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_SetTODTime, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000008, "Member 'NikkiGameInstance_BP_C_SetTODTime::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(NikkiGameInstance_BP_C_SetTODTime, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x000010, "Member 'NikkiGameInstance_BP_C_SetTODTime::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
 
 // Function NikkiGameInstance_BP.NikkiGameInstance_BP_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

@@ -12,6 +12,7 @@
 
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
 #include "E_EInteractSuccRet_structs.hpp"
 
 
@@ -135,7 +136,7 @@ static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_BP_ResetRotation, CallF
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_BP_ResetRotation, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000018, "Member 'BP_MultiplayerMovePlatform_Base_C_BP_ResetRotation::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
 
 // Function BP_MultiplayerMovePlatform_Base.BP_MultiplayerMovePlatform_Base_C.ExecuteUbergraph_BP_MultiplayerMovePlatform_Base
-// 0x0138 (0x0138 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base final
 {
 public:
@@ -159,31 +160,33 @@ public:
 	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_Event_Data;                                 // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_Player;                               // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_Other_player_actor;                   // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_EInteractSuccRet                            K2Node_Event_result;                               // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C1[0x3];                                       // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_ComponentBoundEvent_bForward;               // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Multi_InteractiveObjActive_Type             K2Node_Event_E_Multi_Type;                         // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_Other_player_actor;                   // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_EInteractSuccRet                            K2Node_Event_result;                               // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         K2Node_ComponentBoundEvent_PointIndex;             // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_5;            // 0x00D0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACharacter*                             CallFunc_GetX6GameNikkiPawn_NikkiPawn;             // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_AdjustRotation_DeltaTime_ImplicitCast;    // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ComponentBoundEvent_bForward;               // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1[0x3];                                       // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         K2Node_ComponentBoundEvent_PointIndex;             // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_5;            // 0x00D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPlayMontageCallbackProxy*              CallFunc_CreateProxyObjectForPlayMontage_ReturnValue; // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OverlappedComponent;    // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             CallFunc_GetX6GameNikkiPawn_NikkiPawn;             // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_AdjustRotation_DeltaTime_ImplicitCast;    // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base) == 0x000008, "Wrong alignment on BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base");
-static_assert(sizeof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base) == 0x000138, "Wrong size on BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base");
+static_assert(sizeof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base) == 0x000140, "Wrong size on BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, EntryPoint) == 0x000000, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, Temp_object_Variable) == 0x000008, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_DynamicCast_AsAnim_Montage) == 0x000010, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_DynamicCast_AsAnim_Montage' has a wrong offset!");
@@ -201,23 +204,24 @@ static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_Mul
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, Temp_name_Variable) == 0x000094, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::Temp_name_Variable' has a wrong offset!");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_Data) == 0x0000A0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_Data' has a wrong offset!");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_Player) == 0x0000B0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_Player' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_Other_player_actor) == 0x0000B8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_Other_player_actor' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_result) == 0x0000C0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_result' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_DeltaSeconds) == 0x0000C4, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_bForward) == 0x0000C8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_bForward' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_PointIndex) == 0x0000CC, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_PointIndex' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000D0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x0000E0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_IsValid_ReturnValue) == 0x0000E8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_GetAnimInstance_ReturnValue) == 0x0000F0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x0000F8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OtherActor) == 0x000100, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OtherComp) == 0x000108, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000110, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_CustomEvent_Loaded) == 0x000118, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_CustomEvent_Loaded' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_GetX6GameNikkiPawn_NikkiPawn) == 0x000120, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_GetX6GameNikkiPawn_NikkiPawn' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000128, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_AdjustRotation_DeltaTime_ImplicitCast) == 0x000130, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_AdjustRotation_DeltaTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_E_Multi_Type) == 0x0000B8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_E_Multi_Type' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_Other_player_actor) == 0x0000C0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_Other_player_actor' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_result) == 0x0000C8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_result' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_Event_DeltaSeconds) == 0x0000CC, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_bForward) == 0x0000D0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_bForward' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_PointIndex) == 0x0000D4, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_PointIndex' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_CreateDelegate_OutputDelegate_5) == 0x0000D8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_CreateProxyObjectForPlayMontage_ReturnValue) == 0x0000E8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_CreateProxyObjectForPlayMontage_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_IsValid_ReturnValue) == 0x0000F0, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_GetAnimInstance_ReturnValue) == 0x0000F8, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OverlappedComponent) == 0x000100, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OtherActor) == 0x000108, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OtherComp) == 0x000110, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000118, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, K2Node_CustomEvent_Loaded) == 0x000120, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::K2Node_CustomEvent_Loaded' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_GetX6GameNikkiPawn_NikkiPawn) == 0x000128, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_GetX6GameNikkiPawn_NikkiPawn' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000130, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base, CallFunc_AdjustRotation_DeltaTime_ImplicitCast) == 0x000138, "Member 'BP_MultiplayerMovePlatform_Base_C_ExecuteUbergraph_BP_MultiplayerMovePlatform_Base::CallFunc_AdjustRotation_DeltaTime_ImplicitCast' has a wrong offset!");
 
 // Function BP_MultiplayerMovePlatform_Base.BP_MultiplayerMovePlatform_Base_C.On_Multi_ActiveSuccess
 // 0x0010 (0x0010 - 0x0000)
@@ -233,17 +237,19 @@ static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_On_Multi_ActiveSuccess,
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_On_Multi_ActiveSuccess, Result) == 0x000008, "Member 'BP_MultiplayerMovePlatform_Base_C_On_Multi_ActiveSuccess::Result' has a wrong offset!");
 
 // Function BP_MultiplayerMovePlatform_Base.BP_MultiplayerMovePlatform_Base_C.On_Multi_InteractiveObjActive
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive final
 {
 public:
 	class FString                                 Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 Player;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_Multi_InteractiveObjActive_Type             E_Multi_Type;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive) == 0x000008, "Wrong alignment on BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive");
-static_assert(sizeof(BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive) == 0x000018, "Wrong size on BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive");
+static_assert(sizeof(BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive) == 0x000020, "Wrong size on BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive, Data) == 0x000000, "Member 'BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive::Data' has a wrong offset!");
 static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive, Player) == 0x000010, "Member 'BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive::Player' has a wrong offset!");
+static_assert(offsetof(BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive, E_Multi_Type) == 0x000018, "Member 'BP_MultiplayerMovePlatform_Base_C_On_Multi_InteractiveObjActive::E_Multi_Type' has a wrong offset!");
 
 // Function BP_MultiplayerMovePlatform_Base.BP_MultiplayerMovePlatform_Base_C.OnBlendOut_3FA2443E4959FA0322D075B4FEA0A8E3
 // 0x0008 (0x0008 - 0x0000)

@@ -17,199 +17,363 @@
 namespace SDK
 {
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnClothesMaterialEffect
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.SetVolumeSurfaceTypeValue
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FF_FootstepSurfaceTypeSoundStruct&SurfaceTypeValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::SetVolumeSurfaceTypeValue(const struct FF_FootstepSurfaceTypeSoundStruct& SurfaceTypeValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "SetVolumeSurfaceTypeValue");
+
+	Params::BP_SoundAndParticleComponent_C_SetVolumeSurfaceTypeValue Parms{};
+
+	Parms.SurfaceTypeValue = std::move(SurfaceTypeValue);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.SetIsInFSTSwitchVolume
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bInFSTSwitchVolume_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::SetIsInFSTSwitchVolume(bool bInFSTSwitchVolume_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "SetIsInFSTSwitchVolume");
+
+	Params::BP_SoundAndParticleComponent_C_SetIsInFSTSwitchVolume Parms{};
+
+	Parms.bInFSTSwitchVolume_0 = bInFSTSwitchVolume_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.OnDataTableLoaded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_SoundAndParticleComponent_C::OnDataTableLoaded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "OnDataTableLoaded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.IsInBush
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool*                                   bInBush_0                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::IsInBush(bool* bInBush_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "IsInBush");
+
+	Params::BP_SoundAndParticleComponent_C_IsInBush Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bInBush_0 != nullptr)
+		*bInBush_0 = Parms.bInBush_0;
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetSoftObjectPtrByPath
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    PathString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool*                                   Found                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UObject>*          SWITCH                                                 (Parm, OutParm, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::GetSoftObjectPtrByPath(const class FString& PathString, bool* Found, TSoftObjectPtr<class UObject>* SWITCH)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetSoftObjectPtrByPath");
+
+	Params::BP_SoundAndParticleComponent_C_GetSoftObjectPtrByPath Parms{};
+
+	Parms.PathString = std::move(PathString);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Found != nullptr)
+		*Found = Parms.Found;
+
+	if (SWITCH != nullptr)
+		*SWITCH = Parms.SWITCH;
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetShrubType
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// Enum_ShrubEnum*                         ShrubType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::GetShrubType(Enum_ShrubEnum* ShrubType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetShrubType");
+
+	Params::BP_SoundAndParticleComponent_C_GetShrubType Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ShrubType != nullptr)
+		*ShrubType = Parms.ShrubType;
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetShoeSwitchPath
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString*                          ShoeSwitchPaths                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnClothesMaterialEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent)
+void UBP_SoundAndParticleComponent_C::GetShoeSwitchPath(class USceneComponent* Comp, class FString* ShoeSwitchPaths)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnClothesMaterialEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetShoeSwitchPath");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnClothesMaterialEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_GetShoeSwitchPath Parms{};
 
 	Parms.Comp = Comp;
-	Parms.AkEvent = AkEvent;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (ShoeSwitchPaths != nullptr)
+		*ShoeSwitchPaths = std::move(Parms.ShoeSwitchPaths);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnClothesTypeEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetFootstepSoundMaterialSwitchPath
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FString*                          OutMaterialTag                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class FString*                          OutTypeTag                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnClothesTypeEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent)
+void UBP_SoundAndParticleComponent_C::GetFootstepSoundMaterialSwitchPath(class FString* OutMaterialTag, class FString* OutTypeTag)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnClothesTypeEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetFootstepSoundMaterialSwitchPath");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnClothesTypeEffect Parms{};
-
-	Parms.Comp = Comp;
-	Parms.AkEvent = AkEvent;
+	Params::BP_SoundAndParticleComponent_C_GetFootstepSoundMaterialSwitchPath Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutMaterialTag != nullptr)
+		*OutMaterialTag = std::move(Parms.OutMaterialTag);
+
+	if (OutTypeTag != nullptr)
+		*OutTypeTag = std::move(Parms.OutTypeTag);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnEndCharacterEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetFootstepSoundGaitSwitch
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class USkeletalMeshComponent*           MeshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    bDestroyAtEnd                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    InStr                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAkSwitchValue>    DefaultAkSwitch                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAkSwitchValue>*   OutAkSwitch                                            (Parm, OutParm, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnEndCharacterEffect(class UObject* NotifyObject, class USkeletalMeshComponent* MeshComponent, bool bDestroyAtEnd)
+void UBP_SoundAndParticleComponent_C::GetFootstepSoundGaitSwitch(const class FString& InStr, TSoftObjectPtr<class UAkSwitchValue> DefaultAkSwitch, TSoftObjectPtr<class UAkSwitchValue>* OutAkSwitch)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnEndCharacterEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetFootstepSoundGaitSwitch");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnEndCharacterEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_GetFootstepSoundGaitSwitch Parms{};
 
-	Parms.NotifyObject = NotifyObject;
-	Parms.MeshComponent = MeshComponent;
-	Parms.bDestroyAtEnd = bDestroyAtEnd;
+	Parms.InStr = std::move(InStr);
+	Parms.DefaultAkSwitch = DefaultAkSwitch;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutAkSwitch != nullptr)
+		*OutAkSwitch = Parms.OutAkSwitch;
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnEndLSEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetFootstepSoundFloorSwitch
+// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class UAnimNotifyState*           NotifyObject                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bWaitForLSFinish                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAkSwitchValue>*   SwitchValue                                            (Parm, OutParm, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnEndLSEffect(const class UAnimNotifyState* NotifyObject, bool bWaitForLSFinish)
+void UBP_SoundAndParticleComponent_C::GetFootstepSoundFloorSwitch(TSoftObjectPtr<class UAkSwitchValue>* SwitchValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnEndLSEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetFootstepSoundFloorSwitch");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnEndLSEffect Parms{};
-
-	Parms.NotifyObject = NotifyObject;
-	Parms.bWaitForLSFinish = bWaitForLSFinish;
+	Params::BP_SoundAndParticleComponent_C_GetFootstepSoundFloorSwitch Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (SwitchValue != nullptr)
+		*SwitchValue = Parms.SwitchValue;
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnEndMaterialEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.CompressPosition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   InPosition                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Offset_X                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Offset_Y                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Offset_Z                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         CompressdPosition                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnEndMaterialEffect(class UObject* NotifyObject)
+void UBP_SoundAndParticleComponent_C::CompressPosition(const struct FVector& InPosition, int32 Offset_X, int32 Offset_Y, int32 Offset_Z, struct FVector* CompressdPosition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnEndMaterialEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "CompressPosition");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnEndMaterialEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_CompressPosition Parms{};
 
-	Parms.NotifyObject = NotifyObject;
+	Parms.InPosition = std::move(InPosition);
+	Parms.Offset_X = Offset_X;
+	Parms.Offset_Y = Offset_Y;
+	Parms.Offset_Z = Offset_Z;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (CompressdPosition != nullptr)
+		*CompressdPosition = std::move(Parms.CompressdPosition);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnPlayCharacterEffect
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnX6PlayFootstepEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              CharacterEffectTag                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class USkeletalMeshComponent*           MeshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class FName                             SocketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   LocationOffset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FRotator&                  RotationOffset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FVector&                   Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAbsoluteScale                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDestroyImmediately                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bAttached                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAutoDestroy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    RowName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayCharacterEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnX6PlayFootstepEffect(class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bDestroyImmediately, bool bAttached, double Duration, const class FString& RowName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnPlayCharacterEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnX6PlayFootstepEffect");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnPlayCharacterEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnX6PlayFootstepEffect Parms{};
 
-	Parms.NotifyObject = NotifyObject;
-	Parms.CharacterEffectTag = std::move(CharacterEffectTag);
 	Parms.MeshComponent = MeshComponent;
 	Parms.SocketName = SocketName;
 	Parms.LocationOffset = std::move(LocationOffset);
 	Parms.RotationOffset = std::move(RotationOffset);
 	Parms.Scale = std::move(Scale);
-	Parms.bAbsoluteScale = bAbsoluteScale;
+	Parms.bDestroyImmediately = bDestroyImmediately;
 	Parms.bAttached = bAttached;
-	Parms.bAutoDestroy = bAutoDestroy;
-	Parms.TotalDuration = TotalDuration;
+	Parms.Duration = Duration;
+	Parms.RowName = std::move(RowName);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnPlayLSEffect
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class UAnimNotifyState*           NotifyObject                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class ULevelSequence>    LevelSequenceRef                                       (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// double                                  TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayLSEffect(const class UAnimNotifyState* NotifyObject, TSoftObjectPtr<class ULevelSequence> LevelSequenceRef, double TotalDuration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnPlayLSEffect");
-
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnPlayLSEffect Parms{};
-
-	Parms.NotifyObject = NotifyObject;
-	Parms.LevelSequenceRef = LevelSequenceRef;
-	Parms.TotalDuration = TotalDuration;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnPlayMaterialEffect
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnUpdateMaterialEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const struct FGameplayTag&              CharacterEffectTag                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-// double                                  TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayMaterialEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, double TotalDuration)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnUpdateMaterialEffect(class UObject* NotifyObject, double FrameDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnPlayMaterialEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnUpdateMaterialEffect");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnPlayMaterialEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnUpdateMaterialEffect Parms{};
 
 	Parms.NotifyObject = NotifyObject;
-	Parms.CharacterEffectTag = std::move(CharacterEffectTag);
-	Parms.TotalDuration = TotalDuration;
+	Parms.FrameDeltaTime = FrameDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnRunStepSoundEffectV2
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSoftObjectPtr<class UAkAudioEvent>     AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// const class FString&                    MaterialTag                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             AttachName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnRunStepSoundEffectV2(TSoftObjectPtr<class UAkAudioEvent> AkEvent, const class FString& MaterialTag, class USceneComponent* Comp, class FName AttachName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnRunStepSoundEffectV2");
+
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnRunStepSoundEffectV2 Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.MaterialTag = std::move(MaterialTag);
+	Parms.Comp = Comp;
+	Parms.AttachName = AttachName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnRunStepSoundEffect
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TSoftObjectPtr<class UAkAudioEvent>     AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             AttachName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    AnimName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UAkSwitchValue>    DefaultGaitAkSwitch                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnRunStepSoundEffect(TSoftObjectPtr<class UAkAudioEvent> AkEvent, class USceneComponent* Comp, class FName AttachName, const class FString& AnimName, TSoftObjectPtr<class UAkSwitchValue> DefaultGaitAkSwitch)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnRunStepSoundEffect");
+
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnRunStepSoundEffect Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.Comp = Comp;
+	Parms.AttachName = AttachName;
+	Parms.AnimName = std::move(AnimName);
+	Parms.DefaultGaitAkSwitch = DefaultGaitAkSwitch;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -255,363 +419,199 @@ void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayRejumpEffect(class UObj
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnRunStepSoundEffect
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UAkAudioEvent>     AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             AttachName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    AnimName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAkSwitchValue>    DefaultGaitAkSwitch                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnRunStepSoundEffect(TSoftObjectPtr<class UAkAudioEvent> AkEvent, class USceneComponent* Comp, class FName AttachName, const class FString& AnimName, TSoftObjectPtr<class UAkSwitchValue> DefaultGaitAkSwitch)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnRunStepSoundEffect");
-
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnRunStepSoundEffect Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.Comp = Comp;
-	Parms.AttachName = AttachName;
-	Parms.AnimName = std::move(AnimName);
-	Parms.DefaultGaitAkSwitch = DefaultGaitAkSwitch;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnRunStepSoundEffectV2
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TSoftObjectPtr<class UAkAudioEvent>     AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// const class FString&                    MaterialTag                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             AttachName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnRunStepSoundEffectV2(TSoftObjectPtr<class UAkAudioEvent> AkEvent, const class FString& MaterialTag, class USceneComponent* Comp, class FName AttachName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnRunStepSoundEffectV2");
-
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnRunStepSoundEffectV2 Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.MaterialTag = std::move(MaterialTag);
-	Parms.Comp = Comp;
-	Parms.AttachName = AttachName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnUpdateMaterialEffect
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnPlayMaterialEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              CharacterEffectTag                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// double                                  TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnUpdateMaterialEffect(class UObject* NotifyObject, double FrameDeltaTime)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayMaterialEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, double TotalDuration)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnUpdateMaterialEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnPlayMaterialEffect");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnUpdateMaterialEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnPlayMaterialEffect Parms{};
 
 	Parms.NotifyObject = NotifyObject;
-	Parms.FrameDeltaTime = FrameDeltaTime;
+	Parms.CharacterEffectTag = std::move(CharacterEffectTag);
+	Parms.TotalDuration = TotalDuration;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnX6PlayFootstepEffect
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnPlayLSEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// const class UAnimNotifyState*           NotifyObject                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class ULevelSequence>    LevelSequenceRef                                       (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// double                                  TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayLSEffect(const class UAnimNotifyState* NotifyObject, TSoftObjectPtr<class ULevelSequence> LevelSequenceRef, double TotalDuration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnPlayLSEffect");
+
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnPlayLSEffect Parms{};
+
+	Parms.NotifyObject = NotifyObject;
+	Parms.LevelSequenceRef = LevelSequenceRef;
+	Parms.TotalDuration = TotalDuration;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnPlayCharacterEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const struct FGameplayTag&              CharacterEffectTag                                     (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
 // class USkeletalMeshComponent*           MeshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class FName                             SocketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   LocationOffset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FRotator&                  RotationOffset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FVector&                   Scale                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bDestroyImmediately                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bAbsoluteScale                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bAttached                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    RowName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bAutoDestroy                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnX6PlayFootstepEffect(class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bDestroyImmediately, bool bAttached, double Duration, const class FString& RowName)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnPlayCharacterEffect(class UObject* NotifyObject, const struct FGameplayTag& CharacterEffectTag, class USkeletalMeshComponent* MeshComponent, class FName SocketName, const struct FVector& LocationOffset, const struct FRotator& RotationOffset, const struct FVector& Scale, bool bAbsoluteScale, bool bAttached, bool bAutoDestroy, double TotalDuration)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnX6PlayFootstepEffect");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnPlayCharacterEffect");
 
-	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnX6PlayFootstepEffect Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnPlayCharacterEffect Parms{};
 
+	Parms.NotifyObject = NotifyObject;
+	Parms.CharacterEffectTag = std::move(CharacterEffectTag);
 	Parms.MeshComponent = MeshComponent;
 	Parms.SocketName = SocketName;
 	Parms.LocationOffset = std::move(LocationOffset);
 	Parms.RotationOffset = std::move(RotationOffset);
 	Parms.Scale = std::move(Scale);
-	Parms.bDestroyImmediately = bDestroyImmediately;
+	Parms.bAbsoluteScale = bAbsoluteScale;
 	Parms.bAttached = bAttached;
-	Parms.Duration = Duration;
-	Parms.RowName = std::move(RowName);
+	Parms.bAutoDestroy = bAutoDestroy;
+	Parms.TotalDuration = TotalDuration;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.CompressPosition
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnEndMaterialEffect
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   InPosition                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Offset_X                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Offset_Y                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Offset_Z                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector*                         CompressdPosition                                      (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::CompressPosition(const struct FVector& InPosition, int32 Offset_X, int32 Offset_Y, int32 Offset_Z, struct FVector* CompressdPosition)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnEndMaterialEffect(class UObject* NotifyObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "CompressPosition");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnEndMaterialEffect");
 
-	Params::BP_SoundAndParticleComponent_C_CompressPosition Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnEndMaterialEffect Parms{};
 
-	Parms.InPosition = std::move(InPosition);
-	Parms.Offset_X = Offset_X;
-	Parms.Offset_Y = Offset_Y;
-	Parms.Offset_Z = Offset_Z;
+	Parms.NotifyObject = NotifyObject;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (CompressdPosition != nullptr)
-		*CompressdPosition = std::move(Parms.CompressdPosition);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetFootstepSoundFloorSwitch
-// (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnEndLSEffect
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TSoftObjectPtr<class UAkSwitchValue>*   SwitchValue                                            (Parm, OutParm, HasGetValueTypeHash)
+// const class UAnimNotifyState*           NotifyObject                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bWaitForLSFinish                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::GetFootstepSoundFloorSwitch(TSoftObjectPtr<class UAkSwitchValue>* SwitchValue)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnEndLSEffect(const class UAnimNotifyState* NotifyObject, bool bWaitForLSFinish)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetFootstepSoundFloorSwitch");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnEndLSEffect");
 
-	Params::BP_SoundAndParticleComponent_C_GetFootstepSoundFloorSwitch Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnEndLSEffect Parms{};
+
+	Parms.NotifyObject = NotifyObject;
+	Parms.bWaitForLSFinish = bWaitForLSFinish;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (SwitchValue != nullptr)
-		*SwitchValue = Parms.SwitchValue;
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetFootstepSoundGaitSwitch
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnEndCharacterEffect
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    InStr                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAkSwitchValue>    DefaultAkSwitch                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-// TSoftObjectPtr<class UAkSwitchValue>*   OutAkSwitch                                            (Parm, OutParm, HasGetValueTypeHash)
+// class UObject*                          NotifyObject                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDestroyAtEnd                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::GetFootstepSoundGaitSwitch(const class FString& InStr, TSoftObjectPtr<class UAkSwitchValue> DefaultAkSwitch, TSoftObjectPtr<class UAkSwitchValue>* OutAkSwitch)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnEndCharacterEffect(class UObject* NotifyObject, class USkeletalMeshComponent* MeshComponent, bool bDestroyAtEnd)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetFootstepSoundGaitSwitch");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnEndCharacterEffect");
 
-	Params::BP_SoundAndParticleComponent_C_GetFootstepSoundGaitSwitch Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnEndCharacterEffect Parms{};
 
-	Parms.InStr = std::move(InStr);
-	Parms.DefaultAkSwitch = DefaultAkSwitch;
+	Parms.NotifyObject = NotifyObject;
+	Parms.MeshComponent = MeshComponent;
+	Parms.bDestroyAtEnd = bDestroyAtEnd;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutAkSwitch != nullptr)
-		*OutAkSwitch = Parms.OutAkSwitch;
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetFootstepSoundMaterialSwitchPath
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FString*                          OutMaterialTag                                         (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-// class FString*                          OutTypeTag                                             (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::GetFootstepSoundMaterialSwitchPath(class FString* OutMaterialTag, class FString* OutTypeTag)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetFootstepSoundMaterialSwitchPath");
-
-	Params::BP_SoundAndParticleComponent_C_GetFootstepSoundMaterialSwitchPath Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutMaterialTag != nullptr)
-		*OutMaterialTag = std::move(Parms.OutMaterialTag);
-
-	if (OutTypeTag != nullptr)
-		*OutTypeTag = std::move(Parms.OutTypeTag);
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetShoeSwitchPath
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnClothesTypeEffect
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FString*                          ShoeSwitchPaths                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::GetShoeSwitchPath(class USceneComponent* Comp, class FString* ShoeSwitchPaths)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnClothesTypeEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetShoeSwitchPath");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnClothesTypeEffect");
 
-	Params::BP_SoundAndParticleComponent_C_GetShoeSwitchPath Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnClothesTypeEffect Parms{};
 
 	Parms.Comp = Comp;
+	Parms.AkEvent = AkEvent;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (ShoeSwitchPaths != nullptr)
-		*ShoeSwitchPaths = std::move(Parms.ShoeSwitchPaths);
 }
 
 
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetShrubType
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// Enum_ShrubEnum*                         ShrubType                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::GetShrubType(Enum_ShrubEnum* ShrubType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetShrubType");
-
-	Params::BP_SoundAndParticleComponent_C_GetShrubType Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (ShrubType != nullptr)
-		*ShrubType = Parms.ShrubType;
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.GetSoftObjectPtrByPath
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    PathString                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool*                                   Found                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UObject>*          SWITCH                                                 (Parm, OutParm, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::GetSoftObjectPtrByPath(const class FString& PathString, bool* Found, TSoftObjectPtr<class UObject>* SWITCH)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "GetSoftObjectPtrByPath");
-
-	Params::BP_SoundAndParticleComponent_C_GetSoftObjectPtrByPath Parms{};
-
-	Parms.PathString = std::move(PathString);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Found != nullptr)
-		*Found = Parms.Found;
-
-	if (SWITCH != nullptr)
-		*SWITCH = Parms.SWITCH;
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.IsInBush
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool*                                   bInBush_0                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::IsInBush(bool* bInBush_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "IsInBush");
-
-	Params::BP_SoundAndParticleComponent_C_IsInBush Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bInBush_0 != nullptr)
-		*bInBush_0 = Parms.bInBush_0;
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.OnDataTableLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_SoundAndParticleComponent_C::OnDataTableLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "OnDataTableLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.SetIsInFSTSwitchVolume
+// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.BPAnimNotify_OnClothesMaterialEffect
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bInFSTSwitchVolume_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USceneComponent*                  Comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_SoundAndParticleComponent_C::SetIsInFSTSwitchVolume(bool bInFSTSwitchVolume_0)
+void UBP_SoundAndParticleComponent_C::BPAnimNotify_OnClothesMaterialEffect(class USceneComponent* Comp, class UAkAudioEvent* AkEvent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "SetIsInFSTSwitchVolume");
+		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "BPAnimNotify_OnClothesMaterialEffect");
 
-	Params::BP_SoundAndParticleComponent_C_SetIsInFSTSwitchVolume Parms{};
+	Params::BP_SoundAndParticleComponent_C_BPAnimNotify_OnClothesMaterialEffect Parms{};
 
-	Parms.bInFSTSwitchVolume_0 = bInFSTSwitchVolume_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_SoundAndParticleComponent.BP_SoundAndParticleComponent_C.SetVolumeSurfaceTypeValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FF_FootstepSurfaceTypeSoundStruct&SurfaceTypeValue                                       (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UBP_SoundAndParticleComponent_C::SetVolumeSurfaceTypeValue(const struct FF_FootstepSurfaceTypeSoundStruct& SurfaceTypeValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_SoundAndParticleComponent_C", "SetVolumeSurfaceTypeValue");
-
-	Params::BP_SoundAndParticleComponent_C_SetVolumeSurfaceTypeValue Parms{};
-
-	Parms.SurfaceTypeValue = std::move(SurfaceTypeValue);
+	Parms.Comp = Comp;
+	Parms.AkEvent = AkEvent;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

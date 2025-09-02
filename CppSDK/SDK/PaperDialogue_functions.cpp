@@ -556,6 +556,31 @@ class APaperDialogueSequenceActor* UPaperDialogueBPLibrary::PlayDialogueStage(co
 }
 
 
+// Function PaperDialogue.PaperDialogueControllerComponent.JumpToLastDialogueNode
+// (Final, Native, Public)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UPaperDialogueControllerComponent::JumpToLastDialogueNode()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperDialogueControllerComponent", "JumpToLastDialogueNode");
+
+	Params::PaperDialogueControllerComponent_JumpToLastDialogueNode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PaperDialogue.PaperDialogueControllerComponent.OnDialoguePlayEnd
 // (Final, Native, Private)
 
@@ -1657,6 +1682,25 @@ void UPaperDialogueUserWidget::OnFunctionNodeClick()
 }
 
 
+// Function PaperDialogue.PaperDialogueUserWidget.OnJumpToLastAndStopDialogueStage
+// (Final, Native, Public, BlueprintCallable)
+
+void UPaperDialogueUserWidget::OnJumpToLastAndStopDialogueStage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperDialogueUserWidget", "OnJumpToLastAndStopDialogueStage");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PaperDialogue.PaperDialogueUserWidget.OnMenuItemClick
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1883,9 +1927,11 @@ void UPaperDialogueUserWidget::OnPlayLevelSequenceNodeEnd(const int64& UId)
 // const class FName&                      ChoiceHubName                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool                              bChoiceSlot                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FName&                      SpecialUIWidgetType                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bNeedNotifyServer                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      ImportantChoiceTipID                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TArray<struct FPaperDialogueChoiceLineConfig>&DialogueChoices                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
-void UPaperDialogueUserWidget::OnPlayMenuItems(const int64& UId, const class FName& ChoiceHubName, const bool bChoiceSlot, const class FName& SpecialUIWidgetType, const TArray<struct FPaperDialogueChoiceLineConfig>& DialogueChoices)
+void UPaperDialogueUserWidget::OnPlayMenuItems(const int64& UId, const class FName& ChoiceHubName, const bool bChoiceSlot, const class FName& SpecialUIWidgetType, const bool bNeedNotifyServer, const class FName& ImportantChoiceTipID, const TArray<struct FPaperDialogueChoiceLineConfig>& DialogueChoices)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1898,6 +1944,8 @@ void UPaperDialogueUserWidget::OnPlayMenuItems(const int64& UId, const class FNa
 	Parms.ChoiceHubName = ChoiceHubName;
 	Parms.bChoiceSlot = bChoiceSlot;
 	Parms.SpecialUIWidgetType = SpecialUIWidgetType;
+	Parms.bNeedNotifyServer = bNeedNotifyServer;
+	Parms.ImportantChoiceTipID = ImportantChoiceTipID;
 	Parms.DialogueChoices = std::move(DialogueChoices);
 
 	UObject::ProcessEvent(Func, &Parms);

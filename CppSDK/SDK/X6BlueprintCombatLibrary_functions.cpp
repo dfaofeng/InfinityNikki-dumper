@@ -611,12 +611,12 @@ void UX6BlueprintCombatLibrary_C::BP_GetSafeSpawnLocationsFromOffset(class AActo
 // const struct FVector&                   Center                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  InnerRadius                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // double                                  OuterRadius                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Interval                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  interval                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   PointNum                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // TArray<struct FVector>*                 RandomPoints                                           (Parm, OutParm)
 
-void UX6BlueprintCombatLibrary_C::BP_GetRandomPoints(const struct FVector& Center, double InnerRadius, double OuterRadius, double Interval, int32 PointNum, class UObject* __WorldContext, TArray<struct FVector>* RandomPoints)
+void UX6BlueprintCombatLibrary_C::BP_GetRandomPoints(const struct FVector& Center, double InnerRadius, double OuterRadius, double interval, int32 PointNum, class UObject* __WorldContext, TArray<struct FVector>* RandomPoints)
 {
 	static class UFunction* Func = nullptr;
 
@@ -628,7 +628,7 @@ void UX6BlueprintCombatLibrary_C::BP_GetRandomPoints(const struct FVector& Cente
 	Parms.Center = std::move(Center);
 	Parms.InnerRadius = InnerRadius;
 	Parms.OuterRadius = OuterRadius;
-	Parms.Interval = Interval;
+	Parms.interval = interval;
 	Parms.PointNum = PointNum;
 	Parms.__WorldContext = __WorldContext;
 

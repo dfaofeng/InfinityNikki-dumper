@@ -30,7 +30,7 @@ public:
 	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevelStreamingDynamic*                 LevelInstance;                                     // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class FName                                   LevelName;                                         // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_DyEnvSky_C*                         Ref_DESSky;                                        // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_DyEnvSky_C*                         Ref_DESsky;                                        // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                OriginScale;                                       // 0x02B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CurrentAlpha;                                      // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InterpSpeed;                                       // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,10 +40,10 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void OnFadeOutComplete();
 	void OnFadeOut(float Progress);
+	void OnFadeIn(float Progress);
 	void OnDestroyed();
 	void OnCreated();
 	void ExecuteUbergraph_BP_DyEnvWeatehrComp_SeaOfStars(int32 EntryPoint);
-	void OnFadeIn(float Progress);
 
 public:
 	static class UClass* StaticClass()
@@ -62,7 +62,7 @@ static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, Ref_SeaOfStars) == 0x0
 static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, CanCheck) == 0x000298, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::CanCheck' has a wrong offset!");
 static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, LevelInstance) == 0x0002A0, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::LevelInstance' has a wrong offset!");
 static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, LevelName) == 0x0002A8, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::LevelName' has a wrong offset!");
-static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, Ref_DESSky) == 0x0002B0, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::Ref_DESSky' has a wrong offset!");
+static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, Ref_DESsky) == 0x0002B0, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::Ref_DESsky' has a wrong offset!");
 static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, OriginScale) == 0x0002B8, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::OriginScale' has a wrong offset!");
 static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, CurrentAlpha) == 0x0002D0, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::CurrentAlpha' has a wrong offset!");
 static_assert(offsetof(UBP_DyEnvWeatehrComp_SeaOfStars_C, InterpSpeed) == 0x0002D8, "Member 'UBP_DyEnvWeatehrComp_SeaOfStars_C::InterpSpeed' has a wrong offset!");

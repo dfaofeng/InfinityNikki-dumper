@@ -31,12 +31,12 @@ public:
 	class FText                                   AbilityDescription;                                // 0x00D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ExecuteUbergraph_BP_AbilityBase(int32 EntryPoint);
-	void GetAbilityCD(double* cd_0);
-	void GetAbilityIcon(class UTexture2D** Icon_0);
-	void GetGroupID(int32* GroupID_0);
-	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveBeginPlay();
+	void GetGroupID(int32* GroupID_0);
+	void GetAbilityIcon(class UTexture2D** Icon_0);
+	void GetAbilityCD(double* cd_0);
+	void ExecuteUbergraph_BP_AbilityBase(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

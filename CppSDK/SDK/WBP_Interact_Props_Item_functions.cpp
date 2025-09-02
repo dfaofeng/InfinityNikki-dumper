@@ -17,51 +17,31 @@
 namespace SDK
 {
 
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.SubItemEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Interact_Props_Item_C::SubItemEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "SubItemEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Interact_Props_Item_C::SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ReduceItem
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToRed
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int64                                   InReduceNum                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Interact_Props_Item_C::ReduceItem(int64 InReduceNum)
+void UWBP_Interact_Props_Item_C::ChangeTextColorToRed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "ReduceItem");
+		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "ChangeTextColorToRed");
 
-	Params::WBP_Interact_Props_Item_C_ReduceItem Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.InReduceNum = InReduceNum;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToWhite
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Interact_Props_Item_C::ChangeTextColorToWhite()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "ChangeTextColorToWhite");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -85,29 +65,49 @@ void UWBP_Interact_Props_Item_C::ExecuteUbergraph_WBP_Interact_Props_Item(int32 
 }
 
 
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToWhite
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ReduceItem
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   InReduceNum                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Interact_Props_Item_C::ChangeTextColorToWhite()
+void UWBP_Interact_Props_Item_C::ReduceItem(int64 InReduceNum)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "ChangeTextColorToWhite");
+		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "ReduceItem");
+
+	Params::WBP_Interact_Props_Item_C_ReduceItem Parms{};
+
+	Parms.InReduceNum = InReduceNum;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Interact_Props_Item_C::SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "SequenceEvent__ENTRYPOINTWBP_Interact_Props_Item");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.ChangeTextColorToRed
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_Interact_Props_Item.WBP_Interact_Props_Item_C.SubItemEvent
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Interact_Props_Item_C::ChangeTextColorToRed()
+void UWBP_Interact_Props_Item_C::SubItemEvent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "ChangeTextColorToRed");
+		Func = Class->GetFunction("WBP_Interact_Props_Item_C", "SubItemEvent");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

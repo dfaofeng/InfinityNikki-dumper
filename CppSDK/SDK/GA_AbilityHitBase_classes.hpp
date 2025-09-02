@@ -26,10 +26,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_AbilityHitBase_C;                // 0x0598(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void K2_ActivateAbility();
-	void ExecuteUbergraph_GA_AbilityHitBase(int32 EntryPoint);
+	void BP_GetHitActionType(EHitActionType* ActionType);
 	void BP_GetHitPoint(struct FVector* Point);
-	void BP_GetHitActionType(EHitActionType* actionType);
+	void ExecuteUbergraph_GA_AbilityHitBase(int32 EntryPoint);
+	void K2_ActivateAbility();
 
 	class FString GetModuleName() const;
 

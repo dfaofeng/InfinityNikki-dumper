@@ -29,7 +29,7 @@ enum class EWeatherCollisionShape : uint8
 };
 
 // Enum DynamicEnvironmentSystem.EWeatherAmbianceComponentType
-// NumValues: 0x000C
+// NumValues: 0x000D
 enum class EWeatherAmbianceComponentType : uint8
 {
 	TimeOfDay                                = 0,
@@ -43,11 +43,12 @@ enum class EWeatherAmbianceComponentType : uint8
 	WeatherComponent                         = 8,
 	OverrideAllMode                          = 9,
 	Curve24H                                 = 10,
-	MAX                                      = 11,
+	NightOverride                            = 11,
+	MAX                                      = 12,
 };
 
 // Enum DynamicEnvironmentSystem.EWeatherVolumeType
-// NumValues: 0x000C
+// NumValues: 0x000D
 enum class EWeatherVolumeType : uint8
 {
 	TimeOfDay                                = 0,
@@ -61,7 +62,8 @@ enum class EWeatherVolumeType : uint8
 	WeatherComponent                         = 8,
 	OverrideAllMode                          = 9,
 	Curve24H                                 = 10,
-	MAX                                      = 11,
+	NightOverride                            = 11,
+	MAX                                      = 12,
 };
 
 // Enum DynamicEnvironmentSystem.EWeatherEnableMode
@@ -81,6 +83,15 @@ enum class EWeatherEffectType : uint8
 	NonParticle                              = 0,
 	Particle                                 = 1,
 	MAX                                      = 2,
+};
+
+// Enum DynamicEnvironmentSystem.EShadowFilterMethod
+// NumValues: 0x0003
+enum class EShadowFilterMethod : uint8
+{
+	UniformPCF                               = 0,
+	PCSS                                     = 1,
+	EShadowFilterMethod_MAX                  = 2,
 };
 
 // ScriptStruct DynamicEnvironmentSystem.WeatherEnableOnGI
@@ -114,7 +125,7 @@ static_assert(offsetof(FTimeSpanLerpConfig, EndTime) == 0x00000C, "Member 'FTime
 static_assert(offsetof(FTimeSpanLerpConfig, ShowName) == 0x000010, "Member 'FTimeSpanLerpConfig::ShowName' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.SunLightLerpConfig
-// 0x0128 (0x0128 - 0x0000)
+// 0x0130 (0x0130 - 0x0000)
 struct FSunLightLerpConfig final
 {
 public:
@@ -137,23 +148,24 @@ public:
 	uint8                                         bOverride_DynamicShadowDistanceMovableLight : 1;   // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverride_VolumetricScatteringIntensity : 1;       // 0x0002(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverride_CloudShadowOpacity : 1;                  // 0x0002(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LightFunctionFadeDistance : 1;           // 0x0002(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_DisabledBrightness : 1;                  // 0x0002(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomPassScale : 1;                      // 0x0002(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomFirstPassDistance : 1;              // 0x0002(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomScale : 1;                          // 0x0002(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomScale_Mobile : 1;                   // 0x0003(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomThreshold : 1;                      // 0x0003(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomThreshold_Mobile : 1;               // 0x0003(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomMaxBrightness : 1;                  // 0x0003(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomMaxBrightness_Mobile : 1;           // 0x0003(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_BloomTint : 1;                           // 0x0003(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LightSourceAngle : 1;                    // 0x0003(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_AtmosphereSunDiskColorScale : 1;         // 0x0003(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_IndirectLightingIntensity : 1;           // 0x0004(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_LightIntensityMultiply : 1;              // 0x0004(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_SpecularScale : 1;                       // 0x0004(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_CloudScatteredLuminanceScale : 1;        // 0x0004(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LightFunctionIntensityScale : 1;         // 0x0002(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LightFunctionFadeDistance : 1;           // 0x0002(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_DisabledBrightness : 1;                  // 0x0002(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomPassScale : 1;                      // 0x0002(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomFirstPassDistance : 1;              // 0x0002(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomScale : 1;                          // 0x0003(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomScale_Mobile : 1;                   // 0x0003(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomThreshold : 1;                      // 0x0003(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomThreshold_Mobile : 1;               // 0x0003(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomMaxBrightness : 1;                  // 0x0003(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomMaxBrightness_Mobile : 1;           // 0x0003(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_BloomTint : 1;                           // 0x0003(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LightSourceAngle : 1;                    // 0x0003(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_AtmosphereSunDiskColorScale : 1;         // 0x0004(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_IndirectLightingIntensity : 1;           // 0x0004(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_LightIntensityMultiply : 1;              // 0x0004(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_SpecularScale : 1;                       // 0x0004(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_CloudScatteredLuminanceScale : 1;        // 0x0004(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SunTrackModifier;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -178,26 +190,28 @@ public:
 	float                                         DynamicShadowDistanceMovableLight;                 // 0x00B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VolumetricScatteringIntensity;                     // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CloudShadowOpacity;                                // 0x00BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightFunctionFadeDistance;                         // 0x00C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DisabledBrightness;                                // 0x00C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomPassScale;                                    // 0x00C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomFirstPassDistance;                            // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomScale;                                        // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomScale_Mobile;                                 // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomThreshold;                                    // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomThreshold_Mobile;                             // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomMaxBrightness;                                // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BloomMaxBrightness_Mobile;                         // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BloomTint;                                         // 0x00E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightSourceAngle;                                  // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           AtmosphereSunDiskColorScale;                       // 0x00FC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         IndirectLightingIntensity;                         // 0x010C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LightIntensityMultiply;                            // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpecularScale;                                     // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           CloudScatteredLuminanceScale;                      // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightFunctionIntensityScale;                       // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightFunctionFadeDistance;                         // 0x00C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DisabledBrightness;                                // 0x00C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomPassScale;                                    // 0x00CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomFirstPassDistance;                            // 0x00D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomScale;                                        // 0x00D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomScale_Mobile;                                 // 0x00D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomThreshold;                                    // 0x00DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomThreshold_Mobile;                             // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomMaxBrightness;                                // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BloomMaxBrightness_Mobile;                         // 0x00E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BloomTint;                                         // 0x00EC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightSourceAngle;                                  // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           AtmosphereSunDiskColorScale;                       // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IndirectLightingIntensity;                         // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LightIntensityMultiply;                            // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpecularScale;                                     // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           CloudScatteredLuminanceScale;                      // 0x011C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSunLightLerpConfig) == 0x000008, "Wrong alignment on FSunLightLerpConfig");
-static_assert(sizeof(FSunLightLerpConfig) == 0x000128, "Wrong size on FSunLightLerpConfig");
+static_assert(sizeof(FSunLightLerpConfig) == 0x000130, "Wrong size on FSunLightLerpConfig");
 static_assert(offsetof(FSunLightLerpConfig, SunTrackModifier) == 0x000008, "Member 'FSunLightLerpConfig::SunTrackModifier' has a wrong offset!");
 static_assert(offsetof(FSunLightLerpConfig, Rotator) == 0x000010, "Member 'FSunLightLerpConfig::Rotator' has a wrong offset!");
 static_assert(offsetof(FSunLightLerpConfig, Intensity) == 0x000028, "Member 'FSunLightLerpConfig::Intensity' has a wrong offset!");
@@ -220,26 +234,27 @@ static_assert(offsetof(FSunLightLerpConfig, ShadowBias) == 0x0000B0, "Member 'FS
 static_assert(offsetof(FSunLightLerpConfig, DynamicShadowDistanceMovableLight) == 0x0000B4, "Member 'FSunLightLerpConfig::DynamicShadowDistanceMovableLight' has a wrong offset!");
 static_assert(offsetof(FSunLightLerpConfig, VolumetricScatteringIntensity) == 0x0000B8, "Member 'FSunLightLerpConfig::VolumetricScatteringIntensity' has a wrong offset!");
 static_assert(offsetof(FSunLightLerpConfig, CloudShadowOpacity) == 0x0000BC, "Member 'FSunLightLerpConfig::CloudShadowOpacity' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, LightFunctionFadeDistance) == 0x0000C0, "Member 'FSunLightLerpConfig::LightFunctionFadeDistance' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, DisabledBrightness) == 0x0000C4, "Member 'FSunLightLerpConfig::DisabledBrightness' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomPassScale) == 0x0000C8, "Member 'FSunLightLerpConfig::BloomPassScale' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomFirstPassDistance) == 0x0000CC, "Member 'FSunLightLerpConfig::BloomFirstPassDistance' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomScale) == 0x0000D0, "Member 'FSunLightLerpConfig::BloomScale' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomScale_Mobile) == 0x0000D4, "Member 'FSunLightLerpConfig::BloomScale_Mobile' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomThreshold) == 0x0000D8, "Member 'FSunLightLerpConfig::BloomThreshold' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomThreshold_Mobile) == 0x0000DC, "Member 'FSunLightLerpConfig::BloomThreshold_Mobile' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomMaxBrightness) == 0x0000E0, "Member 'FSunLightLerpConfig::BloomMaxBrightness' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomMaxBrightness_Mobile) == 0x0000E4, "Member 'FSunLightLerpConfig::BloomMaxBrightness_Mobile' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, BloomTint) == 0x0000E8, "Member 'FSunLightLerpConfig::BloomTint' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, LightSourceAngle) == 0x0000F8, "Member 'FSunLightLerpConfig::LightSourceAngle' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, AtmosphereSunDiskColorScale) == 0x0000FC, "Member 'FSunLightLerpConfig::AtmosphereSunDiskColorScale' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, IndirectLightingIntensity) == 0x00010C, "Member 'FSunLightLerpConfig::IndirectLightingIntensity' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, LightIntensityMultiply) == 0x000110, "Member 'FSunLightLerpConfig::LightIntensityMultiply' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, SpecularScale) == 0x000114, "Member 'FSunLightLerpConfig::SpecularScale' has a wrong offset!");
-static_assert(offsetof(FSunLightLerpConfig, CloudScatteredLuminanceScale) == 0x000118, "Member 'FSunLightLerpConfig::CloudScatteredLuminanceScale' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, LightFunctionIntensityScale) == 0x0000C0, "Member 'FSunLightLerpConfig::LightFunctionIntensityScale' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, LightFunctionFadeDistance) == 0x0000C4, "Member 'FSunLightLerpConfig::LightFunctionFadeDistance' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, DisabledBrightness) == 0x0000C8, "Member 'FSunLightLerpConfig::DisabledBrightness' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomPassScale) == 0x0000CC, "Member 'FSunLightLerpConfig::BloomPassScale' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomFirstPassDistance) == 0x0000D0, "Member 'FSunLightLerpConfig::BloomFirstPassDistance' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomScale) == 0x0000D4, "Member 'FSunLightLerpConfig::BloomScale' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomScale_Mobile) == 0x0000D8, "Member 'FSunLightLerpConfig::BloomScale_Mobile' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomThreshold) == 0x0000DC, "Member 'FSunLightLerpConfig::BloomThreshold' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomThreshold_Mobile) == 0x0000E0, "Member 'FSunLightLerpConfig::BloomThreshold_Mobile' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomMaxBrightness) == 0x0000E4, "Member 'FSunLightLerpConfig::BloomMaxBrightness' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomMaxBrightness_Mobile) == 0x0000E8, "Member 'FSunLightLerpConfig::BloomMaxBrightness_Mobile' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, BloomTint) == 0x0000EC, "Member 'FSunLightLerpConfig::BloomTint' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, LightSourceAngle) == 0x0000FC, "Member 'FSunLightLerpConfig::LightSourceAngle' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, AtmosphereSunDiskColorScale) == 0x000100, "Member 'FSunLightLerpConfig::AtmosphereSunDiskColorScale' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, IndirectLightingIntensity) == 0x000110, "Member 'FSunLightLerpConfig::IndirectLightingIntensity' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, LightIntensityMultiply) == 0x000114, "Member 'FSunLightLerpConfig::LightIntensityMultiply' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, SpecularScale) == 0x000118, "Member 'FSunLightLerpConfig::SpecularScale' has a wrong offset!");
+static_assert(offsetof(FSunLightLerpConfig, CloudScatteredLuminanceScale) == 0x00011C, "Member 'FSunLightLerpConfig::CloudScatteredLuminanceScale' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.SkyLightLerpConfig
-// 0x0088 (0x0088 - 0x0000)
+// 0x008C (0x008C - 0x0000)
 struct FSkyLightLerpConfig final
 {
 public:
@@ -251,7 +266,8 @@ public:
 	uint8                                         bOverride_SLWEnvironmentReflectionTint : 1;        // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverride_VolumetricScatteringIntensity : 1;       // 0x0000(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bOverride_SkyLightFunctionLeaking : 1;             // 0x0000(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverride_SkyLightFunctionReflectionLeaking : 1;   // 0x0001(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Intensity;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         IntensityMobileMultiply;                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           LightColor;                                        // 0x000C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -264,9 +280,10 @@ public:
 	struct FLinearColor                           SLWEnvironmentReflectionTintMobileMultiply;        // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         VolumetricScatteringIntensity;                     // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SkyLightFunctionLeaking;                           // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SkyLightFunctionReflectionLeaking;                 // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSkyLightLerpConfig) == 0x000004, "Wrong alignment on FSkyLightLerpConfig");
-static_assert(sizeof(FSkyLightLerpConfig) == 0x000088, "Wrong size on FSkyLightLerpConfig");
+static_assert(sizeof(FSkyLightLerpConfig) == 0x00008C, "Wrong size on FSkyLightLerpConfig");
 static_assert(offsetof(FSkyLightLerpConfig, Intensity) == 0x000004, "Member 'FSkyLightLerpConfig::Intensity' has a wrong offset!");
 static_assert(offsetof(FSkyLightLerpConfig, IntensityMobileMultiply) == 0x000008, "Member 'FSkyLightLerpConfig::IntensityMobileMultiply' has a wrong offset!");
 static_assert(offsetof(FSkyLightLerpConfig, LightColor) == 0x00000C, "Member 'FSkyLightLerpConfig::LightColor' has a wrong offset!");
@@ -279,6 +296,7 @@ static_assert(offsetof(FSkyLightLerpConfig, SLWEnvironmentReflectionTint) == 0x0
 static_assert(offsetof(FSkyLightLerpConfig, SLWEnvironmentReflectionTintMobileMultiply) == 0x000070, "Member 'FSkyLightLerpConfig::SLWEnvironmentReflectionTintMobileMultiply' has a wrong offset!");
 static_assert(offsetof(FSkyLightLerpConfig, VolumetricScatteringIntensity) == 0x000080, "Member 'FSkyLightLerpConfig::VolumetricScatteringIntensity' has a wrong offset!");
 static_assert(offsetof(FSkyLightLerpConfig, SkyLightFunctionLeaking) == 0x000084, "Member 'FSkyLightLerpConfig::SkyLightFunctionLeaking' has a wrong offset!");
+static_assert(offsetof(FSkyLightLerpConfig, SkyLightFunctionReflectionLeaking) == 0x000088, "Member 'FSkyLightLerpConfig::SkyLightFunctionReflectionLeaking' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.SkyAtmosphereLerpConfig
 // 0x007C (0x007C - 0x0000)
@@ -532,7 +550,7 @@ static_assert(offsetof(FEnvironmentLerpConfig, MoonColor) == 0x00010C, "Member '
 static_assert(offsetof(FEnvironmentLerpConfig, IndirectIrradiance_Mobile_SM_TwoSideFoliage) == 0x00011C, "Member 'FEnvironmentLerpConfig::IndirectIrradiance_Mobile_SM_TwoSideFoliage' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.TODLerpConfig
-// 0x0838 (0x0840 - 0x0008)
+// 0x0840 (0x0848 - 0x0008)
 struct FTODLerpConfig final : public FTableRowBase
 {
 public:
@@ -540,22 +558,21 @@ public:
 	float                                         EndTime;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRuntimeFloatCurve                     LerpToCurve;                                       // 0x0010(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	TMap<class FString, struct FRuntimeFloatCurve> CustomLerpCurve;                                  // 0x0098(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x00E8(0x0128)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0210(0x0088)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0298(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x0318(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x00E8(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0218(0x008C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x02A4(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x0320(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FTODLerpConfig) == 0x000008, "Wrong alignment on FTODLerpConfig");
-static_assert(sizeof(FTODLerpConfig) == 0x000840, "Wrong size on FTODLerpConfig");
+static_assert(sizeof(FTODLerpConfig) == 0x000848, "Wrong size on FTODLerpConfig");
 static_assert(offsetof(FTODLerpConfig, NowHours) == 0x000008, "Member 'FTODLerpConfig::NowHours' has a wrong offset!");
 static_assert(offsetof(FTODLerpConfig, EndTime) == 0x00000C, "Member 'FTODLerpConfig::EndTime' has a wrong offset!");
 static_assert(offsetof(FTODLerpConfig, LerpToCurve) == 0x000010, "Member 'FTODLerpConfig::LerpToCurve' has a wrong offset!");
 static_assert(offsetof(FTODLerpConfig, CustomLerpCurve) == 0x000098, "Member 'FTODLerpConfig::CustomLerpCurve' has a wrong offset!");
 static_assert(offsetof(FTODLerpConfig, SunLightSettings) == 0x0000E8, "Member 'FTODLerpConfig::SunLightSettings' has a wrong offset!");
-static_assert(offsetof(FTODLerpConfig, SkyLightSettings) == 0x000210, "Member 'FTODLerpConfig::SkyLightSettings' has a wrong offset!");
-static_assert(offsetof(FTODLerpConfig, SkyAtmosphereSettings) == 0x000298, "Member 'FTODLerpConfig::SkyAtmosphereSettings' has a wrong offset!");
-static_assert(offsetof(FTODLerpConfig, ExponentialHeightFogSettings) == 0x000318, "Member 'FTODLerpConfig::ExponentialHeightFogSettings' has a wrong offset!");
+static_assert(offsetof(FTODLerpConfig, SkyLightSettings) == 0x000218, "Member 'FTODLerpConfig::SkyLightSettings' has a wrong offset!");
+static_assert(offsetof(FTODLerpConfig, SkyAtmosphereSettings) == 0x0002A4, "Member 'FTODLerpConfig::SkyAtmosphereSettings' has a wrong offset!");
+static_assert(offsetof(FTODLerpConfig, ExponentialHeightFogSettings) == 0x000320, "Member 'FTODLerpConfig::ExponentialHeightFogSettings' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.WeatherTexturesConfig
 // 0x0068 (0x0068 - 0x0000)
@@ -961,27 +978,27 @@ static_assert(offsetof(FDynamicEnvironmentLerpConfig, WeatherPreset) == 0x000058
 static_assert(offsetof(FDynamicEnvironmentLerpConfig, CharacterPreset) == 0x000080, "Member 'FDynamicEnvironmentLerpConfig::CharacterPreset' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.FinalWeatherSettings
-// 0x0E08 (0x0E08 - 0x0000)
+// 0x0E10 (0x0E10 - 0x0000)
 struct FFinalWeatherSettings final
 {
 public:
-	struct FTODLerpConfig                         TODSetting;                                        // 0x0000(0x0840)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x0840(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWeatherTexturesConfig                 TextureSetting;                                    // 0x0960(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FCharacterLerpConfig                   CharacterSetting;                                  // 0x09C8(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AF4[0x4];                                      // 0x0AF4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeatherBaseLerpConfig                 WeatherSetting;                                    // 0x0AF8(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FTODLerpConfig                         TODSetting;                                        // 0x0000(0x0848)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x0848(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWeatherTexturesConfig                 TextureSetting;                                    // 0x0968(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FCharacterLerpConfig                   CharacterSetting;                                  // 0x09D0(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AFC[0x4];                                      // 0x0AFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherBaseLerpConfig                 WeatherSetting;                                    // 0x0B00(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FFinalWeatherSettings) == 0x000008, "Wrong alignment on FFinalWeatherSettings");
-static_assert(sizeof(FFinalWeatherSettings) == 0x000E08, "Wrong size on FFinalWeatherSettings");
+static_assert(sizeof(FFinalWeatherSettings) == 0x000E10, "Wrong size on FFinalWeatherSettings");
 static_assert(offsetof(FFinalWeatherSettings, TODSetting) == 0x000000, "Member 'FFinalWeatherSettings::TODSetting' has a wrong offset!");
-static_assert(offsetof(FFinalWeatherSettings, EnvironmentSetting) == 0x000840, "Member 'FFinalWeatherSettings::EnvironmentSetting' has a wrong offset!");
-static_assert(offsetof(FFinalWeatherSettings, TextureSetting) == 0x000960, "Member 'FFinalWeatherSettings::TextureSetting' has a wrong offset!");
-static_assert(offsetof(FFinalWeatherSettings, CharacterSetting) == 0x0009C8, "Member 'FFinalWeatherSettings::CharacterSetting' has a wrong offset!");
-static_assert(offsetof(FFinalWeatherSettings, WeatherSetting) == 0x000AF8, "Member 'FFinalWeatherSettings::WeatherSetting' has a wrong offset!");
+static_assert(offsetof(FFinalWeatherSettings, EnvironmentSetting) == 0x000848, "Member 'FFinalWeatherSettings::EnvironmentSetting' has a wrong offset!");
+static_assert(offsetof(FFinalWeatherSettings, TextureSetting) == 0x000968, "Member 'FFinalWeatherSettings::TextureSetting' has a wrong offset!");
+static_assert(offsetof(FFinalWeatherSettings, CharacterSetting) == 0x0009D0, "Member 'FFinalWeatherSettings::CharacterSetting' has a wrong offset!");
+static_assert(offsetof(FFinalWeatherSettings, WeatherSetting) == 0x000B00, "Member 'FFinalWeatherSettings::WeatherSetting' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.DynamicWeatherSettings
-// 0x0D30 (0x0D30 - 0x0000)
+// 0x0D40 (0x0D40 - 0x0000)
 struct FDynamicWeatherSettings final
 {
 public:
@@ -990,30 +1007,31 @@ public:
 	float                                         NowHours;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndTime;                                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x0010(0x0128)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0138(0x0088)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWeatherTexturesConfig                 WeatherTextureSettings;                            // 0x01C0(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0228(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A4[0x4];                                      // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x02A8(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FEnvironmentLerpConfig                 EnvironmentSettings;                               // 0x07D0(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCharacterLerpConfig                   CharacterSettings;                                 // 0x08F0(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1C[0x4];                                      // 0x0A1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeatherBaseLerpConfig                 WeatherSettings;                                   // 0x0A20(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSunLightLerpConfig                    SunLightSettings;                                  // 0x0010(0x0130)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSkyLightLerpConfig                    SkyLightSettings;                                  // 0x0140(0x008C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CC[0x4];                                      // 0x01CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherTexturesConfig                 WeatherTextureSettings;                            // 0x01D0(0x0068)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FSkyAtmosphereLerpConfig               SkyAtmosphereSettings;                             // 0x0238(0x007C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FExponentialHeightFogLerpConfig        ExponentialHeightFogSettings;                      // 0x02B8(0x0528)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FEnvironmentLerpConfig                 EnvironmentSettings;                               // 0x07E0(0x0120)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCharacterLerpConfig                   CharacterSettings;                                 // 0x0900(0x012C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A2C[0x4];                                      // 0x0A2C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherBaseLerpConfig                 WeatherSettings;                                   // 0x0A30(0x0310)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FDynamicWeatherSettings) == 0x000008, "Wrong alignment on FDynamicWeatherSettings");
-static_assert(sizeof(FDynamicWeatherSettings) == 0x000D30, "Wrong size on FDynamicWeatherSettings");
+static_assert(sizeof(FDynamicWeatherSettings) == 0x000D40, "Wrong size on FDynamicWeatherSettings");
 static_assert(offsetof(FDynamicWeatherSettings, Type) == 0x000000, "Member 'FDynamicWeatherSettings::Type' has a wrong offset!");
 static_assert(offsetof(FDynamicWeatherSettings, NowHours) == 0x000004, "Member 'FDynamicWeatherSettings::NowHours' has a wrong offset!");
 static_assert(offsetof(FDynamicWeatherSettings, EndTime) == 0x000008, "Member 'FDynamicWeatherSettings::EndTime' has a wrong offset!");
 static_assert(offsetof(FDynamicWeatherSettings, SunLightSettings) == 0x000010, "Member 'FDynamicWeatherSettings::SunLightSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, SkyLightSettings) == 0x000138, "Member 'FDynamicWeatherSettings::SkyLightSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, WeatherTextureSettings) == 0x0001C0, "Member 'FDynamicWeatherSettings::WeatherTextureSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, SkyAtmosphereSettings) == 0x000228, "Member 'FDynamicWeatherSettings::SkyAtmosphereSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, ExponentialHeightFogSettings) == 0x0002A8, "Member 'FDynamicWeatherSettings::ExponentialHeightFogSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, EnvironmentSettings) == 0x0007D0, "Member 'FDynamicWeatherSettings::EnvironmentSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, CharacterSettings) == 0x0008F0, "Member 'FDynamicWeatherSettings::CharacterSettings' has a wrong offset!");
-static_assert(offsetof(FDynamicWeatherSettings, WeatherSettings) == 0x000A20, "Member 'FDynamicWeatherSettings::WeatherSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, SkyLightSettings) == 0x000140, "Member 'FDynamicWeatherSettings::SkyLightSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, WeatherTextureSettings) == 0x0001D0, "Member 'FDynamicWeatherSettings::WeatherTextureSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, SkyAtmosphereSettings) == 0x000238, "Member 'FDynamicWeatherSettings::SkyAtmosphereSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, ExponentialHeightFogSettings) == 0x0002B8, "Member 'FDynamicWeatherSettings::ExponentialHeightFogSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, EnvironmentSettings) == 0x0007E0, "Member 'FDynamicWeatherSettings::EnvironmentSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, CharacterSettings) == 0x000900, "Member 'FDynamicWeatherSettings::CharacterSettings' has a wrong offset!");
+static_assert(offsetof(FDynamicWeatherSettings, WeatherSettings) == 0x000A30, "Member 'FDynamicWeatherSettings::WeatherSettings' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.TimeStamp
 // 0x002C (0x002C - 0x0000)
@@ -1060,7 +1078,7 @@ static_assert(offsetof(FTODAssets, TODDataTable) == 0x000000, "Member 'FTODAsset
 static_assert(offsetof(FTODAssets, TODSunRotator) == 0x000008, "Member 'FTODAssets::TODSunRotator' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.WetnessConfigParameters
-// 0x04A8 (0x04A8 - 0x0000)
+// 0x04D0 (0x04D0 - 0x0000)
 struct FWetnessConfigParameters final
 {
 public:
@@ -1078,34 +1096,39 @@ public:
 	float                                         WetnessMetallicReflectionBoost;                    // 0x0230(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_234[0x4];                                      // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRuntimeCurveLinearColor               ReflectionParametersCurve;                         // 0x0238(0x0208)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         WetnessBaseColorDarkness;                          // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessRoughness;                                  // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessRoughnessFoliage;                           // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessRoughnessTrunk;                             // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessRoughnessLandscape;                         // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessSpecularNear;                               // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessSpecularFar;                                // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessFadeIn;                                     // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessFadeDistance;                               // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessSpecularFoliageMultiply;                    // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessSpecularScaleNearFoliage;                   // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetnessSpecularLandscapeMultiply;                  // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RainDropsTiling;                                   // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RainDropsSpeed;                                    // 0x0474(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RainDropsIntensity;                                // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             RainDrops;                                         // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleBaseColorDarkness;                           // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleRoughness;                                   // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleSpecular;                                    // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleFlatness;                                    // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleHeightmapScale;                              // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleHeightOffset;                                // 0x049C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PuddleHeightFalloff;                               // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                CharacterWorldPosition;                            // 0x0440(0x0018)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CharacterSphereMaskIntensity;                      // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CharacterSphereMaskSunnyReverse;                   // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CharacterSphereMaskRadius;                         // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CharacterSphereMaskHardness;                       // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessBaseColorDarkness;                          // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessRoughness;                                  // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessRoughnessFoliage;                           // 0x0470(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessRoughnessTrunk;                             // 0x0474(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessRoughnessLandscape;                         // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessSpecularNear;                               // 0x047C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessSpecularFar;                                // 0x0480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessFadeIn;                                     // 0x0484(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessFadeDistance;                               // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessSpecularFoliageMultiply;                    // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessSpecularScaleNearFoliage;                   // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetnessSpecularLandscapeMultiply;                  // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RainDropsTiling;                                   // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RainDropsSpeed;                                    // 0x049C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RainDropsIntensity;                                // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A4[0x4];                                      // 0x04A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             RainDrops;                                         // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleBaseColorDarkness;                           // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleRoughness;                                   // 0x04B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleSpecular;                                    // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleFlatness;                                    // 0x04BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleHeightmapScale;                              // 0x04C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleHeightOffset;                                // 0x04C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PuddleHeightFalloff;                               // 0x04C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWetnessConfigParameters) == 0x000008, "Wrong alignment on FWetnessConfigParameters");
-static_assert(sizeof(FWetnessConfigParameters) == 0x0004A8, "Wrong size on FWetnessConfigParameters");
+static_assert(sizeof(FWetnessConfigParameters) == 0x0004D0, "Wrong size on FWetnessConfigParameters");
 static_assert(offsetof(FWetnessConfigParameters, RainIntensity) == 0x000000, "Member 'FWetnessConfigParameters::RainIntensity' has a wrong offset!");
 static_assert(offsetof(FWetnessConfigParameters, Wetness) == 0x000004, "Member 'FWetnessConfigParameters::Wetness' has a wrong offset!");
 static_assert(offsetof(FWetnessConfigParameters, WetnessOcclusionMultiply) == 0x000008, "Member 'FWetnessConfigParameters::WetnessOcclusionMultiply' has a wrong offset!");
@@ -1116,29 +1139,34 @@ static_assert(offsetof(FWetnessConfigParameters, bControlLumenReflectionsSpecula
 static_assert(offsetof(FWetnessConfigParameters, LumenReflectionsSpecularScale) == 0x00022C, "Member 'FWetnessConfigParameters::LumenReflectionsSpecularScale' has a wrong offset!");
 static_assert(offsetof(FWetnessConfigParameters, WetnessMetallicReflectionBoost) == 0x000230, "Member 'FWetnessConfigParameters::WetnessMetallicReflectionBoost' has a wrong offset!");
 static_assert(offsetof(FWetnessConfigParameters, ReflectionParametersCurve) == 0x000238, "Member 'FWetnessConfigParameters::ReflectionParametersCurve' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessBaseColorDarkness) == 0x000440, "Member 'FWetnessConfigParameters::WetnessBaseColorDarkness' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessRoughness) == 0x000444, "Member 'FWetnessConfigParameters::WetnessRoughness' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessRoughnessFoliage) == 0x000448, "Member 'FWetnessConfigParameters::WetnessRoughnessFoliage' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessRoughnessTrunk) == 0x00044C, "Member 'FWetnessConfigParameters::WetnessRoughnessTrunk' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessRoughnessLandscape) == 0x000450, "Member 'FWetnessConfigParameters::WetnessRoughnessLandscape' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularNear) == 0x000454, "Member 'FWetnessConfigParameters::WetnessSpecularNear' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularFar) == 0x000458, "Member 'FWetnessConfigParameters::WetnessSpecularFar' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessFadeIn) == 0x00045C, "Member 'FWetnessConfigParameters::WetnessFadeIn' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessFadeDistance) == 0x000460, "Member 'FWetnessConfigParameters::WetnessFadeDistance' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularFoliageMultiply) == 0x000464, "Member 'FWetnessConfigParameters::WetnessSpecularFoliageMultiply' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularScaleNearFoliage) == 0x000468, "Member 'FWetnessConfigParameters::WetnessSpecularScaleNearFoliage' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularLandscapeMultiply) == 0x00046C, "Member 'FWetnessConfigParameters::WetnessSpecularLandscapeMultiply' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, RainDropsTiling) == 0x000470, "Member 'FWetnessConfigParameters::RainDropsTiling' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, RainDropsSpeed) == 0x000474, "Member 'FWetnessConfigParameters::RainDropsSpeed' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, RainDropsIntensity) == 0x000478, "Member 'FWetnessConfigParameters::RainDropsIntensity' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, RainDrops) == 0x000480, "Member 'FWetnessConfigParameters::RainDrops' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleBaseColorDarkness) == 0x000488, "Member 'FWetnessConfigParameters::PuddleBaseColorDarkness' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleRoughness) == 0x00048C, "Member 'FWetnessConfigParameters::PuddleRoughness' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleSpecular) == 0x000490, "Member 'FWetnessConfigParameters::PuddleSpecular' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleFlatness) == 0x000494, "Member 'FWetnessConfigParameters::PuddleFlatness' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleHeightmapScale) == 0x000498, "Member 'FWetnessConfigParameters::PuddleHeightmapScale' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleHeightOffset) == 0x00049C, "Member 'FWetnessConfigParameters::PuddleHeightOffset' has a wrong offset!");
-static_assert(offsetof(FWetnessConfigParameters, PuddleHeightFalloff) == 0x0004A0, "Member 'FWetnessConfigParameters::PuddleHeightFalloff' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, CharacterWorldPosition) == 0x000440, "Member 'FWetnessConfigParameters::CharacterWorldPosition' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, CharacterSphereMaskIntensity) == 0x000458, "Member 'FWetnessConfigParameters::CharacterSphereMaskIntensity' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, CharacterSphereMaskSunnyReverse) == 0x00045C, "Member 'FWetnessConfigParameters::CharacterSphereMaskSunnyReverse' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, CharacterSphereMaskRadius) == 0x000460, "Member 'FWetnessConfigParameters::CharacterSphereMaskRadius' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, CharacterSphereMaskHardness) == 0x000464, "Member 'FWetnessConfigParameters::CharacterSphereMaskHardness' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessBaseColorDarkness) == 0x000468, "Member 'FWetnessConfigParameters::WetnessBaseColorDarkness' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessRoughness) == 0x00046C, "Member 'FWetnessConfigParameters::WetnessRoughness' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessRoughnessFoliage) == 0x000470, "Member 'FWetnessConfigParameters::WetnessRoughnessFoliage' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessRoughnessTrunk) == 0x000474, "Member 'FWetnessConfigParameters::WetnessRoughnessTrunk' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessRoughnessLandscape) == 0x000478, "Member 'FWetnessConfigParameters::WetnessRoughnessLandscape' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularNear) == 0x00047C, "Member 'FWetnessConfigParameters::WetnessSpecularNear' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularFar) == 0x000480, "Member 'FWetnessConfigParameters::WetnessSpecularFar' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessFadeIn) == 0x000484, "Member 'FWetnessConfigParameters::WetnessFadeIn' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessFadeDistance) == 0x000488, "Member 'FWetnessConfigParameters::WetnessFadeDistance' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularFoliageMultiply) == 0x00048C, "Member 'FWetnessConfigParameters::WetnessSpecularFoliageMultiply' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularScaleNearFoliage) == 0x000490, "Member 'FWetnessConfigParameters::WetnessSpecularScaleNearFoliage' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, WetnessSpecularLandscapeMultiply) == 0x000494, "Member 'FWetnessConfigParameters::WetnessSpecularLandscapeMultiply' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, RainDropsTiling) == 0x000498, "Member 'FWetnessConfigParameters::RainDropsTiling' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, RainDropsSpeed) == 0x00049C, "Member 'FWetnessConfigParameters::RainDropsSpeed' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, RainDropsIntensity) == 0x0004A0, "Member 'FWetnessConfigParameters::RainDropsIntensity' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, RainDrops) == 0x0004A8, "Member 'FWetnessConfigParameters::RainDrops' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleBaseColorDarkness) == 0x0004B0, "Member 'FWetnessConfigParameters::PuddleBaseColorDarkness' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleRoughness) == 0x0004B4, "Member 'FWetnessConfigParameters::PuddleRoughness' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleSpecular) == 0x0004B8, "Member 'FWetnessConfigParameters::PuddleSpecular' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleFlatness) == 0x0004BC, "Member 'FWetnessConfigParameters::PuddleFlatness' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleHeightmapScale) == 0x0004C0, "Member 'FWetnessConfigParameters::PuddleHeightmapScale' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleHeightOffset) == 0x0004C4, "Member 'FWetnessConfigParameters::PuddleHeightOffset' has a wrong offset!");
+static_assert(offsetof(FWetnessConfigParameters, PuddleHeightFalloff) == 0x0004C8, "Member 'FWetnessConfigParameters::PuddleHeightFalloff' has a wrong offset!");
 
 // ScriptStruct DynamicEnvironmentSystem.LightFunctionSystemConfig
 // 0x0060 (0x0060 - 0x0000)
@@ -1220,27 +1248,26 @@ public:
 	float                                         ShadowSlopeBiasSplit4;                             // 0x0108(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ShadowBiasSplit5;                                  // 0x010C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ShadowSlopeBiasSplit5;                             // 0x0110(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FarShadowCascadeCount;                             // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FarShadowMaxDrawDistance;                          // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShadowSharpen;                                     // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShadowSlopBias;                                    // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_124[0x4];                                      // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticFarShadowAsset*                  StaticFarShadowAsset;                              // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceFieldShadowDistance;                       // 0x0130(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceFieldTraceDistance;                        // 0x0134(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSpecialShadowConfig;                              // 0x0138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_139[0x3];                                      // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CullingScreenSizeForOcclusionQuery;                // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SpecialDeviceEnableShadingmodelStencilCulling;     // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MobileExtraReflectionAdd;                          // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseLumen;                                         // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseEnlighten;                                     // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14A[0x2];                                      // 0x014A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EnlightenSkyLightDiffuse;                          // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseLowerHemisphereColor;                          // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           LowerHemisphereColor;                              // 0x0154(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_164[0x4];                                      // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ShadowSharpen;                                     // 0x0114(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShadowSlopBias;                                    // 0x0118(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SourceAngle;                                       // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EShadowFilterMethod                           ShadowFilterMethod;                                // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x3];                                      // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FarShadowCascadeCount;                             // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FarShadowMaxDrawDistance;                          // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticFarShadowAsset*                  StaticFarShadowAsset;                              // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceFieldShadowDistance;                       // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceFieldTraceDistance;                        // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSpecialShadowConfig;                              // 0x0140(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CullingScreenSizeForOcclusionQuery;                // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SpecialDeviceEnableShadingmodelStencilCulling;     // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseLumen;                                         // 0x014C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseLowerHemisphereColor;                          // 0x014D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E[0x2];                                      // 0x014E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           LowerHemisphereColor;                              // 0x0150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkyLightFunctionDataAsset*             SkyLightFunctionDataAsset;                         // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture*                               SkyLightFunctionTexture;                           // 0x0168(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture*                               SkyLightHemisphereDiffuseTexture;                  // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              SkyLightFunctionLocation;                          // 0x0178(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1283,22 +1310,22 @@ static_assert(offsetof(FEnvironmentLevelConfig, ShadowBiasSplit4) == 0x000104, "
 static_assert(offsetof(FEnvironmentLevelConfig, ShadowSlopeBiasSplit4) == 0x000108, "Member 'FEnvironmentLevelConfig::ShadowSlopeBiasSplit4' has a wrong offset!");
 static_assert(offsetof(FEnvironmentLevelConfig, ShadowBiasSplit5) == 0x00010C, "Member 'FEnvironmentLevelConfig::ShadowBiasSplit5' has a wrong offset!");
 static_assert(offsetof(FEnvironmentLevelConfig, ShadowSlopeBiasSplit5) == 0x000110, "Member 'FEnvironmentLevelConfig::ShadowSlopeBiasSplit5' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, FarShadowCascadeCount) == 0x000114, "Member 'FEnvironmentLevelConfig::FarShadowCascadeCount' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, FarShadowMaxDrawDistance) == 0x000118, "Member 'FEnvironmentLevelConfig::FarShadowMaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, ShadowSharpen) == 0x00011C, "Member 'FEnvironmentLevelConfig::ShadowSharpen' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, ShadowSlopBias) == 0x000120, "Member 'FEnvironmentLevelConfig::ShadowSlopBias' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, StaticFarShadowAsset) == 0x000128, "Member 'FEnvironmentLevelConfig::StaticFarShadowAsset' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, DistanceFieldShadowDistance) == 0x000130, "Member 'FEnvironmentLevelConfig::DistanceFieldShadowDistance' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, DistanceFieldTraceDistance) == 0x000134, "Member 'FEnvironmentLevelConfig::DistanceFieldTraceDistance' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, bSpecialShadowConfig) == 0x000138, "Member 'FEnvironmentLevelConfig::bSpecialShadowConfig' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, CullingScreenSizeForOcclusionQuery) == 0x00013C, "Member 'FEnvironmentLevelConfig::CullingScreenSizeForOcclusionQuery' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, SpecialDeviceEnableShadingmodelStencilCulling) == 0x000140, "Member 'FEnvironmentLevelConfig::SpecialDeviceEnableShadingmodelStencilCulling' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, MobileExtraReflectionAdd) == 0x000144, "Member 'FEnvironmentLevelConfig::MobileExtraReflectionAdd' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, bUseLumen) == 0x000148, "Member 'FEnvironmentLevelConfig::bUseLumen' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, bUseEnlighten) == 0x000149, "Member 'FEnvironmentLevelConfig::bUseEnlighten' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, EnlightenSkyLightDiffuse) == 0x00014C, "Member 'FEnvironmentLevelConfig::EnlightenSkyLightDiffuse' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, bUseLowerHemisphereColor) == 0x000150, "Member 'FEnvironmentLevelConfig::bUseLowerHemisphereColor' has a wrong offset!");
-static_assert(offsetof(FEnvironmentLevelConfig, LowerHemisphereColor) == 0x000154, "Member 'FEnvironmentLevelConfig::LowerHemisphereColor' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, ShadowSharpen) == 0x000114, "Member 'FEnvironmentLevelConfig::ShadowSharpen' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, ShadowSlopBias) == 0x000118, "Member 'FEnvironmentLevelConfig::ShadowSlopBias' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, SourceAngle) == 0x00011C, "Member 'FEnvironmentLevelConfig::SourceAngle' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, ShadowFilterMethod) == 0x000120, "Member 'FEnvironmentLevelConfig::ShadowFilterMethod' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, FarShadowCascadeCount) == 0x000124, "Member 'FEnvironmentLevelConfig::FarShadowCascadeCount' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, FarShadowMaxDrawDistance) == 0x000128, "Member 'FEnvironmentLevelConfig::FarShadowMaxDrawDistance' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, StaticFarShadowAsset) == 0x000130, "Member 'FEnvironmentLevelConfig::StaticFarShadowAsset' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, DistanceFieldShadowDistance) == 0x000138, "Member 'FEnvironmentLevelConfig::DistanceFieldShadowDistance' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, DistanceFieldTraceDistance) == 0x00013C, "Member 'FEnvironmentLevelConfig::DistanceFieldTraceDistance' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, bSpecialShadowConfig) == 0x000140, "Member 'FEnvironmentLevelConfig::bSpecialShadowConfig' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, CullingScreenSizeForOcclusionQuery) == 0x000144, "Member 'FEnvironmentLevelConfig::CullingScreenSizeForOcclusionQuery' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, SpecialDeviceEnableShadingmodelStencilCulling) == 0x000148, "Member 'FEnvironmentLevelConfig::SpecialDeviceEnableShadingmodelStencilCulling' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, bUseLumen) == 0x00014C, "Member 'FEnvironmentLevelConfig::bUseLumen' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, bUseLowerHemisphereColor) == 0x00014D, "Member 'FEnvironmentLevelConfig::bUseLowerHemisphereColor' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, LowerHemisphereColor) == 0x000150, "Member 'FEnvironmentLevelConfig::LowerHemisphereColor' has a wrong offset!");
+static_assert(offsetof(FEnvironmentLevelConfig, SkyLightFunctionDataAsset) == 0x000160, "Member 'FEnvironmentLevelConfig::SkyLightFunctionDataAsset' has a wrong offset!");
 static_assert(offsetof(FEnvironmentLevelConfig, SkyLightFunctionTexture) == 0x000168, "Member 'FEnvironmentLevelConfig::SkyLightFunctionTexture' has a wrong offset!");
 static_assert(offsetof(FEnvironmentLevelConfig, SkyLightHemisphereDiffuseTexture) == 0x000170, "Member 'FEnvironmentLevelConfig::SkyLightHemisphereDiffuseTexture' has a wrong offset!");
 static_assert(offsetof(FEnvironmentLevelConfig, SkyLightFunctionLocation) == 0x000178, "Member 'FEnvironmentLevelConfig::SkyLightFunctionLocation' has a wrong offset!");

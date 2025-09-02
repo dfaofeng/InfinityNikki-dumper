@@ -17,37 +17,163 @@
 namespace SDK
 {
 
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.SetCollisionInfoByBulletData
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.ExecuteUbergraph_BP_X6SkillPreviewActor_V2
+// (Final, UbergraphFunction)
 // Parameters:
-// class UBP_BulletDataAsset_C*            BulletData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_X6SkillPreviewActor_V2_C::SetCollisionInfoByBulletData(class UBP_BulletDataAsset_C* BulletData)
+void ABP_X6SkillPreviewActor_V2_C::ExecuteUbergraph_BP_X6SkillPreviewActor_V2(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "SetCollisionInfoByBulletData");
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "ExecuteUbergraph_BP_X6SkillPreviewActor_V2");
 
-	Params::BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData Parms{};
+	Params::BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2 Parms{};
 
-	Parms.BulletData = BulletData;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetOverriddenInfo
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_BulletDataAsset_C*            BulletData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             OverrideSocket                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                OverrideTransform                                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString*                          Socket                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+// struct FVector*                         OffsetLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRotator*                        OffsetRotation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_X6SkillPreviewActor_V2_C::ReceiveDestroyed()
+void ABP_X6SkillPreviewActor_V2_C::GetOverriddenInfo(class UBP_BulletDataAsset_C* BulletData, class FName OverrideSocket, const struct FTransform& OverrideTransform, class FString* Socket, struct FVector* OffsetLocation, struct FRotator* OffsetRotation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "ReceiveDestroyed");
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "GetOverriddenInfo");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo Parms{};
+
+	Parms.BulletData = BulletData;
+	Parms.OverrideSocket = OverrideSocket;
+	Parms.OverrideTransform = std::move(OverrideTransform);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Socket != nullptr)
+		*Socket = std::move(Parms.Socket);
+
+	if (OffsetLocation != nullptr)
+		*OffsetLocation = std::move(Parms.OffsetLocation);
+
+	if (OffsetRotation != nullptr)
+		*OffsetRotation = std::move(Parms.OffsetRotation);
+}
+
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetSocketTransform
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    ScoketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// struct FTransform*                      SocketTransform                                        (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_X6SkillPreviewActor_V2_C::GetSocketTransform(const class FString& ScoketName, struct FTransform* SocketTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "GetSocketTransform");
+
+	Params::BP_X6SkillPreviewActor_V2_C_GetSocketTransform Parms{};
+
+	Parms.ScoketName = std::move(ScoketName);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SocketTransform != nullptr)
+		*SocketTransform = std::move(Parms.SocketTransform);
+}
+
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetTransformByOffset
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FVector&                   OffsetLoc                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  OffsetRot                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FVector*                         OutLoc                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FRotator*                        OutRot                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_X6SkillPreviewActor_V2_C::GetTransformByOffset(const class FString& Socket, const struct FVector& OffsetLoc, const struct FRotator& OffsetRot, struct FVector* OutLoc, struct FRotator* OutRot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "GetTransformByOffset");
+
+	Params::BP_X6SkillPreviewActor_V2_C_GetTransformByOffset Parms{};
+
+	Parms.Socket = std::move(Socket);
+	Parms.OffsetLoc = std::move(OffsetLoc);
+	Parms.OffsetRot = std::move(OffsetRot);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OutLoc != nullptr)
+		*OutLoc = std::move(Parms.OutLoc);
+
+	if (OutRot != nullptr)
+		*OutRot = std::move(Parms.OutRot);
+}
+
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.Init
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_BulletDataAsset_C*            BulletData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FTransform&                OffsetTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bDrawCollision                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_X6SkillPreviewActor_V2_C::Init(class UBP_BulletDataAsset_C* BulletData, class AActor* Owner_0, class FName Socket, const struct FTransform& OffsetTransform, bool bDrawCollision)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "Init");
+
+	Params::BP_X6SkillPreviewActor_V2_C_Init Parms{};
+
+	Parms.BulletData = BulletData;
+	Parms.Owner_0 = Owner_0;
+	Parms.Socket = Socket;
+	Parms.OffsetTransform = std::move(OffsetTransform);
+	Parms.bDrawCollision = bDrawCollision;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.InitSimple
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_X6SkillPreviewActor_V2_C::InitSimple(double Speed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "InitSimple");
+
+	Params::BP_X6SkillPreviewActor_V2_C_InitSimple Parms{};
+
+	Parms.Speed = Speed;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -90,161 +216,35 @@ void ABP_X6SkillPreviewActor_V2_C::PreviewRibbon(TSoftObjectPtr<class UNiagaraSy
 }
 
 
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.InitSimple
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_X6SkillPreviewActor_V2_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.SetCollisionInfoByBulletData
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// double                                  Speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_X6SkillPreviewActor_V2_C::InitSimple(double Speed)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "InitSimple");
-
-	Params::BP_X6SkillPreviewActor_V2_C_InitSimple Parms{};
-
-	Parms.Speed = Speed;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.Init
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
 // class UBP_BulletDataAsset_C*            BulletData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Owner_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FName                             Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                OffsetTransform                                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bDrawCollision                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_X6SkillPreviewActor_V2_C::Init(class UBP_BulletDataAsset_C* BulletData, class AActor* Owner_0, class FName Socket, const struct FTransform& OffsetTransform, bool bDrawCollision)
+void ABP_X6SkillPreviewActor_V2_C::SetCollisionInfoByBulletData(class UBP_BulletDataAsset_C* BulletData)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "Init");
+		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "SetCollisionInfoByBulletData");
 
-	Params::BP_X6SkillPreviewActor_V2_C_Init Parms{};
+	Params::BP_X6SkillPreviewActor_V2_C_SetCollisionInfoByBulletData Parms{};
 
 	Parms.BulletData = BulletData;
-	Parms.Owner_0 = Owner_0;
-	Parms.Socket = Socket;
-	Parms.OffsetTransform = std::move(OffsetTransform);
-	Parms.bDrawCollision = bDrawCollision;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetTransformByOffset
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const struct FVector&                   OffsetLoc                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FRotator&                  OffsetRot                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FVector*                         OutLoc                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator*                        OutRot                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_X6SkillPreviewActor_V2_C::GetTransformByOffset(const class FString& Socket, const struct FVector& OffsetLoc, const struct FRotator& OffsetRot, struct FVector* OutLoc, struct FRotator* OutRot)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "GetTransformByOffset");
-
-	Params::BP_X6SkillPreviewActor_V2_C_GetTransformByOffset Parms{};
-
-	Parms.Socket = std::move(Socket);
-	Parms.OffsetLoc = std::move(OffsetLoc);
-	Parms.OffsetRot = std::move(OffsetRot);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (OutLoc != nullptr)
-		*OutLoc = std::move(Parms.OutLoc);
-
-	if (OutRot != nullptr)
-		*OutRot = std::move(Parms.OutRot);
-}
-
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetSocketTransform
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// const class FString&                    ScoketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// struct FTransform*                      SocketTransform                                        (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_X6SkillPreviewActor_V2_C::GetSocketTransform(const class FString& ScoketName, struct FTransform* SocketTransform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "GetSocketTransform");
-
-	Params::BP_X6SkillPreviewActor_V2_C_GetSocketTransform Parms{};
-
-	Parms.ScoketName = std::move(ScoketName);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SocketTransform != nullptr)
-		*SocketTransform = std::move(Parms.SocketTransform);
-}
-
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.GetOverriddenInfo
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBP_BulletDataAsset_C*            BulletData                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FName                             OverrideSocket                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FTransform&                OverrideTransform                                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FString*                          Socket                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-// struct FVector*                         OffsetLocation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FRotator*                        OffsetRotation                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_X6SkillPreviewActor_V2_C::GetOverriddenInfo(class UBP_BulletDataAsset_C* BulletData, class FName OverrideSocket, const struct FTransform& OverrideTransform, class FString* Socket, struct FVector* OffsetLocation, struct FRotator* OffsetRotation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "GetOverriddenInfo");
-
-	Params::BP_X6SkillPreviewActor_V2_C_GetOverriddenInfo Parms{};
-
-	Parms.BulletData = BulletData;
-	Parms.OverrideSocket = OverrideSocket;
-	Parms.OverrideTransform = std::move(OverrideTransform);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Socket != nullptr)
-		*Socket = std::move(Parms.Socket);
-
-	if (OffsetLocation != nullptr)
-		*OffsetLocation = std::move(Parms.OffsetLocation);
-
-	if (OffsetRotation != nullptr)
-		*OffsetRotation = std::move(Parms.OffsetRotation);
-}
-
-
-// Function BP_X6SkillPreviewActor_V2.BP_X6SkillPreviewActor_V2_C.ExecuteUbergraph_BP_X6SkillPreviewActor_V2
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_X6SkillPreviewActor_V2_C::ExecuteUbergraph_BP_X6SkillPreviewActor_V2(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_X6SkillPreviewActor_V2_C", "ExecuteUbergraph_BP_X6SkillPreviewActor_V2");
-
-	Params::BP_X6SkillPreviewActor_V2_C_ExecuteUbergraph_BP_X6SkillPreviewActor_V2 Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

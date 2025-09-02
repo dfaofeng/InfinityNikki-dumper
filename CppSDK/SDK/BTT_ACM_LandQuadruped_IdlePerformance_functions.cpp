@@ -17,43 +17,25 @@
 namespace SDK
 {
 
-// Function BTT_ACM_LandQuadruped_IdlePerformance.BTT_ACM_LandQuadruped_IdlePerformance_C.ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTT_ACM_LandQuadruped_IdlePerformance_C::ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_ACM_LandQuadruped_IdlePerformance_C", "ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance");
-
-	Params::BTT_ACM_LandQuadruped_IdlePerformance_C_ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BTT_ACM_LandQuadruped_IdlePerformance.BTT_ACM_LandQuadruped_IdlePerformance_C.ReceiveAbortAI
+// Function BTT_ACM_LandQuadruped_IdlePerformance.BTT_ACM_LandQuadruped_IdlePerformance_C.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBTT_ACM_LandQuadruped_IdlePerformance_C::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_ACM_LandQuadruped_IdlePerformance_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_ACM_LandQuadruped_IdlePerformance_C", "ReceiveAbortAI");
+		Func = Class->GetFunction("BTT_ACM_LandQuadruped_IdlePerformance_C", "ReceiveTickAI");
 
-	Params::BTT_ACM_LandQuadruped_IdlePerformance_C_ReceiveAbortAI Parms{};
+	Params::BTT_ACM_LandQuadruped_IdlePerformance_C_ReceiveTickAI Parms{};
 
 	Parms.OwnerController = OwnerController;
 	Parms.ControlledPawn = ControlledPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -81,25 +63,43 @@ void UBTT_ACM_LandQuadruped_IdlePerformance_C::ReceiveExecuteAI(class AAIControl
 }
 
 
-// Function BTT_ACM_LandQuadruped_IdlePerformance.BTT_ACM_LandQuadruped_IdlePerformance_C.ReceiveTickAI
+// Function BTT_ACM_LandQuadruped_IdlePerformance.BTT_ACM_LandQuadruped_IdlePerformance_C.ReceiveAbortAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
 // class AAIController*                    OwnerController                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            ControlledPawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBTT_ACM_LandQuadruped_IdlePerformance_C::ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds)
+void UBTT_ACM_LandQuadruped_IdlePerformance_C::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_ACM_LandQuadruped_IdlePerformance_C", "ReceiveTickAI");
+		Func = Class->GetFunction("BTT_ACM_LandQuadruped_IdlePerformance_C", "ReceiveAbortAI");
 
-	Params::BTT_ACM_LandQuadruped_IdlePerformance_C_ReceiveTickAI Parms{};
+	Params::BTT_ACM_LandQuadruped_IdlePerformance_C_ReceiveAbortAI Parms{};
 
 	Parms.OwnerController = OwnerController;
 	Parms.ControlledPawn = ControlledPawn;
-	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTT_ACM_LandQuadruped_IdlePerformance.BTT_ACM_LandQuadruped_IdlePerformance_C.ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTT_ACM_LandQuadruped_IdlePerformance_C::ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTT_ACM_LandQuadruped_IdlePerformance_C", "ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance");
+
+	Params::BTT_ACM_LandQuadruped_IdlePerformance_C_ExecuteUbergraph_BTT_ACM_LandQuadruped_IdlePerformance Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

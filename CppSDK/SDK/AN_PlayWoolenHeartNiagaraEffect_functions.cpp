@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function AN_PlayWoolenHeartNiagaraEffect.AN_PlayWoolenHeartNiagaraEffect_C.NewFunction
+// (Public, BlueprintCallable, BlueprintEvent, Const)
+
+void UAN_PlayWoolenHeartNiagaraEffect_C::NewFunction() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AN_PlayWoolenHeartNiagaraEffect_C", "NewFunction");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function AN_PlayWoolenHeartNiagaraEffect.AN_PlayWoolenHeartNiagaraEffect_C.Received_Notify
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -41,20 +55,6 @@ bool UAN_PlayWoolenHeartNiagaraEffect_C::Received_Notify(class USkeletalMeshComp
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function AN_PlayWoolenHeartNiagaraEffect.AN_PlayWoolenHeartNiagaraEffect_C.NewFunction
-// (Public, BlueprintCallable, BlueprintEvent, Const)
-
-void UAN_PlayWoolenHeartNiagaraEffect_C::NewFunction() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AN_PlayWoolenHeartNiagaraEffect_C", "NewFunction");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

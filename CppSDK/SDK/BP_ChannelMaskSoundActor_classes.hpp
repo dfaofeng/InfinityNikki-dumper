@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "AkAudio_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "AkAudio_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ChannelMaskSoundActor.BP_ChannelMaskSoundActor_C
-// 0x0070 (0x04A8 - 0x0438)
+// 0x0070 (0x04F8 - 0x0488)
 class ABP_ChannelMaskSoundActor_C final : public AX6Actor
 {
 public:
-	class UAkComponent*                           Emitter;                                           // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Scene;                                             // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TMap<struct FVector, struct FAkChannelMask>   PointsChannelMask;                                 // 0x0448(0x0050)(Edit, BlueprintVisible)
-	class UAkAudioEvent*                          BeginEvent;                                        // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          NeedCallback;                                      // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          WithChannelMask;                                   // 0x04A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           Emitter;                                           // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TMap<struct FVector, struct FAkChannelMask>   PointsChannelMask;                                 // 0x0498(0x0050)(Edit, BlueprintVisible)
+	class UAkAudioEvent*                          BeginEvent;                                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          NeedCallback;                                      // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WithChannelMask;                                   // 0x04F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FString GetModuleName() const;
@@ -44,13 +44,13 @@ public:
 	}
 };
 static_assert(alignof(ABP_ChannelMaskSoundActor_C) == 0x000008, "Wrong alignment on ABP_ChannelMaskSoundActor_C");
-static_assert(sizeof(ABP_ChannelMaskSoundActor_C) == 0x0004A8, "Wrong size on ABP_ChannelMaskSoundActor_C");
-static_assert(offsetof(ABP_ChannelMaskSoundActor_C, Emitter) == 0x000438, "Member 'ABP_ChannelMaskSoundActor_C::Emitter' has a wrong offset!");
-static_assert(offsetof(ABP_ChannelMaskSoundActor_C, Scene) == 0x000440, "Member 'ABP_ChannelMaskSoundActor_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_ChannelMaskSoundActor_C, PointsChannelMask) == 0x000448, "Member 'ABP_ChannelMaskSoundActor_C::PointsChannelMask' has a wrong offset!");
-static_assert(offsetof(ABP_ChannelMaskSoundActor_C, BeginEvent) == 0x000498, "Member 'ABP_ChannelMaskSoundActor_C::BeginEvent' has a wrong offset!");
-static_assert(offsetof(ABP_ChannelMaskSoundActor_C, NeedCallback) == 0x0004A0, "Member 'ABP_ChannelMaskSoundActor_C::NeedCallback' has a wrong offset!");
-static_assert(offsetof(ABP_ChannelMaskSoundActor_C, WithChannelMask) == 0x0004A1, "Member 'ABP_ChannelMaskSoundActor_C::WithChannelMask' has a wrong offset!");
+static_assert(sizeof(ABP_ChannelMaskSoundActor_C) == 0x0004F8, "Wrong size on ABP_ChannelMaskSoundActor_C");
+static_assert(offsetof(ABP_ChannelMaskSoundActor_C, Emitter) == 0x000488, "Member 'ABP_ChannelMaskSoundActor_C::Emitter' has a wrong offset!");
+static_assert(offsetof(ABP_ChannelMaskSoundActor_C, Scene) == 0x000490, "Member 'ABP_ChannelMaskSoundActor_C::Scene' has a wrong offset!");
+static_assert(offsetof(ABP_ChannelMaskSoundActor_C, PointsChannelMask) == 0x000498, "Member 'ABP_ChannelMaskSoundActor_C::PointsChannelMask' has a wrong offset!");
+static_assert(offsetof(ABP_ChannelMaskSoundActor_C, BeginEvent) == 0x0004E8, "Member 'ABP_ChannelMaskSoundActor_C::BeginEvent' has a wrong offset!");
+static_assert(offsetof(ABP_ChannelMaskSoundActor_C, NeedCallback) == 0x0004F0, "Member 'ABP_ChannelMaskSoundActor_C::NeedCallback' has a wrong offset!");
+static_assert(offsetof(ABP_ChannelMaskSoundActor_C, WithChannelMask) == 0x0004F1, "Member 'ABP_ChannelMaskSoundActor_C::WithChannelMask' has a wrong offset!");
 
 }
 

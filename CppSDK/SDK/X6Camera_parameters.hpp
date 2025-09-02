@@ -60,17 +60,17 @@ static_assert(offsetof(AdvancedCamera_BlendConfigFromCurrentCameraView, bOverrid
 static_assert(offsetof(AdvancedCamera_BlendConfigFromCurrentCameraView, TransitionParams) == 0x000008, "Member 'AdvancedCamera_BlendConfigFromCurrentCameraView::TransitionParams' has a wrong offset!");
 
 // Function X6Camera.AdvancedCamera.BlendToCameraView
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct AdvancedCamera_BlendToCameraView final
 {
 public:
-	struct FMinimalViewInfo                       NewCameraView;                                     // 0x0000(0x0970)(Parm, NativeAccessSpecifierPublic)
-	struct FViewTargetTransitionParams            CameraBlendParams;                                 // 0x0970(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       NewCameraView;                                     // 0x0000(0x0990)(Parm, NativeAccessSpecifierPublic)
+	struct FViewTargetTransitionParams            CameraBlendParams;                                 // 0x0990(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedCamera_BlendToCameraView) == 0x000010, "Wrong alignment on AdvancedCamera_BlendToCameraView");
-static_assert(sizeof(AdvancedCamera_BlendToCameraView) == 0x000990, "Wrong size on AdvancedCamera_BlendToCameraView");
+static_assert(sizeof(AdvancedCamera_BlendToCameraView) == 0x0009B0, "Wrong size on AdvancedCamera_BlendToCameraView");
 static_assert(offsetof(AdvancedCamera_BlendToCameraView, NewCameraView) == 0x000000, "Member 'AdvancedCamera_BlendToCameraView::NewCameraView' has a wrong offset!");
-static_assert(offsetof(AdvancedCamera_BlendToCameraView, CameraBlendParams) == 0x000970, "Member 'AdvancedCamera_BlendToCameraView::CameraBlendParams' has a wrong offset!");
+static_assert(offsetof(AdvancedCamera_BlendToCameraView, CameraBlendParams) == 0x000990, "Member 'AdvancedCamera_BlendToCameraView::CameraBlendParams' has a wrong offset!");
 
 // Function X6Camera.AdvancedCamera.CreateCameraCollisionProcessInstance
 // 0x0008 (0x0008 - 0x0000)
@@ -223,22 +223,22 @@ static_assert(offsetof(AdvancedCamera_PushBaseCameraConfig, ConfigKey) == 0x0000
 static_assert(offsetof(AdvancedCamera_PushBaseCameraConfig, ReturnValue) == 0x000008, "Member 'AdvancedCamera_PushBaseCameraConfig::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.AdvancedCamera.PushBaseParams
-// 0x01C0 (0x01C0 - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct AdvancedCamera_PushBaseParams final
 {
 public:
-	struct FCameraBaseParamsDefine                BaseParams;                                        // 0x0000(0x0160)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FX6CameraConfigBlendParams             CameraConfigBlendParams;                           // 0x0160(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FX6CameraConfigPriority                Priority;                                          // 0x0188(0x0030)(ConstParm, Parm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x01B8(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCameraBaseParamsDefine                BaseParams;                                        // 0x0000(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6CameraConfigBlendParams             CameraConfigBlendParams;                           // 0x0168(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6CameraConfigPriority                Priority;                                          // 0x0190(0x0030)(ConstParm, Parm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x01C0(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AdvancedCamera_PushBaseParams) == 0x000008, "Wrong alignment on AdvancedCamera_PushBaseParams");
-static_assert(sizeof(AdvancedCamera_PushBaseParams) == 0x0001C0, "Wrong size on AdvancedCamera_PushBaseParams");
+static_assert(sizeof(AdvancedCamera_PushBaseParams) == 0x0001C8, "Wrong size on AdvancedCamera_PushBaseParams");
 static_assert(offsetof(AdvancedCamera_PushBaseParams, BaseParams) == 0x000000, "Member 'AdvancedCamera_PushBaseParams::BaseParams' has a wrong offset!");
-static_assert(offsetof(AdvancedCamera_PushBaseParams, CameraConfigBlendParams) == 0x000160, "Member 'AdvancedCamera_PushBaseParams::CameraConfigBlendParams' has a wrong offset!");
-static_assert(offsetof(AdvancedCamera_PushBaseParams, Priority) == 0x000188, "Member 'AdvancedCamera_PushBaseParams::Priority' has a wrong offset!");
-static_assert(offsetof(AdvancedCamera_PushBaseParams, ReturnValue) == 0x0001B8, "Member 'AdvancedCamera_PushBaseParams::ReturnValue' has a wrong offset!");
+static_assert(offsetof(AdvancedCamera_PushBaseParams, CameraConfigBlendParams) == 0x000168, "Member 'AdvancedCamera_PushBaseParams::CameraConfigBlendParams' has a wrong offset!");
+static_assert(offsetof(AdvancedCamera_PushBaseParams, Priority) == 0x000190, "Member 'AdvancedCamera_PushBaseParams::Priority' has a wrong offset!");
+static_assert(offsetof(AdvancedCamera_PushBaseParams, ReturnValue) == 0x0001C0, "Member 'AdvancedCamera_PushBaseParams::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.AdvancedCamera.PushCameraConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -593,6 +593,17 @@ static_assert(offsetof(AdvancedCamera_SetPassiveDesiredRotationByTime, TotalTime
 static_assert(offsetof(AdvancedCamera_SetPassiveDesiredRotationByTime, BlendFunction) == 0x00001C, "Member 'AdvancedCamera_SetPassiveDesiredRotationByTime::BlendFunction' has a wrong offset!");
 static_assert(offsetof(AdvancedCamera_SetPassiveDesiredRotationByTime, BlendExp) == 0x000020, "Member 'AdvancedCamera_SetPassiveDesiredRotationByTime::BlendExp' has a wrong offset!");
 
+// Function X6Camera.AdvancedCamera.SetPlayerSettingArmLengthCurve
+// 0x0004 (0x0004 - 0x0000)
+struct AdvancedCamera_SetPlayerSettingArmLengthCurve final
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AdvancedCamera_SetPlayerSettingArmLengthCurve) == 0x000004, "Wrong alignment on AdvancedCamera_SetPlayerSettingArmLengthCurve");
+static_assert(sizeof(AdvancedCamera_SetPlayerSettingArmLengthCurve) == 0x000004, "Wrong size on AdvancedCamera_SetPlayerSettingArmLengthCurve");
+static_assert(offsetof(AdvancedCamera_SetPlayerSettingArmLengthCurve, InIndex) == 0x000000, "Member 'AdvancedCamera_SetPlayerSettingArmLengthCurve::InIndex' has a wrong offset!");
+
 // Function X6Camera.AdvancedCamera.SetUsingGamepad
 // 0x0001 (0x0001 - 0x0000)
 struct AdvancedCamera_SetUsingGamepad final
@@ -764,6 +775,21 @@ static_assert(alignof(AdvancedCamera_CollectSpringArmDebugOutput) == 0x000008, "
 static_assert(sizeof(AdvancedCamera_CollectSpringArmDebugOutput) == 0x000010, "Wrong size on AdvancedCamera_CollectSpringArmDebugOutput");
 static_assert(offsetof(AdvancedCamera_CollectSpringArmDebugOutput, InOutDebugInfoLines) == 0x000000, "Member 'AdvancedCamera_CollectSpringArmDebugOutput::InOutDebugInfoLines' has a wrong offset!");
 
+// Function X6Camera.AdvancedCamera.FixArmLengthByPlayerSetting
+// 0x0128 (0x0128 - 0x0000)
+struct AdvancedCamera_FixArmLengthByPlayerSetting final
+{
+public:
+	struct FX6CameraBlendableSettings             InCameraSettings;                                  // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         InArmLength;                                       // 0x0120(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0124(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AdvancedCamera_FixArmLengthByPlayerSetting) == 0x000008, "Wrong alignment on AdvancedCamera_FixArmLengthByPlayerSetting");
+static_assert(sizeof(AdvancedCamera_FixArmLengthByPlayerSetting) == 0x000128, "Wrong size on AdvancedCamera_FixArmLengthByPlayerSetting");
+static_assert(offsetof(AdvancedCamera_FixArmLengthByPlayerSetting, InCameraSettings) == 0x000000, "Member 'AdvancedCamera_FixArmLengthByPlayerSetting::InCameraSettings' has a wrong offset!");
+static_assert(offsetof(AdvancedCamera_FixArmLengthByPlayerSetting, InArmLength) == 0x000120, "Member 'AdvancedCamera_FixArmLengthByPlayerSetting::InArmLength' has a wrong offset!");
+static_assert(offsetof(AdvancedCamera_FixArmLengthByPlayerSetting, ReturnValue) == 0x000124, "Member 'AdvancedCamera_FixArmLengthByPlayerSetting::ReturnValue' has a wrong offset!");
+
 // Function X6Camera.AdvancedCamera.FixLocationByBasedMovement
 // 0x00A0 (0x00A0 - 0x0000)
 struct AdvancedCamera_FixLocationByBasedMovement final
@@ -828,14 +854,14 @@ static_assert(sizeof(AdvancedCamera_GetCameraOrientationSynchronizer) == 0x00000
 static_assert(offsetof(AdvancedCamera_GetCameraOrientationSynchronizer, ReturnValue) == 0x000000, "Member 'AdvancedCamera_GetCameraOrientationSynchronizer::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.AdvancedCamera.GetCameraSettings
-// 0x0118 (0x0118 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct AdvancedCamera_GetCameraSettings final
 {
 public:
-	struct FX6CameraBlendableSettings             ReturnValue;                                       // 0x0000(0x0118)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6CameraBlendableSettings             ReturnValue;                                       // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedCamera_GetCameraSettings) == 0x000008, "Wrong alignment on AdvancedCamera_GetCameraSettings");
-static_assert(sizeof(AdvancedCamera_GetCameraSettings) == 0x000118, "Wrong size on AdvancedCamera_GetCameraSettings");
+static_assert(sizeof(AdvancedCamera_GetCameraSettings) == 0x000120, "Wrong size on AdvancedCamera_GetCameraSettings");
 static_assert(offsetof(AdvancedCamera_GetCameraSettings, ReturnValue) == 0x000000, "Member 'AdvancedCamera_GetCameraSettings::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.AdvancedCamera.GetCurrentSocketRotationOffset
@@ -949,19 +975,19 @@ static_assert(sizeof(AdvancedCamera_SetOrientationSyncCanResetPitch) == 0x000001
 static_assert(offsetof(AdvancedCamera_SetOrientationSyncCanResetPitch, bInEnabled) == 0x000000, "Member 'AdvancedCamera_SetOrientationSyncCanResetPitch::bInEnabled' has a wrong offset!");
 
 // Function X6Camera.AdvancedCameraBPFLibrary.GetOverriddenCameraBaseParams
-// 0x0420 (0x0420 - 0x0000)
+// 0x0438 (0x0438 - 0x0000)
 struct AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams final
 {
 public:
-	struct FCameraBaseParamsDefine                Origin;                                            // 0x0000(0x0160)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraBaseParamsDefine                Override;                                          // 0x0160(0x0160)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraBaseParamsDefine                OutOverridden;                                     // 0x02C0(0x0160)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraBaseParamsDefine                Origin;                                            // 0x0000(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraBaseParamsDefine                Override;                                          // 0x0168(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraBaseParamsDefine                OutOverridden;                                     // 0x02D0(0x0168)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams) == 0x000008, "Wrong alignment on AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams");
-static_assert(sizeof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams) == 0x000420, "Wrong size on AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams");
+static_assert(sizeof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams) == 0x000438, "Wrong size on AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams");
 static_assert(offsetof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams, Origin) == 0x000000, "Member 'AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams::Origin' has a wrong offset!");
-static_assert(offsetof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams, Override) == 0x000160, "Member 'AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams::Override' has a wrong offset!");
-static_assert(offsetof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams, OutOverridden) == 0x0002C0, "Member 'AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams::OutOverridden' has a wrong offset!");
+static_assert(offsetof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams, Override) == 0x000168, "Member 'AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams::Override' has a wrong offset!");
+static_assert(offsetof(AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams, OutOverridden) == 0x0002D0, "Member 'AdvancedCameraBPFLibrary_GetOverriddenCameraBaseParams::OutOverridden' has a wrong offset!");
 
 // Function X6Camera.AdvancedCameraBPFLibrary.GetOverriddenCameraInputConfig
 // 0x0270 (0x0270 - 0x0000)
@@ -1073,17 +1099,17 @@ static_assert(sizeof(X6PlayerCameraManagerBase_BlendBackToViewTarget) == 0x00002
 static_assert(offsetof(X6PlayerCameraManagerBase_BlendBackToViewTarget, TransitionParams) == 0x000000, "Member 'X6PlayerCameraManagerBase_BlendBackToViewTarget::TransitionParams' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.BlendToNewViewInfo
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct X6PlayerCameraManagerBase_BlendToNewViewInfo final
 {
 public:
-	struct FMinimalViewInfo                       NewInfo;                                           // 0x0000(0x0970)(Parm, NativeAccessSpecifierPublic)
-	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0970(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       NewInfo;                                           // 0x0000(0x0990)(Parm, NativeAccessSpecifierPublic)
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0990(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6PlayerCameraManagerBase_BlendToNewViewInfo) == 0x000010, "Wrong alignment on X6PlayerCameraManagerBase_BlendToNewViewInfo");
-static_assert(sizeof(X6PlayerCameraManagerBase_BlendToNewViewInfo) == 0x000990, "Wrong size on X6PlayerCameraManagerBase_BlendToNewViewInfo");
+static_assert(sizeof(X6PlayerCameraManagerBase_BlendToNewViewInfo) == 0x0009B0, "Wrong size on X6PlayerCameraManagerBase_BlendToNewViewInfo");
 static_assert(offsetof(X6PlayerCameraManagerBase_BlendToNewViewInfo, NewInfo) == 0x000000, "Member 'X6PlayerCameraManagerBase_BlendToNewViewInfo::NewInfo' has a wrong offset!");
-static_assert(offsetof(X6PlayerCameraManagerBase_BlendToNewViewInfo, TransitionParams) == 0x000970, "Member 'X6PlayerCameraManagerBase_BlendToNewViewInfo::TransitionParams' has a wrong offset!");
+static_assert(offsetof(X6PlayerCameraManagerBase_BlendToNewViewInfo, TransitionParams) == 0x000990, "Member 'X6PlayerCameraManagerBase_BlendToNewViewInfo::TransitionParams' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.ExitCameraZoom
 // 0x0008 (0x0008 - 0x0000)
@@ -1251,17 +1277,17 @@ static_assert(offsetof(X6PlayerCameraManagerBase_SetCameraDrawDebug, bEnable) ==
 static_assert(offsetof(X6PlayerCameraManagerBase_SetCameraDrawDebug, DrawDebugTime) == 0x000004, "Member 'X6PlayerCameraManagerBase_SetCameraDrawDebug::DrawDebugTime' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.SetCameraViewPointWithBlend
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct X6PlayerCameraManagerBase_SetCameraViewPointWithBlend final
 {
 public:
-	struct FMinimalViewInfo                       ViewInfo;                                          // 0x0000(0x0970)(Parm, NativeAccessSpecifierPublic)
-	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0970(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       ViewInfo;                                          // 0x0000(0x0990)(Parm, NativeAccessSpecifierPublic)
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0990(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6PlayerCameraManagerBase_SetCameraViewPointWithBlend) == 0x000010, "Wrong alignment on X6PlayerCameraManagerBase_SetCameraViewPointWithBlend");
-static_assert(sizeof(X6PlayerCameraManagerBase_SetCameraViewPointWithBlend) == 0x000990, "Wrong size on X6PlayerCameraManagerBase_SetCameraViewPointWithBlend");
+static_assert(sizeof(X6PlayerCameraManagerBase_SetCameraViewPointWithBlend) == 0x0009B0, "Wrong size on X6PlayerCameraManagerBase_SetCameraViewPointWithBlend");
 static_assert(offsetof(X6PlayerCameraManagerBase_SetCameraViewPointWithBlend, ViewInfo) == 0x000000, "Member 'X6PlayerCameraManagerBase_SetCameraViewPointWithBlend::ViewInfo' has a wrong offset!");
-static_assert(offsetof(X6PlayerCameraManagerBase_SetCameraViewPointWithBlend, TransitionParams) == 0x000970, "Member 'X6PlayerCameraManagerBase_SetCameraViewPointWithBlend::TransitionParams' has a wrong offset!");
+static_assert(offsetof(X6PlayerCameraManagerBase_SetCameraViewPointWithBlend, TransitionParams) == 0x000990, "Member 'X6PlayerCameraManagerBase_SetCameraViewPointWithBlend::TransitionParams' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.SetEnableRotateInput
 // 0x0001 (0x0001 - 0x0000)
@@ -1433,26 +1459,40 @@ static_assert(offsetof(X6PlayerCameraManagerBase_SwitchToLastCameraState, NewTar
 static_assert(offsetof(X6PlayerCameraManagerBase_SwitchToLastCameraState, ReturnValue) == 0x000008, "Member 'X6PlayerCameraManagerBase_SwitchToLastCameraState::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.GetCameraPendingViewTarget
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct X6PlayerCameraManagerBase_GetCameraPendingViewTarget final
 {
 public:
-	struct FTViewTarget                           ReturnValue;                                       // 0x0000(0x0990)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FTViewTarget                           ReturnValue;                                       // 0x0000(0x09B0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6PlayerCameraManagerBase_GetCameraPendingViewTarget) == 0x000010, "Wrong alignment on X6PlayerCameraManagerBase_GetCameraPendingViewTarget");
-static_assert(sizeof(X6PlayerCameraManagerBase_GetCameraPendingViewTarget) == 0x000990, "Wrong size on X6PlayerCameraManagerBase_GetCameraPendingViewTarget");
+static_assert(sizeof(X6PlayerCameraManagerBase_GetCameraPendingViewTarget) == 0x0009B0, "Wrong size on X6PlayerCameraManagerBase_GetCameraPendingViewTarget");
 static_assert(offsetof(X6PlayerCameraManagerBase_GetCameraPendingViewTarget, ReturnValue) == 0x000000, "Member 'X6PlayerCameraManagerBase_GetCameraPendingViewTarget::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.GetCameraViewTarget
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct X6PlayerCameraManagerBase_GetCameraViewTarget final
 {
 public:
-	struct FTViewTarget                           ReturnValue;                                       // 0x0000(0x0990)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FTViewTarget                           ReturnValue;                                       // 0x0000(0x09B0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6PlayerCameraManagerBase_GetCameraViewTarget) == 0x000010, "Wrong alignment on X6PlayerCameraManagerBase_GetCameraViewTarget");
-static_assert(sizeof(X6PlayerCameraManagerBase_GetCameraViewTarget) == 0x000990, "Wrong size on X6PlayerCameraManagerBase_GetCameraViewTarget");
+static_assert(sizeof(X6PlayerCameraManagerBase_GetCameraViewTarget) == 0x0009B0, "Wrong size on X6PlayerCameraManagerBase_GetCameraViewTarget");
 static_assert(offsetof(X6PlayerCameraManagerBase_GetCameraViewTarget, ReturnValue) == 0x000000, "Member 'X6PlayerCameraManagerBase_GetCameraViewTarget::ReturnValue' has a wrong offset!");
+
+// Function X6Camera.X6PlayerCameraManagerBase.GetCurrentFOVWithoutPlayerSetting
+// 0x0010 (0x0010 - 0x0000)
+struct X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting final
+{
+public:
+	class AActor*                                 InTargetActor;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting) == 0x000008, "Wrong alignment on X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting");
+static_assert(sizeof(X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting) == 0x000010, "Wrong size on X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting");
+static_assert(offsetof(X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting, InTargetActor) == 0x000000, "Member 'X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting::InTargetActor' has a wrong offset!");
+static_assert(offsetof(X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting, ReturnValue) == 0x000008, "Member 'X6PlayerCameraManagerBase_GetCurrentFOVWithoutPlayerSetting::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.X6PlayerCameraManagerBase.GetEnableRotateInput
 // 0x0001 (0x0001 - 0x0000)
@@ -1808,6 +1848,90 @@ static_assert(offsetof(CameraLagProcess_RInterpTo, DeltaTime) == 0x000030, "Memb
 static_assert(offsetof(CameraLagProcess_RInterpTo, InterpSpeed) == 0x000034, "Member 'CameraLagProcess_RInterpTo::InterpSpeed' has a wrong offset!");
 static_assert(offsetof(CameraLagProcess_RInterpTo, ReturnValue) == 0x000038, "Member 'CameraLagProcess_RInterpTo::ReturnValue' has a wrong offset!");
 
+// Function X6Camera.CameraModifier_PlayerSettingFOV.GetPlayerSettingFOVModifier
+// 0x0010 (0x0010 - 0x0000)
+struct CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier final
+{
+public:
+	const class UObject*                          WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraModifier_PlayerSettingFOV*       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier) == 0x000008, "Wrong alignment on CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier");
+static_assert(sizeof(CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier) == 0x000010, "Wrong size on CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier, WorldContextObject) == 0x000000, "Member 'CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier, ReturnValue) == 0x000008, "Member 'CameraModifier_PlayerSettingFOV_GetPlayerSettingFOVModifier::ReturnValue' has a wrong offset!");
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.SetCameraAcceptEffect
+// 0x0010 (0x0010 - 0x0000)
+struct CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect final
+{
+public:
+	class AActor*                                 InActorWithCamera;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAcceptEffect;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect) == 0x000008, "Wrong alignment on CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect");
+static_assert(sizeof(CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect) == 0x000010, "Wrong size on CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect, InActorWithCamera) == 0x000000, "Member 'CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect::InActorWithCamera' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect, bAcceptEffect) == 0x000008, "Member 'CameraModifier_PlayerSettingFOV_SetCameraAcceptEffect::bAcceptEffect' has a wrong offset!");
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.OnViewTargetChanged
+// 0x0018 (0x0018 - 0x0000)
+struct CameraModifier_PlayerSettingFOV_OnViewTargetChanged final
+{
+public:
+	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OldTarget;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 NewTarget;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CameraModifier_PlayerSettingFOV_OnViewTargetChanged) == 0x000008, "Wrong alignment on CameraModifier_PlayerSettingFOV_OnViewTargetChanged");
+static_assert(sizeof(CameraModifier_PlayerSettingFOV_OnViewTargetChanged) == 0x000018, "Wrong size on CameraModifier_PlayerSettingFOV_OnViewTargetChanged");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_OnViewTargetChanged, PC) == 0x000000, "Member 'CameraModifier_PlayerSettingFOV_OnViewTargetChanged::PC' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_OnViewTargetChanged, OldTarget) == 0x000008, "Member 'CameraModifier_PlayerSettingFOV_OnViewTargetChanged::OldTarget' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_OnViewTargetChanged, NewTarget) == 0x000010, "Member 'CameraModifier_PlayerSettingFOV_OnViewTargetChanged::NewTarget' has a wrong offset!");
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.GetFOVWithoutPlayerSetting
+// 0x0010 (0x0010 - 0x0000)
+struct CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting final
+{
+public:
+	const class AActor*                           InActor;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InTargetFOV;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting) == 0x000008, "Wrong alignment on CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting");
+static_assert(sizeof(CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting) == 0x000010, "Wrong size on CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting, InActor) == 0x000000, "Member 'CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting::InActor' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting, InTargetFOV) == 0x000008, "Member 'CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting::InTargetFOV' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting, ReturnValue) == 0x00000C, "Member 'CameraModifier_PlayerSettingFOV_GetFOVWithoutPlayerSetting::ReturnValue' has a wrong offset!");
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.IfCameraUsePlayerSettingFOV
+// 0x0010 (0x0010 - 0x0000)
+struct CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV final
+{
+public:
+	const class AActor*                           InActor;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV) == 0x000008, "Wrong alignment on CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV");
+static_assert(sizeof(CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV) == 0x000010, "Wrong size on CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV, InActor) == 0x000000, "Member 'CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV::InActor' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV, ReturnValue) == 0x000008, "Member 'CameraModifier_PlayerSettingFOV_IfCameraUsePlayerSettingFOV::ReturnValue' has a wrong offset!");
+
+// Function X6Camera.CameraModifier_PlayerSettingFOV.ModifyFOV
+// 0x0008 (0x0008 - 0x0000)
+struct CameraModifier_PlayerSettingFOV_ModifyFOV final
+{
+public:
+	float                                         InFOV;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CameraModifier_PlayerSettingFOV_ModifyFOV) == 0x000004, "Wrong alignment on CameraModifier_PlayerSettingFOV_ModifyFOV");
+static_assert(sizeof(CameraModifier_PlayerSettingFOV_ModifyFOV) == 0x000008, "Wrong size on CameraModifier_PlayerSettingFOV_ModifyFOV");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_ModifyFOV, InFOV) == 0x000000, "Member 'CameraModifier_PlayerSettingFOV_ModifyFOV::InFOV' has a wrong offset!");
+static_assert(offsetof(CameraModifier_PlayerSettingFOV_ModifyFOV, ReturnValue) == 0x000004, "Member 'CameraModifier_PlayerSettingFOV_ModifyFOV::ReturnValue' has a wrong offset!");
+
 // Function X6Camera.CameraOrientationSynchronizer.BlueprintSyncCameraRotationPitch
 // 0x0038 (0x0038 - 0x0000)
 struct CameraOrientationSynchronizer_BlueprintSyncCameraRotationPitch final
@@ -1943,21 +2067,21 @@ static_assert(offsetof(CameraStateInterface_HandleExitCameraState, LastState) ==
 static_assert(offsetof(CameraStateInterface_HandleExitCameraState, ReturnValue) == 0x000001, "Member 'CameraStateInterface_HandleExitCameraState::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.CameraStateInterface.HandleFullyBlendedCameraState
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct CameraStateInterface_HandleFullyBlendedCameraState final
 {
 public:
 	ECameraState                                  NewState;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       NewPOV;                                            // 0x0010(0x0970)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0980(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_981[0xF];                                      // 0x0981(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMinimalViewInfo                       NewPOV;                                            // 0x0010(0x0990)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x09A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9A1[0xF];                                      // 0x09A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CameraStateInterface_HandleFullyBlendedCameraState) == 0x000010, "Wrong alignment on CameraStateInterface_HandleFullyBlendedCameraState");
-static_assert(sizeof(CameraStateInterface_HandleFullyBlendedCameraState) == 0x000990, "Wrong size on CameraStateInterface_HandleFullyBlendedCameraState");
+static_assert(sizeof(CameraStateInterface_HandleFullyBlendedCameraState) == 0x0009B0, "Wrong size on CameraStateInterface_HandleFullyBlendedCameraState");
 static_assert(offsetof(CameraStateInterface_HandleFullyBlendedCameraState, NewState) == 0x000000, "Member 'CameraStateInterface_HandleFullyBlendedCameraState::NewState' has a wrong offset!");
 static_assert(offsetof(CameraStateInterface_HandleFullyBlendedCameraState, NewPOV) == 0x000010, "Member 'CameraStateInterface_HandleFullyBlendedCameraState::NewPOV' has a wrong offset!");
-static_assert(offsetof(CameraStateInterface_HandleFullyBlendedCameraState, ReturnValue) == 0x000980, "Member 'CameraStateInterface_HandleFullyBlendedCameraState::ReturnValue' has a wrong offset!");
+static_assert(offsetof(CameraStateInterface_HandleFullyBlendedCameraState, ReturnValue) == 0x0009A0, "Member 'CameraStateInterface_HandleFullyBlendedCameraState::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.CameraStateInterface.HandleGetCameraComponent
 // 0x0008 (0x0008 - 0x0000)
@@ -1971,7 +2095,7 @@ static_assert(sizeof(CameraStateInterface_HandleGetCameraComponent) == 0x000008,
 static_assert(offsetof(CameraStateInterface_HandleGetCameraComponent, ReturnValue) == 0x000000, "Member 'CameraStateInterface_HandleGetCameraComponent::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.CameraStateInterface.HandleUpdateBlendCameraState
-// 0x09B0 (0x09B0 - 0x0000)
+// 0x09D0 (0x09D0 - 0x0000)
 struct CameraStateInterface_HandleUpdateBlendCameraState final
 {
 public:
@@ -1980,17 +2104,17 @@ public:
 	float                                         DurationPct;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FViewTargetTransitionParams            BlendParams;                                       // 0x0008(0x0020)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       NewPOV;                                            // 0x0030(0x0970)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x09A0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9A1[0xF];                                      // 0x09A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMinimalViewInfo                       NewPOV;                                            // 0x0030(0x0990)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x09C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9C1[0xF];                                      // 0x09C1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CameraStateInterface_HandleUpdateBlendCameraState) == 0x000010, "Wrong alignment on CameraStateInterface_HandleUpdateBlendCameraState");
-static_assert(sizeof(CameraStateInterface_HandleUpdateBlendCameraState) == 0x0009B0, "Wrong size on CameraStateInterface_HandleUpdateBlendCameraState");
+static_assert(sizeof(CameraStateInterface_HandleUpdateBlendCameraState) == 0x0009D0, "Wrong size on CameraStateInterface_HandleUpdateBlendCameraState");
 static_assert(offsetof(CameraStateInterface_HandleUpdateBlendCameraState, NewState) == 0x000000, "Member 'CameraStateInterface_HandleUpdateBlendCameraState::NewState' has a wrong offset!");
 static_assert(offsetof(CameraStateInterface_HandleUpdateBlendCameraState, DurationPct) == 0x000004, "Member 'CameraStateInterface_HandleUpdateBlendCameraState::DurationPct' has a wrong offset!");
 static_assert(offsetof(CameraStateInterface_HandleUpdateBlendCameraState, BlendParams) == 0x000008, "Member 'CameraStateInterface_HandleUpdateBlendCameraState::BlendParams' has a wrong offset!");
 static_assert(offsetof(CameraStateInterface_HandleUpdateBlendCameraState, NewPOV) == 0x000030, "Member 'CameraStateInterface_HandleUpdateBlendCameraState::NewPOV' has a wrong offset!");
-static_assert(offsetof(CameraStateInterface_HandleUpdateBlendCameraState, ReturnValue) == 0x0009A0, "Member 'CameraStateInterface_HandleUpdateBlendCameraState::ReturnValue' has a wrong offset!");
+static_assert(offsetof(CameraStateInterface_HandleUpdateBlendCameraState, ReturnValue) == 0x0009C0, "Member 'CameraStateInterface_HandleUpdateBlendCameraState::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.CameraStateInterface.OnEnterCameraState
 // 0x0028 (0x0028 - 0x0000)
@@ -2368,20 +2492,20 @@ static_assert(offsetof(SplineCameraVolumeActor_SetViewTarget, NewViewTarget) == 
 static_assert(offsetof(SplineCameraVolumeActor_SetViewTarget, BlendParam) == 0x000008, "Member 'SplineCameraVolumeActor_SetViewTarget::BlendParam' has a wrong offset!");
 
 // Function X6Camera.X6CameraConfigManager.IsCameraSettingsValueEqual
-// 0x0238 (0x0238 - 0x0000)
+// 0x0248 (0x0248 - 0x0000)
 struct X6CameraConfigManager_IsCameraSettingsValueEqual final
 {
 public:
-	struct FX6CameraBlendableSettings             A;                                                 // 0x0000(0x0118)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FX6CameraBlendableSettings             B;                                                 // 0x0118(0x0118)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0230(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_231[0x7];                                      // 0x0231(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FX6CameraBlendableSettings             A;                                                 // 0x0000(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6CameraBlendableSettings             B;                                                 // 0x0120(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0240(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_241[0x7];                                      // 0x0241(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(X6CameraConfigManager_IsCameraSettingsValueEqual) == 0x000008, "Wrong alignment on X6CameraConfigManager_IsCameraSettingsValueEqual");
-static_assert(sizeof(X6CameraConfigManager_IsCameraSettingsValueEqual) == 0x000238, "Wrong size on X6CameraConfigManager_IsCameraSettingsValueEqual");
+static_assert(sizeof(X6CameraConfigManager_IsCameraSettingsValueEqual) == 0x000248, "Wrong size on X6CameraConfigManager_IsCameraSettingsValueEqual");
 static_assert(offsetof(X6CameraConfigManager_IsCameraSettingsValueEqual, A) == 0x000000, "Member 'X6CameraConfigManager_IsCameraSettingsValueEqual::A' has a wrong offset!");
-static_assert(offsetof(X6CameraConfigManager_IsCameraSettingsValueEqual, B) == 0x000118, "Member 'X6CameraConfigManager_IsCameraSettingsValueEqual::B' has a wrong offset!");
-static_assert(offsetof(X6CameraConfigManager_IsCameraSettingsValueEqual, ReturnValue) == 0x000230, "Member 'X6CameraConfigManager_IsCameraSettingsValueEqual::ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6CameraConfigManager_IsCameraSettingsValueEqual, B) == 0x000120, "Member 'X6CameraConfigManager_IsCameraSettingsValueEqual::B' has a wrong offset!");
+static_assert(offsetof(X6CameraConfigManager_IsCameraSettingsValueEqual, ReturnValue) == 0x000240, "Member 'X6CameraConfigManager_IsCameraSettingsValueEqual::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.X6CameraConfigManager.CollectDebugOutput
 // 0x0010 (0x0010 - 0x0000)
@@ -2406,7 +2530,7 @@ static_assert(sizeof(X6CameraConfigManager_GetConfigDataList) == 0x000010, "Wron
 static_assert(offsetof(X6CameraConfigManager_GetConfigDataList, ReturnValue) == 0x000000, "Member 'X6CameraConfigManager_GetConfigDataList::ReturnValue' has a wrong offset!");
 
 // Function X6Camera.X6CameraRuntimeConfigModifier.BlueprintModifyCameraRuntimeConfig
-// 0x0468 (0x0468 - 0x0000)
+// 0x0478 (0x0478 - 0x0000)
 struct X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig final
 {
 public:
@@ -2414,18 +2538,18 @@ public:
 	bool                                          bRefreshConfigData;                                // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FX6CameraInputConfig                   InInputConfig;                                     // 0x0008(0x00D0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraBaseParamsDefine                InBaseParams;                                      // 0x00D8(0x0160)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FX6CameraInputConfig                   OutInputConfig;                                    // 0x0238(0x00D0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraBaseParamsDefine                OutBaseParams;                                     // 0x0308(0x0160)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraBaseParamsDefine                InBaseParams;                                      // 0x00D8(0x0168)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6CameraInputConfig                   OutInputConfig;                                    // 0x0240(0x00D0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraBaseParamsDefine                OutBaseParams;                                     // 0x0310(0x0168)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig) == 0x000008, "Wrong alignment on X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig");
-static_assert(sizeof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig) == 0x000468, "Wrong size on X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig");
+static_assert(sizeof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig) == 0x000478, "Wrong size on X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig");
 static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, DeltaTime) == 0x000000, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::DeltaTime' has a wrong offset!");
 static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, bRefreshConfigData) == 0x000004, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::bRefreshConfigData' has a wrong offset!");
 static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, InInputConfig) == 0x000008, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::InInputConfig' has a wrong offset!");
 static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, InBaseParams) == 0x0000D8, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::InBaseParams' has a wrong offset!");
-static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, OutInputConfig) == 0x000238, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::OutInputConfig' has a wrong offset!");
-static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, OutBaseParams) == 0x000308, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::OutBaseParams' has a wrong offset!");
+static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, OutInputConfig) == 0x000240, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::OutInputConfig' has a wrong offset!");
+static_assert(offsetof(X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig, OutBaseParams) == 0x000310, "Member 'X6CameraRuntimeConfigModifier_BlueprintModifyCameraRuntimeConfig::OutBaseParams' has a wrong offset!");
 
 // Function X6Camera.X6CameraRuntimeConfigModifier.GetConfigDataUniqueKey
 // 0x0004 (0x0004 - 0x0000)

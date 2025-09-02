@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class WebSocketNetworking.WebSocketConnection
-// 0x0010 (0x1E20 - 0x1E10)
+// 0x0010 (0x1E48 - 0x1E38)
 class UWebSocketConnection final : public UNetConnection
 {
 public:
-	uint8                                         Pad_1E10[0x10];                                    // 0x1E10(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E38[0x10];                                    // 0x1E38(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(UWebSocketConnection) == 0x000008, "Wrong alignment on UWebSocketConnection");
-static_assert(sizeof(UWebSocketConnection) == 0x001E20, "Wrong size on UWebSocketConnection");
+static_assert(sizeof(UWebSocketConnection) == 0x001E48, "Wrong size on UWebSocketConnection");
 
 // Class WebSocketNetworking.WebSocketNetDriver
 // 0x0010 (0x08D8 - 0x08C8)

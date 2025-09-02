@@ -17,215 +17,6 @@
 namespace SDK::Params
 {
 
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.VariableAssignment
-// 0x0068 (0x0068 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_VariableAssignment final
-{
-public:
-	struct FGameplayTagContainer                  LongDistanceTag;                                   // 0x0000(0x0020)(Edit, BlueprintVisible)
-	struct FGameplayTagContainer                  TracingTag;                                        // 0x0020(0x0020)(Edit, BlueprintVisible)
-	struct FGameplayTagContainer                  PenetrateTag;                                      // 0x0040(0x0020)(Edit, BlueprintVisible)
-	bool                                          CallFunc_HasAnyTag_ReturnValue;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyTag_ReturnValue_1;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyTag_ReturnValue_2;                  // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_VariableAssignment) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_VariableAssignment");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_VariableAssignment) == 0x000068, "Wrong size on GA_Nikki_RecoveryPre_C_VariableAssignment");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, LongDistanceTag) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::LongDistanceTag' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, TracingTag) == 0x000020, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::TracingTag' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, PenetrateTag) == 0x000040, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::PenetrateTag' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, CallFunc_HasAnyTag_ReturnValue) == 0x000060, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::CallFunc_HasAnyTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, CallFunc_HasAnyTag_ReturnValue_1) == 0x000061, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::CallFunc_HasAnyTag_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, CallFunc_HasAnyTag_ReturnValue_2) == 0x000062, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::CallFunc_HasAnyTag_ReturnValue_2' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.StopFullBodyMontage
-// 0x0020 (0x0020 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_StopFullBodyMontage final
-{
-public:
-	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_StopFullBodyMontage");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage) == 0x000020, "Wrong size on GA_Nikki_RecoveryPre_C_StopFullBodyMontage");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, K2Node_DynamicCast_AsCharacter) == 0x000010, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.PlayFullBodyMontage
-// 0x0068 (0x0068 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_PlayFullBodyMontage final
-{
-public:
-	class USkeletalMeshComponent*                 CallFunc_GetOwningComponentFromActorInfo_ReturnValue; // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Montage_Play_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWalking_ReturnValue;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_PlayFullBodyMontage");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage) == 0x000068, "Wrong size on GA_Nikki_RecoveryPre_C_PlayFullBodyMontage");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetOwningComponentFromActorInfo_ReturnValue) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetOwningComponentFromActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetAnimInstance_ReturnValue) == 0x000010, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_Montage_Play_ReturnValue) == 0x000018, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_Montage_Play_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000020, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, K2Node_DynamicCast_AsCharacter) == 0x000028, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetVelocity_ReturnValue) == 0x000038, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_IsWalking_ReturnValue) == 0x000050, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_IsWalking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_VSize_ReturnValue) == 0x000058, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000060, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_BooleanAND_ReturnValue) == 0x000061, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B
-// 0x0004 (0x0004 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B final
-{
-public:
-	float                                         CurTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong size on GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B, CurTime) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B::CurTime' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B
-// 0x0004 (0x0004 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B final
-{
-public:
-	float                                         CurTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong size on GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B, CurTime) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B::CurTime' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B
-// 0x0004 (0x0004 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B final
-{
-public:
-	float                                         CurTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong size on GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B, CurTime) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B::CurTime' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.ModifyChargeTime
-// 0x0048 (0x0048 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_ModifyChargeTime final
-{
-public:
-	struct FGameplayTagContainer                  ChargeTimeReduceTag;                               // 0x0000(0x0020)(Edit, BlueprintVisible)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasAnyTag_ReturnValue;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_FinalChargeTime_ImplicitCast;   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_ModifyChargeTime) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_ModifyChargeTime");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_ModifyChargeTime) == 0x000048, "Wrong size on GA_Nikki_RecoveryPre_C_ModifyChargeTime");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, ChargeTimeReduceTag) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::ChargeTimeReduceTag' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000020, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000028, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_HasAnyTag_ReturnValue) == 0x000030, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_HasAnyTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000038, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, K2Node_VariableSet_FinalChargeTime_ImplicitCast) == 0x000040, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::K2Node_VariableSet_FinalChargeTime_ImplicitCast' has a wrong offset!");
-
-// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.K2_OnEndAbility
-// 0x0001 (0x0001 - 0x0000)
-struct GA_Nikki_RecoveryPre_C_K2_OnEndAbility final
-{
-public:
-	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_RecoveryPre_C_K2_OnEndAbility) == 0x000001, "Wrong alignment on GA_Nikki_RecoveryPre_C_K2_OnEndAbility");
-static_assert(sizeof(GA_Nikki_RecoveryPre_C_K2_OnEndAbility) == 0x000001, "Wrong size on GA_Nikki_RecoveryPre_C_K2_OnEndAbility");
-static_assert(offsetof(GA_Nikki_RecoveryPre_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
-
 // Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.ExecuteUbergraph_GA_Nikki_RecoveryPre
 // 0x0100 (0x0100 - 0x0000)
 struct GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre final
@@ -292,6 +83,215 @@ static_assert(offsetof(GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_Recovery
 static_assert(offsetof(GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre, CallFunc_ChargeUpProxy_ReturnValue) == 0x0000E0, "Member 'GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre::CallFunc_ChargeUpProxy_ReturnValue' has a wrong offset!");
 static_assert(offsetof(GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre, K2Node_CreateDelegate_OutputDelegate_8) == 0x0000E8, "Member 'GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
 static_assert(offsetof(GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre, CallFunc_IsValid_ReturnValue_2) == 0x0000F8, "Member 'GA_Nikki_RecoveryPre_C_ExecuteUbergraph_GA_Nikki_RecoveryPre::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.K2_OnEndAbility
+// 0x0001 (0x0001 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_K2_OnEndAbility final
+{
+public:
+	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_K2_OnEndAbility) == 0x000001, "Wrong alignment on GA_Nikki_RecoveryPre_C_K2_OnEndAbility");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_K2_OnEndAbility) == 0x000001, "Wrong size on GA_Nikki_RecoveryPre_C_K2_OnEndAbility");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.ModifyChargeTime
+// 0x0048 (0x0048 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_ModifyChargeTime final
+{
+public:
+	struct FGameplayTagContainer                  ChargeTimeReduceTag;                               // 0x0000(0x0020)(Edit, BlueprintVisible)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyTag_ReturnValue;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_FinalChargeTime_ImplicitCast;   // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_ModifyChargeTime) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_ModifyChargeTime");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_ModifyChargeTime) == 0x000048, "Wrong size on GA_Nikki_RecoveryPre_C_ModifyChargeTime");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, ChargeTimeReduceTag) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::ChargeTimeReduceTag' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000020, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000028, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_HasAnyTag_ReturnValue) == 0x000030, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_HasAnyTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000038, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_ModifyChargeTime, K2Node_VariableSet_FinalChargeTime_ImplicitCast) == 0x000040, "Member 'GA_Nikki_RecoveryPre_C_ModifyChargeTime::K2Node_VariableSet_FinalChargeTime_ImplicitCast' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B
+// 0x0004 (0x0004 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B final
+{
+public:
+	float                                         CurTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong size on GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B, CurTime) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B::CurTime' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B
+// 0x0004 (0x0004 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B final
+{
+public:
+	float                                         CurTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong size on GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B, CurTime) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B::CurTime' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B
+// 0x0004 (0x0004 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B final
+{
+public:
+	float                                         CurTime;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B) == 0x000004, "Wrong size on GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B, CurTime) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B::CurTime' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000004, "Wrong alignment on GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E) == 0x000008, "Wrong size on GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E, NotifyName) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.PlayFullBodyMontage
+// 0x0068 (0x0068 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_PlayFullBodyMontage final
+{
+public:
+	class USkeletalMeshComponent*                 CallFunc_GetOwningComponentFromActorInfo_ReturnValue; // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Montage_Play_ReturnValue;                 // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWalking_ReturnValue;                    // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_PlayFullBodyMontage");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage) == 0x000068, "Wrong size on GA_Nikki_RecoveryPre_C_PlayFullBodyMontage");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetOwningComponentFromActorInfo_ReturnValue) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetOwningComponentFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetAnimInstance_ReturnValue) == 0x000010, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_Montage_Play_ReturnValue) == 0x000018, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_Montage_Play_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000020, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, K2Node_DynamicCast_AsCharacter) == 0x000028, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, K2Node_DynamicCast_bSuccess) == 0x000030, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_GetVelocity_ReturnValue) == 0x000038, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_IsWalking_ReturnValue) == 0x000050, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_IsWalking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_VSize_ReturnValue) == 0x000058, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_VSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000060, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_PlayFullBodyMontage, CallFunc_BooleanAND_ReturnValue) == 0x000061, "Member 'GA_Nikki_RecoveryPre_C_PlayFullBodyMontage::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.StopFullBodyMontage
+// 0x0020 (0x0020 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_StopFullBodyMontage final
+{
+public:
+	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             K2Node_DynamicCast_AsCharacter;                    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_StopFullBodyMontage");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage) == 0x000020, "Wrong size on GA_Nikki_RecoveryPre_C_StopFullBodyMontage");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, K2Node_DynamicCast_AsCharacter) == 0x000010, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::K2Node_DynamicCast_AsCharacter' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_StopFullBodyMontage, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Nikki_RecoveryPre_C_StopFullBodyMontage::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.VariableAssignment
+// 0x0068 (0x0068 - 0x0000)
+struct GA_Nikki_RecoveryPre_C_VariableAssignment final
+{
+public:
+	struct FGameplayTagContainer                  LongDistanceTag;                                   // 0x0000(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  TracingTag;                                        // 0x0020(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  PenetrateTag;                                      // 0x0040(0x0020)(Edit, BlueprintVisible)
+	bool                                          CallFunc_HasAnyTag_ReturnValue;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyTag_ReturnValue_1;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasAnyTag_ReturnValue_2;                  // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_RecoveryPre_C_VariableAssignment) == 0x000008, "Wrong alignment on GA_Nikki_RecoveryPre_C_VariableAssignment");
+static_assert(sizeof(GA_Nikki_RecoveryPre_C_VariableAssignment) == 0x000068, "Wrong size on GA_Nikki_RecoveryPre_C_VariableAssignment");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, LongDistanceTag) == 0x000000, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::LongDistanceTag' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, TracingTag) == 0x000020, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::TracingTag' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, PenetrateTag) == 0x000040, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::PenetrateTag' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, CallFunc_HasAnyTag_ReturnValue) == 0x000060, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::CallFunc_HasAnyTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, CallFunc_HasAnyTag_ReturnValue_1) == 0x000061, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::CallFunc_HasAnyTag_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_RecoveryPre_C_VariableAssignment, CallFunc_HasAnyTag_ReturnValue_2) == 0x000062, "Member 'GA_Nikki_RecoveryPre_C_VariableAssignment::CallFunc_HasAnyTag_ReturnValue_2' has a wrong offset!");
 
 // Function GA_Nikki_RecoveryPre.GA_Nikki_RecoveryPre_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

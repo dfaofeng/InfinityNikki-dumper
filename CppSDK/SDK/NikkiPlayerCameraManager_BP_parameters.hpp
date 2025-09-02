@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "FFocusOnCameraParams_structs.hpp"
 #include "X6Camera_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "FFocusOnCameraParams_structs.hpp"
 
 
 namespace SDK::Params

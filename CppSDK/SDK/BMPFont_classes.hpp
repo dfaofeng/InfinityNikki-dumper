@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BMPFont_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "BMPFont_structs.hpp"
 #include "UMG_classes.hpp"
 
 

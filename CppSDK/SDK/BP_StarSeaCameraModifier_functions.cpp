@@ -45,6 +45,104 @@ void UBP_StarSeaCameraModifier_C::BlueprintModifyPostProcess(float DeltaTime, fl
 }
 
 
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_AddActorCount
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_StarSeaCameraModifier_C::BP_AddActorCount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCameraModifier_C", "BP_AddActorCount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_AddRefCount
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_StarSeaCameraModifier_C::BP_AddRefCount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCameraModifier_C", "BP_AddRefCount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_DeleteActorCount
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_StarSeaCameraModifier_C::BP_DeleteActorCount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCameraModifier_C", "BP_DeleteActorCount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_DeleteRefCount
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_StarSeaCameraModifier_C::BP_DeleteRefCount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCameraModifier_C", "BP_DeleteRefCount");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_GetActorCount
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32*                                  RefCount_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_StarSeaCameraModifier_C::BP_GetActorCount(int32* RefCount_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCameraModifier_C", "BP_GetActorCount");
+
+	Params::BP_StarSeaCameraModifier_C_BP_GetActorCount Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RefCount_0 != nullptr)
+		*RefCount_0 = Parms.RefCount_0;
+}
+
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_GetRefCount
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32*                                  RefCount_0                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_StarSeaCameraModifier_C::BP_GetRefCount(int32* RefCount_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_StarSeaCameraModifier_C", "BP_GetRefCount");
+
+	Params::BP_StarSeaCameraModifier_C_BP_GetRefCount Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (RefCount_0 != nullptr)
+		*RefCount_0 = Parms.RefCount_0;
+}
+
+
 // Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_SetDynamicMat
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

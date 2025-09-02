@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ELSTimePeriodType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ELSTimePeriodType_structs.hpp"
 #include "EPlatformType_structs.hpp"
 #include "X6Game_structs.hpp"
 

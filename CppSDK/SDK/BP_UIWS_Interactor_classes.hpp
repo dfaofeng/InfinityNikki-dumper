@@ -60,23 +60,23 @@ public:
 	bool                                          ForceInitEmitterOnCreate;                          // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetInteractivity(bool NewValue);
-	void ReloadInteractor();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void LoadNiagara(class UObject* Loaded);
-	void IsMobilePlatform(bool* Condition);
-	void GetVelocity(struct FVector* Velocity);
-	void GetUIWSManagerToRegister(class ABP_UIWS_Manager_C** manager);
-	void GetSize(double* Size);
-	void GetPosition(struct FVector* Position);
-	void ExecuteUbergraph_BP_UIWS_Interactor(int32 EntryPoint);
-	void DisableInteract();
-	void CulcForceIntensity_Sand(const struct FVector& Start, double* Distance);
-	void CulcForceIntensity(double HeightOffset_0, const struct FVector& Position, double Multiplier, bool OcclutionDetection, double* Intensity, double* UnderWaterDistance, bool* Hit);
-	void CreateInteractor(class FName SocketName, class USkeletalMeshComponent* SkeletalComp, class AActor** Interactor);
 	void ChangeInteractorType(int32 NewType);
+	void CreateInteractor(class FName SocketName, class USkeletalMeshComponent* SkeletalComp, class AActor** Interactor);
+	void CulcForceIntensity(double HeightOffset_0, const struct FVector& Position, double Multiplier, bool OcclutionDetection, double* Intensity, double* UnderWaterDistance, bool* Hit);
+	void CulcForceIntensity_Sand(const struct FVector& Start, double* Distance);
+	void DisableInteract();
+	void ExecuteUbergraph_BP_UIWS_Interactor(int32 EntryPoint);
+	void GetPosition(struct FVector* Position);
+	void GetSize(double* Size);
+	void GetUIWSManagerToRegister(class ABP_UIWS_Manager_C** manager);
+	void GetVelocity(struct FVector* Velocity);
+	void IsMobilePlatform(bool* Condition);
+	void LoadNiagara(class UObject* Loaded);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	void ReloadInteractor();
+	void SetInteractivity(bool NewValue);
 
 public:
 	static class UClass* StaticClass()

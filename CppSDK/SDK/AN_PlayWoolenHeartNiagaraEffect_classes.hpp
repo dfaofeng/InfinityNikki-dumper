@@ -21,8 +21,8 @@ namespace SDK
 class UAN_PlayWoolenHeartNiagaraEffect_C final : public UAnimNotify_PlayNiagaraEffect
 {
 public:
-	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
 	void NewFunction() const;
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()

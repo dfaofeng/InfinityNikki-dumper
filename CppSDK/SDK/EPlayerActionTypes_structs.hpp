@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EPlayerActionTypes.EPlayerActionTypes
-// NumValues: 0x009A
+// NumValues: 0x00A6
 enum class EPlayerActionTypes : uint8
 {
 	NewEnumerator0                           = 0,
@@ -149,13 +149,13 @@ enum class EPlayerActionTypes : uint8
 	NewEnumerator170                         = 128,
 	NewEnumerator171                         = 129,
 	NewEnumerator172                         = 130,
-	NewEnumerator175                         = 131,
-	NewEnumerator176                         = 132,
-	NewEnumerator173                         = 133,
+	NewEnumerator173                         = 131,
+	NewEnumerator174                         = 132,
+	NewEnumerator175                         = 133,
 	NewEnumerator177                         = 134,
 	NewEnumerator178                         = 135,
-	NewEnumerator174                         = 136,
-	NewEnumerator179                         = 137,
+	NewEnumerator179                         = 136,
+	NewEnumerator176                         = 137,
 	NewEnumerator180                         = 138,
 	NewEnumerator181                         = 139,
 	NewEnumerator182                         = 140,
@@ -171,7 +171,19 @@ enum class EPlayerActionTypes : uint8
 	NewEnumerator192                         = 150,
 	NewEnumerator193                         = 151,
 	NewEnumerator194                         = 152,
-	EPlayerActionTypes_MAX                   = 153,
+	NewEnumerator195                         = 153,
+	NewEnumerator196                         = 154,
+	NewEnumerator197                         = 155,
+	NewEnumerator199                         = 156,
+	NewEnumerator198                         = 157,
+	NewEnumerator200                         = 158,
+	NewEnumerator201                         = 159,
+	NewEnumerator202                         = 160,
+	NewEnumerator203                         = 161,
+	NewEnumerator204                         = 162,
+	NewEnumerator205                         = 163,
+	NewEnumerator206                         = 164,
+	EPlayerActionTypes_MAX                   = 165,
 };
 
 }

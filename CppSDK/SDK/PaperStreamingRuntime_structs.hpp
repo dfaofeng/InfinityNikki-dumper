@@ -267,5 +267,15 @@ static_assert(sizeof(FLoadRangeInfo) == 0x000038, "Wrong size on FLoadRangeInfo"
 static_assert(offsetof(FLoadRangeInfo, StreamingRange) == 0x000000, "Member 'FLoadRangeInfo::StreamingRange' has a wrong offset!");
 static_assert(offsetof(FLoadRangeInfo, LoadingRanges) == 0x000028, "Member 'FLoadRangeInfo::LoadingRanges' has a wrong offset!");
 
+// ScriptStruct PaperStreamingRuntime.PaperStreamingWorld
+// 0x0068 (0x0068 - 0x0000)
+struct alignas(0x08) FPaperStreamingWorld final
+{
+public:
+	uint8                                         Pad_0[0x68];                                       // 0x0000(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPaperStreamingWorld) == 0x000008, "Wrong alignment on FPaperStreamingWorld");
+static_assert(sizeof(FPaperStreamingWorld) == 0x000068, "Wrong size on FPaperStreamingWorld");
+
 }
 

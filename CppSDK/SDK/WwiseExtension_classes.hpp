@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "PhysicsCore_structs.hpp"
+#include "WwiseExtension_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "Niagara_classes.hpp"
 #include "AkAudio_structs.hpp"
 #include "AkAudio_classes.hpp"
-#include "PhysicsCore_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
-#include "WwiseExtension_structs.hpp"
 
 
 namespace SDK
@@ -198,6 +198,7 @@ public:
 	static class UAkEventProxy* CreatePostEventProxyObjectAtLocation(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, int32 CallbackMask, const struct FVector& Location, const struct FRotator& Orientation, bool bIsAsync, EX6AkAudioContext AudioContext);
 	static class UAkEventProxy* CreatePostEventProxyObjectWithComponent(class UAkAudioEvent* AkEvent, class UAkComponent* AkComponent, int32 CallbackMask, bool bIsAsync, EX6AkAudioContext AudioContext);
 	static TSoftObjectPtr<class UAkSwitchValue> GetSurfaceTypeSwitchValue(class UObject* WorldContextObject, EPhysicalSurface InSurfaceType);
+	static bool IsX6DeviceMuted();
 	static void PlayRunStepSoundEffectWithSwitch(TSoftObjectPtr<class UAkAudioEvent> AkEventSoftRef, class USceneComponent* AttachToComponent, const class FName& AttachName, const TArray<TSoftObjectPtr<class UObject>>& InSwitchSoftRefs, bool bAllowAutoDestory);
 	static bool SetJobMgrMaxActiveWorkers(EAkJobType JobType, int64 MaxNumActiveWorkers);
 	static bool SetMaxNumVoicesLimit(int32 MaxNumberVoices);
@@ -259,7 +260,7 @@ static_assert(alignof(UX6AkBlueprintLibrary) == 0x000008, "Wrong alignment on UX
 static_assert(sizeof(UX6AkBlueprintLibrary) == 0x000028, "Wrong size on UX6AkBlueprintLibrary");
 
 // Class WwiseExtension.X6AkManager
-// 0x0148 (0x0178 - 0x0030)
+// 0x0158 (0x0188 - 0x0030)
 class UX6AkManager final : public UGameInstanceSubsystem
 {
 public:
@@ -269,7 +270,8 @@ public:
 	uint8                                         Pad_60[0x58];                                      // 0x0060(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FManagedAkEventInfo>            ManagedAkEventInfos;                               // 0x00B8(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<uint64, struct FManagedAkGroupInfo>      ManagedAkGroupMap;                                 // 0x00C8(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_118[0x60];                                     // 0x0118(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_118[0x60];                                     // 0x0118(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool bIsMuted)> DeviceMutedDelegate;                               // 0x0178(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	void AkErrorOutput(const class FString& InErrorString, uint32 InPlayingID, uint64 InGameObjectID);
@@ -288,12 +290,13 @@ public:
 	}
 };
 static_assert(alignof(UX6AkManager) == 0x000008, "Wrong alignment on UX6AkManager");
-static_assert(sizeof(UX6AkManager) == 0x000178, "Wrong size on UX6AkManager");
+static_assert(sizeof(UX6AkManager) == 0x000188, "Wrong size on UX6AkManager");
 static_assert(offsetof(UX6AkManager, ArrProxy) == 0x000030, "Member 'UX6AkManager::ArrProxy' has a wrong offset!");
 static_assert(offsetof(UX6AkManager, AkDebugInfoChanged) == 0x000040, "Member 'UX6AkManager::AkDebugInfoChanged' has a wrong offset!");
 static_assert(offsetof(UX6AkManager, AkEventActionDebugInfo) == 0x000050, "Member 'UX6AkManager::AkEventActionDebugInfo' has a wrong offset!");
 static_assert(offsetof(UX6AkManager, ManagedAkEventInfos) == 0x0000B8, "Member 'UX6AkManager::ManagedAkEventInfos' has a wrong offset!");
 static_assert(offsetof(UX6AkManager, ManagedAkGroupMap) == 0x0000C8, "Member 'UX6AkManager::ManagedAkGroupMap' has a wrong offset!");
+static_assert(offsetof(UX6AkManager, DeviceMutedDelegate) == 0x000178, "Member 'UX6AkManager::DeviceMutedDelegate' has a wrong offset!");
 
 }
 

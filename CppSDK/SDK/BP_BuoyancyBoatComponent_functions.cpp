@@ -161,14 +161,29 @@ void UBP_BuoyancyBoatComponent_C::ReceiveTick(float DeltaSeconds)
 }
 
 
+// Function BP_BuoyancyBoatComponent.BP_BuoyancyBoatComponent_C.SetWaterHighForEachPontoon
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_BuoyancyBoatComponent_C::SetWaterHighForEachPontoon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BuoyancyBoatComponent_C", "SetWaterHighForEachPontoon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_BuoyancyBoatComponent.BP_BuoyancyBoatComponent_C.UpdateBuoyancy
 // (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // double                                  DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FBS_FluxBuoyancyPontoon&   BuoyancyData                                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   InitPos                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PontoonIdx                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_BuoyancyBoatComponent_C::UpdateBuoyancy(double DeltaTime, const struct FBS_FluxBuoyancyPontoon& BuoyancyData, const struct FVector& InitPos)
+void UBP_BuoyancyBoatComponent_C::UpdateBuoyancy(double DeltaTime, const struct FBS_FluxBuoyancyPontoon& BuoyancyData, const struct FVector& InitPos, int32 PontoonIdx)
 {
 	static class UFunction* Func = nullptr;
 
@@ -180,6 +195,7 @@ void UBP_BuoyancyBoatComponent_C::UpdateBuoyancy(double DeltaTime, const struct 
 	Parms.DeltaTime = DeltaTime;
 	Parms.BuoyancyData = std::move(BuoyancyData);
 	Parms.InitPos = std::move(InitPos);
+	Parms.PontoonIdx = PontoonIdx;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

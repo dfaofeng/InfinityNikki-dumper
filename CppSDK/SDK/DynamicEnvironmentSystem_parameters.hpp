@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "DynamicEnvironmentSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "DynamicEnvironmentSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -290,23 +290,23 @@ static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToPPConfig, InPPSet
 static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToPPConfig, InMobilePPSettings) == 0x000880, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToPPConfig::InMobilePPSettings' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicEnvironmentSystemBPLibrary.SaveToTODConfig
-// 0x0A40 (0x0A40 - 0x0000)
+// 0x0A48 (0x0A48 - 0x0000)
 struct DynamicEnvironmentSystemBPLibrary_SaveToTODConfig final
 {
 public:
 	TSoftClassPtr<class UClass>                   TODConfig;                                         // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTODLerpConfig                         InTODSetting;                                      // 0x0028(0x0840)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FRuntimeFloatCurve> InCustomEnvironmentSettingsLerpCurve;             // 0x0868(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x08B8(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FWeatherTexturesConfig                 TextureSetting;                                    // 0x09D8(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FTODLerpConfig                         InTODSetting;                                      // 0x0028(0x0848)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FRuntimeFloatCurve> InCustomEnvironmentSettingsLerpCurve;             // 0x0870(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEnvironmentLerpConfig                 EnvironmentSetting;                                // 0x08C0(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWeatherTexturesConfig                 TextureSetting;                                    // 0x09E0(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig) == 0x000008, "Wrong alignment on DynamicEnvironmentSystemBPLibrary_SaveToTODConfig");
-static_assert(sizeof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig) == 0x000A40, "Wrong size on DynamicEnvironmentSystemBPLibrary_SaveToTODConfig");
+static_assert(sizeof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig) == 0x000A48, "Wrong size on DynamicEnvironmentSystemBPLibrary_SaveToTODConfig");
 static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, TODConfig) == 0x000000, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::TODConfig' has a wrong offset!");
 static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, InTODSetting) == 0x000028, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::InTODSetting' has a wrong offset!");
-static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, InCustomEnvironmentSettingsLerpCurve) == 0x000868, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::InCustomEnvironmentSettingsLerpCurve' has a wrong offset!");
-static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, EnvironmentSetting) == 0x0008B8, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::EnvironmentSetting' has a wrong offset!");
-static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, TextureSetting) == 0x0009D8, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::TextureSetting' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, InCustomEnvironmentSettingsLerpCurve) == 0x000870, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::InCustomEnvironmentSettingsLerpCurve' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, EnvironmentSetting) == 0x0008C0, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::EnvironmentSetting' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToTODConfig, TextureSetting) == 0x0009E0, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToTODConfig::TextureSetting' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicEnvironmentSystemBPLibrary.SaveToWeatherConfig
 // 0x0338 (0x0338 - 0x0000)
@@ -321,6 +321,38 @@ static_assert(sizeof(DynamicEnvironmentSystemBPLibrary_SaveToWeatherConfig) == 0
 static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToWeatherConfig, WeatherConfig) == 0x000000, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToWeatherConfig::WeatherConfig' has a wrong offset!");
 static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SaveToWeatherConfig, InWeatherControl) == 0x000028, "Member 'DynamicEnvironmentSystemBPLibrary_SaveToWeatherConfig::InWeatherControl' has a wrong offset!");
 
+// Function DynamicEnvironmentSystem.DynamicEnvironmentSystemBPLibrary.SetTargetOverridePropertyInCharacterLerpConfigByName
+// 0x0138 (0x0138 - 0x0000)
+struct DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName final
+{
+public:
+	struct FCharacterLerpConfig                   InCharacterLerpConfig;                             // 0x0000(0x012C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   InPropertyName;                                    // 0x012C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InValue;                                           // 0x0134(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_135[0x3];                                      // 0x0135(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName) == 0x000004, "Wrong alignment on DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName");
+static_assert(sizeof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName) == 0x000138, "Wrong size on DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName, InCharacterLerpConfig) == 0x000000, "Member 'DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName::InCharacterLerpConfig' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName, InPropertyName) == 0x00012C, "Member 'DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName::InPropertyName' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName, InValue) == 0x000134, "Member 'DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName::InValue' has a wrong offset!");
+
+// Function DynamicEnvironmentSystem.DynamicEnvironmentSystemBPLibrary.SetTargetOverridePropertyInPPSettingByName
+// 0x0860 (0x0860 - 0x0000)
+struct DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName final
+{
+public:
+	struct FPostProcessSettings                   InPPSetting;                                       // 0x0000(0x0850)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   InPropertyName;                                    // 0x0850(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InValue;                                           // 0x0858(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_859[0x7];                                      // 0x0859(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName) == 0x000010, "Wrong alignment on DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName");
+static_assert(sizeof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName) == 0x000860, "Wrong size on DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName, InPPSetting) == 0x000000, "Member 'DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName::InPPSetting' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName, InPropertyName) == 0x000850, "Member 'DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName::InPropertyName' has a wrong offset!");
+static_assert(offsetof(DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName, InValue) == 0x000858, "Member 'DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName::InValue' has a wrong offset!");
+
 // Function DynamicEnvironmentSystem.DynamicEnvironmentSystemManager.GetFinalPostProcessSettings
 // 0x0850 (0x0850 - 0x0000)
 struct DynamicEnvironmentSystemManager_GetFinalPostProcessSettings final
@@ -333,14 +365,14 @@ static_assert(sizeof(DynamicEnvironmentSystemManager_GetFinalPostProcessSettings
 static_assert(offsetof(DynamicEnvironmentSystemManager_GetFinalPostProcessSettings, ReturnValue) == 0x000000, "Member 'DynamicEnvironmentSystemManager_GetFinalPostProcessSettings::ReturnValue' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicEnvironmentSystemManager.GetFinalWeatherSettings
-// 0x0E08 (0x0E08 - 0x0000)
+// 0x0E10 (0x0E10 - 0x0000)
 struct DynamicEnvironmentSystemManager_GetFinalWeatherSettings final
 {
 public:
-	struct FFinalWeatherSettings                  ReturnValue;                                       // 0x0000(0x0E08)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FFinalWeatherSettings                  ReturnValue;                                       // 0x0000(0x0E10)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DynamicEnvironmentSystemManager_GetFinalWeatherSettings) == 0x000008, "Wrong alignment on DynamicEnvironmentSystemManager_GetFinalWeatherSettings");
-static_assert(sizeof(DynamicEnvironmentSystemManager_GetFinalWeatherSettings) == 0x000E08, "Wrong size on DynamicEnvironmentSystemManager_GetFinalWeatherSettings");
+static_assert(sizeof(DynamicEnvironmentSystemManager_GetFinalWeatherSettings) == 0x000E10, "Wrong size on DynamicEnvironmentSystemManager_GetFinalWeatherSettings");
 static_assert(offsetof(DynamicEnvironmentSystemManager_GetFinalWeatherSettings, ReturnValue) == 0x000000, "Member 'DynamicEnvironmentSystemManager_GetFinalWeatherSettings::ReturnValue' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicEnvironmentSystemManager.GetPhotoFilterFinalPPSettings
@@ -529,28 +561,28 @@ static_assert(sizeof(DynamicWeatherManager_GetCurrentWeather) == 0x000004, "Wron
 static_assert(offsetof(DynamicWeatherManager_GetCurrentWeather, ReturnValue) == 0x000000, "Member 'DynamicWeatherManager_GetCurrentWeather::ReturnValue' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicWeatherManager.LimitTODSunRotator
-// 0x0150 (0x0150 - 0x0000)
+// 0x0158 (0x0158 - 0x0000)
 struct DynamicWeatherManager_LimitTODSunRotator final
 {
 public:
-	struct FSunLightLerpConfig                    FinalSunLightSetting;                              // 0x0000(0x0128)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class AActor*                                 SkySphere;                                         // 0x0128(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ADirectionalLight*                      SunLight;                                          // 0x0130(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ADirectionalLight*                      MoonLight;                                         // 0x0138(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NowTime;                                           // 0x0140(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SunExtraIntensity;                                 // 0x0144(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MoonExtraIntensity;                                // 0x0148(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FSunLightLerpConfig                    FinalSunLightSetting;                              // 0x0000(0x0130)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class AActor*                                 SkySphere;                                         // 0x0130(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ADirectionalLight*                      SunLight;                                          // 0x0138(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ADirectionalLight*                      MoonLight;                                         // 0x0140(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NowTime;                                           // 0x0148(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SunExtraIntensity;                                 // 0x014C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MoonExtraIntensity;                                // 0x0150(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_154[0x4];                                      // 0x0154(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DynamicWeatherManager_LimitTODSunRotator) == 0x000008, "Wrong alignment on DynamicWeatherManager_LimitTODSunRotator");
-static_assert(sizeof(DynamicWeatherManager_LimitTODSunRotator) == 0x000150, "Wrong size on DynamicWeatherManager_LimitTODSunRotator");
+static_assert(sizeof(DynamicWeatherManager_LimitTODSunRotator) == 0x000158, "Wrong size on DynamicWeatherManager_LimitTODSunRotator");
 static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, FinalSunLightSetting) == 0x000000, "Member 'DynamicWeatherManager_LimitTODSunRotator::FinalSunLightSetting' has a wrong offset!");
-static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, SkySphere) == 0x000128, "Member 'DynamicWeatherManager_LimitTODSunRotator::SkySphere' has a wrong offset!");
-static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, SunLight) == 0x000130, "Member 'DynamicWeatherManager_LimitTODSunRotator::SunLight' has a wrong offset!");
-static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, MoonLight) == 0x000138, "Member 'DynamicWeatherManager_LimitTODSunRotator::MoonLight' has a wrong offset!");
-static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, NowTime) == 0x000140, "Member 'DynamicWeatherManager_LimitTODSunRotator::NowTime' has a wrong offset!");
-static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, SunExtraIntensity) == 0x000144, "Member 'DynamicWeatherManager_LimitTODSunRotator::SunExtraIntensity' has a wrong offset!");
-static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, MoonExtraIntensity) == 0x000148, "Member 'DynamicWeatherManager_LimitTODSunRotator::MoonExtraIntensity' has a wrong offset!");
+static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, SkySphere) == 0x000130, "Member 'DynamicWeatherManager_LimitTODSunRotator::SkySphere' has a wrong offset!");
+static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, SunLight) == 0x000138, "Member 'DynamicWeatherManager_LimitTODSunRotator::SunLight' has a wrong offset!");
+static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, MoonLight) == 0x000140, "Member 'DynamicWeatherManager_LimitTODSunRotator::MoonLight' has a wrong offset!");
+static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, NowTime) == 0x000148, "Member 'DynamicWeatherManager_LimitTODSunRotator::NowTime' has a wrong offset!");
+static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, SunExtraIntensity) == 0x00014C, "Member 'DynamicWeatherManager_LimitTODSunRotator::SunExtraIntensity' has a wrong offset!");
+static_assert(offsetof(DynamicWeatherManager_LimitTODSunRotator, MoonExtraIntensity) == 0x000150, "Member 'DynamicWeatherManager_LimitTODSunRotator::MoonExtraIntensity' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicWeatherManager.RandomWeather
 // 0x0008 (0x0008 - 0x0000)
@@ -694,6 +726,28 @@ static_assert(sizeof(DynamicWeatherVolume_UpdateTimeSpanProgress) == 0x000010, "
 static_assert(offsetof(DynamicWeatherVolume_UpdateTimeSpanProgress, DynamicEnvironmentSystemMgr) == 0x000000, "Member 'DynamicWeatherVolume_UpdateTimeSpanProgress::DynamicEnvironmentSystemMgr' has a wrong offset!");
 static_assert(offsetof(DynamicWeatherVolume_UpdateTimeSpanProgress, NowTime) == 0x000008, "Member 'DynamicWeatherVolume_UpdateTimeSpanProgress::NowTime' has a wrong offset!");
 
+// Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetCharacterSphereMaskIntensity
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicWetnessComponent_SetCharacterSphereMaskIntensity final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DynamicWetnessComponent_SetCharacterSphereMaskIntensity) == 0x000004, "Wrong alignment on DynamicWetnessComponent_SetCharacterSphereMaskIntensity");
+static_assert(sizeof(DynamicWetnessComponent_SetCharacterSphereMaskIntensity) == 0x000004, "Wrong size on DynamicWetnessComponent_SetCharacterSphereMaskIntensity");
+static_assert(offsetof(DynamicWetnessComponent_SetCharacterSphereMaskIntensity, NewValue) == 0x000000, "Member 'DynamicWetnessComponent_SetCharacterSphereMaskIntensity::NewValue' has a wrong offset!");
+
+// Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetCharacterSphereMaskSunnyReverse
+// 0x0004 (0x0004 - 0x0000)
+struct DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse final
+{
+public:
+	float                                         NewValue;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse) == 0x000004, "Wrong alignment on DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse");
+static_assert(sizeof(DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse) == 0x000004, "Wrong size on DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse");
+static_assert(offsetof(DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse, NewValue) == 0x000000, "Member 'DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse::NewValue' has a wrong offset!");
+
 // Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetLumenReflectionsSpecularScale
 // 0x0004 (0x0004 - 0x0000)
 struct DynamicWetnessComponent_SetLumenReflectionsSpecularScale final
@@ -758,6 +812,17 @@ static_assert(sizeof(DynamicWetnessComponent_SetWetness) == 0x000008, "Wrong siz
 static_assert(offsetof(DynamicWetnessComponent_SetWetness, InValue) == 0x000000, "Member 'DynamicWetnessComponent_SetWetness::InValue' has a wrong offset!");
 static_assert(offsetof(DynamicWetnessComponent_SetWetness, bToRain) == 0x000004, "Member 'DynamicWetnessComponent_SetWetness::bToRain' has a wrong offset!");
 
+// Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetWetnessCharacterWorldPosition
+// 0x0018 (0x0018 - 0x0000)
+struct DynamicWetnessComponent_SetWetnessCharacterWorldPosition final
+{
+public:
+	struct FVector                                NewValue;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DynamicWetnessComponent_SetWetnessCharacterWorldPosition) == 0x000008, "Wrong alignment on DynamicWetnessComponent_SetWetnessCharacterWorldPosition");
+static_assert(sizeof(DynamicWetnessComponent_SetWetnessCharacterWorldPosition) == 0x000018, "Wrong size on DynamicWetnessComponent_SetWetnessCharacterWorldPosition");
+static_assert(offsetof(DynamicWetnessComponent_SetWetnessCharacterWorldPosition, NewValue) == 0x000000, "Member 'DynamicWetnessComponent_SetWetnessCharacterWorldPosition::NewValue' has a wrong offset!");
+
 // Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetWetnessOcclusionMultiply
 // 0x0004 (0x0004 - 0x0000)
 struct DynamicWetnessComponent_SetWetnessOcclusionMultiply final
@@ -792,14 +857,14 @@ static_assert(sizeof(DynamicWetnessComponent_SetWetnessSpecularLandscapeMultiply
 static_assert(offsetof(DynamicWetnessComponent_SetWetnessSpecularLandscapeMultiply, NewValue) == 0x000000, "Member 'DynamicWetnessComponent_SetWetnessSpecularLandscapeMultiply::NewValue' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.DynamicWetnessComponent.UpdateWetnessConfig
-// 0x04A8 (0x04A8 - 0x0000)
+// 0x04D0 (0x04D0 - 0x0000)
 struct DynamicWetnessComponent_UpdateWetnessConfig final
 {
 public:
-	struct FWetnessConfigParameters               NewWetness;                                        // 0x0000(0x04A8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FWetnessConfigParameters               NewWetness;                                        // 0x0000(0x04D0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(DynamicWetnessComponent_UpdateWetnessConfig) == 0x000008, "Wrong alignment on DynamicWetnessComponent_UpdateWetnessConfig");
-static_assert(sizeof(DynamicWetnessComponent_UpdateWetnessConfig) == 0x0004A8, "Wrong size on DynamicWetnessComponent_UpdateWetnessConfig");
+static_assert(sizeof(DynamicWetnessComponent_UpdateWetnessConfig) == 0x0004D0, "Wrong size on DynamicWetnessComponent_UpdateWetnessConfig");
 static_assert(offsetof(DynamicWetnessComponent_UpdateWetnessConfig, NewWetness) == 0x000000, "Member 'DynamicWetnessComponent_UpdateWetnessConfig::NewWetness' has a wrong offset!");
 
 // Function DynamicEnvironmentSystem.EnvironmentLevelConfigActor.SetConfigEnabled

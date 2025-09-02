@@ -21,11 +21,11 @@ namespace SDK::Params
 struct PSdkLoginUIBindExistingAccountSteam_OnCheckedButton final
 {
 public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PSdkLoginUIBindExistingAccountSteam_OnCheckedButton) == 0x000001, "Wrong alignment on PSdkLoginUIBindExistingAccountSteam_OnCheckedButton");
 static_assert(sizeof(PSdkLoginUIBindExistingAccountSteam_OnCheckedButton) == 0x000001, "Wrong size on PSdkLoginUIBindExistingAccountSteam_OnCheckedButton");
-static_assert(offsetof(PSdkLoginUIBindExistingAccountSteam_OnCheckedButton, checked) == 0x000000, "Member 'PSdkLoginUIBindExistingAccountSteam_OnCheckedButton::checked' has a wrong offset!");
+static_assert(offsetof(PSdkLoginUIBindExistingAccountSteam_OnCheckedButton, Checked) == 0x000000, "Member 'PSdkLoginUIBindExistingAccountSteam_OnCheckedButton::Checked' has a wrong offset!");
 
 // Function PSDKChannelSteam.PSdkLoginUIBindExistingAccountSteam.OnDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -71,11 +71,11 @@ static_assert(offsetof(PSdkLoginUIBindExistingAccountSteam_TextBoxInputPasswordC
 struct PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton final
 {
 public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton) == 0x000001, "Wrong alignment on PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton");
 static_assert(sizeof(PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton) == 0x000001, "Wrong size on PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton");
-static_assert(offsetof(PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton, checked) == 0x000000, "Member 'PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton::checked' has a wrong offset!");
+static_assert(offsetof(PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton, Checked) == 0x000000, "Member 'PSdkLoginUIBindExistingAccountSteamKr_OnCheckedButton::Checked' has a wrong offset!");
 
 // Function PSDKChannelSteam.PSdkLoginUIBindExistingAccountSteamKr.OnDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -121,11 +121,11 @@ static_assert(offsetof(PSdkLoginUIBindExistingAccountSteamKr_TextBoxInputPasswor
 struct PSdkLoginUIRegisterAndBindSteam_OnCheckedButton final
 {
 public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PSdkLoginUIRegisterAndBindSteam_OnCheckedButton) == 0x000001, "Wrong alignment on PSdkLoginUIRegisterAndBindSteam_OnCheckedButton");
 static_assert(sizeof(PSdkLoginUIRegisterAndBindSteam_OnCheckedButton) == 0x000001, "Wrong size on PSdkLoginUIRegisterAndBindSteam_OnCheckedButton");
-static_assert(offsetof(PSdkLoginUIRegisterAndBindSteam_OnCheckedButton, checked) == 0x000000, "Member 'PSdkLoginUIRegisterAndBindSteam_OnCheckedButton::checked' has a wrong offset!");
+static_assert(offsetof(PSdkLoginUIRegisterAndBindSteam_OnCheckedButton, Checked) == 0x000000, "Member 'PSdkLoginUIRegisterAndBindSteam_OnCheckedButton::Checked' has a wrong offset!");
 
 // Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteam.OnDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -137,6 +137,17 @@ public:
 static_assert(alignof(PSdkLoginUIRegisterAndBindSteam_OnDelegate) == 0x000001, "Wrong alignment on PSdkLoginUIRegisterAndBindSteam_OnDelegate");
 static_assert(sizeof(PSdkLoginUIRegisterAndBindSteam_OnDelegate) == 0x000001, "Wrong size on PSdkLoginUIRegisterAndBindSteam_OnDelegate");
 static_assert(offsetof(PSdkLoginUIRegisterAndBindSteam_OnDelegate, bRes) == 0x000000, "Member 'PSdkLoginUIRegisterAndBindSteam_OnDelegate::bRes' has a wrong offset!");
+
+// Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteam.OnSubscribeCheckedButton
+// 0x0001 (0x0001 - 0x0000)
+struct PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton) == 0x000001, "Wrong alignment on PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton");
+static_assert(sizeof(PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton) == 0x000001, "Wrong size on PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton");
+static_assert(offsetof(PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton, Checked) == 0x000000, "Member 'PSdkLoginUIRegisterAndBindSteam_OnSubscribeCheckedButton::Checked' has a wrong offset!");
 
 // Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteam.TextBoxInputAccountCommit
 // 0x0018 (0x0018 - 0x0000)
@@ -237,6 +248,17 @@ public:
 static_assert(alignof(PSdkLoginUIRegisterAndBindSteamKr_OnDelegate) == 0x000001, "Wrong alignment on PSdkLoginUIRegisterAndBindSteamKr_OnDelegate");
 static_assert(sizeof(PSdkLoginUIRegisterAndBindSteamKr_OnDelegate) == 0x000001, "Wrong size on PSdkLoginUIRegisterAndBindSteamKr_OnDelegate");
 static_assert(offsetof(PSdkLoginUIRegisterAndBindSteamKr_OnDelegate, bRes) == 0x000000, "Member 'PSdkLoginUIRegisterAndBindSteamKr_OnDelegate::bRes' has a wrong offset!");
+
+// Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteamKr.OnSubscribeCheckedBoxChanged
+// 0x0001 (0x0001 - 0x0000)
+struct PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged) == 0x000001, "Wrong alignment on PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged");
+static_assert(sizeof(PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged) == 0x000001, "Wrong size on PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged");
+static_assert(offsetof(PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged, Checked) == 0x000000, "Member 'PSdkLoginUIRegisterAndBindSteamKr_OnSubscribeCheckedBoxChanged::Checked' has a wrong offset!");
 
 // Function PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteamKr.TextBoxInputAccountCommit
 // 0x0018 (0x0018 - 0x0000)

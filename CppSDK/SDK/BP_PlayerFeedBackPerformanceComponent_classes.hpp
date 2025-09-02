@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
+#include "SMSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "SMSystem_structs.hpp"
-#include "X6Game_classes.hpp"
 #include "EGroundedLocomotionScenarioType_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerFeedBackPerformanceComponent.BP_PlayerFeedBackPerformanceComponent_C
-// 0x0248 (0x02F8 - 0x00B0)
+// 0x0250 (0x0300 - 0x00B0)
 class UBP_PlayerFeedBackPerformanceComponent_C final : public UX6ModularFeaturesContainerComp
 {
 public:
@@ -106,7 +106,8 @@ public:
 	bool                                          BP_EnableMiniGameBounder;                          // 0x02F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_EnableVisitorSyncMovementPerformanceProcessor;  // 0x02F5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_EnablePlayerOnIceProcessor;                     // 0x02F6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnablePlayerModifierProcessor;                  // 0x02F7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSkipBePushedCharacterLimit;                       // 0x02F7(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnablePlayerModifierProcessor;                  // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_ActionPoint_InterruptActionPoint();
@@ -143,7 +144,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PlayerFeedBackPerformanceComponent_C) == 0x000008, "Wrong alignment on UBP_PlayerFeedBackPerformanceComponent_C");
-static_assert(sizeof(UBP_PlayerFeedBackPerformanceComponent_C) == 0x0002F8, "Wrong size on UBP_PlayerFeedBackPerformanceComponent_C");
+static_assert(sizeof(UBP_PlayerFeedBackPerformanceComponent_C) == 0x000300, "Wrong size on UBP_PlayerFeedBackPerformanceComponent_C");
 static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, UberGraphFrame) == 0x0000B0, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, EnableShadowDecal) == 0x0000B8, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::EnableShadowDecal' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, Ref_RoleShadowCapture) == 0x0000C0, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::Ref_RoleShadowCapture' has a wrong offset!");
@@ -212,7 +213,8 @@ static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, BP_EnableGLSLis
 static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, BP_EnableMiniGameBounder) == 0x0002F4, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::BP_EnableMiniGameBounder' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, BP_EnableVisitorSyncMovementPerformanceProcessor) == 0x0002F5, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::BP_EnableVisitorSyncMovementPerformanceProcessor' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, BP_EnablePlayerOnIceProcessor) == 0x0002F6, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::BP_EnablePlayerOnIceProcessor' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, BP_EnablePlayerModifierProcessor) == 0x0002F7, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::BP_EnablePlayerModifierProcessor' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, bSkipBePushedCharacterLimit) == 0x0002F7, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::bSkipBePushedCharacterLimit' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerFeedBackPerformanceComponent_C, BP_EnablePlayerModifierProcessor) == 0x0002F8, "Member 'UBP_PlayerFeedBackPerformanceComponent_C::BP_EnablePlayerModifierProcessor' has a wrong offset!");
 
 }
 

@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum Enum_CenterInfoType.Enum_CenterInfoType
-// NumValues: 0x001C
+// NumValues: 0x001D
 enum class Enum_CenterInfoType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -45,7 +45,8 @@ enum class Enum_CenterInfoType : uint8
 	NewEnumerator27                          = 24,
 	NewEnumerator28                          = 25,
 	NewEnumerator29                          = 26,
-	Enum_MAX                                 = 27,
+	NewEnumerator30                          = 27,
+	Enum_MAX                                 = 28,
 };
 
 }

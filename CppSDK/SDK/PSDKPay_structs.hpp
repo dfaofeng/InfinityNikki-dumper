@@ -409,7 +409,7 @@ static_assert(offsetof(FPSDKListMarketingProductPriceAttr, money) == 0x0000D0, "
 static_assert(offsetof(FPSDKListMarketingProductPriceAttr, expand_plat_id_json_str) == 0x0001F0, "Member 'FPSDKListMarketingProductPriceAttr::expand_plat_id_json_str' has a wrong offset!");
 
 // ScriptStruct PSDKPay.PSDKListMarketingProductPriceInfo
-// 0x04A8 (0x0560 - 0x00B8)
+// 0x04C0 (0x0578 - 0x00B8)
 struct FPSDKListMarketingProductPriceInfo final : public FJsonData
 {
 public:
@@ -432,10 +432,12 @@ public:
 	bool                                          store_product_unavailable;                         // 0x0559(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_55A[0x1];                                      // 0x055A(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          is_use_multi;                                      // 0x055B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55C[0x4];                                      // 0x055C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 sdk_channel_product_description;                   // 0x0560(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_570[0x8];                                      // 0x0570(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPSDKListMarketingProductPriceInfo) == 0x000008, "Wrong alignment on FPSDKListMarketingProductPriceInfo");
-static_assert(sizeof(FPSDKListMarketingProductPriceInfo) == 0x000560, "Wrong size on FPSDKListMarketingProductPriceInfo");
+static_assert(sizeof(FPSDKListMarketingProductPriceInfo) == 0x000578, "Wrong size on FPSDKListMarketingProductPriceInfo");
 static_assert(offsetof(FPSDKListMarketingProductPriceInfo, base_price) == 0x0000B8, "Member 'FPSDKListMarketingProductPriceInfo::base_price' has a wrong offset!");
 static_assert(offsetof(FPSDKListMarketingProductPriceInfo, base_discount_price) == 0x0000D0, "Member 'FPSDKListMarketingProductPriceInfo::base_discount_price' has a wrong offset!");
 static_assert(offsetof(FPSDKListMarketingProductPriceInfo, price) == 0x0000E8, "Member 'FPSDKListMarketingProductPriceInfo::price' has a wrong offset!");
@@ -446,6 +448,7 @@ static_assert(offsetof(FPSDKListMarketingProductPriceInfo, discount_rate) == 0x0
 static_assert(offsetof(FPSDKListMarketingProductPriceInfo, discount_rate_ratio) == 0x000548, "Member 'FPSDKListMarketingProductPriceInfo::discount_rate_ratio' has a wrong offset!");
 static_assert(offsetof(FPSDKListMarketingProductPriceInfo, store_product_unavailable) == 0x000559, "Member 'FPSDKListMarketingProductPriceInfo::store_product_unavailable' has a wrong offset!");
 static_assert(offsetof(FPSDKListMarketingProductPriceInfo, is_use_multi) == 0x00055B, "Member 'FPSDKListMarketingProductPriceInfo::is_use_multi' has a wrong offset!");
+static_assert(offsetof(FPSDKListMarketingProductPriceInfo, sdk_channel_product_description) == 0x000560, "Member 'FPSDKListMarketingProductPriceInfo::sdk_channel_product_description' has a wrong offset!");
 
 // ScriptStruct PSDKPay.PSDKListMarketingProductExtraInfo
 // 0x0010 (0x00C8 - 0x00B8)
@@ -460,7 +463,7 @@ static_assert(sizeof(FPSDKListMarketingProductExtraInfo) == 0x0000C8, "Wrong siz
 static_assert(offsetof(FPSDKListMarketingProductExtraInfo, vip_card_time) == 0x0000B8, "Member 'FPSDKListMarketingProductExtraInfo::vip_card_time' has a wrong offset!");
 
 // ScriptStruct PSDKPay.PSDKListMarketingProductMarketingProductInfo
-// 0x09B0 (0x0A68 - 0x00B8)
+// 0x09C8 (0x0A80 - 0x00B8)
 struct FPSDKListMarketingProductMarketingProductInfo final : public FJsonData
 {
 public:
@@ -468,17 +471,17 @@ public:
 	uint8                                         Pad_2D8[0x8];                                      // 0x02D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPSDKListMarketingProductLimitInfo     limit_info;                                        // 0x02E0(0x0148)(NativeAccessSpecifierPrivate)
 	uint8                                         Pad_428[0x8];                                      // 0x0428(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPSDKListMarketingProductPriceInfo     price_info;                                        // 0x0430(0x0560)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_990[0x8];                                      // 0x0990(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPSDKListMarketingProductExtraInfo     extra_info;                                        // 0x0998(0x00C8)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_A60[0x8];                                      // 0x0A60(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPSDKListMarketingProductPriceInfo     price_info;                                        // 0x0430(0x0578)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_9A8[0x8];                                      // 0x09A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPSDKListMarketingProductExtraInfo     extra_info;                                        // 0x09B0(0x00C8)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A78[0x8];                                      // 0x0A78(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPSDKListMarketingProductMarketingProductInfo) == 0x000008, "Wrong alignment on FPSDKListMarketingProductMarketingProductInfo");
-static_assert(sizeof(FPSDKListMarketingProductMarketingProductInfo) == 0x000A68, "Wrong size on FPSDKListMarketingProductMarketingProductInfo");
+static_assert(sizeof(FPSDKListMarketingProductMarketingProductInfo) == 0x000A80, "Wrong size on FPSDKListMarketingProductMarketingProductInfo");
 static_assert(offsetof(FPSDKListMarketingProductMarketingProductInfo, product_info) == 0x0000B8, "Member 'FPSDKListMarketingProductMarketingProductInfo::product_info' has a wrong offset!");
 static_assert(offsetof(FPSDKListMarketingProductMarketingProductInfo, limit_info) == 0x0002E0, "Member 'FPSDKListMarketingProductMarketingProductInfo::limit_info' has a wrong offset!");
 static_assert(offsetof(FPSDKListMarketingProductMarketingProductInfo, price_info) == 0x000430, "Member 'FPSDKListMarketingProductMarketingProductInfo::price_info' has a wrong offset!");
-static_assert(offsetof(FPSDKListMarketingProductMarketingProductInfo, extra_info) == 0x000998, "Member 'FPSDKListMarketingProductMarketingProductInfo::extra_info' has a wrong offset!");
+static_assert(offsetof(FPSDKListMarketingProductMarketingProductInfo, extra_info) == 0x0009B0, "Member 'FPSDKListMarketingProductMarketingProductInfo::extra_info' has a wrong offset!");
 
 // ScriptStruct PSDKPay.PSDKListMarketingProductListMarketingProductResponse
 // 0x01E8 (0x02A0 - 0x00B8)
@@ -503,7 +506,7 @@ static_assert(offsetof(FPSDKListMarketingProductListMarketingProductResponse, se
 struct FPSDKProductListServerResponse final : public FJsonData
 {
 public:
-	int32                                         Code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -518,7 +521,7 @@ public:
 };
 static_assert(alignof(FPSDKProductListServerResponse) == 0x000008, "Wrong alignment on FPSDKProductListServerResponse");
 static_assert(sizeof(FPSDKProductListServerResponse) == 0x0003B8, "Wrong size on FPSDKProductListServerResponse");
-static_assert(offsetof(FPSDKProductListServerResponse, Code) == 0x0000B8, "Member 'FPSDKProductListServerResponse::Code' has a wrong offset!");
+static_assert(offsetof(FPSDKProductListServerResponse, code) == 0x0000B8, "Member 'FPSDKProductListServerResponse::code' has a wrong offset!");
 static_assert(offsetof(FPSDKProductListServerResponse, Info) == 0x0000C0, "Member 'FPSDKProductListServerResponse::Info' has a wrong offset!");
 static_assert(offsetof(FPSDKProductListServerResponse, request_id) == 0x0000D8, "Member 'FPSDKProductListServerResponse::request_id' has a wrong offset!");
 static_assert(offsetof(FPSDKProductListServerResponse, Data) == 0x0000F0, "Member 'FPSDKProductListServerResponse::Data' has a wrong offset!");

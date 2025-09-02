@@ -20,111 +20,121 @@ namespace SDK::Params
 {
 
 // Function BP_LevelConfigMgr.BP_LevelConfigMgr_C.ExecuteUbergraph_BP_LevelConfigMgr
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_LevelConfigActor_Master_C*          K2Node_DynamicCast_AsBP_Level_Config_Actor_Master; // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Temp_string_Variable;                              // 0x0040(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0060(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_LevelConfigActor_C*                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_DyEnvWeathers_C*                    K2Node_DynamicCast_AsBP_Dy_Env_Weathers;           // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E2[0x6];                                       // 0x00E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_DyEnvSky_C*                         K2Node_DynamicCast_AsDES_Sky;                      // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_F1[0x3];                                       // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, double>                   K2Node_Select_Default;                             // 0x0100(0x0050)()
-	TArray<class FString>                         CallFunc_Map_Keys_Keys;                            // 0x0150(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Map_IsNotEmpty_ReturnValue;               // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_Map_Find_Value;                           // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_181[0x3];                                      // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_DyEnvSys_C*                         K2Node_DynamicCast_AsBP_Dy_Env_Sys;                // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_LevelConfigActor_Master_C*          K2Node_DynamicCast_AsBP_Level_Config_Actor_Master; // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Temp_string_Variable;                              // 0x0038(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0054(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Contains_ReturnValue;                 // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_65[0xB];                                       // 0x0065(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0070(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue; // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_LevelConfigActor_C*                 CallFunc_FinishSpawningActor_ReturnValue;          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_DyEnvWeathers_C*                    K2Node_DynamicCast_AsBP_Dy_Env_Weathers;           // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_F2[0x6];                                       // 0x00F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_DyEnvSky_C*                         K2Node_DynamicCast_AsDES_Sky;                      // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_10C[0x4];                                      // 0x010C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, double>                   K2Node_Select_Default;                             // 0x0110(0x0050)()
+	TArray<class FString>                         CallFunc_Map_Keys_Keys;                            // 0x0160(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Map_IsNotEmpty_ReturnValue;               // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Array_Get_Item;                           // 0x0178(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	double                                        CallFunc_Map_Find_Value;                           // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_191[0x3];                                      // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_199[0x3];                                      // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetConsoleVariableFromFloat_InValue_ImplicitCast; // 0x019C(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x01A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x01A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01A3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_DyEnvSys_C*                         K2Node_DynamicCast_AsBP_Dy_Env_Sys;                // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B1[0x3];                                      // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x01B4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x01BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetConsoleVariableFromFloat_InValue_ImplicitCast; // 0x01C4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr) == 0x000010, "Wrong alignment on BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr");
-static_assert(sizeof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr) == 0x0001A0, "Wrong size on BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr");
+static_assert(sizeof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr) == 0x0001D0, "Wrong size on BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr");
 static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, EntryPoint) == 0x000000, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000004, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000008, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_bool_Variable) == 0x000009, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue) == 0x00000A, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsBP_Level_Config_Actor_Master) == 0x000010, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsBP_Level_Config_Actor_Master' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BreakRotator_Roll) == 0x00001C, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BreakRotator_Pitch) == 0x000020, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BreakRotator_Yaw) == 0x000024, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_int_Array_Index_Variable) == 0x000028, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_bool_IsClosed_Variable) == 0x00002C, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_bool_Has_Been_Initd_Variable) == 0x00002D, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_CreateDelegate_OutputDelegate) == 0x000030, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_string_Variable) == 0x000040, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_string_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_GetGameUserSettings_ReturnValue) == 0x000050, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_Event_DeltaSeconds) == 0x000058, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Contains_ReturnValue) == 0x00005C, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_MakeTransform_ReturnValue) == 0x000060, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000C0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000C8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_1) == 0x0000D0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsBP_Dy_Env_Weathers) == 0x0000D8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsBP_Dy_Env_Weathers' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess_1) == 0x0000E0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_2) == 0x0000E1, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsDES_Sky) == 0x0000E8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsDES_Sky' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess_2) == 0x0000F0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_int_Loop_Counter_Variable) == 0x0000F4, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Add_IntInt_ReturnValue) == 0x0000F8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_Select_Default) == 0x000100, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Keys_Keys) == 0x000150, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_IsNotEmpty_ReturnValue) == 0x000160, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_IsNotEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Array_Get_Item) == 0x000168, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Find_Value) == 0x000178, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Find_ReturnValue) == 0x000180, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Array_Length_ReturnValue) == 0x000184, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Less_IntInt_ReturnValue) == 0x000188, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BooleanAND_ReturnValue) == 0x000189, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BooleanAND_ReturnValue_1) == 0x00018A, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_3) == 0x00018B, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsBP_Dy_Env_Sys) == 0x000190, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsBP_Dy_Env_Sys' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess_3) == 0x000198, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_SetConsoleVariableFromFloat_InValue_ImplicitCast) == 0x00019C, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_SetConsoleVariableFromFloat_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_bool_Variable) == 0x000004, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue) == 0x000005, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsBP_Level_Config_Actor_Master) == 0x000008, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsBP_Level_Config_Actor_Master' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000018, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BreakRotator_Roll) == 0x000020, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BreakRotator_Pitch) == 0x000024, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BreakRotator_Yaw) == 0x000028, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_bool_IsClosed_Variable) == 0x000030, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_bool_IsClosed_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_bool_Has_Been_Initd_Variable) == 0x000031, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_string_Variable) == 0x000038, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_string_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_GetGameUserSettings_ReturnValue) == 0x000048, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_Event_DeltaSeconds) == 0x000050, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_CreateDelegate_OutputDelegate) == 0x000054, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Contains_ReturnValue) == 0x000064, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_MakeTransform_ReturnValue) == 0x000070, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue) == 0x0000D0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_FinishSpawningActor_ReturnValue) == 0x0000D8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_FinishSpawningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_1) == 0x0000E0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsBP_Dy_Env_Weathers) == 0x0000E8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsBP_Dy_Env_Weathers' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess_1) == 0x0000F0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_2) == 0x0000F1, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsDES_Sky) == 0x0000F8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsDES_Sky' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess_2) == 0x000100, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, Temp_int_Loop_Counter_Variable) == 0x000104, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Add_IntInt_ReturnValue) == 0x000108, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_Select_Default) == 0x000110, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Keys_Keys) == 0x000160, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_IsNotEmpty_ReturnValue) == 0x000170, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_IsNotEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Array_Get_Item) == 0x000178, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Find_Value) == 0x000188, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Map_Find_ReturnValue) == 0x000190, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Array_Length_ReturnValue) == 0x000194, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_Less_IntInt_ReturnValue) == 0x000198, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x00019C, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x0001A0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_3) == 0x0001A1, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BooleanAND_ReturnValue) == 0x0001A2, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_BooleanAND_ReturnValue_1) == 0x0001A3, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_AsBP_Dy_Env_Sys) == 0x0001A8, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_AsBP_Dy_Env_Sys' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, K2Node_DynamicCast_bSuccess_3) == 0x0001B0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_MakeLiteralName_ReturnValue) == 0x0001B4, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_IsValid_ReturnValue_4) == 0x0001BC, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x0001C0, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr, CallFunc_SetConsoleVariableFromFloat_InValue_ImplicitCast) == 0x0001C4, "Member 'BP_LevelConfigMgr_C_ExecuteUbergraph_BP_LevelConfigMgr::CallFunc_SetConsoleVariableFromFloat_InValue_ImplicitCast' has a wrong offset!");
 
 // Function BP_LevelConfigMgr.BP_LevelConfigMgr_C.Get Other Quality
 // 0x0048 (0x0048 - 0x0000)
@@ -244,7 +254,7 @@ static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Mobile_Light_CVars, CallFunc_
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Mobile_Light_CVars, CallFunc_Less_IntInt_ReturnValue) == 0x000058, "Member 'BP_LevelConfigMgr_C_Restore_Mobile_Light_CVars::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_LevelConfigMgr.BP_LevelConfigMgr_C.Restore Scalability
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct BP_LevelConfigMgr_C_Restore_Scalability final
 {
 public:
@@ -255,26 +265,28 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_LevelConfigScalability              CallFunc_Array_Get_Item;                           // 0x0028(0x0050)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue; // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_ScalabilityValue                    K2Node_Select_Default;                             // 0x0088(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default_1;                           // 0x00A8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_NotEqual_DoubleDouble_A_ImplicitCast;     // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Option_0_ImplicitCast;               // 0x00B8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Option_1_ImplicitCast;               // 0x00BC(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Option_2_ImplicitCast;               // 0x00C0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Option_3_ImplicitCast;               // 0x00C4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_NotEqual_DoubleDouble_B_ImplicitCast;     // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FS_LevelConfigScalability              CallFunc_Array_Get_Item;                           // 0x0028(0x0060)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_89[0x3];                                       // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue; // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_ScalabilityValue                    K2Node_Select_Default;                             // 0x0098(0x0028)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_1;                           // 0x00C0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_DoubleDouble_ReturnValue;        // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_NotEqual_DoubleDouble_A_ImplicitCast;     // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_0_ImplicitCast;               // 0x00D0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_1_ImplicitCast;               // 0x00D4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_2_ImplicitCast;               // 0x00D8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_3_ImplicitCast;               // 0x00DC(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Option_4_ImplicitCast;               // 0x00E0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_NotEqual_DoubleDouble_B_ImplicitCast;     // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_LevelConfigMgr_C_Restore_Scalability) == 0x000008, "Wrong alignment on BP_LevelConfigMgr_C_Restore_Scalability");
-static_assert(sizeof(BP_LevelConfigMgr_C_Restore_Scalability) == 0x0000D0, "Wrong size on BP_LevelConfigMgr_C_Restore_Scalability");
+static_assert(sizeof(BP_LevelConfigMgr_C_Restore_Scalability) == 0x0000F0, "Wrong size on BP_LevelConfigMgr_C_Restore_Scalability");
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Quality) == 0x000000, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Quality' has a wrong offset!");
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Level) == 0x000010, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Level' has a wrong offset!");
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Temp_int_Variable) == 0x000014, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Temp_int_Variable' has a wrong offset!");
@@ -282,19 +294,20 @@ static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_Array_L
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Temp_int_Array_Index_Variable) == 0x00001C, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Temp_int_Loop_Counter_Variable' has a wrong offset!");
 static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_Less_IntInt_ReturnValue) == 0x000078, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_GetConsoleVariableFloatValue_ReturnValue) == 0x00007C, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_GetConsoleVariableFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_Add_IntInt_ReturnValue) == 0x000080, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Temp_bool_Variable) == 0x000084, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Default) == 0x000088, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Default_1) == 0x0000A8, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_NotEqual_DoubleDouble_ReturnValue) == 0x0000AC, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_NotEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_NotEqual_DoubleDouble_A_ImplicitCast) == 0x0000B0, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_NotEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_0_ImplicitCast) == 0x0000B8, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_1_ImplicitCast) == 0x0000BC, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_1_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_2_ImplicitCast) == 0x0000C0, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_2_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_3_ImplicitCast) == 0x0000C4, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_3_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_NotEqual_DoubleDouble_B_ImplicitCast) == 0x0000C8, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_NotEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_Less_IntInt_ReturnValue) == 0x000088, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_GetConsoleVariableFloatValue_ReturnValue) == 0x00008C, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_GetConsoleVariableFloatValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_Add_IntInt_ReturnValue) == 0x000090, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, Temp_bool_Variable) == 0x000094, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Default) == 0x000098, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Default_1) == 0x0000C0, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_NotEqual_DoubleDouble_ReturnValue) == 0x0000C4, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_NotEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_NotEqual_DoubleDouble_A_ImplicitCast) == 0x0000C8, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_NotEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_0_ImplicitCast) == 0x0000D0, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_1_ImplicitCast) == 0x0000D4, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_1_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_2_ImplicitCast) == 0x0000D8, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_2_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_3_ImplicitCast) == 0x0000DC, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_3_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, K2Node_Select_Option_4_ImplicitCast) == 0x0000E0, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::K2Node_Select_Option_4_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_LevelConfigMgr_C_Restore_Scalability, CallFunc_NotEqual_DoubleDouble_B_ImplicitCast) == 0x0000E8, "Member 'BP_LevelConfigMgr_C_Restore_Scalability::CallFunc_NotEqual_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 // Function BP_LevelConfigMgr.BP_LevelConfigMgr_C.Set Mobile Light CVars
 // 0x0140 (0x0140 - 0x0000)

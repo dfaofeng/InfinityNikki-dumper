@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_UI_SceneMarkerCell_SocialTask.WBP_UI_SceneMarkerCell_SocialTask_C.ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_SceneMarkerCell_SocialTask_C::ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_SceneMarkerCell_SocialTask_C", "ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask");
-
-	Params::WBP_UI_SceneMarkerCell_SocialTask_C_ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_UI_SceneMarkerCell_SocialTask.WBP_UI_SceneMarkerCell_SocialTask_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_UI_SceneMarkerCell_SocialTask_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_UI_SceneMarkerCell_SocialTask_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_SceneMarkerCell_SocialTask.WBP_UI_SceneMarkerCell_SocialTask_C.ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_SceneMarkerCell_SocialTask_C::ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_SceneMarkerCell_SocialTask_C", "ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask");
+
+	Params::WBP_UI_SceneMarkerCell_SocialTask_C_ExecuteUbergraph_WBP_UI_SceneMarkerCell_SocialTask Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

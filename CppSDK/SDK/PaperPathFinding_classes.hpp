@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "PaperPathFinding_structs.hpp"
+#include "AIModule_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "AIModule_classes.hpp"
+#include "PaperPathFinding_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

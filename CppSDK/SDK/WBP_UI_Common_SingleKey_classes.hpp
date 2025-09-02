@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Enum_TipsKeyTheme_structs.hpp"
+#include "Engine_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -49,9 +49,9 @@ public:
 	class FText                                   TextTip;                                           // 0x03A0(0x0010)(Edit, BlueprintVisible, ExposeOnSpawn)
 
 public:
-	void BP_CreateProgressMat(bool bConsole, class UMaterialInstanceDynamic** Mat);
-	void ExecuteUbergraph_WBP_UI_Common_SingleKey(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_UI_Common_SingleKey(int32 EntryPoint);
+	void BP_CreateProgressMat(bool bConsole, class UMaterialInstanceDynamic** Mat);
 
 	class FString GetModuleName() const;
 

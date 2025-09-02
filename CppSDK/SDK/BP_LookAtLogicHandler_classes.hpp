@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LookAtLogicHandler.BP_LookAtLogicHandler_C
-// 0x0008 (0x01F0 - 0x01E8)
+// 0x0008 (0x0220 - 0x0218)
 class UBP_LookAtLogicHandler_C final : public ULookAtLogicHandler
 {
 public:
-	EPlayerActionTypes                            LookAtAction;                                      // 0x01E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerActionTypes                            LookAtAction;                                      // 0x0218(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	bool CanOwnerActorDoLookAt();
@@ -40,8 +40,8 @@ public:
 	}
 };
 static_assert(alignof(UBP_LookAtLogicHandler_C) == 0x000008, "Wrong alignment on UBP_LookAtLogicHandler_C");
-static_assert(sizeof(UBP_LookAtLogicHandler_C) == 0x0001F0, "Wrong size on UBP_LookAtLogicHandler_C");
-static_assert(offsetof(UBP_LookAtLogicHandler_C, LookAtAction) == 0x0001E8, "Member 'UBP_LookAtLogicHandler_C::LookAtAction' has a wrong offset!");
+static_assert(sizeof(UBP_LookAtLogicHandler_C) == 0x000220, "Wrong size on UBP_LookAtLogicHandler_C");
+static_assert(offsetof(UBP_LookAtLogicHandler_C, LookAtAction) == 0x000218, "Member 'UBP_LookAtLogicHandler_C::LookAtAction' has a wrong offset!");
 
 }
 

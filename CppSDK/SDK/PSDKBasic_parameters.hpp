@@ -100,6 +100,21 @@ static_assert(alignof(PSDKGamePadInterface_OnKeyUpTrigger) == 0x000008, "Wrong a
 static_assert(sizeof(PSDKGamePadInterface_OnKeyUpTrigger) == 0x000040, "Wrong size on PSDKGamePadInterface_OnKeyUpTrigger");
 static_assert(offsetof(PSDKGamePadInterface_OnKeyUpTrigger, KeyEvent) == 0x000000, "Member 'PSDKGamePadInterface_OnKeyUpTrigger::KeyEvent' has a wrong offset!");
 
+// Function PSDKBasic.PSDKHyperLinkButton.SetButtonText
+// 0x0030 (0x0030 - 0x0000)
+struct PSDKHyperLinkButton_SetButtonText final
+{
+public:
+	class FString                                 InColor;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InRichText;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InUrl;                                             // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSDKHyperLinkButton_SetButtonText) == 0x000008, "Wrong alignment on PSDKHyperLinkButton_SetButtonText");
+static_assert(sizeof(PSDKHyperLinkButton_SetButtonText) == 0x000030, "Wrong size on PSDKHyperLinkButton_SetButtonText");
+static_assert(offsetof(PSDKHyperLinkButton_SetButtonText, InColor) == 0x000000, "Member 'PSDKHyperLinkButton_SetButtonText::InColor' has a wrong offset!");
+static_assert(offsetof(PSDKHyperLinkButton_SetButtonText, InRichText) == 0x000010, "Member 'PSDKHyperLinkButton_SetButtonText::InRichText' has a wrong offset!");
+static_assert(offsetof(PSDKHyperLinkButton_SetButtonText, InUrl) == 0x000020, "Member 'PSDKHyperLinkButton_SetButtonText::InUrl' has a wrong offset!");
+
 // Function PSDKBasic.PSdkPS5BaseUI.OnGamepadButton
 // 0x0040 (0x0040 - 0x0000)
 struct PSdkPS5BaseUI_OnGamepadButton final

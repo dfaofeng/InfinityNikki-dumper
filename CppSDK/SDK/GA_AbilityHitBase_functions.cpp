@@ -17,37 +17,24 @@
 namespace SDK
 {
 
-// Function GA_AbilityHitBase.GA_AbilityHitBase_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_AbilityHitBase_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityHitBase_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_AbilityHitBase.GA_AbilityHitBase_C.ExecuteUbergraph_GA_AbilityHitBase
-// (Final, UbergraphFunction)
+// Function GA_AbilityHitBase.GA_AbilityHitBase_C.BP_GetHitActionType
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EHitActionType*                         ActionType                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_AbilityHitBase_C::ExecuteUbergraph_GA_AbilityHitBase(int32 EntryPoint)
+void UGA_AbilityHitBase_C::BP_GetHitActionType(EHitActionType* ActionType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityHitBase_C", "ExecuteUbergraph_GA_AbilityHitBase");
+		Func = Class->GetFunction("GA_AbilityHitBase_C", "BP_GetHitActionType");
 
-	Params::GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::GA_AbilityHitBase_C_BP_GetHitActionType Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (ActionType != nullptr)
+		*ActionType = Parms.ActionType;
 }
 
 
@@ -72,24 +59,37 @@ void UGA_AbilityHitBase_C::BP_GetHitPoint(struct FVector* Point)
 }
 
 
-// Function GA_AbilityHitBase.GA_AbilityHitBase_C.BP_GetHitActionType
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function GA_AbilityHitBase.GA_AbilityHitBase_C.ExecuteUbergraph_GA_AbilityHitBase
+// (Final, UbergraphFunction)
 // Parameters:
-// EHitActionType*                         actionType                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_AbilityHitBase_C::BP_GetHitActionType(EHitActionType* actionType)
+void UGA_AbilityHitBase_C::ExecuteUbergraph_GA_AbilityHitBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityHitBase_C", "BP_GetHitActionType");
+		Func = Class->GetFunction("GA_AbilityHitBase_C", "ExecuteUbergraph_GA_AbilityHitBase");
 
-	Params::GA_AbilityHitBase_C_BP_GetHitActionType Parms{};
+	Params::GA_AbilityHitBase_C_ExecuteUbergraph_GA_AbilityHitBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
 
-	if (actionType != nullptr)
-		*actionType = Parms.actionType;
+
+// Function GA_AbilityHitBase.GA_AbilityHitBase_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_AbilityHitBase_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AbilityHitBase_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

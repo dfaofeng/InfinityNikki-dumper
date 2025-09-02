@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
-#include "EUTCJoystickMode_structs.hpp"
+#include "UTCConfigStruct_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EUTCJoystickMode_structs.hpp"
+#include "F_JoystickCustomConfig_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "UTCControlTypeEnum_structs.hpp"
 #include "X6Game_structs.hpp"
-#include "F_JoystickCustomConfig_structs.hpp"
-#include "UTCConfigStruct_structs.hpp"
+#include "InputCore_structs.hpp"
 #include "EDeviceScreenSizeType_structs.hpp"
 #include "F_UTCRatioConfig_structs.hpp"
 #include "Engine_structs.hpp"
@@ -447,7 +447,7 @@ static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCConfig, CallFunc_GetD
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCConfig, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000078, "Member 'BP_PlayerUTCInputComponent_C_InitUTCConfig::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
 
 // Function BP_PlayerUTCInputComponent.BP_PlayerUTCInputComponent_C.InitUTCComponents
-// 0x0050 (0x0050 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BP_PlayerUTCInputComponent_C_InitUTCComponents final
 {
 public:
@@ -459,15 +459,18 @@ public:
 	uint8                                         Pad_13[0x5];                                       // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UUTCTapComponent_C*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUTCPinchComponent_C*                   CallFunc_AddComponentByClass_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUTCMultiComponent_C*                   CallFunc_AddComponentByClass_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUTCTapComponent_C*                     CallFunc_AddComponentByClass_ReturnValue_1;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UUTCPinchComponent_C*                   CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UUTCPinchComponent_C*                   CallFunc_AddComponentByClass_ReturnValue_1;        // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUTCTapComponent_C*                     CallFunc_AddComponentByClass_ReturnValue_2;        // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUTCMultiComponent_C*                   CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UUTCPinchComponent_C*                   CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_PlayerUTCInputComponent_C_InitUTCComponents) == 0x000008, "Wrong alignment on BP_PlayerUTCInputComponent_C_InitUTCComponents");
-static_assert(sizeof(BP_PlayerUTCInputComponent_C_InitUTCComponents) == 0x000050, "Wrong size on BP_PlayerUTCInputComponent_C_InitUTCComponents");
+static_assert(sizeof(BP_PlayerUTCInputComponent_C_InitUTCComponents) == 0x000060, "Wrong size on BP_PlayerUTCInputComponent_C_InitUTCComponents");
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_GetSwipeToMoveComponent_comp) == 0x000000, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_GetSwipeToMoveComponent_comp' has a wrong offset!");
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_BP_GetPixelRateStandardToReal_rate) == 0x000008, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_BP_GetPixelRateStandardToReal_rate' has a wrong offset!");
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_BP_GetDeviceType_NewParam) == 0x000010, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_BP_GetDeviceType_NewParam' has a wrong offset!");
@@ -478,8 +481,11 @@ static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_AddComponentByClass_ReturnValue) == 0x000028, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_IsValid_ReturnValue_1) == 0x000030, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_AddComponentByClass_ReturnValue_1) == 0x000038, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_AddComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000040, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_IsValid_ReturnValue_2) == 0x000048, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_AddComponentByClass_ReturnValue_2) == 0x000040, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_AddComponentByClass_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000048, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_GetComponentByClass_ReturnValue_2) == 0x000050, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_GetComponentByClass_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_IsValid_ReturnValue_2) == 0x000058, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_PlayerUTCInputComponent_C_InitUTCComponents, CallFunc_IsValid_ReturnValue_3) == 0x000059, "Member 'BP_PlayerUTCInputComponent_C_InitUTCComponents::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
 
 // Function BP_PlayerUTCInputComponent.BP_PlayerUTCInputComponent_C.HandleTouchEvent
 // 0x0020 (0x0020 - 0x0000)

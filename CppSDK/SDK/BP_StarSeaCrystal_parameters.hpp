@@ -11,11 +11,12 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
-#include "X6StateMachine_structs.hpp"
-#include "E_InteractionProcess_structs.hpp"
-#include "E_EInteractSuccRet_structs.hpp"
 #include "E_InteractiveObjPhantomState_structs.hpp"
+#include "Engine_structs.hpp"
+#include "E_EInteractSuccRet_structs.hpp"
+#include "E_InteractionProcess_structs.hpp"
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
+#include "X6StateMachine_structs.hpp"
 
 
 namespace SDK::Params
@@ -157,15 +158,29 @@ static_assert(sizeof(BP_StarSeaCrystal_C_BP_DisableLongRing) == 0x000001, "Wrong
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisableLongRing, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_DisableLongRing::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_DisablePenetrateEffect
-// 0x0001 (0x0001 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct BP_StarSeaCrystal_C_BP_DisablePenetrateEffect final
 {
 public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPendingDisable_ReturnValue;             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDisabled_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BP_GetRefCount_RefCount;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect) == 0x000001, "Wrong alignment on BP_StarSeaCrystal_C_BP_DisablePenetrateEffect");
-static_assert(sizeof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect) == 0x000001, "Wrong size on BP_StarSeaCrystal_C_BP_DisablePenetrateEffect");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect) == 0x000004, "Wrong alignment on BP_StarSeaCrystal_C_BP_DisablePenetrateEffect");
+static_assert(sizeof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect) == 0x00000C, "Wrong size on BP_StarSeaCrystal_C_BP_DisablePenetrateEffect");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_IsPendingDisable_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_IsPendingDisable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_IsDisabled_ReturnValue) == 0x000001, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_IsDisabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue) == 0x000002, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_1) == 0x000003, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_BP_GetRefCount_RefCount) == 0x000004, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_BP_GetRefCount_RefCount' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_BooleanAND_ReturnValue) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000009, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisablePenetrateEffect, CallFunc_IsValid_ReturnValue) == 0x00000A, "Member 'BP_StarSeaCrystal_C_BP_DisablePenetrateEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_DisableShortRing
 // 0x0001 (0x0001 - 0x0000)
@@ -179,20 +194,66 @@ static_assert(sizeof(BP_StarSeaCrystal_C_BP_DisableShortRing) == 0x000001, "Wron
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_DisableShortRing, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_DisableShortRing::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_EnablePenetrateEffect
-// 0x0018 (0x0018 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct BP_StarSeaCrystal_C_BP_EnablePenetrateEffect final
 {
 public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AX6PlayerCameraManager*                 CallFunc_GetX6PlayerCameraManager_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_StarSeaCameraModifier_C*            CallFunc_AddNewCameraModifier_ReturnValue;         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPendingDisable_ReturnValue;             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDisabled_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_4;                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_5;                // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_6;                // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_7;                // 0x000E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_8;                // 0x000F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_5;                 // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_12[0x6];                                       // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AX6PlayerCameraManager*                 CallFunc_GetX6PlayerCameraManager_ReturnValue;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StarSeaCameraModifier_C*            CallFunc_FindCameraModifierByClass_ReturnValue;    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_StarSeaCameraModifier_C*            CallFunc_AddNewCameraModifier_ReturnValue;         // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPendingDisable_ReturnValue_1;           // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDisabled_ReturnValue_1;                 // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect) == 0x000008, "Wrong alignment on BP_StarSeaCrystal_C_BP_EnablePenetrateEffect");
-static_assert(sizeof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect) == 0x000018, "Wrong size on BP_StarSeaCrystal_C_BP_EnablePenetrateEffect");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_GetX6PlayerCameraManager_ReturnValue) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_GetX6PlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_AddNewCameraModifier_ReturnValue) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_AddNewCameraModifier_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect) == 0x000038, "Wrong size on BP_StarSeaCrystal_C_BP_EnablePenetrateEffect");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsPendingDisable_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsPendingDisable_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsDisabled_ReturnValue) == 0x000001, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsDisabled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanOR_ReturnValue) == 0x000002, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue) == 0x000003, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_1) == 0x000004, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_2) == 0x000005, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_3) == 0x000006, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanAND_ReturnValue) == 0x000007, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanAND_ReturnValue_1) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_4) == 0x000009, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_5) == 0x00000A, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_6) == 0x00000B, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanAND_ReturnValue_2) == 0x00000C, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanAND_ReturnValue_3) == 0x00000D, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_7) == 0x00000E, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_Not_PreBool_ReturnValue_8) == 0x00000F, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_Not_PreBool_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanAND_ReturnValue_4) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanAND_ReturnValue_5) == 0x000011, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanAND_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_GetX6PlayerCameraManager_ReturnValue) == 0x000018, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_GetX6PlayerCameraManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_FindCameraModifierByClass_ReturnValue) == 0x000020, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_FindCameraModifierByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_AddNewCameraModifier_ReturnValue) == 0x000028, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_AddNewCameraModifier_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsValid_ReturnValue) == 0x000030, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsPendingDisable_ReturnValue_1) == 0x000031, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsPendingDisable_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsDisabled_ReturnValue_1) == 0x000032, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsDisabled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_BooleanOR_ReturnValue_1) == 0x000033, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_EnablePenetrateEffect, CallFunc_IsValid_ReturnValue_1) == 0x000034, "Member 'BP_StarSeaCrystal_C_BP_EnablePenetrateEffect::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_ForceInteractSuccess
 // 0x0018 (0x0018 - 0x0000)
@@ -268,65 +329,64 @@ static_assert(sizeof(BP_StarSeaCrystal_C_BP_IsEnergized) == 0x000010, "Wrong siz
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_IsEnergized, Actor) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_IsEnergized::Actor' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_IsEnergized, bIsEnergized) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_IsEnergized::bIsEnergized' has a wrong offset!");
 
+// Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_NotifyPenetrateEffect
+// 0x0001 (0x0001 - 0x0000)
+struct BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect) == 0x000001, "Wrong alignment on BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect");
+static_assert(sizeof(BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect) == 0x000001, "Wrong size on BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect, bEnable) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_NotifyPenetrateEffect::bEnable' has a wrong offset!");
+
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_OnEmpower
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BP_StarSeaCrystal_C_BP_OnEmpower final
 {
 public:
 	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue_1;                // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast_1;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_StarSeaCrystal_C_BP_OnEmpower) == 0x000008, "Wrong alignment on BP_StarSeaCrystal_C_BP_OnEmpower");
-static_assert(sizeof(BP_StarSeaCrystal_C_BP_OnEmpower) == 0x000020, "Wrong size on BP_StarSeaCrystal_C_BP_OnEmpower");
+static_assert(sizeof(BP_StarSeaCrystal_C_BP_OnEmpower) == 0x000018, "Wrong size on BP_StarSeaCrystal_C_BP_OnEmpower");
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnEmpower, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_OnEmpower::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnEmpower, CallFunc_K2_SetTimer_ReturnValue) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_OnEmpower::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnEmpower, CallFunc_K2_SetTimer_ReturnValue_1) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_OnEmpower::CallFunc_K2_SetTimer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnEmpower, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000018, "Member 'BP_StarSeaCrystal_C_BP_OnEmpower::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnEmpower, CallFunc_K2_SetTimer_Time_ImplicitCast_1) == 0x00001C, "Member 'BP_StarSeaCrystal_C_BP_OnEmpower::CallFunc_K2_SetTimer_Time_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnEmpower, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_OnEmpower::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_OnLongRing
-// 0x0020 (0x0020 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct BP_StarSeaCrystal_C_BP_OnLongRing final
 {
 public:
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue_1;                // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast_1;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0008(0x0008)(NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_StarSeaCrystal_C_BP_OnLongRing) == 0x000008, "Wrong alignment on BP_StarSeaCrystal_C_BP_OnLongRing");
-static_assert(sizeof(BP_StarSeaCrystal_C_BP_OnLongRing) == 0x000020, "Wrong size on BP_StarSeaCrystal_C_BP_OnLongRing");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_SetTimer_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_SetTimer_ReturnValue_1) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_SetTimer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000018, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_SetTimer_Time_ImplicitCast_1) == 0x00001C, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_SetTimer_Time_ImplicitCast_1' has a wrong offset!");
+static_assert(sizeof(BP_StarSeaCrystal_C_BP_OnLongRing) == 0x000018, "Wrong size on BP_StarSeaCrystal_C_BP_OnLongRing");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_SetTimer_ReturnValue) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnLongRing, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_OnLongRing::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_OnShortRing
-// 0x0020 (0x0020 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct BP_StarSeaCrystal_C_BP_OnShortRing final
 {
 public:
 	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0000(0x0008)(NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue_1;                // 0x0010(0x0008)(NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast_1;          // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_StarSeaCrystal_C_BP_OnShortRing) == 0x000008, "Wrong alignment on BP_StarSeaCrystal_C_BP_OnShortRing");
-static_assert(sizeof(BP_StarSeaCrystal_C_BP_OnShortRing) == 0x000020, "Wrong size on BP_StarSeaCrystal_C_BP_OnShortRing");
+static_assert(sizeof(BP_StarSeaCrystal_C_BP_OnShortRing) == 0x000010, "Wrong size on BP_StarSeaCrystal_C_BP_OnShortRing");
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnShortRing, CallFunc_K2_SetTimer_ReturnValue) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_OnShortRing::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnShortRing, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000008, "Member 'BP_StarSeaCrystal_C_BP_OnShortRing::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnShortRing, CallFunc_K2_SetTimer_ReturnValue_1) == 0x000010, "Member 'BP_StarSeaCrystal_C_BP_OnShortRing::CallFunc_K2_SetTimer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnShortRing, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000018, "Member 'BP_StarSeaCrystal_C_BP_OnShortRing::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnShortRing, CallFunc_K2_SetTimer_Time_ImplicitCast_1) == 0x00001C, "Member 'BP_StarSeaCrystal_C_BP_OnShortRing::CallFunc_K2_SetTimer_Time_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_BP_OnShortRing, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x00000C, "Member 'BP_StarSeaCrystal_C_BP_OnShortRing::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.BP_StartFly
 // 0x00E0 (0x00E0 - 0x0000)
@@ -488,19 +548,18 @@ static_assert(sizeof(BP_StarSeaCrystal_C_BP_UpdateRange) == 0x000004, "Wrong siz
 static_assert(offsetof(BP_StarSeaCrystal_C_BP_UpdateRange, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x000000, "Member 'BP_StarSeaCrystal_C_BP_UpdateRange::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.ExecuteUbergraph_BP_StarSeaCrystal
-// 0x05C0 (0x05C0 - 0x0000)
+// 0x05C8 (0x05C8 - 0x0000)
 struct BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_IsEnergized_bIsEnergized;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_IsEnergized_bIsEnergized_1;            // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B[0x1];                                        // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_IsEnergized_bIsEnergized;              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_1;            // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_MakeLiteralByte_ReturnValue_2;            // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0008(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BP_IsArriveAtPlayer_isArrive;             // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -527,19 +586,21 @@ public:
 	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ACharacter*                             CallFunc_GetPlayerControllingRole_ControllingRole; // 0x0180(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_1;      // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_2;      // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_3;      // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18E[0x2];                                      // 0x018E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_BP_IsEnergized_bIsEnergized_1;            // 0x0189(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x018A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_1;      // 0x018B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_2;      // 0x018C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_3;      // 0x018D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x018E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_18F[0x1];                                      // 0x018F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0190(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Event_Data;                                 // 0x0198(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_Player;                               // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMultiPlayerMode_ret;                    // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bServer;                              // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1B3[0x5];                                      // 0x01B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	E_Multi_InteractiveObjActive_Type             K2Node_Event_E_Multi_Type;                         // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMultiPlayerMode_ret;                    // 0x01B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x01B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bServer;                              // 0x01B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B4[0x4];                                      // 0x01B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 K2Node_Event_Other_player_actor;                   // 0x01B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	E_EInteractSuccRet                            K2Node_Event_result;                               // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C1[0x7];                                      // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -555,8 +616,8 @@ public:
 	class UNiagaraComponent*                      K2Node_ComponentBoundEvent_PSystem_1;              // 0x02F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EFSM_Transition                               CallFunc_SetStateByStateID_Transition;             // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EFSM_Transition                               CallFunc_SetStateByStateID_Transition_1;           // 0x0301(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0302(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFSM_Transition                               CallFunc_SetStateByStateID_Transition_2;           // 0x0303(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFSM_Transition                               CallFunc_SetStateByStateID_Transition_2;           // 0x0302(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0303(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_304[0x4];                                      // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      K2Node_ComponentBoundEvent_PSystem;                // 0x0308(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_SetScalarParameterValue_ReturnValue;      // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -587,26 +648,28 @@ public:
 	bool                                          CallFunc_MakeLiteralBool_ReturnValue;              // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AX6PlayerCameraManager*                 CallFunc_GetX6PlayerCameraManager_ReturnValue;     // 0x0590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_RemoveCameraModifier_ReturnValue;         // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0599(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59A[0x6];                                      // 0x059A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_VariableSet_DeltaSeconds_ImplicitCast;      // 0x05A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x05A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_InValue_ImplicitCast; // 0x05AC(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x05B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_InValue_ImplicitCast_1; // 0x05B4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_InValue_ImplicitCast_2; // 0x05B8(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_599[0x3];                                      // 0x0599(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_BP_GetActorCount_RefCount;                // 0x059C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x05A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_RemoveCameraModifier_ReturnValue;         // 0x05A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A2[0x6];                                      // 0x05A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_VariableSet_DeltaSeconds_ImplicitCast;      // 0x05A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x05B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_InValue_ImplicitCast; // 0x05B4(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x05B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_InValue_ImplicitCast_1; // 0x05BC(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_InValue_ImplicitCast_2; // 0x05C0(0x0004)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal) == 0x000008, "Wrong alignment on BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal");
-static_assert(sizeof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal) == 0x0005C0, "Wrong size on BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal");
+static_assert(sizeof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal) == 0x0005C8, "Wrong size on BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, EntryPoint) == 0x000000, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_IsEnergized_bIsEnergized) == 0x000004, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_IsEnergized_bIsEnergized' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralByte_ReturnValue) == 0x000005, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_IsEnergized_bIsEnergized_1) == 0x000006, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_IsEnergized_bIsEnergized_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x000007, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralByte_ReturnValue_2) == 0x000008, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, Temp_bool_Variable) == 0x000009, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x00000A, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralByte_ReturnValue) == 0x000004, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_IsEnergized_bIsEnergized) == 0x000005, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_IsEnergized_bIsEnergized' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralByte_ReturnValue_1) == 0x000006, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralByte_ReturnValue_2) == 0x000007, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, Temp_bool_Variable) == 0x000008, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000009, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_DeltaSeconds) == 0x00000C, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_DeltaSeconds' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_IsArriveAtPlayer_isArrive) == 0x000010, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_IsArriveAtPlayer_isArrive' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000018, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
@@ -627,17 +690,19 @@ static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, C
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_ComponentHasTag_ReturnValue) == 0x000178, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_ComponentHasTag_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_GetPlayerControllingRole_ControllingRole) == 0x000180, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_GetPlayerControllingRole_ControllingRole' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000188, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BooleanAND_ReturnValue) == 0x000189, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue_1) == 0x00018A, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue_2) == 0x00018B, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue_3) == 0x00018C, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_EndPlayReason) == 0x00018D, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_IsEnergized_bIsEnergized_1) == 0x000189, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_IsEnergized_bIsEnergized_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BooleanAND_ReturnValue) == 0x00018A, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue_1) == 0x00018B, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue_2) == 0x00018C, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_IsValidTimerHandle_ReturnValue_3) == 0x00018D, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_IsValidTimerHandle_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_EndPlayReason) == 0x00018E, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_EndPlayReason' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000190, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_Data) == 0x000198, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_Data' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_Player) == 0x0001A8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_Player' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_IsMultiPlayerMode_ret) == 0x0001B0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_IsMultiPlayerMode_ret' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_SwitchString_CmpSuccess) == 0x0001B1, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_bServer) == 0x0001B2, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_bServer' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_E_Multi_Type) == 0x0001B0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_E_Multi_Type' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_IsMultiPlayerMode_ret) == 0x0001B1, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_IsMultiPlayerMode_ret' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_SwitchString_CmpSuccess) == 0x0001B2, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_SwitchString_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_bServer) == 0x0001B3, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_bServer' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_Other_player_actor) == 0x0001B8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_Other_player_actor' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_Event_result) == 0x0001C0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_Event_result' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_GetOtherPlayerToShareReward_OtherPlayer) == 0x0001C8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_GetOtherPlayerToShareReward_OtherPlayer' has a wrong offset!");
@@ -650,8 +715,8 @@ static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, C
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_ComponentBoundEvent_PSystem_1) == 0x0002F8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_ComponentBoundEvent_PSystem_1' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetStateByStateID_Transition) == 0x000300, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetStateByStateID_Transition' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetStateByStateID_Transition_1) == 0x000301, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetStateByStateID_Transition_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000302, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetStateByStateID_Transition_2) == 0x000303, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetStateByStateID_Transition_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetStateByStateID_Transition_2) == 0x000302, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetStateByStateID_Transition_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000303, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_ComponentBoundEvent_PSystem) == 0x000308, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_ComponentBoundEvent_PSystem' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_ReturnValue) == 0x000310, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000318, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
@@ -676,14 +741,16 @@ static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, C
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_SetWorldLocation_SweepHitResult_2) == 0x000490, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_SetWorldLocation_SweepHitResult_2' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_MakeLiteralBool_ReturnValue) == 0x000588, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_MakeLiteralBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_GetX6PlayerCameraManager_ReturnValue) == 0x000590, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_GetX6PlayerCameraManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_RemoveCameraModifier_ReturnValue) == 0x000598, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_RemoveCameraModifier_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_IsValid_ReturnValue_2) == 0x000599, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_VariableSet_DeltaSeconds_ImplicitCast) == 0x0005A0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_VariableSet_DeltaSeconds_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x0005A8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_InValue_ImplicitCast) == 0x0005AC, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x0005B0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_InValue_ImplicitCast_1) == 0x0005B4, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_InValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_InValue_ImplicitCast_2) == 0x0005B8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_InValue_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_IsValid_ReturnValue_2) == 0x000598, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_BP_GetActorCount_RefCount) == 0x00059C, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_BP_GetActorCount_RefCount' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x0005A0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_RemoveCameraModifier_ReturnValue) == 0x0005A1, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_RemoveCameraModifier_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, K2Node_VariableSet_DeltaSeconds_ImplicitCast) == 0x0005A8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::K2Node_VariableSet_DeltaSeconds_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x0005B0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_InValue_ImplicitCast) == 0x0005B4, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x0005B8, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_InValue_ImplicitCast_1) == 0x0005BC, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_InValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal, CallFunc_SetScalarParameterValue_InValue_ImplicitCast_2) == 0x0005C0, "Member 'BP_StarSeaCrystal_C_ExecuteUbergraph_BP_StarSeaCrystal::CallFunc_SetScalarParameterValue_InValue_ImplicitCast_2' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.On_Multi_ActiveSuccess
 // 0x0010 (0x0010 - 0x0000)
@@ -699,17 +766,19 @@ static_assert(offsetof(BP_StarSeaCrystal_C_On_Multi_ActiveSuccess, Other_player_
 static_assert(offsetof(BP_StarSeaCrystal_C_On_Multi_ActiveSuccess, Result) == 0x000008, "Member 'BP_StarSeaCrystal_C_On_Multi_ActiveSuccess::Result' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.On_Multi_InteractiveObjActive
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive final
 {
 public:
 	class FString                                 Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 Player;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_Multi_InteractiveObjActive_Type             E_Multi_Type;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive) == 0x000008, "Wrong alignment on BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive");
-static_assert(sizeof(BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive) == 0x000018, "Wrong size on BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive");
+static_assert(sizeof(BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive) == 0x000020, "Wrong size on BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive");
 static_assert(offsetof(BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive, Data) == 0x000000, "Member 'BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive::Data' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive, Player) == 0x000010, "Member 'BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive::Player' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive, E_Multi_Type) == 0x000018, "Member 'BP_StarSeaCrystal_C_On_Multi_InteractiveObjActive::E_Multi_Type' has a wrong offset!");
 
 // Function BP_StarSeaCrystal.BP_StarSeaCrystal_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)

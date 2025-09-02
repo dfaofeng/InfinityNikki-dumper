@@ -384,7 +384,8 @@ public:
 	class UBP_PlayerRegularMovementCompV3_C*      CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_CanUseDialogPerformance_bRet;             // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UBP_PlayerAnimStatesComponent_C*        CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance; // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -399,8 +400,7 @@ public:
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_3;            // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CanUseDialogPerformance_bRet;             // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue_4;            // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UBP_PlayerFeedBackPerformanceComponent_C* CallFunc_GetComponentByClass_ReturnValue_3;      // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
@@ -412,6 +412,7 @@ static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacte
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_IsValid_ReturnValue_1) == 0x000021, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_CanUseDialogPerformance_bRet) == 0x000022, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_CanUseDialogPerformance_bRet' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_TryGetPawnOwner_ReturnValue_1) == 0x000028, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_TryGetPawnOwner_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000030, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance) == 0x000038, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance' has a wrong offset!");
@@ -423,7 +424,6 @@ static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacte
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_TryGetPawnOwner_ReturnValue_3) == 0x000068, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_TryGetPawnOwner_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_IsValid_ReturnValue_3) == 0x000070, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_IsValid_ReturnValue_4) == 0x000071, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_CanUseDialogPerformance_bRet) == 0x000072, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_CanUseDialogPerformance_bRet' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_TryGetPawnOwner_ReturnValue_4) == 0x000078, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_TryGetPawnOwner_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter, CallFunc_GetComponentByClass_ReturnValue_3) == 0x000080, "Member 'ABP_DaMiaoCharacter_C_ExecuteUbergraph_ABP_DaMiaoCharacter::CallFunc_GetComponentByClass_ReturnValue_3' has a wrong offset!");
 

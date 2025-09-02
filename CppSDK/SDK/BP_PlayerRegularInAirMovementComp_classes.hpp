@@ -56,7 +56,7 @@ public:
 	void BP_IsNormalJumpOnGround(bool* IsNormalJumpOnGround);
 	void BP_Modify_TimeWindowOfResponseJumpInputWhenOffLedgeConfigValue(double Value);
 	void BP_ModifyOwnerJumpStageConfigByDA(class UBP_JumpStage_ConfigTemplate_C* NewDataAsset, class UBP_JumpStage_ConfigTemplate_C** OldDataAsset);
-	void BP_Multicast_ChangeJumpStage(ERegularFloatingJumpStage NewStage, bool bForceUpdate);
+	void BP_Multicast_ChangeJumpStage(ERegularFloatingJumpStage NewStage, ERegularJumpMode NewJumpMode, bool bForceUpdate);
 	void BP_OverrideCurrentGravityScale(double G);
 	void BP_Reset_TimeWindowOfResponseJumpInputWhenOffLedgeConfigValue();
 	void BP_ResetGravityScale();

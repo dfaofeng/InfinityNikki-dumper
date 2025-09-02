@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C
-// 0x0028 (0x0460 - 0x0438)
+// 0x0028 (0x04B0 - 0x0488)
 class ABP_PhotographDailyAttendanceArea_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cube;                                              // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CameraShootingPositionCollision;                   // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         Tag;                                               // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Cube;                                              // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CameraShootingPositionCollision;                   // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         Tag;                                               // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void ExecuteUbergraph_BP_PhotographDailyAttendanceArea(int32 EntryPoint);
-	void Lua_BeginOverlap(int32 CheckInID);
 	void Lua_EndOverlap();
+	void Lua_BeginOverlap(int32 CheckInID);
+	void ExecuteUbergraph_BP_PhotographDailyAttendanceArea(int32 EntryPoint);
+	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	void BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 
 	class FString GetModuleName() const;
 
@@ -48,12 +48,12 @@ public:
 	}
 };
 static_assert(alignof(ABP_PhotographDailyAttendanceArea_C) == 0x000008, "Wrong alignment on ABP_PhotographDailyAttendanceArea_C");
-static_assert(sizeof(ABP_PhotographDailyAttendanceArea_C) == 0x000460, "Wrong size on ABP_PhotographDailyAttendanceArea_C");
-static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, UberGraphFrame) == 0x000438, "Member 'ABP_PhotographDailyAttendanceArea_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, Cube) == 0x000440, "Member 'ABP_PhotographDailyAttendanceArea_C::Cube' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, CameraShootingPositionCollision) == 0x000448, "Member 'ABP_PhotographDailyAttendanceArea_C::CameraShootingPositionCollision' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, DefaultSceneRoot) == 0x000450, "Member 'ABP_PhotographDailyAttendanceArea_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, Tag) == 0x000458, "Member 'ABP_PhotographDailyAttendanceArea_C::Tag' has a wrong offset!");
+static_assert(sizeof(ABP_PhotographDailyAttendanceArea_C) == 0x0004B0, "Wrong size on ABP_PhotographDailyAttendanceArea_C");
+static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, UberGraphFrame) == 0x000488, "Member 'ABP_PhotographDailyAttendanceArea_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, Cube) == 0x000490, "Member 'ABP_PhotographDailyAttendanceArea_C::Cube' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, CameraShootingPositionCollision) == 0x000498, "Member 'ABP_PhotographDailyAttendanceArea_C::CameraShootingPositionCollision' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, DefaultSceneRoot) == 0x0004A0, "Member 'ABP_PhotographDailyAttendanceArea_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceArea_C, Tag) == 0x0004A8, "Member 'ABP_PhotographDailyAttendanceArea_C::Tag' has a wrong offset!");
 
 }
 

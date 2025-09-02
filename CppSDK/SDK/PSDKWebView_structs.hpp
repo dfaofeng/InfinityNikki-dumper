@@ -34,14 +34,14 @@ static_assert(offsetof(FWebViewTicketData, link) == 0x0000C8, "Member 'FWebViewT
 struct FWebViewTicketResponse final : public FJsonData
 {
 public:
-	int32                                         Code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FWebViewTicketData                     Data;                                              // 0x00D0(0x00D8)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FWebViewTicketResponse) == 0x000008, "Wrong alignment on FWebViewTicketResponse");
 static_assert(sizeof(FWebViewTicketResponse) == 0x0001A8, "Wrong size on FWebViewTicketResponse");
-static_assert(offsetof(FWebViewTicketResponse, Code) == 0x0000B8, "Member 'FWebViewTicketResponse::Code' has a wrong offset!");
+static_assert(offsetof(FWebViewTicketResponse, code) == 0x0000B8, "Member 'FWebViewTicketResponse::code' has a wrong offset!");
 static_assert(offsetof(FWebViewTicketResponse, Info) == 0x0000C0, "Member 'FWebViewTicketResponse::Info' has a wrong offset!");
 static_assert(offsetof(FWebViewTicketResponse, Data) == 0x0000D0, "Member 'FWebViewTicketResponse::Data' has a wrong offset!");
 

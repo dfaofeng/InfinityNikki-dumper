@@ -14,19 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BTT_QuadrupedAnimalReaction_TryEnterState.BTT_QuadrupedAnimalReaction_TryEnterState_C.ReceiveExecuteAI
-// 0x0010 (0x0010 - 0x0000)
-struct BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI final
-{
-public:
-	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI) == 0x000008, "Wrong alignment on BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI");
-static_assert(sizeof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI) == 0x000010, "Wrong size on BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI");
-static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI, OwnerController) == 0x000000, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI::OwnerController' has a wrong offset!");
-static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI, ControlledPawn) == 0x000008, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI::ControlledPawn' has a wrong offset!");
-
 // Function BTT_QuadrupedAnimalReaction_TryEnterState.BTT_QuadrupedAnimalReaction_TryEnterState_C.ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState
 // 0x0028 (0x0028 - 0x0000)
 struct BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState final
@@ -48,6 +35,19 @@ static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergr
 static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState, CallFunc_GetAnimalReactionFSM_FSM) == 0x000018, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState::CallFunc_GetAnimalReactionFSM_FSM' has a wrong offset!");
 static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState, CallFunc_TryEnterState_bSuccess) == 0x000021, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ExecuteUbergraph_BTT_QuadrupedAnimalReaction_TryEnterState::CallFunc_TryEnterState_bSuccess' has a wrong offset!");
+
+// Function BTT_QuadrupedAnimalReaction_TryEnterState.BTT_QuadrupedAnimalReaction_TryEnterState_C.ReceiveExecuteAI
+// 0x0010 (0x0010 - 0x0000)
+struct BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI final
+{
+public:
+	class AAIController*                          OwnerController;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  ControlledPawn;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI) == 0x000008, "Wrong alignment on BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI");
+static_assert(sizeof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI) == 0x000010, "Wrong size on BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI");
+static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI, OwnerController) == 0x000000, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI::OwnerController' has a wrong offset!");
+static_assert(offsetof(BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI, ControlledPawn) == 0x000008, "Member 'BTT_QuadrupedAnimalReaction_TryEnterState_C_ReceiveExecuteAI::ControlledPawn' has a wrong offset!");
 
 }
 

@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "F_BuffDurationSet_structs.hpp"
+#include "EHitReason_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "F_BuffDurationSet_structs.hpp"
+#include "EHitDisMoveType_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "EScenarioCombatEventType_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EDamagePerformanceType_structs.hpp"
-#include "EHitDisMoveType_structs.hpp"
-#include "EHitReason_structs.hpp"
 #include "EFeedBackReason_structs.hpp"
 #include "Enum_JumpToTaskTraceType_structs.hpp"
 
@@ -422,7 +422,7 @@ public:
 	struct FVector                                Center;                                            // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InnerRadius;                                       // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OuterRadius;                                       // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Interval;                                          // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        interval;                                          // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PointNum;                                          // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -433,7 +433,7 @@ static_assert(sizeof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints) == 0x000050,
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, Center) == 0x000000, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::Center' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, InnerRadius) == 0x000018, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::InnerRadius' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, OuterRadius) == 0x000020, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::OuterRadius' has a wrong offset!");
-static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, Interval) == 0x000028, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::Interval' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, interval) == 0x000028, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::interval' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, PointNum) == 0x000030, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::PointNum' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, __WorldContext) == 0x000038, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::__WorldContext' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCombatLibrary_C_BP_GetRandomPoints, RandomPoints) == 0x000040, "Member 'X6BlueprintCombatLibrary_C_BP_GetRandomPoints::RandomPoints' has a wrong offset!");

@@ -353,14 +353,14 @@ void UAkAndroidInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
 // Function AkAudio.AkAudioEvent.ExecuteAction
 // (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
-// const EAkActionOnEventType              actionType                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EAkActionOnEventType              ActionType                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class AActor*                     Actor                                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             PlayingID                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const int32                             TransitionDuration                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const EAkCurveInterpolation             FadeCurve                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UAkAudioEvent::ExecuteAction(const EAkActionOnEventType actionType, const class AActor* Actor, const int32 PlayingID, const int32 TransitionDuration, const EAkCurveInterpolation FadeCurve)
+int32 UAkAudioEvent::ExecuteAction(const EAkActionOnEventType ActionType, const class AActor* Actor, const int32 PlayingID, const int32 TransitionDuration, const EAkCurveInterpolation FadeCurve)
 {
 	static class UFunction* Func = nullptr;
 
@@ -369,7 +369,7 @@ int32 UAkAudioEvent::ExecuteAction(const EAkActionOnEventType actionType, const 
 
 	Params::AkAudioEvent_ExecuteAction Parms{};
 
-	Parms.actionType = actionType;
+	Parms.ActionType = ActionType;
 	Parms.Actor = Actor;
 	Parms.PlayingID = PlayingID;
 	Parms.TransitionDuration = TransitionDuration;
@@ -1757,13 +1757,13 @@ void UAkGameplayStatics::ClearSoundBanksAndMedia()
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UAkAudioEvent*                    AkEvent                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EAkActionOnEventType                    actionType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAkActionOnEventType                    ActionType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TransitionDuration                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EAkCurveInterpolation                   FadeCurve                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   PlayingID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAkGameplayStatics::ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType actionType, class AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID)
+void UAkGameplayStatics::ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType ActionType, class AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1773,7 +1773,7 @@ void UAkGameplayStatics::ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkA
 	Params::AkGameplayStatics_ExecuteActionOnEvent Parms{};
 
 	Parms.AkEvent = AkEvent;
-	Parms.actionType = actionType;
+	Parms.ActionType = ActionType;
 	Parms.Actor = Actor;
 	Parms.TransitionDuration = TransitionDuration;
 	Parms.FadeCurve = FadeCurve;
@@ -1791,12 +1791,12 @@ void UAkGameplayStatics::ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkA
 // Function AkAudio.AkGameplayStatics.ExecuteActionOnPlayingID
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// EAkActionOnEventType                    actionType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EAkActionOnEventType                    ActionType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   PlayingID                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TransitionDuration                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EAkCurveInterpolation                   FadeCurve                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UAkGameplayStatics::ExecuteActionOnPlayingID(EAkActionOnEventType actionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve)
+void UAkGameplayStatics::ExecuteActionOnPlayingID(EAkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1805,7 +1805,7 @@ void UAkGameplayStatics::ExecuteActionOnPlayingID(EAkActionOnEventType actionTyp
 
 	Params::AkGameplayStatics_ExecuteActionOnPlayingID Parms{};
 
-	Parms.actionType = actionType;
+	Parms.ActionType = ActionType;
 	Parms.PlayingID = PlayingID;
 	Parms.TransitionDuration = TransitionDuration;
 	Parms.FadeCurve = FadeCurve;

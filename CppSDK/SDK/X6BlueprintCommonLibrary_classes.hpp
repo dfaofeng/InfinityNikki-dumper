@@ -12,12 +12,13 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_InformID_structs.hpp"
-#include "E_SafezoneType_structs.hpp"
 #include "ECharacterType_structs.hpp"
-#include "MainHUDItem_structs.hpp"
-#include "Enum_CenterInfoType_structs.hpp"
+#include "EScenarioHomeEventType_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "MainHUDItem_structs.hpp"
+#include "E_SafezoneType_structs.hpp"
+#include "Enum_InformID_structs.hpp"
+#include "Enum_CenterInfoType_structs.hpp"
 
 
 namespace SDK
@@ -61,7 +62,7 @@ public:
 	static void BPGetNearestActorFromActor(class UClass* Class_0, double Radius, class AActor* CenterActor, class UObject* __WorldContext, class AActor** ReturnActor);
 	static void BPForceActorEnterWater(class AActor* ActorToEnterWater, class AActor* WaterActor, class UObject* __WorldContext);
 	static void BPEnableActorSimulateBuoyancy(class AActor* FloatingActor, bool EnableSimulate, class UObject* __WorldContext);
-	static void BP_UpdateUITips(int32 LevelID, int32 GameStage, class UObject* __WorldContext);
+	static void BP_UpdateUITips(int32 LevelId, int32 GameStage, class UObject* __WorldContext);
 	static void BP_UnTrackMarker(class UBP_Marker_C* Marker, class UObject* __WorldContext);
 	static void BP_TrackMarker(class UBP_Marker_C* Marker, class UObject* __WorldContext);
 	static void BP_SyncNikkiPlayerPos(const struct FVector& Pos, const struct FRotator& Rot, class UObject* Context, class UObject* __WorldContext);
@@ -77,7 +78,8 @@ public:
 	static void BP_SetActorFrozen(class AActor* Actor, bool bFreeze, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorEnableGravity(class AActor* Actor, bool bEnableGravity, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorEnableCollision(class AActor* Actor, bool bEnableCollision, const class FString& Tag, class UObject* __WorldContext);
-	static void BP_RequestEnterBattle(int32 LevelID, class UObject* __WorldContext);
+	static void BP_ScenarioHomeEventTrigger(EScenarioHomeEventType HomeEventType, class UObject* __WorldContext);
+	static void BP_RequestEnterBattle(int32 LevelId, class UObject* __WorldContext);
 	static void BP_RequestConsumeOutput(class UObject* Context, int32 OutputId, class UObject* __WorldContext);
 	static void BP_RequestBackToWorld(const struct FVector& PlayerLocation, const struct FRotator& PlayerRotation, class UObject* __WorldContext);
 	static void BP_RemoveMarker(class UBP_Marker_C* Marker, class UObject* __WorldContext);
@@ -85,6 +87,7 @@ public:
 	static void BP_PlayVideo(const class FString& StrVedioPath, class UObject* Contxt, class UObject* __WorldContext);
 	static void BP_PlayLevelSeqAtCustomizeTransfrom(class ALevelSequenceActor* LevelSeqToPlay, const struct FTransform& CustomizeTransform, const struct FVector& BaseLocationForLevelSeq, class UObject* __WorldContext);
 	static void BP_NotifyLogicFadeInFinish(class UUserWidget* Widget, class UObject* __WorldContext);
+	static void BP_MultiPlatform_IsInGamepadMode(class UObject* __WorldContext, bool* IsGamePad);
 	static void BP_Multi_InteractiveObjActive(class AActor* Actor, const class FString& Data, class UObject* __WorldContext);
 	static void BP_IsLightOnTime(class UObject* __WorldContext, bool* bIsLightOnTime);
 	static void BP_GetWorldIDFromLevelData(class UObject* __WorldContext, int32* worldId);
@@ -121,7 +124,7 @@ public:
 	void BP_ShowHUDLockCamera(bool toShow, class UObject* __WorldContext);
 	void BP_ShowBlurScreen(bool Show, int32 BlurStrength, class UObject* __WorldContext);
 	void BP_SetCurrentGamePlayMode(int32 MainModeID, int32 SubModeID, class UObject* __WorldContext);
-	void BP_RequestLoadStreamingLevel(int32 LevelID, const class FString& LevelPath, const struct FVector& levelLocation, const struct FVector& PlayerLocation, const struct FRotator& PlayerRotation, class UObject* __WorldContext);
+	void BP_RequestLoadStreamingLevel(int32 LevelId, const class FString& LevelPath, const struct FVector& levelLocation, const struct FVector& PlayerLocation, const struct FRotator& PlayerRotation, class UObject* __WorldContext);
 	void BP_GetIsConnected(class UObject* __WorldContext, bool* IsConnected);
 	void BP_GetCurrentClientTime(class UObject* __WorldContext, TArray<int32>* CurrentTime);
 	void BP_GetActorID(class AActor* Actor, class UObject* __WorldContext, int64* ID);

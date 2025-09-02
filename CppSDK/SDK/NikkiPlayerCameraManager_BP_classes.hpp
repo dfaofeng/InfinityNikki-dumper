@@ -20,41 +20,41 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass NikkiPlayerCameraManager_BP.NikkiPlayerCameraManager_BP_C
-// 0x0120 (0x7570 - 0x7450)
+// 0x0120 (0x76D0 - 0x75B0)
 class ANikkiPlayerCameraManager_BP_C final : public AX6PlayerCameraManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x7450(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMulticastInlineDelegate<void(class AActor* NewViewTarget)> EventOnAssignViewTarget;             // 0x7458(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class ABP_ClothCameraActor_C*                 ClothCamera;                                       // 0x7468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        ClothWorldSpeed;                                   // 0x7470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 LookAtCameraActor;                                 // 0x7478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UAdvancedCamera*                        ViewTargetAdvancedCamera;                          // 0x7480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        DissolveDistance;                                  // 0x7488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DissolveRadius;                                    // 0x7490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultDissolveDistance;                           // 0x7498(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultDissolveRadius;                             // 0x74A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DefaultDissolveClip;                               // 0x74A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DissolveDistanceScale;                             // 0x74B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DissolveRadiusScale;                               // 0x74B8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 FocusOnTargetCameraClass;                          // 0x74C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	class ABP_FocusOnTargetCamera_C*              FocusOnTargetCamera;                               // 0x74C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BP_CameraActorCollisionName;                       // 0x74D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	class FName                                   BP_CameraVolumeActorTagName;                       // 0x74D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DissolveClip;                                      // 0x74E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            DissolveClipCurve;                                 // 0x74E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBP_GyroControlConfig_C*                BP_GyroControlConfig;                              // 0x74F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TSoftClassPtr<class UClass>                   CameraResetForbidUIClass;                          // 0x74F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	double                                        UIAutoDestroyDelayTime;                            // 0x7520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DoubleTapResetDelayTime;                           // 0x7528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FastTakePhotoResetDelayTime;                       // 0x7530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCameraResetDebug;                                 // 0x7538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7539[0x3];                                     // 0x7539(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           GameplayTag;                                       // 0x753C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7544[0x4];                                     // 0x7544(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class AActor* NewControlledRole)> EventOnControlledRoleChanged;    // 0x7548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(class AActor* ControlledActor, class AActor* LastControlledActor)> EventOnCameraVolumeTargetControlledActorChanged; // 0x7558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FName                                   BP_CameraSocketName;                               // 0x7568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x75B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMulticastInlineDelegate<void(class AActor* NewViewTarget)> EventOnAssignViewTarget;             // 0x75B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class ABP_ClothCameraActor_C*                 ClothCamera;                                       // 0x75C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        ClothWorldSpeed;                                   // 0x75D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 LookAtCameraActor;                                 // 0x75D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UAdvancedCamera*                        ViewTargetAdvancedCamera;                          // 0x75E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        DissolveDistance;                                  // 0x75E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DissolveRadius;                                    // 0x75F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultDissolveDistance;                           // 0x75F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultDissolveRadius;                             // 0x7600(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DefaultDissolveClip;                               // 0x7608(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DissolveDistanceScale;                             // 0x7610(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DissolveRadiusScale;                               // 0x7618(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 FocusOnTargetCameraClass;                          // 0x7620(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	class ABP_FocusOnTargetCamera_C*              FocusOnTargetCamera;                               // 0x7628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FName                                   BP_CameraActorCollisionName;                       // 0x7630(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	class FName                                   BP_CameraVolumeActorTagName;                       // 0x7638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DissolveClip;                                      // 0x7640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            DissolveClipCurve;                                 // 0x7648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UBP_GyroControlConfig_C*                BP_GyroControlConfig;                              // 0x7650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TSoftClassPtr<class UClass>                   CameraResetForbidUIClass;                          // 0x7658(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	double                                        UIAutoDestroyDelayTime;                            // 0x7680(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DoubleTapResetDelayTime;                           // 0x7688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FastTakePhotoResetDelayTime;                       // 0x7690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bCameraResetDebug;                                 // 0x7698(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_7699[0x3];                                     // 0x7699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           GameplayTag;                                       // 0x769C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_76A4[0x4];                                     // 0x76A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class AActor* NewControlledRole)> EventOnControlledRoleChanged;    // 0x76A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(class AActor* ControlledActor, class AActor* LastControlledActor)> EventOnCameraVolumeTargetControlledActorChanged; // 0x76B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FName                                   BP_CameraSocketName;                               // 0x76C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UpdateCameraDissolveParams();
@@ -97,36 +97,36 @@ public:
 	}
 };
 static_assert(alignof(ANikkiPlayerCameraManager_BP_C) == 0x000010, "Wrong alignment on ANikkiPlayerCameraManager_BP_C");
-static_assert(sizeof(ANikkiPlayerCameraManager_BP_C) == 0x007570, "Wrong size on ANikkiPlayerCameraManager_BP_C");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, UberGraphFrame) == 0x007450, "Member 'ANikkiPlayerCameraManager_BP_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnAssignViewTarget) == 0x007458, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnAssignViewTarget' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, ClothCamera) == 0x007468, "Member 'ANikkiPlayerCameraManager_BP_C::ClothCamera' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, ClothWorldSpeed) == 0x007470, "Member 'ANikkiPlayerCameraManager_BP_C::ClothWorldSpeed' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, LookAtCameraActor) == 0x007478, "Member 'ANikkiPlayerCameraManager_BP_C::LookAtCameraActor' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, ViewTargetAdvancedCamera) == 0x007480, "Member 'ANikkiPlayerCameraManager_BP_C::ViewTargetAdvancedCamera' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveDistance) == 0x007488, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveDistance' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveRadius) == 0x007490, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveRadius' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DefaultDissolveDistance) == 0x007498, "Member 'ANikkiPlayerCameraManager_BP_C::DefaultDissolveDistance' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DefaultDissolveRadius) == 0x0074A0, "Member 'ANikkiPlayerCameraManager_BP_C::DefaultDissolveRadius' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DefaultDissolveClip) == 0x0074A8, "Member 'ANikkiPlayerCameraManager_BP_C::DefaultDissolveClip' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveDistanceScale) == 0x0074B0, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveDistanceScale' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveRadiusScale) == 0x0074B8, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveRadiusScale' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, FocusOnTargetCameraClass) == 0x0074C0, "Member 'ANikkiPlayerCameraManager_BP_C::FocusOnTargetCameraClass' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, FocusOnTargetCamera) == 0x0074C8, "Member 'ANikkiPlayerCameraManager_BP_C::FocusOnTargetCamera' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraActorCollisionName) == 0x0074D0, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraActorCollisionName' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraVolumeActorTagName) == 0x0074D8, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraVolumeActorTagName' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveClip) == 0x0074E0, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveClip' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveClipCurve) == 0x0074E8, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveClipCurve' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_GyroControlConfig) == 0x0074F0, "Member 'ANikkiPlayerCameraManager_BP_C::BP_GyroControlConfig' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, CameraResetForbidUIClass) == 0x0074F8, "Member 'ANikkiPlayerCameraManager_BP_C::CameraResetForbidUIClass' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, UIAutoDestroyDelayTime) == 0x007520, "Member 'ANikkiPlayerCameraManager_BP_C::UIAutoDestroyDelayTime' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DoubleTapResetDelayTime) == 0x007528, "Member 'ANikkiPlayerCameraManager_BP_C::DoubleTapResetDelayTime' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, FastTakePhotoResetDelayTime) == 0x007530, "Member 'ANikkiPlayerCameraManager_BP_C::FastTakePhotoResetDelayTime' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, bCameraResetDebug) == 0x007538, "Member 'ANikkiPlayerCameraManager_BP_C::bCameraResetDebug' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, GameplayTag) == 0x00753C, "Member 'ANikkiPlayerCameraManager_BP_C::GameplayTag' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnControlledRoleChanged) == 0x007548, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnControlledRoleChanged' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnCameraVolumeTargetControlledActorChanged) == 0x007558, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnCameraVolumeTargetControlledActorChanged' has a wrong offset!");
-static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraSocketName) == 0x007568, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraSocketName' has a wrong offset!");
+static_assert(sizeof(ANikkiPlayerCameraManager_BP_C) == 0x0076D0, "Wrong size on ANikkiPlayerCameraManager_BP_C");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, UberGraphFrame) == 0x0075B0, "Member 'ANikkiPlayerCameraManager_BP_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnAssignViewTarget) == 0x0075B8, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnAssignViewTarget' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, ClothCamera) == 0x0075C8, "Member 'ANikkiPlayerCameraManager_BP_C::ClothCamera' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, ClothWorldSpeed) == 0x0075D0, "Member 'ANikkiPlayerCameraManager_BP_C::ClothWorldSpeed' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, LookAtCameraActor) == 0x0075D8, "Member 'ANikkiPlayerCameraManager_BP_C::LookAtCameraActor' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, ViewTargetAdvancedCamera) == 0x0075E0, "Member 'ANikkiPlayerCameraManager_BP_C::ViewTargetAdvancedCamera' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveDistance) == 0x0075E8, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveDistance' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveRadius) == 0x0075F0, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveRadius' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DefaultDissolveDistance) == 0x0075F8, "Member 'ANikkiPlayerCameraManager_BP_C::DefaultDissolveDistance' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DefaultDissolveRadius) == 0x007600, "Member 'ANikkiPlayerCameraManager_BP_C::DefaultDissolveRadius' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DefaultDissolveClip) == 0x007608, "Member 'ANikkiPlayerCameraManager_BP_C::DefaultDissolveClip' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveDistanceScale) == 0x007610, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveDistanceScale' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveRadiusScale) == 0x007618, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveRadiusScale' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, FocusOnTargetCameraClass) == 0x007620, "Member 'ANikkiPlayerCameraManager_BP_C::FocusOnTargetCameraClass' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, FocusOnTargetCamera) == 0x007628, "Member 'ANikkiPlayerCameraManager_BP_C::FocusOnTargetCamera' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraActorCollisionName) == 0x007630, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraActorCollisionName' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraVolumeActorTagName) == 0x007638, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraVolumeActorTagName' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveClip) == 0x007640, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveClip' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DissolveClipCurve) == 0x007648, "Member 'ANikkiPlayerCameraManager_BP_C::DissolveClipCurve' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_GyroControlConfig) == 0x007650, "Member 'ANikkiPlayerCameraManager_BP_C::BP_GyroControlConfig' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, CameraResetForbidUIClass) == 0x007658, "Member 'ANikkiPlayerCameraManager_BP_C::CameraResetForbidUIClass' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, UIAutoDestroyDelayTime) == 0x007680, "Member 'ANikkiPlayerCameraManager_BP_C::UIAutoDestroyDelayTime' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, DoubleTapResetDelayTime) == 0x007688, "Member 'ANikkiPlayerCameraManager_BP_C::DoubleTapResetDelayTime' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, FastTakePhotoResetDelayTime) == 0x007690, "Member 'ANikkiPlayerCameraManager_BP_C::FastTakePhotoResetDelayTime' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, bCameraResetDebug) == 0x007698, "Member 'ANikkiPlayerCameraManager_BP_C::bCameraResetDebug' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, GameplayTag) == 0x00769C, "Member 'ANikkiPlayerCameraManager_BP_C::GameplayTag' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnControlledRoleChanged) == 0x0076A8, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnControlledRoleChanged' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, EventOnCameraVolumeTargetControlledActorChanged) == 0x0076B8, "Member 'ANikkiPlayerCameraManager_BP_C::EventOnCameraVolumeTargetControlledActorChanged' has a wrong offset!");
+static_assert(offsetof(ANikkiPlayerCameraManager_BP_C, BP_CameraSocketName) == 0x0076C8, "Member 'ANikkiPlayerCameraManager_BP_C::BP_CameraSocketName' has a wrong offset!");
 
 }
 

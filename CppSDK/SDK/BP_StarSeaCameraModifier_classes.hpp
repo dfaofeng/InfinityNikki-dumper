@@ -18,15 +18,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C
-// 0x0018 (0x0060 - 0x0048)
+// 0x0020 (0x0068 - 0x0048)
 class UBP_StarSeaCameraModifier_C final : public UCameraModifier
 {
 public:
 	TArray<struct FWeightedBlendable>             Array;                                             // 0x0048(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UMaterialInstanceDynamic*               DynamicMaterial;                                   // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         RefCount;                                          // 0x0060(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ActorCount;                                        // 0x0064(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BlueprintModifyPostProcess(float DeltaTime, float* PostProcessBlendWeight, struct FPostProcessSettings* PostProcessSettings);
+	void BP_AddActorCount();
+	void BP_AddRefCount();
+	void BP_DeleteActorCount();
+	void BP_DeleteRefCount();
+	void BP_GetActorCount(int32* RefCount_0);
+	void BP_GetRefCount(int32* RefCount_0);
 	void BP_SetDynamicMat(class UMaterialInstanceDynamic* Mat);
 
 public:
@@ -40,9 +48,11 @@ public:
 	}
 };
 static_assert(alignof(UBP_StarSeaCameraModifier_C) == 0x000008, "Wrong alignment on UBP_StarSeaCameraModifier_C");
-static_assert(sizeof(UBP_StarSeaCameraModifier_C) == 0x000060, "Wrong size on UBP_StarSeaCameraModifier_C");
+static_assert(sizeof(UBP_StarSeaCameraModifier_C) == 0x000068, "Wrong size on UBP_StarSeaCameraModifier_C");
 static_assert(offsetof(UBP_StarSeaCameraModifier_C, Array) == 0x000048, "Member 'UBP_StarSeaCameraModifier_C::Array' has a wrong offset!");
 static_assert(offsetof(UBP_StarSeaCameraModifier_C, DynamicMaterial) == 0x000058, "Member 'UBP_StarSeaCameraModifier_C::DynamicMaterial' has a wrong offset!");
+static_assert(offsetof(UBP_StarSeaCameraModifier_C, RefCount) == 0x000060, "Member 'UBP_StarSeaCameraModifier_C::RefCount' has a wrong offset!");
+static_assert(offsetof(UBP_StarSeaCameraModifier_C, ActorCount) == 0x000064, "Member 'UBP_StarSeaCameraModifier_C::ActorCount' has a wrong offset!");
 
 }
 

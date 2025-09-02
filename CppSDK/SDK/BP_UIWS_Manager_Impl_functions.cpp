@@ -17,153 +17,149 @@
 namespace SDK
 {
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use2ChannelHeightMap
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeHeight1
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::Use2ChannelHeightMap(bool NewValue)
+void ABP_UIWS_Manager_Impl_C::ExchangeHeight1(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "Use2ChannelHeightMap");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ExchangeHeight1");
 
-	Params::BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap Parms{};
+	Params::BP_UIWS_Manager_Impl_C_ExchangeHeight1 Parms{};
 
-	Parms.NewValue = NewValue;
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use High Quality Render Target
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeNormal
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::Use_High_Quality_Render_Target(bool NewValue)
+void ABP_UIWS_Manager_Impl_C::ExchangeNormal(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "Use High Quality Render Target");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ExchangeNormal");
 
-	Params::BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target Parms{};
+	Params::BP_UIWS_Manager_Impl_C_ExchangeNormal Parms{};
 
-	Parms.NewValue = NewValue;
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.SetInteractivity
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExecuteUbergraph_BP_UIWS_Manager_Impl
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::SetInteractivity(bool NewValue)
+void ABP_UIWS_Manager_Impl_C::ExecuteUbergraph_BP_UIWS_Manager_Impl(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "SetInteractivity");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ExecuteUbergraph_BP_UIWS_Manager_Impl");
 
-	Params::BP_UIWS_Manager_Impl_C_SetInteractivity Parms{};
+	Params::BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_Impl Parms{};
 
-	Parms.NewValue = NewValue;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector*                         PlayerPos                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::ReceiveTick(float DeltaSeconds)
+void ABP_UIWS_Manager_Impl_C::GetPlayerPos(struct FVector* PlayerPos)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "GetPlayerPos");
 
-	Params::BP_UIWS_Manager_Impl_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
+	Params::BP_UIWS_Manager_Impl_C_GetPlayerPos Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlayerPos != nullptr)
+		*PlayerPos = std::move(Parms.PlayerPos);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos_LastFrame
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FVector*                         PlayerPos                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::ReceiveBeginPlay()
+void ABP_UIWS_Manager_Impl_C::GetPlayerPos_LastFrame(struct FVector* PlayerPos)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "GetPlayerPos_LastFrame");
+
+	Params::BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlayerPos != nullptr)
+		*PlayerPos = std::move(Parms.PlayerPos);
+}
+
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.InitMat
+// (Protected, BlueprintCallable, BlueprintEvent)
+
+void ABP_UIWS_Manager_Impl_C::InitMat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "InitMat");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormalMat
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.InitRT
+// (Protected, BlueprintCallable, BlueprintEvent)
 
-void ABP_UIWS_Manager_Impl_C::LoadNormalMat(class UObject* Loaded)
+void ABP_UIWS_Manager_Impl_C::InitRT()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadNormalMat");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "InitRT");
 
-	Params::BP_UIWS_Manager_Impl_C_LoadNormalMat Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormal
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadCopyMat
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::LoadNormal(class UObject* Loaded)
+void ABP_UIWS_Manager_Impl_C::LoadCopyMat(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadNormal");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadCopyMat");
 
-	Params::BP_UIWS_Manager_Impl_C_LoadNormal Parms{};
-
-	Parms.Loaded = Loaded;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadLowQualityNormalRTForHighQuality
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ABP_UIWS_Manager_Impl_C::LoadLowQualityNormalRTForHighQuality(class UObject* Loaded)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadLowQualityNormalRTForHighQuality");
-
-	Params::BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality Parms{};
+	Params::BP_UIWS_Manager_Impl_C_LoadCopyMat Parms{};
 
 	Parms.Loaded = Loaded;
 
@@ -191,19 +187,19 @@ void ABP_UIWS_Manager_Impl_C::LoadHeight1(class UObject* Loaded)
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadCopyMat
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadLowQualityNormalRTForHighQuality
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::LoadCopyMat(class UObject* Loaded)
+void ABP_UIWS_Manager_Impl_C::LoadLowQualityNormalRTForHighQuality(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadCopyMat");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadLowQualityNormalRTForHighQuality");
 
-	Params::BP_UIWS_Manager_Impl_C_LoadCopyMat Parms{};
+	Params::BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality Parms{};
 
 	Parms.Loaded = Loaded;
 
@@ -211,131 +207,135 @@ void ABP_UIWS_Manager_Impl_C::LoadCopyMat(class UObject* Loaded)
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.InitRT
-// (Protected, BlueprintCallable, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormal
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::InitRT()
+void ABP_UIWS_Manager_Impl_C::LoadNormal(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "InitRT");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadNormal");
+
+	Params::BP_UIWS_Manager_Impl_C_LoadNormal Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormalMat
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void ABP_UIWS_Manager_Impl_C::LoadNormalMat(class UObject* Loaded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "LoadNormalMat");
+
+	Params::BP_UIWS_Manager_Impl_C_LoadNormalMat Parms{};
+
+	Parms.Loaded = Loaded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_UIWS_Manager_Impl_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.InitMat
-// (Protected, BlueprintCallable, BlueprintEvent)
-
-void ABP_UIWS_Manager_Impl_C::InitMat()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "InitMat");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos_LastFrame
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// struct FVector*                         PlayerPos                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::GetPlayerPos_LastFrame(struct FVector* PlayerPos)
+void ABP_UIWS_Manager_Impl_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "GetPlayerPos_LastFrame");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ReceiveTick");
 
-	Params::BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame Parms{};
+	Params::BP_UIWS_Manager_Impl_C_ReceiveTick Parms{};
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PlayerPos != nullptr)
-		*PlayerPos = std::move(Parms.PlayerPos);
-}
-
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FVector*                         PlayerPos                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_UIWS_Manager_Impl_C::GetPlayerPos(struct FVector* PlayerPos)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "GetPlayerPos");
-
-	Params::BP_UIWS_Manager_Impl_C_GetPlayerPos Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (PlayerPos != nullptr)
-		*PlayerPos = std::move(Parms.PlayerPos);
-}
-
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExecuteUbergraph_BP_UIWS_Manager_Impl
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_UIWS_Manager_Impl_C::ExecuteUbergraph_BP_UIWS_Manager_Impl(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ExecuteUbergraph_BP_UIWS_Manager_Impl");
-
-	Params::BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_Impl Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeNormal
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.SetInteractivity
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::ExchangeNormal(class UObject* Loaded)
+void ABP_UIWS_Manager_Impl_C::SetInteractivity(bool NewValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ExchangeNormal");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "SetInteractivity");
 
-	Params::BP_UIWS_Manager_Impl_C_ExchangeNormal Parms{};
+	Params::BP_UIWS_Manager_Impl_C_SetInteractivity Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.NewValue = NewValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeHeight1
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use High Quality Render Target
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIWS_Manager_Impl_C::ExchangeHeight1(class UObject* Loaded)
+void ABP_UIWS_Manager_Impl_C::Use_High_Quality_Render_Target(bool NewValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "ExchangeHeight1");
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "Use High Quality Render Target");
 
-	Params::BP_UIWS_Manager_Impl_C_ExchangeHeight1 Parms{};
+	Params::BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.NewValue = NewValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use2ChannelHeightMap
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    NewValue                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_UIWS_Manager_Impl_C::Use2ChannelHeightMap(bool NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIWS_Manager_Impl_C", "Use2ChannelHeightMap");
+
+	Params::BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap Parms{};
+
+	Parms.NewValue = NewValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

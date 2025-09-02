@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_X6ActorComponent_classes.hpp"
 #include "Engine_structs.hpp"
 #include "EPlayerWhiteBoxType_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK
@@ -32,8 +32,8 @@ public:
 	class UAnimMontage*                           BP_StartCombatAM;                                  // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_PlayerWhiteBoxMovementComponent(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 
 	class FString GetModuleName() const;
 

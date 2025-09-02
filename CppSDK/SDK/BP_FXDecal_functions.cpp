@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_FXDecal.BP_FXDecal_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_FXDecal_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FXDecal_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_FXDecal.BP_FXDecal_C.ExecuteUbergraph_BP_FXDecal
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UBP_FXDecal_C::ExecuteUbergraph_BP_FXDecal(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FXDecal.BP_FXDecal_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_FXDecal_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FXDecal_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

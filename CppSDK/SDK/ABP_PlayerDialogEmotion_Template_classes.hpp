@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ABP_PlayerDialogEmotion_Template_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "X6Animation_structs.hpp"
 
 
@@ -34,51 +34,50 @@ public:
 	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0438(0x00B8)()
 	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x04F0(0x0048)()
 	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x0538(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x0580(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x05A8(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x05F0(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x0670(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x06B8(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x06E0(0x0048)()
-	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_1;                      // 0x0728(0x0010)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_2;                     // 0x0738(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x0800(0x0080)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0880(0x0048)()
-	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose;                        // 0x08C8(0x0010)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x08D8(0x0080)()
-	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x0958(0x00D8)()
-	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator_1;                 // 0x0A30(0x0040)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_1;                     // 0x0A70(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x0B38(0x0028)()
-	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_4;                // 0x0B60(0x0108)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x0C68(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x0CE8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x0D10(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x0D38(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0D60(0x0048)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0DA8(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x0E70(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0E98(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x0F18(0x0028)()
-	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x0F40(0x0040)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x0F80(0x0028)()
-	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_3;                // 0x0FA8(0x0108)()
-	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode_3;                   // 0x10B0(0x0120)()
-	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode_2;                   // 0x11D0(0x0120)()
-	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode_1;                   // 0x12F0(0x0120)()
-	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode;                     // 0x1410(0x0120)()
-	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_2;                // 0x1530(0x0108)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x1638(0x0028)()
-	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_1;                // 0x1660(0x0108)()
-	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend;                  // 0x1768(0x0108)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1870(0x0048)()
+	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_4;                // 0x0580(0x0108)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x0688(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0x06D0(0x0080)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x0750(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0x0798(0x0028)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0x07C0(0x0048)()
+	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_1;                      // 0x0808(0x0010)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_2;                     // 0x0818(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0x08E0(0x0080)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0x0960(0x0048)()
+	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose;                        // 0x09A8(0x0010)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0x09B8(0x0080)()
+	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x0A38(0x00D8)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator_1;                 // 0x0B10(0x0040)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_1;                     // 0x0B50(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0x0C18(0x0028)()
+	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_3;                // 0x0C40(0x0108)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0x0D48(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0x0DC8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0x0DF0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0x0E18(0x0028)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0x0E40(0x0048)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x0E88(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0x0F50(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0x0F78(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0x0FF8(0x0028)()
+	struct FAnimNode_SequenceEvaluator            AnimGraphNode_SequenceEvaluator;                   // 0x1020(0x0040)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0x1060(0x0028)()
+	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_2;                // 0x1088(0x0108)()
+	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode_3;                   // 0x1190(0x0120)()
+	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode_2;                   // 0x12B0(0x0120)()
+	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode_1;                   // 0x13D0(0x0120)()
+	struct FAnimNode_X6PoseBlendNode              AnimGraphNode_X6PoseBlendNode;                     // 0x14F0(0x0120)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0x1610(0x0028)()
+	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend_1;                // 0x1638(0x0108)()
+	struct FAnimNode_X6LayeredBoneBlend           AnimGraphNode_X6LayeredBoneBlend;                  // 0x1740(0x0108)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0x1848(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x1890(0x0028)()
 	bool                                          bHasBegunPlay;                                     // 0x18B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bEnableEmotionPerformance;                         // 0x18B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDialogFreezePose;                                 // 0x18BA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_18BB[0x1];                                     // 0x18BB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   DialogFreezePoseName;                              // 0x18BC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseDialogEmotionBlendBranch;                      // 0x18C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_18C5[0x3];                                     // 0x18C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18C4[0x4];                                     // 0x18C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimStatesComponent;                         // 0x18C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPoseAsset*                             AIFacialPoseAsset;                                 // 0x18D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequence*                          PauseAnim;                                         // 0x18D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -99,7 +98,6 @@ public:
 	void InitDialogueEmotionParams();
 	void OnEmotionPerformanceChanged(bool EnableEmotionPerformance);
 	void UpdateState();
-	void UpdateUseDialogEmotionBlendBranch();
 
 public:
 	static class UClass* StaticClass()
@@ -121,49 +119,48 @@ static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Root) 
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_LinkedInputPose) == 0x000438, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_6) == 0x0004F0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_6' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_5) == 0x000538, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_9) == 0x000580, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_4) == 0x0005A8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_4) == 0x0005F0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_BlendListByBool) == 0x000670, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_8) == 0x0006B8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_3) == 0x0006E0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_IdentityPose_1) == 0x000728, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_IdentityPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_ApplyAdditive_2) == 0x000738, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_ApplyAdditive_2' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_3) == 0x000800, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_2) == 0x000880, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_IdentityPose) == 0x0008C8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_IdentityPose' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_2) == 0x0008D8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_PoseBlendNode) == 0x000958, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_PoseBlendNode' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SequenceEvaluator_1) == 0x000A30, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SequenceEvaluator_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_ApplyAdditive_1) == 0x000A70, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_7) == 0x000B38, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_4) == 0x000B60, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_4' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_1) == 0x000C68, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_6) == 0x000CE8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_5) == 0x000D10, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_4) == 0x000D38, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_1) == 0x000D60, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_ApplyAdditive) == 0x000DA8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_3) == 0x000E70, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose) == 0x000E98, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_2) == 0x000F18, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SequenceEvaluator) == 0x000F40, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_1) == 0x000F80, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_3) == 0x000FA8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_3' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode_3) == 0x0010B0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode_3' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode_2) == 0x0011D0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode_2' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode_1) == 0x0012F0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode) == 0x001410, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_2) == 0x001530, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_2' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose) == 0x001638, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_1) == 0x001660, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend) == 0x001768, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot) == 0x001870, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_4) == 0x000580, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_4' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_4) == 0x000688, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_4' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_4) == 0x0006D0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_BlendListByBool) == 0x000750, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_9) == 0x000798, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_3) == 0x0007C0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_3' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_IdentityPose_1) == 0x000808, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_IdentityPose_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_ApplyAdditive_2) == 0x000818, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_ApplyAdditive_2' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_3) == 0x0008E0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_2) == 0x000960, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_2' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_IdentityPose) == 0x0009A8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_IdentityPose' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_2) == 0x0009B8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_PoseBlendNode) == 0x000A38, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_PoseBlendNode' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SequenceEvaluator_1) == 0x000B10, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SequenceEvaluator_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_ApplyAdditive_1) == 0x000B50, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_8) == 0x000C18, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_3) == 0x000C40, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_3' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose_1) == 0x000D48, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_7) == 0x000DC8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_6) == 0x000DF0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_5) == 0x000E18, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot_1) == 0x000E40, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_ApplyAdditive) == 0x000E88, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_4) == 0x000F50, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SaveCachedPose) == 0x000F78, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_3) == 0x000FF8, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_SequenceEvaluator) == 0x001020, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_SequenceEvaluator' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_2) == 0x001060, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_2) == 0x001088, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_2' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode_3) == 0x001190, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode_3' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode_2) == 0x0012B0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode_2' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode_1) == 0x0013D0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6PoseBlendNode) == 0x0014F0, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6PoseBlendNode' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose_1) == 0x001610, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend_1) == 0x001638, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_X6LayeredBoneBlend) == 0x001740, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_X6LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_Slot) == 0x001848, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AnimGraphNode_UseCachedPose) == 0x001890, "Member 'UABP_PlayerDialogEmotion_Template_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, bHasBegunPlay) == 0x0018B8, "Member 'UABP_PlayerDialogEmotion_Template_C::bHasBegunPlay' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, bEnableEmotionPerformance) == 0x0018B9, "Member 'UABP_PlayerDialogEmotion_Template_C::bEnableEmotionPerformance' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, bDialogFreezePose) == 0x0018BA, "Member 'UABP_PlayerDialogEmotion_Template_C::bDialogFreezePose' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, DialogFreezePoseName) == 0x0018BC, "Member 'UABP_PlayerDialogEmotion_Template_C::DialogFreezePoseName' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, bUseDialogEmotionBlendBranch) == 0x0018C4, "Member 'UABP_PlayerDialogEmotion_Template_C::bUseDialogEmotionBlendBranch' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, PlayerAnimStatesComponent) == 0x0018C8, "Member 'UABP_PlayerDialogEmotion_Template_C::PlayerAnimStatesComponent' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, AIFacialPoseAsset) == 0x0018D0, "Member 'UABP_PlayerDialogEmotion_Template_C::AIFacialPoseAsset' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerDialogEmotion_Template_C, PauseAnim) == 0x0018D8, "Member 'UABP_PlayerDialogEmotion_Template_C::PauseAnim' has a wrong offset!");

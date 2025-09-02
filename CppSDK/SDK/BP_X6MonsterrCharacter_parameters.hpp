@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EFeedBackReason_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EFeedBackReason_structs.hpp"
 
 
 namespace SDK::Params
@@ -114,7 +114,7 @@ static_assert(offsetof(BP_X6MonsterrCharacter_C_ExecuteUbergraph_BP_X6MonsterrCh
 struct BP_X6MonsterrCharacter_C_DrawHeightCylinder final
 {
 public:
-	struct FVector                                HItPoint;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                HitPoint;                                          // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                JumpPoint;                                         // 0x0018(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                MeshLocation;                                      // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_BreakVector_X;                            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -161,7 +161,7 @@ public:
 };
 static_assert(alignof(BP_X6MonsterrCharacter_C_DrawHeightCylinder) == 0x000008, "Wrong alignment on BP_X6MonsterrCharacter_C_DrawHeightCylinder");
 static_assert(sizeof(BP_X6MonsterrCharacter_C_DrawHeightCylinder) == 0x0002D0, "Wrong size on BP_X6MonsterrCharacter_C_DrawHeightCylinder");
-static_assert(offsetof(BP_X6MonsterrCharacter_C_DrawHeightCylinder, HItPoint) == 0x000000, "Member 'BP_X6MonsterrCharacter_C_DrawHeightCylinder::HItPoint' has a wrong offset!");
+static_assert(offsetof(BP_X6MonsterrCharacter_C_DrawHeightCylinder, HitPoint) == 0x000000, "Member 'BP_X6MonsterrCharacter_C_DrawHeightCylinder::HitPoint' has a wrong offset!");
 static_assert(offsetof(BP_X6MonsterrCharacter_C_DrawHeightCylinder, JumpPoint) == 0x000018, "Member 'BP_X6MonsterrCharacter_C_DrawHeightCylinder::JumpPoint' has a wrong offset!");
 static_assert(offsetof(BP_X6MonsterrCharacter_C_DrawHeightCylinder, MeshLocation) == 0x000030, "Member 'BP_X6MonsterrCharacter_C_DrawHeightCylinder::MeshLocation' has a wrong offset!");
 static_assert(offsetof(BP_X6MonsterrCharacter_C_DrawHeightCylinder, CallFunc_BreakVector_X) == 0x000048, "Member 'BP_X6MonsterrCharacter_C_DrawHeightCylinder::CallFunc_BreakVector_X' has a wrong offset!");

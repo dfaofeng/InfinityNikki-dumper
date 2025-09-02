@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Hud_LeftTip.WBP_Hud_LeftTip_C
-// 0x0178 (0x0468 - 0x02F0)
+// 0x01B8 (0x04A8 - 0x02F0)
 class UWBP_Hud_LeftTip_C final : public UUserWidget
 {
 public:
@@ -37,47 +37,55 @@ public:
 	class UWidgetAnimation*                       Ani_NewTask_1;                                     // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UWidgetAnimation*                       Ani_NewTask;                                       // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
 	class UImage*                                 Bg_1;                                              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_Name;                                       // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_Name_1;                                     // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_Total;                                      // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UDynamicEntryBox*                       DynamicEntryBox_DesList;                           // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UDynamicEntryBox*                       DynamicEntryBox_DesList_1;                         // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UDynamicEntryBox*                       DynamicEntryBox_StuckPoint;                        // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UDynamicEntryBox*                       DynamicEntryBox_StuckPoint_1;                      // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Img_End_Glow;                                   // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon_End;                                          // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon_End_Circle;                                   // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon_Marker;                                       // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Icon_Marker_1;                                     // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Effect_Glow;                                 // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Effect_Start;                                // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           List;                                              // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVerticalBox*                           List_1;                                            // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_0;                                            // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Name_1;                                            // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayEntryBox;                                   // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayEntryBox_1;                                 // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayStuckPoint;                                 // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OverlayStuckPoint_1;                               // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_NPCOccupied;                                  // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_NPCOccupied_1;                                // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_RemainUntilStartTime;                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_RemainUntilStartTime_1;                       // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Message_3;                                   // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Start;                                       // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_HUD_LeftTip_FollowBtn_C*           WBP_HUD_LeftTip_FollowBtn;                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_HUD_LeftTip_FollowBtn_C*           WBP_HUD_LeftTip_FollowBtn_1;                       // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Tips;                               // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Tips_1;                             // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Des;                                        // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Des_1;                                      // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Name;                                       // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Name_1;                                     // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_Total;                                      // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDynamicEntryBox*                       DynamicEntryBox_DesList;                           // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDynamicEntryBox*                       DynamicEntryBox_DesList_1;                         // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDynamicEntryBox*                       DynamicEntryBox_StuckPoint;                        // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UDynamicEntryBox*                       DynamicEntryBox_StuckPoint_1;                      // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Img_End_Glow;                                   // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon_End;                                          // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon_End_Circle;                                   // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon_Forbid;                                       // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon_Forbid_1;                                     // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon_Marker;                                       // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Icon_Marker_1;                                     // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Effect_Glow;                                 // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Effect_Start;                                // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           List;                                              // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVerticalBox*                           List_1;                                            // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_0;                                            // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Name_1;                                            // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Normal;                                            // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Normal_1;                                          // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayEntryBox;                                   // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayEntryBox_1;                                 // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayStuckPoint;                                 // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OverlayStuckPoint_1;                               // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_NPCOccupied;                                  // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_NPCOccupied_1;                                // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_RemainUntilStartTime;                         // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_RemainUntilStartTime_1;                       // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Message_3;                                   // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Start;                                       // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_HUD_LeftTip_FollowBtn_C*           WBP_HUD_LeftTip_FollowBtn;                         // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_HUD_LeftTip_FollowBtn_C*           WBP_HUD_LeftTip_FollowBtn_1;                       // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Tips;                               // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Tips_1;                             // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             WorldDes;                                          // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             WorldDes_1;                                        // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void sfx2();
-	void sfx1();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3();
 	void ExecuteUbergraph_WBP_Hud_LeftTip(int32 EntryPoint);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6();
+	void sfx1();
+	void sfx2();
 
 	class FString GetModuleName() const;
 
@@ -92,7 +100,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Hud_LeftTip_C) == 0x000008, "Wrong alignment on UWBP_Hud_LeftTip_C");
-static_assert(sizeof(UWBP_Hud_LeftTip_C) == 0x000468, "Wrong size on UWBP_Hud_LeftTip_C");
+static_assert(sizeof(UWBP_Hud_LeftTip_C) == 0x0004A8, "Wrong size on UWBP_Hud_LeftTip_C");
 static_assert(offsetof(UWBP_Hud_LeftTip_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_Hud_LeftTip_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_LeftTip_C, Ani_Taskend_New_1) == 0x0002F8, "Member 'UWBP_Hud_LeftTip_C::Ani_Taskend_New_1' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_LeftTip_C, Ani_Taskend_New) == 0x000300, "Member 'UWBP_Hud_LeftTip_C::Ani_Taskend_New' has a wrong offset!");
@@ -108,38 +116,46 @@ static_assert(offsetof(UWBP_Hud_LeftTip_C, Ani_Change) == 0x000348, "Member 'UWB
 static_assert(offsetof(UWBP_Hud_LeftTip_C, Ani_NewTask_1) == 0x000350, "Member 'UWBP_Hud_LeftTip_C::Ani_NewTask_1' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_LeftTip_C, Ani_NewTask) == 0x000358, "Member 'UWBP_Hud_LeftTip_C::Ani_NewTask' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_LeftTip_C, Bg_1) == 0x000360, "Member 'UWBP_Hud_LeftTip_C::Bg_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Name) == 0x000368, "Member 'UWBP_Hud_LeftTip_C::Button_Name' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Name_1) == 0x000370, "Member 'UWBP_Hud_LeftTip_C::Button_Name_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Total) == 0x000378, "Member 'UWBP_Hud_LeftTip_C::Button_Total' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_DesList) == 0x000380, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_DesList' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_DesList_1) == 0x000388, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_DesList_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_StuckPoint) == 0x000390, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_StuckPoint' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_StuckPoint_1) == 0x000398, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_StuckPoint_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Fx_Img_End_Glow) == 0x0003A0, "Member 'UWBP_Hud_LeftTip_C::Fx_Img_End_Glow' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_End) == 0x0003A8, "Member 'UWBP_Hud_LeftTip_C::Icon_End' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_End_Circle) == 0x0003B0, "Member 'UWBP_Hud_LeftTip_C::Icon_End_Circle' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_Marker) == 0x0003B8, "Member 'UWBP_Hud_LeftTip_C::Icon_Marker' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_Marker_1) == 0x0003C0, "Member 'UWBP_Hud_LeftTip_C::Icon_Marker_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Image_Effect_Glow) == 0x0003C8, "Member 'UWBP_Hud_LeftTip_C::Image_Effect_Glow' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Image_Effect_Start) == 0x0003D0, "Member 'UWBP_Hud_LeftTip_C::Image_Effect_Start' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, List) == 0x0003D8, "Member 'UWBP_Hud_LeftTip_C::List' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, List_1) == 0x0003E0, "Member 'UWBP_Hud_LeftTip_C::List_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Name_0) == 0x0003E8, "Member 'UWBP_Hud_LeftTip_C::Name_0' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Name_1) == 0x0003F0, "Member 'UWBP_Hud_LeftTip_C::Name_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayEntryBox) == 0x0003F8, "Member 'UWBP_Hud_LeftTip_C::OverlayEntryBox' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayEntryBox_1) == 0x000400, "Member 'UWBP_Hud_LeftTip_C::OverlayEntryBox_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayStuckPoint) == 0x000408, "Member 'UWBP_Hud_LeftTip_C::OverlayStuckPoint' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayStuckPoint_1) == 0x000410, "Member 'UWBP_Hud_LeftTip_C::OverlayStuckPoint_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_NPCOccupied) == 0x000418, "Member 'UWBP_Hud_LeftTip_C::Text_NPCOccupied' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_NPCOccupied_1) == 0x000420, "Member 'UWBP_Hud_LeftTip_C::Text_NPCOccupied_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_RemainUntilStartTime) == 0x000428, "Member 'UWBP_Hud_LeftTip_C::Text_RemainUntilStartTime' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_RemainUntilStartTime_1) == 0x000430, "Member 'UWBP_Hud_LeftTip_C::Text_RemainUntilStartTime_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, UI_NS_Message_3) == 0x000438, "Member 'UWBP_Hud_LeftTip_C::UI_NS_Message_3' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, UI_NS_Start) == 0x000440, "Member 'UWBP_Hud_LeftTip_C::UI_NS_Start' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, WBP_HUD_LeftTip_FollowBtn) == 0x000448, "Member 'UWBP_Hud_LeftTip_C::WBP_HUD_LeftTip_FollowBtn' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, WBP_HUD_LeftTip_FollowBtn_1) == 0x000450, "Member 'UWBP_Hud_LeftTip_C::WBP_HUD_LeftTip_FollowBtn_1' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, WidgetSwitcher_Tips) == 0x000458, "Member 'UWBP_Hud_LeftTip_C::WidgetSwitcher_Tips' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_LeftTip_C, WidgetSwitcher_Tips_1) == 0x000460, "Member 'UWBP_Hud_LeftTip_C::WidgetSwitcher_Tips_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Des) == 0x000368, "Member 'UWBP_Hud_LeftTip_C::Button_Des' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Des_1) == 0x000370, "Member 'UWBP_Hud_LeftTip_C::Button_Des_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Name) == 0x000378, "Member 'UWBP_Hud_LeftTip_C::Button_Name' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Name_1) == 0x000380, "Member 'UWBP_Hud_LeftTip_C::Button_Name_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Button_Total) == 0x000388, "Member 'UWBP_Hud_LeftTip_C::Button_Total' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_DesList) == 0x000390, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_DesList' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_DesList_1) == 0x000398, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_DesList_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_StuckPoint) == 0x0003A0, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_StuckPoint' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, DynamicEntryBox_StuckPoint_1) == 0x0003A8, "Member 'UWBP_Hud_LeftTip_C::DynamicEntryBox_StuckPoint_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Fx_Img_End_Glow) == 0x0003B0, "Member 'UWBP_Hud_LeftTip_C::Fx_Img_End_Glow' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_End) == 0x0003B8, "Member 'UWBP_Hud_LeftTip_C::Icon_End' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_End_Circle) == 0x0003C0, "Member 'UWBP_Hud_LeftTip_C::Icon_End_Circle' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_Forbid) == 0x0003C8, "Member 'UWBP_Hud_LeftTip_C::Icon_Forbid' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_Forbid_1) == 0x0003D0, "Member 'UWBP_Hud_LeftTip_C::Icon_Forbid_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_Marker) == 0x0003D8, "Member 'UWBP_Hud_LeftTip_C::Icon_Marker' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Icon_Marker_1) == 0x0003E0, "Member 'UWBP_Hud_LeftTip_C::Icon_Marker_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Image_Effect_Glow) == 0x0003E8, "Member 'UWBP_Hud_LeftTip_C::Image_Effect_Glow' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Image_Effect_Start) == 0x0003F0, "Member 'UWBP_Hud_LeftTip_C::Image_Effect_Start' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, List) == 0x0003F8, "Member 'UWBP_Hud_LeftTip_C::List' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, List_1) == 0x000400, "Member 'UWBP_Hud_LeftTip_C::List_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Name_0) == 0x000408, "Member 'UWBP_Hud_LeftTip_C::Name_0' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Name_1) == 0x000410, "Member 'UWBP_Hud_LeftTip_C::Name_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Normal) == 0x000418, "Member 'UWBP_Hud_LeftTip_C::Normal' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Normal_1) == 0x000420, "Member 'UWBP_Hud_LeftTip_C::Normal_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayEntryBox) == 0x000428, "Member 'UWBP_Hud_LeftTip_C::OverlayEntryBox' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayEntryBox_1) == 0x000430, "Member 'UWBP_Hud_LeftTip_C::OverlayEntryBox_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayStuckPoint) == 0x000438, "Member 'UWBP_Hud_LeftTip_C::OverlayStuckPoint' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, OverlayStuckPoint_1) == 0x000440, "Member 'UWBP_Hud_LeftTip_C::OverlayStuckPoint_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_NPCOccupied) == 0x000448, "Member 'UWBP_Hud_LeftTip_C::Text_NPCOccupied' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_NPCOccupied_1) == 0x000450, "Member 'UWBP_Hud_LeftTip_C::Text_NPCOccupied_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_RemainUntilStartTime) == 0x000458, "Member 'UWBP_Hud_LeftTip_C::Text_RemainUntilStartTime' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, Text_RemainUntilStartTime_1) == 0x000460, "Member 'UWBP_Hud_LeftTip_C::Text_RemainUntilStartTime_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, UI_NS_Message_3) == 0x000468, "Member 'UWBP_Hud_LeftTip_C::UI_NS_Message_3' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, UI_NS_Start) == 0x000470, "Member 'UWBP_Hud_LeftTip_C::UI_NS_Start' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, WBP_HUD_LeftTip_FollowBtn) == 0x000478, "Member 'UWBP_Hud_LeftTip_C::WBP_HUD_LeftTip_FollowBtn' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, WBP_HUD_LeftTip_FollowBtn_1) == 0x000480, "Member 'UWBP_Hud_LeftTip_C::WBP_HUD_LeftTip_FollowBtn_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, WidgetSwitcher_Tips) == 0x000488, "Member 'UWBP_Hud_LeftTip_C::WidgetSwitcher_Tips' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, WidgetSwitcher_Tips_1) == 0x000490, "Member 'UWBP_Hud_LeftTip_C::WidgetSwitcher_Tips_1' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, WorldDes) == 0x000498, "Member 'UWBP_Hud_LeftTip_C::WorldDes' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_LeftTip_C, WorldDes_1) == 0x0004A0, "Member 'UWBP_Hud_LeftTip_C::WorldDes_1' has a wrong offset!");
 
 }
 

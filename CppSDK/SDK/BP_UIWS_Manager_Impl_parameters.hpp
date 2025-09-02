@@ -17,222 +17,35 @@
 namespace SDK::Params
 {
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use2ChannelHeightMap
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap) == 0x000001, "Wrong alignment on BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap) == 0x000001, "Wrong size on BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap, NewValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap::NewValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use High Quality Render Target
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target) == 0x000001, "Wrong alignment on BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target) == 0x000001, "Wrong size on BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target, NewValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target::NewValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.SetInteractivity
-// 0x0001 (0x0001 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_SetInteractivity final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_SetInteractivity) == 0x000001, "Wrong alignment on BP_UIWS_Manager_Impl_C_SetInteractivity");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_SetInteractivity) == 0x000001, "Wrong size on BP_UIWS_Manager_Impl_C_SetInteractivity");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_SetInteractivity, NewValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_SetInteractivity::NewValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_UIWS_Manager_Impl_C_ReceiveTick");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_ReceiveTick) == 0x000004, "Wrong size on BP_UIWS_Manager_Impl_C_ReceiveTick");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormalMat
-// 0x0020 (0x0020 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_LoadNormalMat final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     K2Node_DynamicCast_AsMaterial_Interface;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadNormalMat) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadNormalMat");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadNormalMat) == 0x000020, "Wrong size on BP_UIWS_Manager_Impl_C_LoadNormalMat");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, K2Node_DynamicCast_AsMaterial_Interface) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::K2Node_DynamicCast_AsMaterial_Interface' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormal
-// 0x0038 (0x0038 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_LoadNormal final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_6;          // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_7;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_8;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_9;          // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadNormal) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadNormal");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadNormal) == 0x000038, "Wrong size on BP_UIWS_Manager_Impl_C_LoadNormal");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000021, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000022, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x000023, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000024, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_4) == 0x000025, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_5) == 0x000026, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_6) == 0x000027, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_7) == 0x000028, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_8) == 0x000029, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_9) == 0x00002A, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x00002C, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000030, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadLowQualityNormalRTForHighQuality
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeHeight1
 // 0x0018 (0x0018 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality final
+struct BP_UIWS_Manager_Impl_C_ExchangeHeight1 final
 {
 public:
 	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Manager_Impl_C_ExchangeHeight1) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_ExchangeHeight1");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_ExchangeHeight1) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_ExchangeHeight1");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeHeight1, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_ExchangeHeight1::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeHeight1, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_ExchangeHeight1::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeHeight1, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_ExchangeHeight1::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadHeight1
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeNormal
 // 0x0018 (0x0018 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_LoadHeight1 final
+struct BP_UIWS_Manager_Impl_C_ExchangeNormal final
 {
 public:
 	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadHeight1) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadHeight1");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadHeight1) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_LoadHeight1");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadHeight1, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadHeight1::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadHeight1, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadHeight1::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadHeight1, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadHeight1::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadCopyMat
-// 0x0020 (0x0020 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_LoadCopyMat final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     K2Node_DynamicCast_AsMaterial_Interface;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadCopyMat) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadCopyMat");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadCopyMat) == 0x000020, "Wrong size on BP_UIWS_Manager_Impl_C_LoadCopyMat");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, K2Node_DynamicCast_AsMaterial_Interface) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::K2Node_DynamicCast_AsMaterial_Interface' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.InitRT
-// 0x0020 (0x0020 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_InitRT final
-{
-public:
-	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_6;          // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_7;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_8;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_9;          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_InitRT) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_InitRT");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_InitRT) == 0x000020, "Wrong size on BP_UIWS_Manager_Impl_C_InitRT");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000014, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000015, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000016, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x000017, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_4) == 0x000019, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_5) == 0x00001A, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_6) == 0x00001B, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_7) == 0x00001C, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_8) == 0x00001D, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_9) == 0x00001E, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_9' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos_LastFrame
-// 0x0040 (0x0040 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame final
-{
-public:
-	struct FVector                                PlayerPos;                                         // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame) == 0x000040, "Wrong size on BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame, PlayerPos) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame::PlayerPos' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000028, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
-
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos
-// 0x0040 (0x0040 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_GetPlayerPos final
-{
-public:
-	struct FVector                                PlayerPos;                                         // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIWS_Manager_Impl_C_GetPlayerPos) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_GetPlayerPos");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_GetPlayerPos) == 0x000040, "Wrong size on BP_UIWS_Manager_Impl_C_GetPlayerPos");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos, PlayerPos) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos::PlayerPos' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000028, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Manager_Impl_C_ExchangeNormal) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_ExchangeNormal");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_ExchangeNormal) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_ExchangeNormal");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeNormal, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_ExchangeNormal::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeNormal, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_ExchangeNormal::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeNormal, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_ExchangeNormal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExecuteUbergraph_BP_UIWS_Manager_Impl
 // 0x0470 (0x0470 - 0x0000)
@@ -520,35 +333,222 @@ static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_I
 static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_Impl, K2Node_DynamicCast_AsMaterial_Instance_Dynamic) == 0x000460, "Member 'BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_Impl::K2Node_DynamicCast_AsMaterial_Instance_Dynamic' has a wrong offset!");
 static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_Impl, K2Node_DynamicCast_bSuccess_1) == 0x000468, "Member 'BP_UIWS_Manager_Impl_C_ExecuteUbergraph_BP_UIWS_Manager_Impl::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeNormal
-// 0x0018 (0x0018 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_ExchangeNormal final
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos
+// 0x0040 (0x0040 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_GetPlayerPos final
 {
 public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PlayerPos;                                         // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Manager_Impl_C_ExchangeNormal) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_ExchangeNormal");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_ExchangeNormal) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_ExchangeNormal");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeNormal, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_ExchangeNormal::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeNormal, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_ExchangeNormal::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeNormal, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_ExchangeNormal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Manager_Impl_C_GetPlayerPos) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_GetPlayerPos");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_GetPlayerPos) == 0x000040, "Wrong size on BP_UIWS_Manager_Impl_C_GetPlayerPos");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos, PlayerPos) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos::PlayerPos' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000028, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
 
-// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ExchangeHeight1
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.GetPlayerPos_LastFrame
+// 0x0040 (0x0040 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame final
+{
+public:
+	struct FVector                                PlayerPos;                                         // 0x0000(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame) == 0x000040, "Wrong size on BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame, PlayerPos) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame::PlayerPos' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000028, "Member 'BP_UIWS_Manager_Impl_C_GetPlayerPos_LastFrame::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.InitRT
+// 0x0020 (0x0020 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_InitRT final
+{
+public:
+	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_6;          // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_7;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_8;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_9;          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_InitRT) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_InitRT");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_InitRT) == 0x000020, "Wrong size on BP_UIWS_Manager_Impl_C_InitRT");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000014, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000015, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000016, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x000017, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_4) == 0x000019, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_5) == 0x00001A, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_6) == 0x00001B, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_7) == 0x00001C, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_8) == 0x00001D, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_InitRT, CallFunc_EqualEqual_StrStr_ReturnValue_9) == 0x00001E, "Member 'BP_UIWS_Manager_Impl_C_InitRT::CallFunc_EqualEqual_StrStr_ReturnValue_9' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadCopyMat
+// 0x0020 (0x0020 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_LoadCopyMat final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     K2Node_DynamicCast_AsMaterial_Interface;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadCopyMat) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadCopyMat");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadCopyMat) == 0x000020, "Wrong size on BP_UIWS_Manager_Impl_C_LoadCopyMat");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, K2Node_DynamicCast_AsMaterial_Interface) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::K2Node_DynamicCast_AsMaterial_Interface' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadCopyMat, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_LoadCopyMat::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadHeight1
 // 0x0018 (0x0018 - 0x0000)
-struct BP_UIWS_Manager_Impl_C_ExchangeHeight1 final
+struct BP_UIWS_Manager_Impl_C_LoadHeight1 final
 {
 public:
 	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_UIWS_Manager_Impl_C_ExchangeHeight1) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_ExchangeHeight1");
-static_assert(sizeof(BP_UIWS_Manager_Impl_C_ExchangeHeight1) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_ExchangeHeight1");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeHeight1, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_ExchangeHeight1::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeHeight1, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_ExchangeHeight1::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIWS_Manager_Impl_C_ExchangeHeight1, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_ExchangeHeight1::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadHeight1) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadHeight1");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadHeight1) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_LoadHeight1");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadHeight1, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadHeight1::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadHeight1, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadHeight1::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadHeight1, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadHeight1::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadLowQualityNormalRTForHighQuality
+// 0x0018 (0x0018 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality) == 0x000018, "Wrong size on BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadLowQualityNormalRTForHighQuality::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormal
+// 0x0038 (0x0038 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_LoadNormal final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_6;          // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_7;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_8;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_9;          // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadNormal) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadNormal");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadNormal) == 0x000038, "Wrong size on BP_UIWS_Manager_Impl_C_LoadNormal");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000021, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000022, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x000023, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000024, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_4) == 0x000025, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_5) == 0x000026, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_6) == 0x000027, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_7) == 0x000028, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_8) == 0x000029, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_StrStr_ReturnValue_9) == 0x00002A, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_StrStr_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x00002C, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormal, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000030, "Member 'BP_UIWS_Manager_Impl_C_LoadNormal::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.LoadNormalMat
+// 0x0020 (0x0020 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_LoadNormalMat final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     K2Node_DynamicCast_AsMaterial_Interface;           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_LoadNormalMat) == 0x000008, "Wrong alignment on BP_UIWS_Manager_Impl_C_LoadNormalMat");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_LoadNormalMat) == 0x000020, "Wrong size on BP_UIWS_Manager_Impl_C_LoadNormalMat");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, Loaded) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, K2Node_DynamicCast_AsMaterial_Interface) == 0x000008, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::K2Node_DynamicCast_AsMaterial_Interface' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_LoadNormalMat, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000018, "Member 'BP_UIWS_Manager_Impl_C_LoadNormalMat::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_UIWS_Manager_Impl_C_ReceiveTick");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_ReceiveTick) == 0x000004, "Wrong size on BP_UIWS_Manager_Impl_C_ReceiveTick");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.SetInteractivity
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_SetInteractivity final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_SetInteractivity) == 0x000001, "Wrong alignment on BP_UIWS_Manager_Impl_C_SetInteractivity");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_SetInteractivity) == 0x000001, "Wrong size on BP_UIWS_Manager_Impl_C_SetInteractivity");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_SetInteractivity, NewValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_SetInteractivity::NewValue' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use High Quality Render Target
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target) == 0x000001, "Wrong alignment on BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target) == 0x000001, "Wrong size on BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target, NewValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_Use_High_Quality_Render_Target::NewValue' has a wrong offset!");
+
+// Function BP_UIWS_Manager_Impl.BP_UIWS_Manager_Impl_C.Use2ChannelHeightMap
+// 0x0001 (0x0001 - 0x0000)
+struct BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap) == 0x000001, "Wrong alignment on BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap");
+static_assert(sizeof(BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap) == 0x000001, "Wrong size on BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap");
+static_assert(offsetof(BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap, NewValue) == 0x000000, "Member 'BP_UIWS_Manager_Impl_C_Use2ChannelHeightMap::NewValue' has a wrong offset!");
 
 }
 

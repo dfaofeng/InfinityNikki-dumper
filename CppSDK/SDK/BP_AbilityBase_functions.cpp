@@ -17,65 +17,37 @@
 namespace SDK
 {
 
-// Function BP_AbilityBase.BP_AbilityBase_C.ExecuteUbergraph_BP_AbilityBase
-// (Final, UbergraphFunction)
+// Function BP_AbilityBase.BP_AbilityBase_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AbilityBase_C::ExecuteUbergraph_BP_AbilityBase(int32 EntryPoint)
+void UBP_AbilityBase_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AbilityBase_C", "ExecuteUbergraph_BP_AbilityBase");
+		Func = Class->GetFunction("BP_AbilityBase_C", "ReceiveEndPlay");
 
-	Params::BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase Parms{};
+	Params::BP_AbilityBase_C_ReceiveEndPlay Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityCD
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double*                                 cd_0                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_AbilityBase.BP_AbilityBase_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBP_AbilityBase_C::GetAbilityCD(double* cd_0)
+void UBP_AbilityBase_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AbilityBase_C", "GetAbilityCD");
+		Func = Class->GetFunction("BP_AbilityBase_C", "ReceiveBeginPlay");
 
-	Params::BP_AbilityBase_C_GetAbilityCD Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (cd_0 != nullptr)
-		*cd_0 = Parms.cd_0;
-}
-
-
-// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityIcon
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UTexture2D**                      Icon_0                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AbilityBase_C::GetAbilityIcon(class UTexture2D** Icon_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AbilityBase_C", "GetAbilityIcon");
-
-	Params::BP_AbilityBase_C_GetAbilityIcon Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Icon_0 != nullptr)
-		*Icon_0 = Parms.Icon_0;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -100,35 +72,63 @@ void UBP_AbilityBase_C::GetGroupID(int32* GroupID_0)
 }
 
 
-// Function BP_AbilityBase.BP_AbilityBase_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityIcon
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UTexture2D**                      Icon_0                                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AbilityBase_C::ReceiveBeginPlay()
+void UBP_AbilityBase_C::GetAbilityIcon(class UTexture2D** Icon_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AbilityBase_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_AbilityBase_C", "GetAbilityIcon");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_AbilityBase_C_GetAbilityIcon Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Icon_0 != nullptr)
+		*Icon_0 = Parms.Icon_0;
 }
 
 
-// Function BP_AbilityBase.BP_AbilityBase_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityCD
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double*                                 cd_0                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AbilityBase_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+void UBP_AbilityBase_C::GetAbilityCD(double* cd_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AbilityBase_C", "ReceiveEndPlay");
+		Func = Class->GetFunction("BP_AbilityBase_C", "GetAbilityCD");
 
-	Params::BP_AbilityBase_C_ReceiveEndPlay Parms{};
+	Params::BP_AbilityBase_C_GetAbilityCD Parms{};
 
-	Parms.EndPlayReason = EndPlayReason;
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (cd_0 != nullptr)
+		*cd_0 = Parms.cd_0;
+}
+
+
+// Function BP_AbilityBase.BP_AbilityBase_C.ExecuteUbergraph_BP_AbilityBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AbilityBase_C::ExecuteUbergraph_BP_AbilityBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AbilityBase_C", "ExecuteUbergraph_BP_AbilityBase");
+
+	Params::BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

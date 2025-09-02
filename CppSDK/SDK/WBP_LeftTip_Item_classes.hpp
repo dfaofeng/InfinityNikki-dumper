@@ -26,7 +26,7 @@ public:
 	class UButton*                                Button_Des;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UButton*                                Button_TargetHost;                                 // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           CanvasPanel_0;                                     // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Complete;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 complete;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UTextBlock*                             DES;                                               // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UHorizontalBox*                         HorizontalBox_0;                                   // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_100;                                         // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ static_assert(offsetof(UWBP_LeftTip_Item_C, FadeOut) == 0x0002F8, "Member 'UWBP_
 static_assert(offsetof(UWBP_LeftTip_Item_C, Button_Des) == 0x000300, "Member 'UWBP_LeftTip_Item_C::Button_Des' has a wrong offset!");
 static_assert(offsetof(UWBP_LeftTip_Item_C, Button_TargetHost) == 0x000308, "Member 'UWBP_LeftTip_Item_C::Button_TargetHost' has a wrong offset!");
 static_assert(offsetof(UWBP_LeftTip_Item_C, CanvasPanel_0) == 0x000310, "Member 'UWBP_LeftTip_Item_C::CanvasPanel_0' has a wrong offset!");
-static_assert(offsetof(UWBP_LeftTip_Item_C, Complete) == 0x000318, "Member 'UWBP_LeftTip_Item_C::Complete' has a wrong offset!");
+static_assert(offsetof(UWBP_LeftTip_Item_C, complete) == 0x000318, "Member 'UWBP_LeftTip_Item_C::complete' has a wrong offset!");
 static_assert(offsetof(UWBP_LeftTip_Item_C, DES) == 0x000320, "Member 'UWBP_LeftTip_Item_C::DES' has a wrong offset!");
 static_assert(offsetof(UWBP_LeftTip_Item_C, HorizontalBox_0) == 0x000328, "Member 'UWBP_LeftTip_Item_C::HorizontalBox_0' has a wrong offset!");
 static_assert(offsetof(UWBP_LeftTip_Item_C, Image_100) == 0x000330, "Member 'UWBP_LeftTip_Item_C::Image_100' has a wrong offset!");

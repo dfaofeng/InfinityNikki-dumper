@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "F_CorrectionAnim_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -18,20 +19,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SyncData.BP_SyncData_C
-// 0x0248 (0x0278 - 0x0030)
+// 0x02B8 (0x02E8 - 0x0030)
 class UBP_SyncData_C final : public UPrimaryDataAsset
 {
 public:
-	bool                                          bEnableMirrorTurnAnim;                             // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FF_CorrectionAnim                      IdleStart;                                         // 0x0038(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TMap<double, TSoftObjectPtr<class UAnimMontage>> StepAnims;                                      // 0x0100(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FF_CorrectionAnim                      MoveStart;                                         // 0x0150(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          bUseRotateModifier;                                // 0x0218(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        RotateSpeed;                                       // 0x0220(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimMontage>            StepF_Lfoot;                                       // 0x0228(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimMontage>            StepF_Rfoot;                                       // 0x0250(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0030(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          bEnableMirrorTurnAnim;                             // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FF_CorrectionAnim                      IdleStart;                                         // 0x0040(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMap<double, TSoftObjectPtr<class UAnimMontage>> StepAnims;                                      // 0x0108(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FF_CorrectionAnim                      MoveStart;                                         // 0x0158(0x00C8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          bUseRotateModifier;                                // 0x0220(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_221[0x7];                                      // 0x0221(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        RotateSpeed;                                       // 0x0228(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimMontage>            StepF_Lfoot;                                       // 0x0230(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimMontage>            StepF_Rfoot;                                       // 0x0258(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	double                                        AdjustHeight_Threshold;                            // 0x0280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       AdjustHeight_Up;                                   // 0x0288(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       AdjustHeight_Down;                                 // 0x02B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	double                                        Dlg_TargetHeightDiff_Nikki;                        // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Dlg_TargetHeightDiff_Damiao;                       // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+public:
+	void ExecuteUbergraph_BP_SyncData(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -44,15 +54,21 @@ public:
 	}
 };
 static_assert(alignof(UBP_SyncData_C) == 0x000008, "Wrong alignment on UBP_SyncData_C");
-static_assert(sizeof(UBP_SyncData_C) == 0x000278, "Wrong size on UBP_SyncData_C");
-static_assert(offsetof(UBP_SyncData_C, bEnableMirrorTurnAnim) == 0x000030, "Member 'UBP_SyncData_C::bEnableMirrorTurnAnim' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, IdleStart) == 0x000038, "Member 'UBP_SyncData_C::IdleStart' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, StepAnims) == 0x000100, "Member 'UBP_SyncData_C::StepAnims' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, MoveStart) == 0x000150, "Member 'UBP_SyncData_C::MoveStart' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, bUseRotateModifier) == 0x000218, "Member 'UBP_SyncData_C::bUseRotateModifier' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, RotateSpeed) == 0x000220, "Member 'UBP_SyncData_C::RotateSpeed' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, StepF_Lfoot) == 0x000228, "Member 'UBP_SyncData_C::StepF_Lfoot' has a wrong offset!");
-static_assert(offsetof(UBP_SyncData_C, StepF_Rfoot) == 0x000250, "Member 'UBP_SyncData_C::StepF_Rfoot' has a wrong offset!");
+static_assert(sizeof(UBP_SyncData_C) == 0x0002E8, "Wrong size on UBP_SyncData_C");
+static_assert(offsetof(UBP_SyncData_C, UberGraphFrame) == 0x000030, "Member 'UBP_SyncData_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, bEnableMirrorTurnAnim) == 0x000038, "Member 'UBP_SyncData_C::bEnableMirrorTurnAnim' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, IdleStart) == 0x000040, "Member 'UBP_SyncData_C::IdleStart' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, StepAnims) == 0x000108, "Member 'UBP_SyncData_C::StepAnims' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, MoveStart) == 0x000158, "Member 'UBP_SyncData_C::MoveStart' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, bUseRotateModifier) == 0x000220, "Member 'UBP_SyncData_C::bUseRotateModifier' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, RotateSpeed) == 0x000228, "Member 'UBP_SyncData_C::RotateSpeed' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, StepF_Lfoot) == 0x000230, "Member 'UBP_SyncData_C::StepF_Lfoot' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, StepF_Rfoot) == 0x000258, "Member 'UBP_SyncData_C::StepF_Rfoot' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, AdjustHeight_Threshold) == 0x000280, "Member 'UBP_SyncData_C::AdjustHeight_Threshold' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, AdjustHeight_Up) == 0x000288, "Member 'UBP_SyncData_C::AdjustHeight_Up' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, AdjustHeight_Down) == 0x0002B0, "Member 'UBP_SyncData_C::AdjustHeight_Down' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, Dlg_TargetHeightDiff_Nikki) == 0x0002D8, "Member 'UBP_SyncData_C::Dlg_TargetHeightDiff_Nikki' has a wrong offset!");
+static_assert(offsetof(UBP_SyncData_C, Dlg_TargetHeightDiff_Damiao) == 0x0002E0, "Member 'UBP_SyncData_C::Dlg_TargetHeightDiff_Damiao' has a wrong offset!");
 
 }
 

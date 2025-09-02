@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetCurRequiredTags
-// 0x0020 (0x0020 - 0x0000)
-struct GA_AbilityMontageSelector_C_GetCurRequiredTags final
-{
-public:
-	struct FGameplayTagContainer                  Result;                                            // 0x0000(0x0020)(Parm, OutParm)
-};
-static_assert(alignof(GA_AbilityMontageSelector_C_GetCurRequiredTags) == 0x000008, "Wrong alignment on GA_AbilityMontageSelector_C_GetCurRequiredTags");
-static_assert(sizeof(GA_AbilityMontageSelector_C_GetCurRequiredTags) == 0x000020, "Wrong size on GA_AbilityMontageSelector_C_GetCurRequiredTags");
-static_assert(offsetof(GA_AbilityMontageSelector_C_GetCurRequiredTags, Result) == 0x000000, "Member 'GA_AbilityMontageSelector_C_GetCurRequiredTags::Result' has a wrong offset!");
-
 // Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetCurBlockedTags
 // 0x0020 (0x0020 - 0x0000)
 struct GA_AbilityMontageSelector_C_GetCurBlockedTags final
@@ -37,6 +26,17 @@ public:
 static_assert(alignof(GA_AbilityMontageSelector_C_GetCurBlockedTags) == 0x000008, "Wrong alignment on GA_AbilityMontageSelector_C_GetCurBlockedTags");
 static_assert(sizeof(GA_AbilityMontageSelector_C_GetCurBlockedTags) == 0x000020, "Wrong size on GA_AbilityMontageSelector_C_GetCurBlockedTags");
 static_assert(offsetof(GA_AbilityMontageSelector_C_GetCurBlockedTags, Result) == 0x000000, "Member 'GA_AbilityMontageSelector_C_GetCurBlockedTags::Result' has a wrong offset!");
+
+// Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetCurRequiredTags
+// 0x0020 (0x0020 - 0x0000)
+struct GA_AbilityMontageSelector_C_GetCurRequiredTags final
+{
+public:
+	struct FGameplayTagContainer                  Result;                                            // 0x0000(0x0020)(Parm, OutParm)
+};
+static_assert(alignof(GA_AbilityMontageSelector_C_GetCurRequiredTags) == 0x000008, "Wrong alignment on GA_AbilityMontageSelector_C_GetCurRequiredTags");
+static_assert(sizeof(GA_AbilityMontageSelector_C_GetCurRequiredTags) == 0x000020, "Wrong size on GA_AbilityMontageSelector_C_GetCurRequiredTags");
+static_assert(offsetof(GA_AbilityMontageSelector_C_GetCurRequiredTags, Result) == 0x000000, "Member 'GA_AbilityMontageSelector_C_GetCurRequiredTags::Result' has a wrong offset!");
 
 // Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

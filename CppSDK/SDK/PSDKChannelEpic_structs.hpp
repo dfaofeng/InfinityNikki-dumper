@@ -409,7 +409,7 @@ struct FPSDKEpicAccountInfo final : public FJsonData
 public:
 	bool                                          IsLogined;                                         // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AccessToken;                                       // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 accessToken;                                       // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 JsonWebToken;                                      // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StoreArea;                                         // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_F0[0x8];                                       // 0x00F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -417,7 +417,7 @@ public:
 static_assert(alignof(FPSDKEpicAccountInfo) == 0x000008, "Wrong alignment on FPSDKEpicAccountInfo");
 static_assert(sizeof(FPSDKEpicAccountInfo) == 0x0000F8, "Wrong size on FPSDKEpicAccountInfo");
 static_assert(offsetof(FPSDKEpicAccountInfo, IsLogined) == 0x0000B8, "Member 'FPSDKEpicAccountInfo::IsLogined' has a wrong offset!");
-static_assert(offsetof(FPSDKEpicAccountInfo, AccessToken) == 0x0000C0, "Member 'FPSDKEpicAccountInfo::AccessToken' has a wrong offset!");
+static_assert(offsetof(FPSDKEpicAccountInfo, accessToken) == 0x0000C0, "Member 'FPSDKEpicAccountInfo::accessToken' has a wrong offset!");
 static_assert(offsetof(FPSDKEpicAccountInfo, JsonWebToken) == 0x0000D0, "Member 'FPSDKEpicAccountInfo::JsonWebToken' has a wrong offset!");
 static_assert(offsetof(FPSDKEpicAccountInfo, StoreArea) == 0x0000E0, "Member 'FPSDKEpicAccountInfo::StoreArea' has a wrong offset!");
 

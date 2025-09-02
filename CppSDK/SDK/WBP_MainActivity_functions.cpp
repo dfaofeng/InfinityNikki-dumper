@@ -17,117 +17,29 @@
 namespace SDK
 {
 
-// Function WBP_MainActivity.WBP_MainActivity_C.PreConstruct
+// Function WBP_MainActivity.WBP_MainActivity_C.ChangePlayerClothes
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_MainActivity_C::ChangePlayerClothes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MainActivity_C", "ChangePlayerClothes");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MainActivity.WBP_MainActivity_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_MainActivity_C::PreConstruct(bool IsDesignTime)
+void UWBP_MainActivity_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "PreConstruct");
-
-	Params::WBP_MainActivity_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_MainActivity.WBP_MainActivity_C.PlayFadeIn
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_MainActivity_C::PlayFadeIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "PlayFadeIn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_MainActivity.WBP_MainActivity_C.OnLevelLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_MainActivity_C::OnLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "OnLevelLoaded");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_MainActivity.WBP_MainActivity_C.OnItemClicked
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBP_MainHudObtainedContainerData_C*Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_MainActivity_C::OnItemClicked(class UBP_MainHudObtainedContainerData_C* Data)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "OnItemClicked");
-
-	Params::WBP_MainActivity_C_OnItemClicked Parms{};
-
-	Parms.Data = Data;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_MainActivity.WBP_MainActivity_C.LoadStreamLevel
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_MainActivity_C::LoadStreamLevel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "LoadStreamLevel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_MainActivity.WBP_MainActivity_C.loadDesignDrawingWorld
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    LevelPath                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWBP_MainActivity_C::loadDesignDrawingWorld(const class FString& LevelPath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "loadDesignDrawingWorld");
-
-	Params::WBP_MainActivity_C_loadDesignDrawingWorld Parms{};
-
-	Parms.LevelPath = std::move(LevelPath);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_MainActivity.WBP_MainActivity_C.HandleOnLevelLoaded
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_MainActivity_C::HandleOnLevelLoaded()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "HandleOnLevelLoaded");
+		Func = Class->GetFunction("WBP_MainActivity_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,31 +65,119 @@ void UWBP_MainActivity_C::ExecuteUbergraph_WBP_MainActivity(int32 EntryPoint)
 }
 
 
-// Function WBP_MainActivity.WBP_MainActivity_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_MainActivity.WBP_MainActivity_C.HandleOnLevelLoaded
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_MainActivity_C::Construct()
+void UWBP_MainActivity_C::HandleOnLevelLoaded()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "Construct");
+		Func = Class->GetFunction("WBP_MainActivity_C", "HandleOnLevelLoaded");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_MainActivity.WBP_MainActivity_C.ChangePlayerClothes
+// Function WBP_MainActivity.WBP_MainActivity_C.loadDesignDrawingWorld
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    LevelPath                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_MainActivity_C::ChangePlayerClothes()
+void UWBP_MainActivity_C::loadDesignDrawingWorld(const class FString& LevelPath)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MainActivity_C", "ChangePlayerClothes");
+		Func = Class->GetFunction("WBP_MainActivity_C", "loadDesignDrawingWorld");
+
+	Params::WBP_MainActivity_C_loadDesignDrawingWorld Parms{};
+
+	Parms.LevelPath = std::move(LevelPath);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MainActivity.WBP_MainActivity_C.LoadStreamLevel
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_MainActivity_C::LoadStreamLevel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MainActivity_C", "LoadStreamLevel");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MainActivity.WBP_MainActivity_C.OnItemClicked
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_MainHudObtainedContainerData_C*Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MainActivity_C::OnItemClicked(class UBP_MainHudObtainedContainerData_C* Data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MainActivity_C", "OnItemClicked");
+
+	Params::WBP_MainActivity_C_OnItemClicked Parms{};
+
+	Parms.Data = Data;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MainActivity.WBP_MainActivity_C.OnLevelLoaded
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_MainActivity_C::OnLevelLoaded()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MainActivity_C", "OnLevelLoaded");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MainActivity.WBP_MainActivity_C.PlayFadeIn
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_MainActivity_C::PlayFadeIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MainActivity_C", "PlayFadeIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_MainActivity.WBP_MainActivity_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MainActivity_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MainActivity_C", "PreConstruct");
+
+	Params::WBP_MainActivity_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

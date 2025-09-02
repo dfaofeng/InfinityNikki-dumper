@@ -61,11 +61,11 @@ static_assert(alignof(USoundAreaCheckData) == 0x000008, "Wrong alignment on USou
 static_assert(sizeof(USoundAreaCheckData) == 0x000060, "Wrong size on USoundAreaCheckData");
 
 // Class PaperAreaCheckToolRuntime.CollectionData
-// 0x0038 (0x0060 - 0x0028)
+// 0x0088 (0x00B0 - 0x0028)
 class UCollectionData final : public UObject
 {
 public:
-	uint8                                         Pad_28[0x38];                                      // 0x0028(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x88];                                      // 0x0028(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -78,7 +78,7 @@ public:
 	}
 };
 static_assert(alignof(UCollectionData) == 0x000008, "Wrong alignment on UCollectionData");
-static_assert(sizeof(UCollectionData) == 0x000060, "Wrong size on UCollectionData");
+static_assert(sizeof(UCollectionData) == 0x0000B0, "Wrong size on UCollectionData");
 
 // Class PaperAreaCheckToolRuntime.SublevelCollectionData
 // 0x0038 (0x0060 - 0x0028)
@@ -257,7 +257,7 @@ public:
 	class FString                                 SoundAssetsPath;                                   // 0x0048(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 CollectionAssetsPath;                              // 0x0058(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ExportServerDataPath;                              // 0x0068(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<int32, class FString>                    CollectionLevels;                                  // 0x0078(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	TMap<int32, struct FSoftObjectPath>           CollectionLevels;                                  // 0x0078(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
 	float                                         AreaCheckPrecision;                                // 0x00C8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SoundAreaCheckPrecision;                           // 0x00CC(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WeatherAreaCheckPrecision;                         // 0x00D0(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -292,7 +292,7 @@ static_assert(offsetof(UPaperAreaCheckSetting, ShrubOverlapCheckZOffset) == 0x00
 static_assert(offsetof(UPaperAreaCheckSetting, AreaMarginSize) == 0x0000D8, "Member 'UPaperAreaCheckSetting::AreaMarginSize' has a wrong offset!");
 
 // Class PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem
-// 0x0210 (0x0250 - 0x0040)
+// 0x02D8 (0x0318 - 0x0040)
 class UPaperAreaCheckSubsystem final : public UTickableWorldSubsystem
 {
 public:
@@ -308,25 +308,28 @@ public:
 	TMulticastInlineDelegate<void()>              OnExitAreaEdgeNotify;                              // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(int32 SpecialAreaType)> OnEnterSpecialAreaDelegate;                // 0x00E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnExitSpecialAreaDelegate;                         // 0x00F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UPolygonAreaTree*                       AreaPolygonTree;                                   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ANetWorkAreaDebugActor*                 NetDebugAreaActor;                                 // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<struct FIntPoint, class UAreaCheckData*> AreaCheckDataCache;                                // 0x0110(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<struct FIntPoint, class USoundAreaCheckData*> SoundAreaCheckDataCache;                      // 0x0160(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<struct FIntPoint, class UCollectionData*> CollectionData;                                   // 0x01B0(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_200[0x10];                                     // 0x0200(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                SublevelOrigin;                                    // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_228[0x28];                                     // 0x0228(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 ExArea)>  OnEnterExSpecialAreaDelegate;                      // 0x0100(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(int32 ExArea)>  OnExitExSpecialAreaDelegate;                       // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UPolygonAreaTree*                       AreaPolygonTree;                                   // 0x0120(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ANetWorkAreaDebugActor*                 NetDebugAreaActor;                                 // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FIntPoint, class UAreaCheckData*> AreaCheckDataCache;                                // 0x0130(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<struct FIntPoint, class USoundAreaCheckData*> SoundAreaCheckDataCache;                      // 0x0180(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<struct FIntPoint, class UCollectionData*> CollectionData;                                   // 0x01D0(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_220[0x10];                                     // 0x0220(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SublevelOrigin;                                    // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPaperAreaCheckSetting*                 AreaCheckSetting;                                  // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_250[0xC8];                                     // 0x0250(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AreaPolygonTreeInit();
 	bool CheckNikkiInAreaEdge();
 	void ClearCurAreaCheckCache();
-	void EnterSubLevel(const int32 LevelID, const struct FVector& PlayerPos);
-	void ExitSubLevel();
-	int32 GetAreaIDByWorldPosition(const struct FVector& InWorldPosition);
+	int32 GetAreaIDByWorldPosition(const struct FVector& InWorldPosition, bool bAsync);
 	int32 GetCurrentAreaID();
 	int32 GetCurrentSoundAreaID();
 	uint8 GetShrubTypeByWorldPosition(const struct FVector& InPosition);
+	int32 GetSpecialAreaByWorldPosition(const struct FVector& Pos, const int32 LevelId, const uint8 inSpecialAreaEnum);
+	void OnEnterLevel(const int32 LevelId, const struct FVector& PlayerPos);
 	void RefreshAreaCheckState(const struct FVector& PlayerPos);
 
 public:
@@ -340,7 +343,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperAreaCheckSubsystem) == 0x000008, "Wrong alignment on UPaperAreaCheckSubsystem");
-static_assert(sizeof(UPaperAreaCheckSubsystem) == 0x000250, "Wrong size on UPaperAreaCheckSubsystem");
+static_assert(sizeof(UPaperAreaCheckSubsystem) == 0x000318, "Wrong size on UPaperAreaCheckSubsystem");
 static_assert(offsetof(UPaperAreaCheckSubsystem, OnEnterSoundArea) == 0x000040, "Member 'UPaperAreaCheckSubsystem::OnEnterSoundArea' has a wrong offset!");
 static_assert(offsetof(UPaperAreaCheckSubsystem, OnEnterSoundEffectArea) == 0x000050, "Member 'UPaperAreaCheckSubsystem::OnEnterSoundEffectArea' has a wrong offset!");
 static_assert(offsetof(UPaperAreaCheckSubsystem, OnEnterSoundAuxArea) == 0x000060, "Member 'UPaperAreaCheckSubsystem::OnEnterSoundAuxArea' has a wrong offset!");
@@ -353,12 +356,15 @@ static_assert(offsetof(UPaperAreaCheckSubsystem, OnEnterAreaEdgeNotify) == 0x000
 static_assert(offsetof(UPaperAreaCheckSubsystem, OnExitAreaEdgeNotify) == 0x0000D0, "Member 'UPaperAreaCheckSubsystem::OnExitAreaEdgeNotify' has a wrong offset!");
 static_assert(offsetof(UPaperAreaCheckSubsystem, OnEnterSpecialAreaDelegate) == 0x0000E0, "Member 'UPaperAreaCheckSubsystem::OnEnterSpecialAreaDelegate' has a wrong offset!");
 static_assert(offsetof(UPaperAreaCheckSubsystem, OnExitSpecialAreaDelegate) == 0x0000F0, "Member 'UPaperAreaCheckSubsystem::OnExitSpecialAreaDelegate' has a wrong offset!");
-static_assert(offsetof(UPaperAreaCheckSubsystem, AreaPolygonTree) == 0x000100, "Member 'UPaperAreaCheckSubsystem::AreaPolygonTree' has a wrong offset!");
-static_assert(offsetof(UPaperAreaCheckSubsystem, NetDebugAreaActor) == 0x000108, "Member 'UPaperAreaCheckSubsystem::NetDebugAreaActor' has a wrong offset!");
-static_assert(offsetof(UPaperAreaCheckSubsystem, AreaCheckDataCache) == 0x000110, "Member 'UPaperAreaCheckSubsystem::AreaCheckDataCache' has a wrong offset!");
-static_assert(offsetof(UPaperAreaCheckSubsystem, SoundAreaCheckDataCache) == 0x000160, "Member 'UPaperAreaCheckSubsystem::SoundAreaCheckDataCache' has a wrong offset!");
-static_assert(offsetof(UPaperAreaCheckSubsystem, CollectionData) == 0x0001B0, "Member 'UPaperAreaCheckSubsystem::CollectionData' has a wrong offset!");
-static_assert(offsetof(UPaperAreaCheckSubsystem, SublevelOrigin) == 0x000210, "Member 'UPaperAreaCheckSubsystem::SublevelOrigin' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, OnEnterExSpecialAreaDelegate) == 0x000100, "Member 'UPaperAreaCheckSubsystem::OnEnterExSpecialAreaDelegate' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, OnExitExSpecialAreaDelegate) == 0x000110, "Member 'UPaperAreaCheckSubsystem::OnExitExSpecialAreaDelegate' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, AreaPolygonTree) == 0x000120, "Member 'UPaperAreaCheckSubsystem::AreaPolygonTree' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, NetDebugAreaActor) == 0x000128, "Member 'UPaperAreaCheckSubsystem::NetDebugAreaActor' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, AreaCheckDataCache) == 0x000130, "Member 'UPaperAreaCheckSubsystem::AreaCheckDataCache' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, SoundAreaCheckDataCache) == 0x000180, "Member 'UPaperAreaCheckSubsystem::SoundAreaCheckDataCache' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, CollectionData) == 0x0001D0, "Member 'UPaperAreaCheckSubsystem::CollectionData' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, SublevelOrigin) == 0x000230, "Member 'UPaperAreaCheckSubsystem::SublevelOrigin' has a wrong offset!");
+static_assert(offsetof(UPaperAreaCheckSubsystem, AreaCheckSetting) == 0x000248, "Member 'UPaperAreaCheckSubsystem::AreaCheckSetting' has a wrong offset!");
 
 // Class PaperAreaCheckToolRuntime.AreaCheckStreammingTree
 // 0x0048 (0x0070 - 0x0028)

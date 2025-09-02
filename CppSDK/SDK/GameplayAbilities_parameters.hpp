@@ -19,6 +19,133 @@
 namespace SDK::Params
 {
 
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting
+// 0x0028 (0x0028 - 0x0000)
+struct AbilityTask_VisualizeTargeting_VisualizeTargeting final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_VisualizeTargeting_VisualizeTargeting) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_VisualizeTargeting");
+static_assert(sizeof(AbilityTask_VisualizeTargeting_VisualizeTargeting) == 0x000028, "Wrong size on AbilityTask_VisualizeTargeting_VisualizeTargeting");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, Class_0) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::Class_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, TaskInstanceName) == 0x000010, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::TaskInstanceName' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, Duration) == 0x000018, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::Duration' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, ReturnValue) == 0x000020, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor
+// 0x0028 (0x0028 - 0x0000)
+struct AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGameplayAbilityTargetActor*            TargetActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor");
+static_assert(sizeof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor) == 0x000028, "Wrong size on AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, TargetActor) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::TargetActor' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, TaskInstanceName) == 0x000010, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::TaskInstanceName' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, Duration) == 0x000018, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::Duration' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, ReturnValue) == 0x000020, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor
+// 0x0020 (0x0020 - 0x0000)
+struct AbilityTask_VisualizeTargeting_BeginSpawningActor final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AbilityTask_VisualizeTargeting_BeginSpawningActor) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_BeginSpawningActor");
+static_assert(sizeof(AbilityTask_VisualizeTargeting_BeginSpawningActor) == 0x000020, "Wrong size on AbilityTask_VisualizeTargeting_BeginSpawningActor");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, Class_0) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::Class_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, SpawnedActor) == 0x000010, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::SpawnedActor' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, ReturnValue) == 0x000018, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_VisualizeTargeting_FinishSpawningActor final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_VisualizeTargeting_FinishSpawningActor) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_FinishSpawningActor");
+static_assert(sizeof(AbilityTask_VisualizeTargeting_FinishSpawningActor) == 0x000010, "Wrong size on AbilityTask_VisualizeTargeting_FinishSpawningActor");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_FinishSpawningActor, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_FinishSpawningActor::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_VisualizeTargeting_FinishSpawningActor, SpawnedActor) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_FinishSpawningActor::SpawnedActor' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_Repeat.RepeatAction
+// 0x0018 (0x0018 - 0x0000)
+struct AbilityTask_Repeat_RepeatAction final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeBetweenActions;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalActionCount;                                  // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_Repeat*                    ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_Repeat_RepeatAction) == 0x000008, "Wrong alignment on AbilityTask_Repeat_RepeatAction");
+static_assert(sizeof(AbilityTask_Repeat_RepeatAction) == 0x000018, "Wrong size on AbilityTask_Repeat_RepeatAction");
+static_assert(offsetof(AbilityTask_Repeat_RepeatAction, OwningAbility) == 0x000000, "Member 'AbilityTask_Repeat_RepeatAction::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_Repeat_RepeatAction, TimeBetweenActions) == 0x000008, "Member 'AbilityTask_Repeat_RepeatAction::TimeBetweenActions' has a wrong offset!");
+static_assert(offsetof(AbilityTask_Repeat_RepeatAction, TotalActionCount) == 0x00000C, "Member 'AbilityTask_Repeat_RepeatAction::TotalActionCount' has a wrong offset!");
+static_assert(offsetof(AbilityTask_Repeat_RepeatAction, ReturnValue) == 0x000010, "Member 'AbilityTask_Repeat_RepeatAction::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_WaitConfirm.WaitConfirm
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_WaitConfirm_WaitConfirm final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitConfirm*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_WaitConfirm_WaitConfirm) == 0x000008, "Wrong alignment on AbilityTask_WaitConfirm_WaitConfirm");
+static_assert(sizeof(AbilityTask_WaitConfirm_WaitConfirm) == 0x000010, "Wrong size on AbilityTask_WaitConfirm_WaitConfirm");
+static_assert(offsetof(AbilityTask_WaitConfirm_WaitConfirm, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitConfirm_WaitConfirm::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitConfirm_WaitConfirm, ReturnValue) == 0x000008, "Member 'AbilityTask_WaitConfirm_WaitConfirm::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_WaitConfirm.OnConfirmCallback
+// 0x0008 (0x0008 - 0x0000)
+struct AbilityTask_WaitConfirm_OnConfirmCallback final
+{
+public:
+	class UGameplayAbility*                       InAbility;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_WaitConfirm_OnConfirmCallback) == 0x000008, "Wrong alignment on AbilityTask_WaitConfirm_OnConfirmCallback");
+static_assert(sizeof(AbilityTask_WaitConfirm_OnConfirmCallback) == 0x000008, "Wrong size on AbilityTask_WaitConfirm_OnConfirmCallback");
+static_assert(offsetof(AbilityTask_WaitConfirm_OnConfirmCallback, InAbility) == 0x000000, "Member 'AbilityTask_WaitConfirm_OnConfirmCallback::InAbility' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityAsync_WaitGameplayTagCountChanged.WaitGameplayTagCountChangedOnActor
+// 0x0018 (0x0018 - 0x0000)
+struct AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityAsync_WaitGameplayTagCountChanged* ReturnValue;                                    // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor) == 0x000008, "Wrong alignment on AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor");
+static_assert(sizeof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor) == 0x000018, "Wrong size on AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor, TargetActor) == 0x000000, "Member 'AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor::TargetActor' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor, Tag) == 0x000008, "Member 'AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor::Tag' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor, ReturnValue) == 0x000010, "Member 'AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor::ReturnValue' has a wrong offset!");
+
 // Function GameplayAbilities.AbilitySystemCheatManagerExtension.AbilityActivate
 // 0x0010 (0x0010 - 0x0000)
 struct AbilitySystemCheatManagerExtension_AbilityActivate final
@@ -76,117 +203,6 @@ public:
 static_assert(alignof(AbilitySystemCheatManagerExtension_EffectRemove) == 0x000008, "Wrong alignment on AbilitySystemCheatManagerExtension_EffectRemove");
 static_assert(sizeof(AbilitySystemCheatManagerExtension_EffectRemove) == 0x000010, "Wrong size on AbilitySystemCheatManagerExtension_EffectRemove");
 static_assert(offsetof(AbilitySystemCheatManagerExtension_EffectRemove, NameOrHandle) == 0x000000, "Member 'AbilitySystemCheatManagerExtension_EffectRemove::NameOrHandle' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_WaitConfirm.WaitConfirm
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_WaitConfirm_WaitConfirm final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitConfirm*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_WaitConfirm_WaitConfirm) == 0x000008, "Wrong alignment on AbilityTask_WaitConfirm_WaitConfirm");
-static_assert(sizeof(AbilityTask_WaitConfirm_WaitConfirm) == 0x000010, "Wrong size on AbilityTask_WaitConfirm_WaitConfirm");
-static_assert(offsetof(AbilityTask_WaitConfirm_WaitConfirm, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitConfirm_WaitConfirm::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitConfirm_WaitConfirm, ReturnValue) == 0x000008, "Member 'AbilityTask_WaitConfirm_WaitConfirm::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_WaitConfirm.OnConfirmCallback
-// 0x0008 (0x0008 - 0x0000)
-struct AbilityTask_WaitConfirm_OnConfirmCallback final
-{
-public:
-	class UGameplayAbility*                       InAbility;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_WaitConfirm_OnConfirmCallback) == 0x000008, "Wrong alignment on AbilityTask_WaitConfirm_OnConfirmCallback");
-static_assert(sizeof(AbilityTask_WaitConfirm_OnConfirmCallback) == 0x000008, "Wrong size on AbilityTask_WaitConfirm_OnConfirmCallback");
-static_assert(offsetof(AbilityTask_WaitConfirm_OnConfirmCallback, InAbility) == 0x000000, "Member 'AbilityTask_WaitConfirm_OnConfirmCallback::InAbility' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy
-// 0x0040 (0x0040 - 0x0000)
-struct AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TaskInstanceName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimMontage*                           MontageToPlay_0;                                   // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Rate_0;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   StartSection_0;                                    // 0x001C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStopWhenAbilityEnds_0;                            // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AnimRootMotionTranslationScale_0;                  // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartTimeSeconds_0;                                // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowInterruptAfterBlendOut_0;                    // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_PlayMontageAndWait*        ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy) == 0x000008, "Wrong alignment on AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy");
-static_assert(sizeof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy) == 0x000040, "Wrong size on AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, OwningAbility) == 0x000000, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, TaskInstanceName) == 0x000008, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::TaskInstanceName' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, MontageToPlay_0) == 0x000010, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::MontageToPlay_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, Rate_0) == 0x000018, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::Rate_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, StartSection_0) == 0x00001C, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::StartSection_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, bStopWhenAbilityEnds_0) == 0x000024, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::bStopWhenAbilityEnds_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, AnimRootMotionTranslationScale_0) == 0x000028, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::AnimRootMotionTranslationScale_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, StartTimeSeconds_0) == 0x00002C, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::StartTimeSeconds_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, bAllowInterruptAfterBlendOut_0) == 0x000030, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::bAllowInterruptAfterBlendOut_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, ReturnValue) == 0x000038, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_PlayMontageAndWait_OnMontageBlendingOut final
-{
-public:
-	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut) == 0x000008, "Wrong alignment on AbilityTask_PlayMontageAndWait_OnMontageBlendingOut");
-static_assert(sizeof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut) == 0x000010, "Wrong size on AbilityTask_PlayMontageAndWait_OnMontageBlendingOut");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut, Montage) == 0x000000, "Member 'AbilityTask_PlayMontageAndWait_OnMontageBlendingOut::Montage' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut, bInterrupted) == 0x000008, "Member 'AbilityTask_PlayMontageAndWait_OnMontageBlendingOut::bInterrupted' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageEnded
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_PlayMontageAndWait_OnMontageEnded final
-{
-public:
-	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(AbilityTask_PlayMontageAndWait_OnMontageEnded) == 0x000008, "Wrong alignment on AbilityTask_PlayMontageAndWait_OnMontageEnded");
-static_assert(sizeof(AbilityTask_PlayMontageAndWait_OnMontageEnded) == 0x000010, "Wrong size on AbilityTask_PlayMontageAndWait_OnMontageEnded");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageEnded, Montage) == 0x000000, "Member 'AbilityTask_PlayMontageAndWait_OnMontageEnded::Montage' has a wrong offset!");
-static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageEnded, bInterrupted) == 0x000008, "Member 'AbilityTask_PlayMontageAndWait_OnMontageEnded::bInterrupted' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_WaitCancel.WaitCancel
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_WaitCancel_WaitCancel final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitCancel*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_WaitCancel_WaitCancel) == 0x000008, "Wrong alignment on AbilityTask_WaitCancel_WaitCancel");
-static_assert(sizeof(AbilityTask_WaitCancel_WaitCancel) == 0x000010, "Wrong size on AbilityTask_WaitCancel_WaitCancel");
-static_assert(offsetof(AbilityTask_WaitCancel_WaitCancel, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitCancel_WaitCancel::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitCancel_WaitCancel, ReturnValue) == 0x000008, "Member 'AbilityTask_WaitCancel_WaitCancel::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityAsync_WaitGameplayTagCountChanged.WaitGameplayTagCountChangedOnActor
-// 0x0018 (0x0018 - 0x0000)
-struct AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityAsync_WaitGameplayTagCountChanged* ReturnValue;                                    // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor) == 0x000008, "Wrong alignment on AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor");
-static_assert(sizeof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor) == 0x000018, "Wrong size on AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor, TargetActor) == 0x000000, "Member 'AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor::TargetActor' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor, Tag) == 0x000008, "Member 'AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor::Tag' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor, ReturnValue) == 0x000010, "Member 'AbilityAsync_WaitGameplayTagCountChanged_WaitGameplayTagCountChangedOnActor::ReturnValue' has a wrong offset!");
 
 // Function GameplayAbilities.AbilityTask_PlayAnimAndWait.CreatePlayAnimAndWaitProxy
 // 0x0040 (0x0040 - 0x0000)
@@ -259,33 +275,6 @@ static_assert(sizeof(AbilityTask_PlayAnimAndWait_OnMontageEnded) == 0x000010, "W
 static_assert(offsetof(AbilityTask_PlayAnimAndWait_OnMontageEnded, Montage) == 0x000000, "Member 'AbilityTask_PlayAnimAndWait_OnMontageEnded::Montage' has a wrong offset!");
 static_assert(offsetof(AbilityTask_PlayAnimAndWait_OnMontageEnded, bInterrupted) == 0x000008, "Member 'AbilityTask_PlayAnimAndWait_OnMontageEnded::bInterrupted' has a wrong offset!");
 
-// Function GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold.WaitForAttributeChangeRatioThreshold
-// 0x0098 (0x0098 - 0x0000)
-struct AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     AttributeNumerator;                                // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     AttributeDenominator;                              // 0x0040(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ComparisonValue;                                   // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTriggerOnce;                                      // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OptionalExternalOwner;                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitAttributeChangeRatioThreshold* ReturnValue;                               // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold) == 0x000008, "Wrong alignment on AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold");
-static_assert(sizeof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold) == 0x000098, "Wrong size on AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, AttributeNumerator) == 0x000008, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::AttributeNumerator' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, AttributeDenominator) == 0x000040, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::AttributeDenominator' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, ComparisonType) == 0x000078, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::ComparisonType' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, ComparisonValue) == 0x00007C, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::ComparisonValue' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, bTriggerOnce) == 0x000080, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::bTriggerOnce' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, OptionalExternalOwner) == 0x000088, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::OptionalExternalOwner' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, ReturnValue) == 0x000090, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::ReturnValue' has a wrong offset!");
-
 // Function GameplayAbilities.AbilityTask_WaitGameplayTagCountChanged.WaitGameplayTagCountChange
 // 0x0020 (0x0020 - 0x0000)
 struct AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange final
@@ -302,6 +291,31 @@ static_assert(offsetof(AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCo
 static_assert(offsetof(AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange, Tag) == 0x000008, "Member 'AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange::Tag' has a wrong offset!");
 static_assert(offsetof(AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange, InOptionalExternalTarget) == 0x000010, "Member 'AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange::InOptionalExternalTarget' has a wrong offset!");
 static_assert(offsetof(AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange, ReturnValue) == 0x000018, "Member 'AbilityTask_WaitGameplayTagCountChanged_WaitGameplayTagCountChange::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold.WaitForAttributeChangeThreshold
+// 0x0060 (0x0060 - 0x0000)
+struct AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ComparisonValue;                                   // 0x0044(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriggerOnce;                                      // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OptionalExternalOwner;                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitAttributeChangeThreshold* ReturnValue;                                    // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold) == 0x000008, "Wrong alignment on AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold");
+static_assert(sizeof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold) == 0x000060, "Wrong size on AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, Attribute) == 0x000008, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::Attribute' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, ComparisonType) == 0x000040, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::ComparisonType' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, ComparisonValue) == 0x000044, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::ComparisonValue' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, bTriggerOnce) == 0x000048, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::bTriggerOnce' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, OptionalExternalOwner) == 0x000050, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::OptionalExternalOwner' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, ReturnValue) == 0x000058, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::ReturnValue' has a wrong offset!");
 
 // Function GameplayAbilities.GameplayCueNotify_Static.K2_HandleGameplayCue
 // 0x00E8 (0x00E8 - 0x0000)
@@ -383,42 +397,6 @@ static_assert(offsetof(GameplayCueNotify_Static_WhileActive, MyTarget) == 0x0000
 static_assert(offsetof(GameplayCueNotify_Static_WhileActive, Parameters) == 0x000008, "Member 'GameplayCueNotify_Static_WhileActive::Parameters' has a wrong offset!");
 static_assert(offsetof(GameplayCueNotify_Static_WhileActive, ReturnValue) == 0x0000E0, "Member 'GameplayCueNotify_Static_WhileActive::ReturnValue' has a wrong offset!");
 
-// Function GameplayAbilities.AbilityAsync_WaitGameplayTagAdded.WaitGameplayTagAddToActor
-// 0x0020 (0x0020 - 0x0000)
-struct AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OnlyTriggerOnce;                                   // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityAsync_WaitGameplayTagAdded*     ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor) == 0x000008, "Wrong alignment on AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor");
-static_assert(sizeof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor) == 0x000020, "Wrong size on AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, TargetActor) == 0x000000, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::TargetActor' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, Tag) == 0x000008, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::Tag' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, OnlyTriggerOnce) == 0x000010, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::OnlyTriggerOnce' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, ReturnValue) == 0x000018, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityAsync_WaitAttributeChanged.WaitForAttributeChanged
-// 0x0050 (0x0050 - 0x0000)
-struct AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged final
-{
-public:
-	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OnlyTriggerOnce;                                   // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityAsync_WaitAttributeChanged*     ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged) == 0x000008, "Wrong alignment on AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged");
-static_assert(sizeof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged) == 0x000050, "Wrong size on AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged");
-static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, TargetActor) == 0x000000, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::TargetActor' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, Attribute) == 0x000008, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::Attribute' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, OnlyTriggerOnce) == 0x000040, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::OnlyTriggerOnce' has a wrong offset!");
-static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, ReturnValue) == 0x000048, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::ReturnValue' has a wrong offset!");
-
 // Function GameplayAbilities.AbilityAsync_WaitGameplayEffectApplied.WaitGameplayEffectAppliedToActor
 // 0x0138 (0x0138 - 0x0000)
 struct AbilityAsync_WaitGameplayEffectApplied_WaitGameplayEffectAppliedToActor final
@@ -443,6 +421,24 @@ static_assert(offsetof(AbilityAsync_WaitGameplayEffectApplied_WaitGameplayEffect
 static_assert(offsetof(AbilityAsync_WaitGameplayEffectApplied_WaitGameplayEffectAppliedToActor, ListenForPeriodicEffect) == 0x000129, "Member 'AbilityAsync_WaitGameplayEffectApplied_WaitGameplayEffectAppliedToActor::ListenForPeriodicEffect' has a wrong offset!");
 static_assert(offsetof(AbilityAsync_WaitGameplayEffectApplied_WaitGameplayEffectAppliedToActor, ReturnValue) == 0x000130, "Member 'AbilityAsync_WaitGameplayEffectApplied_WaitGameplayEffectAppliedToActor::ReturnValue' has a wrong offset!");
 
+// Function GameplayAbilities.AbilityAsync_WaitAttributeChanged.WaitForAttributeChanged
+// 0x0050 (0x0050 - 0x0000)
+struct AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OnlyTriggerOnce;                                   // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityAsync_WaitAttributeChanged*     ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged) == 0x000008, "Wrong alignment on AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged");
+static_assert(sizeof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged) == 0x000050, "Wrong size on AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged");
+static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, TargetActor) == 0x000000, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::TargetActor' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, Attribute) == 0x000008, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::Attribute' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, OnlyTriggerOnce) == 0x000040, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::OnlyTriggerOnce' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged, ReturnValue) == 0x000048, "Member 'AbilityAsync_WaitAttributeChanged_WaitForAttributeChanged::ReturnValue' has a wrong offset!");
+
 // Function GameplayAbilities.AbilityAsync_WaitGameplayEvent.WaitGameplayEventToActor
 // 0x0020 (0x0020 - 0x0000)
 struct AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor final
@@ -462,6 +458,24 @@ static_assert(offsetof(AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor, 
 static_assert(offsetof(AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor, OnlyTriggerOnce) == 0x000010, "Member 'AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor::OnlyTriggerOnce' has a wrong offset!");
 static_assert(offsetof(AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor, OnlyMatchExact) == 0x000011, "Member 'AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor::OnlyMatchExact' has a wrong offset!");
 static_assert(offsetof(AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor, ReturnValue) == 0x000018, "Member 'AbilityAsync_WaitGameplayEvent_WaitGameplayEventToActor::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityAsync_WaitGameplayTagAdded.WaitGameplayTagAddToActor
+// 0x0020 (0x0020 - 0x0000)
+struct AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor final
+{
+public:
+	class AActor*                                 TargetActor;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           Tag;                                               // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OnlyTriggerOnce;                                   // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityAsync_WaitGameplayTagAdded*     ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor) == 0x000008, "Wrong alignment on AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor");
+static_assert(sizeof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor) == 0x000020, "Wrong size on AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, TargetActor) == 0x000000, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::TargetActor' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, Tag) == 0x000008, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::Tag' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, OnlyTriggerOnce) == 0x000010, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::OnlyTriggerOnce' has a wrong offset!");
+static_assert(offsetof(AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor, ReturnValue) == 0x000018, "Member 'AbilityAsync_WaitGameplayTagAdded_WaitGameplayTagAddToActor::ReturnValue' has a wrong offset!");
 
 // Function GameplayAbilities.AbilityAsync_WaitGameplayTagRemoved.WaitGameplayTagRemoveFromActor
 // 0x0020 (0x0020 - 0x0000)
@@ -1574,22 +1588,64 @@ static_assert(offsetof(AbilityTask_NetworkSyncPoint_WaitNetSync, OwningAbility) 
 static_assert(offsetof(AbilityTask_NetworkSyncPoint_WaitNetSync, SyncType) == 0x000008, "Member 'AbilityTask_NetworkSyncPoint_WaitNetSync::SyncType' has a wrong offset!");
 static_assert(offsetof(AbilityTask_NetworkSyncPoint_WaitNetSync, ReturnValue) == 0x000010, "Member 'AbilityTask_NetworkSyncPoint_WaitNetSync::ReturnValue' has a wrong offset!");
 
-// Function GameplayAbilities.AbilityTask_Repeat.RepeatAction
-// 0x0018 (0x0018 - 0x0000)
-struct AbilityTask_Repeat_RepeatAction final
+// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.CreatePlayMontageAndWaitProxy
+// 0x0040 (0x0040 - 0x0000)
+struct AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeBetweenActions;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalActionCount;                                  // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_Repeat*                    ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           MontageToPlay_0;                                   // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rate_0;                                            // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StartSection_0;                                    // 0x001C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStopWhenAbilityEnds_0;                            // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AnimRootMotionTranslationScale_0;                  // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartTimeSeconds_0;                                // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowInterruptAfterBlendOut_0;                    // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_PlayMontageAndWait*        ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AbilityTask_Repeat_RepeatAction) == 0x000008, "Wrong alignment on AbilityTask_Repeat_RepeatAction");
-static_assert(sizeof(AbilityTask_Repeat_RepeatAction) == 0x000018, "Wrong size on AbilityTask_Repeat_RepeatAction");
-static_assert(offsetof(AbilityTask_Repeat_RepeatAction, OwningAbility) == 0x000000, "Member 'AbilityTask_Repeat_RepeatAction::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_Repeat_RepeatAction, TimeBetweenActions) == 0x000008, "Member 'AbilityTask_Repeat_RepeatAction::TimeBetweenActions' has a wrong offset!");
-static_assert(offsetof(AbilityTask_Repeat_RepeatAction, TotalActionCount) == 0x00000C, "Member 'AbilityTask_Repeat_RepeatAction::TotalActionCount' has a wrong offset!");
-static_assert(offsetof(AbilityTask_Repeat_RepeatAction, ReturnValue) == 0x000010, "Member 'AbilityTask_Repeat_RepeatAction::ReturnValue' has a wrong offset!");
+static_assert(alignof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy) == 0x000008, "Wrong alignment on AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy");
+static_assert(sizeof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy) == 0x000040, "Wrong size on AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, OwningAbility) == 0x000000, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, TaskInstanceName) == 0x000008, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::TaskInstanceName' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, MontageToPlay_0) == 0x000010, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::MontageToPlay_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, Rate_0) == 0x000018, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::Rate_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, StartSection_0) == 0x00001C, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::StartSection_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, bStopWhenAbilityEnds_0) == 0x000024, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::bStopWhenAbilityEnds_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, AnimRootMotionTranslationScale_0) == 0x000028, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::AnimRootMotionTranslationScale_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, StartTimeSeconds_0) == 0x00002C, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::StartTimeSeconds_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, bAllowInterruptAfterBlendOut_0) == 0x000030, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::bAllowInterruptAfterBlendOut_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, ReturnValue) == 0x000038, "Member 'AbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageBlendingOut
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_PlayMontageAndWait_OnMontageBlendingOut final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut) == 0x000008, "Wrong alignment on AbilityTask_PlayMontageAndWait_OnMontageBlendingOut");
+static_assert(sizeof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut) == 0x000010, "Wrong size on AbilityTask_PlayMontageAndWait_OnMontageBlendingOut");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut, Montage) == 0x000000, "Member 'AbilityTask_PlayMontageAndWait_OnMontageBlendingOut::Montage' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageBlendingOut, bInterrupted) == 0x000008, "Member 'AbilityTask_PlayMontageAndWait_OnMontageBlendingOut::bInterrupted' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_PlayMontageAndWait.OnMontageEnded
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_PlayMontageAndWait_OnMontageEnded final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AbilityTask_PlayMontageAndWait_OnMontageEnded) == 0x000008, "Wrong alignment on AbilityTask_PlayMontageAndWait_OnMontageEnded");
+static_assert(sizeof(AbilityTask_PlayMontageAndWait_OnMontageEnded) == 0x000010, "Wrong size on AbilityTask_PlayMontageAndWait_OnMontageEnded");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageEnded, Montage) == 0x000000, "Member 'AbilityTask_PlayMontageAndWait_OnMontageEnded::Montage' has a wrong offset!");
+static_assert(offsetof(AbilityTask_PlayMontageAndWait_OnMontageEnded, bInterrupted) == 0x000008, "Member 'AbilityTask_PlayMontageAndWait_OnMontageEnded::bInterrupted' has a wrong offset!");
 
 // Function GameplayAbilities.AbilityTask_SpawnActor.SpawnActor
 // 0x0040 (0x0040 - 0x0000)
@@ -1660,77 +1716,6 @@ static_assert(offsetof(AbilityTask_StartAbilityState_StartAbilityState, OwningAb
 static_assert(offsetof(AbilityTask_StartAbilityState_StartAbilityState, StateName) == 0x000008, "Member 'AbilityTask_StartAbilityState_StartAbilityState::StateName' has a wrong offset!");
 static_assert(offsetof(AbilityTask_StartAbilityState_StartAbilityState, bEndCurrentState) == 0x000010, "Member 'AbilityTask_StartAbilityState_StartAbilityState::bEndCurrentState' has a wrong offset!");
 static_assert(offsetof(AbilityTask_StartAbilityState_StartAbilityState, ReturnValue) == 0x000018, "Member 'AbilityTask_StartAbilityState_StartAbilityState::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargeting
-// 0x0028 (0x0028 - 0x0000)
-struct AbilityTask_VisualizeTargeting_VisualizeTargeting final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_VisualizeTargeting_VisualizeTargeting) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_VisualizeTargeting");
-static_assert(sizeof(AbilityTask_VisualizeTargeting_VisualizeTargeting) == 0x000028, "Wrong size on AbilityTask_VisualizeTargeting_VisualizeTargeting");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, Class_0) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::Class_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, TaskInstanceName) == 0x000010, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::TaskInstanceName' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, Duration) == 0x000018, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::Duration' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargeting, ReturnValue) == 0x000020, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargeting::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.VisualizeTargetingUsingActor
-// 0x0028 (0x0028 - 0x0000)
-struct AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGameplayAbilityTargetActor*            TargetActor;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TaskInstanceName;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAbilityTask_VisualizeTargeting*        ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor");
-static_assert(sizeof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor) == 0x000028, "Wrong size on AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, TargetActor) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::TargetActor' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, TaskInstanceName) == 0x000010, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::TaskInstanceName' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, Duration) == 0x000018, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::Duration' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, ReturnValue) == 0x000020, "Member 'AbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.BeginSpawningActor
-// 0x0020 (0x0020 - 0x0000)
-struct AbilityTask_VisualizeTargeting_BeginSpawningActor final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class AGameplayAbilityTargetActor> Class_0;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(AbilityTask_VisualizeTargeting_BeginSpawningActor) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_BeginSpawningActor");
-static_assert(sizeof(AbilityTask_VisualizeTargeting_BeginSpawningActor) == 0x000020, "Wrong size on AbilityTask_VisualizeTargeting_BeginSpawningActor");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, Class_0) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::Class_0' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, SpawnedActor) == 0x000010, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::SpawnedActor' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_BeginSpawningActor, ReturnValue) == 0x000018, "Member 'AbilityTask_VisualizeTargeting_BeginSpawningActor::ReturnValue' has a wrong offset!");
-
-// Function GameplayAbilities.AbilityTask_VisualizeTargeting.FinishSpawningActor
-// 0x0010 (0x0010 - 0x0000)
-struct AbilityTask_VisualizeTargeting_FinishSpawningActor final
-{
-public:
-	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AGameplayAbilityTargetActor*            SpawnedActor;                                      // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AbilityTask_VisualizeTargeting_FinishSpawningActor) == 0x000008, "Wrong alignment on AbilityTask_VisualizeTargeting_FinishSpawningActor");
-static_assert(sizeof(AbilityTask_VisualizeTargeting_FinishSpawningActor) == 0x000010, "Wrong size on AbilityTask_VisualizeTargeting_FinishSpawningActor");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_FinishSpawningActor, OwningAbility) == 0x000000, "Member 'AbilityTask_VisualizeTargeting_FinishSpawningActor::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_VisualizeTargeting_FinishSpawningActor, SpawnedActor) == 0x000008, "Member 'AbilityTask_VisualizeTargeting_FinishSpawningActor::SpawnedActor' has a wrong offset!");
 
 // Function GameplayAbilities.AbilityTask_WaitAbilityActivate.WaitForAbilityActivate
 // 0x0028 (0x0028 - 0x0000)
@@ -1907,30 +1892,45 @@ static_assert(offsetof(AbilityTask_WaitAttributeChange_WaitForAttributeChangeWit
 static_assert(offsetof(AbilityTask_WaitAttributeChange_WaitForAttributeChangeWithComparison, OptionalExternalOwner) == 0x000060, "Member 'AbilityTask_WaitAttributeChange_WaitForAttributeChangeWithComparison::OptionalExternalOwner' has a wrong offset!");
 static_assert(offsetof(AbilityTask_WaitAttributeChange_WaitForAttributeChangeWithComparison, ReturnValue) == 0x000068, "Member 'AbilityTask_WaitAttributeChange_WaitForAttributeChangeWithComparison::ReturnValue' has a wrong offset!");
 
-// Function GameplayAbilities.AbilityTask_WaitAttributeChangeThreshold.WaitForAttributeChangeThreshold
-// 0x0060 (0x0060 - 0x0000)
-struct AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold final
+// Function GameplayAbilities.AbilityTask_WaitAttributeChangeRatioThreshold.WaitForAttributeChangeRatioThreshold
+// 0x0098 (0x0098 - 0x0000)
+struct AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold final
 {
 public:
 	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayAttribute                     Attribute;                                         // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ComparisonValue;                                   // 0x0044(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTriggerOnce;                                      // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OptionalExternalOwner;                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAbilityTask_WaitAttributeChangeThreshold* ReturnValue;                                    // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     AttributeNumerator;                                // 0x0008(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayAttribute                     AttributeDenominator;                              // 0x0040(0x0038)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWaitAttributeChangeComparison                ComparisonType;                                    // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_79[0x3];                                       // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ComparisonValue;                                   // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriggerOnce;                                      // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OptionalExternalOwner;                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitAttributeChangeRatioThreshold* ReturnValue;                               // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold) == 0x000008, "Wrong alignment on AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold");
-static_assert(sizeof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold) == 0x000060, "Wrong size on AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::OwningAbility' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, Attribute) == 0x000008, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::Attribute' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, ComparisonType) == 0x000040, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::ComparisonType' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, ComparisonValue) == 0x000044, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::ComparisonValue' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, bTriggerOnce) == 0x000048, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::bTriggerOnce' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, OptionalExternalOwner) == 0x000050, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::OptionalExternalOwner' has a wrong offset!");
-static_assert(offsetof(AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, ReturnValue) == 0x000058, "Member 'AbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold::ReturnValue' has a wrong offset!");
+static_assert(alignof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold) == 0x000008, "Wrong alignment on AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold");
+static_assert(sizeof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold) == 0x000098, "Wrong size on AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, AttributeNumerator) == 0x000008, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::AttributeNumerator' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, AttributeDenominator) == 0x000040, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::AttributeDenominator' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, ComparisonType) == 0x000078, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::ComparisonType' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, ComparisonValue) == 0x00007C, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::ComparisonValue' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, bTriggerOnce) == 0x000080, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::bTriggerOnce' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, OptionalExternalOwner) == 0x000088, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::OptionalExternalOwner' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold, ReturnValue) == 0x000090, "Member 'AbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold::ReturnValue' has a wrong offset!");
+
+// Function GameplayAbilities.AbilityTask_WaitCancel.WaitCancel
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_WaitCancel_WaitCancel final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAbilityTask_WaitCancel*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_WaitCancel_WaitCancel) == 0x000008, "Wrong alignment on AbilityTask_WaitCancel_WaitCancel");
+static_assert(sizeof(AbilityTask_WaitCancel_WaitCancel) == 0x000010, "Wrong size on AbilityTask_WaitCancel_WaitCancel");
+static_assert(offsetof(AbilityTask_WaitCancel_WaitCancel, OwningAbility) == 0x000000, "Member 'AbilityTask_WaitCancel_WaitCancel::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_WaitCancel_WaitCancel, ReturnValue) == 0x000008, "Member 'AbilityTask_WaitCancel_WaitCancel::ReturnValue' has a wrong offset!");
 
 // Function GameplayAbilities.AbilityTask_WaitConfirmCancel.WaitConfirmCancel
 // 0x0010 (0x0010 - 0x0000)

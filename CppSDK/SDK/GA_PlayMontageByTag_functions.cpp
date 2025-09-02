@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.ExecuteUbergraph_GA_PlayMontageByTag
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_PlayMontageByTag_C::ExecuteUbergraph_GA_PlayMontageByTag(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_PlayMontageByTag_C", "ExecuteUbergraph_GA_PlayMontageByTag");
+
+	Params::GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.K2_ActivateAbilityFromEvent
 // (Event, Protected, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -37,23 +57,23 @@ void UGA_PlayMontageByTag_C::K2_ActivateAbilityFromEvent(const struct FGameplayE
 }
 
 
-// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.ExecuteUbergraph_GA_PlayMontageByTag
-// (Final, UbergraphFunction, HasDefaults)
+// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-void UGA_PlayMontageByTag_C::ExecuteUbergraph_GA_PlayMontageByTag(int32 EntryPoint)
+class FString UGA_PlayMontageByTag_C::GetModuleName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_PlayMontageByTag_C", "ExecuteUbergraph_GA_PlayMontageByTag");
+		Func = Class->GetFunction("GA_PlayMontageByTag_C", "GetModuleName");
 
-	Params::GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::GA_PlayMontageByTag_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -75,26 +95,6 @@ bool UGA_PlayMontageByTag_C::K2_ShouldAbilityRespondToEvent(const struct FGamepl
 
 	Parms.ActorInfo = std::move(ActorInfo);
 	Parms.Payload = std::move(Payload);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UGA_PlayMontageByTag_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_PlayMontageByTag_C", "GetModuleName");
-
-	Params::GA_PlayMontageByTag_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

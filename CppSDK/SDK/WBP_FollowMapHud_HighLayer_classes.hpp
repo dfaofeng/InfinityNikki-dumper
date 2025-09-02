@@ -27,15 +27,15 @@ public:
 	class UCanvasPanel*                           MoveRoot;                                          // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SetMoveContentPositionInternal(const struct FVector2D& Pos);
-	void SetMoveContentPosition(const struct FVector2D& Pos);
-	void SetContentSizeInternal(const struct FVector2D& Size);
-	void SetContentSize(const struct FVector2D& Size);
-	void SetContentScaleInternal(const struct FVector2D& Scale);
-	void SetContentScale(const struct FVector2D& Scale);
-	void SetClipRangeInternal(const struct FVector2D& Size);
-	void SetClipRange(const struct FVector2D& Size);
 	void ExecuteUbergraph_WBP_FollowMapHud_HighLayer(int32 EntryPoint);
+	void SetClipRange(const struct FVector2D& Size);
+	void SetClipRangeInternal(const struct FVector2D& Size);
+	void SetContentScale(const struct FVector2D& Scale);
+	void SetContentScaleInternal(const struct FVector2D& Scale);
+	void SetContentSize(const struct FVector2D& Size);
+	void SetContentSizeInternal(const struct FVector2D& Size);
+	void SetMoveContentPosition(const struct FVector2D& Pos);
+	void SetMoveContentPositionInternal(const struct FVector2D& Pos);
 
 public:
 	static class UClass* StaticClass()

@@ -17,32 +17,32 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_X6PlayerCharacterVisitor.BP_X6PlayerCharacterVisitor_C
-// 0x00B0 (0x0980 - 0x08D0)
+// 0x00B0 (0x0A30 - 0x0980)
 class ABP_X6PlayerCharacterVisitor_C : public AX6PlayerCharacterBase
 {
 public:
-	class USphereComponent*                       InteractItem;                                      // 0x08D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CombatPerformanceProcessorComponent_C* BP_CombatPerformanceProcessorComponent;         // 0x08D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CharacterBaseInfoComponent_C*       BP_CharacterBaseInfoComponent;                     // 0x08E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerFeedBackPerformanceComponent_C* BP_PlayerFeedBackPerformanceComponent;           // 0x08E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerInAirMoveableComponent_C*     BP_PlayerInAirMoveableComponent;                   // 0x08F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_SoundAndParticleComponent_C*        BP_SoundAndParticleComponent;                      // 0x08F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UX6CustomRootMotionComponent*           X6CustomRootMotion;                                // 0x0900(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UX6NikkiCPPTickHelperComponent*         X6NikkiCPPTickHelper;                              // 0x0908(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PawnPiecemealFeatures_C*            BP_PawnPiecemealFeatures;                          // 0x0910(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerMantleComponent_C*            BP_PlayerMantleComponent;                          // 0x0918(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        BP_PlayerAnimStatesComponent;                      // 0x0920(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerMoveableComponent_C*          BP_PlayerMoveableComponent;                        // 0x0928(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerSpecialAbilityComponent_C*    BP_PlayerSpecialAbilityComponent;                  // 0x0930(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerEnvironmentEffectComponent_C* BP_PlayerEnvironmentEffectComponent;               // 0x0938(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerPawnAttributesComponent_C*    BP_PlayerPawnAttributesComponent;                  // 0x0940(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_SuitDisplayComponent_C*             BP_SuitDisplayComponent;                           // 0x0948(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 HandHold;                                          // 0x0950(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 HeadOrnament;                                      // 0x0958(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Shoe;                                              // 0x0960(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Trouser;                                           // 0x0968(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Hair;                                              // 0x0970(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Skirt;                                             // 0x0978(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       InteractItem;                                      // 0x0980(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CombatPerformanceProcessorComponent_C* BP_CombatPerformanceProcessorComponent;         // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CharacterBaseInfoComponent_C*       BP_CharacterBaseInfoComponent;                     // 0x0990(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerFeedBackPerformanceComponent_C* BP_PlayerFeedBackPerformanceComponent;           // 0x0998(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerInAirMoveableComponent_C*     BP_PlayerInAirMoveableComponent;                   // 0x09A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_SoundAndParticleComponent_C*        BP_SoundAndParticleComponent;                      // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UX6CustomRootMotionComponent*           X6CustomRootMotion;                                // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UX6NikkiCPPTickHelperComponent*         X6NikkiCPPTickHelper;                              // 0x09B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PawnPiecemealFeatures_C*            BP_PawnPiecemealFeatures;                          // 0x09C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerMantleComponent_C*            BP_PlayerMantleComponent;                          // 0x09C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        BP_PlayerAnimStatesComponent;                      // 0x09D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerMoveableComponent_C*          BP_PlayerMoveableComponent;                        // 0x09D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerSpecialAbilityComponent_C*    BP_PlayerSpecialAbilityComponent;                  // 0x09E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerEnvironmentEffectComponent_C* BP_PlayerEnvironmentEffectComponent;               // 0x09E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerPawnAttributesComponent_C*    BP_PlayerPawnAttributesComponent;                  // 0x09F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_SuitDisplayComponent_C*             BP_SuitDisplayComponent;                           // 0x09F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 HandHold;                                          // 0x0A00(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 HeadOrnament;                                      // 0x0A08(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Shoe;                                              // 0x0A10(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Trouser;                                           // 0x0A18(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Hair;                                              // 0x0A20(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Skirt;                                             // 0x0A28(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	class FString GetModuleName() const;
@@ -58,29 +58,29 @@ public:
 	}
 };
 static_assert(alignof(ABP_X6PlayerCharacterVisitor_C) == 0x000010, "Wrong alignment on ABP_X6PlayerCharacterVisitor_C");
-static_assert(sizeof(ABP_X6PlayerCharacterVisitor_C) == 0x000980, "Wrong size on ABP_X6PlayerCharacterVisitor_C");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, InteractItem) == 0x0008D0, "Member 'ABP_X6PlayerCharacterVisitor_C::InteractItem' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_CombatPerformanceProcessorComponent) == 0x0008D8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_CombatPerformanceProcessorComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_CharacterBaseInfoComponent) == 0x0008E0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_CharacterBaseInfoComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerFeedBackPerformanceComponent) == 0x0008E8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerFeedBackPerformanceComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerInAirMoveableComponent) == 0x0008F0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerInAirMoveableComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_SoundAndParticleComponent) == 0x0008F8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_SoundAndParticleComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, X6CustomRootMotion) == 0x000900, "Member 'ABP_X6PlayerCharacterVisitor_C::X6CustomRootMotion' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, X6NikkiCPPTickHelper) == 0x000908, "Member 'ABP_X6PlayerCharacterVisitor_C::X6NikkiCPPTickHelper' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PawnPiecemealFeatures) == 0x000910, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PawnPiecemealFeatures' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerMantleComponent) == 0x000918, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerMantleComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerAnimStatesComponent) == 0x000920, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerAnimStatesComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerMoveableComponent) == 0x000928, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerMoveableComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerSpecialAbilityComponent) == 0x000930, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerSpecialAbilityComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerEnvironmentEffectComponent) == 0x000938, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerEnvironmentEffectComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerPawnAttributesComponent) == 0x000940, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerPawnAttributesComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_SuitDisplayComponent) == 0x000948, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_SuitDisplayComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, HandHold) == 0x000950, "Member 'ABP_X6PlayerCharacterVisitor_C::HandHold' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, HeadOrnament) == 0x000958, "Member 'ABP_X6PlayerCharacterVisitor_C::HeadOrnament' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Shoe) == 0x000960, "Member 'ABP_X6PlayerCharacterVisitor_C::Shoe' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Trouser) == 0x000968, "Member 'ABP_X6PlayerCharacterVisitor_C::Trouser' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Hair) == 0x000970, "Member 'ABP_X6PlayerCharacterVisitor_C::Hair' has a wrong offset!");
-static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Skirt) == 0x000978, "Member 'ABP_X6PlayerCharacterVisitor_C::Skirt' has a wrong offset!");
+static_assert(sizeof(ABP_X6PlayerCharacterVisitor_C) == 0x000A30, "Wrong size on ABP_X6PlayerCharacterVisitor_C");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, InteractItem) == 0x000980, "Member 'ABP_X6PlayerCharacterVisitor_C::InteractItem' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_CombatPerformanceProcessorComponent) == 0x000988, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_CombatPerformanceProcessorComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_CharacterBaseInfoComponent) == 0x000990, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_CharacterBaseInfoComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerFeedBackPerformanceComponent) == 0x000998, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerFeedBackPerformanceComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerInAirMoveableComponent) == 0x0009A0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerInAirMoveableComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_SoundAndParticleComponent) == 0x0009A8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_SoundAndParticleComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, X6CustomRootMotion) == 0x0009B0, "Member 'ABP_X6PlayerCharacterVisitor_C::X6CustomRootMotion' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, X6NikkiCPPTickHelper) == 0x0009B8, "Member 'ABP_X6PlayerCharacterVisitor_C::X6NikkiCPPTickHelper' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PawnPiecemealFeatures) == 0x0009C0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PawnPiecemealFeatures' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerMantleComponent) == 0x0009C8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerMantleComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerAnimStatesComponent) == 0x0009D0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerAnimStatesComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerMoveableComponent) == 0x0009D8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerMoveableComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerSpecialAbilityComponent) == 0x0009E0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerSpecialAbilityComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerEnvironmentEffectComponent) == 0x0009E8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerEnvironmentEffectComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_PlayerPawnAttributesComponent) == 0x0009F0, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_PlayerPawnAttributesComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, BP_SuitDisplayComponent) == 0x0009F8, "Member 'ABP_X6PlayerCharacterVisitor_C::BP_SuitDisplayComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, HandHold) == 0x000A00, "Member 'ABP_X6PlayerCharacterVisitor_C::HandHold' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, HeadOrnament) == 0x000A08, "Member 'ABP_X6PlayerCharacterVisitor_C::HeadOrnament' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Shoe) == 0x000A10, "Member 'ABP_X6PlayerCharacterVisitor_C::Shoe' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Trouser) == 0x000A18, "Member 'ABP_X6PlayerCharacterVisitor_C::Trouser' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Hair) == 0x000A20, "Member 'ABP_X6PlayerCharacterVisitor_C::Hair' has a wrong offset!");
+static_assert(offsetof(ABP_X6PlayerCharacterVisitor_C, Skirt) == 0x000A28, "Member 'ABP_X6PlayerCharacterVisitor_C::Skirt' has a wrong offset!");
 
 }
 

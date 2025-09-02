@@ -18,19 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LevelConfigActor.BP_LevelConfigActor_C
-// 0x0010 (0x0B40 - 0x0B30)
+// 0x0008 (0x0B60 - 0x0B58)
 class ABP_LevelConfigActor_C final : public ABP_LevelConfigActor_Master_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B30(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         ReturnValue;                                       // 0x0B38(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0B58(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
 	void ExecuteUbergraph_BP_LevelConfigActor(int32 EntryPoint);
-	void PostConstruct();
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()
@@ -43,9 +40,8 @@ public:
 	}
 };
 static_assert(alignof(ABP_LevelConfigActor_C) == 0x000008, "Wrong alignment on ABP_LevelConfigActor_C");
-static_assert(sizeof(ABP_LevelConfigActor_C) == 0x000B40, "Wrong size on ABP_LevelConfigActor_C");
-static_assert(offsetof(ABP_LevelConfigActor_C, UberGraphFrame) == 0x000B30, "Member 'ABP_LevelConfigActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigActor_C, ReturnValue) == 0x000B38, "Member 'ABP_LevelConfigActor_C::ReturnValue' has a wrong offset!");
+static_assert(sizeof(ABP_LevelConfigActor_C) == 0x000B60, "Wrong size on ABP_LevelConfigActor_C");
+static_assert(offsetof(ABP_LevelConfigActor_C, UberGraphFrame) == 0x000B58, "Member 'ABP_LevelConfigActor_C::UberGraphFrame' has a wrong offset!");
 
 }
 

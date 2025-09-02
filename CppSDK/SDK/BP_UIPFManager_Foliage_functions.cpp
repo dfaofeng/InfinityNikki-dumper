@@ -17,35 +17,21 @@
 namespace SDK
 {
 
-// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ABP_UIPFManager_Foliage_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPFManager_Foliage_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.OnPre_RT_Loaded
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.ExecuteUbergraph_BP_UIPFManager_Foliage
+// (Final, UbergraphFunction)
 // Parameters:
-// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIPFManager_Foliage_C::OnPre_RT_Loaded(class UObject* Loaded)
+void ABP_UIPFManager_Foliage_C::ExecuteUbergraph_BP_UIPFManager_Foliage(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPFManager_Foliage_C", "OnPre_RT_Loaded");
+		Func = Class->GetFunction("BP_UIPFManager_Foliage_C", "ExecuteUbergraph_BP_UIPFManager_Foliage");
 
-	Params::BP_UIPFManager_Foliage_C_OnPre_RT_Loaded Parms{};
+	Params::BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage Parms{};
 
-	Parms.Loaded = Loaded;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -71,23 +57,37 @@ void ABP_UIPFManager_Foliage_C::OnCur_RT_Loaded(class UObject* Loaded)
 }
 
 
-// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.ExecuteUbergraph_BP_UIPFManager_Foliage
-// (Final, UbergraphFunction)
+// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.OnPre_RT_Loaded
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          Loaded                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIPFManager_Foliage_C::ExecuteUbergraph_BP_UIPFManager_Foliage(int32 EntryPoint)
+void ABP_UIPFManager_Foliage_C::OnPre_RT_Loaded(class UObject* Loaded)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPFManager_Foliage_C", "ExecuteUbergraph_BP_UIPFManager_Foliage");
+		Func = Class->GetFunction("BP_UIPFManager_Foliage_C", "OnPre_RT_Loaded");
 
-	Params::BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage Parms{};
+	Params::BP_UIPFManager_Foliage_C_OnPre_RT_Loaded Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Loaded = Loaded;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_UIPFManager_Foliage_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_UIPFManager_Foliage_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

@@ -17,117 +17,43 @@
 namespace SDK
 {
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpteWidgetSize
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_MiniMap_C::UpteWidgetSize(class UWidget* NewParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "UpteWidgetSize");
-
-	Params::WBP_HUD_MiniMap_C_UpteWidgetSize Parms{};
-
-	Parms.NewParam = NewParam;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpdateWidget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          目标                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_MiniMap_C::UpdateWidget(class UWidget* 目标)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "UpdateWidget");
-
-	Params::WBP_HUD_MiniMap_C_UpdateWidget Parms{};
-
-	Parms.目标 = 目标;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.BeginUpdateMapScale
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_MiniMap_C::SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0()
+void UWBP_HUD_MiniMap_C::BeginUpdateMapScale()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0");
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "BeginUpdateMapScale");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_MiniMap_C::SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.ReportException
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void UWBP_HUD_MiniMap_C::ReportException(const class FString& NewParam)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "ReportException");
-
-	Params::WBP_HUD_MiniMap_C_ReportException Parms{};
-
-	Parms.NewParam = std::move(NewParam);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.OnFadeInEnd
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.BP_TraverseAllWidgets
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_MiniMap_C::OnFadeInEnd()
+void UWBP_HUD_MiniMap_C::BP_TraverseAllWidgets()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "OnFadeInEnd");
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "BP_TraverseAllWidgets");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.OnFadeInBegin
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.EndUpdateMapScale
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_MiniMap_C::OnFadeInBegin()
+void UWBP_HUD_MiniMap_C::EndUpdateMapScale()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "OnFadeInBegin");
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "EndUpdateMapScale");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,45 +79,119 @@ void UWBP_HUD_MiniMap_C::ExecuteUbergraph_WBP_HUD_MiniMap(int32 EntryPoint)
 }
 
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.EndUpdateMapScale
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_MiniMap_C::EndUpdateMapScale()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "EndUpdateMapScale");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.BP_TraverseAllWidgets
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.OnFadeInBegin
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_MiniMap_C::BP_TraverseAllWidgets()
+void UWBP_HUD_MiniMap_C::OnFadeInBegin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "BP_TraverseAllWidgets");
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "OnFadeInBegin");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.BeginUpdateMapScale
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.OnFadeInEnd
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_MiniMap_C::BeginUpdateMapScale()
+void UWBP_HUD_MiniMap_C::OnFadeInEnd()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "BeginUpdateMapScale");
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "OnFadeInEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.ReportException
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_HUD_MiniMap_C::ReportException(const class FString& NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "ReportException");
+
+	Params::WBP_HUD_MiniMap_C_ReportException Parms{};
+
+	Parms.NewParam = std::move(NewParam);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_MiniMap_C::SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_MiniMap_C::SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "SequenceEvent__ENTRYPOINTWBP_HUD_MiniMap_0");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpdateWidget
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          目标                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_MiniMap_C::UpdateWidget(class UWidget* 目标)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "UpdateWidget");
+
+	Params::WBP_HUD_MiniMap_C_UpdateWidget Parms{};
+
+	Parms.目标 = 目标;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_MiniMap.WBP_HUD_MiniMap_C.UpteWidgetSize
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWidget*                          NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_MiniMap_C::UpteWidgetSize(class UWidget* NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_MiniMap_C", "UpteWidgetSize");
+
+	Params::WBP_HUD_MiniMap_C_UpteWidgetSize Parms{};
+
+	Parms.NewParam = NewParam;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

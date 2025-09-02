@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SpatialAudioComponent.BP_SpatialAudioComponent_C
-// 0x00A0 (0x0148 - 0x00A8)
+// 0x00F0 (0x0198 - 0x00A8)
 class UBP_SpatialAudioComponent_C final : public UActorComponent
 {
 public:
@@ -29,6 +29,7 @@ public:
 	class UAkRtpc*                                RAmbOpennessRTPC;                                  // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UDataTable>              SurfaceTypeStateMap;                               // 0x00D0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSet<int32>                                   DisableInSpecificLevels;                           // 0x00F8(0x0050)(Edit, BlueprintVisible)
+	TSet<int32>                                   DisableReflectInSpecificLevels;                    // 0x0148(0x0050)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_BP_SpatialAudioComponent(int32 EntryPoint);
@@ -48,7 +49,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_SpatialAudioComponent_C) == 0x000008, "Wrong alignment on UBP_SpatialAudioComponent_C");
-static_assert(sizeof(UBP_SpatialAudioComponent_C) == 0x000148, "Wrong size on UBP_SpatialAudioComponent_C");
+static_assert(sizeof(UBP_SpatialAudioComponent_C) == 0x000198, "Wrong size on UBP_SpatialAudioComponent_C");
 static_assert(offsetof(UBP_SpatialAudioComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_SpatialAudioComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_SpatialAudioComponent_C, RoomSizeRTPC) == 0x0000B0, "Member 'UBP_SpatialAudioComponent_C::RoomSizeRTPC' has a wrong offset!");
 static_assert(offsetof(UBP_SpatialAudioComponent_C, InOutRoomRatioRTPC) == 0x0000B8, "Member 'UBP_SpatialAudioComponent_C::InOutRoomRatioRTPC' has a wrong offset!");
@@ -56,6 +57,7 @@ static_assert(offsetof(UBP_SpatialAudioComponent_C, LAmbOpennessRTPC) == 0x0000C
 static_assert(offsetof(UBP_SpatialAudioComponent_C, RAmbOpennessRTPC) == 0x0000C8, "Member 'UBP_SpatialAudioComponent_C::RAmbOpennessRTPC' has a wrong offset!");
 static_assert(offsetof(UBP_SpatialAudioComponent_C, SurfaceTypeStateMap) == 0x0000D0, "Member 'UBP_SpatialAudioComponent_C::SurfaceTypeStateMap' has a wrong offset!");
 static_assert(offsetof(UBP_SpatialAudioComponent_C, DisableInSpecificLevels) == 0x0000F8, "Member 'UBP_SpatialAudioComponent_C::DisableInSpecificLevels' has a wrong offset!");
+static_assert(offsetof(UBP_SpatialAudioComponent_C, DisableReflectInSpecificLevels) == 0x000148, "Member 'UBP_SpatialAudioComponent_C::DisableReflectInSpecificLevels' has a wrong offset!");
 
 }
 

@@ -19,7 +19,7 @@ namespace SDK
 struct FPSdkUeCrossQrCodeModel final
 {
 public:
-	class FString                                 Code;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 code;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Ecc;                                               // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Size;                                              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Border;                                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -27,7 +27,7 @@ public:
 };
 static_assert(alignof(FPSdkUeCrossQrCodeModel) == 0x000008, "Wrong alignment on FPSdkUeCrossQrCodeModel");
 static_assert(sizeof(FPSdkUeCrossQrCodeModel) == 0x000020, "Wrong size on FPSdkUeCrossQrCodeModel");
-static_assert(offsetof(FPSdkUeCrossQrCodeModel, Code) == 0x000000, "Member 'FPSdkUeCrossQrCodeModel::Code' has a wrong offset!");
+static_assert(offsetof(FPSdkUeCrossQrCodeModel, code) == 0x000000, "Member 'FPSdkUeCrossQrCodeModel::code' has a wrong offset!");
 static_assert(offsetof(FPSdkUeCrossQrCodeModel, Ecc) == 0x000010, "Member 'FPSdkUeCrossQrCodeModel::Ecc' has a wrong offset!");
 static_assert(offsetof(FPSdkUeCrossQrCodeModel, Size) == 0x000014, "Member 'FPSdkUeCrossQrCodeModel::Size' has a wrong offset!");
 static_assert(offsetof(FPSdkUeCrossQrCodeModel, Border) == 0x000018, "Member 'FPSdkUeCrossQrCodeModel::Border' has a wrong offset!");

@@ -11,24 +11,24 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "PaperPartitionRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
-#include "PaperPartitionRuntime_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class PaperPartitionRuntime.PaperPartition
-// 0x06B8 (0x06E0 - 0x0028)
+// 0x0718 (0x0740 - 0x0028)
 class UPaperPartition final : public UPaperWorldPartition
 {
 public:
-	uint8                                         Pad_28[0x468];                                     // 0x0028(0x0468)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UObject*, int32>                   ReferenceHash;                                     // 0x0490(0x0050)(NativeAccessSpecifierPrivate)
-	TArray<class UObject*>                        ReferencedObjects;                                 // 0x04E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_4F0[0x1F0];                                    // 0x04F0(0x01F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x4C8];                                     // 0x0028(0x04C8)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UObject*, int32>                   ReferenceHash;                                     // 0x04F0(0x0050)(NativeAccessSpecifierPrivate)
+	TArray<class UObject*>                        ReferencedObjects;                                 // 0x0540(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_550[0x1F0];                                    // 0x0550(0x01F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -41,16 +41,16 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartition) == 0x000008, "Wrong alignment on UPaperPartition");
-static_assert(sizeof(UPaperPartition) == 0x0006E0, "Wrong size on UPaperPartition");
-static_assert(offsetof(UPaperPartition, ReferenceHash) == 0x000490, "Member 'UPaperPartition::ReferenceHash' has a wrong offset!");
-static_assert(offsetof(UPaperPartition, ReferencedObjects) == 0x0004E0, "Member 'UPaperPartition::ReferencedObjects' has a wrong offset!");
+static_assert(sizeof(UPaperPartition) == 0x000740, "Wrong size on UPaperPartition");
+static_assert(offsetof(UPaperPartition, ReferenceHash) == 0x0004F0, "Member 'UPaperPartition::ReferenceHash' has a wrong offset!");
+static_assert(offsetof(UPaperPartition, ReferencedObjects) == 0x000540, "Member 'UPaperPartition::ReferencedObjects' has a wrong offset!");
 
 // Class PaperPartitionRuntime.PaperPartitionStreamer
-// 0x0168 (0x0190 - 0x0028)
+// 0x01A0 (0x01C8 - 0x0028)
 class UPaperPartitionStreamer : public UObject
 {
 public:
-	uint8                                         Pad_28[0x168];                                     // 0x0028(0x0168)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0x1A0];                                     // 0x0028(0x01A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -63,14 +63,14 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionStreamer) == 0x000008, "Wrong alignment on UPaperPartitionStreamer");
-static_assert(sizeof(UPaperPartitionStreamer) == 0x000190, "Wrong size on UPaperPartitionStreamer");
+static_assert(sizeof(UPaperPartitionStreamer) == 0x0001C8, "Wrong size on UPaperPartitionStreamer");
 
 // Class PaperPartitionRuntime.PaperPartitionCollisionStreamer
-// 0x0100 (0x0290 - 0x0190)
+// 0x0150 (0x0318 - 0x01C8)
 class UPaperPartitionCollisionStreamer final : public UPaperPartitionStreamer
 {
 public:
-	uint8                                         Pad_190[0x100];                                    // 0x0190(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C8[0x150];                                    // 0x01C8(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -83,10 +83,10 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionCollisionStreamer) == 0x000008, "Wrong alignment on UPaperPartitionCollisionStreamer");
-static_assert(sizeof(UPaperPartitionCollisionStreamer) == 0x000290, "Wrong size on UPaperPartitionCollisionStreamer");
+static_assert(sizeof(UPaperPartitionCollisionStreamer) == 0x000318, "Wrong size on UPaperPartitionCollisionStreamer");
 
 // Class PaperPartitionRuntime.PaperPartitionMeshStreamer
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01C8 - 0x01C8)
 class UPaperPartitionMeshStreamer : public UPaperPartitionStreamer
 {
 public:
@@ -100,10 +100,10 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionMeshStreamer) == 0x000008, "Wrong alignment on UPaperPartitionMeshStreamer");
-static_assert(sizeof(UPaperPartitionMeshStreamer) == 0x000190, "Wrong size on UPaperPartitionMeshStreamer");
+static_assert(sizeof(UPaperPartitionMeshStreamer) == 0x0001C8, "Wrong size on UPaperPartitionMeshStreamer");
 
 // Class PaperPartitionRuntime.PaperPartitionMicroStreamer
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01C8 - 0x01C8)
 class UPaperPartitionMicroStreamer final : public UPaperPartitionMeshStreamer
 {
 public:
@@ -117,10 +117,10 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionMicroStreamer) == 0x000008, "Wrong alignment on UPaperPartitionMicroStreamer");
-static_assert(sizeof(UPaperPartitionMicroStreamer) == 0x000190, "Wrong size on UPaperPartitionMicroStreamer");
+static_assert(sizeof(UPaperPartitionMicroStreamer) == 0x0001C8, "Wrong size on UPaperPartitionMicroStreamer");
 
 // Class PaperPartitionRuntime.PaperPartitionMiscStreamer
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01C8 - 0x01C8)
 class UPaperPartitionMiscStreamer final : public UPaperPartitionStreamer
 {
 public:
@@ -134,7 +134,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionMiscStreamer) == 0x000008, "Wrong alignment on UPaperPartitionMiscStreamer");
-static_assert(sizeof(UPaperPartitionMiscStreamer) == 0x000190, "Wrong size on UPaperPartitionMiscStreamer");
+static_assert(sizeof(UPaperPartitionMiscStreamer) == 0x0001C8, "Wrong size on UPaperPartitionMiscStreamer");
 
 // Class PaperPartitionRuntime.PaperPartitionSettings
 // 0x0118 (0x0150 - 0x0038)
@@ -289,7 +289,7 @@ static_assert(offsetof(UPaperPartitionVastStreamingInfo, VastStreamingActors) ==
 static_assert(offsetof(UPaperPartitionVastStreamingInfo, VastActorOriMap) == 0x000038, "Member 'UPaperPartitionVastStreamingInfo::VastActorOriMap' has a wrong offset!");
 
 // Class PaperPartitionRuntime.PaperPartitionActorProxy
-// 0x0170 (0x0198 - 0x0028)
+// 0x01C0 (0x01E8 - 0x0028)
 class UPaperPartitionActorProxy final : public UObject
 {
 public:
@@ -297,9 +297,9 @@ public:
 	struct FSoftObjectPath                        MiscActorSoftPath;                                 // 0x0030(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UStaticMeshComponent*>           Components;                                        // 0x0050(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TMap<class UInstancedStaticMeshComponent*, class FString> InstanceComponents;                    // 0x0060(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B0[0xE0];                                      // 0x00B0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
-	EPPActorType                                  ActorType;                                         // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_194[0x4];                                      // 0x0194(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_B0[0x130];                                     // 0x00B0(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
+	EPPActorType                                  ActorType;                                         // 0x01E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E4[0x4];                                      // 0x01E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -312,12 +312,12 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionActorProxy) == 0x000008, "Wrong alignment on UPaperPartitionActorProxy");
-static_assert(sizeof(UPaperPartitionActorProxy) == 0x000198, "Wrong size on UPaperPartitionActorProxy");
+static_assert(sizeof(UPaperPartitionActorProxy) == 0x0001E8, "Wrong size on UPaperPartitionActorProxy");
 static_assert(offsetof(UPaperPartitionActorProxy, Actor) == 0x000028, "Member 'UPaperPartitionActorProxy::Actor' has a wrong offset!");
 static_assert(offsetof(UPaperPartitionActorProxy, MiscActorSoftPath) == 0x000030, "Member 'UPaperPartitionActorProxy::MiscActorSoftPath' has a wrong offset!");
 static_assert(offsetof(UPaperPartitionActorProxy, Components) == 0x000050, "Member 'UPaperPartitionActorProxy::Components' has a wrong offset!");
 static_assert(offsetof(UPaperPartitionActorProxy, InstanceComponents) == 0x000060, "Member 'UPaperPartitionActorProxy::InstanceComponents' has a wrong offset!");
-static_assert(offsetof(UPaperPartitionActorProxy, ActorType) == 0x000190, "Member 'UPaperPartitionActorProxy::ActorType' has a wrong offset!");
+static_assert(offsetof(UPaperPartitionActorProxy, ActorType) == 0x0001E0, "Member 'UPaperPartitionActorProxy::ActorType' has a wrong offset!");
 
 // Class PaperPartitionRuntime.PaperPartitionStreamingCell
 // 0x0100 (0x0128 - 0x0028)
@@ -369,11 +369,11 @@ static_assert(sizeof(UPaperPartitionSubsystem) == 0x000248, "Wrong size on UPape
 static_assert(offsetof(UPaperPartitionSubsystem, PaperPartition) == 0x000240, "Member 'UPaperPartitionSubsystem::PaperPartition' has a wrong offset!");
 
 // Class PaperPartitionRuntime.PaperPartitionVastLevelStreamer
-// 0x00C8 (0x00F0 - 0x0028)
+// 0x00E0 (0x0108 - 0x0028)
 class UPaperPartitionVastLevelStreamer final : public UObject
 {
 public:
-	uint8                                         Pad_28[0xC8];                                      // 0x0028(0x00C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_28[0xE0];                                      // 0x0028(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -386,10 +386,10 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionVastLevelStreamer) == 0x000008, "Wrong alignment on UPaperPartitionVastLevelStreamer");
-static_assert(sizeof(UPaperPartitionVastLevelStreamer) == 0x0000F0, "Wrong size on UPaperPartitionVastLevelStreamer");
+static_assert(sizeof(UPaperPartitionVastLevelStreamer) == 0x000108, "Wrong size on UPaperPartitionVastLevelStreamer");
 
 // Class PaperPartitionRuntime.PaperPartitionVastStreamer
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01C8 - 0x01C8)
 class UPaperPartitionVastStreamer final : public UPaperPartitionMeshStreamer
 {
 public:
@@ -403,7 +403,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperPartitionVastStreamer) == 0x000008, "Wrong alignment on UPaperPartitionVastStreamer");
-static_assert(sizeof(UPaperPartitionVastStreamer) == 0x000190, "Wrong size on UPaperPartitionVastStreamer");
+static_assert(sizeof(UPaperPartitionVastStreamer) == 0x0001C8, "Wrong size on UPaperPartitionVastStreamer");
 
 }
 

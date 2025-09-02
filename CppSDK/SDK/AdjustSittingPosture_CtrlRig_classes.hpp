@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "ControlRig_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ControlRig_classes.hpp"
 
 
 namespace SDK
 {
 
 // ControlRigBlueprintGeneratedClass AdjustSittingPosture_CtrlRig.AdjustSittingPosture_CtrlRig_C
-// 0x0238 (0x0CE0 - 0x0AA8)
+// 0x0278 (0x0D20 - 0x0AA8)
 class UAdjustSittingPosture_CtrlRig_C final : public UControlRig
 {
 public:
@@ -42,19 +42,22 @@ public:
 	double                                        KneeMaxXDelta;                                     // 0x0C80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        KneeMinXDelta;                                     // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        MaxAnkleRotateAngle;                               // 0x0C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LeftToeTraceDeltaHeight;                           // 0x0C98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightToeTraceDeltaHeight;                          // 0x0CA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isLeftToeTraceHit;                                 // 0x0CA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isRightToeTraceHit;                                // 0x0CA9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isLeftToeUnderFloor;                               // 0x0CAA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isRightToeUnderFloor;                              // 0x0CAB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CAC[0x4];                                      // 0x0CAC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        HighHeelToeHeight;                                 // 0x0CB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        KneeL_Height;                                      // 0x0CB8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        KneeR_Height;                                      // 0x0CC0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LeftHandPercent;                                   // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightHandPercent;                                  // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TraceHeightThreshold;                              // 0x0CD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AnkleL_LandLocationTemp;                           // 0x0C98(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AnkleR_LandLocationTemp;                           // 0x0CB0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftToeTraceDeltaHeight;                           // 0x0CC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightToeTraceDeltaHeight;                          // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isLeftToeTraceHit;                                 // 0x0CD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isRightToeTraceHit;                                // 0x0CD9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isLeftToeUnderFloor;                               // 0x0CDA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          isRightToeUnderFloor;                              // 0x0CDB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CDC[0x4];                                      // 0x0CDC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        HighHeelToeHeight;                                 // 0x0CE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        KneeL_Height;                                      // 0x0CE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        KneeR_Height;                                      // 0x0CF0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftHandPercent;                                   // 0x0CF8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightHandPercent;                                  // 0x0D00(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TraceHeightThreshold;                              // 0x0D08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RootMDiffZ;                                        // 0x0D10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -67,7 +70,7 @@ public:
 	}
 };
 static_assert(alignof(UAdjustSittingPosture_CtrlRig_C) == 0x000010, "Wrong alignment on UAdjustSittingPosture_CtrlRig_C");
-static_assert(sizeof(UAdjustSittingPosture_CtrlRig_C) == 0x000CE0, "Wrong size on UAdjustSittingPosture_CtrlRig_C");
+static_assert(sizeof(UAdjustSittingPosture_CtrlRig_C) == 0x000D20, "Wrong size on UAdjustSittingPosture_CtrlRig_C");
 static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RootM_Alpha) == 0x000AA8, "Member 'UAdjustSittingPosture_CtrlRig_C::RootM_Alpha' has a wrong offset!");
 static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RootMCompTransform) == 0x000AB0, "Member 'UAdjustSittingPosture_CtrlRig_C::RootMCompTransform' has a wrong offset!");
 static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, AnkleLeftCompTransform) == 0x000B10, "Member 'UAdjustSittingPosture_CtrlRig_C::AnkleLeftCompTransform' has a wrong offset!");
@@ -87,18 +90,21 @@ static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, ToesRotaionYawOffset) ==
 static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, KneeMaxXDelta) == 0x000C80, "Member 'UAdjustSittingPosture_CtrlRig_C::KneeMaxXDelta' has a wrong offset!");
 static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, KneeMinXDelta) == 0x000C88, "Member 'UAdjustSittingPosture_CtrlRig_C::KneeMinXDelta' has a wrong offset!");
 static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, MaxAnkleRotateAngle) == 0x000C90, "Member 'UAdjustSittingPosture_CtrlRig_C::MaxAnkleRotateAngle' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, LeftToeTraceDeltaHeight) == 0x000C98, "Member 'UAdjustSittingPosture_CtrlRig_C::LeftToeTraceDeltaHeight' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RightToeTraceDeltaHeight) == 0x000CA0, "Member 'UAdjustSittingPosture_CtrlRig_C::RightToeTraceDeltaHeight' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isLeftToeTraceHit) == 0x000CA8, "Member 'UAdjustSittingPosture_CtrlRig_C::isLeftToeTraceHit' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isRightToeTraceHit) == 0x000CA9, "Member 'UAdjustSittingPosture_CtrlRig_C::isRightToeTraceHit' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isLeftToeUnderFloor) == 0x000CAA, "Member 'UAdjustSittingPosture_CtrlRig_C::isLeftToeUnderFloor' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isRightToeUnderFloor) == 0x000CAB, "Member 'UAdjustSittingPosture_CtrlRig_C::isRightToeUnderFloor' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, HighHeelToeHeight) == 0x000CB0, "Member 'UAdjustSittingPosture_CtrlRig_C::HighHeelToeHeight' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, KneeL_Height) == 0x000CB8, "Member 'UAdjustSittingPosture_CtrlRig_C::KneeL_Height' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, KneeR_Height) == 0x000CC0, "Member 'UAdjustSittingPosture_CtrlRig_C::KneeR_Height' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, LeftHandPercent) == 0x000CC8, "Member 'UAdjustSittingPosture_CtrlRig_C::LeftHandPercent' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RightHandPercent) == 0x000CD0, "Member 'UAdjustSittingPosture_CtrlRig_C::RightHandPercent' has a wrong offset!");
-static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, TraceHeightThreshold) == 0x000CD8, "Member 'UAdjustSittingPosture_CtrlRig_C::TraceHeightThreshold' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, AnkleL_LandLocationTemp) == 0x000C98, "Member 'UAdjustSittingPosture_CtrlRig_C::AnkleL_LandLocationTemp' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, AnkleR_LandLocationTemp) == 0x000CB0, "Member 'UAdjustSittingPosture_CtrlRig_C::AnkleR_LandLocationTemp' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, LeftToeTraceDeltaHeight) == 0x000CC8, "Member 'UAdjustSittingPosture_CtrlRig_C::LeftToeTraceDeltaHeight' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RightToeTraceDeltaHeight) == 0x000CD0, "Member 'UAdjustSittingPosture_CtrlRig_C::RightToeTraceDeltaHeight' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isLeftToeTraceHit) == 0x000CD8, "Member 'UAdjustSittingPosture_CtrlRig_C::isLeftToeTraceHit' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isRightToeTraceHit) == 0x000CD9, "Member 'UAdjustSittingPosture_CtrlRig_C::isRightToeTraceHit' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isLeftToeUnderFloor) == 0x000CDA, "Member 'UAdjustSittingPosture_CtrlRig_C::isLeftToeUnderFloor' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, isRightToeUnderFloor) == 0x000CDB, "Member 'UAdjustSittingPosture_CtrlRig_C::isRightToeUnderFloor' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, HighHeelToeHeight) == 0x000CE0, "Member 'UAdjustSittingPosture_CtrlRig_C::HighHeelToeHeight' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, KneeL_Height) == 0x000CE8, "Member 'UAdjustSittingPosture_CtrlRig_C::KneeL_Height' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, KneeR_Height) == 0x000CF0, "Member 'UAdjustSittingPosture_CtrlRig_C::KneeR_Height' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, LeftHandPercent) == 0x000CF8, "Member 'UAdjustSittingPosture_CtrlRig_C::LeftHandPercent' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RightHandPercent) == 0x000D00, "Member 'UAdjustSittingPosture_CtrlRig_C::RightHandPercent' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, TraceHeightThreshold) == 0x000D08, "Member 'UAdjustSittingPosture_CtrlRig_C::TraceHeightThreshold' has a wrong offset!");
+static_assert(offsetof(UAdjustSittingPosture_CtrlRig_C, RootMDiffZ) == 0x000D10, "Member 'UAdjustSittingPosture_CtrlRig_C::RootMDiffZ' has a wrong offset!");
 
 }
 

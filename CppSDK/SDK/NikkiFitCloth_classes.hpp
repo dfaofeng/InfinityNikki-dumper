@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "NikkiFitCloth_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -79,17 +79,29 @@ class UMatchTwoClothEvent final : public UBlueprintFunctionLibrary
 public:
 	static bool CheckPrebuildClothData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* BodySkelMesh);
 	static bool CheckSkeletalMeshBone(const class USkeletalMesh* SkeletalMesh);
+	static bool CheckSkeletalMeshFitCacheVersion(class USkeletalMesh* SkeletalMesh, const int32 VersionNumber);
+	static void ClearBoneInfluenceVertexIndicesForFitCache(class USkeletalMesh* SkeletalMesh);
 	static void ClearPairCache();
 	static void ClearPrebuildClothData(class USkeletalMesh* ClothSkelMesh);
-	static void ExtractCPUSkinVertexPositionsToFitChache(class USkeletalMesh* SkeletalMesh, const TArray<int32>& DisabledLODIndices, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms);
-	static void FindBestMatchBetweenClothOfBody(class USkeletalMesh* InnerSkeletalMesh, class USkeletalMesh* OuterSkeletalMesh, class UFitClothCacheAsset* BodyCacheAsset, const struct FMatchClothParameter& MatchParam);
+	static int32 ConvertSecondsToIntesectCounts(double Seconds);
+	static void DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData(class USkeletalMesh* ClothSkelMesh);
+	static void DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData(class USkeletalMesh* ClothSkelMesh, const class FString& MethodName);
+	static void ExtractCPUSkinVertexPositionsAndProjectionsToFitChache(class USkeletalMesh* SkeletalMesh, const TArray<int32>& DisabledLODIndices, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms, const EProjectDataType ProjectDataType, const class FString& ProjectName, bool bMultiplyBoneTransform);
+	static void ExtractCPUSkinVertexPositionsToFitChacheForOrnament(class USkeletalMesh* SkeletalMesh, const TArray<int32>& DisabledLODIndices, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms);
+	static void FindBestMatchBetweenClothOfBody(class USkeletalMesh* InnerSkeletalMesh, class USkeletalMesh* OuterSkeletalMesh, const struct FMatchClothParameter& MatchParam);
 	static bool FindValidPairData(class USkeletalMesh* InnerSkelMesh, class USkeletalMesh* OuterSkelMesh);
+	static void GenerateBoneInfluenceVertexIndicesForFitCache(class USkeletalMesh* SkeletalMesh, const TArray<class FName>& BoneNames);
 	static void GeneratePrebuildBodyData(class USkeletalMesh* BodySkelMesh, const struct FMatchClothEditorParameter& MatchParam);
 	static void GeneratePrebuildClothData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* BodySkelMesh, class USkeletalMesh* RenderBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam);
 	static void GeneratePrebuildClothSkirtData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* BodySkelMesh, class USkeletalMesh* RenderBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam);
+	static void GeneratePrebuildOuterClothData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* BodySkelMesh, class USkeletalMesh* RenderBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam);
 	static void GeneratePrebuildSkinClothData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* BodySkelMesh, class USkeletalMesh* RenderBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms, bool bMultiplyBoneTransform);
+	static void GeneratePrebuildUserDefinedData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* ProjectBodySkelMesh, class USkeletalMesh* DistBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam, const TArray<struct FClothLODSectionIndices>& ProjectBodySectionIndices, const TArray<struct FClothLODSectionIndices>& DistBodySectionIndices, const class FString& ProjectionTypeName, const TArray<class FName>& InClothBoneNames, const TArray<struct FTransform>& InClothBoneTransforms, const TArray<class FName>& InProjectBodyBoneNames, const TArray<struct FTransform>& InProjectBodyBoneTransforms, const TArray<class FName>& InDistBodyBoneNames, const TArray<struct FTransform>& InDistBodyBoneTransforms, bool bMultiplyBoneTransform);
 	static int32 GetMaxPairCacheNum();
 	static int32 GetPairCacheNum();
+	static void GetUserDefinedProjectMethodEnumsFromReferenceFitClothData(TArray<EUserDefinedProjectMethod>* MethodEnums, class USkeletalMesh* ClothSkelMesh, int32 LODIndex);
+	static void GetUserDefinedProjectMethodNamesFromReferenceFitClothData(TArray<class FString>* MethodNames, class USkeletalMesh* ClothSkelMesh, int32 LODIndex);
+	static void InverseCPUSkinVertexOffsetsToFitChache(const TArray<class USkeletalMesh*>& InnerSkeletalMeshes, const TArray<class USkeletalMesh*>& OuterSkeletalMeshes);
 	static void ReleasePairCacheDataExceptInput(const TArray<class FString>& InMeshNames, const TArray<class FString>& OutMeshNames);
 	static void ReleaseReferenceArray(const TArray<class USkeletalMesh*>& InSkelMeshArray);
 	static void ReleaseReferenceData(class USkeletalMesh* InSkelMesh);
@@ -124,6 +136,7 @@ public:
 	static class UAssetUserData* GetAssetUserDataOfClass(class UFitClothCacheAsset* FitCacheAsset, TSubclassOf<class UAssetUserData> InUserDataClass);
 	static void GetNameFromBoneNamePair(class FName* OutClothBoneName, class FName* OutBodyBoneName, const struct FClothBodyBoneNamePair& BoneNamePair);
 	static bool GetNikkiPhysicsBoneWeights(TArray<class FName>* OutColliderBones, TArray<class FName>* OutAnimBones, class USkeletalMesh* InnerSkeletalMesh, float AnimMaskRatioThrshold, float ColliderMaskRatioThrshold);
+	static bool GetNikkiPhysicsBoneWeightsWithVertexInfluences(TArray<class FName>* OutColliderBones, TArray<class FName>* OutAnimBones, class USkeletalMesh* InnerSkeletalMesh, float AnimMaskRatioThrshold, float ColliderMaskRatioThrshold);
 	static void GetSkeletalMeshVisibilityProperty(TArray<int32>* ColorNumVertices, TArray<int32>* ColorNumHidedVertices, TArray<int32>* ColorValues, const class USkeletalMesh* ClothSkeletalMesh, const int32 LODIndex);
 	static void PrintAllVisibilityData();
 	static void PrintVisibilityData(const class USkeletalMesh* SkeletalMesh);
@@ -131,6 +144,7 @@ public:
 	static bool RemoveUserDataOfClass(class UFitClothCacheAsset* FitCacheAsset, TSubclassOf<class UAssetUserData> InUserDataClass);
 	static void ResetAllVisibilityData();
 	static void SaveCurrentClothVisibilityAndOffsetProperty(class USkeletalMeshComponent* InnerComponent, const class FString& SaveFilePath, const int32 LODIndex, bool bKeepDisable);
+	static void SaveNikkiFitClothObjForDebug(class USkeletalMesh* InnerSkeletalMesh, class USkeletalMesh* OuterSkeletalMesh, const class FString& SaveDirectory, ENikkiFitClothObjType NikkiFitClothObjType, const class FString& ProjectName, int32 InLODIndex);
 	static void SetChaosClothFixedVertices(TArray<class FString>* OutAssetNames, TArray<struct FLODVertexIndices>* OutLODFixedIndices, class USkeletalMeshComponent* InnerComponent, float FixedRatioThrshold);
 	static bool SetNameToBoneNamePair(struct FClothBodyBoneNamePair* BoneNamePair, const class FName& InClothBoneName, const class FName& InBodyBoneName, const class USkeletalMesh* InSkeletalMesh);
 
@@ -250,6 +264,34 @@ static_assert(offsetof(UBodyPropertyAssetUserData, ExcludeTrunkSectionIndices) =
 static_assert(offsetof(UBodyPropertyAssetUserData, SmoothSectionIndices) == 0x000048, "Member 'UBodyPropertyAssetUserData::SmoothSectionIndices' has a wrong offset!");
 static_assert(offsetof(UBodyPropertyAssetUserData, TrunkSectionIndices) == 0x000058, "Member 'UBodyPropertyAssetUserData::TrunkSectionIndices' has a wrong offset!");
 static_assert(offsetof(UBodyPropertyAssetUserData, BoneReferenceDataList) == 0x000068, "Member 'UBodyPropertyAssetUserData::BoneReferenceDataList' has a wrong offset!");
+
+// Class NikkiFitCloth.FitClothMutex
+// 0x0008 (0x0030 - 0x0028)
+class UFitClothMutex final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Exit();
+	void Lock();
+	bool TryLock();
+	void Unlock();
+
+	bool IsLocked() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FitClothMutex">();
+	}
+	static class UFitClothMutex* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFitClothMutex>();
+	}
+};
+static_assert(alignof(UFitClothMutex) == 0x000008, "Wrong alignment on UFitClothMutex");
+static_assert(sizeof(UFitClothMutex) == 0x000030, "Wrong size on UFitClothMutex");
 
 }
 

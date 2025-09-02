@@ -10,160 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "EPlatformType_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function PlatformSection.PlatformSection_C.UpdateCondition
-// 0x0118 (0x0118 - 0x0000)
-struct PlatformSection_C_UpdateCondition final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CurrentCondition;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          FinalCondition;                                    // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, bool>                     TempMap;                                           // 0x0010(0x0050)(Edit, BlueprintVisible)
-	class FString                                 Tag;                                               // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          res;                                               // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsPreviewInEditor_Result;                 // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UpdateActorCondition_Result;              // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         CallFunc_Map_Keys_Keys;                            // 0x0088(0x0010)(ReferenceParm)
-	struct FFallbackStruct                        K2Node_MakeStruct_PreviewActorCondionStruct;       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Array_Get_Item;                           // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_Value;                           // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, bool>                     K2Node_MakeMap_Map;                                // 0x00B8(0x0050)()
-	class UObject*                                CallFunc_GetActorOfClass_ReturnValue;              // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FFallbackStruct                        K2Node_MakeStruct_PreviewActorCondionStruct_1;     // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FFallbackStruct                        CallFunc_Map_Find_Value_1;                         // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PlatformSection_C_UpdateCondition) == 0x000008, "Wrong alignment on PlatformSection_C_UpdateCondition");
-static_assert(sizeof(PlatformSection_C_UpdateCondition) == 0x000118, "Wrong size on PlatformSection_C_UpdateCondition");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, Actor) == 0x000000, "Member 'PlatformSection_C_UpdateCondition::Actor' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CurrentCondition) == 0x000008, "Member 'PlatformSection_C_UpdateCondition::CurrentCondition' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, FinalCondition) == 0x000009, "Member 'PlatformSection_C_UpdateCondition::FinalCondition' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, TempMap) == 0x000010, "Member 'PlatformSection_C_UpdateCondition::TempMap' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, Tag) == 0x000060, "Member 'PlatformSection_C_UpdateCondition::Tag' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, res) == 0x000070, "Member 'PlatformSection_C_UpdateCondition::res' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, Temp_int_Array_Index_Variable) == 0x000074, "Member 'PlatformSection_C_UpdateCondition::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, Temp_int_Loop_Counter_Variable) == 0x000078, "Member 'PlatformSection_C_UpdateCondition::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Add_IntInt_ReturnValue) == 0x00007C, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_IsPreviewInEditor_Result) == 0x000080, "Member 'PlatformSection_C_UpdateCondition::CallFunc_IsPreviewInEditor_Result' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_UpdateActorCondition_Result) == 0x000081, "Member 'PlatformSection_C_UpdateCondition::CallFunc_UpdateActorCondition_Result' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Keys_Keys) == 0x000088, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, K2Node_MakeStruct_PreviewActorCondionStruct) == 0x000098, "Member 'PlatformSection_C_UpdateCondition::K2Node_MakeStruct_PreviewActorCondionStruct' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Array_Get_Item) == 0x0000A0, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Array_Length_ReturnValue) == 0x0000B0, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_Value) == 0x0000B4, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_ReturnValue) == 0x0000B5, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Less_IntInt_ReturnValue) == 0x0000B6, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, K2Node_MakeMap_Map) == 0x0000B8, "Member 'PlatformSection_C_UpdateCondition::K2Node_MakeMap_Map' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_GetActorOfClass_ReturnValue) == 0x000108, "Member 'PlatformSection_C_UpdateCondition::CallFunc_GetActorOfClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, K2Node_MakeStruct_PreviewActorCondionStruct_1) == 0x000110, "Member 'PlatformSection_C_UpdateCondition::K2Node_MakeStruct_PreviewActorCondionStruct_1' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_Value_1) == 0x000111, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_Value_1' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_ReturnValue_1) == 0x000112, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
-
-// Function PlatformSection.PlatformSection_C.SetPlatform
-// 0x0040 (0x0040 - 0x0000)
-struct PlatformSection_C_SetPlatform final
-{
-public:
-	EPlatformType                                 NewPlatform;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_GetBindingObject_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<EPlatformType>                         CallFunc_GetCurrentPlatform_PlatformType;          // 0x0010(0x0010)(ReferenceParm)
-	class AActor*                                 K2Node_DynamicCast_AsActor;                        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AX6CharacterBase*                       K2Node_DynamicCast_AsX6Character_Base;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_UpdateCondition_FinalCondition;           // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_X6_SetActorHiddenInGame_ReturnValue;      // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PlatformSection_C_SetPlatform) == 0x000008, "Wrong alignment on PlatformSection_C_SetPlatform");
-static_assert(sizeof(PlatformSection_C_SetPlatform) == 0x000040, "Wrong size on PlatformSection_C_SetPlatform");
-static_assert(offsetof(PlatformSection_C_SetPlatform, NewPlatform) == 0x000000, "Member 'PlatformSection_C_SetPlatform::NewPlatform' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_GetBindingObject_ReturnValue) == 0x000008, "Member 'PlatformSection_C_SetPlatform::CallFunc_GetBindingObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_GetCurrentPlatform_PlatformType) == 0x000010, "Member 'PlatformSection_C_SetPlatform::CallFunc_GetCurrentPlatform_PlatformType' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_AsActor) == 0x000020, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_AsActor' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_Array_Contains_ReturnValue) == 0x000029, "Member 'PlatformSection_C_SetPlatform::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_AsX6Character_Base) == 0x000030, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_AsX6Character_Base' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_UpdateCondition_FinalCondition) == 0x000039, "Member 'PlatformSection_C_SetPlatform::CallFunc_UpdateCondition_FinalCondition' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_Not_PreBool_ReturnValue) == 0x00003A, "Member 'PlatformSection_C_SetPlatform::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_X6_SetActorHiddenInGame_ReturnValue) == 0x00003B, "Member 'PlatformSection_C_SetPlatform::CallFunc_X6_SetActorHiddenInGame_ReturnValue' has a wrong offset!");
-
-// Function PlatformSection.PlatformSection_C.K2_OnSectionUpdate_WithBindingObject
-// 0x0008 (0x0008 - 0x0000)
-struct PlatformSection_C_K2_OnSectionUpdate_WithBindingObject final
-{
-public:
-	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PlatformSection_C_K2_OnSectionUpdate_WithBindingObject) == 0x000008, "Wrong alignment on PlatformSection_C_K2_OnSectionUpdate_WithBindingObject");
-static_assert(sizeof(PlatformSection_C_K2_OnSectionUpdate_WithBindingObject) == 0x000008, "Wrong size on PlatformSection_C_K2_OnSectionUpdate_WithBindingObject");
-static_assert(offsetof(PlatformSection_C_K2_OnSectionUpdate_WithBindingObject, BindingObject) == 0x000000, "Member 'PlatformSection_C_K2_OnSectionUpdate_WithBindingObject::BindingObject' has a wrong offset!");
-
-// Function PlatformSection.PlatformSection_C.K2_OnSectionEnd_WithBindingObject
-// 0x0008 (0x0008 - 0x0000)
-struct PlatformSection_C_K2_OnSectionEnd_WithBindingObject final
-{
-public:
-	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PlatformSection_C_K2_OnSectionEnd_WithBindingObject) == 0x000008, "Wrong alignment on PlatformSection_C_K2_OnSectionEnd_WithBindingObject");
-static_assert(sizeof(PlatformSection_C_K2_OnSectionEnd_WithBindingObject) == 0x000008, "Wrong size on PlatformSection_C_K2_OnSectionEnd_WithBindingObject");
-static_assert(offsetof(PlatformSection_C_K2_OnSectionEnd_WithBindingObject, BindingObject) == 0x000000, "Member 'PlatformSection_C_K2_OnSectionEnd_WithBindingObject::BindingObject' has a wrong offset!");
-
-// Function PlatformSection.PlatformSection_C.K2_OnSectionBegin_WithBindingObject
-// 0x0008 (0x0008 - 0x0000)
-struct PlatformSection_C_K2_OnSectionBegin_WithBindingObject final
-{
-public:
-	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PlatformSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong alignment on PlatformSection_C_K2_OnSectionBegin_WithBindingObject");
-static_assert(sizeof(PlatformSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong size on PlatformSection_C_K2_OnSectionBegin_WithBindingObject");
-static_assert(offsetof(PlatformSection_C_K2_OnSectionBegin_WithBindingObject, BindingObject) == 0x000000, "Member 'PlatformSection_C_K2_OnSectionBegin_WithBindingObject::BindingObject' has a wrong offset!");
-
-// Function PlatformSection.PlatformSection_C.GetCurrentPlatform
-// 0x0038 (0x0038 - 0x0000)
-struct PlatformSection_C_GetCurrentPlatform final
-{
-public:
-	TArray<EPlatformType>                         PlatformType;                                      // 0x0000(0x0010)(Parm, OutParm)
-	TArray<EPlatformType>                         CallFunc_GetCurrentPlatform_PlatformType;          // 0x0010(0x0010)(ReferenceParm)
-	bool                                          CallFunc_IsPreviewInEditor_Result;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetByteValueFromPreviewConfig_ReturnValue; // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EPlatformType>                         K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
-};
-static_assert(alignof(PlatformSection_C_GetCurrentPlatform) == 0x000008, "Wrong alignment on PlatformSection_C_GetCurrentPlatform");
-static_assert(sizeof(PlatformSection_C_GetCurrentPlatform) == 0x000038, "Wrong size on PlatformSection_C_GetCurrentPlatform");
-static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, PlatformType) == 0x000000, "Member 'PlatformSection_C_GetCurrentPlatform::PlatformType' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_GetCurrentPlatform_PlatformType) == 0x000010, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_GetCurrentPlatform_PlatformType' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_IsPreviewInEditor_Result) == 0x000020, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_IsPreviewInEditor_Result' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_GetByteValueFromPreviewConfig_ReturnValue) == 0x000021, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_GetByteValueFromPreviewConfig_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_GetValidValue_ReturnValue) == 0x000022, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, K2Node_MakeArray_Array) == 0x000028, "Member 'PlatformSection_C_GetCurrentPlatform::K2Node_MakeArray_Array' has a wrong offset!");
 
 // Function PlatformSection.PlatformSection_C.ExecuteUbergraph_PlatformSection
 // 0x0070 (0x0070 - 0x0000)
@@ -207,6 +58,175 @@ static_assert(offsetof(PlatformSection_C_ExecuteUbergraph_PlatformSection, CallF
 static_assert(offsetof(PlatformSection_C_ExecuteUbergraph_PlatformSection, K2Node_Event_BindingObject) == 0x000060, "Member 'PlatformSection_C_ExecuteUbergraph_PlatformSection::K2Node_Event_BindingObject' has a wrong offset!");
 static_assert(offsetof(PlatformSection_C_ExecuteUbergraph_PlatformSection, CallFunc_IsPreviewInEditor_Result_1) == 0x000068, "Member 'PlatformSection_C_ExecuteUbergraph_PlatformSection::CallFunc_IsPreviewInEditor_Result_1' has a wrong offset!");
 static_assert(offsetof(PlatformSection_C_ExecuteUbergraph_PlatformSection, CallFunc_IsPreviewInEditor_Result_2) == 0x000069, "Member 'PlatformSection_C_ExecuteUbergraph_PlatformSection::CallFunc_IsPreviewInEditor_Result_2' has a wrong offset!");
+
+// Function PlatformSection.PlatformSection_C.GetCurrentPlatform
+// 0x0038 (0x0038 - 0x0000)
+struct PlatformSection_C_GetCurrentPlatform final
+{
+public:
+	TArray<EPlatformType>                         PlatformType;                                      // 0x0000(0x0010)(Parm, OutParm)
+	TArray<EPlatformType>                         CallFunc_GetCurrentPlatform_PlatformType;          // 0x0010(0x0010)(ReferenceParm)
+	bool                                          CallFunc_IsPreviewInEditor_Result;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetByteValueFromPreviewConfig_ReturnValue; // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_23[0x5];                                       // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EPlatformType>                         K2Node_MakeArray_Array;                            // 0x0028(0x0010)(ReferenceParm)
+};
+static_assert(alignof(PlatformSection_C_GetCurrentPlatform) == 0x000008, "Wrong alignment on PlatformSection_C_GetCurrentPlatform");
+static_assert(sizeof(PlatformSection_C_GetCurrentPlatform) == 0x000038, "Wrong size on PlatformSection_C_GetCurrentPlatform");
+static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, PlatformType) == 0x000000, "Member 'PlatformSection_C_GetCurrentPlatform::PlatformType' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_GetCurrentPlatform_PlatformType) == 0x000010, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_GetCurrentPlatform_PlatformType' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_IsPreviewInEditor_Result) == 0x000020, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_IsPreviewInEditor_Result' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_GetByteValueFromPreviewConfig_ReturnValue) == 0x000021, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_GetByteValueFromPreviewConfig_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, CallFunc_GetValidValue_ReturnValue) == 0x000022, "Member 'PlatformSection_C_GetCurrentPlatform::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_GetCurrentPlatform, K2Node_MakeArray_Array) == 0x000028, "Member 'PlatformSection_C_GetCurrentPlatform::K2Node_MakeArray_Array' has a wrong offset!");
+
+// Function PlatformSection.PlatformSection_C.K2_OnSectionBegin_WithBindingObject
+// 0x0008 (0x0008 - 0x0000)
+struct PlatformSection_C_K2_OnSectionBegin_WithBindingObject final
+{
+public:
+	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PlatformSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong alignment on PlatformSection_C_K2_OnSectionBegin_WithBindingObject");
+static_assert(sizeof(PlatformSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong size on PlatformSection_C_K2_OnSectionBegin_WithBindingObject");
+static_assert(offsetof(PlatformSection_C_K2_OnSectionBegin_WithBindingObject, BindingObject) == 0x000000, "Member 'PlatformSection_C_K2_OnSectionBegin_WithBindingObject::BindingObject' has a wrong offset!");
+
+// Function PlatformSection.PlatformSection_C.K2_OnSectionEnd_WithBindingObject
+// 0x0008 (0x0008 - 0x0000)
+struct PlatformSection_C_K2_OnSectionEnd_WithBindingObject final
+{
+public:
+	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PlatformSection_C_K2_OnSectionEnd_WithBindingObject) == 0x000008, "Wrong alignment on PlatformSection_C_K2_OnSectionEnd_WithBindingObject");
+static_assert(sizeof(PlatformSection_C_K2_OnSectionEnd_WithBindingObject) == 0x000008, "Wrong size on PlatformSection_C_K2_OnSectionEnd_WithBindingObject");
+static_assert(offsetof(PlatformSection_C_K2_OnSectionEnd_WithBindingObject, BindingObject) == 0x000000, "Member 'PlatformSection_C_K2_OnSectionEnd_WithBindingObject::BindingObject' has a wrong offset!");
+
+// Function PlatformSection.PlatformSection_C.K2_OnSectionUpdate_WithBindingObject
+// 0x0008 (0x0008 - 0x0000)
+struct PlatformSection_C_K2_OnSectionUpdate_WithBindingObject final
+{
+public:
+	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PlatformSection_C_K2_OnSectionUpdate_WithBindingObject) == 0x000008, "Wrong alignment on PlatformSection_C_K2_OnSectionUpdate_WithBindingObject");
+static_assert(sizeof(PlatformSection_C_K2_OnSectionUpdate_WithBindingObject) == 0x000008, "Wrong size on PlatformSection_C_K2_OnSectionUpdate_WithBindingObject");
+static_assert(offsetof(PlatformSection_C_K2_OnSectionUpdate_WithBindingObject, BindingObject) == 0x000000, "Member 'PlatformSection_C_K2_OnSectionUpdate_WithBindingObject::BindingObject' has a wrong offset!");
+
+// Function PlatformSection.PlatformSection_C.SetPlatform
+// 0x0040 (0x0040 - 0x0000)
+struct PlatformSection_C_SetPlatform final
+{
+public:
+	EPlatformType                                 NewPlatform;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_GetBindingObject_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<EPlatformType>                         CallFunc_GetCurrentPlatform_PlatformType;          // 0x0010(0x0010)(ReferenceParm)
+	class AActor*                                 K2Node_DynamicCast_AsActor;                        // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AX6CharacterBase*                       K2Node_DynamicCast_AsX6Character_Base;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UpdateCondition_FinalCondition;           // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_X6_SetActorHiddenInGame_ReturnValue;      // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PlatformSection_C_SetPlatform) == 0x000008, "Wrong alignment on PlatformSection_C_SetPlatform");
+static_assert(sizeof(PlatformSection_C_SetPlatform) == 0x000040, "Wrong size on PlatformSection_C_SetPlatform");
+static_assert(offsetof(PlatformSection_C_SetPlatform, NewPlatform) == 0x000000, "Member 'PlatformSection_C_SetPlatform::NewPlatform' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_GetBindingObject_ReturnValue) == 0x000008, "Member 'PlatformSection_C_SetPlatform::CallFunc_GetBindingObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_GetCurrentPlatform_PlatformType) == 0x000010, "Member 'PlatformSection_C_SetPlatform::CallFunc_GetCurrentPlatform_PlatformType' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_AsActor) == 0x000020, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_AsActor' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_Array_Contains_ReturnValue) == 0x000029, "Member 'PlatformSection_C_SetPlatform::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_AsX6Character_Base) == 0x000030, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_AsX6Character_Base' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'PlatformSection_C_SetPlatform::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_UpdateCondition_FinalCondition) == 0x000039, "Member 'PlatformSection_C_SetPlatform::CallFunc_UpdateCondition_FinalCondition' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_Not_PreBool_ReturnValue) == 0x00003A, "Member 'PlatformSection_C_SetPlatform::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_SetPlatform, CallFunc_X6_SetActorHiddenInGame_ReturnValue) == 0x00003B, "Member 'PlatformSection_C_SetPlatform::CallFunc_X6_SetActorHiddenInGame_ReturnValue' has a wrong offset!");
+
+// Function PlatformSection.PlatformSection_C.UpdateCondition
+// 0x0178 (0x0178 - 0x0000)
+struct PlatformSection_C_UpdateCondition final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CurrentCondition;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          FinalCondition;                                    // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class FString>            TempMap;                                           // 0x0010(0x0050)(Edit, BlueprintVisible)
+	class FString                                 ActorName_0;                                       // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CurrentConditionRes;                               // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetObjectName_ReturnValue;                // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_UpdateActorCondition_Result;              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsPreviewInEditor_Result;                 // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Map_Find_Value;                           // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A2[0x2];                                       // 0x00A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue;             // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Conv_BoolToInt_ReturnValue;               // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Multiply_IntInt_ReturnValue;              // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            CallFunc_GetStringToStringMapFromPreviewConfig_ReturnValue; // 0x00C8(0x0050)()
+	class FString                                 CallFunc_Map_Find_Value_1;                         // 0x0118(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_StringToInt_ReturnValue_1;           // 0x012C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Divide_IntInt_ReturnValue;                // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Percent_IntInt_ReturnValue;               // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_1;           // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Conv_IntToBool_ReturnValue;               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_152[0x2];                                      // 0x0152(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue_2;           // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue_1;      // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PlatformSection_C_UpdateCondition) == 0x000008, "Wrong alignment on PlatformSection_C_UpdateCondition");
+static_assert(sizeof(PlatformSection_C_UpdateCondition) == 0x000178, "Wrong size on PlatformSection_C_UpdateCondition");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, Actor) == 0x000000, "Member 'PlatformSection_C_UpdateCondition::Actor' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CurrentCondition) == 0x000008, "Member 'PlatformSection_C_UpdateCondition::CurrentCondition' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, FinalCondition) == 0x000009, "Member 'PlatformSection_C_UpdateCondition::FinalCondition' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, TempMap) == 0x000010, "Member 'PlatformSection_C_UpdateCondition::TempMap' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, ActorName_0) == 0x000060, "Member 'PlatformSection_C_UpdateCondition::ActorName_0' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CurrentConditionRes) == 0x000070, "Member 'PlatformSection_C_UpdateCondition::CurrentConditionRes' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_GetObjectName_ReturnValue) == 0x000078, "Member 'PlatformSection_C_UpdateCondition::CallFunc_GetObjectName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_UpdateActorCondition_Result) == 0x000088, "Member 'PlatformSection_C_UpdateCondition::CallFunc_UpdateActorCondition_Result' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_IsPreviewInEditor_Result) == 0x000089, "Member 'PlatformSection_C_UpdateCondition::CallFunc_IsPreviewInEditor_Result' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_Value) == 0x000090, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_ReturnValue) == 0x0000A0, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Not_PreBool_ReturnValue) == 0x0000A1, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_StringToInt_ReturnValue) == 0x0000A4, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_BoolToInt_ReturnValue) == 0x0000A8, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_BoolToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x0000AC, "Member 'PlatformSection_C_UpdateCondition::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Multiply_IntInt_ReturnValue) == 0x0000B0, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Multiply_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_IntToString_ReturnValue) == 0x0000B8, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_GetStringToStringMapFromPreviewConfig_ReturnValue) == 0x0000C8, "Member 'PlatformSection_C_UpdateCondition::CallFunc_GetStringToStringMapFromPreviewConfig_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_Value_1) == 0x000118, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_Value_1' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Map_Find_ReturnValue_1) == 0x000128, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_StringToInt_ReturnValue_1) == 0x00012C, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_StringToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Divide_IntInt_ReturnValue) == 0x000130, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Divide_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Add_IntInt_ReturnValue) == 0x000134, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Percent_IntInt_ReturnValue) == 0x000138, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Percent_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_IntToString_ReturnValue_1) == 0x000140, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_IntToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_IntToBool_ReturnValue) == 0x000150, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_IntToBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Not_PreBool_ReturnValue_1) == 0x000151, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Subtract_IntInt_ReturnValue) == 0x000154, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000158, "Member 'PlatformSection_C_UpdateCondition::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_Conv_IntToString_ReturnValue_2) == 0x000160, "Member 'PlatformSection_C_UpdateCondition::CallFunc_Conv_IntToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(PlatformSection_C_UpdateCondition, CallFunc_EqualEqual_32ByteByte_ReturnValue_1) == 0x000170, "Member 'PlatformSection_C_UpdateCondition::CallFunc_EqualEqual_32ByteByte_ReturnValue_1' has a wrong offset!");
 
 }
 

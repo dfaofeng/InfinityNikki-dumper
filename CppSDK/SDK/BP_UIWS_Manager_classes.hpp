@@ -51,31 +51,31 @@ public:
 	class UTextureRenderTarget2D*                 FrameTex;                                          // 0x0468(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void WaterInteractEnabled(bool* IsEnabled);
-	void Use2ChannelHeightMap(bool NewValue);
-	void Use_High_Quality_Render_Target(bool NewValue);
-	void UpdatePos(const struct FVector& InteractorPos, bool* ActiveOut);
-	void Unregister_Interactor(class UActorComponent* Interactor);
-	void SetInteractivity(bool NewValue);
-	void RemoveFromShowOnlyList(class AActor* Actor);
-	void Register_Interactor(class UActorComponent* Interactor);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void PropagateRipples();
-	void InteractCapture();
-	bool InPlayerRange(const struct FVector& B);
-	void InitRT();
-	void InitMat();
-	void GetPlayerPos_LastFrame(struct FVector* PlayerPos);
-	void GetPlayerPos(struct FVector* PlayerPos);
-	void ExecuteUbergraph_BP_UIWS_Manager(int32 EntryPoint);
-	void DrawForce(const struct FVector& Velocity, const struct FVector& Position, const struct FVector2D& Size, double size_multiplier, class UCanvas* Canvas, class UMaterialInstanceDynamic* MatInst);
-	void CulcForceIntensity(double HeightOffset, const struct FVector& Position, double Multiplier, bool OcclutionDetection, double* Intensity);
-	void CulcDrawPos(const struct FVector& Velocity, const struct FVector& Position, const struct FVector2D& Size, double size_multiplier, struct FVector2D* OutSize, double* PosX, double* PosY, struct FLinearColor* SamplePos);
-	void CopyNormal();
-	void ComputeNormal();
-	void ApplyInteractivityForces();
 	void AdvectionSim();
+	void ApplyInteractivityForces();
+	void ComputeNormal();
+	void CopyNormal();
+	void CulcDrawPos(const struct FVector& Velocity, const struct FVector& Position, const struct FVector2D& Size, double size_multiplier, struct FVector2D* OutSize, double* PosX, double* PosY, struct FLinearColor* SamplePos);
+	void CulcForceIntensity(double HeightOffset, const struct FVector& Position, double Multiplier, bool OcclutionDetection, double* Intensity);
+	void DrawForce(const struct FVector& Velocity, const struct FVector& Position, const struct FVector2D& Size, double size_multiplier, class UCanvas* Canvas, class UMaterialInstanceDynamic* MatInst);
+	void ExecuteUbergraph_BP_UIWS_Manager(int32 EntryPoint);
+	void GetPlayerPos(struct FVector* PlayerPos);
+	void GetPlayerPos_LastFrame(struct FVector* PlayerPos);
+	void InitMat();
+	void InitRT();
+	bool InPlayerRange(const struct FVector& B);
+	void InteractCapture();
+	void PropagateRipples();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void Register_Interactor(class UActorComponent* Interactor);
+	void RemoveFromShowOnlyList(class AActor* Actor);
+	void SetInteractivity(bool NewValue);
+	void Unregister_Interactor(class UActorComponent* Interactor);
+	void UpdatePos(const struct FVector& InteractorPos, bool* ActiveOut);
+	void Use_High_Quality_Render_Target(bool NewValue);
+	void Use2ChannelHeightMap(bool NewValue);
+	void WaterInteractEnabled(bool* IsEnabled);
 
 public:
 	static class UClass* StaticClass()

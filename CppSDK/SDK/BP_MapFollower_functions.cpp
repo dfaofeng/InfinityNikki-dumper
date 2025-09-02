@@ -17,39 +17,19 @@
 namespace SDK
 {
 
-// Function BP_MapFollower.BP_MapFollower_C.SetMoveContentPosition
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Pos                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void IBP_MapFollower_C::SetMoveContentPosition(const struct FVector2D& Pos)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapFollower_C", "SetMoveContentPosition");
-
-	Params::BP_MapFollower_C_SetMoveContentPosition Parms{};
-
-	Parms.Pos = std::move(Pos);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_MapFollower.BP_MapFollower_C.SetContentSize
+// Function BP_MapFollower.BP_MapFollower_C.SetClipRange
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBP_MapFollower_C::SetContentSize(const struct FVector2D& Size)
+void IBP_MapFollower_C::SetClipRange(const struct FVector2D& Size)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapFollower_C", "SetContentSize");
+		Func = Class->GetFunction("BP_MapFollower_C", "SetClipRange");
 
-	Params::BP_MapFollower_C_SetContentSize Parms{};
+	Params::BP_MapFollower_C_SetClipRange Parms{};
 
 	Parms.Size = std::move(Size);
 
@@ -77,21 +57,41 @@ void IBP_MapFollower_C::SetContentScale(const struct FVector2D& Scale)
 }
 
 
-// Function BP_MapFollower.BP_MapFollower_C.SetClipRange
+// Function BP_MapFollower.BP_MapFollower_C.SetContentSize
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBP_MapFollower_C::SetClipRange(const struct FVector2D& Size)
+void IBP_MapFollower_C::SetContentSize(const struct FVector2D& Size)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MapFollower_C", "SetClipRange");
+		Func = Class->GetFunction("BP_MapFollower_C", "SetContentSize");
 
-	Params::BP_MapFollower_C_SetClipRange Parms{};
+	Params::BP_MapFollower_C_SetContentSize Parms{};
 
 	Parms.Size = std::move(Size);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MapFollower.BP_MapFollower_C.SetMoveContentPosition
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Pos                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void IBP_MapFollower_C::SetMoveContentPosition(const struct FVector2D& Pos)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MapFollower_C", "SetMoveContentPosition");
+
+	Params::BP_MapFollower_C_SetMoveContentPosition Parms{};
+
+	Parms.Pos = std::move(Pos);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

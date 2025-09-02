@@ -17,37 +17,6 @@
 namespace SDK::Params
 {
 
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.GetOrAddPostProcessMaterialInstance
-// 0x0030 (0x0030 - 0x0000)
-struct PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance final
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnMaterial;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FWeightedBlendable                     K2Node_MakeStruct_WeightedBlendable;               // 0x0008(0x0010)(NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance) == 0x000008, "Wrong alignment on PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance");
-static_assert(sizeof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance) == 0x000030, "Wrong size on PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance");
-static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, ReturnMaterial) == 0x000000, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::ReturnMaterial' has a wrong offset!");
-static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, K2Node_MakeStruct_WeightedBlendable) == 0x000008, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::K2Node_MakeStruct_WeightedBlendable' has a wrong offset!");
-static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000020, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, CallFunc_Array_Add_ReturnValue) == 0x000028, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
-
-// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeOut
-// 0x0010 (0x0010 - 0x0000)
-struct PostProcessHelpBlackActor_C_FadeOut final
-{
-public:
-	struct FLinearColor                           FadeOutColor_0;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(PostProcessHelpBlackActor_C_FadeOut) == 0x000004, "Wrong alignment on PostProcessHelpBlackActor_C_FadeOut");
-static_assert(sizeof(PostProcessHelpBlackActor_C_FadeOut) == 0x000010, "Wrong size on PostProcessHelpBlackActor_C_FadeOut");
-static_assert(offsetof(PostProcessHelpBlackActor_C_FadeOut, FadeOutColor_0) == 0x000000, "Member 'PostProcessHelpBlackActor_C_FadeOut::FadeOutColor_0' has a wrong offset!");
-
 // Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.ExecuteUbergraph_PostProcessHelpBlackActor
 // 0x0118 (0x0118 - 0x0000)
 struct PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor final
@@ -133,6 +102,37 @@ static_assert(offsetof(PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessH
 static_assert(offsetof(PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000108, "Member 'PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast_1) == 0x00010C, "Member 'PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast_1' has a wrong offset!");
 static_assert(offsetof(PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor, CallFunc_SetScalarParameterValue_Value_ImplicitCast_2) == 0x000110, "Member 'PostProcessHelpBlackActor_C_ExecuteUbergraph_PostProcessHelpBlackActor::CallFunc_SetScalarParameterValue_Value_ImplicitCast_2' has a wrong offset!");
+
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.FadeOut
+// 0x0010 (0x0010 - 0x0000)
+struct PostProcessHelpBlackActor_C_FadeOut final
+{
+public:
+	struct FLinearColor                           FadeOutColor_0;                                    // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PostProcessHelpBlackActor_C_FadeOut) == 0x000004, "Wrong alignment on PostProcessHelpBlackActor_C_FadeOut");
+static_assert(sizeof(PostProcessHelpBlackActor_C_FadeOut) == 0x000010, "Wrong size on PostProcessHelpBlackActor_C_FadeOut");
+static_assert(offsetof(PostProcessHelpBlackActor_C_FadeOut, FadeOutColor_0) == 0x000000, "Member 'PostProcessHelpBlackActor_C_FadeOut::FadeOutColor_0' has a wrong offset!");
+
+// Function PostProcessHelpBlackActor.PostProcessHelpBlackActor_C.GetOrAddPostProcessMaterialInstance
+// 0x0030 (0x0030 - 0x0000)
+struct PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance final
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnMaterial;                                    // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FWeightedBlendable                     K2Node_MakeStruct_WeightedBlendable;               // 0x0008(0x0010)(NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance) == 0x000008, "Wrong alignment on PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance");
+static_assert(sizeof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance) == 0x000030, "Wrong size on PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance");
+static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, ReturnMaterial) == 0x000000, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::ReturnMaterial' has a wrong offset!");
+static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, K2Node_MakeStruct_WeightedBlendable) == 0x000008, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::K2Node_MakeStruct_WeightedBlendable' has a wrong offset!");
+static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000020, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance, CallFunc_Array_Add_ReturnValue) == 0x000028, "Member 'PostProcessHelpBlackActor_C_GetOrAddPostProcessMaterialInstance::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 }
 

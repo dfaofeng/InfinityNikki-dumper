@@ -149,12 +149,13 @@ enum class EDialogueTransformRangeType : uint8
 };
 
 // Enum PaperDialogue.EPaperDialogueChoiceConditionPurpose
-// NumValues: 0x0003
+// NumValues: 0x0004
 enum class EPaperDialogueChoiceConditionPurpose : uint8
 {
 	ShowChoice                               = 0,
 	HideChoice                               = 1,
-	EPaperDialogueChoiceConditionPurpose_MAX = 2,
+	UnlockChoice                             = 2,
+	EPaperDialogueChoiceConditionPurpose_MAX = 3,
 };
 
 // Enum PaperDialogue.EPaperDialogueLanguage
@@ -420,47 +421,6 @@ static_assert(offsetof(FPaperDialogueActorAnimations, TransfromAnim) == 0x000020
 static_assert(offsetof(FPaperDialogueActorAnimations, Line) == 0x000130, "Member 'FPaperDialogueActorAnimations::Line' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueActorAnimations, LookAt) == 0x000170, "Member 'FPaperDialogueActorAnimations::LookAt' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueActorAnimations, DialogueAudio) == 0x0001F8, "Member 'FPaperDialogueActorAnimations::DialogueAudio' has a wrong offset!");
-
-// ScriptStruct PaperDialogue.PCDAIAnimationMotionMatchingLineParamNetData
-// 0x0078 (0x0078 - 0x0000)
-struct FPCDAIAnimationMotionMatchingLineParamNetData final
-{
-public:
-	double                                        word_nums_per_sec;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        words_min_interval_duration;                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        word_acoustic_weight;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        word_concept_weight;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        local_anim_duration_weight;                        // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        local_anim_pitch_weight;                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        local_anim_handedness_weight;                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         local_matching_cand_anim_num;                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        global_anim_overlap_weight;                        // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        global_anim_repeat_nums_weight;                    // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        global_anim_time_bias_weight;                      // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        global_anim_max_speed_diff_weight;                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        relative_local_weight;                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        relative_global_weight;                            // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          random_flag;                                       // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000008, "Wrong alignment on FPCDAIAnimationMotionMatchingLineParamNetData");
-static_assert(sizeof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000078, "Wrong size on FPCDAIAnimationMotionMatchingLineParamNetData");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_nums_per_sec) == 0x000000, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_nums_per_sec' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, words_min_interval_duration) == 0x000008, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::words_min_interval_duration' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_acoustic_weight) == 0x000010, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_acoustic_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_concept_weight) == 0x000018, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_concept_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_duration_weight) == 0x000020, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_duration_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_pitch_weight) == 0x000028, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_pitch_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_handedness_weight) == 0x000030, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_handedness_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_matching_cand_anim_num) == 0x000038, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_matching_cand_anim_num' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_overlap_weight) == 0x000040, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_overlap_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_repeat_nums_weight) == 0x000048, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_repeat_nums_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_time_bias_weight) == 0x000050, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_time_bias_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_max_speed_diff_weight) == 0x000058, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_max_speed_diff_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_local_weight) == 0x000060, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_local_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_global_weight) == 0x000068, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_global_weight' has a wrong offset!");
-static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, random_flag) == 0x000070, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::random_flag' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueActorInfo
 // 0x0200 (0x0200 - 0x0000)
@@ -1117,18 +1077,20 @@ static_assert(offsetof(FPaperDialogueParaSetStruct, ConditionRemark) == 0x000000
 static_assert(offsetof(FPaperDialogueParaSetStruct, StructParameters) == 0x000010, "Member 'FPaperDialogueParaSetStruct::StructParameters' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueMultiParaStruct
-// 0x0018 (0x0018 - 0x0000)
+// 0x0028 (0x0028 - 0x0000)
 struct FPaperDialogueMultiParaStruct final
 {
 public:
 	EPaperDialogueChoiceConditionPurpose          ConditionPurpose;                                  // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperDialogueParaSetStruct>    StructParameterList;                               // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 UnlockChoiceTip;                                   // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPaperDialogueParaSetStruct>    StructParameterList;                               // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPaperDialogueMultiParaStruct) == 0x000008, "Wrong alignment on FPaperDialogueMultiParaStruct");
-static_assert(sizeof(FPaperDialogueMultiParaStruct) == 0x000018, "Wrong size on FPaperDialogueMultiParaStruct");
+static_assert(sizeof(FPaperDialogueMultiParaStruct) == 0x000028, "Wrong size on FPaperDialogueMultiParaStruct");
 static_assert(offsetof(FPaperDialogueMultiParaStruct, ConditionPurpose) == 0x000000, "Member 'FPaperDialogueMultiParaStruct::ConditionPurpose' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueMultiParaStruct, StructParameterList) == 0x000008, "Member 'FPaperDialogueMultiParaStruct::StructParameterList' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueMultiParaStruct, UnlockChoiceTip) == 0x000008, "Member 'FPaperDialogueMultiParaStruct::UnlockChoiceTip' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueMultiParaStruct, StructParameterList) == 0x000018, "Member 'FPaperDialogueMultiParaStruct::StructParameterList' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueDataTableStruct
 // 0x0028 (0x0030 - 0x0008)
@@ -1186,41 +1148,6 @@ static_assert(sizeof(FPaperDialogueStringListStruct) == 0x000020, "Wrong size on
 static_assert(offsetof(FPaperDialogueStringListStruct, StringID) == 0x000008, "Member 'FPaperDialogueStringListStruct::StringID' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueStringListStruct, Text) == 0x000010, "Member 'FPaperDialogueStringListStruct::Text' has a wrong offset!");
 
-// ScriptStruct PaperDialogue.DialogueStageAutomaticConfig
-// 0x000D (0x000D - 0x0000)
-struct FDialogueStageAutomaticConfig final
-{
-public:
-	bool                                          bAutoConnection;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoAlign;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCameras;                              // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateAnimTracks;                           // 0x0003(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCustomTracks;                         // 0x0004(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateLightTracks;                          // 0x0005(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateLookAtTracks;                         // 0x0006(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCharacterNameableTracks;              // 0x0007(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateCameraShakeTracks;                    // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateHighHeelTracks;                       // 0x0009(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateResimulationTracks;                   // 0x000A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateEmotionTracks;                        // 0x000B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoGenerateTransformTracks;                      // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDialogueStageAutomaticConfig) == 0x000001, "Wrong alignment on FDialogueStageAutomaticConfig");
-static_assert(sizeof(FDialogueStageAutomaticConfig) == 0x00000D, "Wrong size on FDialogueStageAutomaticConfig");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoConnection) == 0x000000, "Member 'FDialogueStageAutomaticConfig::bAutoConnection' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoAlign) == 0x000001, "Member 'FDialogueStageAutomaticConfig::bAutoAlign' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameras) == 0x000002, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameras' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateAnimTracks) == 0x000003, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateAnimTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCustomTracks) == 0x000004, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCustomTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLightTracks) == 0x000005, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLightTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLookAtTracks) == 0x000006, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLookAtTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCharacterNameableTracks) == 0x000007, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCharacterNameableTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameraShakeTracks) == 0x000008, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameraShakeTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateHighHeelTracks) == 0x000009, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateHighHeelTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateResimulationTracks) == 0x00000A, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateResimulationTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateEmotionTracks) == 0x00000B, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateEmotionTracks' has a wrong offset!");
-static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateTransformTracks) == 0x00000C, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateTransformTracks' has a wrong offset!");
-
 // ScriptStruct PaperDialogue.PaperDialogueVoiceListStruct
 // 0x0028 (0x0030 - 0x0008)
 struct FPaperDialogueVoiceListStruct final : public FTableRowBase
@@ -1269,7 +1196,7 @@ static_assert(offsetof(FPaperDialogueChoiceGroupStruct, DialogueChoiceGroupKey) 
 static_assert(offsetof(FPaperDialogueChoiceGroupStruct, ChoiceLineID) == 0x000010, "Member 'FPaperDialogueChoiceGroupStruct::ChoiceLineID' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueChoiceLineConfig
-// 0x0078 (0x0078 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct FPaperDialogueChoiceLineConfig final
 {
 public:
@@ -1280,13 +1207,13 @@ public:
 	class FText                                   ChoiceStringText;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                          bIsConditionChoice;                                // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPaperDialogueMultiParaStruct          ConditionData;                                     // 0x0050(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UPCDInstancedProvider*                  PCDInstancedProvider;                              // 0x0068(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLinkedOutputNode;                               // 0x0070(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPaperDialogueMultiParaStruct          ConditionData;                                     // 0x0050(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class UPCDInstancedProvider*                  PCDInstancedProvider;                              // 0x0078(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLinkedOutputNode;                               // 0x0080(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperDialogueChoiceLineConfig) == 0x000008, "Wrong alignment on FPaperDialogueChoiceLineConfig");
-static_assert(sizeof(FPaperDialogueChoiceLineConfig) == 0x000078, "Wrong size on FPaperDialogueChoiceLineConfig");
+static_assert(sizeof(FPaperDialogueChoiceLineConfig) == 0x000088, "Wrong size on FPaperDialogueChoiceLineConfig");
 static_assert(offsetof(FPaperDialogueChoiceLineConfig, UId) == 0x000000, "Member 'FPaperDialogueChoiceLineConfig::UId' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueChoiceLineConfig, Group) == 0x000008, "Member 'FPaperDialogueChoiceLineConfig::Group' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueChoiceLineConfig, ChoiceIcon) == 0x000010, "Member 'FPaperDialogueChoiceLineConfig::ChoiceIcon' has a wrong offset!");
@@ -1294,8 +1221,8 @@ static_assert(offsetof(FPaperDialogueChoiceLineConfig, DialogueLineID) == 0x0000
 static_assert(offsetof(FPaperDialogueChoiceLineConfig, ChoiceStringText) == 0x000038, "Member 'FPaperDialogueChoiceLineConfig::ChoiceStringText' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueChoiceLineConfig, bIsConditionChoice) == 0x000048, "Member 'FPaperDialogueChoiceLineConfig::bIsConditionChoice' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueChoiceLineConfig, ConditionData) == 0x000050, "Member 'FPaperDialogueChoiceLineConfig::ConditionData' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueChoiceLineConfig, PCDInstancedProvider) == 0x000068, "Member 'FPaperDialogueChoiceLineConfig::PCDInstancedProvider' has a wrong offset!");
-static_assert(offsetof(FPaperDialogueChoiceLineConfig, bIsLinkedOutputNode) == 0x000070, "Member 'FPaperDialogueChoiceLineConfig::bIsLinkedOutputNode' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueChoiceLineConfig, PCDInstancedProvider) == 0x000078, "Member 'FPaperDialogueChoiceLineConfig::PCDInstancedProvider' has a wrong offset!");
+static_assert(offsetof(FPaperDialogueChoiceLineConfig, bIsLinkedOutputNode) == 0x000080, "Member 'FPaperDialogueChoiceLineConfig::bIsLinkedOutputNode' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperDialogueChoiceLineStruct
 // 0x0048 (0x0050 - 0x0008)
@@ -1995,6 +1922,47 @@ static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, GestureSettings) == 
 static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, UnifiedAnimationTrackSettings) == 0x000358, "Member 'FPaperDialogueGenerationSetUpStruct::UnifiedAnimationTrackSettings' has a wrong offset!");
 static_assert(offsetof(FPaperDialogueGenerationSetUpStruct, EmotionSettings) == 0x0003D0, "Member 'FPaperDialogueGenerationSetUpStruct::EmotionSettings' has a wrong offset!");
 
+// ScriptStruct PaperDialogue.PCDAIAnimationMotionMatchingLineParamNetData
+// 0x0078 (0x0078 - 0x0000)
+struct FPCDAIAnimationMotionMatchingLineParamNetData final
+{
+public:
+	double                                        word_nums_per_sec;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        words_min_interval_duration;                       // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        word_acoustic_weight;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        word_concept_weight;                               // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        local_anim_duration_weight;                        // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        local_anim_pitch_weight;                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        local_anim_handedness_weight;                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         local_matching_cand_anim_num;                      // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        global_anim_overlap_weight;                        // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        global_anim_repeat_nums_weight;                    // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        global_anim_time_bias_weight;                      // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        global_anim_max_speed_diff_weight;                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        relative_local_weight;                             // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        relative_global_weight;                            // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          random_flag;                                       // 0x0070(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000008, "Wrong alignment on FPCDAIAnimationMotionMatchingLineParamNetData");
+static_assert(sizeof(FPCDAIAnimationMotionMatchingLineParamNetData) == 0x000078, "Wrong size on FPCDAIAnimationMotionMatchingLineParamNetData");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_nums_per_sec) == 0x000000, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_nums_per_sec' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, words_min_interval_duration) == 0x000008, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::words_min_interval_duration' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_acoustic_weight) == 0x000010, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_acoustic_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, word_concept_weight) == 0x000018, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::word_concept_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_duration_weight) == 0x000020, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_duration_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_pitch_weight) == 0x000028, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_pitch_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_anim_handedness_weight) == 0x000030, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_anim_handedness_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, local_matching_cand_anim_num) == 0x000038, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::local_matching_cand_anim_num' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_overlap_weight) == 0x000040, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_overlap_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_repeat_nums_weight) == 0x000048, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_repeat_nums_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_time_bias_weight) == 0x000050, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_time_bias_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, global_anim_max_speed_diff_weight) == 0x000058, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::global_anim_max_speed_diff_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_local_weight) == 0x000060, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_local_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, relative_global_weight) == 0x000068, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::relative_global_weight' has a wrong offset!");
+static_assert(offsetof(FPCDAIAnimationMotionMatchingLineParamNetData, random_flag) == 0x000070, "Member 'FPCDAIAnimationMotionMatchingLineParamNetData::random_flag' has a wrong offset!");
+
 // ScriptStruct PaperDialogue.PaperDialogueGenerationAIAnimationStruct
 // 0x0058 (0x0058 - 0x0000)
 struct FPaperDialogueGenerationAIAnimationStruct final
@@ -2048,6 +2016,41 @@ static_assert(offsetof(FDialogueCharacterSlotDetail, AvatarDataAsset) == 0x00002
 static_assert(offsetof(FDialogueCharacterSlotDetail, PreviewActor) == 0x000048, "Member 'FDialogueCharacterSlotDetail::PreviewActor' has a wrong offset!");
 static_assert(offsetof(FDialogueCharacterSlotDetail, SlotIndex) == 0x000070, "Member 'FDialogueCharacterSlotDetail::SlotIndex' has a wrong offset!");
 static_assert(offsetof(FDialogueCharacterSlotDetail, FixTemplate) == 0x000074, "Member 'FDialogueCharacterSlotDetail::FixTemplate' has a wrong offset!");
+
+// ScriptStruct PaperDialogue.DialogueStageAutomaticConfig
+// 0x000D (0x000D - 0x0000)
+struct FDialogueStageAutomaticConfig final
+{
+public:
+	bool                                          bAutoConnection;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoAlign;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCameras;                              // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateAnimTracks;                           // 0x0003(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCustomTracks;                         // 0x0004(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateLightTracks;                          // 0x0005(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateLookAtTracks;                         // 0x0006(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCharacterNameableTracks;              // 0x0007(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateCameraShakeTracks;                    // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateHighHeelTracks;                       // 0x0009(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateResimulationTracks;                   // 0x000A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateEmotionTracks;                        // 0x000B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoGenerateTransformTracks;                      // 0x000C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDialogueStageAutomaticConfig) == 0x000001, "Wrong alignment on FDialogueStageAutomaticConfig");
+static_assert(sizeof(FDialogueStageAutomaticConfig) == 0x00000D, "Wrong size on FDialogueStageAutomaticConfig");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoConnection) == 0x000000, "Member 'FDialogueStageAutomaticConfig::bAutoConnection' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoAlign) == 0x000001, "Member 'FDialogueStageAutomaticConfig::bAutoAlign' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameras) == 0x000002, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameras' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateAnimTracks) == 0x000003, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateAnimTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCustomTracks) == 0x000004, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCustomTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLightTracks) == 0x000005, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLightTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateLookAtTracks) == 0x000006, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateLookAtTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCharacterNameableTracks) == 0x000007, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCharacterNameableTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateCameraShakeTracks) == 0x000008, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateCameraShakeTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateHighHeelTracks) == 0x000009, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateHighHeelTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateResimulationTracks) == 0x00000A, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateResimulationTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateEmotionTracks) == 0x00000B, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateEmotionTracks' has a wrong offset!");
+static_assert(offsetof(FDialogueStageAutomaticConfig, bAutoGenerateTransformTracks) == 0x00000C, "Member 'FDialogueStageAutomaticConfig::bAutoGenerateTransformTracks' has a wrong offset!");
 
 // ScriptStruct PaperDialogue.PaperEdGraphSchemaAction_NewNode
 // 0x0008 (0x00E8 - 0x00E0)

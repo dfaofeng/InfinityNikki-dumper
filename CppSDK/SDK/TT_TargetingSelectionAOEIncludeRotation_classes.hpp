@@ -30,14 +30,14 @@ public:
 	double                                        DefaultYawRotationOffset;                          // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
-	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetSourceOffsetLocationFromMesh(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent* MeshComp) const;
-	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetSourceLocationFromMesh(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent* MeshComp) const;
-	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FQuat GetOffsetRotationInEditor(const class AActor* Actor) const;
-	class FString GetModuleName() const;
 	void BP_GetSourceMeshComp(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent** MeshComp) const;
+	class FString GetModuleName() const;
+	struct FQuat GetOffsetRotationInEditor(const class AActor* Actor) const;
+	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetSourceLocationFromMesh(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent* MeshComp) const;
+	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetSourceOffsetLocationFromMesh(const struct FTargetingRequestHandle& TargetingHandle, class UMeshComponent* MeshComp) const;
+	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
 
 public:
 	static class UClass* StaticClass()

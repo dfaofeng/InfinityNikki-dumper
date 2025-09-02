@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_HUD_CommonSlot_Mobile.WBP_HUD_CommonSlot_Mobile_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_HUD_CommonSlot_Mobile.WBP_HUD_CommonSlot_Mobile_C.ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_CommonSlot_Mobile_C::PreConstruct(bool IsDesignTime)
+void UWBP_HUD_CommonSlot_Mobile_C::ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_CommonSlot_Mobile_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_HUD_CommonSlot_Mobile_C", "ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile");
 
-	Params::WBP_HUD_CommonSlot_Mobile_C_PreConstruct Parms{};
+	Params::WBP_HUD_CommonSlot_Mobile_C_ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -51,21 +51,21 @@ void UWBP_HUD_CommonSlot_Mobile_C::NotifyIconRefresh()
 }
 
 
-// Function WBP_HUD_CommonSlot_Mobile.WBP_HUD_CommonSlot_Mobile_C.ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile
-// (Final, UbergraphFunction)
+// Function WBP_HUD_CommonSlot_Mobile.WBP_HUD_CommonSlot_Mobile_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_CommonSlot_Mobile_C::ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile(int32 EntryPoint)
+void UWBP_HUD_CommonSlot_Mobile_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_CommonSlot_Mobile_C", "ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile");
+		Func = Class->GetFunction("WBP_HUD_CommonSlot_Mobile_C", "PreConstruct");
 
-	Params::WBP_HUD_CommonSlot_Mobile_C_ExecuteUbergraph_WBP_HUD_CommonSlot_Mobile Parms{};
+	Params::WBP_HUD_CommonSlot_Mobile_C_PreConstruct Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

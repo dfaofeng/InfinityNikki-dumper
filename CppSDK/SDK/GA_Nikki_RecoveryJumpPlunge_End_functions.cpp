@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_Nikki_RecoveryJumpPlunge_End.GA_Nikki_RecoveryJumpPlunge_End_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Nikki_RecoveryJumpPlunge_End_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryJumpPlunge_End_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_Nikki_RecoveryJumpPlunge_End.GA_Nikki_RecoveryJumpPlunge_End_C.ExecuteUbergraph_GA_Nikki_RecoveryJumpPlunge_End
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UGA_Nikki_RecoveryJumpPlunge_End_C::ExecuteUbergraph_GA_Nikki_RecoveryJumpP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryJumpPlunge_End.GA_Nikki_RecoveryJumpPlunge_End_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_Nikki_RecoveryJumpPlunge_End_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryJumpPlunge_End_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

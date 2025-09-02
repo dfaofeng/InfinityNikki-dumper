@@ -3452,7 +3452,7 @@ static_assert(offsetof(MoviePipelineExecutorBase_OnExecutorErroredImpl, ErrorRea
 struct MoviePipelineExecutorBase_SendHTTPRequest final
 {
 public:
-	class FString                                 InURL;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InUrl;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InVerb;                                            // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InMessage;                                         // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, class FString>            InHeaders;                                         // 0x0030(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
@@ -3461,7 +3461,7 @@ public:
 };
 static_assert(alignof(MoviePipelineExecutorBase_SendHTTPRequest) == 0x000008, "Wrong alignment on MoviePipelineExecutorBase_SendHTTPRequest");
 static_assert(sizeof(MoviePipelineExecutorBase_SendHTTPRequest) == 0x000088, "Wrong size on MoviePipelineExecutorBase_SendHTTPRequest");
-static_assert(offsetof(MoviePipelineExecutorBase_SendHTTPRequest, InURL) == 0x000000, "Member 'MoviePipelineExecutorBase_SendHTTPRequest::InURL' has a wrong offset!");
+static_assert(offsetof(MoviePipelineExecutorBase_SendHTTPRequest, InUrl) == 0x000000, "Member 'MoviePipelineExecutorBase_SendHTTPRequest::InUrl' has a wrong offset!");
 static_assert(offsetof(MoviePipelineExecutorBase_SendHTTPRequest, InVerb) == 0x000010, "Member 'MoviePipelineExecutorBase_SendHTTPRequest::InVerb' has a wrong offset!");
 static_assert(offsetof(MoviePipelineExecutorBase_SendHTTPRequest, InMessage) == 0x000020, "Member 'MoviePipelineExecutorBase_SendHTTPRequest::InMessage' has a wrong offset!");
 static_assert(offsetof(MoviePipelineExecutorBase_SendHTTPRequest, InHeaders) == 0x000030, "Member 'MoviePipelineExecutorBase_SendHTTPRequest::InHeaders' has a wrong offset!");

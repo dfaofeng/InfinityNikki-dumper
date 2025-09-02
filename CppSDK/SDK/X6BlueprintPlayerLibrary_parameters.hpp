@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "EPlayerActionTypes_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
+#include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "EAbilityGroupType_structs.hpp"
-#include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EX6EnvType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EPlayerActionTypes_structs.hpp"
 #include "EClothesPropertyType_structs.hpp"
 #include "EClothesMinorType_structs.hpp"
 
@@ -255,6 +255,21 @@ static_assert(sizeof(X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn) ==
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn, Actor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn::Actor' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn, __WorldContext) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn::__WorldContext' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn, IsControllingPawn) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_IsLocalPlayerControllingPawn::IsControllingPawn' has a wrong offset!");
+
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.IsGhostCharacter
+// 0x0018 (0x0018 - 0x0000)
+struct X6BlueprintPlayerLibrary_C_IsGhostCharacter final
+{
+public:
+	class AActor*                                 InActor;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          isGhost;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintPlayerLibrary_C_IsGhostCharacter) == 0x000008, "Wrong alignment on X6BlueprintPlayerLibrary_C_IsGhostCharacter");
+static_assert(sizeof(X6BlueprintPlayerLibrary_C_IsGhostCharacter) == 0x000018, "Wrong size on X6BlueprintPlayerLibrary_C_IsGhostCharacter");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_IsGhostCharacter, InActor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_IsGhostCharacter::InActor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_IsGhostCharacter, __WorldContext) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_IsGhostCharacter::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_IsGhostCharacter, isGhost) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_IsGhostCharacter::isGhost' has a wrong offset!");
 
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.GetX6GameNikkiPawn
 // 0x0010 (0x0010 - 0x0000)
@@ -579,6 +594,22 @@ static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback) == 0x0
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback, ForceFeedbackEffect) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback::ForceFeedbackEffect' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback, TagName) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback::TagName' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback, __WorldContext) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_StopPlayForceFeedback::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetWeaponOverlayEnabled
+// 0x0018 (0x0018 - 0x0000)
+struct X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled final
+{
+public:
+	class AActor*                                 InActor;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnable;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled) == 0x000008, "Wrong alignment on X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled");
+static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled) == 0x000018, "Wrong size on X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled, InActor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled::InActor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled, bEnable) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled::bEnable' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled, __WorldContext) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetWeaponMirrorDisabled
 // 0x0028 (0x0028 - 0x0000)
@@ -943,26 +974,26 @@ static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_ExitGamePlayMovementMode, C
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_ExitGamePlayMovementMode, CallFunc_IsValid_ReturnValue_1) == 0x000022, "Member 'X6BlueprintPlayerLibrary_C_BP_ExitGamePlayMovementMode::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_EquipWeaponByID
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID final
 {
 public:
 	class AActor*                                 InActor;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FString                                 WeaponID;                                          // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 SlotType;                                          // 0x0018(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          ImmediateRequest;                                  // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          InSync;                                            // 0x0029(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int64                                         WeaponID;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SlotType;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          ImmediateRequest;                                  // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          InSync;                                            // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID) == 0x000008, "Wrong alignment on X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID");
-static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID) == 0x000038, "Wrong size on X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID");
+static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID) == 0x000030, "Wrong size on X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, InActor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::InActor' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, WeaponID) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::WeaponID' has a wrong offset!");
-static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, SlotType) == 0x000018, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::SlotType' has a wrong offset!");
-static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, ImmediateRequest) == 0x000028, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::ImmediateRequest' has a wrong offset!");
-static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, InSync) == 0x000029, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::InSync' has a wrong offset!");
-static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, __WorldContext) == 0x000030, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, SlotType) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::SlotType' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, ImmediateRequest) == 0x000020, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::ImmediateRequest' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, InSync) == 0x000021, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::InSync' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID, __WorldContext) == 0x000028, "Member 'X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_EquipWeaponByConfigPath
 // 0x0038 (0x0038 - 0x0000)

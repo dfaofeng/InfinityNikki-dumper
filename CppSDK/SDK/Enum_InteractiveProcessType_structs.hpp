@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum Enum_InteractiveProcessType.Enum_InteractiveProcessType
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class Enum_InteractiveProcessType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -23,7 +23,8 @@ enum class Enum_InteractiveProcessType : uint8
 	NewEnumerator2                           = 2,
 	NewEnumerator3                           = 3,
 	NewEnumerator4                           = 4,
-	Enum_MAX                                 = 5,
+	NewEnumerator5                           = 5,
+	Enum_MAX                                 = 6,
 };
 
 }

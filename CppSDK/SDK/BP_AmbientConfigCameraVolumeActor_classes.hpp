@@ -19,15 +19,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AmbientConfigCameraVolumeActor.BP_AmbientConfigCameraVolumeActor_C
-// 0x00B0 (0x06B0 - 0x0600)
+// 0x00B0 (0x0700 - 0x0650)
 class ABP_AmbientConfigCameraVolumeActor_C final : public ABP_CameraVolumeActorBase_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_AmbientConfigCameraVolumeActor_C; // 0x05F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TMap<Enum_AmbientCamera, class FName>         CameraAmbientMap;                                  // 0x0600(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	Enum_AmbientCamera                            CameraAmbientType;                                 // 0x0650(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_651[0x7];                                      // 0x0651(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UAdvancedCamera*, int32>           CameraIndexMap;                                    // 0x0658(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_AmbientConfigCameraVolumeActor_C; // 0x0648(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	TMap<Enum_AmbientCamera, class FName>         CameraAmbientMap;                                  // 0x0650(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	Enum_AmbientCamera                            CameraAmbientType;                                 // 0x06A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A1[0x7];                                      // 0x06A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UAdvancedCamera*, int32>           CameraIndexMap;                                    // 0x06A8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:
 	void ReceiveBeginPlay();
@@ -51,11 +51,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_AmbientConfigCameraVolumeActor_C) == 0x000010, "Wrong alignment on ABP_AmbientConfigCameraVolumeActor_C");
-static_assert(sizeof(ABP_AmbientConfigCameraVolumeActor_C) == 0x0006B0, "Wrong size on ABP_AmbientConfigCameraVolumeActor_C");
-static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, UberGraphFrame_BP_AmbientConfigCameraVolumeActor_C) == 0x0005F8, "Member 'ABP_AmbientConfigCameraVolumeActor_C::UberGraphFrame_BP_AmbientConfigCameraVolumeActor_C' has a wrong offset!");
-static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, CameraAmbientMap) == 0x000600, "Member 'ABP_AmbientConfigCameraVolumeActor_C::CameraAmbientMap' has a wrong offset!");
-static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, CameraAmbientType) == 0x000650, "Member 'ABP_AmbientConfigCameraVolumeActor_C::CameraAmbientType' has a wrong offset!");
-static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, CameraIndexMap) == 0x000658, "Member 'ABP_AmbientConfigCameraVolumeActor_C::CameraIndexMap' has a wrong offset!");
+static_assert(sizeof(ABP_AmbientConfigCameraVolumeActor_C) == 0x000700, "Wrong size on ABP_AmbientConfigCameraVolumeActor_C");
+static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, UberGraphFrame_BP_AmbientConfigCameraVolumeActor_C) == 0x000648, "Member 'ABP_AmbientConfigCameraVolumeActor_C::UberGraphFrame_BP_AmbientConfigCameraVolumeActor_C' has a wrong offset!");
+static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, CameraAmbientMap) == 0x000650, "Member 'ABP_AmbientConfigCameraVolumeActor_C::CameraAmbientMap' has a wrong offset!");
+static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, CameraAmbientType) == 0x0006A0, "Member 'ABP_AmbientConfigCameraVolumeActor_C::CameraAmbientType' has a wrong offset!");
+static_assert(offsetof(ABP_AmbientConfigCameraVolumeActor_C, CameraIndexMap) == 0x0006A8, "Member 'ABP_AmbientConfigCameraVolumeActor_C::CameraIndexMap' has a wrong offset!");
 
 }
 

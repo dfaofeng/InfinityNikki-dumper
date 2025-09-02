@@ -210,22 +210,6 @@ enum class EX6CameraInputDeviceType : uint8
 	EX6CameraInputDeviceType_MAX             = 4,
 };
 
-// ScriptStruct X6Camera.X6CameraConfigBlendParams
-// 0x0028 (0x0028 - 0x0000)
-struct FX6CameraConfigBlendParams final
-{
-public:
-	bool                                          bOverrideTransitionParams;                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCacheCameraSettingsWhenLockOutgoingBlend;         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0008(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6CameraConfigBlendParams) == 0x000008, "Wrong alignment on FX6CameraConfigBlendParams");
-static_assert(sizeof(FX6CameraConfigBlendParams) == 0x000028, "Wrong size on FX6CameraConfigBlendParams");
-static_assert(offsetof(FX6CameraConfigBlendParams, bOverrideTransitionParams) == 0x000000, "Member 'FX6CameraConfigBlendParams::bOverrideTransitionParams' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigBlendParams, bCacheCameraSettingsWhenLockOutgoingBlend) == 0x000001, "Member 'FX6CameraConfigBlendParams::bCacheCameraSettingsWhenLockOutgoingBlend' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigBlendParams, TransitionParams) == 0x000008, "Member 'FX6CameraConfigBlendParams::TransitionParams' has a wrong offset!");
-
 // ScriptStruct X6Camera.CameraOrientationSyncConfig
 // 0x00B8 (0x00B8 - 0x0000)
 struct FCameraOrientationSyncConfig final
@@ -329,30 +313,6 @@ static_assert(offsetof(FCameraOrientationSyncConfig, PitchCheckChangeLength) == 
 static_assert(offsetof(FCameraOrientationSyncConfig, PitchCheckYawRange) == 0x0000AC, "Member 'FCameraOrientationSyncConfig::PitchCheckYawRange' has a wrong offset!");
 static_assert(offsetof(FCameraOrientationSyncConfig, AirLandPitch) == 0x0000B0, "Member 'FCameraOrientationSyncConfig::AirLandPitch' has a wrong offset!");
 
-// ScriptStruct X6Camera.X6CameraInputConfig
-// 0x00D0 (0x00D0 - 0x0000)
-struct FX6CameraInputConfig final
-{
-public:
-	uint8                                         bOverride_bAcceptInput : 1;                        // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bAcceptInput;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_InputXRotateSpeedFactor : 1;             // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InputXRotateSpeedFactor;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_InputYRotateSpeedFactor : 1;             // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InputYRotateSpeedFactor;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_CameraOrientationSyncConfig : 1;         // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraOrientationSyncConfig           CameraOrientationSyncConfig;                       // 0x0018(0x00B8)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6CameraInputConfig) == 0x000008, "Wrong alignment on FX6CameraInputConfig");
-static_assert(sizeof(FX6CameraInputConfig) == 0x0000D0, "Wrong size on FX6CameraInputConfig");
-static_assert(offsetof(FX6CameraInputConfig, bAcceptInput) == 0x000001, "Member 'FX6CameraInputConfig::bAcceptInput' has a wrong offset!");
-static_assert(offsetof(FX6CameraInputConfig, InputXRotateSpeedFactor) == 0x000004, "Member 'FX6CameraInputConfig::InputXRotateSpeedFactor' has a wrong offset!");
-static_assert(offsetof(FX6CameraInputConfig, InputYRotateSpeedFactor) == 0x00000C, "Member 'FX6CameraInputConfig::InputYRotateSpeedFactor' has a wrong offset!");
-static_assert(offsetof(FX6CameraInputConfig, CameraOrientationSyncConfig) == 0x000018, "Member 'FX6CameraInputConfig::CameraOrientationSyncConfig' has a wrong offset!");
-
 // ScriptStruct X6Camera.CameraTaskEventData
 // 0x0090 (0x0090 - 0x0000)
 struct FCameraTaskEventData final
@@ -399,6 +359,22 @@ static_assert(offsetof(FBasedMovementFixCameraHelper, bRotationChanged) == 0x000
 static_assert(offsetof(FBasedMovementFixCameraHelper, bLocationChanged) == 0x000069, "Member 'FBasedMovementFixCameraHelper::bLocationChanged' has a wrong offset!");
 static_assert(offsetof(FBasedMovementFixCameraHelper, DeltaYaw) == 0x00006C, "Member 'FBasedMovementFixCameraHelper::DeltaYaw' has a wrong offset!");
 
+// ScriptStruct X6Camera.X6CameraConfigBlendParams
+// 0x0028 (0x0028 - 0x0000)
+struct FX6CameraConfigBlendParams final
+{
+public:
+	bool                                          bOverrideTransitionParams;                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCacheCameraSettingsWhenLockOutgoingBlend;         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0008(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6CameraConfigBlendParams) == 0x000008, "Wrong alignment on FX6CameraConfigBlendParams");
+static_assert(sizeof(FX6CameraConfigBlendParams) == 0x000028, "Wrong size on FX6CameraConfigBlendParams");
+static_assert(offsetof(FX6CameraConfigBlendParams, bOverrideTransitionParams) == 0x000000, "Member 'FX6CameraConfigBlendParams::bOverrideTransitionParams' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigBlendParams, bCacheCameraSettingsWhenLockOutgoingBlend) == 0x000001, "Member 'FX6CameraConfigBlendParams::bCacheCameraSettingsWhenLockOutgoingBlend' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigBlendParams, TransitionParams) == 0x000008, "Member 'FX6CameraConfigBlendParams::TransitionParams' has a wrong offset!");
+
 // ScriptStruct X6Camera.VectorSpringStateInfo
 // 0x001C (0x001C - 0x0000)
 struct alignas(0x04) FVectorSpringStateInfo final
@@ -440,17 +416,17 @@ static_assert(offsetof(FViewTargetCurveTransitionParams, RotationBlendFunction) 
 static_assert(offsetof(FViewTargetCurveTransitionParams, RotationBlendExp) == 0x00001C, "Member 'FViewTargetCurveTransitionParams::RotationBlendExp' has a wrong offset!");
 
 // ScriptStruct X6Camera.TransCameraViewData
-// 0x0990 (0x0990 - 0x0000)
+// 0x09B0 (0x09B0 - 0x0000)
 struct FTransCameraViewData final
 {
 public:
-	struct FMinimalViewInfo                       NewCameraView;                                     // 0x0000(0x0970)(NativeAccessSpecifierPublic)
-	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0970(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       NewCameraView;                                     // 0x0000(0x0990)(NativeAccessSpecifierPublic)
+	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x0990(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FTransCameraViewData) == 0x000010, "Wrong alignment on FTransCameraViewData");
-static_assert(sizeof(FTransCameraViewData) == 0x000990, "Wrong size on FTransCameraViewData");
+static_assert(sizeof(FTransCameraViewData) == 0x0009B0, "Wrong size on FTransCameraViewData");
 static_assert(offsetof(FTransCameraViewData, NewCameraView) == 0x000000, "Member 'FTransCameraViewData::NewCameraView' has a wrong offset!");
-static_assert(offsetof(FTransCameraViewData, TransitionParams) == 0x000970, "Member 'FTransCameraViewData::TransitionParams' has a wrong offset!");
+static_assert(offsetof(FTransCameraViewData, TransitionParams) == 0x000990, "Member 'FTransCameraViewData::TransitionParams' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraStateViewTagetData
 // 0x0020 (0x0020 - 0x0000)
@@ -495,7 +471,7 @@ static_assert(offsetof(FCameraInputOptimizationConfig, AllowMaxSpeed) == 0x00001
 static_assert(offsetof(FCameraInputOptimizationConfig, SpeedMapScaleCurve) == 0x000020, "Member 'FCameraInputOptimizationConfig::SpeedMapScaleCurve' has a wrong offset!");
 
 // ScriptStruct X6Camera.X6CameraBlendableSettings
-// 0x0118 (0x0118 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct FX6CameraBlendableSettings
 {
 public:
@@ -529,30 +505,33 @@ public:
 	uint8                                         Pad_73[0x5];                                       // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            ArmlengthCurveByPitch;                             // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_80[0x4];                                       // 0x0080(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bOverride_MaxArmLength : 1;                        // 0x0084(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxArmLength;                                      // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_MinArmLength : 1;                        // 0x008C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_bArmLengthInfluencedByPlayerSetting : 1; // 0x0084(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bArmLengthInfluencedByPlayerSetting;               // 0x0085(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_86[0x6];                                       // 0x0086(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverride_MaxArmLength : 1;                        // 0x008C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinArmLength;                                      // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_bEnableInfluenceOffsetByPitch : 1;       // 0x0094(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bEnableInfluenceOffsetByPitch;                     // 0x0095(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_OffsetCurveByPitch : 1;                  // 0x0096(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_97[0x1];                                       // 0x0097(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveVector*                           OffsetCurveByPitch;                                // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A0[0x18];                                      // 0x00A0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bOverride_SocketOffset : 1;                        // 0x00B8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                SocketOffset;                                      // 0x00C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_SocketRotationOffset : 1;                // 0x00D8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               SocketRotationOffset;                              // 0x00E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_TargetOffset : 1;                        // 0x00F8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                TargetOffset;                                      // 0x0100(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxArmLength;                                      // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_MinArmLength : 1;                        // 0x0094(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinArmLength;                                      // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_bEnableInfluenceOffsetByPitch : 1;       // 0x009C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bEnableInfluenceOffsetByPitch;                     // 0x009D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_OffsetCurveByPitch : 1;                  // 0x009E(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9F[0x1];                                       // 0x009F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveVector*                           OffsetCurveByPitch;                                // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x18];                                      // 0x00A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverride_SocketOffset : 1;                        // 0x00C0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_C1[0x7];                                       // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SocketOffset;                                      // 0x00C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_SocketRotationOffset : 1;                // 0x00E0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_E1[0x7];                                       // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               SocketRotationOffset;                              // 0x00E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_TargetOffset : 1;                        // 0x0100(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_101[0x7];                                      // 0x0101(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TargetOffset;                                      // 0x0108(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FX6CameraBlendableSettings) == 0x000008, "Wrong alignment on FX6CameraBlendableSettings");
-static_assert(sizeof(FX6CameraBlendableSettings) == 0x000118, "Wrong size on FX6CameraBlendableSettings");
+static_assert(sizeof(FX6CameraBlendableSettings) == 0x000120, "Wrong size on FX6CameraBlendableSettings");
 static_assert(offsetof(FX6CameraBlendableSettings, FOV) == 0x000004, "Member 'FX6CameraBlendableSettings::FOV' has a wrong offset!");
 static_assert(offsetof(FX6CameraBlendableSettings, BirthRotation) == 0x000010, "Member 'FX6CameraBlendableSettings::BirthRotation' has a wrong offset!");
 static_assert(offsetof(FX6CameraBlendableSettings, OriginRotation) == 0x000030, "Member 'FX6CameraBlendableSettings::OriginRotation' has a wrong offset!");
@@ -563,62 +542,87 @@ static_assert(offsetof(FX6CameraBlendableSettings, MinYawAngle) == 0x000064, "Me
 static_assert(offsetof(FX6CameraBlendableSettings, BaseArmLength) == 0x00006C, "Member 'FX6CameraBlendableSettings::BaseArmLength' has a wrong offset!");
 static_assert(offsetof(FX6CameraBlendableSettings, bEnableInfluencedByPitch) == 0x000071, "Member 'FX6CameraBlendableSettings::bEnableInfluencedByPitch' has a wrong offset!");
 static_assert(offsetof(FX6CameraBlendableSettings, ArmlengthCurveByPitch) == 0x000078, "Member 'FX6CameraBlendableSettings::ArmlengthCurveByPitch' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, MaxArmLength) == 0x000088, "Member 'FX6CameraBlendableSettings::MaxArmLength' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, MinArmLength) == 0x000090, "Member 'FX6CameraBlendableSettings::MinArmLength' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, bEnableInfluenceOffsetByPitch) == 0x000095, "Member 'FX6CameraBlendableSettings::bEnableInfluenceOffsetByPitch' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, OffsetCurveByPitch) == 0x000098, "Member 'FX6CameraBlendableSettings::OffsetCurveByPitch' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, SocketOffset) == 0x0000C0, "Member 'FX6CameraBlendableSettings::SocketOffset' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, SocketRotationOffset) == 0x0000E0, "Member 'FX6CameraBlendableSettings::SocketRotationOffset' has a wrong offset!");
-static_assert(offsetof(FX6CameraBlendableSettings, TargetOffset) == 0x000100, "Member 'FX6CameraBlendableSettings::TargetOffset' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, bArmLengthInfluencedByPlayerSetting) == 0x000085, "Member 'FX6CameraBlendableSettings::bArmLengthInfluencedByPlayerSetting' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, MaxArmLength) == 0x000090, "Member 'FX6CameraBlendableSettings::MaxArmLength' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, MinArmLength) == 0x000098, "Member 'FX6CameraBlendableSettings::MinArmLength' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, bEnableInfluenceOffsetByPitch) == 0x00009D, "Member 'FX6CameraBlendableSettings::bEnableInfluenceOffsetByPitch' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, OffsetCurveByPitch) == 0x0000A0, "Member 'FX6CameraBlendableSettings::OffsetCurveByPitch' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, SocketOffset) == 0x0000C8, "Member 'FX6CameraBlendableSettings::SocketOffset' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, SocketRotationOffset) == 0x0000E8, "Member 'FX6CameraBlendableSettings::SocketRotationOffset' has a wrong offset!");
+static_assert(offsetof(FX6CameraBlendableSettings, TargetOffset) == 0x000108, "Member 'FX6CameraBlendableSettings::TargetOffset' has a wrong offset!");
+
+// ScriptStruct X6Camera.X6CameraInputConfig
+// 0x00D0 (0x00D0 - 0x0000)
+struct FX6CameraInputConfig final
+{
+public:
+	uint8                                         bOverride_bAcceptInput : 1;                        // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bAcceptInput;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_InputXRotateSpeedFactor : 1;             // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InputXRotateSpeedFactor;                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_InputYRotateSpeedFactor : 1;             // 0x0008(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InputYRotateSpeedFactor;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_CameraOrientationSyncConfig : 1;         // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraOrientationSyncConfig           CameraOrientationSyncConfig;                       // 0x0018(0x00B8)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6CameraInputConfig) == 0x000008, "Wrong alignment on FX6CameraInputConfig");
+static_assert(sizeof(FX6CameraInputConfig) == 0x0000D0, "Wrong size on FX6CameraInputConfig");
+static_assert(offsetof(FX6CameraInputConfig, bAcceptInput) == 0x000001, "Member 'FX6CameraInputConfig::bAcceptInput' has a wrong offset!");
+static_assert(offsetof(FX6CameraInputConfig, InputXRotateSpeedFactor) == 0x000004, "Member 'FX6CameraInputConfig::InputXRotateSpeedFactor' has a wrong offset!");
+static_assert(offsetof(FX6CameraInputConfig, InputYRotateSpeedFactor) == 0x00000C, "Member 'FX6CameraInputConfig::InputYRotateSpeedFactor' has a wrong offset!");
+static_assert(offsetof(FX6CameraInputConfig, CameraOrientationSyncConfig) == 0x000018, "Member 'FX6CameraInputConfig::CameraOrientationSyncConfig' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraBaseParamsDefine
-// 0x0048 (0x0160 - 0x0118)
+// 0x0048 (0x0168 - 0x0120)
 struct FCameraBaseParamsDefine final : public FX6CameraBlendableSettings
 {
 public:
-	uint8                                         bOverride_bDoCollisionTest : 1;                    // 0x0118(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bDoCollisionTest;                                  // 0x0119(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_ProbeSize : 1;                           // 0x011A(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11B[0x1];                                      // 0x011B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProbeSize;                                         // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_CameraCollisionProcessClass : 1;         // 0x0120(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCameraCollisionProcess>    CameraCollisionProcessClass;                       // 0x0128(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_bDoLocationLag : 1;                      // 0x0130(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bDoLocationLag;                                    // 0x0131(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_bDoRotationLag : 1;                      // 0x0132(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bDoRotationLag;                                    // 0x0133(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_bDoTargetArmlengthLag : 1;               // 0x0134(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	bool                                          bDoTargetArmlengthLag;                             // 0x0135(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_CameraLagProcessClass : 1;               // 0x0136(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_137[0x1];                                      // 0x0137(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCameraLagProcess>          CameraLagProcessClass;                             // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_LocationBlendSpeed : 1;                  // 0x0140(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LocationBlendSpeed;                                // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_FOVBlendSpeed : 1;                       // 0x0148(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_bDoCollisionTest : 1;                    // 0x0120(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bDoCollisionTest;                                  // 0x0121(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_ProbeSize : 1;                           // 0x0122(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_123[0x1];                                      // 0x0123(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ProbeSize;                                         // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_CameraCollisionProcessClass : 1;         // 0x0128(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCameraCollisionProcess>    CameraCollisionProcessClass;                       // 0x0130(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_bDoLocationLag : 1;                      // 0x0138(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bDoLocationLag;                                    // 0x0139(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_bDoRotationLag : 1;                      // 0x013A(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bDoRotationLag;                                    // 0x013B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_bDoTargetArmlengthLag : 1;               // 0x013C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	bool                                          bDoTargetArmlengthLag;                             // 0x013D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_CameraLagProcessClass : 1;               // 0x013E(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_13F[0x1];                                      // 0x013F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCameraLagProcess>          CameraLagProcessClass;                             // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_LocationBlendSpeed : 1;                  // 0x0148(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_149[0x3];                                      // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FOVBlendSpeed;                                     // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_MaxBlendTime : 1;                        // 0x0150(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	float                                         LocationBlendSpeed;                                // 0x014C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_FOVBlendSpeed : 1;                       // 0x0150(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxBlendTime;                                      // 0x0154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOverride_MaxBlendSpeed : 1;                       // 0x0158(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	float                                         FOVBlendSpeed;                                     // 0x0154(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_MaxBlendTime : 1;                        // 0x0158(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxBlendSpeed;                                     // 0x015C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxBlendTime;                                      // 0x015C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOverride_MaxBlendSpeed : 1;                       // 0x0160(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxBlendSpeed;                                     // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FCameraBaseParamsDefine) == 0x000008, "Wrong alignment on FCameraBaseParamsDefine");
-static_assert(sizeof(FCameraBaseParamsDefine) == 0x000160, "Wrong size on FCameraBaseParamsDefine");
-static_assert(offsetof(FCameraBaseParamsDefine, bDoCollisionTest) == 0x000119, "Member 'FCameraBaseParamsDefine::bDoCollisionTest' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, ProbeSize) == 0x00011C, "Member 'FCameraBaseParamsDefine::ProbeSize' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, CameraCollisionProcessClass) == 0x000128, "Member 'FCameraBaseParamsDefine::CameraCollisionProcessClass' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, bDoLocationLag) == 0x000131, "Member 'FCameraBaseParamsDefine::bDoLocationLag' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, bDoRotationLag) == 0x000133, "Member 'FCameraBaseParamsDefine::bDoRotationLag' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, bDoTargetArmlengthLag) == 0x000135, "Member 'FCameraBaseParamsDefine::bDoTargetArmlengthLag' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, CameraLagProcessClass) == 0x000138, "Member 'FCameraBaseParamsDefine::CameraLagProcessClass' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, LocationBlendSpeed) == 0x000144, "Member 'FCameraBaseParamsDefine::LocationBlendSpeed' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, FOVBlendSpeed) == 0x00014C, "Member 'FCameraBaseParamsDefine::FOVBlendSpeed' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, MaxBlendTime) == 0x000154, "Member 'FCameraBaseParamsDefine::MaxBlendTime' has a wrong offset!");
-static_assert(offsetof(FCameraBaseParamsDefine, MaxBlendSpeed) == 0x00015C, "Member 'FCameraBaseParamsDefine::MaxBlendSpeed' has a wrong offset!");
+static_assert(sizeof(FCameraBaseParamsDefine) == 0x000168, "Wrong size on FCameraBaseParamsDefine");
+static_assert(offsetof(FCameraBaseParamsDefine, bDoCollisionTest) == 0x000121, "Member 'FCameraBaseParamsDefine::bDoCollisionTest' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, ProbeSize) == 0x000124, "Member 'FCameraBaseParamsDefine::ProbeSize' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, CameraCollisionProcessClass) == 0x000130, "Member 'FCameraBaseParamsDefine::CameraCollisionProcessClass' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, bDoLocationLag) == 0x000139, "Member 'FCameraBaseParamsDefine::bDoLocationLag' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, bDoRotationLag) == 0x00013B, "Member 'FCameraBaseParamsDefine::bDoRotationLag' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, bDoTargetArmlengthLag) == 0x00013D, "Member 'FCameraBaseParamsDefine::bDoTargetArmlengthLag' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, CameraLagProcessClass) == 0x000140, "Member 'FCameraBaseParamsDefine::CameraLagProcessClass' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, LocationBlendSpeed) == 0x00014C, "Member 'FCameraBaseParamsDefine::LocationBlendSpeed' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, FOVBlendSpeed) == 0x000154, "Member 'FCameraBaseParamsDefine::FOVBlendSpeed' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, MaxBlendTime) == 0x00015C, "Member 'FCameraBaseParamsDefine::MaxBlendTime' has a wrong offset!");
+static_assert(offsetof(FCameraBaseParamsDefine, MaxBlendSpeed) == 0x000164, "Member 'FCameraBaseParamsDefine::MaxBlendSpeed' has a wrong offset!");
 
 // ScriptStruct X6Camera.X6CameraConfigPriority
 // 0x0030 (0x0030 - 0x0000)
@@ -997,36 +1001,36 @@ static_assert(offsetof(FCameraSpringArmPathBlend, MaxTraceTimes) == 0x000014, "M
 static_assert(offsetof(FCameraSpringArmPathBlend, MaxCollisionFixDistance) == 0x000018, "Member 'FCameraSpringArmPathBlend::MaxCollisionFixDistance' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraStateContext
-// 0x09A0 (0x09A0 - 0x0000)
+// 0x09C0 (0x09C0 - 0x0000)
 struct FCameraStateContext final
 {
 public:
-	struct FTViewTarget                           ViewTarget;                                        // 0x0000(0x0990)(BlueprintVisible, NativeAccessSpecifierPublic)
-	ECameraState                                  CameraState;                                       // 0x0990(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPlayerPawn;                                     // 0x0991(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_992[0xE];                                      // 0x0992(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FTViewTarget                           ViewTarget;                                        // 0x0000(0x09B0)(BlueprintVisible, NativeAccessSpecifierPublic)
+	ECameraState                                  CameraState;                                       // 0x09B0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPlayerPawn;                                     // 0x09B1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9B2[0xE];                                      // 0x09B2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCameraStateContext) == 0x000010, "Wrong alignment on FCameraStateContext");
-static_assert(sizeof(FCameraStateContext) == 0x0009A0, "Wrong size on FCameraStateContext");
+static_assert(sizeof(FCameraStateContext) == 0x0009C0, "Wrong size on FCameraStateContext");
 static_assert(offsetof(FCameraStateContext, ViewTarget) == 0x000000, "Member 'FCameraStateContext::ViewTarget' has a wrong offset!");
-static_assert(offsetof(FCameraStateContext, CameraState) == 0x000990, "Member 'FCameraStateContext::CameraState' has a wrong offset!");
-static_assert(offsetof(FCameraStateContext, bIsPlayerPawn) == 0x000991, "Member 'FCameraStateContext::bIsPlayerPawn' has a wrong offset!");
+static_assert(offsetof(FCameraStateContext, CameraState) == 0x0009B0, "Member 'FCameraStateContext::CameraState' has a wrong offset!");
+static_assert(offsetof(FCameraStateContext, bIsPlayerPawn) == 0x0009B1, "Member 'FCameraStateContext::bIsPlayerPawn' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraStateBase
-// 0x09A0 (0x09A0 - 0x0000)
+// 0x09C0 (0x09C0 - 0x0000)
 struct FCameraStateBase final
 {
 public:
-	struct FTViewTarget                           ViewTarget;                                        // 0x0000(0x0990)(NativeAccessSpecifierPublic)
-	ECameraState                                  CameraState;                                       // 0x0990(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsPlayerPawn;                                     // 0x0991(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_992[0xE];                                      // 0x0992(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FTViewTarget                           ViewTarget;                                        // 0x0000(0x09B0)(NativeAccessSpecifierPublic)
+	ECameraState                                  CameraState;                                       // 0x09B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsPlayerPawn;                                     // 0x09B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9B2[0xE];                                      // 0x09B2(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCameraStateBase) == 0x000010, "Wrong alignment on FCameraStateBase");
-static_assert(sizeof(FCameraStateBase) == 0x0009A0, "Wrong size on FCameraStateBase");
+static_assert(sizeof(FCameraStateBase) == 0x0009C0, "Wrong size on FCameraStateBase");
 static_assert(offsetof(FCameraStateBase, ViewTarget) == 0x000000, "Member 'FCameraStateBase::ViewTarget' has a wrong offset!");
-static_assert(offsetof(FCameraStateBase, CameraState) == 0x000990, "Member 'FCameraStateBase::CameraState' has a wrong offset!");
-static_assert(offsetof(FCameraStateBase, bIsPlayerPawn) == 0x000991, "Member 'FCameraStateBase::bIsPlayerPawn' has a wrong offset!");
+static_assert(offsetof(FCameraStateBase, CameraState) == 0x0009B0, "Member 'FCameraStateBase::CameraState' has a wrong offset!");
+static_assert(offsetof(FCameraStateBase, bIsPlayerPawn) == 0x0009B1, "Member 'FCameraStateBase::bIsPlayerPawn' has a wrong offset!");
 
 // ScriptStruct X6Camera.CameraModifierBlendParam
 // 0x0018 (0x0018 - 0x0000)
@@ -1102,42 +1106,42 @@ static_assert(offsetof(FCameraTaskSplineData, SplineComponent) == 0x000000, "Mem
 static_assert(offsetof(FCameraTaskSplineData, TotalTime) == 0x000008, "Member 'FCameraTaskSplineData::TotalTime' has a wrong offset!");
 
 // ScriptStruct X6Camera.X6CameraRuntimeConfig
-// 0x0230 (0x0230 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct FX6CameraRuntimeConfig
 {
 public:
 	struct FX6CameraInputConfig                   InputConfig;                                       // 0x0000(0x00D0)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraBaseParamsDefine                BaseParams;                                        // 0x00D0(0x0160)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraBaseParamsDefine                BaseParams;                                        // 0x00D0(0x0168)(NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FX6CameraRuntimeConfig) == 0x000008, "Wrong alignment on FX6CameraRuntimeConfig");
-static_assert(sizeof(FX6CameraRuntimeConfig) == 0x000230, "Wrong size on FX6CameraRuntimeConfig");
+static_assert(sizeof(FX6CameraRuntimeConfig) == 0x000238, "Wrong size on FX6CameraRuntimeConfig");
 static_assert(offsetof(FX6CameraRuntimeConfig, InputConfig) == 0x000000, "Member 'FX6CameraRuntimeConfig::InputConfig' has a wrong offset!");
 static_assert(offsetof(FX6CameraRuntimeConfig, BaseParams) == 0x0000D0, "Member 'FX6CameraRuntimeConfig::BaseParams' has a wrong offset!");
 
 // ScriptStruct X6Camera.X6CameraConfigData
-// 0x00F8 (0x0328 - 0x0230)
+// 0x00F8 (0x0330 - 0x0238)
 struct FX6CameraConfigData final : public FX6CameraRuntimeConfig
 {
 public:
-	class UCameraBaseParamsData*                  Data;                                              // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ConfigKey;                                         // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FX6CameraConfig                        Config;                                            // 0x0240(0x00D0)(NativeAccessSpecifierPublic)
-	class UX6CameraRuntimeConfigModifier*         ConfigModifier;                                    // 0x0310(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBaseConfig;                                       // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         UniqueKey;                                         // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRejected;                                         // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_321[0x7];                                      // 0x0321(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UCameraBaseParamsData*                  Data;                                              // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ConfigKey;                                         // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FX6CameraConfig                        Config;                                            // 0x0248(0x00D0)(NativeAccessSpecifierPublic)
+	class UX6CameraRuntimeConfigModifier*         ConfigModifier;                                    // 0x0318(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBaseConfig;                                       // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_321[0x3];                                      // 0x0321(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         UniqueKey;                                         // 0x0324(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRejected;                                         // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_329[0x7];                                      // 0x0329(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FX6CameraConfigData) == 0x000008, "Wrong alignment on FX6CameraConfigData");
-static_assert(sizeof(FX6CameraConfigData) == 0x000328, "Wrong size on FX6CameraConfigData");
-static_assert(offsetof(FX6CameraConfigData, Data) == 0x000230, "Member 'FX6CameraConfigData::Data' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigData, ConfigKey) == 0x000238, "Member 'FX6CameraConfigData::ConfigKey' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigData, Config) == 0x000240, "Member 'FX6CameraConfigData::Config' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigData, ConfigModifier) == 0x000310, "Member 'FX6CameraConfigData::ConfigModifier' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigData, bBaseConfig) == 0x000318, "Member 'FX6CameraConfigData::bBaseConfig' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigData, UniqueKey) == 0x00031C, "Member 'FX6CameraConfigData::UniqueKey' has a wrong offset!");
-static_assert(offsetof(FX6CameraConfigData, bRejected) == 0x000320, "Member 'FX6CameraConfigData::bRejected' has a wrong offset!");
+static_assert(sizeof(FX6CameraConfigData) == 0x000330, "Wrong size on FX6CameraConfigData");
+static_assert(offsetof(FX6CameraConfigData, Data) == 0x000238, "Member 'FX6CameraConfigData::Data' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigData, ConfigKey) == 0x000240, "Member 'FX6CameraConfigData::ConfigKey' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigData, Config) == 0x000248, "Member 'FX6CameraConfigData::Config' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigData, ConfigModifier) == 0x000318, "Member 'FX6CameraConfigData::ConfigModifier' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigData, bBaseConfig) == 0x000320, "Member 'FX6CameraConfigData::bBaseConfig' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigData, UniqueKey) == 0x000324, "Member 'FX6CameraConfigData::UniqueKey' has a wrong offset!");
+static_assert(offsetof(FX6CameraConfigData, bRejected) == 0x000328, "Member 'FX6CameraConfigData::bRejected' has a wrong offset!");
 
 // ScriptStruct X6Camera.X6CameraModifiersProcessor
 // 0x0140 (0x0140 - 0x0000)

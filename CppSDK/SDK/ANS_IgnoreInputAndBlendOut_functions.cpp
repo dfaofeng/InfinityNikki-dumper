@@ -17,147 +17,66 @@
 namespace SDK
 {
 
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.StopMontage
-// (Public, BlueprintCallable, BlueprintEvent, Const)
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.AddJumpData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class ACharacter*                       InCharacter                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAnimInstance*                    InAnimInstance                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  InBlendOutTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAnimMontage*                     InMontage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UANS_IgnoreInputAndBlendOut_C::StopMontage(class ACharacter* InCharacter, class UAnimInstance* InAnimInstance, double InBlendOutTime, class UAnimMontage* InMontage) const
+void UANS_IgnoreInputAndBlendOut_C::AddJumpData(double Duration) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "StopMontage");
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "AddJumpData");
 
-	Params::ANS_IgnoreInputAndBlendOut_C_StopMontage Parms{};
+	Params::ANS_IgnoreInputAndBlendOut_C_AddJumpData Parms{};
 
-	Parms.InCharacter = InCharacter;
-	Parms.InAnimInstance = InAnimInstance;
-	Parms.InBlendOutTime = InBlendOutTime;
-	Parms.InMontage = InMontage;
+	Parms.Duration = Duration;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.Received_NotifyTick_Section
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.AddMoveData
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class FName                             SectionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UANS_IgnoreInputAndBlendOut_C::AddMoveData(double Duration) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "AddMoveData");
+
+	Params::ANS_IgnoreInputAndBlendOut_C_AddMoveData Parms{};
+
+	Parms.Duration = Duration;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.BP_TickBlendOut
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
 // class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // float                                   FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UANS_IgnoreInputAndBlendOut_C::Received_NotifyTick_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const
+bool UANS_IgnoreInputAndBlendOut_C::BP_TickBlendOut(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "Received_NotifyTick_Section");
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "BP_TickBlendOut");
 
-	Params::ANS_IgnoreInputAndBlendOut_C_Received_NotifyTick_Section Parms{};
+	Params::ANS_IgnoreInputAndBlendOut_C_BP_TickBlendOut Parms{};
 
-	Parms.SectionName = SectionName;
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 	Parms.FrameDeltaTime = FrameDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.Received_NotifyEnd_Section
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FName                             SectionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   SectionElapsedTime                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bAnimNotifyEnd                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UANS_IgnoreInputAndBlendOut_C::Received_NotifyEnd_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float SectionElapsedTime, bool bAnimNotifyEnd) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "Received_NotifyEnd_Section");
-
-	Params::ANS_IgnoreInputAndBlendOut_C_Received_NotifyEnd_Section Parms{};
-
-	Parms.SectionName = SectionName;
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.SectionElapsedTime = SectionElapsedTime;
-	Parms.bAnimNotifyEnd = bAnimNotifyEnd;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.Received_NotifyBegin_Section
-// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FName                             SectionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   SectionElapsedTime                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UANS_IgnoreInputAndBlendOut_C::Received_NotifyBegin_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, float SectionElapsedTime) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "Received_NotifyBegin_Section");
-
-	Params::ANS_IgnoreInputAndBlendOut_C_Received_NotifyBegin_Section Parms{};
-
-	Parms.SectionName = SectionName;
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.TotalDuration = TotalDuration;
-	Parms.SectionElapsedTime = SectionElapsedTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.GetNotifyName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UANS_IgnoreInputAndBlendOut_C::GetNotifyName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "GetNotifyName");
-
-	Params::ANS_IgnoreInputAndBlendOut_C_GetNotifyName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UANS_IgnoreInputAndBlendOut_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "GetModuleName");
-
-	Params::ANS_IgnoreInputAndBlendOut_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -191,26 +110,19 @@ void UANS_IgnoreInputAndBlendOut_C::CancelAbility(class ACharacter* InCharacter,
 }
 
 
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.BP_TickBlendOut
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// float                                   FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-bool UANS_IgnoreInputAndBlendOut_C::BP_TickBlendOut(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const
+class FString UANS_IgnoreInputAndBlendOut_C::GetModuleName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "BP_TickBlendOut");
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "GetModuleName");
 
-	Params::ANS_IgnoreInputAndBlendOut_C_BP_TickBlendOut Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.FrameDeltaTime = FrameDeltaTime;
+	Params::ANS_IgnoreInputAndBlendOut_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -218,41 +130,129 @@ bool UANS_IgnoreInputAndBlendOut_C::BP_TickBlendOut(class USkeletalMeshComponent
 }
 
 
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.AddMoveData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.GetNotifyName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-void UANS_IgnoreInputAndBlendOut_C::AddMoveData(double Duration) const
+class FString UANS_IgnoreInputAndBlendOut_C::GetNotifyName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "AddMoveData");
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "GetNotifyName");
 
-	Params::ANS_IgnoreInputAndBlendOut_C_AddMoveData Parms{};
+	Params::ANS_IgnoreInputAndBlendOut_C_GetNotifyName Parms{};
 
-	Parms.Duration = Duration;
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.Received_NotifyBegin_Section
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FName                             SectionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   TotalDuration                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   SectionElapsedTime                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UANS_IgnoreInputAndBlendOut_C::Received_NotifyBegin_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, float SectionElapsedTime) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "Received_NotifyBegin_Section");
+
+	Params::ANS_IgnoreInputAndBlendOut_C_Received_NotifyBegin_Section Parms{};
+
+	Parms.SectionName = SectionName;
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.TotalDuration = TotalDuration;
+	Parms.SectionElapsedTime = SectionElapsedTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.AddJumpData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.Received_NotifyEnd_Section
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// double                                  Duration                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             SectionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   SectionElapsedTime                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bAnimNotifyEnd                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UANS_IgnoreInputAndBlendOut_C::AddJumpData(double Duration) const
+void UANS_IgnoreInputAndBlendOut_C::Received_NotifyEnd_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float SectionElapsedTime, bool bAnimNotifyEnd) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "AddJumpData");
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "Received_NotifyEnd_Section");
 
-	Params::ANS_IgnoreInputAndBlendOut_C_AddJumpData Parms{};
+	Params::ANS_IgnoreInputAndBlendOut_C_Received_NotifyEnd_Section Parms{};
 
-	Parms.Duration = Duration;
+	Parms.SectionName = SectionName;
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.SectionElapsedTime = SectionElapsedTime;
+	Parms.bAnimNotifyEnd = bAnimNotifyEnd;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.Received_NotifyTick_Section
+// (Event, Public, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FName                             SectionName                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// float                                   FrameDeltaTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UANS_IgnoreInputAndBlendOut_C::Received_NotifyTick_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "Received_NotifyTick_Section");
+
+	Params::ANS_IgnoreInputAndBlendOut_C_Received_NotifyTick_Section Parms{};
+
+	Parms.SectionName = SectionName;
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.FrameDeltaTime = FrameDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ANS_IgnoreInputAndBlendOut.ANS_IgnoreInputAndBlendOut_C.StopMontage
+// (Public, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class ACharacter*                       InCharacter                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAnimInstance*                    InAnimInstance                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  InBlendOutTime                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimMontage*                     InMontage                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UANS_IgnoreInputAndBlendOut_C::StopMontage(class ACharacter* InCharacter, class UAnimInstance* InAnimInstance, double InBlendOutTime, class UAnimMontage* InMontage) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_IgnoreInputAndBlendOut_C", "StopMontage");
+
+	Params::ANS_IgnoreInputAndBlendOut_C_StopMontage Parms{};
+
+	Parms.InCharacter = InCharacter;
+	Parms.InAnimInstance = InAnimInstance;
+	Parms.InBlendOutTime = InBlendOutTime;
+	Parms.InMontage = InMontage;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

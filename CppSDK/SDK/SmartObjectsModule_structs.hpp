@@ -12,9 +12,9 @@
 
 #include "GameplayTags_structs.hpp"
 #include "WorldConditions_structs.hpp"
+#include "StructUtils_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "StructUtils_structs.hpp"
 #include "PropertyBindingUtils_structs.hpp"
 
 
@@ -160,6 +160,14 @@ enum class ESmartObjectTraceType : uint8
 	ESmartObjectTraceType_MAX                = 3,
 };
 
+// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionBase
+// 0x0000 (0x0010 - 0x0010)
+struct FSmartObjectWorldConditionBase : public FWorldConditionBase
+{
+};
+static_assert(alignof(FSmartObjectWorldConditionBase) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionBase");
+static_assert(sizeof(FSmartObjectWorldConditionBase) == 0x000010, "Wrong size on FSmartObjectWorldConditionBase");
+
 // ScriptStruct SmartObjectsModule.SmartObjectHandle
 // 0x0008 (0x0008 - 0x0000)
 struct FSmartObjectHandle final
@@ -214,14 +222,6 @@ static_assert(sizeof(FSmartObjectUserCapsuleParams) == 0x00000C, "Wrong size on 
 static_assert(offsetof(FSmartObjectUserCapsuleParams, Radius) == 0x000000, "Member 'FSmartObjectUserCapsuleParams::Radius' has a wrong offset!");
 static_assert(offsetof(FSmartObjectUserCapsuleParams, Height) == 0x000004, "Member 'FSmartObjectUserCapsuleParams::Height' has a wrong offset!");
 static_assert(offsetof(FSmartObjectUserCapsuleParams, StepHeight) == 0x000008, "Member 'FSmartObjectUserCapsuleParams::StepHeight' has a wrong offset!");
-
-// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionBase
-// 0x0000 (0x0010 - 0x0010)
-struct FSmartObjectWorldConditionBase : public FWorldConditionBase
-{
-};
-static_assert(alignof(FSmartObjectWorldConditionBase) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionBase");
-static_assert(sizeof(FSmartObjectWorldConditionBase) == 0x000010, "Wrong size on FSmartObjectWorldConditionBase");
 
 // ScriptStruct SmartObjectsModule.SmartObjectDefinitionData
 // 0x0008 (0x0008 - 0x0000)
@@ -528,16 +528,6 @@ struct alignas(0x01) FSmartObjectSlotStateData
 static_assert(alignof(FSmartObjectSlotStateData) == 0x000001, "Wrong alignment on FSmartObjectSlotStateData");
 static_assert(sizeof(FSmartObjectSlotStateData) == 0x000001, "Wrong size on FSmartObjectSlotStateData");
 
-// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionSlotTagQueryState
-// 0x0018 (0x0018 - 0x0000)
-struct alignas(0x08) FSmartObjectWorldConditionSlotTagQueryState final
-{
-public:
-	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionSlotTagQueryState");
-static_assert(sizeof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000018, "Wrong size on FSmartObjectWorldConditionSlotTagQueryState");
-
 // ScriptStruct SmartObjectsModule.SmartObjectSlotTransform
 // 0x0060 (0x0060 - 0x0000)
 struct FSmartObjectSlotTransform final : public FSmartObjectSlotStateData
@@ -840,6 +830,16 @@ public:
 static_assert(alignof(FSmartObjectWorldConditionObjectTagQuery) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionObjectTagQuery");
 static_assert(sizeof(FSmartObjectWorldConditionObjectTagQuery) == 0x000070, "Wrong size on FSmartObjectWorldConditionObjectTagQuery");
 static_assert(offsetof(FSmartObjectWorldConditionObjectTagQuery, TagQuery) == 0x000028, "Member 'FSmartObjectWorldConditionObjectTagQuery::TagQuery' has a wrong offset!");
+
+// ScriptStruct SmartObjectsModule.SmartObjectWorldConditionSlotTagQueryState
+// 0x0018 (0x0018 - 0x0000)
+struct alignas(0x08) FSmartObjectWorldConditionSlotTagQueryState final
+{
+public:
+	uint8                                         Pad_0[0x18];                                       // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000008, "Wrong alignment on FSmartObjectWorldConditionSlotTagQueryState");
+static_assert(sizeof(FSmartObjectWorldConditionSlotTagQueryState) == 0x000018, "Wrong size on FSmartObjectWorldConditionSlotTagQueryState");
 
 // ScriptStruct SmartObjectsModule.SmartObjectWorldConditionSlotTagQuery
 // 0x0060 (0x0070 - 0x0010)

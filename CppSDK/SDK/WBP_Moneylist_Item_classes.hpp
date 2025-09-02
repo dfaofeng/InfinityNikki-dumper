@@ -10,43 +10,47 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_Moneylist_Item.WBP_Moneylist_Item_C
-// 0x0080 (0x0370 - 0x02F0)
+// 0x0090 (0x0380 - 0x02F0)
 class UWBP_Moneylist_Item_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Ani_Hover;                                         // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Energy_Hover;                                      // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Hover;                                             // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UButton*                                Btn_Add_Mobile;                                    // 0x0310(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_C*               Btn_Console;                                       // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Btn_Hov_PC;                                        // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Btn_PC;                                            // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 currency_icon;                                     // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             currency_num;                                      // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             currency_num_UpperLimit;                           // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Img_add_Mobile;                                    // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Img_Line;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text;                                              // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Energy_InfoPanel_C*                WBP_Energy_InfoPanel;                              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Add;                                // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_MoneyCollect_Moneylist;                        // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Hover;                                         // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Energy_Hover;                                      // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Hover;                                             // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UButton*                                Btn_Add_Mobile;                                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_C*               Btn_Console;                                       // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Btn_Hov_PC;                                        // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Btn_PC;                                            // 0x0330(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 currency_icon;                                     // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             currency_num;                                      // 0x0340(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             currency_num_UpperLimit;                           // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Img_add_Mobile;                                    // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Img_Line;                                          // 0x0358(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text;                                              // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Energy_InfoPanel_C*                WBP_Energy_InfoPanel;                              // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Add;                                // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	ESlateVisibility                              InVisibility_Line;                                 // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_Moneylist_Item_Btn_Add_Mobile_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_Moneylist_Item_Btn_Hov_PC_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Moneylist_Item_Btn_Hov_PC_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Moneylist_Item_Btn_Hov_PC_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_Moneylist_Item_Btn_PC_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_Moneylist_Item_Btn_PC_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature();
+	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_Moneylist_Item(int32 EntryPoint);
+	void BndEvt__WBP_Moneylist_Item_Btn_PC_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Moneylist_Item_Btn_PC_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_Moneylist_Item_Btn_Hov_PC_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_Moneylist_Item_Btn_Hov_PC_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Moneylist_Item_Btn_Hov_PC_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Moneylist_Item_Btn_Add_Mobile_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 
@@ -61,23 +65,25 @@ public:
 	}
 };
 static_assert(alignof(UWBP_Moneylist_Item_C) == 0x000008, "Wrong alignment on UWBP_Moneylist_Item_C");
-static_assert(sizeof(UWBP_Moneylist_Item_C) == 0x000370, "Wrong size on UWBP_Moneylist_Item_C");
+static_assert(sizeof(UWBP_Moneylist_Item_C) == 0x000380, "Wrong size on UWBP_Moneylist_Item_C");
 static_assert(offsetof(UWBP_Moneylist_Item_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_Moneylist_Item_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Ani_Hover) == 0x0002F8, "Member 'UWBP_Moneylist_Item_C::Ani_Hover' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Energy_Hover) == 0x000300, "Member 'UWBP_Moneylist_Item_C::Energy_Hover' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Hover) == 0x000308, "Member 'UWBP_Moneylist_Item_C::Hover' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_Add_Mobile) == 0x000310, "Member 'UWBP_Moneylist_Item_C::Btn_Add_Mobile' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_Console) == 0x000318, "Member 'UWBP_Moneylist_Item_C::Btn_Console' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_Hov_PC) == 0x000320, "Member 'UWBP_Moneylist_Item_C::Btn_Hov_PC' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_PC) == 0x000328, "Member 'UWBP_Moneylist_Item_C::Btn_PC' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, currency_icon) == 0x000330, "Member 'UWBP_Moneylist_Item_C::currency_icon' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, currency_num) == 0x000338, "Member 'UWBP_Moneylist_Item_C::currency_num' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, currency_num_UpperLimit) == 0x000340, "Member 'UWBP_Moneylist_Item_C::currency_num_UpperLimit' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Img_add_Mobile) == 0x000348, "Member 'UWBP_Moneylist_Item_C::Img_add_Mobile' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Img_Line) == 0x000350, "Member 'UWBP_Moneylist_Item_C::Img_Line' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, Text) == 0x000358, "Member 'UWBP_Moneylist_Item_C::Text' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, WBP_Energy_InfoPanel) == 0x000360, "Member 'UWBP_Moneylist_Item_C::WBP_Energy_InfoPanel' has a wrong offset!");
-static_assert(offsetof(UWBP_Moneylist_Item_C, WidgetSwitcher_Add) == 0x000368, "Member 'UWBP_Moneylist_Item_C::WidgetSwitcher_Add' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Ani_MoneyCollect_Moneylist) == 0x0002F8, "Member 'UWBP_Moneylist_Item_C::Ani_MoneyCollect_Moneylist' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Ani_Hover) == 0x000300, "Member 'UWBP_Moneylist_Item_C::Ani_Hover' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Energy_Hover) == 0x000308, "Member 'UWBP_Moneylist_Item_C::Energy_Hover' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Hover) == 0x000310, "Member 'UWBP_Moneylist_Item_C::Hover' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_Add_Mobile) == 0x000318, "Member 'UWBP_Moneylist_Item_C::Btn_Add_Mobile' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_Console) == 0x000320, "Member 'UWBP_Moneylist_Item_C::Btn_Console' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_Hov_PC) == 0x000328, "Member 'UWBP_Moneylist_Item_C::Btn_Hov_PC' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Btn_PC) == 0x000330, "Member 'UWBP_Moneylist_Item_C::Btn_PC' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, currency_icon) == 0x000338, "Member 'UWBP_Moneylist_Item_C::currency_icon' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, currency_num) == 0x000340, "Member 'UWBP_Moneylist_Item_C::currency_num' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, currency_num_UpperLimit) == 0x000348, "Member 'UWBP_Moneylist_Item_C::currency_num_UpperLimit' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Img_add_Mobile) == 0x000350, "Member 'UWBP_Moneylist_Item_C::Img_add_Mobile' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Img_Line) == 0x000358, "Member 'UWBP_Moneylist_Item_C::Img_Line' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, Text) == 0x000360, "Member 'UWBP_Moneylist_Item_C::Text' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, WBP_Energy_InfoPanel) == 0x000368, "Member 'UWBP_Moneylist_Item_C::WBP_Energy_InfoPanel' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, WidgetSwitcher_Add) == 0x000370, "Member 'UWBP_Moneylist_Item_C::WidgetSwitcher_Add' has a wrong offset!");
+static_assert(offsetof(UWBP_Moneylist_Item_C, InVisibility_Line) == 0x000378, "Member 'UWBP_Moneylist_Item_C::InVisibility_Line' has a wrong offset!");
 
 }
 

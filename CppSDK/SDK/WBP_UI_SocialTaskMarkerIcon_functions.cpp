@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_UI_SocialTaskMarkerIcon.WBP_UI_SocialTaskMarkerIcon_C.ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_SocialTaskMarkerIcon_C::ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_SocialTaskMarkerIcon_C", "ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon");
-
-	Params::WBP_UI_SocialTaskMarkerIcon_C_ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_UI_SocialTaskMarkerIcon.WBP_UI_SocialTaskMarkerIcon_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_UI_SocialTaskMarkerIcon_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_UI_SocialTaskMarkerIcon_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_SocialTaskMarkerIcon.WBP_UI_SocialTaskMarkerIcon_C.ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_SocialTaskMarkerIcon_C::ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_SocialTaskMarkerIcon_C", "ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon");
+
+	Params::WBP_UI_SocialTaskMarkerIcon_C_ExecuteUbergraph_WBP_UI_SocialTaskMarkerIcon Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

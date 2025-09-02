@@ -10,30 +10,35 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+
 
 namespace SDK::Params
 {
 
 // Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.ExecuteUbergraph_D_StarSeaPublicSpace_LS
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_CustomEvent_Loaded;                         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                Temp_object_Variable;                              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS) == 0x000008, "Wrong alignment on D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS");
-static_assert(sizeof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS) == 0x000030, "Wrong size on D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS");
+static_assert(sizeof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS) == 0x000038, "Wrong size on D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS");
 static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, EntryPoint) == 0x000000, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::EntryPoint' has a wrong offset!");
-static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000004, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
 static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, K2Node_CustomEvent_Loaded) == 0x000008, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::K2Node_CustomEvent_Loaded' has a wrong offset!");
 static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, Temp_object_Variable) == 0x000020, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::Temp_object_Variable' has a wrong offset!");
 static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, K2Node_Event_DeltaSeconds) == 0x000028, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, CallFunc_GetScalarParameterValue_ReturnValue) == 0x00002C, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS, K2Node_Event_EndPlayReason) == 0x000030, "Member 'D_StarSeaPublicSpace_LS_C_ExecuteUbergraph_D_StarSeaPublicSpace_LS::K2Node_Event_EndPlayReason' has a wrong offset!");
 
 // Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.OnLoaded_42C496BD44BA605173BFF1AE864F3FAA
 // 0x0008 (0x0008 - 0x0000)
@@ -45,6 +50,17 @@ public:
 static_assert(alignof(D_StarSeaPublicSpace_LS_C_OnLoaded_42C496BD44BA605173BFF1AE864F3FAA) == 0x000008, "Wrong alignment on D_StarSeaPublicSpace_LS_C_OnLoaded_42C496BD44BA605173BFF1AE864F3FAA");
 static_assert(sizeof(D_StarSeaPublicSpace_LS_C_OnLoaded_42C496BD44BA605173BFF1AE864F3FAA) == 0x000008, "Wrong size on D_StarSeaPublicSpace_LS_C_OnLoaded_42C496BD44BA605173BFF1AE864F3FAA");
 static_assert(offsetof(D_StarSeaPublicSpace_LS_C_OnLoaded_42C496BD44BA605173BFF1AE864F3FAA, Loaded) == 0x000000, "Member 'D_StarSeaPublicSpace_LS_C_OnLoaded_42C496BD44BA605173BFF1AE864F3FAA::Loaded' has a wrong offset!");
+
+// Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct D_StarSeaPublicSpace_LS_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(D_StarSeaPublicSpace_LS_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on D_StarSeaPublicSpace_LS_C_ReceiveEndPlay");
+static_assert(sizeof(D_StarSeaPublicSpace_LS_C_ReceiveEndPlay) == 0x000001, "Wrong size on D_StarSeaPublicSpace_LS_C_ReceiveEndPlay");
+static_assert(offsetof(D_StarSeaPublicSpace_LS_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'D_StarSeaPublicSpace_LS_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function D_StarSeaPublicSpace_LS.D_StarSeaPublicSpace_LS_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

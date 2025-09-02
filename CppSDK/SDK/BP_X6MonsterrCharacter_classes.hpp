@@ -11,37 +11,37 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "EFeedBackReason_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "EFeedBackReason_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_X6MonsterrCharacter.BP_X6MonsterrCharacter_C
-// 0x00A0 (0x0970 - 0x08D0)
-class ABP_X6MonsterrCharacter_C : public AX6PlayerCharacterBase
+// 0x00A0 (0x0A20 - 0x0980)
+class ABP_X6MonsterrCharacter_C final : public AX6PlayerCharacterBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBP_MonsterPerformanceProcessorComponent_C* BP_MonsterPerformanceProcessorComponent;       // 0x08D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CombatPartHitComponent_C*           BP_CombatPartHitComponent;                         // 0x08E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CombatPassiveCollisionComponent_C*  BP_CombatPassiveCollisionComponent;                // 0x08E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                X6PerceptionPreview;                               // 0x08F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_AIAgentComponent_C*                 BP_AIAgentComponent;                               // 0x08F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UX6CharacterVisualEffectComponent*      X6CharacterVisualEffect;                           // 0x0900(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMotionWarpingComponent*                MotionWarping;                                     // 0x0908(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CombatPerformanceProcessorComponent_C* BP_CombatPerformanceProcessorComponent;         // 0x0910(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CharacterBaseInfoComponent_C*       BP_CharacterBaseInfoComponent;                     // 0x0918(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CombatCharSkillOpComp_C*            BP_CombatCharSkillOpComp;                          // 0x0920(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        DesiredHeightForDataLayer;                         // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void()>              MonsterDead;                                       // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	struct FGameplayTag                           OverrideAIBehaviorTag;                             // 0x0940(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTagContainer                  LeisureTagContainer;                               // 0x0948(0x0020)(Edit, BlueprintVisible)
-	bool                                          HasAlertBehavior;                                  // 0x0968(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          RandomRoaming;                                     // 0x0969(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsTreasureMonster;                                 // 0x096A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0980(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_MonsterPerformanceProcessorComponent_C* BP_MonsterPerformanceProcessorComponent;       // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CombatPartHitComponent_C*           BP_CombatPartHitComponent;                         // 0x0990(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CombatPassiveCollisionComponent_C*  BP_CombatPassiveCollisionComponent;                // 0x0998(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                X6PerceptionPreview;                               // 0x09A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_AIAgentComponent_C*                 BP_AIAgentComponent;                               // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UX6CharacterVisualEffectComponent*      X6CharacterVisualEffect;                           // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMotionWarpingComponent*                MotionWarping;                                     // 0x09B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CombatPerformanceProcessorComponent_C* BP_CombatPerformanceProcessorComponent;         // 0x09C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CharacterBaseInfoComponent_C*       BP_CharacterBaseInfoComponent;                     // 0x09C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CombatCharSkillOpComp_C*            BP_CombatCharSkillOpComp;                          // 0x09D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        DesiredHeightForDataLayer;                         // 0x09D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void()>              MonsterDead;                                       // 0x09E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FGameplayTag                           OverrideAIBehaviorTag;                             // 0x09F0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTagContainer                  LeisureTagContainer;                               // 0x09F8(0x0020)(Edit, BlueprintVisible)
+	bool                                          HasAlertBehavior;                                  // 0x0A18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          RandomRoaming;                                     // 0x0A19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsTreasureMonster;                                 // 0x0A1A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void GetDistanceToDesiredHeight(double* Distance);
@@ -63,25 +63,25 @@ public:
 	}
 };
 static_assert(alignof(ABP_X6MonsterrCharacter_C) == 0x000010, "Wrong alignment on ABP_X6MonsterrCharacter_C");
-static_assert(sizeof(ABP_X6MonsterrCharacter_C) == 0x000970, "Wrong size on ABP_X6MonsterrCharacter_C");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, UberGraphFrame) == 0x0008D0, "Member 'ABP_X6MonsterrCharacter_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_MonsterPerformanceProcessorComponent) == 0x0008D8, "Member 'ABP_X6MonsterrCharacter_C::BP_MonsterPerformanceProcessorComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatPartHitComponent) == 0x0008E0, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatPartHitComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatPassiveCollisionComponent) == 0x0008E8, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatPassiveCollisionComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, X6PerceptionPreview) == 0x0008F0, "Member 'ABP_X6MonsterrCharacter_C::X6PerceptionPreview' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_AIAgentComponent) == 0x0008F8, "Member 'ABP_X6MonsterrCharacter_C::BP_AIAgentComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, X6CharacterVisualEffect) == 0x000900, "Member 'ABP_X6MonsterrCharacter_C::X6CharacterVisualEffect' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, MotionWarping) == 0x000908, "Member 'ABP_X6MonsterrCharacter_C::MotionWarping' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatPerformanceProcessorComponent) == 0x000910, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatPerformanceProcessorComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CharacterBaseInfoComponent) == 0x000918, "Member 'ABP_X6MonsterrCharacter_C::BP_CharacterBaseInfoComponent' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatCharSkillOpComp) == 0x000920, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatCharSkillOpComp' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, DesiredHeightForDataLayer) == 0x000928, "Member 'ABP_X6MonsterrCharacter_C::DesiredHeightForDataLayer' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, MonsterDead) == 0x000930, "Member 'ABP_X6MonsterrCharacter_C::MonsterDead' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, OverrideAIBehaviorTag) == 0x000940, "Member 'ABP_X6MonsterrCharacter_C::OverrideAIBehaviorTag' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, LeisureTagContainer) == 0x000948, "Member 'ABP_X6MonsterrCharacter_C::LeisureTagContainer' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, HasAlertBehavior) == 0x000968, "Member 'ABP_X6MonsterrCharacter_C::HasAlertBehavior' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, RandomRoaming) == 0x000969, "Member 'ABP_X6MonsterrCharacter_C::RandomRoaming' has a wrong offset!");
-static_assert(offsetof(ABP_X6MonsterrCharacter_C, IsTreasureMonster) == 0x00096A, "Member 'ABP_X6MonsterrCharacter_C::IsTreasureMonster' has a wrong offset!");
+static_assert(sizeof(ABP_X6MonsterrCharacter_C) == 0x000A20, "Wrong size on ABP_X6MonsterrCharacter_C");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, UberGraphFrame) == 0x000980, "Member 'ABP_X6MonsterrCharacter_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_MonsterPerformanceProcessorComponent) == 0x000988, "Member 'ABP_X6MonsterrCharacter_C::BP_MonsterPerformanceProcessorComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatPartHitComponent) == 0x000990, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatPartHitComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatPassiveCollisionComponent) == 0x000998, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatPassiveCollisionComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, X6PerceptionPreview) == 0x0009A0, "Member 'ABP_X6MonsterrCharacter_C::X6PerceptionPreview' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_AIAgentComponent) == 0x0009A8, "Member 'ABP_X6MonsterrCharacter_C::BP_AIAgentComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, X6CharacterVisualEffect) == 0x0009B0, "Member 'ABP_X6MonsterrCharacter_C::X6CharacterVisualEffect' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, MotionWarping) == 0x0009B8, "Member 'ABP_X6MonsterrCharacter_C::MotionWarping' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatPerformanceProcessorComponent) == 0x0009C0, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatPerformanceProcessorComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CharacterBaseInfoComponent) == 0x0009C8, "Member 'ABP_X6MonsterrCharacter_C::BP_CharacterBaseInfoComponent' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, BP_CombatCharSkillOpComp) == 0x0009D0, "Member 'ABP_X6MonsterrCharacter_C::BP_CombatCharSkillOpComp' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, DesiredHeightForDataLayer) == 0x0009D8, "Member 'ABP_X6MonsterrCharacter_C::DesiredHeightForDataLayer' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, MonsterDead) == 0x0009E0, "Member 'ABP_X6MonsterrCharacter_C::MonsterDead' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, OverrideAIBehaviorTag) == 0x0009F0, "Member 'ABP_X6MonsterrCharacter_C::OverrideAIBehaviorTag' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, LeisureTagContainer) == 0x0009F8, "Member 'ABP_X6MonsterrCharacter_C::LeisureTagContainer' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, HasAlertBehavior) == 0x000A18, "Member 'ABP_X6MonsterrCharacter_C::HasAlertBehavior' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, RandomRoaming) == 0x000A19, "Member 'ABP_X6MonsterrCharacter_C::RandomRoaming' has a wrong offset!");
+static_assert(offsetof(ABP_X6MonsterrCharacter_C, IsTreasureMonster) == 0x000A1A, "Member 'ABP_X6MonsterrCharacter_C::IsTreasureMonster' has a wrong offset!");
 
 }
 

@@ -113,14 +113,14 @@ static_assert(sizeof(ATopdownDepthCapture) == 0x0003C0, "Wrong size on ATopdownD
 static_assert(offsetof(ATopdownDepthCapture, ShadowLightComponent) == 0x0003B8, "Member 'ATopdownDepthCapture::ShadowLightComponent' has a wrong offset!");
 
 // Class PaperTopdownDepth.TopdownDepthCaptureComponent
-// 0x0010 (0x0400 - 0x03F0)
+// 0x0010 (0x0420 - 0x0410)
 class UTopdownDepthCaptureComponent final : public ULocalLightComponent
 {
 public:
-	float                                         SourceRadius;                                      // 0x03F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SourceHeight;                                      // 0x03F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsedForHeightfieldReadback;                       // 0x03F8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F9[0x7];                                      // 0x03F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SourceRadius;                                      // 0x0408(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SourceHeight;                                      // 0x040C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsedForHeightfieldReadback;                       // 0x0410(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_411[0xF];                                      // 0x0411(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -133,10 +133,10 @@ public:
 	}
 };
 static_assert(alignof(UTopdownDepthCaptureComponent) == 0x000010, "Wrong alignment on UTopdownDepthCaptureComponent");
-static_assert(sizeof(UTopdownDepthCaptureComponent) == 0x000400, "Wrong size on UTopdownDepthCaptureComponent");
-static_assert(offsetof(UTopdownDepthCaptureComponent, SourceRadius) == 0x0003F0, "Member 'UTopdownDepthCaptureComponent::SourceRadius' has a wrong offset!");
-static_assert(offsetof(UTopdownDepthCaptureComponent, SourceHeight) == 0x0003F4, "Member 'UTopdownDepthCaptureComponent::SourceHeight' has a wrong offset!");
-static_assert(offsetof(UTopdownDepthCaptureComponent, bUsedForHeightfieldReadback) == 0x0003F8, "Member 'UTopdownDepthCaptureComponent::bUsedForHeightfieldReadback' has a wrong offset!");
+static_assert(sizeof(UTopdownDepthCaptureComponent) == 0x000420, "Wrong size on UTopdownDepthCaptureComponent");
+static_assert(offsetof(UTopdownDepthCaptureComponent, SourceRadius) == 0x000408, "Member 'UTopdownDepthCaptureComponent::SourceRadius' has a wrong offset!");
+static_assert(offsetof(UTopdownDepthCaptureComponent, SourceHeight) == 0x00040C, "Member 'UTopdownDepthCaptureComponent::SourceHeight' has a wrong offset!");
+static_assert(offsetof(UTopdownDepthCaptureComponent, bUsedForHeightfieldReadback) == 0x000410, "Member 'UTopdownDepthCaptureComponent::bUsedForHeightfieldReadback' has a wrong offset!");
 
 }
 

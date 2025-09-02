@@ -74,7 +74,7 @@ static_assert(offsetof(FWatermarkImageInfo, Opacity) == 0x000054, "Member 'FWate
 struct FWatermarkServerResponse final
 {
 public:
-	int32                                         Code;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         code;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 request_id;                                        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -82,7 +82,7 @@ public:
 };
 static_assert(alignof(FWatermarkServerResponse) == 0x000008, "Wrong alignment on FWatermarkServerResponse");
 static_assert(sizeof(FWatermarkServerResponse) == 0x000080, "Wrong size on FWatermarkServerResponse");
-static_assert(offsetof(FWatermarkServerResponse, Code) == 0x000000, "Member 'FWatermarkServerResponse::Code' has a wrong offset!");
+static_assert(offsetof(FWatermarkServerResponse, code) == 0x000000, "Member 'FWatermarkServerResponse::code' has a wrong offset!");
 static_assert(offsetof(FWatermarkServerResponse, Info) == 0x000008, "Member 'FWatermarkServerResponse::Info' has a wrong offset!");
 static_assert(offsetof(FWatermarkServerResponse, request_id) == 0x000018, "Member 'FWatermarkServerResponse::request_id' has a wrong offset!");
 static_assert(offsetof(FWatermarkServerResponse, Data) == 0x000028, "Member 'FWatermarkServerResponse::Data' has a wrong offset!");

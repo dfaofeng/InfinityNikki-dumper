@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "E_InteractiveShapeType_structs.hpp"
 #include "E_InteractiveActorType_structs.hpp"
-#include "E_InteractionProcess_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "E_InteractiveStageEnum_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "F_AdvanceInteractOperationData_structs.hpp"
+#include "E_InteractiveShapeType_structs.hpp"
+#include "E_InteractionProcess_structs.hpp"
+#include "E_InteractiveStageEnum_structs.hpp"
 #include "E_InteractiveTraceLocationType_structs.hpp"
 #include "E_InteractiveTraceModeType_structs.hpp"
 #include "GameplayTags_structs.hpp"
@@ -85,7 +85,7 @@ public:
 	E_InterObjOccupyType                          BP_OccupyType;                                     // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanInteractLocal;                                  // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C2[0x6];                                      // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(bool ShowInteractionUI, bool CanInteract)> OnUpdateCanInteract;    // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(bool ShowInteractUI, bool CanInteract)> OnUpdateCanInteract;       // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void UpdateCanInteractLocal(bool ShowInteractUI, bool CanInteract_0);

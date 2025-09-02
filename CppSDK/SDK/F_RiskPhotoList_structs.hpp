@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "E_ImageRecognitionFinishType_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Enum_WeatherType_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "F_RiskPhotoMonsterList_structs.hpp"
+#include "E_ImageRecognitionFinishType_structs.hpp"
 
 
 namespace SDK

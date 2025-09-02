@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ControlRig_structs.hpp"
-#include "ABP_Posedriver_Nikki_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "ABP_Posedriver_Nikki_structs.hpp"
+#include "ControlRig_structs.hpp"
 
 
 namespace SDK
@@ -67,6 +67,7 @@ public:
 	void BlueprintUpdateAnimation(float DeltaTimeX);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Posedriver_Nikki_AnimGraphNode_ApplyAdditive_6C4E9B8344A77BED8EBBEDAD0249298C();
 	void ExecuteUbergraph_ABP_Posedriver_Nikki(int32 EntryPoint);
+	double GetRealHighHeelHeight();
 	void UpdateAntiClippingAlpha();
 	void UpdateEnableMaxAnkleAngleLimit();
 

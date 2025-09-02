@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay");
+static_assert(sizeof(BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay");
+static_assert(offsetof(BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+
 // Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ExecuteUbergraph_BP_CatchingInsectFeedBackComponent
 // 0x0008 (0x0008 - 0x0000)
 struct BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent final
@@ -28,17 +39,6 @@ static_assert(alignof(BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_C
 static_assert(sizeof(BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent) == 0x000008, "Wrong size on BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent");
 static_assert(offsetof(BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent, EntryPoint) == 0x000000, "Member 'BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent, K2Node_Event_EndPlayReason) == 0x000004, "Member 'BP_CatchingInsectFeedBackComponent_C_ExecuteUbergraph_BP_CatchingInsectFeedBackComponent::K2Node_Event_EndPlayReason' has a wrong offset!");
-
-// Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay final
-{
-public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay");
-static_assert(sizeof(BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay");
-static_assert(offsetof(BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_CatchingInsectFeedBackComponent_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function BP_CatchingInsectFeedBackComponent.BP_CatchingInsectFeedBackComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

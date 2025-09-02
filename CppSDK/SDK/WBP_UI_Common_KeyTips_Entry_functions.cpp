@@ -17,83 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.BP_SetInputAction
+// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.SetKeyByInputAction
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UX6InputAction*                   Action                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    bForceSimple                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ActionPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_KeyTips_Entry_C::BP_SetInputAction(class UX6InputAction* Action, bool bForceSimple)
+void UWBP_UI_Common_KeyTips_Entry_C::SetKeyByInputAction(const class FString& ActionPath)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "BP_SetInputAction");
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "SetKeyByInputAction");
 
-	Params::WBP_UI_Common_KeyTips_Entry_C_BP_SetInputAction Parms{};
+	Params::WBP_UI_Common_KeyTips_Entry_C_SetKeyByInputAction Parms{};
 
-	Parms.Action = Action;
-	Parms.bForceSimple = bForceSimple;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.BP_SetJoinDark
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bJoinDark                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_Common_KeyTips_Entry_C::BP_SetJoinDark(bool bJoinDark)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "BP_SetJoinDark");
-
-	Params::WBP_UI_Common_KeyTips_Entry_C_BP_SetJoinDark Parms{};
-
-	Parms.bJoinDark = bJoinDark;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_Common_KeyTips_Entry_C::ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry");
-
-	Params::WBP_UI_Common_KeyTips_Entry_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_UI_Common_KeyTips_Entry_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "PreConstruct");
-
-	Params::WBP_UI_Common_KeyTips_Entry_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.ActionPath = std::move(ActionPath);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -119,21 +57,83 @@ void UWBP_UI_Common_KeyTips_Entry_C::SetKey(const struct FKey& Key)
 }
 
 
-// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.SetKeyByInputAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// const class FString&                    ActionPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_KeyTips_Entry_C::SetKeyByInputAction(const class FString& ActionPath)
+void UWBP_UI_Common_KeyTips_Entry_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "SetKeyByInputAction");
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "PreConstruct");
 
-	Params::WBP_UI_Common_KeyTips_Entry_C_SetKeyByInputAction Parms{};
+	Params::WBP_UI_Common_KeyTips_Entry_C_PreConstruct Parms{};
 
-	Parms.ActionPath = std::move(ActionPath);
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_Common_KeyTips_Entry_C::ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry");
+
+	Params::WBP_UI_Common_KeyTips_Entry_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_Entry Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.BP_SetJoinDark
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bJoinDark                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_Common_KeyTips_Entry_C::BP_SetJoinDark(bool bJoinDark)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "BP_SetJoinDark");
+
+	Params::WBP_UI_Common_KeyTips_Entry_C_BP_SetJoinDark Parms{};
+
+	Parms.bJoinDark = bJoinDark;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_Common_KeyTips_Entry.WBP_UI_Common_KeyTips_Entry_C.BP_SetInputAction
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UX6InputAction*                   Action                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bForceSimple                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_UI_Common_KeyTips_Entry_C::BP_SetInputAction(class UX6InputAction* Action, bool bForceSimple)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_Entry_C", "BP_SetInputAction");
+
+	Params::WBP_UI_Common_KeyTips_Entry_C_BP_SetInputAction Parms{};
+
+	Parms.Action = Action;
+	Parms.bForceSimple = bForceSimple;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

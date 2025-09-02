@@ -25,8 +25,8 @@ public:
 	class UCanvasPanel*                           CanvasPanel_Root;                                  // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void CreateSceneMarkerCell(class UWBP_UI_SceneMarkerCell_C** Cell);
 	void ConvertScreenPosToWidgetPos(const struct FVector2D& screenPos, struct FVector2D* widgetPos);
+	void CreateSceneMarkerCell(class UWBP_UI_SceneMarkerCell_C** Cell);
 
 	class FString GetModuleName() const;
 

@@ -25,7 +25,7 @@ class UBP_CombatCharSkillOpComp_C final : public UX6CombatComponent
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	TSoftObjectPtr<class UX6AbilitySet>           BP_AbilitySet;                                     // 0x00C0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UX6AbilitySet>           BP_AbilitySet;                                     // 0x00C0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, EditConst, HasGetValueTypeHash)
 	TMap<ESkillInputType, int32>                  BP_InputToSkillMap;                                // 0x00E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<ESkillInputType, struct FGameplayTag>    BP_InputTagMap;                                    // 0x0138(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 

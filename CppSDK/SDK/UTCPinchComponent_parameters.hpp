@@ -138,6 +138,19 @@ static_assert(sizeof(UTCPinchComponent_C_On_Event_Touch_Pressed) == 0x000020, "W
 static_assert(offsetof(UTCPinchComponent_C_On_Event_Touch_Pressed, Location) == 0x000000, "Member 'UTCPinchComponent_C_On_Event_Touch_Pressed::Location' has a wrong offset!");
 static_assert(offsetof(UTCPinchComponent_C_On_Event_Touch_Pressed, FingerIndex) == 0x000018, "Member 'UTCPinchComponent_C_On_Event_Touch_Pressed::FingerIndex' has a wrong offset!");
 
+// Function UTCPinchComponent.UTCPinchComponent_C.On Event Touch Moved
+// 0x0020 (0x0020 - 0x0000)
+struct UTCPinchComponent_C_On_Event_Touch_Moved final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETouchIndex                                   FingerIndex;                                       // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(UTCPinchComponent_C_On_Event_Touch_Moved) == 0x000008, "Wrong alignment on UTCPinchComponent_C_On_Event_Touch_Moved");
+static_assert(sizeof(UTCPinchComponent_C_On_Event_Touch_Moved) == 0x000020, "Wrong size on UTCPinchComponent_C_On_Event_Touch_Moved");
+static_assert(offsetof(UTCPinchComponent_C_On_Event_Touch_Moved, Location) == 0x000000, "Member 'UTCPinchComponent_C_On_Event_Touch_Moved::Location' has a wrong offset!");
+static_assert(offsetof(UTCPinchComponent_C_On_Event_Touch_Moved, FingerIndex) == 0x000018, "Member 'UTCPinchComponent_C_On_Event_Touch_Moved::FingerIndex' has a wrong offset!");
+
 // Function UTCPinchComponent.UTCPinchComponent_C.On Event Touch Canceled
 // 0x0020 (0x0020 - 0x0000)
 struct UTCPinchComponent_C_On_Event_Touch_Canceled final
@@ -396,19 +409,6 @@ static_assert(alignof(UTCPinchComponent_C_Add_Debug_Touch_Location) == 0x000008,
 static_assert(sizeof(UTCPinchComponent_C_Add_Debug_Touch_Location) == 0x000020, "Wrong size on UTCPinchComponent_C_Add_Debug_Touch_Location");
 static_assert(offsetof(UTCPinchComponent_C_Add_Debug_Touch_Location, Location) == 0x000000, "Member 'UTCPinchComponent_C_Add_Debug_Touch_Location::Location' has a wrong offset!");
 static_assert(offsetof(UTCPinchComponent_C_Add_Debug_Touch_Location, CallFunc_Add_Finger_Location_Result) == 0x000018, "Member 'UTCPinchComponent_C_Add_Debug_Touch_Location::CallFunc_Add_Finger_Location_Result' has a wrong offset!");
-
-// Function UTCPinchComponent.UTCPinchComponent_C.On Event Touch Moved
-// 0x0020 (0x0020 - 0x0000)
-struct UTCPinchComponent_C_On_Event_Touch_Moved final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETouchIndex                                   FingerIndex;                                       // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(UTCPinchComponent_C_On_Event_Touch_Moved) == 0x000008, "Wrong alignment on UTCPinchComponent_C_On_Event_Touch_Moved");
-static_assert(sizeof(UTCPinchComponent_C_On_Event_Touch_Moved) == 0x000020, "Wrong size on UTCPinchComponent_C_On_Event_Touch_Moved");
-static_assert(offsetof(UTCPinchComponent_C_On_Event_Touch_Moved, Location) == 0x000000, "Member 'UTCPinchComponent_C_On_Event_Touch_Moved::Location' has a wrong offset!");
-static_assert(offsetof(UTCPinchComponent_C_On_Event_Touch_Moved, FingerIndex) == 0x000018, "Member 'UTCPinchComponent_C_On_Event_Touch_Moved::FingerIndex' has a wrong offset!");
 
 }
 

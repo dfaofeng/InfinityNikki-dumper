@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum E_SafezoneType.E_SafezoneType
-// NumValues: 0x000B
+// NumValues: 0x000E
 enum class E_SafezoneType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -28,7 +28,10 @@ enum class E_SafezoneType : uint8
 	NewEnumerator7                           = 7,
 	NewEnumerator8                           = 8,
 	NewEnumerator11                          = 9,
-	E_MAX                                    = 10,
+	NewEnumerator12                          = 10,
+	NewEnumerator13                          = 11,
+	NewEnumerator14                          = 12,
+	E_MAX                                    = 13,
 };
 
 }

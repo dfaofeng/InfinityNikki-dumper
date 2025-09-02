@@ -27,16 +27,16 @@ public:
 	bool                                          BP_AlsoInhibitJumpInput;                           // 0x00B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void StopMontage(class ACharacter* InCharacter, class UAnimInstance* InAnimInstance, double InBlendOutTime, class UAnimMontage* InMontage) const;
-	void Received_NotifyTick_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const;
-	void Received_NotifyEnd_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float SectionElapsedTime, bool bAnimNotifyEnd) const;
-	void Received_NotifyBegin_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, float SectionElapsedTime) const;
-	class FString GetNotifyName() const;
-	class FString GetModuleName() const;
-	void CancelAbility(class ACharacter* InCharacter, class UAnimMontage* InMontage, bool* Ret) const;
-	bool BP_TickBlendOut(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const;
-	void AddMoveData(double Duration) const;
 	void AddJumpData(double Duration) const;
+	void AddMoveData(double Duration) const;
+	bool BP_TickBlendOut(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const;
+	void CancelAbility(class ACharacter* InCharacter, class UAnimMontage* InMontage, bool* Ret) const;
+	class FString GetModuleName() const;
+	class FString GetNotifyName() const;
+	void Received_NotifyBegin_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, float SectionElapsedTime) const;
+	void Received_NotifyEnd_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float SectionElapsedTime, bool bAnimNotifyEnd) const;
+	void Received_NotifyTick_Section(class FName SectionName, class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime) const;
+	void StopMontage(class ACharacter* InCharacter, class UAnimInstance* InAnimInstance, double InBlendOutTime, class UAnimMontage* InMontage) const;
 
 public:
 	static class UClass* StaticClass()

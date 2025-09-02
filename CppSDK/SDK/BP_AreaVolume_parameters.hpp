@@ -17,18 +17,84 @@
 namespace SDK::Params
 {
 
-// Function BP_AreaVolume.BP_AreaVolume_C.ShowVolume
-// 0x0002 (0x0002 - 0x0000)
-struct BP_AreaVolume_C_ShowVolume final
+// Function BP_AreaVolume.BP_AreaVolume_C.ExecuteUbergraph_BP_AreaVolume
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume final
 {
 public:
-	bool                                          CanShow;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 K2Node_Event_OtherActor;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_Event_OtherActor_1;                         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AreaVolume_C_ShowVolume) == 0x000001, "Wrong alignment on BP_AreaVolume_C_ShowVolume");
-static_assert(sizeof(BP_AreaVolume_C_ShowVolume) == 0x000002, "Wrong size on BP_AreaVolume_C_ShowVolume");
-static_assert(offsetof(BP_AreaVolume_C_ShowVolume, CanShow) == 0x000000, "Member 'BP_AreaVolume_C_ShowVolume::CanShow' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_ShowVolume, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'BP_AreaVolume_C_ShowVolume::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume) == 0x000008, "Wrong alignment on BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume");
+static_assert(sizeof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume) == 0x000018, "Wrong size on BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume");
+static_assert(offsetof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume, EntryPoint) == 0x000000, "Member 'BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume, K2Node_Event_OtherActor) == 0x000008, "Member 'BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume::K2Node_Event_OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume, K2Node_Event_OtherActor_1) == 0x000010, "Member 'BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume::K2Node_Event_OtherActor_1' has a wrong offset!");
+
+// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapBegin
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AreaVolume_C_OnOverlapBegin final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AreaVolume_C_OnOverlapBegin) == 0x000008, "Wrong alignment on BP_AreaVolume_C_OnOverlapBegin");
+static_assert(sizeof(BP_AreaVolume_C_OnOverlapBegin) == 0x000008, "Wrong size on BP_AreaVolume_C_OnOverlapBegin");
+static_assert(offsetof(BP_AreaVolume_C_OnOverlapBegin, Actor) == 0x000000, "Member 'BP_AreaVolume_C_OnOverlapBegin::Actor' has a wrong offset!");
+
+// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapEnd
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AreaVolume_C_OnOverlapEnd final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AreaVolume_C_OnOverlapEnd) == 0x000008, "Wrong alignment on BP_AreaVolume_C_OnOverlapEnd");
+static_assert(sizeof(BP_AreaVolume_C_OnOverlapEnd) == 0x000008, "Wrong size on BP_AreaVolume_C_OnOverlapEnd");
+static_assert(offsetof(BP_AreaVolume_C_OnOverlapEnd, Actor) == 0x000000, "Member 'BP_AreaVolume_C_OnOverlapEnd::Actor' has a wrong offset!");
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorBeginOverlap
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AreaVolume_C_ReceiveActorBeginOverlap final
+{
+public:
+	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AreaVolume_C_ReceiveActorBeginOverlap) == 0x000008, "Wrong alignment on BP_AreaVolume_C_ReceiveActorBeginOverlap");
+static_assert(sizeof(BP_AreaVolume_C_ReceiveActorBeginOverlap) == 0x000008, "Wrong size on BP_AreaVolume_C_ReceiveActorBeginOverlap");
+static_assert(offsetof(BP_AreaVolume_C_ReceiveActorBeginOverlap, OtherActor) == 0x000000, "Member 'BP_AreaVolume_C_ReceiveActorBeginOverlap::OtherActor' has a wrong offset!");
+
+// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorEndOverlap
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AreaVolume_C_ReceiveActorEndOverlap final
+{
+public:
+	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AreaVolume_C_ReceiveActorEndOverlap) == 0x000008, "Wrong alignment on BP_AreaVolume_C_ReceiveActorEndOverlap");
+static_assert(sizeof(BP_AreaVolume_C_ReceiveActorEndOverlap) == 0x000008, "Wrong size on BP_AreaVolume_C_ReceiveActorEndOverlap");
+static_assert(offsetof(BP_AreaVolume_C_ReceiveActorEndOverlap, OtherActor) == 0x000000, "Member 'BP_AreaVolume_C_ReceiveActorEndOverlap::OtherActor' has a wrong offset!");
+
+// Function BP_AreaVolume.BP_AreaVolume_C.SetMeshType
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AreaVolume_C_SetMeshType final
+{
+public:
+	int32                                         MeshType_0;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue_2;              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AreaVolume_C_SetMeshType) == 0x000004, "Wrong alignment on BP_AreaVolume_C_SetMeshType");
+static_assert(sizeof(BP_AreaVolume_C_SetMeshType) == 0x000008, "Wrong size on BP_AreaVolume_C_SetMeshType");
+static_assert(offsetof(BP_AreaVolume_C_SetMeshType, MeshType_0) == 0x000000, "Member 'BP_AreaVolume_C_SetMeshType::MeshType_0' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_SetMeshType, CallFunc_SetStaticMesh_ReturnValue) == 0x000004, "Member 'BP_AreaVolume_C_SetMeshType::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_SetMeshType, CallFunc_SetStaticMesh_ReturnValue_1) == 0x000005, "Member 'BP_AreaVolume_C_SetMeshType::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_SetMeshType, CallFunc_SetStaticMesh_ReturnValue_2) == 0x000006, "Member 'BP_AreaVolume_C_SetMeshType::CallFunc_SetStaticMesh_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_SetMeshType, K2Node_SwitchInteger_CmpSuccess) == 0x000007, "Member 'BP_AreaVolume_C_SetMeshType::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
 
 // Function BP_AreaVolume.BP_AreaVolume_C.SetTransform
 // 0x01B0 (0x01B0 - 0x0000)
@@ -50,84 +116,18 @@ static_assert(offsetof(BP_AreaVolume_C_SetTransform, Scale) == 0x000030, "Member
 static_assert(offsetof(BP_AreaVolume_C_SetTransform, CallFunc_MakeTransform_ReturnValue) == 0x000050, "Member 'BP_AreaVolume_C_SetTransform::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_AreaVolume_C_SetTransform, CallFunc_K2_SetWorldTransform_SweepHitResult) == 0x0000B0, "Member 'BP_AreaVolume_C_SetTransform::CallFunc_K2_SetWorldTransform_SweepHitResult' has a wrong offset!");
 
-// Function BP_AreaVolume.BP_AreaVolume_C.SetMeshType
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AreaVolume_C_SetMeshType final
+// Function BP_AreaVolume.BP_AreaVolume_C.ShowVolume
+// 0x0002 (0x0002 - 0x0000)
+struct BP_AreaVolume_C_ShowVolume final
 {
 public:
-	int32                                         MeshType_0;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue_2;              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanShow;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AreaVolume_C_SetMeshType) == 0x000004, "Wrong alignment on BP_AreaVolume_C_SetMeshType");
-static_assert(sizeof(BP_AreaVolume_C_SetMeshType) == 0x000008, "Wrong size on BP_AreaVolume_C_SetMeshType");
-static_assert(offsetof(BP_AreaVolume_C_SetMeshType, MeshType_0) == 0x000000, "Member 'BP_AreaVolume_C_SetMeshType::MeshType_0' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_SetMeshType, CallFunc_SetStaticMesh_ReturnValue) == 0x000004, "Member 'BP_AreaVolume_C_SetMeshType::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_SetMeshType, CallFunc_SetStaticMesh_ReturnValue_1) == 0x000005, "Member 'BP_AreaVolume_C_SetMeshType::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_SetMeshType, CallFunc_SetStaticMesh_ReturnValue_2) == 0x000006, "Member 'BP_AreaVolume_C_SetMeshType::CallFunc_SetStaticMesh_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_SetMeshType, K2Node_SwitchInteger_CmpSuccess) == 0x000007, "Member 'BP_AreaVolume_C_SetMeshType::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorEndOverlap
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AreaVolume_C_ReceiveActorEndOverlap final
-{
-public:
-	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AreaVolume_C_ReceiveActorEndOverlap) == 0x000008, "Wrong alignment on BP_AreaVolume_C_ReceiveActorEndOverlap");
-static_assert(sizeof(BP_AreaVolume_C_ReceiveActorEndOverlap) == 0x000008, "Wrong size on BP_AreaVolume_C_ReceiveActorEndOverlap");
-static_assert(offsetof(BP_AreaVolume_C_ReceiveActorEndOverlap, OtherActor) == 0x000000, "Member 'BP_AreaVolume_C_ReceiveActorEndOverlap::OtherActor' has a wrong offset!");
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ReceiveActorBeginOverlap
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AreaVolume_C_ReceiveActorBeginOverlap final
-{
-public:
-	class AActor*                                 OtherActor;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AreaVolume_C_ReceiveActorBeginOverlap) == 0x000008, "Wrong alignment on BP_AreaVolume_C_ReceiveActorBeginOverlap");
-static_assert(sizeof(BP_AreaVolume_C_ReceiveActorBeginOverlap) == 0x000008, "Wrong size on BP_AreaVolume_C_ReceiveActorBeginOverlap");
-static_assert(offsetof(BP_AreaVolume_C_ReceiveActorBeginOverlap, OtherActor) == 0x000000, "Member 'BP_AreaVolume_C_ReceiveActorBeginOverlap::OtherActor' has a wrong offset!");
-
-// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapEnd
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AreaVolume_C_OnOverlapEnd final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AreaVolume_C_OnOverlapEnd) == 0x000008, "Wrong alignment on BP_AreaVolume_C_OnOverlapEnd");
-static_assert(sizeof(BP_AreaVolume_C_OnOverlapEnd) == 0x000008, "Wrong size on BP_AreaVolume_C_OnOverlapEnd");
-static_assert(offsetof(BP_AreaVolume_C_OnOverlapEnd, Actor) == 0x000000, "Member 'BP_AreaVolume_C_OnOverlapEnd::Actor' has a wrong offset!");
-
-// Function BP_AreaVolume.BP_AreaVolume_C.OnOverlapBegin
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AreaVolume_C_OnOverlapBegin final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AreaVolume_C_OnOverlapBegin) == 0x000008, "Wrong alignment on BP_AreaVolume_C_OnOverlapBegin");
-static_assert(sizeof(BP_AreaVolume_C_OnOverlapBegin) == 0x000008, "Wrong size on BP_AreaVolume_C_OnOverlapBegin");
-static_assert(offsetof(BP_AreaVolume_C_OnOverlapBegin, Actor) == 0x000000, "Member 'BP_AreaVolume_C_OnOverlapBegin::Actor' has a wrong offset!");
-
-// Function BP_AreaVolume.BP_AreaVolume_C.ExecuteUbergraph_BP_AreaVolume
-// 0x0018 (0x0018 - 0x0000)
-struct BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 K2Node_Event_OtherActor;                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_Event_OtherActor_1;                         // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume) == 0x000008, "Wrong alignment on BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume");
-static_assert(sizeof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume) == 0x000018, "Wrong size on BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume");
-static_assert(offsetof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume, EntryPoint) == 0x000000, "Member 'BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume, K2Node_Event_OtherActor) == 0x000008, "Member 'BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume::K2Node_Event_OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume, K2Node_Event_OtherActor_1) == 0x000010, "Member 'BP_AreaVolume_C_ExecuteUbergraph_BP_AreaVolume::K2Node_Event_OtherActor_1' has a wrong offset!");
+static_assert(alignof(BP_AreaVolume_C_ShowVolume) == 0x000001, "Wrong alignment on BP_AreaVolume_C_ShowVolume");
+static_assert(sizeof(BP_AreaVolume_C_ShowVolume) == 0x000002, "Wrong size on BP_AreaVolume_C_ShowVolume");
+static_assert(offsetof(BP_AreaVolume_C_ShowVolume, CanShow) == 0x000000, "Member 'BP_AreaVolume_C_ShowVolume::CanShow' has a wrong offset!");
+static_assert(offsetof(BP_AreaVolume_C_ShowVolume, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'BP_AreaVolume_C_ShowVolume::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function BP_AreaVolume.BP_AreaVolume_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

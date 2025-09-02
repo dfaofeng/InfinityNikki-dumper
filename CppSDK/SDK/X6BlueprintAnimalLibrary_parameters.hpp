@@ -17,52 +17,107 @@
 namespace SDK::Params
 {
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_IsGlobalAnimalTickManagerActive
-// 0x0010 (0x0010 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bActive;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive) == 0x000010, "Wrong size on X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive, __WorldContext) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive, bActive) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive::bActive' has a wrong offset!");
-
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2AnimSeqSoftRef
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetBelongingAnimalCluster
 // 0x0040 (0x0040 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef final
+struct X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster final
 {
 public:
-	class AActor*                                 AnimalActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           BehaviorType;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UAnimSequenceBase>       AnimSeqSoftRef;                                    // 0x0018(0x0028)(Parm, OutParm, HasGetValueTypeHash)
+	class AActor*                                 Member;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_AnimalClusterBase_C*                AnimalCluster;                                     // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_AnimalClusterMemberFSMComponent_C*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USMInstance*                            CallFunc_GetInstance_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFSM_AnimalClusterMemberBase_C*         K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, AnimalActor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::AnimalActor' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, BehaviorType) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::BehaviorType' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, __WorldContext) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, AnimSeqSoftRef) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::AnimSeqSoftRef' has a wrong offset!");
+static_assert(alignof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, Member) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::Member' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, AnimalCluster) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::AnimalCluster' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, CallFunc_GetInstance_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::CallFunc_GetInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base) == 0x000030, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2CharAnimSetTag
-// 0x0020 (0x0020 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag final
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalClusterMemberFSM
+// 0x0040 (0x0040 - 0x0000)
+struct X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM final
 {
 public:
-	class AActor*                                 AnimalActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           BehaviorType;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FGameplayTag                           CharAnimSetTag;                                    // 0x0018(0x0008)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFSM_AnimalClusterMemberBase_C*         FSM;                                               // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_AnimalClusterMemberFSMComponent_C*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USMInstance*                            CallFunc_GetInstance_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFSM_AnimalClusterMemberBase_C*         K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag) == 0x000020, "Wrong size on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, AnimalActor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::AnimalActor' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, BehaviorType) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::BehaviorType' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, __WorldContext) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, CharAnimSetTag) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::CharAnimSetTag' has a wrong offset!");
+static_assert(alignof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, Actor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, FSM) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::FSM' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, CallFunc_GetInstance_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::CallFunc_GetInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base) == 0x000030, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalReactionFSM
+// 0x0040 (0x0040 - 0x0000)
+struct X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFSM_QuadrupedAnimalReaction_C*         FSM;                                               // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_QuadrupedAnimalReactionComponent_C* CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USMInstance*                            CallFunc_GetInstance_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UFSM_QuadrupedAnimalReaction_C*         K2Node_DynamicCast_AsFSM_Quadruped_Animal_Reaction; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, Actor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, FSM) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::FSM' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, CallFunc_GetInstance_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::CallFunc_GetInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, K2Node_DynamicCast_AsFSM_Quadruped_Animal_Reaction) == 0x000030, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::K2Node_DynamicCast_AsFSM_Quadruped_Animal_Reaction' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.IsHoldingBrush
+// 0x0030 (0x0030 - 0x0000)
+struct X6BlueprintAnimalLibrary_C_IsHoldingBrush final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHoldingBrush;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CleaningAnimalComponent_V2_C*       CleaningComp;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_CleaningAnimalComponent_V2_C*       CallFunc_GetComponentByClass_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintAnimalLibrary_C_IsHoldingBrush) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_IsHoldingBrush");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_IsHoldingBrush) == 0x000030, "Wrong size on X6BlueprintAnimalLibrary_C_IsHoldingBrush");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, Actor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, bHoldingBrush) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::bHoldingBrush' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CleaningComp) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CleaningComp' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CallFunc_GetComponentByClass_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000029, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetSimpleFleePoint
 // 0x01E0 (0x01E0 - 0x0000)
@@ -122,107 +177,52 @@ static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetSimpleFleePoint, CallFunc_D
 static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetSimpleFleePoint, CallFunc_Multiply_VectorVector_ReturnValue_1) == 0x0001B0, "Member 'X6BlueprintAnimalLibrary_C_GetSimpleFleePoint::CallFunc_Multiply_VectorVector_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetSimpleFleePoint, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0001C8, "Member 'X6BlueprintAnimalLibrary_C_GetSimpleFleePoint::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.IsHoldingBrush
-// 0x0030 (0x0030 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_IsHoldingBrush final
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2CharAnimSetTag
+// 0x0020 (0x0020 - 0x0000)
+struct X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag final
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHoldingBrush;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CleaningAnimalComponent_V2_C*       CleaningComp;                                      // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_CleaningAnimalComponent_V2_C*       CallFunc_GetComponentByClass_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 AnimalActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           BehaviorType;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           CharAnimSetTag;                                    // 0x0018(0x0008)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(X6BlueprintAnimalLibrary_C_IsHoldingBrush) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_IsHoldingBrush");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_IsHoldingBrush) == 0x000030, "Wrong size on X6BlueprintAnimalLibrary_C_IsHoldingBrush");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, Actor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::Actor' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, bHoldingBrush) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::bHoldingBrush' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CleaningComp) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CleaningComp' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CallFunc_GetComponentByClass_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_IsHoldingBrush, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000029, "Member 'X6BlueprintAnimalLibrary_C_IsHoldingBrush::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(alignof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag) == 0x000020, "Wrong size on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, AnimalActor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::AnimalActor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, BehaviorType) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::BehaviorType' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, __WorldContext) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag, CharAnimSetTag) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2CharAnimSetTag::CharAnimSetTag' has a wrong offset!");
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalReactionFSM
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_ConvBehaviorType2AnimSeqSoftRef
 // 0x0040 (0x0040 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM final
+struct X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef final
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFSM_QuadrupedAnimalReaction_C*         FSM;                                               // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_QuadrupedAnimalReactionComponent_C* CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USMInstance*                            CallFunc_GetInstance_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFSM_QuadrupedAnimalReaction_C*         K2Node_DynamicCast_AsFSM_Quadruped_Animal_Reaction; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 AnimalActor;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FGameplayTag                           BehaviorType;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UAnimSequenceBase>       AnimSeqSoftRef;                                    // 0x0018(0x0028)(Parm, OutParm, HasGetValueTypeHash)
 };
-static_assert(alignof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, Actor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::Actor' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, FSM) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::FSM' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, CallFunc_GetInstance_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::CallFunc_GetInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, K2Node_DynamicCast_AsFSM_Quadruped_Animal_Reaction) == 0x000030, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::K2Node_DynamicCast_AsFSM_Quadruped_Animal_Reaction' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalReactionFSM::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, AnimalActor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::AnimalActor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, BehaviorType) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::BehaviorType' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, __WorldContext) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef, AnimSeqSoftRef) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_BP_ConvBehaviorType2AnimSeqSoftRef::AnimSeqSoftRef' has a wrong offset!");
 
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetAnimalClusterMemberFSM
-// 0x0040 (0x0040 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM final
+// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.BP_IsGlobalAnimalTickManagerActive
+// 0x0010 (0x0010 - 0x0000)
+struct X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive final
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFSM_AnimalClusterMemberBase_C*         FSM;                                               // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_AnimalClusterMemberFSMComponent_C*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USMInstance*                            CallFunc_GetInstance_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFSM_AnimalClusterMemberBase_C*         K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bActive;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, Actor) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::Actor' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, FSM) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::FSM' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, CallFunc_GetInstance_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::CallFunc_GetInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base) == 0x000030, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'X6BlueprintAnimalLibrary_C_GetAnimalClusterMemberFSM::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function X6BlueprintAnimalLibrary.X6BlueprintAnimalLibrary_C.GetBelongingAnimalCluster
-// 0x0040 (0x0040 - 0x0000)
-struct X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster final
-{
-public:
-	class AActor*                                 Member;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_AnimalClusterBase_C*                AnimalCluster;                                     // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_AnimalClusterMemberFSMComponent_C*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USMInstance*                            CallFunc_GetInstance_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UFSM_AnimalClusterMemberBase_C*         K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base; // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster");
-static_assert(sizeof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster) == 0x000040, "Wrong size on X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, Member) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::Member' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, __WorldContext) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::__WorldContext' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, AnimalCluster) == 0x000010, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::AnimalCluster' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, CallFunc_GetComponentByClass_ReturnValue) == 0x000018, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, CallFunc_GetInstance_ReturnValue) == 0x000028, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::CallFunc_GetInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base) == 0x000030, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::K2Node_DynamicCast_AsFSM_Animal_Cluster_Member_Base' has a wrong offset!");
-static_assert(offsetof(X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'X6BlueprintAnimalLibrary_C_GetBelongingAnimalCluster::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(alignof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive) == 0x000008, "Wrong alignment on X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive");
+static_assert(sizeof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive) == 0x000010, "Wrong size on X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive, __WorldContext) == 0x000000, "Member 'X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive, bActive) == 0x000008, "Member 'X6BlueprintAnimalLibrary_C_BP_IsGlobalAnimalTickManagerActive::bActive' has a wrong offset!");
 
 }
 

@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function ANS_ChangeMovementInfo.ANS_ChangeMovementInfo_C.GetNotifyName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UANS_ChangeMovementInfo_C::GetNotifyName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ANS_ChangeMovementInfo_C", "GetNotifyName");
-
-	Params::ANS_ChangeMovementInfo_C_GetNotifyName Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ANS_ChangeMovementInfo.ANS_ChangeMovementInfo_C.GetModuleName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
@@ -50,6 +30,26 @@ class FString UANS_ChangeMovementInfo_C::GetModuleName() const
 		Func = Class->GetFunction("ANS_ChangeMovementInfo_C", "GetModuleName");
 
 	Params::ANS_ChangeMovementInfo_C_GetModuleName Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ANS_ChangeMovementInfo.ANS_ChangeMovementInfo_C.GetNotifyName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UANS_ChangeMovementInfo_C::GetNotifyName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ANS_ChangeMovementInfo_C", "GetNotifyName");
+
+	Params::ANS_ChangeMovementInfo_C_GetNotifyName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

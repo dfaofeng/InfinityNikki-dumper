@@ -55,7 +55,7 @@ public:
 	double                                        Length_begin;                                      // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Length_end;                                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Has_Collision;                                     // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          isWater;                                           // 0x04F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsWater;                                           // 0x04F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EDetailMode                                   Detail_Mode;                                       // 0x04F2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseInstanced;                                      // 0x04F3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Use_HISM;                                          // 0x04F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -138,7 +138,7 @@ static_assert(offsetof(APCG_SplineMesh_UE_C, Cast_Shadow) == 0x0004D8, "Member '
 static_assert(offsetof(APCG_SplineMesh_UE_C, Length_begin) == 0x0004E0, "Member 'APCG_SplineMesh_UE_C::Length_begin' has a wrong offset!");
 static_assert(offsetof(APCG_SplineMesh_UE_C, Length_end) == 0x0004E8, "Member 'APCG_SplineMesh_UE_C::Length_end' has a wrong offset!");
 static_assert(offsetof(APCG_SplineMesh_UE_C, Has_Collision) == 0x0004F0, "Member 'APCG_SplineMesh_UE_C::Has_Collision' has a wrong offset!");
-static_assert(offsetof(APCG_SplineMesh_UE_C, isWater) == 0x0004F1, "Member 'APCG_SplineMesh_UE_C::isWater' has a wrong offset!");
+static_assert(offsetof(APCG_SplineMesh_UE_C, IsWater) == 0x0004F1, "Member 'APCG_SplineMesh_UE_C::IsWater' has a wrong offset!");
 static_assert(offsetof(APCG_SplineMesh_UE_C, Detail_Mode) == 0x0004F2, "Member 'APCG_SplineMesh_UE_C::Detail_Mode' has a wrong offset!");
 static_assert(offsetof(APCG_SplineMesh_UE_C, UseInstanced) == 0x0004F3, "Member 'APCG_SplineMesh_UE_C::UseInstanced' has a wrong offset!");
 static_assert(offsetof(APCG_SplineMesh_UE_C, Use_HISM) == 0x0004F4, "Member 'APCG_SplineMesh_UE_C::Use_HISM' has a wrong offset!");

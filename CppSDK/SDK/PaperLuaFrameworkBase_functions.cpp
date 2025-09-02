@@ -3272,9 +3272,9 @@ void UPaperNetworkMgr::SetHandlerMode(EPaperNetworkHandler Mode)
 // Function PaperLuaFrameworkBase.PaperNetworkMgr.SetHeartbeatInterval
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// float                                   Interval                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   interval                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPaperNetworkMgr::SetHeartbeatInterval(float Interval)
+void UPaperNetworkMgr::SetHeartbeatInterval(float interval)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3283,7 +3283,7 @@ void UPaperNetworkMgr::SetHeartbeatInterval(float Interval)
 
 	Params::PaperNetworkMgr_SetHeartbeatInterval Parms{};
 
-	Parms.Interval = Interval;
+	Parms.interval = interval;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4599,8 +4599,9 @@ void UX6NetClientV2::OnWorldBeginPlay()
 // Parameters:
 // int64                                   NetID                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   OldNetID                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UX6NetClientV2::RegisterActorNetGUID_Lua(int64 NetID, class AActor* Actor)
+void UX6NetClientV2::RegisterActorNetGUID_Lua(int64 NetID, class AActor* Actor, int64 OldNetID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4611,6 +4612,7 @@ void UX6NetClientV2::RegisterActorNetGUID_Lua(int64 NetID, class AActor* Actor)
 
 	Parms.NetID = NetID;
 	Parms.Actor = Actor;
+	Parms.OldNetID = OldNetID;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4754,8 +4756,9 @@ void UX6NetClientV2::SetPlayerCustomReplicate(const int64& playerId, const bool 
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // const int64&                            playerId                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int64>&                    ActorEntityIDList                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UX6NetClientV2::SetPlayerForceReplicate(const int64& playerId)
+void UX6NetClientV2::SetPlayerForceReplicate(const int64& playerId, const TArray<int64>& ActorEntityIDList)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4765,6 +4768,7 @@ void UX6NetClientV2::SetPlayerForceReplicate(const int64& playerId)
 	Params::X6NetClientV2_SetPlayerForceReplicate Parms{};
 
 	Parms.playerId = playerId;
+	Parms.ActorEntityIDList = std::move(ActorEntityIDList);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

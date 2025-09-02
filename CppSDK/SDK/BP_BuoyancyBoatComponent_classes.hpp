@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BuoyancyBoatComponent.BP_BuoyancyBoatComponent_C
-// 0x00A8 (0x0150 - 0x00A8)
+// 0x00C0 (0x0168 - 0x00A8)
 class UBP_BuoyancyBoatComponent_C final : public UActorComponent
 {
 public:
@@ -46,6 +46,8 @@ public:
 	double                                        WaterHighOffset;                                   // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WaterHigh;                                         // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Phase;                                             // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<double>                                WaterHighs;                                        // 0x0150(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bUseWaterHighForEachPontoon;                       // 0x0160(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DebugPontoons();
@@ -55,7 +57,8 @@ public:
 	void GetSphereVolume(double R, double* V);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void UpdateBuoyancy(double DeltaTime, const struct FBS_FluxBuoyancyPontoon& BuoyancyData, const struct FVector& InitPos);
+	void SetWaterHighForEachPontoon();
+	void UpdateBuoyancy(double DeltaTime, const struct FBS_FluxBuoyancyPontoon& BuoyancyData, const struct FVector& InitPos, int32 PontoonIdx);
 
 	void GetOwnerMesh(class UPrimitiveComponent** Output_Get) const;
 	void GetPontoonsLocations(TArray<struct FVector>* Locations) const;
@@ -71,7 +74,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_BuoyancyBoatComponent_C) == 0x000008, "Wrong alignment on UBP_BuoyancyBoatComponent_C");
-static_assert(sizeof(UBP_BuoyancyBoatComponent_C) == 0x000150, "Wrong size on UBP_BuoyancyBoatComponent_C");
+static_assert(sizeof(UBP_BuoyancyBoatComponent_C) == 0x000168, "Wrong size on UBP_BuoyancyBoatComponent_C");
 static_assert(offsetof(UBP_BuoyancyBoatComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_BuoyancyBoatComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_BuoyancyBoatComponent_C, Pontoons) == 0x0000B0, "Member 'UBP_BuoyancyBoatComponent_C::Pontoons' has a wrong offset!");
 static_assert(offsetof(UBP_BuoyancyBoatComponent_C, CachedMesh) == 0x0000C0, "Member 'UBP_BuoyancyBoatComponent_C::CachedMesh' has a wrong offset!");
@@ -92,6 +95,8 @@ static_assert(offsetof(UBP_BuoyancyBoatComponent_C, InitPosS) == 0x000128, "Memb
 static_assert(offsetof(UBP_BuoyancyBoatComponent_C, WaterHighOffset) == 0x000138, "Member 'UBP_BuoyancyBoatComponent_C::WaterHighOffset' has a wrong offset!");
 static_assert(offsetof(UBP_BuoyancyBoatComponent_C, WaterHigh) == 0x000140, "Member 'UBP_BuoyancyBoatComponent_C::WaterHigh' has a wrong offset!");
 static_assert(offsetof(UBP_BuoyancyBoatComponent_C, Phase) == 0x000148, "Member 'UBP_BuoyancyBoatComponent_C::Phase' has a wrong offset!");
+static_assert(offsetof(UBP_BuoyancyBoatComponent_C, WaterHighs) == 0x000150, "Member 'UBP_BuoyancyBoatComponent_C::WaterHighs' has a wrong offset!");
+static_assert(offsetof(UBP_BuoyancyBoatComponent_C, bUseWaterHighForEachPontoon) == 0x000160, "Member 'UBP_BuoyancyBoatComponent_C::bUseWaterHighForEachPontoon' has a wrong offset!");
 
 }
 

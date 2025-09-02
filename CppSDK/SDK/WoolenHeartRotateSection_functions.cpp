@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.K2_OnSectionUpdate
-// (Event, Protected, BlueprintEvent)
-
-void UWoolenHeartRotateSection_C::K2_OnSectionUpdate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WoolenHeartRotateSection_C", "K2_OnSectionUpdate");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.K2_OnSectionBegin
-// (Event, Protected, BlueprintEvent)
-
-void UWoolenHeartRotateSection_C::K2_OnSectionBegin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WoolenHeartRotateSection_C", "K2_OnSectionBegin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.ExecuteUbergraph_WoolenHeartRotateSection
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -62,6 +34,34 @@ void UWoolenHeartRotateSection_C::ExecuteUbergraph_WoolenHeartRotateSection(int3
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.K2_OnSectionBegin
+// (Event, Protected, BlueprintEvent)
+
+void UWoolenHeartRotateSection_C::K2_OnSectionBegin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WoolenHeartRotateSection_C", "K2_OnSectionBegin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.K2_OnSectionUpdate
+// (Event, Protected, BlueprintEvent)
+
+void UWoolenHeartRotateSection_C::K2_OnSectionUpdate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WoolenHeartRotateSection_C", "K2_OnSectionUpdate");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

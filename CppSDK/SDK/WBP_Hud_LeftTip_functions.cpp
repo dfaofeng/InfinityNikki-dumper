@@ -17,57 +17,35 @@
 namespace SDK
 {
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.sfx2
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.ExecuteUbergraph_WBP_Hud_LeftTip
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_LeftTip_C::sfx2()
+void UWBP_Hud_LeftTip_C::ExecuteUbergraph_WBP_Hud_LeftTip(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "sfx2");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "ExecuteUbergraph_WBP_Hud_LeftTip");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Hud_LeftTip_C_ExecuteUbergraph_WBP_Hud_LeftTip Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.sfx1
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_LeftTip_C::sfx1()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "sfx1");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6()
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,37 +65,59 @@ void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4()
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3()
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.ExecuteUbergraph_WBP_Hud_LeftTip
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::ExecuteUbergraph_WBP_Hud_LeftTip(int32 EntryPoint)
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "ExecuteUbergraph_WBP_Hud_LeftTip");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6");
 
-	Params::WBP_Hud_LeftTip_C_ExecuteUbergraph_WBP_Hud_LeftTip Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.sfx1
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_LeftTip_C::sfx1()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "sfx1");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.sfx2
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_LeftTip_C::sfx2()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "sfx2");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

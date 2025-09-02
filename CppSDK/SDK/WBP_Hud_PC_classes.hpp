@@ -55,46 +55,46 @@ public:
 	class UWBP_Hud_HP_v2_C*                       WBP_Hud_HP_v2;                                     // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_HUD_NPC_NewsHint_C*                WBP_HUD_NPC_NewsHint;                              // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_HUD_Ping_C*                        WBP_HUD_Ping;                                      // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_HUD_TaskList_C*                    WBP_HUD_TaskList;                                  // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_HUD_TaskList_Vertical_C*           WBP_HUD_TaskList_Vertical;                         // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_HUD_UseProps_C*                    WBP_HUD_UseProps;                                  // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_NikkiActionGroup_PC_V2_C*          WBP_NikkiActionGroup_PC_V2;                        // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_NikkiActionGroup_PC_V3_C*          WBP_NikkiActionGroup_PC_V3;                        // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Photograph_FinishTask_C*           WBP_PhotoWall_FinishTask;                          // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_SceneMarkerPanel_C*                WBP_SceneMarkerPanel;                              // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UX6SoftRefWidget*                       X6SoftRefWidget_IndependentLevel;                  // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void WH_ShowTip();
-	void WH_ShowOtherCoin();
-	void WH_ShoMoonCoin();
-	void WH_PlayAddAnim();
-	void WH_HideCollectionList();
-	void StopFadeInFull();
-	void ShowHPParticle(class UWBP_MainActivity_C* MainActivity_0);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_24();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_23();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_22();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_21();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_20();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_19(class UWBP_MainActivity_C* MainActivity_0);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_18(class UWBP_MainActivity_C* MainActivity_0);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_17(class UWBP_MainActivity_C* MainActivity_0);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_16();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_15();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_14();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_13();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_12();
-	void SequenceEvent();
-	void PlayLevelUp();
-	void OnMapFadeInStart();
-	void OnFadeOutStart();
-	void OnAnimationStarted(const class UWidgetAnimation* Animation);
-	void OnAnimationFinished(const class UWidgetAnimation* Animation);
-	void HideHPParticle(class UWBP_MainActivity_C* MainActivity_0);
-	void ExecuteUbergraph_WBP_Hud_PC(int32 EntryPoint);
-	void Event_FadeOut(class UWBP_MainActivity_C* MainActivity_0);
-	void Event_FadeIn(class UWBP_MainActivity_C* MainActivity_0);
-	void BP_ShowOrHideEnergyLevelHud(bool IsShow);
 	void ActivityItemFadeIn();
+	void BP_ShowOrHideEnergyLevelHud(bool IsShow);
+	void Event_FadeIn(class UWBP_MainActivity_C* MainActivity_0);
+	void Event_FadeOut(class UWBP_MainActivity_C* MainActivity_0);
+	void ExecuteUbergraph_WBP_Hud_PC(int32 EntryPoint);
+	void HideHPParticle(class UWBP_MainActivity_C* MainActivity_0);
+	void OnAnimationFinished(const class UWidgetAnimation* Animation);
+	void OnAnimationStarted(const class UWidgetAnimation* Animation);
+	void OnFadeOutStart();
+	void OnMapFadeInStart();
+	void PlayLevelUp();
+	void SequenceEvent();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_12();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_13();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_14();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_15();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_16();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_17(class UWBP_MainActivity_C* MainActivity_0);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_18(class UWBP_MainActivity_C* MainActivity_0);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_19(class UWBP_MainActivity_C* MainActivity_0);
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_20();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_21();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_22();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_23();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_PC_24();
+	void ShowHPParticle(class UWBP_MainActivity_C* MainActivity_0);
+	void StopFadeInFull();
+	void WH_HideCollectionList();
+	void WH_PlayAddAnim();
+	void WH_ShoMoonCoin();
+	void WH_ShowOtherCoin();
+	void WH_ShowTip();
 
 	class FString GetModuleName() const;
 
@@ -143,9 +143,9 @@ static_assert(offsetof(UWBP_Hud_PC_C, TR) == 0x0003D8, "Member 'UWBP_Hud_PC_C::T
 static_assert(offsetof(UWBP_Hud_PC_C, WBP_Hud_HP_v2) == 0x0003E0, "Member 'UWBP_Hud_PC_C::WBP_Hud_HP_v2' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_PC_C, WBP_HUD_NPC_NewsHint) == 0x0003E8, "Member 'UWBP_Hud_PC_C::WBP_HUD_NPC_NewsHint' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_PC_C, WBP_HUD_Ping) == 0x0003F0, "Member 'UWBP_Hud_PC_C::WBP_HUD_Ping' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_PC_C, WBP_HUD_TaskList) == 0x0003F8, "Member 'UWBP_Hud_PC_C::WBP_HUD_TaskList' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_PC_C, WBP_HUD_TaskList_Vertical) == 0x0003F8, "Member 'UWBP_Hud_PC_C::WBP_HUD_TaskList_Vertical' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_PC_C, WBP_HUD_UseProps) == 0x000400, "Member 'UWBP_Hud_PC_C::WBP_HUD_UseProps' has a wrong offset!");
-static_assert(offsetof(UWBP_Hud_PC_C, WBP_NikkiActionGroup_PC_V2) == 0x000408, "Member 'UWBP_Hud_PC_C::WBP_NikkiActionGroup_PC_V2' has a wrong offset!");
+static_assert(offsetof(UWBP_Hud_PC_C, WBP_NikkiActionGroup_PC_V3) == 0x000408, "Member 'UWBP_Hud_PC_C::WBP_NikkiActionGroup_PC_V3' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_PC_C, WBP_PhotoWall_FinishTask) == 0x000410, "Member 'UWBP_Hud_PC_C::WBP_PhotoWall_FinishTask' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_PC_C, WBP_SceneMarkerPanel) == 0x000418, "Member 'UWBP_Hud_PC_C::WBP_SceneMarkerPanel' has a wrong offset!");
 static_assert(offsetof(UWBP_Hud_PC_C, X6SoftRefWidget_IndependentLevel) == 0x000420, "Member 'UWBP_Hud_PC_C::X6SoftRefWidget_IndependentLevel' has a wrong offset!");

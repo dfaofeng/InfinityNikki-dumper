@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "BP_X6ActorComponent_classes.hpp"
-#include "E_CleaningAbilityType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "E_CleaningAbilityType_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 #include "ECleaningAnimalHeightType_structs.hpp"
 
 
@@ -50,20 +50,20 @@ public:
 	TArray<class FString>                         BP_TagStringList;                                  // 0x0178(0x0010)(Edit, BlueprintVisible)
 
 public:
-	void BP_CheckInCleanRange(bool* bInRange);
-	void BP_EventTick(double DeltaSeconds);
-	void BP_GetAnimalConfigId(int32* animalCfgId);
-	void BP_GetIsClean(bool* bClean);
-	void BP_GetNearestSlotIndex(int32* nearestSlotIndex);
-	void BP_GetSlotLocation(int32 SlotIndex, struct FVector* slotLocation);
-	void BP_GetSlotLS(int32 NewParam, class FString* NewParam1);
-	void BP_GetSlotRotation(int32 SlotIndex, struct FVector* rotateForwardVector);
-	void BP_RequestDestroyOwner();
-	void BP_ServerSyncFakePosition(const struct FVector& FakePosition);
-	void BP_SetCleanEFXAlpha(bool isNeedHide, double DeltaTime);
-	void BP_SetJewelryVisible(bool Visible);
-	void ExecuteUbergraph_BP_CleanableAnimalComponent_V2(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_CleanableAnimalComponent_V2(int32 EntryPoint);
+	void BP_SetJewelryVisible(bool Visible);
+	void BP_SetCleanEFXAlpha(bool isNeedHide, double DeltaTime);
+	void BP_ServerSyncFakePosition(const struct FVector& FakePosition);
+	void BP_RequestDestroyOwner();
+	void BP_GetSlotRotation(int32 SlotIndex, struct FVector* rotateForwardVector);
+	void BP_GetSlotLS(int32 NewParam, class FString* NewParam1);
+	void BP_GetSlotLocation(int32 SlotIndex, struct FVector* slotLocation);
+	void BP_GetNearestSlotIndex(int32* nearestSlotIndex);
+	void BP_GetIsClean(bool* bClean);
+	void BP_GetAnimalConfigId(int32* animalCfgId);
+	void BP_EventTick(double DeltaSeconds);
+	void BP_CheckInCleanRange(bool* bInRange);
 
 	class FString GetModuleName() const;
 

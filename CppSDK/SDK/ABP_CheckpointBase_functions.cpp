@@ -17,59 +17,17 @@
 namespace SDK
 {
 
-// Function ABP_CheckpointBase.ABP_CheckpointBase_C.OnUpdate
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FAnimUpdateContext&        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const struct FAnimNodeReference&        Node                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-
-void UABP_CheckpointBase_C::OnUpdate(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_CheckpointBase_C", "OnUpdate");
-
-	Params::ABP_CheckpointBase_C_OnUpdate Parms{};
-
-	Parms.Context = std::move(Context);
-	Parms.Node = std::move(Node);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ABP_CheckpointBase.ABP_CheckpointBase_C.ForceActive
+// Function ABP_CheckpointBase.ABP_CheckpointBase_C.Active
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UABP_CheckpointBase_C::ForceActive()
+void UABP_CheckpointBase_C::Active()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_CheckpointBase_C", "ForceActive");
+		Func = Class->GetFunction("ABP_CheckpointBase_C", "Active");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ABP_CheckpointBase.ABP_CheckpointBase_C.ExecuteUbergraph_ABP_CheckpointBase
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UABP_CheckpointBase_C::ExecuteUbergraph_ABP_CheckpointBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_CheckpointBase_C", "ExecuteUbergraph_ABP_CheckpointBase");
-
-	Params::ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -94,17 +52,59 @@ void UABP_CheckpointBase_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 }
 
 
-// Function ABP_CheckpointBase.ABP_CheckpointBase_C.Active
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function ABP_CheckpointBase.ABP_CheckpointBase_C.ExecuteUbergraph_ABP_CheckpointBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABP_CheckpointBase_C::Active()
+void UABP_CheckpointBase_C::ExecuteUbergraph_ABP_CheckpointBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_CheckpointBase_C", "Active");
+		Func = Class->GetFunction("ABP_CheckpointBase_C", "ExecuteUbergraph_ABP_CheckpointBase");
+
+	Params::ABP_CheckpointBase_C_ExecuteUbergraph_ABP_CheckpointBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_CheckpointBase.ABP_CheckpointBase_C.ForceActive
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UABP_CheckpointBase_C::ForceActive()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_CheckpointBase_C", "ForceActive");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ABP_CheckpointBase.ABP_CheckpointBase_C.OnUpdate
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FAnimUpdateContext&        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UABP_CheckpointBase_C::OnUpdate(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_CheckpointBase_C", "OnUpdate");
+
+	Params::ABP_CheckpointBase_C_OnUpdate Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Node = std::move(Node);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -21,7 +21,7 @@ namespace SDK
 struct FPSdkBiliAccountBasicModel
 {
 public:
-	int32                                         Code;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         code;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 request_id;                                        // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -29,7 +29,7 @@ public:
 };
 static_assert(alignof(FPSdkBiliAccountBasicModel) == 0x000008, "Wrong alignment on FPSdkBiliAccountBasicModel");
 static_assert(sizeof(FPSdkBiliAccountBasicModel) == 0x000038, "Wrong size on FPSdkBiliAccountBasicModel");
-static_assert(offsetof(FPSdkBiliAccountBasicModel, Code) == 0x000000, "Member 'FPSdkBiliAccountBasicModel::Code' has a wrong offset!");
+static_assert(offsetof(FPSdkBiliAccountBasicModel, code) == 0x000000, "Member 'FPSdkBiliAccountBasicModel::code' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountBasicModel, Info) == 0x000008, "Member 'FPSdkBiliAccountBasicModel::Info' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountBasicModel, request_id) == 0x000018, "Member 'FPSdkBiliAccountBasicModel::request_id' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountBasicModel, ResponseString) == 0x000028, "Member 'FPSdkBiliAccountBasicModel::ResponseString' has a wrong offset!");
@@ -92,7 +92,7 @@ static_assert(offsetof(FPSdkBiliAccountYouthMsg, HasRealInfo) == 0x00005C, "Memb
 static_assert(offsetof(FPSdkBiliAccountYouthMsg, Is_Holiday) == 0x000060, "Member 'FPSdkBiliAccountYouthMsg::Is_Holiday' has a wrong offset!");
 
 // ScriptStruct PSDKChannelBili.PSdkBiliAccountInfoModel
-// 0x0150 (0x0150 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct FPSdkBiliAccountInfoModel final
 {
 public:
@@ -110,13 +110,14 @@ public:
 	int32                                         IsNew;                                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         IsGuest;                                           // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AccountType;                                       // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RoleId;                                            // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Extra;                                             // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPSdkBiliAccountYouthMsg               Youth_Msg;                                         // 0x0088(0x0068)(NativeAccessSpecifierPublic)
-	struct FPSdkBiliDetailInfo                    Detail;                                            // 0x00F0(0x0060)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 RoleId;                                            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Extra;                                             // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPSdkBiliAccountYouthMsg               Youth_Msg;                                         // 0x0098(0x0068)(NativeAccessSpecifierPublic)
+	struct FPSdkBiliDetailInfo                    Detail;                                            // 0x0100(0x0060)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkBiliAccountInfoModel) == 0x000008, "Wrong alignment on FPSdkBiliAccountInfoModel");
-static_assert(sizeof(FPSdkBiliAccountInfoModel) == 0x000150, "Wrong size on FPSdkBiliAccountInfoModel");
+static_assert(sizeof(FPSdkBiliAccountInfoModel) == 0x000160, "Wrong size on FPSdkBiliAccountInfoModel");
 static_assert(offsetof(FPSdkBiliAccountInfoModel, Is_Bind) == 0x000000, "Member 'FPSdkBiliAccountInfoModel::Is_Bind' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountInfoModel, Real_Switch) == 0x000001, "Member 'FPSdkBiliAccountInfoModel::Real_Switch' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountInfoModel, Youth_Switch) == 0x000002, "Member 'FPSdkBiliAccountInfoModel::Youth_Switch' has a wrong offset!");
@@ -130,20 +131,20 @@ static_assert(offsetof(FPSdkBiliAccountInfoModel, Refresh_Token) == 0x000058, "M
 static_assert(offsetof(FPSdkBiliAccountInfoModel, IsNew) == 0x000068, "Member 'FPSdkBiliAccountInfoModel::IsNew' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountInfoModel, IsGuest) == 0x00006C, "Member 'FPSdkBiliAccountInfoModel::IsGuest' has a wrong offset!");
 static_assert(offsetof(FPSdkBiliAccountInfoModel, AccountType) == 0x000070, "Member 'FPSdkBiliAccountInfoModel::AccountType' has a wrong offset!");
-static_assert(offsetof(FPSdkBiliAccountInfoModel, RoleId) == 0x000074, "Member 'FPSdkBiliAccountInfoModel::RoleId' has a wrong offset!");
-static_assert(offsetof(FPSdkBiliAccountInfoModel, Extra) == 0x000078, "Member 'FPSdkBiliAccountInfoModel::Extra' has a wrong offset!");
-static_assert(offsetof(FPSdkBiliAccountInfoModel, Youth_Msg) == 0x000088, "Member 'FPSdkBiliAccountInfoModel::Youth_Msg' has a wrong offset!");
-static_assert(offsetof(FPSdkBiliAccountInfoModel, Detail) == 0x0000F0, "Member 'FPSdkBiliAccountInfoModel::Detail' has a wrong offset!");
+static_assert(offsetof(FPSdkBiliAccountInfoModel, RoleId) == 0x000078, "Member 'FPSdkBiliAccountInfoModel::RoleId' has a wrong offset!");
+static_assert(offsetof(FPSdkBiliAccountInfoModel, Extra) == 0x000088, "Member 'FPSdkBiliAccountInfoModel::Extra' has a wrong offset!");
+static_assert(offsetof(FPSdkBiliAccountInfoModel, Youth_Msg) == 0x000098, "Member 'FPSdkBiliAccountInfoModel::Youth_Msg' has a wrong offset!");
+static_assert(offsetof(FPSdkBiliAccountInfoModel, Detail) == 0x000100, "Member 'FPSdkBiliAccountInfoModel::Detail' has a wrong offset!");
 
 // ScriptStruct PSDKChannelBili.PSdkBiliLoginInfoModel
-// 0x0150 (0x0188 - 0x0038)
+// 0x0160 (0x0198 - 0x0038)
 struct FPSdkBiliLoginInfoModel final : public FPSdkBiliAccountBasicModel
 {
 public:
-	struct FPSdkBiliAccountInfoModel              Data;                                              // 0x0038(0x0150)(NativeAccessSpecifierPublic)
+	struct FPSdkBiliAccountInfoModel              Data;                                              // 0x0038(0x0160)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkBiliLoginInfoModel) == 0x000008, "Wrong alignment on FPSdkBiliLoginInfoModel");
-static_assert(sizeof(FPSdkBiliLoginInfoModel) == 0x000188, "Wrong size on FPSdkBiliLoginInfoModel");
+static_assert(sizeof(FPSdkBiliLoginInfoModel) == 0x000198, "Wrong size on FPSdkBiliLoginInfoModel");
 static_assert(offsetof(FPSdkBiliLoginInfoModel, Data) == 0x000038, "Member 'FPSdkBiliLoginInfoModel::Data' has a wrong offset!");
 
 // ScriptStruct PSDKChannelBili.PSdkPayBiliOrderInfoModel
@@ -172,7 +173,7 @@ public:
 	class FString                                 tradeNum;                                          // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 zoneId;                                            // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 product_desc;                                      // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserName;                                          // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Username;                                          // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 role_name;                                         // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkPayBiliOrderInfoModel) == 0x000008, "Wrong alignment on FPSdkPayBiliOrderInfoModel");
@@ -198,7 +199,7 @@ static_assert(offsetof(FPSdkPayBiliOrderInfoModel, product_name) == 0x000110, "M
 static_assert(offsetof(FPSdkPayBiliOrderInfoModel, tradeNum) == 0x000120, "Member 'FPSdkPayBiliOrderInfoModel::tradeNum' has a wrong offset!");
 static_assert(offsetof(FPSdkPayBiliOrderInfoModel, zoneId) == 0x000130, "Member 'FPSdkPayBiliOrderInfoModel::zoneId' has a wrong offset!");
 static_assert(offsetof(FPSdkPayBiliOrderInfoModel, product_desc) == 0x000140, "Member 'FPSdkPayBiliOrderInfoModel::product_desc' has a wrong offset!");
-static_assert(offsetof(FPSdkPayBiliOrderInfoModel, UserName) == 0x000150, "Member 'FPSdkPayBiliOrderInfoModel::UserName' has a wrong offset!");
+static_assert(offsetof(FPSdkPayBiliOrderInfoModel, Username) == 0x000150, "Member 'FPSdkPayBiliOrderInfoModel::Username' has a wrong offset!");
 static_assert(offsetof(FPSdkPayBiliOrderInfoModel, role_name) == 0x000160, "Member 'FPSdkPayBiliOrderInfoModel::role_name' has a wrong offset!");
 
 // ScriptStruct PSDKChannelBili.PSdkPayBiliYouthChargeModel
@@ -260,7 +261,7 @@ public:
 	class FString                                 product_name;                                      // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 money;                                             // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 product_desc;                                      // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserName;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Username;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 role_name;                                         // 0x0070(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 extension_info;                                    // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 notify_url;                                        // 0x0090(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -275,7 +276,7 @@ static_assert(offsetof(FPSdkThirdPartyBiliPayModel, game_money) == 0x000020, "Me
 static_assert(offsetof(FPSdkThirdPartyBiliPayModel, product_name) == 0x000030, "Member 'FPSdkThirdPartyBiliPayModel::product_name' has a wrong offset!");
 static_assert(offsetof(FPSdkThirdPartyBiliPayModel, money) == 0x000040, "Member 'FPSdkThirdPartyBiliPayModel::money' has a wrong offset!");
 static_assert(offsetof(FPSdkThirdPartyBiliPayModel, product_desc) == 0x000050, "Member 'FPSdkThirdPartyBiliPayModel::product_desc' has a wrong offset!");
-static_assert(offsetof(FPSdkThirdPartyBiliPayModel, UserName) == 0x000060, "Member 'FPSdkThirdPartyBiliPayModel::UserName' has a wrong offset!");
+static_assert(offsetof(FPSdkThirdPartyBiliPayModel, Username) == 0x000060, "Member 'FPSdkThirdPartyBiliPayModel::Username' has a wrong offset!");
 static_assert(offsetof(FPSdkThirdPartyBiliPayModel, role_name) == 0x000070, "Member 'FPSdkThirdPartyBiliPayModel::role_name' has a wrong offset!");
 static_assert(offsetof(FPSdkThirdPartyBiliPayModel, extension_info) == 0x000080, "Member 'FPSdkThirdPartyBiliPayModel::extension_info' has a wrong offset!");
 static_assert(offsetof(FPSdkThirdPartyBiliPayModel, notify_url) == 0x000090, "Member 'FPSdkThirdPartyBiliPayModel::notify_url' has a wrong offset!");

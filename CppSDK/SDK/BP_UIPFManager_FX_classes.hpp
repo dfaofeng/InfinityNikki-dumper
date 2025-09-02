@@ -31,9 +31,9 @@ public:
 	bool                                          NewVar_0;                                          // 0x0629(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateInteractorLocation(int32 InteractorID, const struct FVector& HitLocation);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_UIPFManager_FX(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void UpdateInteractorLocation(int32 InteractorID, const struct FVector& HitLocation);
 
 public:
 	static class UClass* StaticClass()

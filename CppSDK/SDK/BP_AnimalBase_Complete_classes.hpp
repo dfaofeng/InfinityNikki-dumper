@@ -11,49 +11,49 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "E_Platform_structs.hpp"
 #include "X6Game_classes.hpp"
 #include "ECharacterType_structs.hpp"
-#include "E_Platform_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AnimalBase_Complete.BP_AnimalBase_Complete_C
-// 0x0080 (0x0930 - 0x08B0)
+// 0x0080 (0x09D0 - 0x0950)
 class ABP_AnimalBase_Complete_C final : public AX6CharacterBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UDecalComponent*                        FakeShadowDecal;                                   // 0x08B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   InteractTipWidget;                                 // 0x08C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   BP_InsectVerticalShadow;                           // 0x08C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CatchingInsectFeedBackComponent_C*  BP_CatchingInsectFeedBackComponent;                // 0x08D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_Foliage_Interactor_Component_C*     BP_Foliage_Interactor_Component;                   // 0x08D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_CharacterBaseInfoComponent_C*       BP_CharacterBaseInfoComponent;                     // 0x08E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      InteractionCollision;                              // 0x08E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_HandleInteractionLogic_C*           BP_HandleInteractionLogic;                         // 0x08F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_InteractiveActorComponent_C*        BP_InteractiveActorComponent;                      // 0x08F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_AIAgentComponent_C*                 BP_AIAgentComponent;                               // 0x0900(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UX6CustomRootMotionComponent*           X6CustomRootMotion;                                // 0x0908(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        BP_PlayerAnimStatesComponent;                      // 0x0910(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_SoundAndParticleComponent_C*        BP_SoundAndParticleComponent;                      // 0x0918(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerRegularMovementCompV3_C*      BP_PlayerRegularMovementCompV3;                    // 0x0920(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_AnimalTickManager_C*                AnimalTickManager;                                 // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0950(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UDecalComponent*                        FakeShadowDecal;                                   // 0x0958(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   InteractTipWidget;                                 // 0x0960(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   BP_InsectVerticalShadow;                           // 0x0968(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CatchingInsectFeedBackComponent_C*  BP_CatchingInsectFeedBackComponent;                // 0x0970(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_Foliage_Interactor_Component_C*     BP_Foliage_Interactor_Component;                   // 0x0978(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_CharacterBaseInfoComponent_C*       BP_CharacterBaseInfoComponent;                     // 0x0980(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      InteractionCollision;                              // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_HandleInteractionLogic_C*           BP_HandleInteractionLogic;                         // 0x0990(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_InteractiveActorComponent_C*        BP_InteractiveActorComponent;                      // 0x0998(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_AIAgentComponent_C*                 BP_AIAgentComponent;                               // 0x09A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UX6CustomRootMotionComponent*           X6CustomRootMotion;                                // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        BP_PlayerAnimStatesComponent;                      // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_SoundAndParticleComponent_C*        BP_SoundAndParticleComponent;                      // 0x09B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerRegularMovementCompV3_C*      BP_PlayerRegularMovementCompV3;                    // 0x09C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_AnimalTickManager_C*                AnimalTickManager;                                 // 0x09C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_AnimalTickManagerResumeAI();
-	void BP_AnimalTickManagerStopAI();
-	void CreateAnimalTickManager();
-	void ExecuteUbergraph_BP_AnimalBase_Complete(int32 EntryPoint);
-	void GetAIObjectClass(class FString* LuaClassPath);
-	void GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager_0);
-	void GetCurrentPlatformActorMeshScale(int64 ConfigID, double* Scale);
-	void OnBindEntity();
-	void OnUnbindEntity();
-	void SetAnimalTickEnabled(bool bEnabled, bool* bSuccess);
-	void ShouldRejectTickManagement(bool* bReject);
 	void UserConstructionScript();
+	void ShouldRejectTickManagement(bool* bReject);
+	void SetAnimalTickEnabled(bool bEnabled, bool* bSuccess);
+	void OnUnbindEntity();
+	void OnBindEntity();
+	void GetCurrentPlatformActorMeshScale(int64 ConfigID, double* Scale);
+	void GetAnimalTickManager(class UBP_AnimalTickManager_C** AnimalTickManager_0);
+	void GetAIObjectClass(class FString* LuaClassPath);
+	void ExecuteUbergraph_BP_AnimalBase_Complete(int32 EntryPoint);
+	void CreateAnimalTickManager();
+	void BP_AnimalTickManagerStopAI();
+	void BP_AnimalTickManagerResumeAI();
 
 	class FString GetModuleName() const;
 
@@ -68,23 +68,23 @@ public:
 	}
 };
 static_assert(alignof(ABP_AnimalBase_Complete_C) == 0x000010, "Wrong alignment on ABP_AnimalBase_Complete_C");
-static_assert(sizeof(ABP_AnimalBase_Complete_C) == 0x000930, "Wrong size on ABP_AnimalBase_Complete_C");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, UberGraphFrame) == 0x0008B0, "Member 'ABP_AnimalBase_Complete_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, FakeShadowDecal) == 0x0008B8, "Member 'ABP_AnimalBase_Complete_C::FakeShadowDecal' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, InteractTipWidget) == 0x0008C0, "Member 'ABP_AnimalBase_Complete_C::InteractTipWidget' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_InsectVerticalShadow) == 0x0008C8, "Member 'ABP_AnimalBase_Complete_C::BP_InsectVerticalShadow' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_CatchingInsectFeedBackComponent) == 0x0008D0, "Member 'ABP_AnimalBase_Complete_C::BP_CatchingInsectFeedBackComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_Foliage_Interactor_Component) == 0x0008D8, "Member 'ABP_AnimalBase_Complete_C::BP_Foliage_Interactor_Component' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_CharacterBaseInfoComponent) == 0x0008E0, "Member 'ABP_AnimalBase_Complete_C::BP_CharacterBaseInfoComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, InteractionCollision) == 0x0008E8, "Member 'ABP_AnimalBase_Complete_C::InteractionCollision' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_HandleInteractionLogic) == 0x0008F0, "Member 'ABP_AnimalBase_Complete_C::BP_HandleInteractionLogic' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_InteractiveActorComponent) == 0x0008F8, "Member 'ABP_AnimalBase_Complete_C::BP_InteractiveActorComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_AIAgentComponent) == 0x000900, "Member 'ABP_AnimalBase_Complete_C::BP_AIAgentComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, X6CustomRootMotion) == 0x000908, "Member 'ABP_AnimalBase_Complete_C::X6CustomRootMotion' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_PlayerAnimStatesComponent) == 0x000910, "Member 'ABP_AnimalBase_Complete_C::BP_PlayerAnimStatesComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_SoundAndParticleComponent) == 0x000918, "Member 'ABP_AnimalBase_Complete_C::BP_SoundAndParticleComponent' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_PlayerRegularMovementCompV3) == 0x000920, "Member 'ABP_AnimalBase_Complete_C::BP_PlayerRegularMovementCompV3' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalBase_Complete_C, AnimalTickManager) == 0x000928, "Member 'ABP_AnimalBase_Complete_C::AnimalTickManager' has a wrong offset!");
+static_assert(sizeof(ABP_AnimalBase_Complete_C) == 0x0009D0, "Wrong size on ABP_AnimalBase_Complete_C");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, UberGraphFrame) == 0x000950, "Member 'ABP_AnimalBase_Complete_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, FakeShadowDecal) == 0x000958, "Member 'ABP_AnimalBase_Complete_C::FakeShadowDecal' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, InteractTipWidget) == 0x000960, "Member 'ABP_AnimalBase_Complete_C::InteractTipWidget' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_InsectVerticalShadow) == 0x000968, "Member 'ABP_AnimalBase_Complete_C::BP_InsectVerticalShadow' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_CatchingInsectFeedBackComponent) == 0x000970, "Member 'ABP_AnimalBase_Complete_C::BP_CatchingInsectFeedBackComponent' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_Foliage_Interactor_Component) == 0x000978, "Member 'ABP_AnimalBase_Complete_C::BP_Foliage_Interactor_Component' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_CharacterBaseInfoComponent) == 0x000980, "Member 'ABP_AnimalBase_Complete_C::BP_CharacterBaseInfoComponent' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, InteractionCollision) == 0x000988, "Member 'ABP_AnimalBase_Complete_C::InteractionCollision' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_HandleInteractionLogic) == 0x000990, "Member 'ABP_AnimalBase_Complete_C::BP_HandleInteractionLogic' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_InteractiveActorComponent) == 0x000998, "Member 'ABP_AnimalBase_Complete_C::BP_InteractiveActorComponent' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_AIAgentComponent) == 0x0009A0, "Member 'ABP_AnimalBase_Complete_C::BP_AIAgentComponent' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, X6CustomRootMotion) == 0x0009A8, "Member 'ABP_AnimalBase_Complete_C::X6CustomRootMotion' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_PlayerAnimStatesComponent) == 0x0009B0, "Member 'ABP_AnimalBase_Complete_C::BP_PlayerAnimStatesComponent' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_SoundAndParticleComponent) == 0x0009B8, "Member 'ABP_AnimalBase_Complete_C::BP_SoundAndParticleComponent' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, BP_PlayerRegularMovementCompV3) == 0x0009C0, "Member 'ABP_AnimalBase_Complete_C::BP_PlayerRegularMovementCompV3' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalBase_Complete_C, AnimalTickManager) == 0x0009C8, "Member 'ABP_AnimalBase_Complete_C::AnimalTickManager' has a wrong offset!");
 
 }
 

@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AnimalClusterBase.BP_AnimalClusterBase_C
-// 0x0018 (0x0450 - 0x0438)
+// 0x0018 (0x04A0 - 0x0488)
 class ABP_AnimalClusterBase_C final : public AX6Actor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Members;                                           // 0x0440(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Members;                                           // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_AnimalClusterBase_C) == 0x000008, "Wrong alignment on ABP_AnimalClusterBase_C");
-static_assert(sizeof(ABP_AnimalClusterBase_C) == 0x000450, "Wrong size on ABP_AnimalClusterBase_C");
-static_assert(offsetof(ABP_AnimalClusterBase_C, DefaultSceneRoot) == 0x000438, "Member 'ABP_AnimalClusterBase_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_AnimalClusterBase_C, Members) == 0x000440, "Member 'ABP_AnimalClusterBase_C::Members' has a wrong offset!");
+static_assert(sizeof(ABP_AnimalClusterBase_C) == 0x0004A0, "Wrong size on ABP_AnimalClusterBase_C");
+static_assert(offsetof(ABP_AnimalClusterBase_C, DefaultSceneRoot) == 0x000488, "Member 'ABP_AnimalClusterBase_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_AnimalClusterBase_C, Members) == 0x000490, "Member 'ABP_AnimalClusterBase_C::Members' has a wrong offset!");
 
 }
 

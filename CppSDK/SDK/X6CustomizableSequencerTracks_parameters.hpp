@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "MovieScene_structs.hpp"
 #include "X6CustomizableSequencerTracks_structs.hpp"
+#include "MovieScene_structs.hpp"
 
 
 namespace SDK::Params
@@ -100,6 +100,60 @@ static_assert(alignof(X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreview
 static_assert(sizeof(X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreviewConfig) == 0x00000C, "Wrong size on X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreviewConfig");
 static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreviewConfig, Name_0) == 0x000000, "Member 'X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreviewConfig::Name_0' has a wrong offset!");
 static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreviewConfig, ReturnValue) == 0x000008, "Member 'X6SequencerBlueprintFunctionLibrary_GetIntValueFromPreviewConfig::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.GetStringToStringMapFromPreviewConfig
+// 0x0058 (0x0058 - 0x0000)
+struct X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig) == 0x000008, "Wrong alignment on X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig");
+static_assert(sizeof(X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig) == 0x000058, "Wrong size on X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig, Name_0) == 0x000000, "Member 'X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig::Name_0' has a wrong offset!");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig, ReturnValue) == 0x000008, "Member 'X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.IsPreviewInEditor
+// 0x0010 (0x0010 - 0x0000)
+struct X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor) == 0x000008, "Wrong alignment on X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor");
+static_assert(sizeof(X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor) == 0x000010, "Wrong size on X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor, Actor) == 0x000000, "Member 'X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor::Actor' has a wrong offset!");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor, ReturnValue) == 0x000008, "Member 'X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.SetStringToStringMapToPreviewConfig
+// 0x0058 (0x0058 - 0x0000)
+struct X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig final
+{
+public:
+	class FName                                   Name_0;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            NewMap;                                            // 0x0008(0x0050)(Parm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig) == 0x000008, "Wrong alignment on X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig");
+static_assert(sizeof(X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig) == 0x000058, "Wrong size on X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig, Name_0) == 0x000000, "Member 'X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig::Name_0' has a wrong offset!");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig, NewMap) == 0x000008, "Member 'X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig::NewMap' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.SetVisibility
+// 0x0010 (0x0010 - 0x0000)
+struct X6SequencerBlueprintFunctionLibrary_SetVisibility final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewVisibility;                                    // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6SequencerBlueprintFunctionLibrary_SetVisibility) == 0x000008, "Wrong alignment on X6SequencerBlueprintFunctionLibrary_SetVisibility");
+static_assert(sizeof(X6SequencerBlueprintFunctionLibrary_SetVisibility) == 0x000010, "Wrong size on X6SequencerBlueprintFunctionLibrary_SetVisibility");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_SetVisibility, Actor) == 0x000000, "Member 'X6SequencerBlueprintFunctionLibrary_SetVisibility::Actor' has a wrong offset!");
+static_assert(offsetof(X6SequencerBlueprintFunctionLibrary_SetVisibility, bNewVisibility) == 0x000008, "Member 'X6SequencerBlueprintFunctionLibrary_SetVisibility::bNewVisibility' has a wrong offset!");
 
 // Function X6CustomizableSequencerTracks.X6SequencerSectionBP.FindBindingObject
 // 0x0020 (0x0020 - 0x0000)
@@ -508,6 +562,180 @@ static_assert(alignof(X6SequencerParameterSectionBP_RemoveVectorParameter) == 0x
 static_assert(sizeof(X6SequencerParameterSectionBP_RemoveVectorParameter) == 0x00000C, "Wrong size on X6SequencerParameterSectionBP_RemoveVectorParameter");
 static_assert(offsetof(X6SequencerParameterSectionBP_RemoveVectorParameter, InParameterName) == 0x000000, "Member 'X6SequencerParameterSectionBP_RemoveVectorParameter::InParameterName' has a wrong offset!");
 static_assert(offsetof(X6SequencerParameterSectionBP_RemoveVectorParameter, ReturnValue) == 0x000008, "Member 'X6SequencerParameterSectionBP_RemoveVectorParameter::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.FindBindingObject
+// 0x0020 (0x0020 - 0x0000)
+struct X6SequencerTrackInstanceBP_FindBindingObject final
+{
+public:
+	struct FMovieSceneObjectBindingID             MovieSceneObjectBindingID;                         // 0x0000(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_FindBindingObject) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_FindBindingObject");
+static_assert(sizeof(X6SequencerTrackInstanceBP_FindBindingObject) == 0x000020, "Wrong size on X6SequencerTrackInstanceBP_FindBindingObject");
+static_assert(offsetof(X6SequencerTrackInstanceBP_FindBindingObject, MovieSceneObjectBindingID) == 0x000000, "Member 'X6SequencerTrackInstanceBP_FindBindingObject::MovieSceneObjectBindingID' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_FindBindingObject, ReturnValue) == 0x000018, "Member 'X6SequencerTrackInstanceBP_FindBindingObject::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.FindBindingObjectByInput
+// 0x0090 (0x0090 - 0x0000)
+struct X6SequencerTrackInstanceBP_FindBindingObjectByInput final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FMovieSceneObjectBindingID             MovieSceneObjectBindingID;                         // 0x0070(0x0018)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_FindBindingObjectByInput) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_FindBindingObjectByInput");
+static_assert(sizeof(X6SequencerTrackInstanceBP_FindBindingObjectByInput) == 0x000090, "Wrong size on X6SequencerTrackInstanceBP_FindBindingObjectByInput");
+static_assert(offsetof(X6SequencerTrackInstanceBP_FindBindingObjectByInput, Input) == 0x000000, "Member 'X6SequencerTrackInstanceBP_FindBindingObjectByInput::Input' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_FindBindingObjectByInput, MovieSceneObjectBindingID) == 0x000070, "Member 'X6SequencerTrackInstanceBP_FindBindingObjectByInput::MovieSceneObjectBindingID' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_FindBindingObjectByInput, ReturnValue) == 0x000088, "Member 'X6SequencerTrackInstanceBP_FindBindingObjectByInput::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.FindProxyActor
+// 0x0008 (0x0008 - 0x0000)
+struct X6SequencerTrackInstanceBP_FindProxyActor final
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_FindProxyActor) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_FindProxyActor");
+static_assert(sizeof(X6SequencerTrackInstanceBP_FindProxyActor) == 0x000008, "Wrong size on X6SequencerTrackInstanceBP_FindProxyActor");
+static_assert(offsetof(X6SequencerTrackInstanceBP_FindProxyActor, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_FindProxyActor::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrame
+// 0x0004 (0x0004 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetBeginFrame final
+{
+public:
+	struct FFrameNumber                           ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetBeginFrame) == 0x000004, "Wrong alignment on X6SequencerTrackInstanceBP_GetBeginFrame");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetBeginFrame) == 0x000004, "Wrong size on X6SequencerTrackInstanceBP_GetBeginFrame");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetBeginFrame, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetBeginFrame::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrameByInput
+// 0x0078 (0x0078 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetBeginFrameByInput final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetBeginFrameByInput) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetBeginFrameByInput");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetBeginFrameByInput) == 0x000078, "Wrong size on X6SequencerTrackInstanceBP_GetBeginFrameByInput");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetBeginFrameByInput, Input) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetBeginFrameByInput::Input' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetBeginFrameByInput, ReturnValue) == 0x000070, "Member 'X6SequencerTrackInstanceBP_GetBeginFrameByInput::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrameSeconds
+// 0x0004 (0x0004 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetBeginFrameSeconds final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetBeginFrameSeconds) == 0x000004, "Wrong alignment on X6SequencerTrackInstanceBP_GetBeginFrameSeconds");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetBeginFrameSeconds) == 0x000004, "Wrong size on X6SequencerTrackInstanceBP_GetBeginFrameSeconds");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetBeginFrameSeconds, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetBeginFrameSeconds::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrameSecondsByInput
+// 0x0078 (0x0078 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput) == 0x000078, "Wrong size on X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput, Input) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput::Input' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput, ReturnValue) == 0x000070, "Member 'X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetDefaultSectionBP
+// 0x0008 (0x0008 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetDefaultSectionBP final
+{
+public:
+	class UX6SequencerSectionBP*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetDefaultSectionBP) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetDefaultSectionBP");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetDefaultSectionBP) == 0x000008, "Wrong size on X6SequencerTrackInstanceBP_GetDefaultSectionBP");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetDefaultSectionBP, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetDefaultSectionBP::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrame
+// 0x0004 (0x0004 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetEndFrame final
+{
+public:
+	struct FFrameNumber                           ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetEndFrame) == 0x000004, "Wrong alignment on X6SequencerTrackInstanceBP_GetEndFrame");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetEndFrame) == 0x000004, "Wrong size on X6SequencerTrackInstanceBP_GetEndFrame");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetEndFrame, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetEndFrame::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrameByInput
+// 0x0078 (0x0078 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetEndFrameByInput final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetEndFrameByInput) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetEndFrameByInput");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetEndFrameByInput) == 0x000078, "Wrong size on X6SequencerTrackInstanceBP_GetEndFrameByInput");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetEndFrameByInput, Input) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetEndFrameByInput::Input' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetEndFrameByInput, ReturnValue) == 0x000070, "Member 'X6SequencerTrackInstanceBP_GetEndFrameByInput::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrameSeconds
+// 0x0004 (0x0004 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetEndFrameSeconds final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetEndFrameSeconds) == 0x000004, "Wrong alignment on X6SequencerTrackInstanceBP_GetEndFrameSeconds");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetEndFrameSeconds) == 0x000004, "Wrong size on X6SequencerTrackInstanceBP_GetEndFrameSeconds");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetEndFrameSeconds, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetEndFrameSeconds::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrameSecondsByInput
+// 0x0078 (0x0078 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0070(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput) == 0x000078, "Wrong size on X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput, Input) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput::Input' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput, ReturnValue) == 0x000070, "Member 'X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetMovieSceneSequencePlayer
+// 0x0008 (0x0008 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer final
+{
+public:
+	class UMovieSceneSequencePlayer*              ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer) == 0x000008, "Wrong size on X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer, ReturnValue) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer::ReturnValue' has a wrong offset!");
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetMovieSceneSequencePlayerByInput
+// 0x0078 (0x0078 - 0x0000)
+struct X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput final
+{
+public:
+	struct FX6SequencerTrackInstanceInput         Input;                                             // 0x0000(0x0070)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class UMovieSceneSequencePlayer*              ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput) == 0x000008, "Wrong alignment on X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput");
+static_assert(sizeof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput) == 0x000078, "Wrong size on X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput, Input) == 0x000000, "Member 'X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput::Input' has a wrong offset!");
+static_assert(offsetof(X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput, ReturnValue) == 0x000070, "Member 'X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput::ReturnValue' has a wrong offset!");
 
 // Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.K2_OnInputAdded
 // 0x0070 (0x0070 - 0x0000)

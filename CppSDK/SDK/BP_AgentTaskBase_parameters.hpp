@@ -14,16 +14,16 @@
 namespace SDK::Params
 {
 
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.RejectRecycle
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AgentTaskBase_C_RejectRecycle final
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.ExecuteUbergraph_BP_AgentTaskBase
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AgentTaskBase_C_RejectRecycle) == 0x000001, "Wrong alignment on BP_AgentTaskBase_C_RejectRecycle");
-static_assert(sizeof(BP_AgentTaskBase_C_RejectRecycle) == 0x000001, "Wrong size on BP_AgentTaskBase_C_RejectRecycle");
-static_assert(offsetof(BP_AgentTaskBase_C_RejectRecycle, ReturnValue) == 0x000000, "Member 'BP_AgentTaskBase_C_RejectRecycle::ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase) == 0x000004, "Wrong alignment on BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase");
+static_assert(sizeof(BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase) == 0x000004, "Wrong size on BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase");
+static_assert(offsetof(BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase, EntryPoint) == 0x000000, "Member 'BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase::EntryPoint' has a wrong offset!");
 
 // Function BP_AgentTaskBase.BP_AgentTaskBase_C.ReceiveTickUncheck
 // 0x0010 (0x0010 - 0x0000)
@@ -38,16 +38,16 @@ static_assert(sizeof(BP_AgentTaskBase_C_ReceiveTickUncheck) == 0x000010, "Wrong 
 static_assert(offsetof(BP_AgentTaskBase_C_ReceiveTickUncheck, AgentPawn) == 0x000000, "Member 'BP_AgentTaskBase_C_ReceiveTickUncheck::AgentPawn' has a wrong offset!");
 static_assert(offsetof(BP_AgentTaskBase_C_ReceiveTickUncheck, DeltaTime) == 0x000008, "Member 'BP_AgentTaskBase_C_ReceiveTickUncheck::DeltaTime' has a wrong offset!");
 
-// Function BP_AgentTaskBase.BP_AgentTaskBase_C.ExecuteUbergraph_BP_AgentTaskBase
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase final
+// Function BP_AgentTaskBase.BP_AgentTaskBase_C.RejectRecycle
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AgentTaskBase_C_RejectRecycle final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase) == 0x000004, "Wrong alignment on BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase");
-static_assert(sizeof(BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase) == 0x000004, "Wrong size on BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase");
-static_assert(offsetof(BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase, EntryPoint) == 0x000000, "Member 'BP_AgentTaskBase_C_ExecuteUbergraph_BP_AgentTaskBase::EntryPoint' has a wrong offset!");
+static_assert(alignof(BP_AgentTaskBase_C_RejectRecycle) == 0x000001, "Wrong alignment on BP_AgentTaskBase_C_RejectRecycle");
+static_assert(sizeof(BP_AgentTaskBase_C_RejectRecycle) == 0x000001, "Wrong size on BP_AgentTaskBase_C_RejectRecycle");
+static_assert(offsetof(BP_AgentTaskBase_C_RejectRecycle, ReturnValue) == 0x000000, "Member 'BP_AgentTaskBase_C_RejectRecycle::ReturnValue' has a wrong offset!");
 
 // Function BP_AgentTaskBase.BP_AgentTaskBase_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

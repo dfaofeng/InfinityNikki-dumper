@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.K2_OnSectionBegin_WithBindingObject
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// class UObject*                          BindingObject                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWoolenHeartPhantomSection_C::K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WoolenHeartPhantomSection_C", "K2_OnSectionBegin_WithBindingObject");
-
-	Params::WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject Parms{};
-
-	Parms.BindingObject = BindingObject;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.ExecuteUbergraph_WoolenHeartPhantomSection
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -52,6 +32,26 @@ void UWoolenHeartPhantomSection_C::ExecuteUbergraph_WoolenHeartPhantomSection(in
 	Params::WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.K2_OnSectionBegin_WithBindingObject
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// class UObject*                          BindingObject                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWoolenHeartPhantomSection_C::K2_OnSectionBegin_WithBindingObject(class UObject* BindingObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WoolenHeartPhantomSection_C", "K2_OnSectionBegin_WithBindingObject");
+
+	Params::WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject Parms{};
+
+	Parms.BindingObject = BindingObject;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

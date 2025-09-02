@@ -26,10 +26,10 @@ public:
 	double                                        ResetHeightSpeed;                                  // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetFlyingGroundBias(double NewBias);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_AgentFlyingAbilityComponent(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
+	void SetFlyingGroundBias(double NewBias);
 
 	class FString GetModuleName() const;
 

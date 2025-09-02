@@ -25,9 +25,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0048(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ShowRewardUI();
-	void SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP();
 	void ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP(int32 EntryPoint);
+	void SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP();
+	void ShowRewardUI();
 
 public:
 	static class UClass* StaticClass()

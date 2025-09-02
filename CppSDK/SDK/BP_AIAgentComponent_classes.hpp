@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_X6ActorComponent_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Enum_AgentAvoidanceSetting_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK

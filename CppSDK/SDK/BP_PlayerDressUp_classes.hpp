@@ -20,29 +20,29 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerDressUp.BP_PlayerDressUp_C
-// 0x00A0 (0x0980 - 0x08E0)
+// 0x00A0 (0x0A20 - 0x0980)
 class ABP_PlayerDressUp_C final : public AX6NikkiPawn
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x08E0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBP_ClothesSoundComponent_C*            BP_ClothesSoundComponent;                          // 0x08E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UHeightfieldReadbackComponent*          HeightfieldReadback;                               // 0x08F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNikkiPhysicsManagerComponent*          NikkiPhysicsManager;                               // 0x08F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 HeadOrnament;                                      // 0x0900(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UX6NikkiCPPTickHelperComponent*         X6NikkiCPPTickHelper;                              // 0x0908(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerAnimStatesComponent_C*        BP_PlayerAnimStatesComponent;                      // 0x0910(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_SuitDisplayComponent_C*             BP_SuitDisplayComponent;                           // 0x0918(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Shoe;                                              // 0x0920(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Trouser;                                           // 0x0928(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Hair;                                              // 0x0930(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Skirt;                                             // 0x0938(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	double                                        LeftEyeBlinkValue;                                 // 0x0940(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightEyeBlinkValue;                                // 0x0948(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Iris_Brightness;                                   // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           Value;                                             // 0x0958(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Use_Static_Rotation;                               // 0x0968(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_969[0x3];                                      // 0x0969(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           DressUpCharacterTag;                               // 0x096C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0980(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_ClothesSoundComponent_C*            BP_ClothesSoundComponent;                          // 0x0988(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UHeightfieldReadbackComponent*          HeightfieldReadback;                               // 0x0990(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNikkiPhysicsManagerComponent*          NikkiPhysicsManager;                               // 0x0998(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 HeadOrnament;                                      // 0x09A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UX6NikkiCPPTickHelperComponent*         X6NikkiCPPTickHelper;                              // 0x09A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        BP_PlayerAnimStatesComponent;                      // 0x09B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_SuitDisplayComponent_C*             BP_SuitDisplayComponent;                           // 0x09B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Shoe;                                              // 0x09C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Trouser;                                           // 0x09C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Hair;                                              // 0x09D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Skirt;                                             // 0x09D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	double                                        LeftEyeBlinkValue;                                 // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightEyeBlinkValue;                                // 0x09E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Iris_Brightness;                                   // 0x09F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           Value;                                             // 0x09F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Use_Static_Rotation;                               // 0x0A08(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A09[0x3];                                      // 0x0A09(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           DressUpCharacterTag;                               // 0x0A0C(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void CustomEvent(EEndPlayReason EndPlayReason);
@@ -65,25 +65,25 @@ public:
 	}
 };
 static_assert(alignof(ABP_PlayerDressUp_C) == 0x000010, "Wrong alignment on ABP_PlayerDressUp_C");
-static_assert(sizeof(ABP_PlayerDressUp_C) == 0x000980, "Wrong size on ABP_PlayerDressUp_C");
-static_assert(offsetof(ABP_PlayerDressUp_C, UberGraphFrame) == 0x0008E0, "Member 'ABP_PlayerDressUp_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, BP_ClothesSoundComponent) == 0x0008E8, "Member 'ABP_PlayerDressUp_C::BP_ClothesSoundComponent' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, HeightfieldReadback) == 0x0008F0, "Member 'ABP_PlayerDressUp_C::HeightfieldReadback' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, NikkiPhysicsManager) == 0x0008F8, "Member 'ABP_PlayerDressUp_C::NikkiPhysicsManager' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, HeadOrnament) == 0x000900, "Member 'ABP_PlayerDressUp_C::HeadOrnament' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, X6NikkiCPPTickHelper) == 0x000908, "Member 'ABP_PlayerDressUp_C::X6NikkiCPPTickHelper' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, BP_PlayerAnimStatesComponent) == 0x000910, "Member 'ABP_PlayerDressUp_C::BP_PlayerAnimStatesComponent' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, BP_SuitDisplayComponent) == 0x000918, "Member 'ABP_PlayerDressUp_C::BP_SuitDisplayComponent' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Shoe) == 0x000920, "Member 'ABP_PlayerDressUp_C::Shoe' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Trouser) == 0x000928, "Member 'ABP_PlayerDressUp_C::Trouser' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Hair) == 0x000930, "Member 'ABP_PlayerDressUp_C::Hair' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Skirt) == 0x000938, "Member 'ABP_PlayerDressUp_C::Skirt' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, LeftEyeBlinkValue) == 0x000940, "Member 'ABP_PlayerDressUp_C::LeftEyeBlinkValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, RightEyeBlinkValue) == 0x000948, "Member 'ABP_PlayerDressUp_C::RightEyeBlinkValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Iris_Brightness) == 0x000950, "Member 'ABP_PlayerDressUp_C::Iris_Brightness' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Value) == 0x000958, "Member 'ABP_PlayerDressUp_C::Value' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, Use_Static_Rotation) == 0x000968, "Member 'ABP_PlayerDressUp_C::Use_Static_Rotation' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDressUp_C, DressUpCharacterTag) == 0x00096C, "Member 'ABP_PlayerDressUp_C::DressUpCharacterTag' has a wrong offset!");
+static_assert(sizeof(ABP_PlayerDressUp_C) == 0x000A20, "Wrong size on ABP_PlayerDressUp_C");
+static_assert(offsetof(ABP_PlayerDressUp_C, UberGraphFrame) == 0x000980, "Member 'ABP_PlayerDressUp_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, BP_ClothesSoundComponent) == 0x000988, "Member 'ABP_PlayerDressUp_C::BP_ClothesSoundComponent' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, HeightfieldReadback) == 0x000990, "Member 'ABP_PlayerDressUp_C::HeightfieldReadback' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, NikkiPhysicsManager) == 0x000998, "Member 'ABP_PlayerDressUp_C::NikkiPhysicsManager' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, HeadOrnament) == 0x0009A0, "Member 'ABP_PlayerDressUp_C::HeadOrnament' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, X6NikkiCPPTickHelper) == 0x0009A8, "Member 'ABP_PlayerDressUp_C::X6NikkiCPPTickHelper' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, BP_PlayerAnimStatesComponent) == 0x0009B0, "Member 'ABP_PlayerDressUp_C::BP_PlayerAnimStatesComponent' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, BP_SuitDisplayComponent) == 0x0009B8, "Member 'ABP_PlayerDressUp_C::BP_SuitDisplayComponent' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Shoe) == 0x0009C0, "Member 'ABP_PlayerDressUp_C::Shoe' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Trouser) == 0x0009C8, "Member 'ABP_PlayerDressUp_C::Trouser' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Hair) == 0x0009D0, "Member 'ABP_PlayerDressUp_C::Hair' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Skirt) == 0x0009D8, "Member 'ABP_PlayerDressUp_C::Skirt' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, LeftEyeBlinkValue) == 0x0009E0, "Member 'ABP_PlayerDressUp_C::LeftEyeBlinkValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, RightEyeBlinkValue) == 0x0009E8, "Member 'ABP_PlayerDressUp_C::RightEyeBlinkValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Iris_Brightness) == 0x0009F0, "Member 'ABP_PlayerDressUp_C::Iris_Brightness' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Value) == 0x0009F8, "Member 'ABP_PlayerDressUp_C::Value' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, Use_Static_Rotation) == 0x000A08, "Member 'ABP_PlayerDressUp_C::Use_Static_Rotation' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDressUp_C, DressUpCharacterTag) == 0x000A0C, "Member 'ABP_PlayerDressUp_C::DressUpCharacterTag' has a wrong offset!");
 
 }
 

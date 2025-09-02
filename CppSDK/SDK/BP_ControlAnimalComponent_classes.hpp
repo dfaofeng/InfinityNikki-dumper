@@ -10,15 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "BP_SimpleAbilityBase_classes.hpp"
+#include "Enum_ControlAnimal_AnimationPerformance_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ControlAnimalComponent.BP_ControlAnimalComponent_C
-// 0x0090 (0x0180 - 0x00F0)
+// 0x0098 (0x0188 - 0x00F0)
 class UBP_ControlAnimalComponent_C final : public UBP_SimpleAbilityBase_C
 {
 public:
@@ -34,6 +35,7 @@ public:
 	struct FViewTargetTransitionParams            CameraBlendInCfg;                                  // 0x0138(0x0020)(Edit, BlueprintVisible, NoDestructor)
 	struct FViewTargetTransitionParams            CameraBlendOutCfg;                                 // 0x0158(0x0020)(Edit, BlueprintVisible, NoDestructor)
 	class UBlendSpace1D*                          Cache_MoveBlendAnim;                               // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	Enum_ControlAnimal_AnimationPerformance       PerformanceType;                                   // 0x0180(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_ControlAnimalComponent(int32 EntryPoint);
@@ -52,7 +54,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_ControlAnimalComponent_C) == 0x000008, "Wrong alignment on UBP_ControlAnimalComponent_C");
-static_assert(sizeof(UBP_ControlAnimalComponent_C) == 0x000180, "Wrong size on UBP_ControlAnimalComponent_C");
+static_assert(sizeof(UBP_ControlAnimalComponent_C) == 0x000188, "Wrong size on UBP_ControlAnimalComponent_C");
 static_assert(offsetof(UBP_ControlAnimalComponent_C, UberGraphFrame_BP_ControlAnimalComponent_C) == 0x0000F0, "Member 'UBP_ControlAnimalComponent_C::UberGraphFrame_BP_ControlAnimalComponent_C' has a wrong offset!");
 static_assert(offsetof(UBP_ControlAnimalComponent_C, AnimialDataTable) == 0x0000F8, "Member 'UBP_ControlAnimalComponent_C::AnimialDataTable' has a wrong offset!");
 static_assert(offsetof(UBP_ControlAnimalComponent_C, AnimInstClass) == 0x000100, "Member 'UBP_ControlAnimalComponent_C::AnimInstClass' has a wrong offset!");
@@ -65,6 +67,7 @@ static_assert(offsetof(UBP_ControlAnimalComponent_C, Cache_CameraCfg) == 0x00013
 static_assert(offsetof(UBP_ControlAnimalComponent_C, CameraBlendInCfg) == 0x000138, "Member 'UBP_ControlAnimalComponent_C::CameraBlendInCfg' has a wrong offset!");
 static_assert(offsetof(UBP_ControlAnimalComponent_C, CameraBlendOutCfg) == 0x000158, "Member 'UBP_ControlAnimalComponent_C::CameraBlendOutCfg' has a wrong offset!");
 static_assert(offsetof(UBP_ControlAnimalComponent_C, Cache_MoveBlendAnim) == 0x000178, "Member 'UBP_ControlAnimalComponent_C::Cache_MoveBlendAnim' has a wrong offset!");
+static_assert(offsetof(UBP_ControlAnimalComponent_C, PerformanceType) == 0x000180, "Member 'UBP_ControlAnimalComponent_C::PerformanceType' has a wrong offset!");
 
 }
 

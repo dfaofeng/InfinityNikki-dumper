@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "E_MatchClothType_Arm_structs.hpp"
-#include "E_MatchClothType_Head_structs.hpp"
-#include "E_MatchClothType_Neck_structs.hpp"
 #include "E_MatchClothType_Body_structs.hpp"
+#include "E_MatchClothType_Arm_structs.hpp"
 #include "NikkiFitCloth_structs.hpp"
 #include "NikkiFitCloth_classes.hpp"
 #include "E_MatchClothType_Leg_structs.hpp"
+#include "E_MatchClothType_Head_structs.hpp"
+#include "E_MatchClothType_Neck_structs.hpp"
 #include "E_MatchClothType_structs.hpp"
 #include "Struct_ClothMatchSectionPriority_structs.hpp"
 
@@ -25,7 +25,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass FitMatchSetting.FitMatchSetting_C
-// 0x0108 (0x0178 - 0x0070)
+// 0x0118 (0x0188 - 0x0070)
 class UFitMatchSetting_C final : public UClothPropertyAssetUserData
 {
 public:
@@ -52,6 +52,7 @@ public:
 	uint8                                         Pad_111[0x7];                                      // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<E_MatchClothType, struct FMatchClothParameter> OuterMatchPartsMap;                          // 0x0118(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FClothVertexColorMaskUnit>      TransparentColorVertexMaskUnit;                    // 0x0168(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<struct FClothVertexColorMaskUnit>      HairTieColorVertexMaskUnit;                        // 0x0178(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void GetMatchType(E_MatchClothType InTypeName, int32* Result);
@@ -68,7 +69,7 @@ public:
 	}
 };
 static_assert(alignof(UFitMatchSetting_C) == 0x000008, "Wrong alignment on UFitMatchSetting_C");
-static_assert(sizeof(UFitMatchSetting_C) == 0x000178, "Wrong size on UFitMatchSetting_C");
+static_assert(sizeof(UFitMatchSetting_C) == 0x000188, "Wrong size on UFitMatchSetting_C");
 static_assert(offsetof(UFitMatchSetting_C, Arm) == 0x000070, "Member 'UFitMatchSetting_C::Arm' has a wrong offset!");
 static_assert(offsetof(UFitMatchSetting_C, Body) == 0x000071, "Member 'UFitMatchSetting_C::Body' has a wrong offset!");
 static_assert(offsetof(UFitMatchSetting_C, Leg) == 0x000072, "Member 'UFitMatchSetting_C::Leg' has a wrong offset!");
@@ -88,6 +89,7 @@ static_assert(offsetof(UFitMatchSetting_C, SectionPriority) == 0x000100, "Member
 static_assert(offsetof(UFitMatchSetting_C, OuterMatchPartsOverride) == 0x000110, "Member 'UFitMatchSetting_C::OuterMatchPartsOverride' has a wrong offset!");
 static_assert(offsetof(UFitMatchSetting_C, OuterMatchPartsMap) == 0x000118, "Member 'UFitMatchSetting_C::OuterMatchPartsMap' has a wrong offset!");
 static_assert(offsetof(UFitMatchSetting_C, TransparentColorVertexMaskUnit) == 0x000168, "Member 'UFitMatchSetting_C::TransparentColorVertexMaskUnit' has a wrong offset!");
+static_assert(offsetof(UFitMatchSetting_C, HairTieColorVertexMaskUnit) == 0x000178, "Member 'UFitMatchSetting_C::HairTieColorVertexMaskUnit' has a wrong offset!");
 
 }
 

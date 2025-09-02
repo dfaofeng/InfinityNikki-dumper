@@ -17,147 +17,21 @@
 namespace SDK
 {
 
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetDlgActorFloorTransform
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTransform*                      Tranform                                               (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_X6DlgFunctionLib_C::BP_GetDlgActorFloorTransform(class AActor* Actor, class UObject* __WorldContext, struct FTransform* Tranform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetDlgActorFloorTransform");
-
-	Params::BPFL_X6DlgFunctionLib_C_BP_GetDlgActorFloorTransform Parms{};
-
-	Parms.Actor = Actor;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Tranform != nullptr)
-		*Tranform = std::move(Parms.Tranform);
-}
-
-
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetFloorSufaceZ
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double*                                 LocationZ                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_X6DlgFunctionLib_C::BP_GetFloorSufaceZ(class UObject* __WorldContext, double* LocationZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetFloorSufaceZ");
-
-	Params::BPFL_X6DlgFunctionLib_C_BP_GetFloorSufaceZ Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (LocationZ != nullptr)
-		*LocationZ = Parms.LocationZ;
-}
-
-
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetTransformBySemPointID
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// int64                                   PlayPointID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTransform*                      Transform                                              (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_X6DlgFunctionLib_C::BP_GetTransformBySemPointID(int64 PlayPointID, class UObject* __WorldContext, struct FTransform* Transform)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetTransformBySemPointID");
-
-	Params::BPFL_X6DlgFunctionLib_C_BP_GetTransformBySemPointID Parms{};
-
-	Parms.PlayPointID = PlayPointID;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Transform != nullptr)
-		*Transform = std::move(Parms.Transform);
-}
-
-
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetVoicePathByLineID
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             DlgLineID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FSoftObjectPath*                 AkEventSoftPath                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
-
-void UBPFL_X6DlgFunctionLib_C::BP_GetVoicePathByLineID(class FName DlgLineID, class UObject* __WorldContext, struct FSoftObjectPath* AkEventSoftPath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetVoicePathByLineID");
-
-	Params::BPFL_X6DlgFunctionLib_C_BP_GetVoicePathByLineID Parms{};
-
-	Parms.DlgLineID = DlgLineID;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (AkEventSoftPath != nullptr)
-		*AkEventSoftPath = std::move(Parms.AkEventSoftPath);
-}
-
-
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_MountChatBubble
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    ChatBubbleName                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_X6DlgFunctionLib_C::BP_MountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_MountChatBubble");
-
-	Params::BPFL_X6DlgFunctionLib_C_BP_MountChatBubble Parms{};
-
-	Parms.Actor = Actor;
-	Parms.ChatBubbleName = std::move(ChatBubbleName);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_MountDlg
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_UnmountDlg
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    DlgName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int64                                   TargetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPFL_X6DlgFunctionLib_C::BP_MountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext)
+void UBPFL_X6DlgFunctionLib_C::BP_UnmountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_MountDlg");
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_UnmountDlg");
 
-	Params::BPFL_X6DlgFunctionLib_C_BP_MountDlg Parms{};
+	Params::BPFL_X6DlgFunctionLib_C_BP_UnmountDlg Parms{};
 
 	Parms.DlgName = std::move(DlgName);
 	Parms.TargetId = TargetId;
@@ -167,46 +41,24 @@ void UBPFL_X6DlgFunctionLib_C::BP_MountDlg(const class FString& DlgName, int64 T
 }
 
 
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_PlayDialogue
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_UnmountChatBubble
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    DialogueName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int64                                   TargetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ChatBubbleName                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPFL_X6DlgFunctionLib_C::BP_PlayDialogue(const class FString& DialogueName, int64 TargetId, class UObject* __WorldContext)
+void UBPFL_X6DlgFunctionLib_C::BP_UnmountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_PlayDialogue");
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_UnmountChatBubble");
 
-	Params::BPFL_X6DlgFunctionLib_C_BP_PlayDialogue Parms{};
+	Params::BPFL_X6DlgFunctionLib_C_BP_UnmountChatBubble Parms{};
 
-	Parms.DialogueName = std::move(DialogueName);
-	Parms.TargetId = TargetId;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_PrintDlgDebugInfo
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    InDebugInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_X6DlgFunctionLib_C::BP_PrintDlgDebugInfo(const class FString& InDebugInfo, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_PrintDlgDebugInfo");
-
-	Params::BPFL_X6DlgFunctionLib_C_BP_PrintDlgDebugInfo Parms{};
-
-	Parms.InDebugInfo = std::move(InDebugInfo);
+	Parms.Actor = Actor;
+	Parms.ChatBubbleName = std::move(ChatBubbleName);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
@@ -247,21 +99,91 @@ void UBPFL_X6DlgFunctionLib_C::BP_ShowDlgSubtitleByIDV2(const class FString& Dlg
 }
 
 
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_UnmountChatBubble
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_PrintDlgDebugInfo
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    InDebugInfo                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_X6DlgFunctionLib_C::BP_PrintDlgDebugInfo(const class FString& InDebugInfo, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_PrintDlgDebugInfo");
+
+	Params::BPFL_X6DlgFunctionLib_C_BP_PrintDlgDebugInfo Parms{};
+
+	Parms.InDebugInfo = std::move(InDebugInfo);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_PlayDialogue
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    DialogueName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int64                                   TargetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_X6DlgFunctionLib_C::BP_PlayDialogue(const class FString& DialogueName, int64 TargetId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_PlayDialogue");
+
+	Params::BPFL_X6DlgFunctionLib_C_BP_PlayDialogue Parms{};
+
+	Parms.DialogueName = std::move(DialogueName);
+	Parms.TargetId = TargetId;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_MountDlg
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    DlgName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int64                                   TargetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_X6DlgFunctionLib_C::BP_MountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_MountDlg");
+
+	Params::BPFL_X6DlgFunctionLib_C_BP_MountDlg Parms{};
+
+	Parms.DlgName = std::move(DlgName);
+	Parms.TargetId = TargetId;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_MountChatBubble
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    ChatBubbleName                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPFL_X6DlgFunctionLib_C::BP_UnmountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext)
+void UBPFL_X6DlgFunctionLib_C::BP_MountChatBubble(class AActor* Actor, const class FString& ChatBubbleName, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_UnmountChatBubble");
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_MountChatBubble");
 
-	Params::BPFL_X6DlgFunctionLib_C_BP_UnmountChatBubble Parms{};
+	Params::BPFL_X6DlgFunctionLib_C_BP_MountChatBubble Parms{};
 
 	Parms.Actor = Actor;
 	Parms.ChatBubbleName = std::move(ChatBubbleName);
@@ -271,27 +193,105 @@ void UBPFL_X6DlgFunctionLib_C::BP_UnmountChatBubble(class AActor* Actor, const c
 }
 
 
-// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_UnmountDlg
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetVoicePathByLineID
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    DlgName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// int64                                   TargetId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             DlgLineID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FSoftObjectPath*                 AkEventSoftPath                                        (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBPFL_X6DlgFunctionLib_C::BP_UnmountDlg(const class FString& DlgName, int64 TargetId, class UObject* __WorldContext)
+void UBPFL_X6DlgFunctionLib_C::BP_GetVoicePathByLineID(class FName DlgLineID, class UObject* __WorldContext, struct FSoftObjectPath* AkEventSoftPath)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_UnmountDlg");
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetVoicePathByLineID");
 
-	Params::BPFL_X6DlgFunctionLib_C_BP_UnmountDlg Parms{};
+	Params::BPFL_X6DlgFunctionLib_C_BP_GetVoicePathByLineID Parms{};
 
-	Parms.DlgName = std::move(DlgName);
-	Parms.TargetId = TargetId;
+	Parms.DlgLineID = DlgLineID;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (AkEventSoftPath != nullptr)
+		*AkEventSoftPath = std::move(Parms.AkEventSoftPath);
+}
+
+
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetTransformBySemPointID
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int64                                   PlayPointID                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FTransform*                      Transform                                              (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_X6DlgFunctionLib_C::BP_GetTransformBySemPointID(int64 PlayPointID, class UObject* __WorldContext, struct FTransform* Transform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetTransformBySemPointID");
+
+	Params::BPFL_X6DlgFunctionLib_C_BP_GetTransformBySemPointID Parms{};
+
+	Parms.PlayPointID = PlayPointID;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Transform != nullptr)
+		*Transform = std::move(Parms.Transform);
+}
+
+
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetFloorSufaceZ
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double*                                 LocationZ                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_X6DlgFunctionLib_C::BP_GetFloorSufaceZ(class UObject* __WorldContext, double* LocationZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetFloorSufaceZ");
+
+	Params::BPFL_X6DlgFunctionLib_C_BP_GetFloorSufaceZ Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (LocationZ != nullptr)
+		*LocationZ = Parms.LocationZ;
+}
+
+
+// Function BPFL_X6DlgFunctionLib.BPFL_X6DlgFunctionLib_C.BP_GetDlgActorFloorTransform
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FTransform*                      Tranform                                               (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_X6DlgFunctionLib_C::BP_GetDlgActorFloorTransform(class AActor* Actor, class UObject* __WorldContext, struct FTransform* Tranform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_X6DlgFunctionLib_C", "BP_GetDlgActorFloorTransform");
+
+	Params::BPFL_X6DlgFunctionLib_C_BP_GetDlgActorFloorTransform Parms{};
+
+	Parms.Actor = Actor;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Tranform != nullptr)
+		*Tranform = std::move(Parms.Tranform);
 }
 
 }

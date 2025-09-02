@@ -16,6 +16,23 @@
 namespace SDK
 {
 
+// Class PaperClothDeoverlapping.MaterialExpressionClothDoVertexAnim
+// 0x0000 (0x00C0 - 0x00C0)
+class UMaterialExpressionClothDoVertexAnim final : public UMaterialExpression
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MaterialExpressionClothDoVertexAnim">();
+	}
+	static class UMaterialExpressionClothDoVertexAnim* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMaterialExpressionClothDoVertexAnim>();
+	}
+};
+static_assert(alignof(UMaterialExpressionClothDoVertexAnim) == 0x000008, "Wrong alignment on UMaterialExpressionClothDoVertexAnim");
+static_assert(sizeof(UMaterialExpressionClothDoVertexAnim) == 0x0000C0, "Wrong size on UMaterialExpressionClothDoVertexAnim");
+
 // Class PaperClothDeoverlapping.MaterialExpressionClothVisibility
 // 0x0000 (0x00C0 - 0x00C0)
 class UMaterialExpressionClothVisibility final : public UMaterialExpression

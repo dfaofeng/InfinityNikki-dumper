@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "DonAINavigation_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "DonAINavigation_structs.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 namespace SDK

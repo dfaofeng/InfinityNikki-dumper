@@ -65,11 +65,11 @@ static_assert(offsetof(PCCnLoginUICode_AgreementUICloseToQrCallback, Check) == 0
 struct PCCnLoginUICode_OnCheckedButton final
 {
 public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PCCnLoginUICode_OnCheckedButton) == 0x000001, "Wrong alignment on PCCnLoginUICode_OnCheckedButton");
 static_assert(sizeof(PCCnLoginUICode_OnCheckedButton) == 0x000001, "Wrong size on PCCnLoginUICode_OnCheckedButton");
-static_assert(offsetof(PCCnLoginUICode_OnCheckedButton, checked) == 0x000000, "Member 'PCCnLoginUICode_OnCheckedButton::checked' has a wrong offset!");
+static_assert(offsetof(PCCnLoginUICode_OnCheckedButton, Checked) == 0x000000, "Member 'PCCnLoginUICode_OnCheckedButton::Checked' has a wrong offset!");
 
 // Function PaperSDKCross.PCCnLoginUICode.OnThirdDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -320,11 +320,11 @@ static_assert(offsetof(PCCnLoginUIPassword_AgreementUICloseToQrCallback, Check) 
 struct PCCnLoginUIPassword_OnCheckedButton final
 {
 public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PCCnLoginUIPassword_OnCheckedButton) == 0x000001, "Wrong alignment on PCCnLoginUIPassword_OnCheckedButton");
 static_assert(sizeof(PCCnLoginUIPassword_OnCheckedButton) == 0x000001, "Wrong size on PCCnLoginUIPassword_OnCheckedButton");
-static_assert(offsetof(PCCnLoginUIPassword_OnCheckedButton, checked) == 0x000000, "Member 'PCCnLoginUIPassword_OnCheckedButton::checked' has a wrong offset!");
+static_assert(offsetof(PCCnLoginUIPassword_OnCheckedButton, Checked) == 0x000000, "Member 'PCCnLoginUIPassword_OnCheckedButton::Checked' has a wrong offset!");
 
 // Function PaperSDKCross.PCCnLoginUIPassword.OnThirdDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -1380,6 +1380,139 @@ static_assert(alignof(PSdkPsQrCodeWidget_OnScanSuccessfulCancelButtonAddToFocus)
 static_assert(sizeof(PSdkPsQrCodeWidget_OnScanSuccessfulCancelButtonAddToFocus) == 0x000001, "Wrong size on PSdkPsQrCodeWidget_OnScanSuccessfulCancelButtonAddToFocus");
 static_assert(offsetof(PSdkPsQrCodeWidget_OnScanSuccessfulCancelButtonAddToFocus, Focus) == 0x000000, "Member 'PSdkPsQrCodeWidget_OnScanSuccessfulCancelButtonAddToFocus::Focus' has a wrong offset!");
 
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnAdjustRichText
+// 0x0001 (0x0001 - 0x0000)
+struct PSOverseasRegisterAccountUI_OnAdjustRichText final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_OnAdjustRichText) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnAdjustRichText");
+static_assert(sizeof(PSOverseasRegisterAccountUI_OnAdjustRichText) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnAdjustRichText");
+static_assert(offsetof(PSOverseasRegisterAccountUI_OnAdjustRichText, ReturnValue) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnAdjustRichText::ReturnValue' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnCheckedButton
+// 0x0001 (0x0001 - 0x0000)
+struct PSOverseasRegisterAccountUI_OnCheckedButton final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_OnCheckedButton) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnCheckedButton");
+static_assert(sizeof(PSOverseasRegisterAccountUI_OnCheckedButton) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnCheckedButton");
+static_assert(offsetof(PSOverseasRegisterAccountUI_OnCheckedButton, Checked) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnCheckedButton::Checked' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnDelegate
+// 0x0001 (0x0001 - 0x0000)
+struct PSOverseasRegisterAccountUI_OnDelegate final
+{
+public:
+	bool                                          bRes;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_OnDelegate) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnDelegate");
+static_assert(sizeof(PSOverseasRegisterAccountUI_OnDelegate) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnDelegate");
+static_assert(offsetof(PSOverseasRegisterAccountUI_OnDelegate, bRes) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnDelegate::bRes' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnSubscribeCheckedButton
+// 0x0001 (0x0001 - 0x0000)
+struct PSOverseasRegisterAccountUI_OnSubscribeCheckedButton final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_OnSubscribeCheckedButton) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnSubscribeCheckedButton");
+static_assert(sizeof(PSOverseasRegisterAccountUI_OnSubscribeCheckedButton) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnSubscribeCheckedButton");
+static_assert(offsetof(PSOverseasRegisterAccountUI_OnSubscribeCheckedButton, Checked) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnSubscribeCheckedButton::Checked' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputAccountCommit
+// 0x0018 (0x0018 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputAccountCommit final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputAccountCommit");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputAccountCommit");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputAccountCommit::Text' has a wrong offset!");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputAccountCommit::Type' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputCodeChanged
+// 0x0010 (0x0010 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputCodeChanged final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputCodeChanged) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputCodeChanged");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputCodeChanged) == 0x000010, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputCodeChanged");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputCodeChanged, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputCodeChanged::Text' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputCodeCommit
+// 0x0018 (0x0018 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputCodeCommit final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputCodeCommit");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputCodeCommit");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputCodeCommit::Text' has a wrong offset!");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputCodeCommit::Type' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPassword2Changed
+// 0x0010 (0x0010 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed) == 0x000010, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed::Text' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPassword2Commit
+// 0x0018 (0x0018 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit::Text' has a wrong offset!");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit::Type' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPasswordChanged
+// 0x0010 (0x0010 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged) == 0x000010, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged::Text' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPasswordCommit
+// 0x0018 (0x0018 - 0x0000)
+struct PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit");
+static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit::Text' has a wrong offset!");
+static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit::Type' has a wrong offset!");
+
 // Function PaperSDKCross.PSDKUIToolTip.MoveWidget
 // 0x0001 (0x0001 - 0x0000)
 struct PSDKUIToolTip_MoveWidget final
@@ -1402,6 +1535,28 @@ static_assert(alignof(PSLoginUIBrowser_OnCloseButton) == 0x000008, "Wrong alignm
 static_assert(sizeof(PSLoginUIBrowser_OnCloseButton) == 0x000008, "Wrong size on PSLoginUIBrowser_OnCloseButton");
 static_assert(offsetof(PSLoginUIBrowser_OnCloseButton, Button) == 0x000000, "Member 'PSLoginUIBrowser_OnCloseButton::Button' has a wrong offset!");
 
+// Function PaperSDKCross.PSOverseasLoginUIBindMail.TextBoxInputCodeChanged
+// 0x0010 (0x0010 - 0x0000)
+struct PSOverseasLoginUIBindMail_TextBoxInputCodeChanged final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasLoginUIBindMail_TextBoxInputCodeChanged) == 0x000008, "Wrong alignment on PSOverseasLoginUIBindMail_TextBoxInputCodeChanged");
+static_assert(sizeof(PSOverseasLoginUIBindMail_TextBoxInputCodeChanged) == 0x000010, "Wrong size on PSOverseasLoginUIBindMail_TextBoxInputCodeChanged");
+static_assert(offsetof(PSOverseasLoginUIBindMail_TextBoxInputCodeChanged, Text) == 0x000000, "Member 'PSOverseasLoginUIBindMail_TextBoxInputCodeChanged::Text' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasLoginUIBindMail.TextBoxInputMailChanged
+// 0x0010 (0x0010 - 0x0000)
+struct PSOverseasLoginUIBindMail_TextBoxInputMailChanged final
+{
+public:
+	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasLoginUIBindMail_TextBoxInputMailChanged) == 0x000008, "Wrong alignment on PSOverseasLoginUIBindMail_TextBoxInputMailChanged");
+static_assert(sizeof(PSOverseasLoginUIBindMail_TextBoxInputMailChanged) == 0x000010, "Wrong size on PSOverseasLoginUIBindMail_TextBoxInputMailChanged");
+static_assert(offsetof(PSOverseasLoginUIBindMail_TextBoxInputMailChanged, Text) == 0x000000, "Member 'PSOverseasLoginUIBindMail_TextBoxInputMailChanged::Text' has a wrong offset!");
+
 // Function PaperSDKCross.PSLoginUIHyperlinkDecorator.ClickFun
 // 0x0050 (0x0050 - 0x0000)
 struct PSLoginUIHyperlinkDecorator_ClickFun final
@@ -1412,6 +1567,72 @@ public:
 static_assert(alignof(PSLoginUIHyperlinkDecorator_ClickFun) == 0x000008, "Wrong alignment on PSLoginUIHyperlinkDecorator_ClickFun");
 static_assert(sizeof(PSLoginUIHyperlinkDecorator_ClickFun) == 0x000050, "Wrong size on PSLoginUIHyperlinkDecorator_ClickFun");
 static_assert(offsetof(PSLoginUIHyperlinkDecorator_ClickFun, MetaData) == 0x000000, "Member 'PSLoginUIHyperlinkDecorator_ClickFun::MetaData' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasQRLoginUI.OnCommonErrorPageRefreshButton
+// 0x0008 (0x0008 - 0x0000)
+struct PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton final
+{
+public:
+	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton");
+static_assert(sizeof(PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton");
+static_assert(offsetof(PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton::Button' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasQRLoginUI.OnExpirePageRefreshButton
+// 0x0008 (0x0008 - 0x0000)
+struct PSOverseasQRLoginUI_OnExpirePageRefreshButton final
+{
+public:
+	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasQRLoginUI_OnExpirePageRefreshButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnExpirePageRefreshButton");
+static_assert(sizeof(PSOverseasQRLoginUI_OnExpirePageRefreshButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnExpirePageRefreshButton");
+static_assert(offsetof(PSOverseasQRLoginUI_OnExpirePageRefreshButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnExpirePageRefreshButton::Button' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasQRLoginUI.OnGetFailedPageRetryButton
+// 0x0008 (0x0008 - 0x0000)
+struct PSOverseasQRLoginUI_OnGetFailedPageRetryButton final
+{
+public:
+	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasQRLoginUI_OnGetFailedPageRetryButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnGetFailedPageRetryButton");
+static_assert(sizeof(PSOverseasQRLoginUI_OnGetFailedPageRetryButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnGetFailedPageRetryButton");
+static_assert(offsetof(PSOverseasQRLoginUI_OnGetFailedPageRetryButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnGetFailedPageRetryButton::Button' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasQRLoginUI.OnInvalidPageRefreshButton
+// 0x0008 (0x0008 - 0x0000)
+struct PSOverseasQRLoginUI_OnInvalidPageRefreshButton final
+{
+public:
+	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasQRLoginUI_OnInvalidPageRefreshButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnInvalidPageRefreshButton");
+static_assert(sizeof(PSOverseasQRLoginUI_OnInvalidPageRefreshButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnInvalidPageRefreshButton");
+static_assert(offsetof(PSOverseasQRLoginUI_OnInvalidPageRefreshButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnInvalidPageRefreshButton::Button' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasQRLoginUI.OnNotSupportPageRetryButton
+// 0x0008 (0x0008 - 0x0000)
+struct PSOverseasQRLoginUI_OnNotSupportPageRetryButton final
+{
+public:
+	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasQRLoginUI_OnNotSupportPageRetryButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnNotSupportPageRetryButton");
+static_assert(sizeof(PSOverseasQRLoginUI_OnNotSupportPageRetryButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnNotSupportPageRetryButton");
+static_assert(offsetof(PSOverseasQRLoginUI_OnNotSupportPageRetryButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnNotSupportPageRetryButton::Button' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasQRLoginUI.OnScanSuccessfulPageCancelButton
+// 0x0008 (0x0008 - 0x0000)
+struct PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton final
+{
+public:
+	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton");
+static_assert(sizeof(PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton");
+static_assert(offsetof(PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton::Button' has a wrong offset!");
 
 // Function PaperSDKCross.PSOverseasForgetPassWordUI.OnBackButtonClicked
 // 0x0001 (0x0001 - 0x0000)
@@ -1513,28 +1734,6 @@ static_assert(sizeof(PSOverseasForgetPassWordUI_TextBoxInputPasswordCommit) == 0
 static_assert(offsetof(PSOverseasForgetPassWordUI_TextBoxInputPasswordCommit, Text) == 0x000000, "Member 'PSOverseasForgetPassWordUI_TextBoxInputPasswordCommit::Text' has a wrong offset!");
 static_assert(offsetof(PSOverseasForgetPassWordUI_TextBoxInputPasswordCommit, Type) == 0x000010, "Member 'PSOverseasForgetPassWordUI_TextBoxInputPasswordCommit::Type' has a wrong offset!");
 
-// Function PaperSDKCross.PSOverseasLoginUIBindMail.TextBoxInputCodeChanged
-// 0x0010 (0x0010 - 0x0000)
-struct PSOverseasLoginUIBindMail_TextBoxInputCodeChanged final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasLoginUIBindMail_TextBoxInputCodeChanged) == 0x000008, "Wrong alignment on PSOverseasLoginUIBindMail_TextBoxInputCodeChanged");
-static_assert(sizeof(PSOverseasLoginUIBindMail_TextBoxInputCodeChanged) == 0x000010, "Wrong size on PSOverseasLoginUIBindMail_TextBoxInputCodeChanged");
-static_assert(offsetof(PSOverseasLoginUIBindMail_TextBoxInputCodeChanged, Text) == 0x000000, "Member 'PSOverseasLoginUIBindMail_TextBoxInputCodeChanged::Text' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasLoginUIBindMail.TextBoxInputMailChanged
-// 0x0010 (0x0010 - 0x0000)
-struct PSOverseasLoginUIBindMail_TextBoxInputMailChanged final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasLoginUIBindMail_TextBoxInputMailChanged) == 0x000008, "Wrong alignment on PSOverseasLoginUIBindMail_TextBoxInputMailChanged");
-static_assert(sizeof(PSOverseasLoginUIBindMail_TextBoxInputMailChanged) == 0x000010, "Wrong size on PSOverseasLoginUIBindMail_TextBoxInputMailChanged");
-static_assert(offsetof(PSOverseasLoginUIBindMail_TextBoxInputMailChanged, Text) == 0x000000, "Member 'PSOverseasLoginUIBindMail_TextBoxInputMailChanged::Text' has a wrong offset!");
-
 // Function PaperSDKCross.PSOverseasLoginUIFast.OnDeleteItemCallback
 // 0x0010 (0x0010 - 0x0000)
 struct PSOverseasLoginUIFast_OnDeleteItemCallback final
@@ -1573,11 +1772,11 @@ static_assert(offsetof(PSOverseasLoginUIMain_OnAdjustRichText, ReturnValue) == 0
 struct PSOverseasLoginUIMain_OnCheckedButton final
 {
 public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PSOverseasLoginUIMain_OnCheckedButton) == 0x000001, "Wrong alignment on PSOverseasLoginUIMain_OnCheckedButton");
 static_assert(sizeof(PSOverseasLoginUIMain_OnCheckedButton) == 0x000001, "Wrong size on PSOverseasLoginUIMain_OnCheckedButton");
-static_assert(offsetof(PSOverseasLoginUIMain_OnCheckedButton, checked) == 0x000000, "Member 'PSOverseasLoginUIMain_OnCheckedButton::checked' has a wrong offset!");
+static_assert(offsetof(PSOverseasLoginUIMain_OnCheckedButton, Checked) == 0x000000, "Member 'PSOverseasLoginUIMain_OnCheckedButton::Checked' has a wrong offset!");
 
 // Function PaperSDKCross.PSOverseasLoginUIMain.OnDelegate
 // 0x0001 (0x0001 - 0x0000)
@@ -1654,72 +1853,6 @@ static_assert(sizeof(PSOverseasLoginUIMain_TextBoxInputPasswordCommit) == 0x0000
 static_assert(offsetof(PSOverseasLoginUIMain_TextBoxInputPasswordCommit, Text) == 0x000000, "Member 'PSOverseasLoginUIMain_TextBoxInputPasswordCommit::Text' has a wrong offset!");
 static_assert(offsetof(PSOverseasLoginUIMain_TextBoxInputPasswordCommit, Type) == 0x000010, "Member 'PSOverseasLoginUIMain_TextBoxInputPasswordCommit::Type' has a wrong offset!");
 
-// Function PaperSDKCross.PSOverseasQRLoginUI.OnCommonErrorPageRefreshButton
-// 0x0008 (0x0008 - 0x0000)
-struct PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton final
-{
-public:
-	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton");
-static_assert(sizeof(PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton");
-static_assert(offsetof(PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnCommonErrorPageRefreshButton::Button' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasQRLoginUI.OnExpirePageRefreshButton
-// 0x0008 (0x0008 - 0x0000)
-struct PSOverseasQRLoginUI_OnExpirePageRefreshButton final
-{
-public:
-	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasQRLoginUI_OnExpirePageRefreshButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnExpirePageRefreshButton");
-static_assert(sizeof(PSOverseasQRLoginUI_OnExpirePageRefreshButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnExpirePageRefreshButton");
-static_assert(offsetof(PSOverseasQRLoginUI_OnExpirePageRefreshButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnExpirePageRefreshButton::Button' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasQRLoginUI.OnGetFailedPageRetryButton
-// 0x0008 (0x0008 - 0x0000)
-struct PSOverseasQRLoginUI_OnGetFailedPageRetryButton final
-{
-public:
-	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasQRLoginUI_OnGetFailedPageRetryButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnGetFailedPageRetryButton");
-static_assert(sizeof(PSOverseasQRLoginUI_OnGetFailedPageRetryButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnGetFailedPageRetryButton");
-static_assert(offsetof(PSOverseasQRLoginUI_OnGetFailedPageRetryButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnGetFailedPageRetryButton::Button' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasQRLoginUI.OnInvalidPageRefreshButton
-// 0x0008 (0x0008 - 0x0000)
-struct PSOverseasQRLoginUI_OnInvalidPageRefreshButton final
-{
-public:
-	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasQRLoginUI_OnInvalidPageRefreshButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnInvalidPageRefreshButton");
-static_assert(sizeof(PSOverseasQRLoginUI_OnInvalidPageRefreshButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnInvalidPageRefreshButton");
-static_assert(offsetof(PSOverseasQRLoginUI_OnInvalidPageRefreshButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnInvalidPageRefreshButton::Button' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasQRLoginUI.OnNotSupportPageRetryButton
-// 0x0008 (0x0008 - 0x0000)
-struct PSOverseasQRLoginUI_OnNotSupportPageRetryButton final
-{
-public:
-	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasQRLoginUI_OnNotSupportPageRetryButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnNotSupportPageRetryButton");
-static_assert(sizeof(PSOverseasQRLoginUI_OnNotSupportPageRetryButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnNotSupportPageRetryButton");
-static_assert(offsetof(PSOverseasQRLoginUI_OnNotSupportPageRetryButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnNotSupportPageRetryButton::Button' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasQRLoginUI.OnScanSuccessfulPageCancelButton
-// 0x0008 (0x0008 - 0x0000)
-struct PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton final
-{
-public:
-	class UButton*                                Button;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton) == 0x000008, "Wrong alignment on PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton");
-static_assert(sizeof(PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton) == 0x000008, "Wrong size on PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton");
-static_assert(offsetof(PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton, Button) == 0x000000, "Member 'PSOverseasQRLoginUI_OnScanSuccessfulPageCancelButton::Button' has a wrong offset!");
-
 // Function PaperSDKCross.PSOverseasRegisterAccountKrUI.OnDelegate
 // 0x0001 (0x0001 - 0x0000)
 struct PSOverseasRegisterAccountKrUI_OnDelegate final
@@ -1730,6 +1863,17 @@ public:
 static_assert(alignof(PSOverseasRegisterAccountKrUI_OnDelegate) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountKrUI_OnDelegate");
 static_assert(sizeof(PSOverseasRegisterAccountKrUI_OnDelegate) == 0x000001, "Wrong size on PSOverseasRegisterAccountKrUI_OnDelegate");
 static_assert(offsetof(PSOverseasRegisterAccountKrUI_OnDelegate, bRes) == 0x000000, "Member 'PSOverseasRegisterAccountKrUI_OnDelegate::bRes' has a wrong offset!");
+
+// Function PaperSDKCross.PSOverseasRegisterAccountKrUI.OnSubscribeCheckedBoxChanged
+// 0x0001 (0x0001 - 0x0000)
+struct PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged final
+{
+public:
+	bool                                          Checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged");
+static_assert(sizeof(PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged) == 0x000001, "Wrong size on PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged");
+static_assert(offsetof(PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged, Checked) == 0x000000, "Member 'PSOverseasRegisterAccountKrUI_OnSubscribeCheckedBoxChanged::Checked' has a wrong offset!");
 
 // Function PaperSDKCross.PSOverseasRegisterAccountKrUI.TextBoxInputAccountCommit
 // 0x0018 (0x0018 - 0x0000)
@@ -1819,128 +1963,6 @@ static_assert(alignof(PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit) 
 static_assert(sizeof(PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit");
 static_assert(offsetof(PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit::Text' has a wrong offset!");
 static_assert(offsetof(PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountKrUI_TextBoxInputPasswordCommit::Type' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnAdjustRichText
-// 0x0001 (0x0001 - 0x0000)
-struct PSOverseasRegisterAccountUI_OnAdjustRichText final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_OnAdjustRichText) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnAdjustRichText");
-static_assert(sizeof(PSOverseasRegisterAccountUI_OnAdjustRichText) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnAdjustRichText");
-static_assert(offsetof(PSOverseasRegisterAccountUI_OnAdjustRichText, ReturnValue) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnAdjustRichText::ReturnValue' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnCheckedButton
-// 0x0001 (0x0001 - 0x0000)
-struct PSOverseasRegisterAccountUI_OnCheckedButton final
-{
-public:
-	bool                                          checked;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_OnCheckedButton) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnCheckedButton");
-static_assert(sizeof(PSOverseasRegisterAccountUI_OnCheckedButton) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnCheckedButton");
-static_assert(offsetof(PSOverseasRegisterAccountUI_OnCheckedButton, checked) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnCheckedButton::checked' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.OnDelegate
-// 0x0001 (0x0001 - 0x0000)
-struct PSOverseasRegisterAccountUI_OnDelegate final
-{
-public:
-	bool                                          bRes;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_OnDelegate) == 0x000001, "Wrong alignment on PSOverseasRegisterAccountUI_OnDelegate");
-static_assert(sizeof(PSOverseasRegisterAccountUI_OnDelegate) == 0x000001, "Wrong size on PSOverseasRegisterAccountUI_OnDelegate");
-static_assert(offsetof(PSOverseasRegisterAccountUI_OnDelegate, bRes) == 0x000000, "Member 'PSOverseasRegisterAccountUI_OnDelegate::bRes' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputAccountCommit
-// 0x0018 (0x0018 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputAccountCommit final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputAccountCommit");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputAccountCommit");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputAccountCommit::Text' has a wrong offset!");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputAccountCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputAccountCommit::Type' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputCodeChanged
-// 0x0010 (0x0010 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputCodeChanged final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputCodeChanged) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputCodeChanged");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputCodeChanged) == 0x000010, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputCodeChanged");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputCodeChanged, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputCodeChanged::Text' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputCodeCommit
-// 0x0018 (0x0018 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputCodeCommit final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputCodeCommit");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputCodeCommit");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputCodeCommit::Text' has a wrong offset!");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputCodeCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputCodeCommit::Type' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPassword2Changed
-// 0x0010 (0x0010 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed) == 0x000010, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPassword2Changed::Text' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPassword2Commit
-// 0x0018 (0x0018 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit::Text' has a wrong offset!");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPassword2Commit::Type' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPasswordChanged
-// 0x0010 (0x0010 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged) == 0x000010, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPasswordChanged::Text' has a wrong offset!");
-
-// Function PaperSDKCross.PSOverseasRegisterAccountUI.TextBoxInputPasswordCommit
-// 0x0018 (0x0018 - 0x0000)
-struct PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit final
-{
-public:
-	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextCommit                                   Type;                                              // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit) == 0x000008, "Wrong alignment on PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit");
-static_assert(sizeof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit) == 0x000018, "Wrong size on PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit, Text) == 0x000000, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit::Text' has a wrong offset!");
-static_assert(offsetof(PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit, Type) == 0x000010, "Member 'PSOverseasRegisterAccountUI_TextBoxInputPasswordCommit::Type' has a wrong offset!");
 
 }
 

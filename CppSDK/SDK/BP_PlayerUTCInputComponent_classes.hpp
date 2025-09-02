@@ -10,22 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
-#include "EUTCJoystickMode_structs.hpp"
-#include "UTCControlTypeEnum_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UTCConfigStruct_structs.hpp"
 #include "EDeviceScreenSizeType_structs.hpp"
-#include "F_UTCRatioConfig_structs.hpp"
+#include "UTCConfigStruct_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "F_UTCRatioConfig_structs.hpp"
+#include "EUTCJoystickMode_structs.hpp"
+#include "UTCControlTypeEnum_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerUTCInputComponent.BP_PlayerUTCInputComponent_C
-// 0x01C8 (0x0270 - 0x00A8)
+// 0x01D0 (0x0278 - 0x00A8)
 class UBP_PlayerUTCInputComponent_C final : public UX6UtcPlayerInputComponent
 {
 public:
@@ -44,6 +44,8 @@ public:
 	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FF_UTCRatioConfig                      UTCRateConfig;                                     // 0x01C0(0x00A8)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	EUTCJoystickMode                              JoystickMode;                                      // 0x0268(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_26C[0x4];                                      // 0x026C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUTCMultiComponent_C*                   MusicTapCompoent;                                  // 0x0270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UTCTouch_Input_Manager(EX6InputTouchEvent X6InputTouchEvent, ETouchIndex FingerIndex, const struct FVector& Location);
@@ -93,7 +95,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PlayerUTCInputComponent_C) == 0x000008, "Wrong alignment on UBP_PlayerUTCInputComponent_C");
-static_assert(sizeof(UBP_PlayerUTCInputComponent_C) == 0x000270, "Wrong size on UBP_PlayerUTCInputComponent_C");
+static_assert(sizeof(UBP_PlayerUTCInputComponent_C) == 0x000278, "Wrong size on UBP_PlayerUTCInputComponent_C");
 static_assert(offsetof(UBP_PlayerUTCInputComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_PlayerUTCInputComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerUTCInputComponent_C, UTCConfig) == 0x0000B0, "Member 'UBP_PlayerUTCInputComponent_C::UTCConfig' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerUTCInputComponent_C, TapComponent) == 0x000128, "Member 'UBP_PlayerUTCInputComponent_C::TapComponent' has a wrong offset!");
@@ -107,6 +109,7 @@ static_assert(offsetof(UBP_PlayerUTCInputComponent_C, PixelRateSTR) == 0x0001B0,
 static_assert(offsetof(UBP_PlayerUTCInputComponent_C, ScreenType) == 0x0001B8, "Member 'UBP_PlayerUTCInputComponent_C::ScreenType' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerUTCInputComponent_C, UTCRateConfig) == 0x0001C0, "Member 'UBP_PlayerUTCInputComponent_C::UTCRateConfig' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerUTCInputComponent_C, JoystickMode) == 0x000268, "Member 'UBP_PlayerUTCInputComponent_C::JoystickMode' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerUTCInputComponent_C, MusicTapCompoent) == 0x000270, "Member 'UBP_PlayerUTCInputComponent_C::MusicTapCompoent' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AudioExtensions_structs.hpp"
 #include "MetasoundFrontend_structs.hpp"
+#include "AudioExtensions_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -61,6 +61,14 @@ public:
 static_assert(alignof(FMetaSoundOutput) == 0x000008, "Wrong alignment on FMetaSoundOutput");
 static_assert(sizeof(FMetaSoundOutput) == 0x000010, "Wrong size on FMetaSoundOutput");
 
+// ScriptStruct MetasoundEngine.MetaSoundBuilderNodeInputHandle
+// 0x0000 (0x0020 - 0x0020)
+struct FMetaSoundBuilderNodeInputHandle final : public FMetasoundFrontendVertexHandle
+{
+};
+static_assert(alignof(FMetaSoundBuilderNodeInputHandle) == 0x000004, "Wrong alignment on FMetaSoundBuilderNodeInputHandle");
+static_assert(sizeof(FMetaSoundBuilderNodeInputHandle) == 0x000020, "Wrong size on FMetaSoundBuilderNodeInputHandle");
+
 // ScriptStruct MetasoundEngine.DefaultMetaSoundAssetAutoUpdateSettings
 // 0x0020 (0x0020 - 0x0000)
 struct FDefaultMetaSoundAssetAutoUpdateSettings final
@@ -108,14 +116,6 @@ public:
 static_assert(alignof(FMetaSoundAsyncAssetDependencies) == 0x000008, "Wrong alignment on FMetaSoundAsyncAssetDependencies");
 static_assert(sizeof(FMetaSoundAsyncAssetDependencies) == 0x000030, "Wrong size on FMetaSoundAsyncAssetDependencies");
 static_assert(offsetof(FMetaSoundAsyncAssetDependencies, Metasound) == 0x000008, "Member 'FMetaSoundAsyncAssetDependencies::Metasound' has a wrong offset!");
-
-// ScriptStruct MetasoundEngine.MetaSoundBuilderNodeInputHandle
-// 0x0000 (0x0020 - 0x0020)
-struct FMetaSoundBuilderNodeInputHandle final : public FMetasoundFrontendVertexHandle
-{
-};
-static_assert(alignof(FMetaSoundBuilderNodeInputHandle) == 0x000004, "Wrong alignment on FMetaSoundBuilderNodeInputHandle");
-static_assert(sizeof(FMetaSoundBuilderNodeInputHandle) == 0x000020, "Wrong size on FMetaSoundBuilderNodeInputHandle");
 
 // ScriptStruct MetasoundEngine.MetaSoundBuilderNodeOutputHandle
 // 0x0000 (0x0020 - 0x0020)

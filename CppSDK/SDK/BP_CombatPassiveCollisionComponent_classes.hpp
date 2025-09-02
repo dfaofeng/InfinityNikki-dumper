@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "ECombatPassiveCollisionType_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "ECombatPassiveCollisionType_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CombatPassiveCollisionComponent.BP_CombatPassiveCollisionComponent_C
-// 0x0070 (0x0670 - 0x0600)
+// 0x0080 (0x0680 - 0x0600)
 class UBP_CombatPassiveCollisionComponent_C final : public UX6CombatCapsuleComponent
 {
 public:
@@ -36,6 +36,7 @@ public:
 	bool                                          ApplySelfHit;                                      // 0x0648(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_649[0x7];                                      // 0x0649(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameplayTagContainer                  TargetHasTags;                                     // 0x0650(0x0020)(Edit, BlueprintVisible)
+	bool                                          ApplyPainWhenEnable;                               // 0x0670(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void SetEnableByAnimNotify();
@@ -43,6 +44,7 @@ public:
 	void BP_SetSingleComponentForDamage(class UActorComponent* TargetComponent);
 	void BP_SetEnable(bool Enable);
 	void BP_SetCustomCollisionForDamage(class UShapeComponent* CollisionComponent);
+	void BP_ApplyPainWhenEnable();
 	void BP_AddMeshCollisionForDamage(class UMeshComponent* MeshComp);
 
 	class FString GetModuleName() const;
@@ -58,7 +60,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_CombatPassiveCollisionComponent_C) == 0x000010, "Wrong alignment on UBP_CombatPassiveCollisionComponent_C");
-static_assert(sizeof(UBP_CombatPassiveCollisionComponent_C) == 0x000670, "Wrong size on UBP_CombatPassiveCollisionComponent_C");
+static_assert(sizeof(UBP_CombatPassiveCollisionComponent_C) == 0x000680, "Wrong size on UBP_CombatPassiveCollisionComponent_C");
 static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, DamageType) == 0x000600, "Member 'UBP_CombatPassiveCollisionComponent_C::DamageType' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, DamageInterval) == 0x000608, "Member 'UBP_CombatPassiveCollisionComponent_C::DamageInterval' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, IsEnable) == 0x000610, "Member 'UBP_CombatPassiveCollisionComponent_C::IsEnable' has a wrong offset!");
@@ -69,6 +71,7 @@ static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, CollisionType) == 
 static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, MeshArray) == 0x000638, "Member 'UBP_CombatPassiveCollisionComponent_C::MeshArray' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, ApplySelfHit) == 0x000648, "Member 'UBP_CombatPassiveCollisionComponent_C::ApplySelfHit' has a wrong offset!");
 static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, TargetHasTags) == 0x000650, "Member 'UBP_CombatPassiveCollisionComponent_C::TargetHasTags' has a wrong offset!");
+static_assert(offsetof(UBP_CombatPassiveCollisionComponent_C, ApplyPainWhenEnable) == 0x000670, "Member 'UBP_CombatPassiveCollisionComponent_C::ApplyPainWhenEnable' has a wrong offset!");
 
 }
 

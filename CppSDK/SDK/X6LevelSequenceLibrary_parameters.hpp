@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "MovieScene_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ELSTimePeriodType_structs.hpp"
 #include "EPlatformType_structs.hpp"
 #include "FeatureSequenceParams_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "MovieScene_structs.hpp"
 #include "X6Game_structs.hpp"
 
 

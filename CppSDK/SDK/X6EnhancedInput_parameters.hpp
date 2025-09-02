@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
-#include "X6EnhancedInput_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "X6EnhancedInput_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK::Params
@@ -581,15 +581,15 @@ static_assert(offsetof(X6EnhancedInputLocalPlayerSubsystem_UnbindActionByHandle,
 static_assert(offsetof(X6EnhancedInputLocalPlayerSubsystem_UnbindActionByHandle, ReturnValue) == 0x000011, "Member 'X6EnhancedInputLocalPlayerSubsystem_UnbindActionByHandle::ReturnValue' has a wrong offset!");
 
 // Function X6EnhancedInput.X6InputMappingContext.MapKey
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct X6InputMappingContext_MapKey final
 {
 public:
 	const class UX6InputAction*                   Action;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FX6EnhancedActionKeyMapping            ReturnValue;                                       // 0x0008(0x0040)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FX6EnhancedActionKeyMapping            ReturnValue;                                       // 0x0008(0x0048)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(X6InputMappingContext_MapKey) == 0x000008, "Wrong alignment on X6InputMappingContext_MapKey");
-static_assert(sizeof(X6InputMappingContext_MapKey) == 0x000048, "Wrong size on X6InputMappingContext_MapKey");
+static_assert(sizeof(X6InputMappingContext_MapKey) == 0x000050, "Wrong size on X6InputMappingContext_MapKey");
 static_assert(offsetof(X6InputMappingContext_MapKey, Action) == 0x000000, "Member 'X6InputMappingContext_MapKey::Action' has a wrong offset!");
 static_assert(offsetof(X6InputMappingContext_MapKey, ReturnValue) == 0x000008, "Member 'X6InputMappingContext_MapKey::ReturnValue' has a wrong offset!");
 

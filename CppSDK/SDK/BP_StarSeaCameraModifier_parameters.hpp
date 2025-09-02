@@ -36,6 +36,76 @@ static_assert(offsetof(BP_StarSeaCameraModifier_C_BlueprintModifyPostProcess, Po
 static_assert(offsetof(BP_StarSeaCameraModifier_C_BlueprintModifyPostProcess, K2Node_MakeStruct_WeightedBlendables) == 0x000860, "Member 'BP_StarSeaCameraModifier_C_BlueprintModifyPostProcess::K2Node_MakeStruct_WeightedBlendables' has a wrong offset!");
 static_assert(offsetof(BP_StarSeaCameraModifier_C_BlueprintModifyPostProcess, K2Node_MakeStruct_PostProcessSettings) == 0x000870, "Member 'BP_StarSeaCameraModifier_C_BlueprintModifyPostProcess::K2Node_MakeStruct_PostProcessSettings' has a wrong offset!");
 
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_AddActorCount
+// 0x0004 (0x0004 - 0x0000)
+struct BP_StarSeaCameraModifier_C_BP_AddActorCount final
+{
+public:
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCameraModifier_C_BP_AddActorCount) == 0x000004, "Wrong alignment on BP_StarSeaCameraModifier_C_BP_AddActorCount");
+static_assert(sizeof(BP_StarSeaCameraModifier_C_BP_AddActorCount) == 0x000004, "Wrong size on BP_StarSeaCameraModifier_C_BP_AddActorCount");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_AddActorCount, CallFunc_Add_IntInt_ReturnValue) == 0x000000, "Member 'BP_StarSeaCameraModifier_C_BP_AddActorCount::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_AddRefCount
+// 0x0004 (0x0004 - 0x0000)
+struct BP_StarSeaCameraModifier_C_BP_AddRefCount final
+{
+public:
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCameraModifier_C_BP_AddRefCount) == 0x000004, "Wrong alignment on BP_StarSeaCameraModifier_C_BP_AddRefCount");
+static_assert(sizeof(BP_StarSeaCameraModifier_C_BP_AddRefCount) == 0x000004, "Wrong size on BP_StarSeaCameraModifier_C_BP_AddRefCount");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_AddRefCount, CallFunc_Add_IntInt_ReturnValue) == 0x000000, "Member 'BP_StarSeaCameraModifier_C_BP_AddRefCount::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_DeleteActorCount
+// 0x0008 (0x0008 - 0x0000)
+struct BP_StarSeaCameraModifier_C_BP_DeleteActorCount final
+{
+public:
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCameraModifier_C_BP_DeleteActorCount) == 0x000004, "Wrong alignment on BP_StarSeaCameraModifier_C_BP_DeleteActorCount");
+static_assert(sizeof(BP_StarSeaCameraModifier_C_BP_DeleteActorCount) == 0x000008, "Wrong size on BP_StarSeaCameraModifier_C_BP_DeleteActorCount");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_DeleteActorCount, CallFunc_Subtract_IntInt_ReturnValue) == 0x000000, "Member 'BP_StarSeaCameraModifier_C_BP_DeleteActorCount::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_DeleteActorCount, CallFunc_Greater_IntInt_ReturnValue) == 0x000004, "Member 'BP_StarSeaCameraModifier_C_BP_DeleteActorCount::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_DeleteRefCount
+// 0x0008 (0x0008 - 0x0000)
+struct BP_StarSeaCameraModifier_C_BP_DeleteRefCount final
+{
+public:
+	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCameraModifier_C_BP_DeleteRefCount) == 0x000004, "Wrong alignment on BP_StarSeaCameraModifier_C_BP_DeleteRefCount");
+static_assert(sizeof(BP_StarSeaCameraModifier_C_BP_DeleteRefCount) == 0x000008, "Wrong size on BP_StarSeaCameraModifier_C_BP_DeleteRefCount");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_DeleteRefCount, CallFunc_Subtract_IntInt_ReturnValue) == 0x000000, "Member 'BP_StarSeaCameraModifier_C_BP_DeleteRefCount::CallFunc_Subtract_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_DeleteRefCount, CallFunc_Greater_IntInt_ReturnValue) == 0x000004, "Member 'BP_StarSeaCameraModifier_C_BP_DeleteRefCount::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_GetActorCount
+// 0x0004 (0x0004 - 0x0000)
+struct BP_StarSeaCameraModifier_C_BP_GetActorCount final
+{
+public:
+	int32                                         RefCount_0;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCameraModifier_C_BP_GetActorCount) == 0x000004, "Wrong alignment on BP_StarSeaCameraModifier_C_BP_GetActorCount");
+static_assert(sizeof(BP_StarSeaCameraModifier_C_BP_GetActorCount) == 0x000004, "Wrong size on BP_StarSeaCameraModifier_C_BP_GetActorCount");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_GetActorCount, RefCount_0) == 0x000000, "Member 'BP_StarSeaCameraModifier_C_BP_GetActorCount::RefCount_0' has a wrong offset!");
+
+// Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_GetRefCount
+// 0x0004 (0x0004 - 0x0000)
+struct BP_StarSeaCameraModifier_C_BP_GetRefCount final
+{
+public:
+	int32                                         RefCount_0;                                        // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_StarSeaCameraModifier_C_BP_GetRefCount) == 0x000004, "Wrong alignment on BP_StarSeaCameraModifier_C_BP_GetRefCount");
+static_assert(sizeof(BP_StarSeaCameraModifier_C_BP_GetRefCount) == 0x000004, "Wrong size on BP_StarSeaCameraModifier_C_BP_GetRefCount");
+static_assert(offsetof(BP_StarSeaCameraModifier_C_BP_GetRefCount, RefCount_0) == 0x000000, "Member 'BP_StarSeaCameraModifier_C_BP_GetRefCount::RefCount_0' has a wrong offset!");
+
 // Function BP_StarSeaCameraModifier.BP_StarSeaCameraModifier_C.BP_SetDynamicMat
 // 0x0020 (0x0020 - 0x0000)
 struct BP_StarSeaCameraModifier_C_BP_SetDynamicMat final

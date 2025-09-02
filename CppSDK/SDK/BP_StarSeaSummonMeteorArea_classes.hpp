@@ -18,18 +18,18 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_StarSeaSummonMeteorArea.BP_StarSeaSummonMeteorArea_C
-// 0x0038 (0x0470 - 0x0438)
+// 0x0038 (0x04C0 - 0x0488)
 class ABP_StarSeaSummonMeteorArea_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NS_Meteor;                                         // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NS_StarDust;                                       // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       Sphere;                                            // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_AreaIndex;                                      // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_StarDustNSDuration;                             // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         BP_MeteorNSDuration;                               // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NS_Meteor;                                         // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NS_StarDust;                                       // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       Sphere;                                            // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_AreaIndex;                                      // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_StarDustNSDuration;                             // 0x04B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         BP_MeteorNSDuration;                               // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BndEvt__BP_StarSeaSummonMeteorArea_Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
@@ -51,15 +51,15 @@ public:
 	}
 };
 static_assert(alignof(ABP_StarSeaSummonMeteorArea_C) == 0x000008, "Wrong alignment on ABP_StarSeaSummonMeteorArea_C");
-static_assert(sizeof(ABP_StarSeaSummonMeteorArea_C) == 0x000470, "Wrong size on ABP_StarSeaSummonMeteorArea_C");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, UberGraphFrame) == 0x000438, "Member 'ABP_StarSeaSummonMeteorArea_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, NS_Meteor) == 0x000440, "Member 'ABP_StarSeaSummonMeteorArea_C::NS_Meteor' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, NS_StarDust) == 0x000448, "Member 'ABP_StarSeaSummonMeteorArea_C::NS_StarDust' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, Sphere) == 0x000450, "Member 'ABP_StarSeaSummonMeteorArea_C::Sphere' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, DefaultSceneRoot) == 0x000458, "Member 'ABP_StarSeaSummonMeteorArea_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, BP_AreaIndex) == 0x000460, "Member 'ABP_StarSeaSummonMeteorArea_C::BP_AreaIndex' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, BP_StarDustNSDuration) == 0x000464, "Member 'ABP_StarSeaSummonMeteorArea_C::BP_StarDustNSDuration' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, BP_MeteorNSDuration) == 0x000468, "Member 'ABP_StarSeaSummonMeteorArea_C::BP_MeteorNSDuration' has a wrong offset!");
+static_assert(sizeof(ABP_StarSeaSummonMeteorArea_C) == 0x0004C0, "Wrong size on ABP_StarSeaSummonMeteorArea_C");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, UberGraphFrame) == 0x000488, "Member 'ABP_StarSeaSummonMeteorArea_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, NS_Meteor) == 0x000490, "Member 'ABP_StarSeaSummonMeteorArea_C::NS_Meteor' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, NS_StarDust) == 0x000498, "Member 'ABP_StarSeaSummonMeteorArea_C::NS_StarDust' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, Sphere) == 0x0004A0, "Member 'ABP_StarSeaSummonMeteorArea_C::Sphere' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, DefaultSceneRoot) == 0x0004A8, "Member 'ABP_StarSeaSummonMeteorArea_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, BP_AreaIndex) == 0x0004B0, "Member 'ABP_StarSeaSummonMeteorArea_C::BP_AreaIndex' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, BP_StarDustNSDuration) == 0x0004B4, "Member 'ABP_StarSeaSummonMeteorArea_C::BP_StarDustNSDuration' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaSummonMeteorArea_C, BP_MeteorNSDuration) == 0x0004B8, "Member 'ABP_StarSeaSummonMeteorArea_C::BP_MeteorNSDuration' has a wrong offset!");
 
 }
 

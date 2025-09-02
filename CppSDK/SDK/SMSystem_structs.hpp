@@ -64,6 +64,43 @@ enum class ESMTransactionType : uint8
 	SM_MAX                                   = 8,
 };
 
+// ScriptStruct SMSystem.SMNode_Base
+// 0x0090 (0x0090 - 0x0000)
+struct FSMNode_Base
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TimeInState;                                       // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInEndState;                                     // 0x0014(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasUpdated;                                       // 0x0015(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DuplicateId;                                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  Guid;                                              // 0x001C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGuid                                  OwnerGuid;                                         // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGuid                                  PathGuid;                                          // 0x003C(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0xC];                                       // 0x004C(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 NodeName;                                          // 0x0058(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   TemplateName;                                      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USMInstance*                            OwningInstance;                                    // 0x0070(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USMNodeInstance*                        NodeInstance;                                      // 0x0078(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UClass*                                 NodeInstanceClass;                                 // 0x0080(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSMNode_Base) == 0x000008, "Wrong alignment on FSMNode_Base");
+static_assert(sizeof(FSMNode_Base) == 0x000090, "Wrong size on FSMNode_Base");
+static_assert(offsetof(FSMNode_Base, TimeInState) == 0x000010, "Member 'FSMNode_Base::TimeInState' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, bIsInEndState) == 0x000014, "Member 'FSMNode_Base::bIsInEndState' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, bHasUpdated) == 0x000015, "Member 'FSMNode_Base::bHasUpdated' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, DuplicateId) == 0x000018, "Member 'FSMNode_Base::DuplicateId' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, Guid) == 0x00001C, "Member 'FSMNode_Base::Guid' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, OwnerGuid) == 0x00002C, "Member 'FSMNode_Base::OwnerGuid' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, PathGuid) == 0x00003C, "Member 'FSMNode_Base::PathGuid' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, NodeName) == 0x000058, "Member 'FSMNode_Base::NodeName' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, TemplateName) == 0x000068, "Member 'FSMNode_Base::TemplateName' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, OwningInstance) == 0x000070, "Member 'FSMNode_Base::OwningInstance' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, NodeInstance) == 0x000078, "Member 'FSMNode_Base::NodeInstance' has a wrong offset!");
+static_assert(offsetof(FSMNode_Base, NodeInstanceClass) == 0x000080, "Member 'FSMNode_Base::NodeInstanceClass' has a wrong offset!");
+
 // ScriptStruct SMSystem.SMInfo_Base
 // 0x0060 (0x0060 - 0x0000)
 struct FSMInfo_Base
@@ -118,59 +155,6 @@ static_assert(alignof(FSMStateInfo) == 0x000008, "Wrong alignment on FSMStateInf
 static_assert(sizeof(FSMStateInfo) == 0x000080, "Wrong size on FSMStateInfo");
 static_assert(offsetof(FSMStateInfo, OutgoingTransitions) == 0x000060, "Member 'FSMStateInfo::OutgoingTransitions' has a wrong offset!");
 static_assert(offsetof(FSMStateInfo, bIsEndState) == 0x000070, "Member 'FSMStateInfo::bIsEndState' has a wrong offset!");
-
-// ScriptStruct SMSystem.SMBlendSetting
-// 0x0020 (0x0020 - 0x0000)
-struct FSMBlendSetting final
-{
-public:
-	ETransitionLogicType                          LogicType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAlphaBlendArgs                        Blend;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   BlendProfileName;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSMBlendSetting) == 0x000008, "Wrong alignment on FSMBlendSetting");
-static_assert(sizeof(FSMBlendSetting) == 0x000020, "Wrong size on FSMBlendSetting");
-static_assert(offsetof(FSMBlendSetting, LogicType) == 0x000000, "Member 'FSMBlendSetting::LogicType' has a wrong offset!");
-static_assert(offsetof(FSMBlendSetting, Blend) == 0x000008, "Member 'FSMBlendSetting::Blend' has a wrong offset!");
-static_assert(offsetof(FSMBlendSetting, BlendProfileName) == 0x000018, "Member 'FSMBlendSetting::BlendProfileName' has a wrong offset!");
-
-// ScriptStruct SMSystem.SMNode_Base
-// 0x0090 (0x0090 - 0x0000)
-struct FSMNode_Base
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TimeInState;                                       // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInEndState;                                     // 0x0014(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasUpdated;                                       // 0x0015(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         DuplicateId;                                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  Guid;                                              // 0x001C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FGuid                                  OwnerGuid;                                         // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FGuid                                  PathGuid;                                          // 0x003C(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C[0xC];                                       // 0x004C(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 NodeName;                                          // 0x0058(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   TemplateName;                                      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USMInstance*                            OwningInstance;                                    // 0x0070(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USMNodeInstance*                        NodeInstance;                                      // 0x0078(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UClass*                                 NodeInstanceClass;                                 // 0x0080(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSMNode_Base) == 0x000008, "Wrong alignment on FSMNode_Base");
-static_assert(sizeof(FSMNode_Base) == 0x000090, "Wrong size on FSMNode_Base");
-static_assert(offsetof(FSMNode_Base, TimeInState) == 0x000010, "Member 'FSMNode_Base::TimeInState' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, bIsInEndState) == 0x000014, "Member 'FSMNode_Base::bIsInEndState' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, bHasUpdated) == 0x000015, "Member 'FSMNode_Base::bHasUpdated' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, DuplicateId) == 0x000018, "Member 'FSMNode_Base::DuplicateId' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, Guid) == 0x00001C, "Member 'FSMNode_Base::Guid' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, OwnerGuid) == 0x00002C, "Member 'FSMNode_Base::OwnerGuid' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, PathGuid) == 0x00003C, "Member 'FSMNode_Base::PathGuid' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, NodeName) == 0x000058, "Member 'FSMNode_Base::NodeName' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, TemplateName) == 0x000068, "Member 'FSMNode_Base::TemplateName' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, OwningInstance) == 0x000070, "Member 'FSMNode_Base::OwningInstance' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, NodeInstance) == 0x000078, "Member 'FSMNode_Base::NodeInstance' has a wrong offset!");
-static_assert(offsetof(FSMNode_Base, NodeInstanceClass) == 0x000080, "Member 'FSMNode_Base::NodeInstanceClass' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMState_Base
 // 0x0070 (0x0100 - 0x0090)
@@ -382,6 +366,22 @@ static_assert(offsetof(FSMStateHistory, StateGuid) == 0x000000, "Member 'FSMStat
 static_assert(offsetof(FSMStateHistory, StartTime) == 0x000010, "Member 'FSMStateHistory::StartTime' has a wrong offset!");
 static_assert(offsetof(FSMStateHistory, TimeInState) == 0x000018, "Member 'FSMStateHistory::TimeInState' has a wrong offset!");
 static_assert(offsetof(FSMStateHistory, ServerTimeInState) == 0x00001C, "Member 'FSMStateHistory::ServerTimeInState' has a wrong offset!");
+
+// ScriptStruct SMSystem.SMBlendSetting
+// 0x0020 (0x0020 - 0x0000)
+struct FSMBlendSetting final
+{
+public:
+	ETransitionLogicType                          LogicType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAlphaBlendArgs                        Blend;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   BlendProfileName;                                  // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSMBlendSetting) == 0x000008, "Wrong alignment on FSMBlendSetting");
+static_assert(sizeof(FSMBlendSetting) == 0x000020, "Wrong size on FSMBlendSetting");
+static_assert(offsetof(FSMBlendSetting, LogicType) == 0x000000, "Member 'FSMBlendSetting::LogicType' has a wrong offset!");
+static_assert(offsetof(FSMBlendSetting, Blend) == 0x000008, "Member 'FSMBlendSetting::Blend' has a wrong offset!");
+static_assert(offsetof(FSMBlendSetting, BlendProfileName) == 0x000018, "Member 'FSMBlendSetting::BlendProfileName' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMState
 // 0x0000 (0x0100 - 0x0100)

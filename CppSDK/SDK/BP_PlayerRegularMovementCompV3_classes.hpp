@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "EInputDeviceKeyType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EPlayerMovementScenarios_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EPlayerAdditiveMovementMode_structs.hpp"
-#include "EPlayerSprintType_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "EPlayerMovementScenarios_structs.hpp"
-#include "EInputDeviceKeyType_structs.hpp"
+#include "EPlayerSprintType_structs.hpp"
 
 
 namespace SDK
@@ -119,12 +119,14 @@ public:
 	void BP_SetEnableFootIK(bool bEnable, bool bImmediately);
 	void BP_SetAIInplaceTurnAroundAngle(double CurInplaceTurnAroundAngle);
 	void BP_ResetOwnerMovementConfig();
+	void BP_ResetOwnerDefaultMovementConfig(bool bForceResetCurrentMovementConfig, class UBP_MovementAllConfigTemplate_C** OldDefaultMovementConfigByModify);
 	void BP_ResetMaxAccelerationConfigValue(double* OldMaxAcceleration);
 	void BP_ResetGroundFrictionConfigValue(double* OldGroundFriction);
 	void BP_ResetGlideMovementConfig();
 	void BP_ResetGaitMaxWalkSpeedConfigValue(ERegularLocomotionType Gait);
 	void BP_ResetBrakingDecelerationWalkingConfigValue(double* OldBrakingDecelerationWalking);
 	void BP_ModifyOwnerMovementConfigByDA(class UBP_MovementAllConfigTemplate_C* NewDataAsset, class UBP_MovementAllConfigTemplate_C** OldDataAsset);
+	void BP_ModifyOwnerDefaultMovementConfigByDA(class UBP_MovementAllConfigTemplate_C* NewDefaultMovementConfigByModify, bool bForceResetCurrentMovementConfig, class UBP_MovementAllConfigTemplate_C** OldDefaultMovementConfigByModify);
 	void BP_ModifyMaxAccelerationConfigValue(double Value);
 	void BP_ModifyGroundFrictionConfigValue(double Value);
 	void BP_ModifyGlideMovementConfig(double NewMaxWalkSpeed, double NewRotationActorInterpSpeed);
@@ -138,6 +140,7 @@ public:
 	void BP_GetPlayerCurLocomotionStateByCurSpeed(ERegularLocomotionType* CurLocomotionType);
 	void BP_GetOwnerIsSimulated(bool* bOwnerSimulated);
 	void BP_GetDesiredGait(ERegularLocomotionType* BP_CurrentAllowedGait_0);
+	void BP_GetCurrentDefaultMovementConfig(class UBP_MovementAllConfigTemplate_C** CurDefaultMovementConfig);
 	void BP_GetCurConfigMaxSpeed(double* CurConfigMaxSpeed);
 	void BP_GetAllowGait(ERegularLocomotionType* NewParam);
 	void BP_ForbidPlayerRegularMovementInput(bool Value, EPlayerRegularForbidInputType RegularForbidInputType);

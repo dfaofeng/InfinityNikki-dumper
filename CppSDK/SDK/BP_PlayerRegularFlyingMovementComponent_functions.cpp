@@ -17,55 +17,138 @@
 namespace SDK
 {
 
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ChangeFlyingMovementSpeedType
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EPlayerRegularFlyingMovementSpeedType   NewFlyingMovementSpeedType                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerRegularFlyingMovementComponent_C::ReceiveTick(float DeltaSeconds)
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_ChangeFlyingMovementSpeedType(EPlayerRegularFlyingMovementSpeedType NewFlyingMovementSpeedType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ChangeFlyingMovementSpeedType");
 
-	Params::BP_PlayerRegularFlyingMovementComponent_C_ReceiveTick Parms{};
+	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ChangeFlyingMovementSpeedType Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.NewFlyingMovementSpeedType = NewFlyingMovementSpeedType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_GetCurrentFlyingSpeedType
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPlayerRegularFlyingMovementSpeedType*  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerRegularFlyingMovementComponent_C::ReceiveBeginPlay()
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_GetCurrentFlyingSpeedType(EPlayerRegularFlyingMovementSpeedType* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_GetCurrentFlyingSpeedType");
+
+	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_GetCurrentFlyingSpeedType Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ModifyBrakingDecelerationFlyingConfigValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_ModifyBrakingDecelerationFlyingConfigValue(double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ModifyBrakingDecelerationFlyingConfigValue");
+
+	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ModifyBrakingDecelerationFlyingConfigValue Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ModifyMaxFlySpeedConfigValue
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPlayerRegularFlyingMovementSpeedType   FlyingMovementSpeedType                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_ModifyMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType, double Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ModifyMaxFlySpeedConfigValue");
+
+	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ModifyMaxFlySpeedConfigValue Parms{};
+
+	Parms.FlyingMovementSpeedType = FlyingMovementSpeedType;
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ResetBrakingDecelerationFlyingConfigValue
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_ResetBrakingDecelerationFlyingConfigValue()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ResetBrakingDecelerationFlyingConfigValue");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent
-// (Final, UbergraphFunction)
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ResetMaxFlySpeedConfigValue
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EPlayerRegularFlyingMovementSpeedType   FlyingMovementSpeedType                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerRegularFlyingMovementComponent_C::ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent(int32 EntryPoint)
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_ResetMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent");
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ResetMaxFlySpeedConfigValue");
 
-	Params::BP_PlayerRegularFlyingMovementComponent_C_ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent Parms{};
+	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ResetMaxFlySpeedConfigValue Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.FlyingMovementSpeedType = FlyingMovementSpeedType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_SetCurrenntFlyingMovementType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EPlayerRegularFlyingMovementType        NewFlyingMovementType                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerRegularFlyingMovementComponent_C::BP_SetCurrenntFlyingMovementType(EPlayerRegularFlyingMovementType NewFlyingMovementType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_SetCurrenntFlyingMovementType");
+
+	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_SetCurrenntFlyingMovementType Parms{};
+
+	Parms.NewFlyingMovementType = NewFlyingMovementType;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -100,138 +183,55 @@ void UBP_PlayerRegularFlyingMovementComponent_C::BPI_Get_RegularFlyingConfigData
 }
 
 
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_SetCurrenntFlyingMovementType
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent
+// (Final, UbergraphFunction)
 // Parameters:
-// EPlayerRegularFlyingMovementType        NewFlyingMovementType                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_SetCurrenntFlyingMovementType(EPlayerRegularFlyingMovementType NewFlyingMovementType)
+void UBP_PlayerRegularFlyingMovementComponent_C::ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_SetCurrenntFlyingMovementType");
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent");
 
-	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_SetCurrenntFlyingMovementType Parms{};
+	Params::BP_PlayerRegularFlyingMovementComponent_C_ExecuteUbergraph_BP_PlayerRegularFlyingMovementComponent Parms{};
 
-	Parms.NewFlyingMovementType = NewFlyingMovementType;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ResetMaxFlySpeedConfigValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EPlayerRegularFlyingMovementSpeedType   FlyingMovementSpeedType                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
 
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_ResetMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType)
+void UBP_PlayerRegularFlyingMovementComponent_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ResetMaxFlySpeedConfigValue");
-
-	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ResetMaxFlySpeedConfigValue Parms{};
-
-	Parms.FlyingMovementSpeedType = FlyingMovementSpeedType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ResetBrakingDecelerationFlyingConfigValue
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_ResetBrakingDecelerationFlyingConfigValue()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ResetBrakingDecelerationFlyingConfigValue");
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ModifyMaxFlySpeedConfigValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
 // Parameters:
-// EPlayerRegularFlyingMovementSpeedType   FlyingMovementSpeedType                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_ModifyMaxFlySpeedConfigValue(EPlayerRegularFlyingMovementSpeedType FlyingMovementSpeedType, double Value)
+void UBP_PlayerRegularFlyingMovementComponent_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ModifyMaxFlySpeedConfigValue");
+		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "ReceiveTick");
 
-	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ModifyMaxFlySpeedConfigValue Parms{};
+	Params::BP_PlayerRegularFlyingMovementComponent_C_ReceiveTick Parms{};
 
-	Parms.FlyingMovementSpeedType = FlyingMovementSpeedType;
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ModifyBrakingDecelerationFlyingConfigValue
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_ModifyBrakingDecelerationFlyingConfigValue(double Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ModifyBrakingDecelerationFlyingConfigValue");
-
-	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ModifyBrakingDecelerationFlyingConfigValue Parms{};
-
-	Parms.Value = Value;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_GetCurrentFlyingSpeedType
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EPlayerRegularFlyingMovementSpeedType*  Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_GetCurrentFlyingSpeedType(EPlayerRegularFlyingMovementSpeedType* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_GetCurrentFlyingSpeedType");
-
-	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_GetCurrentFlyingSpeedType Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function BP_PlayerRegularFlyingMovementComponent.BP_PlayerRegularFlyingMovementComponent_C.BP_ChangeFlyingMovementSpeedType
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EPlayerRegularFlyingMovementSpeedType   NewFlyingMovementSpeedType                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_PlayerRegularFlyingMovementComponent_C::BP_ChangeFlyingMovementSpeedType(EPlayerRegularFlyingMovementSpeedType NewFlyingMovementSpeedType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PlayerRegularFlyingMovementComponent_C", "BP_ChangeFlyingMovementSpeedType");
-
-	Params::BP_PlayerRegularFlyingMovementComponent_C_BP_ChangeFlyingMovementSpeedType Parms{};
-
-	Parms.NewFlyingMovementSpeedType = NewFlyingMovementSpeedType;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BPI_CustomWidgetFadeAnimation.BPI_CustomWidgetFadeAnimation_C.GetFadeInAnimation
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation final
-{
-public:
-	class UWidgetAnimation*                       Anim;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation) == 0x000008, "Wrong alignment on BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation");
-static_assert(sizeof(BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation) == 0x000008, "Wrong size on BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation");
-static_assert(offsetof(BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation, Anim) == 0x000000, "Member 'BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation::Anim' has a wrong offset!");
-
 // Function BPI_CustomWidgetFadeAnimation.BPI_CustomWidgetFadeAnimation_C.GetFadeOutAnimation
 // 0x0008 (0x0008 - 0x0000)
 struct BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation final
@@ -35,6 +24,17 @@ public:
 static_assert(alignof(BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation) == 0x000008, "Wrong alignment on BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation");
 static_assert(sizeof(BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation) == 0x000008, "Wrong size on BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation");
 static_assert(offsetof(BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation, Anim) == 0x000000, "Member 'BPI_CustomWidgetFadeAnimation_C_GetFadeOutAnimation::Anim' has a wrong offset!");
+
+// Function BPI_CustomWidgetFadeAnimation.BPI_CustomWidgetFadeAnimation_C.GetFadeInAnimation
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation final
+{
+public:
+	class UWidgetAnimation*                       Anim;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation) == 0x000008, "Wrong alignment on BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation");
+static_assert(sizeof(BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation) == 0x000008, "Wrong size on BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation");
+static_assert(offsetof(BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation, Anim) == 0x000000, "Member 'BPI_CustomWidgetFadeAnimation_C_GetFadeInAnimation::Anim' has a wrong offset!");
 
 }
 

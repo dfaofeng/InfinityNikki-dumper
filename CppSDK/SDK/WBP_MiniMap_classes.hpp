@@ -37,10 +37,10 @@ public:
 	class UMaterialInstanceDynamic*               CachedMat;                                         // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void InitRenderTarget(const struct FVector2D& Size);
-	void ExecuteUbergraph_WBP_MiniMap(int32 EntryPoint);
-	void CreateMapTerrainCell(class UWBP_MapTerrainCell_C** Cell);
 	void ClearRenderTarget();
+	void CreateMapTerrainCell(class UWBP_MapTerrainCell_C** Cell);
+	void ExecuteUbergraph_WBP_MiniMap(int32 EntryPoint);
+	void InitRenderTarget(const struct FVector2D& Size);
 
 	class FString GetModuleName() const;
 

@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.K2_OnSectionBegin_WithBindingObject
-// 0x0008 (0x0008 - 0x0000)
-struct WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject final
-{
-public:
-	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong alignment on WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject");
-static_assert(sizeof(WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong size on WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject");
-static_assert(offsetof(WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject, BindingObject) == 0x000000, "Member 'WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject::BindingObject' has a wrong offset!");
-
 // Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.ExecuteUbergraph_WoolenHeartPhantomSection
 // 0x0168 (0x0168 - 0x0000)
 struct WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection final
@@ -146,6 +135,17 @@ static_assert(offsetof(WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartP
 static_assert(offsetof(WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection, CallFunc_Array_Get_Item_3) == 0x000150, "Member 'WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection::CallFunc_Array_Get_Item_3' has a wrong offset!");
 static_assert(offsetof(WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection, CallFunc_Map_Find_Value_1) == 0x000158, "Member 'WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection::CallFunc_Map_Find_Value_1' has a wrong offset!");
 static_assert(offsetof(WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection, CallFunc_Map_Find_ReturnValue_1) == 0x000160, "Member 'WoolenHeartPhantomSection_C_ExecuteUbergraph_WoolenHeartPhantomSection::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+
+// Function WoolenHeartPhantomSection.WoolenHeartPhantomSection_C.K2_OnSectionBegin_WithBindingObject
+// 0x0008 (0x0008 - 0x0000)
+struct WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject final
+{
+public:
+	class UObject*                                BindingObject;                                     // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong alignment on WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject");
+static_assert(sizeof(WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject) == 0x000008, "Wrong size on WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject");
+static_assert(offsetof(WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject, BindingObject) == 0x000000, "Member 'WoolenHeartPhantomSection_C_K2_OnSectionBegin_WithBindingObject::BindingObject' has a wrong offset!");
 
 }
 

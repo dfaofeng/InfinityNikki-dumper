@@ -70,12 +70,15 @@ static_assert(alignof(UPaperHotFixMgr) == 0x000008, "Wrong alignment on UPaperHo
 static_assert(sizeof(UPaperHotFixMgr) == 0x000058, "Wrong size on UPaperHotFixMgr");
 
 // Class PaperLuaFrameworkApp.PaperHotUpdateGameInstance
-// 0x0010 (0x01D0 - 0x01C0)
+// 0x0048 (0x0208 - 0x01C0)
 class UPaperHotUpdateGameInstance : public UGameInstance
 {
 public:
 	int32                                         InstanceId;                                        // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1C4[0xC];                                      // 0x01C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4[0x44];                                     // 0x01C4(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Restart();
 
 public:
 	static class UClass* StaticClass()
@@ -88,7 +91,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperHotUpdateGameInstance) == 0x000008, "Wrong alignment on UPaperHotUpdateGameInstance");
-static_assert(sizeof(UPaperHotUpdateGameInstance) == 0x0001D0, "Wrong size on UPaperHotUpdateGameInstance");
+static_assert(sizeof(UPaperHotUpdateGameInstance) == 0x000208, "Wrong size on UPaperHotUpdateGameInstance");
 static_assert(offsetof(UPaperHotUpdateGameInstance, InstanceId) == 0x0001C0, "Member 'UPaperHotUpdateGameInstance::InstanceId' has a wrong offset!");
 
 // Class PaperLuaFrameworkApp.PaperHotUpdateMgr
@@ -158,6 +161,7 @@ public:
 	void GetCmsURL(const class FString& Mode, class FString* URL);
 	float GetExtractPaksProgress();
 	TArray<class FString> GetKeyChainNonDynamicGroups(const class FString& InKeyChainName);
+	TMap<class FString, int64> GetMetallibShaderSizeInfo(const class FString& Version, const TArray<uint8>& InShaderCodeData);
 	class FString GetMicroCodeVersion();
 	class FString GetMotherBoardInfo();
 	float GetMovePaksProgress();
@@ -190,7 +194,7 @@ public:
 	void SetCheckRepairProgress(float InCheckRepairProgress);
 	void SetDownloadMode(int32 Value);
 	void SetDynamicKeyChainHttpBaseURL(const class FString& InHttpBaseURL);
-	void SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile(int32 QualityLevel, int32 LevelID);
+	void SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile(int32 QualityLevel, int32 LevelId);
 	void SetPSOCacheMaterialQualityLevelMaskForMobile(int32 QualityLevel);
 	void SetUrlWithTimeStamp(class FString* URL);
 	void SmallestPackageWithBasePak(bool bSuccess, int32 ResponseCode);

@@ -377,7 +377,7 @@ static_assert(offsetof(BP_CloudMaskGenerator_C_Render_Clouds, CallFunc_SetScalar
 static_assert(offsetof(BP_CloudMaskGenerator_C_Render_Clouds, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x000530, "Member 'BP_CloudMaskGenerator_C_Render_Clouds::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
 
 // Function BP_CloudMaskGenerator.BP_CloudMaskGenerator_C.Set Up Volumetric Cloud Light Rays
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays final
 {
 public:
@@ -391,34 +391,36 @@ public:
 	double                                        CallFunc_BreakVector_Z;                            // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMax_ReturnValue;                         // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture*                               K2Node_Select_Default;                             // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FFloor_ReturnValue_1;                     // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_1;   // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_2;   // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_3;   // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_4;   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_5;   // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_6;   // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_7;   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_2;      // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMax_ReturnValue;                         // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_3;      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_2;      // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               K2Node_Select_Default;                             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_4;      // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue;                       // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Conv_IntToDouble_ReturnValue;             // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FFloor_ReturnValue_1;                     // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast;     // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_1;   // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_2;   // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_3;   // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_4;   // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_5;   // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_6;   // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFloatParameter_Param_ImplicitCast_7;   // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays) == 0x000008, "Wrong alignment on BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays");
-static_assert(sizeof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays) == 0x0000F8, "Wrong size on BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays");
+static_assert(sizeof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays) == 0x000100, "Wrong size on BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays");
 static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Volumetric_Cloud_Top_Altitude_Cloud_Top_Altitude) == 0x000000, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Volumetric_Cloud_Top_Altitude_Cloud_Top_Altitude' has a wrong offset!");
 static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Volumetric_Cloud_Top_Altitude_Cloud_Top_Altitude_1) == 0x000008, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Volumetric_Cloud_Top_Altitude_Cloud_Top_Altitude_1' has a wrong offset!");
 static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_MapRangeClamped_ReturnValue) == 0x000010, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
@@ -429,29 +431,30 @@ static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Ray
 static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_BreakVector_Z) == 0x000048, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_BreakVector_Z' has a wrong offset!");
 static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000050, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000058, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Lerp_ReturnValue) == 0x000060, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000068, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000070, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000078, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_FMax_ReturnValue) == 0x000080, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_FMax_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, Temp_bool_Variable) == 0x000088, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000090, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x000098, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, K2Node_Select_Default) == 0x0000A0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000A8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0000B0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_FFloor_ReturnValue) == 0x0000B8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_FFloor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000C0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000C8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_FFloor_ReturnValue_1) == 0x0000D0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_FFloor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0000D4, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_1) == 0x0000D8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_2) == 0x0000DC, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_3) == 0x0000E0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_4) == 0x0000E4, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_5) == 0x0000E8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_6) == 0x0000EC, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_6' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_7) == 0x0000F0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_7' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Lerp_ReturnValue) == 0x000068, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_2) == 0x000070, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000078, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000080, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_FMax_ReturnValue) == 0x000088, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_FMax_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, Temp_bool_Variable) == 0x000090, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_3) == 0x000098, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Subtract_DoubleDouble_ReturnValue_2) == 0x0000A0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Subtract_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, K2Node_Select_Default) == 0x0000A8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Multiply_DoubleDouble_ReturnValue_4) == 0x0000B8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Multiply_DoubleDouble_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_FFloor_ReturnValue) == 0x0000C0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_FFloor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000C8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_Conv_IntToDouble_ReturnValue) == 0x0000D0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_Conv_IntToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_FFloor_ReturnValue_1) == 0x0000D8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_FFloor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast) == 0x0000DC, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_1) == 0x0000E0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_2) == 0x0000E4, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_3) == 0x0000E8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_4) == 0x0000EC, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_4' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_5) == 0x0000F0, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_5' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_6) == 0x0000F4, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_6' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays, CallFunc_SetFloatParameter_Param_ImplicitCast_7) == 0x0000F8, "Member 'BP_CloudMaskGenerator_C_Set_Up_Volumetric_Cloud_Light_Rays::CallFunc_SetFloatParameter_Param_ImplicitCast_7' has a wrong offset!");
 
 // Function BP_CloudMaskGenerator.BP_CloudMaskGenerator_C.Snap Clouds to Z
 // 0x01A8 (0x01A8 - 0x0000)
@@ -660,88 +663,59 @@ static_assert(offsetof(BP_CloudMaskGenerator_C_Update_Volumetric_Cloud_Light_Ray
 static_assert(offsetof(BP_CloudMaskGenerator_C_Update_Volumetric_Cloud_Light_Rays_Movement, CallFunc_Conv_LinearColorToVector_ReturnValue_1) == 0x000040, "Member 'BP_CloudMaskGenerator_C_Update_Volumetric_Cloud_Light_Rays_Movement::CallFunc_Conv_LinearColorToVector_ReturnValue_1' has a wrong offset!");
 
 // Function BP_CloudMaskGenerator.BP_CloudMaskGenerator_C.UserConstructionScript
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct BP_CloudMaskGenerator_C_UserConstructionScript final
 {
 public:
-	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue; // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_1;          // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_2;          // 0x0017(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_3;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_6;          // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_7;          // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_8;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_9;          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1F[0x1];                                       // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AVolumetricCloud*>               CallFunc_GetAllActorsOfClass_OutActors;            // 0x0010(0x0010)(ReferenceParm)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AVolumetricCloud*>               CallFunc_GetAllActorsOfClass_OutActors;            // 0x0038(0x0010)(ReferenceParm)
-	class AVolumetricCloud*                       CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6B[0x5];                                       // 0x006B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTextureRenderTarget2D*                 CallFunc_CreateRenderTarget2D_ReturnValue;         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsRunningCommandletMode_ReturnValue;      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_79[0x7];                                       // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture*                               K2Node_Select_Default;                             // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AVolumetricCloud*                       CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextureRenderTarget2D*                 CallFunc_CreateRenderTarget2D_ReturnValue;         // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTexture*                               K2Node_Select_Default;                             // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_DoubleToVector_ReturnValue;          // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CloudMaskGenerator_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_CloudMaskGenerator_C_UserConstructionScript");
-static_assert(sizeof(BP_CloudMaskGenerator_C_UserConstructionScript) == 0x0000B8, "Wrong size on BP_CloudMaskGenerator_C_UserConstructionScript");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000000, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000010, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue) == 0x000014, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000015, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_1) == 0x000016, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_2) == 0x000017, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_3) == 0x000018, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_4) == 0x000019, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_5) == 0x00001A, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_6) == 0x00001B, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_7) == 0x00001C, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_8) == 0x00001D, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_EqualEqual_StrStr_ReturnValue_9) == 0x00001E, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_EqualEqual_StrStr_ReturnValue_9' has a wrong offset!");
+static_assert(sizeof(BP_CloudMaskGenerator_C_UserConstructionScript) == 0x000090, "Wrong size on BP_CloudMaskGenerator_C_UserConstructionScript");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_bool_True_if_break_was_hit_Variable) == 0x000000, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_int_Array_Index_Variable) == 0x000004, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_bool_Variable) == 0x000009, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_GetAllActorsOfClass_OutActors) == 0x000010, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
 static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_int_Loop_Counter_Variable) == 0x000020, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue) == 0x000024, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_bool_True_if_break_was_hit_Variable) == 0x000028, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_int_Array_Index_Variable) == 0x00002C, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, Temp_bool_Variable) == 0x000031, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_GetAllActorsOfClass_OutActors) == 0x000038, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_GetAllActorsOfClass_OutActors' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Array_Get_Item) == 0x000048, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue) == 0x000050, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_GetDisplayName_ReturnValue) == 0x000058, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Less_IntInt_ReturnValue) == 0x000068, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Contains_ReturnValue) == 0x000069, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_BooleanAND_ReturnValue) == 0x00006A, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_CreateRenderTarget2D_ReturnValue) == 0x000070, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_CreateRenderTarget2D_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_IsRunningCommandletMode_ReturnValue) == 0x000078, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_IsRunningCommandletMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, K2Node_Select_Default) == 0x000080, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000088, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000090, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000098, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x0000B0, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x0000B4, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_GetDisplayName_ReturnValue) == 0x000030, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Contains_ReturnValue) == 0x000040, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Add_IntInt_ReturnValue) == 0x000044, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Array_Length_ReturnValue) == 0x000048, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Less_IntInt_ReturnValue) == 0x00004C, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_BooleanAND_ReturnValue) == 0x00004D, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_CreateRenderTarget2D_ReturnValue) == 0x000050, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_CreateRenderTarget2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, K2Node_Select_Default) == 0x000058, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000068, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_Conv_DoubleToVector_ReturnValue) == 0x000070, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_Conv_DoubleToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000088, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_CloudMaskGenerator_C_UserConstructionScript, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x00008C, "Member 'BP_CloudMaskGenerator_C_UserConstructionScript::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
 
 // Function BP_CloudMaskGenerator.BP_CloudMaskGenerator_C.Volumetric Cloud Top Altitude
 // 0x0050 (0x0050 - 0x0000)

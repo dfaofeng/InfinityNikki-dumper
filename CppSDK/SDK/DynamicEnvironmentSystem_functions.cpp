@@ -618,6 +618,68 @@ void UDynamicEnvironmentSystemBPLibrary::SaveToWeatherConfig(TSoftClassPtr<class
 }
 
 
+// Function DynamicEnvironmentSystem.DynamicEnvironmentSystemBPLibrary.SetTargetOverridePropertyInCharacterLerpConfigByName
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FCharacterLerpConfig&            InCharacterLerpConfig                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class FName                             InPropertyName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicEnvironmentSystemBPLibrary::SetTargetOverridePropertyInCharacterLerpConfigByName(struct FCharacterLerpConfig& InCharacterLerpConfig, class FName InPropertyName, bool InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DynamicEnvironmentSystemBPLibrary", "SetTargetOverridePropertyInCharacterLerpConfigByName");
+
+	Params::DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInCharacterLerpConfigByName Parms{};
+
+	Parms.InCharacterLerpConfig = std::move(InCharacterLerpConfig);
+	Parms.InPropertyName = InPropertyName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InCharacterLerpConfig = std::move(Parms.InCharacterLerpConfig);
+}
+
+
+// Function DynamicEnvironmentSystem.DynamicEnvironmentSystemBPLibrary.SetTargetOverridePropertyInPPSettingByName
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FPostProcessSettings&            InPPSetting                                            (Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName                             InPropertyName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicEnvironmentSystemBPLibrary::SetTargetOverridePropertyInPPSettingByName(struct FPostProcessSettings& InPPSetting, class FName InPropertyName, bool InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DynamicEnvironmentSystemBPLibrary", "SetTargetOverridePropertyInPPSettingByName");
+
+	Params::DynamicEnvironmentSystemBPLibrary_SetTargetOverridePropertyInPPSettingByName Parms{};
+
+	Parms.InPPSetting = std::move(InPPSetting);
+	Parms.InPropertyName = InPropertyName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	InPPSetting = std::move(Parms.InPPSetting);
+}
+
+
 // Function DynamicEnvironmentSystem.DynamicEnvironmentSystemManager.BlendTextures
 // (Final, Native, Public, BlueprintCallable)
 
@@ -1535,6 +1597,56 @@ void ADynamicWeatherVolume::UpdateTimeSpanProgress(class ADynamicEnvironmentSyst
 }
 
 
+// Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetCharacterSphereMaskIntensity
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicWetnessComponent::SetCharacterSphereMaskIntensity(float NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicWetnessComponent", "SetCharacterSphereMaskIntensity");
+
+	Params::DynamicWetnessComponent_SetCharacterSphereMaskIntensity Parms{};
+
+	Parms.NewValue = NewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetCharacterSphereMaskSunnyReverse
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicWetnessComponent::SetCharacterSphereMaskSunnyReverse(float NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicWetnessComponent", "SetCharacterSphereMaskSunnyReverse");
+
+	Params::DynamicWetnessComponent_SetCharacterSphereMaskSunnyReverse Parms{};
+
+	Parms.NewValue = NewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetLumenReflectionsSpecularScale
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1656,6 +1768,31 @@ void UDynamicWetnessComponent::SetWetness(float InValue, bool bToRain)
 
 	Parms.InValue = InValue;
 	Parms.bToRain = bToRain;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function DynamicEnvironmentSystem.DynamicWetnessComponent.SetWetnessCharacterWorldPosition
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicWetnessComponent::SetWetnessCharacterWorldPosition(const struct FVector& NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicWetnessComponent", "SetWetnessCharacterWorldPosition");
+
+	Params::DynamicWetnessComponent_SetWetnessCharacterWorldPosition Parms{};
+
+	Parms.NewValue = std::move(NewValue);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

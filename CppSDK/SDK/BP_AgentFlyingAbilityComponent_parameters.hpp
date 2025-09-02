@@ -14,28 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.SetFlyingGroundBias
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias final
-{
-public:
-	double                                        NewBias;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias) == 0x000008, "Wrong alignment on BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias");
-static_assert(sizeof(BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias) == 0x000008, "Wrong size on BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias");
-static_assert(offsetof(BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias, NewBias) == 0x000000, "Member 'BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias::NewBias' has a wrong offset!");
-
-// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_AgentFlyingAbilityComponent_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AgentFlyingAbilityComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AgentFlyingAbilityComponent_C_ReceiveTick");
-static_assert(sizeof(BP_AgentFlyingAbilityComponent_C_ReceiveTick) == 0x000004, "Wrong size on BP_AgentFlyingAbilityComponent_C_ReceiveTick");
-static_assert(offsetof(BP_AgentFlyingAbilityComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AgentFlyingAbilityComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
 // Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ExecuteUbergraph_BP_AgentFlyingAbilityComponent
 // 0x0008 (0x0008 - 0x0000)
 struct BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent final
@@ -48,6 +26,28 @@ static_assert(alignof(BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_Agent
 static_assert(sizeof(BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent) == 0x000008, "Wrong size on BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent");
 static_assert(offsetof(BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent, EntryPoint) == 0x000000, "Member 'BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent::K2Node_Event_DeltaSeconds' has a wrong offset!");
+
+// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_AgentFlyingAbilityComponent_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AgentFlyingAbilityComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_AgentFlyingAbilityComponent_C_ReceiveTick");
+static_assert(sizeof(BP_AgentFlyingAbilityComponent_C_ReceiveTick) == 0x000004, "Wrong size on BP_AgentFlyingAbilityComponent_C_ReceiveTick");
+static_assert(offsetof(BP_AgentFlyingAbilityComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_AgentFlyingAbilityComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
+
+// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.SetFlyingGroundBias
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias final
+{
+public:
+	double                                        NewBias;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias) == 0x000008, "Wrong alignment on BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias");
+static_assert(sizeof(BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias) == 0x000008, "Wrong size on BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias");
+static_assert(offsetof(BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias, NewBias) == 0x000000, "Member 'BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias::NewBias' has a wrong offset!");
 
 // Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

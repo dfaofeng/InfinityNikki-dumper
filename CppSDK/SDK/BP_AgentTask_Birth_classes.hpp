@@ -25,10 +25,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_BP_AgentTask_Birth_C;               // 0x0038(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ReceiveTick(class APawn* AgentPawn, double DeltaSeconds);
-	void ReceiveExecute(class APawn* AgentPawn);
-	void ReceiveAbort(class APawn* AgentPawn, int32 AbortFlag);
 	void ExecuteUbergraph_BP_AgentTask_Birth(int32 EntryPoint);
+	void ReceiveAbort(class APawn* AgentPawn, int32 AbortFlag);
+	void ReceiveExecute(class APawn* AgentPawn);
+	void ReceiveTick(class APawn* AgentPawn, double DeltaSeconds);
 
 	class FString GetModuleName() const;
 

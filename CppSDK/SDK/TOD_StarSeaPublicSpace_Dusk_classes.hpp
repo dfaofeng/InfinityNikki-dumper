@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TOD_StarSeaPublicSpace_Dusk.TOD_StarSeaPublicSpace_Dusk_C
-// 0x0000 (0x0A48 - 0x0A48)
+// 0x0000 (0x0A50 - 0x0A50)
 class UTOD_StarSeaPublicSpace_Dusk_C final : public UTOD_Preset_Master_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UTOD_StarSeaPublicSpace_Dusk_C) == 0x000008, "Wrong alignment on UTOD_StarSeaPublicSpace_Dusk_C");
-static_assert(sizeof(UTOD_StarSeaPublicSpace_Dusk_C) == 0x000A48, "Wrong size on UTOD_StarSeaPublicSpace_Dusk_C");
+static_assert(sizeof(UTOD_StarSeaPublicSpace_Dusk_C) == 0x000A50, "Wrong size on UTOD_StarSeaPublicSpace_Dusk_C");
 
 }
 

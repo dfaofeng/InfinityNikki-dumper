@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_HatredTickParams_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Enum_HatredTickParams_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -28,8 +28,9 @@ public:
 	double                                        InSightValue;                                      // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OutSightValue;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        BeHitValue;                                        // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ApplyValueIgnoreHitCondition;                      // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          OpenInLSChangeValue;                               // 0x0058(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ApplyValueIgnoreHitCondition;                      // 0x0059(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReReachableValue;                                  // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TMap<struct FGameplayTag, double>             TriggerEventMap;                                   // 0x0068(0x0050)(Edit, BlueprintVisible)
 	TMap<Enum_HatredTickParams, class UCurveFloat*> TickParamsMap;                                   // 0x00B8(0x0050)(Edit, BlueprintVisible)
@@ -51,7 +52,8 @@ static_assert(offsetof(UBP_Combat_AIHatredConfig_C, MaxHateValue) == 0x000038, "
 static_assert(offsetof(UBP_Combat_AIHatredConfig_C, InSightValue) == 0x000040, "Member 'UBP_Combat_AIHatredConfig_C::InSightValue' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIHatredConfig_C, OutSightValue) == 0x000048, "Member 'UBP_Combat_AIHatredConfig_C::OutSightValue' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIHatredConfig_C, BeHitValue) == 0x000050, "Member 'UBP_Combat_AIHatredConfig_C::BeHitValue' has a wrong offset!");
-static_assert(offsetof(UBP_Combat_AIHatredConfig_C, ApplyValueIgnoreHitCondition) == 0x000058, "Member 'UBP_Combat_AIHatredConfig_C::ApplyValueIgnoreHitCondition' has a wrong offset!");
+static_assert(offsetof(UBP_Combat_AIHatredConfig_C, OpenInLSChangeValue) == 0x000058, "Member 'UBP_Combat_AIHatredConfig_C::OpenInLSChangeValue' has a wrong offset!");
+static_assert(offsetof(UBP_Combat_AIHatredConfig_C, ApplyValueIgnoreHitCondition) == 0x000059, "Member 'UBP_Combat_AIHatredConfig_C::ApplyValueIgnoreHitCondition' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIHatredConfig_C, ReReachableValue) == 0x000060, "Member 'UBP_Combat_AIHatredConfig_C::ReReachableValue' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIHatredConfig_C, TriggerEventMap) == 0x000068, "Member 'UBP_Combat_AIHatredConfig_C::TriggerEventMap' has a wrong offset!");
 static_assert(offsetof(UBP_Combat_AIHatredConfig_C, TickParamsMap) == 0x0000B8, "Member 'UBP_Combat_AIHatredConfig_C::TickParamsMap' has a wrong offset!");

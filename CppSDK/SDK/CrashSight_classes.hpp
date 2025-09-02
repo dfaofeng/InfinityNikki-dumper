@@ -58,7 +58,7 @@ public:
 	static void ConfigDebugMode(bool Enable);
 	static bool IsInitialized();
 	static void PrintLog(int32 Level, const class FString& LogStr);
-	static void ReportException(int32 Type, const class FString& Name_0, const class FString& Reason, const class FString& StackTrace, const class FString& Extras, bool quit, int32 dumpNativeType);
+	static void ReportException(int32 Type, const class FString& Name_0, const class FString& Reason, const class FString& StackTrace, const class FString& extras, bool quit, int32 dumpNativeType);
 	static void ReportLogInfo(const class FString& MsgType, const class FString& msg);
 	static void SetAppVersion(const class FString& appVersion);
 	static void SetDeviceId(const class FString& DeviceID);

@@ -16,40 +16,16 @@
 namespace SDK::Params
 {
 
-// Function BP_AbilityBase.BP_AbilityBase_C.ExecuteUbergraph_BP_AbilityBase
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase final
+// Function BP_AbilityBase.BP_AbilityBase_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_AbilityBase_C_ReceiveEndPlay final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase) == 0x000004, "Wrong alignment on BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase");
-static_assert(sizeof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase) == 0x000008, "Wrong size on BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase");
-static_assert(offsetof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase, EntryPoint) == 0x000000, "Member 'BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase, K2Node_Event_EndPlayReason) == 0x000004, "Member 'BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase::K2Node_Event_EndPlayReason' has a wrong offset!");
-
-// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityCD
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AbilityBase_C_GetAbilityCD final
-{
-public:
-	double                                        cd_0;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AbilityBase_C_GetAbilityCD) == 0x000008, "Wrong alignment on BP_AbilityBase_C_GetAbilityCD");
-static_assert(sizeof(BP_AbilityBase_C_GetAbilityCD) == 0x000008, "Wrong size on BP_AbilityBase_C_GetAbilityCD");
-static_assert(offsetof(BP_AbilityBase_C_GetAbilityCD, cd_0) == 0x000000, "Member 'BP_AbilityBase_C_GetAbilityCD::cd_0' has a wrong offset!");
-
-// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityIcon
-// 0x0008 (0x0008 - 0x0000)
-struct BP_AbilityBase_C_GetAbilityIcon final
-{
-public:
-	class UTexture2D*                             Icon_0;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_AbilityBase_C_GetAbilityIcon) == 0x000008, "Wrong alignment on BP_AbilityBase_C_GetAbilityIcon");
-static_assert(sizeof(BP_AbilityBase_C_GetAbilityIcon) == 0x000008, "Wrong size on BP_AbilityBase_C_GetAbilityIcon");
-static_assert(offsetof(BP_AbilityBase_C_GetAbilityIcon, Icon_0) == 0x000000, "Member 'BP_AbilityBase_C_GetAbilityIcon::Icon_0' has a wrong offset!");
+static_assert(alignof(BP_AbilityBase_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_AbilityBase_C_ReceiveEndPlay");
+static_assert(sizeof(BP_AbilityBase_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_AbilityBase_C_ReceiveEndPlay");
+static_assert(offsetof(BP_AbilityBase_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_AbilityBase_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function BP_AbilityBase.BP_AbilityBase_C.GetGroupID
 // 0x0004 (0x0004 - 0x0000)
@@ -62,16 +38,40 @@ static_assert(alignof(BP_AbilityBase_C_GetGroupID) == 0x000004, "Wrong alignment
 static_assert(sizeof(BP_AbilityBase_C_GetGroupID) == 0x000004, "Wrong size on BP_AbilityBase_C_GetGroupID");
 static_assert(offsetof(BP_AbilityBase_C_GetGroupID, GroupID_0) == 0x000000, "Member 'BP_AbilityBase_C_GetGroupID::GroupID_0' has a wrong offset!");
 
-// Function BP_AbilityBase.BP_AbilityBase_C.ReceiveEndPlay
-// 0x0001 (0x0001 - 0x0000)
-struct BP_AbilityBase_C_ReceiveEndPlay final
+// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityIcon
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AbilityBase_C_GetAbilityIcon final
 {
 public:
-	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             Icon_0;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_AbilityBase_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_AbilityBase_C_ReceiveEndPlay");
-static_assert(sizeof(BP_AbilityBase_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_AbilityBase_C_ReceiveEndPlay");
-static_assert(offsetof(BP_AbilityBase_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_AbilityBase_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
+static_assert(alignof(BP_AbilityBase_C_GetAbilityIcon) == 0x000008, "Wrong alignment on BP_AbilityBase_C_GetAbilityIcon");
+static_assert(sizeof(BP_AbilityBase_C_GetAbilityIcon) == 0x000008, "Wrong size on BP_AbilityBase_C_GetAbilityIcon");
+static_assert(offsetof(BP_AbilityBase_C_GetAbilityIcon, Icon_0) == 0x000000, "Member 'BP_AbilityBase_C_GetAbilityIcon::Icon_0' has a wrong offset!");
+
+// Function BP_AbilityBase.BP_AbilityBase_C.GetAbilityCD
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AbilityBase_C_GetAbilityCD final
+{
+public:
+	double                                        cd_0;                                              // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AbilityBase_C_GetAbilityCD) == 0x000008, "Wrong alignment on BP_AbilityBase_C_GetAbilityCD");
+static_assert(sizeof(BP_AbilityBase_C_GetAbilityCD) == 0x000008, "Wrong size on BP_AbilityBase_C_GetAbilityCD");
+static_assert(offsetof(BP_AbilityBase_C_GetAbilityCD, cd_0) == 0x000000, "Member 'BP_AbilityBase_C_GetAbilityCD::cd_0' has a wrong offset!");
+
+// Function BP_AbilityBase.BP_AbilityBase_C.ExecuteUbergraph_BP_AbilityBase
+// 0x0008 (0x0008 - 0x0000)
+struct BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase) == 0x000004, "Wrong alignment on BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase");
+static_assert(sizeof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase) == 0x000008, "Wrong size on BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase");
+static_assert(offsetof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase, EntryPoint) == 0x000000, "Member 'BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase::EntryPoint' has a wrong offset!");
+static_assert(offsetof(BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase, K2Node_Event_EndPlayReason) == 0x000004, "Member 'BP_AbilityBase_C_ExecuteUbergraph_BP_AbilityBase::K2Node_Event_EndPlayReason' has a wrong offset!");
 
 // Function BP_AbilityBase.BP_AbilityBase_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "X6ExportRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "X6ExportRuntime_structs.hpp"
 
 
 namespace SDK

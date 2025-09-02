@@ -56,6 +56,45 @@ static_assert(sizeof(FInterchangeStackInfo) == 0x000018, "Wrong size on FInterch
 static_assert(offsetof(FInterchangeStackInfo, StackName) == 0x000000, "Member 'FInterchangeStackInfo::StackName' has a wrong offset!");
 static_assert(offsetof(FInterchangeStackInfo, Pipelines) == 0x000008, "Member 'FInterchangeStackInfo::Pipelines' has a wrong offset!");
 
+// ScriptStruct InterchangeEngine.ImportAssetParameters
+// 0x00C0 (0x00C0 - 0x0000)
+struct FImportAssetParameters final
+{
+public:
+	class UObject*                                ReimportAsset;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReimportSourceIndex;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsAutomated;                                      // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFollowRedirectors;                                // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoftObjectPath>                OverridePipelines;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class ULevel*                                 ImportLevel;                                       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DestinationName;                                   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReplaceExisting;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Object)>        OnAssetDone;                                       // 0x003C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x14];                                      // 0x004C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const TArray<class UObject*>& Objects)> OnAssetsImportDone;                       // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Object)>        OnSceneObjectDone;                                 // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const TArray<class UObject*>& Objects)> OnSceneImportDone;                        // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FImportAssetParameters) == 0x000008, "Wrong alignment on FImportAssetParameters");
+static_assert(sizeof(FImportAssetParameters) == 0x0000C0, "Wrong size on FImportAssetParameters");
+static_assert(offsetof(FImportAssetParameters, ReimportAsset) == 0x000000, "Member 'FImportAssetParameters::ReimportAsset' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, ReimportSourceIndex) == 0x000008, "Member 'FImportAssetParameters::ReimportSourceIndex' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, bIsAutomated) == 0x00000C, "Member 'FImportAssetParameters::bIsAutomated' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, bFollowRedirectors) == 0x00000D, "Member 'FImportAssetParameters::bFollowRedirectors' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, OverridePipelines) == 0x000010, "Member 'FImportAssetParameters::OverridePipelines' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, ImportLevel) == 0x000020, "Member 'FImportAssetParameters::ImportLevel' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, DestinationName) == 0x000028, "Member 'FImportAssetParameters::DestinationName' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, bReplaceExisting) == 0x000038, "Member 'FImportAssetParameters::bReplaceExisting' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, OnAssetDone) == 0x00003C, "Member 'FImportAssetParameters::OnAssetDone' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, OnAssetsImportDone) == 0x000060, "Member 'FImportAssetParameters::OnAssetsImportDone' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, OnSceneObjectDone) == 0x000080, "Member 'FImportAssetParameters::OnSceneObjectDone' has a wrong offset!");
+static_assert(offsetof(FImportAssetParameters, OnSceneImportDone) == 0x0000A0, "Member 'FImportAssetParameters::OnSceneImportDone' has a wrong offset!");
+
 // ScriptStruct InterchangeEngine.InterchangeTranslatorPipelines
 // 0x0038 (0x0038 - 0x0000)
 struct FInterchangeTranslatorPipelines final
@@ -150,45 +189,6 @@ public:
 };
 static_assert(alignof(FPropertyData) == 0x000008, "Wrong alignment on FPropertyData");
 static_assert(sizeof(FPropertyData) == 0x000018, "Wrong size on FPropertyData");
-
-// ScriptStruct InterchangeEngine.ImportAssetParameters
-// 0x00C0 (0x00C0 - 0x0000)
-struct FImportAssetParameters final
-{
-public:
-	class UObject*                                ReimportAsset;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReimportSourceIndex;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsAutomated;                                      // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFollowRedirectors;                                // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSoftObjectPath>                OverridePipelines;                                 // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class ULevel*                                 ImportLevel;                                       // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DestinationName;                                   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReplaceExisting;                                  // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Object)>        OnAssetDone;                                       // 0x003C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x14];                                      // 0x004C(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const TArray<class UObject*>& Objects)> OnAssetsImportDone;                       // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x10];                                      // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Object)>        OnSceneObjectDone;                                 // 0x0080(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x10];                                      // 0x0090(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const TArray<class UObject*>& Objects)> OnSceneImportDone;                        // 0x00A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B0[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FImportAssetParameters) == 0x000008, "Wrong alignment on FImportAssetParameters");
-static_assert(sizeof(FImportAssetParameters) == 0x0000C0, "Wrong size on FImportAssetParameters");
-static_assert(offsetof(FImportAssetParameters, ReimportAsset) == 0x000000, "Member 'FImportAssetParameters::ReimportAsset' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, ReimportSourceIndex) == 0x000008, "Member 'FImportAssetParameters::ReimportSourceIndex' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, bIsAutomated) == 0x00000C, "Member 'FImportAssetParameters::bIsAutomated' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, bFollowRedirectors) == 0x00000D, "Member 'FImportAssetParameters::bFollowRedirectors' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, OverridePipelines) == 0x000010, "Member 'FImportAssetParameters::OverridePipelines' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, ImportLevel) == 0x000020, "Member 'FImportAssetParameters::ImportLevel' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, DestinationName) == 0x000028, "Member 'FImportAssetParameters::DestinationName' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, bReplaceExisting) == 0x000038, "Member 'FImportAssetParameters::bReplaceExisting' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, OnAssetDone) == 0x00003C, "Member 'FImportAssetParameters::OnAssetDone' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, OnAssetsImportDone) == 0x000060, "Member 'FImportAssetParameters::OnAssetsImportDone' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, OnSceneObjectDone) == 0x000080, "Member 'FImportAssetParameters::OnSceneObjectDone' has a wrong offset!");
-static_assert(offsetof(FImportAssetParameters, OnSceneImportDone) == 0x0000A0, "Member 'FImportAssetParameters::OnSceneImportDone' has a wrong offset!");
 
 }
 

@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function LS_Nikki_Std_FantasyStar_Get_Rfoot.LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C.ShowRewardUI
-// (BlueprintCallable, BlueprintEvent)
-
-void ULS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C::ShowRewardUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C", "ShowRewardUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function LS_Nikki_Std_FantasyStar_Get_Rfoot.LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C.SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ULS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function LS_Nikki_Std_FantasyStar_Get_Rfoot.LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C.ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void ULS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C::ExecuteUbergraph_LS_Nikki
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function LS_Nikki_Std_FantasyStar_Get_Rfoot.LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C.SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ULS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C", "SequenceEvent__ENTRYPOINTLS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function LS_Nikki_Std_FantasyStar_Get_Rfoot.LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C.ShowRewardUI
+// (BlueprintCallable, BlueprintEvent)
+
+void ULS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C::ShowRewardUI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_Rfoot_DirectorBP_C", "ShowRewardUI");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

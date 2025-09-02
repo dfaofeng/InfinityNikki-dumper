@@ -110,6 +110,69 @@ void UPaperPSOPrecachingApplyRenderTargetSettings::UnregisterExtension()
 }
 
 
+// Function PaperStreamingRuntime.PaperPipelineStateCacheSettings.Get
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPaperPipelineStateCacheSettings* ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPaperPipelineStateCacheSettings* UPaperPipelineStateCacheSettings::Get()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PaperPipelineStateCacheSettings", "Get");
+
+	Params::PaperPipelineStateCacheSettings_Get Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperStreamingRuntime.PaperPipelineStateCacheSettings.RegisterExtension
+// (Final, Native, Public, BlueprintCallable)
+
+void UPaperPipelineStateCacheSettings::RegisterExtension()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperPipelineStateCacheSettings", "RegisterExtension");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperStreamingRuntime.PaperPipelineStateCacheSettings.UnregisterExtension
+// (Final, Native, Public, BlueprintCallable)
+
+void UPaperPipelineStateCacheSettings::UnregisterExtension()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperPipelineStateCacheSettings", "UnregisterExtension");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PaperStreamingRuntime.PaperStreamingSubsystem.GetActorLayers
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -563,6 +626,31 @@ TArray<class FName> UPaperStreamingSubsystem::GetAllSocketNames(class USceneComp
 }
 
 
+// Function PaperStreamingRuntime.PaperStreamingSubsystem.GetAvailablePhysical
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int64 UPaperStreamingSubsystem::GetAvailablePhysical()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperStreamingSubsystem", "GetAvailablePhysical");
+
+	Params::PaperStreamingSubsystem_GetAvailablePhysical Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PaperStreamingRuntime.PaperStreamingSubsystem.GetCellCollisionActiveCells
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -997,6 +1085,31 @@ bool UPaperStreamingSubsystem::GetSubLevelsByPath(class UObject* InWorldContextO
 }
 
 
+// Function PaperStreamingRuntime.PaperStreamingSubsystem.GetUsedPhysical
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int64                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int64 UPaperStreamingSubsystem::GetUsedPhysical()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperStreamingSubsystem", "GetUsedPhysical");
+
+	Params::PaperStreamingSubsystem_GetUsedPhysical Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function PaperStreamingRuntime.PaperStreamingSubsystem.HandleDetailModeComponentsPhys
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1351,6 +1464,25 @@ bool UPaperStreamingSubsystem::LoadSubLevelToWorld(const class FString& SubLevel
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function PaperStreamingRuntime.PaperStreamingSubsystem.ReInitPaperStreamingQuadTree
+// (Final, Native, Public, BlueprintCallable)
+
+void UPaperStreamingSubsystem::ReInitPaperStreamingQuadTree()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperStreamingSubsystem", "ReInitPaperStreamingQuadTree");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

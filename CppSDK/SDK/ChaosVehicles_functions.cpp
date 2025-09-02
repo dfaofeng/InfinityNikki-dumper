@@ -1074,7 +1074,7 @@ void UChaosWheeledVehicleMovementComponent::BreakWheelSnapshot(const struct FWhe
 // Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.BreakWheelStatus
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// const struct FWheelStatus&              Status                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FWheelStatus&              Status                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 // bool*                                   bInContact                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector*                         ContactPoint                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UPhysicalMaterial**               PhysMaterial                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1243,7 +1243,7 @@ struct FWheelSnapshot UChaosWheeledVehicleMovementComponent::MakeWheelSnapshot(f
 // float                                   DriveTorque                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   BrakeTorque                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bABSActivated                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FWheelStatus                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FWheelStatus                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 struct FWheelStatus UChaosWheeledVehicleMovementComponent::MakeWheelStatus(bool bInContact, struct FVector* ContactPoint, class UPhysicalMaterial* PhysMaterial, float NormalizedSuspensionLength, float SpringForce, float SlipAngle, bool bIsSlipping, float SlipMagnitude, bool bIsSkidding, float SkidMagnitude, struct FVector* SkidNormal, float DriveTorque, float BrakeTorque, bool bABSActivated)
 {
@@ -1356,6 +1356,62 @@ void UChaosWheeledVehicleMovementComponent::EnableWheelFriction(bool InState)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.GetWheelHitActorByIndex
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InWheelIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AActor* UChaosWheeledVehicleMovementComponent::GetWheelHitActorByIndex(int32 InWheelIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosWheeledVehicleMovementComponent", "GetWheelHitActorByIndex");
+
+	Params::ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex Parms{};
+
+	Parms.InWheelIndex = InWheelIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.GetWheelHitComponentByIndex
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InWheelIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPrimitiveComponent* UChaosWheeledVehicleMovementComponent::GetWheelHitComponentByIndex(int32 InWheelIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosWheeledVehicleMovementComponent", "GetWheelHitComponentByIndex");
+
+	Params::ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex Parms{};
+
+	Parms.InWheelIndex = InWheelIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -2080,7 +2136,7 @@ struct FWheeledSnaphotData UChaosWheeledVehicleMovementComponent::GetSnapshot() 
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   WheelIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FWheelStatus               ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FWheelStatus               ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 const struct FWheelStatus UChaosWheeledVehicleMovementComponent::GetWheelState(int32 WheelIndex) const
 {

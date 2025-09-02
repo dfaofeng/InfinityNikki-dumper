@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -38,9 +38,9 @@ public:
 	double                                        NoTargetSearchAngle;                               // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
-	bool K2_CanSelect(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
 	class FString GetModuleName() const;
+	bool K2_CanSelect(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
+	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
 
 public:
 	static class UClass* StaticClass()

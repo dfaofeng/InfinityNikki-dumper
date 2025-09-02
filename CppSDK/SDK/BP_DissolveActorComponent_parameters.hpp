@@ -67,17 +67,6 @@ static_assert(offsetof(BP_DissolveActorComponent_C_SetDissolve, CallFunc_Array_L
 static_assert(offsetof(BP_DissolveActorComponent_C_SetDissolve, CallFunc_Array_Get_Item) == 0x000018, "Member 'BP_DissolveActorComponent_C_SetDissolve::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(BP_DissolveActorComponent_C_SetDissolve, CallFunc_Less_IntInt_ReturnValue) == 0x000020, "Member 'BP_DissolveActorComponent_C_SetDissolve::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
-// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveTick
-// 0x0004 (0x0004 - 0x0000)
-struct BP_DissolveActorComponent_C_ReceiveTick final
-{
-public:
-	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_DissolveActorComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_DissolveActorComponent_C_ReceiveTick");
-static_assert(sizeof(BP_DissolveActorComponent_C_ReceiveTick) == 0x000004, "Wrong size on BP_DissolveActorComponent_C_ReceiveTick");
-static_assert(offsetof(BP_DissolveActorComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_DissolveActorComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
-
 // Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
 struct BP_DissolveActorComponent_C_ReceiveEndPlay final
@@ -99,6 +88,17 @@ public:
 static_assert(alignof(BP_DissolveActorComponent_C_Opacity) == 0x000001, "Wrong alignment on BP_DissolveActorComponent_C_Opacity");
 static_assert(sizeof(BP_DissolveActorComponent_C_Opacity) == 0x000001, "Wrong size on BP_DissolveActorComponent_C_Opacity");
 static_assert(offsetof(BP_DissolveActorComponent_C_Opacity, On) == 0x000000, "Member 'BP_DissolveActorComponent_C_Opacity::On' has a wrong offset!");
+
+// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveTick
+// 0x0004 (0x0004 - 0x0000)
+struct BP_DissolveActorComponent_C_ReceiveTick final
+{
+public:
+	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_DissolveActorComponent_C_ReceiveTick) == 0x000004, "Wrong alignment on BP_DissolveActorComponent_C_ReceiveTick");
+static_assert(sizeof(BP_DissolveActorComponent_C_ReceiveTick) == 0x000004, "Wrong size on BP_DissolveActorComponent_C_ReceiveTick");
+static_assert(offsetof(BP_DissolveActorComponent_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_DissolveActorComponent_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ExecuteUbergraph_BP_DissolveActorComponent
 // 0x0068 (0x0068 - 0x0000)

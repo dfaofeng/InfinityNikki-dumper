@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GA_AbilityBase_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -29,8 +29,8 @@ public:
 	class FString                                 BP_NSLocationSocket;                               // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
-	void K2_ActivateAbility();
 	void ExecuteUbergraph_GA_AbilityTargetingPreset(int32 EntryPoint);
+	void K2_ActivateAbility();
 
 	class FString GetModuleName() const;
 

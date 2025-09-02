@@ -36,6 +36,16 @@ enum class ESCCModification : uint32
 	ESCCModification_MAX                     = 4,
 };
 
+// ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FTypedElementWidgetConstructor final
+{
+public:
+	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementWidgetConstructor) == 0x000008, "Wrong alignment on FTypedElementWidgetConstructor");
+static_assert(sizeof(FTypedElementWidgetConstructor) == 0x000028, "Wrong size on FTypedElementWidgetConstructor");
+
 // ScriptStruct TypedElementFramework.TypedElementDataStorageColumn
 // 0x0000 (0x0000 - 0x0000)
 #pragma pack(push, 0x1)
@@ -46,26 +56,16 @@ struct alignas(0x01) FTypedElementDataStorageColumn
 static_assert(alignof(FTypedElementDataStorageColumn) == 0x000001, "Wrong alignment on FTypedElementDataStorageColumn");
 static_assert(sizeof(FTypedElementDataStorageColumn) == 0x000001, "Wrong size on FTypedElementDataStorageColumn");
 
-// ScriptStruct TypedElementFramework.TypedElementExternalObjectColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FTypedElementExternalObjectColumn final : public FTypedElementDataStorageColumn
+// ScriptStruct TypedElementFramework.TypedElementViewportColorColumn
+// 0x0001 (0x0001 - 0x0000)
+struct FTypedElementViewportColorColumn final : public FTypedElementDataStorageColumn
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         SelectionOutlineColorIndex;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FTypedElementExternalObjectColumn) == 0x000008, "Wrong alignment on FTypedElementExternalObjectColumn");
-static_assert(sizeof(FTypedElementExternalObjectColumn) == 0x000008, "Wrong size on FTypedElementExternalObjectColumn");
-
-// ScriptStruct TypedElementFramework.TypedElementU64IntValueCacheColumn
-// 0x0008 (0x0008 - 0x0000)
-struct FTypedElementU64IntValueCacheColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint64                                        Value;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FTypedElementU64IntValueCacheColumn) == 0x000008, "Wrong alignment on FTypedElementU64IntValueCacheColumn");
-static_assert(sizeof(FTypedElementU64IntValueCacheColumn) == 0x000008, "Wrong size on FTypedElementU64IntValueCacheColumn");
-static_assert(offsetof(FTypedElementU64IntValueCacheColumn, Value) == 0x000000, "Member 'FTypedElementU64IntValueCacheColumn::Value' has a wrong offset!");
+static_assert(alignof(FTypedElementViewportColorColumn) == 0x000001, "Wrong alignment on FTypedElementViewportColorColumn");
+static_assert(sizeof(FTypedElementViewportColorColumn) == 0x000001, "Wrong size on FTypedElementViewportColorColumn");
+static_assert(offsetof(FTypedElementViewportColorColumn, SelectionOutlineColorIndex) == 0x000000, "Member 'FTypedElementViewportColorColumn::SelectionOutlineColorIndex' has a wrong offset!");
 
 // ScriptStruct TypedElementFramework.ScriptTypedElementHandle
 // 0x0008 (0x0008 - 0x0000)
@@ -76,6 +76,16 @@ public:
 };
 static_assert(alignof(FScriptTypedElementHandle) == 0x000008, "Wrong alignment on FScriptTypedElementHandle");
 static_assert(sizeof(FScriptTypedElementHandle) == 0x000008, "Wrong size on FScriptTypedElementHandle");
+
+// ScriptStruct TypedElementFramework.TypedElementScriptStructTypeInfoColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x04) FTypedElementScriptStructTypeInfoColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementScriptStructTypeInfoColumn) == 0x000004, "Wrong alignment on FTypedElementScriptStructTypeInfoColumn");
+static_assert(sizeof(FTypedElementScriptStructTypeInfoColumn) == 0x000008, "Wrong size on FTypedElementScriptStructTypeInfoColumn");
 
 // ScriptStruct TypedElementFramework.TypedElementAlertColumn
 // 0x0020 (0x0020 - 0x0000)
@@ -112,6 +122,16 @@ public:
 static_assert(alignof(FTypedElementUObjectColumn) == 0x000004, "Wrong alignment on FTypedElementUObjectColumn");
 static_assert(sizeof(FTypedElementUObjectColumn) == 0x000008, "Wrong size on FTypedElementUObjectColumn");
 
+// ScriptStruct TypedElementFramework.TypedElementExternalObjectColumn
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FTypedElementExternalObjectColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementExternalObjectColumn) == 0x000008, "Wrong alignment on FTypedElementExternalObjectColumn");
+static_assert(sizeof(FTypedElementExternalObjectColumn) == 0x000008, "Wrong size on FTypedElementExternalObjectColumn");
+
 // ScriptStruct TypedElementFramework.TypedElementDataStorageTag
 // 0x0001 (0x0001 - 0x0000)
 struct FTypedElementDataStorageTag
@@ -121,16 +141,6 @@ public:
 };
 static_assert(alignof(FTypedElementDataStorageTag) == 0x000001, "Wrong alignment on FTypedElementDataStorageTag");
 static_assert(sizeof(FTypedElementDataStorageTag) == 0x000001, "Wrong size on FTypedElementDataStorageTag");
-
-// ScriptStruct TypedElementFramework.TypedElementWidgetConstructor
-// 0x0028 (0x0028 - 0x0000)
-struct alignas(0x08) FTypedElementWidgetConstructor final
-{
-public:
-	uint8                                         Pad_0[0x28];                                       // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTypedElementWidgetConstructor) == 0x000008, "Wrong alignment on FTypedElementWidgetConstructor");
-static_assert(sizeof(FTypedElementWidgetConstructor) == 0x000028, "Wrong size on FTypedElementWidgetConstructor");
 
 // ScriptStruct TypedElementFramework.TypedElementParentColumn
 // 0x0008 (0x0008 - 0x0000)
@@ -305,6 +315,16 @@ struct FSCCLockedTag final : public FTypedElementDataStorageTag
 static_assert(alignof(FSCCLockedTag) == 0x000001, "Wrong alignment on FSCCLockedTag");
 static_assert(sizeof(FSCCLockedTag) == 0x000001, "Wrong size on FSCCLockedTag");
 
+// ScriptStruct TypedElementFramework.TestColumnE
+// 0x0001 (0x0001 - 0x0000)
+struct FTestColumnE final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTestColumnE) == 0x000001, "Wrong alignment on FTestColumnE");
+static_assert(sizeof(FTestColumnE) == 0x000001, "Wrong size on FTestColumnE");
+
 // ScriptStruct TypedElementFramework.SCCExternallyEditedTag
 // 0x0000 (0x0001 - 0x0001)
 struct FSCCExternallyEditedTag final : public FTypedElementDataStorageTag
@@ -320,6 +340,16 @@ struct FSCCNotCurrentTag final : public FTypedElementDataStorageTag
 };
 static_assert(alignof(FSCCNotCurrentTag) == 0x000001, "Wrong alignment on FSCCNotCurrentTag");
 static_assert(sizeof(FSCCNotCurrentTag) == 0x000001, "Wrong size on FSCCNotCurrentTag");
+
+// ScriptStruct TypedElementFramework.TypedElementSlateWidgetReferenceColumn
+// 0x0020 (0x0020 - 0x0000)
+struct alignas(0x08) FTypedElementSlateWidgetReferenceColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTypedElementSlateWidgetReferenceColumn) == 0x000008, "Wrong alignment on FTypedElementSlateWidgetReferenceColumn");
+static_assert(sizeof(FTypedElementSlateWidgetReferenceColumn) == 0x000020, "Wrong size on FTypedElementSlateWidgetReferenceColumn");
 
 // ScriptStruct TypedElementFramework.SCCStatusColumn
 // 0x0004 (0x0004 - 0x0000)
@@ -365,6 +395,16 @@ static_assert(alignof(FSCCExternalRevisionIdColumn) == 0x000004, "Wrong alignmen
 static_assert(sizeof(FSCCExternalRevisionIdColumn) == 0x000014, "Wrong size on FSCCExternalRevisionIdColumn");
 static_assert(offsetof(FSCCExternalRevisionIdColumn, RevisionId) == 0x000000, "Member 'FSCCExternalRevisionIdColumn::RevisionId' has a wrong offset!");
 
+// ScriptStruct TypedElementFramework.TestColumnC
+// 0x0001 (0x0001 - 0x0000)
+struct FTestColumnC final : public FTypedElementDataStorageColumn
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTestColumnC) == 0x000001, "Wrong alignment on FTestColumnC");
+static_assert(sizeof(FTestColumnC) == 0x000001, "Wrong size on FTestColumnC");
+
 // ScriptStruct TypedElementFramework.SCCUserInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FSCCUserInfo final
@@ -398,16 +438,6 @@ static_assert(alignof(FTypedElementSelectionColumn) == 0x000004, "Wrong alignmen
 static_assert(sizeof(FTypedElementSelectionColumn) == 0x000008, "Wrong size on FTypedElementSelectionColumn");
 static_assert(offsetof(FTypedElementSelectionColumn, SelectionSet) == 0x000000, "Member 'FTypedElementSelectionColumn::SelectionSet' has a wrong offset!");
 
-// ScriptStruct TypedElementFramework.TypedElementSlateWidgetReferenceColumn
-// 0x0020 (0x0020 - 0x0000)
-struct alignas(0x08) FTypedElementSlateWidgetReferenceColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x20];                                       // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTypedElementSlateWidgetReferenceColumn) == 0x000008, "Wrong alignment on FTypedElementSlateWidgetReferenceColumn");
-static_assert(sizeof(FTypedElementSlateWidgetReferenceColumn) == 0x000020, "Wrong size on FTypedElementSlateWidgetReferenceColumn");
-
 // ScriptStruct TypedElementFramework.TypedElementSlateWidgetReferenceDeletesRowTag
 // 0x0000 (0x0001 - 0x0001)
 struct FTypedElementSlateWidgetReferenceDeletesRowTag final : public FTypedElementDataStorageTag
@@ -436,16 +466,6 @@ public:
 static_assert(alignof(FTestColumnB) == 0x000001, "Wrong alignment on FTestColumnB");
 static_assert(sizeof(FTestColumnB) == 0x000001, "Wrong size on FTestColumnB");
 
-// ScriptStruct TypedElementFramework.TestColumnC
-// 0x0001 (0x0001 - 0x0000)
-struct FTestColumnC final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTestColumnC) == 0x000001, "Wrong alignment on FTestColumnC");
-static_assert(sizeof(FTestColumnC) == 0x000001, "Wrong size on FTestColumnC");
-
 // ScriptStruct TypedElementFramework.TestColumnD
 // 0x0001 (0x0001 - 0x0000)
 struct FTestColumnD final : public FTypedElementDataStorageColumn
@@ -455,16 +475,6 @@ public:
 };
 static_assert(alignof(FTestColumnD) == 0x000001, "Wrong alignment on FTestColumnD");
 static_assert(sizeof(FTestColumnD) == 0x000001, "Wrong size on FTestColumnD");
-
-// ScriptStruct TypedElementFramework.TestColumnE
-// 0x0001 (0x0001 - 0x0000)
-struct FTestColumnE final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTestColumnE) == 0x000001, "Wrong alignment on FTestColumnE");
-static_assert(sizeof(FTestColumnE) == 0x000001, "Wrong size on FTestColumnE");
 
 // ScriptStruct TypedElementFramework.TestColumnF
 // 0x0001 (0x0001 - 0x0000)
@@ -539,16 +549,6 @@ public:
 static_assert(alignof(FTypedElementClassTypeInfoColumn) == 0x000004, "Wrong alignment on FTypedElementClassTypeInfoColumn");
 static_assert(sizeof(FTypedElementClassTypeInfoColumn) == 0x000008, "Wrong size on FTypedElementClassTypeInfoColumn");
 
-// ScriptStruct TypedElementFramework.TypedElementScriptStructTypeInfoColumn
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x04) FTypedElementScriptStructTypeInfoColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FTypedElementScriptStructTypeInfoColumn) == 0x000004, "Wrong alignment on FTypedElementScriptStructTypeInfoColumn");
-static_assert(sizeof(FTypedElementScriptStructTypeInfoColumn) == 0x000008, "Wrong size on FTypedElementScriptStructTypeInfoColumn");
-
 // ScriptStruct TypedElementFramework.TypedElementU32IntValueCacheColumn
 // 0x0004 (0x0004 - 0x0000)
 struct FTypedElementU32IntValueCacheColumn final : public FTypedElementDataStorageColumn
@@ -571,6 +571,17 @@ static_assert(alignof(FTypedElementI32IntValueCacheColumn) == 0x000004, "Wrong a
 static_assert(sizeof(FTypedElementI32IntValueCacheColumn) == 0x000004, "Wrong size on FTypedElementI32IntValueCacheColumn");
 static_assert(offsetof(FTypedElementI32IntValueCacheColumn, Value) == 0x000000, "Member 'FTypedElementI32IntValueCacheColumn::Value' has a wrong offset!");
 
+// ScriptStruct TypedElementFramework.TypedElementU64IntValueCacheColumn
+// 0x0008 (0x0008 - 0x0000)
+struct FTypedElementU64IntValueCacheColumn final : public FTypedElementDataStorageColumn
+{
+public:
+	uint64                                        Value;                                             // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FTypedElementU64IntValueCacheColumn) == 0x000008, "Wrong alignment on FTypedElementU64IntValueCacheColumn");
+static_assert(sizeof(FTypedElementU64IntValueCacheColumn) == 0x000008, "Wrong size on FTypedElementU64IntValueCacheColumn");
+static_assert(offsetof(FTypedElementU64IntValueCacheColumn, Value) == 0x000000, "Member 'FTypedElementU64IntValueCacheColumn::Value' has a wrong offset!");
+
 // ScriptStruct TypedElementFramework.TypedElementI64IntValueCacheColumn
 // 0x0008 (0x0008 - 0x0000)
 struct FTypedElementI64IntValueCacheColumn final : public FTypedElementDataStorageColumn
@@ -592,17 +603,6 @@ public:
 static_assert(alignof(FTypedElementFloatValueCacheColumn) == 0x000004, "Wrong alignment on FTypedElementFloatValueCacheColumn");
 static_assert(sizeof(FTypedElementFloatValueCacheColumn) == 0x000004, "Wrong size on FTypedElementFloatValueCacheColumn");
 static_assert(offsetof(FTypedElementFloatValueCacheColumn, Value) == 0x000000, "Member 'FTypedElementFloatValueCacheColumn::Value' has a wrong offset!");
-
-// ScriptStruct TypedElementFramework.TypedElementViewportColorColumn
-// 0x0001 (0x0001 - 0x0000)
-struct FTypedElementViewportColorColumn final : public FTypedElementDataStorageColumn
-{
-public:
-	uint8                                         SelectionOutlineColorIndex;                        // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FTypedElementViewportColorColumn) == 0x000001, "Wrong alignment on FTypedElementViewportColorColumn");
-static_assert(sizeof(FTypedElementViewportColorColumn) == 0x000001, "Wrong size on FTypedElementViewportColorColumn");
-static_assert(offsetof(FTypedElementViewportColorColumn, SelectionOutlineColorIndex) == 0x000000, "Member 'FTypedElementViewportColorColumn::SelectionOutlineColorIndex' has a wrong offset!");
 
 }
 

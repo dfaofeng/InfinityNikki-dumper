@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EHitReason_structs.hpp"
-#include "EDamagePerformanceType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_JumpToTaskTraceType_structs.hpp"
 #include "EScenarioCombatEventType_structs.hpp"
+#include "EDamagePerformanceType_structs.hpp"
+#include "EHitReason_structs.hpp"
 #include "EHitDisMoveType_structs.hpp"
 #include "EFeedBackReason_structs.hpp"
+#include "Enum_JumpToTaskTraceType_structs.hpp"
 
 
 namespace SDK
@@ -51,7 +51,7 @@ public:
 	static void BP_IsDead(class AActor* Actor, class UObject* __WorldContext, bool* IsDead);
 	static void BP_GetX6AIPerceptionComponent(class AActor* Actor, class UObject* __WorldContext, class UX6AIPerceptionComponent** X6AIPerceptionComp);
 	static void BP_GetSafeSpawnLocationsFromOffset(class AActor* OwnerActor, TArray<struct FVector2D>& OffsetLocations, double GroundHeight, double CheckLength, EDrawDebugTrace DrawDebug, class UObject* __WorldContext, TArray<struct FVector>* SafeSpawnLocation);
-	static void BP_GetRandomPoints(const struct FVector& Center, double InnerRadius, double OuterRadius, double Interval, int32 PointNum, class UObject* __WorldContext, TArray<struct FVector>* RandomPoints);
+	static void BP_GetRandomPoints(const struct FVector& Center, double InnerRadius, double OuterRadius, double interval, int32 PointNum, class UObject* __WorldContext, TArray<struct FVector>* RandomPoints);
 	static void BP_GetMonsterRangeOfBattleSq(class AActor* MonsterActor, class UObject* __WorldContext, double* RangeOfBattleSq);
 	static void BP_GetCrowdAllocatePoints(class AActor* CenterActor, TArray<class AActor*>& Actors, TArray<struct FVector>& Positions, class UObject* __WorldContext, TMap<class AActor*, struct FVector>* Results);
 	static void BP_GetActorMaxHP(class AActor* Actor, class UObject* __WorldContext, double* MaxHP);

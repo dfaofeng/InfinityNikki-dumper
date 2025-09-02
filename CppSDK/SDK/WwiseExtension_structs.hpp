@@ -74,6 +74,30 @@ enum class EX6AkAudioContext : uint8
 	EX6AkAudioContext_MAX                    = 4,
 };
 
+// ScriptStruct WwiseExtension.AkParameters
+// 0x0098 (0x0098 - 0x0000)
+struct FAkParameters final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAkAudioEvent>           AkEvent;                                           // 0x0008(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FAkExternalSourceInfo>          ExternalSources;                                   // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class UAkComponent*                           AkComponent;                                       // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bAtLocation : 1;                                   // 0x0048(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Location;                                          // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6AkAudioContext                             AudioContext;                                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x2F];                                      // 0x0069(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAkParameters) == 0x000008, "Wrong alignment on FAkParameters");
+static_assert(sizeof(FAkParameters) == 0x000098, "Wrong size on FAkParameters");
+static_assert(offsetof(FAkParameters, WorldContextObject) == 0x000000, "Member 'FAkParameters::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(FAkParameters, AkEvent) == 0x000008, "Member 'FAkParameters::AkEvent' has a wrong offset!");
+static_assert(offsetof(FAkParameters, ExternalSources) == 0x000030, "Member 'FAkParameters::ExternalSources' has a wrong offset!");
+static_assert(offsetof(FAkParameters, AkComponent) == 0x000040, "Member 'FAkParameters::AkComponent' has a wrong offset!");
+static_assert(offsetof(FAkParameters, Location) == 0x000050, "Member 'FAkParameters::Location' has a wrong offset!");
+static_assert(offsetof(FAkParameters, AudioContext) == 0x000068, "Member 'FAkParameters::AudioContext' has a wrong offset!");
+
 // ScriptStruct WwiseExtension.AkEventDebugInfo
 // 0x0010 (0x0010 - 0x0000)
 struct FAkEventDebugInfo final
@@ -87,29 +111,6 @@ static_assert(alignof(FAkEventDebugInfo) == 0x000008, "Wrong alignment on FAkEve
 static_assert(sizeof(FAkEventDebugInfo) == 0x000010, "Wrong size on FAkEventDebugInfo");
 static_assert(offsetof(FAkEventDebugInfo, EventDebugType) == 0x000000, "Member 'FAkEventDebugInfo::EventDebugType' has a wrong offset!");
 static_assert(offsetof(FAkEventDebugInfo, EventDebugProxy) == 0x000008, "Member 'FAkEventDebugInfo::EventDebugProxy' has a wrong offset!");
-
-// ScriptStruct WwiseExtension.AkParameters
-// 0x0098 (0x0098 - 0x0000)
-struct FAkParameters final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8[0x28];                                       // 0x0008(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAkExternalSourceInfo>          ExternalSources;                                   // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class UAkComponent*                           AkComponent;                                       // 0x0040(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bAtLocation : 1;                                   // 0x0048(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Location;                                          // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6AkAudioContext                             AudioContext;                                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x2F];                                      // 0x0069(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAkParameters) == 0x000008, "Wrong alignment on FAkParameters");
-static_assert(sizeof(FAkParameters) == 0x000098, "Wrong size on FAkParameters");
-static_assert(offsetof(FAkParameters, WorldContextObject) == 0x000000, "Member 'FAkParameters::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(FAkParameters, ExternalSources) == 0x000030, "Member 'FAkParameters::ExternalSources' has a wrong offset!");
-static_assert(offsetof(FAkParameters, AkComponent) == 0x000040, "Member 'FAkParameters::AkComponent' has a wrong offset!");
-static_assert(offsetof(FAkParameters, Location) == 0x000050, "Member 'FAkParameters::Location' has a wrong offset!");
-static_assert(offsetof(FAkParameters, AudioContext) == 0x000068, "Member 'FAkParameters::AudioContext' has a wrong offset!");
 
 // ScriptStruct WwiseExtension.ManagedAkEventInfo
 // 0x00B8 (0x00B8 - 0x0000)

@@ -17,27 +17,6 @@
 namespace SDK
 {
 
-// Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetCurRequiredTags
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FGameplayTagContainer*           Result                                                 (Parm, OutParm)
-
-void UGA_AbilityMontageSelector_C::GetCurRequiredTags(struct FGameplayTagContainer* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityMontageSelector_C", "GetCurRequiredTags");
-
-	Params::GA_AbilityMontageSelector_C_GetCurRequiredTags Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Result != nullptr)
-		*Result = std::move(Parms.Result);
-}
-
-
 // Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetCurBlockedTags
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -51,6 +30,27 @@ void UGA_AbilityMontageSelector_C::GetCurBlockedTags(struct FGameplayTagContaine
 		Func = Class->GetFunction("GA_AbilityMontageSelector_C", "GetCurBlockedTags");
 
 	Params::GA_AbilityMontageSelector_C_GetCurBlockedTags Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Result != nullptr)
+		*Result = std::move(Parms.Result);
+}
+
+
+// Function GA_AbilityMontageSelector.GA_AbilityMontageSelector_C.GetCurRequiredTags
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FGameplayTagContainer*           Result                                                 (Parm, OutParm)
+
+void UGA_AbilityMontageSelector_C::GetCurRequiredTags(struct FGameplayTagContainer* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AbilityMontageSelector_C", "GetCurRequiredTags");
+
+	Params::GA_AbilityMontageSelector_C_GetCurRequiredTags Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

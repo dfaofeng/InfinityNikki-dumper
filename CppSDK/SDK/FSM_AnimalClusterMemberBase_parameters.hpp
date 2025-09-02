@@ -16,16 +16,16 @@
 namespace SDK::Params
 {
 
-// Function FSM_AnimalClusterMemberBase.FSM_AnimalClusterMemberBase_C.ExecuteUbergraph_FSM_AnimalClusterMemberBase
-// 0x0004 (0x0004 - 0x0000)
-struct FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase final
+// Function FSM_AnimalClusterMemberBase.FSM_AnimalClusterMemberBase_C.OnMemberBehaviorReceived
+// 0x0060 (0x0060 - 0x0000)
+struct FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FF_AnimalClusterBehaviorAssignmentInfo AssignmentInfo;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase) == 0x000004, "Wrong alignment on FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase");
-static_assert(sizeof(FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase) == 0x000004, "Wrong size on FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase");
-static_assert(offsetof(FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase, EntryPoint) == 0x000000, "Member 'FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase::EntryPoint' has a wrong offset!");
+static_assert(alignof(FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived) == 0x000008, "Wrong alignment on FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived");
+static_assert(sizeof(FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived) == 0x000060, "Wrong size on FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived");
+static_assert(offsetof(FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived, AssignmentInfo) == 0x000000, "Member 'FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived::AssignmentInfo' has a wrong offset!");
 
 // Function FSM_AnimalClusterMemberBase.FSM_AnimalClusterMemberBase_C.OnJoinGroup
 // 0x0028 (0x0028 - 0x0000)
@@ -46,16 +46,16 @@ static_assert(offsetof(FSM_AnimalClusterMemberBase_C_OnJoinGroup, CallFunc_GetOw
 static_assert(offsetof(FSM_AnimalClusterMemberBase_C_OnJoinGroup, K2Node_DynamicCast_AsBP_Animal_Base_Complete) == 0x000018, "Member 'FSM_AnimalClusterMemberBase_C_OnJoinGroup::K2Node_DynamicCast_AsBP_Animal_Base_Complete' has a wrong offset!");
 static_assert(offsetof(FSM_AnimalClusterMemberBase_C_OnJoinGroup, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'FSM_AnimalClusterMemberBase_C_OnJoinGroup::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
-// Function FSM_AnimalClusterMemberBase.FSM_AnimalClusterMemberBase_C.OnMemberBehaviorReceived
-// 0x0060 (0x0060 - 0x0000)
-struct FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived final
+// Function FSM_AnimalClusterMemberBase.FSM_AnimalClusterMemberBase_C.ExecuteUbergraph_FSM_AnimalClusterMemberBase
+// 0x0004 (0x0004 - 0x0000)
+struct FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase final
 {
 public:
-	struct FF_AnimalClusterBehaviorAssignmentInfo AssignmentInfo;                                    // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived) == 0x000008, "Wrong alignment on FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived");
-static_assert(sizeof(FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived) == 0x000060, "Wrong size on FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived");
-static_assert(offsetof(FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived, AssignmentInfo) == 0x000000, "Member 'FSM_AnimalClusterMemberBase_C_OnMemberBehaviorReceived::AssignmentInfo' has a wrong offset!");
+static_assert(alignof(FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase) == 0x000004, "Wrong alignment on FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase");
+static_assert(sizeof(FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase) == 0x000004, "Wrong size on FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase");
+static_assert(offsetof(FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase, EntryPoint) == 0x000000, "Member 'FSM_AnimalClusterMemberBase_C_ExecuteUbergraph_FSM_AnimalClusterMemberBase::EntryPoint' has a wrong offset!");
 
 }
 

@@ -11,11 +11,71 @@
 #include "Basic.hpp"
 
 #include "SlateCore_structs.hpp"
+#include "PSDKBasic_classes.hpp"
 #include "UMG_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class PSDKLogin.PSdkDeleteLoginCacheConfirmUI
+// 0x00A0 (0x0400 - 0x0360)
+class UPSdkDeleteLoginCacheConfirmUI final : public UPSdkUIBaseWidget
+{
+public:
+	uint8                                         Pad_360[0x20];                                     // 0x0360(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTextBlock*                             TitleTextBlock;                                    // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCheckBox*                              OneCheckBox;                                       // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             OneTextBlockTitle;                                 // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             OneTextBlockContent;                               // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCheckBox*                              TwoCheckBox;                                       // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             TwoTextBlockTitle;                                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             TwoTextBlockContent;                               // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCheckBox*                              NotRemindCheckBox;                                 // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             NotRemindTextBlock;                                // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             CancelButtonTextBlock;                             // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             CommitButtonTextBlock;                             // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                CommitButton;                                      // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             PadKeySelectTextBlock;                             // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             PadKeyCloseTextBlock;                              // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F0[0x10];                                     // 0x03F0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnCancelButton();
+	void OnCloseButton();
+	void OnCommitButton(const bool ClearLoginCache, const bool NotRemindAgain);
+	void OnNotRemindButton();
+	void OnOneButton();
+	void OnOneCheckedButton(const bool Checked);
+	void OnTwoButton();
+	void OnTwoCheckedButton(const bool Checked);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PSdkDeleteLoginCacheConfirmUI">();
+	}
+	static class UPSdkDeleteLoginCacheConfirmUI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPSdkDeleteLoginCacheConfirmUI>();
+	}
+};
+static_assert(alignof(UPSdkDeleteLoginCacheConfirmUI) == 0x000008, "Wrong alignment on UPSdkDeleteLoginCacheConfirmUI");
+static_assert(sizeof(UPSdkDeleteLoginCacheConfirmUI) == 0x000400, "Wrong size on UPSdkDeleteLoginCacheConfirmUI");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, TitleTextBlock) == 0x000380, "Member 'UPSdkDeleteLoginCacheConfirmUI::TitleTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, OneCheckBox) == 0x000388, "Member 'UPSdkDeleteLoginCacheConfirmUI::OneCheckBox' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, OneTextBlockTitle) == 0x000390, "Member 'UPSdkDeleteLoginCacheConfirmUI::OneTextBlockTitle' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, OneTextBlockContent) == 0x000398, "Member 'UPSdkDeleteLoginCacheConfirmUI::OneTextBlockContent' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, TwoCheckBox) == 0x0003A0, "Member 'UPSdkDeleteLoginCacheConfirmUI::TwoCheckBox' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, TwoTextBlockTitle) == 0x0003A8, "Member 'UPSdkDeleteLoginCacheConfirmUI::TwoTextBlockTitle' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, TwoTextBlockContent) == 0x0003B0, "Member 'UPSdkDeleteLoginCacheConfirmUI::TwoTextBlockContent' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, NotRemindCheckBox) == 0x0003B8, "Member 'UPSdkDeleteLoginCacheConfirmUI::NotRemindCheckBox' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, NotRemindTextBlock) == 0x0003C0, "Member 'UPSdkDeleteLoginCacheConfirmUI::NotRemindTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, CancelButtonTextBlock) == 0x0003C8, "Member 'UPSdkDeleteLoginCacheConfirmUI::CancelButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, CommitButtonTextBlock) == 0x0003D0, "Member 'UPSdkDeleteLoginCacheConfirmUI::CommitButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, CommitButton) == 0x0003D8, "Member 'UPSdkDeleteLoginCacheConfirmUI::CommitButton' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, PadKeySelectTextBlock) == 0x0003E0, "Member 'UPSdkDeleteLoginCacheConfirmUI::PadKeySelectTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkDeleteLoginCacheConfirmUI, PadKeyCloseTextBlock) == 0x0003E8, "Member 'UPSdkDeleteLoginCacheConfirmUI::PadKeyCloseTextBlock' has a wrong offset!");
 
 // Class PSDKLogin.PSdkHyperlinkDecorator
 // 0x0758 (0x0780 - 0x0028)
@@ -41,6 +101,101 @@ public:
 static_assert(alignof(UPSdkHyperlinkDecorator) == 0x000010, "Wrong alignment on UPSdkHyperlinkDecorator");
 static_assert(sizeof(UPSdkHyperlinkDecorator) == 0x000780, "Wrong size on UPSdkHyperlinkDecorator");
 static_assert(offsetof(UPSdkHyperlinkDecorator, m_Style) == 0x000030, "Member 'UPSdkHyperlinkDecorator::m_Style' has a wrong offset!");
+
+// Class PSDKLogin.PSdkLoginBaseUI
+// 0x0038 (0x0398 - 0x0360)
+class UPSdkLoginBaseUI : public UPSdkUIBaseWidget
+{
+public:
+	uint8                                         Pad_360[0x38];                                     // 0x0360(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PSdkLoginBaseUI">();
+	}
+	static class UPSdkLoginBaseUI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPSdkLoginBaseUI>();
+	}
+};
+static_assert(alignof(UPSdkLoginBaseUI) == 0x000008, "Wrong alignment on UPSdkLoginBaseUI");
+static_assert(sizeof(UPSdkLoginBaseUI) == 0x000398, "Wrong size on UPSdkLoginBaseUI");
+
+// Class PSDKLogin.PSdkLoginUISubscribe
+// 0x0080 (0x0418 - 0x0398)
+class UPSdkLoginUISubscribe final : public UPSdkLoginBaseUI
+{
+public:
+	class UTextBlock*                             ContentTextBlock;                                  // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             EmailTextBlock;                                    // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                SubscribeButton;                                   // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             SubscribeButtonTextBlock;                          // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                CancelButton;                                      // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             CancelButtonTextBlock;                             // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             PadConfirmName;                                    // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             PadCancelName;                                     // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D8[0x40];                                     // 0x03D8(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnCancelButtonClicked();
+	void OnCancelButtonHovered();
+	void OnCancelButtonPressed();
+	void OnCancelButtonReleased();
+	void OnCancelButtonUnhovered();
+	void OnSubscribeButtonReleased();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PSdkLoginUISubscribe">();
+	}
+	static class UPSdkLoginUISubscribe* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPSdkLoginUISubscribe>();
+	}
+};
+static_assert(alignof(UPSdkLoginUISubscribe) == 0x000008, "Wrong alignment on UPSdkLoginUISubscribe");
+static_assert(sizeof(UPSdkLoginUISubscribe) == 0x000418, "Wrong size on UPSdkLoginUISubscribe");
+static_assert(offsetof(UPSdkLoginUISubscribe, ContentTextBlock) == 0x000398, "Member 'UPSdkLoginUISubscribe::ContentTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, EmailTextBlock) == 0x0003A0, "Member 'UPSdkLoginUISubscribe::EmailTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, SubscribeButton) == 0x0003A8, "Member 'UPSdkLoginUISubscribe::SubscribeButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, SubscribeButtonTextBlock) == 0x0003B0, "Member 'UPSdkLoginUISubscribe::SubscribeButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, CancelButton) == 0x0003B8, "Member 'UPSdkLoginUISubscribe::CancelButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, CancelButtonTextBlock) == 0x0003C0, "Member 'UPSdkLoginUISubscribe::CancelButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, PadConfirmName) == 0x0003C8, "Member 'UPSdkLoginUISubscribe::PadConfirmName' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribe, PadCancelName) == 0x0003D0, "Member 'UPSdkLoginUISubscribe::PadCancelName' has a wrong offset!");
+
+// Class PSDKLogin.PSdkLoginUISubscribeRefuse
+// 0x0030 (0x03C8 - 0x0398)
+class UPSdkLoginUISubscribeRefuse final : public UPSdkLoginBaseUI
+{
+public:
+	class UTextBlock*                             ContentTextBlock;                                  // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                OkButton;                                          // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             OkButtonTextBlock;                                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             PadConfirmName;                                    // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B8[0x10];                                     // 0x03B8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnOkButton();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PSdkLoginUISubscribeRefuse">();
+	}
+	static class UPSdkLoginUISubscribeRefuse* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPSdkLoginUISubscribeRefuse>();
+	}
+};
+static_assert(alignof(UPSdkLoginUISubscribeRefuse) == 0x000008, "Wrong alignment on UPSdkLoginUISubscribeRefuse");
+static_assert(sizeof(UPSdkLoginUISubscribeRefuse) == 0x0003C8, "Wrong size on UPSdkLoginUISubscribeRefuse");
+static_assert(offsetof(UPSdkLoginUISubscribeRefuse, ContentTextBlock) == 0x000398, "Member 'UPSdkLoginUISubscribeRefuse::ContentTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribeRefuse, OkButton) == 0x0003A0, "Member 'UPSdkLoginUISubscribeRefuse::OkButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribeRefuse, OkButtonTextBlock) == 0x0003A8, "Member 'UPSdkLoginUISubscribeRefuse::OkButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUISubscribeRefuse, PadConfirmName) == 0x0003B0, "Member 'UPSdkLoginUISubscribeRefuse::PadConfirmName' has a wrong offset!");
 
 }
 

@@ -17,27 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.BP_CreateProgressMat
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bConsole                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UMaterialInstanceDynamic**        Mat                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_SingleKey_C::BP_CreateProgressMat(bool bConsole, class UMaterialInstanceDynamic** Mat)
+void UWBP_UI_Common_SingleKey_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_SingleKey_C", "BP_CreateProgressMat");
+		Func = Class->GetFunction("WBP_UI_Common_SingleKey_C", "PreConstruct");
 
-	Params::WBP_UI_Common_SingleKey_C_BP_CreateProgressMat Parms{};
+	Params::WBP_UI_Common_SingleKey_C_PreConstruct Parms{};
 
-	Parms.bConsole = bConsole;
+	Parms.IsDesignTime = IsDesignTime;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (Mat != nullptr)
-		*Mat = Parms.Mat;
 }
 
 
@@ -61,23 +57,27 @@ void UWBP_UI_Common_SingleKey_C::ExecuteUbergraph_WBP_UI_Common_SingleKey(int32 
 }
 
 
-// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.BP_CreateProgressMat
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bConsole                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstanceDynamic**        Mat                                                    (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_SingleKey_C::PreConstruct(bool IsDesignTime)
+void UWBP_UI_Common_SingleKey_C::BP_CreateProgressMat(bool bConsole, class UMaterialInstanceDynamic** Mat)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_SingleKey_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_UI_Common_SingleKey_C", "BP_CreateProgressMat");
 
-	Params::WBP_UI_Common_SingleKey_C_PreConstruct Parms{};
+	Params::WBP_UI_Common_SingleKey_C_BP_CreateProgressMat Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
+	Parms.bConsole = bConsole;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (Mat != nullptr)
+		*Mat = Parms.Mat;
 }
 
 

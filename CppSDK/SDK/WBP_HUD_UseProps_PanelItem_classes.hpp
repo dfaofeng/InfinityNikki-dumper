@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
@@ -63,11 +63,11 @@ public:
 	float                                         InUserSpecifiedScale;                              // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_WBP_HUD_UseProps_PanelItem(int32 EntryPoint);
-	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__WBP_HUD_UseProps_PanelItem_Mobile_Button_Item_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_UseProps_PanelItem_PC_Button_Item_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
+	void ExecuteUbergraph_WBP_HUD_UseProps_PanelItem(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 

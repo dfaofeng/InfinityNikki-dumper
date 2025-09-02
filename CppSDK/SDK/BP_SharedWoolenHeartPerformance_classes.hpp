@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "F_SharedWoolenHeartConfig_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "F_SharedWoolenHeartConfig_structs.hpp"
 #include "EWoolenHeartEMVersion_structs.hpp"
 #include "X6Game_classes.hpp"
 
@@ -21,43 +21,43 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SharedWoolenHeartPerformance.BP_SharedWoolenHeartPerformance_C
-// 0x00C0 (0x04F8 - 0x0438)
+// 0x00C0 (0x0548 - 0x0488)
 class ABP_SharedWoolenHeartPerformance_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class URotatingMovementComponent*             RotatingMovement;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyUpTimeline_VerticalInterp_1C536A9E4147581B7C41DAB3DBBF1218; // 0x0450(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyUpTimeline_RotateSpeed_1C536A9E4147581B7C41DAB3DBBF1218; // 0x0454(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyUpTimeline_Scale_1C536A9E4147581B7C41DAB3DBBF1218; // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyUpTimeline_VerticalTranslation_1C536A9E4147581B7C41DAB3DBBF1218; // 0x045C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FlyUpTimeline_HorizontalInterp_1C536A9E4147581B7C41DAB3DBBF1218; // 0x0460(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            FlyUpTimeline__Direction_1C536A9E4147581B7C41DAB3DBBF1218; // 0x0464(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_465[0x3];                                      // 0x0465(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     FlyUpTimeline;                                     // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         BP_FlyingNS;                                       // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         BP_FinishNS;                                       // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UBP_WoolenHeartSimulatedLSeqConfig_C*   BP_PerformanceDA;                                  // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      FlyingNSCompAttached;                              // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BP_InitLocation;                                   // 0x0490(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 BP_TargetPlayer;                                   // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        GravityScale;                                      // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        GravityScaleAcceptHeight;                          // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FF_SharedWoolenHeartConfig             SharedWoolenHeartConfig;                           // 0x04C0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FF_SharedWoolenHeartConfig             ExternalConfig;                                    // 0x04D8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EWoolenHeartEMVersion                         EMVersion;                                         // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class URotatingMovementComponent*             RotatingMovement;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyUpTimeline_VerticalInterp_1C536A9E4147581B7C41DAB3DBBF1218; // 0x04A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyUpTimeline_RotateSpeed_1C536A9E4147581B7C41DAB3DBBF1218; // 0x04A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyUpTimeline_Scale_1C536A9E4147581B7C41DAB3DBBF1218; // 0x04A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyUpTimeline_VerticalTranslation_1C536A9E4147581B7C41DAB3DBBF1218; // 0x04AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FlyUpTimeline_HorizontalInterp_1C536A9E4147581B7C41DAB3DBBF1218; // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            FlyUpTimeline__Direction_1C536A9E4147581B7C41DAB3DBBF1218; // 0x04B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B5[0x3];                                      // 0x04B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     FlyUpTimeline;                                     // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         BP_FlyingNS;                                       // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         BP_FinishNS;                                       // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UBP_WoolenHeartSimulatedLSeqConfig_C*   BP_PerformanceDA;                                  // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      FlyingNSCompAttached;                              // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BP_InitLocation;                                   // 0x04E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 BP_TargetPlayer;                                   // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        GravityScale;                                      // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        GravityScaleAcceptHeight;                          // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FF_SharedWoolenHeartConfig             SharedWoolenHeartConfig;                           // 0x0510(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FF_SharedWoolenHeartConfig             ExternalConfig;                                    // 0x0528(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EWoolenHeartEMVersion                         EMVersion;                                         // 0x0540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void FlyUpTimeline__UpdateFunc();
-	void FlyUpTimeline__FinishedFunc();
-	void FlyUpTimeline__1__EventFunc();
-	void ExecuteUbergraph_BP_SharedWoolenHeartPerformance(int32 EntryPoint);
-	void ChangeGravityScale();
-	void BP_Init(class AActor* InTargetPlayer, EWoolenHeartEMVersion EMVersion_0, class UStaticMesh* mesh, const struct FF_SharedWoolenHeartConfig& SharedWoolenHeartConfig_0);
-	void BP_FireEventStartRewardUI();
-	void BP_FinishFlyToPlayerPerformance();
 	void BP_Deinit();
+	void BP_FinishFlyToPlayerPerformance();
+	void BP_FireEventStartRewardUI();
+	void BP_Init(class AActor* InTargetPlayer, EWoolenHeartEMVersion EMVersion_0, class UStaticMesh* mesh, const struct FF_SharedWoolenHeartConfig& SharedWoolenHeartConfig_0);
+	void ChangeGravityScale();
+	void ExecuteUbergraph_BP_SharedWoolenHeartPerformance(int32 EntryPoint);
+	void FlyUpTimeline__1__EventFunc();
+	void FlyUpTimeline__FinishedFunc();
+	void FlyUpTimeline__UpdateFunc();
 
 	class FString GetModuleName() const;
 
@@ -72,28 +72,28 @@ public:
 	}
 };
 static_assert(alignof(ABP_SharedWoolenHeartPerformance_C) == 0x000008, "Wrong alignment on ABP_SharedWoolenHeartPerformance_C");
-static_assert(sizeof(ABP_SharedWoolenHeartPerformance_C) == 0x0004F8, "Wrong size on ABP_SharedWoolenHeartPerformance_C");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, UberGraphFrame) == 0x000438, "Member 'ABP_SharedWoolenHeartPerformance_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, StaticMesh) == 0x000440, "Member 'ABP_SharedWoolenHeartPerformance_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, RotatingMovement) == 0x000448, "Member 'ABP_SharedWoolenHeartPerformance_C::RotatingMovement' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_VerticalInterp_1C536A9E4147581B7C41DAB3DBBF1218) == 0x000450, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_VerticalInterp_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_RotateSpeed_1C536A9E4147581B7C41DAB3DBBF1218) == 0x000454, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_RotateSpeed_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_Scale_1C536A9E4147581B7C41DAB3DBBF1218) == 0x000458, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_Scale_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_VerticalTranslation_1C536A9E4147581B7C41DAB3DBBF1218) == 0x00045C, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_VerticalTranslation_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_HorizontalInterp_1C536A9E4147581B7C41DAB3DBBF1218) == 0x000460, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_HorizontalInterp_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline__Direction_1C536A9E4147581B7C41DAB3DBBF1218) == 0x000464, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline__Direction_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline) == 0x000468, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_FlyingNS) == 0x000470, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_FlyingNS' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_FinishNS) == 0x000478, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_FinishNS' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_PerformanceDA) == 0x000480, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_PerformanceDA' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyingNSCompAttached) == 0x000488, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyingNSCompAttached' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_InitLocation) == 0x000490, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_InitLocation' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_TargetPlayer) == 0x0004A8, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_TargetPlayer' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, GravityScale) == 0x0004B0, "Member 'ABP_SharedWoolenHeartPerformance_C::GravityScale' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, GravityScaleAcceptHeight) == 0x0004B8, "Member 'ABP_SharedWoolenHeartPerformance_C::GravityScaleAcceptHeight' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, SharedWoolenHeartConfig) == 0x0004C0, "Member 'ABP_SharedWoolenHeartPerformance_C::SharedWoolenHeartConfig' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, ExternalConfig) == 0x0004D8, "Member 'ABP_SharedWoolenHeartPerformance_C::ExternalConfig' has a wrong offset!");
-static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, EMVersion) == 0x0004F0, "Member 'ABP_SharedWoolenHeartPerformance_C::EMVersion' has a wrong offset!");
+static_assert(sizeof(ABP_SharedWoolenHeartPerformance_C) == 0x000548, "Wrong size on ABP_SharedWoolenHeartPerformance_C");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, UberGraphFrame) == 0x000488, "Member 'ABP_SharedWoolenHeartPerformance_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, StaticMesh) == 0x000490, "Member 'ABP_SharedWoolenHeartPerformance_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, RotatingMovement) == 0x000498, "Member 'ABP_SharedWoolenHeartPerformance_C::RotatingMovement' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_VerticalInterp_1C536A9E4147581B7C41DAB3DBBF1218) == 0x0004A0, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_VerticalInterp_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_RotateSpeed_1C536A9E4147581B7C41DAB3DBBF1218) == 0x0004A4, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_RotateSpeed_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_Scale_1C536A9E4147581B7C41DAB3DBBF1218) == 0x0004A8, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_Scale_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_VerticalTranslation_1C536A9E4147581B7C41DAB3DBBF1218) == 0x0004AC, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_VerticalTranslation_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline_HorizontalInterp_1C536A9E4147581B7C41DAB3DBBF1218) == 0x0004B0, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline_HorizontalInterp_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline__Direction_1C536A9E4147581B7C41DAB3DBBF1218) == 0x0004B4, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline__Direction_1C536A9E4147581B7C41DAB3DBBF1218' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyUpTimeline) == 0x0004B8, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyUpTimeline' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_FlyingNS) == 0x0004C0, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_FlyingNS' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_FinishNS) == 0x0004C8, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_FinishNS' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_PerformanceDA) == 0x0004D0, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_PerformanceDA' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, FlyingNSCompAttached) == 0x0004D8, "Member 'ABP_SharedWoolenHeartPerformance_C::FlyingNSCompAttached' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_InitLocation) == 0x0004E0, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_InitLocation' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, BP_TargetPlayer) == 0x0004F8, "Member 'ABP_SharedWoolenHeartPerformance_C::BP_TargetPlayer' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, GravityScale) == 0x000500, "Member 'ABP_SharedWoolenHeartPerformance_C::GravityScale' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, GravityScaleAcceptHeight) == 0x000508, "Member 'ABP_SharedWoolenHeartPerformance_C::GravityScaleAcceptHeight' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, SharedWoolenHeartConfig) == 0x000510, "Member 'ABP_SharedWoolenHeartPerformance_C::SharedWoolenHeartConfig' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, ExternalConfig) == 0x000528, "Member 'ABP_SharedWoolenHeartPerformance_C::ExternalConfig' has a wrong offset!");
+static_assert(offsetof(ABP_SharedWoolenHeartPerformance_C, EMVersion) == 0x000540, "Member 'ABP_SharedWoolenHeartPerformance_C::EMVersion' has a wrong offset!");
 
 }
 

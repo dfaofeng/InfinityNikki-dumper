@@ -12,8 +12,8 @@
 
 #include "CoreUObject_structs.hpp"
 #include "F_Weapon_structs.hpp"
-#include "F_HandObjInfo_structs.hpp"
 #include "F_WeaponNiagara_structs.hpp"
+#include "F_HandObjInfo_structs.hpp"
 #include "EInt32_WeaponEquipAnimType_structs.hpp"
 #include "X6Game_classes.hpp"
 

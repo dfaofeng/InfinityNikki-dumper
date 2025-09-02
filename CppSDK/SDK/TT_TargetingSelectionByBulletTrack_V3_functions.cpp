@@ -17,25 +17,23 @@
 namespace SDK
 {
 
-// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.SelectTargets
+// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.GetModuleName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
-// const struct FTargetingSourceContext&   SourceContext                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
-void UTT_TargetingSelectionByBulletTrack_V3_C::SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const
+class FString UTT_TargetingSelectionByBulletTrack_V3_C::GetModuleName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionByBulletTrack_V3_C", "SelectTargets");
+		Func = Class->GetFunction("TT_TargetingSelectionByBulletTrack_V3_C", "GetModuleName");
 
-	Params::TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets Parms{};
-
-	Parms.TargetingHandle = std::move(TargetingHandle);
-	Parms.SourceContext = std::move(SourceContext);
+	Params::TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -64,23 +62,25 @@ bool UTT_TargetingSelectionByBulletTrack_V3_C::K2_CanSelect(const struct FTarget
 }
 
 
-// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.GetModuleName
+// Function TT_TargetingSelectionByBulletTrack_V3.TT_TargetingSelectionByBulletTrack_V3_C.SelectTargets
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+// const struct FTargetingRequestHandle&   TargetingHandle                                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+// const struct FTargetingSourceContext&   SourceContext                                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-class FString UTT_TargetingSelectionByBulletTrack_V3_C::GetModuleName() const
+void UTT_TargetingSelectionByBulletTrack_V3_C::SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("TT_TargetingSelectionByBulletTrack_V3_C", "GetModuleName");
+		Func = Class->GetFunction("TT_TargetingSelectionByBulletTrack_V3_C", "SelectTargets");
 
-	Params::TT_TargetingSelectionByBulletTrack_V3_C_GetModuleName Parms{};
+	Params::TT_TargetingSelectionByBulletTrack_V3_C_SelectTargets Parms{};
+
+	Parms.TargetingHandle = std::move(TargetingHandle);
+	Parms.SourceContext = std::move(SourceContext);
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 }

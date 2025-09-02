@@ -17,31 +17,55 @@
 namespace SDK
 {
 
-// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
+// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.Lua_EndOverlap
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_PhotographDailyAttendanceArea_C::BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_PhotographDailyAttendanceArea_C::Lua_EndOverlap()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
+		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "Lua_EndOverlap");
 
-	Params::BP_PhotographDailyAttendanceArea_C_BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
-	Parms.bFromSweep = bFromSweep;
-	Parms.SweepResult = std::move(SweepResult);
+
+// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.Lua_BeginOverlap
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CheckInID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PhotographDailyAttendanceArea_C::Lua_BeginOverlap(int32 CheckInID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "Lua_BeginOverlap");
+
+	Params::BP_PhotographDailyAttendanceArea_C_Lua_BeginOverlap Parms{};
+
+	Parms.CheckInID = CheckInID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.ExecuteUbergraph_BP_PhotographDailyAttendanceArea
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_PhotographDailyAttendanceArea_C::ExecuteUbergraph_BP_PhotographDailyAttendanceArea(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "ExecuteUbergraph_BP_PhotographDailyAttendanceArea");
+
+	Params::BP_PhotographDailyAttendanceArea_C_ExecuteUbergraph_BP_PhotographDailyAttendanceArea Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -73,57 +97,33 @@ void ABP_PhotographDailyAttendanceArea_C::BndEvt__BP_PhotographDailyAttendanceAr
 }
 
 
-// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.ExecuteUbergraph_BP_PhotographDailyAttendanceArea
-// (Final, UbergraphFunction, HasDefaults)
+// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
+// (HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFromSweep                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FHitResult&                SweepResult                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 
-void ABP_PhotographDailyAttendanceArea_C::ExecuteUbergraph_BP_PhotographDailyAttendanceArea(int32 EntryPoint)
+void ABP_PhotographDailyAttendanceArea_C::BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "ExecuteUbergraph_BP_PhotographDailyAttendanceArea");
+		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
-	Params::BP_PhotographDailyAttendanceArea_C_ExecuteUbergraph_BP_PhotographDailyAttendanceArea Parms{};
+	Params::BP_PhotographDailyAttendanceArea_C_BndEvt__BP_PhotographDailyAttendanceArea_CameraShootingPositionCollision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.SweepResult = std::move(SweepResult);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.Lua_BeginOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CheckInID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_PhotographDailyAttendanceArea_C::Lua_BeginOverlap(int32 CheckInID)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "Lua_BeginOverlap");
-
-	Params::BP_PhotographDailyAttendanceArea_C_Lua_BeginOverlap Parms{};
-
-	Parms.CheckInID = CheckInID;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_PhotographDailyAttendanceArea.BP_PhotographDailyAttendanceArea_C.Lua_EndOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_PhotographDailyAttendanceArea_C::Lua_EndOverlap()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_PhotographDailyAttendanceArea_C", "Lua_EndOverlap");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

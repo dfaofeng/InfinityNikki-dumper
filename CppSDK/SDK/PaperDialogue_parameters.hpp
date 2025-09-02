@@ -262,6 +262,17 @@ static_assert(offsetof(PaperDialogueBPLibrary_PlayDialogueStage, bEnableOverride
 static_assert(offsetof(PaperDialogueBPLibrary_PlayDialogueStage, bAttachBindActorToSequence) == 0x0000E3, "Member 'PaperDialogueBPLibrary_PlayDialogueStage::bAttachBindActorToSequence' has a wrong offset!");
 static_assert(offsetof(PaperDialogueBPLibrary_PlayDialogueStage, ReturnValue) == 0x0000E8, "Member 'PaperDialogueBPLibrary_PlayDialogueStage::ReturnValue' has a wrong offset!");
 
+// Function PaperDialogue.PaperDialogueControllerComponent.JumpToLastDialogueNode
+// 0x0001 (0x0001 - 0x0000)
+struct PaperDialogueControllerComponent_JumpToLastDialogueNode final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperDialogueControllerComponent_JumpToLastDialogueNode) == 0x000001, "Wrong alignment on PaperDialogueControllerComponent_JumpToLastDialogueNode");
+static_assert(sizeof(PaperDialogueControllerComponent_JumpToLastDialogueNode) == 0x000001, "Wrong size on PaperDialogueControllerComponent_JumpToLastDialogueNode");
+static_assert(offsetof(PaperDialogueControllerComponent_JumpToLastDialogueNode, ReturnValue) == 0x000000, "Member 'PaperDialogueControllerComponent_JumpToLastDialogueNode::ReturnValue' has a wrong offset!");
+
 // Function PaperDialogue.PaperDialogueSequenceActor.AddBindingBySlotIndex
 // 0x0010 (0x0010 - 0x0000)
 struct PaperDialogueSequenceActor_AddBindingBySlotIndex final
@@ -725,7 +736,7 @@ static_assert(sizeof(PaperDialogueUserWidget_OnPlayLevelSequenceNodeEnd) == 0x00
 static_assert(offsetof(PaperDialogueUserWidget_OnPlayLevelSequenceNodeEnd, UId) == 0x000000, "Member 'PaperDialogueUserWidget_OnPlayLevelSequenceNodeEnd::UId' has a wrong offset!");
 
 // Function PaperDialogue.PaperDialogueUserWidget.OnPlayMenuItems
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct PaperDialogueUserWidget_OnPlayMenuItems final
 {
 public:
@@ -734,16 +745,20 @@ public:
 	bool                                          bChoiceSlot;                                       // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   SpecialUIWidgetType;                               // 0x0014(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperDialogueChoiceLineConfig> DialogueChoices;                                   // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bNeedNotifyServer;                                 // 0x001C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ImportantChoiceTipID;                              // 0x0020(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPaperDialogueChoiceLineConfig> DialogueChoices;                                   // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PaperDialogueUserWidget_OnPlayMenuItems) == 0x000008, "Wrong alignment on PaperDialogueUserWidget_OnPlayMenuItems");
-static_assert(sizeof(PaperDialogueUserWidget_OnPlayMenuItems) == 0x000030, "Wrong size on PaperDialogueUserWidget_OnPlayMenuItems");
+static_assert(sizeof(PaperDialogueUserWidget_OnPlayMenuItems) == 0x000038, "Wrong size on PaperDialogueUserWidget_OnPlayMenuItems");
 static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, UId) == 0x000000, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::UId' has a wrong offset!");
 static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, ChoiceHubName) == 0x000008, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::ChoiceHubName' has a wrong offset!");
 static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, bChoiceSlot) == 0x000010, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::bChoiceSlot' has a wrong offset!");
 static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, SpecialUIWidgetType) == 0x000014, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::SpecialUIWidgetType' has a wrong offset!");
-static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, DialogueChoices) == 0x000020, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::DialogueChoices' has a wrong offset!");
+static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, bNeedNotifyServer) == 0x00001C, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::bNeedNotifyServer' has a wrong offset!");
+static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, ImportantChoiceTipID) == 0x000020, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::ImportantChoiceTipID' has a wrong offset!");
+static_assert(offsetof(PaperDialogueUserWidget_OnPlayMenuItems, DialogueChoices) == 0x000028, "Member 'PaperDialogueUserWidget_OnPlayMenuItems::DialogueChoices' has a wrong offset!");
 
 // Function PaperDialogue.PaperDialogueUserWidget.OnPlayOutputNode
 // 0x0008 (0x0008 - 0x0000)

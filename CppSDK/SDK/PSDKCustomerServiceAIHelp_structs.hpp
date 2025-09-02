@@ -46,14 +46,14 @@ static_assert(offsetof(FBackendDataStoreResponseTicketData, valid_seconds) == 0x
 struct FBackendDataStoreResponse final : public FJsonData
 {
 public:
-	int32                                         Code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         code;                                              // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Info;                                              // 0x00C0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBackendDataStoreResponseTicketData    Data;                                              // 0x00D0(0x00D0)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FBackendDataStoreResponse) == 0x000008, "Wrong alignment on FBackendDataStoreResponse");
 static_assert(sizeof(FBackendDataStoreResponse) == 0x0001A0, "Wrong size on FBackendDataStoreResponse");
-static_assert(offsetof(FBackendDataStoreResponse, Code) == 0x0000B8, "Member 'FBackendDataStoreResponse::Code' has a wrong offset!");
+static_assert(offsetof(FBackendDataStoreResponse, code) == 0x0000B8, "Member 'FBackendDataStoreResponse::code' has a wrong offset!");
 static_assert(offsetof(FBackendDataStoreResponse, Info) == 0x0000C0, "Member 'FBackendDataStoreResponse::Info' has a wrong offset!");
 static_assert(offsetof(FBackendDataStoreResponse, Data) == 0x0000D0, "Member 'FBackendDataStoreResponse::Data' has a wrong offset!");
 
@@ -131,7 +131,7 @@ struct FFrontendUserConfig final : public FJsonData
 public:
 	class FString                                 UserId;                                            // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 UserName;                                          // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Username;                                          // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 serverId;                                          // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -143,7 +143,7 @@ public:
 static_assert(alignof(FFrontendUserConfig) == 0x000008, "Wrong alignment on FFrontendUserConfig");
 static_assert(sizeof(FFrontendUserConfig) == 0x000130, "Wrong size on FFrontendUserConfig");
 static_assert(offsetof(FFrontendUserConfig, UserId) == 0x0000B8, "Member 'FFrontendUserConfig::UserId' has a wrong offset!");
-static_assert(offsetof(FFrontendUserConfig, UserName) == 0x0000D0, "Member 'FFrontendUserConfig::UserName' has a wrong offset!");
+static_assert(offsetof(FFrontendUserConfig, Username) == 0x0000D0, "Member 'FFrontendUserConfig::Username' has a wrong offset!");
 static_assert(offsetof(FFrontendUserConfig, serverId) == 0x0000E8, "Member 'FFrontendUserConfig::serverId' has a wrong offset!");
 static_assert(offsetof(FFrontendUserConfig, UserTags) == 0x000100, "Member 'FFrontendUserConfig::UserTags' has a wrong offset!");
 static_assert(offsetof(FFrontendUserConfig, CustomData) == 0x000118, "Member 'FFrontendUserConfig::CustomData' has a wrong offset!");
@@ -208,7 +208,7 @@ struct FUserConfigContent final : public FJsonData
 public:
 	class FString                                 UserId;                                            // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 UserName;                                          // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 Username;                                          // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 serverId;                                          // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -220,7 +220,7 @@ public:
 static_assert(alignof(FUserConfigContent) == 0x000008, "Wrong alignment on FUserConfigContent");
 static_assert(sizeof(FUserConfigContent) == 0x000130, "Wrong size on FUserConfigContent");
 static_assert(offsetof(FUserConfigContent, UserId) == 0x0000B8, "Member 'FUserConfigContent::UserId' has a wrong offset!");
-static_assert(offsetof(FUserConfigContent, UserName) == 0x0000D0, "Member 'FUserConfigContent::UserName' has a wrong offset!");
+static_assert(offsetof(FUserConfigContent, Username) == 0x0000D0, "Member 'FUserConfigContent::Username' has a wrong offset!");
 static_assert(offsetof(FUserConfigContent, serverId) == 0x0000E8, "Member 'FUserConfigContent::serverId' has a wrong offset!");
 static_assert(offsetof(FUserConfigContent, UserTags) == 0x000100, "Member 'FUserConfigContent::UserTags' has a wrong offset!");
 static_assert(offsetof(FUserConfigContent, CustomData) == 0x000118, "Member 'FUserConfigContent::CustomData' has a wrong offset!");

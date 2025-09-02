@@ -45,12 +45,12 @@ public:
 	int32                                         RedPoint_Swither_Index;                            // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UpdateState();
-	void SetUniqueId(int32 UId_0);
-	void PreConstruct(bool IsDesignTime);
-	void NewFunction_0();
-	void GetRedPointID();
 	void ExecuteUbergraph_WBP_UI_RedPoint(int32 EntryPoint);
+	void GetRedPointID();
+	void NewFunction_0();
+	void PreConstruct(bool IsDesignTime);
+	void SetUniqueId(int32 UId_0);
+	void UpdateState();
 
 	class FString GetModuleName() const;
 

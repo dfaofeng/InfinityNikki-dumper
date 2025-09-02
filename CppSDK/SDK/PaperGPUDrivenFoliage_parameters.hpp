@@ -10,6 +10,8 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+
 
 namespace SDK::Params
 {
@@ -48,6 +50,340 @@ public:
 static_assert(alignof(PaperGPUDrivenFoliageStreamingSubsystem_Instance) == 0x000008, "Wrong alignment on PaperGPUDrivenFoliageStreamingSubsystem_Instance");
 static_assert(sizeof(PaperGPUDrivenFoliageStreamingSubsystem_Instance) == 0x000008, "Wrong size on PaperGPUDrivenFoliageStreamingSubsystem_Instance");
 static_assert(offsetof(PaperGPUDrivenFoliageStreamingSubsystem_Instance, ReturnValue) == 0x000000, "Member 'PaperGPUDrivenFoliageStreamingSubsystem_Instance::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.Get
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshManager_Get final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APaperVirtualMeshManager*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshManager_Get) == 0x000008, "Wrong alignment on PaperVirtualMeshManager_Get");
+static_assert(sizeof(PaperVirtualMeshManager_Get) == 0x000010, "Wrong size on PaperVirtualMeshManager_Get");
+static_assert(offsetof(PaperVirtualMeshManager_Get, WorldContextObject) == 0x000000, "Member 'PaperVirtualMeshManager_Get::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_Get, ReturnValue) == 0x000008, "Member 'PaperVirtualMeshManager_Get::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.AddStaticMeshInstance
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshManager_AddStaticMeshInstance final
+{
+public:
+	class UStaticMeshComponent*                   InStaticMeshComp;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_AddStaticMeshInstance) == 0x000008, "Wrong alignment on PaperVirtualMeshManager_AddStaticMeshInstance");
+static_assert(sizeof(PaperVirtualMeshManager_AddStaticMeshInstance) == 0x000010, "Wrong size on PaperVirtualMeshManager_AddStaticMeshInstance");
+static_assert(offsetof(PaperVirtualMeshManager_AddStaticMeshInstance, InStaticMeshComp) == 0x000000, "Member 'PaperVirtualMeshManager_AddStaticMeshInstance::InStaticMeshComp' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddStaticMeshInstance, ReturnValue) == 0x000008, "Member 'PaperVirtualMeshManager_AddStaticMeshInstance::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.AddVirtualMesh
+// 0x0090 (0x0090 - 0x0000)
+struct PaperVirtualMeshManager_AddVirtualMesh final
+{
+public:
+	class UVirtualMeshPlatformAssetData*          AssetData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  ReturnValue;                                       // 0x0074(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0xC];                                       // 0x0084(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_AddVirtualMesh) == 0x000010, "Wrong alignment on PaperVirtualMeshManager_AddVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshManager_AddVirtualMesh) == 0x000090, "Wrong size on PaperVirtualMeshManager_AddVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMesh, AssetData) == 0x000000, "Member 'PaperVirtualMeshManager_AddVirtualMesh::AssetData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMesh, InTransform) == 0x000010, "Member 'PaperVirtualMeshManager_AddVirtualMesh::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMesh, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshManager_AddVirtualMesh::PaperCustomData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMesh, ReturnValue) == 0x000074, "Member 'PaperVirtualMeshManager_AddVirtualMesh::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.AddVirtualMeshWithFloat
+// 0x0090 (0x0090 - 0x0000)
+struct PaperVirtualMeshManager_AddVirtualMeshWithFloat final
+{
+public:
+	class UVirtualMeshPlatformAssetData*          AssetData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  ReturnValue;                                       // 0x0074(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0xC];                                       // 0x0084(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_AddVirtualMeshWithFloat) == 0x000010, "Wrong alignment on PaperVirtualMeshManager_AddVirtualMeshWithFloat");
+static_assert(sizeof(PaperVirtualMeshManager_AddVirtualMeshWithFloat) == 0x000090, "Wrong size on PaperVirtualMeshManager_AddVirtualMeshWithFloat");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMeshWithFloat, AssetData) == 0x000000, "Member 'PaperVirtualMeshManager_AddVirtualMeshWithFloat::AssetData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMeshWithFloat, InTransform) == 0x000010, "Member 'PaperVirtualMeshManager_AddVirtualMeshWithFloat::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMeshWithFloat, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshManager_AddVirtualMeshWithFloat::PaperCustomData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_AddVirtualMeshWithFloat, ReturnValue) == 0x000074, "Member 'PaperVirtualMeshManager_AddVirtualMeshWithFloat::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.RemoveAllStaticMeshInstances
+// 0x0008 (0x0008 - 0x0000)
+struct PaperVirtualMeshManager_RemoveAllStaticMeshInstances final
+{
+public:
+	class UStaticMesh*                            RefMesh;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshManager_RemoveAllStaticMeshInstances) == 0x000008, "Wrong alignment on PaperVirtualMeshManager_RemoveAllStaticMeshInstances");
+static_assert(sizeof(PaperVirtualMeshManager_RemoveAllStaticMeshInstances) == 0x000008, "Wrong size on PaperVirtualMeshManager_RemoveAllStaticMeshInstances");
+static_assert(offsetof(PaperVirtualMeshManager_RemoveAllStaticMeshInstances, RefMesh) == 0x000000, "Member 'PaperVirtualMeshManager_RemoveAllStaticMeshInstances::RefMesh' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.RemoveStaticMeshInstance
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshManager_RemoveStaticMeshInstance final
+{
+public:
+	class UStaticMeshComponent*                   InStaticMeshComp;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_RemoveStaticMeshInstance) == 0x000008, "Wrong alignment on PaperVirtualMeshManager_RemoveStaticMeshInstance");
+static_assert(sizeof(PaperVirtualMeshManager_RemoveStaticMeshInstance) == 0x000010, "Wrong size on PaperVirtualMeshManager_RemoveStaticMeshInstance");
+static_assert(offsetof(PaperVirtualMeshManager_RemoveStaticMeshInstance, InStaticMeshComp) == 0x000000, "Member 'PaperVirtualMeshManager_RemoveStaticMeshInstance::InStaticMeshComp' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_RemoveStaticMeshInstance, ReturnValue) == 0x000008, "Member 'PaperVirtualMeshManager_RemoveStaticMeshInstance::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.RemoveVirtualMesh
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshManager_RemoveVirtualMesh final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshManager_RemoveVirtualMesh) == 0x000004, "Wrong alignment on PaperVirtualMeshManager_RemoveVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshManager_RemoveVirtualMesh) == 0x000010, "Wrong size on PaperVirtualMeshManager_RemoveVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshManager_RemoveVirtualMesh, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshManager_RemoveVirtualMesh::InInstanceGUID' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateStaticMeshTransform
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshManager_UpdateStaticMeshTransform final
+{
+public:
+	class UStaticMeshComponent*                   InStaticMeshComp;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_UpdateStaticMeshTransform) == 0x000008, "Wrong alignment on PaperVirtualMeshManager_UpdateStaticMeshTransform");
+static_assert(sizeof(PaperVirtualMeshManager_UpdateStaticMeshTransform) == 0x000010, "Wrong size on PaperVirtualMeshManager_UpdateStaticMeshTransform");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateStaticMeshTransform, InStaticMeshComp) == 0x000000, "Member 'PaperVirtualMeshManager_UpdateStaticMeshTransform::InStaticMeshComp' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateStaticMeshTransform, ReturnValue) == 0x000008, "Member 'PaperVirtualMeshManager_UpdateStaticMeshTransform::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMesh
+// 0x0080 (0x0080 - 0x0000)
+struct PaperVirtualMeshManager_UpdateVirtualMesh final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_UpdateVirtualMesh) == 0x000010, "Wrong alignment on PaperVirtualMeshManager_UpdateVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshManager_UpdateVirtualMesh) == 0x000080, "Wrong size on PaperVirtualMeshManager_UpdateVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh, InTransform) == 0x000010, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh::PaperCustomData' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMesh2
+// 0x0070 (0x0070 - 0x0000)
+struct PaperVirtualMeshManager_UpdateVirtualMesh2 final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshManager_UpdateVirtualMesh2) == 0x000010, "Wrong alignment on PaperVirtualMeshManager_UpdateVirtualMesh2");
+static_assert(sizeof(PaperVirtualMeshManager_UpdateVirtualMesh2) == 0x000070, "Wrong size on PaperVirtualMeshManager_UpdateVirtualMesh2");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh2, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh2::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh2, InTransform) == 0x000010, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh2::InTransform' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMesh3
+// 0x0014 (0x0014 - 0x0000)
+struct PaperVirtualMeshManager_UpdateVirtualMesh3 final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshManager_UpdateVirtualMesh3) == 0x000004, "Wrong alignment on PaperVirtualMeshManager_UpdateVirtualMesh3");
+static_assert(sizeof(PaperVirtualMeshManager_UpdateVirtualMesh3) == 0x000014, "Wrong size on PaperVirtualMeshManager_UpdateVirtualMesh3");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh3, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh3::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMesh3, PaperCustomData) == 0x000010, "Member 'PaperVirtualMeshManager_UpdateVirtualMesh3::PaperCustomData' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMeshFloat
+// 0x0080 (0x0080 - 0x0000)
+struct PaperVirtualMeshManager_UpdateVirtualMeshFloat final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshManager_UpdateVirtualMeshFloat) == 0x000010, "Wrong alignment on PaperVirtualMeshManager_UpdateVirtualMeshFloat");
+static_assert(sizeof(PaperVirtualMeshManager_UpdateVirtualMeshFloat) == 0x000080, "Wrong size on PaperVirtualMeshManager_UpdateVirtualMeshFloat");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMeshFloat, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshManager_UpdateVirtualMeshFloat::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMeshFloat, InTransform) == 0x000010, "Member 'PaperVirtualMeshManager_UpdateVirtualMeshFloat::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMeshFloat, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshManager_UpdateVirtualMeshFloat::PaperCustomData' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshManager.UpdateVirtualMeshFloatCustomData
+// 0x0014 (0x0014 - 0x0000)
+struct PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaperCustomData;                                   // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData) == 0x000004, "Wrong alignment on PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData");
+static_assert(sizeof(PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData) == 0x000014, "Wrong size on PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData, PaperCustomData) == 0x000010, "Member 'PaperVirtualMeshManager_UpdateVirtualMeshFloatCustomData::PaperCustomData' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.Instance
+// 0x0008 (0x0008 - 0x0000)
+struct PaperVirtualMeshSubsystem_Instance final
+{
+public:
+	class UPaperVirtualMeshSubsystem*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_Instance) == 0x000008, "Wrong alignment on PaperVirtualMeshSubsystem_Instance");
+static_assert(sizeof(PaperVirtualMeshSubsystem_Instance) == 0x000008, "Wrong size on PaperVirtualMeshSubsystem_Instance");
+static_assert(offsetof(PaperVirtualMeshSubsystem_Instance, ReturnValue) == 0x000000, "Member 'PaperVirtualMeshSubsystem_Instance::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.AddEditorVirtualMesh
+// 0x0090 (0x0090 - 0x0000)
+struct PaperVirtualMeshSubsystem_AddEditorVirtualMesh final
+{
+public:
+	class UVirtualMeshPlatformAssetData*          AssetData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  ReturnValue;                                       // 0x0074(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0xC];                                       // 0x0084(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_AddEditorVirtualMesh) == 0x000010, "Wrong alignment on PaperVirtualMeshSubsystem_AddEditorVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshSubsystem_AddEditorVirtualMesh) == 0x000090, "Wrong size on PaperVirtualMeshSubsystem_AddEditorVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddEditorVirtualMesh, AssetData) == 0x000000, "Member 'PaperVirtualMeshSubsystem_AddEditorVirtualMesh::AssetData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddEditorVirtualMesh, InTransform) == 0x000010, "Member 'PaperVirtualMeshSubsystem_AddEditorVirtualMesh::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddEditorVirtualMesh, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshSubsystem_AddEditorVirtualMesh::PaperCustomData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddEditorVirtualMesh, ReturnValue) == 0x000074, "Member 'PaperVirtualMeshSubsystem_AddEditorVirtualMesh::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.AddVirtualMesh
+// 0x0090 (0x0090 - 0x0000)
+struct PaperVirtualMeshSubsystem_AddVirtualMesh final
+{
+public:
+	class UVirtualMeshPlatformAssetData*          AssetData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  ReturnValue;                                       // 0x0074(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0xC];                                       // 0x0084(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_AddVirtualMesh) == 0x000010, "Wrong alignment on PaperVirtualMeshSubsystem_AddVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshSubsystem_AddVirtualMesh) == 0x000090, "Wrong size on PaperVirtualMeshSubsystem_AddVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMesh, AssetData) == 0x000000, "Member 'PaperVirtualMeshSubsystem_AddVirtualMesh::AssetData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMesh, InTransform) == 0x000010, "Member 'PaperVirtualMeshSubsystem_AddVirtualMesh::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMesh, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshSubsystem_AddVirtualMesh::PaperCustomData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMesh, ReturnValue) == 0x000074, "Member 'PaperVirtualMeshSubsystem_AddVirtualMesh::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.AddVirtualMeshFloatCustomData
+// 0x0090 (0x0090 - 0x0000)
+struct PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData final
+{
+public:
+	class UVirtualMeshPlatformAssetData*          AssetData;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  ReturnValue;                                       // 0x0074(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0xC];                                       // 0x0084(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData) == 0x000010, "Wrong alignment on PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData");
+static_assert(sizeof(PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData) == 0x000090, "Wrong size on PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData, AssetData) == 0x000000, "Member 'PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData::AssetData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData, InTransform) == 0x000010, "Member 'PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData::PaperCustomData' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData, ReturnValue) == 0x000074, "Member 'PaperVirtualMeshSubsystem_AddVirtualMeshFloatCustomData::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.IsES31
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshSubsystem_IsES31 final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_IsES31) == 0x000008, "Wrong alignment on PaperVirtualMeshSubsystem_IsES31");
+static_assert(sizeof(PaperVirtualMeshSubsystem_IsES31) == 0x000010, "Wrong size on PaperVirtualMeshSubsystem_IsES31");
+static_assert(offsetof(PaperVirtualMeshSubsystem_IsES31, WorldContextObject) == 0x000000, "Member 'PaperVirtualMeshSubsystem_IsES31::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_IsES31, ReturnValue) == 0x000008, "Member 'PaperVirtualMeshSubsystem_IsES31::ReturnValue' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.RemoveVirtualMesh
+// 0x0010 (0x0010 - 0x0000)
+struct PaperVirtualMeshSubsystem_RemoveVirtualMesh final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_RemoveVirtualMesh) == 0x000004, "Wrong alignment on PaperVirtualMeshSubsystem_RemoveVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshSubsystem_RemoveVirtualMesh) == 0x000010, "Wrong size on PaperVirtualMeshSubsystem_RemoveVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshSubsystem_RemoveVirtualMesh, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshSubsystem_RemoveVirtualMesh::InInstanceGUID' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMesh
+// 0x0080 (0x0080 - 0x0000)
+struct PaperVirtualMeshSubsystem_UpdateVirtualMesh final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0xC];                                       // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_UpdateVirtualMesh) == 0x000010, "Wrong alignment on PaperVirtualMeshSubsystem_UpdateVirtualMesh");
+static_assert(sizeof(PaperVirtualMeshSubsystem_UpdateVirtualMesh) == 0x000080, "Wrong size on PaperVirtualMeshSubsystem_UpdateVirtualMesh");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh, InTransform) == 0x000010, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh::InTransform' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh, PaperCustomData) == 0x000070, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh::PaperCustomData' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMesh2
+// 0x0070 (0x0070 - 0x0000)
+struct PaperVirtualMeshSubsystem_UpdateVirtualMesh2 final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_UpdateVirtualMesh2) == 0x000010, "Wrong alignment on PaperVirtualMeshSubsystem_UpdateVirtualMesh2");
+static_assert(sizeof(PaperVirtualMeshSubsystem_UpdateVirtualMesh2) == 0x000070, "Wrong size on PaperVirtualMeshSubsystem_UpdateVirtualMesh2");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh2, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh2::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh2, InTransform) == 0x000010, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh2::InTransform' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMesh3
+// 0x0014 (0x0014 - 0x0000)
+struct PaperVirtualMeshSubsystem_UpdateVirtualMesh3 final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PaperCustomData;                                   // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_UpdateVirtualMesh3) == 0x000004, "Wrong alignment on PaperVirtualMeshSubsystem_UpdateVirtualMesh3");
+static_assert(sizeof(PaperVirtualMeshSubsystem_UpdateVirtualMesh3) == 0x000014, "Wrong size on PaperVirtualMeshSubsystem_UpdateVirtualMesh3");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh3, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh3::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMesh3, PaperCustomData) == 0x000010, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMesh3::PaperCustomData' has a wrong offset!");
+
+// Function PaperGPUDrivenFoliage.PaperVirtualMeshSubsystem.UpdateVirtualMeshFloatCustomData
+// 0x0014 (0x0014 - 0x0000)
+struct PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData final
+{
+public:
+	struct FGuid                                  InInstanceGUID;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PaperCustomData;                                   // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData) == 0x000004, "Wrong alignment on PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData");
+static_assert(sizeof(PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData) == 0x000014, "Wrong size on PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData, InInstanceGUID) == 0x000000, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData::InInstanceGUID' has a wrong offset!");
+static_assert(offsetof(PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData, PaperCustomData) == 0x000010, "Member 'PaperVirtualMeshSubsystem_UpdateVirtualMeshFloatCustomData::PaperCustomData' has a wrong offset!");
 
 }
 

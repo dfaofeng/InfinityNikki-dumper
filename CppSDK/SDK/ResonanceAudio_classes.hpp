@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ResonanceAudio_structs.hpp"
 #include "AudioExtensions_classes.hpp"
+#include "ResonanceAudio_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
@@ -25,7 +25,7 @@ namespace SDK
 class UResonanceAudioSoundfieldSettings final : public USoundfieldEncodingSettingsBase
 {
 public:
-	EResonanceRenderMode                          RenderMode;                                        // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EResonanceRenderMode                          renderMode;                                        // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
@@ -40,7 +40,7 @@ public:
 };
 static_assert(alignof(UResonanceAudioSoundfieldSettings) == 0x000008, "Wrong alignment on UResonanceAudioSoundfieldSettings");
 static_assert(sizeof(UResonanceAudioSoundfieldSettings) == 0x000030, "Wrong size on UResonanceAudioSoundfieldSettings");
-static_assert(offsetof(UResonanceAudioSoundfieldSettings, RenderMode) == 0x000028, "Member 'UResonanceAudioSoundfieldSettings::RenderMode' has a wrong offset!");
+static_assert(offsetof(UResonanceAudioSoundfieldSettings, renderMode) == 0x000028, "Member 'UResonanceAudioSoundfieldSettings::renderMode' has a wrong offset!");
 
 // Class ResonanceAudio.ResonanceAudioBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)

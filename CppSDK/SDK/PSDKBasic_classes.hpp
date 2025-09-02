@@ -65,6 +65,32 @@ public:
 static_assert(alignof(IPSDKGamePadInterface) == 0x000001, "Wrong alignment on IPSDKGamePadInterface");
 static_assert(sizeof(IPSDKGamePadInterface) == 0x000001, "Wrong size on IPSDKGamePadInterface");
 
+// Class PSDKBasic.PSDKHyperLinkButton
+// 0x0010 (0x0300 - 0x02F0)
+class UPSDKHyperLinkButton final : public UUserWidget
+{
+public:
+	class UButton*                                InButton;                                          // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URichTextBlock*                         BtnTextBlock;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void SetButtonText(const class FString& InColor, const class FString& InRichText, const class FString& InUrl);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PSDKHyperLinkButton">();
+	}
+	static class UPSDKHyperLinkButton* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPSDKHyperLinkButton>();
+	}
+};
+static_assert(alignof(UPSDKHyperLinkButton) == 0x000008, "Wrong alignment on UPSDKHyperLinkButton");
+static_assert(sizeof(UPSDKHyperLinkButton) == 0x000300, "Wrong size on UPSDKHyperLinkButton");
+static_assert(offsetof(UPSDKHyperLinkButton, InButton) == 0x0002F0, "Member 'UPSDKHyperLinkButton::InButton' has a wrong offset!");
+static_assert(offsetof(UPSDKHyperLinkButton, BtnTextBlock) == 0x0002F8, "Member 'UPSDKHyperLinkButton::BtnTextBlock' has a wrong offset!");
+
 // Class PSDKBasic.PSdkUIBaseWidget
 // 0x0070 (0x0360 - 0x02F0)
 class UPSdkUIBaseWidget : public UUserWidget
@@ -283,6 +309,44 @@ static_assert(offsetof(UPSdkUITwoButtonsUI, CommitButton) == 0x000388, "Member '
 static_assert(offsetof(UPSdkUITwoButtonsUI, CommitButtonTextBlock) == 0x000390, "Member 'UPSdkUITwoButtonsUI::CommitButtonTextBlock' has a wrong offset!");
 static_assert(offsetof(UPSdkUITwoButtonsUI, CancelButton) == 0x000398, "Member 'UPSdkUITwoButtonsUI::CancelButton' has a wrong offset!");
 static_assert(offsetof(UPSdkUITwoButtonsUI, CancelButtonTextBlock) == 0x0003A0, "Member 'UPSdkUITwoButtonsUI::CancelButtonTextBlock' has a wrong offset!");
+
+// Class PSDKBasic.PSdkUITwoButtonsUINoTitle
+// 0x0058 (0x03B8 - 0x0360)
+class UPSdkUITwoButtonsUINoTitle final : public UPSdkUIBaseWidget
+{
+public:
+	class UImage*                                 OverlayImage;                                      // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UImage*                                 BackgroundImage;                                   // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             ContentTextBlock;                                  // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                CommitButton;                                      // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             CommitButtonTextBlock;                             // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                CancelButton;                                      // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             CancelButtonTextBlock;                             // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_398[0x20];                                     // 0x0398(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnCancelButton();
+	void OnCommitButton();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PSdkUITwoButtonsUINoTitle">();
+	}
+	static class UPSdkUITwoButtonsUINoTitle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPSdkUITwoButtonsUINoTitle>();
+	}
+};
+static_assert(alignof(UPSdkUITwoButtonsUINoTitle) == 0x000008, "Wrong alignment on UPSdkUITwoButtonsUINoTitle");
+static_assert(sizeof(UPSdkUITwoButtonsUINoTitle) == 0x0003B8, "Wrong size on UPSdkUITwoButtonsUINoTitle");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, OverlayImage) == 0x000360, "Member 'UPSdkUITwoButtonsUINoTitle::OverlayImage' has a wrong offset!");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, BackgroundImage) == 0x000368, "Member 'UPSdkUITwoButtonsUINoTitle::BackgroundImage' has a wrong offset!");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, ContentTextBlock) == 0x000370, "Member 'UPSdkUITwoButtonsUINoTitle::ContentTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, CommitButton) == 0x000378, "Member 'UPSdkUITwoButtonsUINoTitle::CommitButton' has a wrong offset!");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, CommitButtonTextBlock) == 0x000380, "Member 'UPSdkUITwoButtonsUINoTitle::CommitButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, CancelButton) == 0x000388, "Member 'UPSdkUITwoButtonsUINoTitle::CancelButton' has a wrong offset!");
+static_assert(offsetof(UPSdkUITwoButtonsUINoTitle, CancelButtonTextBlock) == 0x000390, "Member 'UPSdkUITwoButtonsUINoTitle::CancelButtonTextBlock' has a wrong offset!");
 
 // Class PSDKBasic.PSdkUITwoButtonsVerticalUI
 // 0x0078 (0x03D8 - 0x0360)

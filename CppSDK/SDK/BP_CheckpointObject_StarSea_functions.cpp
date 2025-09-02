@@ -17,75 +17,116 @@
 namespace SDK
 {
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CheckpointObject_StarSea_C::UserConstructionScript()
+void ABP_CheckpointObject_StarSea_C::BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+
+	Params::BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_Empower
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bDisplayFinal                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckpointObject_StarSea_C::BP_Empower(bool bDisplayFinal)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_Empower");
+
+	Params::BP_CheckpointObject_StarSea_C_BP_Empower Parms{};
+
+	Parms.bDisplayFinal = bDisplayFinal;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_GetNiagaraPosition
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// double*                                 Position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckpointObject_StarSea_C::BP_GetNiagaraPosition(double* Position)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_GetNiagaraPosition");
+
+	Params::BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Position != nullptr)
+		*Position = Parms.Position;
+}
+
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_TestLock
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CheckpointObject_StarSea_C::BP_TestLock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_TestLock");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsLastActivate
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_TestUnlock
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    opt                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CheckpointObject_StarSea_C::SetIsLastActivate(bool opt)
+void ABP_CheckpointObject_StarSea_C::BP_TestUnlock()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "SetIsLastActivate");
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_TestUnlock");
 
-	Params::BP_CheckpointObject_StarSea_C_SetIsLastActivate Parms{};
-
-	Parms.opt = opt;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsActivate
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_UpdateEnergized
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    opt                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnergized                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CheckpointObject_StarSea_C::SetIsActivate(bool opt)
+void ABP_CheckpointObject_StarSea_C::BP_UpdateEnergized(bool bEnergized)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "SetIsActivate");
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_UpdateEnergized");
 
-	Params::BP_CheckpointObject_StarSea_C_SetIsActivate Parms{};
+	Params::BP_CheckpointObject_StarSea_C_BP_UpdateEnergized Parms{};
 
-	Parms.opt = opt;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.ServerInit
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bServer                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckpointObject_StarSea_C::ServerInit(bool bServer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "ServerInit");
-
-	Params::BP_CheckpointObject_StarSea_C_ServerInit Parms{};
-
-	Parms.bServer = bServer;
+	Parms.bEnergized = bEnergized;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -111,118 +152,77 @@ void ABP_CheckpointObject_StarSea_C::ExecuteUbergraph_BP_CheckpointObject_StarSe
 }
 
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_UpdateEnergized
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.ServerInit
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bEnergized                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bServer                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CheckpointObject_StarSea_C::BP_UpdateEnergized(bool bEnergized)
+void ABP_CheckpointObject_StarSea_C::ServerInit(bool bServer)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_UpdateEnergized");
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "ServerInit");
 
-	Params::BP_CheckpointObject_StarSea_C_BP_UpdateEnergized Parms{};
+	Params::BP_CheckpointObject_StarSea_C_ServerInit Parms{};
 
-	Parms.bEnergized = bEnergized;
+	Parms.bServer = bServer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_TestUnlock
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsActivate
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    opt                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CheckpointObject_StarSea_C::BP_TestUnlock()
+void ABP_CheckpointObject_StarSea_C::SetIsActivate(bool opt)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_TestUnlock");
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "SetIsActivate");
+
+	Params::BP_CheckpointObject_StarSea_C_SetIsActivate Parms{};
+
+	Parms.opt = opt;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsLastActivate
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    opt                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckpointObject_StarSea_C::SetIsLastActivate(bool opt)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "SetIsLastActivate");
+
+	Params::BP_CheckpointObject_StarSea_C_SetIsLastActivate Parms{};
+
+	Parms.opt = opt;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CheckpointObject_StarSea_C::UserConstructionScript()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_TestLock
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_CheckpointObject_StarSea_C::BP_TestLock()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_TestLock");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_GetNiagaraPosition
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double*                                 Position                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckpointObject_StarSea_C::BP_GetNiagaraPosition(double* Position)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_GetNiagaraPosition");
-
-	Params::BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (Position != nullptr)
-		*Position = Parms.Position;
-}
-
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_Empower
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bDisplayFinal                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckpointObject_StarSea_C::BP_Empower(bool bDisplayFinal)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BP_Empower");
-
-	Params::BP_CheckpointObject_StarSea_C_BP_Empower Parms{};
-
-	Parms.bDisplayFinal = bDisplayFinal;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UPrimitiveComponent*              OverlappedComponent                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   OtherBodyIndex                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckpointObject_StarSea_C::BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckpointObject_StarSea_C", "BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-
-	Params::BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature Parms{};
-
-	Parms.OverlappedComponent = OverlappedComponent;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.OtherBodyIndex = OtherBodyIndex;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 

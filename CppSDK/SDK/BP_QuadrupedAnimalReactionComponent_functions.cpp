@@ -17,41 +17,35 @@
 namespace SDK
 {
 
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.BP_SetState
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EQuadrupedAnimalReactionState           NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.ServerInit
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_QuadrupedAnimalReactionComponent_C::BP_SetState(EQuadrupedAnimalReactionState NewState)
+void UBP_QuadrupedAnimalReactionComponent_C::ServerInit()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "BP_SetState");
+		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "ServerInit");
 
-	Params::BP_QuadrupedAnimalReactionComponent_C_BP_SetState Parms{};
-
-	Parms.NewState = NewState;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent
-// (Final, UbergraphFunction)
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.OnCleanStateChanged
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsClean                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_QuadrupedAnimalReactionComponent_C::ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent(int32 EntryPoint)
+void UBP_QuadrupedAnimalReactionComponent_C::OnCleanStateChanged(bool bIsClean)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent");
+		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "OnCleanStateChanged");
 
-	Params::BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent Parms{};
+	Params::BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.bIsClean = bIsClean;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -79,37 +73,43 @@ void UBP_QuadrupedAnimalReactionComponent_C::OnCleaningStarted(class AActor* Cle
 }
 
 
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.OnCleanStateChanged
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent
+// (Final, UbergraphFunction)
 // Parameters:
-// bool                                    bIsClean                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_QuadrupedAnimalReactionComponent_C::OnCleanStateChanged(bool bIsClean)
+void UBP_QuadrupedAnimalReactionComponent_C::ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "OnCleanStateChanged");
+		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent");
 
-	Params::BP_QuadrupedAnimalReactionComponent_C_OnCleanStateChanged Parms{};
+	Params::BP_QuadrupedAnimalReactionComponent_C_ExecuteUbergraph_BP_QuadrupedAnimalReactionComponent Parms{};
 
-	Parms.bIsClean = bIsClean;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.ServerInit
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_QuadrupedAnimalReactionComponent.BP_QuadrupedAnimalReactionComponent_C.BP_SetState
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EQuadrupedAnimalReactionState           NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_QuadrupedAnimalReactionComponent_C::ServerInit()
+void UBP_QuadrupedAnimalReactionComponent_C::BP_SetState(EQuadrupedAnimalReactionState NewState)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "ServerInit");
+		Func = Class->GetFunction("BP_QuadrupedAnimalReactionComponent_C", "BP_SetState");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_QuadrupedAnimalReactionComponent_C_BP_SetState Parms{};
+
+	Parms.NewState = NewState;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

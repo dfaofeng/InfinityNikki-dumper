@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PhotographDailyAttendanceTarget.BP_PhotographDailyAttendanceTarget_C
-// 0x0020 (0x0458 - 0x0438)
+// 0x0020 (0x04A8 - 0x0488)
 class ABP_PhotographDailyAttendanceTarget_C final : public AX6Actor
 {
 public:
-	class UStaticMeshComponent*                   Cube;                                              // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          CameraShootingTargetCollisiong;                    // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         Tag;                                               // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cube;                                              // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CameraShootingTargetCollisiong;                    // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         Tag;                                               // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_PhotographDailyAttendanceTarget_C) == 0x000008, "Wrong alignment on ABP_PhotographDailyAttendanceTarget_C");
-static_assert(sizeof(ABP_PhotographDailyAttendanceTarget_C) == 0x000458, "Wrong size on ABP_PhotographDailyAttendanceTarget_C");
-static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, Cube) == 0x000438, "Member 'ABP_PhotographDailyAttendanceTarget_C::Cube' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, CameraShootingTargetCollisiong) == 0x000440, "Member 'ABP_PhotographDailyAttendanceTarget_C::CameraShootingTargetCollisiong' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, DefaultSceneRoot) == 0x000448, "Member 'ABP_PhotographDailyAttendanceTarget_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, Tag) == 0x000450, "Member 'ABP_PhotographDailyAttendanceTarget_C::Tag' has a wrong offset!");
+static_assert(sizeof(ABP_PhotographDailyAttendanceTarget_C) == 0x0004A8, "Wrong size on ABP_PhotographDailyAttendanceTarget_C");
+static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, Cube) == 0x000488, "Member 'ABP_PhotographDailyAttendanceTarget_C::Cube' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, CameraShootingTargetCollisiong) == 0x000490, "Member 'ABP_PhotographDailyAttendanceTarget_C::CameraShootingTargetCollisiong' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, DefaultSceneRoot) == 0x000498, "Member 'ABP_PhotographDailyAttendanceTarget_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_PhotographDailyAttendanceTarget_C, Tag) == 0x0004A0, "Member 'ABP_PhotographDailyAttendanceTarget_C::Tag' has a wrong offset!");
 
 }
 

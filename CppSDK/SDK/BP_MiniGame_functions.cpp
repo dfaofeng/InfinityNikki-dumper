@@ -471,15 +471,15 @@ void ABP_MiniGame_C::DestorySelf()
 }
 
 
-// Function BP_MiniGame.BP_MiniGame_C.Complete
+// Function BP_MiniGame.BP_MiniGame_C.complete
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_C::Complete()
+void ABP_MiniGame_C::complete()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_MiniGame_C", "Complete");
+		Func = Class->GetFunction("BP_MiniGame_C", "complete");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

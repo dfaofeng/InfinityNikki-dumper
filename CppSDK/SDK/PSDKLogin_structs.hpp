@@ -11,10 +11,21 @@
 #include "Basic.hpp"
 
 #include "PSDKBasic_structs.hpp"
+#include "PSDKConfig_structs.hpp"
 
 
 namespace SDK
 {
+
+// Enum PSDKLogin.EPSdkSubscribeResult
+// NumValues: 0x0004
+enum class EPSdkSubscribeResult : uint8
+{
+	Undefined                                = 0,
+	NotSubscribed                            = 1,
+	Subscribe                                = 2,
+	EPSdkSubscribeResult_MAX                 = 3,
+};
 
 // ScriptStruct PSDKLogin.PSdkAccountExistsInfoData
 // 0x0001 (0x0001 - 0x0000)
@@ -38,6 +49,27 @@ public:
 static_assert(alignof(FPSdkAccountExistsModel) == 0x000008, "Wrong alignment on FPSdkAccountExistsModel");
 static_assert(sizeof(FPSdkAccountExistsModel) == 0x000040, "Wrong size on FPSdkAccountExistsModel");
 static_assert(offsetof(FPSdkAccountExistsModel, Data) == 0x000038, "Member 'FPSdkAccountExistsModel::Data' has a wrong offset!");
+
+// ScriptStruct PSDKLogin.PSdkLoginLanguagesRow
+// 0x0000 (0x00D8 - 0x00D8)
+struct FPSdkLoginLanguagesRow final : public FPSDKLanguageTableRowBase
+{
+};
+static_assert(alignof(FPSdkLoginLanguagesRow) == 0x000008, "Wrong alignment on FPSdkLoginLanguagesRow");
+static_assert(sizeof(FPSdkLoginLanguagesRow) == 0x0000D8, "Wrong size on FPSdkLoginLanguagesRow");
+
+// ScriptStruct PSDKLogin.PSdkLogoutDeleteRecord
+// 0x0020 (0x0020 - 0x0000)
+struct FPSdkLogoutDeleteRecord final
+{
+public:
+	TArray<class FString>                         ClearRecord;                                       // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<class FString>                         KeepRecord;                                        // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSdkLogoutDeleteRecord) == 0x000008, "Wrong alignment on FPSdkLogoutDeleteRecord");
+static_assert(sizeof(FPSdkLogoutDeleteRecord) == 0x000020, "Wrong size on FPSdkLogoutDeleteRecord");
+static_assert(offsetof(FPSdkLogoutDeleteRecord, ClearRecord) == 0x000000, "Member 'FPSdkLogoutDeleteRecord::ClearRecord' has a wrong offset!");
+static_assert(offsetof(FPSdkLogoutDeleteRecord, KeepRecord) == 0x000010, "Member 'FPSdkLogoutDeleteRecord::KeepRecord' has a wrong offset!");
 
 }
 

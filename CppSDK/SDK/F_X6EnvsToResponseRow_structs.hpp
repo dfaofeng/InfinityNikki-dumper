@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "F_X6EnvResponseCD_structs.hpp"
 #include "EX6EnvType_structs.hpp"
 #include "F_X6StylizedEnvResponse_structs.hpp"
+#include "F_X6EnvResponseCD_structs.hpp"
 
 
 namespace SDK

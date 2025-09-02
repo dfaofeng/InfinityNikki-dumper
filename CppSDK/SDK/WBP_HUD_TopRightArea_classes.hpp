@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C
-// 0x02F8 (0x05E8 - 0x02F0)
+// 0x0310 (0x0600 - 0x02F0)
 class UWBP_HUD_TopRightArea_C final : public UUserWidget
 {
 public:
@@ -97,36 +97,37 @@ public:
 	class UNiagaraSystemWidget*                   UI_NS_Burst;                                       // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UNiagaraSystemWidget*                   UI_NS_Loop;                                        // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UNiagaraSystemWidget*                   UI_NS_Single;                                      // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_HUD_PearNotice_C*                  WBP_Guide_PearNotice;                              // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_HUD_MiniMap_C*                     WBP_HUD_MiniMap;                                   // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_Photograph_QuickShoot_C*           WBP_Photograph_QuickShoot;                         // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SysHUD_ExitButton_C*               WBP_SysHUD_ExitButton;                             // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SysHUD_OnlineButton_C*             WBP_SysHUD_OnlineButton;                           // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_SysHUD_ResetButton_C*              WBP_SysHUD_ResetButton;                            // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Bag;                         // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_DaMiao;                      // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Map;                         // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Map_2;                       // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Pear;                        // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Pear_1;                      // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Photo;                       // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_QuickPhoto;                  // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Setting;                     // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Weather;                                           // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        WidgetSwitcher_Exit;                               // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Ws_Pear_State;                                     // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Ws_Tip_Icon;                                       // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	bool                                          isPlayingFadeIn;                                   // 0x05E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E1[0x3];                                      // 0x05E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InUserSpecifiedScale;                              // 0x05E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_Common_Review_State_Tip_C*         WBP_Common_Review_State_Tip_Banned;                // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Common_Review_State_Tip_C*         WBP_Common_Review_State_Tip_Normal;                // 0x0550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_HUD_PearNotice_C*                  WBP_Guide_PearNotice;                              // 0x0558(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_HUD_MiniMap_C*                     WBP_HUD_MiniMap;                                   // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_Photograph_QuickShoot_C*           WBP_Photograph_QuickShoot;                         // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SysHUD_ExitButton_C*               WBP_SysHUD_ExitButton;                             // 0x0570(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SysHUD_OnlineButton_C*             WBP_SysHUD_OnlineButton;                           // 0x0578(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_SysHUD_ResetButton_C*              WBP_SysHUD_ResetButton;                            // 0x0580(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Bag;                         // 0x0588(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_DaMiao;                      // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Map;                         // 0x0598(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Map_2;                       // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Pear;                        // 0x05A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Pear_1;                      // 0x05B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Photo;                       // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_QuickPhoto;                  // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWBP_UI_Common_KeyTips_PC_C*            WBP_UI_Common_KeyTips_Setting;                     // 0x05C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Weather;                                           // 0x05D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Exit;                               // 0x05D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        WidgetSwitcher_Review_State;                       // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Ws_Pear_State;                                     // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Ws_Tip_Icon;                                       // 0x05F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	bool                                          isPlayingFadeIn;                                   // 0x05F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0();
-	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea();
-	void PreConstruct(bool IsDesignTime);
-	void OnFadeInStart();
-	void OnFadeInQuickShoot();
 	void ExecuteUbergraph_WBP_HUD_TopRightArea(int32 EntryPoint);
+	void OnFadeInQuickShoot();
+	void OnFadeInStart();
+	void PreConstruct(bool IsDesignTime);
+	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_1();
+	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_2();
 
 	class FString GetModuleName() const;
 
@@ -141,7 +142,7 @@ public:
 	}
 };
 static_assert(alignof(UWBP_HUD_TopRightArea_C) == 0x000008, "Wrong alignment on UWBP_HUD_TopRightArea_C");
-static_assert(sizeof(UWBP_HUD_TopRightArea_C) == 0x0005E8, "Wrong size on UWBP_HUD_TopRightArea_C");
+static_assert(sizeof(UWBP_HUD_TopRightArea_C) == 0x000600, "Wrong size on UWBP_HUD_TopRightArea_C");
 static_assert(offsetof(UWBP_HUD_TopRightArea_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_HUD_TopRightArea_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_TopRightArea_C, FadeIn_SocialPhoto) == 0x0002F8, "Member 'UWBP_HUD_TopRightArea_C::FadeIn_SocialPhoto' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_TopRightArea_C, FadeIn) == 0x000300, "Member 'UWBP_HUD_TopRightArea_C::FadeIn' has a wrong offset!");
@@ -217,27 +218,29 @@ static_assert(offsetof(UWBP_HUD_TopRightArea_C, UI_NS_Bg_S) == 0x000528, "Member
 static_assert(offsetof(UWBP_HUD_TopRightArea_C, UI_NS_Burst) == 0x000530, "Member 'UWBP_HUD_TopRightArea_C::UI_NS_Burst' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_TopRightArea_C, UI_NS_Loop) == 0x000538, "Member 'UWBP_HUD_TopRightArea_C::UI_NS_Loop' has a wrong offset!");
 static_assert(offsetof(UWBP_HUD_TopRightArea_C, UI_NS_Single) == 0x000540, "Member 'UWBP_HUD_TopRightArea_C::UI_NS_Single' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_Guide_PearNotice) == 0x000548, "Member 'UWBP_HUD_TopRightArea_C::WBP_Guide_PearNotice' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_HUD_MiniMap) == 0x000550, "Member 'UWBP_HUD_TopRightArea_C::WBP_HUD_MiniMap' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_Photograph_QuickShoot) == 0x000558, "Member 'UWBP_HUD_TopRightArea_C::WBP_Photograph_QuickShoot' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_SysHUD_ExitButton) == 0x000560, "Member 'UWBP_HUD_TopRightArea_C::WBP_SysHUD_ExitButton' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_SysHUD_OnlineButton) == 0x000568, "Member 'UWBP_HUD_TopRightArea_C::WBP_SysHUD_OnlineButton' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_SysHUD_ResetButton) == 0x000570, "Member 'UWBP_HUD_TopRightArea_C::WBP_SysHUD_ResetButton' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Bag) == 0x000578, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Bag' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_DaMiao) == 0x000580, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_DaMiao' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Map) == 0x000588, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Map' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Map_2) == 0x000590, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Map_2' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Pear) == 0x000598, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Pear' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Pear_1) == 0x0005A0, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Pear_1' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Photo) == 0x0005A8, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Photo' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_QuickPhoto) == 0x0005B0, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_QuickPhoto' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Setting) == 0x0005B8, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Setting' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, Weather) == 0x0005C0, "Member 'UWBP_HUD_TopRightArea_C::Weather' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, WidgetSwitcher_Exit) == 0x0005C8, "Member 'UWBP_HUD_TopRightArea_C::WidgetSwitcher_Exit' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, Ws_Pear_State) == 0x0005D0, "Member 'UWBP_HUD_TopRightArea_C::Ws_Pear_State' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, Ws_Tip_Icon) == 0x0005D8, "Member 'UWBP_HUD_TopRightArea_C::Ws_Tip_Icon' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, isPlayingFadeIn) == 0x0005E0, "Member 'UWBP_HUD_TopRightArea_C::isPlayingFadeIn' has a wrong offset!");
-static_assert(offsetof(UWBP_HUD_TopRightArea_C, InUserSpecifiedScale) == 0x0005E4, "Member 'UWBP_HUD_TopRightArea_C::InUserSpecifiedScale' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_Common_Review_State_Tip_Banned) == 0x000548, "Member 'UWBP_HUD_TopRightArea_C::WBP_Common_Review_State_Tip_Banned' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_Common_Review_State_Tip_Normal) == 0x000550, "Member 'UWBP_HUD_TopRightArea_C::WBP_Common_Review_State_Tip_Normal' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_Guide_PearNotice) == 0x000558, "Member 'UWBP_HUD_TopRightArea_C::WBP_Guide_PearNotice' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_HUD_MiniMap) == 0x000560, "Member 'UWBP_HUD_TopRightArea_C::WBP_HUD_MiniMap' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_Photograph_QuickShoot) == 0x000568, "Member 'UWBP_HUD_TopRightArea_C::WBP_Photograph_QuickShoot' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_SysHUD_ExitButton) == 0x000570, "Member 'UWBP_HUD_TopRightArea_C::WBP_SysHUD_ExitButton' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_SysHUD_OnlineButton) == 0x000578, "Member 'UWBP_HUD_TopRightArea_C::WBP_SysHUD_OnlineButton' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_SysHUD_ResetButton) == 0x000580, "Member 'UWBP_HUD_TopRightArea_C::WBP_SysHUD_ResetButton' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Bag) == 0x000588, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Bag' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_DaMiao) == 0x000590, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_DaMiao' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Map) == 0x000598, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Map' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Map_2) == 0x0005A0, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Map_2' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Pear) == 0x0005A8, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Pear' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Pear_1) == 0x0005B0, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Pear_1' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Photo) == 0x0005B8, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Photo' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_QuickPhoto) == 0x0005C0, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_QuickPhoto' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WBP_UI_Common_KeyTips_Setting) == 0x0005C8, "Member 'UWBP_HUD_TopRightArea_C::WBP_UI_Common_KeyTips_Setting' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, Weather) == 0x0005D0, "Member 'UWBP_HUD_TopRightArea_C::Weather' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WidgetSwitcher_Exit) == 0x0005D8, "Member 'UWBP_HUD_TopRightArea_C::WidgetSwitcher_Exit' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, WidgetSwitcher_Review_State) == 0x0005E0, "Member 'UWBP_HUD_TopRightArea_C::WidgetSwitcher_Review_State' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, Ws_Pear_State) == 0x0005E8, "Member 'UWBP_HUD_TopRightArea_C::Ws_Pear_State' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, Ws_Tip_Icon) == 0x0005F0, "Member 'UWBP_HUD_TopRightArea_C::Ws_Tip_Icon' has a wrong offset!");
+static_assert(offsetof(UWBP_HUD_TopRightArea_C, isPlayingFadeIn) == 0x0005F8, "Member 'UWBP_HUD_TopRightArea_C::isPlayingFadeIn' has a wrong offset!");
 
 }
 

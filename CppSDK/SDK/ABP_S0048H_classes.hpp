@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "NikkiPhysics_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_S0048H.ABP_S0048H_C
-// 0x13C0 (0x1810 - 0x0450)
+// 0x1300 (0x1750 - 0x0450)
 class UABP_S0048H_C final : public UNikkiClothAnimInstance
 {
 public:
@@ -29,9 +29,9 @@ public:
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0460(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0468(0x0020)()
 	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh;                    // 0x0488(0x0158)(ContainsInstancedReference)
-	struct FAnimNode_NikkiPhysics                 AnimGraphNode_NikkiPhysics;                        // 0x05E0(0x11F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x17D0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x17F0(0x0020)()
+	struct FAnimNode_NikkiPhysics                 AnimGraphNode_NikkiPhysics;                        // 0x05E0(0x1130)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1710(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1730(0x0020)()
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -48,15 +48,15 @@ public:
 	}
 };
 static_assert(alignof(UABP_S0048H_C) == 0x000010, "Wrong alignment on UABP_S0048H_C");
-static_assert(sizeof(UABP_S0048H_C) == 0x001810, "Wrong size on UABP_S0048H_C");
+static_assert(sizeof(UABP_S0048H_C) == 0x001750, "Wrong size on UABP_S0048H_C");
 static_assert(offsetof(UABP_S0048H_C, UberGraphFrame) == 0x000450, "Member 'UABP_S0048H_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_S0048H_C, AnimBlueprintExtension_PropertyAccess) == 0x000458, "Member 'UABP_S0048H_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(UABP_S0048H_C, AnimBlueprintExtension_Base) == 0x000460, "Member 'UABP_S0048H_C::AnimBlueprintExtension_Base' has a wrong offset!");
 static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_Root) == 0x000468, "Member 'UABP_S0048H_C::AnimGraphNode_Root' has a wrong offset!");
 static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_CopyPoseFromMesh) == 0x000488, "Member 'UABP_S0048H_C::AnimGraphNode_CopyPoseFromMesh' has a wrong offset!");
 static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_NikkiPhysics) == 0x0005E0, "Member 'UABP_S0048H_C::AnimGraphNode_NikkiPhysics' has a wrong offset!");
-static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_LocalToComponentSpace) == 0x0017D0, "Member 'UABP_S0048H_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_ComponentToLocalSpace) == 0x0017F0, "Member 'UABP_S0048H_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_LocalToComponentSpace) == 0x001710, "Member 'UABP_S0048H_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UABP_S0048H_C, AnimGraphNode_ComponentToLocalSpace) == 0x001730, "Member 'UABP_S0048H_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
 
 }
 

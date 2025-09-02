@@ -30,6 +30,7 @@ public:
 	void ExecuteUbergraph_D_StarSeaPublicSpace_LS(int32 EntryPoint);
 	void OnLoaded_42C496BD44BA605173BFF1AE864F3FAA(class UObject* Loaded);
 	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveTick(float DeltaSeconds);
 
 public:

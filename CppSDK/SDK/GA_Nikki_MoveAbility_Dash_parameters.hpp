@@ -19,253 +19,20 @@
 namespace SDK::Params
 {
 
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.StageChange
-// 0x0002 (0x0002 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_StageChange final
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.ClampXYSpeed
+// 0x0028 (0x0028 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed final
 {
 public:
-	ERegularFloatingJumpStage                     NewStage;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     OldStage;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Max;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMovementComponent*                     MovementComp;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Vector_ClampSize2D_ReturnValue;           // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_StageChange) == 0x000001, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_StageChange");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_StageChange) == 0x000002, "Wrong size on GA_Nikki_MoveAbility_Dash_C_StageChange");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_StageChange, NewStage) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_StageChange::NewStage' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_StageChange, OldStage) == 0x000001, "Member 'GA_Nikki_MoveAbility_Dash_C_StageChange::OldStage' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnInterrupted_D30DE7AB48AEA8E333DF909738541332
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnInputRecv
-// 0x000C (0x000C - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnInputRecv final
-{
-public:
-	bool                                          bPressOrRelease;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTag                           InputTag;                                          // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnInputRecv");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv) == 0x00000C, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnInputRecv");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv, bPressOrRelease) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInputRecv::bPressOrRelease' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv, InputTag) == 0x000004, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInputRecv::InputTag' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCompleted_D30DE7AB48AEA8E333DF909738541332
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCancelled_D30DE7AB48AEA8E333DF909738541332
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnBlendOut_D30DE7AB48AEA8E333DF909738541332
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0
-// 0x0008 (0x0008 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0 final
-{
-public:
-	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.NoInput?
-// 0x0030 (0x0030 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_NoInput_ final
-{
-public:
-	class UCharacterMovementComponent*            MovementComp;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetCurrentAcceleration_ReturnValue;       // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Vector_IsZero_ReturnValue;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_NoInput_) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_NoInput_");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_NoInput_) == 0x000030, "Wrong size on GA_Nikki_MoveAbility_Dash_C_NoInput_");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, MovementComp) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::MovementComp' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, ReturnValue) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, CallFunc_GetCurrentAcceleration_ReturnValue) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::CallFunc_GetCurrentAcceleration_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, CallFunc_Vector_IsZero_ReturnValue) == 0x000028, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::CallFunc_Vector_IsZero_ReturnValue' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.K2_OnEndAbility
-// 0x0001 (0x0001 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility final
-{
-public:
-	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility) == 0x000001, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility) == 0x000001, "Wrong size on GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.GetSopAnim
-// 0x0020 (0x0020 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_GetSopAnim final
-{
-public:
-	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerCombatMovementComponent_C*    CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_GetSopAnim");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim) == 0x000020, "Wrong size on GA_Nikki_MoveAbility_Dash_C_GetSopAnim");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, Montage) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::Montage' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.GetRunOrWalk
-// 0x0006 (0x0006 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk final
-{
-public:
-	ERegularLocomotionType                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetEnableRun_Enable_Run_Operation;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk) == 0x000001, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk) == 0x000006, "Wrong size on GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, ReturnValue) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, Temp_bool_Variable) == 0x000001, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, Temp_byte_Variable) == 0x000002, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, Temp_byte_Variable_1) == 0x000003, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, CallFunc_GetEnableRun_Enable_Run_Operation) == 0x000004, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::CallFunc_GetEnableRun_Enable_Run_Operation' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, K2Node_Select_Default) == 0x000005, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::K2Node_Select_Default' has a wrong offset!");
-
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.GetEnableRun
-// 0x0020 (0x0020 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_GetEnableRun final
-{
-public:
-	bool                                          Enable_Run_Operation;                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMConfigContextInterface*              CallFunc_GetConfigContext_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class URMConfigContext_OnGround*              K2Node_DynamicCast_AsRMConfig_Context_on_Ground;   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_GetEnableRun");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun) == 0x000020, "Wrong size on GA_Nikki_MoveAbility_Dash_C_GetEnableRun");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, Enable_Run_Operation) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::Enable_Run_Operation' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, CallFunc_GetConfigContext_ReturnValue) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::CallFunc_GetConfigContext_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, K2Node_DynamicCast_AsRMConfig_Context_on_Ground) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::K2Node_DynamicCast_AsRMConfig_Context_on_Ground' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed) == 0x000028, "Wrong size on GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed, Max) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed::Max' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed, MovementComp) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed::MovementComp' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed, CallFunc_Vector_ClampSize2D_ReturnValue) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed::CallFunc_Vector_ClampSize2D_ReturnValue' has a wrong offset!");
 
 // Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.ExecuteUbergraph_GA_Nikki_MoveAbility_Dash
 // 0x0308 (0x0308 - 0x0000)
@@ -451,20 +218,253 @@ static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ExecuteUbergraph_GA_Nikki_Mov
 static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ExecuteUbergraph_GA_Nikki_MoveAbility_Dash, CallFunc_GetRunOrWalk_ReturnValue_1) == 0x000300, "Member 'GA_Nikki_MoveAbility_Dash_C_ExecuteUbergraph_GA_Nikki_MoveAbility_Dash::CallFunc_GetRunOrWalk_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ExecuteUbergraph_GA_Nikki_MoveAbility_Dash, CallFunc_GetRunOrWalk_ReturnValue_2) == 0x000301, "Member 'GA_Nikki_MoveAbility_Dash_C_ExecuteUbergraph_GA_Nikki_MoveAbility_Dash::CallFunc_GetRunOrWalk_ReturnValue_2' has a wrong offset!");
 
-// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.ClampXYSpeed
-// 0x0028 (0x0028 - 0x0000)
-struct GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed final
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.GetEnableRun
+// 0x0020 (0x0020 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_GetEnableRun final
 {
 public:
-	double                                        Max;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMovementComponent*                     MovementComp;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Vector_ClampSize2D_ReturnValue;           // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Enable_Run_Operation;                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2[0x6];                                        // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMConfigContextInterface*              CallFunc_GetConfigContext_ReturnValue;             // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class URMConfigContext_OnGround*              K2Node_DynamicCast_AsRMConfig_Context_on_Ground;   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed");
-static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed) == 0x000028, "Wrong size on GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed, Max) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed::Max' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed, MovementComp) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed::MovementComp' has a wrong offset!");
-static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed, CallFunc_Vector_ClampSize2D_ReturnValue) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_ClampXYSpeed::CallFunc_Vector_ClampSize2D_ReturnValue' has a wrong offset!");
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_GetEnableRun");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun) == 0x000020, "Wrong size on GA_Nikki_MoveAbility_Dash_C_GetEnableRun");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, Enable_Run_Operation) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::Enable_Run_Operation' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, CallFunc_IsValid_ReturnValue) == 0x000001, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, CallFunc_GetConfigContext_ReturnValue) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::CallFunc_GetConfigContext_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, K2Node_DynamicCast_AsRMConfig_Context_on_Ground) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::K2Node_DynamicCast_AsRMConfig_Context_on_Ground' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetEnableRun, CallFunc_IsValid_ReturnValue_1) == 0x000019, "Member 'GA_Nikki_MoveAbility_Dash_C_GetEnableRun::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.GetRunOrWalk
+// 0x0006 (0x0006 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk final
+{
+public:
+	ERegularLocomotionType                        ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetEnableRun_Enable_Run_Operation;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        K2Node_Select_Default;                             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk) == 0x000001, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk) == 0x000006, "Wrong size on GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, ReturnValue) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, Temp_bool_Variable) == 0x000001, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, Temp_byte_Variable) == 0x000002, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, Temp_byte_Variable_1) == 0x000003, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, CallFunc_GetEnableRun_Enable_Run_Operation) == 0x000004, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::CallFunc_GetEnableRun_Enable_Run_Operation' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk, K2Node_Select_Default) == 0x000005, "Member 'GA_Nikki_MoveAbility_Dash_C_GetRunOrWalk::K2Node_Select_Default' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.GetSopAnim
+// 0x0020 (0x0020 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_GetSopAnim final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerCombatMovementComponent_C*    CallFunc_GetComponentByClass_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_GetSopAnim");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim) == 0x000020, "Wrong size on GA_Nikki_MoveAbility_Dash_C_GetSopAnim");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, Montage) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::Montage' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, CallFunc_GetComponentByClass_ReturnValue) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_GetSopAnim, CallFunc_IsValid_ReturnValue) == 0x000018, "Member 'GA_Nikki_MoveAbility_Dash_C_GetSopAnim::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.K2_OnEndAbility
+// 0x0001 (0x0001 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility final
+{
+public:
+	bool                                          bWasCancelled;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility) == 0x000001, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility) == 0x000001, "Wrong size on GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility, bWasCancelled) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_K2_OnEndAbility::bWasCancelled' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.NoInput?
+// 0x0030 (0x0030 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_NoInput_ final
+{
+public:
+	class UCharacterMovementComponent*            MovementComp;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetCurrentAcceleration_ReturnValue;       // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Vector_IsZero_ReturnValue;                // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_NoInput_) == 0x000008, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_NoInput_");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_NoInput_) == 0x000030, "Wrong size on GA_Nikki_MoveAbility_Dash_C_NoInput_");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, MovementComp) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::MovementComp' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, ReturnValue) == 0x000008, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, CallFunc_GetCurrentAcceleration_ReturnValue) == 0x000010, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::CallFunc_GetCurrentAcceleration_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_NoInput_, CallFunc_Vector_IsZero_ReturnValue) == 0x000028, "Member 'GA_Nikki_MoveAbility_Dash_C_NoInput_::CallFunc_Vector_IsZero_ReturnValue' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnBlendOut_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnBlendOut_D30DE7AB48AEA8E333DF909738541332
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnBlendOut_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCancelled_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCancelled_D30DE7AB48AEA8E333DF909738541332
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCancelled_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCompleted_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnCompleted_D30DE7AB48AEA8E333DF909738541332
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnCompleted_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnInputRecv
+// 0x000C (0x000C - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnInputRecv final
+{
+public:
+	bool                                          bPressOrRelease;                                   // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           InputTag;                                          // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnInputRecv");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv) == 0x00000C, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnInputRecv");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv, bPressOrRelease) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInputRecv::bPressOrRelease' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInputRecv, InputTag) == 0x000004, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInputRecv::InputTag' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInterrupted_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnInterrupted_D30DE7AB48AEA8E333DF909738541332
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnInterrupted_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyBegin_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_0CAA8CB14C6ED774886F5A8BA49592E0::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332
+// 0x0008 (0x0008 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332 final
+{
+public:
+	class FName                                   NotifyName;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332) == 0x000004, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332) == 0x000008, "Wrong size on GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332, NotifyName) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_OnNotifyEnd_D30DE7AB48AEA8E333DF909738541332::NotifyName' has a wrong offset!");
+
+// Function GA_Nikki_MoveAbility_Dash.GA_Nikki_MoveAbility_Dash_C.StageChange
+// 0x0002 (0x0002 - 0x0000)
+struct GA_Nikki_MoveAbility_Dash_C_StageChange final
+{
+public:
+	ERegularFloatingJumpStage                     NewStage;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     OldStage;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Nikki_MoveAbility_Dash_C_StageChange) == 0x000001, "Wrong alignment on GA_Nikki_MoveAbility_Dash_C_StageChange");
+static_assert(sizeof(GA_Nikki_MoveAbility_Dash_C_StageChange) == 0x000002, "Wrong size on GA_Nikki_MoveAbility_Dash_C_StageChange");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_StageChange, NewStage) == 0x000000, "Member 'GA_Nikki_MoveAbility_Dash_C_StageChange::NewStage' has a wrong offset!");
+static_assert(offsetof(GA_Nikki_MoveAbility_Dash_C_StageChange, OldStage) == 0x000001, "Member 'GA_Nikki_MoveAbility_Dash_C_StageChange::OldStage' has a wrong offset!");
 
 }
 

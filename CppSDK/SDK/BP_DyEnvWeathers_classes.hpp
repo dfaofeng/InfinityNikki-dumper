@@ -10,19 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "E_WeatherTable_structs.hpp"
-#include "DynamicEnvironmentSystem_structs.hpp"
-#include "S_WeatherState_structs.hpp"
 #include "E_WeatherState_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_DynamicWeather_Master_classes.hpp"
+#include "S_WeatherState_structs.hpp"
+#include "DynamicEnvironmentSystem_structs.hpp"
+#include "E_WeatherTable_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DyEnvWeathers.BP_DyEnvWeathers_C
-// 0x0338 (0x0808 - 0x04D0)
+// 0x0368 (0x0838 - 0x04D0)
 class ABP_DyEnvWeathers_C final : public ABP_DynamicWeather_Master_C
 {
 public:
@@ -93,7 +93,7 @@ public:
 	bool                                          Indoor;                                            // 0x06F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_6FA[0x6];                                      // 0x06FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        PeriodSpeed;                                       // 0x0700(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_DyEnvSky_C*                         Ref_DESSky;                                        // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	class ABP_DyEnvSky_C*                         Ref_DESsky;                                        // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	class ADynamicWeatherVolume*                  WeatherVolumeNight;                                // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         VolumetricFog;                                     // 0x0718(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_71C[0x4];                                      // 0x071C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
@@ -113,20 +113,25 @@ public:
 	bool                                          WeatherSwapTo;                                     // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_7F9[0x3];                                      // 0x07F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   LastWeatherName;                                   // 0x07FC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_804[0x4];                                      // 0x0804(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_WeatherState                        CurrentWeatherState;                               // 0x0808(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void WeatherRaining(const struct FWeatherBaseLerpConfig& WeatherSettings);
 	void WeatherChangeEvent(const struct FS_WeatherState& packedParams);
 	void Weather_Rain(const struct FWeatherBaseLerpConfig& WeatherBaseLerpConfig);
-	void UserConstructionScript();
 	void Weather_NoRain();
+	void UserConstructionScript();
 	void UpdateNightParam();
 	void TransitionComplete();
 	class ADynamicWeatherVolume* TargetWeatherVolume();
+	void SetWetnessCharacterSphereMask(float Intensity, double SunnyReverse);
 	void SetVolumetricFog(bool bNewValue);
 	void SetSceneWeatherBlendWeight(double Weight);
 	void SetPause(bool bPause);
 	void SendPresetToObject(class ADynamicWeatherVolume* Volume);
+	void Send_DataTable_to_Volume();
+	class ADynamicWeatherVolume* RemoveSwapWeatherVolume();
 	double RemoveBlendWeight(class ADynamicWeatherVolume* Vol);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
@@ -139,8 +144,6 @@ public:
 	void InitiWeather();
 	class UDataTable* GetWeatherCurrentTable(class FName InName);
 	float GetSwapCurveFactorRemapped0_1();
-	void Send_DataTable_to_Volume();
-	class ADynamicWeatherVolume* RemoveSwapWeatherVolume();
 	void Get_Final_Sun_Rotator_Value(float Now_Time, struct FVector* Final);
 	void FillWeathersBinding();
 	void ExecuteUbergraph_BP_DyEnvWeathers(int32 EntryPoint);
@@ -151,12 +154,12 @@ public:
 	void BPI_WeatherData(class UClass* WeatherPreset);
 	void BPI_WeatherChanged(const class FString& RegionName, const class FString& UnloadWeatherName, const class FString& LoadWeatherName);
 	void BPI_TODTime(double Time);
+	void BPI_TodState();
 	void BPI_SaveAsset(bool OnlySyncContent, bool OnlyWriteParam);
 	void BPI_ReloadFile();
 	void BPI_EditorUpdateRole(const struct FLinearColor& LocalLightColor);
 	void BPI_EditorUpdate();
 	void BPI_CLFSPostContruct();
-	void BPI_TodState();
 	void BlendingWeatherVolume();
 
 public:
@@ -170,7 +173,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_DyEnvWeathers_C) == 0x000008, "Wrong alignment on ABP_DyEnvWeathers_C");
-static_assert(sizeof(ABP_DyEnvWeathers_C) == 0x000808, "Wrong size on ABP_DyEnvWeathers_C");
+static_assert(sizeof(ABP_DyEnvWeathers_C) == 0x000838, "Wrong size on ABP_DyEnvWeathers_C");
 static_assert(offsetof(ABP_DyEnvWeathers_C, UberGraphFrame_BP_DyEnvWeathers_C) == 0x0004D0, "Member 'ABP_DyEnvWeathers_C::UberGraphFrame_BP_DyEnvWeathers_C' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, ExposureManager) == 0x0004D8, "Member 'ABP_DyEnvWeathers_C::ExposureManager' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, DynamicWetness) == 0x0004E0, "Member 'ABP_DyEnvWeathers_C::DynamicWetness' has a wrong offset!");
@@ -228,7 +231,7 @@ static_assert(offsetof(ABP_DyEnvWeathers_C, ShouldChangeWeather) == 0x0006E8, "M
 static_assert(offsetof(ABP_DyEnvWeathers_C, Condition) == 0x0006F8, "Member 'ABP_DyEnvWeathers_C::Condition' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, Indoor) == 0x0006F9, "Member 'ABP_DyEnvWeathers_C::Indoor' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, PeriodSpeed) == 0x000700, "Member 'ABP_DyEnvWeathers_C::PeriodSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvWeathers_C, Ref_DESSky) == 0x000708, "Member 'ABP_DyEnvWeathers_C::Ref_DESSky' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvWeathers_C, Ref_DESsky) == 0x000708, "Member 'ABP_DyEnvWeathers_C::Ref_DESsky' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, WeatherVolumeNight) == 0x000710, "Member 'ABP_DyEnvWeathers_C::WeatherVolumeNight' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, VolumetricFog) == 0x000718, "Member 'ABP_DyEnvWeathers_C::VolumetricFog' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, TODTableArray) == 0x000720, "Member 'ABP_DyEnvWeathers_C::TODTableArray' has a wrong offset!");
@@ -245,6 +248,7 @@ static_assert(offsetof(ABP_DyEnvWeathers_C, WeatherRainRippleMID) == 0x0007E8, "
 static_assert(offsetof(ABP_DyEnvWeathers_C, LocalFliteredWeatherName) == 0x0007F0, "Member 'ABP_DyEnvWeathers_C::LocalFliteredWeatherName' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, WeatherSwapTo) == 0x0007F8, "Member 'ABP_DyEnvWeathers_C::WeatherSwapTo' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvWeathers_C, LastWeatherName) == 0x0007FC, "Member 'ABP_DyEnvWeathers_C::LastWeatherName' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvWeathers_C, CurrentWeatherState) == 0x000808, "Member 'ABP_DyEnvWeathers_C::CurrentWeatherState' has a wrong offset!");
 
 }
 

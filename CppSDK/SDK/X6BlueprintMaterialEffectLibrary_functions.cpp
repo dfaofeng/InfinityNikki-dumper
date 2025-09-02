@@ -17,36 +17,6 @@
 namespace SDK
 {
 
-// Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.BP_SetActorEffect
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   EffectType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const TMap<class FName, double>&        ExtraScalars                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// const TMap<class FName, struct FVector>&ExtraVectors                                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UX6BlueprintMaterialEffectLibrary_C::BP_SetActorEffect(class AActor* Actor, int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, const TMap<class FName, struct FVector>& ExtraVectors, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("X6BlueprintMaterialEffectLibrary_C", "BP_SetActorEffect");
-
-	Params::X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect Parms{};
-
-	Parms.Actor = Actor;
-	Parms.EffectType = EffectType;
-	Parms.Value = Value;
-	Parms.ExtraScalars = std::move(ExtraScalars);
-	Parms.ExtraVectors = std::move(ExtraVectors);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
 // Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.AddScalarsByType
 // (Static, Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -74,6 +44,36 @@ void UX6BlueprintMaterialEffectLibrary_C::AddScalarsByType(int32 EffectType, dou
 
 	if (ScalarMap != nullptr)
 		*ScalarMap = std::move(Parms.ScalarMap);
+}
+
+
+// Function X6BlueprintMaterialEffectLibrary.X6BlueprintMaterialEffectLibrary_C.BP_SetActorEffect
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EffectType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TMap<class FName, double>&        ExtraScalars                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// const TMap<class FName, struct FVector>&ExtraVectors                                           (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintMaterialEffectLibrary_C::BP_SetActorEffect(class AActor* Actor, int32 EffectType, double Value, const TMap<class FName, double>& ExtraScalars, const TMap<class FName, struct FVector>& ExtraVectors, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintMaterialEffectLibrary_C", "BP_SetActorEffect");
+
+	Params::X6BlueprintMaterialEffectLibrary_C_BP_SetActorEffect Parms{};
+
+	Parms.Actor = Actor;
+	Parms.EffectType = EffectType;
+	Parms.Value = Value;
+	Parms.ExtraScalars = std::move(ExtraScalars);
+	Parms.ExtraVectors = std::move(ExtraVectors);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
 }

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EBulletEffectType_structs.hpp"
 #include "ESkillReleaseTargetType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EBulletEffectType_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

@@ -18,21 +18,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WhaleGameplayContainer.BP_WhaleGameplayContainer_C
-// 0x0050 (0x04C0 - 0x0470)
+// 0x0050 (0x0510 - 0x04C0)
 class ABP_WhaleGameplayContainer_C final : public ABP_NPCAttractorDynamicGameplayContainer_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_WhaleGameplayContainer_C;        // 0x0470(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UArrowComponent*                        Arrow;                                             // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 mesh;                                              // 0x0480(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         SummonClound_ScaleParam_699003F64CF61C6327420D86DC1BD9BA; // 0x0488(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ETimelineDirection                            SummonClound__Direction_699003F64CF61C6327420D86DC1BD9BA; // 0x048C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48D[0x3];                                      // 0x048D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTimelineComponent*                     SummonClound;                                      // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimMontage*                           SummonAnim;                                        // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_CustomRayMarchingCloud_C*           Clound;                                            // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               Mid;                                               // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CloudLayerName;                                    // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_WhaleGameplayContainer_C;        // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UArrowComponent*                        Arrow;                                             // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 mesh;                                              // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         SummonClound_ScaleParam_699003F64CF61C6327420D86DC1BD9BA; // 0x04D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ETimelineDirection                            SummonClound__Direction_699003F64CF61C6327420D86DC1BD9BA; // 0x04DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DD[0x3];                                      // 0x04DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTimelineComponent*                     SummonClound;                                      // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimMontage*                           SummonAnim;                                        // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_CustomRayMarchingCloud_C*           Clound;                                            // 0x04F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               Mid;                                               // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CloudLayerName;                                    // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void BP_InitCloud();
@@ -57,17 +57,17 @@ public:
 	}
 };
 static_assert(alignof(ABP_WhaleGameplayContainer_C) == 0x000008, "Wrong alignment on ABP_WhaleGameplayContainer_C");
-static_assert(sizeof(ABP_WhaleGameplayContainer_C) == 0x0004C0, "Wrong size on ABP_WhaleGameplayContainer_C");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, UberGraphFrame_BP_WhaleGameplayContainer_C) == 0x000470, "Member 'ABP_WhaleGameplayContainer_C::UberGraphFrame_BP_WhaleGameplayContainer_C' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, Arrow) == 0x000478, "Member 'ABP_WhaleGameplayContainer_C::Arrow' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, mesh) == 0x000480, "Member 'ABP_WhaleGameplayContainer_C::mesh' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonClound_ScaleParam_699003F64CF61C6327420D86DC1BD9BA) == 0x000488, "Member 'ABP_WhaleGameplayContainer_C::SummonClound_ScaleParam_699003F64CF61C6327420D86DC1BD9BA' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonClound__Direction_699003F64CF61C6327420D86DC1BD9BA) == 0x00048C, "Member 'ABP_WhaleGameplayContainer_C::SummonClound__Direction_699003F64CF61C6327420D86DC1BD9BA' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonClound) == 0x000490, "Member 'ABP_WhaleGameplayContainer_C::SummonClound' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonAnim) == 0x000498, "Member 'ABP_WhaleGameplayContainer_C::SummonAnim' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, Clound) == 0x0004A0, "Member 'ABP_WhaleGameplayContainer_C::Clound' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, Mid) == 0x0004A8, "Member 'ABP_WhaleGameplayContainer_C::Mid' has a wrong offset!");
-static_assert(offsetof(ABP_WhaleGameplayContainer_C, CloudLayerName) == 0x0004B0, "Member 'ABP_WhaleGameplayContainer_C::CloudLayerName' has a wrong offset!");
+static_assert(sizeof(ABP_WhaleGameplayContainer_C) == 0x000510, "Wrong size on ABP_WhaleGameplayContainer_C");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, UberGraphFrame_BP_WhaleGameplayContainer_C) == 0x0004C0, "Member 'ABP_WhaleGameplayContainer_C::UberGraphFrame_BP_WhaleGameplayContainer_C' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, Arrow) == 0x0004C8, "Member 'ABP_WhaleGameplayContainer_C::Arrow' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, mesh) == 0x0004D0, "Member 'ABP_WhaleGameplayContainer_C::mesh' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonClound_ScaleParam_699003F64CF61C6327420D86DC1BD9BA) == 0x0004D8, "Member 'ABP_WhaleGameplayContainer_C::SummonClound_ScaleParam_699003F64CF61C6327420D86DC1BD9BA' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonClound__Direction_699003F64CF61C6327420D86DC1BD9BA) == 0x0004DC, "Member 'ABP_WhaleGameplayContainer_C::SummonClound__Direction_699003F64CF61C6327420D86DC1BD9BA' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonClound) == 0x0004E0, "Member 'ABP_WhaleGameplayContainer_C::SummonClound' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, SummonAnim) == 0x0004E8, "Member 'ABP_WhaleGameplayContainer_C::SummonAnim' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, Clound) == 0x0004F0, "Member 'ABP_WhaleGameplayContainer_C::Clound' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, Mid) == 0x0004F8, "Member 'ABP_WhaleGameplayContainer_C::Mid' has a wrong offset!");
+static_assert(offsetof(ABP_WhaleGameplayContainer_C, CloudLayerName) == 0x000500, "Member 'ABP_WhaleGameplayContainer_C::CloudLayerName' has a wrong offset!");
 
 }
 

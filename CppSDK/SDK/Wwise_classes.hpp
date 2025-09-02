@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "AkAudio_classes.hpp"
 #include "AudioLinkCore_classes.hpp"
+#include "AkAudio_classes.hpp"
 
 
 namespace SDK

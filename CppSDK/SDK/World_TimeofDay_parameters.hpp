@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "S_WeatherState_structs.hpp"
 #include "DynamicEnvironmentSystem_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function World_TimeofDay.World_TimeofDay_C.ExecuteUbergraph_World_TimeofDay
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x02C8 (0x02C8 - 0x0000)
 struct World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay final
 {
 public:
@@ -57,11 +57,11 @@ public:
 	class FString                                 CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue_2; // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_4;          // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_StrStr_ReturnValue_5;          // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_133[0x5];                                      // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                Temp_object_Variable_1;                            // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_BooleanOR_ReturnValue_2;                  // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_141[0x3];                                      // 0x0141(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ADynamicWeatherVolume*                  CallFunc_Array_Get_Item;                           // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FName                                   K2Node_CustomEvent_WeatherName;                    // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FS_WeatherState                        K2Node_MakeStruct_S_WeatherState_2;                // 0x0158(0x0030)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -83,43 +83,44 @@ public:
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FMin_ReturnValue;                         // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0201(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0202(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_203[0x5];                                      // 0x0203(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0218(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                Temp_object_Variable_2;                            // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                K2Node_CustomEvent_Loaded_3;                       // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x0230(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_1; // 0x0240(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_249[0x7];                                      // 0x0249(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                Temp_object_Variable_3;                            // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_Mode_inEditor;                   // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_259[0x3];                                      // 0x0259(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_2;            // 0x025C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x026C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0270(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_271[0x3];                                      // 0x0271(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0274(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_3;            // 0x0278(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_2; // 0x0288(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_FMin_A_ImplicitCast;                      // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_VariableSet_BlendWeight_ImplicitCast;       // 0x02A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFogDensity_Value_ImplicitCast;         // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FMin_ReturnValue;                         // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0209(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_20A[0x6];                                      // 0x020A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0220(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                Temp_object_Variable_2;                            // 0x0228(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                K2Node_CustomEvent_Loaded_3;                       // 0x0230(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_1;            // 0x0238(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_1; // 0x0248(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                Temp_object_Variable_3;                            // 0x0258(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_Mode_inEditor;                   // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_261[0x3];                                      // 0x0261(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_2;            // 0x0264(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UObject* Loaded)>        K2Node_CreateDelegate_OutputDelegate_3;            // 0x0274(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_289[0x3];                                      // 0x0289(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x028C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_2; // 0x0290(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_FMin_A_ImplicitCast;                      // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_VariableSet_BlendWeight_ImplicitCast;       // 0x02B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFogDensity_Value_ImplicitCast;         // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay) == 0x000008, "Wrong alignment on World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay");
-static_assert(sizeof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay) == 0x0002C0, "Wrong size on World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay");
+static_assert(sizeof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay) == 0x0002C8, "Wrong size on World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, EntryPoint) == 0x000000, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::EntryPoint' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate) == 0x000004, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue) == 0x000018, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue' has a wrong offset!");
@@ -149,9 +150,9 @@ static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallF
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue_2) == 0x000120, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_GetPlatformNameInEditorPreviewAndRuntime_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_EqualEqual_StrStr_ReturnValue_4) == 0x000130, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_EqualEqual_StrStr_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_EqualEqual_StrStr_ReturnValue_5) == 0x000131, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_EqualEqual_StrStr_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_BooleanOR_ReturnValue_2) == 0x000132, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_object_Variable_1) == 0x000138, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_int_Array_Index_Variable) == 0x000140, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_BooleanOR_ReturnValue_2) == 0x000140, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_BooleanOR_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_int_Array_Index_Variable) == 0x000144, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Array_Get_Item) == 0x000148, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CustomEvent_WeatherName) == 0x000150, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CustomEvent_WeatherName' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_MakeStruct_S_WeatherState_2) == 0x000158, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_MakeStruct_S_WeatherState_2' has a wrong offset!");
@@ -170,33 +171,33 @@ static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallF
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_DoubleDouble_ReturnValue) == 0x0001D8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x0001E0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_FClamp_ReturnValue) == 0x0001E8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001F0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_FMin_ReturnValue) == 0x0001F8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_FMin_ReturnValue' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_IsValid_ReturnValue) == 0x000200, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_bool_Variable_3) == 0x000201, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Not_PreBool_ReturnValue_3) == 0x000202, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x000208, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_bSuccess) == 0x000210, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000218, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_object_Variable_2) == 0x000220, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_object_Variable_2' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CustomEvent_Loaded_3) == 0x000228, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CustomEvent_Loaded_3' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate_1) == 0x000230, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_AsDirectional_Light_Component_1) == 0x000240, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_AsDirectional_Light_Component_1' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_bSuccess_1) == 0x000248, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_object_Variable_3) == 0x000250, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_object_Variable_3' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_IsEditor_Mode_inEditor) == 0x000258, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_IsEditor_Mode_inEditor' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate_2) == 0x00025C, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_int_Loop_Counter_Variable) == 0x00026C, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Less_IntInt_ReturnValue) == 0x000270, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_IntInt_ReturnValue) == 0x000274, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate_3) == 0x000278, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_AsDirectional_Light_Component_2) == 0x000288, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_AsDirectional_Light_Component_2' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_bSuccess_2) == 0x000290, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_FMin_A_ImplicitCast) == 0x000298, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_FMin_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x0002A0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_VariableSet_BlendWeight_ImplicitCast) == 0x0002A8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_VariableSet_BlendWeight_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0002B0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_SetFogDensity_Value_ImplicitCast) == 0x0002B8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_SetFogDensity_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_IsValid_ReturnValue) == 0x0001F0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001F8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_FMin_ReturnValue) == 0x000200, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_FMin_ReturnValue' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_bool_Variable_3) == 0x000208, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Not_PreBool_ReturnValue_3) == 0x000209, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x000210, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_bSuccess) == 0x000218, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000220, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_object_Variable_2) == 0x000228, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_object_Variable_2' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CustomEvent_Loaded_3) == 0x000230, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CustomEvent_Loaded_3' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate_1) == 0x000238, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_AsDirectional_Light_Component_1) == 0x000248, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_AsDirectional_Light_Component_1' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_bSuccess_1) == 0x000250, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_object_Variable_3) == 0x000258, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_object_Variable_3' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_IsEditor_Mode_inEditor) == 0x000260, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_IsEditor_Mode_inEditor' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate_2) == 0x000264, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_CreateDelegate_OutputDelegate_3) == 0x000274, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, Temp_int_Loop_Counter_Variable) == 0x000284, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Less_IntInt_ReturnValue) == 0x000288, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_IntInt_ReturnValue) == 0x00028C, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_AsDirectional_Light_Component_2) == 0x000290, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_AsDirectional_Light_Component_2' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_DynamicCast_bSuccess_2) == 0x000298, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_FMin_A_ImplicitCast) == 0x0002A0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_FMin_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_LessEqual_DoubleDouble_A_ImplicitCast) == 0x0002A8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_LessEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, K2Node_VariableSet_BlendWeight_ImplicitCast) == 0x0002B0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::K2Node_VariableSet_BlendWeight_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0002B8, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay, CallFunc_SetFogDensity_Value_ImplicitCast) == 0x0002C0, "Member 'World_TimeofDay_C_ExecuteUbergraph_World_TimeofDay::CallFunc_SetFogDensity_Value_ImplicitCast' has a wrong offset!");
 
 // Function World_TimeofDay.World_TimeofDay_C.OnLoaded_153BC3174A665DD2EDCA02973E2A153A
 // 0x0008 (0x0008 - 0x0000)

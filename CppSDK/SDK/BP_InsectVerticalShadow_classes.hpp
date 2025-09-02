@@ -18,22 +18,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_InsectVerticalShadow.BP_InsectVerticalShadow_C
-// 0x0028 (0x0460 - 0x0438)
+// 0x0028 (0x04B0 - 0x0488)
 class ABP_InsectVerticalShadow_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   VerticalShadowMesh;                                // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseVerticalShadow;                                // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_451[0x7];                                      // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 InsectMesh;                                        // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   VerticalShadowMesh;                                // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseVerticalShadow;                                // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 InsectMesh;                                        // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_InsectVerticalShadow(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
 	void ServerInit(bool bServer);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
+	void ExecuteUbergraph_BP_InsectVerticalShadow(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()
@@ -46,12 +46,12 @@ public:
 	}
 };
 static_assert(alignof(ABP_InsectVerticalShadow_C) == 0x000008, "Wrong alignment on ABP_InsectVerticalShadow_C");
-static_assert(sizeof(ABP_InsectVerticalShadow_C) == 0x000460, "Wrong size on ABP_InsectVerticalShadow_C");
-static_assert(offsetof(ABP_InsectVerticalShadow_C, UberGraphFrame) == 0x000438, "Member 'ABP_InsectVerticalShadow_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_InsectVerticalShadow_C, VerticalShadowMesh) == 0x000440, "Member 'ABP_InsectVerticalShadow_C::VerticalShadowMesh' has a wrong offset!");
-static_assert(offsetof(ABP_InsectVerticalShadow_C, DefaultSceneRoot) == 0x000448, "Member 'ABP_InsectVerticalShadow_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_InsectVerticalShadow_C, bUseVerticalShadow) == 0x000450, "Member 'ABP_InsectVerticalShadow_C::bUseVerticalShadow' has a wrong offset!");
-static_assert(offsetof(ABP_InsectVerticalShadow_C, InsectMesh) == 0x000458, "Member 'ABP_InsectVerticalShadow_C::InsectMesh' has a wrong offset!");
+static_assert(sizeof(ABP_InsectVerticalShadow_C) == 0x0004B0, "Wrong size on ABP_InsectVerticalShadow_C");
+static_assert(offsetof(ABP_InsectVerticalShadow_C, UberGraphFrame) == 0x000488, "Member 'ABP_InsectVerticalShadow_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_InsectVerticalShadow_C, VerticalShadowMesh) == 0x000490, "Member 'ABP_InsectVerticalShadow_C::VerticalShadowMesh' has a wrong offset!");
+static_assert(offsetof(ABP_InsectVerticalShadow_C, DefaultSceneRoot) == 0x000498, "Member 'ABP_InsectVerticalShadow_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_InsectVerticalShadow_C, bUseVerticalShadow) == 0x0004A0, "Member 'ABP_InsectVerticalShadow_C::bUseVerticalShadow' has a wrong offset!");
+static_assert(offsetof(ABP_InsectVerticalShadow_C, InsectMesh) == 0x0004A8, "Member 'ABP_InsectVerticalShadow_C::InsectMesh' has a wrong offset!");
 
 }
 

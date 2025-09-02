@@ -12,6 +12,8 @@
 
 #include "E_MatchClothType_structs.hpp"
 #include "FMatchClothParaArray_structs.hpp"
+#include "ESpecialType_structs.hpp"
+#include "DS_HighHeelBoneData_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -19,7 +21,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MatchClothDataAsset.BP_MatchClothDataAsset_C
-// 0x00C8 (0x00F8 - 0x0030)
+// 0x0118 (0x0148 - 0x0030)
 class UBP_MatchClothDataAsset_C final : public UPrimaryDataAsset
 {
 public:
@@ -27,6 +29,7 @@ public:
 	TSoftObjectPtr<class UDataTable>              DT_ClothMatchCombineParam;                         // 0x0058(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UDataTable>              DT_OrnamentPairIgnoreConfig;                       // 0x0080(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TMap<E_MatchClothType, struct FFMatchClothParaArray> MatchPartsMap;                              // 0x00A8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<ESpecialType, struct FDS_HighHeelBoneData> HighHeelBoneData;                                // 0x00F8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	static class UClass* StaticClass()
@@ -39,11 +42,12 @@ public:
 	}
 };
 static_assert(alignof(UBP_MatchClothDataAsset_C) == 0x000008, "Wrong alignment on UBP_MatchClothDataAsset_C");
-static_assert(sizeof(UBP_MatchClothDataAsset_C) == 0x0000F8, "Wrong size on UBP_MatchClothDataAsset_C");
+static_assert(sizeof(UBP_MatchClothDataAsset_C) == 0x000148, "Wrong size on UBP_MatchClothDataAsset_C");
 static_assert(offsetof(UBP_MatchClothDataAsset_C, DT_ClothMatchIgnoreConfig) == 0x000030, "Member 'UBP_MatchClothDataAsset_C::DT_ClothMatchIgnoreConfig' has a wrong offset!");
 static_assert(offsetof(UBP_MatchClothDataAsset_C, DT_ClothMatchCombineParam) == 0x000058, "Member 'UBP_MatchClothDataAsset_C::DT_ClothMatchCombineParam' has a wrong offset!");
 static_assert(offsetof(UBP_MatchClothDataAsset_C, DT_OrnamentPairIgnoreConfig) == 0x000080, "Member 'UBP_MatchClothDataAsset_C::DT_OrnamentPairIgnoreConfig' has a wrong offset!");
 static_assert(offsetof(UBP_MatchClothDataAsset_C, MatchPartsMap) == 0x0000A8, "Member 'UBP_MatchClothDataAsset_C::MatchPartsMap' has a wrong offset!");
+static_assert(offsetof(UBP_MatchClothDataAsset_C, HighHeelBoneData) == 0x0000F8, "Member 'UBP_MatchClothDataAsset_C::HighHeelBoneData' has a wrong offset!");
 
 }
 

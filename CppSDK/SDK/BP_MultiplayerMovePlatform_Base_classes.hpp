@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
 #include "X6Game_classes.hpp"
 #include "E_EInteractSuccRet_structs.hpp"
 
@@ -19,27 +20,28 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MultiplayerMovePlatform_Base.BP_MultiplayerMovePlatform_Base_C
-// 0x00B0 (0x04E8 - 0x0438)
+// 0x00B8 (0x0540 - 0x0488)
 class ABP_MultiplayerMovePlatform_Base_C : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          LeaveTriggerVolume;                                // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   StaticMesh;                                        // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_HandleInteractionLogic_C*           BP_HandleInteractionLogic;                         // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          InteractiveVolume;                                 // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_InteractiveActorComponent_C*        BP_InteractiveActorComponent;                      // 0x0468(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_SplineTrackComponent_C*             BP_SplineTrackComponent;                           // 0x0470(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0478(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bIsPlaying;                                     // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_481[0x7];                                      // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 BP_TeleportTag_End;                                // 0x0488(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 BP_TeleportTag_Start;                              // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	int32                                         BP_MovePlatformCfgID;                              // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAnimMontage>            AM_Move;                                           // 0x04B0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	class FString                                 BP_GuideCode;                                      // 0x04D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBP_BikeCantGetOffVolume_C*             BP_BikeCantGetOffVolume;                           // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          LeaveTriggerVolume;                                // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   StaticMesh;                                        // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SkeletalMesh;                                      // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_HandleInteractionLogic_C*           BP_HandleInteractionLogic;                         // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          InteractiveVolume;                                 // 0x04B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_InteractiveActorComponent_C*        BP_InteractiveActorComponent;                      // 0x04C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_SplineTrackComponent_C*             BP_SplineTrackComponent;                           // 0x04C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bIsPlaying;                                     // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BP_TeleportTag_End;                                // 0x04E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 BP_TeleportTag_Start;                              // 0x04F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         BP_MovePlatformCfgID;                              // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_504[0x4];                                      // 0x0504(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAnimMontage>            AM_Move;                                           // 0x0508(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FString                                 BP_GuideCode;                                      // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	void AdjustRotation(double DeltaTime);
@@ -56,7 +58,7 @@ public:
 	void BP_StopMove();
 	void ExecuteUbergraph_BP_MultiplayerMovePlatform_Base(int32 EntryPoint);
 	void On_Multi_ActiveSuccess(class AActor* Other_player_actor, E_EInteractSuccRet Result);
-	void On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player);
+	void On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player, E_Multi_InteractiveObjActive_Type E_Multi_Type);
 	void OnBlendOut_3FA2443E4959FA0322D075B4FEA0A8E3(class FName NotifyName);
 	void OnCompleted_3FA2443E4959FA0322D075B4FEA0A8E3(class FName NotifyName);
 	void OnInterrupted_3FA2443E4959FA0322D075B4FEA0A8E3(class FName NotifyName);
@@ -79,22 +81,23 @@ public:
 	}
 };
 static_assert(alignof(ABP_MultiplayerMovePlatform_Base_C) == 0x000008, "Wrong alignment on ABP_MultiplayerMovePlatform_Base_C");
-static_assert(sizeof(ABP_MultiplayerMovePlatform_Base_C) == 0x0004E8, "Wrong size on ABP_MultiplayerMovePlatform_Base_C");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, UberGraphFrame) == 0x000438, "Member 'ABP_MultiplayerMovePlatform_Base_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, LeaveTriggerVolume) == 0x000440, "Member 'ABP_MultiplayerMovePlatform_Base_C::LeaveTriggerVolume' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, StaticMesh) == 0x000448, "Member 'ABP_MultiplayerMovePlatform_Base_C::StaticMesh' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, SkeletalMesh) == 0x000450, "Member 'ABP_MultiplayerMovePlatform_Base_C::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_HandleInteractionLogic) == 0x000458, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_HandleInteractionLogic' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, InteractiveVolume) == 0x000460, "Member 'ABP_MultiplayerMovePlatform_Base_C::InteractiveVolume' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_InteractiveActorComponent) == 0x000468, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_InteractiveActorComponent' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_SplineTrackComponent) == 0x000470, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_SplineTrackComponent' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, DefaultSceneRoot) == 0x000478, "Member 'ABP_MultiplayerMovePlatform_Base_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_bIsPlaying) == 0x000480, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_bIsPlaying' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_TeleportTag_End) == 0x000488, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_TeleportTag_End' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_TeleportTag_Start) == 0x000498, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_TeleportTag_Start' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_MovePlatformCfgID) == 0x0004A8, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_MovePlatformCfgID' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, AM_Move) == 0x0004B0, "Member 'ABP_MultiplayerMovePlatform_Base_C::AM_Move' has a wrong offset!");
-static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_GuideCode) == 0x0004D8, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_GuideCode' has a wrong offset!");
+static_assert(sizeof(ABP_MultiplayerMovePlatform_Base_C) == 0x000540, "Wrong size on ABP_MultiplayerMovePlatform_Base_C");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, UberGraphFrame) == 0x000488, "Member 'ABP_MultiplayerMovePlatform_Base_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_BikeCantGetOffVolume) == 0x000490, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_BikeCantGetOffVolume' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, LeaveTriggerVolume) == 0x000498, "Member 'ABP_MultiplayerMovePlatform_Base_C::LeaveTriggerVolume' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, StaticMesh) == 0x0004A0, "Member 'ABP_MultiplayerMovePlatform_Base_C::StaticMesh' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, SkeletalMesh) == 0x0004A8, "Member 'ABP_MultiplayerMovePlatform_Base_C::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_HandleInteractionLogic) == 0x0004B0, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_HandleInteractionLogic' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, InteractiveVolume) == 0x0004B8, "Member 'ABP_MultiplayerMovePlatform_Base_C::InteractiveVolume' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_InteractiveActorComponent) == 0x0004C0, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_InteractiveActorComponent' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_SplineTrackComponent) == 0x0004C8, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_SplineTrackComponent' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, DefaultSceneRoot) == 0x0004D0, "Member 'ABP_MultiplayerMovePlatform_Base_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_bIsPlaying) == 0x0004D8, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_bIsPlaying' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_TeleportTag_End) == 0x0004E0, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_TeleportTag_End' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_TeleportTag_Start) == 0x0004F0, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_TeleportTag_Start' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_MovePlatformCfgID) == 0x000500, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_MovePlatformCfgID' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, AM_Move) == 0x000508, "Member 'ABP_MultiplayerMovePlatform_Base_C::AM_Move' has a wrong offset!");
+static_assert(offsetof(ABP_MultiplayerMovePlatform_Base_C, BP_GuideCode) == 0x000530, "Member 'ABP_MultiplayerMovePlatform_Base_C::BP_GuideCode' has a wrong offset!");
 
 }
 

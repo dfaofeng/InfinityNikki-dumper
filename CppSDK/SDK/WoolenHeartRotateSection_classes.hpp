@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "X6CustomizableSequencerTracks_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "X6CustomizableSequencerTracks_classes.hpp"
 
 
 namespace SDK
@@ -37,9 +37,9 @@ public:
 	double                                        BP_PlayerYawOffsetDegree;                          // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void K2_OnSectionUpdate();
-	void K2_OnSectionBegin();
 	void ExecuteUbergraph_WoolenHeartRotateSection(int32 EntryPoint);
+	void K2_OnSectionBegin();
+	void K2_OnSectionUpdate();
 
 public:
 	static class UClass* StaticClass()

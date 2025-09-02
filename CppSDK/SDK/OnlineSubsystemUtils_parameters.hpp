@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "OnlineSubsystem_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -452,86 +452,6 @@ static_assert(offsetof(InAppPurchaseRestoreCallbackProxy2_CreateProxyObjectForIn
 static_assert(offsetof(InAppPurchaseRestoreCallbackProxy2_CreateProxyObjectForInAppPurchaseRestore, PlayerController) == 0x000010, "Member 'InAppPurchaseRestoreCallbackProxy2_CreateProxyObjectForInAppPurchaseRestore::PlayerController' has a wrong offset!");
 static_assert(offsetof(InAppPurchaseRestoreCallbackProxy2_CreateProxyObjectForInAppPurchaseRestore, ReturnValue) == 0x000018, "Member 'InAppPurchaseRestoreCallbackProxy2_CreateProxyObjectForInAppPurchaseRestore::ReturnValue' has a wrong offset!");
 
-// Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
-// 0x0138 (0x0138 - 0x0000)
-struct JoinSessionCallbackProxy_JoinSession final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBlueprintSessionResult                SearchResult;                                      // 0x0010(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UJoinSessionCallbackProxy*              ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(JoinSessionCallbackProxy_JoinSession) == 0x000008, "Wrong alignment on JoinSessionCallbackProxy_JoinSession");
-static_assert(sizeof(JoinSessionCallbackProxy_JoinSession) == 0x000138, "Wrong size on JoinSessionCallbackProxy_JoinSession");
-static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, WorldContextObject) == 0x000000, "Member 'JoinSessionCallbackProxy_JoinSession::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, PlayerController) == 0x000008, "Member 'JoinSessionCallbackProxy_JoinSession::PlayerController' has a wrong offset!");
-static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, SearchResult) == 0x000010, "Member 'JoinSessionCallbackProxy_JoinSession::SearchResult' has a wrong offset!");
-static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, ReturnValue) == 0x000130, "Member 'JoinSessionCallbackProxy_JoinSession::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
-// 0x0018 (0x0018 - 0x0000)
-struct LeaderboardBlueprintLibrary_WriteLeaderboardInteger final
-{
-public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StatValue;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger) == 0x000008, "Wrong alignment on LeaderboardBlueprintLibrary_WriteLeaderboardInteger");
-static_assert(sizeof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger) == 0x000018, "Wrong size on LeaderboardBlueprintLibrary_WriteLeaderboardInteger");
-static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, PlayerController) == 0x000000, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::PlayerController' has a wrong offset!");
-static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, StatName) == 0x000008, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::StatName' has a wrong offset!");
-static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, StatValue) == 0x000010, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::StatValue' has a wrong offset!");
-static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, ReturnValue) == 0x000014, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
-// 0x0018 (0x0018 - 0x0000)
-struct LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush final
-{
-public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULeaderboardFlushCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush) == 0x000008, "Wrong alignment on LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush");
-static_assert(sizeof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush) == 0x000018, "Wrong size on LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush");
-static_assert(offsetof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, PlayerController) == 0x000000, "Member 'LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush::PlayerController' has a wrong offset!");
-static_assert(offsetof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, SessionName) == 0x000008, "Member 'LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush::SessionName' has a wrong offset!");
-static_assert(offsetof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, ReturnValue) == 0x000010, "Member 'LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-// 0x0018 (0x0018 - 0x0000)
-struct LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery final
-{
-public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULeaderboardQueryCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery) == 0x000008, "Wrong alignment on LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery");
-static_assert(sizeof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery) == 0x000018, "Wrong size on LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery");
-static_assert(offsetof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery, PlayerController) == 0x000000, "Member 'LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery::PlayerController' has a wrong offset!");
-static_assert(offsetof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery, StatName) == 0x000008, "Member 'LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery::StatName' has a wrong offset!");
-static_assert(offsetof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery, ReturnValue) == 0x000010, "Member 'LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery::ReturnValue' has a wrong offset!");
-
-// Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
-// 0x0018 (0x0018 - 0x0000)
-struct LogoutCallbackProxy_Logout final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULogoutCallbackProxy*                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(LogoutCallbackProxy_Logout) == 0x000008, "Wrong alignment on LogoutCallbackProxy_Logout");
-static_assert(sizeof(LogoutCallbackProxy_Logout) == 0x000018, "Wrong size on LogoutCallbackProxy_Logout");
-static_assert(offsetof(LogoutCallbackProxy_Logout, WorldContextObject) == 0x000000, "Member 'LogoutCallbackProxy_Logout::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(LogoutCallbackProxy_Logout, PlayerController) == 0x000008, "Member 'LogoutCallbackProxy_Logout::PlayerController' has a wrong offset!");
-static_assert(offsetof(LogoutCallbackProxy_Logout, ReturnValue) == 0x000010, "Member 'LogoutCallbackProxy_Logout::ReturnValue' has a wrong offset!");
-
 // Function OnlineSubsystemUtils.PartyBeaconClient.ClientCancelReservationResponse
 // 0x0001 (0x0001 - 0x0000)
 struct PartyBeaconClient_ClientCancelReservationResponse final
@@ -627,6 +547,86 @@ static_assert(alignof(PartyBeaconClient_ServerUpdateReservationRequest) == 0x000
 static_assert(sizeof(PartyBeaconClient_ServerUpdateReservationRequest) == 0x000068, "Wrong size on PartyBeaconClient_ServerUpdateReservationRequest");
 static_assert(offsetof(PartyBeaconClient_ServerUpdateReservationRequest, SessionId) == 0x000000, "Member 'PartyBeaconClient_ServerUpdateReservationRequest::SessionId' has a wrong offset!");
 static_assert(offsetof(PartyBeaconClient_ServerUpdateReservationRequest, ReservationUpdate) == 0x000010, "Member 'PartyBeaconClient_ServerUpdateReservationRequest::ReservationUpdate' has a wrong offset!");
+
+// Function OnlineSubsystemUtils.JoinSessionCallbackProxy.JoinSession
+// 0x0138 (0x0138 - 0x0000)
+struct JoinSessionCallbackProxy_JoinSession final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBlueprintSessionResult                SearchResult;                                      // 0x0010(0x0120)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UJoinSessionCallbackProxy*              ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(JoinSessionCallbackProxy_JoinSession) == 0x000008, "Wrong alignment on JoinSessionCallbackProxy_JoinSession");
+static_assert(sizeof(JoinSessionCallbackProxy_JoinSession) == 0x000138, "Wrong size on JoinSessionCallbackProxy_JoinSession");
+static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, WorldContextObject) == 0x000000, "Member 'JoinSessionCallbackProxy_JoinSession::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, PlayerController) == 0x000008, "Member 'JoinSessionCallbackProxy_JoinSession::PlayerController' has a wrong offset!");
+static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, SearchResult) == 0x000010, "Member 'JoinSessionCallbackProxy_JoinSession::SearchResult' has a wrong offset!");
+static_assert(offsetof(JoinSessionCallbackProxy_JoinSession, ReturnValue) == 0x000130, "Member 'JoinSessionCallbackProxy_JoinSession::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemUtils.LeaderboardBlueprintLibrary.WriteLeaderboardInteger
+// 0x0018 (0x0018 - 0x0000)
+struct LeaderboardBlueprintLibrary_WriteLeaderboardInteger final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StatValue;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger) == 0x000008, "Wrong alignment on LeaderboardBlueprintLibrary_WriteLeaderboardInteger");
+static_assert(sizeof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger) == 0x000018, "Wrong size on LeaderboardBlueprintLibrary_WriteLeaderboardInteger");
+static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, PlayerController) == 0x000000, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::PlayerController' has a wrong offset!");
+static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, StatName) == 0x000008, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::StatName' has a wrong offset!");
+static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, StatValue) == 0x000010, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::StatValue' has a wrong offset!");
+static_assert(offsetof(LeaderboardBlueprintLibrary_WriteLeaderboardInteger, ReturnValue) == 0x000014, "Member 'LeaderboardBlueprintLibrary_WriteLeaderboardInteger::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemUtils.LeaderboardFlushCallbackProxy.CreateProxyObjectForFlush
+// 0x0018 (0x0018 - 0x0000)
+struct LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SessionName;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULeaderboardFlushCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush) == 0x000008, "Wrong alignment on LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush");
+static_assert(sizeof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush) == 0x000018, "Wrong size on LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush");
+static_assert(offsetof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, PlayerController) == 0x000000, "Member 'LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush::PlayerController' has a wrong offset!");
+static_assert(offsetof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, SessionName) == 0x000008, "Member 'LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush::SessionName' has a wrong offset!");
+static_assert(offsetof(LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, ReturnValue) == 0x000010, "Member 'LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
+// 0x0018 (0x0018 - 0x0000)
+struct LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULeaderboardQueryCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery) == 0x000008, "Wrong alignment on LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery");
+static_assert(sizeof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery) == 0x000018, "Wrong size on LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery");
+static_assert(offsetof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery, PlayerController) == 0x000000, "Member 'LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery::PlayerController' has a wrong offset!");
+static_assert(offsetof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery, StatName) == 0x000008, "Member 'LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery::StatName' has a wrong offset!");
+static_assert(offsetof(LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery, ReturnValue) == 0x000010, "Member 'LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery::ReturnValue' has a wrong offset!");
+
+// Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
+// 0x0018 (0x0018 - 0x0000)
+struct LogoutCallbackProxy_Logout final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APlayerController*                      PlayerController;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULogoutCallbackProxy*                   ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LogoutCallbackProxy_Logout) == 0x000008, "Wrong alignment on LogoutCallbackProxy_Logout");
+static_assert(sizeof(LogoutCallbackProxy_Logout) == 0x000018, "Wrong size on LogoutCallbackProxy_Logout");
+static_assert(offsetof(LogoutCallbackProxy_Logout, WorldContextObject) == 0x000000, "Member 'LogoutCallbackProxy_Logout::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(LogoutCallbackProxy_Logout, PlayerController) == 0x000008, "Member 'LogoutCallbackProxy_Logout::PlayerController' has a wrong offset!");
+static_assert(offsetof(LogoutCallbackProxy_Logout, ReturnValue) == 0x000010, "Member 'LogoutCallbackProxy_Logout::ReturnValue' has a wrong offset!");
 
 // Function OnlineSubsystemUtils.QuitMatchCallbackProxy.QuitMatch
 // 0x0030 (0x0030 - 0x0000)

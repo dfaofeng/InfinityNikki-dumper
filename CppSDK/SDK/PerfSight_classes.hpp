@@ -30,7 +30,7 @@ public:
 	static void EndExtTag(const class FString& TagName);
 	static void EndTag();
 	static void EndTupleWrap();
-	static int32 GetDeviceLevelByQcc(const class FString& configName, const class FString& gpuFamily);
+	static int32 GetDeviceLevelByQcc(const class FString& ConfigName, const class FString& gpuFamily);
 	static void InitContext(const class FString& AppID);
 	static class FString LoadPerfSightConfig(const class FString& Key);
 	static void MarkLevelFin();

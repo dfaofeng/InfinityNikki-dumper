@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "X6CustomizableSequencerTracks_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "X6CustomizableSequencerTracks_classes.hpp"
 
 
 namespace SDK
@@ -35,9 +35,9 @@ public:
 	EMovieSceneNetPolicy                          FadeNetPolicy;                                     // 0x0165(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void K2_OnSectionEnd();
-	void K2_OnSectionBegin();
 	void ExecuteUbergraph_BlackScreenSection(int32 EntryPoint);
+	void K2_OnSectionBegin();
+	void K2_OnSectionEnd();
 
 	class FString GetModuleName() const;
 

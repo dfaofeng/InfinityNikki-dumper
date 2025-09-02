@@ -17,41 +17,21 @@
 namespace SDK
 {
 
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKeyByInputAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_PC
+// (Final, UbergraphFunction)
 // Parameters:
-// const class FString&                    ActionPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_Common_KeyTips_PC_C::SetKeyByInputAction(const class FString& ActionPath)
+void UWBP_UI_Common_KeyTips_PC_C::ExecuteUbergraph_WBP_UI_Common_KeyTips_PC(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "SetKeyByInputAction");
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
 
-	Params::WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction Parms{};
+	Params::WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC Parms{};
 
-	Parms.ActionPath = std::move(ActionPath);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKey
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void UWBP_UI_Common_KeyTips_PC_C::SetKey(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "SetKey");
-
-	Params::WBP_UI_Common_KeyTips_PC_C_SetKey Parms{};
-
-	Parms.Key = std::move(Key);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,21 +57,41 @@ void UWBP_UI_Common_KeyTips_PC_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.ExecuteUbergraph_WBP_UI_Common_KeyTips_PC
-// (Final, UbergraphFunction)
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKey
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWBP_UI_Common_KeyTips_PC_C::ExecuteUbergraph_WBP_UI_Common_KeyTips_PC(int32 EntryPoint)
+void UWBP_UI_Common_KeyTips_PC_C::SetKey(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "ExecuteUbergraph_WBP_UI_Common_KeyTips_PC");
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "SetKey");
 
-	Params::WBP_UI_Common_KeyTips_PC_C_ExecuteUbergraph_WBP_UI_Common_KeyTips_PC Parms{};
+	Params::WBP_UI_Common_KeyTips_PC_C_SetKey Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_Common_KeyTips_PC.WBP_UI_Common_KeyTips_PC_C.SetKeyByInputAction
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ActionPath                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UWBP_UI_Common_KeyTips_PC_C::SetKeyByInputAction(const class FString& ActionPath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_Common_KeyTips_PC_C", "SetKeyByInputAction");
+
+	Params::WBP_UI_Common_KeyTips_PC_C_SetKeyByInputAction Parms{};
+
+	Parms.ActionPath = std::move(ActionPath);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -707,6 +707,20 @@ void UNikkiAnim_BPNew_C::EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_B
 }
 
 
+// Function NikkiAnim_BPNew.NikkiAnim_BPNew_C.EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_AC92D9434153A75D5FE91D92CF86DE6A
+// (BlueprintEvent)
+
+void UNikkiAnim_BPNew_C::EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_AC92D9434153A75D5FE91D92CF86DE6A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiAnim_BPNew_C", "EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_AC92D9434153A75D5FE91D92CF86DE6A");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function NikkiAnim_BPNew.NikkiAnim_BPNew_C.EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_D97A7EB74CD3FC34EDBDE3953CEB0FC9
 // (BlueprintEvent)
 

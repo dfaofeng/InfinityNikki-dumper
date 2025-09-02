@@ -18,23 +18,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CameraShootingPosition.CameraShootingPosition_C
-// 0x0050 (0x0488 - 0x0438)
+// 0x0050 (0x04D8 - 0x0488)
 class ACameraShootingPosition_C final : public AX6Actor
 {
 public:
-	class UBoxComponent*                          CameraShootingPositionCollision;                   // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBP_InteractiveActorComponent_C*        BP_InteractiveActorComponent;                      // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	EShootingStageThreeConidition                 StageTwoCondition;                                 // 0x0450(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_451[0x7];                                      // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        StageTwoCenterLength;                              // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   StageTwoText;                                      // 0x0460(0x0010)(Edit, BlueprintVisible)
-	class AActor*                                 CameraActor;                                       // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class FString                                 Tag;                                               // 0x0478(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UBoxComponent*                          CameraShootingPositionCollision;                   // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBP_InteractiveActorComponent_C*        BP_InteractiveActorComponent;                      // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	EShootingStageThreeConidition                 StageTwoCondition;                                 // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        StageTwoCenterLength;                              // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   StageTwoText;                                      // 0x04B0(0x0010)(Edit, BlueprintVisible)
+	class AActor*                                 CameraActor;                                       // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Tag;                                               // 0x04C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void DeletePhotographCamera_EditorOnly();
 	void SpawnPhotographCamera_EditorOnly();
+	void DeletePhotographCamera_EditorOnly();
 
 public:
 	static class UClass* StaticClass()
@@ -47,15 +47,15 @@ public:
 	}
 };
 static_assert(alignof(ACameraShootingPosition_C) == 0x000008, "Wrong alignment on ACameraShootingPosition_C");
-static_assert(sizeof(ACameraShootingPosition_C) == 0x000488, "Wrong size on ACameraShootingPosition_C");
-static_assert(offsetof(ACameraShootingPosition_C, CameraShootingPositionCollision) == 0x000438, "Member 'ACameraShootingPosition_C::CameraShootingPositionCollision' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, BP_InteractiveActorComponent) == 0x000440, "Member 'ACameraShootingPosition_C::BP_InteractiveActorComponent' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, DefaultSceneRoot) == 0x000448, "Member 'ACameraShootingPosition_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, StageTwoCondition) == 0x000450, "Member 'ACameraShootingPosition_C::StageTwoCondition' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, StageTwoCenterLength) == 0x000458, "Member 'ACameraShootingPosition_C::StageTwoCenterLength' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, StageTwoText) == 0x000460, "Member 'ACameraShootingPosition_C::StageTwoText' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, CameraActor) == 0x000470, "Member 'ACameraShootingPosition_C::CameraActor' has a wrong offset!");
-static_assert(offsetof(ACameraShootingPosition_C, Tag) == 0x000478, "Member 'ACameraShootingPosition_C::Tag' has a wrong offset!");
+static_assert(sizeof(ACameraShootingPosition_C) == 0x0004D8, "Wrong size on ACameraShootingPosition_C");
+static_assert(offsetof(ACameraShootingPosition_C, CameraShootingPositionCollision) == 0x000488, "Member 'ACameraShootingPosition_C::CameraShootingPositionCollision' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, BP_InteractiveActorComponent) == 0x000490, "Member 'ACameraShootingPosition_C::BP_InteractiveActorComponent' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, DefaultSceneRoot) == 0x000498, "Member 'ACameraShootingPosition_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, StageTwoCondition) == 0x0004A0, "Member 'ACameraShootingPosition_C::StageTwoCondition' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, StageTwoCenterLength) == 0x0004A8, "Member 'ACameraShootingPosition_C::StageTwoCenterLength' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, StageTwoText) == 0x0004B0, "Member 'ACameraShootingPosition_C::StageTwoText' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, CameraActor) == 0x0004C0, "Member 'ACameraShootingPosition_C::CameraActor' has a wrong offset!");
+static_assert(offsetof(ACameraShootingPosition_C, Tag) == 0x0004C8, "Member 'ACameraShootingPosition_C::Tag' has a wrong offset!");
 
 }
 

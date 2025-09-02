@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "E_InteractiveStageEnum_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "E_InteractiveActorType_structs.hpp"
+#include "E_InteractiveStageEnum_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "E_InteractionProcess_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK::Params

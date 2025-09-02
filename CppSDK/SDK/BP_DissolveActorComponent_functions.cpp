@@ -57,26 +57,6 @@ void UBP_DissolveActorComponent_C::SetDissolve(bool Toggle)
 }
 
 
-// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_DissolveActorComponent_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveTick");
-
-	Params::BP_DissolveActorComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveEndPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -97,20 +77,6 @@ void UBP_DissolveActorComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 }
 
 
-// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_DissolveActorComponent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.Opacity
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -128,6 +94,40 @@ void UBP_DissolveActorComponent_C::Opacity(bool On)
 	Parms.On = On;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_DissolveActorComponent_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveTick");
+
+	Params::BP_DissolveActorComponent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_DissolveActorComponent.BP_DissolveActorComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_DissolveActorComponent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_DissolveActorComponent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

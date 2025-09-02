@@ -17,43 +17,17 @@
 namespace SDK
 {
 
-// Function WBP_MiniMap.WBP_MiniMap_C.InitRenderTarget
+// Function WBP_MiniMap.WBP_MiniMap_C.ClearRenderTarget
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_MiniMap_C::InitRenderTarget(const struct FVector2D& Size)
+void UWBP_MiniMap_C::ClearRenderTarget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MiniMap_C", "InitRenderTarget");
+		Func = Class->GetFunction("WBP_MiniMap_C", "ClearRenderTarget");
 
-	Params::WBP_MiniMap_C_InitRenderTarget Parms{};
-
-	Parms.Size = std::move(Size);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_MiniMap.WBP_MiniMap_C.ExecuteUbergraph_WBP_MiniMap
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_MiniMap_C::ExecuteUbergraph_WBP_MiniMap(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MiniMap_C", "ExecuteUbergraph_WBP_MiniMap");
-
-	Params::WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -78,17 +52,43 @@ void UWBP_MiniMap_C::CreateMapTerrainCell(class UWBP_MapTerrainCell_C** Cell)
 }
 
 
-// Function WBP_MiniMap.WBP_MiniMap_C.ClearRenderTarget
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_MiniMap.WBP_MiniMap_C.ExecuteUbergraph_WBP_MiniMap
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_MiniMap_C::ClearRenderTarget()
+void UWBP_MiniMap_C::ExecuteUbergraph_WBP_MiniMap(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_MiniMap_C", "ClearRenderTarget");
+		Func = Class->GetFunction("WBP_MiniMap_C", "ExecuteUbergraph_WBP_MiniMap");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_MiniMap_C_ExecuteUbergraph_WBP_MiniMap Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_MiniMap.WBP_MiniMap_C.InitRenderTarget
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector2D&                 Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_MiniMap_C::InitRenderTarget(const struct FVector2D& Size)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_MiniMap_C", "InitRenderTarget");
+
+	Params::WBP_MiniMap_C_InitRenderTarget Parms{};
+
+	Parms.Size = std::move(Size);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

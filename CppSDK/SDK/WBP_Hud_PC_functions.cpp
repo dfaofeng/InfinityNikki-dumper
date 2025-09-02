@@ -17,103 +17,53 @@
 namespace SDK
 {
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_ShowTip
+// Function WBP_Hud_PC.WBP_Hud_PC_C.ActivityItemFadeIn
 // (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_PC_C::WH_ShowTip()
+void UWBP_Hud_PC_C::ActivityItemFadeIn()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_ShowTip");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "ActivityItemFadeIn");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_ShowOtherCoin
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::WH_ShowOtherCoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_ShowOtherCoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_ShoMoonCoin
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::WH_ShoMoonCoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_ShoMoonCoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_PlayAddAnim
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::WH_PlayAddAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_PlayAddAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_HideCollectionList
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::WH_HideCollectionList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_HideCollectionList");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.StopFadeInFull
+// Function WBP_Hud_PC.WBP_Hud_PC_C.BP_ShowOrHideEnergyLevelHud
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::StopFadeInFull()
+void UWBP_Hud_PC_C::BP_ShowOrHideEnergyLevelHud(bool IsShow)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "StopFadeInFull");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "BP_ShowOrHideEnergyLevelHud");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud Parms{};
+
+	Parms.IsShow = IsShow;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.ShowHPParticle
+// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeIn
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::ShowHPParticle(class UWBP_MainActivity_C* MainActivity_0)
+void UWBP_Hud_PC_C::Event_FadeIn(class UWBP_MainActivity_C* MainActivity_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "ShowHPParticle");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "Event_FadeIn");
 
-	Params::WBP_Hud_PC_C_ShowHPParticle Parms{};
+	Params::WBP_Hud_PC_C_Event_FadeIn Parms{};
 
 	Parms.MainActivity_0 = MainActivity_0;
 
@@ -121,315 +71,19 @@ void UWBP_Hud_PC_C::ShowHPParticle(class UWBP_MainActivity_C* MainActivity_0)
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_24
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_24()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_24");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_23
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_23()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_23");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_22
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_22()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_22");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_21
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_21()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_21");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_20
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_20()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_20");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_19
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_19(class UWBP_MainActivity_C* MainActivity_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_19");
-
-	Params::WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19 Parms{};
-
-	Parms.MainActivity_0 = MainActivity_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_18
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_18(class UWBP_MainActivity_C* MainActivity_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_18");
-
-	Params::WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18 Parms{};
-
-	Parms.MainActivity_0 = MainActivity_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_17
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_17(class UWBP_MainActivity_C* MainActivity_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_17");
-
-	Params::WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17 Parms{};
-
-	Parms.MainActivity_0 = MainActivity_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_16
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_16()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_16");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_15
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_15()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_15");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_14
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_14()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_14");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_13
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_13()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_13");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_12
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_12()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_12");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::SequenceEvent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.PlayLevelUp
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::PlayLevelUp()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "PlayLevelUp");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.OnMapFadeInStart
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::OnMapFadeInStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "OnMapFadeInStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.OnFadeOutStart
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Hud_PC_C::OnFadeOutStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "OnFadeOutStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationStarted
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_PC_C::OnAnimationStarted(const class UWidgetAnimation* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "OnAnimationStarted");
-
-	Params::WBP_Hud_PC_C_OnAnimationStarted Parms{};
-
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
-// Parameters:
-// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Hud_PC_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "OnAnimationFinished");
-
-	Params::WBP_Hud_PC_C_OnAnimationFinished Parms{};
-
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Hud_PC.WBP_Hud_PC_C.HideHPParticle
+// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeOut
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::HideHPParticle(class UWBP_MainActivity_C* MainActivity_0)
+void UWBP_Hud_PC_C::Event_FadeOut(class UWBP_MainActivity_C* MainActivity_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "HideHPParticle");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "Event_FadeOut");
 
-	Params::WBP_Hud_PC_C_HideHPParticle Parms{};
+	Params::WBP_Hud_PC_C_Event_FadeOut Parms{};
 
 	Parms.MainActivity_0 = MainActivity_0;
 
@@ -457,19 +111,19 @@ void UWBP_Hud_PC_C::ExecuteUbergraph_WBP_Hud_PC(int32 EntryPoint)
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeOut
+// Function WBP_Hud_PC.WBP_Hud_PC_C.HideHPParticle
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::Event_FadeOut(class UWBP_MainActivity_C* MainActivity_0)
+void UWBP_Hud_PC_C::HideHPParticle(class UWBP_MainActivity_C* MainActivity_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "Event_FadeOut");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "HideHPParticle");
 
-	Params::WBP_Hud_PC_C_Event_FadeOut Parms{};
+	Params::WBP_Hud_PC_C_HideHPParticle Parms{};
 
 	Parms.MainActivity_0 = MainActivity_0;
 
@@ -477,55 +131,401 @@ void UWBP_Hud_PC_C::Event_FadeOut(class UWBP_MainActivity_C* MainActivity_0)
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.Event_FadeIn
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationFinished
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 // Parameters:
-// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::Event_FadeIn(class UWBP_MainActivity_C* MainActivity_0)
+void UWBP_Hud_PC_C::OnAnimationFinished(const class UWidgetAnimation* Animation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "Event_FadeIn");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "OnAnimationFinished");
 
-	Params::WBP_Hud_PC_C_Event_FadeIn Parms{};
+	Params::WBP_Hud_PC_C_OnAnimationFinished Parms{};
 
-	Parms.MainActivity_0 = MainActivity_0;
+	Parms.Animation = Animation;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.BP_ShowOrHideEnergyLevelHud
+// Function WBP_Hud_PC.WBP_Hud_PC_C.OnAnimationStarted
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UWidgetAnimation*           Animation                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_PC_C::OnAnimationStarted(const class UWidgetAnimation* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "OnAnimationStarted");
+
+	Params::WBP_Hud_PC_C_OnAnimationStarted Parms{};
+
+	Parms.Animation = Animation;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.OnFadeOutStart
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::OnFadeOutStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "OnFadeOutStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.OnMapFadeInStart
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::OnMapFadeInStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "OnMapFadeInStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.PlayLevelUp
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::PlayLevelUp()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "PlayLevelUp");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_12
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_12()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_12");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_13
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_13()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_13");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_14
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_14()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_14");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_15
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_15()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_15");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_16
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_16()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_16");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_17
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    IsShow                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::BP_ShowOrHideEnergyLevelHud(bool IsShow)
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_17(class UWBP_MainActivity_C* MainActivity_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "BP_ShowOrHideEnergyLevelHud");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_17");
 
-	Params::WBP_Hud_PC_C_BP_ShowOrHideEnergyLevelHud Parms{};
+	Params::WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17 Parms{};
 
-	Parms.IsShow = IsShow;
+	Parms.MainActivity_0 = MainActivity_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.ActivityItemFadeIn
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_18
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Hud_PC_C::ActivityItemFadeIn()
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_18(class UWBP_MainActivity_C* MainActivity_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_PC_C", "ActivityItemFadeIn");
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_18");
+
+	Params::WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18 Parms{};
+
+	Parms.MainActivity_0 = MainActivity_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_19
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_19(class UWBP_MainActivity_C* MainActivity_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_19");
+
+	Params::WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19 Parms{};
+
+	Parms.MainActivity_0 = MainActivity_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_20
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_20()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_20");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_21
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_21()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_21");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_22
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_22()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_22");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_23
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_23()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_23");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_24
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::SequenceEvent__ENTRYPOINTWBP_Hud_PC_24()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "SequenceEvent__ENTRYPOINTWBP_Hud_PC_24");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.ShowHPParticle
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_MainActivity_C*              MainActivity_0                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Hud_PC_C::ShowHPParticle(class UWBP_MainActivity_C* MainActivity_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "ShowHPParticle");
+
+	Params::WBP_Hud_PC_C_ShowHPParticle Parms{};
+
+	Parms.MainActivity_0 = MainActivity_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.StopFadeInFull
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::StopFadeInFull()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "StopFadeInFull");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_HideCollectionList
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::WH_HideCollectionList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_HideCollectionList");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_PlayAddAnim
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::WH_PlayAddAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_PlayAddAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_ShoMoonCoin
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::WH_ShoMoonCoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_ShoMoonCoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_ShowOtherCoin
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::WH_ShowOtherCoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_ShowOtherCoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Hud_PC.WBP_Hud_PC_C.WH_ShowTip
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Hud_PC_C::WH_ShowTip()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Hud_PC_C", "WH_ShowTip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

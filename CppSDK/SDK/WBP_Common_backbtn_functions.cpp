@@ -73,6 +73,62 @@ void UWBP_Common_backbtn_C::BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentB
 }
 
 
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Common_backbtn_C::BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_backbtn_C", "BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Common_backbtn_C::BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_backbtn_C", "BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_6_OnButtonPressedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Common_backbtn_C::BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_6_OnButtonPressedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_backbtn_C", "BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_6_OnButtonPressedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UWBP_Common_backbtn_C::BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_backbtn_C", "BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.BP_OnEntryReleased
 // (Event, Protected, BlueprintEvent)
 
@@ -128,7 +184,7 @@ void UWBP_Common_backbtn_C::BP_OnItemSelectionChanged(bool bIsSelected)
 
 
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.ExecuteUbergraph_WBP_Common_backbtn
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -182,6 +238,26 @@ void UWBP_Common_backbtn_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_Common_backbtn_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.Set Title
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      TitleText                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UWBP_Common_backbtn_C::Set_Title(const class FText& TitleText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_backbtn_C", "Set Title");
+
+	Params::WBP_Common_backbtn_C_Set_Title Parms{};
+
+	Parms.TitleText = std::move(TitleText);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

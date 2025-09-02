@@ -19,101 +19,107 @@ namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C
-// 0x0370 (0x0660 - 0x02F0)
+// 0x03A0 (0x0690 - 0x02F0)
 class UWBP_ActionSlotWidget_PC_C final : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UWidgetAnimation*                       Ani_Hit;                                           // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Long_Sprint;                                   // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Long_Press_Progress;                           // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeOut_HighLight;                                 // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FadeIn_HightLight;                                 // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Loop_HightLight;                                   // 0x0320(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_LongJump;                                      // 0x0328(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Empty_1;                                       // 0x0330(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Change_1;                                      // 0x0338(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Add_1;                                         // 0x0340(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Change;                                        // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Empty;                                         // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       Ani_Add;                                           // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       FloatAnim_Loop;                                    // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UWidgetAnimation*                       TouchAnim;                                         // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
-	class UCanvasPanel*                           Ability_Empty;                                     // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Ability_Jump_LongPress;                            // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Ability_Placeholder;                               // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Action;                                            // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Action_1;                                          // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             ActionText;                                        // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           BanIcon;                                           // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                Button_AddAbility;                                 // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_ExtensionAttach;                       // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_Icon;                                  // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           CanvasPanel_IconWidget;                            // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                CDProgress;                                        // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 fx_arrow_glow;                                     // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FX_Button_Loop;                                    // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 FX_ButtonGlow_Loop;                                // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Flare;                                          // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Fx_Float_Effect;                                   // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Glow;                                           // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 fx_glow_progress;                                  // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UCanvasPanel*                           Fx_Hit_Effect;                                     // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 fx_Image_arrow;                                    // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Image_HighLight;                                // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Image_HighLight_2;                              // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Image_HighLight_Circle;                         // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Long_Sprint_circle_1;                           // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Long_Sprint_HighLight_1;                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Mobile_Image_circle_01;                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Mobile_Image_circle_01_1;                       // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Mobile_Image_circle_02;                         // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UX6RadialSlider*                        Fx_Progress_play;                                  // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Ring_01;                                        // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Ring_02;                                        // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Fx_Ring_03;                                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_60;                                          // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_157;                                         // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Arrow;                                       // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_bg;                                          // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_HighLight;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_HighLight_1;                                 // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_HighLight_2;                                 // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_jump;                                        // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UImage*                                 Image_Pressed_Circle;                              // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   NS_Selected;                                       // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UOverlay*                               OV;                                                // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             PressTimeText;                                     // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UX6RadialSlider*                        Progress_play;                                     // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Text_Countdown;                                    // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Add;                                         // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Empty;                                       // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_HighLight;                                   // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_HighLight_First;                             // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_Long_Sprint_1;                               // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UNiagaraSystemWidget*                   UI_NS_TouchButton;                                 // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(EInputEvent InputEvent)> OnActionClick;                            // 0x0520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          bImpressType;                                      // 0x0530(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_531[0x7];                                      // 0x0531(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PressTime;                                         // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ButtonPressed;                                     // 0x0540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_541[0x7];                                      // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        NeededPressTime;                                   // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CurrentIconMaterialIns;                            // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_558[0x8];                                      // 0x0558(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            SkillBg;                                           // 0x0560(0x00D0)(Edit, BlueprintVisible)
-	class UTexture2D*                             SpecialTexture2d;                                  // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	double                                        TouchCommonScale;                                  // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        TouchSmallScale;                                   // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 SlotEnumName;                                      // 0x0648(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class UWidget*                                VisibilityControlNode;                             // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeOut_MidLight;                                  // 0x02F8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeIn_MidLight;                                   // 0x0300(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Star_Fishing;                                  // 0x0308(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Hit;                                           // 0x0310(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Long_Sprint;                                   // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Long_Press_Progress;                           // 0x0320(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeOut_HighLight;                                 // 0x0328(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FadeIn_HightLight;                                 // 0x0330(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Loop_HightLight;                                   // 0x0338(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_LongJump;                                      // 0x0340(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Empty_1;                                       // 0x0348(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Change_1;                                      // 0x0350(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Add_1;                                         // 0x0358(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Change;                                        // 0x0360(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Empty;                                         // 0x0368(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       Ani_Add;                                           // 0x0370(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       FloatAnim_Loop;                                    // 0x0378(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UWidgetAnimation*                       TouchAnim;                                         // 0x0380(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, RepSkip, NoDestructor, HasGetValueTypeHash)
+	class UCanvasPanel*                           Ability_Empty;                                     // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Ability_Jump_LongPress;                            // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Ability_Placeholder;                               // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Action;                                            // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Action_1;                                          // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             ActionText;                                        // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           BanIcon;                                           // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                Button_AddAbility;                                 // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_ExtensionAttach;                       // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_Icon;                                  // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           CanvasPanel_IconWidget;                            // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                CDProgress;                                        // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 fx_arrow_glow;                                     // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FX_Button_Loop;                                    // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 FX_ButtonGlow_Loop;                                // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Flare;                                          // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Fx_Float_Effect;                                   // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Glow;                                           // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 fx_glow_progress;                                  // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Fx_Hit_Effect;                                     // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 fx_Image_arrow;                                    // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Image_HighLight;                                // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Image_HighLight_2;                              // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Image_HighLight_Circle;                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Long_Sprint_circle_1;                           // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Long_Sprint_HighLight_1;                        // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Fx_MidLight;                                       // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Mobile_Image_circle_01;                         // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Mobile_Image_circle_01_1;                       // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Mobile_Image_circle_02;                         // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UX6RadialSlider*                        Fx_Progress_play;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Ring_01;                                        // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Ring_02;                                        // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Fx_Ring_03;                                        // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Fx_Star_Fishing;                                   // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_60;                                          // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_157;                                         // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Arrow;                                       // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_bg;                                          // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_HighLight;                                   // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_HighLight_1;                                 // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_HighLight_2;                                 // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_jump;                                        // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UImage*                                 Image_Pressed_Circle;                              // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInvalidationBox*                       InvalidationBox_0;                                 // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UCanvasPanel*                           Long_Press;                                        // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   NS_Selected;                                       // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UOverlay*                               OV;                                                // 0x0500(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             PressTimeText;                                     // 0x0508(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UX6RadialSlider*                        Progress_play;                                     // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Text_Countdown;                                    // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Add;                                         // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Empty;                                       // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_HighLight;                                   // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_HighLight_First;                             // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_Long_Sprint_1;                               // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UNiagaraSystemWidget*                   UI_NS_TouchButton;                                 // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(EInputEvent InputEvent)> OnActionClick;                            // 0x0550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          bImpressType;                                      // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        pressTime;                                         // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ButtonPressed;                                     // 0x0570(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_571[0x7];                                      // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        NeededPressTime;                                   // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CurrentIconMaterialIns;                            // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_588[0x8];                                      // 0x0588(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            SkillBg;                                           // 0x0590(0x00D0)(Edit, BlueprintVisible)
+	class UTexture2D*                             SpecialTexture2d;                                  // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	double                                        TouchCommonScale;                                  // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TouchSmallScale;                                   // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SlotEnumName;                                      // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class UWidget*                                VisibilityControlNode;                             // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC();
-	void PreConstruct(bool IsDesignTime);
-	void NotifyIconRefresh();
 	void ExecuteUbergraph_WBP_ActionSlotWidget_PC(int32 EntryPoint);
+	void NotifyIconRefresh();
+	void PreConstruct(bool IsDesignTime);
+	void SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC_0();
 
 	class FString GetModuleName() const;
 
@@ -128,89 +134,95 @@ public:
 	}
 };
 static_assert(alignof(UWBP_ActionSlotWidget_PC_C) == 0x000010, "Wrong alignment on UWBP_ActionSlotWidget_PC_C");
-static_assert(sizeof(UWBP_ActionSlotWidget_PC_C) == 0x000660, "Wrong size on UWBP_ActionSlotWidget_PC_C");
+static_assert(sizeof(UWBP_ActionSlotWidget_PC_C) == 0x000690, "Wrong size on UWBP_ActionSlotWidget_PC_C");
 static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UberGraphFrame) == 0x0002F0, "Member 'UWBP_ActionSlotWidget_PC_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Hit) == 0x0002F8, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Hit' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Long_Sprint) == 0x000300, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Long_Sprint' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Long_Press_Progress) == 0x000308, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Long_Press_Progress' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FadeOut_HighLight) == 0x000310, "Member 'UWBP_ActionSlotWidget_PC_C::FadeOut_HighLight' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FadeIn_HightLight) == 0x000318, "Member 'UWBP_ActionSlotWidget_PC_C::FadeIn_HightLight' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Loop_HightLight) == 0x000320, "Member 'UWBP_ActionSlotWidget_PC_C::Loop_HightLight' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_LongJump) == 0x000328, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_LongJump' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Empty_1) == 0x000330, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Empty_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Change_1) == 0x000338, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Change_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Add_1) == 0x000340, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Add_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Change) == 0x000348, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Change' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Empty) == 0x000350, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Empty' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Add) == 0x000358, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Add' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FloatAnim_Loop) == 0x000360, "Member 'UWBP_ActionSlotWidget_PC_C::FloatAnim_Loop' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, TouchAnim) == 0x000368, "Member 'UWBP_ActionSlotWidget_PC_C::TouchAnim' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ability_Empty) == 0x000370, "Member 'UWBP_ActionSlotWidget_PC_C::Ability_Empty' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ability_Jump_LongPress) == 0x000378, "Member 'UWBP_ActionSlotWidget_PC_C::Ability_Jump_LongPress' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ability_Placeholder) == 0x000380, "Member 'UWBP_ActionSlotWidget_PC_C::Ability_Placeholder' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Action) == 0x000388, "Member 'UWBP_ActionSlotWidget_PC_C::Action' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Action_1) == 0x000390, "Member 'UWBP_ActionSlotWidget_PC_C::Action_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, ActionText) == 0x000398, "Member 'UWBP_ActionSlotWidget_PC_C::ActionText' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, BanIcon) == 0x0003A0, "Member 'UWBP_ActionSlotWidget_PC_C::BanIcon' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Button_AddAbility) == 0x0003A8, "Member 'UWBP_ActionSlotWidget_PC_C::Button_AddAbility' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CanvasPanel_ExtensionAttach) == 0x0003B0, "Member 'UWBP_ActionSlotWidget_PC_C::CanvasPanel_ExtensionAttach' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CanvasPanel_Icon) == 0x0003B8, "Member 'UWBP_ActionSlotWidget_PC_C::CanvasPanel_Icon' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CanvasPanel_IconWidget) == 0x0003C0, "Member 'UWBP_ActionSlotWidget_PC_C::CanvasPanel_IconWidget' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CDProgress) == 0x0003C8, "Member 'UWBP_ActionSlotWidget_PC_C::CDProgress' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, fx_arrow_glow) == 0x0003D0, "Member 'UWBP_ActionSlotWidget_PC_C::fx_arrow_glow' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FX_Button_Loop) == 0x0003D8, "Member 'UWBP_ActionSlotWidget_PC_C::FX_Button_Loop' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FX_ButtonGlow_Loop) == 0x0003E0, "Member 'UWBP_ActionSlotWidget_PC_C::FX_ButtonGlow_Loop' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Flare) == 0x0003E8, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Flare' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Float_Effect) == 0x0003F0, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Float_Effect' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Glow) == 0x0003F8, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Glow' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, fx_glow_progress) == 0x000400, "Member 'UWBP_ActionSlotWidget_PC_C::fx_glow_progress' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Hit_Effect) == 0x000408, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Hit_Effect' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, fx_Image_arrow) == 0x000410, "Member 'UWBP_ActionSlotWidget_PC_C::fx_Image_arrow' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Image_HighLight) == 0x000418, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Image_HighLight' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Image_HighLight_2) == 0x000420, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Image_HighLight_2' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Image_HighLight_Circle) == 0x000428, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Image_HighLight_Circle' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Long_Sprint_circle_1) == 0x000430, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Long_Sprint_circle_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Long_Sprint_HighLight_1) == 0x000438, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Long_Sprint_HighLight_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Mobile_Image_circle_01) == 0x000440, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Mobile_Image_circle_01' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Mobile_Image_circle_01_1) == 0x000448, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Mobile_Image_circle_01_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Mobile_Image_circle_02) == 0x000450, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Mobile_Image_circle_02' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Progress_play) == 0x000458, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Progress_play' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Ring_01) == 0x000460, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Ring_01' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Ring_02) == 0x000468, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Ring_02' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Ring_03) == 0x000470, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Ring_03' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_60) == 0x000478, "Member 'UWBP_ActionSlotWidget_PC_C::Image_60' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_157) == 0x000480, "Member 'UWBP_ActionSlotWidget_PC_C::Image_157' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_Arrow) == 0x000488, "Member 'UWBP_ActionSlotWidget_PC_C::Image_Arrow' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_bg) == 0x000490, "Member 'UWBP_ActionSlotWidget_PC_C::Image_bg' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_HighLight) == 0x000498, "Member 'UWBP_ActionSlotWidget_PC_C::Image_HighLight' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_HighLight_1) == 0x0004A0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_HighLight_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_HighLight_2) == 0x0004A8, "Member 'UWBP_ActionSlotWidget_PC_C::Image_HighLight_2' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_jump) == 0x0004B0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_jump' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_Pressed_Circle) == 0x0004B8, "Member 'UWBP_ActionSlotWidget_PC_C::Image_Pressed_Circle' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, InvalidationBox_0) == 0x0004C0, "Member 'UWBP_ActionSlotWidget_PC_C::InvalidationBox_0' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, NS_Selected) == 0x0004C8, "Member 'UWBP_ActionSlotWidget_PC_C::NS_Selected' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, OV) == 0x0004D0, "Member 'UWBP_ActionSlotWidget_PC_C::OV' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, PressTimeText) == 0x0004D8, "Member 'UWBP_ActionSlotWidget_PC_C::PressTimeText' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Progress_play) == 0x0004E0, "Member 'UWBP_ActionSlotWidget_PC_C::Progress_play' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Text_Countdown) == 0x0004E8, "Member 'UWBP_ActionSlotWidget_PC_C::Text_Countdown' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_Add) == 0x0004F0, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_Add' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_Empty) == 0x0004F8, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_Empty' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_HighLight) == 0x000500, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_HighLight' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_HighLight_First) == 0x000508, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_HighLight_First' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_Long_Sprint_1) == 0x000510, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_Long_Sprint_1' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_TouchButton) == 0x000518, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_TouchButton' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, OnActionClick) == 0x000520, "Member 'UWBP_ActionSlotWidget_PC_C::OnActionClick' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, bImpressType) == 0x000530, "Member 'UWBP_ActionSlotWidget_PC_C::bImpressType' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, PressTime) == 0x000538, "Member 'UWBP_ActionSlotWidget_PC_C::PressTime' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, ButtonPressed) == 0x000540, "Member 'UWBP_ActionSlotWidget_PC_C::ButtonPressed' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, NeededPressTime) == 0x000548, "Member 'UWBP_ActionSlotWidget_PC_C::NeededPressTime' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CurrentIconMaterialIns) == 0x000550, "Member 'UWBP_ActionSlotWidget_PC_C::CurrentIconMaterialIns' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, SkillBg) == 0x000560, "Member 'UWBP_ActionSlotWidget_PC_C::SkillBg' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, SpecialTexture2d) == 0x000630, "Member 'UWBP_ActionSlotWidget_PC_C::SpecialTexture2d' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, TouchCommonScale) == 0x000638, "Member 'UWBP_ActionSlotWidget_PC_C::TouchCommonScale' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, TouchSmallScale) == 0x000640, "Member 'UWBP_ActionSlotWidget_PC_C::TouchSmallScale' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, SlotEnumName) == 0x000648, "Member 'UWBP_ActionSlotWidget_PC_C::SlotEnumName' has a wrong offset!");
-static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, VisibilityControlNode) == 0x000658, "Member 'UWBP_ActionSlotWidget_PC_C::VisibilityControlNode' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FadeOut_MidLight) == 0x0002F8, "Member 'UWBP_ActionSlotWidget_PC_C::FadeOut_MidLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FadeIn_MidLight) == 0x000300, "Member 'UWBP_ActionSlotWidget_PC_C::FadeIn_MidLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Star_Fishing) == 0x000308, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Star_Fishing' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Hit) == 0x000310, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Hit' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Long_Sprint) == 0x000318, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Long_Sprint' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Long_Press_Progress) == 0x000320, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Long_Press_Progress' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FadeOut_HighLight) == 0x000328, "Member 'UWBP_ActionSlotWidget_PC_C::FadeOut_HighLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FadeIn_HightLight) == 0x000330, "Member 'UWBP_ActionSlotWidget_PC_C::FadeIn_HightLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Loop_HightLight) == 0x000338, "Member 'UWBP_ActionSlotWidget_PC_C::Loop_HightLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_LongJump) == 0x000340, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_LongJump' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Empty_1) == 0x000348, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Empty_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Change_1) == 0x000350, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Change_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Add_1) == 0x000358, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Add_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Change) == 0x000360, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Change' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Empty) == 0x000368, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Empty' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ani_Add) == 0x000370, "Member 'UWBP_ActionSlotWidget_PC_C::Ani_Add' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FloatAnim_Loop) == 0x000378, "Member 'UWBP_ActionSlotWidget_PC_C::FloatAnim_Loop' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, TouchAnim) == 0x000380, "Member 'UWBP_ActionSlotWidget_PC_C::TouchAnim' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ability_Empty) == 0x000388, "Member 'UWBP_ActionSlotWidget_PC_C::Ability_Empty' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ability_Jump_LongPress) == 0x000390, "Member 'UWBP_ActionSlotWidget_PC_C::Ability_Jump_LongPress' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Ability_Placeholder) == 0x000398, "Member 'UWBP_ActionSlotWidget_PC_C::Ability_Placeholder' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Action) == 0x0003A0, "Member 'UWBP_ActionSlotWidget_PC_C::Action' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Action_1) == 0x0003A8, "Member 'UWBP_ActionSlotWidget_PC_C::Action_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, ActionText) == 0x0003B0, "Member 'UWBP_ActionSlotWidget_PC_C::ActionText' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, BanIcon) == 0x0003B8, "Member 'UWBP_ActionSlotWidget_PC_C::BanIcon' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Button_AddAbility) == 0x0003C0, "Member 'UWBP_ActionSlotWidget_PC_C::Button_AddAbility' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CanvasPanel_ExtensionAttach) == 0x0003C8, "Member 'UWBP_ActionSlotWidget_PC_C::CanvasPanel_ExtensionAttach' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CanvasPanel_Icon) == 0x0003D0, "Member 'UWBP_ActionSlotWidget_PC_C::CanvasPanel_Icon' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CanvasPanel_IconWidget) == 0x0003D8, "Member 'UWBP_ActionSlotWidget_PC_C::CanvasPanel_IconWidget' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CDProgress) == 0x0003E0, "Member 'UWBP_ActionSlotWidget_PC_C::CDProgress' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, fx_arrow_glow) == 0x0003E8, "Member 'UWBP_ActionSlotWidget_PC_C::fx_arrow_glow' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FX_Button_Loop) == 0x0003F0, "Member 'UWBP_ActionSlotWidget_PC_C::FX_Button_Loop' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, FX_ButtonGlow_Loop) == 0x0003F8, "Member 'UWBP_ActionSlotWidget_PC_C::FX_ButtonGlow_Loop' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Flare) == 0x000400, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Flare' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Float_Effect) == 0x000408, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Float_Effect' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Glow) == 0x000410, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Glow' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, fx_glow_progress) == 0x000418, "Member 'UWBP_ActionSlotWidget_PC_C::fx_glow_progress' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Hit_Effect) == 0x000420, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Hit_Effect' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, fx_Image_arrow) == 0x000428, "Member 'UWBP_ActionSlotWidget_PC_C::fx_Image_arrow' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Image_HighLight) == 0x000430, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Image_HighLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Image_HighLight_2) == 0x000438, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Image_HighLight_2' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Image_HighLight_Circle) == 0x000440, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Image_HighLight_Circle' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Long_Sprint_circle_1) == 0x000448, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Long_Sprint_circle_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Long_Sprint_HighLight_1) == 0x000450, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Long_Sprint_HighLight_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_MidLight) == 0x000458, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_MidLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Mobile_Image_circle_01) == 0x000460, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Mobile_Image_circle_01' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Mobile_Image_circle_01_1) == 0x000468, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Mobile_Image_circle_01_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Mobile_Image_circle_02) == 0x000470, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Mobile_Image_circle_02' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Progress_play) == 0x000478, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Progress_play' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Ring_01) == 0x000480, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Ring_01' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Ring_02) == 0x000488, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Ring_02' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Ring_03) == 0x000490, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Ring_03' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Fx_Star_Fishing) == 0x000498, "Member 'UWBP_ActionSlotWidget_PC_C::Fx_Star_Fishing' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_60) == 0x0004A0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_60' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_157) == 0x0004A8, "Member 'UWBP_ActionSlotWidget_PC_C::Image_157' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_Arrow) == 0x0004B0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_Arrow' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_bg) == 0x0004B8, "Member 'UWBP_ActionSlotWidget_PC_C::Image_bg' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_HighLight) == 0x0004C0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_HighLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_HighLight_1) == 0x0004C8, "Member 'UWBP_ActionSlotWidget_PC_C::Image_HighLight_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_HighLight_2) == 0x0004D0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_HighLight_2' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_jump) == 0x0004D8, "Member 'UWBP_ActionSlotWidget_PC_C::Image_jump' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Image_Pressed_Circle) == 0x0004E0, "Member 'UWBP_ActionSlotWidget_PC_C::Image_Pressed_Circle' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, InvalidationBox_0) == 0x0004E8, "Member 'UWBP_ActionSlotWidget_PC_C::InvalidationBox_0' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Long_Press) == 0x0004F0, "Member 'UWBP_ActionSlotWidget_PC_C::Long_Press' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, NS_Selected) == 0x0004F8, "Member 'UWBP_ActionSlotWidget_PC_C::NS_Selected' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, OV) == 0x000500, "Member 'UWBP_ActionSlotWidget_PC_C::OV' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, PressTimeText) == 0x000508, "Member 'UWBP_ActionSlotWidget_PC_C::PressTimeText' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Progress_play) == 0x000510, "Member 'UWBP_ActionSlotWidget_PC_C::Progress_play' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, Text_Countdown) == 0x000518, "Member 'UWBP_ActionSlotWidget_PC_C::Text_Countdown' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_Add) == 0x000520, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_Add' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_Empty) == 0x000528, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_Empty' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_HighLight) == 0x000530, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_HighLight' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_HighLight_First) == 0x000538, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_HighLight_First' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_Long_Sprint_1) == 0x000540, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_Long_Sprint_1' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, UI_NS_TouchButton) == 0x000548, "Member 'UWBP_ActionSlotWidget_PC_C::UI_NS_TouchButton' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, OnActionClick) == 0x000550, "Member 'UWBP_ActionSlotWidget_PC_C::OnActionClick' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, bImpressType) == 0x000560, "Member 'UWBP_ActionSlotWidget_PC_C::bImpressType' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, pressTime) == 0x000568, "Member 'UWBP_ActionSlotWidget_PC_C::pressTime' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, ButtonPressed) == 0x000570, "Member 'UWBP_ActionSlotWidget_PC_C::ButtonPressed' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, NeededPressTime) == 0x000578, "Member 'UWBP_ActionSlotWidget_PC_C::NeededPressTime' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, CurrentIconMaterialIns) == 0x000580, "Member 'UWBP_ActionSlotWidget_PC_C::CurrentIconMaterialIns' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, SkillBg) == 0x000590, "Member 'UWBP_ActionSlotWidget_PC_C::SkillBg' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, SpecialTexture2d) == 0x000660, "Member 'UWBP_ActionSlotWidget_PC_C::SpecialTexture2d' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, TouchCommonScale) == 0x000668, "Member 'UWBP_ActionSlotWidget_PC_C::TouchCommonScale' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, TouchSmallScale) == 0x000670, "Member 'UWBP_ActionSlotWidget_PC_C::TouchSmallScale' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, SlotEnumName) == 0x000678, "Member 'UWBP_ActionSlotWidget_PC_C::SlotEnumName' has a wrong offset!");
+static_assert(offsetof(UWBP_ActionSlotWidget_PC_C, VisibilityControlNode) == 0x000688, "Member 'UWBP_ActionSlotWidget_PC_C::VisibilityControlNode' has a wrong offset!");
 
 }
 

@@ -519,9 +519,9 @@ void UBP_PlayerInAirMoveableComponent_C::InputAction_Sprint(bool PressedOrReleas
 // Function BP_PlayerInAirMoveableComponent.BP_PlayerInAirMoveableComponent_C.InputAction_Walk
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PressOrRelease                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    pressOrRelease                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerInAirMoveableComponent_C::InputAction_Walk(bool PressOrRelease)
+void UBP_PlayerInAirMoveableComponent_C::InputAction_Walk(bool pressOrRelease)
 {
 	static class UFunction* Func = nullptr;
 
@@ -530,7 +530,7 @@ void UBP_PlayerInAirMoveableComponent_C::InputAction_Walk(bool PressOrRelease)
 
 	Params::BP_PlayerInAirMoveableComponent_C_InputAction_Walk Parms{};
 
-	Parms.PressOrRelease = PressOrRelease;
+	Parms.pressOrRelease = pressOrRelease;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

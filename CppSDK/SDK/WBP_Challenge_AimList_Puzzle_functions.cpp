@@ -17,34 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_Challenge_AimList_Puzzle.WBP_Challenge_AimList_Puzzle_C.SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_Challenge_AimList_Puzzle_C::SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Challenge_AimList_Puzzle_C", "SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Challenge_AimList_Puzzle.WBP_Challenge_AimList_Puzzle_C.OnFadeOutStart
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Challenge_AimList_Puzzle_C::OnFadeOutStart()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Challenge_AimList_Puzzle_C", "OnFadeOutStart");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_Challenge_AimList_Puzzle.WBP_Challenge_AimList_Puzzle_C.ExecuteUbergraph_WBP_Challenge_AimList_Puzzle
 // (Final, UbergraphFunction)
 // Parameters:
@@ -62,6 +34,34 @@ void UWBP_Challenge_AimList_Puzzle_C::ExecuteUbergraph_WBP_Challenge_AimList_Puz
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Challenge_AimList_Puzzle.WBP_Challenge_AimList_Puzzle_C.OnFadeOutStart
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Challenge_AimList_Puzzle_C::OnFadeOutStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Challenge_AimList_Puzzle_C", "OnFadeOutStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Challenge_AimList_Puzzle.WBP_Challenge_AimList_Puzzle_C.SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Challenge_AimList_Puzzle_C::SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Challenge_AimList_Puzzle_C", "SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

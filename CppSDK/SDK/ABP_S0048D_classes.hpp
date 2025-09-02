@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "NikkiPhysics_structs.hpp"
-#include "EMantleType_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "E_ClothesAnimationStateType_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EMantleType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -24,7 +24,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_S0048D.ABP_S0048D_C
-// 0x2EC0 (0x3310 - 0x0450)
+// 0x2DD0 (0x3220 - 0x0450)
 class UABP_S0048D_C final : public UNikkiClothAnimInstance
 {
 public:
@@ -74,47 +74,47 @@ public:
 	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x1080(0x0450)()
 	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh_1;                  // 0x14D0(0x0158)(ContainsInstancedReference)
 	uint8                                         Pad_1628[0x8];                                     // 0x1628(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_NikkiPhysics                 AnimGraphNode_NikkiPhysics;                        // 0x1630(0x11F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x2820(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x2840(0x0020)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x2860(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x2950(0x0028)()
-	struct FAnimNode_NikkiLiftLegRig              AnimGraphNode_NikkiLiftLegRig;                     // 0x2978(0x0060)()
-	struct FAnimNode_NikkiArmSkirtRig             AnimGraphNode_NikkiArmSkirtRig;                    // 0x29D8(0x0060)()
-	uint8                                         Pad_2A38[0x8];                                     // 0x2A38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_NikkiHorizontalRig           AnimGraphNode_NikkiHorizontalRig;                  // 0x2A40(0x05E0)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x3020(0x00F0)()
-	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh;                    // 0x3110(0x0158)(ContainsInstancedReference)
-	class UAnimSequence*                          Anim_Jump_Start;                                   // 0x3268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequence*                          Anim_Jump_Fly;                                     // 0x3270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_ClothesAnimationStateType                   BP_Current_Clothe_Anim_State;                      // 0x3278(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3279[0x7];                                     // 0x3279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        PhysicsBlendAlpha;                                 // 0x3280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsUp;                                              // 0x3288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3289[0x7];                                     // 0x3289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CurrentPhysicBlendAlpha;                           // 0x3290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsMantle;                                          // 0x3298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsFloat;                                           // 0x3299(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPrepareFinished;                                 // 0x329A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_329B[0x5];                                     // 0x329B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_PlayerRegularInAirMovementComp_C*   InAirRegularMoveableComponent;                     // 0x32A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerInAirMoveableComponent_C*     InAirMoveableComponent;                            // 0x32A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 MovementMode;                                      // 0x32B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     JumpStage;                                         // 0x32B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bRejump;                                           // 0x32B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32B3[0x5];                                     // 0x32B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ExternalAcceleration;                              // 0x32B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ExternalAccelerationDuration;                      // 0x32D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsJumpingInAir;                                    // 0x32D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32D9[0x7];                                     // 0x32D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharacterMovementComponent*            CharacterMovementComp;                             // 0x32E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerMantleComponent_C*            PlayerMantleComp;                                  // 0x32E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         NikkiPhysicsPreDoStep;                             // 0x32F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         BlendPoseWeight;                                   // 0x32F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          NikkiPhysicsPartSelfCollsion;                      // 0x32F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ENikki_HeightFieldMethod                      NikkiPhysicsHeightFieldMethod;                     // 0x32F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_32FA[0x6];                                     // 0x32FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        Rig_LiftLegAlpha;                                  // 0x3300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNode_NikkiPhysics                 AnimGraphNode_NikkiPhysics;                        // 0x1630(0x1130)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x2760(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x2780(0x0020)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0x27A0(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0x2890(0x0028)()
+	struct FAnimNode_NikkiLiftLegRig              AnimGraphNode_NikkiLiftLegRig;                     // 0x28B8(0x0060)()
+	struct FAnimNode_NikkiArmSkirtRig             AnimGraphNode_NikkiArmSkirtRig;                    // 0x2918(0x0060)()
+	uint8                                         Pad_2978[0x8];                                     // 0x2978(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_NikkiHorizontalRig           AnimGraphNode_NikkiHorizontalRig;                  // 0x2980(0x05B0)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0x2F30(0x00F0)()
+	struct FAnimNode_CopyPoseFromMesh             AnimGraphNode_CopyPoseFromMesh;                    // 0x3020(0x0158)(ContainsInstancedReference)
+	class UAnimSequence*                          Anim_Jump_Start;                                   // 0x3178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequence*                          Anim_Jump_Fly;                                     // 0x3180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_ClothesAnimationStateType                   BP_Current_Clothe_Anim_State;                      // 0x3188(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3189[0x7];                                     // 0x3189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        PhysicsBlendAlpha;                                 // 0x3190(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsUp;                                              // 0x3198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3199[0x7];                                     // 0x3199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CurrentPhysicBlendAlpha;                           // 0x31A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsMantle;                                          // 0x31A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsFloat;                                           // 0x31A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPrepareFinished;                                 // 0x31AA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31AB[0x5];                                     // 0x31AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_PlayerRegularInAirMovementComp_C*   InAirRegularMoveableComponent;                     // 0x31B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerInAirMoveableComponent_C*     InAirMoveableComponent;                            // 0x31B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 MovementMode;                                      // 0x31C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     JumpStage;                                         // 0x31C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bRejump;                                           // 0x31C2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31C3[0x5];                                     // 0x31C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ExternalAcceleration;                              // 0x31C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ExternalAccelerationDuration;                      // 0x31E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsJumpingInAir;                                    // 0x31E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31E9[0x7];                                     // 0x31E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCharacterMovementComponent*            CharacterMovementComp;                             // 0x31F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerMantleComponent_C*            PlayerMantleComp;                                  // 0x31F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         NikkiPhysicsPreDoStep;                             // 0x3200(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         BlendPoseWeight;                                   // 0x3204(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          NikkiPhysicsPartSelfCollsion;                      // 0x3208(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ENikki_HeightFieldMethod                      NikkiPhysicsHeightFieldMethod;                     // 0x3209(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_320A[0x6];                                     // 0x320A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Rig_LiftLegAlpha;                                  // 0x3210(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -151,7 +151,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_S0048D_C) == 0x000010, "Wrong alignment on UABP_S0048D_C");
-static_assert(sizeof(UABP_S0048D_C) == 0x003310, "Wrong size on UABP_S0048D_C");
+static_assert(sizeof(UABP_S0048D_C) == 0x003220, "Wrong size on UABP_S0048D_C");
 static_assert(offsetof(UABP_S0048D_C, UberGraphFrame) == 0x000450, "Member 'UABP_S0048D_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_S0048D_C, AnimBlueprintExtension_PropertyAccess) == 0x000458, "Member 'UABP_S0048D_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(UABP_S0048D_C, AnimBlueprintExtension_Base) == 0x000460, "Member 'UABP_S0048D_C::AnimBlueprintExtension_Base' has a wrong offset!");
@@ -197,39 +197,39 @@ static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_StateMachine) == 0x000FB0, "
 static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_Inertialization) == 0x001080, "Member 'UABP_S0048D_C::AnimGraphNode_Inertialization' has a wrong offset!");
 static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_CopyPoseFromMesh_1) == 0x0014D0, "Member 'UABP_S0048D_C::AnimGraphNode_CopyPoseFromMesh_1' has a wrong offset!");
 static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiPhysics) == 0x001630, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiPhysics' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_LocalToComponentSpace) == 0x002820, "Member 'UABP_S0048D_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_ComponentToLocalSpace) == 0x002840, "Member 'UABP_S0048D_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_LayeredBoneBlend_1) == 0x002860, "Member 'UABP_S0048D_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_UseCachedPose) == 0x002950, "Member 'UABP_S0048D_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiLiftLegRig) == 0x002978, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiLiftLegRig' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiArmSkirtRig) == 0x0029D8, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiArmSkirtRig' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiHorizontalRig) == 0x002A40, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiHorizontalRig' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_LayeredBoneBlend) == 0x003020, "Member 'UABP_S0048D_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_CopyPoseFromMesh) == 0x003110, "Member 'UABP_S0048D_C::AnimGraphNode_CopyPoseFromMesh' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, Anim_Jump_Start) == 0x003268, "Member 'UABP_S0048D_C::Anim_Jump_Start' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, Anim_Jump_Fly) == 0x003270, "Member 'UABP_S0048D_C::Anim_Jump_Fly' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, BP_Current_Clothe_Anim_State) == 0x003278, "Member 'UABP_S0048D_C::BP_Current_Clothe_Anim_State' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, PhysicsBlendAlpha) == 0x003280, "Member 'UABP_S0048D_C::PhysicsBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, IsUp) == 0x003288, "Member 'UABP_S0048D_C::IsUp' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, CurrentPhysicBlendAlpha) == 0x003290, "Member 'UABP_S0048D_C::CurrentPhysicBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, IsMantle) == 0x003298, "Member 'UABP_S0048D_C::IsMantle' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, IsFloat) == 0x003299, "Member 'UABP_S0048D_C::IsFloat' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, IsPrepareFinished) == 0x00329A, "Member 'UABP_S0048D_C::IsPrepareFinished' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, InAirRegularMoveableComponent) == 0x0032A0, "Member 'UABP_S0048D_C::InAirRegularMoveableComponent' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, InAirMoveableComponent) == 0x0032A8, "Member 'UABP_S0048D_C::InAirMoveableComponent' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, MovementMode) == 0x0032B0, "Member 'UABP_S0048D_C::MovementMode' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, JumpStage) == 0x0032B1, "Member 'UABP_S0048D_C::JumpStage' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, bRejump) == 0x0032B2, "Member 'UABP_S0048D_C::bRejump' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, ExternalAcceleration) == 0x0032B8, "Member 'UABP_S0048D_C::ExternalAcceleration' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, ExternalAccelerationDuration) == 0x0032D0, "Member 'UABP_S0048D_C::ExternalAccelerationDuration' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, IsJumpingInAir) == 0x0032D8, "Member 'UABP_S0048D_C::IsJumpingInAir' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, CharacterMovementComp) == 0x0032E0, "Member 'UABP_S0048D_C::CharacterMovementComp' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, PlayerMantleComp) == 0x0032E8, "Member 'UABP_S0048D_C::PlayerMantleComp' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, NikkiPhysicsPreDoStep) == 0x0032F0, "Member 'UABP_S0048D_C::NikkiPhysicsPreDoStep' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, BlendPoseWeight) == 0x0032F4, "Member 'UABP_S0048D_C::BlendPoseWeight' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, NikkiPhysicsPartSelfCollsion) == 0x0032F8, "Member 'UABP_S0048D_C::NikkiPhysicsPartSelfCollsion' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, NikkiPhysicsHeightFieldMethod) == 0x0032F9, "Member 'UABP_S0048D_C::NikkiPhysicsHeightFieldMethod' has a wrong offset!");
-static_assert(offsetof(UABP_S0048D_C, Rig_LiftLegAlpha) == 0x003300, "Member 'UABP_S0048D_C::Rig_LiftLegAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_LocalToComponentSpace) == 0x002760, "Member 'UABP_S0048D_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_ComponentToLocalSpace) == 0x002780, "Member 'UABP_S0048D_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_LayeredBoneBlend_1) == 0x0027A0, "Member 'UABP_S0048D_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_UseCachedPose) == 0x002890, "Member 'UABP_S0048D_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiLiftLegRig) == 0x0028B8, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiLiftLegRig' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiArmSkirtRig) == 0x002918, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiArmSkirtRig' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_NikkiHorizontalRig) == 0x002980, "Member 'UABP_S0048D_C::AnimGraphNode_NikkiHorizontalRig' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_LayeredBoneBlend) == 0x002F30, "Member 'UABP_S0048D_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, AnimGraphNode_CopyPoseFromMesh) == 0x003020, "Member 'UABP_S0048D_C::AnimGraphNode_CopyPoseFromMesh' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, Anim_Jump_Start) == 0x003178, "Member 'UABP_S0048D_C::Anim_Jump_Start' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, Anim_Jump_Fly) == 0x003180, "Member 'UABP_S0048D_C::Anim_Jump_Fly' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, BP_Current_Clothe_Anim_State) == 0x003188, "Member 'UABP_S0048D_C::BP_Current_Clothe_Anim_State' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, PhysicsBlendAlpha) == 0x003190, "Member 'UABP_S0048D_C::PhysicsBlendAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, IsUp) == 0x003198, "Member 'UABP_S0048D_C::IsUp' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, CurrentPhysicBlendAlpha) == 0x0031A0, "Member 'UABP_S0048D_C::CurrentPhysicBlendAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, IsMantle) == 0x0031A8, "Member 'UABP_S0048D_C::IsMantle' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, IsFloat) == 0x0031A9, "Member 'UABP_S0048D_C::IsFloat' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, IsPrepareFinished) == 0x0031AA, "Member 'UABP_S0048D_C::IsPrepareFinished' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, InAirRegularMoveableComponent) == 0x0031B0, "Member 'UABP_S0048D_C::InAirRegularMoveableComponent' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, InAirMoveableComponent) == 0x0031B8, "Member 'UABP_S0048D_C::InAirMoveableComponent' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, MovementMode) == 0x0031C0, "Member 'UABP_S0048D_C::MovementMode' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, JumpStage) == 0x0031C1, "Member 'UABP_S0048D_C::JumpStage' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, bRejump) == 0x0031C2, "Member 'UABP_S0048D_C::bRejump' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, ExternalAcceleration) == 0x0031C8, "Member 'UABP_S0048D_C::ExternalAcceleration' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, ExternalAccelerationDuration) == 0x0031E0, "Member 'UABP_S0048D_C::ExternalAccelerationDuration' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, IsJumpingInAir) == 0x0031E8, "Member 'UABP_S0048D_C::IsJumpingInAir' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, CharacterMovementComp) == 0x0031F0, "Member 'UABP_S0048D_C::CharacterMovementComp' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, PlayerMantleComp) == 0x0031F8, "Member 'UABP_S0048D_C::PlayerMantleComp' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, NikkiPhysicsPreDoStep) == 0x003200, "Member 'UABP_S0048D_C::NikkiPhysicsPreDoStep' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, BlendPoseWeight) == 0x003204, "Member 'UABP_S0048D_C::BlendPoseWeight' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, NikkiPhysicsPartSelfCollsion) == 0x003208, "Member 'UABP_S0048D_C::NikkiPhysicsPartSelfCollsion' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, NikkiPhysicsHeightFieldMethod) == 0x003209, "Member 'UABP_S0048D_C::NikkiPhysicsHeightFieldMethod' has a wrong offset!");
+static_assert(offsetof(UABP_S0048D_C, Rig_LiftLegAlpha) == 0x003210, "Member 'UABP_S0048D_C::Rig_LiftLegAlpha' has a wrong offset!");
 
 }
 

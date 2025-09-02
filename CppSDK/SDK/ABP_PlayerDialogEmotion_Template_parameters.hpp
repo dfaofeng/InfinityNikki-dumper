@@ -134,62 +134,31 @@ static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_OnEmotionPerformanceCh
 static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_OnEmotionPerformanceChanged, CallFunc_Not_PreBool_ReturnValue) == 0x000001, "Member 'ABP_PlayerDialogEmotion_Template_C_OnEmotionPerformanceChanged::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function ABP_PlayerDialogEmotion_Template.ABP_PlayerDialogEmotion_Template_C.UpdateState
-// 0x0038 (0x0038 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct ABP_PlayerDialogEmotion_Template_C_UpdateState final
 {
 public:
 	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetOwningComponent_ReturnValue;           // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_CheckActorHasBegunPlay_ReturnValue;       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMontageSlotActivated_ReturnValue;       // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance; // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetOwningComponent_ReturnValue;           // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CheckActorHasBegunPlay_ReturnValue;       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsMontageSlotActivated_ReturnValue;       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance; // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ABP_PlayerDialogEmotion_Template_C_UpdateState) == 0x000008, "Wrong alignment on ABP_PlayerDialogEmotion_Template_C_UpdateState");
-static_assert(sizeof(ABP_PlayerDialogEmotion_Template_C_UpdateState) == 0x000038, "Wrong size on ABP_PlayerDialogEmotion_Template_C_UpdateState");
+static_assert(sizeof(ABP_PlayerDialogEmotion_Template_C_UpdateState) == 0x000040, "Wrong size on ABP_PlayerDialogEmotion_Template_C_UpdateState");
 static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_MakeLiteralName_ReturnValue) == 0x000000, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_GetOwningComponent_ReturnValue) == 0x000008, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_GetOwningComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_GetOwningActor_ReturnValue) == 0x000010, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_GetAnimInstance_ReturnValue) == 0x000018, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_CheckActorHasBegunPlay_ReturnValue) == 0x000020, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_CheckActorHasBegunPlay_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_IsMontageSlotActivated_ReturnValue) == 0x000021, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_IsMontageSlotActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_SelectFloat_ReturnValue) == 0x000028, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance) == 0x000030, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance' has a wrong offset!");
-
-// Function ABP_PlayerDialogEmotion_Template.ABP_PlayerDialogEmotion_Template_C.UpdateUseDialogEmotionBlendBranch
-// 0x0038 (0x0038 - 0x0000)
-struct ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch final
-{
-public:
-	class USkeletalMeshComponent*                 CallFunc_GetOwningComponent_ReturnValue;           // 0x0000(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x001C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMontageSlotActivated_ReturnValue;       // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue_1;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsMontageSlotActivated_ReturnValue_1;     // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch) == 0x000008, "Wrong alignment on ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch");
-static_assert(sizeof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch) == 0x000038, "Wrong size on ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_GetOwningComponent_ReturnValue) == 0x000000, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_GetOwningComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_GetAnimInstance_ReturnValue) == 0x000010, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_IsValid_ReturnValue_1) == 0x000018, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_MakeLiteralName_ReturnValue) == 0x00001C, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_IsMontageSlotActivated_ReturnValue) == 0x000024, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_IsMontageSlotActivated_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_MakeLiteralName_ReturnValue_1) == 0x000028, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_MakeLiteralName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_IsMontageSlotActivated_ReturnValue_1) == 0x000030, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_IsMontageSlotActivated_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_BooleanOR_ReturnValue) == 0x000031, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch, CallFunc_Not_PreBool_ReturnValue) == 0x000032, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateUseDialogEmotionBlendBranch::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_GetOwningActor_ReturnValue) == 0x000008, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_GetOwningComponent_ReturnValue) == 0x000010, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_GetOwningComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_CheckActorHasBegunPlay_ReturnValue) == 0x000018, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_CheckActorHasBegunPlay_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_GetAnimInstance_ReturnValue) == 0x000020, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_IsMontageSlotActivated_ReturnValue) == 0x000028, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_IsMontageSlotActivated_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_SelectFloat_ReturnValue) == 0x000030, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_PlayerDialogEmotion_Template_C_UpdateState, CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance) == 0x000038, "Member 'ABP_PlayerDialogEmotion_Template_C_UpdateState::CallFunc_BP_GetEnableEmotionPerformance_EnableEmotionPerformance' has a wrong offset!");
 
 }
 

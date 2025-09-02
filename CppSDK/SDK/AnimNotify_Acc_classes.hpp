@@ -25,8 +25,8 @@ public:
 	class UAkAudioEvent*                          AkEvent;                                           // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreviewPostAkEvent(class USceneComponent* Comp) const;
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	void PreviewPostAkEvent(class USceneComponent* Comp) const;
 
 public:
 	static class UClass* StaticClass()

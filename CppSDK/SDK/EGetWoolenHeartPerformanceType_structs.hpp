@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EGetWoolenHeartPerformanceType.EGetWoolenHeartPerformanceType
-// NumValues: 0x000C
+// NumValues: 0x000D
 enum class EGetWoolenHeartPerformanceType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -29,7 +29,8 @@ enum class EGetWoolenHeartPerformanceType : uint8
 	NewEnumerator8                           = 8,
 	NewEnumerator9                           = 9,
 	NewEnumerator10                          = 10,
-	EGetWoolenHeartPerformanceType_MAX       = 11,
+	NewEnumerator11                          = 11,
+	EGetWoolenHeartPerformanceType_MAX       = 12,
 };
 
 }

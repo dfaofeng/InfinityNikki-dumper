@@ -15,13 +15,14 @@ namespace SDK
 {
 
 // UserDefinedEnum ESkillFlag.ESkillFlag
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class ESkillFlag : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator2                           = 1,
 	NewEnumerator3                           = 2,
-	ESkillFlag_MAX                           = 3,
+	NewEnumerator5                           = 3,
+	ESkillFlag_MAX                           = 4,
 };
 
 }

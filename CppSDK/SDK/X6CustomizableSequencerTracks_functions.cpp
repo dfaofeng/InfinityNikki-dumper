@@ -187,6 +187,116 @@ int32 UX6SequencerBlueprintFunctionLibrary::GetIntValueFromPreviewConfig(class F
 }
 
 
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.GetStringToStringMapFromPreviewConfig
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TMap<class FString, class FString>      ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TMap<class FString, class FString> UX6SequencerBlueprintFunctionLibrary::GetStringToStringMapFromPreviewConfig(class FName Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SequencerBlueprintFunctionLibrary", "GetStringToStringMapFromPreviewConfig");
+
+	Params::X6SequencerBlueprintFunctionLibrary_GetStringToStringMapFromPreviewConfig Parms{};
+
+	Parms.Name_0 = Name_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.IsPreviewInEditor
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UX6SequencerBlueprintFunctionLibrary::IsPreviewInEditor(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SequencerBlueprintFunctionLibrary", "IsPreviewInEditor");
+
+	Params::X6SequencerBlueprintFunctionLibrary_IsPreviewInEditor Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.SetStringToStringMapToPreviewConfig
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TMap<class FString, class FString>&NewMap                                                 (Parm, NativeAccessSpecifierPublic)
+
+void UX6SequencerBlueprintFunctionLibrary::SetStringToStringMapToPreviewConfig(class FName Name_0, const TMap<class FString, class FString>& NewMap)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SequencerBlueprintFunctionLibrary", "SetStringToStringMapToPreviewConfig");
+
+	Params::X6SequencerBlueprintFunctionLibrary_SetStringToStringMapToPreviewConfig Parms{};
+
+	Parms.Name_0 = Name_0;
+	Parms.NewMap = std::move(NewMap);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerBlueprintFunctionLibrary.SetVisibility
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bNewVisibility                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UX6SequencerBlueprintFunctionLibrary::SetVisibility(class AActor* Actor, const bool bNewVisibility)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6SequencerBlueprintFunctionLibrary", "SetVisibility");
+
+	Params::X6SequencerBlueprintFunctionLibrary_SetVisibility Parms{};
+
+	Parms.Actor = Actor;
+	Parms.bNewVisibility = bNewVisibility;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function X6CustomizableSequencerTracks.X6SequencerSectionBP.FindBindingObject
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
@@ -1032,6 +1142,379 @@ bool UX6SequencerParameterSectionBP::RemoveVectorParameter(class FName InParamet
 	Params::X6SequencerParameterSectionBP_RemoveVectorParameter Parms{};
 
 	Parms.InParameterName = InParameterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.FindBindingObject
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FMovieSceneObjectBindingID&MovieSceneObjectBindingID                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UX6SequencerTrackInstanceBP::FindBindingObject(const struct FMovieSceneObjectBindingID& MovieSceneObjectBindingID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "FindBindingObject");
+
+	Params::X6SequencerTrackInstanceBP_FindBindingObject Parms{};
+
+	Parms.MovieSceneObjectBindingID = std::move(MovieSceneObjectBindingID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.FindBindingObjectByInput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FX6SequencerTrackInstanceInput&Input                                                  (Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// const struct FMovieSceneObjectBindingID&MovieSceneObjectBindingID                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UObject* UX6SequencerTrackInstanceBP::FindBindingObjectByInput(const struct FX6SequencerTrackInstanceInput& Input, const struct FMovieSceneObjectBindingID& MovieSceneObjectBindingID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "FindBindingObjectByInput");
+
+	Params::X6SequencerTrackInstanceBP_FindBindingObjectByInput Parms{};
+
+	Parms.Input = std::move(Input);
+	Parms.MovieSceneObjectBindingID = std::move(MovieSceneObjectBindingID);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.FindProxyActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AActor* UX6SequencerTrackInstanceBP::FindProxyActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "FindProxyActor");
+
+	Params::X6SequencerTrackInstanceBP_FindProxyActor Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrame
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FFrameNumber                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FFrameNumber UX6SequencerTrackInstanceBP::GetBeginFrame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetBeginFrame");
+
+	Params::X6SequencerTrackInstanceBP_GetBeginFrame Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrameByInput
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FX6SequencerTrackInstanceInput&Input                                                  (Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FFrameNumber                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FFrameNumber UX6SequencerTrackInstanceBP::GetBeginFrameByInput(const struct FX6SequencerTrackInstanceInput& Input)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetBeginFrameByInput");
+
+	Params::X6SequencerTrackInstanceBP_GetBeginFrameByInput Parms{};
+
+	Parms.Input = std::move(Input);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrameSeconds
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UX6SequencerTrackInstanceBP::GetBeginFrameSeconds()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetBeginFrameSeconds");
+
+	Params::X6SequencerTrackInstanceBP_GetBeginFrameSeconds Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetBeginFrameSecondsByInput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FX6SequencerTrackInstanceInput&Input                                                  (Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UX6SequencerTrackInstanceBP::GetBeginFrameSecondsByInput(const struct FX6SequencerTrackInstanceInput& Input)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetBeginFrameSecondsByInput");
+
+	Params::X6SequencerTrackInstanceBP_GetBeginFrameSecondsByInput Parms{};
+
+	Parms.Input = std::move(Input);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetDefaultSectionBP
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UX6SequencerSectionBP*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UX6SequencerSectionBP* UX6SequencerTrackInstanceBP::GetDefaultSectionBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetDefaultSectionBP");
+
+	Params::X6SequencerTrackInstanceBP_GetDefaultSectionBP Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrame
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FFrameNumber                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FFrameNumber UX6SequencerTrackInstanceBP::GetEndFrame()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetEndFrame");
+
+	Params::X6SequencerTrackInstanceBP_GetEndFrame Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrameByInput
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FX6SequencerTrackInstanceInput&Input                                                  (Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// struct FFrameNumber                     ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FFrameNumber UX6SequencerTrackInstanceBP::GetEndFrameByInput(const struct FX6SequencerTrackInstanceInput& Input)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetEndFrameByInput");
+
+	Params::X6SequencerTrackInstanceBP_GetEndFrameByInput Parms{};
+
+	Parms.Input = std::move(Input);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrameSeconds
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UX6SequencerTrackInstanceBP::GetEndFrameSeconds()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetEndFrameSeconds");
+
+	Params::X6SequencerTrackInstanceBP_GetEndFrameSeconds Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetEndFrameSecondsByInput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FX6SequencerTrackInstanceInput&Input                                                  (Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UX6SequencerTrackInstanceBP::GetEndFrameSecondsByInput(const struct FX6SequencerTrackInstanceInput& Input)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetEndFrameSecondsByInput");
+
+	Params::X6SequencerTrackInstanceBP_GetEndFrameSecondsByInput Parms{};
+
+	Parms.Input = std::move(Input);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetMovieSceneSequencePlayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMovieSceneSequencePlayer*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneSequencePlayer* UX6SequencerTrackInstanceBP::GetMovieSceneSequencePlayer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetMovieSceneSequencePlayer");
+
+	Params::X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function X6CustomizableSequencerTracks.X6SequencerTrackInstanceBP.GetMovieSceneSequencePlayerByInput
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const struct FX6SequencerTrackInstanceInput&Input                                                  (Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// class UMovieSceneSequencePlayer*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneSequencePlayer* UX6SequencerTrackInstanceBP::GetMovieSceneSequencePlayerByInput(const struct FX6SequencerTrackInstanceInput& Input)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("X6SequencerTrackInstanceBP", "GetMovieSceneSequencePlayerByInput");
+
+	Params::X6SequencerTrackInstanceBP_GetMovieSceneSequencePlayerByInput Parms{};
+
+	Parms.Input = std::move(Input);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EInputDeviceKeyType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EInputDeviceKeyType_structs.hpp"
 
 
 namespace SDK::Params
@@ -110,11 +110,11 @@ static_assert(offsetof(BPI_NikkiHandleInputInterface_C_InputAction_Sprint, Press
 struct BPI_NikkiHandleInputInterface_C_InputAction_Walk final
 {
 public:
-	bool                                          PressOrRelease;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          pressOrRelease;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_NikkiHandleInputInterface_C_InputAction_Walk) == 0x000001, "Wrong alignment on BPI_NikkiHandleInputInterface_C_InputAction_Walk");
 static_assert(sizeof(BPI_NikkiHandleInputInterface_C_InputAction_Walk) == 0x000001, "Wrong size on BPI_NikkiHandleInputInterface_C_InputAction_Walk");
-static_assert(offsetof(BPI_NikkiHandleInputInterface_C_InputAction_Walk, PressOrRelease) == 0x000000, "Member 'BPI_NikkiHandleInputInterface_C_InputAction_Walk::PressOrRelease' has a wrong offset!");
+static_assert(offsetof(BPI_NikkiHandleInputInterface_C_InputAction_Walk, pressOrRelease) == 0x000000, "Member 'BPI_NikkiHandleInputInterface_C_InputAction_Walk::pressOrRelease' has a wrong offset!");
 
 // Function BPI_NikkiHandleInputInterface.BPI_NikkiHandleInputInterface_C.OnMovementMoveXAxisAction
 // 0x0008 (0x0008 - 0x0000)

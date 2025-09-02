@@ -14,6 +14,30 @@
 namespace SDK::Params
 {
 
+// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_UI_Common_SingleKey_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_Common_SingleKey_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_Common_SingleKey_C_PreConstruct");
+static_assert(sizeof(WBP_UI_Common_SingleKey_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_Common_SingleKey_C_PreConstruct");
+static_assert(offsetof(WBP_UI_Common_SingleKey_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_Common_SingleKey_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.ExecuteUbergraph_WBP_UI_Common_SingleKey
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey) == 0x000004, "Wrong alignment on WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey");
+static_assert(sizeof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey) == 0x000008, "Wrong size on WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey");
+static_assert(offsetof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey, EntryPoint) == 0x000000, "Member 'WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey::K2Node_Event_IsDesignTime' has a wrong offset!");
+
 // Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.BP_CreateProgressMat
 // 0x0020 (0x0020 - 0x0000)
 struct WBP_UI_Common_SingleKey_C_BP_CreateProgressMat final
@@ -31,30 +55,6 @@ static_assert(offsetof(WBP_UI_Common_SingleKey_C_BP_CreateProgressMat, bConsole)
 static_assert(offsetof(WBP_UI_Common_SingleKey_C_BP_CreateProgressMat, Mat) == 0x000008, "Member 'WBP_UI_Common_SingleKey_C_BP_CreateProgressMat::Mat' has a wrong offset!");
 static_assert(offsetof(WBP_UI_Common_SingleKey_C_BP_CreateProgressMat, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'WBP_UI_Common_SingleKey_C_BP_CreateProgressMat::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_Common_SingleKey_C_BP_CreateProgressMat, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000018, "Member 'WBP_UI_Common_SingleKey_C_BP_CreateProgressMat::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.ExecuteUbergraph_WBP_UI_Common_SingleKey
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey) == 0x000004, "Wrong alignment on WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey");
-static_assert(sizeof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey) == 0x000008, "Wrong size on WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey");
-static_assert(offsetof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey, EntryPoint) == 0x000000, "Member 'WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_UI_Common_SingleKey_C_ExecuteUbergraph_WBP_UI_Common_SingleKey::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_UI_Common_SingleKey_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_Common_SingleKey_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_Common_SingleKey_C_PreConstruct");
-static_assert(sizeof(WBP_UI_Common_SingleKey_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_Common_SingleKey_C_PreConstruct");
-static_assert(offsetof(WBP_UI_Common_SingleKey_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_Common_SingleKey_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WBP_UI_Common_SingleKey.WBP_UI_Common_SingleKey_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

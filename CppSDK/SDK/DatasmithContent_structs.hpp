@@ -137,40 +137,6 @@ enum class EDatasmithCADRetessellationRule : uint8
 	EDatasmithCADRetessellationRule_MAX      = 2,
 };
 
-// ScriptStruct DatasmithContent.DatasmithPostProcessSettingsTemplate
-// 0x0040 (0x0040 - 0x0000)
-struct FDatasmithPostProcessSettingsTemplate final
-{
-public:
-	uint8                                         bOverride_WhiteTemp : 1;                           // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_ColorSaturation : 1;                     // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_VignetteIntensity : 1;                   // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_AutoExposureMethod : 1;                  // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_CameraISO : 1;                           // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverride_CameraShutterSpeed : 1;                  // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BitPad_0_6 : 2;                                    // 0x0000(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bOverride_DepthOfFieldFstop : 1;                   // 0x0004(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WhiteTemp;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         VignetteIntensity;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector4                               ColorSaturation;                                   // 0x0010(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAutoExposureMethod                           AutoExposureMethod;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CameraISO;                                         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CameraShutterSpeed;                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DepthOfFieldFstop;                                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDatasmithPostProcessSettingsTemplate) == 0x000010, "Wrong alignment on FDatasmithPostProcessSettingsTemplate");
-static_assert(sizeof(FDatasmithPostProcessSettingsTemplate) == 0x000040, "Wrong size on FDatasmithPostProcessSettingsTemplate");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, WhiteTemp) == 0x000008, "Member 'FDatasmithPostProcessSettingsTemplate::WhiteTemp' has a wrong offset!");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, VignetteIntensity) == 0x00000C, "Member 'FDatasmithPostProcessSettingsTemplate::VignetteIntensity' has a wrong offset!");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, ColorSaturation) == 0x000010, "Member 'FDatasmithPostProcessSettingsTemplate::ColorSaturation' has a wrong offset!");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, AutoExposureMethod) == 0x000030, "Member 'FDatasmithPostProcessSettingsTemplate::AutoExposureMethod' has a wrong offset!");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, CameraISO) == 0x000034, "Member 'FDatasmithPostProcessSettingsTemplate::CameraISO' has a wrong offset!");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, CameraShutterSpeed) == 0x000038, "Member 'FDatasmithPostProcessSettingsTemplate::CameraShutterSpeed' has a wrong offset!");
-static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, DepthOfFieldFstop) == 0x00003C, "Member 'FDatasmithPostProcessSettingsTemplate::DepthOfFieldFstop' has a wrong offset!");
-
 // ScriptStruct DatasmithContent.DatasmithImportInfo
 // 0x0001 (0x0001 - 0x0000)
 struct FDatasmithImportInfo final
@@ -180,20 +146,6 @@ public:
 };
 static_assert(alignof(FDatasmithImportInfo) == 0x000001, "Wrong alignment on FDatasmithImportInfo");
 static_assert(sizeof(FDatasmithImportInfo) == 0x000001, "Wrong size on FDatasmithImportInfo");
-
-// ScriptStruct DatasmithContent.DatasmithCameraFocusSettingsTemplate
-// 0x0008 (0x0008 - 0x0000)
-struct FDatasmithCameraFocusSettingsTemplate final
-{
-public:
-	ECameraFocusMethod                            FocusMethod;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ManualFocusDistance;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDatasmithCameraFocusSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraFocusSettingsTemplate");
-static_assert(sizeof(FDatasmithCameraFocusSettingsTemplate) == 0x000008, "Wrong size on FDatasmithCameraFocusSettingsTemplate");
-static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, FocusMethod) == 0x000000, "Member 'FDatasmithCameraFocusSettingsTemplate::FocusMethod' has a wrong offset!");
-static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, ManualFocusDistance) == 0x000004, "Member 'FDatasmithCameraFocusSettingsTemplate::ManualFocusDistance' has a wrong offset!");
 
 // ScriptStruct DatasmithContent.DatasmithCameraLookatTrackingSettingsTemplate
 // 0x0030 (0x0030 - 0x0000)
@@ -232,6 +184,54 @@ public:
 static_assert(alignof(FDatasmithCameraLensSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraLensSettingsTemplate");
 static_assert(sizeof(FDatasmithCameraLensSettingsTemplate) == 0x000004, "Wrong size on FDatasmithCameraLensSettingsTemplate");
 static_assert(offsetof(FDatasmithCameraLensSettingsTemplate, MaxFStop) == 0x000000, "Member 'FDatasmithCameraLensSettingsTemplate::MaxFStop' has a wrong offset!");
+
+// ScriptStruct DatasmithContent.DatasmithCameraFocusSettingsTemplate
+// 0x0008 (0x0008 - 0x0000)
+struct FDatasmithCameraFocusSettingsTemplate final
+{
+public:
+	ECameraFocusMethod                            FocusMethod;                                       // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ManualFocusDistance;                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDatasmithCameraFocusSettingsTemplate) == 0x000004, "Wrong alignment on FDatasmithCameraFocusSettingsTemplate");
+static_assert(sizeof(FDatasmithCameraFocusSettingsTemplate) == 0x000008, "Wrong size on FDatasmithCameraFocusSettingsTemplate");
+static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, FocusMethod) == 0x000000, "Member 'FDatasmithCameraFocusSettingsTemplate::FocusMethod' has a wrong offset!");
+static_assert(offsetof(FDatasmithCameraFocusSettingsTemplate, ManualFocusDistance) == 0x000004, "Member 'FDatasmithCameraFocusSettingsTemplate::ManualFocusDistance' has a wrong offset!");
+
+// ScriptStruct DatasmithContent.DatasmithPostProcessSettingsTemplate
+// 0x0040 (0x0040 - 0x0000)
+struct FDatasmithPostProcessSettingsTemplate final
+{
+public:
+	uint8                                         bOverride_WhiteTemp : 1;                           // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_ColorSaturation : 1;                     // 0x0000(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_VignetteIntensity : 1;                   // 0x0000(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_AutoExposureMethod : 1;                  // 0x0000(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_CameraISO : 1;                           // 0x0000(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverride_CameraShutterSpeed : 1;                  // 0x0000(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BitPad_0_6 : 2;                                    // 0x0000(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bOverride_DepthOfFieldFstop : 1;                   // 0x0004(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         WhiteTemp;                                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         VignetteIntensity;                                 // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               ColorSaturation;                                   // 0x0010(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAutoExposureMethod                           AutoExposureMethod;                                // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CameraISO;                                         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CameraShutterSpeed;                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DepthOfFieldFstop;                                 // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDatasmithPostProcessSettingsTemplate) == 0x000010, "Wrong alignment on FDatasmithPostProcessSettingsTemplate");
+static_assert(sizeof(FDatasmithPostProcessSettingsTemplate) == 0x000040, "Wrong size on FDatasmithPostProcessSettingsTemplate");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, WhiteTemp) == 0x000008, "Member 'FDatasmithPostProcessSettingsTemplate::WhiteTemp' has a wrong offset!");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, VignetteIntensity) == 0x00000C, "Member 'FDatasmithPostProcessSettingsTemplate::VignetteIntensity' has a wrong offset!");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, ColorSaturation) == 0x000010, "Member 'FDatasmithPostProcessSettingsTemplate::ColorSaturation' has a wrong offset!");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, AutoExposureMethod) == 0x000030, "Member 'FDatasmithPostProcessSettingsTemplate::AutoExposureMethod' has a wrong offset!");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, CameraISO) == 0x000034, "Member 'FDatasmithPostProcessSettingsTemplate::CameraISO' has a wrong offset!");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, CameraShutterSpeed) == 0x000038, "Member 'FDatasmithPostProcessSettingsTemplate::CameraShutterSpeed' has a wrong offset!");
+static_assert(offsetof(FDatasmithPostProcessSettingsTemplate, DepthOfFieldFstop) == 0x00003C, "Member 'FDatasmithPostProcessSettingsTemplate::DepthOfFieldFstop' has a wrong offset!");
 
 // ScriptStruct DatasmithContent.DatasmithAssetImportOptions
 // 0x0008 (0x0008 - 0x0000)

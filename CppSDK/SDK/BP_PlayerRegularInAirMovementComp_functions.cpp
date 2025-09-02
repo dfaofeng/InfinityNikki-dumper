@@ -272,9 +272,10 @@ void UBP_PlayerRegularInAirMovementComp_C::BP_ModifyOwnerJumpStageConfigByDA(cla
 // (Net, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ERegularFloatingJumpStage               NewStage                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ERegularJumpMode                        NewJumpMode                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    bForceUpdate                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_PlayerRegularInAirMovementComp_C::BP_Multicast_ChangeJumpStage(ERegularFloatingJumpStage NewStage, bool bForceUpdate)
+void UBP_PlayerRegularInAirMovementComp_C::BP_Multicast_ChangeJumpStage(ERegularFloatingJumpStage NewStage, ERegularJumpMode NewJumpMode, bool bForceUpdate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -284,6 +285,7 @@ void UBP_PlayerRegularInAirMovementComp_C::BP_Multicast_ChangeJumpStage(ERegular
 	Params::BP_PlayerRegularInAirMovementComp_C_BP_Multicast_ChangeJumpStage Parms{};
 
 	Parms.NewStage = NewStage;
+	Parms.NewJumpMode = NewJumpMode;
 	Parms.bForceUpdate = bForceUpdate;
 
 	UObject::ProcessEvent(Func, &Parms);

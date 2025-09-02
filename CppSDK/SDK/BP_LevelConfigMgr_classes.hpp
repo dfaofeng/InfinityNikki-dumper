@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LevelConfigMgr.BP_LevelConfigMgr_C
-// 0x0098 (0x0B28 - 0x0A90)
+// 0x0098 (0x0B50 - 0x0AB8)
 class ABP_LevelConfigMgr_C final : public AEnvironmentLevelConfigManager
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0A90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0A98(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FS_LevelConfigScalability>      Effect_Quality;                                    // 0x0AA0(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FS_LevelConfigScalability>      Shadow_Quality;                                    // 0x0AB0(0x0010)(Edit, BlueprintVisible)
-	TArray<struct FS_LevelConfigScalability>      Global_Illumination_Quality;                       // 0x0AC0(0x0010)(Edit, BlueprintVisible)
-	TMap<class FString, double>                   Other_Quality;                                     // 0x0AD0(0x0050)(Edit, BlueprintVisible)
-	class UDataTable*                             Mobile_Light_CVars;                                // 0x0B20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0AB8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0AC0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FS_LevelConfigScalability>      Effect_Quality;                                    // 0x0AC8(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FS_LevelConfigScalability>      Shadow_Quality;                                    // 0x0AD8(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FS_LevelConfigScalability>      Global_Illumination_Quality;                       // 0x0AE8(0x0010)(Edit, BlueprintVisible)
+	TMap<class FString, double>                   Other_Quality;                                     // 0x0AF8(0x0050)(Edit, BlueprintVisible)
+	class UDataTable*                             Mobile_Light_CVars;                                // 0x0B48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_LevelConfigMgr(int32 EntryPoint);
@@ -56,14 +56,14 @@ public:
 	}
 };
 static_assert(alignof(ABP_LevelConfigMgr_C) == 0x000008, "Wrong alignment on ABP_LevelConfigMgr_C");
-static_assert(sizeof(ABP_LevelConfigMgr_C) == 0x000B28, "Wrong size on ABP_LevelConfigMgr_C");
-static_assert(offsetof(ABP_LevelConfigMgr_C, UberGraphFrame) == 0x000A90, "Member 'ABP_LevelConfigMgr_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigMgr_C, DefaultSceneRoot) == 0x000A98, "Member 'ABP_LevelConfigMgr_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigMgr_C, Effect_Quality) == 0x000AA0, "Member 'ABP_LevelConfigMgr_C::Effect_Quality' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigMgr_C, Shadow_Quality) == 0x000AB0, "Member 'ABP_LevelConfigMgr_C::Shadow_Quality' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigMgr_C, Global_Illumination_Quality) == 0x000AC0, "Member 'ABP_LevelConfigMgr_C::Global_Illumination_Quality' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigMgr_C, Other_Quality) == 0x000AD0, "Member 'ABP_LevelConfigMgr_C::Other_Quality' has a wrong offset!");
-static_assert(offsetof(ABP_LevelConfigMgr_C, Mobile_Light_CVars) == 0x000B20, "Member 'ABP_LevelConfigMgr_C::Mobile_Light_CVars' has a wrong offset!");
+static_assert(sizeof(ABP_LevelConfigMgr_C) == 0x000B50, "Wrong size on ABP_LevelConfigMgr_C");
+static_assert(offsetof(ABP_LevelConfigMgr_C, UberGraphFrame) == 0x000AB8, "Member 'ABP_LevelConfigMgr_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigMgr_C, DefaultSceneRoot) == 0x000AC0, "Member 'ABP_LevelConfigMgr_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigMgr_C, Effect_Quality) == 0x000AC8, "Member 'ABP_LevelConfigMgr_C::Effect_Quality' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigMgr_C, Shadow_Quality) == 0x000AD8, "Member 'ABP_LevelConfigMgr_C::Shadow_Quality' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigMgr_C, Global_Illumination_Quality) == 0x000AE8, "Member 'ABP_LevelConfigMgr_C::Global_Illumination_Quality' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigMgr_C, Other_Quality) == 0x000AF8, "Member 'ABP_LevelConfigMgr_C::Other_Quality' has a wrong offset!");
+static_assert(offsetof(ABP_LevelConfigMgr_C, Mobile_Light_CVars) == 0x000B48, "Member 'ABP_LevelConfigMgr_C::Mobile_Light_CVars' has a wrong offset!");
 
 }
 

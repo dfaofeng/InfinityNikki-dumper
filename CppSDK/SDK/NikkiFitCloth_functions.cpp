@@ -75,6 +75,61 @@ bool UMatchTwoClothEvent::CheckSkeletalMeshBone(const class USkeletalMesh* Skele
 }
 
 
+// Function NikkiFitCloth.MatchTwoClothEvent.CheckSkeletalMeshFitCacheVersion
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    SkeletalMesh                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             VersionNumber                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMatchTwoClothEvent::CheckSkeletalMeshFitCacheVersion(class USkeletalMesh* SkeletalMesh, const int32 VersionNumber)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "CheckSkeletalMeshFitCacheVersion");
+
+	Params::MatchTwoClothEvent_CheckSkeletalMeshFitCacheVersion Parms{};
+
+	Parms.SkeletalMesh = SkeletalMesh;
+	Parms.VersionNumber = VersionNumber;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.ClearBoneInfluenceVertexIndicesForFitCache
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    SkeletalMesh                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::ClearBoneInfluenceVertexIndicesForFitCache(class USkeletalMesh* SkeletalMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "ClearBoneInfluenceVertexIndicesForFitCache");
+
+	Params::MatchTwoClothEvent_ClearBoneInfluenceVertexIndicesForFitCache Parms{};
+
+	Parms.SkeletalMesh = SkeletalMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NikkiFitCloth.MatchTwoClothEvent.ClearPairCache
 // (Final, Native, Static, Public, BlueprintCallable)
 
@@ -119,7 +174,124 @@ void UMatchTwoClothEvent::ClearPrebuildClothData(class USkeletalMesh* ClothSkelM
 }
 
 
-// Function NikkiFitCloth.MatchTwoClothEvent.ExtractCPUSkinVertexPositionsToFitChache
+// Function NikkiFitCloth.MatchTwoClothEvent.ConvertSecondsToIntesectCounts
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// double                                  Seconds                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMatchTwoClothEvent::ConvertSecondsToIntesectCounts(double Seconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "ConvertSecondsToIntesectCounts");
+
+	Params::MatchTwoClothEvent_ConvertSecondsToIntesectCounts Parms{};
+
+	Parms.Seconds = Seconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    ClothSkelMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData(class USkeletalMesh* ClothSkelMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData");
+
+	Params::MatchTwoClothEvent_DeleteAllUserDefinedProjectMethodsFromReferenceFitClothData Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    ClothSkelMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    MethodName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData(class USkeletalMesh* ClothSkelMesh, const class FString& MethodName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData");
+
+	Params::MatchTwoClothEvent_DeleteUserDefinedProjectMethodByNameFromReferenceFitClothData Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+	Parms.MethodName = std::move(MethodName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.ExtractCPUSkinVertexPositionsAndProjectionsToFitChache
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    SkeletalMesh                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    DisabledLODIndices                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InBoneNames                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        InBoneTransforms                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const EProjectDataType                  ProjectDataType                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ProjectName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bMultiplyBoneTransform                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::ExtractCPUSkinVertexPositionsAndProjectionsToFitChache(class USkeletalMesh* SkeletalMesh, const TArray<int32>& DisabledLODIndices, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms, const EProjectDataType ProjectDataType, const class FString& ProjectName, bool bMultiplyBoneTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "ExtractCPUSkinVertexPositionsAndProjectionsToFitChache");
+
+	Params::MatchTwoClothEvent_ExtractCPUSkinVertexPositionsAndProjectionsToFitChache Parms{};
+
+	Parms.SkeletalMesh = SkeletalMesh;
+	Parms.DisabledLODIndices = std::move(DisabledLODIndices);
+	Parms.InBoneNames = std::move(InBoneNames);
+	Parms.InBoneTransforms = std::move(InBoneTransforms);
+	Parms.ProjectDataType = ProjectDataType;
+	Parms.ProjectName = std::move(ProjectName);
+	Parms.bMultiplyBoneTransform = bMultiplyBoneTransform;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.ExtractCPUSkinVertexPositionsToFitChacheForOrnament
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class USkeletalMesh*                    SkeletalMesh                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -127,14 +299,14 @@ void UMatchTwoClothEvent::ClearPrebuildClothData(class USkeletalMesh* ClothSkelM
 // const TArray<class FName>&              InBoneNames                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // const TArray<struct FTransform>&        InBoneTransforms                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UMatchTwoClothEvent::ExtractCPUSkinVertexPositionsToFitChache(class USkeletalMesh* SkeletalMesh, const TArray<int32>& DisabledLODIndices, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms)
+void UMatchTwoClothEvent::ExtractCPUSkinVertexPositionsToFitChacheForOrnament(class USkeletalMesh* SkeletalMesh, const TArray<int32>& DisabledLODIndices, const TArray<class FName>& InBoneNames, const TArray<struct FTransform>& InBoneTransforms)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "ExtractCPUSkinVertexPositionsToFitChache");
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "ExtractCPUSkinVertexPositionsToFitChacheForOrnament");
 
-	Params::MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChache Parms{};
+	Params::MatchTwoClothEvent_ExtractCPUSkinVertexPositionsToFitChacheForOrnament Parms{};
 
 	Parms.SkeletalMesh = SkeletalMesh;
 	Parms.DisabledLODIndices = std::move(DisabledLODIndices);
@@ -155,10 +327,9 @@ void UMatchTwoClothEvent::ExtractCPUSkinVertexPositionsToFitChache(class USkelet
 // Parameters:
 // class USkeletalMesh*                    InnerSkeletalMesh                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USkeletalMesh*                    OuterSkeletalMesh                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UFitClothCacheAsset*              BodyCacheAsset                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FMatchClothParameter&      MatchParam                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UMatchTwoClothEvent::FindBestMatchBetweenClothOfBody(class USkeletalMesh* InnerSkeletalMesh, class USkeletalMesh* OuterSkeletalMesh, class UFitClothCacheAsset* BodyCacheAsset, const struct FMatchClothParameter& MatchParam)
+void UMatchTwoClothEvent::FindBestMatchBetweenClothOfBody(class USkeletalMesh* InnerSkeletalMesh, class USkeletalMesh* OuterSkeletalMesh, const struct FMatchClothParameter& MatchParam)
 {
 	static class UFunction* Func = nullptr;
 
@@ -169,7 +340,6 @@ void UMatchTwoClothEvent::FindBestMatchBetweenClothOfBody(class USkeletalMesh* I
 
 	Parms.InnerSkeletalMesh = InnerSkeletalMesh;
 	Parms.OuterSkeletalMesh = OuterSkeletalMesh;
-	Parms.BodyCacheAsset = BodyCacheAsset;
 	Parms.MatchParam = std::move(MatchParam);
 
 	auto Flgs = Func->FunctionFlags;
@@ -208,6 +378,33 @@ bool UMatchTwoClothEvent::FindValidPairData(class USkeletalMesh* InnerSkelMesh, 
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GenerateBoneInfluenceVertexIndicesForFitCache
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    SkeletalMesh                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              BoneNames                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::GenerateBoneInfluenceVertexIndicesForFitCache(class USkeletalMesh* SkeletalMesh, const TArray<class FName>& BoneNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "GenerateBoneInfluenceVertexIndicesForFitCache");
+
+	Params::MatchTwoClothEvent_GenerateBoneInfluenceVertexIndicesForFitCache Parms{};
+
+	Parms.SkeletalMesh = SkeletalMesh;
+	Parms.BoneNames = std::move(BoneNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -300,6 +497,37 @@ void UMatchTwoClothEvent::GeneratePrebuildClothSkirtData(class USkeletalMesh* Cl
 }
 
 
+// Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildOuterClothData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    ClothSkelMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    BodySkelMesh                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    RenderBodySkelMesh                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMatchClothEditorParameter&MatchParam                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::GeneratePrebuildOuterClothData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* BodySkelMesh, class USkeletalMesh* RenderBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "GeneratePrebuildOuterClothData");
+
+	Params::MatchTwoClothEvent_GeneratePrebuildOuterClothData Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+	Parms.BodySkelMesh = BodySkelMesh;
+	Parms.RenderBodySkelMesh = RenderBodySkelMesh;
+	Parms.MatchParam = std::move(MatchParam);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildSkinClothData
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -326,6 +554,57 @@ void UMatchTwoClothEvent::GeneratePrebuildSkinClothData(class USkeletalMesh* Clo
 	Parms.MatchParam = std::move(MatchParam);
 	Parms.InBoneNames = std::move(InBoneNames);
 	Parms.InBoneTransforms = std::move(InBoneTransforms);
+	Parms.bMultiplyBoneTransform = bMultiplyBoneTransform;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GeneratePrebuildUserDefinedData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    ClothSkelMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    ProjectBodySkelMesh                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    DistBodySkelMesh                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FMatchClothEditorParameter&MatchParam                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FClothLODSectionIndices>&ProjectBodySectionIndices                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FClothLODSectionIndices>&DistBodySectionIndices                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const class FString&                    ProjectionTypeName                                     (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InClothBoneNames                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        InClothBoneTransforms                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InProjectBodyBoneNames                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        InProjectBodyBoneTransforms                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              InDistBodyBoneNames                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FTransform>&        InDistBodyBoneTransforms                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bMultiplyBoneTransform                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::GeneratePrebuildUserDefinedData(class USkeletalMesh* ClothSkelMesh, class USkeletalMesh* ProjectBodySkelMesh, class USkeletalMesh* DistBodySkelMesh, const struct FMatchClothEditorParameter& MatchParam, const TArray<struct FClothLODSectionIndices>& ProjectBodySectionIndices, const TArray<struct FClothLODSectionIndices>& DistBodySectionIndices, const class FString& ProjectionTypeName, const TArray<class FName>& InClothBoneNames, const TArray<struct FTransform>& InClothBoneTransforms, const TArray<class FName>& InProjectBodyBoneNames, const TArray<struct FTransform>& InProjectBodyBoneTransforms, const TArray<class FName>& InDistBodyBoneNames, const TArray<struct FTransform>& InDistBodyBoneTransforms, bool bMultiplyBoneTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "GeneratePrebuildUserDefinedData");
+
+	Params::MatchTwoClothEvent_GeneratePrebuildUserDefinedData Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+	Parms.ProjectBodySkelMesh = ProjectBodySkelMesh;
+	Parms.DistBodySkelMesh = DistBodySkelMesh;
+	Parms.MatchParam = std::move(MatchParam);
+	Parms.ProjectBodySectionIndices = std::move(ProjectBodySectionIndices);
+	Parms.DistBodySectionIndices = std::move(DistBodySectionIndices);
+	Parms.ProjectionTypeName = std::move(ProjectionTypeName);
+	Parms.InClothBoneNames = std::move(InClothBoneNames);
+	Parms.InClothBoneTransforms = std::move(InClothBoneTransforms);
+	Parms.InProjectBodyBoneNames = std::move(InProjectBodyBoneNames);
+	Parms.InProjectBodyBoneTransforms = std::move(InProjectBodyBoneTransforms);
+	Parms.InDistBodyBoneNames = std::move(InDistBodyBoneNames);
+	Parms.InDistBodyBoneTransforms = std::move(InDistBodyBoneTransforms);
 	Parms.bMultiplyBoneTransform = bMultiplyBoneTransform;
 
 	auto Flgs = Func->FunctionFlags;
@@ -384,6 +663,95 @@ int32 UMatchTwoClothEvent::GetPairCacheNum()
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GetUserDefinedProjectMethodEnumsFromReferenceFitClothData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<EUserDefinedProjectMethod>*      MethodEnums                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    ClothSkelMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::GetUserDefinedProjectMethodEnumsFromReferenceFitClothData(TArray<EUserDefinedProjectMethod>* MethodEnums, class USkeletalMesh* ClothSkelMesh, int32 LODIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "GetUserDefinedProjectMethodEnumsFromReferenceFitClothData");
+
+	Params::MatchTwoClothEvent_GetUserDefinedProjectMethodEnumsFromReferenceFitClothData Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+	Parms.LODIndex = LODIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MethodEnums != nullptr)
+		*MethodEnums = std::move(Parms.MethodEnums);
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.GetUserDefinedProjectMethodNamesFromReferenceFitClothData
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class FString>*                  MethodNames                                            (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    ClothSkelMesh                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LODIndex                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::GetUserDefinedProjectMethodNamesFromReferenceFitClothData(TArray<class FString>* MethodNames, class USkeletalMesh* ClothSkelMesh, int32 LODIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "GetUserDefinedProjectMethodNamesFromReferenceFitClothData");
+
+	Params::MatchTwoClothEvent_GetUserDefinedProjectMethodNamesFromReferenceFitClothData Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+	Parms.LODIndex = LODIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MethodNames != nullptr)
+		*MethodNames = std::move(Parms.MethodNames);
+}
+
+
+// Function NikkiFitCloth.MatchTwoClothEvent.InverseCPUSkinVertexOffsetsToFitChache
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TArray<class USkeletalMesh*>&     InnerSkeletalMeshes                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<class USkeletalMesh*>&     OuterSkeletalMeshes                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UMatchTwoClothEvent::InverseCPUSkinVertexOffsetsToFitChache(const TArray<class USkeletalMesh*>& InnerSkeletalMeshes, const TArray<class USkeletalMesh*>& OuterSkeletalMeshes)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("MatchTwoClothEvent", "InverseCPUSkinVertexOffsetsToFitChache");
+
+	Params::MatchTwoClothEvent_InverseCPUSkinVertexOffsetsToFitChache Parms{};
+
+	Parms.InnerSkeletalMeshes = std::move(InnerSkeletalMeshes);
+	Parms.OuterSkeletalMeshes = std::move(OuterSkeletalMeshes);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -799,6 +1167,46 @@ bool UClothVisibilityAndOffsetBlueprintLiabrary::GetNikkiPhysicsBoneWeights(TArr
 }
 
 
+// Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.GetNikkiPhysicsBoneWeightsWithVertexInfluences
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class FName>*                    OutColliderBones                                       (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<class FName>*                    OutAnimBones                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    InnerSkeletalMesh                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AnimMaskRatioThrshold                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ColliderMaskRatioThrshold                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UClothVisibilityAndOffsetBlueprintLiabrary::GetNikkiPhysicsBoneWeightsWithVertexInfluences(TArray<class FName>* OutColliderBones, TArray<class FName>* OutAnimBones, class USkeletalMesh* InnerSkeletalMesh, float AnimMaskRatioThrshold, float ColliderMaskRatioThrshold)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ClothVisibilityAndOffsetBlueprintLiabrary", "GetNikkiPhysicsBoneWeightsWithVertexInfluences");
+
+	Params::ClothVisibilityAndOffsetBlueprintLiabrary_GetNikkiPhysicsBoneWeightsWithVertexInfluences Parms{};
+
+	Parms.InnerSkeletalMesh = InnerSkeletalMesh;
+	Parms.AnimMaskRatioThrshold = AnimMaskRatioThrshold;
+	Parms.ColliderMaskRatioThrshold = ColliderMaskRatioThrshold;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutColliderBones != nullptr)
+		*OutColliderBones = std::move(Parms.OutColliderBones);
+
+	if (OutAnimBones != nullptr)
+		*OutAnimBones = std::move(Parms.OutAnimBones);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.GetSkeletalMeshVisibilityProperty
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -987,6 +1395,41 @@ void UClothVisibilityAndOffsetBlueprintLiabrary::SaveCurrentClothVisibilityAndOf
 }
 
 
+// Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.SaveNikkiFitClothObjForDebug
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    InnerSkeletalMesh                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMesh*                    OuterSkeletalMesh                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    SaveDirectory                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ENikkiFitClothObjType                   NikkiFitClothObjType                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ProjectName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InLODIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UClothVisibilityAndOffsetBlueprintLiabrary::SaveNikkiFitClothObjForDebug(class USkeletalMesh* InnerSkeletalMesh, class USkeletalMesh* OuterSkeletalMesh, const class FString& SaveDirectory, ENikkiFitClothObjType NikkiFitClothObjType, const class FString& ProjectName, int32 InLODIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ClothVisibilityAndOffsetBlueprintLiabrary", "SaveNikkiFitClothObjForDebug");
+
+	Params::ClothVisibilityAndOffsetBlueprintLiabrary_SaveNikkiFitClothObjForDebug Parms{};
+
+	Parms.InnerSkeletalMesh = InnerSkeletalMesh;
+	Parms.OuterSkeletalMesh = OuterSkeletalMesh;
+	Parms.SaveDirectory = std::move(SaveDirectory);
+	Parms.NikkiFitClothObjType = NikkiFitClothObjType;
+	Parms.ProjectName = std::move(ProjectName);
+	Parms.InLODIndex = InLODIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NikkiFitCloth.ClothVisibilityAndOffsetBlueprintLiabrary.SetChaosClothFixedVertices
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -1053,6 +1496,113 @@ bool UClothVisibilityAndOffsetBlueprintLiabrary::SetNameToBoneNamePair(struct FC
 
 	if (BoneNamePair != nullptr)
 		*BoneNamePair = std::move(Parms.BoneNamePair);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function NikkiFitCloth.FitClothMutex.Exit
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UFitClothMutex::Exit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FitClothMutex", "Exit");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.FitClothMutex.Lock
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UFitClothMutex::Lock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FitClothMutex", "Lock");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.FitClothMutex.TryLock
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UFitClothMutex::TryLock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FitClothMutex", "TryLock");
+
+	Params::FitClothMutex_TryLock Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function NikkiFitCloth.FitClothMutex.Unlock
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UFitClothMutex::Unlock()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FitClothMutex", "Unlock");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function NikkiFitCloth.FitClothMutex.IsLocked
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UFitClothMutex::IsLocked() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FitClothMutex", "IsLocked");
+
+	Params::FitClothMutex_IsLocked Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

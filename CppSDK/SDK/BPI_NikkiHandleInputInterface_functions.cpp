@@ -214,9 +214,9 @@ void IBPI_NikkiHandleInputInterface_C::InputAction_Sprint(bool PressedOrRelease)
 // Function BPI_NikkiHandleInputInterface.BPI_NikkiHandleInputInterface_C.InputAction_Walk
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    PressOrRelease                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    pressOrRelease                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void IBPI_NikkiHandleInputInterface_C::InputAction_Walk(bool PressOrRelease)
+void IBPI_NikkiHandleInputInterface_C::InputAction_Walk(bool pressOrRelease)
 {
 	static class UFunction* Func = nullptr;
 
@@ -225,7 +225,7 @@ void IBPI_NikkiHandleInputInterface_C::InputAction_Walk(bool PressOrRelease)
 
 	Params::BPI_NikkiHandleInputInterface_C_InputAction_Walk Parms{};
 
-	Parms.PressOrRelease = PressOrRelease;
+	Parms.pressOrRelease = pressOrRelease;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -14,6 +14,7 @@
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MovieScene_structs.hpp"
 #include "Engine_classes.hpp"
 #include "LevelSequence_classes.hpp"
 
@@ -250,6 +251,7 @@ public:
 	class UPaperDialogueStage*                    Graph;                                             // 0x0108(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
+	bool JumpToLastDialogueNode();
 	void OnDialoguePlayEnd();
 	void OnExit();
 	void OnLevelSequencePlayEnd();
@@ -316,7 +318,7 @@ static_assert(sizeof(UPaperDialogueFunctionNode) == 0x000068, "Wrong size on UPa
 static_assert(offsetof(UPaperDialogueFunctionNode, FunctionName) == 0x000050, "Member 'UPaperDialogueFunctionNode::FunctionName' has a wrong offset!");
 
 // Class PaperDialogue.PaperDialogueMenu
-// 0x0078 (0x00E0 - 0x0068)
+// 0x0080 (0x00E8 - 0x0068)
 class UPaperDialogueMenu final : public UPaperDialogueBranch
 {
 public:
@@ -324,9 +326,11 @@ public:
 	bool                                          bChoiceSlot;                                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   SpecialUIWidgetType;                               // 0x0074(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperDialogueChoiceLineConfig> DialogueChoices;                                   // 0x0080(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TMap<class FName, int32>                      ChoiceLineIDWithItemMap;                           // 0x0090(0x0050)(Protected, NativeAccessSpecifierProtected)
+	bool                                          bNeedNotifyServer;                                 // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ImportantChoiceTipID;                              // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FPaperDialogueChoiceLineConfig> DialogueChoices;                                   // 0x0088(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TMap<class FName, int32>                      ChoiceLineIDWithItemMap;                           // 0x0098(0x0050)(Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -339,12 +343,14 @@ public:
 	}
 };
 static_assert(alignof(UPaperDialogueMenu) == 0x000008, "Wrong alignment on UPaperDialogueMenu");
-static_assert(sizeof(UPaperDialogueMenu) == 0x0000E0, "Wrong size on UPaperDialogueMenu");
+static_assert(sizeof(UPaperDialogueMenu) == 0x0000E8, "Wrong size on UPaperDialogueMenu");
 static_assert(offsetof(UPaperDialogueMenu, ChoiceHubName) == 0x000068, "Member 'UPaperDialogueMenu::ChoiceHubName' has a wrong offset!");
 static_assert(offsetof(UPaperDialogueMenu, bChoiceSlot) == 0x000070, "Member 'UPaperDialogueMenu::bChoiceSlot' has a wrong offset!");
 static_assert(offsetof(UPaperDialogueMenu, SpecialUIWidgetType) == 0x000074, "Member 'UPaperDialogueMenu::SpecialUIWidgetType' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueMenu, DialogueChoices) == 0x000080, "Member 'UPaperDialogueMenu::DialogueChoices' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueMenu, ChoiceLineIDWithItemMap) == 0x000090, "Member 'UPaperDialogueMenu::ChoiceLineIDWithItemMap' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueMenu, bNeedNotifyServer) == 0x00007C, "Member 'UPaperDialogueMenu::bNeedNotifyServer' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueMenu, ImportantChoiceTipID) == 0x000080, "Member 'UPaperDialogueMenu::ImportantChoiceTipID' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueMenu, DialogueChoices) == 0x000088, "Member 'UPaperDialogueMenu::DialogueChoices' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueMenu, ChoiceLineIDWithItemMap) == 0x000098, "Member 'UPaperDialogueMenu::ChoiceLineIDWithItemMap' has a wrong offset!");
 
 // Class PaperDialogue.PaperDialogueNodeBlueprint
 // 0x0000 (0x00A8 - 0x00A8)
@@ -661,7 +667,7 @@ static_assert(offsetof(UPaperDialogueSettings, CharacterHeightDataTable) == 0x00
 static_assert(offsetof(UPaperDialogueSettings, ProjectType) == 0x0000B8, "Member 'UPaperDialogueSettings::ProjectType' has a wrong offset!");
 
 // Class PaperDialogue.PaperDialogueStage
-// 0x0198 (0x01C0 - 0x0028)
+// 0x01A8 (0x01D0 - 0x0028)
 class UPaperDialogueStage final : public UObject
 {
 public:
@@ -673,11 +679,14 @@ public:
 	TArray<struct FDialogueActorDefinition>       DialogueActorDefinitions;                          // 0x0070(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FDialogueSlotSetting>           SlotSettings;                                      // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 VersionNumber;                                     // 0x0090(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDialogueCustomExtendedData            CustomExtendedData;                                // 0x00A0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, AdvancedDisplay, NativeAccessSpecifierPublic)
-	TMap<int32, struct FDialogueCharacterSlotDetail> ActorSlotFullData;                              // 0x00B0(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class FName, struct FDialogueInternalData> DialogueInternalData;                            // 0x0100(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FTransform                             DialogueRuntimeTransform;                          // 0x0150(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UPaperDialogueNode_Base*>        AllNodes;                                          // 0x01B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	EUpdatePositionMethod                         UpdatePositionMethod;                              // 0x00A0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDialogueCustomExtendedData            CustomExtendedData;                                // 0x00A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, AdvancedDisplay, NativeAccessSpecifierPublic)
+	TMap<int32, struct FDialogueCharacterSlotDetail> ActorSlotFullData;                              // 0x00B8(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class FName, struct FDialogueInternalData> DialogueInternalData;                            // 0x0108(0x0050)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             DialogueRuntimeTransform;                          // 0x0160(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UPaperDialogueNode_Base*>        AllNodes;                                          // 0x01C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	bool GetCharacterTransformInLevelSequence(class FName InSpeakerTag, struct FTransform* OutTransform);
@@ -696,7 +705,7 @@ public:
 	}
 };
 static_assert(alignof(UPaperDialogueStage) == 0x000010, "Wrong alignment on UPaperDialogueStage");
-static_assert(sizeof(UPaperDialogueStage) == 0x0001C0, "Wrong size on UPaperDialogueStage");
+static_assert(sizeof(UPaperDialogueStage) == 0x0001D0, "Wrong size on UPaperDialogueStage");
 static_assert(offsetof(UPaperDialogueStage, Status) == 0x000028, "Member 'UPaperDialogueStage::Status' has a wrong offset!");
 static_assert(offsetof(UPaperDialogueStage, entry) == 0x000030, "Member 'UPaperDialogueStage::entry' has a wrong offset!");
 static_assert(offsetof(UPaperDialogueStage, DialogueSet) == 0x000038, "Member 'UPaperDialogueStage::DialogueSet' has a wrong offset!");
@@ -704,11 +713,12 @@ static_assert(offsetof(UPaperDialogueStage, DialogueType) == 0x000060, "Member '
 static_assert(offsetof(UPaperDialogueStage, DialogueActorDefinitions) == 0x000070, "Member 'UPaperDialogueStage::DialogueActorDefinitions' has a wrong offset!");
 static_assert(offsetof(UPaperDialogueStage, SlotSettings) == 0x000080, "Member 'UPaperDialogueStage::SlotSettings' has a wrong offset!");
 static_assert(offsetof(UPaperDialogueStage, VersionNumber) == 0x000090, "Member 'UPaperDialogueStage::VersionNumber' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueStage, CustomExtendedData) == 0x0000A0, "Member 'UPaperDialogueStage::CustomExtendedData' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueStage, ActorSlotFullData) == 0x0000B0, "Member 'UPaperDialogueStage::ActorSlotFullData' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueStage, DialogueInternalData) == 0x000100, "Member 'UPaperDialogueStage::DialogueInternalData' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueStage, DialogueRuntimeTransform) == 0x000150, "Member 'UPaperDialogueStage::DialogueRuntimeTransform' has a wrong offset!");
-static_assert(offsetof(UPaperDialogueStage, AllNodes) == 0x0001B0, "Member 'UPaperDialogueStage::AllNodes' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueStage, UpdatePositionMethod) == 0x0000A0, "Member 'UPaperDialogueStage::UpdatePositionMethod' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueStage, CustomExtendedData) == 0x0000A8, "Member 'UPaperDialogueStage::CustomExtendedData' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueStage, ActorSlotFullData) == 0x0000B8, "Member 'UPaperDialogueStage::ActorSlotFullData' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueStage, DialogueInternalData) == 0x000108, "Member 'UPaperDialogueStage::DialogueInternalData' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueStage, DialogueRuntimeTransform) == 0x000160, "Member 'UPaperDialogueStage::DialogueRuntimeTransform' has a wrong offset!");
+static_assert(offsetof(UPaperDialogueStage, AllNodes) == 0x0001C0, "Member 'UPaperDialogueStage::AllNodes' has a wrong offset!");
 
 // Class PaperDialogue.PaperDialogueUserWidget
 // 0x0050 (0x0340 - 0x02F0)
@@ -742,6 +752,7 @@ public:
 	void OnClickedSure();
 	void OnConditionItemClick(bool bIsTrue);
 	void OnFunctionNodeClick();
+	void OnJumpToLastAndStopDialogueStage();
 	void OnMenuItemClick(int32 MenuIndex);
 	void OnMenuItemClickByChoiceLineID(const class FName& ChoiceLineID);
 	void OnPersistentNodeClick();
@@ -752,7 +763,7 @@ public:
 	void OnPlayFunctionNode(const int64& UId, const class FName& FunctionName);
 	void OnPlayLevelSequenceNodeBegin(const int64& UId);
 	void OnPlayLevelSequenceNodeEnd(const int64& UId);
-	void OnPlayMenuItems(const int64& UId, const class FName& ChoiceHubName, const bool bChoiceSlot, const class FName& SpecialUIWidgetType, const TArray<struct FPaperDialogueChoiceLineConfig>& DialogueChoices);
+	void OnPlayMenuItems(const int64& UId, const class FName& ChoiceHubName, const bool bChoiceSlot, const class FName& SpecialUIWidgetType, const bool bNeedNotifyServer, const class FName& ImportantChoiceTipID, const TArray<struct FPaperDialogueChoiceLineConfig>& DialogueChoices);
 	void OnPlayOutputNode(const int64& UId);
 	void OnPlayPersistentNode(const int64& UId, const class FName& InPersistentName, const int32& InPersistentValue);
 	void OnStopDialogueStage();
@@ -980,15 +991,15 @@ static_assert(sizeof(UPaperEdGraphBlueprintNode) == 0x0000E8, "Wrong size on UPa
 static_assert(offsetof(UPaperEdGraphBlueprintNode, ItemTexts) == 0x0000D8, "Member 'UPaperEdGraphBlueprintNode::ItemTexts' has a wrong offset!");
 
 // Class PaperDialogue.PaperEdGraphConditionNode
-// 0x0038 (0x0110 - 0x00D8)
+// 0x0048 (0x0120 - 0x00D8)
 class UPaperEdGraphConditionNode final : public UPaperEdGraphBaseNode
 {
 public:
 	bool                                          bPreviewValue;                                     // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPaperDialogueMultiParaStruct          ConditionData;                                     // 0x00E0(0x0018)(Edit, NativeAccessSpecifierPublic)
-	class UPCDInstancedProvider*                  PCDInstancedProvider;                              // 0x00F8(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FText>                           ItemTexts;                                         // 0x0100(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FPaperDialogueMultiParaStruct          ConditionData;                                     // 0x00E0(0x0028)(Edit, NativeAccessSpecifierPublic)
+	class UPCDInstancedProvider*                  PCDInstancedProvider;                              // 0x0108(0x0008)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FText>                           ItemTexts;                                         // 0x0110(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -1001,11 +1012,11 @@ public:
 	}
 };
 static_assert(alignof(UPaperEdGraphConditionNode) == 0x000008, "Wrong alignment on UPaperEdGraphConditionNode");
-static_assert(sizeof(UPaperEdGraphConditionNode) == 0x000110, "Wrong size on UPaperEdGraphConditionNode");
+static_assert(sizeof(UPaperEdGraphConditionNode) == 0x000120, "Wrong size on UPaperEdGraphConditionNode");
 static_assert(offsetof(UPaperEdGraphConditionNode, bPreviewValue) == 0x0000D8, "Member 'UPaperEdGraphConditionNode::bPreviewValue' has a wrong offset!");
 static_assert(offsetof(UPaperEdGraphConditionNode, ConditionData) == 0x0000E0, "Member 'UPaperEdGraphConditionNode::ConditionData' has a wrong offset!");
-static_assert(offsetof(UPaperEdGraphConditionNode, PCDInstancedProvider) == 0x0000F8, "Member 'UPaperEdGraphConditionNode::PCDInstancedProvider' has a wrong offset!");
-static_assert(offsetof(UPaperEdGraphConditionNode, ItemTexts) == 0x000100, "Member 'UPaperEdGraphConditionNode::ItemTexts' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphConditionNode, PCDInstancedProvider) == 0x000108, "Member 'UPaperEdGraphConditionNode::PCDInstancedProvider' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphConditionNode, ItemTexts) == 0x000110, "Member 'UPaperEdGraphConditionNode::ItemTexts' has a wrong offset!");
 
 // Class PaperDialogue.PaperEdGraphDialogueNode
 // 0x0008 (0x00F8 - 0x00F0)
@@ -1094,7 +1105,7 @@ static_assert(alignof(UPaperEdGraphFunctionNode) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UPaperEdGraphFunctionNode) == 0x000188, "Wrong size on UPaperEdGraphFunctionNode");
 
 // Class PaperDialogue.PaperEdGraphMenuNode
-// 0x0048 (0x0120 - 0x00D8)
+// 0x0060 (0x0138 - 0x00D8)
 class UPaperEdGraphMenuNode final : public UPaperEdGraphBaseNode
 {
 public:
@@ -1102,10 +1113,14 @@ public:
 	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ChoiceHubName;                                     // 0x00DC(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   SpecialUIWidgetType;                               // 0x00E4(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FPaperDialogueChoiceLineConfig> DialogueChoices;                                   // 0x00F0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	TArray<class FText>                           ItemTexts;                                         // 0x0100(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class FText                                   ItemText;                                          // 0x0110(0x0010)(NativeAccessSpecifierPrivate)
+	bool                                          bNeedNotifyServer;                                 // 0x00EC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsImportant;                                      // 0x00ED(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EE[0x2];                                       // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ImportantChoiceTipID;                              // 0x00F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ImportantChoiceTipText;                            // 0x00F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FPaperDialogueChoiceLineConfig> DialogueChoices;                                   // 0x0108(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class FText>                           ItemTexts;                                         // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class FText                                   ItemText;                                          // 0x0128(0x0010)(NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -1118,13 +1133,17 @@ public:
 	}
 };
 static_assert(alignof(UPaperEdGraphMenuNode) == 0x000008, "Wrong alignment on UPaperEdGraphMenuNode");
-static_assert(sizeof(UPaperEdGraphMenuNode) == 0x000120, "Wrong size on UPaperEdGraphMenuNode");
+static_assert(sizeof(UPaperEdGraphMenuNode) == 0x000138, "Wrong size on UPaperEdGraphMenuNode");
 static_assert(offsetof(UPaperEdGraphMenuNode, bIsChoiceSlot) == 0x0000D8, "Member 'UPaperEdGraphMenuNode::bIsChoiceSlot' has a wrong offset!");
 static_assert(offsetof(UPaperEdGraphMenuNode, ChoiceHubName) == 0x0000DC, "Member 'UPaperEdGraphMenuNode::ChoiceHubName' has a wrong offset!");
 static_assert(offsetof(UPaperEdGraphMenuNode, SpecialUIWidgetType) == 0x0000E4, "Member 'UPaperEdGraphMenuNode::SpecialUIWidgetType' has a wrong offset!");
-static_assert(offsetof(UPaperEdGraphMenuNode, DialogueChoices) == 0x0000F0, "Member 'UPaperEdGraphMenuNode::DialogueChoices' has a wrong offset!");
-static_assert(offsetof(UPaperEdGraphMenuNode, ItemTexts) == 0x000100, "Member 'UPaperEdGraphMenuNode::ItemTexts' has a wrong offset!");
-static_assert(offsetof(UPaperEdGraphMenuNode, ItemText) == 0x000110, "Member 'UPaperEdGraphMenuNode::ItemText' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, bNeedNotifyServer) == 0x0000EC, "Member 'UPaperEdGraphMenuNode::bNeedNotifyServer' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, bIsImportant) == 0x0000ED, "Member 'UPaperEdGraphMenuNode::bIsImportant' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, ImportantChoiceTipID) == 0x0000F0, "Member 'UPaperEdGraphMenuNode::ImportantChoiceTipID' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, ImportantChoiceTipText) == 0x0000F8, "Member 'UPaperEdGraphMenuNode::ImportantChoiceTipText' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, DialogueChoices) == 0x000108, "Member 'UPaperEdGraphMenuNode::DialogueChoices' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, ItemTexts) == 0x000118, "Member 'UPaperEdGraphMenuNode::ItemTexts' has a wrong offset!");
+static_assert(offsetof(UPaperEdGraphMenuNode, ItemText) == 0x000128, "Member 'UPaperEdGraphMenuNode::ItemText' has a wrong offset!");
 
 // Class PaperDialogue.PaperEdGraphOutputNode
 // 0x0000 (0x00D8 - 0x00D8)

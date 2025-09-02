@@ -35,12 +35,12 @@ static_assert(alignof(USteamAuthComponentModuleInterface) == 0x000008, "Wrong al
 static_assert(sizeof(USteamAuthComponentModuleInterface) == 0x000028, "Wrong size on USteamAuthComponentModuleInterface");
 
 // Class OnlineSubsystemSteam.SteamNetConnection
-// 0x0008 (0x1EA8 - 0x1EA0)
+// 0x0008 (0x1ED0 - 0x1EC8)
 class USteamNetConnection final : public UIpConnection
 {
 public:
-	bool                                          bIsPassthrough;                                    // 0x1EA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EA1[0x7];                                     // 0x1EA1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsPassthrough;                                    // 0x1EC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC9[0x7];                                     // 0x1EC9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -53,8 +53,8 @@ public:
 	}
 };
 static_assert(alignof(USteamNetConnection) == 0x000008, "Wrong alignment on USteamNetConnection");
-static_assert(sizeof(USteamNetConnection) == 0x001EA8, "Wrong size on USteamNetConnection");
-static_assert(offsetof(USteamNetConnection, bIsPassthrough) == 0x001EA0, "Member 'USteamNetConnection::bIsPassthrough' has a wrong offset!");
+static_assert(sizeof(USteamNetConnection) == 0x001ED0, "Wrong size on USteamNetConnection");
+static_assert(offsetof(USteamNetConnection, bIsPassthrough) == 0x001EC8, "Member 'USteamNetConnection::bIsPassthrough' has a wrong offset!");
 
 // Class OnlineSubsystemSteam.SteamNetDriver
 // 0x0008 (0x0980 - 0x0978)

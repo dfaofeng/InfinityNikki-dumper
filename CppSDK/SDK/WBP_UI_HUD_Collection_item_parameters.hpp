@@ -14,50 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.TestSet
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_UI_HUD_Collection_item_C_TestSet final
-{
-public:
-	int32                                         Count;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_HUD_Collection_item_C_TestSet) == 0x000004, "Wrong alignment on WBP_UI_HUD_Collection_item_C_TestSet");
-static_assert(sizeof(WBP_UI_HUD_Collection_item_C_TestSet) == 0x000004, "Wrong size on WBP_UI_HUD_Collection_item_C_TestSet");
-static_assert(offsetof(WBP_UI_HUD_Collection_item_C_TestSet, Count) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_TestSet::Count' has a wrong offset!");
-
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayPurpleCoinAdd
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd) == 0x000008, "Wrong alignment on WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd");
-static_assert(sizeof(WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd) == 0x000008, "Wrong size on WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd");
-static_assert(offsetof(WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMoonCoinAdd
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd) == 0x000008, "Wrong alignment on WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd");
-static_assert(sizeof(WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd) == 0x000008, "Wrong size on WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd");
-static_assert(offsetof(WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMinus
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_UI_HUD_Collection_item_C_PlayMinus final
-{
-public:
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_HUD_Collection_item_C_PlayMinus) == 0x000008, "Wrong alignment on WBP_UI_HUD_Collection_item_C_PlayMinus");
-static_assert(sizeof(WBP_UI_HUD_Collection_item_C_PlayMinus) == 0x000008, "Wrong size on WBP_UI_HUD_Collection_item_C_PlayMinus");
-static_assert(offsetof(WBP_UI_HUD_Collection_item_C_PlayMinus, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_PlayMinus::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-
 // Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.ExecuteUbergraph_WBP_UI_HUD_Collection_item
 // 0x0030 (0x0030 - 0x0000)
 struct WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item final
@@ -75,6 +31,50 @@ static_assert(offsetof(WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_
 static_assert(offsetof(WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item, CallFunc_GetText_ReturnValue) == 0x000008, "Member 'WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item::CallFunc_GetText_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item, CallFunc_Conv_TextToString_ReturnValue) == 0x000018, "Member 'WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item, CallFunc_Conv_StringToInt_ReturnValue) == 0x000028, "Member 'WBP_UI_HUD_Collection_item_C_ExecuteUbergraph_WBP_UI_HUD_Collection_item::CallFunc_Conv_StringToInt_ReturnValue' has a wrong offset!");
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMinus
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_UI_HUD_Collection_item_C_PlayMinus final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_HUD_Collection_item_C_PlayMinus) == 0x000008, "Wrong alignment on WBP_UI_HUD_Collection_item_C_PlayMinus");
+static_assert(sizeof(WBP_UI_HUD_Collection_item_C_PlayMinus) == 0x000008, "Wrong size on WBP_UI_HUD_Collection_item_C_PlayMinus");
+static_assert(offsetof(WBP_UI_HUD_Collection_item_C_PlayMinus, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_PlayMinus::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayMoonCoinAdd
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd) == 0x000008, "Wrong alignment on WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd");
+static_assert(sizeof(WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd) == 0x000008, "Wrong size on WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd");
+static_assert(offsetof(WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_PlayMoonCoinAdd::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.PlayPurpleCoinAdd
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd final
+{
+public:
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd) == 0x000008, "Wrong alignment on WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd");
+static_assert(sizeof(WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd) == 0x000008, "Wrong size on WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd");
+static_assert(offsetof(WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd, CallFunc_PlayAnimation_ReturnValue) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_PlayPurpleCoinAdd::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.TestSet
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_UI_HUD_Collection_item_C_TestSet final
+{
+public:
+	int32                                         Count;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_HUD_Collection_item_C_TestSet) == 0x000004, "Wrong alignment on WBP_UI_HUD_Collection_item_C_TestSet");
+static_assert(sizeof(WBP_UI_HUD_Collection_item_C_TestSet) == 0x000004, "Wrong size on WBP_UI_HUD_Collection_item_C_TestSet");
+static_assert(offsetof(WBP_UI_HUD_Collection_item_C_TestSet, Count) == 0x000000, "Member 'WBP_UI_HUD_Collection_item_C_TestSet::Count' has a wrong offset!");
 
 // Function WBP_UI_HUD_Collection_item.WBP_UI_HUD_Collection_item_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

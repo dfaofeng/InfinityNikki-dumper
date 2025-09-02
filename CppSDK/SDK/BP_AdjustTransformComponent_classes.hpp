@@ -12,13 +12,14 @@
 
 #include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AdjustTransformComponent.BP_AdjustTransformComponent_C
-// 0x00B8 (0x0160 - 0x00A8)
+// 0x00D8 (0x0180 - 0x00A8)
 class UBP_AdjustTransformComponent_C final : public UX6ActorComponent
 {
 public:
@@ -39,6 +40,8 @@ public:
 	class UAnimMontage*                           KeepAM;                                            // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UBP_T2Npc_SyncData_Template_C*          BP_OverrideSyncDataTable;                          // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UCurveFloat*                            BP_LerpCurve;                                      // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<EInt32PlayerPawnStateTypes>            BP_ForbidWarpAnimState;                            // 0x0160(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<EInt32PlayerPawnStateTypes>            BP_ForbidAIMovetoState;                            // 0x0170(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void BP_DebugAdjust();
@@ -60,7 +63,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_AdjustTransformComponent_C) == 0x000008, "Wrong alignment on UBP_AdjustTransformComponent_C");
-static_assert(sizeof(UBP_AdjustTransformComponent_C) == 0x000160, "Wrong size on UBP_AdjustTransformComponent_C");
+static_assert(sizeof(UBP_AdjustTransformComponent_C) == 0x000180, "Wrong size on UBP_AdjustTransformComponent_C");
 static_assert(offsetof(UBP_AdjustTransformComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_AdjustTransformComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_AdjustTransformComponent_C, AdjustTransformStartDelegate) == 0x0000B0, "Member 'UBP_AdjustTransformComponent_C::AdjustTransformStartDelegate' has a wrong offset!");
 static_assert(offsetof(UBP_AdjustTransformComponent_C, BP_Data) == 0x0000C0, "Member 'UBP_AdjustTransformComponent_C::BP_Data' has a wrong offset!");
@@ -78,6 +81,8 @@ static_assert(offsetof(UBP_AdjustTransformComponent_C, BP_WarpingAngleLimitList)
 static_assert(offsetof(UBP_AdjustTransformComponent_C, KeepAM) == 0x000148, "Member 'UBP_AdjustTransformComponent_C::KeepAM' has a wrong offset!");
 static_assert(offsetof(UBP_AdjustTransformComponent_C, BP_OverrideSyncDataTable) == 0x000150, "Member 'UBP_AdjustTransformComponent_C::BP_OverrideSyncDataTable' has a wrong offset!");
 static_assert(offsetof(UBP_AdjustTransformComponent_C, BP_LerpCurve) == 0x000158, "Member 'UBP_AdjustTransformComponent_C::BP_LerpCurve' has a wrong offset!");
+static_assert(offsetof(UBP_AdjustTransformComponent_C, BP_ForbidWarpAnimState) == 0x000160, "Member 'UBP_AdjustTransformComponent_C::BP_ForbidWarpAnimState' has a wrong offset!");
+static_assert(offsetof(UBP_AdjustTransformComponent_C, BP_ForbidAIMovetoState) == 0x000170, "Member 'UBP_AdjustTransformComponent_C::BP_ForbidAIMovetoState' has a wrong offset!");
 
 }
 

@@ -55,6 +55,56 @@ void UPaperMeshGrassMeshComponent::GenerateGrassWeights()
 }
 
 
+// Function PaperMeshGrass.PaperMeshGrassMeshComponent.SetAllowUpdateGrass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    InAllowUpdateGrass                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperMeshGrassMeshComponent::SetAllowUpdateGrass(bool InAllowUpdateGrass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperMeshGrassMeshComponent", "SetAllowUpdateGrass");
+
+	Params::PaperMeshGrassMeshComponent_SetAllowUpdateGrass Parms{};
+
+	Parms.InAllowUpdateGrass = InAllowUpdateGrass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PaperMeshGrass.PaperMeshGrassMeshComponent.SetGrassBakedData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMeshGrassBakedData*              InBakedData                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperMeshGrassMeshComponent::SetGrassBakedData(class UMeshGrassBakedData* InBakedData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperMeshGrassMeshComponent", "SetGrassBakedData");
+
+	Params::PaperMeshGrassMeshComponent_SetGrassBakedData Parms{};
+
+	Parms.InBakedData = InBakedData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PaperMeshGrass.PaperMeshGrassMeshComponent.SetGrassGenerateTextures
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:

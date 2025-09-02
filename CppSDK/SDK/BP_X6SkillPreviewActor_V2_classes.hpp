@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "X6Game_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "X6Game_structs.hpp"
 
 
 namespace SDK
@@ -36,15 +36,15 @@ public:
 	struct FX6BulletShapeTraceContext             BulletShapeContext;                                // 0x03F8(0x0028)(Edit, BlueprintVisible, NoDestructor)
 
 public:
-	void SetCollisionInfoByBulletData(class UBP_BulletDataAsset_C* BulletData);
-	void ReceiveDestroyed();
-	void PreviewRibbon(TSoftObjectPtr<class UNiagaraSystem> NiagaraSystem, TSoftObjectPtr<class UMaterialInterface> RibbonMat, TArray<struct FVector>& LocationArray, TArray<struct FVector>& VelocityArray, bool bIsCircle, int32 CountPerLine, TArray<int32>& HitBalls, TArray<double>& Intensities);
-	void InitSimple(double Speed);
-	void Init(class UBP_BulletDataAsset_C* BulletData, class AActor* Owner_0, class FName Socket, const struct FTransform& OffsetTransform, bool bDrawCollision);
-	void GetTransformByOffset(const class FString& Socket, const struct FVector& OffsetLoc, const struct FRotator& OffsetRot, struct FVector* OutLoc, struct FRotator* OutRot);
-	void GetSocketTransform(const class FString& ScoketName, struct FTransform* SocketTransform);
-	void GetOverriddenInfo(class UBP_BulletDataAsset_C* BulletData, class FName OverrideSocket, const struct FTransform& OverrideTransform, class FString* Socket, struct FVector* OffsetLocation, struct FRotator* OffsetRotation);
 	void ExecuteUbergraph_BP_X6SkillPreviewActor_V2(int32 EntryPoint);
+	void GetOverriddenInfo(class UBP_BulletDataAsset_C* BulletData, class FName OverrideSocket, const struct FTransform& OverrideTransform, class FString* Socket, struct FVector* OffsetLocation, struct FRotator* OffsetRotation);
+	void GetSocketTransform(const class FString& ScoketName, struct FTransform* SocketTransform);
+	void GetTransformByOffset(const class FString& Socket, const struct FVector& OffsetLoc, const struct FRotator& OffsetRot, struct FVector* OutLoc, struct FRotator* OutRot);
+	void Init(class UBP_BulletDataAsset_C* BulletData, class AActor* Owner_0, class FName Socket, const struct FTransform& OffsetTransform, bool bDrawCollision);
+	void InitSimple(double Speed);
+	void PreviewRibbon(TSoftObjectPtr<class UNiagaraSystem> NiagaraSystem, TSoftObjectPtr<class UMaterialInterface> RibbonMat, TArray<struct FVector>& LocationArray, TArray<struct FVector>& VelocityArray, bool bIsCircle, int32 CountPerLine, TArray<int32>& HitBalls, TArray<double>& Intensities);
+	void ReceiveDestroyed();
+	void SetCollisionInfoByBulletData(class UBP_BulletDataAsset_C* BulletData);
 
 public:
 	static class UClass* StaticClass()

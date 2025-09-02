@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // UserDefinedStruct F_GetWoolenHeartPerformanceInfo.F_GetWoolenHeartPerformanceInfo
-// 0x0100 (0x0100 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct FF_GetWoolenHeartPerformanceInfo final
 {
 public:
@@ -36,9 +36,10 @@ public:
 	TMap<class FName, class UMaterialInterface*>  SKMeshPhantomMaterials_39_31C272F340C38489B626E8988420DE83; // 0x0090(0x0050)(Edit, BlueprintVisible)
 	class UStaticMesh*                            SharedWoolenHeartMesh_43_FCC75B704D760AD13A512BADDCA9B907; // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FF_SharedWoolenHeartConfig             SharedWoolenHeartConfig_46_B30CAA19477F0C2A6C98AEA3A332B2F8; // 0x00E8(0x0018)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class ULevelSequence>          LSPath_49_24B1D4D8451ECA43B45DBEA701F05A00;        // 0x0100(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 };
 static_assert(alignof(FF_GetWoolenHeartPerformanceInfo) == 0x000008, "Wrong alignment on FF_GetWoolenHeartPerformanceInfo");
-static_assert(sizeof(FF_GetWoolenHeartPerformanceInfo) == 0x000100, "Wrong size on FF_GetWoolenHeartPerformanceInfo");
+static_assert(sizeof(FF_GetWoolenHeartPerformanceInfo) == 0x000128, "Wrong size on FF_GetWoolenHeartPerformanceInfo");
 static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, LS_6_D77D959948C589BE412FC38D980B938C) == 0x000000, "Member 'FF_GetWoolenHeartPerformanceInfo::LS_6_D77D959948C589BE412FC38D980B938C' has a wrong offset!");
 static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, WoolenHeartMesh_20_2199D6FE4C612CAFF2F21B91FBD0C783) == 0x000008, "Member 'FF_GetWoolenHeartPerformanceInfo::WoolenHeartMesh_20_2199D6FE4C612CAFF2F21B91FBD0C783' has a wrong offset!");
 static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, WoolenHeartAnim_24_4C14871A482090610E9032B2B8F368FB) == 0x000010, "Member 'FF_GetWoolenHeartPerformanceInfo::WoolenHeartAnim_24_4C14871A482090610E9032B2B8F368FB' has a wrong offset!");
@@ -51,6 +52,7 @@ static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, bPhantom_34_8DB563E34A1
 static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, SKMeshPhantomMaterials_39_31C272F340C38489B626E8988420DE83) == 0x000090, "Member 'FF_GetWoolenHeartPerformanceInfo::SKMeshPhantomMaterials_39_31C272F340C38489B626E8988420DE83' has a wrong offset!");
 static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, SharedWoolenHeartMesh_43_FCC75B704D760AD13A512BADDCA9B907) == 0x0000E0, "Member 'FF_GetWoolenHeartPerformanceInfo::SharedWoolenHeartMesh_43_FCC75B704D760AD13A512BADDCA9B907' has a wrong offset!");
 static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, SharedWoolenHeartConfig_46_B30CAA19477F0C2A6C98AEA3A332B2F8) == 0x0000E8, "Member 'FF_GetWoolenHeartPerformanceInfo::SharedWoolenHeartConfig_46_B30CAA19477F0C2A6C98AEA3A332B2F8' has a wrong offset!");
+static_assert(offsetof(FF_GetWoolenHeartPerformanceInfo, LSPath_49_24B1D4D8451ECA43B45DBEA701F05A00) == 0x000100, "Member 'FF_GetWoolenHeartPerformanceInfo::LSPath_49_24B1D4D8451ECA43B45DBEA701F05A00' has a wrong offset!");
 
 }
 

@@ -17,58 +17,69 @@
 namespace SDK::Params
 {
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.UserConstructionScript
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
 // 0x0020 (0x0020 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_UserConstructionScript final
+struct BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature final
 {
 public:
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckpointObject_StarSea_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_CheckpointObject_StarSea_C_UserConstructionScript");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_UserConstructionScript) == 0x000020, "Wrong size on BP_CheckpointObject_StarSea_C_UserConstructionScript");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000008, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000010, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x000014, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x000018, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
+static_assert(alignof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000020, "Wrong size on BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsLastActivate
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_Empower
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_SetIsLastActivate final
+struct BP_CheckpointObject_StarSea_C_BP_Empower final
 {
 public:
-	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bDisplayFinal;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckpointObject_StarSea_C_SetIsLastActivate) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_SetIsLastActivate");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_SetIsLastActivate) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_SetIsLastActivate");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_SetIsLastActivate, opt) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_SetIsLastActivate::opt' has a wrong offset!");
+static_assert(alignof(BP_CheckpointObject_StarSea_C_BP_Empower) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_BP_Empower");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_BP_Empower) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_BP_Empower");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_Empower, bDisplayFinal) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BP_Empower::bDisplayFinal' has a wrong offset!");
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsActivate
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_SetIsActivate final
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_GetNiagaraPosition
+// 0x0010 (0x0010 - 0x0000)
+struct BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition final
 {
 public:
-	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Position;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetCurrentStateID_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckpointObject_StarSea_C_SetIsActivate) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_SetIsActivate");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_SetIsActivate) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_SetIsActivate");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_SetIsActivate, opt) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_SetIsActivate::opt' has a wrong offset!");
+static_assert(alignof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition) == 0x000008, "Wrong alignment on BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition) == 0x000010, "Wrong size on BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, Position) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::Position' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, CallFunc_GetCurrentStateID_ReturnValue) == 0x000008, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::CallFunc_GetCurrentStateID_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, CallFunc_GetValidValue_ReturnValue) == 0x000009, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000A, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.ServerInit
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_ServerInit final
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_UpdateEnergized
+// 0x0005 (0x0005 - 0x0000)
+struct BP_CheckpointObject_StarSea_C_BP_UpdateEnergized final
 {
 public:
-	bool                                          bServer;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnergized;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionEnabled                             Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionEnabled                             Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECollisionEnabled                             K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckpointObject_StarSea_C_ServerInit) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_ServerInit");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_ServerInit) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_ServerInit");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_ServerInit, bServer) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_ServerInit::bServer' has a wrong offset!");
+static_assert(alignof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_BP_UpdateEnergized");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized) == 0x000005, "Wrong size on BP_CheckpointObject_StarSea_C_BP_UpdateEnergized");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, bEnergized) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::bEnergized' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, Temp_bool_Variable) == 0x000001, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, Temp_byte_Variable) == 0x000002, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, Temp_byte_Variable_1) == 0x000003, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::Temp_byte_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, K2Node_Select_Default) == 0x000004, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::K2Node_Select_Default' has a wrong offset!");
 
 // Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.ExecuteUbergraph_BP_CheckpointObject_StarSea
 // 0x0040 (0x0040 - 0x0000)
@@ -110,69 +121,58 @@ static_assert(offsetof(BP_CheckpointObject_StarSea_C_ExecuteUbergraph_BP_Checkpo
 static_assert(offsetof(BP_CheckpointObject_StarSea_C_ExecuteUbergraph_BP_CheckpointObject_StarSea, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000036, "Member 'BP_CheckpointObject_StarSea_C_ExecuteUbergraph_BP_CheckpointObject_StarSea::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CheckpointObject_StarSea_C_ExecuteUbergraph_BP_CheckpointObject_StarSea, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x000038, "Member 'BP_CheckpointObject_StarSea_C_ExecuteUbergraph_BP_CheckpointObject_StarSea::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_UpdateEnergized
-// 0x0005 (0x0005 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_BP_UpdateEnergized final
-{
-public:
-	bool                                          bEnergized;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECollisionEnabled                             Temp_byte_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECollisionEnabled                             Temp_byte_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECollisionEnabled                             K2Node_Select_Default;                             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_BP_UpdateEnergized");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized) == 0x000005, "Wrong size on BP_CheckpointObject_StarSea_C_BP_UpdateEnergized");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, bEnergized) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::bEnergized' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, Temp_bool_Variable) == 0x000001, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, Temp_byte_Variable) == 0x000002, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, Temp_byte_Variable_1) == 0x000003, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::Temp_byte_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_UpdateEnergized, K2Node_Select_Default) == 0x000004, "Member 'BP_CheckpointObject_StarSea_C_BP_UpdateEnergized::K2Node_Select_Default' has a wrong offset!");
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_GetNiagaraPosition
-// 0x0010 (0x0010 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition final
-{
-public:
-	double                                        Position;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetCurrentStateID_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         CallFunc_GetValidValue_ReturnValue;                // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition) == 0x000008, "Wrong alignment on BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition) == 0x000010, "Wrong size on BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, Position) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::Position' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, CallFunc_GetCurrentStateID_ReturnValue) == 0x000008, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::CallFunc_GetCurrentStateID_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, CallFunc_GetValidValue_ReturnValue) == 0x000009, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::CallFunc_GetValidValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00000A, "Member 'BP_CheckpointObject_StarSea_C_BP_GetNiagaraPosition::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BP_Empower
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.ServerInit
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_BP_Empower final
+struct BP_CheckpointObject_StarSea_C_ServerInit final
 {
 public:
-	bool                                          bDisplayFinal;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bServer;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckpointObject_StarSea_C_BP_Empower) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_BP_Empower");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_BP_Empower) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_BP_Empower");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BP_Empower, bDisplayFinal) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BP_Empower::bDisplayFinal' has a wrong offset!");
+static_assert(alignof(BP_CheckpointObject_StarSea_C_ServerInit) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_ServerInit");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_ServerInit) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_ServerInit");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_ServerInit, bServer) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_ServerInit::bServer' has a wrong offset!");
 
-// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature final
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsActivate
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CheckpointObject_StarSea_C_SetIsActivate final
 {
 public:
-	class UPrimitiveComponent*                    OverlappedComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         OtherBodyIndex;                                    // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000008, "Wrong alignment on BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-static_assert(sizeof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature) == 0x000020, "Wrong size on BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OverlappedComponent) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OverlappedComponent' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherActor) == 0x000008, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherComp) == 0x000010, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature, OtherBodyIndex) == 0x000018, "Member 'BP_CheckpointObject_StarSea_C_BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature::OtherBodyIndex' has a wrong offset!");
+static_assert(alignof(BP_CheckpointObject_StarSea_C_SetIsActivate) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_SetIsActivate");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_SetIsActivate) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_SetIsActivate");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_SetIsActivate, opt) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_SetIsActivate::opt' has a wrong offset!");
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.SetIsLastActivate
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CheckpointObject_StarSea_C_SetIsLastActivate final
+{
+public:
+	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CheckpointObject_StarSea_C_SetIsLastActivate) == 0x000001, "Wrong alignment on BP_CheckpointObject_StarSea_C_SetIsLastActivate");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_SetIsLastActivate) == 0x000001, "Wrong size on BP_CheckpointObject_StarSea_C_SetIsLastActivate");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_SetIsLastActivate, opt) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_SetIsLastActivate::opt' has a wrong offset!");
+
+// Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.UserConstructionScript
+// 0x0020 (0x0020 - 0x0000)
+struct BP_CheckpointObject_StarSea_C_UserConstructionScript final
+{
+public:
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_Int64Int64_ReturnValue;          // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetVariableFloat_InValue_ImplicitCast;    // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast; // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CheckpointObject_StarSea_C_UserConstructionScript) == 0x000008, "Wrong alignment on BP_CheckpointObject_StarSea_C_UserConstructionScript");
+static_assert(sizeof(BP_CheckpointObject_StarSea_C_UserConstructionScript) == 0x000020, "Wrong size on BP_CheckpointObject_StarSea_C_UserConstructionScript");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000000, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000008, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_NotEqual_Int64Int64_ReturnValue) == 0x000010, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_NotEqual_Int64Int64_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_SetVariableFloat_InValue_ImplicitCast) == 0x000014, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_SetVariableFloat_InValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_CheckpointObject_StarSea_C_UserConstructionScript, CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast) == 0x000018, "Member 'BP_CheckpointObject_StarSea_C_UserConstructionScript::CallFunc_SetSphereRadius_InSphereRadius_ImplicitCast' has a wrong offset!");
 
 // Function BP_CheckpointObject_StarSea.BP_CheckpointObject_StarSea_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

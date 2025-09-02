@@ -64,8 +64,9 @@ void ABP_InteractiveChair_C::On_Multi_ActiveSuccess(class AActor* Other_player_a
 // Parameters:
 // const class FString&                    Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class AActor*                           Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// E_Multi_InteractiveObjActive_Type       E_Multi_Type                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_InteractiveChair_C::On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player)
+void ABP_InteractiveChair_C::On_Multi_InteractiveObjActive(const class FString& Data, class AActor* Player, E_Multi_InteractiveObjActive_Type E_Multi_Type)
 {
 	static class UFunction* Func = nullptr;
 
@@ -76,6 +77,7 @@ void ABP_InteractiveChair_C::On_Multi_InteractiveObjActive(const class FString& 
 
 	Parms.Data = std::move(Data);
 	Parms.Player = Player;
+	Parms.E_Multi_Type = E_Multi_Type;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

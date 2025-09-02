@@ -243,59 +243,14 @@ void UPaperAreaCheckSubsystem::ClearCurAreaCheckCache()
 }
 
 
-// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.EnterSubLevel
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const int32                             LevelID                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   PlayerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UPaperAreaCheckSubsystem::EnterSubLevel(const int32 LevelID, const struct FVector& PlayerPos)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PaperAreaCheckSubsystem", "EnterSubLevel");
-
-	Params::PaperAreaCheckSubsystem_EnterSubLevel Parms{};
-
-	Parms.LevelID = LevelID;
-	Parms.PlayerPos = std::move(PlayerPos);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.ExitSubLevel
-// (Final, Native, Public, BlueprintCallable)
-
-void UPaperAreaCheckSubsystem::ExitSubLevel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("PaperAreaCheckSubsystem", "ExitSubLevel");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.GetAreaIDByWorldPosition
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // const struct FVector&                   InWorldPosition                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAsync                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UPaperAreaCheckSubsystem::GetAreaIDByWorldPosition(const struct FVector& InWorldPosition)
+int32 UPaperAreaCheckSubsystem::GetAreaIDByWorldPosition(const struct FVector& InWorldPosition, bool bAsync)
 {
 	static class UFunction* Func = nullptr;
 
@@ -305,6 +260,7 @@ int32 UPaperAreaCheckSubsystem::GetAreaIDByWorldPosition(const struct FVector& I
 	Params::PaperAreaCheckSubsystem_GetAreaIDByWorldPosition Parms{};
 
 	Parms.InWorldPosition = std::move(InWorldPosition);
+	Parms.bAsync = bAsync;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -392,6 +348,65 @@ uint8 UPaperAreaCheckSubsystem::GetShrubTypeByWorldPosition(const struct FVector
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.GetSpecialAreaByWorldPosition
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Pos                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             LevelId                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const uint8                             inSpecialAreaEnum                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UPaperAreaCheckSubsystem::GetSpecialAreaByWorldPosition(const struct FVector& Pos, const int32 LevelId, const uint8 inSpecialAreaEnum)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperAreaCheckSubsystem", "GetSpecialAreaByWorldPosition");
+
+	Params::PaperAreaCheckSubsystem_GetSpecialAreaByWorldPosition Parms{};
+
+	Parms.Pos = std::move(Pos);
+	Parms.LevelId = LevelId;
+	Parms.inSpecialAreaEnum = inSpecialAreaEnum;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperAreaCheckToolRuntime.PaperAreaCheckSubsystem.OnEnterLevel
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const int32                             LevelId                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   PlayerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPaperAreaCheckSubsystem::OnEnterLevel(const int32 LevelId, const struct FVector& PlayerPos)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperAreaCheckSubsystem", "OnEnterLevel");
+
+	Params::PaperAreaCheckSubsystem_OnEnterLevel Parms{};
+
+	Parms.LevelId = LevelId;
+	Parms.PlayerPos = std::move(PlayerPos);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 

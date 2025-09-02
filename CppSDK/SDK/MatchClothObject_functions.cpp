@@ -55,6 +55,31 @@ void UMatchClothObject_C::ApplyMatchDataV2()
 }
 
 
+// Function MatchClothObject.MatchClothObject_C.CheckCacheType
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class USkeletalMesh*                    ClothSkelMesh                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ItemToFind                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UMatchClothObject_C::CheckCacheType(class USkeletalMesh* ClothSkelMesh, const class FString& ItemToFind)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MatchClothObject_C", "CheckCacheType");
+
+	Params::MatchClothObject_C_CheckCacheType Parms{};
+
+	Parms.ClothSkelMesh = ClothSkelMesh;
+	Parms.ItemToFind = std::move(ItemToFind);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MatchClothObject.MatchClothObject_C.ClearPairCache
 // (Public, BlueprintCallable, BlueprintEvent)
 

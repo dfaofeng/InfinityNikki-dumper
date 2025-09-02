@@ -16,17 +16,6 @@
 namespace SDK::Params
 {
 
-// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.K2_ActivateAbilityFromEvent
-// 0x00B0 (0x00B0 - 0x0000)
-struct GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent final
-{
-public:
-	struct FGameplayEventData                     EventData;                                         // 0x0000(0x00B0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-static_assert(alignof(GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent) == 0x000008, "Wrong alignment on GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent");
-static_assert(sizeof(GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent) == 0x0000B0, "Wrong size on GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent");
-static_assert(offsetof(GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent, EventData) == 0x000000, "Member 'GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent::EventData' has a wrong offset!");
-
 // Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.ExecuteUbergraph_GA_PlayMontageByTag
 // 0x00B8 (0x00B8 - 0x0000)
 struct GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag final
@@ -40,6 +29,28 @@ static_assert(alignof(GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag
 static_assert(sizeof(GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag) == 0x0000B8, "Wrong size on GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag");
 static_assert(offsetof(GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag, EntryPoint) == 0x000000, "Member 'GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag::EntryPoint' has a wrong offset!");
 static_assert(offsetof(GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag, K2Node_Event_EventData) == 0x000008, "Member 'GA_PlayMontageByTag_C_ExecuteUbergraph_GA_PlayMontageByTag::K2Node_Event_EventData' has a wrong offset!");
+
+// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.K2_ActivateAbilityFromEvent
+// 0x00B0 (0x00B0 - 0x0000)
+struct GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent final
+{
+public:
+	struct FGameplayEventData                     EventData;                                         // 0x0000(0x00B0)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent) == 0x000008, "Wrong alignment on GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent");
+static_assert(sizeof(GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent) == 0x0000B0, "Wrong size on GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent");
+static_assert(offsetof(GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent, EventData) == 0x000000, "Member 'GA_PlayMontageByTag_C_K2_ActivateAbilityFromEvent::EventData' has a wrong offset!");
+
+// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.GetModuleName
+// 0x0010 (0x0010 - 0x0000)
+struct GA_PlayMontageByTag_C_GetModuleName final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_PlayMontageByTag_C_GetModuleName) == 0x000008, "Wrong alignment on GA_PlayMontageByTag_C_GetModuleName");
+static_assert(sizeof(GA_PlayMontageByTag_C_GetModuleName) == 0x000010, "Wrong size on GA_PlayMontageByTag_C_GetModuleName");
+static_assert(offsetof(GA_PlayMontageByTag_C_GetModuleName, ReturnValue) == 0x000000, "Member 'GA_PlayMontageByTag_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 // Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.K2_ShouldAbilityRespondToEvent
 // 0x0100 (0x0100 - 0x0000)
@@ -55,17 +66,6 @@ static_assert(sizeof(GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent) == 0x
 static_assert(offsetof(GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent, ActorInfo) == 0x000000, "Member 'GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent::ActorInfo' has a wrong offset!");
 static_assert(offsetof(GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent, Payload) == 0x000048, "Member 'GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent::Payload' has a wrong offset!");
 static_assert(offsetof(GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent, ReturnValue) == 0x0000F8, "Member 'GA_PlayMontageByTag_C_K2_ShouldAbilityRespondToEvent::ReturnValue' has a wrong offset!");
-
-// Function GA_PlayMontageByTag.GA_PlayMontageByTag_C.GetModuleName
-// 0x0010 (0x0010 - 0x0000)
-struct GA_PlayMontageByTag_C_GetModuleName final
-{
-public:
-	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-};
-static_assert(alignof(GA_PlayMontageByTag_C_GetModuleName) == 0x000008, "Wrong alignment on GA_PlayMontageByTag_C_GetModuleName");
-static_assert(sizeof(GA_PlayMontageByTag_C_GetModuleName) == 0x000010, "Wrong size on GA_PlayMontageByTag_C_GetModuleName");
-static_assert(offsetof(GA_PlayMontageByTag_C_GetModuleName, ReturnValue) == 0x000000, "Member 'GA_PlayMontageByTag_C_GetModuleName::ReturnValue' has a wrong offset!");
 
 }
 

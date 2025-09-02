@@ -128,11 +128,11 @@ void UPaperCrashSightLibrary::PrintLog(int32 Level, const class FString& LogStr)
 // const class FString&                    Name_0                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    Reason                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    StackTrace                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    Extras                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    extras                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    quit                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   dumpNativeType                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPaperCrashSightLibrary::ReportException(int32 Type, const class FString& Name_0, const class FString& Reason, const class FString& StackTrace, const class FString& Extras, bool quit, int32 dumpNativeType)
+void UPaperCrashSightLibrary::ReportException(int32 Type, const class FString& Name_0, const class FString& Reason, const class FString& StackTrace, const class FString& extras, bool quit, int32 dumpNativeType)
 {
 	static class UFunction* Func = nullptr;
 
@@ -145,7 +145,7 @@ void UPaperCrashSightLibrary::ReportException(int32 Type, const class FString& N
 	Parms.Name_0 = std::move(Name_0);
 	Parms.Reason = std::move(Reason);
 	Parms.StackTrace = std::move(StackTrace);
-	Parms.Extras = std::move(Extras);
+	Parms.extras = std::move(extras);
 	Parms.quit = quit;
 	Parms.dumpNativeType = dumpNativeType;
 

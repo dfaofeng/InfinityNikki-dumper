@@ -32,7 +32,7 @@ static_assert(offsetof(FPSdkSteamBindAccountModel, account_type) == 0x000000, "M
 static_assert(offsetof(FPSdkSteamBindAccountModel, Force) == 0x000004, "Member 'FPSdkSteamBindAccountModel::Force' has a wrong offset!");
 
 // ScriptStruct PSDKChannelSteam.PSdkSteamAccountInfoModel
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct FPSdkSteamAccountInfoModel final
 {
 public:
@@ -49,13 +49,17 @@ public:
 	int32                                         IsNew;                                             // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         IsGuest;                                           // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AccountType;                                       // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RoleId;                                            // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Extra;                                             // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SteamId;                                           // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPSdkSteamBindAccountModel             Bind_Account;                                      // 0x0098(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 RoleId;                                            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Extra;                                             // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SteamId;                                           // 0x0098(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Subscribe_Remind;                                  // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Email;                                             // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPSdkSteamBindAccountModel             Bind_Account;                                      // 0x00C0(0x0008)(NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkSteamAccountInfoModel) == 0x000008, "Wrong alignment on FPSdkSteamAccountInfoModel");
-static_assert(sizeof(FPSdkSteamAccountInfoModel) == 0x0000A0, "Wrong size on FPSdkSteamAccountInfoModel");
+static_assert(sizeof(FPSdkSteamAccountInfoModel) == 0x0000C8, "Wrong size on FPSdkSteamAccountInfoModel");
 static_assert(offsetof(FPSdkSteamAccountInfoModel, Real_Switch) == 0x000000, "Member 'FPSdkSteamAccountInfoModel::Real_Switch' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamAccountInfoModel, Youth_Switch) == 0x000001, "Member 'FPSdkSteamAccountInfoModel::Youth_Switch' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamAccountInfoModel, Guest_Need_Bind) == 0x000002, "Member 'FPSdkSteamAccountInfoModel::Guest_Need_Bind' has a wrong offset!");
@@ -68,20 +72,22 @@ static_assert(offsetof(FPSdkSteamAccountInfoModel, Refresh_Token) == 0x000058, "
 static_assert(offsetof(FPSdkSteamAccountInfoModel, IsNew) == 0x000068, "Member 'FPSdkSteamAccountInfoModel::IsNew' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamAccountInfoModel, IsGuest) == 0x00006C, "Member 'FPSdkSteamAccountInfoModel::IsGuest' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamAccountInfoModel, AccountType) == 0x000070, "Member 'FPSdkSteamAccountInfoModel::AccountType' has a wrong offset!");
-static_assert(offsetof(FPSdkSteamAccountInfoModel, RoleId) == 0x000074, "Member 'FPSdkSteamAccountInfoModel::RoleId' has a wrong offset!");
-static_assert(offsetof(FPSdkSteamAccountInfoModel, Extra) == 0x000078, "Member 'FPSdkSteamAccountInfoModel::Extra' has a wrong offset!");
-static_assert(offsetof(FPSdkSteamAccountInfoModel, SteamId) == 0x000088, "Member 'FPSdkSteamAccountInfoModel::SteamId' has a wrong offset!");
-static_assert(offsetof(FPSdkSteamAccountInfoModel, Bind_Account) == 0x000098, "Member 'FPSdkSteamAccountInfoModel::Bind_Account' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamAccountInfoModel, RoleId) == 0x000078, "Member 'FPSdkSteamAccountInfoModel::RoleId' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamAccountInfoModel, Extra) == 0x000088, "Member 'FPSdkSteamAccountInfoModel::Extra' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamAccountInfoModel, SteamId) == 0x000098, "Member 'FPSdkSteamAccountInfoModel::SteamId' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamAccountInfoModel, Subscribe_Remind) == 0x0000A8, "Member 'FPSdkSteamAccountInfoModel::Subscribe_Remind' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamAccountInfoModel, Email) == 0x0000B0, "Member 'FPSdkSteamAccountInfoModel::Email' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamAccountInfoModel, Bind_Account) == 0x0000C0, "Member 'FPSdkSteamAccountInfoModel::Bind_Account' has a wrong offset!");
 
 // ScriptStruct PSDKChannelSteam.PSdkSteamAccountApiModel
-// 0x00A0 (0x00D8 - 0x0038)
+// 0x00C8 (0x0100 - 0x0038)
 struct FPSdkSteamAccountApiModel final : public FPSBffBasicModel
 {
 public:
-	struct FPSdkSteamAccountInfoModel             Data;                                              // 0x0038(0x00A0)(NativeAccessSpecifierPublic)
+	struct FPSdkSteamAccountInfoModel             Data;                                              // 0x0038(0x00C8)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkSteamAccountApiModel) == 0x000008, "Wrong alignment on FPSdkSteamAccountApiModel");
-static_assert(sizeof(FPSdkSteamAccountApiModel) == 0x0000D8, "Wrong size on FPSdkSteamAccountApiModel");
+static_assert(sizeof(FPSdkSteamAccountApiModel) == 0x000100, "Wrong size on FPSdkSteamAccountApiModel");
 static_assert(offsetof(FPSdkSteamAccountApiModel, Data) == 0x000038, "Member 'FPSdkSteamAccountApiModel::Data' has a wrong offset!");
 
 // ScriptStruct PSDKChannelSteam.SDKSteamChannelPreCheckInfoModel
@@ -147,7 +153,7 @@ public:
 	class FString                                 tradeNum;                                          // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 zoneId;                                            // 0x0140(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 product_desc;                                      // 0x0150(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserName;                                          // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Username;                                          // 0x0160(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 role_name;                                         // 0x0170(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkSteamPayOrderInfoModel) == 0x000008, "Wrong alignment on FPSdkSteamPayOrderInfoModel");
@@ -174,7 +180,7 @@ static_assert(offsetof(FPSdkSteamPayOrderInfoModel, product_name) == 0x000120, "
 static_assert(offsetof(FPSdkSteamPayOrderInfoModel, tradeNum) == 0x000130, "Member 'FPSdkSteamPayOrderInfoModel::tradeNum' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamPayOrderInfoModel, zoneId) == 0x000140, "Member 'FPSdkSteamPayOrderInfoModel::zoneId' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamPayOrderInfoModel, product_desc) == 0x000150, "Member 'FPSdkSteamPayOrderInfoModel::product_desc' has a wrong offset!");
-static_assert(offsetof(FPSdkSteamPayOrderInfoModel, UserName) == 0x000160, "Member 'FPSdkSteamPayOrderInfoModel::UserName' has a wrong offset!");
+static_assert(offsetof(FPSdkSteamPayOrderInfoModel, Username) == 0x000160, "Member 'FPSdkSteamPayOrderInfoModel::Username' has a wrong offset!");
 static_assert(offsetof(FPSdkSteamPayOrderInfoModel, role_name) == 0x000170, "Member 'FPSdkSteamPayOrderInfoModel::role_name' has a wrong offset!");
 
 // ScriptStruct PSDKChannelSteam.PSdkSteamPayYouthChargeModel

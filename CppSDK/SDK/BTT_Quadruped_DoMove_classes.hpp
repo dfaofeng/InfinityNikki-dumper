@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "AIModule_structs.hpp"
-#include "X6Game_structs.hpp"
 #include "X6BTTask_LuaBase_classes.hpp"
+#include "AIModule_structs.hpp"
+#include "Engine_structs.hpp"
+#include "X6Game_structs.hpp"
 
 
 namespace SDK
@@ -45,12 +45,12 @@ public:
 	double                                        BP_BlockDetectionInterval;                         // 0x01C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BTT_Quadruped_DoMove(int32 EntryPoint);
-	void K2_OnInstanceDestroyed();
 	void OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName);
-	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void K2_OnInstanceDestroyed();
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
+	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void ExecuteUbergraph_BTT_Quadruped_DoMove(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

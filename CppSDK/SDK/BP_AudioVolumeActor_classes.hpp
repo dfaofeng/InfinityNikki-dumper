@@ -19,27 +19,27 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AudioVolumeActor.BP_AudioVolumeActor_C
-// 0x00B0 (0x04E8 - 0x0438)
+// 0x00B0 (0x0538 - 0x0488)
 class ABP_AudioVolumeActor_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UAkGeometryComponent*                   AkGeometry;                                        // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UAkRoomComponent*                       AkRoom;                                            // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   Cube;                                              // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x0458(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0460(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<TSoftObjectPtr<class UAkAudioType>>    EnterAkAssetData;                                  // 0x0468(0x0010)(Edit, BlueprintVisible)
-	TArray<TSoftObjectPtr<class UAkAudioType>>    ExitAkAssetData;                                   // 0x0478(0x0010)(Edit, BlueprintVisible)
-	bool                                          bIsEnabled;                                        // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_489[0x7];                                      // 0x0489(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class ABP_AudioVolumeActor_C*>         DisableAudioVolumeActors;                          // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
-	bool                                          bTriggerOnce;                                      // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A1[0x7];                                      // 0x04A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<Enum_AudioVolumeType>                  AudioVolumeTypes;                                  // 0x04A8(0x0010)(Edit, BlueprintVisible)
-	bool                                          bIsCollisionEnabled;                               // 0x04B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B9[0x7];                                      // 0x04B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAkAudioEvent>           RoomSound;                                         // 0x04C0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UAkGeometryComponent*                   AkGeometry;                                        // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UAkRoomComponent*                       AkRoom;                                            // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   Cube;                                              // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x04A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<TSoftObjectPtr<class UAkAudioType>>    EnterAkAssetData;                                  // 0x04B8(0x0010)(Edit, BlueprintVisible)
+	TArray<TSoftObjectPtr<class UAkAudioType>>    ExitAkAssetData;                                   // 0x04C8(0x0010)(Edit, BlueprintVisible)
+	bool                                          bIsEnabled;                                        // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4D9[0x7];                                      // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ABP_AudioVolumeActor_C*>         DisableAudioVolumeActors;                          // 0x04E0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate)
+	bool                                          bTriggerOnce;                                      // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F1[0x7];                                      // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<Enum_AudioVolumeType>                  AudioVolumeTypes;                                  // 0x04F8(0x0010)(Edit, BlueprintVisible)
+	bool                                          bIsCollisionEnabled;                               // 0x0508(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_509[0x7];                                      // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAkAudioEvent>           RoomSound;                                         // 0x0510(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_AudioVolumeActor(int32 EntryPoint);
@@ -61,21 +61,21 @@ public:
 	}
 };
 static_assert(alignof(ABP_AudioVolumeActor_C) == 0x000008, "Wrong alignment on ABP_AudioVolumeActor_C");
-static_assert(sizeof(ABP_AudioVolumeActor_C) == 0x0004E8, "Wrong size on ABP_AudioVolumeActor_C");
-static_assert(offsetof(ABP_AudioVolumeActor_C, UberGraphFrame) == 0x000438, "Member 'ABP_AudioVolumeActor_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, AkGeometry) == 0x000440, "Member 'ABP_AudioVolumeActor_C::AkGeometry' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, AkRoom) == 0x000448, "Member 'ABP_AudioVolumeActor_C::AkRoom' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, Cube) == 0x000450, "Member 'ABP_AudioVolumeActor_C::Cube' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, Box) == 0x000458, "Member 'ABP_AudioVolumeActor_C::Box' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, DefaultSceneRoot) == 0x000460, "Member 'ABP_AudioVolumeActor_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, EnterAkAssetData) == 0x000468, "Member 'ABP_AudioVolumeActor_C::EnterAkAssetData' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, ExitAkAssetData) == 0x000478, "Member 'ABP_AudioVolumeActor_C::ExitAkAssetData' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, bIsEnabled) == 0x000488, "Member 'ABP_AudioVolumeActor_C::bIsEnabled' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, DisableAudioVolumeActors) == 0x000490, "Member 'ABP_AudioVolumeActor_C::DisableAudioVolumeActors' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, bTriggerOnce) == 0x0004A0, "Member 'ABP_AudioVolumeActor_C::bTriggerOnce' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, AudioVolumeTypes) == 0x0004A8, "Member 'ABP_AudioVolumeActor_C::AudioVolumeTypes' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, bIsCollisionEnabled) == 0x0004B8, "Member 'ABP_AudioVolumeActor_C::bIsCollisionEnabled' has a wrong offset!");
-static_assert(offsetof(ABP_AudioVolumeActor_C, RoomSound) == 0x0004C0, "Member 'ABP_AudioVolumeActor_C::RoomSound' has a wrong offset!");
+static_assert(sizeof(ABP_AudioVolumeActor_C) == 0x000538, "Wrong size on ABP_AudioVolumeActor_C");
+static_assert(offsetof(ABP_AudioVolumeActor_C, UberGraphFrame) == 0x000488, "Member 'ABP_AudioVolumeActor_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, AkGeometry) == 0x000490, "Member 'ABP_AudioVolumeActor_C::AkGeometry' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, AkRoom) == 0x000498, "Member 'ABP_AudioVolumeActor_C::AkRoom' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, Cube) == 0x0004A0, "Member 'ABP_AudioVolumeActor_C::Cube' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, Box) == 0x0004A8, "Member 'ABP_AudioVolumeActor_C::Box' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, DefaultSceneRoot) == 0x0004B0, "Member 'ABP_AudioVolumeActor_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, EnterAkAssetData) == 0x0004B8, "Member 'ABP_AudioVolumeActor_C::EnterAkAssetData' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, ExitAkAssetData) == 0x0004C8, "Member 'ABP_AudioVolumeActor_C::ExitAkAssetData' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, bIsEnabled) == 0x0004D8, "Member 'ABP_AudioVolumeActor_C::bIsEnabled' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, DisableAudioVolumeActors) == 0x0004E0, "Member 'ABP_AudioVolumeActor_C::DisableAudioVolumeActors' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, bTriggerOnce) == 0x0004F0, "Member 'ABP_AudioVolumeActor_C::bTriggerOnce' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, AudioVolumeTypes) == 0x0004F8, "Member 'ABP_AudioVolumeActor_C::AudioVolumeTypes' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, bIsCollisionEnabled) == 0x000508, "Member 'ABP_AudioVolumeActor_C::bIsCollisionEnabled' has a wrong offset!");
+static_assert(offsetof(ABP_AudioVolumeActor_C, RoomSound) == 0x000510, "Member 'ABP_AudioVolumeActor_C::RoomSound' has a wrong offset!");
 
 }
 

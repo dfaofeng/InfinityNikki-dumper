@@ -37,15 +37,17 @@ static_assert(sizeof(BP_CombatPassiveCollisionComponent_C_BP_SetSingleComponentF
 static_assert(offsetof(BP_CombatPassiveCollisionComponent_C_BP_SetSingleComponentForDamage, TargetComponent) == 0x000000, "Member 'BP_CombatPassiveCollisionComponent_C_BP_SetSingleComponentForDamage::TargetComponent' has a wrong offset!");
 
 // Function BP_CombatPassiveCollisionComponent.BP_CombatPassiveCollisionComponent_C.BP_SetEnable
-// 0x0001 (0x0001 - 0x0000)
+// 0x0002 (0x0002 - 0x0000)
 struct BP_CombatPassiveCollisionComponent_C_BP_SetEnable final
 {
 public:
 	bool                                          Enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CombatPassiveCollisionComponent_C_BP_SetEnable) == 0x000001, "Wrong alignment on BP_CombatPassiveCollisionComponent_C_BP_SetEnable");
-static_assert(sizeof(BP_CombatPassiveCollisionComponent_C_BP_SetEnable) == 0x000001, "Wrong size on BP_CombatPassiveCollisionComponent_C_BP_SetEnable");
+static_assert(sizeof(BP_CombatPassiveCollisionComponent_C_BP_SetEnable) == 0x000002, "Wrong size on BP_CombatPassiveCollisionComponent_C_BP_SetEnable");
 static_assert(offsetof(BP_CombatPassiveCollisionComponent_C_BP_SetEnable, Enable) == 0x000000, "Member 'BP_CombatPassiveCollisionComponent_C_BP_SetEnable::Enable' has a wrong offset!");
+static_assert(offsetof(BP_CombatPassiveCollisionComponent_C_BP_SetEnable, CallFunc_BooleanAND_ReturnValue) == 0x000001, "Member 'BP_CombatPassiveCollisionComponent_C_BP_SetEnable::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function BP_CombatPassiveCollisionComponent.BP_CombatPassiveCollisionComponent_C.BP_SetCustomCollisionForDamage
 // 0x0008 (0x0008 - 0x0000)

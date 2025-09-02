@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_X6ActorComponent_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK
@@ -26,15 +26,15 @@ public:
 	TArray<class UBP_AgentTaskBase_C*>            TickableTaskArray;                                 // 0x00B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void RemoveTickableTask(class UBP_AgentTaskBase_C* Task);
-	bool RejectRecycle();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void OnPush();
-	void OnPreCreated();
-	void OnPop();
-	void ExecuteUbergraph_BP_AgentTaskTickComponent(int32 EntryPoint);
 	void AddTickableTask(class UBP_AgentTaskBase_C* Task);
+	void ExecuteUbergraph_BP_AgentTaskTickComponent(int32 EntryPoint);
+	void OnPop();
+	void OnPreCreated();
+	void OnPush();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
+	bool RejectRecycle();
+	void RemoveTickableTask(class UBP_AgentTaskBase_C* Task);
 
 public:
 	static class UClass* StaticClass()

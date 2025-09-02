@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "MovieScene_structs.hpp"
-#include "S_UrbanLight_structs.hpp"
-#include "S_TimeStamp_structs.hpp"
-#include "DynamicEnvironmentSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "S_UrbanLight_structs.hpp"
+#include "DynamicEnvironmentSystem_structs.hpp"
 #include "S_TimeRange_structs.hpp"
+#include "Engine_structs.hpp"
+#include "S_TimeStamp_structs.hpp"
 
 
 namespace SDK::Params
@@ -106,7 +105,7 @@ static_assert(offsetof(BP_DyEnvSys_C_UpdateStreetLight, CallFunc_Array_Get_Item_
 static_assert(offsetof(BP_DyEnvSys_C_UpdateStreetLight, CallFunc_Less_IntInt_ReturnValue_1) == 0x000060, "Member 'BP_DyEnvSys_C_UpdateStreetLight::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Update Final Param
-// 0x1C60 (0x1C60 - 0x0000)
+// 0x1C68 (0x1C68 - 0x0000)
 struct BP_DyEnvSys_C_Update_Final_Param final
 {
 public:
@@ -148,35 +147,32 @@ public:
 	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting;                   // 0x0220(0x0840)()
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0A60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0A64(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A65[0x3];                                      // 0x0A65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0A68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUpdateExponentialHeightFog_ReturnValue; // 0x0A6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUpdateSunAndSkyLight_ReturnValue;   // 0x0A6D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_ShouldUpdateEnvironment_ReturnValue;      // 0x0A6E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A6F[0x1];                                      // 0x0A6F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEnvironmentLerpConfig                 CallFunc_GetEnvFinal_Environment_Setting;          // 0x0A70(0x0120)(NoDestructor)
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_1; // 0x0B90(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0B98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B99[0x3];                                      // 0x0B99(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0B9C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting_1;                 // 0x0BA0(0x0840)()
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_2; // 0x13E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x13E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13E9[0x7];                                     // 0x13E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting_2;                 // 0x13F0(0x0840)()
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x1C30(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x1C38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_InRange_FloatFloat_Value_ImplicitCast;    // 0x1C40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x1C48(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1C4C[0x4];                                     // 0x1C4C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x1C50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1; // 0x1C58(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting;                   // 0x0220(0x0848)()
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0A68(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0A6C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A6D[0x3];                                      // 0x0A6D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0A70(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldUpdateExponentialHeightFog_ReturnValue; // 0x0A74(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldUpdateSunAndSkyLight_ReturnValue;   // 0x0A75(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ShouldUpdateEnvironment_ReturnValue;      // 0x0A76(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A77[0x1];                                      // 0x0A77(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEnvironmentLerpConfig                 CallFunc_GetEnvFinal_Environment_Setting;          // 0x0A78(0x0120)(NoDestructor)
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_1; // 0x0B98(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0BA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BA1[0x3];                                      // 0x0BA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0BA4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting_1;                 // 0x0BA8(0x0848)()
+	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting_2;                 // 0x13F0(0x0848)()
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x1C38(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x1C40(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_InRange_FloatFloat_Value_ImplicitCast;    // 0x1C48(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x1C50(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C54[0x4];                                     // 0x1C54(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x1C58(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1; // 0x1C60(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_DyEnvSys_C_Update_Final_Param) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_Update_Final_Param");
-static_assert(sizeof(BP_DyEnvSys_C_Update_Final_Param) == 0x001C60, "Wrong size on BP_DyEnvSys_C_Update_Final_Param");
+static_assert(sizeof(BP_DyEnvSys_C_Update_Final_Param) == 0x001C68, "Wrong size on BP_DyEnvSys_C_Update_Final_Param");
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Map_Keys_Keys) == 0x000000, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Map_Keys_Keys' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Add_IntInt_ReturnValue) == 0x000014, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
@@ -208,26 +204,24 @@ static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_IsEditor_Mode_
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x000210, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_bSuccess) == 0x000218, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetTODFinal_TODSetting) == 0x000220, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetTODFinal_TODSetting' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, Temp_int_Loop_Counter_Variable) == 0x000A60, "Member 'BP_DyEnvSys_C_Update_Final_Param::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Less_IntInt_ReturnValue) == 0x000A64, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Add_IntInt_ReturnValue_1) == 0x000A68, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_ShouldUpdateExponentialHeightFog_ReturnValue) == 0x000A6C, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_ShouldUpdateExponentialHeightFog_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_ShouldUpdateSunAndSkyLight_ReturnValue) == 0x000A6D, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_ShouldUpdateSunAndSkyLight_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_ShouldUpdateEnvironment_ReturnValue) == 0x000A6E, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_ShouldUpdateEnvironment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetEnvFinal_Environment_Setting) == 0x000A70, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetEnvFinal_Environment_Setting' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_AsDirectional_Light_Component_1) == 0x000B90, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_AsDirectional_Light_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_bSuccess_1) == 0x000B98, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000B9C, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetTODFinal_TODSetting_1) == 0x000BA0, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetTODFinal_TODSetting_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_AsDirectional_Light_Component_2) == 0x0013E0, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_AsDirectional_Light_Component_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_bSuccess_2) == 0x0013E8, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, Temp_int_Loop_Counter_Variable) == 0x000A68, "Member 'BP_DyEnvSys_C_Update_Final_Param::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Less_IntInt_ReturnValue) == 0x000A6C, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Add_IntInt_ReturnValue_1) == 0x000A70, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_ShouldUpdateExponentialHeightFog_ReturnValue) == 0x000A74, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_ShouldUpdateExponentialHeightFog_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_ShouldUpdateSunAndSkyLight_ReturnValue) == 0x000A75, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_ShouldUpdateSunAndSkyLight_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_ShouldUpdateEnvironment_ReturnValue) == 0x000A76, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_ShouldUpdateEnvironment_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetEnvFinal_Environment_Setting) == 0x000A78, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetEnvFinal_Environment_Setting' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_AsDirectional_Light_Component_1) == 0x000B98, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_AsDirectional_Light_Component_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, K2Node_DynamicCast_bSuccess_1) == 0x000BA0, "Member 'BP_DyEnvSys_C_Update_Final_Param::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000BA4, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetTODFinal_TODSetting_1) == 0x000BA8, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetTODFinal_TODSetting_1' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_GetTODFinal_TODSetting_2) == 0x0013F0, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_GetTODFinal_TODSetting_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x001C30, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_FClamp_ReturnValue) == 0x001C38, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_InRange_FloatFloat_Value_ImplicitCast) == 0x001C40, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_InRange_FloatFloat_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x001C48, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x001C50, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1) == 0x001C58, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x001C38, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_FClamp_ReturnValue) == 0x001C40, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_InRange_FloatFloat_Value_ImplicitCast) == 0x001C48, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_InRange_FloatFloat_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x001C50, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x001C58, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Update_Final_Param, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1) == 0x001C60, "Member 'BP_DyEnvSys_C_Update_Final_Param::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.ToggleStreetLamps
 // 0x0001 (0x0001 - 0x0000)
@@ -252,22 +246,6 @@ static_assert(alignof(BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility) == 0x000008,
 static_assert(sizeof(BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility) == 0x000010, "Wrong size on BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility");
 static_assert(offsetof(BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility, PitchValue) == 0x000000, "Member 'BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility::PitchValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility, YawValue) == 0x000008, "Member 'BP_DyEnvSys_C_TOD_UpdateSunRotationByAbility::YawValue' has a wrong offset!");
-
-// Function BP_DyEnvSys.BP_DyEnvSys_C.Time Update LS
-// 0x0048 (0x0048 - 0x0000)
-struct BP_DyEnvSys_C_Time_Update_LS final
-{
-public:
-	class ULevelSequencePlayer*                   CallFunc_GetSequencePlayer_ReturnValue;            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSequencePlaybackParams      K2Node_MakeStruct_MovieSceneSequencePlaybackParams; // 0x0010(0x0038)()
-};
-static_assert(alignof(BP_DyEnvSys_C_Time_Update_LS) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_Time_Update_LS");
-static_assert(sizeof(BP_DyEnvSys_C_Time_Update_LS) == 0x000048, "Wrong size on BP_DyEnvSys_C_Time_Update_LS");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update_LS, CallFunc_GetSequencePlayer_ReturnValue) == 0x000000, "Member 'BP_DyEnvSys_C_Time_Update_LS::CallFunc_GetSequencePlayer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update_LS, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000008, "Member 'BP_DyEnvSys_C_Time_Update_LS::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update_LS, K2Node_MakeStruct_MovieSceneSequencePlaybackParams) == 0x000010, "Member 'BP_DyEnvSys_C_Time_Update_LS::K2Node_MakeStruct_MovieSceneSequencePlaybackParams' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Time Update From Host
 // 0x0070 (0x0070 - 0x0000)
@@ -311,53 +289,53 @@ static_assert(offsetof(BP_DyEnvSys_C_Time_Update_From_Host, CallFunc_NearlyEqual
 static_assert(offsetof(BP_DyEnvSys_C_Time_Update_From_Host, CallFunc_Less_DoubleDouble_B_ImplicitCast) == 0x000068, "Member 'BP_DyEnvSys_C_Time_Update_From_Host::CallFunc_Less_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Time Update
-// 0x08B0 (0x08B0 - 0x0000)
+// 0x08B8 (0x08B8 - 0x0000)
 struct BP_DyEnvSys_C_Time_Update final
 {
 public:
-	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting;                   // 0x0000(0x0840)()
-	bool                                          Temp_bool_Variable;                                // 0x0840(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_841[0x3];                                      // 0x0841(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0844(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0848(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x084C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0850(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0858(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_859[0x7];                                      // 0x0859(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Time_Update_From_Host_ToHost;             // 0x0860(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0868(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_86C[0x4];                                      // 0x086C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Default;                             // 0x0870(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0880(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0888(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0890(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x0898(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_89C[0x4];                                      // 0x089C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x08A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1; // 0x08A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BeginUpdateTime_NowTime_ImplicitCast;     // 0x08AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTODLerpConfig                         CallFunc_GetTODFinal_TODSetting;                   // 0x0000(0x0848)()
+	bool                                          Temp_bool_Variable;                                // 0x0848(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_849[0x3];                                      // 0x0849(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x084C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0850(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0854(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0858(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0860(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_861[0x7];                                      // 0x0861(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Time_Update_From_Host_ToHost;             // 0x0868(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_874[0x4];                                      // 0x0874(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Default;                             // 0x0878(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0880(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Lerp_ReturnValue;                         // 0x0888(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_Value_ImplicitCast;                // 0x0890(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0898(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast; // 0x08A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_8A4[0x4];                                      // 0x08A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Select_Option_0_ImplicitCast;               // 0x08A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1; // 0x08B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BeginUpdateTime_NowTime_ImplicitCast;     // 0x08B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_DyEnvSys_C_Time_Update) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_Time_Update");
-static_assert(sizeof(BP_DyEnvSys_C_Time_Update) == 0x0008B0, "Wrong size on BP_DyEnvSys_C_Time_Update");
+static_assert(sizeof(BP_DyEnvSys_C_Time_Update) == 0x0008B8, "Wrong size on BP_DyEnvSys_C_Time_Update");
 static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_GetTODFinal_TODSetting) == 0x000000, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_GetTODFinal_TODSetting' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, Temp_bool_Variable) == 0x000840, "Member 'BP_DyEnvSys_C_Time_Update::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BreakRotator_Roll) == 0x000844, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BreakRotator_Pitch) == 0x000848, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BreakRotator_Yaw) == 0x00084C, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_FClamp_ReturnValue) == 0x000850, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000858, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Time_Update_From_Host_ToHost) == 0x000860, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Time_Update_From_Host_ToHost' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000868, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, K2Node_Select_Default) == 0x000870, "Member 'BP_DyEnvSys_C_Time_Update::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_SelectFloat_ReturnValue) == 0x000878, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Lerp_ReturnValue) == 0x000880, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Lerp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_FClamp_Value_ImplicitCast) == 0x000888, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000890, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x000898, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, K2Node_Select_Option_0_ImplicitCast) == 0x0008A0, "Member 'BP_DyEnvSys_C_Time_Update::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1) == 0x0008A8, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BeginUpdateTime_NowTime_ImplicitCast) == 0x0008AC, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BeginUpdateTime_NowTime_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, Temp_bool_Variable) == 0x000848, "Member 'BP_DyEnvSys_C_Time_Update::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BreakRotator_Roll) == 0x00084C, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BreakRotator_Pitch) == 0x000850, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BreakRotator_Yaw) == 0x000854, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_FClamp_ReturnValue) == 0x000858, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000860, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Time_Update_From_Host_ToHost) == 0x000868, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Time_Update_From_Host_ToHost' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000870, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, K2Node_Select_Default) == 0x000878, "Member 'BP_DyEnvSys_C_Time_Update::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_SelectFloat_ReturnValue) == 0x000880, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Lerp_ReturnValue) == 0x000888, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Lerp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_FClamp_Value_ImplicitCast) == 0x000890, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_FClamp_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000898, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast) == 0x0008A0, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, K2Node_Select_Option_0_ImplicitCast) == 0x0008A8, "Member 'BP_DyEnvSys_C_Time_Update::K2Node_Select_Option_0_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1) == 0x0008B0, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_SetScalarParameterValue_ParameterValue_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Time_Update, CallFunc_BeginUpdateTime_NowTime_ImplicitCast) == 0x0008B4, "Member 'BP_DyEnvSys_C_Time_Update::CallFunc_BeginUpdateTime_NowTime_ImplicitCast' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.StylizedLut
 // 0x0008 (0x0008 - 0x0000)
@@ -629,191 +607,183 @@ static_assert(offsetof(BP_DyEnvSys_C_Initi_Tod_Sys, K2Node_DynamicCast_AsBP_Dy_E
 static_assert(offsetof(BP_DyEnvSys_C_Initi_Tod_Sys, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_DyEnvSys_C_Initi_Tod_Sys::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.GetWeatherFinal
-// 0x1118 (0x1118 - 0x0000)
+// 0x1120 (0x1120 - 0x0000)
 struct BP_DyEnvSys_C_GetWeatherFinal final
 {
 public:
 	struct FWeatherBaseLerpConfig                 Weather_Setting;                                   // 0x0000(0x0310)(Parm, OutParm)
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0310(0x0E08)(ConstParm)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0310(0x0E10)(ConstParm)
 };
 static_assert(alignof(BP_DyEnvSys_C_GetWeatherFinal) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_GetWeatherFinal");
-static_assert(sizeof(BP_DyEnvSys_C_GetWeatherFinal) == 0x001118, "Wrong size on BP_DyEnvSys_C_GetWeatherFinal");
+static_assert(sizeof(BP_DyEnvSys_C_GetWeatherFinal) == 0x001120, "Wrong size on BP_DyEnvSys_C_GetWeatherFinal");
 static_assert(offsetof(BP_DyEnvSys_C_GetWeatherFinal, Weather_Setting) == 0x000000, "Member 'BP_DyEnvSys_C_GetWeatherFinal::Weather_Setting' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_GetWeatherFinal, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000310, "Member 'BP_DyEnvSys_C_GetWeatherFinal::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.GetTODFinal
-// 0x1648 (0x1648 - 0x0000)
+// 0x1658 (0x1658 - 0x0000)
 struct BP_DyEnvSys_C_GetTODFinal final
 {
 public:
-	struct FTODLerpConfig                         TODSetting;                                        // 0x0000(0x0840)(Parm, OutParm)
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0840(0x0E08)(ConstParm)
+	struct FTODLerpConfig                         TODSetting;                                        // 0x0000(0x0848)(Parm, OutParm)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0848(0x0E10)(ConstParm)
 };
 static_assert(alignof(BP_DyEnvSys_C_GetTODFinal) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_GetTODFinal");
-static_assert(sizeof(BP_DyEnvSys_C_GetTODFinal) == 0x001648, "Wrong size on BP_DyEnvSys_C_GetTODFinal");
+static_assert(sizeof(BP_DyEnvSys_C_GetTODFinal) == 0x001658, "Wrong size on BP_DyEnvSys_C_GetTODFinal");
 static_assert(offsetof(BP_DyEnvSys_C_GetTODFinal, TODSetting) == 0x000000, "Member 'BP_DyEnvSys_C_GetTODFinal::TODSetting' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_GetTODFinal, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000840, "Member 'BP_DyEnvSys_C_GetTODFinal::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_GetTODFinal, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000848, "Member 'BP_DyEnvSys_C_GetTODFinal::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.GetRoleFinal
-// 0x0F38 (0x0F38 - 0x0000)
+// 0x0F40 (0x0F40 - 0x0000)
 struct BP_DyEnvSys_C_GetRoleFinal final
 {
 public:
 	struct FCharacterLerpConfig                   Character_Setting;                                 // 0x0000(0x012C)(Parm, OutParm, NoDestructor)
 	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0130(0x0E08)(ConstParm)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0130(0x0E10)(ConstParm)
 };
 static_assert(alignof(BP_DyEnvSys_C_GetRoleFinal) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_GetRoleFinal");
-static_assert(sizeof(BP_DyEnvSys_C_GetRoleFinal) == 0x000F38, "Wrong size on BP_DyEnvSys_C_GetRoleFinal");
+static_assert(sizeof(BP_DyEnvSys_C_GetRoleFinal) == 0x000F40, "Wrong size on BP_DyEnvSys_C_GetRoleFinal");
 static_assert(offsetof(BP_DyEnvSys_C_GetRoleFinal, Character_Setting) == 0x000000, "Member 'BP_DyEnvSys_C_GetRoleFinal::Character_Setting' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_GetRoleFinal, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000130, "Member 'BP_DyEnvSys_C_GetRoleFinal::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.GetEnvFinal
-// 0x0F28 (0x0F28 - 0x0000)
+// 0x0F30 (0x0F30 - 0x0000)
 struct BP_DyEnvSys_C_GetEnvFinal final
 {
 public:
 	struct FEnvironmentLerpConfig                 Environment_Setting;                               // 0x0000(0x0120)(Parm, OutParm, NoDestructor)
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0120(0x0E08)(ConstParm)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0120(0x0E10)(ConstParm)
 };
 static_assert(alignof(BP_DyEnvSys_C_GetEnvFinal) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_GetEnvFinal");
-static_assert(sizeof(BP_DyEnvSys_C_GetEnvFinal) == 0x000F28, "Wrong size on BP_DyEnvSys_C_GetEnvFinal");
+static_assert(sizeof(BP_DyEnvSys_C_GetEnvFinal) == 0x000F30, "Wrong size on BP_DyEnvSys_C_GetEnvFinal");
 static_assert(offsetof(BP_DyEnvSys_C_GetEnvFinal, Environment_Setting) == 0x000000, "Member 'BP_DyEnvSys_C_GetEnvFinal::Environment_Setting' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_GetEnvFinal, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000120, "Member 'BP_DyEnvSys_C_GetEnvFinal::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.ExecuteUbergraph_BP_DyEnvSys
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x02A8 (0x02A8 - 0x0000)
 struct BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTimeStamp                             K2Node_Event_TimeStamp1;                           // 0x0008(0x002C)(NoDestructor)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_TimeStamp                           K2Node_Event_TimeStamp;                            // 0x0038(0x0068)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_CanUse;                         // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_Event_percent;                              // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Event_regionId;                             // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_on;                                   // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 K2Node_Event_RegionName;                           // 0x00C8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Event_UnloadWeatherName;                    // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 K2Node_Event_LoadWeatherName;                      // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class ADynamicWeatherVolume*                  K2Node_Event_SrcVolume;                            // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_104[0x4];                                      // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_Intensity;                      // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_TransitionTime;                 // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_Time_1;                               // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_Event_Time;                                 // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_CustomEvent_color;                          // 0x0128(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_PitchValue;                     // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_CustomEvent_YawValue;                       // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UClass*                                 K2Node_Event_WeatherPreset;                        // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_OnlySyncContent;                      // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_OnlyWriteParam;                       // 0x0169(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_isEnter;                        // 0x016A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x016B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ADynamicWeatherVolume*                  K2Node_Event_SrcVolume;                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimeStamp                             K2Node_Event_TimeStamp1;                           // 0x0010(0x002C)(NoDestructor)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_TimeStamp                           K2Node_Event_TimeStamp;                            // 0x0040(0x0068)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_CanUse;                         // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Event_percent;                              // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Event_regionId;                             // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_on;                                   // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CD[0x3];                                       // 0x00CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_Event_Time_1;                               // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_Event_Time;                                 // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_Intensity;                      // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_TransitionTime;                 // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_Event_WeatherPreset;                        // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_OnlySyncContent;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_OnlyWriteParam;                       // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FA[0x2];                                       // 0x00FA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           K2Node_Event_LocalLightColor;                      // 0x00FC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_CustomEvent_color;                          // 0x010C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_CustomEvent_PitchValue;                     // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_CustomEvent_YawValue;                       // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_isEnter;                        // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0149(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14A[0x6];                                      // 0x014A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x0150(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x015C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_16C[0x4];                                      // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component;  // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_1; // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x018C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Event_LocalLightColor;                      // 0x01B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_2; // 0x01C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D1[0x3];                                      // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x01D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x01DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFloatCurve                            K2Node_CustomEvent_curve;                          // 0x01E0(0x0090)()
-	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_274[0x4];                                      // 0x0274(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_DyEnvSky_C*                         K2Node_DynamicCast_AsDES_Sky;                      // 0x0278(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281[0x7];                                      // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_DyEnvSky_C*                         K2Node_DynamicCast_AsDES_Sky_1;                    // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0291(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_292[0x6];                                      // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_CustomEvent_LutIntensity;                   // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_Mode_inEditor;                   // 0x02A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x02A2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2A3[0x5];                                      // 0x02A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_3; // 0x02A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x02B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2B2[0x2];                                      // 0x02B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x02B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_SetFieldsInStruct_ColorGradingIntensity_ImplicitCast; // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Conv_LinearColorToVector_ReturnValue;     // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Event_RegionName;                           // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Event_UnloadWeatherName;                    // 0x0198(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 K2Node_Event_LoadWeatherName;                      // 0x01A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_MakeLiteralName_ReturnValue;              // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFloatCurve                            K2Node_CustomEvent_curve;                          // 0x01C8(0x0090)()
+	float                                         CallFunc_GetFloatValue_ReturnValue;                // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_25C[0x4];                                      // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_DyEnvSky_C*                         K2Node_DynamicCast_AsDES_Sky;                      // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_269[0x7];                                      // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_DyEnvSky_C*                         K2Node_DynamicCast_AsDES_Sky_1;                    // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_27A[0x6];                                      // 0x027A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_CustomEvent_LutIntensity;                   // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_Mode_inEditor;                   // 0x0289(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x028A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_28B[0x5];                                      // 0x028B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDirectionalLightComponent*             K2Node_DynamicCast_AsDirectional_Light_Component_1; // 0x0290(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0298(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0299(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x029A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29B[0x1];                                      // 0x029B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x029C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x02A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_SetFieldsInStruct_ColorGradingIntensity_ImplicitCast; // 0x02A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys");
-static_assert(sizeof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys) == 0x0002C0, "Wrong size on BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys");
+static_assert(sizeof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys) == 0x0002A8, "Wrong size on BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys");
 static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, EntryPoint) == 0x000000, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_IsEditor_ReturnValue) == 0x000004, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_TimeStamp1) == 0x000008, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_TimeStamp1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_TimeStamp) == 0x000038, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_TimeStamp' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x0000A0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_CanUse) == 0x0000B0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_CanUse' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_percent) == 0x0000B8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_percent' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_regionId) == 0x0000C0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_regionId' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_on) == 0x0000C4, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_on' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_RegionName) == 0x0000C8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_RegionName' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_UnloadWeatherName) == 0x0000D8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_UnloadWeatherName' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_LoadWeatherName) == 0x0000E8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_LoadWeatherName' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_SrcVolume) == 0x0000F8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_SrcVolume' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_DeltaSeconds) == 0x000100, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_Intensity) == 0x000108, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_Intensity' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_TransitionTime) == 0x000110, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_TransitionTime' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_Time_1) == 0x000118, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_Time_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_Time) == 0x000120, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_Time' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_color) == 0x000128, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_color' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_PitchValue) == 0x000138, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_PitchValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_YawValue) == 0x000140, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_YawValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeRotator_ReturnValue) == 0x000148, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_WeatherPreset) == 0x000160, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_WeatherPreset' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_OnlySyncContent) == 0x000168, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_OnlySyncContent' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_OnlyWriteParam) == 0x000169, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_OnlyWriteParam' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_isEnter) == 0x00016A, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_isEnter' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Not_PreBool_ReturnValue) == 0x00016B, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x000170, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess) == 0x000178, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDirectional_Light_Component_1) == 0x000180, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDirectional_Light_Component_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_1) == 0x000188, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_GetVectorParameterValue_ReturnValue) == 0x00018C, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x0001A0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_LocalLightColor) == 0x0001B8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_LocalLightColor' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDirectional_Light_Component_2) == 0x0001C8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDirectional_Light_Component_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_2) == 0x0001D0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeLiteralName_ReturnValue) == 0x0001D4, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_GetScalarParameterValue_ReturnValue) == 0x0001DC, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_curve) == 0x0001E0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_curve' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_GetFloatValue_ReturnValue) == 0x000270, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDES_Sky) == 0x000278, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDES_Sky' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_3) == 0x000280, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDES_Sky_1) == 0x000288, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDES_Sky_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_4) == 0x000290, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Not_PreBool_ReturnValue_1) == 0x000291, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_LutIntensity) == 0x000298, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_LutIntensity' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0002A0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_IsEditor_Mode_inEditor) == 0x0002A1, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_IsEditor_Mode_inEditor' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_IsValid_ReturnValue) == 0x0002A2, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDirectional_Light_Component_3) == 0x0002A8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDirectional_Light_Component_3' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_5) == 0x0002B0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_EndPlayReason) == 0x0002B1, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x0002B4, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0002B8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_SetFieldsInStruct_ColorGradingIntensity_ImplicitCast) == 0x0002BC, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_SetFieldsInStruct_ColorGradingIntensity_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_SrcVolume) == 0x000008, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_SrcVolume' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_TimeStamp1) == 0x000010, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_TimeStamp1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_TimeStamp) == 0x000040, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_TimeStamp' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x0000A8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_CanUse) == 0x0000B8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_CanUse' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_DeltaSeconds) == 0x0000BC, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_percent) == 0x0000C0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_percent' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_regionId) == 0x0000C8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_regionId' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_on) == 0x0000CC, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_on' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_Time_1) == 0x0000D0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_Time_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_Time) == 0x0000D8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_Time' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_Intensity) == 0x0000E0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_Intensity' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_TransitionTime) == 0x0000E8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_TransitionTime' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_WeatherPreset) == 0x0000F0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_WeatherPreset' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_OnlySyncContent) == 0x0000F8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_OnlySyncContent' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_OnlyWriteParam) == 0x0000F9, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_OnlyWriteParam' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_LocalLightColor) == 0x0000FC, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_LocalLightColor' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_color) == 0x00010C, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_color' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_PitchValue) == 0x000120, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_PitchValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_YawValue) == 0x000128, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_YawValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeRotator_ReturnValue) == 0x000130, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_isEnter) == 0x000148, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_isEnter' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Not_PreBool_ReturnValue) == 0x000149, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDirectional_Light_Component) == 0x000150, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDirectional_Light_Component' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess) == 0x000158, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_GetVectorParameterValue_ReturnValue) == 0x00015C, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Conv_LinearColorToVector_ReturnValue) == 0x000170, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Conv_LinearColorToVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_RegionName) == 0x000188, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_RegionName' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_UnloadWeatherName) == 0x000198, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_UnloadWeatherName' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_LoadWeatherName) == 0x0001A8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_LoadWeatherName' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeLiteralName_ReturnValue) == 0x0001B8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeLiteralName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_GetScalarParameterValue_ReturnValue) == 0x0001C0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_curve) == 0x0001C8, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_curve' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_GetFloatValue_ReturnValue) == 0x000258, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_GetFloatValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDES_Sky) == 0x000260, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDES_Sky' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_1) == 0x000268, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDES_Sky_1) == 0x000270, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDES_Sky_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_2) == 0x000278, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Not_PreBool_ReturnValue_1) == 0x000279, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_CustomEvent_LutIntensity) == 0x000280, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_CustomEvent_LutIntensity' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000288, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_IsEditor_Mode_inEditor) == 0x000289, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_IsEditor_Mode_inEditor' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_IsValid_ReturnValue) == 0x00028A, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_AsDirectional_Light_Component_1) == 0x000290, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_AsDirectional_Light_Component_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_DynamicCast_bSuccess_3) == 0x000298, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_Event_EndPlayReason) == 0x000299, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_IsEditor_ReturnValue) == 0x00029A, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x00029C, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0002A0, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys, K2Node_SetFieldsInStruct_ColorGradingIntensity_ImplicitCast) == 0x0002A4, "Member 'BP_DyEnvSys_C_ExecuteUbergraph_BP_DyEnvSys::K2Node_SetFieldsInStruct_ColorGradingIntensity_ImplicitCast' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Calculat Dy Env Interp
 // 0x0048 (0x0048 - 0x0000)
@@ -935,50 +905,50 @@ static_assert(sizeof(BP_DyEnvSys_C_BP_AddPreRequisitePlayerPawn) == 0x000008, "W
 static_assert(offsetof(BP_DyEnvSys_C_BP_AddPreRequisitePlayerPawn, CallFunc_GetPlayerPawn_ReturnValue) == 0x000000, "Member 'BP_DyEnvSys_C_BP_AddPreRequisitePlayerPawn::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Blend SkyTexture2D
-// 0x0E18 (0x0E18 - 0x0000)
+// 0x0E20 (0x0E20 - 0x0000)
 struct BP_DyEnvSys_C_Blend_SkyTexture2D final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0008(0x0E08)(ConstParm)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0E10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0E11(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0E12(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0008(0x0E10)(ConstParm)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0E18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0E19(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0E1A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_DyEnvSys_C_Blend_SkyTexture2D) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_Blend_SkyTexture2D");
-static_assert(sizeof(BP_DyEnvSys_C_Blend_SkyTexture2D) == 0x000E18, "Wrong size on BP_DyEnvSys_C_Blend_SkyTexture2D");
+static_assert(sizeof(BP_DyEnvSys_C_Blend_SkyTexture2D) == 0x000E20, "Wrong size on BP_DyEnvSys_C_Blend_SkyTexture2D");
 static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000008, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue_1) == 0x000E10, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue_2) == 0x000E11, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue_3) == 0x000E12, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue_1) == 0x000E18, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue_2) == 0x000E19, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyTexture2D, CallFunc_IsValid_ReturnValue_3) == 0x000E1A, "Member 'BP_DyEnvSys_C_Blend_SkyTexture2D::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Blend SkyLight Cubemap
-// 0x0E18 (0x0E18 - 0x0000)
+// 0x0E20 (0x0E20 - 0x0000)
 struct BP_DyEnvSys_C_Blend_SkyLight_Cubemap final
 {
 public:
-	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0000(0x0E08)(ConstParm)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0E08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0E09(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0E0A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0E0B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0E0C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0E0D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E0E[0x2];                                      // 0x0E0E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0E10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFinalWeatherSettings                  CallFunc_GetFinalWeatherSettings_ReturnValue;      // 0x0000(0x0E10)(ConstParm)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0E10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0E11(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0E12(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0E13(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0E14(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0E15(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_E16[0x2];                                      // 0x0E16(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0E18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap) == 0x000008, "Wrong alignment on BP_DyEnvSys_C_Blend_SkyLight_Cubemap");
-static_assert(sizeof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap) == 0x000E18, "Wrong size on BP_DyEnvSys_C_Blend_SkyLight_Cubemap");
+static_assert(sizeof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap) == 0x000E20, "Wrong size on BP_DyEnvSys_C_Blend_SkyLight_Cubemap");
 static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_GetFinalWeatherSettings_ReturnValue) == 0x000000, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_GetFinalWeatherSettings_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_IsValid_ReturnValue) == 0x000E08, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000E09, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000E0A, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_BooleanOR_ReturnValue) == 0x000E0B, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_IsValid_ReturnValue_1) == 0x000E0C, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_BooleanAND_ReturnValue) == 0x000E0D, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x000E10, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_IsValid_ReturnValue) == 0x000E10, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000E11, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000E12, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_BooleanOR_ReturnValue) == 0x000E13, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_IsValid_ReturnValue_1) == 0x000E14, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_BooleanAND_ReturnValue) == 0x000E15, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_DyEnvSys_C_Blend_SkyLight_Cubemap, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast) == 0x000E18, "Member 'BP_DyEnvSys_C_Blend_SkyLight_Cubemap::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 
 // Function BP_DyEnvSys.BP_DyEnvSys_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

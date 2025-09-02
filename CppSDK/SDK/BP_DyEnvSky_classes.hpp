@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_DyEnvSky.BP_DyEnvSky_C
-// 0x0280 (0x0628 - 0x03A8)
+// 0x0278 (0x0620 - 0x03A8)
 class ABP_DyEnvSky_C final : public AActor
 {
 public:
@@ -62,25 +62,24 @@ public:
 	class UMaterialInstanceDynamic*               GizmoMID;                                          // 0x0520(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        MoonAngularDiameter;                               // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ADirectionalLight*                      DirectionalLight;                                  // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	class ADirectionalLight*                      DirectionalLight_Moon;                             // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	double                                        SwapHeight;                                        // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ManualRotAlphalpha;                                // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               ManualRot;                                         // 0x0550(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FRotator                               FixedTODRot;                                       // 0x0568(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UCurveFloat*                            RoleDistRampCurve;                                 // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            CascadeRemapCurve;                                 // 0x0588(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseSpecialLayer;                                   // 0x0590(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_591[0x7];                                      // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               SpecialLayerRotator;                               // 0x0598(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	TSoftObjectPtr<class UMaterialInterface>      LensMat;                                           // 0x05B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftObjectPtr<class UMaterialInterface>      LensMat_Mobile;                                    // 0x05D8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MID_LensFlare;                                     // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         MoonPhaseSelector;                                 // 0x0608(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         MobileFixed_X__Roll_;                              // 0x060C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         MobileFixed_Y__Pitch_;                             // 0x0610(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         MobileFixed_Z__Yaw_;                               // 0x0614(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               MID_Moon;                                          // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AEnvironmentLevelConfigManager*         Ref_LevelConfigMgr;                                // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	double                                        SwapHeight;                                        // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ManualRotAlphalpha;                                // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               ManualRot;                                         // 0x0548(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               FixedTODRot;                                       // 0x0560(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UCurveFloat*                            RoleDistRampCurve;                                 // 0x0578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            CascadeRemapCurve;                                 // 0x0580(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseSpecialLayer;                                   // 0x0588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_589[0x7];                                      // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               SpecialLayerRotator;                               // 0x0590(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	TSoftObjectPtr<class UMaterialInterface>      LensMat;                                           // 0x05A8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UMaterialInterface>      LensMat_Mobile;                                    // 0x05D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MID_LensFlare;                                     // 0x05F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         MoonPhaseSelector;                                 // 0x0600(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         MobileFixed_X__Roll_;                              // 0x0604(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         MobileFixed_Y__Pitch_;                             // 0x0608(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         MobileFixed_Z__Yaw_;                               // 0x060C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               MID_Moon;                                          // 0x0610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AEnvironmentLevelConfigManager*         Ref_LevelConfigMgr;                                // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void UserConstructionScript();
@@ -119,7 +118,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_DyEnvSky_C) == 0x000008, "Wrong alignment on ABP_DyEnvSky_C");
-static_assert(sizeof(ABP_DyEnvSky_C) == 0x000628, "Wrong size on ABP_DyEnvSky_C");
+static_assert(sizeof(ABP_DyEnvSky_C) == 0x000620, "Wrong size on ABP_DyEnvSky_C");
 static_assert(offsetof(ABP_DyEnvSky_C, UberGraphFrame) == 0x0003A8, "Member 'ABP_DyEnvSky_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSky_C, LensFlare01Mobile) == 0x0003B0, "Member 'ABP_DyEnvSky_C::LensFlare01Mobile' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSky_C, MoonMask) == 0x0003B8, "Member 'ABP_DyEnvSky_C::MoonMask' has a wrong offset!");
@@ -158,24 +157,23 @@ static_assert(offsetof(ABP_DyEnvSky_C, Ref_DyEnvSys) == 0x000518, "Member 'ABP_D
 static_assert(offsetof(ABP_DyEnvSky_C, GizmoMID) == 0x000520, "Member 'ABP_DyEnvSky_C::GizmoMID' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSky_C, MoonAngularDiameter) == 0x000528, "Member 'ABP_DyEnvSky_C::MoonAngularDiameter' has a wrong offset!");
 static_assert(offsetof(ABP_DyEnvSky_C, DirectionalLight) == 0x000530, "Member 'ABP_DyEnvSky_C::DirectionalLight' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, DirectionalLight_Moon) == 0x000538, "Member 'ABP_DyEnvSky_C::DirectionalLight_Moon' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, SwapHeight) == 0x000540, "Member 'ABP_DyEnvSky_C::SwapHeight' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, ManualRotAlphalpha) == 0x000548, "Member 'ABP_DyEnvSky_C::ManualRotAlphalpha' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, ManualRot) == 0x000550, "Member 'ABP_DyEnvSky_C::ManualRot' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, FixedTODRot) == 0x000568, "Member 'ABP_DyEnvSky_C::FixedTODRot' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, RoleDistRampCurve) == 0x000580, "Member 'ABP_DyEnvSky_C::RoleDistRampCurve' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, CascadeRemapCurve) == 0x000588, "Member 'ABP_DyEnvSky_C::CascadeRemapCurve' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, UseSpecialLayer) == 0x000590, "Member 'ABP_DyEnvSky_C::UseSpecialLayer' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, SpecialLayerRotator) == 0x000598, "Member 'ABP_DyEnvSky_C::SpecialLayerRotator' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, LensMat) == 0x0005B0, "Member 'ABP_DyEnvSky_C::LensMat' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, LensMat_Mobile) == 0x0005D8, "Member 'ABP_DyEnvSky_C::LensMat_Mobile' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, MID_LensFlare) == 0x000600, "Member 'ABP_DyEnvSky_C::MID_LensFlare' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, MoonPhaseSelector) == 0x000608, "Member 'ABP_DyEnvSky_C::MoonPhaseSelector' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, MobileFixed_X__Roll_) == 0x00060C, "Member 'ABP_DyEnvSky_C::MobileFixed_X__Roll_' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, MobileFixed_Y__Pitch_) == 0x000610, "Member 'ABP_DyEnvSky_C::MobileFixed_Y__Pitch_' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, MobileFixed_Z__Yaw_) == 0x000614, "Member 'ABP_DyEnvSky_C::MobileFixed_Z__Yaw_' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, MID_Moon) == 0x000618, "Member 'ABP_DyEnvSky_C::MID_Moon' has a wrong offset!");
-static_assert(offsetof(ABP_DyEnvSky_C, Ref_LevelConfigMgr) == 0x000620, "Member 'ABP_DyEnvSky_C::Ref_LevelConfigMgr' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, SwapHeight) == 0x000538, "Member 'ABP_DyEnvSky_C::SwapHeight' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, ManualRotAlphalpha) == 0x000540, "Member 'ABP_DyEnvSky_C::ManualRotAlphalpha' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, ManualRot) == 0x000548, "Member 'ABP_DyEnvSky_C::ManualRot' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, FixedTODRot) == 0x000560, "Member 'ABP_DyEnvSky_C::FixedTODRot' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, RoleDistRampCurve) == 0x000578, "Member 'ABP_DyEnvSky_C::RoleDistRampCurve' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, CascadeRemapCurve) == 0x000580, "Member 'ABP_DyEnvSky_C::CascadeRemapCurve' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, UseSpecialLayer) == 0x000588, "Member 'ABP_DyEnvSky_C::UseSpecialLayer' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, SpecialLayerRotator) == 0x000590, "Member 'ABP_DyEnvSky_C::SpecialLayerRotator' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, LensMat) == 0x0005A8, "Member 'ABP_DyEnvSky_C::LensMat' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, LensMat_Mobile) == 0x0005D0, "Member 'ABP_DyEnvSky_C::LensMat_Mobile' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, MID_LensFlare) == 0x0005F8, "Member 'ABP_DyEnvSky_C::MID_LensFlare' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, MoonPhaseSelector) == 0x000600, "Member 'ABP_DyEnvSky_C::MoonPhaseSelector' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, MobileFixed_X__Roll_) == 0x000604, "Member 'ABP_DyEnvSky_C::MobileFixed_X__Roll_' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, MobileFixed_Y__Pitch_) == 0x000608, "Member 'ABP_DyEnvSky_C::MobileFixed_Y__Pitch_' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, MobileFixed_Z__Yaw_) == 0x00060C, "Member 'ABP_DyEnvSky_C::MobileFixed_Z__Yaw_' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, MID_Moon) == 0x000610, "Member 'ABP_DyEnvSky_C::MID_Moon' has a wrong offset!");
+static_assert(offsetof(ABP_DyEnvSky_C, Ref_LevelConfigMgr) == 0x000618, "Member 'ABP_DyEnvSky_C::Ref_LevelConfigMgr' has a wrong offset!");
 
 }
 

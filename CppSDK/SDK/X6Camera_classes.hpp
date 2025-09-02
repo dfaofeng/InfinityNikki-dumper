@@ -13,10 +13,10 @@
 #include "X6Camera_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "GameplayTasks_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "GameplayTasks_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -51,7 +51,7 @@ static_assert(sizeof(UX6BaseCameraComponent) == 0x000B50, "Wrong size on UX6Base
 static_assert(offsetof(UX6BaseCameraComponent, CameraMode) == 0x000B40, "Member 'UX6BaseCameraComponent::CameraMode' has a wrong offset!");
 
 // Class X6Camera.AdvancedCamera
-// 0x21C0 (0x2D10 - 0x0B50)
+// 0x2240 (0x2D90 - 0x0B50)
 class UAdvancedCamera : public UX6BaseCameraComponent
 {
 public:
@@ -60,106 +60,109 @@ public:
 	class UCameraBaseParamsData*                  CameraDataBase;                                    // 0x0B50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UX6CameraConfigManager*                 CameraConfigManager;                               // 0x0B58(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<class UX6CameraRuntimeConfigModifier*> CameraConfigModifierList;                          // 0x0B60(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B70[0x604];                                    // 0x0B70(0x0604)(Fixing Size After Last Property [ Dumper-7 ])
-	TWeakObjectPtr<class AX6PlayerCameraManagerBase> OwnerPlayerCameraManager;                       // 0x1174(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAcceptInput;                                      // 0x117C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_117D[0x3];                                     // 0x117D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         InputXRotateSpeedFactor;                           // 0x1180(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InputYRotateSpeedFactor;                           // 0x1184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               BirthRotation;                                     // 0x1188(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               OriginRotation;                                    // 0x11A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         MaxPitchAngle;                                     // 0x11B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinPitchAngle;                                     // 0x11BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxYawAngle;                                       // 0x11C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinYawAngle;                                       // 0x11C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EViewTargetBlendFunction                      DefaultBlendFunction;                              // 0x11C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11C9[0x7];                                     // 0x11C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FX6CameraZoomProcessor                 ZoomProcessor;                                     // 0x11D0(0x01A8)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FCameraInputOptimizationConfig> CameraInputOptimizationConfigs;                    // 0x1378(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	struct FVector                                InputVectorCache;                                  // 0x1388(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InputVectorSize;                                   // 0x13A0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13A4[0x4];                                     // 0x13A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               InputDeltaRotation;                                // 0x13A8(0x0018)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bHaveInputData;                                    // 0x13C0(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_13C1[0x7F];                                    // 0x13C1(0x007F)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsLookAt;                                         // 0x1440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1441[0x3];                                     // 0x1441(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TargetArmLength;                                   // 0x1444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableInterpLookAtLocation;                       // 0x1448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1449[0x7];                                     // 0x1449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                InterpLocationSpeed;                               // 0x1450(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InterpLookAtLocationSpeed;                         // 0x1468(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InterpLookAtLocationMaxDistanceToTarget;           // 0x1480(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1484[0x4];                                     // 0x1484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PreviousActualArmLength;                           // 0x1488(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_148C[0x4];                                     // 0x148C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxArmLength;                                      // 0x1490(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinArmLength;                                      // 0x1494(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetArmLengthModifier;                           // 0x1498(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_149C[0x4];                                     // 0x149C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableInfluenceOffsetByPitch;                     // 0x14A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14A1[0x7];                                     // 0x14A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveVector*                           OffsetCurveByPitch;                                // 0x14A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SocketOffset;                                      // 0x14B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SocketOffsetModifier;                              // 0x14C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               SocketRotationOffset;                              // 0x14E0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14F8[0xB0];                                    // 0x14F8(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                TargetOffset;                                      // 0x15A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TargetOffsetModifier;                              // 0x15C0(0x0018)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FOV;                                               // 0x15D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FOVModifier;                                       // 0x15DC(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FixedSpringArmByPitch;                             // 0x15E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E1[0x7];                                     // 0x15E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            FixedSpringArmByPitchCurveAsset;                   // 0x15E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoCollisionTest;                                  // 0x15F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15F1[0x3];                                     // 0x15F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProbeSize;                                         // 0x15F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UCameraCollisionProcess>    CameraCollisionProcessClass;                       // 0x15F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraCollisionProcess*                CameraCollisionProcess;                            // 0x1600(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoLocationLag;                                    // 0x1608(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoRotationLag;                                    // 0x1609(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDoTargetArmlengthLag;                             // 0x160A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_160B[0x5];                                     // 0x160B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCameraLagProcess>          CameraLagProcessClass;                             // 0x1610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraLagProcess*                      CameraLagProcess;                                  // 0x1618(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   NormalConfigKey;                                   // 0x1620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1628[0x18];                                    // 0x1628(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               PreviousDesiredSpringArmRot;                       // 0x1640(0x0018)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1658[0xA0];                                    // 0x1658(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bSpecifiedTargetView;                              // 0x16F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSpecifiedTargetViewBlending;                      // 0x16F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16FA[0x6];                                     // 0x16FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FViewTargetTransitionParams            BlendParams;                                       // 0x1700(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       SpecifiedTargetBeginBlendViewInfo;                 // 0x1720(0x0970)(NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       SpecifiedTargetViewInfo;                           // 0x2090(0x0970)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	float                                         SpecifiedTargetTime;                               // 0x2A00(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOverrideArmlength;                                // 0x2A04(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A05[0x3];                                     // 0x2A05(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OverrideArmlengthValue;                            // 0x2A08(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLockRelativeRotationToLookAtTarget;               // 0x2A0C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A0D[0x24];                                    // 0x2A0D(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bBlueprintDevelopment;                             // 0x2A31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A32[0x46];                                    // 0x2A32(0x0046)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                DebugSumInputVector;                               // 0x2A78(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                DebugSumFinalInputVector;                          // 0x2A90(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2AA8[0xA8];                                    // 0x2AA8(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnX6CameraRuntimeConfigChanged;                    // 0x2B50(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	struct FVector                                InterpLookAtLocationSpeedScale;                    // 0x2B60(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxDistanceToInterpTargetScale;                    // 0x2B78(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNeedInterpLookAtLocation;                         // 0x2B7C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2B7D[0x3];                                     // 0x2B7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 LookAtTarget;                                      // 0x2B80(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<struct FGameplayTag, int32>              CameraConfigPrioritySet;                           // 0x2B88(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TMap<struct FGameplayTag, int32>              BaseCameraConfigPrioritySet;                       // 0x2BD8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C28[0x18];                                    // 0x2C28(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UCameraOrientationSynchronizer> CameraOrientationSynchronizerClass;            // 0x2C40(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UCameraOrientationSynchronizer> BlueprintSetDefaultSynchronizerClass;          // 0x2C48(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C50[0x28];                                    // 0x2C50(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraOrientationSynchronizer*         CameraOrientationSynchronizer;                     // 0x2C78(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C80[0x10];                                    // 0x2C80(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableBasedMovementFix;                           // 0x2C90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C91[0xF];                                     // 0x2C91(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBasedMovementFixCameraHelper          BasedMovementHelper;                               // 0x2CA0(0x0070)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B70[0x624];                                    // 0x0B70(0x0624)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class AX6PlayerCameraManagerBase> OwnerPlayerCameraManager;                       // 0x1194(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAcceptInput;                                      // 0x119C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119D[0x3];                                     // 0x119D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         InputXRotateSpeedFactor;                           // 0x11A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InputYRotateSpeedFactor;                           // 0x11A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               BirthRotation;                                     // 0x11A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               OriginRotation;                                    // 0x11C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         MaxPitchAngle;                                     // 0x11D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinPitchAngle;                                     // 0x11DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxYawAngle;                                       // 0x11E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinYawAngle;                                       // 0x11E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EViewTargetBlendFunction                      DefaultBlendFunction;                              // 0x11E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11E9[0x7];                                     // 0x11E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FX6CameraZoomProcessor                 ZoomProcessor;                                     // 0x11F0(0x01A8)(Edit, BlueprintVisible, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FCameraInputOptimizationConfig> CameraInputOptimizationConfigs;                    // 0x1398(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FVector                                InputVectorCache;                                  // 0x13A8(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InputVectorSize;                                   // 0x13C0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13C4[0x4];                                     // 0x13C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               InputDeltaRotation;                                // 0x13C8(0x0018)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bHaveInputData;                                    // 0x13E0(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13E1[0x7F];                                    // 0x13E1(0x007F)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsLookAt;                                         // 0x1460(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1461[0x3];                                     // 0x1461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TargetArmLength;                                   // 0x1464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableInterpLookAtLocation;                       // 0x1468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1469[0x7];                                     // 0x1469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InterpLocationSpeed;                               // 0x1470(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InterpLookAtLocationSpeed;                         // 0x1488(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InterpLookAtLocationMaxDistanceToTarget;           // 0x14A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14A4[0x4];                                     // 0x14A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PreviousActualArmLength;                           // 0x14A8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14AC[0x4];                                     // 0x14AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxArmLength;                                      // 0x14B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinArmLength;                                      // 0x14B4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetArmLengthModifier;                           // 0x14B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14BC[0x4];                                     // 0x14BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableInfluenceOffsetByPitch;                     // 0x14C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14C1[0x7];                                     // 0x14C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveVector*                           OffsetCurveByPitch;                                // 0x14C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SocketOffset;                                      // 0x14D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SocketOffsetModifier;                              // 0x14E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               SocketRotationOffset;                              // 0x1500(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1518[0xB0];                                    // 0x1518(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TargetOffset;                                      // 0x15C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TargetOffsetModifier;                              // 0x15E0(0x0018)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FOV;                                               // 0x15F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FOVModifier;                                       // 0x15FC(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FixedSpringArmByPitch;                             // 0x1600(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1601[0x7];                                     // 0x1601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            FixedSpringArmByPitchCurveAsset;                   // 0x1608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UCurveFloat*>                    PlayerSettingArmLengthCurves;                      // 0x1610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UCurveFloat*                            PlayerSettingArmLengthCurve;                       // 0x1620(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoCollisionTest;                                  // 0x1628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1629[0x3];                                     // 0x1629(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ProbeSize;                                         // 0x162C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraCollisionProcess>    CameraCollisionProcessClass;                       // 0x1630(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraCollisionProcess*                CameraCollisionProcess;                            // 0x1638(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoLocationLag;                                    // 0x1640(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoRotationLag;                                    // 0x1641(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDoTargetArmlengthLag;                             // 0x1642(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1643[0x5];                                     // 0x1643(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCameraLagProcess>          CameraLagProcessClass;                             // 0x1648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraLagProcess*                      CameraLagProcess;                                  // 0x1650(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   NormalConfigKey;                                   // 0x1658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1660[0x18];                                    // 0x1660(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               PreviousDesiredSpringArmRot;                       // 0x1678(0x0018)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1690[0xA0];                                    // 0x1690(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bSpecifiedTargetView;                              // 0x1730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSpecifiedTargetViewBlending;                      // 0x1731(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1732[0x6];                                     // 0x1732(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FViewTargetTransitionParams            BlendParams;                                       // 0x1738(0x0020)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1758[0x8];                                     // 0x1758(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMinimalViewInfo                       SpecifiedTargetBeginBlendViewInfo;                 // 0x1760(0x0990)(NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       SpecifiedTargetViewInfo;                           // 0x20F0(0x0990)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	float                                         SpecifiedTargetTime;                               // 0x2A80(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOverrideArmlength;                                // 0x2A84(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A85[0x3];                                     // 0x2A85(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverrideArmlengthValue;                            // 0x2A88(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLockRelativeRotationToLookAtTarget;               // 0x2A8C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A8D[0x24];                                    // 0x2A8D(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bBlueprintDevelopment;                             // 0x2AB1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2AB2[0x46];                                    // 0x2AB2(0x0046)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                DebugSumInputVector;                               // 0x2AF8(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                DebugSumFinalInputVector;                          // 0x2B10(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2B28[0xA8];                                    // 0x2B28(0x00A8)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnX6CameraRuntimeConfigChanged;                    // 0x2BD0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	struct FVector                                InterpLookAtLocationSpeedScale;                    // 0x2BE0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistanceToInterpTargetScale;                    // 0x2BF8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNeedInterpLookAtLocation;                         // 0x2BFC(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2BFD[0x3];                                     // 0x2BFD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 LookAtTarget;                                      // 0x2C00(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<struct FGameplayTag, int32>              CameraConfigPrioritySet;                           // 0x2C08(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TMap<struct FGameplayTag, int32>              BaseCameraConfigPrioritySet;                       // 0x2C58(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CA8[0x18];                                    // 0x2CA8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UCameraOrientationSynchronizer> CameraOrientationSynchronizerClass;            // 0x2CC0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UCameraOrientationSynchronizer> BlueprintSetDefaultSynchronizerClass;          // 0x2CC8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CD0[0x28];                                    // 0x2CD0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraOrientationSynchronizer*         CameraOrientationSynchronizer;                     // 0x2CF8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2D00[0x10];                                    // 0x2D00(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableBasedMovementFix;                           // 0x2D10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D11[0xF];                                     // 0x2D11(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBasedMovementFixCameraHelper          BasedMovementHelper;                               // 0x2D20(0x0070)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	class UX6CameraRuntimeConfigModifier* AddCameraConfigModifierByClass(const TSubclassOf<class UX6CameraRuntimeConfigModifier> ModifierClass, const struct FX6CameraConfigBlendParams& CameraConfigBlendParams);
@@ -214,6 +217,7 @@ public:
 	void SetOverrideCameraRotationLagSpeed(bool bOverride, float CameraRotationLagSpeed);
 	void SetPassiveDesiredRotationBySpeed(const struct FRotator& NewDesireRotation, float AngularSpeed, EViewTargetBlendFunction BlendFunction, float BlendExp);
 	void SetPassiveDesiredRotationByTime(const struct FRotator& NewDesireRotation, float TotalTime, EViewTargetBlendFunction BlendFunction, float BlendExp);
+	void SetPlayerSettingArmLengthCurve(int32 InIndex);
 	void SetUsingGamepad(bool bInUsingGamepad);
 	void SetZoomedTargetOffsetZAdjustment(const float NewZoomedTargetOffsetZAdjustment);
 	void StartAutoZoomOutCountDown();
@@ -229,6 +233,7 @@ public:
 	void CollectInputDebugOutput(TArray<class FString>* InOutDebugInfoLines) const;
 	void CollectLookAtTargetDebugOutput(TArray<class FString>* InOutDebugInfoLines) const;
 	void CollectSpringArmDebugOutput(TArray<class FString>* InOutDebugInfoLines) const;
+	float FixArmLengthByPlayerSetting(const struct FX6CameraBlendableSettings& InCameraSettings, float InArmLength) const;
 	struct FVector FixLocationByBasedMovement(const struct FBasedMovementFixCameraHelper& Helper, const struct FVector& InLocation) const;
 	struct FRotator FixRotationByBasedMovement(const struct FBasedMovementFixCameraHelper& Helper, const struct FRotator& InRotation) const;
 	float GetCameraArmlength() const;
@@ -258,84 +263,86 @@ public:
 	}
 };
 static_assert(alignof(UAdvancedCamera) == 0x000010, "Wrong alignment on UAdvancedCamera");
-static_assert(sizeof(UAdvancedCamera) == 0x002D10, "Wrong size on UAdvancedCamera");
+static_assert(sizeof(UAdvancedCamera) == 0x002D90, "Wrong size on UAdvancedCamera");
 static_assert(offsetof(UAdvancedCamera, bRewriteFromSetting) == 0x000B48, "Member 'UAdvancedCamera::bRewriteFromSetting' has a wrong offset!");
 static_assert(offsetof(UAdvancedCamera, CameraDataBase) == 0x000B50, "Member 'UAdvancedCamera::CameraDataBase' has a wrong offset!");
 static_assert(offsetof(UAdvancedCamera, CameraConfigManager) == 0x000B58, "Member 'UAdvancedCamera::CameraConfigManager' has a wrong offset!");
 static_assert(offsetof(UAdvancedCamera, CameraConfigModifierList) == 0x000B60, "Member 'UAdvancedCamera::CameraConfigModifierList' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, OwnerPlayerCameraManager) == 0x001174, "Member 'UAdvancedCamera::OwnerPlayerCameraManager' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bAcceptInput) == 0x00117C, "Member 'UAdvancedCamera::bAcceptInput' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InputXRotateSpeedFactor) == 0x001180, "Member 'UAdvancedCamera::InputXRotateSpeedFactor' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InputYRotateSpeedFactor) == 0x001184, "Member 'UAdvancedCamera::InputYRotateSpeedFactor' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, BirthRotation) == 0x001188, "Member 'UAdvancedCamera::BirthRotation' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, OriginRotation) == 0x0011A0, "Member 'UAdvancedCamera::OriginRotation' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MaxPitchAngle) == 0x0011B8, "Member 'UAdvancedCamera::MaxPitchAngle' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MinPitchAngle) == 0x0011BC, "Member 'UAdvancedCamera::MinPitchAngle' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MaxYawAngle) == 0x0011C0, "Member 'UAdvancedCamera::MaxYawAngle' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MinYawAngle) == 0x0011C4, "Member 'UAdvancedCamera::MinYawAngle' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, DefaultBlendFunction) == 0x0011C8, "Member 'UAdvancedCamera::DefaultBlendFunction' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, ZoomProcessor) == 0x0011D0, "Member 'UAdvancedCamera::ZoomProcessor' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraInputOptimizationConfigs) == 0x001378, "Member 'UAdvancedCamera::CameraInputOptimizationConfigs' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InputVectorCache) == 0x001388, "Member 'UAdvancedCamera::InputVectorCache' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InputVectorSize) == 0x0013A0, "Member 'UAdvancedCamera::InputVectorSize' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InputDeltaRotation) == 0x0013A8, "Member 'UAdvancedCamera::InputDeltaRotation' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bHaveInputData) == 0x0013C0, "Member 'UAdvancedCamera::bHaveInputData' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bIsLookAt) == 0x001440, "Member 'UAdvancedCamera::bIsLookAt' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, TargetArmLength) == 0x001444, "Member 'UAdvancedCamera::TargetArmLength' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bEnableInterpLookAtLocation) == 0x001448, "Member 'UAdvancedCamera::bEnableInterpLookAtLocation' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InterpLocationSpeed) == 0x001450, "Member 'UAdvancedCamera::InterpLocationSpeed' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InterpLookAtLocationSpeed) == 0x001468, "Member 'UAdvancedCamera::InterpLookAtLocationSpeed' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InterpLookAtLocationMaxDistanceToTarget) == 0x001480, "Member 'UAdvancedCamera::InterpLookAtLocationMaxDistanceToTarget' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, PreviousActualArmLength) == 0x001488, "Member 'UAdvancedCamera::PreviousActualArmLength' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MaxArmLength) == 0x001490, "Member 'UAdvancedCamera::MaxArmLength' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MinArmLength) == 0x001494, "Member 'UAdvancedCamera::MinArmLength' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, TargetArmLengthModifier) == 0x001498, "Member 'UAdvancedCamera::TargetArmLengthModifier' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bEnableInfluenceOffsetByPitch) == 0x0014A0, "Member 'UAdvancedCamera::bEnableInfluenceOffsetByPitch' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, OffsetCurveByPitch) == 0x0014A8, "Member 'UAdvancedCamera::OffsetCurveByPitch' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, SocketOffset) == 0x0014B0, "Member 'UAdvancedCamera::SocketOffset' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, SocketOffsetModifier) == 0x0014C8, "Member 'UAdvancedCamera::SocketOffsetModifier' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, SocketRotationOffset) == 0x0014E0, "Member 'UAdvancedCamera::SocketRotationOffset' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, TargetOffset) == 0x0015A8, "Member 'UAdvancedCamera::TargetOffset' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, TargetOffsetModifier) == 0x0015C0, "Member 'UAdvancedCamera::TargetOffsetModifier' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, FOV) == 0x0015D8, "Member 'UAdvancedCamera::FOV' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, FOVModifier) == 0x0015DC, "Member 'UAdvancedCamera::FOVModifier' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, FixedSpringArmByPitch) == 0x0015E0, "Member 'UAdvancedCamera::FixedSpringArmByPitch' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, FixedSpringArmByPitchCurveAsset) == 0x0015E8, "Member 'UAdvancedCamera::FixedSpringArmByPitchCurveAsset' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bDoCollisionTest) == 0x0015F0, "Member 'UAdvancedCamera::bDoCollisionTest' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, ProbeSize) == 0x0015F4, "Member 'UAdvancedCamera::ProbeSize' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraCollisionProcessClass) == 0x0015F8, "Member 'UAdvancedCamera::CameraCollisionProcessClass' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraCollisionProcess) == 0x001600, "Member 'UAdvancedCamera::CameraCollisionProcess' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bDoLocationLag) == 0x001608, "Member 'UAdvancedCamera::bDoLocationLag' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bDoRotationLag) == 0x001609, "Member 'UAdvancedCamera::bDoRotationLag' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bDoTargetArmlengthLag) == 0x00160A, "Member 'UAdvancedCamera::bDoTargetArmlengthLag' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraLagProcessClass) == 0x001610, "Member 'UAdvancedCamera::CameraLagProcessClass' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraLagProcess) == 0x001618, "Member 'UAdvancedCamera::CameraLagProcess' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, NormalConfigKey) == 0x001620, "Member 'UAdvancedCamera::NormalConfigKey' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, PreviousDesiredSpringArmRot) == 0x001640, "Member 'UAdvancedCamera::PreviousDesiredSpringArmRot' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bSpecifiedTargetView) == 0x0016F8, "Member 'UAdvancedCamera::bSpecifiedTargetView' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bSpecifiedTargetViewBlending) == 0x0016F9, "Member 'UAdvancedCamera::bSpecifiedTargetViewBlending' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, BlendParams) == 0x001700, "Member 'UAdvancedCamera::BlendParams' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, SpecifiedTargetBeginBlendViewInfo) == 0x001720, "Member 'UAdvancedCamera::SpecifiedTargetBeginBlendViewInfo' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, SpecifiedTargetViewInfo) == 0x002090, "Member 'UAdvancedCamera::SpecifiedTargetViewInfo' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, SpecifiedTargetTime) == 0x002A00, "Member 'UAdvancedCamera::SpecifiedTargetTime' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bOverrideArmlength) == 0x002A04, "Member 'UAdvancedCamera::bOverrideArmlength' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, OverrideArmlengthValue) == 0x002A08, "Member 'UAdvancedCamera::OverrideArmlengthValue' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bLockRelativeRotationToLookAtTarget) == 0x002A0C, "Member 'UAdvancedCamera::bLockRelativeRotationToLookAtTarget' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bBlueprintDevelopment) == 0x002A31, "Member 'UAdvancedCamera::bBlueprintDevelopment' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, DebugSumInputVector) == 0x002A78, "Member 'UAdvancedCamera::DebugSumInputVector' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, DebugSumFinalInputVector) == 0x002A90, "Member 'UAdvancedCamera::DebugSumFinalInputVector' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, OnX6CameraRuntimeConfigChanged) == 0x002B50, "Member 'UAdvancedCamera::OnX6CameraRuntimeConfigChanged' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, InterpLookAtLocationSpeedScale) == 0x002B60, "Member 'UAdvancedCamera::InterpLookAtLocationSpeedScale' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, MaxDistanceToInterpTargetScale) == 0x002B78, "Member 'UAdvancedCamera::MaxDistanceToInterpTargetScale' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bNeedInterpLookAtLocation) == 0x002B7C, "Member 'UAdvancedCamera::bNeedInterpLookAtLocation' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, LookAtTarget) == 0x002B80, "Member 'UAdvancedCamera::LookAtTarget' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraConfigPrioritySet) == 0x002B88, "Member 'UAdvancedCamera::CameraConfigPrioritySet' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, BaseCameraConfigPrioritySet) == 0x002BD8, "Member 'UAdvancedCamera::BaseCameraConfigPrioritySet' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraOrientationSynchronizerClass) == 0x002C40, "Member 'UAdvancedCamera::CameraOrientationSynchronizerClass' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, BlueprintSetDefaultSynchronizerClass) == 0x002C48, "Member 'UAdvancedCamera::BlueprintSetDefaultSynchronizerClass' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, CameraOrientationSynchronizer) == 0x002C78, "Member 'UAdvancedCamera::CameraOrientationSynchronizer' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, bEnableBasedMovementFix) == 0x002C90, "Member 'UAdvancedCamera::bEnableBasedMovementFix' has a wrong offset!");
-static_assert(offsetof(UAdvancedCamera, BasedMovementHelper) == 0x002CA0, "Member 'UAdvancedCamera::BasedMovementHelper' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, OwnerPlayerCameraManager) == 0x001194, "Member 'UAdvancedCamera::OwnerPlayerCameraManager' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bAcceptInput) == 0x00119C, "Member 'UAdvancedCamera::bAcceptInput' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InputXRotateSpeedFactor) == 0x0011A0, "Member 'UAdvancedCamera::InputXRotateSpeedFactor' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InputYRotateSpeedFactor) == 0x0011A4, "Member 'UAdvancedCamera::InputYRotateSpeedFactor' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, BirthRotation) == 0x0011A8, "Member 'UAdvancedCamera::BirthRotation' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, OriginRotation) == 0x0011C0, "Member 'UAdvancedCamera::OriginRotation' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MaxPitchAngle) == 0x0011D8, "Member 'UAdvancedCamera::MaxPitchAngle' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MinPitchAngle) == 0x0011DC, "Member 'UAdvancedCamera::MinPitchAngle' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MaxYawAngle) == 0x0011E0, "Member 'UAdvancedCamera::MaxYawAngle' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MinYawAngle) == 0x0011E4, "Member 'UAdvancedCamera::MinYawAngle' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, DefaultBlendFunction) == 0x0011E8, "Member 'UAdvancedCamera::DefaultBlendFunction' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, ZoomProcessor) == 0x0011F0, "Member 'UAdvancedCamera::ZoomProcessor' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraInputOptimizationConfigs) == 0x001398, "Member 'UAdvancedCamera::CameraInputOptimizationConfigs' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InputVectorCache) == 0x0013A8, "Member 'UAdvancedCamera::InputVectorCache' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InputVectorSize) == 0x0013C0, "Member 'UAdvancedCamera::InputVectorSize' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InputDeltaRotation) == 0x0013C8, "Member 'UAdvancedCamera::InputDeltaRotation' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bHaveInputData) == 0x0013E0, "Member 'UAdvancedCamera::bHaveInputData' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bIsLookAt) == 0x001460, "Member 'UAdvancedCamera::bIsLookAt' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, TargetArmLength) == 0x001464, "Member 'UAdvancedCamera::TargetArmLength' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bEnableInterpLookAtLocation) == 0x001468, "Member 'UAdvancedCamera::bEnableInterpLookAtLocation' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InterpLocationSpeed) == 0x001470, "Member 'UAdvancedCamera::InterpLocationSpeed' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InterpLookAtLocationSpeed) == 0x001488, "Member 'UAdvancedCamera::InterpLookAtLocationSpeed' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InterpLookAtLocationMaxDistanceToTarget) == 0x0014A0, "Member 'UAdvancedCamera::InterpLookAtLocationMaxDistanceToTarget' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, PreviousActualArmLength) == 0x0014A8, "Member 'UAdvancedCamera::PreviousActualArmLength' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MaxArmLength) == 0x0014B0, "Member 'UAdvancedCamera::MaxArmLength' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MinArmLength) == 0x0014B4, "Member 'UAdvancedCamera::MinArmLength' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, TargetArmLengthModifier) == 0x0014B8, "Member 'UAdvancedCamera::TargetArmLengthModifier' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bEnableInfluenceOffsetByPitch) == 0x0014C0, "Member 'UAdvancedCamera::bEnableInfluenceOffsetByPitch' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, OffsetCurveByPitch) == 0x0014C8, "Member 'UAdvancedCamera::OffsetCurveByPitch' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, SocketOffset) == 0x0014D0, "Member 'UAdvancedCamera::SocketOffset' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, SocketOffsetModifier) == 0x0014E8, "Member 'UAdvancedCamera::SocketOffsetModifier' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, SocketRotationOffset) == 0x001500, "Member 'UAdvancedCamera::SocketRotationOffset' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, TargetOffset) == 0x0015C8, "Member 'UAdvancedCamera::TargetOffset' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, TargetOffsetModifier) == 0x0015E0, "Member 'UAdvancedCamera::TargetOffsetModifier' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, FOV) == 0x0015F8, "Member 'UAdvancedCamera::FOV' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, FOVModifier) == 0x0015FC, "Member 'UAdvancedCamera::FOVModifier' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, FixedSpringArmByPitch) == 0x001600, "Member 'UAdvancedCamera::FixedSpringArmByPitch' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, FixedSpringArmByPitchCurveAsset) == 0x001608, "Member 'UAdvancedCamera::FixedSpringArmByPitchCurveAsset' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, PlayerSettingArmLengthCurves) == 0x001610, "Member 'UAdvancedCamera::PlayerSettingArmLengthCurves' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, PlayerSettingArmLengthCurve) == 0x001620, "Member 'UAdvancedCamera::PlayerSettingArmLengthCurve' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bDoCollisionTest) == 0x001628, "Member 'UAdvancedCamera::bDoCollisionTest' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, ProbeSize) == 0x00162C, "Member 'UAdvancedCamera::ProbeSize' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraCollisionProcessClass) == 0x001630, "Member 'UAdvancedCamera::CameraCollisionProcessClass' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraCollisionProcess) == 0x001638, "Member 'UAdvancedCamera::CameraCollisionProcess' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bDoLocationLag) == 0x001640, "Member 'UAdvancedCamera::bDoLocationLag' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bDoRotationLag) == 0x001641, "Member 'UAdvancedCamera::bDoRotationLag' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bDoTargetArmlengthLag) == 0x001642, "Member 'UAdvancedCamera::bDoTargetArmlengthLag' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraLagProcessClass) == 0x001648, "Member 'UAdvancedCamera::CameraLagProcessClass' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraLagProcess) == 0x001650, "Member 'UAdvancedCamera::CameraLagProcess' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, NormalConfigKey) == 0x001658, "Member 'UAdvancedCamera::NormalConfigKey' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, PreviousDesiredSpringArmRot) == 0x001678, "Member 'UAdvancedCamera::PreviousDesiredSpringArmRot' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bSpecifiedTargetView) == 0x001730, "Member 'UAdvancedCamera::bSpecifiedTargetView' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bSpecifiedTargetViewBlending) == 0x001731, "Member 'UAdvancedCamera::bSpecifiedTargetViewBlending' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, BlendParams) == 0x001738, "Member 'UAdvancedCamera::BlendParams' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, SpecifiedTargetBeginBlendViewInfo) == 0x001760, "Member 'UAdvancedCamera::SpecifiedTargetBeginBlendViewInfo' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, SpecifiedTargetViewInfo) == 0x0020F0, "Member 'UAdvancedCamera::SpecifiedTargetViewInfo' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, SpecifiedTargetTime) == 0x002A80, "Member 'UAdvancedCamera::SpecifiedTargetTime' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bOverrideArmlength) == 0x002A84, "Member 'UAdvancedCamera::bOverrideArmlength' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, OverrideArmlengthValue) == 0x002A88, "Member 'UAdvancedCamera::OverrideArmlengthValue' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bLockRelativeRotationToLookAtTarget) == 0x002A8C, "Member 'UAdvancedCamera::bLockRelativeRotationToLookAtTarget' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bBlueprintDevelopment) == 0x002AB1, "Member 'UAdvancedCamera::bBlueprintDevelopment' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, DebugSumInputVector) == 0x002AF8, "Member 'UAdvancedCamera::DebugSumInputVector' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, DebugSumFinalInputVector) == 0x002B10, "Member 'UAdvancedCamera::DebugSumFinalInputVector' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, OnX6CameraRuntimeConfigChanged) == 0x002BD0, "Member 'UAdvancedCamera::OnX6CameraRuntimeConfigChanged' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, InterpLookAtLocationSpeedScale) == 0x002BE0, "Member 'UAdvancedCamera::InterpLookAtLocationSpeedScale' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, MaxDistanceToInterpTargetScale) == 0x002BF8, "Member 'UAdvancedCamera::MaxDistanceToInterpTargetScale' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bNeedInterpLookAtLocation) == 0x002BFC, "Member 'UAdvancedCamera::bNeedInterpLookAtLocation' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, LookAtTarget) == 0x002C00, "Member 'UAdvancedCamera::LookAtTarget' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraConfigPrioritySet) == 0x002C08, "Member 'UAdvancedCamera::CameraConfigPrioritySet' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, BaseCameraConfigPrioritySet) == 0x002C58, "Member 'UAdvancedCamera::BaseCameraConfigPrioritySet' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraOrientationSynchronizerClass) == 0x002CC0, "Member 'UAdvancedCamera::CameraOrientationSynchronizerClass' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, BlueprintSetDefaultSynchronizerClass) == 0x002CC8, "Member 'UAdvancedCamera::BlueprintSetDefaultSynchronizerClass' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, CameraOrientationSynchronizer) == 0x002CF8, "Member 'UAdvancedCamera::CameraOrientationSynchronizer' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, bEnableBasedMovementFix) == 0x002D10, "Member 'UAdvancedCamera::bEnableBasedMovementFix' has a wrong offset!");
+static_assert(offsetof(UAdvancedCamera, BasedMovementHelper) == 0x002D20, "Member 'UAdvancedCamera::BasedMovementHelper' has a wrong offset!");
 
 // Class X6Camera.AdvancedCameraBPFLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -360,57 +367,57 @@ static_assert(alignof(UAdvancedCameraBPFLibrary) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UAdvancedCameraBPFLibrary) == 0x000028, "Wrong size on UAdvancedCameraBPFLibrary");
 
 // Class X6Camera.X6PlayerCameraManagerBase
-// 0x46C0 (0x7280 - 0x2BC0)
+// 0x47A0 (0x73E0 - 0x2C40)
 class AX6PlayerCameraManagerBase : public APlayerCameraManager
 {
 public:
-	bool                                          bBlendignNewCameraView;                            // 0x2BB8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2BB9[0x1F];                                    // 0x2BB9(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
-	ECameraBlendPathType                          CameraBlendType;                                   // 0x2BD8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2BD9[0x7];                                     // 0x2BD9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       CacheCameraView;                                   // 0x2BE0(0x0970)(Transient, NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       BeginBlendCameraView;                              // 0x3550(0x0970)(Transient, NativeAccessSpecifierPublic)
-	struct FTransCameraViewData                   NewCameraViewData;                                 // 0x3EC0(0x0990)(Transient, NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       CachePOV;                                          // 0x4850(0x0970)(BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FTViewTarget                           LastBlendCompleteTarget;                           // 0x51C0(0x0990)(Transient, NativeAccessSpecifierPublic)
-	struct FViewTargetCurveTransitionParams       CurveTransitionParams;                             // 0x5B50(0x0020)(Transient, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bBlendBackToViewTargetFromCameraView;              // 0x5B70(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5B71[0x7];                                     // 0x5B71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraSpringArmPathBlend              SpringArmPathBlend;                                // 0x5B78(0x0070)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSplineCurves                          SplineCurves;                                      // 0x5BE8(0x0070)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        BezierPoints;                                      // 0x5C58(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C68[0x28];                                    // 0x5C68(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class ULegacyCameraShake>         CustomizeCameraShake;                              // 0x5C90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C98[0x18];                                    // 0x5C98(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class AActor* NewViewTarget)> OnNewTargetBlendEndEvent;            // 0x5CB0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* NewViewTarget)> OnNewTargetBlendBeginEvent;          // 0x5CC0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class AActor* OldViewTarget, class AActor* NewViewTarget)> OnTargetBlendCompleteEvent; // 0x5CD0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool YawValue, bool PitchValue)> OnCameraPitchYawSyncSettingValueChanged; // 0x5CE0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	TArray<struct FCameraStateViewTagetData>      CameraStates;                                      // 0x5CF0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName VFXType, float Value)> OnCameraVFXValueChangedEvent;   // 0x5D00(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5D10[0x8];                                     // 0x5D10(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UCameraModifiersDetailData*, struct FCameraModifierList> ModifierMap;                 // 0x5D18(0x0050)(NativeAccessSpecifierPublic)
-	TArray<class UCameraTaskExecuter*>            TaskExecuters;                                     // 0x5D68(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5D78[0x2A];                                    // 0x5D78(0x002A)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bAllowInputDuringBlend;                            // 0x5DA2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5DA3[0x5];                                     // 0x5DA3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FX6CameraZoomCommonSettings            ZoomCommonSettings;                                // 0x5DA8(0x0080)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(bool bZoomLimitReached)> OnCameraZoomInLimitReached;               // 0x5E28(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E38[0x8];                                     // 0x5E38(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 TransitionKey;                                     // 0x5E40(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LastTransitionKey;                                 // 0x5E50(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UObject>                 TargetCameraStateObject;                           // 0x5E60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             CameraStateTransition;                             // 0x5E68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraState                                  CameraState;                                       // 0x5E70(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETraceTypeQuery                               BlendingCollisionTraceType;                        // 0x5E71(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5E72[0x6];                                     // 0x5E72(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EX6CameraInputDeviceType, struct FVector2D> InputAxisScaleMap;                              // 0x5E78(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class UDataTable*                             CameraConfigPriorityDataTable;                     // 0x5EC8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FString, EX6CameraPlatformType>    X6CameraPlatformKeywordTypeMap;                    // 0x5ED0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	bool                                          bCameraIsBlending;                                 // 0x5F20(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_5F21[0x3F];                                    // 0x5F21(0x003F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCameraCacheEntry                      CameraCachePublic;                                 // 0x5F60(0x0980)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_68E0[0x9A0];                                   // 0x68E0(0x09A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bBlendignNewCameraView;                            // 0x2C38(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C39[0x1F];                                    // 0x2C39(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
+	ECameraBlendPathType                          CameraBlendType;                                   // 0x2C58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C59[0x7];                                     // 0x2C59(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMinimalViewInfo                       CacheCameraView;                                   // 0x2C60(0x0990)(Transient, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       BeginBlendCameraView;                              // 0x35F0(0x0990)(Transient, NativeAccessSpecifierPublic)
+	struct FTransCameraViewData                   NewCameraViewData;                                 // 0x3F80(0x09B0)(Transient, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       CachePOV;                                          // 0x4930(0x0990)(BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FTViewTarget                           LastBlendCompleteTarget;                           // 0x52C0(0x09B0)(Transient, NativeAccessSpecifierPublic)
+	struct FViewTargetCurveTransitionParams       CurveTransitionParams;                             // 0x5C70(0x0020)(Transient, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bBlendBackToViewTargetFromCameraView;              // 0x5C90(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C91[0x7];                                     // 0x5C91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraSpringArmPathBlend              SpringArmPathBlend;                                // 0x5C98(0x0070)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSplineCurves                          SplineCurves;                                      // 0x5D08(0x0070)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        BezierPoints;                                      // 0x5D78(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5D88[0x28];                                    // 0x5D88(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class ULegacyCameraShake>         CustomizeCameraShake;                              // 0x5DB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5DB8[0x18];                                    // 0x5DB8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class AActor* NewViewTarget)> OnNewTargetBlendEndEvent;            // 0x5DD0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* NewViewTarget)> OnNewTargetBlendBeginEvent;          // 0x5DE0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class AActor* OldViewTarget, class AActor* NewViewTarget)> OnTargetBlendCompleteEvent; // 0x5DF0(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool YawValue, bool PitchValue)> OnCameraPitchYawSyncSettingValueChanged; // 0x5E00(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TArray<struct FCameraStateViewTagetData>      CameraStates;                                      // 0x5E10(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName VFXType, float Value)> OnCameraVFXValueChangedEvent;   // 0x5E20(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5E30[0x8];                                     // 0x5E30(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UCameraModifiersDetailData*, struct FCameraModifierList> ModifierMap;                 // 0x5E38(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class UCameraTaskExecuter*>            TaskExecuters;                                     // 0x5E88(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5E98[0x2A];                                    // 0x5E98(0x002A)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bAllowInputDuringBlend;                            // 0x5EC2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_5EC3[0x5];                                     // 0x5EC3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FX6CameraZoomCommonSettings            ZoomCommonSettings;                                // 0x5EC8(0x0080)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool bZoomLimitReached)> OnCameraZoomInLimitReached;               // 0x5F48(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F58[0x8];                                     // 0x5F58(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 TransitionKey;                                     // 0x5F60(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LastTransitionKey;                                 // 0x5F70(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UObject>                 TargetCameraStateObject;                           // 0x5F80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             CameraStateTransition;                             // 0x5F88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraState                                  CameraState;                                       // 0x5F90(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETraceTypeQuery                               BlendingCollisionTraceType;                        // 0x5F91(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F92[0x6];                                     // 0x5F92(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EX6CameraInputDeviceType, struct FVector2D> InputAxisScaleMap;                              // 0x5F98(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class UDataTable*                             CameraConfigPriorityDataTable;                     // 0x5FE8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FString, EX6CameraPlatformType>    X6CameraPlatformKeywordTypeMap;                    // 0x5FF0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	bool                                          bCameraIsBlending;                                 // 0x6040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6041[0x3F];                                    // 0x6041(0x003F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCameraCacheEntry                      CameraCachePublic;                                 // 0x6080(0x09A0)(Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6A20[0x9C0];                                   // 0x6A20(0x09C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddCameraModifierToCustomList(class UCameraModifiersDetailData* CameraModifierDataAsset);
@@ -445,6 +452,7 @@ public:
 
 	struct FTViewTarget GetCameraPendingViewTarget() const;
 	struct FTViewTarget GetCameraViewTarget() const;
+	float GetCurrentFOVWithoutPlayerSetting(class AActor* InTargetActor) const;
 	bool GetEnableRotateInput() const;
 	bool GetEnableZoomInput() const;
 	struct FVector GetLastCameraLocation() const;
@@ -470,42 +478,42 @@ public:
 	}
 };
 static_assert(alignof(AX6PlayerCameraManagerBase) == 0x000010, "Wrong alignment on AX6PlayerCameraManagerBase");
-static_assert(sizeof(AX6PlayerCameraManagerBase) == 0x007280, "Wrong size on AX6PlayerCameraManagerBase");
-static_assert(offsetof(AX6PlayerCameraManagerBase, bBlendignNewCameraView) == 0x002BB8, "Member 'AX6PlayerCameraManagerBase::bBlendignNewCameraView' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CameraBlendType) == 0x002BD8, "Member 'AX6PlayerCameraManagerBase::CameraBlendType' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CacheCameraView) == 0x002BE0, "Member 'AX6PlayerCameraManagerBase::CacheCameraView' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, BeginBlendCameraView) == 0x003550, "Member 'AX6PlayerCameraManagerBase::BeginBlendCameraView' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, NewCameraViewData) == 0x003EC0, "Member 'AX6PlayerCameraManagerBase::NewCameraViewData' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CachePOV) == 0x004850, "Member 'AX6PlayerCameraManagerBase::CachePOV' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, LastBlendCompleteTarget) == 0x0051C0, "Member 'AX6PlayerCameraManagerBase::LastBlendCompleteTarget' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CurveTransitionParams) == 0x005B50, "Member 'AX6PlayerCameraManagerBase::CurveTransitionParams' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, bBlendBackToViewTargetFromCameraView) == 0x005B70, "Member 'AX6PlayerCameraManagerBase::bBlendBackToViewTargetFromCameraView' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, SpringArmPathBlend) == 0x005B78, "Member 'AX6PlayerCameraManagerBase::SpringArmPathBlend' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, SplineCurves) == 0x005BE8, "Member 'AX6PlayerCameraManagerBase::SplineCurves' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, BezierPoints) == 0x005C58, "Member 'AX6PlayerCameraManagerBase::BezierPoints' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CustomizeCameraShake) == 0x005C90, "Member 'AX6PlayerCameraManagerBase::CustomizeCameraShake' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, OnNewTargetBlendEndEvent) == 0x005CB0, "Member 'AX6PlayerCameraManagerBase::OnNewTargetBlendEndEvent' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, OnNewTargetBlendBeginEvent) == 0x005CC0, "Member 'AX6PlayerCameraManagerBase::OnNewTargetBlendBeginEvent' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, OnTargetBlendCompleteEvent) == 0x005CD0, "Member 'AX6PlayerCameraManagerBase::OnTargetBlendCompleteEvent' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, OnCameraPitchYawSyncSettingValueChanged) == 0x005CE0, "Member 'AX6PlayerCameraManagerBase::OnCameraPitchYawSyncSettingValueChanged' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CameraStates) == 0x005CF0, "Member 'AX6PlayerCameraManagerBase::CameraStates' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, OnCameraVFXValueChangedEvent) == 0x005D00, "Member 'AX6PlayerCameraManagerBase::OnCameraVFXValueChangedEvent' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, ModifierMap) == 0x005D18, "Member 'AX6PlayerCameraManagerBase::ModifierMap' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, TaskExecuters) == 0x005D68, "Member 'AX6PlayerCameraManagerBase::TaskExecuters' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, bAllowInputDuringBlend) == 0x005DA2, "Member 'AX6PlayerCameraManagerBase::bAllowInputDuringBlend' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, ZoomCommonSettings) == 0x005DA8, "Member 'AX6PlayerCameraManagerBase::ZoomCommonSettings' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, OnCameraZoomInLimitReached) == 0x005E28, "Member 'AX6PlayerCameraManagerBase::OnCameraZoomInLimitReached' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, TransitionKey) == 0x005E40, "Member 'AX6PlayerCameraManagerBase::TransitionKey' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, LastTransitionKey) == 0x005E50, "Member 'AX6PlayerCameraManagerBase::LastTransitionKey' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, TargetCameraStateObject) == 0x005E60, "Member 'AX6PlayerCameraManagerBase::TargetCameraStateObject' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CameraStateTransition) == 0x005E68, "Member 'AX6PlayerCameraManagerBase::CameraStateTransition' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CameraState) == 0x005E70, "Member 'AX6PlayerCameraManagerBase::CameraState' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, BlendingCollisionTraceType) == 0x005E71, "Member 'AX6PlayerCameraManagerBase::BlendingCollisionTraceType' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, InputAxisScaleMap) == 0x005E78, "Member 'AX6PlayerCameraManagerBase::InputAxisScaleMap' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CameraConfigPriorityDataTable) == 0x005EC8, "Member 'AX6PlayerCameraManagerBase::CameraConfigPriorityDataTable' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, X6CameraPlatformKeywordTypeMap) == 0x005ED0, "Member 'AX6PlayerCameraManagerBase::X6CameraPlatformKeywordTypeMap' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, bCameraIsBlending) == 0x005F20, "Member 'AX6PlayerCameraManagerBase::bCameraIsBlending' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManagerBase, CameraCachePublic) == 0x005F60, "Member 'AX6PlayerCameraManagerBase::CameraCachePublic' has a wrong offset!");
+static_assert(sizeof(AX6PlayerCameraManagerBase) == 0x0073E0, "Wrong size on AX6PlayerCameraManagerBase");
+static_assert(offsetof(AX6PlayerCameraManagerBase, bBlendignNewCameraView) == 0x002C38, "Member 'AX6PlayerCameraManagerBase::bBlendignNewCameraView' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CameraBlendType) == 0x002C58, "Member 'AX6PlayerCameraManagerBase::CameraBlendType' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CacheCameraView) == 0x002C60, "Member 'AX6PlayerCameraManagerBase::CacheCameraView' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, BeginBlendCameraView) == 0x0035F0, "Member 'AX6PlayerCameraManagerBase::BeginBlendCameraView' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, NewCameraViewData) == 0x003F80, "Member 'AX6PlayerCameraManagerBase::NewCameraViewData' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CachePOV) == 0x004930, "Member 'AX6PlayerCameraManagerBase::CachePOV' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, LastBlendCompleteTarget) == 0x0052C0, "Member 'AX6PlayerCameraManagerBase::LastBlendCompleteTarget' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CurveTransitionParams) == 0x005C70, "Member 'AX6PlayerCameraManagerBase::CurveTransitionParams' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, bBlendBackToViewTargetFromCameraView) == 0x005C90, "Member 'AX6PlayerCameraManagerBase::bBlendBackToViewTargetFromCameraView' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, SpringArmPathBlend) == 0x005C98, "Member 'AX6PlayerCameraManagerBase::SpringArmPathBlend' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, SplineCurves) == 0x005D08, "Member 'AX6PlayerCameraManagerBase::SplineCurves' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, BezierPoints) == 0x005D78, "Member 'AX6PlayerCameraManagerBase::BezierPoints' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CustomizeCameraShake) == 0x005DB0, "Member 'AX6PlayerCameraManagerBase::CustomizeCameraShake' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, OnNewTargetBlendEndEvent) == 0x005DD0, "Member 'AX6PlayerCameraManagerBase::OnNewTargetBlendEndEvent' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, OnNewTargetBlendBeginEvent) == 0x005DE0, "Member 'AX6PlayerCameraManagerBase::OnNewTargetBlendBeginEvent' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, OnTargetBlendCompleteEvent) == 0x005DF0, "Member 'AX6PlayerCameraManagerBase::OnTargetBlendCompleteEvent' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, OnCameraPitchYawSyncSettingValueChanged) == 0x005E00, "Member 'AX6PlayerCameraManagerBase::OnCameraPitchYawSyncSettingValueChanged' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CameraStates) == 0x005E10, "Member 'AX6PlayerCameraManagerBase::CameraStates' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, OnCameraVFXValueChangedEvent) == 0x005E20, "Member 'AX6PlayerCameraManagerBase::OnCameraVFXValueChangedEvent' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, ModifierMap) == 0x005E38, "Member 'AX6PlayerCameraManagerBase::ModifierMap' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, TaskExecuters) == 0x005E88, "Member 'AX6PlayerCameraManagerBase::TaskExecuters' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, bAllowInputDuringBlend) == 0x005EC2, "Member 'AX6PlayerCameraManagerBase::bAllowInputDuringBlend' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, ZoomCommonSettings) == 0x005EC8, "Member 'AX6PlayerCameraManagerBase::ZoomCommonSettings' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, OnCameraZoomInLimitReached) == 0x005F48, "Member 'AX6PlayerCameraManagerBase::OnCameraZoomInLimitReached' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, TransitionKey) == 0x005F60, "Member 'AX6PlayerCameraManagerBase::TransitionKey' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, LastTransitionKey) == 0x005F70, "Member 'AX6PlayerCameraManagerBase::LastTransitionKey' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, TargetCameraStateObject) == 0x005F80, "Member 'AX6PlayerCameraManagerBase::TargetCameraStateObject' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CameraStateTransition) == 0x005F88, "Member 'AX6PlayerCameraManagerBase::CameraStateTransition' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CameraState) == 0x005F90, "Member 'AX6PlayerCameraManagerBase::CameraState' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, BlendingCollisionTraceType) == 0x005F91, "Member 'AX6PlayerCameraManagerBase::BlendingCollisionTraceType' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, InputAxisScaleMap) == 0x005F98, "Member 'AX6PlayerCameraManagerBase::InputAxisScaleMap' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CameraConfigPriorityDataTable) == 0x005FE8, "Member 'AX6PlayerCameraManagerBase::CameraConfigPriorityDataTable' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, X6CameraPlatformKeywordTypeMap) == 0x005FF0, "Member 'AX6PlayerCameraManagerBase::X6CameraPlatformKeywordTypeMap' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, bCameraIsBlending) == 0x006040, "Member 'AX6PlayerCameraManagerBase::bCameraIsBlending' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManagerBase, CameraCachePublic) == 0x006080, "Member 'AX6PlayerCameraManagerBase::CameraCachePublic' has a wrong offset!");
 
 // Class X6Camera.CameraBaseParamsData
 // 0x0058 (0x0088 - 0x0030)
@@ -951,6 +959,46 @@ public:
 };
 static_assert(alignof(UCameraModifier_LocationOffset) == 0x000008, "Wrong alignment on UCameraModifier_LocationOffset");
 static_assert(sizeof(UCameraModifier_LocationOffset) == 0x0000E8, "Wrong size on UCameraModifier_LocationOffset");
+
+// Class X6Camera.CameraModifier_PlayerSettingFOV
+// 0x00B8 (0x0100 - 0x0048)
+class UCameraModifier_PlayerSettingFOV : public UCameraModifier
+{
+public:
+	TSet<ECameraState>                            AcceptEffectCameraStates;                          // 0x0048(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         ModifiedFOVMin;                                    // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ModifiedFOVMax;                                    // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothAdjust;                                      // 0x00A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FOVMultiplier;                                     // 0x00A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x58];                                      // 0x00A8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UCameraModifier_PlayerSettingFOV* GetPlayerSettingFOVModifier(const class UObject* WorldContextObject);
+	static void SetCameraAcceptEffect(class AActor* InActorWithCamera, bool bAcceptEffect);
+
+	void OnViewTargetChanged(class APlayerController* PC, class AActor* OldTarget, class AActor* NewTarget);
+
+	float GetFOVWithoutPlayerSetting(const class AActor* InActor, float InTargetFOV) const;
+	bool IfCameraUsePlayerSettingFOV(const class AActor* InActor) const;
+	float ModifyFOV(float InFOV) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"CameraModifier_PlayerSettingFOV">();
+	}
+	static class UCameraModifier_PlayerSettingFOV* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCameraModifier_PlayerSettingFOV>();
+	}
+};
+static_assert(alignof(UCameraModifier_PlayerSettingFOV) == 0x000008, "Wrong alignment on UCameraModifier_PlayerSettingFOV");
+static_assert(sizeof(UCameraModifier_PlayerSettingFOV) == 0x000100, "Wrong size on UCameraModifier_PlayerSettingFOV");
+static_assert(offsetof(UCameraModifier_PlayerSettingFOV, AcceptEffectCameraStates) == 0x000048, "Member 'UCameraModifier_PlayerSettingFOV::AcceptEffectCameraStates' has a wrong offset!");
+static_assert(offsetof(UCameraModifier_PlayerSettingFOV, ModifiedFOVMin) == 0x000098, "Member 'UCameraModifier_PlayerSettingFOV::ModifiedFOVMin' has a wrong offset!");
+static_assert(offsetof(UCameraModifier_PlayerSettingFOV, ModifiedFOVMax) == 0x00009C, "Member 'UCameraModifier_PlayerSettingFOV::ModifiedFOVMax' has a wrong offset!");
+static_assert(offsetof(UCameraModifier_PlayerSettingFOV, SmoothAdjust) == 0x0000A0, "Member 'UCameraModifier_PlayerSettingFOV::SmoothAdjust' has a wrong offset!");
+static_assert(offsetof(UCameraModifier_PlayerSettingFOV, FOVMultiplier) == 0x0000A4, "Member 'UCameraModifier_PlayerSettingFOV::FOVMultiplier' has a wrong offset!");
 
 // Class X6Camera.CameraModifier_SpringArmLength
 // 0x0030 (0x0080 - 0x0050)
@@ -1542,14 +1590,14 @@ static_assert(sizeof(UCameraTask) == 0x0000B0, "Wrong size on UCameraTask");
 static_assert(offsetof(UCameraTask, CameraTransform) == 0x000050, "Member 'UCameraTask::CameraTransform' has a wrong offset!");
 
 // Class X6Camera.CameraTask_MoveTo
-// 0x1CE8 (0x1D30 - 0x0048)
+// 0x1D48 (0x1D90 - 0x0048)
 class UCameraTask_MoveTo final : public UX6CameraTaskBase
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TargetCameraTransfrom;                             // 0x0050(0x0060)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FViewTargetTransitionParams            TransitionParams;                                  // 0x00B0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D0[0x1C60];                                    // 0x00D0(0x1C60)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_D0[0x1CC0];                                    // 0x00D0(0x1CC0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1562,20 +1610,20 @@ public:
 	}
 };
 static_assert(alignof(UCameraTask_MoveTo) == 0x000010, "Wrong alignment on UCameraTask_MoveTo");
-static_assert(sizeof(UCameraTask_MoveTo) == 0x001D30, "Wrong size on UCameraTask_MoveTo");
+static_assert(sizeof(UCameraTask_MoveTo) == 0x001D90, "Wrong size on UCameraTask_MoveTo");
 static_assert(offsetof(UCameraTask_MoveTo, TargetCameraTransfrom) == 0x000050, "Member 'UCameraTask_MoveTo::TargetCameraTransfrom' has a wrong offset!");
 static_assert(offsetof(UCameraTask_MoveTo, TransitionParams) == 0x0000B0, "Member 'UCameraTask_MoveTo::TransitionParams' has a wrong offset!");
 
 // Class X6Camera.CameraTask_LookAt
-// 0x1CE8 (0x1D30 - 0x0048)
+// 0x1D48 (0x1D90 - 0x0048)
 class UCameraTask_LookAt final : public UX6CameraTaskBase
 {
 public:
 	ECameraTaskLookAtType                         LookAtType;                                        // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_49[0x2F];                                      // 0x0049(0x002F)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraTaskObject*                      CameraTaskObject;                                  // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x1C50];                                    // 0x0080(0x1C50)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CameraTransform;                                   // 0x1CD0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_80[0x1CB0];                                    // 0x0080(0x1CB0)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CameraTransform;                                   // 0x1D30(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -1588,20 +1636,20 @@ public:
 	}
 };
 static_assert(alignof(UCameraTask_LookAt) == 0x000010, "Wrong alignment on UCameraTask_LookAt");
-static_assert(sizeof(UCameraTask_LookAt) == 0x001D30, "Wrong size on UCameraTask_LookAt");
+static_assert(sizeof(UCameraTask_LookAt) == 0x001D90, "Wrong size on UCameraTask_LookAt");
 static_assert(offsetof(UCameraTask_LookAt, LookAtType) == 0x000048, "Member 'UCameraTask_LookAt::LookAtType' has a wrong offset!");
 static_assert(offsetof(UCameraTask_LookAt, CameraTaskObject) == 0x000078, "Member 'UCameraTask_LookAt::CameraTaskObject' has a wrong offset!");
-static_assert(offsetof(UCameraTask_LookAt, CameraTransform) == 0x001CD0, "Member 'UCameraTask_LookAt::CameraTransform' has a wrong offset!");
+static_assert(offsetof(UCameraTask_LookAt, CameraTransform) == 0x001D30, "Member 'UCameraTask_LookAt::CameraTransform' has a wrong offset!");
 
 // Class X6Camera.CameraTask_Spline
-// 0x1D38 (0x1D80 - 0x0048)
+// 0x1D98 (0x1DE0 - 0x0048)
 class UCameraTask_Spline final : public UX6CameraTaskBase
 {
 public:
 	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CameraTransform;                                   // 0x0050(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FCameraTaskSplineBlendInfo>     SplineBlendInfo;                                   // 0x00B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C0[0x1CC0];                                    // 0x00C0(0x1CC0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_C0[0x1D20];                                    // 0x00C0(0x1D20)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1614,7 +1662,7 @@ public:
 	}
 };
 static_assert(alignof(UCameraTask_Spline) == 0x000010, "Wrong alignment on UCameraTask_Spline");
-static_assert(sizeof(UCameraTask_Spline) == 0x001D80, "Wrong size on UCameraTask_Spline");
+static_assert(sizeof(UCameraTask_Spline) == 0x001DE0, "Wrong size on UCameraTask_Spline");
 static_assert(offsetof(UCameraTask_Spline, CameraTransform) == 0x000050, "Member 'UCameraTask_Spline::CameraTransform' has a wrong offset!");
 static_assert(offsetof(UCameraTask_Spline, SplineBlendInfo) == 0x0000B0, "Member 'UCameraTask_Spline::SplineBlendInfo' has a wrong offset!");
 

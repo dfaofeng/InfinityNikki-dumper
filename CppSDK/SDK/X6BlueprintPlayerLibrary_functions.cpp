@@ -327,6 +327,32 @@ void UX6BlueprintPlayerLibrary_C::IsLocalPlayerControllingPawn(class AActor* Act
 }
 
 
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.IsGhostCharacter
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   isGhost                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintPlayerLibrary_C::IsGhostCharacter(class AActor* InActor, class UObject* __WorldContext, bool* isGhost)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintPlayerLibrary_C", "IsGhostCharacter");
+
+	Params::X6BlueprintPlayerLibrary_C_IsGhostCharacter Parms{};
+
+	Parms.InActor = InActor;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (isGhost != nullptr)
+		*isGhost = Parms.isGhost;
+}
+
+
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.GetX6GameNikkiPawn
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -701,6 +727,30 @@ void UX6BlueprintPlayerLibrary_C::BP_StopPlayForceFeedback(class UForceFeedbackE
 
 	Parms.ForceFeedbackEffect = ForceFeedbackEffect;
 	Parms.TagName = TagName;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetWeaponOverlayEnabled
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintPlayerLibrary_C::BP_SetWeaponOverlayEnabled(class AActor* InActor, bool bEnable, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintPlayerLibrary_C", "BP_SetWeaponOverlayEnabled");
+
+	Params::X6BlueprintPlayerLibrary_C_BP_SetWeaponOverlayEnabled Parms{};
+
+	Parms.InActor = InActor;
+	Parms.bEnable = bEnable;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
@@ -1274,13 +1324,13 @@ void UX6BlueprintPlayerLibrary_C::BP_ExitGamePlayMovementMode(EPlayerGamePlayMov
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int64                                   WeaponID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    SlotType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // bool                                    ImmediateRequest                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    InSync                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UX6BlueprintPlayerLibrary_C::BP_EquipWeaponByID(class AActor* InActor, const class FString& WeaponID, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext)
+void UX6BlueprintPlayerLibrary_C::BP_EquipWeaponByID(class AActor* InActor, int64 WeaponID, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1290,7 +1340,7 @@ void UX6BlueprintPlayerLibrary_C::BP_EquipWeaponByID(class AActor* InActor, cons
 	Params::X6BlueprintPlayerLibrary_C_BP_EquipWeaponByID Parms{};
 
 	Parms.InActor = InActor;
-	Parms.WeaponID = std::move(WeaponID);
+	Parms.WeaponID = WeaponID;
 	Parms.SlotType = std::move(SlotType);
 	Parms.ImmediateRequest = ImmediateRequest;
 	Parms.InSync = InSync;

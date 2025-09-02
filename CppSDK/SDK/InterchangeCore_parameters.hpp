@@ -53,267 +53,6 @@ static_assert(alignof(InterchangeSourceData_GetFilename) == 0x000008, "Wrong ali
 static_assert(sizeof(InterchangeSourceData_GetFilename) == 0x000010, "Wrong size on InterchangeSourceData_GetFilename");
 static_assert(offsetof(InterchangeSourceData_GetFilename, ReturnValue) == 0x000000, "Member 'InterchangeSourceData_GetFilename::ReturnValue' has a wrong offset!");
 
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Boolean
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean final
-{
-public:
-	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Value;                                             // 0x0018(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::Value' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::RequiresDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Double
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double final
-{
-public:
-	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        Value;                                             // 0x0018(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::Value' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::RequiresDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Float
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float final
-{
-public:
-	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Value;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::Value' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::RequiresDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_FString
-// 0x0040 (0x0040 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString final
-{
-public:
-	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Value;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PayloadKey;                                        // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequiresDelegate;                                  // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString) == 0x000040, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::Value' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, PayloadKey) == 0x000028, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, RequiresDelegate) == 0x000038, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::RequiresDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, ReturnValue) == 0x000039, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Int32
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32 final
-{
-public:
-	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Value;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::Value' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::PayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::RequiresDelegate' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.DuplicateAllUserDefinedAttribute
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeSourceNode;                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UInterchangeBaseNode*                   InterchangeDestinationNode;                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAddSourceNodeName;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute) == 0x000018, "Wrong size on InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute, InterchangeSourceNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute::InterchangeSourceNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute, InterchangeDestinationNode) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute::InterchangeDestinationNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute, bAddSourceNodeName) == 0x000010, "Member 'InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute::bAddSourceNodeName' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Boolean
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          OutValue;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::OutValue' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::OutPayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Double
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        OutValue;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::OutValue' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::OutPayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Float
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutValue;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::OutValue' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::OutPayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_FString
-// 0x0040 (0x0040 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutValue;                                          // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 OutPayloadKey;                                     // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString) == 0x000040, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::OutValue' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, OutPayloadKey) == 0x000028, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::OutPayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, ReturnValue) == 0x000038, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Int32
-// 0x0038 (0x0038 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32 final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutValue;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::OutValue' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::OutPayloadKey' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::ReturnValue' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttributeInfos
-// 0x0018 (0x0018 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos final
-{
-public:
-	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FInterchangeUserDefinedAttributeInfo> UserDefinedAttributeInfos;                   // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos) == 0x000018, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos, UserDefinedAttributeInfos) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos::UserDefinedAttributeInfos' has a wrong offset!");
-
-// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.RemoveUserDefinedAttribute
-// 0x0020 (0x0020 - 0x0000)
-struct InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute final
-{
-public:
-	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute");
-static_assert(sizeof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute) == 0x000020, "Wrong size on InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute::InterchangeNode' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute::UserDefinedAttributeName' has a wrong offset!");
-static_assert(offsetof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute, ReturnValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute::ReturnValue' has a wrong offset!");
-
 // Function InterchangeCore.InterchangePipelineBase.FindOrAddPropertyStates
 // 0x000C (0x000C - 0x0000)
 struct InterchangePipelineBase_FindOrAddPropertyStates final
@@ -1472,6 +1211,267 @@ static_assert(alignof(InterchangeSourceNode_GetCustomSourceTimelineStart) == 0x0
 static_assert(sizeof(InterchangeSourceNode_GetCustomSourceTimelineStart) == 0x000010, "Wrong size on InterchangeSourceNode_GetCustomSourceTimelineStart");
 static_assert(offsetof(InterchangeSourceNode_GetCustomSourceTimelineStart, AttributeValue) == 0x000000, "Member 'InterchangeSourceNode_GetCustomSourceTimelineStart::AttributeValue' has a wrong offset!");
 static_assert(offsetof(InterchangeSourceNode_GetCustomSourceTimelineStart, ReturnValue) == 0x000008, "Member 'InterchangeSourceNode_GetCustomSourceTimelineStart::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Boolean
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean final
+{
+public:
+	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Value;                                             // 0x0018(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::Value' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::PayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Boolean::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Double
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double final
+{
+public:
+	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Value;                                             // 0x0018(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::Value' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::PayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Double::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Float
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float final
+{
+public:
+	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Value;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::Value' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::PayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Float::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_FString
+// 0x0040 (0x0040 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString final
+{
+public:
+	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Value;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PayloadKey;                                        // 0x0028(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequiresDelegate;                                  // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString) == 0x000040, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::Value' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, PayloadKey) == 0x000028, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::PayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, RequiresDelegate) == 0x000038, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString, ReturnValue) == 0x000039, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_FString::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.CreateUserDefinedAttribute_Int32
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32 final
+{
+public:
+	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Value;                                             // 0x0018(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PayloadKey;                                        // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequiresDelegate;                                  // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0031(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, Value) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::Value' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, PayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::PayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, RequiresDelegate) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::RequiresDelegate' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32, ReturnValue) == 0x000031, "Member 'InterchangeUserDefinedAttributesAPI_CreateUserDefinedAttribute_Int32::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.DuplicateAllUserDefinedAttribute
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeSourceNode;                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UInterchangeBaseNode*                   InterchangeDestinationNode;                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAddSourceNodeName;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute) == 0x000018, "Wrong size on InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute, InterchangeSourceNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute::InterchangeSourceNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute, InterchangeDestinationNode) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute::InterchangeDestinationNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute, bAddSourceNodeName) == 0x000010, "Member 'InterchangeUserDefinedAttributesAPI_DuplicateAllUserDefinedAttribute::bAddSourceNodeName' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Boolean
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OutValue;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::OutValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::OutPayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Boolean::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Double
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        OutValue;                                          // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::OutValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::OutPayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Double::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Float
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutValue;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::OutValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::OutPayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Float::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_FString
+// 0x0040 (0x0040 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutValue;                                          // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 OutPayloadKey;                                     // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString) == 0x000040, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::OutValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, OutPayloadKey) == 0x000028, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::OutPayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString, ReturnValue) == 0x000038, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_FString::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttribute_Int32
+// 0x0038 (0x0038 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32 final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutValue;                                          // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OutPayloadKey;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32) == 0x000038, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, OutValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::OutValue' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, OutPayloadKey) == 0x000020, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::OutPayloadKey' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32, ReturnValue) == 0x000030, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttribute_Int32::ReturnValue' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.GetUserDefinedAttributeInfos
+// 0x0018 (0x0018 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos final
+{
+public:
+	const class UInterchangeBaseNode*             InterchangeNode;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FInterchangeUserDefinedAttributeInfo> UserDefinedAttributeInfos;                   // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos) == 0x000018, "Wrong size on InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos, UserDefinedAttributeInfos) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_GetUserDefinedAttributeInfos::UserDefinedAttributeInfos' has a wrong offset!");
+
+// Function InterchangeCore.InterchangeUserDefinedAttributesAPI.RemoveUserDefinedAttribute
+// 0x0020 (0x0020 - 0x0000)
+struct InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute final
+{
+public:
+	class UInterchangeBaseNode*                   InterchangeNode;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UserDefinedAttributeName;                          // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute) == 0x000008, "Wrong alignment on InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute");
+static_assert(sizeof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute) == 0x000020, "Wrong size on InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute, InterchangeNode) == 0x000000, "Member 'InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute::InterchangeNode' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute, UserDefinedAttributeName) == 0x000008, "Member 'InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute::UserDefinedAttributeName' has a wrong offset!");
+static_assert(offsetof(InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute, ReturnValue) == 0x000018, "Member 'InterchangeUserDefinedAttributesAPI_RemoveUserDefinedAttribute::ReturnValue' has a wrong offset!");
 
 }
 

@@ -38,8 +38,8 @@ public:
 	double                                        TickInterval;                                      // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_FrostBlock(int32 EntryPoint);
+	void ReceiveTick(float DeltaSeconds);
 
 	class FString GetModuleName() const;
 

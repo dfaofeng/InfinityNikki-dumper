@@ -65,22 +65,22 @@ static_assert(offsetof(LegacyCameraShake_StartLegacyCameraShakeFromSource, UserP
 static_assert(offsetof(LegacyCameraShake_StartLegacyCameraShakeFromSource, ReturnValue) == 0x000038, "Member 'LegacyCameraShake_StartLegacyCameraShakeFromSource::ReturnValue' has a wrong offset!");
 
 // Function GameplayCameras.LegacyCameraShake.BlueprintUpdateCameraShake
-// 0x12F0 (0x12F0 - 0x0000)
+// 0x1330 (0x1330 - 0x0000)
 struct LegacyCameraShake_BlueprintUpdateCameraShake final
 {
 public:
 	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         alpha;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8[0x8];                                        // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMinimalViewInfo                       POV;                                               // 0x0010(0x0970)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMinimalViewInfo                       ModifiedPOV;                                       // 0x0980(0x0970)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       POV;                                               // 0x0010(0x0990)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMinimalViewInfo                       ModifiedPOV;                                       // 0x09A0(0x0990)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LegacyCameraShake_BlueprintUpdateCameraShake) == 0x000010, "Wrong alignment on LegacyCameraShake_BlueprintUpdateCameraShake");
-static_assert(sizeof(LegacyCameraShake_BlueprintUpdateCameraShake) == 0x0012F0, "Wrong size on LegacyCameraShake_BlueprintUpdateCameraShake");
+static_assert(sizeof(LegacyCameraShake_BlueprintUpdateCameraShake) == 0x001330, "Wrong size on LegacyCameraShake_BlueprintUpdateCameraShake");
 static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, DeltaTime) == 0x000000, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::DeltaTime' has a wrong offset!");
 static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, alpha) == 0x000004, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::alpha' has a wrong offset!");
 static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, POV) == 0x000010, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::POV' has a wrong offset!");
-static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, ModifiedPOV) == 0x000980, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::ModifiedPOV' has a wrong offset!");
+static_assert(offsetof(LegacyCameraShake_BlueprintUpdateCameraShake, ModifiedPOV) == 0x0009A0, "Member 'LegacyCameraShake_BlueprintUpdateCameraShake::ModifiedPOV' has a wrong offset!");
 
 // Function GameplayCameras.LegacyCameraShake.ReceivePlayShake
 // 0x0004 (0x0004 - 0x0000)

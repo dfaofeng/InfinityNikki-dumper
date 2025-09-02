@@ -30,13 +30,13 @@ static_assert(sizeof(FPSdkCaptchaLanguagesRow) == 0x0000D8, "Wrong size on FPSdk
 struct FPSdkPaperRiskInfoModel final
 {
 public:
-	class FString                                 nonce;                                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Nonce;                                             // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 provider;                                          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FString>                         phone;                                             // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSdkPaperRiskInfoModel) == 0x000008, "Wrong alignment on FPSdkPaperRiskInfoModel");
 static_assert(sizeof(FPSdkPaperRiskInfoModel) == 0x000030, "Wrong size on FPSdkPaperRiskInfoModel");
-static_assert(offsetof(FPSdkPaperRiskInfoModel, nonce) == 0x000000, "Member 'FPSdkPaperRiskInfoModel::nonce' has a wrong offset!");
+static_assert(offsetof(FPSdkPaperRiskInfoModel, Nonce) == 0x000000, "Member 'FPSdkPaperRiskInfoModel::Nonce' has a wrong offset!");
 static_assert(offsetof(FPSdkPaperRiskInfoModel, provider) == 0x000010, "Member 'FPSdkPaperRiskInfoModel::provider' has a wrong offset!");
 static_assert(offsetof(FPSdkPaperRiskInfoModel, phone) == 0x000020, "Member 'FPSdkPaperRiskInfoModel::phone' has a wrong offset!");
 

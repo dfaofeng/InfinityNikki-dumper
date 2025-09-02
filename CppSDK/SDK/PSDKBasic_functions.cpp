@@ -198,6 +198,35 @@ void IPSDKGamePadInterface::OnKeyUpTrigger(const struct FKeyEvent& KeyEvent)
 }
 
 
+// Function PSDKBasic.PSDKHyperLinkButton.SetButtonText
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InColor                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InRichText                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InUrl                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UPSDKHyperLinkButton::SetButtonText(const class FString& InColor, const class FString& InRichText, const class FString& InUrl)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSDKHyperLinkButton", "SetButtonText");
+
+	Params::PSDKHyperLinkButton_SetButtonText Parms{};
+
+	Parms.InColor = std::move(InColor);
+	Parms.InRichText = std::move(InRichText);
+	Parms.InUrl = std::move(InUrl);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PSDKBasic.PSdkPS5BaseUI.OnGamepadButton
 // (Final, Native, Private, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -308,6 +337,44 @@ void UPSdkUITwoButtonsUI::OnCommitButton()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("PSdkUITwoButtonsUI", "OnCommitButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKBasic.PSdkUITwoButtonsUINoTitle.OnCancelButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkUITwoButtonsUINoTitle::OnCancelButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkUITwoButtonsUINoTitle", "OnCancelButton");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function PSDKBasic.PSdkUITwoButtonsUINoTitle.OnCommitButton
+// (Final, Native, Protected, BlueprintCallable)
+
+void UPSdkUITwoButtonsUINoTitle::OnCommitButton()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PSdkUITwoButtonsUINoTitle", "OnCommitButton");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

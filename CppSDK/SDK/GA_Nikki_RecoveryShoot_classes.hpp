@@ -37,29 +37,29 @@ public:
 	class UAnimMontage*                           PlayAM_FB;                                         // 0x05D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void VariableAssignment();
-	void StopFullBodyMontage();
-	void SetTarget();
-	void PlayFullBodyMontage();
-	void OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C(class AActor* ReturnActor);
-	void OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A(class AActor* ReturnActor);
-	void OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C();
-	void OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A();
-	void OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
-	void OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
-	void OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
-	void OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
-	void OnCancelled_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
-	void OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
-	void K2_OnEndAbility(bool bWasCancelled);
-	void K2_ActivateAbility();
-	void ExecuteUbergraph_GA_Nikki_RecoveryShoot(int32 EntryPoint);
-	void BP_SelectMontage();
-	void BP_GetSecondBullet(class UBP_BulletDataAsset_C** SecondBullet);
 	void BP_GetFirstBullet(class UBP_BulletDataAsset_C** FirstBullet);
+	void BP_GetSecondBullet(class UBP_BulletDataAsset_C** SecondBullet);
+	void BP_SelectMontage();
+	void ExecuteUbergraph_GA_Nikki_RecoveryShoot(int32 EntryPoint);
+	void K2_ActivateAbility();
+	void K2_OnEndAbility(bool bWasCancelled);
+	void OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
+	void OnCancelled_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
+	void OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
+	void OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
+	void OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
+	void OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName);
+	void OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A();
+	void OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C();
+	void OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A(class AActor* ReturnActor);
+	void OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C(class AActor* ReturnActor);
+	void PlayFullBodyMontage();
+	void SetTarget();
+	void StopFullBodyMontage();
+	void VariableAssignment();
 
-	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
 	class FString GetModuleName() const;
+	bool K2_ShouldAbilityRespondToEvent(const struct FGameplayAbilityActorInfo& ActorInfo, const struct FGameplayEventData& Payload) const;
 
 public:
 	static class UClass* StaticClass()

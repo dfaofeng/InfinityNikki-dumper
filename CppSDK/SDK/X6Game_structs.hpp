@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "StructUtils_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
-#include "StructUtils_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "TargetingSystem_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -379,13 +379,14 @@ enum class EBlendFunction : uint8
 };
 
 // Enum X6Game.EX6ComponentRepInfoResolveMethod
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EX6ComponentRepInfoResolveMethod : uint32
 {
 	None                                     = 0,
 	Path                                     = 1,
 	OwnerSpawnerIDAndName                    = 2,
-	EX6ComponentRepInfoResolveMethod_MAX     = 3,
+	OwnerEntityIDAndName                     = 3,
+	EX6ComponentRepInfoResolveMethod_MAX     = 4,
 };
 
 // Enum X6Game.EBushType
@@ -647,7 +648,7 @@ enum class ESceneDetailMode : uint8
 };
 
 // Enum X6Game.EGUSAntiAliasingMethod
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EGUSAntiAliasingMethod : uint8
 {
 	Off                                      = 0,
@@ -659,7 +660,8 @@ enum class EGUSAntiAliasingMethod : uint8
 	FSR3                                     = 6,
 	MobileFSR2                               = 7,
 	MobileGSR2                               = 8,
-	EGUSAntiAliasingMethod_MAX               = 9,
+	XeSS                                     = 9,
+	EGUSAntiAliasingMethod_MAX               = 10,
 };
 
 // Enum X6Game.EUpScaleMode
@@ -766,6 +768,15 @@ enum class EX6CommerceType : uint8
 	EX6CommerceType_MAX                      = 1,
 };
 
+// Enum X6Game.EX6WaterfallLayoutRule
+// NumValues: 0x0003
+enum class EX6WaterfallLayoutRule : uint8
+{
+	Number                                   = 0,
+	Height                                   = 1,
+	EX6WaterfallLayoutRule_MAX               = 2,
+};
+
 // Enum X6Game.ECarriageMovingState
 // NumValues: 0x0003
 enum class ECarriageMovingState : uint8
@@ -799,19 +810,6 @@ enum class EX6AbilityActivationGroup : uint8
 	MAX                                      = 3,
 };
 
-// ScriptStruct X6Game.DaMiaoInAirJumpAnimSet
-// 0x0010 (0x0010 - 0x0000)
-struct FDaMiaoInAirJumpAnimSet final
-{
-public:
-	class UAnimSequence*                          JumpStart;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          JumpStartLoop;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FDaMiaoInAirJumpAnimSet) == 0x000008, "Wrong alignment on FDaMiaoInAirJumpAnimSet");
-static_assert(sizeof(FDaMiaoInAirJumpAnimSet) == 0x000010, "Wrong size on FDaMiaoInAirJumpAnimSet");
-static_assert(offsetof(FDaMiaoInAirJumpAnimSet, JumpStart) == 0x000000, "Member 'FDaMiaoInAirJumpAnimSet::JumpStart' has a wrong offset!");
-static_assert(offsetof(FDaMiaoInAirJumpAnimSet, JumpStartLoop) == 0x000008, "Member 'FDaMiaoInAirJumpAnimSet::JumpStartLoop' has a wrong offset!");
-
 // ScriptStruct X6Game.LookAtParams
 // 0x000C (0x000C - 0x0000)
 struct FLookAtParams final
@@ -827,20 +825,6 @@ static_assert(sizeof(FLookAtParams) == 0x00000C, "Wrong size on FLookAtParams");
 static_assert(offsetof(FLookAtParams, LookAtEventType) == 0x000000, "Member 'FLookAtParams::LookAtEventType' has a wrong offset!");
 static_assert(offsetof(FLookAtParams, OverrideTriggerTurnAngle) == 0x000004, "Member 'FLookAtParams::OverrideTriggerTurnAngle' has a wrong offset!");
 static_assert(offsetof(FLookAtParams, KeepLookAtAngle) == 0x000008, "Member 'FLookAtParams::KeepLookAtAngle' has a wrong offset!");
-
-// ScriptStruct X6Game.FoliageGeometryInfo
-// 0x0080 (0x0080 - 0x0000)
-struct FFoliageGeometryInfo final
-{
-public:
-	struct FTransform                             InstanceTransform;                                 // 0x0000(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                InstanceBoxExtent;                                 // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FFoliageGeometryInfo) == 0x000010, "Wrong alignment on FFoliageGeometryInfo");
-static_assert(sizeof(FFoliageGeometryInfo) == 0x000080, "Wrong size on FFoliageGeometryInfo");
-static_assert(offsetof(FFoliageGeometryInfo, InstanceTransform) == 0x000000, "Member 'FFoliageGeometryInfo::InstanceTransform' has a wrong offset!");
-static_assert(offsetof(FFoliageGeometryInfo, InstanceBoxExtent) == 0x000060, "Member 'FFoliageGeometryInfo::InstanceBoxExtent' has a wrong offset!");
 
 // ScriptStruct X6Game.BipedalGroundedMoveAnimSet
 // 0x0048 (0x0048 - 0x0000)
@@ -872,79 +856,136 @@ static_assert(offsetof(FBipedalGroundedMoveAnimSet, Sprint) == 0x000030, "Member
 static_assert(offsetof(FBipedalGroundedMoveAnimSet, JogLeanAdditiveBlendSpace) == 0x000038, "Member 'FBipedalGroundedMoveAnimSet::JogLeanAdditiveBlendSpace' has a wrong offset!");
 static_assert(offsetof(FBipedalGroundedMoveAnimSet, SprintLeanAdditiveBlendSpace) == 0x000040, "Member 'FBipedalGroundedMoveAnimSet::SprintLeanAdditiveBlendSpace' has a wrong offset!");
 
-// ScriptStruct X6Game.RMBehaviorNodeInterface
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FRMBehaviorNodeInterface
+// ScriptStruct X6Game.BipedalInAirAnimSet
+// 0x0020 (0x0020 - 0x0000)
+struct FBipedalInAirAnimSet final
 {
 public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UAnimSequenceBase*                      Jump;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequenceBase*                      FallLoop;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLoopFallLoop;                                     // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequenceBase*                      LandRecoveryAdditive;                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FRMBehaviorNodeInterface) == 0x000008, "Wrong alignment on FRMBehaviorNodeInterface");
-static_assert(sizeof(FRMBehaviorNodeInterface) == 0x000008, "Wrong size on FRMBehaviorNodeInterface");
+static_assert(alignof(FBipedalInAirAnimSet) == 0x000008, "Wrong alignment on FBipedalInAirAnimSet");
+static_assert(sizeof(FBipedalInAirAnimSet) == 0x000020, "Wrong size on FBipedalInAirAnimSet");
+static_assert(offsetof(FBipedalInAirAnimSet, Jump) == 0x000000, "Member 'FBipedalInAirAnimSet::Jump' has a wrong offset!");
+static_assert(offsetof(FBipedalInAirAnimSet, FallLoop) == 0x000008, "Member 'FBipedalInAirAnimSet::FallLoop' has a wrong offset!");
+static_assert(offsetof(FBipedalInAirAnimSet, bLoopFallLoop) == 0x000010, "Member 'FBipedalInAirAnimSet::bLoopFallLoop' has a wrong offset!");
+static_assert(offsetof(FBipedalInAirAnimSet, LandRecoveryAdditive) == 0x000018, "Member 'FBipedalInAirAnimSet::LandRecoveryAdditive' has a wrong offset!");
 
-// ScriptStruct X6Game.RMBehavior_OnGround_StartTurnAroundMovement
-// 0x0008 (0x0010 - 0x0008)
-struct FRMBehavior_OnGround_StartTurnAroundMovement final : public FRMBehaviorNodeInterface
+// ScriptStruct X6Game.FoliageGeometryInfo
+// 0x0080 (0x0080 - 0x0000)
+struct FFoliageGeometryInfo final
 {
 public:
-	class AX6PlayerCameraManager*                 CurPlayerCameraManager;                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FTransform                             InstanceTransform;                                 // 0x0000(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InstanceBoxExtent;                                 // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRMBehavior_OnGround_StartTurnAroundMovement) == 0x000008, "Wrong alignment on FRMBehavior_OnGround_StartTurnAroundMovement");
-static_assert(sizeof(FRMBehavior_OnGround_StartTurnAroundMovement) == 0x000010, "Wrong size on FRMBehavior_OnGround_StartTurnAroundMovement");
-static_assert(offsetof(FRMBehavior_OnGround_StartTurnAroundMovement, CurPlayerCameraManager) == 0x000008, "Member 'FRMBehavior_OnGround_StartTurnAroundMovement::CurPlayerCameraManager' has a wrong offset!");
+static_assert(alignof(FFoliageGeometryInfo) == 0x000010, "Wrong alignment on FFoliageGeometryInfo");
+static_assert(sizeof(FFoliageGeometryInfo) == 0x000080, "Wrong size on FFoliageGeometryInfo");
+static_assert(offsetof(FFoliageGeometryInfo, InstanceTransform) == 0x000000, "Member 'FFoliageGeometryInfo::InstanceTransform' has a wrong offset!");
+static_assert(offsetof(FFoliageGeometryInfo, InstanceBoxExtent) == 0x000060, "Member 'FFoliageGeometryInfo::InstanceBoxExtent' has a wrong offset!");
 
-// ScriptStruct X6Game.FootIKFeatureTargetData
-// 0x0160 (0x0160 - 0x0000)
-struct FFootIKFeatureTargetData final
+// ScriptStruct X6Game.StimuliPreprocessorRule
+// 0x0070 (0x0070 - 0x0000)
+struct alignas(0x08) FStimuliPreprocessorRule final
 {
 public:
-	struct FVector                                PelvisTargetOffset;                                // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PelvisAlpha;                                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LeftFootLockAlpha;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LeftFootIKAlpha;                                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LeftFootTargetOffset;                              // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LeftFootOffset;                                    // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               LeftFootRotationOffset;                            // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LeftFootLockLocation;                              // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               LeftFootLockRotation;                              // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LeftFootWorldOffsetLocation;                       // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLeftFootInAir;                                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RightFootLockAlpha;                                // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RightFootIKAlpha;                                  // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RightFootTargetOffset;                             // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                RightFootOffset;                                   // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RightFootRotationOffset;                           // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                RightFootLockLocation;                             // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RightFootLockRotation;                             // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                RightFootWorldOffsetLocation;                      // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRightFootInAir;                                   // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         RuleID;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Priority;                                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StimuliTag;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERuleTriggerTiming                            TriggerTiming;                                     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bInSight : 1;                                      // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SenseRadius;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SenseAngle;                                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SenseAngleOffset;                                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x50];                                      // 0x0020(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FFootIKFeatureTargetData) == 0x000008, "Wrong alignment on FFootIKFeatureTargetData");
-static_assert(sizeof(FFootIKFeatureTargetData) == 0x000160, "Wrong size on FFootIKFeatureTargetData");
-static_assert(offsetof(FFootIKFeatureTargetData, PelvisTargetOffset) == 0x000000, "Member 'FFootIKFeatureTargetData::PelvisTargetOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, PelvisAlpha) == 0x000018, "Member 'FFootIKFeatureTargetData::PelvisAlpha' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootLockAlpha) == 0x00001C, "Member 'FFootIKFeatureTargetData::LeftFootLockAlpha' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootIKAlpha) == 0x000020, "Member 'FFootIKFeatureTargetData::LeftFootIKAlpha' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootTargetOffset) == 0x000028, "Member 'FFootIKFeatureTargetData::LeftFootTargetOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootOffset) == 0x000040, "Member 'FFootIKFeatureTargetData::LeftFootOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootRotationOffset) == 0x000058, "Member 'FFootIKFeatureTargetData::LeftFootRotationOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootLockLocation) == 0x000070, "Member 'FFootIKFeatureTargetData::LeftFootLockLocation' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootLockRotation) == 0x000088, "Member 'FFootIKFeatureTargetData::LeftFootLockRotation' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, LeftFootWorldOffsetLocation) == 0x0000A0, "Member 'FFootIKFeatureTargetData::LeftFootWorldOffsetLocation' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, bLeftFootInAir) == 0x0000B8, "Member 'FFootIKFeatureTargetData::bLeftFootInAir' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootLockAlpha) == 0x0000BC, "Member 'FFootIKFeatureTargetData::RightFootLockAlpha' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootIKAlpha) == 0x0000C0, "Member 'FFootIKFeatureTargetData::RightFootIKAlpha' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootTargetOffset) == 0x0000C8, "Member 'FFootIKFeatureTargetData::RightFootTargetOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootOffset) == 0x0000E0, "Member 'FFootIKFeatureTargetData::RightFootOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootRotationOffset) == 0x0000F8, "Member 'FFootIKFeatureTargetData::RightFootRotationOffset' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootLockLocation) == 0x000110, "Member 'FFootIKFeatureTargetData::RightFootLockLocation' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootLockRotation) == 0x000128, "Member 'FFootIKFeatureTargetData::RightFootLockRotation' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, RightFootWorldOffsetLocation) == 0x000140, "Member 'FFootIKFeatureTargetData::RightFootWorldOffsetLocation' has a wrong offset!");
-static_assert(offsetof(FFootIKFeatureTargetData, bRightFootInAir) == 0x000158, "Member 'FFootIKFeatureTargetData::bRightFootInAir' has a wrong offset!");
+static_assert(alignof(FStimuliPreprocessorRule) == 0x000008, "Wrong alignment on FStimuliPreprocessorRule");
+static_assert(sizeof(FStimuliPreprocessorRule) == 0x000070, "Wrong size on FStimuliPreprocessorRule");
+static_assert(offsetof(FStimuliPreprocessorRule, RuleID) == 0x000000, "Member 'FStimuliPreprocessorRule::RuleID' has a wrong offset!");
+static_assert(offsetof(FStimuliPreprocessorRule, Priority) == 0x000004, "Member 'FStimuliPreprocessorRule::Priority' has a wrong offset!");
+static_assert(offsetof(FStimuliPreprocessorRule, StimuliTag) == 0x000008, "Member 'FStimuliPreprocessorRule::StimuliTag' has a wrong offset!");
+static_assert(offsetof(FStimuliPreprocessorRule, TriggerTiming) == 0x00000C, "Member 'FStimuliPreprocessorRule::TriggerTiming' has a wrong offset!");
+static_assert(offsetof(FStimuliPreprocessorRule, SenseRadius) == 0x000014, "Member 'FStimuliPreprocessorRule::SenseRadius' has a wrong offset!");
+static_assert(offsetof(FStimuliPreprocessorRule, SenseAngle) == 0x000018, "Member 'FStimuliPreprocessorRule::SenseAngle' has a wrong offset!");
+static_assert(offsetof(FStimuliPreprocessorRule, SenseAngleOffset) == 0x00001C, "Member 'FStimuliPreprocessorRule::SenseAngleOffset' has a wrong offset!");
+
+// ScriptStruct X6Game.BipedalIdleAnimSet
+// 0x0020 (0x0020 - 0x0000)
+struct FBipedalIdleAnimSet final
+{
+public:
+	class UAnimSequenceBase*                      IdleReady;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UAnimSequenceBase*>              IdleBreakArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	float                                         IdleBreakInterval;                                 // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBipedalIdleAnimSet) == 0x000008, "Wrong alignment on FBipedalIdleAnimSet");
+static_assert(sizeof(FBipedalIdleAnimSet) == 0x000020, "Wrong size on FBipedalIdleAnimSet");
+static_assert(offsetof(FBipedalIdleAnimSet, IdleReady) == 0x000000, "Member 'FBipedalIdleAnimSet::IdleReady' has a wrong offset!");
+static_assert(offsetof(FBipedalIdleAnimSet, IdleBreakArray) == 0x000008, "Member 'FBipedalIdleAnimSet::IdleBreakArray' has a wrong offset!");
+static_assert(offsetof(FBipedalIdleAnimSet, IdleBreakInterval) == 0x000018, "Member 'FBipedalIdleAnimSet::IdleBreakInterval' has a wrong offset!");
+
+// ScriptStruct X6Game.X6MotionDeltaTrack
+// 0x0090 (0x0090 - 0x0000)
+struct FX6MotionDeltaTrack final
+{
+public:
+	TArray<struct FTransform>                     BoneTransformTrack;                                // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        DeltaTranslationTrack;                             // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRotator>                       DeltaRotationTrack;                                // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                TotalTranslation;                                  // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               TotalRotation;                                     // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                BlendOutTranslation;                               // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               BlendOutRotation;                                  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6MotionDeltaTrack) == 0x000008, "Wrong alignment on FX6MotionDeltaTrack");
+static_assert(sizeof(FX6MotionDeltaTrack) == 0x000090, "Wrong size on FX6MotionDeltaTrack");
+static_assert(offsetof(FX6MotionDeltaTrack, BoneTransformTrack) == 0x000000, "Member 'FX6MotionDeltaTrack::BoneTransformTrack' has a wrong offset!");
+static_assert(offsetof(FX6MotionDeltaTrack, DeltaTranslationTrack) == 0x000010, "Member 'FX6MotionDeltaTrack::DeltaTranslationTrack' has a wrong offset!");
+static_assert(offsetof(FX6MotionDeltaTrack, DeltaRotationTrack) == 0x000020, "Member 'FX6MotionDeltaTrack::DeltaRotationTrack' has a wrong offset!");
+static_assert(offsetof(FX6MotionDeltaTrack, TotalTranslation) == 0x000030, "Member 'FX6MotionDeltaTrack::TotalTranslation' has a wrong offset!");
+static_assert(offsetof(FX6MotionDeltaTrack, TotalRotation) == 0x000048, "Member 'FX6MotionDeltaTrack::TotalRotation' has a wrong offset!");
+static_assert(offsetof(FX6MotionDeltaTrack, BlendOutTranslation) == 0x000060, "Member 'FX6MotionDeltaTrack::BlendOutTranslation' has a wrong offset!");
+static_assert(offsetof(FX6MotionDeltaTrack, BlendOutRotation) == 0x000078, "Member 'FX6MotionDeltaTrack::BlendOutRotation' has a wrong offset!");
+
+// ScriptStruct X6Game.X6MotionDeltaTrackContainer
+// 0x0010 (0x0010 - 0x0000)
+struct FX6MotionDeltaTrackContainer final
+{
+public:
+	TArray<struct FX6MotionDeltaTrack>            Tracks;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6MotionDeltaTrackContainer) == 0x000008, "Wrong alignment on FX6MotionDeltaTrackContainer");
+static_assert(sizeof(FX6MotionDeltaTrackContainer) == 0x000010, "Wrong size on FX6MotionDeltaTrackContainer");
+static_assert(offsetof(FX6MotionDeltaTrackContainer, Tracks) == 0x000000, "Member 'FX6MotionDeltaTrackContainer::Tracks' has a wrong offset!");
+
+// ScriptStruct X6Game.RMCameraContext
+// 0x0038 (0x0038 - 0x0000)
+struct FRMCameraContext final
+{
+public:
+	struct FRotator                               CurrentCameraRotation;                             // 0x0000(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               PreCameraRotation;                                 // 0x0018(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bCameraStateChanged;                               // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCameraStateChangedByCameraVolume;                 // 0x0031(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnNewTargetCameraBlendEnd;                        // 0x0032(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnNewTargetCameraBlendEndByCameraVolume;          // 0x0033(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRMCameraContext) == 0x000008, "Wrong alignment on FRMCameraContext");
+static_assert(sizeof(FRMCameraContext) == 0x000038, "Wrong size on FRMCameraContext");
+static_assert(offsetof(FRMCameraContext, CurrentCameraRotation) == 0x000000, "Member 'FRMCameraContext::CurrentCameraRotation' has a wrong offset!");
+static_assert(offsetof(FRMCameraContext, PreCameraRotation) == 0x000018, "Member 'FRMCameraContext::PreCameraRotation' has a wrong offset!");
+static_assert(offsetof(FRMCameraContext, bCameraStateChanged) == 0x000030, "Member 'FRMCameraContext::bCameraStateChanged' has a wrong offset!");
+static_assert(offsetof(FRMCameraContext, bCameraStateChangedByCameraVolume) == 0x000031, "Member 'FRMCameraContext::bCameraStateChangedByCameraVolume' has a wrong offset!");
+static_assert(offsetof(FRMCameraContext, bOnNewTargetCameraBlendEnd) == 0x000032, "Member 'FRMCameraContext::bOnNewTargetCameraBlendEnd' has a wrong offset!");
+static_assert(offsetof(FRMCameraContext, bOnNewTargetCameraBlendEndByCameraVolume) == 0x000033, "Member 'FRMCameraContext::bOnNewTargetCameraBlendEndByCameraVolume' has a wrong offset!");
 
 // ScriptStruct X6Game.NikkiAroundMeshInfo
 // 0x0010 (0x0010 - 0x0000)
@@ -958,7 +999,7 @@ static_assert(sizeof(FNikkiAroundMeshInfo) == 0x000010, "Wrong size on FNikkiAro
 static_assert(offsetof(FNikkiAroundMeshInfo, Info) == 0x000000, "Member 'FNikkiAroundMeshInfo::Info' has a wrong offset!");
 
 // ScriptStruct X6Game.LookAtRequestParams
-// 0x0020 (0x0020 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FLookAtRequestParams final
 {
 public:
@@ -966,29 +1007,31 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PriorityOrder;                                     // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TargetSocketName;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyUseAOHead;                                    // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bTryToLookAtWhenOutOfBounds;                       // 0x0011(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCustomAOSmoothingTime;                            // 0x0012(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bNeedTriggerTurn;                                  // 0x0013(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AOSmoothingTime;                                   // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OverrideTriggerTurnInPlaceAngle;                   // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          BlinkEyeWhenLargeOffset;                           // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForwardBaseOnNeckBone;                            // 0x001D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                Offset;                                            // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyUseAOHead;                                    // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTryToLookAtWhenOutOfBounds;                       // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCustomAOSmoothingTime;                            // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNeedTriggerTurn;                                  // 0x002B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AOSmoothingTime;                                   // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OverrideTriggerTurnInPlaceAngle;                   // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BlinkEyeWhenLargeOffset;                           // 0x0034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForwardBaseOnNeckBone;                            // 0x0035(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36[0x2];                                       // 0x0036(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FLookAtRequestParams) == 0x000004, "Wrong alignment on FLookAtRequestParams");
-static_assert(sizeof(FLookAtRequestParams) == 0x000020, "Wrong size on FLookAtRequestParams");
+static_assert(alignof(FLookAtRequestParams) == 0x000008, "Wrong alignment on FLookAtRequestParams");
+static_assert(sizeof(FLookAtRequestParams) == 0x000038, "Wrong size on FLookAtRequestParams");
 static_assert(offsetof(FLookAtRequestParams, LookAtUpdateMode) == 0x000000, "Member 'FLookAtRequestParams::LookAtUpdateMode' has a wrong offset!");
 static_assert(offsetof(FLookAtRequestParams, PriorityOrder) == 0x000004, "Member 'FLookAtRequestParams::PriorityOrder' has a wrong offset!");
 static_assert(offsetof(FLookAtRequestParams, TargetSocketName) == 0x000008, "Member 'FLookAtRequestParams::TargetSocketName' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, bOnlyUseAOHead) == 0x000010, "Member 'FLookAtRequestParams::bOnlyUseAOHead' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, bTryToLookAtWhenOutOfBounds) == 0x000011, "Member 'FLookAtRequestParams::bTryToLookAtWhenOutOfBounds' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, bCustomAOSmoothingTime) == 0x000012, "Member 'FLookAtRequestParams::bCustomAOSmoothingTime' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, bNeedTriggerTurn) == 0x000013, "Member 'FLookAtRequestParams::bNeedTriggerTurn' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, AOSmoothingTime) == 0x000014, "Member 'FLookAtRequestParams::AOSmoothingTime' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, OverrideTriggerTurnInPlaceAngle) == 0x000018, "Member 'FLookAtRequestParams::OverrideTriggerTurnInPlaceAngle' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, BlinkEyeWhenLargeOffset) == 0x00001C, "Member 'FLookAtRequestParams::BlinkEyeWhenLargeOffset' has a wrong offset!");
-static_assert(offsetof(FLookAtRequestParams, bForwardBaseOnNeckBone) == 0x00001D, "Member 'FLookAtRequestParams::bForwardBaseOnNeckBone' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, Offset) == 0x000010, "Member 'FLookAtRequestParams::Offset' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, bOnlyUseAOHead) == 0x000028, "Member 'FLookAtRequestParams::bOnlyUseAOHead' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, bTryToLookAtWhenOutOfBounds) == 0x000029, "Member 'FLookAtRequestParams::bTryToLookAtWhenOutOfBounds' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, bCustomAOSmoothingTime) == 0x00002A, "Member 'FLookAtRequestParams::bCustomAOSmoothingTime' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, bNeedTriggerTurn) == 0x00002B, "Member 'FLookAtRequestParams::bNeedTriggerTurn' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, AOSmoothingTime) == 0x00002C, "Member 'FLookAtRequestParams::AOSmoothingTime' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, OverrideTriggerTurnInPlaceAngle) == 0x000030, "Member 'FLookAtRequestParams::OverrideTriggerTurnInPlaceAngle' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, BlinkEyeWhenLargeOffset) == 0x000034, "Member 'FLookAtRequestParams::BlinkEyeWhenLargeOffset' has a wrong offset!");
+static_assert(offsetof(FLookAtRequestParams, bForwardBaseOnNeckBone) == 0x000035, "Member 'FLookAtRequestParams::bForwardBaseOnNeckBone' has a wrong offset!");
 
 // ScriptStruct X6Game.QueryFlyingFollowPositionArgs
 // 0x0038 (0x0038 - 0x0000)
@@ -1016,40 +1059,6 @@ static_assert(offsetof(FQueryFlyingFollowPositionArgs, VerticalOffsetAngle) == 0
 static_assert(offsetof(FQueryFlyingFollowPositionArgs, bAvoidCamera) == 0x000030, "Member 'FQueryFlyingFollowPositionArgs::bAvoidCamera' has a wrong offset!");
 static_assert(offsetof(FQueryFlyingFollowPositionArgs, CameraAvoidDegrees) == 0x000034, "Member 'FQueryFlyingFollowPositionArgs::CameraAvoidDegrees' has a wrong offset!");
 
-// ScriptStruct X6Game.BipedalIdleAnimSet
-// 0x0020 (0x0020 - 0x0000)
-struct FBipedalIdleAnimSet final
-{
-public:
-	class UAnimSequenceBase*                      IdleReady;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UAnimSequenceBase*>              IdleBreakArray;                                    // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	float                                         IdleBreakInterval;                                 // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FBipedalIdleAnimSet) == 0x000008, "Wrong alignment on FBipedalIdleAnimSet");
-static_assert(sizeof(FBipedalIdleAnimSet) == 0x000020, "Wrong size on FBipedalIdleAnimSet");
-static_assert(offsetof(FBipedalIdleAnimSet, IdleReady) == 0x000000, "Member 'FBipedalIdleAnimSet::IdleReady' has a wrong offset!");
-static_assert(offsetof(FBipedalIdleAnimSet, IdleBreakArray) == 0x000008, "Member 'FBipedalIdleAnimSet::IdleBreakArray' has a wrong offset!");
-static_assert(offsetof(FBipedalIdleAnimSet, IdleBreakInterval) == 0x000018, "Member 'FBipedalIdleAnimSet::IdleBreakInterval' has a wrong offset!");
-
-// ScriptStruct X6Game.BipedalInAirAnimSet
-// 0x0020 (0x0020 - 0x0000)
-struct FBipedalInAirAnimSet final
-{
-public:
-	class UAnimSequenceBase*                      Jump;                                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequenceBase*                      FallLoop;                                          // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLoopFallLoop;                                     // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequenceBase*                      LandRecoveryAdditive;                              // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FBipedalInAirAnimSet) == 0x000008, "Wrong alignment on FBipedalInAirAnimSet");
-static_assert(sizeof(FBipedalInAirAnimSet) == 0x000020, "Wrong size on FBipedalInAirAnimSet");
-static_assert(offsetof(FBipedalInAirAnimSet, Jump) == 0x000000, "Member 'FBipedalInAirAnimSet::Jump' has a wrong offset!");
-static_assert(offsetof(FBipedalInAirAnimSet, FallLoop) == 0x000008, "Member 'FBipedalInAirAnimSet::FallLoop' has a wrong offset!");
-static_assert(offsetof(FBipedalInAirAnimSet, bLoopFallLoop) == 0x000010, "Member 'FBipedalInAirAnimSet::bLoopFallLoop' has a wrong offset!");
-static_assert(offsetof(FBipedalInAirAnimSet, LandRecoveryAdditive) == 0x000018, "Member 'FBipedalInAirAnimSet::LandRecoveryAdditive' has a wrong offset!");
-
 // ScriptStruct X6Game.BipedalLocomotionAnimSet
 // 0x0088 (0x0088 - 0x0000)
 struct FBipedalLocomotionAnimSet final
@@ -1064,6 +1073,32 @@ static_assert(sizeof(FBipedalLocomotionAnimSet) == 0x000088, "Wrong size on FBip
 static_assert(offsetof(FBipedalLocomotionAnimSet, IdleAnimSet) == 0x000000, "Member 'FBipedalLocomotionAnimSet::IdleAnimSet' has a wrong offset!");
 static_assert(offsetof(FBipedalLocomotionAnimSet, InAirAnimSet) == 0x000020, "Member 'FBipedalLocomotionAnimSet::InAirAnimSet' has a wrong offset!");
 static_assert(offsetof(FBipedalLocomotionAnimSet, GroundedMoveAnimSet) == 0x000040, "Member 'FBipedalLocomotionAnimSet::GroundedMoveAnimSet' has a wrong offset!");
+
+// ScriptStruct X6Game.SmoothPathParams
+// 0x0020 (0x0020 - 0x0000)
+struct FSmoothPathParams final
+{
+public:
+	float                                         RVOIgnoredAngleCos;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RVOIgnoredDistanceSqr;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothAngleCos;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothNextPathRadiusSqr;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothPerSegmentLength;                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothPerMaxLength;                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothCheckLength;                                 // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStrictCheck;                                      // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSmoothPathParams) == 0x000004, "Wrong alignment on FSmoothPathParams");
+static_assert(sizeof(FSmoothPathParams) == 0x000020, "Wrong size on FSmoothPathParams");
+static_assert(offsetof(FSmoothPathParams, RVOIgnoredAngleCos) == 0x000000, "Member 'FSmoothPathParams::RVOIgnoredAngleCos' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, RVOIgnoredDistanceSqr) == 0x000004, "Member 'FSmoothPathParams::RVOIgnoredDistanceSqr' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, SmoothAngleCos) == 0x000008, "Member 'FSmoothPathParams::SmoothAngleCos' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, SmoothNextPathRadiusSqr) == 0x00000C, "Member 'FSmoothPathParams::SmoothNextPathRadiusSqr' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, SmoothPerSegmentLength) == 0x000010, "Member 'FSmoothPathParams::SmoothPerSegmentLength' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, SmoothPerMaxLength) == 0x000014, "Member 'FSmoothPathParams::SmoothPerMaxLength' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, SmoothCheckLength) == 0x000018, "Member 'FSmoothPathParams::SmoothCheckLength' has a wrong offset!");
+static_assert(offsetof(FSmoothPathParams, bStrictCheck) == 0x00001C, "Member 'FSmoothPathParams::bStrictCheck' has a wrong offset!");
 
 // ScriptStruct X6Game.FootprintConfig
 // 0x0050 (0x0050 - 0x0000)
@@ -1194,6 +1229,55 @@ static_assert(offsetof(FDaMiaoGroundedLocomotionAnimSet, WalkGaitAnimSet) == 0x0
 static_assert(offsetof(FDaMiaoGroundedLocomotionAnimSet, JogGaitAnimSet) == 0x000060, "Member 'FDaMiaoGroundedLocomotionAnimSet::JogGaitAnimSet' has a wrong offset!");
 static_assert(offsetof(FDaMiaoGroundedLocomotionAnimSet, SprintGaitAnimSet) == 0x0000B0, "Member 'FDaMiaoGroundedLocomotionAnimSet::SprintGaitAnimSet' has a wrong offset!");
 
+// ScriptStruct X6Game.X6SkillAvailableStage
+// 0x0004 (0x0004 - 0x0000)
+struct FX6SkillAvailableStage final
+{
+public:
+	int32                                         Stage;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6SkillAvailableStage) == 0x000004, "Wrong alignment on FX6SkillAvailableStage");
+static_assert(sizeof(FX6SkillAvailableStage) == 0x000004, "Wrong size on FX6SkillAvailableStage");
+static_assert(offsetof(FX6SkillAvailableStage, Stage) == 0x000000, "Member 'FX6SkillAvailableStage::Stage' has a wrong offset!");
+
+// ScriptStruct X6Game.DaMiaoInAirJumpAnimSet
+// 0x0010 (0x0010 - 0x0000)
+struct FDaMiaoInAirJumpAnimSet final
+{
+public:
+	class UAnimSequence*                          JumpStart;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          JumpStartLoop;                                     // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FDaMiaoInAirJumpAnimSet) == 0x000008, "Wrong alignment on FDaMiaoInAirJumpAnimSet");
+static_assert(sizeof(FDaMiaoInAirJumpAnimSet) == 0x000010, "Wrong size on FDaMiaoInAirJumpAnimSet");
+static_assert(offsetof(FDaMiaoInAirJumpAnimSet, JumpStart) == 0x000000, "Member 'FDaMiaoInAirJumpAnimSet::JumpStart' has a wrong offset!");
+static_assert(offsetof(FDaMiaoInAirJumpAnimSet, JumpStartLoop) == 0x000008, "Member 'FDaMiaoInAirJumpAnimSet::JumpStartLoop' has a wrong offset!");
+
+// ScriptStruct X6Game.InteractiveItem
+// 0x0004 (0x0004 - 0x0000)
+struct FInteractiveItem final
+{
+public:
+	uint32                                        ID;                                                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FInteractiveItem) == 0x000004, "Wrong alignment on FInteractiveItem");
+static_assert(sizeof(FInteractiveItem) == 0x000004, "Wrong size on FInteractiveItem");
+static_assert(offsetof(FInteractiveItem, ID) == 0x000000, "Member 'FInteractiveItem::ID' has a wrong offset!");
+
+// ScriptStruct X6Game.InteractiveObjectCache
+// 0x0020 (0x0020 - 0x0000)
+struct FInteractiveObjectCache final
+{
+public:
+	class AActor*                                 Object;                                            // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ActionType;                                        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x10];                                      // 0x0010(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FInteractiveObjectCache) == 0x000008, "Wrong alignment on FInteractiveObjectCache");
+static_assert(sizeof(FInteractiveObjectCache) == 0x000020, "Wrong size on FInteractiveObjectCache");
+static_assert(offsetof(FInteractiveObjectCache, Object) == 0x000000, "Member 'FInteractiveObjectCache::Object' has a wrong offset!");
+static_assert(offsetof(FInteractiveObjectCache, ActionType) == 0x000008, "Member 'FInteractiveObjectCache::ActionType' has a wrong offset!");
+
 // ScriptStruct X6Game.LookAtEventInfo
 // 0x0004 (0x0004 - 0x0000)
 struct FLookAtEventInfo final
@@ -1206,7 +1290,7 @@ static_assert(sizeof(FLookAtEventInfo) == 0x000004, "Wrong size on FLookAtEventI
 static_assert(offsetof(FLookAtEventInfo, BaseScore) == 0x000000, "Member 'FLookAtEventInfo::BaseScore' has a wrong offset!");
 
 // ScriptStruct X6Game.LookAtEvent
-// 0x0050 (0x0050 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct FLookAtEvent final
 {
 public:
@@ -1218,10 +1302,10 @@ public:
 	struct FVector                                TargetLocation;                                    // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TriggerTurnInPlaceAngle;                           // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PriorityOrder;                                     // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLookAtRequestParams                   RequestParams;                                     // 0x0030(0x0020)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FLookAtRequestParams                   RequestParams;                                     // 0x0030(0x0038)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FLookAtEvent) == 0x000008, "Wrong alignment on FLookAtEvent");
-static_assert(sizeof(FLookAtEvent) == 0x000050, "Wrong size on FLookAtEvent");
+static_assert(sizeof(FLookAtEvent) == 0x000068, "Wrong size on FLookAtEvent");
 static_assert(offsetof(FLookAtEvent, LookAtEventType) == 0x000000, "Member 'FLookAtEvent::LookAtEventType' has a wrong offset!");
 static_assert(offsetof(FLookAtEvent, LookAtMethod) == 0x000001, "Member 'FLookAtEvent::LookAtMethod' has a wrong offset!");
 static_assert(offsetof(FLookAtEvent, TargetActor) == 0x000004, "Member 'FLookAtEvent::TargetActor' has a wrong offset!");
@@ -1280,6 +1364,19 @@ static_assert(sizeof(FJumpAnimationState) == 0x000003, "Wrong size on FJumpAnima
 static_assert(offsetof(FJumpAnimationState, JumpState) == 0x000000, "Member 'FJumpAnimationState::JumpState' has a wrong offset!");
 static_assert(offsetof(FJumpAnimationState, JumpState_TakeOff) == 0x000001, "Member 'FJumpAnimationState::JumpState_TakeOff' has a wrong offset!");
 static_assert(offsetof(FJumpAnimationState, JumpState_Fall) == 0x000002, "Member 'FJumpAnimationState::JumpState_Fall' has a wrong offset!");
+
+// ScriptStruct X6Game.CombatInputHeldSpecHandle
+// 0x0008 (0x0008 - 0x0000)
+struct FCombatInputHeldSpecHandle final
+{
+public:
+	struct FGameplayAbilitySpecHandle             AbilitySpecHandle;                                 // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InputHeldTimeSeconds;                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCombatInputHeldSpecHandle) == 0x000004, "Wrong alignment on FCombatInputHeldSpecHandle");
+static_assert(sizeof(FCombatInputHeldSpecHandle) == 0x000008, "Wrong size on FCombatInputHeldSpecHandle");
+static_assert(offsetof(FCombatInputHeldSpecHandle, AbilitySpecHandle) == 0x000000, "Member 'FCombatInputHeldSpecHandle::AbilitySpecHandle' has a wrong offset!");
+static_assert(offsetof(FCombatInputHeldSpecHandle, InputHeldTimeSeconds) == 0x000004, "Member 'FCombatInputHeldSpecHandle::InputHeldTimeSeconds' has a wrong offset!");
 
 // ScriptStruct X6Game.NPCMovingAnimSet
 // 0x0078 (0x0078 - 0x0000)
@@ -1373,6 +1470,23 @@ static_assert(offsetof(FNPCLocomotionAnimSet, Stop_B_L180_AnimSequence) == 0x000
 static_assert(offsetof(FNPCLocomotionAnimSet, Stop_B_R90_AnimSequence) == 0x0000A0, "Member 'FNPCLocomotionAnimSet::Stop_B_R90_AnimSequence' has a wrong offset!");
 static_assert(offsetof(FNPCLocomotionAnimSet, Stop_B_R180_AnimSequence) == 0x0000A8, "Member 'FNPCLocomotionAnimSet::Stop_B_R180_AnimSequence' has a wrong offset!");
 
+// ScriptStruct X6Game.X6RMWalkingReplicatedMovementData
+// 0x0028 (0x0028 - 0x0000)
+struct FX6RMWalkingReplicatedMovementData final
+{
+public:
+	ERegularLocomotionType                        ReplicatedAllowedGait;                             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReplicatedInputMovingDirection;                    // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReplicatedTurnAroundAngle;                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FX6RMWalkingReplicatedMovementData) == 0x000008, "Wrong alignment on FX6RMWalkingReplicatedMovementData");
+static_assert(sizeof(FX6RMWalkingReplicatedMovementData) == 0x000028, "Wrong size on FX6RMWalkingReplicatedMovementData");
+static_assert(offsetof(FX6RMWalkingReplicatedMovementData, ReplicatedAllowedGait) == 0x000000, "Member 'FX6RMWalkingReplicatedMovementData::ReplicatedAllowedGait' has a wrong offset!");
+static_assert(offsetof(FX6RMWalkingReplicatedMovementData, ReplicatedInputMovingDirection) == 0x000008, "Member 'FX6RMWalkingReplicatedMovementData::ReplicatedInputMovingDirection' has a wrong offset!");
+static_assert(offsetof(FX6RMWalkingReplicatedMovementData, ReplicatedTurnAroundAngle) == 0x000020, "Member 'FX6RMWalkingReplicatedMovementData::ReplicatedTurnAroundAngle' has a wrong offset!");
+
 // ScriptStruct X6Game.PlayerCameraContext
 // 0x0038 (0x0038 - 0x0000)
 struct FPlayerCameraContext final
@@ -1389,27 +1503,15 @@ static_assert(sizeof(FPlayerCameraContext) == 0x000038, "Wrong size on FPlayerCa
 static_assert(offsetof(FPlayerCameraContext, CurrentCameraRotation) == 0x000000, "Member 'FPlayerCameraContext::CurrentCameraRotation' has a wrong offset!");
 static_assert(offsetof(FPlayerCameraContext, PreCameraRotation) == 0x000018, "Member 'FPlayerCameraContext::PreCameraRotation' has a wrong offset!");
 
-// ScriptStruct X6Game.RMCameraContext
-// 0x0038 (0x0038 - 0x0000)
-struct FRMCameraContext final
+// ScriptStruct X6Game.RMBehaviorNodeInterface
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FRMBehaviorNodeInterface
 {
 public:
-	struct FRotator                               CurrentCameraRotation;                             // 0x0000(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               PreCameraRotation;                                 // 0x0018(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bCameraStateChanged;                               // 0x0030(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCameraStateChangedByCameraVolume;                 // 0x0031(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnNewTargetCameraBlendEnd;                        // 0x0032(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnNewTargetCameraBlendEndByCameraVolume;          // 0x0033(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FRMCameraContext) == 0x000008, "Wrong alignment on FRMCameraContext");
-static_assert(sizeof(FRMCameraContext) == 0x000038, "Wrong size on FRMCameraContext");
-static_assert(offsetof(FRMCameraContext, CurrentCameraRotation) == 0x000000, "Member 'FRMCameraContext::CurrentCameraRotation' has a wrong offset!");
-static_assert(offsetof(FRMCameraContext, PreCameraRotation) == 0x000018, "Member 'FRMCameraContext::PreCameraRotation' has a wrong offset!");
-static_assert(offsetof(FRMCameraContext, bCameraStateChanged) == 0x000030, "Member 'FRMCameraContext::bCameraStateChanged' has a wrong offset!");
-static_assert(offsetof(FRMCameraContext, bCameraStateChangedByCameraVolume) == 0x000031, "Member 'FRMCameraContext::bCameraStateChangedByCameraVolume' has a wrong offset!");
-static_assert(offsetof(FRMCameraContext, bOnNewTargetCameraBlendEnd) == 0x000032, "Member 'FRMCameraContext::bOnNewTargetCameraBlendEnd' has a wrong offset!");
-static_assert(offsetof(FRMCameraContext, bOnNewTargetCameraBlendEndByCameraVolume) == 0x000033, "Member 'FRMCameraContext::bOnNewTargetCameraBlendEndByCameraVolume' has a wrong offset!");
+static_assert(alignof(FRMBehaviorNodeInterface) == 0x000008, "Wrong alignment on FRMBehaviorNodeInterface");
+static_assert(sizeof(FRMBehaviorNodeInterface) == 0x000008, "Wrong size on FRMBehaviorNodeInterface");
 
 // ScriptStruct X6Game.AngularInputDeadZoneConfig
 // 0x0018 (0x0018 - 0x0000)
@@ -1578,6 +1680,32 @@ struct FRMBehavior_InAir_InputMovement final : public FRMBehaviorNodeInterface
 static_assert(alignof(FRMBehavior_InAir_InputMovement) == 0x000008, "Wrong alignment on FRMBehavior_InAir_InputMovement");
 static_assert(sizeof(FRMBehavior_InAir_InputMovement) == 0x000008, "Wrong size on FRMBehavior_InAir_InputMovement");
 
+// ScriptStruct X6Game.X6AbilityGrant
+// 0x0028 (0x0028 - 0x0000)
+struct FX6AbilityGrant final
+{
+public:
+	TSoftClassPtr<class UClass>                   AbilityType;                                       // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6AbilityGrant) == 0x000008, "Wrong alignment on FX6AbilityGrant");
+static_assert(sizeof(FX6AbilityGrant) == 0x000028, "Wrong size on FX6AbilityGrant");
+static_assert(offsetof(FX6AbilityGrant, AbilityType) == 0x000000, "Member 'FX6AbilityGrant::AbilityType' has a wrong offset!");
+
+// ScriptStruct X6Game.GameFeatureAbilitiesEntry
+// 0x0048 (0x0048 - 0x0000)
+struct FGameFeatureAbilitiesEntry final
+{
+public:
+	TSoftClassPtr<class UClass>                   ActorClass;                                        // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FX6AbilityGrant>                GrantedAbilities;                                  // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<TSoftObjectPtr<class UX6AbilitySet>>   GrantedAbilitySets;                                // 0x0038(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGameFeatureAbilitiesEntry) == 0x000008, "Wrong alignment on FGameFeatureAbilitiesEntry");
+static_assert(sizeof(FGameFeatureAbilitiesEntry) == 0x000048, "Wrong size on FGameFeatureAbilitiesEntry");
+static_assert(offsetof(FGameFeatureAbilitiesEntry, ActorClass) == 0x000000, "Member 'FGameFeatureAbilitiesEntry::ActorClass' has a wrong offset!");
+static_assert(offsetof(FGameFeatureAbilitiesEntry, GrantedAbilities) == 0x000028, "Member 'FGameFeatureAbilitiesEntry::GrantedAbilities' has a wrong offset!");
+static_assert(offsetof(FGameFeatureAbilitiesEntry, GrantedAbilitySets) == 0x000038, "Member 'FGameFeatureAbilitiesEntry::GrantedAbilitySets' has a wrong offset!");
+
 // ScriptStruct X6Game.RMBehavior_InAir_StartLocomotion
 // 0x0000 (0x0008 - 0x0008)
 struct FRMBehavior_InAir_StartLocomotion final : public FRMBehaviorNodeInterface
@@ -1658,6 +1786,16 @@ struct FRMBehavior_OnGround_GatherInputInfo final : public FRMBehaviorNodeInterf
 static_assert(alignof(FRMBehavior_OnGround_GatherInputInfo) == 0x000008, "Wrong alignment on FRMBehavior_OnGround_GatherInputInfo");
 static_assert(sizeof(FRMBehavior_OnGround_GatherInputInfo) == 0x000008, "Wrong size on FRMBehavior_OnGround_GatherInputInfo");
 
+// ScriptStruct X6Game.BoxDropDownTrackResult
+// 0x0108 (0x0108 - 0x0000)
+struct alignas(0x08) FBoxDropDownTrackResult final
+{
+public:
+	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBoxDropDownTrackResult) == 0x000008, "Wrong alignment on FBoxDropDownTrackResult");
+static_assert(sizeof(FBoxDropDownTrackResult) == 0x000108, "Wrong size on FBoxDropDownTrackResult");
+
 // ScriptStruct X6Game.RMBehavior_OnGround_InputMovement
 // 0x0000 (0x0008 - 0x0008)
 struct FRMBehavior_OnGround_InputMovement final : public FRMBehaviorNodeInterface
@@ -1675,6 +1813,17 @@ public:
 };
 static_assert(alignof(FRMBehavior_OnGround_StartLocomotion) == 0x000008, "Wrong alignment on FRMBehavior_OnGround_StartLocomotion");
 static_assert(sizeof(FRMBehavior_OnGround_StartLocomotion) == 0x000018, "Wrong size on FRMBehavior_OnGround_StartLocomotion");
+
+// ScriptStruct X6Game.RMBehavior_OnGround_StartTurnAroundMovement
+// 0x0008 (0x0010 - 0x0008)
+struct FRMBehavior_OnGround_StartTurnAroundMovement final : public FRMBehaviorNodeInterface
+{
+public:
+	class AX6PlayerCameraManager*                 CurPlayerCameraManager;                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+};
+static_assert(alignof(FRMBehavior_OnGround_StartTurnAroundMovement) == 0x000008, "Wrong alignment on FRMBehavior_OnGround_StartTurnAroundMovement");
+static_assert(sizeof(FRMBehavior_OnGround_StartTurnAroundMovement) == 0x000010, "Wrong size on FRMBehavior_OnGround_StartTurnAroundMovement");
+static_assert(offsetof(FRMBehavior_OnGround_StartTurnAroundMovement, CurPlayerCameraManager) == 0x000008, "Member 'FRMBehavior_OnGround_StartTurnAroundMovement::CurPlayerCameraManager' has a wrong offset!");
 
 // ScriptStruct X6Game.RMBehavior_OnGround_StopLocomotion
 // 0x0000 (0x0008 - 0x0008)
@@ -1728,6 +1877,21 @@ static_assert(offsetof(FRMBehavior_InAir_Main, RMBehavior_InAir_StartLocomotion)
 static_assert(offsetof(FRMBehavior_InAir_Main, RMBehavior_InAir_StopLocomotion) == 0x000020, "Member 'FRMBehavior_InAir_Main::RMBehavior_InAir_StopLocomotion' has a wrong offset!");
 static_assert(offsetof(FRMBehavior_InAir_Main, RMBehavior_InAir_TurnAroundMovement) == 0x000028, "Member 'FRMBehavior_InAir_Main::RMBehavior_InAir_TurnAroundMovement' has a wrong offset!");
 static_assert(offsetof(FRMBehavior_InAir_Main, RMBehavior_InAir_UpdateMovementAttributes) == 0x000030, "Member 'FRMBehavior_InAir_Main::RMBehavior_InAir_UpdateMovementAttributes' has a wrong offset!");
+
+// ScriptStruct X6Game.X6AbilityMontageFailureMessage
+// 0x0030 (0x0030 - 0x0000)
+struct FX6AbilityMontageFailureMessage final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FailureTags;                                       // 0x0008(0x0020)(BlueprintVisible, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           FailureMontage;                                    // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6AbilityMontageFailureMessage) == 0x000008, "Wrong alignment on FX6AbilityMontageFailureMessage");
+static_assert(sizeof(FX6AbilityMontageFailureMessage) == 0x000030, "Wrong size on FX6AbilityMontageFailureMessage");
+static_assert(offsetof(FX6AbilityMontageFailureMessage, PlayerController) == 0x000000, "Member 'FX6AbilityMontageFailureMessage::PlayerController' has a wrong offset!");
+static_assert(offsetof(FX6AbilityMontageFailureMessage, FailureTags) == 0x000008, "Member 'FX6AbilityMontageFailureMessage::FailureTags' has a wrong offset!");
+static_assert(offsetof(FX6AbilityMontageFailureMessage, FailureMontage) == 0x000028, "Member 'FX6AbilityMontageFailureMessage::FailureMontage' has a wrong offset!");
 
 // ScriptStruct X6Game.RMBehavior_OnGround_Main
 // 0x0050 (0x0058 - 0x0008)
@@ -1852,33 +2016,6 @@ static_assert(offsetof(FStimuliSourceSet, Identifier) == 0x000000, "Member 'FSti
 static_assert(offsetof(FStimuliSourceSet, OwnerActor) == 0x000008, "Member 'FStimuliSourceSet::OwnerActor' has a wrong offset!");
 static_assert(offsetof(FStimuliSourceSet, Location) == 0x000010, "Member 'FStimuliSourceSet::Location' has a wrong offset!");
 static_assert(offsetof(FStimuliSourceSet, SourceArray) == 0x000028, "Member 'FStimuliSourceSet::SourceArray' has a wrong offset!");
-
-// ScriptStruct X6Game.StimuliPreprocessorRule
-// 0x0070 (0x0070 - 0x0000)
-struct alignas(0x08) FStimuliPreprocessorRule final
-{
-public:
-	int32                                         RuleID;                                            // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Priority;                                          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         StimuliTag;                                        // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERuleTriggerTiming                            TriggerTiming;                                     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bInSight : 1;                                      // 0x0010(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SenseRadius;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SenseAngle;                                        // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SenseAngleOffset;                                  // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_20[0x50];                                      // 0x0020(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FStimuliPreprocessorRule) == 0x000008, "Wrong alignment on FStimuliPreprocessorRule");
-static_assert(sizeof(FStimuliPreprocessorRule) == 0x000070, "Wrong size on FStimuliPreprocessorRule");
-static_assert(offsetof(FStimuliPreprocessorRule, RuleID) == 0x000000, "Member 'FStimuliPreprocessorRule::RuleID' has a wrong offset!");
-static_assert(offsetof(FStimuliPreprocessorRule, Priority) == 0x000004, "Member 'FStimuliPreprocessorRule::Priority' has a wrong offset!");
-static_assert(offsetof(FStimuliPreprocessorRule, StimuliTag) == 0x000008, "Member 'FStimuliPreprocessorRule::StimuliTag' has a wrong offset!");
-static_assert(offsetof(FStimuliPreprocessorRule, TriggerTiming) == 0x00000C, "Member 'FStimuliPreprocessorRule::TriggerTiming' has a wrong offset!");
-static_assert(offsetof(FStimuliPreprocessorRule, SenseRadius) == 0x000014, "Member 'FStimuliPreprocessorRule::SenseRadius' has a wrong offset!");
-static_assert(offsetof(FStimuliPreprocessorRule, SenseAngle) == 0x000018, "Member 'FStimuliPreprocessorRule::SenseAngle' has a wrong offset!");
-static_assert(offsetof(FStimuliPreprocessorRule, SenseAngleOffset) == 0x00001C, "Member 'FStimuliPreprocessorRule::SenseAngleOffset' has a wrong offset!");
 
 // ScriptStruct X6Game.StimuliPreprocessor
 // 0x0010 (0x0010 - 0x0000)
@@ -2075,14 +2212,14 @@ public:
 	EX6ComponentRepInfoResolveMethod              ResolveMethod;                                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Path;                                              // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int64                                         SpawnerID;                                         // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int64                                         ID;                                                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ComponentName;                                     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FX6PrimitiveComponentRepInfo) == 0x000008, "Wrong alignment on FX6PrimitiveComponentRepInfo");
 static_assert(sizeof(FX6PrimitiveComponentRepInfo) == 0x000028, "Wrong size on FX6PrimitiveComponentRepInfo");
 static_assert(offsetof(FX6PrimitiveComponentRepInfo, ResolveMethod) == 0x000000, "Member 'FX6PrimitiveComponentRepInfo::ResolveMethod' has a wrong offset!");
 static_assert(offsetof(FX6PrimitiveComponentRepInfo, Path) == 0x000008, "Member 'FX6PrimitiveComponentRepInfo::Path' has a wrong offset!");
-static_assert(offsetof(FX6PrimitiveComponentRepInfo, SpawnerID) == 0x000018, "Member 'FX6PrimitiveComponentRepInfo::SpawnerID' has a wrong offset!");
+static_assert(offsetof(FX6PrimitiveComponentRepInfo, ID) == 0x000018, "Member 'FX6PrimitiveComponentRepInfo::ID' has a wrong offset!");
 static_assert(offsetof(FX6PrimitiveComponentRepInfo, ComponentName) == 0x000020, "Member 'FX6PrimitiveComponentRepInfo::ComponentName' has a wrong offset!");
 
 // ScriptStruct X6Game.X6MovementBaseInfo
@@ -2445,6 +2582,17 @@ static_assert(offsetof(FX6InteractiveIdleBreak, IdleBreakSequence) == 0x000000, 
 static_assert(offsetof(FX6InteractiveIdleBreak, bLookAtParticipant) == 0x000028, "Member 'FX6InteractiveIdleBreak::bLookAtParticipant' has a wrong offset!");
 static_assert(offsetof(FX6InteractiveIdleBreak, ParticipantConfig) == 0x000030, "Member 'FX6InteractiveIdleBreak::ParticipantConfig' has a wrong offset!");
 
+// ScriptStruct X6Game.X6AbilitySet_GrantedHandles
+// 0x0010 (0x0010 - 0x0000)
+struct FX6AbilitySet_GrantedHandles final
+{
+public:
+	TArray<struct FGameplayAbilitySpecHandle>     AbilitySpecHandles;                                // 0x0000(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+};
+static_assert(alignof(FX6AbilitySet_GrantedHandles) == 0x000008, "Wrong alignment on FX6AbilitySet_GrantedHandles");
+static_assert(sizeof(FX6AbilitySet_GrantedHandles) == 0x000010, "Wrong size on FX6AbilitySet_GrantedHandles");
+static_assert(offsetof(FX6AbilitySet_GrantedHandles, AbilitySpecHandles) == 0x000000, "Member 'FX6AbilitySet_GrantedHandles::AbilitySpecHandles' has a wrong offset!");
+
 // ScriptStruct X6Game.X6EnvResponse_IdleBreak
 // 0x0020 (0x0020 - 0x0000)
 struct FX6EnvResponse_IdleBreak final : public FX6EnvResponseBase
@@ -2517,6 +2665,75 @@ static_assert(offsetof(FRecommendQualityLevels, RecommendSceneDetailMode) == 0x0
 static_assert(offsetof(FRecommendQualityLevels, RecommendResolution) == 0x000034, "Member 'FRecommendQualityLevels::RecommendResolution' has a wrong offset!");
 static_assert(offsetof(FRecommendQualityLevels, X6GamePlayQuality) == 0x00003C, "Member 'FRecommendQualityLevels::X6GamePlayQuality' has a wrong offset!");
 static_assert(offsetof(FRecommendQualityLevels, X6DisplayGamma) == 0x000040, "Member 'FRecommendQualityLevels::X6DisplayGamma' has a wrong offset!");
+
+// ScriptStruct X6Game.X6GamePlatformRect
+// 0x0010 (0x0010 - 0x0000)
+struct FX6GamePlatformRect final
+{
+public:
+	int32                                         Left;                                              // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Top;                                               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Right;                                             // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Bottom;                                            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6GamePlatformRect) == 0x000004, "Wrong alignment on FX6GamePlatformRect");
+static_assert(sizeof(FX6GamePlatformRect) == 0x000010, "Wrong size on FX6GamePlatformRect");
+static_assert(offsetof(FX6GamePlatformRect, Left) == 0x000000, "Member 'FX6GamePlatformRect::Left' has a wrong offset!");
+static_assert(offsetof(FX6GamePlatformRect, Top) == 0x000004, "Member 'FX6GamePlatformRect::Top' has a wrong offset!");
+static_assert(offsetof(FX6GamePlatformRect, Right) == 0x000008, "Member 'FX6GamePlatformRect::Right' has a wrong offset!");
+static_assert(offsetof(FX6GamePlatformRect, Bottom) == 0x00000C, "Member 'FX6GamePlatformRect::Bottom' has a wrong offset!");
+
+// ScriptStruct X6Game.X6GameMonitorInfo
+// 0x0058 (0x0058 - 0x0000)
+struct FX6GameMonitorInfo final
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ID;                                                // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NativeWidth;                                       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NativeHeight;                                      // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FIntPoint                              MaxResolution;                                     // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FX6GamePlatformRect                    DisplayRect;                                       // 0x0030(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6GamePlatformRect                    WorkArea;                                          // 0x0040(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsPrimary;                                        // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         DPI;                                               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6GameMonitorInfo) == 0x000008, "Wrong alignment on FX6GameMonitorInfo");
+static_assert(sizeof(FX6GameMonitorInfo) == 0x000058, "Wrong size on FX6GameMonitorInfo");
+static_assert(offsetof(FX6GameMonitorInfo, Name) == 0x000000, "Member 'FX6GameMonitorInfo::Name' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, ID) == 0x000010, "Member 'FX6GameMonitorInfo::ID' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, NativeWidth) == 0x000020, "Member 'FX6GameMonitorInfo::NativeWidth' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, NativeHeight) == 0x000024, "Member 'FX6GameMonitorInfo::NativeHeight' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, MaxResolution) == 0x000028, "Member 'FX6GameMonitorInfo::MaxResolution' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, DisplayRect) == 0x000030, "Member 'FX6GameMonitorInfo::DisplayRect' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, WorkArea) == 0x000040, "Member 'FX6GameMonitorInfo::WorkArea' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, bIsPrimary) == 0x000050, "Member 'FX6GameMonitorInfo::bIsPrimary' has a wrong offset!");
+static_assert(offsetof(FX6GameMonitorInfo, DPI) == 0x000054, "Member 'FX6GameMonitorInfo::DPI' has a wrong offset!");
+
+// ScriptStruct X6Game.X6GameDisplayMetrics
+// 0x0080 (0x0080 - 0x0000)
+struct FX6GameDisplayMetrics final
+{
+public:
+	int32                                         PrimaryDisplayWidth;                               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PrimaryDisplayHeight;                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FX6GameMonitorInfo>             MonitorInfo;                                       // 0x0008(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FX6GamePlatformRect                    PrimaryDisplayWorkAreaRect;                        // 0x0018(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6GamePlatformRect                    VirtualDisplayRect;                                // 0x0028(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector4                               TitleSafePaddingSize;                              // 0x0040(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector4                               ActionSafePaddingSize;                             // 0x0060(0x0020)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6GameDisplayMetrics) == 0x000010, "Wrong alignment on FX6GameDisplayMetrics");
+static_assert(sizeof(FX6GameDisplayMetrics) == 0x000080, "Wrong size on FX6GameDisplayMetrics");
+static_assert(offsetof(FX6GameDisplayMetrics, PrimaryDisplayWidth) == 0x000000, "Member 'FX6GameDisplayMetrics::PrimaryDisplayWidth' has a wrong offset!");
+static_assert(offsetof(FX6GameDisplayMetrics, PrimaryDisplayHeight) == 0x000004, "Member 'FX6GameDisplayMetrics::PrimaryDisplayHeight' has a wrong offset!");
+static_assert(offsetof(FX6GameDisplayMetrics, MonitorInfo) == 0x000008, "Member 'FX6GameDisplayMetrics::MonitorInfo' has a wrong offset!");
+static_assert(offsetof(FX6GameDisplayMetrics, PrimaryDisplayWorkAreaRect) == 0x000018, "Member 'FX6GameDisplayMetrics::PrimaryDisplayWorkAreaRect' has a wrong offset!");
+static_assert(offsetof(FX6GameDisplayMetrics, VirtualDisplayRect) == 0x000028, "Member 'FX6GameDisplayMetrics::VirtualDisplayRect' has a wrong offset!");
+static_assert(offsetof(FX6GameDisplayMetrics, TitleSafePaddingSize) == 0x000040, "Member 'FX6GameDisplayMetrics::TitleSafePaddingSize' has a wrong offset!");
+static_assert(offsetof(FX6GameDisplayMetrics, ActionSafePaddingSize) == 0x000060, "Member 'FX6GameDisplayMetrics::ActionSafePaddingSize' has a wrong offset!");
 
 // ScriptStruct X6Game.T2MovableNPCFeetIKInfo
 // 0x0038 (0x0038 - 0x0000)
@@ -2658,6 +2875,39 @@ static_assert(sizeof(FAreaInfo) == 0x000020, "Wrong size on FAreaInfo");
 static_assert(offsetof(FAreaInfo, AreaLanguage) == 0x000000, "Member 'FAreaInfo::AreaLanguage' has a wrong offset!");
 static_assert(offsetof(FAreaInfo, AreaSound) == 0x000010, "Member 'FAreaInfo::AreaSound' has a wrong offset!");
 
+// ScriptStruct X6Game.X6NiagaraComponentProfilerData
+// 0x000C (0x000C - 0x0000)
+struct FX6NiagaraComponentProfilerData final
+{
+public:
+	int32                                         Emitters;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Particles;                                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EmitterParticlesMax;                               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6NiagaraComponentProfilerData) == 0x000004, "Wrong alignment on FX6NiagaraComponentProfilerData");
+static_assert(sizeof(FX6NiagaraComponentProfilerData) == 0x00000C, "Wrong size on FX6NiagaraComponentProfilerData");
+static_assert(offsetof(FX6NiagaraComponentProfilerData, Emitters) == 0x000000, "Member 'FX6NiagaraComponentProfilerData::Emitters' has a wrong offset!");
+static_assert(offsetof(FX6NiagaraComponentProfilerData, Particles) == 0x000004, "Member 'FX6NiagaraComponentProfilerData::Particles' has a wrong offset!");
+static_assert(offsetof(FX6NiagaraComponentProfilerData, EmitterParticlesMax) == 0x000008, "Member 'FX6NiagaraComponentProfilerData::EmitterParticlesMax' has a wrong offset!");
+
+// ScriptStruct X6Game.X6StatData
+// 0x0020 (0x0020 - 0x0000)
+struct FX6StatData final
+{
+public:
+	class FString                                 StatName;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CallCount;                                         // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IncAve;                                            // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         IncMax;                                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FX6StatData) == 0x000008, "Wrong alignment on FX6StatData");
+static_assert(sizeof(FX6StatData) == 0x000020, "Wrong size on FX6StatData");
+static_assert(offsetof(FX6StatData, StatName) == 0x000000, "Member 'FX6StatData::StatName' has a wrong offset!");
+static_assert(offsetof(FX6StatData, CallCount) == 0x000010, "Member 'FX6StatData::CallCount' has a wrong offset!");
+static_assert(offsetof(FX6StatData, IncAve) == 0x000014, "Member 'FX6StatData::IncAve' has a wrong offset!");
+static_assert(offsetof(FX6StatData, IncMax) == 0x000018, "Member 'FX6StatData::IncMax' has a wrong offset!");
+
 // ScriptStruct X6Game.FootPlacementIKContext
 // 0x0190 (0x0190 - 0x0000)
 struct FFootPlacementIKContext final
@@ -2717,6 +2967,59 @@ static_assert(offsetof(FFootIKCalculateDependenceParameter, LeftIKCurveName) == 
 static_assert(offsetof(FFootIKCalculateDependenceParameter, LeftLockCurveName) == 0x000008, "Member 'FFootIKCalculateDependenceParameter::LeftLockCurveName' has a wrong offset!");
 static_assert(offsetof(FFootIKCalculateDependenceParameter, RightIKCurveName) == 0x000010, "Member 'FFootIKCalculateDependenceParameter::RightIKCurveName' has a wrong offset!");
 static_assert(offsetof(FFootIKCalculateDependenceParameter, RightLockCurveName) == 0x000018, "Member 'FFootIKCalculateDependenceParameter::RightLockCurveName' has a wrong offset!");
+
+// ScriptStruct X6Game.FootIKFeatureTargetData
+// 0x0160 (0x0160 - 0x0000)
+struct FFootIKFeatureTargetData final
+{
+public:
+	struct FVector                                PelvisTargetOffset;                                // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PelvisAlpha;                                       // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LeftFootLockAlpha;                                 // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LeftFootIKAlpha;                                   // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LeftFootTargetOffset;                              // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LeftFootOffset;                                    // 0x0040(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               LeftFootRotationOffset;                            // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                LeftFootLockLocation;                              // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               LeftFootLockRotation;                              // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                LeftFootWorldOffsetLocation;                       // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLeftFootInAir;                                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RightFootLockAlpha;                                // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RightFootIKAlpha;                                  // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RightFootTargetOffset;                             // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RightFootOffset;                                   // 0x00E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RightFootRotationOffset;                           // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RightFootLockLocation;                             // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RightFootLockRotation;                             // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RightFootWorldOffsetLocation;                      // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRightFootInAir;                                   // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FFootIKFeatureTargetData) == 0x000008, "Wrong alignment on FFootIKFeatureTargetData");
+static_assert(sizeof(FFootIKFeatureTargetData) == 0x000160, "Wrong size on FFootIKFeatureTargetData");
+static_assert(offsetof(FFootIKFeatureTargetData, PelvisTargetOffset) == 0x000000, "Member 'FFootIKFeatureTargetData::PelvisTargetOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, PelvisAlpha) == 0x000018, "Member 'FFootIKFeatureTargetData::PelvisAlpha' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootLockAlpha) == 0x00001C, "Member 'FFootIKFeatureTargetData::LeftFootLockAlpha' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootIKAlpha) == 0x000020, "Member 'FFootIKFeatureTargetData::LeftFootIKAlpha' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootTargetOffset) == 0x000028, "Member 'FFootIKFeatureTargetData::LeftFootTargetOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootOffset) == 0x000040, "Member 'FFootIKFeatureTargetData::LeftFootOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootRotationOffset) == 0x000058, "Member 'FFootIKFeatureTargetData::LeftFootRotationOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootLockLocation) == 0x000070, "Member 'FFootIKFeatureTargetData::LeftFootLockLocation' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootLockRotation) == 0x000088, "Member 'FFootIKFeatureTargetData::LeftFootLockRotation' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, LeftFootWorldOffsetLocation) == 0x0000A0, "Member 'FFootIKFeatureTargetData::LeftFootWorldOffsetLocation' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, bLeftFootInAir) == 0x0000B8, "Member 'FFootIKFeatureTargetData::bLeftFootInAir' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootLockAlpha) == 0x0000BC, "Member 'FFootIKFeatureTargetData::RightFootLockAlpha' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootIKAlpha) == 0x0000C0, "Member 'FFootIKFeatureTargetData::RightFootIKAlpha' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootTargetOffset) == 0x0000C8, "Member 'FFootIKFeatureTargetData::RightFootTargetOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootOffset) == 0x0000E0, "Member 'FFootIKFeatureTargetData::RightFootOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootRotationOffset) == 0x0000F8, "Member 'FFootIKFeatureTargetData::RightFootRotationOffset' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootLockLocation) == 0x000110, "Member 'FFootIKFeatureTargetData::RightFootLockLocation' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootLockRotation) == 0x000128, "Member 'FFootIKFeatureTargetData::RightFootLockRotation' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, RightFootWorldOffsetLocation) == 0x000140, "Member 'FFootIKFeatureTargetData::RightFootWorldOffsetLocation' has a wrong offset!");
+static_assert(offsetof(FFootIKFeatureTargetData, bRightFootInAir) == 0x000158, "Member 'FFootIKFeatureTargetData::bRightFootInAir' has a wrong offset!");
 
 // ScriptStruct X6Game.FootIKFeatureTargetDataV2
 // 0x00A0 (0x00A0 - 0x0000)
@@ -2837,32 +3140,6 @@ static_assert(offsetof(FDirectMoveParams, UpTraceOffset) == 0x00000C, "Member 'F
 static_assert(offsetof(FDirectMoveParams, EnableBelowTraceDistance) == 0x000010, "Member 'FDirectMoveParams::EnableBelowTraceDistance' has a wrong offset!");
 static_assert(offsetof(FDirectMoveParams, BelowTraceOffset) == 0x000014, "Member 'FDirectMoveParams::BelowTraceOffset' has a wrong offset!");
 
-// ScriptStruct X6Game.SmoothPathParams
-// 0x0020 (0x0020 - 0x0000)
-struct FSmoothPathParams final
-{
-public:
-	float                                         RVOIgnoredAngleCos;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RVOIgnoredDistanceSqr;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothAngleCos;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothNextPathRadiusSqr;                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothPerSegmentLength;                            // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothPerMaxLength;                                // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothCheckLength;                                 // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStrictCheck;                                      // 0x001C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSmoothPathParams) == 0x000004, "Wrong alignment on FSmoothPathParams");
-static_assert(sizeof(FSmoothPathParams) == 0x000020, "Wrong size on FSmoothPathParams");
-static_assert(offsetof(FSmoothPathParams, RVOIgnoredAngleCos) == 0x000000, "Member 'FSmoothPathParams::RVOIgnoredAngleCos' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, RVOIgnoredDistanceSqr) == 0x000004, "Member 'FSmoothPathParams::RVOIgnoredDistanceSqr' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, SmoothAngleCos) == 0x000008, "Member 'FSmoothPathParams::SmoothAngleCos' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, SmoothNextPathRadiusSqr) == 0x00000C, "Member 'FSmoothPathParams::SmoothNextPathRadiusSqr' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, SmoothPerSegmentLength) == 0x000010, "Member 'FSmoothPathParams::SmoothPerSegmentLength' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, SmoothPerMaxLength) == 0x000014, "Member 'FSmoothPathParams::SmoothPerMaxLength' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, SmoothCheckLength) == 0x000018, "Member 'FSmoothPathParams::SmoothCheckLength' has a wrong offset!");
-static_assert(offsetof(FSmoothPathParams, bStrictCheck) == 0x00001C, "Member 'FSmoothPathParams::bStrictCheck' has a wrong offset!");
-
 // ScriptStruct X6Game.CameraCutsExitCondition
 // 0x0002 (0x0002 - 0x0000)
 struct FCameraCutsExitCondition final
@@ -2875,16 +3152,6 @@ static_assert(alignof(FCameraCutsExitCondition) == 0x000001, "Wrong alignment on
 static_assert(sizeof(FCameraCutsExitCondition) == 0x000002, "Wrong size on FCameraCutsExitCondition");
 static_assert(offsetof(FCameraCutsExitCondition, bWithBlend) == 0x000000, "Member 'FCameraCutsExitCondition::bWithBlend' has a wrong offset!");
 static_assert(offsetof(FCameraCutsExitCondition, bWithoutBlend) == 0x000001, "Member 'FCameraCutsExitCondition::bWithoutBlend' has a wrong offset!");
-
-// ScriptStruct X6Game.BoxDropDownTrackResult
-// 0x0108 (0x0108 - 0x0000)
-struct alignas(0x08) FBoxDropDownTrackResult final
-{
-public:
-	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FBoxDropDownTrackResult) == 0x000008, "Wrong alignment on FBoxDropDownTrackResult");
-static_assert(sizeof(FBoxDropDownTrackResult) == 0x000108, "Wrong size on FBoxDropDownTrackResult");
 
 // ScriptStruct X6Game.X6RadialSliderStyle
 // 0x0768 (0x0770 - 0x0008)
@@ -2945,23 +3212,6 @@ public:
 static_assert(alignof(FX6RMInAirComponentPostPhysicsTickFunction) == 0x000008, "Wrong alignment on FX6RMInAirComponentPostPhysicsTickFunction");
 static_assert(sizeof(FX6RMInAirComponentPostPhysicsTickFunction) == 0x000038, "Wrong size on FX6RMInAirComponentPostPhysicsTickFunction");
 
-// ScriptStruct X6Game.X6RMWalkingReplicatedMovementData
-// 0x0028 (0x0028 - 0x0000)
-struct FX6RMWalkingReplicatedMovementData final
-{
-public:
-	ERegularLocomotionType                        ReplicatedAllowedGait;                             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ReplicatedInputMovingDirection;                    // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReplicatedTurnAroundAngle;                         // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FX6RMWalkingReplicatedMovementData) == 0x000008, "Wrong alignment on FX6RMWalkingReplicatedMovementData");
-static_assert(sizeof(FX6RMWalkingReplicatedMovementData) == 0x000028, "Wrong size on FX6RMWalkingReplicatedMovementData");
-static_assert(offsetof(FX6RMWalkingReplicatedMovementData, ReplicatedAllowedGait) == 0x000000, "Member 'FX6RMWalkingReplicatedMovementData::ReplicatedAllowedGait' has a wrong offset!");
-static_assert(offsetof(FX6RMWalkingReplicatedMovementData, ReplicatedInputMovingDirection) == 0x000008, "Member 'FX6RMWalkingReplicatedMovementData::ReplicatedInputMovingDirection' has a wrong offset!");
-static_assert(offsetof(FX6RMWalkingReplicatedMovementData, ReplicatedTurnAroundAngle) == 0x000020, "Member 'FX6RMWalkingReplicatedMovementData::ReplicatedTurnAroundAngle' has a wrong offset!");
-
 // ScriptStruct X6Game.X6TrackContent
 // 0x0010 (0x0010 - 0x0000)
 struct FX6TrackContent final
@@ -2977,17 +3227,6 @@ static_assert(offsetof(FX6TrackContent, TrackClass) == 0x000000, "Member 'FX6Tra
 static_assert(offsetof(FX6TrackContent, SectionBegin) == 0x000008, "Member 'FX6TrackContent::SectionBegin' has a wrong offset!");
 static_assert(offsetof(FX6TrackContent, SectionEnd) == 0x00000C, "Member 'FX6TrackContent::SectionEnd' has a wrong offset!");
 
-// ScriptStruct X6Game.X6SkillAvailableStage
-// 0x0004 (0x0004 - 0x0000)
-struct FX6SkillAvailableStage final
-{
-public:
-	int32                                         Stage;                                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6SkillAvailableStage) == 0x000004, "Wrong alignment on FX6SkillAvailableStage");
-static_assert(sizeof(FX6SkillAvailableStage) == 0x000004, "Wrong size on FX6SkillAvailableStage");
-static_assert(offsetof(FX6SkillAvailableStage, Stage) == 0x000000, "Member 'FX6SkillAvailableStage::Stage' has a wrong offset!");
-
 // ScriptStruct X6Game.X6TargetingShapeScale
 // 0x0018 (0x0018 - 0x0000)
 struct FX6TargetingShapeScale final : public FTargetingExtentParamsBase
@@ -2998,55 +3237,6 @@ public:
 static_assert(alignof(FX6TargetingShapeScale) == 0x000008, "Wrong alignment on FX6TargetingShapeScale");
 static_assert(sizeof(FX6TargetingShapeScale) == 0x000018, "Wrong size on FX6TargetingShapeScale");
 static_assert(offsetof(FX6TargetingShapeScale, ShapeScale) == 0x000000, "Member 'FX6TargetingShapeScale::ShapeScale' has a wrong offset!");
-
-// ScriptStruct X6Game.X6AbilityMontageFailureMessage
-// 0x0030 (0x0030 - 0x0000)
-struct FX6AbilityMontageFailureMessage final
-{
-public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  FailureTags;                                       // 0x0008(0x0020)(BlueprintVisible, NativeAccessSpecifierPublic)
-	class UAnimMontage*                           FailureMontage;                                    // 0x0028(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6AbilityMontageFailureMessage) == 0x000008, "Wrong alignment on FX6AbilityMontageFailureMessage");
-static_assert(sizeof(FX6AbilityMontageFailureMessage) == 0x000030, "Wrong size on FX6AbilityMontageFailureMessage");
-static_assert(offsetof(FX6AbilityMontageFailureMessage, PlayerController) == 0x000000, "Member 'FX6AbilityMontageFailureMessage::PlayerController' has a wrong offset!");
-static_assert(offsetof(FX6AbilityMontageFailureMessage, FailureTags) == 0x000008, "Member 'FX6AbilityMontageFailureMessage::FailureTags' has a wrong offset!");
-static_assert(offsetof(FX6AbilityMontageFailureMessage, FailureMontage) == 0x000028, "Member 'FX6AbilityMontageFailureMessage::FailureMontage' has a wrong offset!");
-
-// ScriptStruct X6Game.X6MotionDeltaTrack
-// 0x0090 (0x0090 - 0x0000)
-struct FX6MotionDeltaTrack final
-{
-public:
-	TArray<struct FTransform>                     BoneTransformTrack;                                // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        DeltaTranslationTrack;                             // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRotator>                       DeltaRotationTrack;                                // 0x0020(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                TotalTranslation;                                  // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               TotalRotation;                                     // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                BlendOutTranslation;                               // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               BlendOutRotation;                                  // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6MotionDeltaTrack) == 0x000008, "Wrong alignment on FX6MotionDeltaTrack");
-static_assert(sizeof(FX6MotionDeltaTrack) == 0x000090, "Wrong size on FX6MotionDeltaTrack");
-static_assert(offsetof(FX6MotionDeltaTrack, BoneTransformTrack) == 0x000000, "Member 'FX6MotionDeltaTrack::BoneTransformTrack' has a wrong offset!");
-static_assert(offsetof(FX6MotionDeltaTrack, DeltaTranslationTrack) == 0x000010, "Member 'FX6MotionDeltaTrack::DeltaTranslationTrack' has a wrong offset!");
-static_assert(offsetof(FX6MotionDeltaTrack, DeltaRotationTrack) == 0x000020, "Member 'FX6MotionDeltaTrack::DeltaRotationTrack' has a wrong offset!");
-static_assert(offsetof(FX6MotionDeltaTrack, TotalTranslation) == 0x000030, "Member 'FX6MotionDeltaTrack::TotalTranslation' has a wrong offset!");
-static_assert(offsetof(FX6MotionDeltaTrack, TotalRotation) == 0x000048, "Member 'FX6MotionDeltaTrack::TotalRotation' has a wrong offset!");
-static_assert(offsetof(FX6MotionDeltaTrack, BlendOutTranslation) == 0x000060, "Member 'FX6MotionDeltaTrack::BlendOutTranslation' has a wrong offset!");
-static_assert(offsetof(FX6MotionDeltaTrack, BlendOutRotation) == 0x000078, "Member 'FX6MotionDeltaTrack::BlendOutRotation' has a wrong offset!");
-
-// ScriptStruct X6Game.X6MotionDeltaTrackContainer
-// 0x0010 (0x0010 - 0x0000)
-struct FX6MotionDeltaTrackContainer final
-{
-public:
-	TArray<struct FX6MotionDeltaTrack>            Tracks;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6MotionDeltaTrackContainer) == 0x000008, "Wrong alignment on FX6MotionDeltaTrackContainer");
-static_assert(sizeof(FX6MotionDeltaTrackContainer) == 0x000010, "Wrong size on FX6MotionDeltaTrackContainer");
-static_assert(offsetof(FX6MotionDeltaTrackContainer, Tracks) == 0x000000, "Member 'FX6MotionDeltaTrackContainer::Tracks' has a wrong offset!");
 
 // ScriptStruct X6Game.X6AbilitySet_GameplayAbility
 // 0x0010 (0x0010 - 0x0000)
@@ -3061,17 +3251,6 @@ static_assert(sizeof(FX6AbilitySet_GameplayAbility) == 0x000010, "Wrong size on 
 static_assert(offsetof(FX6AbilitySet_GameplayAbility, Ability) == 0x000000, "Member 'FX6AbilitySet_GameplayAbility::Ability' has a wrong offset!");
 static_assert(offsetof(FX6AbilitySet_GameplayAbility, InputTag) == 0x000008, "Member 'FX6AbilitySet_GameplayAbility::InputTag' has a wrong offset!");
 
-// ScriptStruct X6Game.X6AbilitySet_GrantedHandles
-// 0x0010 (0x0010 - 0x0000)
-struct FX6AbilitySet_GrantedHandles final
-{
-public:
-	TArray<struct FGameplayAbilitySpecHandle>     AbilitySpecHandles;                                // 0x0000(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-};
-static_assert(alignof(FX6AbilitySet_GrantedHandles) == 0x000008, "Wrong alignment on FX6AbilitySet_GrantedHandles");
-static_assert(sizeof(FX6AbilitySet_GrantedHandles) == 0x000010, "Wrong size on FX6AbilitySet_GrantedHandles");
-static_assert(offsetof(FX6AbilitySet_GrantedHandles, AbilitySpecHandles) == 0x000000, "Member 'FX6AbilitySet_GrantedHandles::AbilitySpecHandles' has a wrong offset!");
-
 // ScriptStruct X6Game.GameplayAbilityLocalAnimMontageForMesh
 // 0x0030 (0x0030 - 0x0000)
 struct FGameplayAbilityLocalAnimMontageForMesh final
@@ -3084,19 +3263,6 @@ static_assert(alignof(FGameplayAbilityLocalAnimMontageForMesh) == 0x000008, "Wro
 static_assert(sizeof(FGameplayAbilityLocalAnimMontageForMesh) == 0x000030, "Wrong size on FGameplayAbilityLocalAnimMontageForMesh");
 static_assert(offsetof(FGameplayAbilityLocalAnimMontageForMesh, mesh) == 0x000000, "Member 'FGameplayAbilityLocalAnimMontageForMesh::mesh' has a wrong offset!");
 static_assert(offsetof(FGameplayAbilityLocalAnimMontageForMesh, LocalMontageInfo) == 0x000008, "Member 'FGameplayAbilityLocalAnimMontageForMesh::LocalMontageInfo' has a wrong offset!");
-
-// ScriptStruct X6Game.CombatInputHeldSpecHandle
-// 0x0008 (0x0008 - 0x0000)
-struct FCombatInputHeldSpecHandle final
-{
-public:
-	struct FGameplayAbilitySpecHandle             AbilitySpecHandle;                                 // 0x0000(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InputHeldTimeSeconds;                              // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FCombatInputHeldSpecHandle) == 0x000004, "Wrong alignment on FCombatInputHeldSpecHandle");
-static_assert(sizeof(FCombatInputHeldSpecHandle) == 0x000008, "Wrong size on FCombatInputHeldSpecHandle");
-static_assert(offsetof(FCombatInputHeldSpecHandle, AbilitySpecHandle) == 0x000000, "Member 'FCombatInputHeldSpecHandle::AbilitySpecHandle' has a wrong offset!");
-static_assert(offsetof(FCombatInputHeldSpecHandle, InputHeldTimeSeconds) == 0x000004, "Member 'FCombatInputHeldSpecHandle::InputHeldTimeSeconds' has a wrong offset!");
 
 // ScriptStruct X6Game.X6AbilityTagRelationship
 // 0x0088 (0x0088 - 0x0000)
@@ -3117,17 +3283,6 @@ static_assert(offsetof(FX6AbilityTagRelationship, AbilityTagsToCancel) == 0x0000
 static_assert(offsetof(FX6AbilityTagRelationship, ActivationRequiredTags) == 0x000048, "Member 'FX6AbilityTagRelationship::ActivationRequiredTags' has a wrong offset!");
 static_assert(offsetof(FX6AbilityTagRelationship, ActivationBlockedTags) == 0x000068, "Member 'FX6AbilityTagRelationship::ActivationBlockedTags' has a wrong offset!");
 
-// ScriptStruct X6Game.X6AbilityGrant
-// 0x0028 (0x0028 - 0x0000)
-struct FX6AbilityGrant final
-{
-public:
-	TSoftClassPtr<class UClass>                   AbilityType;                                       // 0x0000(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6AbilityGrant) == 0x000008, "Wrong alignment on FX6AbilityGrant");
-static_assert(sizeof(FX6AbilityGrant) == 0x000028, "Wrong size on FX6AbilityGrant");
-static_assert(offsetof(FX6AbilityGrant, AbilityType) == 0x000000, "Member 'FX6AbilityGrant::AbilityType' has a wrong offset!");
-
 // ScriptStruct X6Game.X6AttributeSetGrant
 // 0x0050 (0x0050 - 0x0000)
 struct FX6AttributeSetGrant final
@@ -3140,21 +3295,6 @@ static_assert(alignof(FX6AttributeSetGrant) == 0x000008, "Wrong alignment on FX6
 static_assert(sizeof(FX6AttributeSetGrant) == 0x000050, "Wrong size on FX6AttributeSetGrant");
 static_assert(offsetof(FX6AttributeSetGrant, AttributeSetType) == 0x000000, "Member 'FX6AttributeSetGrant::AttributeSetType' has a wrong offset!");
 static_assert(offsetof(FX6AttributeSetGrant, InitializationData) == 0x000028, "Member 'FX6AttributeSetGrant::InitializationData' has a wrong offset!");
-
-// ScriptStruct X6Game.GameFeatureAbilitiesEntry
-// 0x0048 (0x0048 - 0x0000)
-struct FGameFeatureAbilitiesEntry final
-{
-public:
-	TSoftClassPtr<class UClass>                   ActorClass;                                        // 0x0000(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FX6AbilityGrant>                GrantedAbilities;                                  // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<TSoftObjectPtr<class UX6AbilitySet>>   GrantedAbilitySets;                                // 0x0038(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FGameFeatureAbilitiesEntry) == 0x000008, "Wrong alignment on FGameFeatureAbilitiesEntry");
-static_assert(sizeof(FGameFeatureAbilitiesEntry) == 0x000048, "Wrong size on FGameFeatureAbilitiesEntry");
-static_assert(offsetof(FGameFeatureAbilitiesEntry, ActorClass) == 0x000000, "Member 'FGameFeatureAbilitiesEntry::ActorClass' has a wrong offset!");
-static_assert(offsetof(FGameFeatureAbilitiesEntry, GrantedAbilities) == 0x000028, "Member 'FGameFeatureAbilitiesEntry::GrantedAbilities' has a wrong offset!");
-static_assert(offsetof(FGameFeatureAbilitiesEntry, GrantedAbilitySets) == 0x000038, "Member 'FGameFeatureAbilitiesEntry::GrantedAbilitySets' has a wrong offset!");
 
 }
 

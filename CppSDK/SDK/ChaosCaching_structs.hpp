@@ -150,14 +150,14 @@ struct FCacheEventTrack final
 public:
 	class FName                                   Name;                                              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UScriptStruct*                          Struct;                                            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 TimeStamps;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 Timestamps;                                        // 0x0010(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_20[0x18];                                      // 0x0020(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCacheEventTrack) == 0x000008, "Wrong alignment on FCacheEventTrack");
 static_assert(sizeof(FCacheEventTrack) == 0x000038, "Wrong size on FCacheEventTrack");
 static_assert(offsetof(FCacheEventTrack, Name) == 0x000000, "Member 'FCacheEventTrack::Name' has a wrong offset!");
 static_assert(offsetof(FCacheEventTrack, Struct) == 0x000008, "Member 'FCacheEventTrack::Struct' has a wrong offset!");
-static_assert(offsetof(FCacheEventTrack, TimeStamps) == 0x000010, "Member 'FCacheEventTrack::TimeStamps' has a wrong offset!");
+static_assert(offsetof(FCacheEventTrack, Timestamps) == 0x000010, "Member 'FCacheEventTrack::Timestamps' has a wrong offset!");
 
 // ScriptStruct ChaosCaching.ObservedComponent
 // 0x0180 (0x0180 - 0x0000)

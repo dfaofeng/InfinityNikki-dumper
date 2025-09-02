@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "InputCore_structs.hpp"
-#include "EUTCJoystickAxes_structs.hpp"
 #include "UTCComponent_classes.hpp"
+#include "InputCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "EUTCJoystickAxes_structs.hpp"
 
 
 namespace SDK

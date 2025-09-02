@@ -12,9 +12,9 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "SMSystem_structs.hpp"
 #include "Engine_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "SMSystem_structs.hpp"
 
 
 namespace SDK

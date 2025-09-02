@@ -17,37 +17,51 @@
 namespace SDK
 {
 
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.UpdateState
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.ExecuteUbergraph_WBP_UI_RedPoint
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_RedPoint_C::UpdateState()
+void UWBP_UI_RedPoint_C::ExecuteUbergraph_WBP_UI_RedPoint(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_RedPoint_C", "UpdateState");
+		Func = Class->GetFunction("WBP_UI_RedPoint_C", "ExecuteUbergraph_WBP_UI_RedPoint");
+
+	Params::WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.GetRedPointID
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_RedPoint_C::GetRedPointID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_RedPoint_C", "GetRedPointID");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.SetUniqueId
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.NewFunction_0
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   UId_0                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_RedPoint_C::SetUniqueId(int32 UId_0)
+void UWBP_UI_RedPoint_C::NewFunction_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_RedPoint_C", "SetUniqueId");
+		Func = Class->GetFunction("WBP_UI_RedPoint_C", "NewFunction_0");
 
-	Params::WBP_UI_RedPoint_C_SetUniqueId Parms{};
-
-	Parms.UId_0 = UId_0;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -71,51 +85,37 @@ void UWBP_UI_RedPoint_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.NewFunction_0
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.SetUniqueId
 // (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_UI_RedPoint_C::NewFunction_0()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_RedPoint_C", "NewFunction_0");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.GetRedPointID
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_UI_RedPoint_C::GetRedPointID()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_RedPoint_C", "GetRedPointID");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.ExecuteUbergraph_WBP_UI_RedPoint
-// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   UId_0                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_UI_RedPoint_C::ExecuteUbergraph_WBP_UI_RedPoint(int32 EntryPoint)
+void UWBP_UI_RedPoint_C::SetUniqueId(int32 UId_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_UI_RedPoint_C", "ExecuteUbergraph_WBP_UI_RedPoint");
+		Func = Class->GetFunction("WBP_UI_RedPoint_C", "SetUniqueId");
 
-	Params::WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint Parms{};
+	Params::WBP_UI_RedPoint_C_SetUniqueId Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.UId_0 = UId_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.UpdateState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_UI_RedPoint_C::UpdateState()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_UI_RedPoint_C", "UpdateState");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

@@ -16,6 +16,21 @@
 namespace SDK::Params
 {
 
+// Function WBP_Interaction_OperationItem.WBP_Interaction_OperationItem_C.BP_PostAKEventOnPressed
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed final
+{
+public:
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable; // 0x0010(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_X6PostEvent2D_PlayingID;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed) == 0x000008, "Wrong alignment on WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed");
+static_assert(sizeof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed) == 0x000028, "Wrong size on WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed");
+static_assert(offsetof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed, Temp_struct_Variable) == 0x000000, "Member 'WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed, Temp_delegate_Variable) == 0x000010, "Member 'WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed, CallFunc_X6PostEvent2D_PlayingID) == 0x000020, "Member 'WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed::CallFunc_X6PostEvent2D_PlayingID' has a wrong offset!");
+
 // Function WBP_Interaction_OperationItem.WBP_Interaction_OperationItem_C.ExecuteUbergraph_WBP_Interaction_OperationItem
 // 0x0030 (0x0030 - 0x0000)
 struct WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem final
@@ -33,21 +48,6 @@ static_assert(offsetof(WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Inte
 static_assert(offsetof(WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem, Temp_struct_Variable) == 0x000008, "Member 'WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem::Temp_struct_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem, Temp_delegate_Variable) == 0x000018, "Member 'WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem::Temp_delegate_Variable' has a wrong offset!");
 static_assert(offsetof(WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem, CallFunc_X6PostEvent2D_PlayingID) == 0x000028, "Member 'WBP_Interaction_OperationItem_C_ExecuteUbergraph_WBP_Interaction_OperationItem::CallFunc_X6PostEvent2D_PlayingID' has a wrong offset!");
-
-// Function WBP_Interaction_OperationItem.WBP_Interaction_OperationItem_C.BP_PostAKEventOnPressed
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed final
-{
-public:
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0000(0x0010)(ConstParm, ReferenceParm)
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable; // 0x0010(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_X6PostEvent2D_PlayingID;                  // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed) == 0x000008, "Wrong alignment on WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed");
-static_assert(sizeof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed) == 0x000028, "Wrong size on WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed");
-static_assert(offsetof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed, Temp_struct_Variable) == 0x000000, "Member 'WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed, Temp_delegate_Variable) == 0x000010, "Member 'WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed, CallFunc_X6PostEvent2D_PlayingID) == 0x000020, "Member 'WBP_Interaction_OperationItem_C_BP_PostAKEventOnPressed::CallFunc_X6PostEvent2D_PlayingID' has a wrong offset!");
 
 // Function WBP_Interaction_OperationItem.WBP_Interaction_OperationItem_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

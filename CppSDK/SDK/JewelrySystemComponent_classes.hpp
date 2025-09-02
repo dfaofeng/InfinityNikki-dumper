@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_X6ActorComponent_classes.hpp"
 #include "Engine_structs.hpp"
 #include "AkAudio_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK
@@ -41,19 +41,19 @@ public:
 	struct FMontageBlendSettings                  BlendOutSettings;                                  // 0x0138(0x0020)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 
 public:
-	void BP_AddCommonNiagara(class UNiagaraSystem* Niagara, class FName SocketName, int32 AnimalIndex);
-	void BP_AddNiagara(class UNiagaraSystem* Niagara, class FName SocketName, int32 AnimalIndex, int32 ColorIndex, class UNiagaraComponent** NiagaraComponent);
-	void BP_AddNiagaraToMesh(class UNiagaraSystem* Niagara, class FName SocketName, class UStaticMeshComponent* StaticMeshComponent);
-	void BP_HideJewelry();
-	void BP_PlayAudio(class AActor* Actor, class UAkAudioEvent* Audio);
-	void BP_SetJewelryShow(bool isNeedShow);
-	void BP_ShowJewelry(TSoftObjectPtr<class UStaticMesh> mesh, const struct FTransform& Transform, const class FString& SocketName);
-	void BP_ShowOtherJewelry(TSoftObjectPtr<class UStaticMesh> mesh, const struct FTransform& Transform, const class FString& SocketName);
-	void BP_StopAnimalActionInfo(class UAnimInstance* AnimInstance);
-	void ExecuteUbergraph_JewelrySystemComponent(int32 EntryPoint);
-	void OnLoaded_13B6375E47D76253214C44A3E6AAE80B(class UObject* Loaded);
-	void OnLoaded_1E76F6A4429CBBD606DFEAB37F5F62D8(class UObject* Loaded);
 	void ReceiveTick(float DeltaSeconds);
+	void OnLoaded_1E76F6A4429CBBD606DFEAB37F5F62D8(class UObject* Loaded);
+	void OnLoaded_13B6375E47D76253214C44A3E6AAE80B(class UObject* Loaded);
+	void ExecuteUbergraph_JewelrySystemComponent(int32 EntryPoint);
+	void BP_StopAnimalActionInfo(class UAnimInstance* AnimInstance);
+	void BP_ShowOtherJewelry(TSoftObjectPtr<class UStaticMesh> mesh, const struct FTransform& Transform, const class FString& SocketName);
+	void BP_ShowJewelry(TSoftObjectPtr<class UStaticMesh> mesh, const struct FTransform& Transform, const class FString& SocketName);
+	void BP_SetJewelryShow(bool isNeedShow);
+	void BP_PlayAudio(class AActor* Actor, class UAkAudioEvent* Audio);
+	void BP_HideJewelry();
+	void BP_AddNiagaraToMesh(class UNiagaraSystem* Niagara, class FName SocketName, class UStaticMeshComponent* StaticMeshComponent);
+	void BP_AddNiagara(class UNiagaraSystem* Niagara, class FName SocketName, int32 AnimalIndex, int32 ColorIndex, class UNiagaraComponent** NiagaraComponent);
+	void BP_AddCommonNiagara(class UNiagaraSystem* Niagara, class FName SocketName, int32 AnimalIndex);
 
 	class FString GetModuleName() const;
 

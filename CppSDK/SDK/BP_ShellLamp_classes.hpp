@@ -17,14 +17,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ShellLamp.BP_ShellLamp_C
-// 0x0020 (0x0458 - 0x0438)
+// 0x0020 (0x04A8 - 0x0488)
 class ABP_ShellLamp_C final : public AX6Actor
 {
 public:
-	class USceneComponent*                        Scene;                                             // 0x0438(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   S_Prop_Light_21b;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Light;                                             // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Scene;                                             // 0x0488(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   S_Prop_Light_21b;                                  // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Light;                                             // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -37,11 +37,11 @@ public:
 	}
 };
 static_assert(alignof(ABP_ShellLamp_C) == 0x000008, "Wrong alignment on ABP_ShellLamp_C");
-static_assert(sizeof(ABP_ShellLamp_C) == 0x000458, "Wrong size on ABP_ShellLamp_C");
-static_assert(offsetof(ABP_ShellLamp_C, Scene) == 0x000438, "Member 'ABP_ShellLamp_C::Scene' has a wrong offset!");
-static_assert(offsetof(ABP_ShellLamp_C, S_Prop_Light_21b) == 0x000440, "Member 'ABP_ShellLamp_C::S_Prop_Light_21b' has a wrong offset!");
-static_assert(offsetof(ABP_ShellLamp_C, DefaultSceneRoot) == 0x000448, "Member 'ABP_ShellLamp_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_ShellLamp_C, Light) == 0x000450, "Member 'ABP_ShellLamp_C::Light' has a wrong offset!");
+static_assert(sizeof(ABP_ShellLamp_C) == 0x0004A8, "Wrong size on ABP_ShellLamp_C");
+static_assert(offsetof(ABP_ShellLamp_C, Scene) == 0x000488, "Member 'ABP_ShellLamp_C::Scene' has a wrong offset!");
+static_assert(offsetof(ABP_ShellLamp_C, S_Prop_Light_21b) == 0x000490, "Member 'ABP_ShellLamp_C::S_Prop_Light_21b' has a wrong offset!");
+static_assert(offsetof(ABP_ShellLamp_C, DefaultSceneRoot) == 0x000498, "Member 'ABP_ShellLamp_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_ShellLamp_C, Light) == 0x0004A0, "Member 'ABP_ShellLamp_C::Light' has a wrong offset!");
 
 }
 

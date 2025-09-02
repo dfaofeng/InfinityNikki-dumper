@@ -39,12 +39,12 @@ public:
 	class UTextBlock*                             Num;                                               // 0x0360(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void TestSet(int32 Count);
-	void PlayPurpleCoinAdd();
-	void PlayMoonCoinAdd();
-	void PlayMinus();
-	void ExecuteUbergraph_WBP_UI_HUD_Collection_item(int32 EntryPoint);
 	void BndEvt__WBP_UI_HUD_Collection_item_Button_TestSet_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void ExecuteUbergraph_WBP_UI_HUD_Collection_item(int32 EntryPoint);
+	void PlayMinus();
+	void PlayMoonCoinAdd();
+	void PlayPurpleCoinAdd();
+	void TestSet(int32 Count);
 
 	class FString GetModuleName() const;
 

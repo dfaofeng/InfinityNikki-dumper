@@ -16,20 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.UpdateInteractorLocation
-// 0x0020 (0x0020 - 0x0000)
-struct BP_UIPFManager_FX_C_UpdateInteractorLocation final
-{
-public:
-	int32                                         InteractorID;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HitLocation;                                       // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIPFManager_FX_C_UpdateInteractorLocation) == 0x000008, "Wrong alignment on BP_UIPFManager_FX_C_UpdateInteractorLocation");
-static_assert(sizeof(BP_UIPFManager_FX_C_UpdateInteractorLocation) == 0x000020, "Wrong size on BP_UIPFManager_FX_C_UpdateInteractorLocation");
-static_assert(offsetof(BP_UIPFManager_FX_C_UpdateInteractorLocation, InteractorID) == 0x000000, "Member 'BP_UIPFManager_FX_C_UpdateInteractorLocation::InteractorID' has a wrong offset!");
-static_assert(offsetof(BP_UIPFManager_FX_C_UpdateInteractorLocation, HitLocation) == 0x000008, "Member 'BP_UIPFManager_FX_C_UpdateInteractorLocation::HitLocation' has a wrong offset!");
-
 // Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.ExecuteUbergraph_BP_UIPFManager_FX
 // 0x0068 (0x0068 - 0x0000)
 struct BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX final
@@ -56,6 +42,20 @@ static_assert(offsetof(BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX, C
 static_assert(offsetof(BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX, CallFunc_Conv_IntToString_ReturnValue) == 0x000040, "Member 'BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX, CallFunc_Concat_StrStr_ReturnValue) == 0x000050, "Member 'BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX, CallFunc_GetNiagaraParameterCollection_ReturnValue_1) == 0x000060, "Member 'BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX::CallFunc_GetNiagaraParameterCollection_ReturnValue_1' has a wrong offset!");
+
+// Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.UpdateInteractorLocation
+// 0x0020 (0x0020 - 0x0000)
+struct BP_UIPFManager_FX_C_UpdateInteractorLocation final
+{
+public:
+	int32                                         InteractorID;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HitLocation;                                       // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIPFManager_FX_C_UpdateInteractorLocation) == 0x000008, "Wrong alignment on BP_UIPFManager_FX_C_UpdateInteractorLocation");
+static_assert(sizeof(BP_UIPFManager_FX_C_UpdateInteractorLocation) == 0x000020, "Wrong size on BP_UIPFManager_FX_C_UpdateInteractorLocation");
+static_assert(offsetof(BP_UIPFManager_FX_C_UpdateInteractorLocation, InteractorID) == 0x000000, "Member 'BP_UIPFManager_FX_C_UpdateInteractorLocation::InteractorID' has a wrong offset!");
+static_assert(offsetof(BP_UIPFManager_FX_C_UpdateInteractorLocation, HitLocation) == 0x000008, "Member 'BP_UIPFManager_FX_C_UpdateInteractorLocation::HitLocation' has a wrong offset!");
 
 }
 

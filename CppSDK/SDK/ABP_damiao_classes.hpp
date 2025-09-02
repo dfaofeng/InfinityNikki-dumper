@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_damiao.ABP_damiao_C
-// 0x1340 (0x1710 - 0x03D0)
+// 0x1280 (0x1650 - 0x03D0)
 class UABP_damiao_C final : public UAnimInstance
 {
 public:
@@ -29,12 +29,12 @@ public:
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x03E0(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x03E8(0x0020)()
 	uint8                                         Pad_408[0x8];                                      // 0x0408(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_NikkiPhysics                 AnimGraphNode_NikkiPhysics;                        // 0x0410(0x11F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1600(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1620(0x0020)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x1640(0x00B8)()
-	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimStatesComponent;                         // 0x16F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        NikkiPhysicsAlpha;                                 // 0x1700(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNode_NikkiPhysics                 AnimGraphNode_NikkiPhysics;                        // 0x0410(0x1130)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0x1540(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0x1560(0x0020)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x1580(0x00B8)()
+	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimStatesComponent;                         // 0x1638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        NikkiPhysicsAlpha;                                 // 0x1640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(const struct FPoseLink& InPose, struct FPoseLink* AnimGraph_0);
@@ -52,17 +52,17 @@ public:
 	}
 };
 static_assert(alignof(UABP_damiao_C) == 0x000010, "Wrong alignment on UABP_damiao_C");
-static_assert(sizeof(UABP_damiao_C) == 0x001710, "Wrong size on UABP_damiao_C");
+static_assert(sizeof(UABP_damiao_C) == 0x001650, "Wrong size on UABP_damiao_C");
 static_assert(offsetof(UABP_damiao_C, UberGraphFrame) == 0x0003D0, "Member 'UABP_damiao_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_damiao_C, AnimBlueprintExtension_PropertyAccess) == 0x0003D8, "Member 'UABP_damiao_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
 static_assert(offsetof(UABP_damiao_C, AnimBlueprintExtension_Base) == 0x0003E0, "Member 'UABP_damiao_C::AnimBlueprintExtension_Base' has a wrong offset!");
 static_assert(offsetof(UABP_damiao_C, AnimGraphNode_Root) == 0x0003E8, "Member 'UABP_damiao_C::AnimGraphNode_Root' has a wrong offset!");
 static_assert(offsetof(UABP_damiao_C, AnimGraphNode_NikkiPhysics) == 0x000410, "Member 'UABP_damiao_C::AnimGraphNode_NikkiPhysics' has a wrong offset!");
-static_assert(offsetof(UABP_damiao_C, AnimGraphNode_LocalToComponentSpace) == 0x001600, "Member 'UABP_damiao_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UABP_damiao_C, AnimGraphNode_ComponentToLocalSpace) == 0x001620, "Member 'UABP_damiao_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UABP_damiao_C, AnimGraphNode_LinkedInputPose) == 0x001640, "Member 'UABP_damiao_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_damiao_C, PlayerAnimStatesComponent) == 0x0016F8, "Member 'UABP_damiao_C::PlayerAnimStatesComponent' has a wrong offset!");
-static_assert(offsetof(UABP_damiao_C, NikkiPhysicsAlpha) == 0x001700, "Member 'UABP_damiao_C::NikkiPhysicsAlpha' has a wrong offset!");
+static_assert(offsetof(UABP_damiao_C, AnimGraphNode_LocalToComponentSpace) == 0x001540, "Member 'UABP_damiao_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UABP_damiao_C, AnimGraphNode_ComponentToLocalSpace) == 0x001560, "Member 'UABP_damiao_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UABP_damiao_C, AnimGraphNode_LinkedInputPose) == 0x001580, "Member 'UABP_damiao_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UABP_damiao_C, PlayerAnimStatesComponent) == 0x001638, "Member 'UABP_damiao_C::PlayerAnimStatesComponent' has a wrong offset!");
+static_assert(offsetof(UABP_damiao_C, NikkiPhysicsAlpha) == 0x001640, "Member 'UABP_damiao_C::NikkiPhysicsAlpha' has a wrong offset!");
 
 }
 

@@ -36,14 +36,14 @@ public:
 	float                                         Scale_Size;                                        // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void OnListItemValueChangedViaIndex(int32 Index_0);
-	void OnListItemObjectSetViaIndex(int32 Index_0);
-	void ExecuteUbergraph_WBP_Friends_Head(int32 EntryPoint);
-	void Construct();
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
 	void BP_OnEntryReleased();
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void Construct();
+	void ExecuteUbergraph_WBP_Friends_Head(int32 EntryPoint);
+	void OnListItemObjectSetViaIndex(int32 Index_0);
+	void OnListItemValueChangedViaIndex(int32 Index_0);
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 

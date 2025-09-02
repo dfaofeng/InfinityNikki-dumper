@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "WwiseObjectUtils_structs.hpp"
 
 
@@ -113,7 +113,7 @@ static_assert(offsetof(AkAndroidInitializationSettings_MigrateMultiCoreRendering
 struct AkAudioEvent_ExecuteAction final
 {
 public:
-	EAkActionOnEventType                          actionType;                                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkActionOnEventType                          ActionType;                                        // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	const class AActor*                           Actor;                                             // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PlayingID;                                         // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -124,7 +124,7 @@ public:
 };
 static_assert(alignof(AkAudioEvent_ExecuteAction) == 0x000008, "Wrong alignment on AkAudioEvent_ExecuteAction");
 static_assert(sizeof(AkAudioEvent_ExecuteAction) == 0x000020, "Wrong size on AkAudioEvent_ExecuteAction");
-static_assert(offsetof(AkAudioEvent_ExecuteAction, actionType) == 0x000000, "Member 'AkAudioEvent_ExecuteAction::actionType' has a wrong offset!");
+static_assert(offsetof(AkAudioEvent_ExecuteAction, ActionType) == 0x000000, "Member 'AkAudioEvent_ExecuteAction::ActionType' has a wrong offset!");
 static_assert(offsetof(AkAudioEvent_ExecuteAction, Actor) == 0x000008, "Member 'AkAudioEvent_ExecuteAction::Actor' has a wrong offset!");
 static_assert(offsetof(AkAudioEvent_ExecuteAction, PlayingID) == 0x000010, "Member 'AkAudioEvent_ExecuteAction::PlayingID' has a wrong offset!");
 static_assert(offsetof(AkAudioEvent_ExecuteAction, TransitionDuration) == 0x000014, "Member 'AkAudioEvent_ExecuteAction::TransitionDuration' has a wrong offset!");
@@ -799,7 +799,7 @@ struct AkGameplayStatics_ExecuteActionOnEvent final
 {
 public:
 	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAkActionOnEventType                          actionType;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkActionOnEventType                          ActionType;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 Actor;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TransitionDuration;                                // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -811,7 +811,7 @@ public:
 static_assert(alignof(AkGameplayStatics_ExecuteActionOnEvent) == 0x000008, "Wrong alignment on AkGameplayStatics_ExecuteActionOnEvent");
 static_assert(sizeof(AkGameplayStatics_ExecuteActionOnEvent) == 0x000028, "Wrong size on AkGameplayStatics_ExecuteActionOnEvent");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, AkEvent) == 0x000000, "Member 'AkGameplayStatics_ExecuteActionOnEvent::AkEvent' has a wrong offset!");
-static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, actionType) == 0x000008, "Member 'AkGameplayStatics_ExecuteActionOnEvent::actionType' has a wrong offset!");
+static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, ActionType) == 0x000008, "Member 'AkGameplayStatics_ExecuteActionOnEvent::ActionType' has a wrong offset!");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, Actor) == 0x000010, "Member 'AkGameplayStatics_ExecuteActionOnEvent::Actor' has a wrong offset!");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, TransitionDuration) == 0x000018, "Member 'AkGameplayStatics_ExecuteActionOnEvent::TransitionDuration' has a wrong offset!");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, FadeCurve) == 0x00001C, "Member 'AkGameplayStatics_ExecuteActionOnEvent::FadeCurve' has a wrong offset!");
@@ -822,7 +822,7 @@ static_assert(offsetof(AkGameplayStatics_ExecuteActionOnEvent, PlayingID) == 0x0
 struct AkGameplayStatics_ExecuteActionOnPlayingID final
 {
 public:
-	EAkActionOnEventType                          actionType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkActionOnEventType                          ActionType;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         PlayingID;                                         // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TransitionDuration;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -831,7 +831,7 @@ public:
 };
 static_assert(alignof(AkGameplayStatics_ExecuteActionOnPlayingID) == 0x000004, "Wrong alignment on AkGameplayStatics_ExecuteActionOnPlayingID");
 static_assert(sizeof(AkGameplayStatics_ExecuteActionOnPlayingID) == 0x000010, "Wrong size on AkGameplayStatics_ExecuteActionOnPlayingID");
-static_assert(offsetof(AkGameplayStatics_ExecuteActionOnPlayingID, actionType) == 0x000000, "Member 'AkGameplayStatics_ExecuteActionOnPlayingID::actionType' has a wrong offset!");
+static_assert(offsetof(AkGameplayStatics_ExecuteActionOnPlayingID, ActionType) == 0x000000, "Member 'AkGameplayStatics_ExecuteActionOnPlayingID::ActionType' has a wrong offset!");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnPlayingID, PlayingID) == 0x000004, "Member 'AkGameplayStatics_ExecuteActionOnPlayingID::PlayingID' has a wrong offset!");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnPlayingID, TransitionDuration) == 0x000008, "Member 'AkGameplayStatics_ExecuteActionOnPlayingID::TransitionDuration' has a wrong offset!");
 static_assert(offsetof(AkGameplayStatics_ExecuteActionOnPlayingID, FadeCurve) == 0x00000C, "Member 'AkGameplayStatics_ExecuteActionOnPlayingID::FadeCurve' has a wrong offset!");

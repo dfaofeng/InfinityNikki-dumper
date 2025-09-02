@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "E_NPCPhotoReactionAnimType_structs.hpp"
 #include "F_NPCPhotoReactionAnimList_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

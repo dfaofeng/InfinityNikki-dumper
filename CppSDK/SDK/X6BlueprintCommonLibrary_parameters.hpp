@@ -10,15 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Enum_InformID_structs.hpp"
-#include "E_SafezoneType_structs.hpp"
 #include "ECharacterType_structs.hpp"
+#include "EScenarioHomeEventType_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "Enum_CenterInfoType_structs.hpp"
-#include "MainHUDItem_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Enum_CenterInfoType_structs.hpp"
+#include "E_SafezoneType_structs.hpp"
+#include "Enum_InformID_structs.hpp"
 #include "Engine_structs.hpp"
+#include "MainHUDItem_structs.hpp"
 
 
 namespace SDK::Params
@@ -1192,13 +1193,13 @@ static_assert(offsetof(X6BlueprintCommonLibrary_C_BPEnableActorSimulateBuoyancy,
 struct X6BlueprintCommonLibrary_C_BP_UpdateUITips final
 {
 public:
-	int32                                         LevelID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LevelId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         GameStage;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(X6BlueprintCommonLibrary_C_BP_UpdateUITips) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_UpdateUITips");
 static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_UpdateUITips) == 0x000010, "Wrong size on X6BlueprintCommonLibrary_C_BP_UpdateUITips");
-static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_UpdateUITips, LevelID) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_UpdateUITips::LevelID' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_UpdateUITips, LevelId) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_UpdateUITips::LevelId' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_UpdateUITips, GameStage) == 0x000004, "Member 'X6BlueprintCommonLibrary_C_BP_UpdateUITips::GameStage' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_UpdateUITips, __WorldContext) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_UpdateUITips::__WorldContext' has a wrong offset!");
 
@@ -1428,18 +1429,32 @@ static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision, bE
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision, Tag) == 0x000010, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision::Tag' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision, __WorldContext) == 0x000020, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision::__WorldContext' has a wrong offset!");
 
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_ScenarioHomeEventTrigger
+// 0x0010 (0x0010 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger final
+{
+public:
+	EScenarioHomeEventType                        HomeEventType;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger) == 0x000010, "Wrong size on X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger, HomeEventType) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger::HomeEventType' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger, __WorldContext) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_ScenarioHomeEventTrigger::__WorldContext' has a wrong offset!");
+
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_RequestEnterBattle
 // 0x0010 (0x0010 - 0x0000)
 struct X6BlueprintCommonLibrary_C_BP_RequestEnterBattle final
 {
 public:
-	int32                                         LevelID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LevelId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(X6BlueprintCommonLibrary_C_BP_RequestEnterBattle) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_RequestEnterBattle");
 static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_RequestEnterBattle) == 0x000010, "Wrong size on X6BlueprintCommonLibrary_C_BP_RequestEnterBattle");
-static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestEnterBattle, LevelID) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_RequestEnterBattle::LevelID' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestEnterBattle, LevelId) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_RequestEnterBattle::LevelId' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestEnterBattle, __WorldContext) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_RequestEnterBattle::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_RequestConsumeOutput
@@ -1567,6 +1582,19 @@ static_assert(alignof(X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish) == 
 static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish) == 0x000010, "Wrong size on X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish, Widget) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish::Widget' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish, __WorldContext) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_NotifyLogicFadeInFinish::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_MultiPlatform_IsInGamepadMode
+// 0x0010 (0x0010 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsGamePad;                                         // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode) == 0x000010, "Wrong size on X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode, __WorldContext) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode, IsGamePad) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_MultiPlatform_IsInGamepadMode::IsGamePad' has a wrong offset!");
 
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_Multi_InteractiveObjActive
 // 0x0020 (0x0020 - 0x0000)
@@ -2113,7 +2141,7 @@ static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetCurrentGamePlayMode, __W
 struct X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel final
 {
 public:
-	int32                                         LevelID;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LevelId;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 LevelPath;                                         // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	struct FVector                                levelLocation;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -2123,7 +2151,7 @@ public:
 };
 static_assert(alignof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel");
 static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel) == 0x000068, "Wrong size on X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel");
-static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel, LevelID) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel::LevelID' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel, LevelId) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel::LevelId' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel, LevelPath) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel::LevelPath' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel, levelLocation) == 0x000018, "Member 'X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel::levelLocation' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel, PlayerLocation) == 0x000030, "Member 'X6BlueprintCommonLibrary_C_BP_RequestLoadStreamingLevel::PlayerLocation' has a wrong offset!");

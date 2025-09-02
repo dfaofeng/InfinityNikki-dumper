@@ -7383,13 +7383,13 @@ void UMoviePipelineExecutorBase::OnExecutorFinishedImpl()
 // Function MovieRenderPipelineCore.MoviePipelineExecutorBase.SendHTTPRequest
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class FString&                    InURL                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InUrl                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InVerb                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    InMessage                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const TMap<class FString, class FString>&InHeaders                                              (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UMoviePipelineExecutorBase::SendHTTPRequest(const class FString& InURL, const class FString& InVerb, const class FString& InMessage, const TMap<class FString, class FString>& InHeaders)
+int32 UMoviePipelineExecutorBase::SendHTTPRequest(const class FString& InUrl, const class FString& InVerb, const class FString& InMessage, const TMap<class FString, class FString>& InHeaders)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7398,7 +7398,7 @@ int32 UMoviePipelineExecutorBase::SendHTTPRequest(const class FString& InURL, co
 
 	Params::MoviePipelineExecutorBase_SendHTTPRequest Parms{};
 
-	Parms.InURL = std::move(InURL);
+	Parms.InUrl = std::move(InUrl);
 	Parms.InVerb = std::move(InVerb);
 	Parms.InMessage = std::move(InMessage);
 	Parms.InHeaders = std::move(InHeaders);

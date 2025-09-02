@@ -35,10 +35,10 @@ public:
 	int32                                         KeyTips;                                           // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void SetKeyByInputAction(const class FString& ActionPath);
-	void SetKey(const struct FKey& Key);
-	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_UI_Common_KeyTips_PC(int32 EntryPoint);
+	void PreConstruct(bool IsDesignTime);
+	void SetKey(const struct FKey& Key);
+	void SetKeyByInputAction(const class FString& ActionPath);
 
 	class FString GetModuleName() const;
 

@@ -18,13 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_AdvancedCamera.BP_AdvancedCamera_C
-// 0x0020 (0x2D30 - 0x2D10)
+// 0x0020 (0x2EA0 - 0x2E80)
 class UBP_AdvancedCamera_C final : public UX6CameraComponent
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2D10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	double                                        BP_LerpDuration;                                   // 0x2D18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_LerpTimeStep;                                   // 0x2D20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2E80(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	double                                        BP_LerpDuration;                                   // 0x2E88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_LerpTimeStep;                                   // 0x2E90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_AddZoomedTargetOffsetZByReason(const class FString& ReasonName, double TargetOffsetZ);
@@ -50,10 +50,10 @@ public:
 	}
 };
 static_assert(alignof(UBP_AdvancedCamera_C) == 0x000010, "Wrong alignment on UBP_AdvancedCamera_C");
-static_assert(sizeof(UBP_AdvancedCamera_C) == 0x002D30, "Wrong size on UBP_AdvancedCamera_C");
-static_assert(offsetof(UBP_AdvancedCamera_C, UberGraphFrame) == 0x002D10, "Member 'UBP_AdvancedCamera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_AdvancedCamera_C, BP_LerpDuration) == 0x002D18, "Member 'UBP_AdvancedCamera_C::BP_LerpDuration' has a wrong offset!");
-static_assert(offsetof(UBP_AdvancedCamera_C, BP_LerpTimeStep) == 0x002D20, "Member 'UBP_AdvancedCamera_C::BP_LerpTimeStep' has a wrong offset!");
+static_assert(sizeof(UBP_AdvancedCamera_C) == 0x002EA0, "Wrong size on UBP_AdvancedCamera_C");
+static_assert(offsetof(UBP_AdvancedCamera_C, UberGraphFrame) == 0x002E80, "Member 'UBP_AdvancedCamera_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_AdvancedCamera_C, BP_LerpDuration) == 0x002E88, "Member 'UBP_AdvancedCamera_C::BP_LerpDuration' has a wrong offset!");
+static_assert(offsetof(UBP_AdvancedCamera_C, BP_LerpTimeStep) == 0x002E90, "Member 'UBP_AdvancedCamera_C::BP_LerpTimeStep' has a wrong offset!");
 
 }
 

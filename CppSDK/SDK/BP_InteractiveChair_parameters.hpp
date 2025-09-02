@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
 #include "Enum_WeatherType_structs.hpp"
 #include "E_EInteractSuccRet_structs.hpp"
 #include "Engine_structs.hpp"
@@ -19,7 +20,7 @@ namespace SDK::Params
 {
 
 // Function BP_InteractiveChair.BP_InteractiveChair_C.ExecuteUbergraph_BP_InteractiveChair
-// 0x0158 (0x0158 - 0x0000)
+// 0x0160 (0x0160 - 0x0000)
 struct BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair final
 {
 public:
@@ -30,45 +31,48 @@ public:
 	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_Event_Data;                                 // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_Event_Player;                               // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_WeatherSensitiveActorManager_C*     K2Node_CustomEvent_Manager;                        // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	Enum_WeatherType                              K2Node_CustomEvent_WeatherType;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetInt32EnumeratorUserFriendlyName_ReturnValue; // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0050(0x0010)()
-	class FString                                 CallFunc_GetActorNameOrLabel_ReturnValue;          // 0x0060(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0070(0x0048)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00B8(0x0010)()
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00C8(0x0048)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0110(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0120(0x0010)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	TDelegate<void(class ABP_WeatherSensitiveActorManager_C* manager, Enum_WeatherType WeatherType)> K2Node_CreateDelegate_OutputDelegate; // 0x0140(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bServer;                              // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BP_ReplayGetForceIngoreSit_ShouldIngore;  // 0x0151(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_Multi_InteractiveObjActive_Type             K2Node_Event_E_Multi_Type;                         // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_WeatherSensitiveActorManager_C*     K2Node_CustomEvent_Manager;                        // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	Enum_WeatherType                              K2Node_CustomEvent_WeatherType;                    // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetInt32EnumeratorUserFriendlyName_ReturnValue; // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0058(0x0010)()
+	class FString                                 CallFunc_GetActorNameOrLabel_ReturnValue;          // 0x0068(0x0010)(ConstParm, ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0078(0x0048)(HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00C0(0x0010)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00D0(0x0048)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0118(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0128(0x0010)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	TDelegate<void(class ABP_WeatherSensitiveActorManager_C* manager, Enum_WeatherType WeatherType)> K2Node_CreateDelegate_OutputDelegate; // 0x0148(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bServer;                              // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_ReplayGetForceIngoreSit_ShouldIngore;  // 0x0159(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair) == 0x000008, "Wrong alignment on BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair");
-static_assert(sizeof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair) == 0x000158, "Wrong size on BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair");
+static_assert(sizeof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair) == 0x000160, "Wrong size on BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair");
 static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, EntryPoint) == 0x000000, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_Other_player_actor) == 0x000008, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_Other_player_actor' has a wrong offset!");
 static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_result) == 0x000010, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_result' has a wrong offset!");
 static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_Data) == 0x000018, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_Data' has a wrong offset!");
 static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_Player) == 0x000028, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_Player' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_CustomEvent_Manager) == 0x000030, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_CustomEvent_Manager' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_CustomEvent_WeatherType) == 0x000038, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_CustomEvent_WeatherType' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00003C, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_GetInt32EnumeratorUserFriendlyName_ReturnValue) == 0x000040, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_GetInt32EnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Conv_StringToText_ReturnValue) == 0x000050, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_GetActorNameOrLabel_ReturnValue) == 0x000060, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_GetActorNameOrLabel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_MakeStruct_FormatArgumentData) == 0x000070, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000B8, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000C8, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_MakeArray_Array) == 0x000110, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Format_ReturnValue) == 0x000120, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Format_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Conv_TextToString_ReturnValue) == 0x000130, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_CreateDelegate_OutputDelegate) == 0x000140, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_bServer) == 0x000150, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_bServer' has a wrong offset!");
-static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_BP_ReplayGetForceIngoreSit_ShouldIngore) == 0x000151, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_BP_ReplayGetForceIngoreSit_ShouldIngore' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_E_Multi_Type) == 0x000030, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_E_Multi_Type' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_CustomEvent_Manager) == 0x000038, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_CustomEvent_Manager' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_CustomEvent_WeatherType) == 0x000040, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_CustomEvent_WeatherType' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000044, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_GetInt32EnumeratorUserFriendlyName_ReturnValue) == 0x000048, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_GetInt32EnumeratorUserFriendlyName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Conv_StringToText_ReturnValue) == 0x000058, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_GetActorNameOrLabel_ReturnValue) == 0x000068, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_GetActorNameOrLabel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_MakeStruct_FormatArgumentData) == 0x000078, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_MakeStruct_FormatArgumentData' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Conv_StringToText_ReturnValue_1) == 0x0000C0, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Conv_StringToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_MakeStruct_FormatArgumentData_1) == 0x0000D0, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_MakeStruct_FormatArgumentData_1' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_MakeArray_Array) == 0x000118, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Format_ReturnValue) == 0x000128, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Format_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_Conv_TextToString_ReturnValue) == 0x000138, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_CreateDelegate_OutputDelegate) == 0x000148, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, K2Node_Event_bServer) == 0x000158, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::K2Node_Event_bServer' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair, CallFunc_BP_ReplayGetForceIngoreSit_ShouldIngore) == 0x000159, "Member 'BP_InteractiveChair_C_ExecuteUbergraph_BP_InteractiveChair::CallFunc_BP_ReplayGetForceIngoreSit_ShouldIngore' has a wrong offset!");
 
 // Function BP_InteractiveChair.BP_InteractiveChair_C.On_Multi_ActiveSuccess
 // 0x0010 (0x0010 - 0x0000)
@@ -84,17 +88,19 @@ static_assert(offsetof(BP_InteractiveChair_C_On_Multi_ActiveSuccess, Other_playe
 static_assert(offsetof(BP_InteractiveChair_C_On_Multi_ActiveSuccess, Result) == 0x000008, "Member 'BP_InteractiveChair_C_On_Multi_ActiveSuccess::Result' has a wrong offset!");
 
 // Function BP_InteractiveChair.BP_InteractiveChair_C.On_Multi_InteractiveObjActive
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BP_InteractiveChair_C_On_Multi_InteractiveObjActive final
 {
 public:
 	class FString                                 Data;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 Player;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_Multi_InteractiveObjActive_Type             E_Multi_Type;                                      // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_InteractiveChair_C_On_Multi_InteractiveObjActive) == 0x000008, "Wrong alignment on BP_InteractiveChair_C_On_Multi_InteractiveObjActive");
-static_assert(sizeof(BP_InteractiveChair_C_On_Multi_InteractiveObjActive) == 0x000018, "Wrong size on BP_InteractiveChair_C_On_Multi_InteractiveObjActive");
+static_assert(sizeof(BP_InteractiveChair_C_On_Multi_InteractiveObjActive) == 0x000020, "Wrong size on BP_InteractiveChair_C_On_Multi_InteractiveObjActive");
 static_assert(offsetof(BP_InteractiveChair_C_On_Multi_InteractiveObjActive, Data) == 0x000000, "Member 'BP_InteractiveChair_C_On_Multi_InteractiveObjActive::Data' has a wrong offset!");
 static_assert(offsetof(BP_InteractiveChair_C_On_Multi_InteractiveObjActive, Player) == 0x000010, "Member 'BP_InteractiveChair_C_On_Multi_InteractiveObjActive::Player' has a wrong offset!");
+static_assert(offsetof(BP_InteractiveChair_C_On_Multi_InteractiveObjActive, E_Multi_Type) == 0x000018, "Member 'BP_InteractiveChair_C_On_Multi_InteractiveObjActive::E_Multi_Type' has a wrong offset!");
 
 // Function BP_InteractiveChair.BP_InteractiveChair_C.OnWeatherSensitiveActorChange
 // 0x0010 (0x0010 - 0x0000)

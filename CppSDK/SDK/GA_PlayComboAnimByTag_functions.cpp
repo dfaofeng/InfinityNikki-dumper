@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function GA_PlayComboAnimByTag.GA_PlayComboAnimByTag_C.K2_ActivateAbilityFromEvent
-// (Event, Protected, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UGA_PlayComboAnimByTag_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_PlayComboAnimByTag_C", "K2_ActivateAbilityFromEvent");
-
-	Params::GA_PlayComboAnimByTag_C_K2_ActivateAbilityFromEvent Parms{};
-
-	Parms.EventData = std::move(EventData);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function GA_PlayComboAnimByTag.GA_PlayComboAnimByTag_C.ExecuteUbergraph_GA_PlayComboAnimByTag
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -52,6 +32,26 @@ void UGA_PlayComboAnimByTag_C::ExecuteUbergraph_GA_PlayComboAnimByTag(int32 Entr
 	Params::GA_PlayComboAnimByTag_C_ExecuteUbergraph_GA_PlayComboAnimByTag Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_PlayComboAnimByTag.GA_PlayComboAnimByTag_C.K2_ActivateAbilityFromEvent
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// const struct FGameplayEventData&        EventData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UGA_PlayComboAnimByTag_C::K2_ActivateAbilityFromEvent(const struct FGameplayEventData& EventData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_PlayComboAnimByTag_C", "K2_ActivateAbilityFromEvent");
+
+	Params::GA_PlayComboAnimByTag_C_K2_ActivateAbilityFromEvent Parms{};
+
+	Parms.EventData = std::move(EventData);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -393,7 +393,7 @@ static_assert(offsetof(FVehicleThrustConfig, MaxThrustForce) == 0x000040, "Membe
 static_assert(offsetof(FVehicleThrustConfig, MaxControlAngle) == 0x000044, "Member 'FVehicleThrustConfig::MaxControlAngle' has a wrong offset!");
 
 // ScriptStruct ChaosVehicles.WheelStatus
-// 0x0088 (0x0088 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct FWheelStatus final
 {
 public:
@@ -416,10 +416,14 @@ public:
 	float                                         DriveTorque;                                       // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BrakeTorque;                                       // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bABSActivated;                                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UPrimitiveComponent>     HitComponent;                                      // 0x0084(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FActorInstanceHandle                   HitActor;                                          // 0x0090(0x0020)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWheelStatus) == 0x000008, "Wrong alignment on FWheelStatus");
-static_assert(sizeof(FWheelStatus) == 0x000088, "Wrong size on FWheelStatus");
+static_assert(sizeof(FWheelStatus) == 0x0000B8, "Wrong size on FWheelStatus");
 static_assert(offsetof(FWheelStatus, bInContact) == 0x000000, "Member 'FWheelStatus::bInContact' has a wrong offset!");
 static_assert(offsetof(FWheelStatus, ContactPoint) == 0x000008, "Member 'FWheelStatus::ContactPoint' has a wrong offset!");
 static_assert(offsetof(FWheelStatus, HitLocation) == 0x000020, "Member 'FWheelStatus::HitLocation' has a wrong offset!");
@@ -435,6 +439,8 @@ static_assert(offsetof(FWheelStatus, SkidNormal) == 0x000060, "Member 'FWheelSta
 static_assert(offsetof(FWheelStatus, DriveTorque) == 0x000078, "Member 'FWheelStatus::DriveTorque' has a wrong offset!");
 static_assert(offsetof(FWheelStatus, BrakeTorque) == 0x00007C, "Member 'FWheelStatus::BrakeTorque' has a wrong offset!");
 static_assert(offsetof(FWheelStatus, bABSActivated) == 0x000080, "Member 'FWheelStatus::bABSActivated' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, HitComponent) == 0x000084, "Member 'FWheelStatus::HitComponent' has a wrong offset!");
+static_assert(offsetof(FWheelStatus, HitActor) == 0x000090, "Member 'FWheelStatus::HitActor' has a wrong offset!");
 
 // ScriptStruct ChaosVehicles.VehicleDifferentialConfig
 // 0x0010 (0x0010 - 0x0000)

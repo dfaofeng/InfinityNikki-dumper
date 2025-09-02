@@ -17,23 +17,21 @@
 namespace SDK
 {
 
-// Function BP_AgentTask_Turn.BP_AgentTask_Turn_C.ReceiveTick
-// (BlueprintEvent)
+// Function BP_AgentTask_Turn.BP_AgentTask_Turn_C.ExecuteUbergraph_BP_AgentTask_Turn
+// (Final, UbergraphFunction)
 // Parameters:
-// class APawn*                            AgentPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTask_Turn_C::ReceiveTick(class APawn* AgentPawn, double DeltaSeconds)
+void UBP_AgentTask_Turn_C::ExecuteUbergraph_BP_AgentTask_Turn(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTask_Turn_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_AgentTask_Turn_C", "ExecuteUbergraph_BP_AgentTask_Turn");
 
-	Params::BP_AgentTask_Turn_C_ReceiveTick Parms{};
+	Params::BP_AgentTask_Turn_C_ExecuteUbergraph_BP_AgentTask_Turn Parms{};
 
-	Parms.AgentPawn = AgentPawn;
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -81,21 +79,23 @@ void UBP_AgentTask_Turn_C::ReceiveExecute(class APawn* AgentPawn)
 }
 
 
-// Function BP_AgentTask_Turn.BP_AgentTask_Turn_C.ExecuteUbergraph_BP_AgentTask_Turn
-// (Final, UbergraphFunction)
+// Function BP_AgentTask_Turn.BP_AgentTask_Turn_C.ReceiveTick
+// (BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            AgentPawn                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTask_Turn_C::ExecuteUbergraph_BP_AgentTask_Turn(int32 EntryPoint)
+void UBP_AgentTask_Turn_C::ReceiveTick(class APawn* AgentPawn, double DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTask_Turn_C", "ExecuteUbergraph_BP_AgentTask_Turn");
+		Func = Class->GetFunction("BP_AgentTask_Turn_C", "ReceiveTick");
 
-	Params::BP_AgentTask_Turn_C_ExecuteUbergraph_BP_AgentTask_Turn Parms{};
+	Params::BP_AgentTask_Turn_C_ReceiveTick Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.AgentPawn = AgentPawn;
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

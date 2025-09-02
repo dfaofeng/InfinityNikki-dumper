@@ -17,126 +17,6 @@
 namespace SDK
 {
 
-// Function BPFL_MatchCloth.BPFL_MatchCloth_C.ClearPairCacheExcept
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMatchClothObject_C*              InMatchClothesObject                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          InParent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_MatchCloth_C::ClearPairCacheExcept(class UMatchClothObject_C* InMatchClothesObject, class UObject* InParent, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "ClearPairCacheExcept");
-
-	Params::BPFL_MatchCloth_C_ClearPairCacheExcept Parms{};
-
-	Parms.InMatchClothesObject = InMatchClothesObject;
-	Parms.InParent = InParent;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function BPFL_MatchCloth.BPFL_MatchCloth_C.FindOrCreateMatchClothObject
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMatchClothObject_C*              InMatchClothObject                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          InParent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UMatchClothObject_C**             ResultMatchClothObject                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   IsNew                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_MatchCloth_C::FindOrCreateMatchClothObject(class UMatchClothObject_C* InMatchClothObject, class UObject* InParent, class UObject* __WorldContext, class UMatchClothObject_C** ResultMatchClothObject, bool* IsNew)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "FindOrCreateMatchClothObject");
-
-	Params::BPFL_MatchCloth_C_FindOrCreateMatchClothObject Parms{};
-
-	Parms.InMatchClothObject = InMatchClothObject;
-	Parms.InParent = InParent;
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (ResultMatchClothObject != nullptr)
-		*ResultMatchClothObject = Parms.ResultMatchClothObject;
-
-	if (IsNew != nullptr)
-		*IsNew = Parms.IsNew;
-}
-
-
-// Function BPFL_MatchCloth.BPFL_MatchCloth_C.MatchClothSetupToRun
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UMatchClothObject_C*              InMatchClothObject                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          InParent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// const TMap<class FString, class USkeletalMeshComponent*>&SuitPartsMap                                           (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool*                                   isNewObject                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UMatchClothObject_C**             ResultMatchClothObject                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_MatchCloth_C::MatchClothSetupToRun(class UMatchClothObject_C* InMatchClothObject, class UObject* InParent, const TMap<class FString, class USkeletalMeshComponent*>& SuitPartsMap, class UObject* __WorldContext, bool* isNewObject, class UMatchClothObject_C** ResultMatchClothObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "MatchClothSetupToRun");
-
-	Params::BPFL_MatchCloth_C_MatchClothSetupToRun Parms{};
-
-	Parms.InMatchClothObject = InMatchClothObject;
-	Parms.InParent = InParent;
-	Parms.SuitPartsMap = std::move(SuitPartsMap);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (isNewObject != nullptr)
-		*isNewObject = Parms.isNewObject;
-
-	if (ResultMatchClothObject != nullptr)
-		*ResultMatchClothObject = Parms.ResultMatchClothObject;
-}
-
-
-// Function BPFL_MatchCloth.BPFL_MatchCloth_C.MultiThread_ClothMatch
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          Parent                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<class USkeletalMesh*>&           InputSkelMeshArray                                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UMatchClothObject_C**             ResultObject                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBPFL_MatchCloth_C::MultiThread_ClothMatch(class UObject* Parent, TArray<class USkeletalMesh*>& InputSkelMeshArray, class UObject* __WorldContext, class UMatchClothObject_C** ResultObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "MultiThread_ClothMatch");
-
-	Params::BPFL_MatchCloth_C_MultiThread_ClothMatch Parms{};
-
-	Parms.Parent = Parent;
-	Parms.InputSkelMeshArray = std::move(InputSkelMeshArray);
-	Parms.__WorldContext = __WorldContext;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	InputSkelMeshArray = std::move(Parms.InputSkelMeshArray);
-
-	if (ResultObject != nullptr)
-		*ResultObject = Parms.ResultObject;
-}
-
-
 // Function BPFL_MatchCloth.BPFL_MatchCloth_C.ReplaceCopyPoseParentComp
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -184,6 +64,63 @@ void UBPFL_MatchCloth_C::ReplaceCopyPoseParentComp(class UAnimInstance* InAnimIn
 }
 
 
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.MultiThread_ClothMatch
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          Parent                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<class USkeletalMesh*>&           InputSkelMeshArray                                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UMatchClothObject_C**             ResultObject                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_MatchCloth_C::MultiThread_ClothMatch(class UObject* Parent, TArray<class USkeletalMesh*>& InputSkelMeshArray, class UObject* __WorldContext, class UMatchClothObject_C** ResultObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "MultiThread_ClothMatch");
+
+	Params::BPFL_MatchCloth_C_MultiThread_ClothMatch Parms{};
+
+	Parms.Parent = Parent;
+	Parms.InputSkelMeshArray = std::move(InputSkelMeshArray);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InputSkelMeshArray = std::move(Parms.InputSkelMeshArray);
+
+	if (ResultObject != nullptr)
+		*ResultObject = Parms.ResultObject;
+}
+
+
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.SingleMatchClothes_OrnamentPair
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*&          InnerSkelMeshComp                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*&          OuterSkelMeshComp                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_MatchCloth_C::SingleMatchClothes_OrnamentPair(class USkeletalMeshComponent*& InnerSkelMeshComp, class USkeletalMeshComponent*& OuterSkelMeshComp, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "SingleMatchClothes_OrnamentPair");
+
+	Params::BPFL_MatchCloth_C_SingleMatchClothes_OrnamentPair Parms{};
+
+	Parms.InnerSkelMeshComp = InnerSkelMeshComp;
+	Parms.OuterSkelMeshComp = OuterSkelMeshComp;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	InnerSkelMeshComp = Parms.InnerSkelMeshComp;
+	OuterSkelMeshComp = Parms.OuterSkelMeshComp;
+}
+
+
 // Function BPFL_MatchCloth.BPFL_MatchCloth_C.SingleMatchClothes
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -215,30 +152,93 @@ void UBPFL_MatchCloth_C::SingleMatchClothes(class USkeletalMeshComponent*& Inner
 }
 
 
-// Function BPFL_MatchCloth.BPFL_MatchCloth_C.SingleMatchClothes_OrnamentPair
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.ClearPairCacheExcept
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USkeletalMeshComponent*&          InnerSkelMeshComp                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// class USkeletalMeshComponent*&          OuterSkelMeshComp                                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// class UMatchClothObject_C*              InMatchClothesObject                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          InParent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBPFL_MatchCloth_C::SingleMatchClothes_OrnamentPair(class USkeletalMeshComponent*& InnerSkelMeshComp, class USkeletalMeshComponent*& OuterSkelMeshComp, class UObject* __WorldContext)
+void UBPFL_MatchCloth_C::ClearPairCacheExcept(class UMatchClothObject_C* InMatchClothesObject, class UObject* InParent, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "SingleMatchClothes_OrnamentPair");
+		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "ClearPairCacheExcept");
 
-	Params::BPFL_MatchCloth_C_SingleMatchClothes_OrnamentPair Parms{};
+	Params::BPFL_MatchCloth_C_ClearPairCacheExcept Parms{};
 
-	Parms.InnerSkelMeshComp = InnerSkelMeshComp;
-	Parms.OuterSkelMeshComp = OuterSkelMeshComp;
+	Parms.InMatchClothesObject = InMatchClothesObject;
+	Parms.InParent = InParent;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.MatchClothSetupToRun
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMatchClothObject_C*              InMatchClothObject                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          InParent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const TMap<class FString, class USkeletalMeshComponent*>&SuitPartsMap                                           (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   isNewObject                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMatchClothObject_C**             ResultMatchClothObject                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_MatchCloth_C::MatchClothSetupToRun(class UMatchClothObject_C* InMatchClothObject, class UObject* InParent, const TMap<class FString, class USkeletalMeshComponent*>& SuitPartsMap, class UObject* __WorldContext, bool* isNewObject, class UMatchClothObject_C** ResultMatchClothObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "MatchClothSetupToRun");
+
+	Params::BPFL_MatchCloth_C_MatchClothSetupToRun Parms{};
+
+	Parms.InMatchClothObject = InMatchClothObject;
+	Parms.InParent = InParent;
+	Parms.SuitPartsMap = std::move(SuitPartsMap);
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	InnerSkelMeshComp = Parms.InnerSkelMeshComp;
-	OuterSkelMeshComp = Parms.OuterSkelMeshComp;
+	if (isNewObject != nullptr)
+		*isNewObject = Parms.isNewObject;
+
+	if (ResultMatchClothObject != nullptr)
+		*ResultMatchClothObject = Parms.ResultMatchClothObject;
+}
+
+
+// Function BPFL_MatchCloth.BPFL_MatchCloth_C.FindOrCreateMatchClothObject
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMatchClothObject_C*              InMatchClothObject                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          InParent                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UMatchClothObject_C**             ResultMatchClothObject                                 (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   IsNew                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBPFL_MatchCloth_C::FindOrCreateMatchClothObject(class UMatchClothObject_C* InMatchClothObject, class UObject* InParent, class UObject* __WorldContext, class UMatchClothObject_C** ResultMatchClothObject, bool* IsNew)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_MatchCloth_C", "FindOrCreateMatchClothObject");
+
+	Params::BPFL_MatchCloth_C_FindOrCreateMatchClothObject Parms{};
+
+	Parms.InMatchClothObject = InMatchClothObject;
+	Parms.InParent = InParent;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (ResultMatchClothObject != nullptr)
+		*ResultMatchClothObject = Parms.ResultMatchClothObject;
+
+	if (IsNew != nullptr)
+		*IsNew = Parms.IsNew;
 }
 
 }

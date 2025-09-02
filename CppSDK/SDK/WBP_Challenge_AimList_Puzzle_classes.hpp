@@ -40,9 +40,9 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_Icon;                               // 0x0368(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle();
-	void OnFadeOutStart();
 	void ExecuteUbergraph_WBP_Challenge_AimList_Puzzle(int32 EntryPoint);
+	void OnFadeOutStart();
+	void SequenceEvent__ENTRYPOINTWBP_Challenge_AimList_Puzzle();
 
 	class FString GetModuleName() const;
 

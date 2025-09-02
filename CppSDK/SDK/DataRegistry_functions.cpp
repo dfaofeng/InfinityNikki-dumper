@@ -192,6 +192,34 @@ void UDataRegistryFunctionLibrary::GetDataRegistryRowNames(const class UDataRegi
 }
 
 
+// Function DataRegistry.DataRegistryFunctionLibrary.GetRegistryForType
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const struct FDataRegistryType&         RegistryType                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDataRegistry*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDataRegistry* UDataRegistryFunctionLibrary::GetRegistryForType(const struct FDataRegistryType& RegistryType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("DataRegistryFunctionLibrary", "GetRegistryForType");
+
+	Params::DataRegistryFunctionLibrary_GetRegistryForType Parms{};
+
+	Parms.RegistryType = std::move(RegistryType);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function DataRegistry.DataRegistrySubsystem.AcquireItemBP
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

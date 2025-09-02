@@ -18,14 +18,27 @@ namespace SDK
 {
 
 // Enum NikkiFitCloth.ECacheAssetType
-// NumValues: 0x0005
+// NumValues: 0x0007
 enum class ECacheAssetType : uint8
 {
 	NormalCloth                              = 0,
 	SkinCloth                                = 1,
 	SkirtCloth                               = 2,
-	Body                                     = 3,
-	ECacheAssetType_MAX                      = 4,
+	OuterCloth                               = 3,
+	UserDefinedCache                         = 4,
+	Body                                     = 5,
+	ECacheAssetType_MAX                      = 6,
+};
+
+// Enum NikkiFitCloth.EUserDefinedProjectMethod
+// NumValues: 0x0005
+enum class EUserDefinedProjectMethod : uint8
+{
+	NormalProjectMethod                      = 0,
+	SkinClothProjectMethod                   = 1,
+	SkinBodyProjectMethod                    = 2,
+	SkinBodyAndClothProjectMethod            = 3,
+	EUserDefinedProjectMethod_MAX            = 4,
 };
 
 // Enum NikkiFitCloth.EMeshComponentType
@@ -39,23 +52,33 @@ enum class EMeshComponentType : uint8
 	EMeshComponentType_MAX                   = 4,
 };
 
-// Enum NikkiFitCloth.EProjectMethodType
-// NumValues: 0x0003
-enum class EProjectMethodType : uint8
-{
-	IntersectedPos                           = 0,
-	BodySkinPos                              = 1,
-	EProjectMethodType_MAX                   = 2,
-};
-
 // Enum NikkiFitCloth.EProjectDataType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EProjectDataType : uint8
 {
-	Normal                                   = 1,
-	Smooth                                   = 2,
-	Trunk                                    = 4,
-	EProjectDataType_MAX                     = 5,
+	Normal                                   = 0,
+	Smooth                                   = 1,
+	Trunk                                    = 2,
+	UserDefined                              = 3,
+	EProjectDataType_MAX                     = 4,
+};
+
+// Enum NikkiFitCloth.ENikkiFitClothObjType
+// NumValues: 0x000C
+enum class ENikkiFitClothObjType : uint8
+{
+	RenderMesh                               = 0,
+	StaticMesh                               = 1,
+	ProjectMesh                              = 2,
+	BackupProjectMesh                        = 3,
+	ProjectLine                              = 4,
+	BackupProjectLine                        = 5,
+	DistProjectLine                          = 6,
+	FitPairOffsetMesh                        = 7,
+	FitPairOffsetLine                        = 8,
+	FitDataOffsetMesh                        = 9,
+	FitDataOffsetLine                        = 10,
+	ENikkiFitClothObjType_MAX                = 11,
 };
 
 // ScriptStruct NikkiFitCloth.LODVertexIndices
@@ -197,61 +220,89 @@ static_assert(offsetof(FClothVertexColorMaskUnit, bUseDeform) == 0x000008, "Memb
 static_assert(offsetof(FClothVertexColorMaskUnit, DeformRatio) == 0x00000C, "Member 'FClothVertexColorMaskUnit::DeformRatio' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothProjectParameter
-// 0x000C (0x000C - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct FMatchClothProjectParameter final
 {
 public:
-	float                                         ProjectRatio;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMiddleZoneDeform;                                 // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EProjectMethodType                            ProjectType;                                       // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProjectToBodyDistOffset;                           // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ProjectToBodyDistOffset;                           // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMatchClothProjectParameter) == 0x000004, "Wrong alignment on FMatchClothProjectParameter");
-static_assert(sizeof(FMatchClothProjectParameter) == 0x00000C, "Wrong size on FMatchClothProjectParameter");
-static_assert(offsetof(FMatchClothProjectParameter, ProjectRatio) == 0x000000, "Member 'FMatchClothProjectParameter::ProjectRatio' has a wrong offset!");
-static_assert(offsetof(FMatchClothProjectParameter, bMiddleZoneDeform) == 0x000004, "Member 'FMatchClothProjectParameter::bMiddleZoneDeform' has a wrong offset!");
-static_assert(offsetof(FMatchClothProjectParameter, ProjectType) == 0x000005, "Member 'FMatchClothProjectParameter::ProjectType' has a wrong offset!");
-static_assert(offsetof(FMatchClothProjectParameter, ProjectToBodyDistOffset) == 0x000008, "Member 'FMatchClothProjectParameter::ProjectToBodyDistOffset' has a wrong offset!");
+static_assert(sizeof(FMatchClothProjectParameter) == 0x000004, "Wrong size on FMatchClothProjectParameter");
+static_assert(offsetof(FMatchClothProjectParameter, ProjectToBodyDistOffset) == 0x000000, "Member 'FMatchClothProjectParameter::ProjectToBodyDistOffset' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothProjectDataTypeParameter
-// 0x0001 (0x0001 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct FMatchClothProjectDataTypeParameter final
 {
 public:
 	EProjectDataType                              ProjectDataType;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 UserDefinedProjectTypeName;                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FMatchClothProjectDataTypeParameter) == 0x000001, "Wrong alignment on FMatchClothProjectDataTypeParameter");
-static_assert(sizeof(FMatchClothProjectDataTypeParameter) == 0x000001, "Wrong size on FMatchClothProjectDataTypeParameter");
+static_assert(alignof(FMatchClothProjectDataTypeParameter) == 0x000008, "Wrong alignment on FMatchClothProjectDataTypeParameter");
+static_assert(sizeof(FMatchClothProjectDataTypeParameter) == 0x000018, "Wrong size on FMatchClothProjectDataTypeParameter");
 static_assert(offsetof(FMatchClothProjectDataTypeParameter, ProjectDataType) == 0x000000, "Member 'FMatchClothProjectDataTypeParameter::ProjectDataType' has a wrong offset!");
+static_assert(offsetof(FMatchClothProjectDataTypeParameter, UserDefinedProjectTypeName) == 0x000008, "Member 'FMatchClothProjectDataTypeParameter::UserDefinedProjectTypeName' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothIntersectParameter
-// 0x0020 (0x0020 - 0x0000)
+// 0x0014 (0x0014 - 0x0000)
 struct FMatchClothIntersectParameter final
 {
 public:
-	float                                         BoundaryOffset;                                    // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         StartOuterExtendDist;                              // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TestOuterExtendDist;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseInnerTag;                                      // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOldExtention;                                  // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InnerExtendNum;                                    // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaskAdjExtendNum;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DeformAdjExtendNum;                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeformAdjWeight;                                   // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartOuterExtendDist;                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TestOuterExtendDist;                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaskAdjExtendNum;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DeformAdjExtendNum;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeformAdjWeight;                                   // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMatchClothIntersectParameter) == 0x000004, "Wrong alignment on FMatchClothIntersectParameter");
-static_assert(sizeof(FMatchClothIntersectParameter) == 0x000020, "Wrong size on FMatchClothIntersectParameter");
-static_assert(offsetof(FMatchClothIntersectParameter, BoundaryOffset) == 0x000000, "Member 'FMatchClothIntersectParameter::BoundaryOffset' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, StartOuterExtendDist) == 0x000004, "Member 'FMatchClothIntersectParameter::StartOuterExtendDist' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, TestOuterExtendDist) == 0x000008, "Member 'FMatchClothIntersectParameter::TestOuterExtendDist' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, bUseInnerTag) == 0x00000C, "Member 'FMatchClothIntersectParameter::bUseInnerTag' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, bUseOldExtention) == 0x00000D, "Member 'FMatchClothIntersectParameter::bUseOldExtention' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, InnerExtendNum) == 0x000010, "Member 'FMatchClothIntersectParameter::InnerExtendNum' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, MaskAdjExtendNum) == 0x000014, "Member 'FMatchClothIntersectParameter::MaskAdjExtendNum' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, DeformAdjExtendNum) == 0x000018, "Member 'FMatchClothIntersectParameter::DeformAdjExtendNum' has a wrong offset!");
-static_assert(offsetof(FMatchClothIntersectParameter, DeformAdjWeight) == 0x00001C, "Member 'FMatchClothIntersectParameter::DeformAdjWeight' has a wrong offset!");
+static_assert(sizeof(FMatchClothIntersectParameter) == 0x000014, "Wrong size on FMatchClothIntersectParameter");
+static_assert(offsetof(FMatchClothIntersectParameter, StartOuterExtendDist) == 0x000000, "Member 'FMatchClothIntersectParameter::StartOuterExtendDist' has a wrong offset!");
+static_assert(offsetof(FMatchClothIntersectParameter, TestOuterExtendDist) == 0x000004, "Member 'FMatchClothIntersectParameter::TestOuterExtendDist' has a wrong offset!");
+static_assert(offsetof(FMatchClothIntersectParameter, MaskAdjExtendNum) == 0x000008, "Member 'FMatchClothIntersectParameter::MaskAdjExtendNum' has a wrong offset!");
+static_assert(offsetof(FMatchClothIntersectParameter, DeformAdjExtendNum) == 0x00000C, "Member 'FMatchClothIntersectParameter::DeformAdjExtendNum' has a wrong offset!");
+static_assert(offsetof(FMatchClothIntersectParameter, DeformAdjWeight) == 0x000010, "Member 'FMatchClothIntersectParameter::DeformAdjWeight' has a wrong offset!");
+
+// ScriptStruct NikkiFitCloth.MatchClothAccelerationParameter
+// 0x0010 (0x0010 - 0x0000)
+struct FMatchClothAccelerationParameter final
+{
+public:
+	float                                         CellSizeMutiplier;                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAverageCellSize;                               // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseIntersectBox;                                  // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCulling;                                       // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CullingNumTol;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CullingNumStep;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMatchClothAccelerationParameter) == 0x000004, "Wrong alignment on FMatchClothAccelerationParameter");
+static_assert(sizeof(FMatchClothAccelerationParameter) == 0x000010, "Wrong size on FMatchClothAccelerationParameter");
+static_assert(offsetof(FMatchClothAccelerationParameter, CellSizeMutiplier) == 0x000000, "Member 'FMatchClothAccelerationParameter::CellSizeMutiplier' has a wrong offset!");
+static_assert(offsetof(FMatchClothAccelerationParameter, bUseAverageCellSize) == 0x000004, "Member 'FMatchClothAccelerationParameter::bUseAverageCellSize' has a wrong offset!");
+static_assert(offsetof(FMatchClothAccelerationParameter, bUseIntersectBox) == 0x000005, "Member 'FMatchClothAccelerationParameter::bUseIntersectBox' has a wrong offset!");
+static_assert(offsetof(FMatchClothAccelerationParameter, bUseCulling) == 0x000006, "Member 'FMatchClothAccelerationParameter::bUseCulling' has a wrong offset!");
+static_assert(offsetof(FMatchClothAccelerationParameter, CullingNumTol) == 0x000008, "Member 'FMatchClothAccelerationParameter::CullingNumTol' has a wrong offset!");
+static_assert(offsetof(FMatchClothAccelerationParameter, CullingNumStep) == 0x00000C, "Member 'FMatchClothAccelerationParameter::CullingNumStep' has a wrong offset!");
+
+// ScriptStruct NikkiFitCloth.MatchClothLevelOffsetParameter
+// 0x0010 (0x0010 - 0x0000)
+struct FMatchClothLevelOffsetParameter final
+{
+public:
+	float                                         TestLevelOffset;                                   // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyTestLevelOffset;                             // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ProjectLevelOffset;                                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyEqualLevelOffset;                            // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FMatchClothLevelOffsetParameter) == 0x000004, "Wrong alignment on FMatchClothLevelOffsetParameter");
+static_assert(sizeof(FMatchClothLevelOffsetParameter) == 0x000010, "Wrong size on FMatchClothLevelOffsetParameter");
+static_assert(offsetof(FMatchClothLevelOffsetParameter, TestLevelOffset) == 0x000000, "Member 'FMatchClothLevelOffsetParameter::TestLevelOffset' has a wrong offset!");
+static_assert(offsetof(FMatchClothLevelOffsetParameter, bApplyTestLevelOffset) == 0x000004, "Member 'FMatchClothLevelOffsetParameter::bApplyTestLevelOffset' has a wrong offset!");
+static_assert(offsetof(FMatchClothLevelOffsetParameter, ProjectLevelOffset) == 0x000008, "Member 'FMatchClothLevelOffsetParameter::ProjectLevelOffset' has a wrong offset!");
+static_assert(offsetof(FMatchClothLevelOffsetParameter, bApplyEqualLevelOffset) == 0x00000C, "Member 'FMatchClothLevelOffsetParameter::bApplyEqualLevelOffset' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothBodySkinParameter
 // 0x0008 (0x0008 - 0x0000)
@@ -284,22 +335,17 @@ static_assert(offsetof(FMatchClothSmoothParameter, SmoothRange) == 0x000008, "Me
 static_assert(offsetof(FMatchClothSmoothParameter, SmoothRangeWeight) == 0x00000C, "Member 'FMatchClothSmoothParameter::SmoothRangeWeight' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothAdvancedParameter
-// 0x000C (0x000C - 0x0000)
+// 0x0008 (0x0008 - 0x0000)
 struct FMatchClothAdvancedParameter final
 {
 public:
 	int32                                         DebugVertexIndex;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DebugVertexColor;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableInnerTest;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableInOut;                                      // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMatchClothAdvancedParameter) == 0x000004, "Wrong alignment on FMatchClothAdvancedParameter");
-static_assert(sizeof(FMatchClothAdvancedParameter) == 0x00000C, "Wrong size on FMatchClothAdvancedParameter");
+static_assert(sizeof(FMatchClothAdvancedParameter) == 0x000008, "Wrong size on FMatchClothAdvancedParameter");
 static_assert(offsetof(FMatchClothAdvancedParameter, DebugVertexIndex) == 0x000000, "Member 'FMatchClothAdvancedParameter::DebugVertexIndex' has a wrong offset!");
 static_assert(offsetof(FMatchClothAdvancedParameter, DebugVertexColor) == 0x000004, "Member 'FMatchClothAdvancedParameter::DebugVertexColor' has a wrong offset!");
-static_assert(offsetof(FMatchClothAdvancedParameter, bEnableInnerTest) == 0x000008, "Member 'FMatchClothAdvancedParameter::bEnableInnerTest' has a wrong offset!");
-static_assert(offsetof(FMatchClothAdvancedParameter, bEnableInOut) == 0x000009, "Member 'FMatchClothAdvancedParameter::bEnableInOut' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothOuterSectionParameter
 // 0x0040 (0x0040 - 0x0000)
@@ -342,7 +388,7 @@ public:
 	bool                                          bIgnoreFingerBone;                                 // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBuildVertexLevel;                                 // 0x0081(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseAdvancedSkinDist;                              // 0x0082(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_83[0x1];                                       // 0x0083(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseAutomaticCellSize;                             // 0x0083(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DebugLODIndex;                                     // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         DebugVertexIndex;                                  // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_8C[0x4];                                       // 0x008C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -366,11 +412,12 @@ static_assert(offsetof(FMatchClothEditorParameter, JsonVertexLevelString) == 0x0
 static_assert(offsetof(FMatchClothEditorParameter, bIgnoreFingerBone) == 0x000080, "Member 'FMatchClothEditorParameter::bIgnoreFingerBone' has a wrong offset!");
 static_assert(offsetof(FMatchClothEditorParameter, bBuildVertexLevel) == 0x000081, "Member 'FMatchClothEditorParameter::bBuildVertexLevel' has a wrong offset!");
 static_assert(offsetof(FMatchClothEditorParameter, bUseAdvancedSkinDist) == 0x000082, "Member 'FMatchClothEditorParameter::bUseAdvancedSkinDist' has a wrong offset!");
+static_assert(offsetof(FMatchClothEditorParameter, bUseAutomaticCellSize) == 0x000083, "Member 'FMatchClothEditorParameter::bUseAutomaticCellSize' has a wrong offset!");
 static_assert(offsetof(FMatchClothEditorParameter, DebugLODIndex) == 0x000084, "Member 'FMatchClothEditorParameter::DebugLODIndex' has a wrong offset!");
 static_assert(offsetof(FMatchClothEditorParameter, DebugVertexIndex) == 0x000088, "Member 'FMatchClothEditorParameter::DebugVertexIndex' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.LODMatchClothParameter
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct FLODMatchClothParameter final
 {
 public:
@@ -380,73 +427,71 @@ public:
 	bool                                          bUseRuntimeInner;                                  // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseRuntimeOuter;                                  // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumParallelFor;                                    // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMatchClothProjectDataTypeParameter    ProjectDataTypeParam;                              // 0x000C(0x0001)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bUseRigidMapping;                                  // 0x000D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBillboard;                                     // 0x000E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F[0x1];                                        // 0x000F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BillboardOffsetDist;                               // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceUpSkin;                                      // 0x0014(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RenderBodyOffsetDist;                              // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TestLevelOffset;                                   // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyTestLevelOffset;                             // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProjectLevelOffset;                                // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyEqualLevelOffset;                            // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeformSkin;                                       // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBodySkinParam;                                 // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2B[0x1];                                       // 0x002B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchClothBodySkinParameter           BodySkinParam;                                     // 0x002C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         PaperFurLengthScale;                               // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseSmooth;                                        // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMatchClothSmoothParameter             SmoothParam;                                       // 0x003C(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatchClothProjectParameter            ProjectParam;                                      // 0x004C(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatchClothIntersectParameter          IntersectParam;                                    // 0x0058(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FMatchClothAdvancedParameter           AdvancedParam;                                     // 0x0078(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FClothVertexColorMaskUnit>      ClothVertexColorMaskUnits;                         // 0x0088(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FMatchClothOuterSectionParameter       ClothOuterSectionParameter;                        // 0x0098(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<int32>                                 DisabledLODIndices;                                // 0x00D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreTagIntersection;                            // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyInnerPairCacheData;                          // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyOuterPairCacheData;                          // 0x00EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EB[0x5];                                       // 0x00EB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMatchClothProjectDataTypeParameter    ProjectDataTypeParam;                              // 0x0008(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bUseBaseLODColor;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseRigidMapping;                                  // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBillboard;                                     // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BillboardOffsetDist;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceUpSkin;                                      // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RenderBodyOffsetDist;                              // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMatchClothLevelOffsetParameter        LevelOffsetParam;                                  // 0x0030(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bDeformSkin;                                       // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBodySkinParam;                                 // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchClothBodySkinParameter           BodySkinParam;                                     // 0x0044(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatchClothAccelerationParameter       AccelerationParam;                                 // 0x004C(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         PaperFurLengthScale;                               // 0x005C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseSmooth;                                        // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMatchClothSmoothParameter             SmoothParam;                                       // 0x0064(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatchClothProjectParameter            ProjectParam;                                      // 0x0074(0x0004)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatchClothIntersectParameter          IntersectParam;                                    // 0x0078(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FMatchClothAdvancedParameter           AdvancedParam;                                     // 0x008C(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FClothVertexColorMaskUnit>      ClothVertexColorMaskUnits;                         // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FMatchClothOuterSectionParameter       ClothOuterSectionParameter;                        // 0x00A8(0x0040)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<int32>                                 DisabledLODIndices;                                // 0x00E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreTagIntersection;                            // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RuntimeCompressRatio;                              // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyInnerPairCacheData;                          // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyOuterPairCacheData;                          // 0x0101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_102[0x6];                                      // 0x0102(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FLODMatchClothParameter) == 0x000008, "Wrong alignment on FLODMatchClothParameter");
-static_assert(sizeof(FLODMatchClothParameter) == 0x0000F0, "Wrong size on FLODMatchClothParameter");
+static_assert(sizeof(FLODMatchClothParameter) == 0x000108, "Wrong size on FLODMatchClothParameter");
 static_assert(offsetof(FLODMatchClothParameter, bSkipCloth) == 0x000000, "Member 'FLODMatchClothParameter::bSkipCloth' has a wrong offset!");
 static_assert(offsetof(FLODMatchClothParameter, bUpdateVertexColor) == 0x000001, "Member 'FLODMatchClothParameter::bUpdateVertexColor' has a wrong offset!");
 static_assert(offsetof(FLODMatchClothParameter, bUpdateVertexPosition) == 0x000002, "Member 'FLODMatchClothParameter::bUpdateVertexPosition' has a wrong offset!");
 static_assert(offsetof(FLODMatchClothParameter, bUseRuntimeInner) == 0x000003, "Member 'FLODMatchClothParameter::bUseRuntimeInner' has a wrong offset!");
 static_assert(offsetof(FLODMatchClothParameter, bUseRuntimeOuter) == 0x000004, "Member 'FLODMatchClothParameter::bUseRuntimeOuter' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, NumParallelFor) == 0x000008, "Member 'FLODMatchClothParameter::NumParallelFor' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, ProjectDataTypeParam) == 0x00000C, "Member 'FLODMatchClothParameter::ProjectDataTypeParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bUseRigidMapping) == 0x00000D, "Member 'FLODMatchClothParameter::bUseRigidMapping' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bUseBillboard) == 0x00000E, "Member 'FLODMatchClothParameter::bUseBillboard' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, BillboardOffsetDist) == 0x000010, "Member 'FLODMatchClothParameter::BillboardOffsetDist' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bForceUpSkin) == 0x000014, "Member 'FLODMatchClothParameter::bForceUpSkin' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, RenderBodyOffsetDist) == 0x000018, "Member 'FLODMatchClothParameter::RenderBodyOffsetDist' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, TestLevelOffset) == 0x00001C, "Member 'FLODMatchClothParameter::TestLevelOffset' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bApplyTestLevelOffset) == 0x000020, "Member 'FLODMatchClothParameter::bApplyTestLevelOffset' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, ProjectLevelOffset) == 0x000024, "Member 'FLODMatchClothParameter::ProjectLevelOffset' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bApplyEqualLevelOffset) == 0x000028, "Member 'FLODMatchClothParameter::bApplyEqualLevelOffset' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bDeformSkin) == 0x000029, "Member 'FLODMatchClothParameter::bDeformSkin' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bUseBodySkinParam) == 0x00002A, "Member 'FLODMatchClothParameter::bUseBodySkinParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, BodySkinParam) == 0x00002C, "Member 'FLODMatchClothParameter::BodySkinParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, PaperFurLengthScale) == 0x000034, "Member 'FLODMatchClothParameter::PaperFurLengthScale' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bUseSmooth) == 0x000038, "Member 'FLODMatchClothParameter::bUseSmooth' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, SmoothParam) == 0x00003C, "Member 'FLODMatchClothParameter::SmoothParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, ProjectParam) == 0x00004C, "Member 'FLODMatchClothParameter::ProjectParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, IntersectParam) == 0x000058, "Member 'FLODMatchClothParameter::IntersectParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, AdvancedParam) == 0x000078, "Member 'FLODMatchClothParameter::AdvancedParam' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, ClothVertexColorMaskUnits) == 0x000088, "Member 'FLODMatchClothParameter::ClothVertexColorMaskUnits' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, ClothOuterSectionParameter) == 0x000098, "Member 'FLODMatchClothParameter::ClothOuterSectionParameter' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, DisabledLODIndices) == 0x0000D8, "Member 'FLODMatchClothParameter::DisabledLODIndices' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bIgnoreTagIntersection) == 0x0000E8, "Member 'FLODMatchClothParameter::bIgnoreTagIntersection' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bApplyInnerPairCacheData) == 0x0000E9, "Member 'FLODMatchClothParameter::bApplyInnerPairCacheData' has a wrong offset!");
-static_assert(offsetof(FLODMatchClothParameter, bApplyOuterPairCacheData) == 0x0000EA, "Member 'FLODMatchClothParameter::bApplyOuterPairCacheData' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, ProjectDataTypeParam) == 0x000008, "Member 'FLODMatchClothParameter::ProjectDataTypeParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bUseBaseLODColor) == 0x000020, "Member 'FLODMatchClothParameter::bUseBaseLODColor' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bUseRigidMapping) == 0x000021, "Member 'FLODMatchClothParameter::bUseRigidMapping' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bUseBillboard) == 0x000022, "Member 'FLODMatchClothParameter::bUseBillboard' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, BillboardOffsetDist) == 0x000024, "Member 'FLODMatchClothParameter::BillboardOffsetDist' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bForceUpSkin) == 0x000028, "Member 'FLODMatchClothParameter::bForceUpSkin' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, RenderBodyOffsetDist) == 0x00002C, "Member 'FLODMatchClothParameter::RenderBodyOffsetDist' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, LevelOffsetParam) == 0x000030, "Member 'FLODMatchClothParameter::LevelOffsetParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bDeformSkin) == 0x000040, "Member 'FLODMatchClothParameter::bDeformSkin' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bUseBodySkinParam) == 0x000041, "Member 'FLODMatchClothParameter::bUseBodySkinParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, BodySkinParam) == 0x000044, "Member 'FLODMatchClothParameter::BodySkinParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, AccelerationParam) == 0x00004C, "Member 'FLODMatchClothParameter::AccelerationParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, PaperFurLengthScale) == 0x00005C, "Member 'FLODMatchClothParameter::PaperFurLengthScale' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bUseSmooth) == 0x000060, "Member 'FLODMatchClothParameter::bUseSmooth' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, SmoothParam) == 0x000064, "Member 'FLODMatchClothParameter::SmoothParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, ProjectParam) == 0x000074, "Member 'FLODMatchClothParameter::ProjectParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, IntersectParam) == 0x000078, "Member 'FLODMatchClothParameter::IntersectParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, AdvancedParam) == 0x00008C, "Member 'FLODMatchClothParameter::AdvancedParam' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, ClothVertexColorMaskUnits) == 0x000098, "Member 'FLODMatchClothParameter::ClothVertexColorMaskUnits' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, ClothOuterSectionParameter) == 0x0000A8, "Member 'FLODMatchClothParameter::ClothOuterSectionParameter' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, DisabledLODIndices) == 0x0000E8, "Member 'FLODMatchClothParameter::DisabledLODIndices' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bIgnoreTagIntersection) == 0x0000F8, "Member 'FLODMatchClothParameter::bIgnoreTagIntersection' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, RuntimeCompressRatio) == 0x0000FC, "Member 'FLODMatchClothParameter::RuntimeCompressRatio' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bApplyInnerPairCacheData) == 0x000100, "Member 'FLODMatchClothParameter::bApplyInnerPairCacheData' has a wrong offset!");
+static_assert(offsetof(FLODMatchClothParameter, bApplyOuterPairCacheData) == 0x000101, "Member 'FLODMatchClothParameter::bApplyOuterPairCacheData' has a wrong offset!");
 
 // ScriptStruct NikkiFitCloth.MatchClothParameter
 // 0x0028 (0x0028 - 0x0000)
@@ -455,22 +500,20 @@ struct FMatchClothParameter final
 public:
 	TArray<struct FLODMatchClothParameter>        LODMatchParams;                                    // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 DisabledLODIndices;                                // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bUseLODParallelFor;                                // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseRuntimeInner;                                  // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseRuntimeOuter;                                  // 0x0022(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyInnerPairCacheData;                          // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyOuterPairCacheData;                          // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseRuntimeInner;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseRuntimeOuter;                                  // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyInnerPairCacheData;                          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyOuterPairCacheData;                          // 0x0023(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMatchClothParameter) == 0x000008, "Wrong alignment on FMatchClothParameter");
 static_assert(sizeof(FMatchClothParameter) == 0x000028, "Wrong size on FMatchClothParameter");
 static_assert(offsetof(FMatchClothParameter, LODMatchParams) == 0x000000, "Member 'FMatchClothParameter::LODMatchParams' has a wrong offset!");
 static_assert(offsetof(FMatchClothParameter, DisabledLODIndices) == 0x000010, "Member 'FMatchClothParameter::DisabledLODIndices' has a wrong offset!");
-static_assert(offsetof(FMatchClothParameter, bUseLODParallelFor) == 0x000020, "Member 'FMatchClothParameter::bUseLODParallelFor' has a wrong offset!");
-static_assert(offsetof(FMatchClothParameter, bUseRuntimeInner) == 0x000021, "Member 'FMatchClothParameter::bUseRuntimeInner' has a wrong offset!");
-static_assert(offsetof(FMatchClothParameter, bUseRuntimeOuter) == 0x000022, "Member 'FMatchClothParameter::bUseRuntimeOuter' has a wrong offset!");
-static_assert(offsetof(FMatchClothParameter, bApplyInnerPairCacheData) == 0x000023, "Member 'FMatchClothParameter::bApplyInnerPairCacheData' has a wrong offset!");
-static_assert(offsetof(FMatchClothParameter, bApplyOuterPairCacheData) == 0x000024, "Member 'FMatchClothParameter::bApplyOuterPairCacheData' has a wrong offset!");
+static_assert(offsetof(FMatchClothParameter, bUseRuntimeInner) == 0x000020, "Member 'FMatchClothParameter::bUseRuntimeInner' has a wrong offset!");
+static_assert(offsetof(FMatchClothParameter, bUseRuntimeOuter) == 0x000021, "Member 'FMatchClothParameter::bUseRuntimeOuter' has a wrong offset!");
+static_assert(offsetof(FMatchClothParameter, bApplyInnerPairCacheData) == 0x000022, "Member 'FMatchClothParameter::bApplyInnerPairCacheData' has a wrong offset!");
+static_assert(offsetof(FMatchClothParameter, bApplyOuterPairCacheData) == 0x000023, "Member 'FMatchClothParameter::bApplyOuterPairCacheData' has a wrong offset!");
 
 }
 

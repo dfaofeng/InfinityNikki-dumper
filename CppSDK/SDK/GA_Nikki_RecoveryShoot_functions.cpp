@@ -17,203 +17,129 @@
 namespace SDK
 {
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.VariableAssignment
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.BP_GetFirstBullet
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UBP_BulletDataAsset_C**           FirstBullet                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryShoot_C::VariableAssignment()
+void UGA_Nikki_RecoveryShoot_C::BP_GetFirstBullet(class UBP_BulletDataAsset_C** FirstBullet)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "VariableAssignment");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "BP_GetFirstBullet");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::GA_Nikki_RecoveryShoot_C_BP_GetFirstBullet Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FirstBullet != nullptr)
+		*FirstBullet = Parms.FirstBullet;
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.StopFullBodyMontage
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.BP_GetSecondBullet
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UBP_BulletDataAsset_C**           SecondBullet                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Nikki_RecoveryShoot_C::BP_GetSecondBullet(class UBP_BulletDataAsset_C** SecondBullet)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "BP_GetSecondBullet");
+
+	Params::GA_Nikki_RecoveryShoot_C_BP_GetSecondBullet Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (SecondBullet != nullptr)
+		*SecondBullet = Parms.SecondBullet;
+}
+
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.BP_SelectMontage
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryShoot_C::StopFullBodyMontage()
+void UGA_Nikki_RecoveryShoot_C::BP_SelectMontage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "StopFullBodyMontage");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "BP_SelectMontage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.SetTarget
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Nikki_RecoveryShoot_C::SetTarget()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "SetTarget");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.PlayFullBodyMontage
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UGA_Nikki_RecoveryShoot_C::PlayFullBodyMontage()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "PlayFullBodyMontage");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.ExecuteUbergraph_GA_Nikki_RecoveryShoot
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class AActor*                           ReturnActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryShoot_C::OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C(class AActor* ReturnActor)
+void UGA_Nikki_RecoveryShoot_C::ExecuteUbergraph_GA_Nikki_RecoveryShoot(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "ExecuteUbergraph_GA_Nikki_RecoveryShoot");
 
-	Params::GA_Nikki_RecoveryShoot_C_OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C Parms{};
+	Params::GA_Nikki_RecoveryShoot_C_ExecuteUbergraph_GA_Nikki_RecoveryShoot Parms{};
 
-	Parms.ReturnActor = ReturnActor;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           ReturnActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
 
-void UGA_Nikki_RecoveryShoot_C::OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A(class AActor* ReturnActor)
+void UGA_Nikki_RecoveryShoot_C::K2_ActivateAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "K2_ActivateAbility");
 
-	Params::GA_Nikki_RecoveryShoot_C_OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.ReturnActor = ReturnActor;
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Nikki_RecoveryShoot_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "K2_OnEndAbility");
+
+	Params::GA_Nikki_RecoveryShoot_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Nikki_RecoveryShoot_C::OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Nikki_RecoveryShoot_C::OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryShoot_C::OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
+void UGA_Nikki_RecoveryShoot_C::OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA");
 
-	Params::GA_Nikki_RecoveryShoot_C_OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Nikki_RecoveryShoot_C::OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA");
-
-	Params::GA_Nikki_RecoveryShoot_C_OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Nikki_RecoveryShoot_C::OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA");
-
-	Params::GA_Nikki_RecoveryShoot_C_OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Nikki_RecoveryShoot_C::OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA");
-
-	Params::GA_Nikki_RecoveryShoot_C_OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
+	Params::GA_Nikki_RecoveryShoot_C_OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -241,19 +167,19 @@ void UGA_Nikki_RecoveryShoot_C::OnCancelled_6D0991414B50E8B2F052EA9EE1BF78FA(cla
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryShoot_C::OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
+void UGA_Nikki_RecoveryShoot_C::OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA");
 
-	Params::GA_Nikki_RecoveryShoot_C_OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
+	Params::GA_Nikki_RecoveryShoot_C_OnCompleted_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -261,113 +187,207 @@ void UGA_Nikki_RecoveryShoot_C::OnBlendOut_6D0991414B50E8B2F052EA9EE1BF78FA(clas
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryShoot_C::K2_OnEndAbility(bool bWasCancelled)
+void UGA_Nikki_RecoveryShoot_C::OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "K2_OnEndAbility");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA");
 
-	Params::GA_Nikki_RecoveryShoot_C_K2_OnEndAbility Parms{};
+	Params::GA_Nikki_RecoveryShoot_C_OnInterrupted_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
 
-	Parms.bWasCancelled = bWasCancelled;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryShoot_C::K2_ActivateAbility()
+void UGA_Nikki_RecoveryShoot_C::OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "K2_ActivateAbility");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA");
+
+	Params::GA_Nikki_RecoveryShoot_C_OnNotifyBegin_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Nikki_RecoveryShoot_C::OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA(class FName NotifyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA");
+
+	Params::GA_Nikki_RecoveryShoot_C_OnNotifyEnd_6D0991414B50E8B2F052EA9EE1BF78FA Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Nikki_RecoveryShoot_C::OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFailed_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.ExecuteUbergraph_GA_Nikki_RecoveryShoot
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C
+// (BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryShoot_C::ExecuteUbergraph_GA_Nikki_RecoveryShoot(int32 EntryPoint)
+void UGA_Nikki_RecoveryShoot_C::OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "ExecuteUbergraph_GA_Nikki_RecoveryShoot");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFailed_D09ECA294A859F7D0D7AF69771A68A9C");
 
-	Params::GA_Nikki_RecoveryShoot_C_ExecuteUbergraph_GA_Nikki_RecoveryShoot Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.EntryPoint = EntryPoint;
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           ReturnActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Nikki_RecoveryShoot_C::OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A(class AActor* ReturnActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A");
+
+	Params::GA_Nikki_RecoveryShoot_C_OnSpawnFinished_9FD4C3FF45D4AAAA2D0CFF93FD3CB75A Parms{};
+
+	Parms.ReturnActor = ReturnActor;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.BP_SelectMontage
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           ReturnActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Nikki_RecoveryShoot_C::OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C(class AActor* ReturnActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C");
+
+	Params::GA_Nikki_RecoveryShoot_C_OnSpawnFinished_D09ECA294A859F7D0D7AF69771A68A9C Parms{};
+
+	Parms.ReturnActor = ReturnActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.PlayFullBodyMontage
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryShoot_C::BP_SelectMontage()
+void UGA_Nikki_RecoveryShoot_C::PlayFullBodyMontage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "BP_SelectMontage");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "PlayFullBodyMontage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.BP_GetSecondBullet
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UBP_BulletDataAsset_C**           SecondBullet                                           (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.SetTarget
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryShoot_C::BP_GetSecondBullet(class UBP_BulletDataAsset_C** SecondBullet)
+void UGA_Nikki_RecoveryShoot_C::SetTarget()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "BP_GetSecondBullet");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "SetTarget");
 
-	Params::GA_Nikki_RecoveryShoot_C_BP_GetSecondBullet Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (SecondBullet != nullptr)
-		*SecondBullet = Parms.SecondBullet;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.BP_GetFirstBullet
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UBP_BulletDataAsset_C**           FirstBullet                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.StopFullBodyMontage
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryShoot_C::BP_GetFirstBullet(class UBP_BulletDataAsset_C** FirstBullet)
+void UGA_Nikki_RecoveryShoot_C::StopFullBodyMontage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "BP_GetFirstBullet");
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "StopFullBodyMontage");
 
-	Params::GA_Nikki_RecoveryShoot_C_BP_GetFirstBullet Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.VariableAssignment
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UGA_Nikki_RecoveryShoot_C::VariableAssignment()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "VariableAssignment");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.GetModuleName
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UGA_Nikki_RecoveryShoot_C::GetModuleName() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "GetModuleName");
+
+	Params::GA_Nikki_RecoveryShoot_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (FirstBullet != nullptr)
-		*FirstBullet = Parms.FirstBullet;
+	return Parms.ReturnValue;
 }
 
 
@@ -389,26 +409,6 @@ bool UGA_Nikki_RecoveryShoot_C::K2_ShouldAbilityRespondToEvent(const struct FGam
 
 	Parms.ActorInfo = std::move(ActorInfo);
 	Parms.Payload = std::move(Payload);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GA_Nikki_RecoveryShoot.GA_Nikki_RecoveryShoot_C.GetModuleName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
-
-class FString UGA_Nikki_RecoveryShoot_C::GetModuleName() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryShoot_C", "GetModuleName");
-
-	Params::GA_Nikki_RecoveryShoot_C_GetModuleName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

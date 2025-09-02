@@ -28,32 +28,35 @@ enum class ESectorDevideOptions : uint8
 };
 
 // ScriptStruct PaperGPUDrivenFoliage.PaperGPUDrivenFoliageClusterData
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00F0 (0x00F0 - 0x0000)
 struct FPaperGPUDrivenFoliageClusterData final
 {
 public:
 	struct FSoftObjectPath                        ClusterDataSavePath;                               // 0x0000(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         LevelMarkerID;                                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ClusterID;                                         // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ContainInstanceNum;                                // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ContainPatchNum;                                   // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 ClusterContainedSectionIDs;                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FBoxSphereBounds                       ClusterBound;                                      // 0x0040(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoxSphereBounds                       CullClusterBound;                                  // 0x0078(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	class UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData* TemptLoadCompressedClusterData; // 0x00B0(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B8[0x30];                                      // 0x00B8(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         IsForHLOD;                                         // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ContainInstanceNum;                                // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ContainPatchNum;                                   // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ClusterContainedSectionIDs;                        // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       ClusterBound;                                      // 0x0048(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoxSphereBounds                       CullClusterBound;                                  // 0x0080(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class UCompressedStreamedGPUDrivenFoliageClusterInstanceAssetData* TemptLoadCompressedClusterData; // 0x00B8(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C0[0x30];                                      // 0x00C0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperGPUDrivenFoliageClusterData) == 0x000008, "Wrong alignment on FPaperGPUDrivenFoliageClusterData");
-static_assert(sizeof(FPaperGPUDrivenFoliageClusterData) == 0x0000E8, "Wrong size on FPaperGPUDrivenFoliageClusterData");
+static_assert(sizeof(FPaperGPUDrivenFoliageClusterData) == 0x0000F0, "Wrong size on FPaperGPUDrivenFoliageClusterData");
 static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ClusterDataSavePath) == 0x000000, "Member 'FPaperGPUDrivenFoliageClusterData::ClusterDataSavePath' has a wrong offset!");
 static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, LevelMarkerID) == 0x000020, "Member 'FPaperGPUDrivenFoliageClusterData::LevelMarkerID' has a wrong offset!");
 static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ClusterID) == 0x000024, "Member 'FPaperGPUDrivenFoliageClusterData::ClusterID' has a wrong offset!");
-static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ContainInstanceNum) == 0x000028, "Member 'FPaperGPUDrivenFoliageClusterData::ContainInstanceNum' has a wrong offset!");
-static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ContainPatchNum) == 0x00002C, "Member 'FPaperGPUDrivenFoliageClusterData::ContainPatchNum' has a wrong offset!");
-static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ClusterContainedSectionIDs) == 0x000030, "Member 'FPaperGPUDrivenFoliageClusterData::ClusterContainedSectionIDs' has a wrong offset!");
-static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ClusterBound) == 0x000040, "Member 'FPaperGPUDrivenFoliageClusterData::ClusterBound' has a wrong offset!");
-static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, CullClusterBound) == 0x000078, "Member 'FPaperGPUDrivenFoliageClusterData::CullClusterBound' has a wrong offset!");
-static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, TemptLoadCompressedClusterData) == 0x0000B0, "Member 'FPaperGPUDrivenFoliageClusterData::TemptLoadCompressedClusterData' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, IsForHLOD) == 0x000028, "Member 'FPaperGPUDrivenFoliageClusterData::IsForHLOD' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ContainInstanceNum) == 0x00002C, "Member 'FPaperGPUDrivenFoliageClusterData::ContainInstanceNum' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ContainPatchNum) == 0x000030, "Member 'FPaperGPUDrivenFoliageClusterData::ContainPatchNum' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ClusterContainedSectionIDs) == 0x000038, "Member 'FPaperGPUDrivenFoliageClusterData::ClusterContainedSectionIDs' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, ClusterBound) == 0x000048, "Member 'FPaperGPUDrivenFoliageClusterData::ClusterBound' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, CullClusterBound) == 0x000080, "Member 'FPaperGPUDrivenFoliageClusterData::CullClusterBound' has a wrong offset!");
+static_assert(offsetof(FPaperGPUDrivenFoliageClusterData, TemptLoadCompressedClusterData) == 0x0000B8, "Member 'FPaperGPUDrivenFoliageClusterData::TemptLoadCompressedClusterData' has a wrong offset!");
 
 // ScriptStruct PaperGPUDrivenFoliage.AGFGPUDrivenFoliageMeshVertex
 // 0x0018 (0x0018 - 0x0000)
@@ -144,7 +147,7 @@ static_assert(offsetof(FGPUDrivenMeshReplaceTableStructInfo, OriginalMeshName) =
 static_assert(offsetof(FGPUDrivenMeshReplaceTableStructInfo, ReplaceMeshName) == 0x000018, "Member 'FGPUDrivenMeshReplaceTableStructInfo::ReplaceMeshName' has a wrong offset!");
 
 // ScriptStruct PaperGPUDrivenFoliage.PaperGPUDrivenFoliageSectorData
-// 0x0238 (0x0238 - 0x0000)
+// 0x0268 (0x0268 - 0x0000)
 struct FPaperGPUDrivenFoliageSectorData final
 {
 public:
@@ -159,10 +162,10 @@ public:
 	struct FSoftObjectPath                        InstanceDataSavePath;                              // 0x0070(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UStaticMesh*>                    AllSrcStaticMeshes;                                // 0x0090(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	class UCompressedStreamedGPUDrivenFoliageSectorInstanceAssetData* TemptLoadCompressedInstanceData; // 0x00A0(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A8[0x190];                                     // 0x00A8(0x0190)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A8[0x1C0];                                     // 0x00A8(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPaperGPUDrivenFoliageSectorData) == 0x000008, "Wrong alignment on FPaperGPUDrivenFoliageSectorData");
-static_assert(sizeof(FPaperGPUDrivenFoliageSectorData) == 0x000238, "Wrong size on FPaperGPUDrivenFoliageSectorData");
+static_assert(sizeof(FPaperGPUDrivenFoliageSectorData) == 0x000268, "Wrong size on FPaperGPUDrivenFoliageSectorData");
 static_assert(offsetof(FPaperGPUDrivenFoliageSectorData, SectorBound) == 0x000008, "Member 'FPaperGPUDrivenFoliageSectorData::SectorBound' has a wrong offset!");
 static_assert(offsetof(FPaperGPUDrivenFoliageSectorData, SectorID) == 0x000040, "Member 'FPaperGPUDrivenFoliageSectorData::SectorID' has a wrong offset!");
 static_assert(offsetof(FPaperGPUDrivenFoliageSectorData, AllGeneratedSrcMeshNames) == 0x000048, "Member 'FPaperGPUDrivenFoliageSectorData::AllGeneratedSrcMeshNames' has a wrong offset!");
@@ -185,6 +188,72 @@ static_assert(alignof(FVirtualGrassSharedData) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(FVirtualGrassSharedData) == 0x000040, "Wrong size on FVirtualGrassSharedData");
 static_assert(offsetof(FVirtualGrassSharedData, MeshDataSavePath) == 0x000000, "Member 'FVirtualGrassSharedData::MeshDataSavePath' has a wrong offset!");
 static_assert(offsetof(FVirtualGrassSharedData, TemptPrebakeData) == 0x000020, "Member 'FVirtualGrassSharedData::TemptPrebakeData' has a wrong offset!");
+
+// ScriptStruct PaperGPUDrivenFoliage.PVM_MeshMaterialCombine
+// 0x0018 (0x0018 - 0x0000)
+struct FPVM_MeshMaterialCombine final
+{
+public:
+	class UStaticMesh*                            StaticMesh;                                        // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UMaterialInterface*>             OverridedMaterials;                                // 0x0008(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPVM_MeshMaterialCombine) == 0x000008, "Wrong alignment on FPVM_MeshMaterialCombine");
+static_assert(sizeof(FPVM_MeshMaterialCombine) == 0x000018, "Wrong size on FPVM_MeshMaterialCombine");
+static_assert(offsetof(FPVM_MeshMaterialCombine, StaticMesh) == 0x000000, "Member 'FPVM_MeshMaterialCombine::StaticMesh' has a wrong offset!");
+static_assert(offsetof(FPVM_MeshMaterialCombine, OverridedMaterials) == 0x000008, "Member 'FPVM_MeshMaterialCombine::OverridedMaterials' has a wrong offset!");
+
+// ScriptStruct PaperGPUDrivenFoliage.VirtualMeshMaterialData
+// 0x0038 (0x0038 - 0x0000)
+struct FVirtualMeshMaterialData final
+{
+public:
+	struct FStaticMaterial                        StaticMaterial;                                    // 0x0000(0x0030)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         LocalSectionBegin;                                 // 0x0030(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumOfSections;                                     // 0x0034(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVirtualMeshMaterialData) == 0x000008, "Wrong alignment on FVirtualMeshMaterialData");
+static_assert(sizeof(FVirtualMeshMaterialData) == 0x000038, "Wrong size on FVirtualMeshMaterialData");
+static_assert(offsetof(FVirtualMeshMaterialData, StaticMaterial) == 0x000000, "Member 'FVirtualMeshMaterialData::StaticMaterial' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshMaterialData, LocalSectionBegin) == 0x000030, "Member 'FVirtualMeshMaterialData::LocalSectionBegin' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshMaterialData, NumOfSections) == 0x000034, "Member 'FVirtualMeshMaterialData::NumOfSections' has a wrong offset!");
+
+// ScriptStruct PaperGPUDrivenFoliage.VirtualMeshSectionData
+// 0x001C (0x001C - 0x0000)
+struct FVirtualMeshSectionData final
+{
+public:
+	int32                                         MaterialIndex;                                     // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        VertexOffset;                                      // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        IndiceOffset;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        VertexCount;                                       // 0x000C(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        IndiceCount;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LODIndex;                                          // 0x0014(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SrcMeshSectionIndex;                               // 0x0018(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVirtualMeshSectionData) == 0x000004, "Wrong alignment on FVirtualMeshSectionData");
+static_assert(sizeof(FVirtualMeshSectionData) == 0x00001C, "Wrong size on FVirtualMeshSectionData");
+static_assert(offsetof(FVirtualMeshSectionData, MaterialIndex) == 0x000000, "Member 'FVirtualMeshSectionData::MaterialIndex' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshSectionData, VertexOffset) == 0x000004, "Member 'FVirtualMeshSectionData::VertexOffset' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshSectionData, IndiceOffset) == 0x000008, "Member 'FVirtualMeshSectionData::IndiceOffset' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshSectionData, VertexCount) == 0x00000C, "Member 'FVirtualMeshSectionData::VertexCount' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshSectionData, IndiceCount) == 0x000010, "Member 'FVirtualMeshSectionData::IndiceCount' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshSectionData, LODIndex) == 0x000014, "Member 'FVirtualMeshSectionData::LODIndex' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshSectionData, SrcMeshSectionIndex) == 0x000018, "Member 'FVirtualMeshSectionData::SrcMeshSectionIndex' has a wrong offset!");
+
+// ScriptStruct PaperGPUDrivenFoliage.VirtualMeshLODData
+// 0x000C (0x000C - 0x0000)
+struct FVirtualMeshLODData final
+{
+public:
+	float                                         MaxScreenSize;                                     // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinScreenSize;                                     // 0x0004(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumTriangles;                                      // 0x0008(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVirtualMeshLODData) == 0x000004, "Wrong alignment on FVirtualMeshLODData");
+static_assert(sizeof(FVirtualMeshLODData) == 0x00000C, "Wrong size on FVirtualMeshLODData");
+static_assert(offsetof(FVirtualMeshLODData, MaxScreenSize) == 0x000000, "Member 'FVirtualMeshLODData::MaxScreenSize' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshLODData, MinScreenSize) == 0x000004, "Member 'FVirtualMeshLODData::MinScreenSize' has a wrong offset!");
+static_assert(offsetof(FVirtualMeshLODData, NumTriangles) == 0x000008, "Member 'FVirtualMeshLODData::NumTriangles' has a wrong offset!");
 
 }
 

@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "F_HitActionConfigDatas_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK

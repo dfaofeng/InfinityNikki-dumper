@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ChaosVehicles_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "ChaosVehicles_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -347,6 +347,8 @@ public:
 	void EnableMechanicalSim(bool InState);
 	void EnableSuspension(bool InState);
 	void EnableWheelFriction(bool InState);
+	class AActor* GetWheelHitActorByIndex(int32 InWheelIndex);
+	class UPrimitiveComponent* GetWheelHitComponentByIndex(int32 InWheelIndex);
 	void SetABSEnabled(int32 WheelIndex, bool Enabled);
 	void SetAffectedByBrake(int32 WheelIndex, bool Enabled);
 	void SetAffectedByEngine(int32 WheelIndex, bool Enabled);

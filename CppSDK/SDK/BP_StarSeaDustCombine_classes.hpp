@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_InteractiveObjType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -19,25 +19,25 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_StarSeaDustCombine.BP_StarSeaDustCombine_C
-// 0x0098 (0x04D0 - 0x0438)
+// 0x0098 (0x0520 - 0x0488)
 class ABP_StarSeaDustCombine_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UNiagaraComponent*                      NiagaraStarSeaCrystal;                             // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      NiagaraGlimmer;                                    // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class ABP_StarSeaDust_C*                      AsBP_Star_Sea_Dust;                                // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	int32                                         Index_0;                                           // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_464[0x4];                                      // 0x0464(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  Alive;                                             // 0x0468(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 AliveIndex;                                        // 0x0478(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	int32                                         IndexCrystal;                                      // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_48C[0x4];                                      // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  AliveCrystal;                                      // 0x0490(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 AliveIndexCrystal;                                 // 0x04A0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 SpawnID;                                           // 0x04B0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TArray<int32>                                 SpawnCrystalID;                                    // 0x04C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UNiagaraComponent*                      NiagaraStarSeaCrystal;                             // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      NiagaraGlimmer;                                    // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class ABP_StarSeaDust_C*                      AsBP_Star_Sea_Dust;                                // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x04B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4B4[0x4];                                      // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  Alive;                                             // 0x04B8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 AliveIndex;                                        // 0x04C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	int32                                         IndexCrystal;                                      // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  AliveCrystal;                                      // 0x04E0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 AliveIndexCrystal;                                 // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 SpawnID;                                           // 0x0500(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<int32>                                 SpawnCrystalID;                                    // 0x0510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_StarSeaDustCombine(int32 EntryPoint);
@@ -61,20 +61,20 @@ public:
 	}
 };
 static_assert(alignof(ABP_StarSeaDustCombine_C) == 0x000008, "Wrong alignment on ABP_StarSeaDustCombine_C");
-static_assert(sizeof(ABP_StarSeaDustCombine_C) == 0x0004D0, "Wrong size on ABP_StarSeaDustCombine_C");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, UberGraphFrame) == 0x000438, "Member 'ABP_StarSeaDustCombine_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, NiagaraStarSeaCrystal) == 0x000440, "Member 'ABP_StarSeaDustCombine_C::NiagaraStarSeaCrystal' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, NiagaraGlimmer) == 0x000448, "Member 'ABP_StarSeaDustCombine_C::NiagaraGlimmer' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, DefaultSceneRoot) == 0x000450, "Member 'ABP_StarSeaDustCombine_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, AsBP_Star_Sea_Dust) == 0x000458, "Member 'ABP_StarSeaDustCombine_C::AsBP_Star_Sea_Dust' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, Index_0) == 0x000460, "Member 'ABP_StarSeaDustCombine_C::Index_0' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, Alive) == 0x000468, "Member 'ABP_StarSeaDustCombine_C::Alive' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, AliveIndex) == 0x000478, "Member 'ABP_StarSeaDustCombine_C::AliveIndex' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, IndexCrystal) == 0x000488, "Member 'ABP_StarSeaDustCombine_C::IndexCrystal' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, AliveCrystal) == 0x000490, "Member 'ABP_StarSeaDustCombine_C::AliveCrystal' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, AliveIndexCrystal) == 0x0004A0, "Member 'ABP_StarSeaDustCombine_C::AliveIndexCrystal' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, SpawnID) == 0x0004B0, "Member 'ABP_StarSeaDustCombine_C::SpawnID' has a wrong offset!");
-static_assert(offsetof(ABP_StarSeaDustCombine_C, SpawnCrystalID) == 0x0004C0, "Member 'ABP_StarSeaDustCombine_C::SpawnCrystalID' has a wrong offset!");
+static_assert(sizeof(ABP_StarSeaDustCombine_C) == 0x000520, "Wrong size on ABP_StarSeaDustCombine_C");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, UberGraphFrame) == 0x000488, "Member 'ABP_StarSeaDustCombine_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, NiagaraStarSeaCrystal) == 0x000490, "Member 'ABP_StarSeaDustCombine_C::NiagaraStarSeaCrystal' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, NiagaraGlimmer) == 0x000498, "Member 'ABP_StarSeaDustCombine_C::NiagaraGlimmer' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, DefaultSceneRoot) == 0x0004A0, "Member 'ABP_StarSeaDustCombine_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, AsBP_Star_Sea_Dust) == 0x0004A8, "Member 'ABP_StarSeaDustCombine_C::AsBP_Star_Sea_Dust' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, Index_0) == 0x0004B0, "Member 'ABP_StarSeaDustCombine_C::Index_0' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, Alive) == 0x0004B8, "Member 'ABP_StarSeaDustCombine_C::Alive' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, AliveIndex) == 0x0004C8, "Member 'ABP_StarSeaDustCombine_C::AliveIndex' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, IndexCrystal) == 0x0004D8, "Member 'ABP_StarSeaDustCombine_C::IndexCrystal' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, AliveCrystal) == 0x0004E0, "Member 'ABP_StarSeaDustCombine_C::AliveCrystal' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, AliveIndexCrystal) == 0x0004F0, "Member 'ABP_StarSeaDustCombine_C::AliveIndexCrystal' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, SpawnID) == 0x000500, "Member 'ABP_StarSeaDustCombine_C::SpawnID' has a wrong offset!");
+static_assert(offsetof(ABP_StarSeaDustCombine_C, SpawnCrystalID) == 0x000510, "Member 'ABP_StarSeaDustCombine_C::SpawnCrystalID' has a wrong offset!");
 
 }
 

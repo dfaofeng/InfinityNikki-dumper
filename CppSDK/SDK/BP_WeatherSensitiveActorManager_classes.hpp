@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "F_WeatherSensitiveActors_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Enum_WeatherType_structs.hpp"
+#include "F_WeatherSensitiveActors_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -21,23 +21,23 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_WeatherSensitiveActorManager.BP_WeatherSensitiveActorManager_C
-// 0x00E8 (0x0520 - 0x0438)
+// 0x00E8 (0x0570 - 0x0488)
 class ABP_WeatherSensitiveActorManager_C final : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                          InteractiveItemNotifierBox;                        // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USphereComponent*                       InactiveRange;                                     // 0x0448(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0450(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FName                                   DefaultLayerName;                                  // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   RainyLayerName;                                    // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BP_BoundingBoxCenter;                              // 0x0468(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BP_BoundingBoxExtent;                              // 0x0480(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        InactiveDistance;                                  // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                AdditionalExtent;                                  // 0x04A0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<Enum_WeatherType, struct FF_WeatherSensitiveActors> Weather2ActorsMap;                      // 0x04B8(0x0050)(Edit, BlueprintVisible)
-	struct FF_WeatherSensitiveActors              DefaultActors;                                     // 0x0508(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	bool                                          NewVar_0;                                          // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                          InteractiveItemNotifierBox;                        // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USphereComponent*                       InactiveRange;                                     // 0x0498(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x04A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class FName                                   DefaultLayerName;                                  // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   RainyLayerName;                                    // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BP_BoundingBoxCenter;                              // 0x04B8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BP_BoundingBoxExtent;                              // 0x04D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        InactiveDistance;                                  // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                AdditionalExtent;                                  // 0x04F0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<Enum_WeatherType, struct FF_WeatherSensitiveActors> Weather2ActorsMap;                      // 0x0508(0x0050)(Edit, BlueprintVisible)
+	struct FF_WeatherSensitiveActors              DefaultActors;                                     // 0x0558(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	bool                                          NewVar_0;                                          // 0x0568(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_GetCurrentWeather(Enum_WeatherType* Weather);
@@ -62,20 +62,20 @@ public:
 	}
 };
 static_assert(alignof(ABP_WeatherSensitiveActorManager_C) == 0x000008, "Wrong alignment on ABP_WeatherSensitiveActorManager_C");
-static_assert(sizeof(ABP_WeatherSensitiveActorManager_C) == 0x000520, "Wrong size on ABP_WeatherSensitiveActorManager_C");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, UberGraphFrame) == 0x000438, "Member 'ABP_WeatherSensitiveActorManager_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, InteractiveItemNotifierBox) == 0x000440, "Member 'ABP_WeatherSensitiveActorManager_C::InteractiveItemNotifierBox' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, InactiveRange) == 0x000448, "Member 'ABP_WeatherSensitiveActorManager_C::InactiveRange' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, DefaultSceneRoot) == 0x000450, "Member 'ABP_WeatherSensitiveActorManager_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, DefaultLayerName) == 0x000458, "Member 'ABP_WeatherSensitiveActorManager_C::DefaultLayerName' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, RainyLayerName) == 0x000460, "Member 'ABP_WeatherSensitiveActorManager_C::RainyLayerName' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, BP_BoundingBoxCenter) == 0x000468, "Member 'ABP_WeatherSensitiveActorManager_C::BP_BoundingBoxCenter' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, BP_BoundingBoxExtent) == 0x000480, "Member 'ABP_WeatherSensitiveActorManager_C::BP_BoundingBoxExtent' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, InactiveDistance) == 0x000498, "Member 'ABP_WeatherSensitiveActorManager_C::InactiveDistance' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, AdditionalExtent) == 0x0004A0, "Member 'ABP_WeatherSensitiveActorManager_C::AdditionalExtent' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, Weather2ActorsMap) == 0x0004B8, "Member 'ABP_WeatherSensitiveActorManager_C::Weather2ActorsMap' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, DefaultActors) == 0x000508, "Member 'ABP_WeatherSensitiveActorManager_C::DefaultActors' has a wrong offset!");
-static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, NewVar_0) == 0x000518, "Member 'ABP_WeatherSensitiveActorManager_C::NewVar_0' has a wrong offset!");
+static_assert(sizeof(ABP_WeatherSensitiveActorManager_C) == 0x000570, "Wrong size on ABP_WeatherSensitiveActorManager_C");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, UberGraphFrame) == 0x000488, "Member 'ABP_WeatherSensitiveActorManager_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, InteractiveItemNotifierBox) == 0x000490, "Member 'ABP_WeatherSensitiveActorManager_C::InteractiveItemNotifierBox' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, InactiveRange) == 0x000498, "Member 'ABP_WeatherSensitiveActorManager_C::InactiveRange' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, DefaultSceneRoot) == 0x0004A0, "Member 'ABP_WeatherSensitiveActorManager_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, DefaultLayerName) == 0x0004A8, "Member 'ABP_WeatherSensitiveActorManager_C::DefaultLayerName' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, RainyLayerName) == 0x0004B0, "Member 'ABP_WeatherSensitiveActorManager_C::RainyLayerName' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, BP_BoundingBoxCenter) == 0x0004B8, "Member 'ABP_WeatherSensitiveActorManager_C::BP_BoundingBoxCenter' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, BP_BoundingBoxExtent) == 0x0004D0, "Member 'ABP_WeatherSensitiveActorManager_C::BP_BoundingBoxExtent' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, InactiveDistance) == 0x0004E8, "Member 'ABP_WeatherSensitiveActorManager_C::InactiveDistance' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, AdditionalExtent) == 0x0004F0, "Member 'ABP_WeatherSensitiveActorManager_C::AdditionalExtent' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, Weather2ActorsMap) == 0x000508, "Member 'ABP_WeatherSensitiveActorManager_C::Weather2ActorsMap' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, DefaultActors) == 0x000558, "Member 'ABP_WeatherSensitiveActorManager_C::DefaultActors' has a wrong offset!");
+static_assert(offsetof(ABP_WeatherSensitiveActorManager_C, NewVar_0) == 0x000568, "Member 'ABP_WeatherSensitiveActorManager_C::NewVar_0' has a wrong offset!");
 
 }
 

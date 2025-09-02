@@ -40,13 +40,13 @@ public:
 	TArray<struct FVector2D>                      CoordinateSizeArray;                               // 0x0430(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void ReceiveBeginPlay();
-	void OnPre_RT_Loaded(class UObject* Loaded);
-	void OnCur_RT_Loaded(class UObject* Loaded);
-	void ExecuteUbergraph_BP_FoliageInteractor_Manager(int32 EntryPoint);
 	void BP_SetTickEnable(bool Enable);
+	void ExecuteUbergraph_BP_FoliageInteractor_Manager(int32 EntryPoint);
+	void OnCur_RT_Loaded(class UObject* Loaded);
+	void OnPre_RT_Loaded(class UObject* Loaded);
+	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ReceiveTick(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()

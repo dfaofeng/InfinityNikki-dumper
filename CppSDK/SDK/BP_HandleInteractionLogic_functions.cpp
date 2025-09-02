@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function BP_HandleInteractionLogic.BP_HandleInteractionLogic_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_HandleInteractionLogic_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_HandleInteractionLogic_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_HandleInteractionLogic.BP_HandleInteractionLogic_C.ExecuteUbergraph_BP_HandleInteractionLogic
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void UBP_HandleInteractionLogic_C::ExecuteUbergraph_BP_HandleInteractionLogic(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_HandleInteractionLogic.BP_HandleInteractionLogic_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_HandleInteractionLogic_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_HandleInteractionLogic_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

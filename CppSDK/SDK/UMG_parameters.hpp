@@ -6679,6 +6679,17 @@ static_assert(alignof(TextBlock_SetColorAndOpacity) == 0x000004, "Wrong alignmen
 static_assert(sizeof(TextBlock_SetColorAndOpacity) == 0x000014, "Wrong size on TextBlock_SetColorAndOpacity");
 static_assert(offsetof(TextBlock_SetColorAndOpacity, InColorAndOpacity) == 0x000000, "Member 'TextBlock_SetColorAndOpacity::InColorAndOpacity' has a wrong offset!");
 
+// Function UMG.TextBlock.SetFillParentArea
+// 0x0001 (0x0001 - 0x0000)
+struct TextBlock_SetFillParentArea final
+{
+public:
+	bool                                          InFillParentArea;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextBlock_SetFillParentArea) == 0x000001, "Wrong alignment on TextBlock_SetFillParentArea");
+static_assert(sizeof(TextBlock_SetFillParentArea) == 0x000001, "Wrong size on TextBlock_SetFillParentArea");
+static_assert(offsetof(TextBlock_SetFillParentArea, InFillParentArea) == 0x000000, "Member 'TextBlock_SetFillParentArea::InFillParentArea' has a wrong offset!");
+
 // Function UMG.TextBlock.SetFont
 // 0x0060 (0x0060 - 0x0000)
 struct TextBlock_SetFont final
@@ -6799,6 +6810,17 @@ public:
 static_assert(alignof(TextBlock_SetTextTransformPolicy) == 0x000001, "Wrong alignment on TextBlock_SetTextTransformPolicy");
 static_assert(sizeof(TextBlock_SetTextTransformPolicy) == 0x000001, "Wrong size on TextBlock_SetTextTransformPolicy");
 static_assert(offsetof(TextBlock_SetTextTransformPolicy, InTransformPolicy) == 0x000000, "Member 'TextBlock_SetTextTransformPolicy::InTransformPolicy' has a wrong offset!");
+
+// Function UMG.TextBlock.GetFillParentArea
+// 0x0001 (0x0001 - 0x0000)
+struct TextBlock_GetFillParentArea final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(TextBlock_GetFillParentArea) == 0x000001, "Wrong alignment on TextBlock_GetFillParentArea");
+static_assert(sizeof(TextBlock_GetFillParentArea) == 0x000001, "Wrong size on TextBlock_GetFillParentArea");
+static_assert(offsetof(TextBlock_GetFillParentArea, ReturnValue) == 0x000000, "Member 'TextBlock_GetFillParentArea::ReturnValue' has a wrong offset!");
 
 // Function UMG.TextBlock.GetText
 // 0x0010 (0x0010 - 0x0000)

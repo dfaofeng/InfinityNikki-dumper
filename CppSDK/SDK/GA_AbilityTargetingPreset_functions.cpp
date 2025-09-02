@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function GA_AbilityTargetingPreset.GA_AbilityTargetingPreset_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_AbilityTargetingPreset_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_AbilityTargetingPreset_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function GA_AbilityTargetingPreset.GA_AbilityTargetingPreset_C.ExecuteUbergraph_GA_AbilityTargetingPreset
 // (Final, UbergraphFunction)
 // Parameters:
@@ -48,6 +34,20 @@ void UGA_AbilityTargetingPreset_C::ExecuteUbergraph_GA_AbilityTargetingPreset(in
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_AbilityTargetingPreset.GA_AbilityTargetingPreset_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
+
+void UGA_AbilityTargetingPreset_C::K2_ActivateAbility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_AbilityTargetingPreset_C", "K2_ActivateAbility");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

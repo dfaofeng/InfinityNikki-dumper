@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "PaperGamesSEM_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PaperGamesSEM_structs.hpp"
 
 
 namespace SDK::Params

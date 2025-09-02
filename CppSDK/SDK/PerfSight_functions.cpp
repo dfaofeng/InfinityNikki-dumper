@@ -215,11 +215,11 @@ void UPerfSightHelper::EndTupleWrap()
 // Function PerfSight.PerfSightHelper.GetDeviceLevelByQcc
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    configName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ConfigName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const class FString&                    gpuFamily                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UPerfSightHelper::GetDeviceLevelByQcc(const class FString& configName, const class FString& gpuFamily)
+int32 UPerfSightHelper::GetDeviceLevelByQcc(const class FString& ConfigName, const class FString& gpuFamily)
 {
 	static class UFunction* Func = nullptr;
 
@@ -228,7 +228,7 @@ int32 UPerfSightHelper::GetDeviceLevelByQcc(const class FString& configName, con
 
 	Params::PerfSightHelper_GetDeviceLevelByQcc Parms{};
 
-	Parms.configName = std::move(configName);
+	Parms.ConfigName = std::move(ConfigName);
 	Parms.gpuFamily = std::move(gpuFamily);
 
 	auto Flgs = Func->FunctionFlags;

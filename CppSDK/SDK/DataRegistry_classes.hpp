@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "DataRegistry_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "DataRegistry_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
@@ -31,6 +31,7 @@ public:
 	static bool GetDataRegistryRowFromName(const class UDataRegistry* Registry, class FName RowName, struct FTableRowBase* OutRow, bool bCheckVersion);
 	static bool GetDataRegistryRowMap(const class UDataRegistry* Registry, TMap<class FName, struct FTableRowBase>* OutRowMap, bool bCheckVersion);
 	static void GetDataRegistryRowNames(const class UDataRegistry* Registry, TArray<class FName>* OutRowNames, bool bCheckVersion);
+	static class UDataRegistry* GetRegistryForType(const struct FDataRegistryType& RegistryType);
 
 public:
 	static class UClass* StaticClass()

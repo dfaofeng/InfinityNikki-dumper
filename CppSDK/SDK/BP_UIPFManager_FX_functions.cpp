@@ -17,23 +17,21 @@
 namespace SDK
 {
 
-// Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.UpdateInteractorLocation
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.ExecuteUbergraph_BP_UIPFManager_FX
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   InteractorID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIPFManager_FX_C::UpdateInteractorLocation(int32 InteractorID, const struct FVector& HitLocation)
+void ABP_UIPFManager_FX_C::ExecuteUbergraph_BP_UIPFManager_FX(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPFManager_FX_C", "UpdateInteractorLocation");
+		Func = Class->GetFunction("BP_UIPFManager_FX_C", "ExecuteUbergraph_BP_UIPFManager_FX");
 
-	Params::BP_UIPFManager_FX_C_UpdateInteractorLocation Parms{};
+	Params::BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX Parms{};
 
-	Parms.InteractorID = InteractorID;
-	Parms.HitLocation = std::move(HitLocation);
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -53,21 +51,23 @@ void ABP_UIPFManager_FX_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.ExecuteUbergraph_BP_UIPFManager_FX
-// (Final, UbergraphFunction)
+// Function BP_UIPFManager_FX.BP_UIPFManager_FX_C.UpdateInteractorLocation
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InteractorID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   HitLocation                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_UIPFManager_FX_C::ExecuteUbergraph_BP_UIPFManager_FX(int32 EntryPoint)
+void ABP_UIPFManager_FX_C::UpdateInteractorLocation(int32 InteractorID, const struct FVector& HitLocation)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_UIPFManager_FX_C", "ExecuteUbergraph_BP_UIPFManager_FX");
+		Func = Class->GetFunction("BP_UIPFManager_FX_C", "UpdateInteractorLocation");
 
-	Params::BP_UIPFManager_FX_C_ExecuteUbergraph_BP_UIPFManager_FX Parms{};
+	Params::BP_UIPFManager_FX_C_UpdateInteractorLocation Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.InteractorID = InteractorID;
+	Parms.HitLocation = std::move(HitLocation);
 
 	UObject::ProcessEvent(Func, &Parms);
 }

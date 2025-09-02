@@ -57,7 +57,7 @@ static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PopWideCamera, K2Node_Dynami
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PopWideCamera, CallFunc_NotEqual_32ByteByte_ReturnValue) == 0x000009, "Member 'BP_Multiplayer_MoonBoat_C_BP_PopWideCamera::CallFunc_NotEqual_32ByteByte_ReturnValue' has a wrong offset!");
 
 // Function BP_Multiplayer_MoonBoat.BP_Multiplayer_MoonBoat_C.BP_PushWideCamera
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct BP_Multiplayer_MoonBoat_C_BP_PushWideCamera final
 {
 public:
@@ -67,18 +67,18 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FX6CameraConfigPriority                K2Node_MakeStruct_X6CameraConfigPriority;          // 0x0030(0x0030)()
-	struct FCameraBaseParamsDefine                K2Node_MakeStruct_CameraBaseParamsDefine;          // 0x0060(0x0160)(NoDestructor)
-	int32                                         CallFunc_PushBaseParams_ReturnValue;               // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCameraBaseParamsDefine                K2Node_MakeStruct_CameraBaseParamsDefine;          // 0x0060(0x0168)(NoDestructor)
+	int32                                         CallFunc_PushBaseParams_ReturnValue;               // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera) == 0x000008, "Wrong alignment on BP_Multiplayer_MoonBoat_C_BP_PushWideCamera");
-static_assert(sizeof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera) == 0x0001C8, "Wrong size on BP_Multiplayer_MoonBoat_C_BP_PushWideCamera");
+static_assert(sizeof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera) == 0x0001D0, "Wrong size on BP_Multiplayer_MoonBoat_C_BP_PushWideCamera");
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, CallFunc_GetAdvancedCameraComponent_ReturnValue) == 0x000000, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::CallFunc_GetAdvancedCameraComponent_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000008, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, K2Node_DynamicCast_AsBP_Multiplayer_Moon_Boat_Camera_Actor) == 0x000020, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::K2Node_DynamicCast_AsBP_Multiplayer_Moon_Boat_Camera_Actor' has a wrong offset!");
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, K2Node_MakeStruct_X6CameraConfigPriority) == 0x000030, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::K2Node_MakeStruct_X6CameraConfigPriority' has a wrong offset!");
 static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, K2Node_MakeStruct_CameraBaseParamsDefine) == 0x000060, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::K2Node_MakeStruct_CameraBaseParamsDefine' has a wrong offset!");
-static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, CallFunc_PushBaseParams_ReturnValue) == 0x0001C0, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::CallFunc_PushBaseParams_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Multiplayer_MoonBoat_C_BP_PushWideCamera, CallFunc_PushBaseParams_ReturnValue) == 0x0001C8, "Member 'BP_Multiplayer_MoonBoat_C_BP_PushWideCamera::CallFunc_PushBaseParams_ReturnValue' has a wrong offset!");
 
 // Function BP_Multiplayer_MoonBoat.BP_Multiplayer_MoonBoat_C.ExecuteUbergraph_BP_Multiplayer_MoonBoat
 // 0x0050 (0x0050 - 0x0000)

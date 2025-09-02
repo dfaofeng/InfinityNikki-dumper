@@ -14,36 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.OnPre_RT_Loaded
-// 0x0018 (0x0018 - 0x0000)
-struct BP_UIPFManager_Foliage_C_OnPre_RT_Loaded final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded) == 0x000008, "Wrong alignment on BP_UIPFManager_Foliage_C_OnPre_RT_Loaded");
-static_assert(sizeof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded) == 0x000018, "Wrong size on BP_UIPFManager_Foliage_C_OnPre_RT_Loaded");
-static_assert(offsetof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded, Loaded) == 0x000000, "Member 'BP_UIPFManager_Foliage_C_OnPre_RT_Loaded::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIPFManager_Foliage_C_OnPre_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIPFManager_Foliage_C_OnPre_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.OnCur_RT_Loaded
-// 0x0018 (0x0018 - 0x0000)
-struct BP_UIPFManager_Foliage_C_OnCur_RT_Loaded final
-{
-public:
-	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded) == 0x000008, "Wrong alignment on BP_UIPFManager_Foliage_C_OnCur_RT_Loaded");
-static_assert(sizeof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded) == 0x000018, "Wrong size on BP_UIPFManager_Foliage_C_OnCur_RT_Loaded");
-static_assert(offsetof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded, Loaded) == 0x000000, "Member 'BP_UIPFManager_Foliage_C_OnCur_RT_Loaded::Loaded' has a wrong offset!");
-static_assert(offsetof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIPFManager_Foliage_C_OnCur_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
-static_assert(offsetof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIPFManager_Foliage_C_OnCur_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
 // Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.ExecuteUbergraph_BP_UIPFManager_Foliage
 // 0x0048 (0x0048 - 0x0000)
 struct BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage final
@@ -86,6 +56,36 @@ static_assert(offsetof(BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_
 static_assert(offsetof(BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage, CallFunc_EqualEqual_StrStr_ReturnValue_9) == 0x000026, "Member 'BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage::CallFunc_EqualEqual_StrStr_ReturnValue_9' has a wrong offset!");
 static_assert(offsetof(BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage, K2Node_CreateDelegate_OutputDelegate) == 0x000028, "Member 'BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage, K2Node_CreateDelegate_OutputDelegate_1) == 0x000038, "Member 'BP_UIPFManager_Foliage_C_ExecuteUbergraph_BP_UIPFManager_Foliage::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+
+// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.OnCur_RT_Loaded
+// 0x0018 (0x0018 - 0x0000)
+struct BP_UIPFManager_Foliage_C_OnCur_RT_Loaded final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded) == 0x000008, "Wrong alignment on BP_UIPFManager_Foliage_C_OnCur_RT_Loaded");
+static_assert(sizeof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded) == 0x000018, "Wrong size on BP_UIPFManager_Foliage_C_OnCur_RT_Loaded");
+static_assert(offsetof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded, Loaded) == 0x000000, "Member 'BP_UIPFManager_Foliage_C_OnCur_RT_Loaded::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIPFManager_Foliage_C_OnCur_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIPFManager_Foliage_C_OnCur_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIPFManager_Foliage_C_OnCur_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_UIPFManager_Foliage.BP_UIPFManager_Foliage_C.OnPre_RT_Loaded
+// 0x0018 (0x0018 - 0x0000)
+struct BP_UIPFManager_Foliage_C_OnPre_RT_Loaded final
+{
+public:
+	class UObject*                                Loaded;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UTextureRenderTarget2D*                 K2Node_DynamicCast_AsTexture_Render_Target_2D;     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded) == 0x000008, "Wrong alignment on BP_UIPFManager_Foliage_C_OnPre_RT_Loaded");
+static_assert(sizeof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded) == 0x000018, "Wrong size on BP_UIPFManager_Foliage_C_OnPre_RT_Loaded");
+static_assert(offsetof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded, Loaded) == 0x000000, "Member 'BP_UIPFManager_Foliage_C_OnPre_RT_Loaded::Loaded' has a wrong offset!");
+static_assert(offsetof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded, K2Node_DynamicCast_AsTexture_Render_Target_2D) == 0x000008, "Member 'BP_UIPFManager_Foliage_C_OnPre_RT_Loaded::K2Node_DynamicCast_AsTexture_Render_Target_2D' has a wrong offset!");
+static_assert(offsetof(BP_UIPFManager_Foliage_C_OnPre_RT_Loaded, K2Node_DynamicCast_bSuccess) == 0x000010, "Member 'BP_UIPFManager_Foliage_C_OnPre_RT_Loaded::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
 }
 

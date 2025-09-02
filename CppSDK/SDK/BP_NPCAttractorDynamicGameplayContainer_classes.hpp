@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NPCAttractorDynamicGameplayContainer.BP_NPCAttractorDynamicGameplayContainer_C
-// 0x0038 (0x0470 - 0x0438)
+// 0x0038 (0x04C0 - 0x0488)
 class ABP_NPCAttractorDynamicGameplayContainer_C : public AX6Actor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0438(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0440(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	ENPCDynamicGameplayState                      GameplayState;                                     // 0x0448(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_449[0x7];                                      // 0x0449(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_NPCAttractorDynamicGameplayData_Template_C* DA_GameplayData;                           // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 npcActor;                                          // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class AActor* NPC)> OnPlayStop;                                    // 0x0460(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0488(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0490(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	ENPCDynamicGameplayState                      GameplayState;                                     // 0x0498(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_499[0x7];                                      // 0x0499(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_NPCAttractorDynamicGameplayData_Template_C* DA_GameplayData;                           // 0x04A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 npcActor;                                          // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class AActor* NPC)> OnPlayStop;                                    // 0x04B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BindNPCOnEndPlay(class AActor* InNPCActor);
@@ -57,13 +57,13 @@ public:
 	}
 };
 static_assert(alignof(ABP_NPCAttractorDynamicGameplayContainer_C) == 0x000008, "Wrong alignment on ABP_NPCAttractorDynamicGameplayContainer_C");
-static_assert(sizeof(ABP_NPCAttractorDynamicGameplayContainer_C) == 0x000470, "Wrong size on ABP_NPCAttractorDynamicGameplayContainer_C");
-static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, UberGraphFrame) == 0x000438, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, DefaultSceneRoot) == 0x000440, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, GameplayState) == 0x000448, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::GameplayState' has a wrong offset!");
-static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, DA_GameplayData) == 0x000450, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::DA_GameplayData' has a wrong offset!");
-static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, npcActor) == 0x000458, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::npcActor' has a wrong offset!");
-static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, OnPlayStop) == 0x000460, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::OnPlayStop' has a wrong offset!");
+static_assert(sizeof(ABP_NPCAttractorDynamicGameplayContainer_C) == 0x0004C0, "Wrong size on ABP_NPCAttractorDynamicGameplayContainer_C");
+static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, UberGraphFrame) == 0x000488, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, DefaultSceneRoot) == 0x000490, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, GameplayState) == 0x000498, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::GameplayState' has a wrong offset!");
+static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, DA_GameplayData) == 0x0004A0, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::DA_GameplayData' has a wrong offset!");
+static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, npcActor) == 0x0004A8, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::npcActor' has a wrong offset!");
+static_assert(offsetof(ABP_NPCAttractorDynamicGameplayContainer_C, OnPlayStop) == 0x0004B0, "Member 'ABP_NPCAttractorDynamicGameplayContainer_C::OnPlayStop' has a wrong offset!");
 
 }
 

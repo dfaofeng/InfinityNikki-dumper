@@ -14,38 +14,27 @@
 namespace SDK::Params
 {
 
-// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.PreConstruct
+// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.BP_OnItemExpansionChanged
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_HUD_UseProps_ListItem_C_PreConstruct final
+struct WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_UseProps_ListItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_PreConstruct");
-static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_HUD_UseProps_ListItem_C_PreConstruct");
-static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
+static_assert(alignof(WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
-// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.OnListItemValueChangedViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex final
+// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex");
-static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex");
-static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
-
-// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.OnListItemObjectSetViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex");
-static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex");
-static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
+static_assert(alignof(WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
 // Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.ExecuteUbergraph_WBP_HUD_UseProps_ListItem
 // 0x0038 (0x0038 - 0x0000)
@@ -79,27 +68,38 @@ static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_ExecuteUbergraph_WBP_HUD_UseP
 static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_ExecuteUbergraph_WBP_HUD_UseProps_ListItem, CallFunc_PlayAnimation_ReturnValue_2) == 0x000028, "Member 'WBP_HUD_UseProps_ListItem_C_ExecuteUbergraph_WBP_HUD_UseProps_ListItem::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_ExecuteUbergraph_WBP_HUD_UseProps_ListItem, CallFunc_PlayAnimation_ReturnValue_3) == 0x000030, "Member 'WBP_HUD_UseProps_ListItem_C_ExecuteUbergraph_WBP_HUD_UseProps_ListItem::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
 
-// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged final
+// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.OnListItemObjectSetViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex");
+static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex");
+static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
 
-// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged final
+// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.OnListItemValueChangedViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex");
+static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex");
+static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
+
+// Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HUD_UseProps_ListItem_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_UseProps_ListItem_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_HUD_UseProps_ListItem_C_PreConstruct");
+static_assert(sizeof(WBP_HUD_UseProps_ListItem_C_PreConstruct) == 0x000001, "Wrong size on WBP_HUD_UseProps_ListItem_C_PreConstruct");
+static_assert(offsetof(WBP_HUD_UseProps_ListItem_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_HUD_UseProps_ListItem_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WBP_HUD_UseProps_ListItem.WBP_HUD_UseProps_ListItem_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

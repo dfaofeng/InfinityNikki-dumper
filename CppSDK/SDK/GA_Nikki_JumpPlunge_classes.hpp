@@ -34,8 +34,8 @@ public:
 	struct FGameplayTag                           BigRangeTag;                                       // 0x05D0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void K2_ActivateAbility();
 	void ExecuteUbergraph_GA_Nikki_JumpPlunge(int32 EntryPoint);
+	void K2_ActivateAbility();
 
 	class FString GetModuleName() const;
 

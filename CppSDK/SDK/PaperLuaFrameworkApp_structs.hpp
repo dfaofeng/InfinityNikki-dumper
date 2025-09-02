@@ -147,7 +147,7 @@ public:
 	class FString                                 BaseUrlApiPre;                                     // 0x0020(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BaseUrlApi;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ClientKey;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ClientID;                                          // 0x0050(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ClientId;                                          // 0x0050(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Role;                                              // 0x0060(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Channel;                                           // 0x0070(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Region;                                            // 0x0080(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -161,7 +161,7 @@ static_assert(offsetof(FCMSConfig, BaseUrlApiTest) == 0x000010, "Member 'FCMSCon
 static_assert(offsetof(FCMSConfig, BaseUrlApiPre) == 0x000020, "Member 'FCMSConfig::BaseUrlApiPre' has a wrong offset!");
 static_assert(offsetof(FCMSConfig, BaseUrlApi) == 0x000030, "Member 'FCMSConfig::BaseUrlApi' has a wrong offset!");
 static_assert(offsetof(FCMSConfig, ClientKey) == 0x000040, "Member 'FCMSConfig::ClientKey' has a wrong offset!");
-static_assert(offsetof(FCMSConfig, ClientID) == 0x000050, "Member 'FCMSConfig::ClientID' has a wrong offset!");
+static_assert(offsetof(FCMSConfig, ClientId) == 0x000050, "Member 'FCMSConfig::ClientId' has a wrong offset!");
 static_assert(offsetof(FCMSConfig, Role) == 0x000060, "Member 'FCMSConfig::Role' has a wrong offset!");
 static_assert(offsetof(FCMSConfig, Channel) == 0x000070, "Member 'FCMSConfig::Channel' has a wrong offset!");
 static_assert(offsetof(FCMSConfig, Region) == 0x000080, "Member 'FCMSConfig::Region' has a wrong offset!");

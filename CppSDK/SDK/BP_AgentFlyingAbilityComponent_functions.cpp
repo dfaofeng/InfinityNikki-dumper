@@ -17,23 +17,37 @@
 namespace SDK
 {
 
-// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.SetFlyingGroundBias
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ExecuteUbergraph_BP_AgentFlyingAbilityComponent
+// (Final, UbergraphFunction)
 // Parameters:
-// double                                  NewBias                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentFlyingAbilityComponent_C::SetFlyingGroundBias(double NewBias)
+void UBP_AgentFlyingAbilityComponent_C::ExecuteUbergraph_BP_AgentFlyingAbilityComponent(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentFlyingAbilityComponent_C", "SetFlyingGroundBias");
+		Func = Class->GetFunction("BP_AgentFlyingAbilityComponent_C", "ExecuteUbergraph_BP_AgentFlyingAbilityComponent");
 
-	Params::BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias Parms{};
+	Params::BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent Parms{};
 
-	Parms.NewBias = NewBias;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_AgentFlyingAbilityComponent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentFlyingAbilityComponent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -57,35 +71,21 @@ void UBP_AgentFlyingAbilityComponent_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentFlyingAbilityComponent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentFlyingAbilityComponent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.ExecuteUbergraph_BP_AgentFlyingAbilityComponent
-// (Final, UbergraphFunction)
+// Function BP_AgentFlyingAbilityComponent.BP_AgentFlyingAbilityComponent_C.SetFlyingGroundBias
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  NewBias                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentFlyingAbilityComponent_C::ExecuteUbergraph_BP_AgentFlyingAbilityComponent(int32 EntryPoint)
+void UBP_AgentFlyingAbilityComponent_C::SetFlyingGroundBias(double NewBias)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentFlyingAbilityComponent_C", "ExecuteUbergraph_BP_AgentFlyingAbilityComponent");
+		Func = Class->GetFunction("BP_AgentFlyingAbilityComponent_C", "SetFlyingGroundBias");
 
-	Params::BP_AgentFlyingAbilityComponent_C_ExecuteUbergraph_BP_AgentFlyingAbilityComponent Parms{};
+	Params::BP_AgentFlyingAbilityComponent_C_SetFlyingGroundBias Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.NewBias = NewBias;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

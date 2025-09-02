@@ -29,15 +29,13 @@ enum class EControlBoneAxis : uint32
 };
 
 // Enum NikkiPhysics.EControlBoneMethod
-// NumValues: 0x0006
+// NumValues: 0x0004
 enum class EControlBoneMethod : uint32
 {
-	Default                                  = 0,
-	FollowRefBones                           = 1,
-	AdaptiveFollowAndSplay                   = 2,
-	RBFInterpolation                         = 3,
-	JustFirstBone                            = 4,
-	EControlBoneMethod_MAX                   = 5,
+	SimpleFollowRefBones                     = 0,
+	AdaptiveFollowAndSplay                   = 1,
+	JustFirstBone                            = 2,
+	EControlBoneMethod_MAX                   = 3,
 };
 
 // Enum NikkiPhysics.EControlBoneAlphaMethod
@@ -57,16 +55,6 @@ enum class EControlBoneType : uint8
 	Follow                                   = 0,
 	Splay                                    = 1,
 	EControlBoneType_MAX                     = 2,
-};
-
-// Enum NikkiPhysics.ERBFDistMethod
-// NumValues: 0x0004
-enum class ERBFDistMethod : uint32
-{
-	Default                                  = 0,
-	Euclidean                                = 1,
-	Quaternion                               = 2,
-	ERBFDistMethod_MAX                       = 3,
 };
 
 // Enum NikkiPhysics.ENikki_ClothType
@@ -271,6 +259,17 @@ enum class ENikki_SleeveRigFollowArm : uint32
 	UpperArm                                 = 0,
 	LowerArm                                 = 1,
 	ENikki_MAX                               = 2,
+};
+
+// Enum NikkiPhysics.ENikkiPhysicsPlatformType
+// NumValues: 0x0005
+enum class ENikkiPhysicsPlatformType : uint8
+{
+	PC                                       = 0,
+	Mobile                                   = 1,
+	Switch                                   = 2,
+	PS                                       = 3,
+	ENikkiPhysicsPlatformType_MAX            = 4,
 };
 
 // Enum NikkiPhysics.ENikki_SimSpaceType
@@ -622,30 +621,8 @@ static_assert(offsetof(FHorizontalRigCorrectProxy, Gravity) == 0x000010, "Member
 static_assert(offsetof(FHorizontalRigCorrectProxy, GravityStiffness) == 0x000028, "Member 'FHorizontalRigCorrectProxy::GravityStiffness' has a wrong offset!");
 static_assert(offsetof(FHorizontalRigCorrectProxy, Damping) == 0x00002C, "Member 'FHorizontalRigCorrectProxy::Damping' has a wrong offset!");
 
-// ScriptStruct NikkiPhysics.RBFPose
-// 0x0010 (0x0010 - 0x0000)
-struct FRBFPose final
-{
-public:
-	TArray<float>                                 Values;                                            // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRBFPose) == 0x000008, "Wrong alignment on FRBFPose");
-static_assert(sizeof(FRBFPose) == 0x000010, "Wrong size on FRBFPose");
-static_assert(offsetof(FRBFPose, Values) == 0x000000, "Member 'FRBFPose::Values' has a wrong offset!");
-
-// ScriptStruct NikkiPhysics.RBFSolver
-// 0x0004 (0x0004 - 0x0000)
-struct FRBFSolver final
-{
-public:
-	ERBFDistMethod                                DistanceMethod;                                    // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRBFSolver) == 0x000004, "Wrong alignment on FRBFSolver");
-static_assert(sizeof(FRBFSolver) == 0x000004, "Wrong size on FRBFSolver");
-static_assert(offsetof(FRBFSolver, DistanceMethod) == 0x000000, "Member 'FRBFSolver::DistanceMethod' has a wrong offset!");
-
 // ScriptStruct NikkiPhysics.AnimNode_NikkiHorizontalRig
-// 0x05D0 (0x05E0 - 0x0010)
+// 0x05A0 (0x05B0 - 0x0010)
 struct FAnimNode_NikkiHorizontalRig final : public FAnimNode_Base
 {
 public:
@@ -669,41 +646,37 @@ public:
 	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBoneReference                         ClothBodyBone;                                     // 0x005C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	struct FBoneReference                         FootBodyBone;                                      // 0x006C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                FrontDirection;                                    // 0x0080(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         LeftBone;                                          // 0x0098(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         LeftSecondBone;                                    // 0x00A8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                LeftBoneDir;                                       // 0x00B8(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RightBone;                                         // 0x00D0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RightSecondBone;                                   // 0x00E0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                RightBoneDir;                                      // 0x00F0(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableNormalize;                                  // 0x0108(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableSmoothing;                                  // 0x0109(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A[0x2];                                      // 0x010A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SmoothRatio;                                       // 0x010C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SmoothCenter;                                      // 0x0110(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         ControlledLeftBone;                                // 0x0114(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         ControlledRightBone;                               // 0x0124(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134[0x4];                                      // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNikki_ControlledBone>          ControlledBones;                                   // 0x0138(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FBoneReference>                 FixedBones;                                        // 0x0148(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FVector                                Gravity;                                           // 0x0158(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHorizontalRigProxySim                 ProxySimSystem;                                    // 0x0170(0x00E0)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FHorizontalRigCorrectProxy             GravityProxy;                                      // 0x0250(0x0200)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bCheckRefBoneComponentSpace;                       // 0x0450(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGetAngleComponentSpace;                           // 0x0451(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawDebugInfo;                                    // 0x0452(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawControlledBones;                              // 0x0453(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_454[0x4];                                      // 0x0454(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRBFPose>                       LeftPoses;                                         // 0x0458(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRBFPose>                       RightPoses;                                        // 0x0468(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FRBFSolver                             RBFSolver;                                         // 0x0478(0x0004)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRBFPose                               Poses;                                             // 0x0480(0x0010)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_490[0x150];                                    // 0x0490(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bRemoveBodyBoneTrans;                              // 0x007C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         BodyMainBone;                                      // 0x0080(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                FrontDirection;                                    // 0x0090(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         LeftBone;                                          // 0x00A8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         LeftSecondBone;                                    // 0x00B8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                LeftBoneDir;                                       // 0x00C8(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RightBone;                                         // 0x00E0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RightSecondBone;                                   // 0x00F0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RightBoneDir;                                      // 0x0100(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableNormalize;                                  // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableSmoothing;                                  // 0x0119(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SmoothRatio;                                       // 0x011C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SmoothCenter;                                      // 0x0120(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         ControlledLeftBone;                                // 0x0124(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         ControlledRightBone;                               // 0x0134(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_144[0x4];                                      // 0x0144(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNikki_ControlledBone>          ControlledBones;                                   // 0x0148(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FBoneReference>                 FixedBones;                                        // 0x0158(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FVector                                Gravity;                                           // 0x0168(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHorizontalRigProxySim                 ProxySimSystem;                                    // 0x0180(0x00E0)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FHorizontalRigCorrectProxy             GravityProxy;                                      // 0x0260(0x0200)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bCheckRefBoneComponentSpace;                       // 0x0460(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGetAngleComponentSpace;                           // 0x0461(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawDebugInfo;                                    // 0x0462(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawControlledBones;                              // 0x0463(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_464[0x14C];                                    // 0x0464(0x014C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_NikkiHorizontalRig) == 0x000010, "Wrong alignment on FAnimNode_NikkiHorizontalRig");
-static_assert(sizeof(FAnimNode_NikkiHorizontalRig) == 0x0005E0, "Wrong size on FAnimNode_NikkiHorizontalRig");
+static_assert(sizeof(FAnimNode_NikkiHorizontalRig) == 0x0005B0, "Wrong size on FAnimNode_NikkiHorizontalRig");
 static_assert(offsetof(FAnimNode_NikkiHorizontalRig, Source) == 0x000010, "Member 'FAnimNode_NikkiHorizontalRig::Source' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiHorizontalRig, HipRadius) == 0x000020, "Member 'FAnimNode_NikkiHorizontalRig::HipRadius' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiHorizontalRig, KneeRadius) == 0x000024, "Member 'FAnimNode_NikkiHorizontalRig::KneeRadius' has a wrong offset!");
@@ -722,51 +695,52 @@ static_assert(offsetof(FAnimNode_NikkiHorizontalRig, SplayBoneDistributionSoften
 static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bFixBodyRot) == 0x000058, "Member 'FAnimNode_NikkiHorizontalRig::bFixBodyRot' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ClothBodyBone) == 0x00005C, "Member 'FAnimNode_NikkiHorizontalRig::ClothBodyBone' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiHorizontalRig, FootBodyBone) == 0x00006C, "Member 'FAnimNode_NikkiHorizontalRig::FootBodyBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, FrontDirection) == 0x000080, "Member 'FAnimNode_NikkiHorizontalRig::FrontDirection' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftBone) == 0x000098, "Member 'FAnimNode_NikkiHorizontalRig::LeftBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftSecondBone) == 0x0000A8, "Member 'FAnimNode_NikkiHorizontalRig::LeftSecondBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftBoneDir) == 0x0000B8, "Member 'FAnimNode_NikkiHorizontalRig::LeftBoneDir' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightBone) == 0x0000D0, "Member 'FAnimNode_NikkiHorizontalRig::RightBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightSecondBone) == 0x0000E0, "Member 'FAnimNode_NikkiHorizontalRig::RightSecondBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightBoneDir) == 0x0000F0, "Member 'FAnimNode_NikkiHorizontalRig::RightBoneDir' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bEnableNormalize) == 0x000108, "Member 'FAnimNode_NikkiHorizontalRig::bEnableNormalize' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bEnableSmoothing) == 0x000109, "Member 'FAnimNode_NikkiHorizontalRig::bEnableSmoothing' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, SmoothRatio) == 0x00010C, "Member 'FAnimNode_NikkiHorizontalRig::SmoothRatio' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, SmoothCenter) == 0x000110, "Member 'FAnimNode_NikkiHorizontalRig::SmoothCenter' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ControlledLeftBone) == 0x000114, "Member 'FAnimNode_NikkiHorizontalRig::ControlledLeftBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ControlledRightBone) == 0x000124, "Member 'FAnimNode_NikkiHorizontalRig::ControlledRightBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ControlledBones) == 0x000138, "Member 'FAnimNode_NikkiHorizontalRig::ControlledBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, FixedBones) == 0x000148, "Member 'FAnimNode_NikkiHorizontalRig::FixedBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, Gravity) == 0x000158, "Member 'FAnimNode_NikkiHorizontalRig::Gravity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ProxySimSystem) == 0x000170, "Member 'FAnimNode_NikkiHorizontalRig::ProxySimSystem' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, GravityProxy) == 0x000250, "Member 'FAnimNode_NikkiHorizontalRig::GravityProxy' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bCheckRefBoneComponentSpace) == 0x000450, "Member 'FAnimNode_NikkiHorizontalRig::bCheckRefBoneComponentSpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bGetAngleComponentSpace) == 0x000451, "Member 'FAnimNode_NikkiHorizontalRig::bGetAngleComponentSpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bDrawDebugInfo) == 0x000452, "Member 'FAnimNode_NikkiHorizontalRig::bDrawDebugInfo' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bDrawControlledBones) == 0x000453, "Member 'FAnimNode_NikkiHorizontalRig::bDrawControlledBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftPoses) == 0x000458, "Member 'FAnimNode_NikkiHorizontalRig::LeftPoses' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightPoses) == 0x000468, "Member 'FAnimNode_NikkiHorizontalRig::RightPoses' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RBFSolver) == 0x000478, "Member 'FAnimNode_NikkiHorizontalRig::RBFSolver' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiHorizontalRig, Poses) == 0x000480, "Member 'FAnimNode_NikkiHorizontalRig::Poses' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bRemoveBodyBoneTrans) == 0x00007C, "Member 'FAnimNode_NikkiHorizontalRig::bRemoveBodyBoneTrans' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, BodyMainBone) == 0x000080, "Member 'FAnimNode_NikkiHorizontalRig::BodyMainBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, FrontDirection) == 0x000090, "Member 'FAnimNode_NikkiHorizontalRig::FrontDirection' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftBone) == 0x0000A8, "Member 'FAnimNode_NikkiHorizontalRig::LeftBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftSecondBone) == 0x0000B8, "Member 'FAnimNode_NikkiHorizontalRig::LeftSecondBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, LeftBoneDir) == 0x0000C8, "Member 'FAnimNode_NikkiHorizontalRig::LeftBoneDir' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightBone) == 0x0000E0, "Member 'FAnimNode_NikkiHorizontalRig::RightBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightSecondBone) == 0x0000F0, "Member 'FAnimNode_NikkiHorizontalRig::RightSecondBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, RightBoneDir) == 0x000100, "Member 'FAnimNode_NikkiHorizontalRig::RightBoneDir' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bEnableNormalize) == 0x000118, "Member 'FAnimNode_NikkiHorizontalRig::bEnableNormalize' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bEnableSmoothing) == 0x000119, "Member 'FAnimNode_NikkiHorizontalRig::bEnableSmoothing' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, SmoothRatio) == 0x00011C, "Member 'FAnimNode_NikkiHorizontalRig::SmoothRatio' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, SmoothCenter) == 0x000120, "Member 'FAnimNode_NikkiHorizontalRig::SmoothCenter' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ControlledLeftBone) == 0x000124, "Member 'FAnimNode_NikkiHorizontalRig::ControlledLeftBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ControlledRightBone) == 0x000134, "Member 'FAnimNode_NikkiHorizontalRig::ControlledRightBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ControlledBones) == 0x000148, "Member 'FAnimNode_NikkiHorizontalRig::ControlledBones' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, FixedBones) == 0x000158, "Member 'FAnimNode_NikkiHorizontalRig::FixedBones' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, Gravity) == 0x000168, "Member 'FAnimNode_NikkiHorizontalRig::Gravity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, ProxySimSystem) == 0x000180, "Member 'FAnimNode_NikkiHorizontalRig::ProxySimSystem' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, GravityProxy) == 0x000260, "Member 'FAnimNode_NikkiHorizontalRig::GravityProxy' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bCheckRefBoneComponentSpace) == 0x000460, "Member 'FAnimNode_NikkiHorizontalRig::bCheckRefBoneComponentSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bGetAngleComponentSpace) == 0x000461, "Member 'FAnimNode_NikkiHorizontalRig::bGetAngleComponentSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bDrawDebugInfo) == 0x000462, "Member 'FAnimNode_NikkiHorizontalRig::bDrawDebugInfo' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiHorizontalRig, bDrawControlledBones) == 0x000463, "Member 'FAnimNode_NikkiHorizontalRig::bDrawControlledBones' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_LiftLegRig_FollowBone
-// 0x0058 (0x0058 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct FNikki_LiftLegRig_FollowBone final
 {
 public:
 	struct FBoneReference                         BoneRef;                                           // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         FollowRatio;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                TposeDirection;                                    // 0x0018(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RotateDirInverse;                                  // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x27];                                      // 0x0031(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         SecondBone;                                        // 0x0014(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         SecondFollowRatio;                                 // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TposeDirection;                                    // 0x0028(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RotateDirInverse;                                  // 0x0040(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x27];                                      // 0x0041(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_LiftLegRig_FollowBone) == 0x000008, "Wrong alignment on FNikki_LiftLegRig_FollowBone");
-static_assert(sizeof(FNikki_LiftLegRig_FollowBone) == 0x000058, "Wrong size on FNikki_LiftLegRig_FollowBone");
+static_assert(sizeof(FNikki_LiftLegRig_FollowBone) == 0x000068, "Wrong size on FNikki_LiftLegRig_FollowBone");
 static_assert(offsetof(FNikki_LiftLegRig_FollowBone, BoneRef) == 0x000000, "Member 'FNikki_LiftLegRig_FollowBone::BoneRef' has a wrong offset!");
 static_assert(offsetof(FNikki_LiftLegRig_FollowBone, FollowRatio) == 0x000010, "Member 'FNikki_LiftLegRig_FollowBone::FollowRatio' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_FollowBone, TposeDirection) == 0x000018, "Member 'FNikki_LiftLegRig_FollowBone::TposeDirection' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_FollowBone, RotateDirInverse) == 0x000030, "Member 'FNikki_LiftLegRig_FollowBone::RotateDirInverse' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_FollowBone, SecondBone) == 0x000014, "Member 'FNikki_LiftLegRig_FollowBone::SecondBone' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_FollowBone, SecondFollowRatio) == 0x000024, "Member 'FNikki_LiftLegRig_FollowBone::SecondFollowRatio' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_FollowBone, TposeDirection) == 0x000028, "Member 'FNikki_LiftLegRig_FollowBone::TposeDirection' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_FollowBone, RotateDirInverse) == 0x000040, "Member 'FNikki_LiftLegRig_FollowBone::RotateDirInverse' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_LiftLegRig_AxisBone
 // 0x0040 (0x0040 - 0x0000)
@@ -784,40 +758,42 @@ static_assert(offsetof(FNikki_LiftLegRig_AxisBone, FrontDir) == 0x000010, "Membe
 static_assert(offsetof(FNikki_LiftLegRig_AxisBone, RotAxis) == 0x000028, "Member 'FNikki_LiftLegRig_AxisBone::RotAxis' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_LiftLegRig_ModifiedBone
-// 0x0148 (0x0148 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct FNikki_LiftLegRig_ModifiedBone final
 {
 public:
 	struct FBoneReference                         BoneRef;                                           // 0x0000(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         StartLiftAngle;                                    // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_LiftLegRig_AxisBone             AxisBone;                                          // 0x0018(0x0040)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FNikki_LiftLegRig_FollowBone           FollowStrictBone;                                  // 0x0058(0x0058)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         OtherBoneCoeff;                                    // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FNikki_LiftLegRig_FollowBone>   FollowOtherBones;                                  // 0x00B8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          EnableAxialRotation;                               // 0x00C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C9[0x3];                                       // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         RotatedLastBone;                                   // 0x00CC(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RefBoneA;                                          // 0x00DC(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         RefBoneB;                                          // 0x00EC(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                RotateAxisLocalSpace;                              // 0x0100(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_118[0x30];                                     // 0x0118(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         Second;                                            // 0x0010(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         StartLiftAngle;                                    // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_LiftLegRig_AxisBone             AxisBone;                                          // 0x0028(0x0040)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FNikki_LiftLegRig_FollowBone           FollowStrictBone;                                  // 0x0068(0x0068)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         OtherBoneCoeff;                                    // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FNikki_LiftLegRig_FollowBone>   FollowOtherBones;                                  // 0x00D8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          EnableAxialRotation;                               // 0x00E8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         RotatedLastBone;                                   // 0x00EC(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RefBoneA;                                          // 0x00FC(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         RefBoneB;                                          // 0x010C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                RotateAxisLocalSpace;                              // 0x0120(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_138[0x30];                                     // 0x0138(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_LiftLegRig_ModifiedBone) == 0x000008, "Wrong alignment on FNikki_LiftLegRig_ModifiedBone");
-static_assert(sizeof(FNikki_LiftLegRig_ModifiedBone) == 0x000148, "Wrong size on FNikki_LiftLegRig_ModifiedBone");
+static_assert(sizeof(FNikki_LiftLegRig_ModifiedBone) == 0x000168, "Wrong size on FNikki_LiftLegRig_ModifiedBone");
 static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, BoneRef) == 0x000000, "Member 'FNikki_LiftLegRig_ModifiedBone::BoneRef' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, StartLiftAngle) == 0x000010, "Member 'FNikki_LiftLegRig_ModifiedBone::StartLiftAngle' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, AxisBone) == 0x000018, "Member 'FNikki_LiftLegRig_ModifiedBone::AxisBone' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, FollowStrictBone) == 0x000058, "Member 'FNikki_LiftLegRig_ModifiedBone::FollowStrictBone' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, OtherBoneCoeff) == 0x0000B0, "Member 'FNikki_LiftLegRig_ModifiedBone::OtherBoneCoeff' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, FollowOtherBones) == 0x0000B8, "Member 'FNikki_LiftLegRig_ModifiedBone::FollowOtherBones' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, EnableAxialRotation) == 0x0000C8, "Member 'FNikki_LiftLegRig_ModifiedBone::EnableAxialRotation' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RotatedLastBone) == 0x0000CC, "Member 'FNikki_LiftLegRig_ModifiedBone::RotatedLastBone' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RefBoneA) == 0x0000DC, "Member 'FNikki_LiftLegRig_ModifiedBone::RefBoneA' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RefBoneB) == 0x0000EC, "Member 'FNikki_LiftLegRig_ModifiedBone::RefBoneB' has a wrong offset!");
-static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RotateAxisLocalSpace) == 0x000100, "Member 'FNikki_LiftLegRig_ModifiedBone::RotateAxisLocalSpace' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, Second) == 0x000010, "Member 'FNikki_LiftLegRig_ModifiedBone::Second' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, StartLiftAngle) == 0x000020, "Member 'FNikki_LiftLegRig_ModifiedBone::StartLiftAngle' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, AxisBone) == 0x000028, "Member 'FNikki_LiftLegRig_ModifiedBone::AxisBone' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, FollowStrictBone) == 0x000068, "Member 'FNikki_LiftLegRig_ModifiedBone::FollowStrictBone' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, OtherBoneCoeff) == 0x0000D0, "Member 'FNikki_LiftLegRig_ModifiedBone::OtherBoneCoeff' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, FollowOtherBones) == 0x0000D8, "Member 'FNikki_LiftLegRig_ModifiedBone::FollowOtherBones' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, EnableAxialRotation) == 0x0000E8, "Member 'FNikki_LiftLegRig_ModifiedBone::EnableAxialRotation' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RotatedLastBone) == 0x0000EC, "Member 'FNikki_LiftLegRig_ModifiedBone::RotatedLastBone' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RefBoneA) == 0x0000FC, "Member 'FNikki_LiftLegRig_ModifiedBone::RefBoneA' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RefBoneB) == 0x00010C, "Member 'FNikki_LiftLegRig_ModifiedBone::RefBoneB' has a wrong offset!");
+static_assert(offsetof(FNikki_LiftLegRig_ModifiedBone, RotateAxisLocalSpace) == 0x000120, "Member 'FNikki_LiftLegRig_ModifiedBone::RotateAxisLocalSpace' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.AnimNode_NikkiLiftLegRig
 // 0x0050 (0x0060 - 0x0010)
@@ -912,7 +888,7 @@ static_assert(offsetof(FNikkiParticle_MaxDistConstraintData, MaxDistance) == 0x0
 static_assert(offsetof(FNikkiParticle_MaxDistConstraintData, MaxDistanceStiffness) == 0x000004, "Member 'FNikkiParticle_MaxDistConstraintData::MaxDistanceStiffness' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_CapsuleCollider
-// 0x01F0 (0x01F0 - 0x0000)
+// 0x0220 (0x0220 - 0x0000)
 struct alignas(0x10) FNikki_CapsuleCollider final
 {
 public:
@@ -923,10 +899,10 @@ public:
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Pos_B_BoneSpace;                                   // 0x0040(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius_B;                                          // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5C[0x194];                                     // 0x005C(0x0194)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C[0x1C4];                                     // 0x005C(0x01C4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_CapsuleCollider) == 0x000010, "Wrong alignment on FNikki_CapsuleCollider");
-static_assert(sizeof(FNikki_CapsuleCollider) == 0x0001F0, "Wrong size on FNikki_CapsuleCollider");
+static_assert(sizeof(FNikki_CapsuleCollider) == 0x000220, "Wrong size on FNikki_CapsuleCollider");
 static_assert(offsetof(FNikki_CapsuleCollider, BoneRef) == 0x000000, "Member 'FNikki_CapsuleCollider::BoneRef' has a wrong offset!");
 static_assert(offsetof(FNikki_CapsuleCollider, Guid) == 0x000010, "Member 'FNikki_CapsuleCollider::Guid' has a wrong offset!");
 static_assert(offsetof(FNikki_CapsuleCollider, Pos_A_BoneSpace) == 0x000020, "Member 'FNikki_CapsuleCollider::Pos_A_BoneSpace' has a wrong offset!");
@@ -966,23 +942,23 @@ static_assert(offsetof(FNikki_PlaneCollider, Pos_BoneSpace) == 0x000020, "Member
 static_assert(offsetof(FNikki_PlaneCollider, Norm_BoneSpace) == 0x000038, "Member 'FNikki_PlaneCollider::Norm_BoneSpace' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_QuadCollider
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct FNikki_QuadCollider final
 {
 public:
 	int32                                         Conns[0x4];                                        // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BoneNames[0x4];                                    // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasSkeleton;                                      // 0x0050(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x177];                                     // 0x0051(0x0177)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51[0x167];                                     // 0x0051(0x0167)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_QuadCollider) == 0x000008, "Wrong alignment on FNikki_QuadCollider");
-static_assert(sizeof(FNikki_QuadCollider) == 0x0001C8, "Wrong size on FNikki_QuadCollider");
+static_assert(sizeof(FNikki_QuadCollider) == 0x0001B8, "Wrong size on FNikki_QuadCollider");
 static_assert(offsetof(FNikki_QuadCollider, Conns) == 0x000000, "Member 'FNikki_QuadCollider::Conns' has a wrong offset!");
 static_assert(offsetof(FNikki_QuadCollider, BoneNames) == 0x000010, "Member 'FNikki_QuadCollider::BoneNames' has a wrong offset!");
 static_assert(offsetof(FNikki_QuadCollider, bHasSkeleton) == 0x000050, "Member 'FNikki_QuadCollider::bHasSkeleton' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_TriaCollider
-// 0x0168 (0x0168 - 0x0000)
+// 0x0150 (0x0150 - 0x0000)
 struct FNikki_TriaCollider final
 {
 public:
@@ -990,26 +966,26 @@ public:
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BoneNames[0x3];                                    // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasSkeleton;                                      // 0x0040(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x127];                                     // 0x0041(0x0127)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x10F];                                     // 0x0041(0x010F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_TriaCollider) == 0x000008, "Wrong alignment on FNikki_TriaCollider");
-static_assert(sizeof(FNikki_TriaCollider) == 0x000168, "Wrong size on FNikki_TriaCollider");
+static_assert(sizeof(FNikki_TriaCollider) == 0x000150, "Wrong size on FNikki_TriaCollider");
 static_assert(offsetof(FNikki_TriaCollider, Conns) == 0x000000, "Member 'FNikki_TriaCollider::Conns' has a wrong offset!");
 static_assert(offsetof(FNikki_TriaCollider, BoneNames) == 0x000010, "Member 'FNikki_TriaCollider::BoneNames' has a wrong offset!");
 static_assert(offsetof(FNikki_TriaCollider, bHasSkeleton) == 0x000040, "Member 'FNikki_TriaCollider::bHasSkeleton' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_MeshCollider
-// 0x0090 (0x0090 - 0x0000)
+// 0x0100 (0x0100 - 0x0000)
 struct FNikki_MeshCollider final
 {
 public:
-	TArray<struct FNikki_QuadCollider>            QuadColliders;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<struct FNikki_TriaCollider>            TriaColliders;                                     // 0x0010(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FNikki_QuadCollider>            QuadColliders;                                     // 0x0000(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FNikki_TriaCollider>            TriaColliders;                                     // 0x0010(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	TMap<int32, struct FVector>                   BoneIndexNormalMap;                                // 0x0020(0x0050)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_70[0x20];                                      // 0x0070(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_70[0x90];                                      // 0x0070(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_MeshCollider) == 0x000008, "Wrong alignment on FNikki_MeshCollider");
-static_assert(sizeof(FNikki_MeshCollider) == 0x000090, "Wrong size on FNikki_MeshCollider");
+static_assert(sizeof(FNikki_MeshCollider) == 0x000100, "Wrong size on FNikki_MeshCollider");
 static_assert(offsetof(FNikki_MeshCollider, QuadColliders) == 0x000000, "Member 'FNikki_MeshCollider::QuadColliders' has a wrong offset!");
 static_assert(offsetof(FNikki_MeshCollider, TriaColliders) == 0x000010, "Member 'FNikki_MeshCollider::TriaColliders' has a wrong offset!");
 static_assert(offsetof(FNikki_MeshCollider, BoneIndexNormalMap) == 0x000020, "Member 'FNikki_MeshCollider::BoneIndexNormalMap' has a wrong offset!");
@@ -1260,23 +1236,26 @@ static_assert(offsetof(FNikki_HeighiFieldMap, HeightFieldSoftThreshold) == 0x000
 static_assert(offsetof(FNikki_HeighiFieldMap, HeightFieldSoftFactor) == 0x000014, "Member 'FNikki_HeighiFieldMap::HeightFieldSoftFactor' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_WindSource
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FNikki_WindSource final
 {
 public:
-	struct FVector                                Direction;                                         // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Speed;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Strength;                                          // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Speed;                                             // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Strength;                                          // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinGustAmount;                                     // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxGustAmount;                                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AccumMaxWindSpeed;                                 // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_WindSource) == 0x000008, "Wrong alignment on FNikki_WindSource");
-static_assert(sizeof(FNikki_WindSource) == 0x000028, "Wrong size on FNikki_WindSource");
+static_assert(sizeof(FNikki_WindSource) == 0x000030, "Wrong size on FNikki_WindSource");
 static_assert(offsetof(FNikki_WindSource, Direction) == 0x000000, "Member 'FNikki_WindSource::Direction' has a wrong offset!");
 static_assert(offsetof(FNikki_WindSource, Speed) == 0x000018, "Member 'FNikki_WindSource::Speed' has a wrong offset!");
 static_assert(offsetof(FNikki_WindSource, Strength) == 0x00001C, "Member 'FNikki_WindSource::Strength' has a wrong offset!");
 static_assert(offsetof(FNikki_WindSource, MinGustAmount) == 0x000020, "Member 'FNikki_WindSource::MinGustAmount' has a wrong offset!");
 static_assert(offsetof(FNikki_WindSource, MaxGustAmount) == 0x000024, "Member 'FNikki_WindSource::MaxGustAmount' has a wrong offset!");
+static_assert(offsetof(FNikki_WindSource, AccumMaxWindSpeed) == 0x000028, "Member 'FNikki_WindSource::AccumMaxWindSpeed' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_WindWave
 // 0x0014 (0x0014 - 0x0000)
@@ -1298,70 +1277,110 @@ static_assert(offsetof(FNikki_WindWave, WaveSize) == 0x00000C, "Member 'FNikki_W
 static_assert(offsetof(FNikki_WindWave, WindForceCoeff) == 0x000010, "Member 'FNikki_WindWave::WindForceCoeff' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_WindPara
-// 0x0034 (0x0034 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct FNikki_WindPara final
 {
 public:
 	float                                         Influence;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Turbulence;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NoiseBlend;                                        // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Synchronization;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DepthWeight;                                       // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MovingWindInfluence;                               // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BaseWindSpeed;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNikki_WindWave                        WaveConfig;                                        // 0x0020(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         NoiseBlend;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Synchronization;                                   // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DepthWeight;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MovingWindInfluence;                               // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseWindSpeed;                                     // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikki_WindWave                        WaveConfig;                                        // 0x001C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FNikki_WindPara) == 0x000004, "Wrong alignment on FNikki_WindPara");
-static_assert(sizeof(FNikki_WindPara) == 0x000034, "Wrong size on FNikki_WindPara");
+static_assert(sizeof(FNikki_WindPara) == 0x000030, "Wrong size on FNikki_WindPara");
 static_assert(offsetof(FNikki_WindPara, Influence) == 0x000000, "Member 'FNikki_WindPara::Influence' has a wrong offset!");
 static_assert(offsetof(FNikki_WindPara, Frequency) == 0x000004, "Member 'FNikki_WindPara::Frequency' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, Turbulence) == 0x000008, "Member 'FNikki_WindPara::Turbulence' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, NoiseBlend) == 0x00000C, "Member 'FNikki_WindPara::NoiseBlend' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, Synchronization) == 0x000010, "Member 'FNikki_WindPara::Synchronization' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, DepthWeight) == 0x000014, "Member 'FNikki_WindPara::DepthWeight' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, MovingWindInfluence) == 0x000018, "Member 'FNikki_WindPara::MovingWindInfluence' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, BaseWindSpeed) == 0x00001C, "Member 'FNikki_WindPara::BaseWindSpeed' has a wrong offset!");
-static_assert(offsetof(FNikki_WindPara, WaveConfig) == 0x000020, "Member 'FNikki_WindPara::WaveConfig' has a wrong offset!");
+static_assert(offsetof(FNikki_WindPara, NoiseBlend) == 0x000008, "Member 'FNikki_WindPara::NoiseBlend' has a wrong offset!");
+static_assert(offsetof(FNikki_WindPara, Synchronization) == 0x00000C, "Member 'FNikki_WindPara::Synchronization' has a wrong offset!");
+static_assert(offsetof(FNikki_WindPara, DepthWeight) == 0x000010, "Member 'FNikki_WindPara::DepthWeight' has a wrong offset!");
+static_assert(offsetof(FNikki_WindPara, MovingWindInfluence) == 0x000014, "Member 'FNikki_WindPara::MovingWindInfluence' has a wrong offset!");
+static_assert(offsetof(FNikki_WindPara, BaseWindSpeed) == 0x000018, "Member 'FNikki_WindPara::BaseWindSpeed' has a wrong offset!");
+static_assert(offsetof(FNikki_WindPara, WaveConfig) == 0x00001C, "Member 'FNikki_WindPara::WaveConfig' has a wrong offset!");
+
+// ScriptStruct NikkiPhysics.Nikki_DynamicParameter
+// 0x002C (0x002C - 0x0000)
+struct FNikki_DynamicParameter final
+{
+public:
+	float                                         Influence;                                         // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseBlend;                                        // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Synchronization;                                   // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DepthWeight;                                       // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BaseWindSpeed;                                     // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SinFrequency;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseFrequency;                                    // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoiseSize;                                         // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WaveSize;                                          // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ForceCoeff;                                        // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNikki_DynamicParameter) == 0x000004, "Wrong alignment on FNikki_DynamicParameter");
+static_assert(sizeof(FNikki_DynamicParameter) == 0x00002C, "Wrong size on FNikki_DynamicParameter");
+static_assert(offsetof(FNikki_DynamicParameter, Influence) == 0x000000, "Member 'FNikki_DynamicParameter::Influence' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, Frequency) == 0x000004, "Member 'FNikki_DynamicParameter::Frequency' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, NoiseBlend) == 0x000008, "Member 'FNikki_DynamicParameter::NoiseBlend' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, Synchronization) == 0x00000C, "Member 'FNikki_DynamicParameter::Synchronization' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, DepthWeight) == 0x000010, "Member 'FNikki_DynamicParameter::DepthWeight' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, BaseWindSpeed) == 0x000014, "Member 'FNikki_DynamicParameter::BaseWindSpeed' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, SinFrequency) == 0x000018, "Member 'FNikki_DynamicParameter::SinFrequency' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, NoiseFrequency) == 0x00001C, "Member 'FNikki_DynamicParameter::NoiseFrequency' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, NoiseSize) == 0x000020, "Member 'FNikki_DynamicParameter::NoiseSize' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, WaveSize) == 0x000024, "Member 'FNikki_DynamicParameter::WaveSize' has a wrong offset!");
+static_assert(offsetof(FNikki_DynamicParameter, ForceCoeff) == 0x000028, "Member 'FNikki_DynamicParameter::ForceCoeff' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_LODLevel
-// 0x0028 (0x0028 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FNikki_LODLevel final
 {
 public:
-	TArray<bool>                                  ChainSetting;                                      // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         SolverFrameRate;                                   // 0x0010(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GlobalShapeCoeff;                                  // 0x0014(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocalShapeCoeff;                                   // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AirDampingCoeff;                                   // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WindCoeff;                                         // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableFixInRenderStep;                            // 0x0024(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         LODLevel;                                          // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  ChainSetting;                                      // 0x0008(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         SolverFrameRate;                                   // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalShapeCoeff;                                  // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalShapeCoeff;                                   // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirDampingCoeff;                                   // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WindCoeff;                                         // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFixInRenderStep;                            // 0x002C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_HeightFieldMethod                      HeightFieldMethod;                                 // 0x002D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_RotCorrectRef                          RotationCorrectionMethod;                          // 0x002E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCollisionFriction;                          // 0x002F(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableProxySim;                                   // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_LODLevel) == 0x000008, "Wrong alignment on FNikki_LODLevel");
-static_assert(sizeof(FNikki_LODLevel) == 0x000028, "Wrong size on FNikki_LODLevel");
-static_assert(offsetof(FNikki_LODLevel, ChainSetting) == 0x000000, "Member 'FNikki_LODLevel::ChainSetting' has a wrong offset!");
-static_assert(offsetof(FNikki_LODLevel, SolverFrameRate) == 0x000010, "Member 'FNikki_LODLevel::SolverFrameRate' has a wrong offset!");
-static_assert(offsetof(FNikki_LODLevel, GlobalShapeCoeff) == 0x000014, "Member 'FNikki_LODLevel::GlobalShapeCoeff' has a wrong offset!");
-static_assert(offsetof(FNikki_LODLevel, LocalShapeCoeff) == 0x000018, "Member 'FNikki_LODLevel::LocalShapeCoeff' has a wrong offset!");
-static_assert(offsetof(FNikki_LODLevel, AirDampingCoeff) == 0x00001C, "Member 'FNikki_LODLevel::AirDampingCoeff' has a wrong offset!");
-static_assert(offsetof(FNikki_LODLevel, WindCoeff) == 0x000020, "Member 'FNikki_LODLevel::WindCoeff' has a wrong offset!");
-static_assert(offsetof(FNikki_LODLevel, bEnableFixInRenderStep) == 0x000024, "Member 'FNikki_LODLevel::bEnableFixInRenderStep' has a wrong offset!");
+static_assert(sizeof(FNikki_LODLevel) == 0x000038, "Wrong size on FNikki_LODLevel");
+static_assert(offsetof(FNikki_LODLevel, LODLevel) == 0x000000, "Member 'FNikki_LODLevel::LODLevel' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, ChainSetting) == 0x000008, "Member 'FNikki_LODLevel::ChainSetting' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, SolverFrameRate) == 0x000018, "Member 'FNikki_LODLevel::SolverFrameRate' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, GlobalShapeCoeff) == 0x00001C, "Member 'FNikki_LODLevel::GlobalShapeCoeff' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, LocalShapeCoeff) == 0x000020, "Member 'FNikki_LODLevel::LocalShapeCoeff' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, AirDampingCoeff) == 0x000024, "Member 'FNikki_LODLevel::AirDampingCoeff' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, WindCoeff) == 0x000028, "Member 'FNikki_LODLevel::WindCoeff' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, bEnableFixInRenderStep) == 0x00002C, "Member 'FNikki_LODLevel::bEnableFixInRenderStep' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, HeightFieldMethod) == 0x00002D, "Member 'FNikki_LODLevel::HeightFieldMethod' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, RotationCorrectionMethod) == 0x00002E, "Member 'FNikki_LODLevel::RotationCorrectionMethod' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, bEnableCollisionFriction) == 0x00002F, "Member 'FNikki_LODLevel::bEnableCollisionFriction' has a wrong offset!");
+static_assert(offsetof(FNikki_LODLevel, bEnableProxySim) == 0x000030, "Member 'FNikki_LODLevel::bEnableProxySim' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_LODSettings
-// 0x0010 (0x0010 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct FNikki_LODSettings final
 {
 public:
-	TArray<struct FNikki_LODLevel>                LodLevels;                                         // 0x0000(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, struct FNikki_LODLevel>           LodLevels;                                         // 0x0000(0x0050)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FNikki_LODSettings) == 0x000008, "Wrong alignment on FNikki_LODSettings");
-static_assert(sizeof(FNikki_LODSettings) == 0x000010, "Wrong size on FNikki_LODSettings");
+static_assert(sizeof(FNikki_LODSettings) == 0x000050, "Wrong size on FNikki_LODSettings");
 static_assert(offsetof(FNikki_LODSettings, LodLevels) == 0x000000, "Member 'FNikki_LODSettings::LodLevels' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_Particle
-// 0x0390 (0x0390 - 0x0000)
-struct alignas(0x10) FNikki_Particle final
+// 0x0120 (0x0120 - 0x0000)
+struct FNikki_Particle final
 {
 public:
 	struct FBoneReference                         BoneRef;                                           // 0x0000(0x0010)(Edit, EditConst, NoDestructor, NativeAccessSpecifierPublic)
@@ -1378,33 +1397,31 @@ public:
 	float                                         LocalShapeStiffness;                               // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxVelocity;                                       // 0x0064(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxAngle;                                          // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHalfAngleSin2;                                  // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShapeInertia;                                      // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinShapeInertia;                                   // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CriticalRootVelocityCheck;                         // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AirDamping;                                        // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LengthStiffness;                                   // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LongRangeStiffness;                                // 0x0084(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LongRangeScale;                                    // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BendingStiffness;                                  // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimDriveStiffness;                                // 0x0090(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNikkiParticle_BackstopConstraint      BackstopData;                                      // 0x0094(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FNikkiParticle_MaxDistConstraintData   MaxDistConData;                                    // 0x00A0(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         WindInfluence;                                     // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  MaintainSideCapGuid;                               // 0x00AC(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaintainSideSphereRadius;                          // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaintainSideSphereDist;                            // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 LayerBindParticleIndices;                          // 0x00C8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         LayerSphereRadius;                                 // 0x00D8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LayerSphereDist;                                   // 0x00DC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         SkinBoneNames;                                     // 0x00E0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 SkinBoneWeights;                                   // 0x00F0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	ENikki_ParticleColliderType                   ColliderType;                                      // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_101[0x28F];                                    // 0x0101(0x028F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         ShapeInertia;                                      // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinShapeInertia;                                   // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CriticalRootVelocityCheck;                         // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirDamping;                                        // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LengthStiffness;                                   // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LongRangeStiffness;                                // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LongRangeScale;                                    // 0x0084(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BendingStiffness;                                  // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimDriveStiffness;                                // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikkiParticle_BackstopConstraint      BackstopData;                                      // 0x0090(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FNikkiParticle_MaxDistConstraintData   MaxDistConData;                                    // 0x009C(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         WindInfluence;                                     // 0x00A4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  MaintainSideCapGuid;                               // 0x00A8(0x0010)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaintainSideSphereRadius;                          // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaintainSideSphereDist;                            // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 LayerBindParticleIndices;                          // 0x00C0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         LayerSphereRadius;                                 // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LayerSphereDist;                                   // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         SkinBoneNames;                                     // 0x00D8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 SkinBoneWeights;                                   // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	ENikki_ParticleColliderType                   ColliderType;                                      // 0x00F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x27];                                      // 0x00F9(0x0027)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNikki_Particle) == 0x000010, "Wrong alignment on FNikki_Particle");
-static_assert(sizeof(FNikki_Particle) == 0x000390, "Wrong size on FNikki_Particle");
+static_assert(alignof(FNikki_Particle) == 0x000008, "Wrong alignment on FNikki_Particle");
+static_assert(sizeof(FNikki_Particle) == 0x000120, "Wrong size on FNikki_Particle");
 static_assert(offsetof(FNikki_Particle, BoneRef) == 0x000000, "Member 'FNikki_Particle::BoneRef' has a wrong offset!");
 static_assert(offsetof(FNikki_Particle, Type) == 0x000010, "Member 'FNikki_Particle::Type' has a wrong offset!");
 static_assert(offsetof(FNikki_Particle, VirtualTPosePos_BoneSpace) == 0x000018, "Member 'FNikki_Particle::VirtualTPosePos_BoneSpace' has a wrong offset!");
@@ -1418,28 +1435,27 @@ static_assert(offsetof(FNikki_Particle, GlobalShapeStiffness) == 0x00005C, "Memb
 static_assert(offsetof(FNikki_Particle, LocalShapeStiffness) == 0x000060, "Member 'FNikki_Particle::LocalShapeStiffness' has a wrong offset!");
 static_assert(offsetof(FNikki_Particle, MaxVelocity) == 0x000064, "Member 'FNikki_Particle::MaxVelocity' has a wrong offset!");
 static_assert(offsetof(FNikki_Particle, MaxAngle) == 0x000068, "Member 'FNikki_Particle::MaxAngle' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, MaxHalfAngleSin2) == 0x00006C, "Member 'FNikki_Particle::MaxHalfAngleSin2' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, ShapeInertia) == 0x000070, "Member 'FNikki_Particle::ShapeInertia' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, MinShapeInertia) == 0x000074, "Member 'FNikki_Particle::MinShapeInertia' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, CriticalRootVelocityCheck) == 0x000078, "Member 'FNikki_Particle::CriticalRootVelocityCheck' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, AirDamping) == 0x00007C, "Member 'FNikki_Particle::AirDamping' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, LengthStiffness) == 0x000080, "Member 'FNikki_Particle::LengthStiffness' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, LongRangeStiffness) == 0x000084, "Member 'FNikki_Particle::LongRangeStiffness' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, LongRangeScale) == 0x000088, "Member 'FNikki_Particle::LongRangeScale' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, BendingStiffness) == 0x00008C, "Member 'FNikki_Particle::BendingStiffness' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, AnimDriveStiffness) == 0x000090, "Member 'FNikki_Particle::AnimDriveStiffness' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, BackstopData) == 0x000094, "Member 'FNikki_Particle::BackstopData' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, MaxDistConData) == 0x0000A0, "Member 'FNikki_Particle::MaxDistConData' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, WindInfluence) == 0x0000A8, "Member 'FNikki_Particle::WindInfluence' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, MaintainSideCapGuid) == 0x0000AC, "Member 'FNikki_Particle::MaintainSideCapGuid' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, MaintainSideSphereRadius) == 0x0000BC, "Member 'FNikki_Particle::MaintainSideSphereRadius' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, MaintainSideSphereDist) == 0x0000C0, "Member 'FNikki_Particle::MaintainSideSphereDist' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, LayerBindParticleIndices) == 0x0000C8, "Member 'FNikki_Particle::LayerBindParticleIndices' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, LayerSphereRadius) == 0x0000D8, "Member 'FNikki_Particle::LayerSphereRadius' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, LayerSphereDist) == 0x0000DC, "Member 'FNikki_Particle::LayerSphereDist' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, SkinBoneNames) == 0x0000E0, "Member 'FNikki_Particle::SkinBoneNames' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, SkinBoneWeights) == 0x0000F0, "Member 'FNikki_Particle::SkinBoneWeights' has a wrong offset!");
-static_assert(offsetof(FNikki_Particle, ColliderType) == 0x000100, "Member 'FNikki_Particle::ColliderType' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, ShapeInertia) == 0x00006C, "Member 'FNikki_Particle::ShapeInertia' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, MinShapeInertia) == 0x000070, "Member 'FNikki_Particle::MinShapeInertia' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, CriticalRootVelocityCheck) == 0x000074, "Member 'FNikki_Particle::CriticalRootVelocityCheck' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, AirDamping) == 0x000078, "Member 'FNikki_Particle::AirDamping' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, LengthStiffness) == 0x00007C, "Member 'FNikki_Particle::LengthStiffness' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, LongRangeStiffness) == 0x000080, "Member 'FNikki_Particle::LongRangeStiffness' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, LongRangeScale) == 0x000084, "Member 'FNikki_Particle::LongRangeScale' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, BendingStiffness) == 0x000088, "Member 'FNikki_Particle::BendingStiffness' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, AnimDriveStiffness) == 0x00008C, "Member 'FNikki_Particle::AnimDriveStiffness' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, BackstopData) == 0x000090, "Member 'FNikki_Particle::BackstopData' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, MaxDistConData) == 0x00009C, "Member 'FNikki_Particle::MaxDistConData' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, WindInfluence) == 0x0000A4, "Member 'FNikki_Particle::WindInfluence' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, MaintainSideCapGuid) == 0x0000A8, "Member 'FNikki_Particle::MaintainSideCapGuid' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, MaintainSideSphereRadius) == 0x0000B8, "Member 'FNikki_Particle::MaintainSideSphereRadius' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, MaintainSideSphereDist) == 0x0000BC, "Member 'FNikki_Particle::MaintainSideSphereDist' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, LayerBindParticleIndices) == 0x0000C0, "Member 'FNikki_Particle::LayerBindParticleIndices' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, LayerSphereRadius) == 0x0000D0, "Member 'FNikki_Particle::LayerSphereRadius' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, LayerSphereDist) == 0x0000D4, "Member 'FNikki_Particle::LayerSphereDist' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, SkinBoneNames) == 0x0000D8, "Member 'FNikki_Particle::SkinBoneNames' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, SkinBoneWeights) == 0x0000E8, "Member 'FNikki_Particle::SkinBoneWeights' has a wrong offset!");
+static_assert(offsetof(FNikki_Particle, ColliderType) == 0x0000F8, "Member 'FNikki_Particle::ColliderType' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_ParticleConfig
 // 0x0001 (0x0001 - 0x0000)
@@ -1499,7 +1515,7 @@ static_assert(offsetof(FNikki_Chain, ConstraintAxis) == 0x000020, "Member 'FNikk
 static_assert(offsetof(FNikki_Chain, bFixRotationWithTPose) == 0x000038, "Member 'FNikki_Chain::bFixRotationWithTPose' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_Part
-// 0x01C8 (0x01C8 - 0x0000)
+// 0x0238 (0x0238 - 0x0000)
 struct FNikki_Part final
 {
 public:
@@ -1513,12 +1529,12 @@ public:
 	TArray<ENikki_ClothType>                      ColWithPublicClothTypes;                           // 0x0070(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ColWithHeightField;                                // 0x0080(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_MeshCollider                    MeshCollider;                                      // 0x0088(0x0090)(Edit, NativeAccessSpecifierPublic)
-	struct FNikki_PublicCollisionShape            PublicShapes;                                      // 0x0118(0x0040)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158[0x70];                                     // 0x0158(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FNikki_MeshCollider                    MeshCollider;                                      // 0x0088(0x0100)(Edit, NativeAccessSpecifierPublic)
+	struct FNikki_PublicCollisionShape            PublicShapes;                                      // 0x0188(0x0040)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C8[0x70];                                     // 0x01C8(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_Part) == 0x000008, "Wrong alignment on FNikki_Part");
-static_assert(sizeof(FNikki_Part) == 0x0001C8, "Wrong size on FNikki_Part");
+static_assert(sizeof(FNikki_Part) == 0x000238, "Wrong size on FNikki_Part");
 static_assert(offsetof(FNikki_Part, Guid) == 0x000000, "Member 'FNikki_Part::Guid' has a wrong offset!");
 static_assert(offsetof(FNikki_Part, PartName) == 0x000010, "Member 'FNikki_Part::PartName' has a wrong offset!");
 static_assert(offsetof(FNikki_Part, Chains) == 0x000020, "Member 'FNikki_Part::Chains' has a wrong offset!");
@@ -1529,10 +1545,10 @@ static_assert(offsetof(FNikki_Part, ColWithPrivatePartGuids) == 0x000060, "Membe
 static_assert(offsetof(FNikki_Part, ColWithPublicClothTypes) == 0x000070, "Member 'FNikki_Part::ColWithPublicClothTypes' has a wrong offset!");
 static_assert(offsetof(FNikki_Part, ColWithHeightField) == 0x000080, "Member 'FNikki_Part::ColWithHeightField' has a wrong offset!");
 static_assert(offsetof(FNikki_Part, MeshCollider) == 0x000088, "Member 'FNikki_Part::MeshCollider' has a wrong offset!");
-static_assert(offsetof(FNikki_Part, PublicShapes) == 0x000118, "Member 'FNikki_Part::PublicShapes' has a wrong offset!");
+static_assert(offsetof(FNikki_Part, PublicShapes) == 0x000188, "Member 'FNikki_Part::PublicShapes' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_Cloth
-// 0x0800 (0x0800 - 0x0000)
+// 0x09C0 (0x09C0 - 0x0000)
 struct alignas(0x10) FNikki_Cloth final
 {
 public:
@@ -1544,12 +1560,12 @@ public:
 	TArray<struct FNikki_PlaneCollider>           PrivatePlaneColliders;                             // 0x0038(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FNikki_Particle>                Particles;                                         // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FNikki_Part>                    Parts;                                             // 0x0058(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x6D0];                                     // 0x0068(0x06D0)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 ParticleAnimWeights;                               // 0x0738(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_748[0xB8];                                     // 0x0748(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_68[0x890];                                     // 0x0068(0x0890)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 ParticleAnimWeights;                               // 0x08F8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_908[0xB8];                                     // 0x0908(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_Cloth) == 0x000010, "Wrong alignment on FNikki_Cloth");
-static_assert(sizeof(FNikki_Cloth) == 0x000800, "Wrong size on FNikki_Cloth");
+static_assert(sizeof(FNikki_Cloth) == 0x0009C0, "Wrong size on FNikki_Cloth");
 static_assert(offsetof(FNikki_Cloth, ClothName) == 0x000000, "Member 'FNikki_Cloth::ClothName' has a wrong offset!");
 static_assert(offsetof(FNikki_Cloth, Guid) == 0x000010, "Member 'FNikki_Cloth::Guid' has a wrong offset!");
 static_assert(offsetof(FNikki_Cloth, Type) == 0x000020, "Member 'FNikki_Cloth::Type' has a wrong offset!");
@@ -1558,7 +1574,7 @@ static_assert(offsetof(FNikki_Cloth, PrivateCapsuleColliders) == 0x000028, "Memb
 static_assert(offsetof(FNikki_Cloth, PrivatePlaneColliders) == 0x000038, "Member 'FNikki_Cloth::PrivatePlaneColliders' has a wrong offset!");
 static_assert(offsetof(FNikki_Cloth, Particles) == 0x000048, "Member 'FNikki_Cloth::Particles' has a wrong offset!");
 static_assert(offsetof(FNikki_Cloth, Parts) == 0x000058, "Member 'FNikki_Cloth::Parts' has a wrong offset!");
-static_assert(offsetof(FNikki_Cloth, ParticleAnimWeights) == 0x000738, "Member 'FNikki_Cloth::ParticleAnimWeights' has a wrong offset!");
+static_assert(offsetof(FNikki_Cloth, ParticleAnimWeights) == 0x0008F8, "Member 'FNikki_Cloth::ParticleAnimWeights' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_ProxySimulateSystem
 // 0x0250 (0x0250 - 0x0000)
@@ -1590,276 +1606,296 @@ static_assert(offsetof(FNikki_ProxySimulateSystem, Damping) == 0x00003C, "Member
 static_assert(offsetof(FNikki_ProxySimulateSystem, LinearDamping) == 0x000040, "Member 'FNikki_ProxySimulateSystem::LinearDamping' has a wrong offset!");
 static_assert(offsetof(FNikki_ProxySimulateSystem, LinearMaxVel) == 0x000044, "Member 'FNikki_ProxySimulateSystem::LinearMaxVel' has a wrong offset!");
 
+// ScriptStruct NikkiPhysics.PartCollisionSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FPartCollisionSettings final
+{
+public:
+	float                                         UnderMeshPushStiffness;                            // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ColVelAtte;                                        // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AabbMinRadius;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtendDist;                                        // 0x000C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPartCollisionSettings) == 0x000004, "Wrong alignment on FPartCollisionSettings");
+static_assert(sizeof(FPartCollisionSettings) == 0x000010, "Wrong size on FPartCollisionSettings");
+static_assert(offsetof(FPartCollisionSettings, UnderMeshPushStiffness) == 0x000000, "Member 'FPartCollisionSettings::UnderMeshPushStiffness' has a wrong offset!");
+static_assert(offsetof(FPartCollisionSettings, ColVelAtte) == 0x000004, "Member 'FPartCollisionSettings::ColVelAtte' has a wrong offset!");
+static_assert(offsetof(FPartCollisionSettings, AabbMinRadius) == 0x000008, "Member 'FPartCollisionSettings::AabbMinRadius' has a wrong offset!");
+static_assert(offsetof(FPartCollisionSettings, ExtendDist) == 0x00000C, "Member 'FPartCollisionSettings::ExtendDist' has a wrong offset!");
+
 // ScriptStruct NikkiPhysics.AnimNode_NikkiPhysics
-// 0x1128 (0x11F0 - 0x00C8)
+// 0x1068 (0x1130 - 0x00C8)
 struct FAnimNode_NikkiPhysics final : public FAnimNode_SkeletalControlBase
 {
 public:
 	class FString                                 PartName;                                          // 0x00C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_Cloth                           NikkiCloth;                                        // 0x00E0(0x0800)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UNikkiPhysicsSettings*                  NikkiPhysicsSettings;                              // 0x08E0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableNikkiPhysics;                                // 0x08E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_SolverType                             SolverType;                                        // 0x08E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitWithTPose;                                    // 0x08EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAttachment;                                       // 0x08EB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8EC[0x64];                                     // 0x08EC(0x0064)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SkinPoseAlpha;                                     // 0x0950(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FrameRate;                                         // 0x0954(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxStepNumOneFrame;                                // 0x0958(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PreDoStepTimes;                                    // 0x095C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Gravity;                                           // 0x0960(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_SpaceType                              GravityType;                                       // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AddExternalAcc;                                    // 0x0979(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_SpaceType                              AccSpace;                                          // 0x097A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_97B[0x5];                                      // 0x097B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ExternalAcc;                                       // 0x0980(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPerPlatformInt                        MinLOD;                                            // 0x0998(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_99C[0x4];                                      // 0x099C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_LODSettings                     LODs;                                              // 0x09A0(0x0010)(Edit, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9B0[0x14];                                     // 0x09B0(0x0014)(Fixing Size After Last Property [ Dumper-7 ])
-	ENikki_SimSpaceType                           RuntimeRefSpace;                                   // 0x09C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_SimSpaceType                           ReferenceSpace;                                    // 0x09C5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9C6[0x2];                                      // 0x09C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         SpecificBone;                                      // 0x09C8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9D8[0xC8];                                     // 0x09D8(0x00C8)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         RootBone;                                          // 0x0AA0(0x0010)(NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AB0[0xC1];                                     // 0x0AB0(0x00C1)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bLongRangeConstraint;                              // 0x0B71(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBendingConstraint;                                // 0x0B72(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAnimDriveConstraint;                              // 0x0B73(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableShapeConstraint;                            // 0x0B74(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B75[0x3];                                      // 0x0B75(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         StepNum;                                           // 0x0B78(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_ShapeMethod                            ShapeMethod;                                       // 0x0B7C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B7D[0x3];                                      // 0x0B7D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RotCenterRatio;                                    // 0x0B80(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DynamicRotAttenuation;                             // 0x0B84(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FixShapeAttenuation;                               // 0x0B88(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableShapeInertia;                                // 0x0B8C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikki_Cloth                           NikkiCloth;                                        // 0x00E0(0x09C0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UNikkiPhysicsConfigDataAsset*           ConfigDataAsset;                                   // 0x0AA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_SolverType                             SolverType;                                        // 0x0AA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitWithTPose;                                    // 0x0AA9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAttachment;                                       // 0x0AAA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOptimized;                                        // 0x0AAB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FrameRate;                                         // 0x0AAC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxStepNumOneFrame;                                // 0x0AB0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PreDoStepTimes;                                    // 0x0AB4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFixStep;                                    // 0x0AB8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AB9[0x7];                                      // 0x0AB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Gravity;                                           // 0x0AC0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_SpaceType                              GravityType;                                       // 0x0AD8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AddExternalAcc;                                    // 0x0AD9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_SpaceType                              AccSpace;                                          // 0x0ADA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_ADB[0x5];                                      // 0x0ADB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ExternalAcc;                                       // 0x0AE0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPerPlatformInt                        MinLOD;                                            // 0x0AF8(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AFC[0x4];                                      // 0x0AFC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_LODSettings                     LODs;                                              // 0x0B00(0x0050)(Edit, NativeAccessSpecifierPublic)
+	ENikki_SimSpaceType                           RuntimeRefSpace;                                   // 0x0B50(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_SimSpaceType                           ReferenceSpace;                                    // 0x0B51(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B52[0x2];                                      // 0x0B52(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         SpecificBone;                                      // 0x0B54(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bLongRangeConstraint;                              // 0x0B64(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBendingConstraint;                                // 0x0B65(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAnimDriveConstraint;                              // 0x0B66(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableShapeConstraint;                            // 0x0B67(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLengthCorrectWithAnim;                      // 0x0B68(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B69[0x3];                                      // 0x0B69(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StepNum;                                           // 0x0B6C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_ShapeMethod                            ShapeMethod;                                       // 0x0B70(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B71[0x3];                                      // 0x0B71(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RotCenterRatio;                                    // 0x0B74(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicRotAttenuation;                             // 0x0B78(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FixShapeAttenuation;                               // 0x0B7C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShapeApplyLimit;                                   // 0x0B80(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableMaxAngleConstraint;                          // 0x0B84(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableSpring;                                      // 0x0B85(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableLenCorrection;                               // 0x0B86(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_LengthConstraintType                   LengthConsMethod;                                  // 0x0B87(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LengthStiffness;                                   // 0x0B88(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_RotCorrectRef                          RotationCorrectionMethod;                          // 0x0B8C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_B8D[0x3];                                      // 0x0B8D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ShapeApplyLimit;                                   // 0x0B90(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableMaxAngleConstraint;                          // 0x0B94(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableSpring;                                      // 0x0B95(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableLenCorrection;                               // 0x0B96(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_LengthConstraintType                   LengthConsMethod;                                  // 0x0B97(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LengthStiffness;                                   // 0x0B98(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_RotCorrectRef                          RotationCorrectionMethod;                          // 0x0B9C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9D[0x3];                                      // 0x0B9D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RootBoneRotUpdateRatio;                            // 0x0BA0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_HumanColMethod                         HumanCollisionMethod;                              // 0x0BA4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BA5[0x3];                                      // 0x0BA5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CapsuleCollisionRange;                             // 0x0BA8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_CapColMethod                           CapsulePushMethod;                                 // 0x0BAC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BAD[0x3];                                      // 0x0BAD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BindDirAndNormalBlendAlpha;                        // 0x0BB0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CriticalBindDirRotRatio;                           // 0x0BB4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinStaticContactRadius;                            // 0x0BB8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableCapsuleSphereCheck;                         // 0x0BBC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableCapsuleSphereCheckInSpring;                 // 0x0BBD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableWeightedCollision;                          // 0x0BBE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePlaneCollision;                             // 0x0BBF(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePartSelfCollision;                          // 0x0BC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFaceNormal;                                    // 0x0BC1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableLayerConstraint;                            // 0x0BC2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNikki_ParticleConfig                  ParticleConfig;                                    // 0x0BC3(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	ENikki_HeightFieldMethod                      HeightFieldMethod;                                 // 0x0BC4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BC5[0x3];                                      // 0x0BC5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_HeightField                     NikkiHeightField;                                  // 0x0BC8(0x0068)(Edit, NativeAccessSpecifierPublic)
-	struct FNikki_HeighiFieldMap                  NikkiHeightFieldMap;                               // 0x0C30(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          EnableCollisionFriction;                           // 0x0C48(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C49[0x3];                                      // 0x0C49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StaticFriction;                                    // 0x0C4C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         KineticFriction;                                   // 0x0C50(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableAnimInfClamp;                                // 0x0C54(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C55[0x3];                                      // 0x0C55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoneReference                         AnimMainBone;                                      // 0x0C58(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C68[0x80];                                     // 0x0C68(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxAnimVelocity;                                   // 0x0CE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimLinearDamping;                                 // 0x0CEC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxAnimRotVel;                                     // 0x0CF0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimAngularDamping;                                // 0x0CF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxWorldMovementVelocity;                          // 0x0CF8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxWorldRotationVelocity;                          // 0x0CFC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxParticleVelocity;                               // 0x0D00(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableProxySim;                                    // 0x0D04(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D05[0xB];                                      // 0x0D05(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_ProxySimulateSystem             Sim;                                               // 0x0D10(0x0250)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bEnableBlendAnimPose;                              // 0x0F60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_LayeredBoneBlendMode                   BlendMode;                                         // 0x0F61(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F62[0x2];                                      // 0x0F62(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AnimPoseIndex;                                     // 0x0F64(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F68[0x8];                                      // 0x0F68(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UBlendProfile*>                  BlendMasks;                                        // 0x0F70(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	TArray<struct FInputBlendPose>                LayerSetup;                                        // 0x0F80(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FPerBoneBlendWeight>            PerBoneBlendWeights;                               // 0x0F90(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FGuid                                  SkeletonGuid;                                      // 0x0FA0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  VirtualSkeletonGuid;                               // 0x0FB0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableWind;                                       // 0x0FC0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC1[0x3];                                      // 0x0FC1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_WindPara                        WindPara;                                          // 0x0FC4(0x0034)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FF8[0x40];                                     // 0x0FF8(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         WindStrength;                                      // 0x1038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableCentrifugalforce;                           // 0x103C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugWindSource;                                  // 0x103D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_103E[0x2];                                     // 0x103E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_WindSource                      DebugWindSource;                                   // 0x1040(0x0028)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bDebugAddVelocity;                                 // 0x1068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1069[0x7];                                     // 0x1069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_DebugAddVelocity                AddVelocitySetting;                                // 0x1070(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bControlGlobalShape;                               // 0x1090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1091[0x3];                                     // 0x1091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ControledGlobalShape;                              // 0x1094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bControlLocalShape;                                // 0x1098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1099[0x3];                                     // 0x1099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ControledLocalShape;                               // 0x109C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bControlAirDamping;                                // 0x10A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A1[0x3];                                     // 0x10A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ControledAirDamping;                               // 0x10A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugInfo;                                        // 0x10A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableFixStep;                                    // 0x10A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugDraw;                                        // 0x10AA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawAllCloth;                                     // 0x10AB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawBones;                                        // 0x10AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawParticles;                                    // 0x10AD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawThickness;                                    // 0x10AE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawSprings;                                      // 0x10AF(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawCapsules;                                     // 0x10B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawNormals;                                      // 0x10B1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawAnimationPose;                                // 0x10B2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawBounds;                                       // 0x10B3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawPublicCollisionInfo;                          // 0x10B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawMaintainSideSpheres;                          // 0x10B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawLayering;                                     // 0x10B6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawLayeringSpheres;                              // 0x10B7(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawHeightField;                                  // 0x10B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawHeightFieldCollision;                         // 0x10B9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawEnvironment;                                  // 0x10BA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawWind;                                         // 0x10BB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawBoneParticleInfo;                             // 0x10BC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawProxySimulation;                              // 0x10BD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10BE[0x2];                                     // 0x10BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           DrawBoneParticleNames;                             // 0x10C0(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10D0[0x120];                                   // 0x10D0(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         RootBoneRotUpdateRatio;                            // 0x0B90(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GlobalShapeCoefficient;                            // 0x0B94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocalShapeCoefficient;                             // 0x0B98(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirDampingCoefficient;                             // 0x0B9C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_HumanColMethod                         HumanCollisionMethod;                              // 0x0BA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BA1[0x3];                                      // 0x0BA1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CapsuleCollisionRange;                             // 0x0BA4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_CapColMethod                           CapsulePushMethod;                                 // 0x0BA8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BA9[0x3];                                      // 0x0BA9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BindDirAndNormalBlendAlpha;                        // 0x0BAC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CriticalBindDirRotRatio;                           // 0x0BB0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinStaticContactRadius;                            // 0x0BB4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCapsuleSphereCheck;                         // 0x0BB8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCapsuleSphereCheckInSpring;                 // 0x0BB9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableWeightedCollision;                          // 0x0BBA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePlaneCollision;                             // 0x0BBB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePartSelfCollision;                          // 0x0BBC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSelfCollisionInRenderStep;                        // 0x0BBD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BBE[0x2];                                      // 0x0BBE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPartCollisionSettings                 PartCollisionSettings;                             // 0x0BC0(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bUseFaceNormal;                                    // 0x0BD0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLayerConstraint;                            // 0x0BD1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikki_ParticleConfig                  ParticleConfig;                                    // 0x0BD2(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ENikki_HeightFieldMethod                      HeightFieldMethod;                                 // 0x0BD3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BD4[0x4];                                      // 0x0BD4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_HeightField                     NikkiHeightField;                                  // 0x0BD8(0x0068)(Edit, NativeAccessSpecifierPublic)
+	struct FNikki_HeighiFieldMap                  NikkiHeightFieldMap;                               // 0x0C40(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          EnableCollisionFriction;                           // 0x0C58(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C59[0x3];                                      // 0x0C59(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StaticFriction;                                    // 0x0C5C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         KineticFriction;                                   // 0x0C60(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableAnimInfClamp;                                // 0x0C64(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C65[0x3];                                      // 0x0C65(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         AnimMainBone;                                      // 0x0C68(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         MaxAnimVelocity;                                   // 0x0C78(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimLinearDamping;                                 // 0x0C7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxAnimRotVel;                                     // 0x0C80(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimAngularDamping;                                // 0x0C84(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAnimationLimitPerParticle;                  // 0x0C88(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C89[0x3];                                      // 0x0C89(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxWorldMovementVelocity;                          // 0x0C8C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxWorldRotationVelocity;                          // 0x0C90(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxParticleVelocity;                               // 0x0C94(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableProxySim;                                    // 0x0C98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C99[0x7];                                      // 0x0C99(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_ProxySimulateSystem             Sim;                                               // 0x0CA0(0x0250)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableBlendAnimPose;                              // 0x0EF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_LayeredBoneBlendMode                   BlendMode;                                         // 0x0EF1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EF2[0x2];                                      // 0x0EF2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AnimPoseIndex;                                     // 0x0EF4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UBlendProfile*>                  BlendMasks;                                        // 0x0EF8(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<struct FInputBlendPose>                LayerSetup;                                        // 0x0F08(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableWind;                                       // 0x0F18(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F19[0x3];                                      // 0x0F19(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_WindPara                        WindPara;                                          // 0x0F1C(0x0030)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         AutoDynamicsSize;                                  // 0x0F4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikki_DynamicParameter                AutoDynamicsParameters;                            // 0x0F50(0x002C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         WindStrength;                                      // 0x0F7C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCentrifugalforce;                           // 0x0F80(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugWindSource;                                  // 0x0F81(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F82[0x6];                                      // 0x0F82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_WindSource                      DebugWindSource;                                   // 0x0F88(0x0030)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bDebugAddVelocity;                                 // 0x0FB8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FB9[0x7];                                      // 0x0FB9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_DebugAddVelocity                AddVelocitySetting;                                // 0x0FC0(0x0020)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bDebugInfo;                                        // 0x0FE0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bControlGlobalShape;                               // 0x0FE1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FE2[0x2];                                      // 0x0FE2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ControledGlobalShape;                              // 0x0FE4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bControlLocalShape;                                // 0x0FE8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FE9[0x3];                                      // 0x0FE9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ControledLocalShape;                               // 0x0FEC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bControlAirDamping;                                // 0x0FF0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FF1[0x3];                                      // 0x0FF1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ControledAirDamping;                               // 0x0FF4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugDraw;                                        // 0x0FF8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawAllCloth;                                     // 0x0FF9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawBones;                                        // 0x0FFA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawParticles;                                    // 0x0FFB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawThickness;                                    // 0x0FFC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawSprings;                                      // 0x0FFD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawCapsules;                                     // 0x0FFE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawNormals;                                      // 0x0FFF(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawAnimationPose;                                // 0x1000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawTPose;                                        // 0x1001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawBounds;                                       // 0x1002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawPublicCollisionInfo;                          // 0x1003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawMaintainSideSpheres;                          // 0x1004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawLayering;                                     // 0x1005(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawLayeringSpheres;                              // 0x1006(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawHeightField;                                  // 0x1007(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawHeightFieldCollision;                         // 0x1008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawEnvironment;                                  // 0x1009(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawWind;                                         // 0x100A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawBoneParticleInfo;                             // 0x100B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDrawProxySimulation;                              // 0x100C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_100D[0x3];                                     // 0x100D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           DrawBoneParticleNames;                             // 0x1010(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1020[0x110];                                   // 0x1020(0x0110)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_NikkiPhysics) == 0x000010, "Wrong alignment on FAnimNode_NikkiPhysics");
-static_assert(sizeof(FAnimNode_NikkiPhysics) == 0x0011F0, "Wrong size on FAnimNode_NikkiPhysics");
+static_assert(sizeof(FAnimNode_NikkiPhysics) == 0x001130, "Wrong size on FAnimNode_NikkiPhysics");
 static_assert(offsetof(FAnimNode_NikkiPhysics, PartName) == 0x0000C8, "Member 'FAnimNode_NikkiPhysics::PartName' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiPhysics, NikkiCloth) == 0x0000E0, "Member 'FAnimNode_NikkiPhysics::NikkiCloth' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, NikkiPhysicsSettings) == 0x0008E0, "Member 'FAnimNode_NikkiPhysics::NikkiPhysicsSettings' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableNikkiPhysics) == 0x0008E8, "Member 'FAnimNode_NikkiPhysics::EnableNikkiPhysics' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, SolverType) == 0x0008E9, "Member 'FAnimNode_NikkiPhysics::SolverType' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bInitWithTPose) == 0x0008EA, "Member 'FAnimNode_NikkiPhysics::bInitWithTPose' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bAttachment) == 0x0008EB, "Member 'FAnimNode_NikkiPhysics::bAttachment' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, SkinPoseAlpha) == 0x000950, "Member 'FAnimNode_NikkiPhysics::SkinPoseAlpha' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, FrameRate) == 0x000954, "Member 'FAnimNode_NikkiPhysics::FrameRate' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MaxStepNumOneFrame) == 0x000958, "Member 'FAnimNode_NikkiPhysics::MaxStepNumOneFrame' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, PreDoStepTimes) == 0x00095C, "Member 'FAnimNode_NikkiPhysics::PreDoStepTimes' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, Gravity) == 0x000960, "Member 'FAnimNode_NikkiPhysics::Gravity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, GravityType) == 0x000978, "Member 'FAnimNode_NikkiPhysics::GravityType' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AddExternalAcc) == 0x000979, "Member 'FAnimNode_NikkiPhysics::AddExternalAcc' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AccSpace) == 0x00097A, "Member 'FAnimNode_NikkiPhysics::AccSpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ExternalAcc) == 0x000980, "Member 'FAnimNode_NikkiPhysics::ExternalAcc' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MinLOD) == 0x000998, "Member 'FAnimNode_NikkiPhysics::MinLOD' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, LODs) == 0x0009A0, "Member 'FAnimNode_NikkiPhysics::LODs' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, RuntimeRefSpace) == 0x0009C4, "Member 'FAnimNode_NikkiPhysics::RuntimeRefSpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ReferenceSpace) == 0x0009C5, "Member 'FAnimNode_NikkiPhysics::ReferenceSpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, SpecificBone) == 0x0009C8, "Member 'FAnimNode_NikkiPhysics::SpecificBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, RootBone) == 0x000AA0, "Member 'FAnimNode_NikkiPhysics::RootBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bLongRangeConstraint) == 0x000B71, "Member 'FAnimNode_NikkiPhysics::bLongRangeConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bBendingConstraint) == 0x000B72, "Member 'FAnimNode_NikkiPhysics::bBendingConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bAnimDriveConstraint) == 0x000B73, "Member 'FAnimNode_NikkiPhysics::bAnimDriveConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableShapeConstraint) == 0x000B74, "Member 'FAnimNode_NikkiPhysics::bEnableShapeConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, StepNum) == 0x000B78, "Member 'FAnimNode_NikkiPhysics::StepNum' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ShapeMethod) == 0x000B7C, "Member 'FAnimNode_NikkiPhysics::ShapeMethod' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, RotCenterRatio) == 0x000B80, "Member 'FAnimNode_NikkiPhysics::RotCenterRatio' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, DynamicRotAttenuation) == 0x000B84, "Member 'FAnimNode_NikkiPhysics::DynamicRotAttenuation' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, FixShapeAttenuation) == 0x000B88, "Member 'FAnimNode_NikkiPhysics::FixShapeAttenuation' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableShapeInertia) == 0x000B8C, "Member 'FAnimNode_NikkiPhysics::EnableShapeInertia' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ShapeApplyLimit) == 0x000B90, "Member 'FAnimNode_NikkiPhysics::ShapeApplyLimit' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableMaxAngleConstraint) == 0x000B94, "Member 'FAnimNode_NikkiPhysics::EnableMaxAngleConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableSpring) == 0x000B95, "Member 'FAnimNode_NikkiPhysics::EnableSpring' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableLenCorrection) == 0x000B96, "Member 'FAnimNode_NikkiPhysics::EnableLenCorrection' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, LengthConsMethod) == 0x000B97, "Member 'FAnimNode_NikkiPhysics::LengthConsMethod' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, LengthStiffness) == 0x000B98, "Member 'FAnimNode_NikkiPhysics::LengthStiffness' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, RotationCorrectionMethod) == 0x000B9C, "Member 'FAnimNode_NikkiPhysics::RotationCorrectionMethod' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, RootBoneRotUpdateRatio) == 0x000BA0, "Member 'FAnimNode_NikkiPhysics::RootBoneRotUpdateRatio' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, HumanCollisionMethod) == 0x000BA4, "Member 'FAnimNode_NikkiPhysics::HumanCollisionMethod' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, CapsuleCollisionRange) == 0x000BA8, "Member 'FAnimNode_NikkiPhysics::CapsuleCollisionRange' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, CapsulePushMethod) == 0x000BAC, "Member 'FAnimNode_NikkiPhysics::CapsulePushMethod' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, BindDirAndNormalBlendAlpha) == 0x000BB0, "Member 'FAnimNode_NikkiPhysics::BindDirAndNormalBlendAlpha' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, CriticalBindDirRotRatio) == 0x000BB4, "Member 'FAnimNode_NikkiPhysics::CriticalBindDirRotRatio' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MinStaticContactRadius) == 0x000BB8, "Member 'FAnimNode_NikkiPhysics::MinStaticContactRadius' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableCapsuleSphereCheck) == 0x000BBC, "Member 'FAnimNode_NikkiPhysics::bEnableCapsuleSphereCheck' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableCapsuleSphereCheckInSpring) == 0x000BBD, "Member 'FAnimNode_NikkiPhysics::bEnableCapsuleSphereCheckInSpring' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableWeightedCollision) == 0x000BBE, "Member 'FAnimNode_NikkiPhysics::bEnableWeightedCollision' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnablePlaneCollision) == 0x000BBF, "Member 'FAnimNode_NikkiPhysics::bEnablePlaneCollision' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnablePartSelfCollision) == 0x000BC0, "Member 'FAnimNode_NikkiPhysics::bEnablePartSelfCollision' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bUseFaceNormal) == 0x000BC1, "Member 'FAnimNode_NikkiPhysics::bUseFaceNormal' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableLayerConstraint) == 0x000BC2, "Member 'FAnimNode_NikkiPhysics::bEnableLayerConstraint' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ParticleConfig) == 0x000BC3, "Member 'FAnimNode_NikkiPhysics::ParticleConfig' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, HeightFieldMethod) == 0x000BC4, "Member 'FAnimNode_NikkiPhysics::HeightFieldMethod' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, NikkiHeightField) == 0x000BC8, "Member 'FAnimNode_NikkiPhysics::NikkiHeightField' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, NikkiHeightFieldMap) == 0x000C30, "Member 'FAnimNode_NikkiPhysics::NikkiHeightFieldMap' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableCollisionFriction) == 0x000C48, "Member 'FAnimNode_NikkiPhysics::EnableCollisionFriction' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, StaticFriction) == 0x000C4C, "Member 'FAnimNode_NikkiPhysics::StaticFriction' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, KineticFriction) == 0x000C50, "Member 'FAnimNode_NikkiPhysics::KineticFriction' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableAnimInfClamp) == 0x000C54, "Member 'FAnimNode_NikkiPhysics::EnableAnimInfClamp' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AnimMainBone) == 0x000C58, "Member 'FAnimNode_NikkiPhysics::AnimMainBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MaxAnimVelocity) == 0x000CE8, "Member 'FAnimNode_NikkiPhysics::MaxAnimVelocity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AnimLinearDamping) == 0x000CEC, "Member 'FAnimNode_NikkiPhysics::AnimLinearDamping' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MaxAnimRotVel) == 0x000CF0, "Member 'FAnimNode_NikkiPhysics::MaxAnimRotVel' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AnimAngularDamping) == 0x000CF4, "Member 'FAnimNode_NikkiPhysics::AnimAngularDamping' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MaxWorldMovementVelocity) == 0x000CF8, "Member 'FAnimNode_NikkiPhysics::MaxWorldMovementVelocity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MaxWorldRotationVelocity) == 0x000CFC, "Member 'FAnimNode_NikkiPhysics::MaxWorldRotationVelocity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, MaxParticleVelocity) == 0x000D00, "Member 'FAnimNode_NikkiPhysics::MaxParticleVelocity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, EnableProxySim) == 0x000D04, "Member 'FAnimNode_NikkiPhysics::EnableProxySim' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, Sim) == 0x000D10, "Member 'FAnimNode_NikkiPhysics::Sim' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableBlendAnimPose) == 0x000F60, "Member 'FAnimNode_NikkiPhysics::bEnableBlendAnimPose' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, BlendMode) == 0x000F61, "Member 'FAnimNode_NikkiPhysics::BlendMode' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AnimPoseIndex) == 0x000F64, "Member 'FAnimNode_NikkiPhysics::AnimPoseIndex' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, BlendMasks) == 0x000F70, "Member 'FAnimNode_NikkiPhysics::BlendMasks' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, LayerSetup) == 0x000F80, "Member 'FAnimNode_NikkiPhysics::LayerSetup' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, PerBoneBlendWeights) == 0x000F90, "Member 'FAnimNode_NikkiPhysics::PerBoneBlendWeights' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, SkeletonGuid) == 0x000FA0, "Member 'FAnimNode_NikkiPhysics::SkeletonGuid' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, VirtualSkeletonGuid) == 0x000FB0, "Member 'FAnimNode_NikkiPhysics::VirtualSkeletonGuid' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableWind) == 0x000FC0, "Member 'FAnimNode_NikkiPhysics::bEnableWind' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, WindPara) == 0x000FC4, "Member 'FAnimNode_NikkiPhysics::WindPara' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, WindStrength) == 0x001038, "Member 'FAnimNode_NikkiPhysics::WindStrength' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableCentrifugalforce) == 0x00103C, "Member 'FAnimNode_NikkiPhysics::bEnableCentrifugalforce' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugWindSource) == 0x00103D, "Member 'FAnimNode_NikkiPhysics::bDebugWindSource' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, DebugWindSource) == 0x001040, "Member 'FAnimNode_NikkiPhysics::DebugWindSource' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugAddVelocity) == 0x001068, "Member 'FAnimNode_NikkiPhysics::bDebugAddVelocity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, AddVelocitySetting) == 0x001070, "Member 'FAnimNode_NikkiPhysics::AddVelocitySetting' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bControlGlobalShape) == 0x001090, "Member 'FAnimNode_NikkiPhysics::bControlGlobalShape' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ControledGlobalShape) == 0x001094, "Member 'FAnimNode_NikkiPhysics::ControledGlobalShape' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bControlLocalShape) == 0x001098, "Member 'FAnimNode_NikkiPhysics::bControlLocalShape' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ControledLocalShape) == 0x00109C, "Member 'FAnimNode_NikkiPhysics::ControledLocalShape' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bControlAirDamping) == 0x0010A0, "Member 'FAnimNode_NikkiPhysics::bControlAirDamping' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, ControledAirDamping) == 0x0010A4, "Member 'FAnimNode_NikkiPhysics::ControledAirDamping' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugInfo) == 0x0010A8, "Member 'FAnimNode_NikkiPhysics::bDebugInfo' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableFixStep) == 0x0010A9, "Member 'FAnimNode_NikkiPhysics::bEnableFixStep' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugDraw) == 0x0010AA, "Member 'FAnimNode_NikkiPhysics::bDebugDraw' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawAllCloth) == 0x0010AB, "Member 'FAnimNode_NikkiPhysics::bDrawAllCloth' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawBones) == 0x0010AC, "Member 'FAnimNode_NikkiPhysics::bDrawBones' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawParticles) == 0x0010AD, "Member 'FAnimNode_NikkiPhysics::bDrawParticles' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawThickness) == 0x0010AE, "Member 'FAnimNode_NikkiPhysics::bDrawThickness' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawSprings) == 0x0010AF, "Member 'FAnimNode_NikkiPhysics::bDrawSprings' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawCapsules) == 0x0010B0, "Member 'FAnimNode_NikkiPhysics::bDrawCapsules' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawNormals) == 0x0010B1, "Member 'FAnimNode_NikkiPhysics::bDrawNormals' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawAnimationPose) == 0x0010B2, "Member 'FAnimNode_NikkiPhysics::bDrawAnimationPose' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawBounds) == 0x0010B3, "Member 'FAnimNode_NikkiPhysics::bDrawBounds' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawPublicCollisionInfo) == 0x0010B4, "Member 'FAnimNode_NikkiPhysics::bDrawPublicCollisionInfo' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawMaintainSideSpheres) == 0x0010B5, "Member 'FAnimNode_NikkiPhysics::bDrawMaintainSideSpheres' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawLayering) == 0x0010B6, "Member 'FAnimNode_NikkiPhysics::bDrawLayering' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawLayeringSpheres) == 0x0010B7, "Member 'FAnimNode_NikkiPhysics::bDrawLayeringSpheres' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawHeightField) == 0x0010B8, "Member 'FAnimNode_NikkiPhysics::bDrawHeightField' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawHeightFieldCollision) == 0x0010B9, "Member 'FAnimNode_NikkiPhysics::bDrawHeightFieldCollision' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawEnvironment) == 0x0010BA, "Member 'FAnimNode_NikkiPhysics::bDrawEnvironment' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawWind) == 0x0010BB, "Member 'FAnimNode_NikkiPhysics::bDrawWind' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawBoneParticleInfo) == 0x0010BC, "Member 'FAnimNode_NikkiPhysics::bDrawBoneParticleInfo' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawProxySimulation) == 0x0010BD, "Member 'FAnimNode_NikkiPhysics::bDrawProxySimulation' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiPhysics, DrawBoneParticleNames) == 0x0010C0, "Member 'FAnimNode_NikkiPhysics::DrawBoneParticleNames' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ConfigDataAsset) == 0x000AA0, "Member 'FAnimNode_NikkiPhysics::ConfigDataAsset' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, SolverType) == 0x000AA8, "Member 'FAnimNode_NikkiPhysics::SolverType' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bInitWithTPose) == 0x000AA9, "Member 'FAnimNode_NikkiPhysics::bInitWithTPose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bAttachment) == 0x000AAA, "Member 'FAnimNode_NikkiPhysics::bAttachment' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bOptimized) == 0x000AAB, "Member 'FAnimNode_NikkiPhysics::bOptimized' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, FrameRate) == 0x000AAC, "Member 'FAnimNode_NikkiPhysics::FrameRate' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MaxStepNumOneFrame) == 0x000AB0, "Member 'FAnimNode_NikkiPhysics::MaxStepNumOneFrame' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, PreDoStepTimes) == 0x000AB4, "Member 'FAnimNode_NikkiPhysics::PreDoStepTimes' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableFixStep) == 0x000AB8, "Member 'FAnimNode_NikkiPhysics::bEnableFixStep' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, Gravity) == 0x000AC0, "Member 'FAnimNode_NikkiPhysics::Gravity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, GravityType) == 0x000AD8, "Member 'FAnimNode_NikkiPhysics::GravityType' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AddExternalAcc) == 0x000AD9, "Member 'FAnimNode_NikkiPhysics::AddExternalAcc' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AccSpace) == 0x000ADA, "Member 'FAnimNode_NikkiPhysics::AccSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ExternalAcc) == 0x000AE0, "Member 'FAnimNode_NikkiPhysics::ExternalAcc' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MinLOD) == 0x000AF8, "Member 'FAnimNode_NikkiPhysics::MinLOD' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, LODs) == 0x000B00, "Member 'FAnimNode_NikkiPhysics::LODs' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, RuntimeRefSpace) == 0x000B50, "Member 'FAnimNode_NikkiPhysics::RuntimeRefSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ReferenceSpace) == 0x000B51, "Member 'FAnimNode_NikkiPhysics::ReferenceSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, SpecificBone) == 0x000B54, "Member 'FAnimNode_NikkiPhysics::SpecificBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bLongRangeConstraint) == 0x000B64, "Member 'FAnimNode_NikkiPhysics::bLongRangeConstraint' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bBendingConstraint) == 0x000B65, "Member 'FAnimNode_NikkiPhysics::bBendingConstraint' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bAnimDriveConstraint) == 0x000B66, "Member 'FAnimNode_NikkiPhysics::bAnimDriveConstraint' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableShapeConstraint) == 0x000B67, "Member 'FAnimNode_NikkiPhysics::bEnableShapeConstraint' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableLengthCorrectWithAnim) == 0x000B68, "Member 'FAnimNode_NikkiPhysics::bEnableLengthCorrectWithAnim' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, StepNum) == 0x000B6C, "Member 'FAnimNode_NikkiPhysics::StepNum' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ShapeMethod) == 0x000B70, "Member 'FAnimNode_NikkiPhysics::ShapeMethod' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, RotCenterRatio) == 0x000B74, "Member 'FAnimNode_NikkiPhysics::RotCenterRatio' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, DynamicRotAttenuation) == 0x000B78, "Member 'FAnimNode_NikkiPhysics::DynamicRotAttenuation' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, FixShapeAttenuation) == 0x000B7C, "Member 'FAnimNode_NikkiPhysics::FixShapeAttenuation' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ShapeApplyLimit) == 0x000B80, "Member 'FAnimNode_NikkiPhysics::ShapeApplyLimit' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, EnableMaxAngleConstraint) == 0x000B84, "Member 'FAnimNode_NikkiPhysics::EnableMaxAngleConstraint' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, EnableSpring) == 0x000B85, "Member 'FAnimNode_NikkiPhysics::EnableSpring' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, EnableLenCorrection) == 0x000B86, "Member 'FAnimNode_NikkiPhysics::EnableLenCorrection' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, LengthConsMethod) == 0x000B87, "Member 'FAnimNode_NikkiPhysics::LengthConsMethod' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, LengthStiffness) == 0x000B88, "Member 'FAnimNode_NikkiPhysics::LengthStiffness' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, RotationCorrectionMethod) == 0x000B8C, "Member 'FAnimNode_NikkiPhysics::RotationCorrectionMethod' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, RootBoneRotUpdateRatio) == 0x000B90, "Member 'FAnimNode_NikkiPhysics::RootBoneRotUpdateRatio' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, GlobalShapeCoefficient) == 0x000B94, "Member 'FAnimNode_NikkiPhysics::GlobalShapeCoefficient' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, LocalShapeCoefficient) == 0x000B98, "Member 'FAnimNode_NikkiPhysics::LocalShapeCoefficient' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AirDampingCoefficient) == 0x000B9C, "Member 'FAnimNode_NikkiPhysics::AirDampingCoefficient' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, HumanCollisionMethod) == 0x000BA0, "Member 'FAnimNode_NikkiPhysics::HumanCollisionMethod' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, CapsuleCollisionRange) == 0x000BA4, "Member 'FAnimNode_NikkiPhysics::CapsuleCollisionRange' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, CapsulePushMethod) == 0x000BA8, "Member 'FAnimNode_NikkiPhysics::CapsulePushMethod' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, BindDirAndNormalBlendAlpha) == 0x000BAC, "Member 'FAnimNode_NikkiPhysics::BindDirAndNormalBlendAlpha' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, CriticalBindDirRotRatio) == 0x000BB0, "Member 'FAnimNode_NikkiPhysics::CriticalBindDirRotRatio' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MinStaticContactRadius) == 0x000BB4, "Member 'FAnimNode_NikkiPhysics::MinStaticContactRadius' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableCapsuleSphereCheck) == 0x000BB8, "Member 'FAnimNode_NikkiPhysics::bEnableCapsuleSphereCheck' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableCapsuleSphereCheckInSpring) == 0x000BB9, "Member 'FAnimNode_NikkiPhysics::bEnableCapsuleSphereCheckInSpring' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableWeightedCollision) == 0x000BBA, "Member 'FAnimNode_NikkiPhysics::bEnableWeightedCollision' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnablePlaneCollision) == 0x000BBB, "Member 'FAnimNode_NikkiPhysics::bEnablePlaneCollision' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnablePartSelfCollision) == 0x000BBC, "Member 'FAnimNode_NikkiPhysics::bEnablePartSelfCollision' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bSelfCollisionInRenderStep) == 0x000BBD, "Member 'FAnimNode_NikkiPhysics::bSelfCollisionInRenderStep' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, PartCollisionSettings) == 0x000BC0, "Member 'FAnimNode_NikkiPhysics::PartCollisionSettings' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bUseFaceNormal) == 0x000BD0, "Member 'FAnimNode_NikkiPhysics::bUseFaceNormal' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableLayerConstraint) == 0x000BD1, "Member 'FAnimNode_NikkiPhysics::bEnableLayerConstraint' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ParticleConfig) == 0x000BD2, "Member 'FAnimNode_NikkiPhysics::ParticleConfig' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, HeightFieldMethod) == 0x000BD3, "Member 'FAnimNode_NikkiPhysics::HeightFieldMethod' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, NikkiHeightField) == 0x000BD8, "Member 'FAnimNode_NikkiPhysics::NikkiHeightField' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, NikkiHeightFieldMap) == 0x000C40, "Member 'FAnimNode_NikkiPhysics::NikkiHeightFieldMap' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, EnableCollisionFriction) == 0x000C58, "Member 'FAnimNode_NikkiPhysics::EnableCollisionFriction' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, StaticFriction) == 0x000C5C, "Member 'FAnimNode_NikkiPhysics::StaticFriction' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, KineticFriction) == 0x000C60, "Member 'FAnimNode_NikkiPhysics::KineticFriction' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, EnableAnimInfClamp) == 0x000C64, "Member 'FAnimNode_NikkiPhysics::EnableAnimInfClamp' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AnimMainBone) == 0x000C68, "Member 'FAnimNode_NikkiPhysics::AnimMainBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MaxAnimVelocity) == 0x000C78, "Member 'FAnimNode_NikkiPhysics::MaxAnimVelocity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AnimLinearDamping) == 0x000C7C, "Member 'FAnimNode_NikkiPhysics::AnimLinearDamping' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MaxAnimRotVel) == 0x000C80, "Member 'FAnimNode_NikkiPhysics::MaxAnimRotVel' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AnimAngularDamping) == 0x000C84, "Member 'FAnimNode_NikkiPhysics::AnimAngularDamping' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableAnimationLimitPerParticle) == 0x000C88, "Member 'FAnimNode_NikkiPhysics::bEnableAnimationLimitPerParticle' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MaxWorldMovementVelocity) == 0x000C8C, "Member 'FAnimNode_NikkiPhysics::MaxWorldMovementVelocity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MaxWorldRotationVelocity) == 0x000C90, "Member 'FAnimNode_NikkiPhysics::MaxWorldRotationVelocity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, MaxParticleVelocity) == 0x000C94, "Member 'FAnimNode_NikkiPhysics::MaxParticleVelocity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, EnableProxySim) == 0x000C98, "Member 'FAnimNode_NikkiPhysics::EnableProxySim' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, Sim) == 0x000CA0, "Member 'FAnimNode_NikkiPhysics::Sim' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableBlendAnimPose) == 0x000EF0, "Member 'FAnimNode_NikkiPhysics::bEnableBlendAnimPose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, BlendMode) == 0x000EF1, "Member 'FAnimNode_NikkiPhysics::BlendMode' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AnimPoseIndex) == 0x000EF4, "Member 'FAnimNode_NikkiPhysics::AnimPoseIndex' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, BlendMasks) == 0x000EF8, "Member 'FAnimNode_NikkiPhysics::BlendMasks' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, LayerSetup) == 0x000F08, "Member 'FAnimNode_NikkiPhysics::LayerSetup' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableWind) == 0x000F18, "Member 'FAnimNode_NikkiPhysics::bEnableWind' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, WindPara) == 0x000F1C, "Member 'FAnimNode_NikkiPhysics::WindPara' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AutoDynamicsSize) == 0x000F4C, "Member 'FAnimNode_NikkiPhysics::AutoDynamicsSize' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AutoDynamicsParameters) == 0x000F50, "Member 'FAnimNode_NikkiPhysics::AutoDynamicsParameters' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, WindStrength) == 0x000F7C, "Member 'FAnimNode_NikkiPhysics::WindStrength' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bEnableCentrifugalforce) == 0x000F80, "Member 'FAnimNode_NikkiPhysics::bEnableCentrifugalforce' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugWindSource) == 0x000F81, "Member 'FAnimNode_NikkiPhysics::bDebugWindSource' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, DebugWindSource) == 0x000F88, "Member 'FAnimNode_NikkiPhysics::DebugWindSource' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugAddVelocity) == 0x000FB8, "Member 'FAnimNode_NikkiPhysics::bDebugAddVelocity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, AddVelocitySetting) == 0x000FC0, "Member 'FAnimNode_NikkiPhysics::AddVelocitySetting' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugInfo) == 0x000FE0, "Member 'FAnimNode_NikkiPhysics::bDebugInfo' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bControlGlobalShape) == 0x000FE1, "Member 'FAnimNode_NikkiPhysics::bControlGlobalShape' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ControledGlobalShape) == 0x000FE4, "Member 'FAnimNode_NikkiPhysics::ControledGlobalShape' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bControlLocalShape) == 0x000FE8, "Member 'FAnimNode_NikkiPhysics::bControlLocalShape' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ControledLocalShape) == 0x000FEC, "Member 'FAnimNode_NikkiPhysics::ControledLocalShape' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bControlAirDamping) == 0x000FF0, "Member 'FAnimNode_NikkiPhysics::bControlAirDamping' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, ControledAirDamping) == 0x000FF4, "Member 'FAnimNode_NikkiPhysics::ControledAirDamping' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDebugDraw) == 0x000FF8, "Member 'FAnimNode_NikkiPhysics::bDebugDraw' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawAllCloth) == 0x000FF9, "Member 'FAnimNode_NikkiPhysics::bDrawAllCloth' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawBones) == 0x000FFA, "Member 'FAnimNode_NikkiPhysics::bDrawBones' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawParticles) == 0x000FFB, "Member 'FAnimNode_NikkiPhysics::bDrawParticles' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawThickness) == 0x000FFC, "Member 'FAnimNode_NikkiPhysics::bDrawThickness' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawSprings) == 0x000FFD, "Member 'FAnimNode_NikkiPhysics::bDrawSprings' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawCapsules) == 0x000FFE, "Member 'FAnimNode_NikkiPhysics::bDrawCapsules' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawNormals) == 0x000FFF, "Member 'FAnimNode_NikkiPhysics::bDrawNormals' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawAnimationPose) == 0x001000, "Member 'FAnimNode_NikkiPhysics::bDrawAnimationPose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawTPose) == 0x001001, "Member 'FAnimNode_NikkiPhysics::bDrawTPose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawBounds) == 0x001002, "Member 'FAnimNode_NikkiPhysics::bDrawBounds' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawPublicCollisionInfo) == 0x001003, "Member 'FAnimNode_NikkiPhysics::bDrawPublicCollisionInfo' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawMaintainSideSpheres) == 0x001004, "Member 'FAnimNode_NikkiPhysics::bDrawMaintainSideSpheres' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawLayering) == 0x001005, "Member 'FAnimNode_NikkiPhysics::bDrawLayering' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawLayeringSpheres) == 0x001006, "Member 'FAnimNode_NikkiPhysics::bDrawLayeringSpheres' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawHeightField) == 0x001007, "Member 'FAnimNode_NikkiPhysics::bDrawHeightField' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawHeightFieldCollision) == 0x001008, "Member 'FAnimNode_NikkiPhysics::bDrawHeightFieldCollision' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawEnvironment) == 0x001009, "Member 'FAnimNode_NikkiPhysics::bDrawEnvironment' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawWind) == 0x00100A, "Member 'FAnimNode_NikkiPhysics::bDrawWind' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawBoneParticleInfo) == 0x00100B, "Member 'FAnimNode_NikkiPhysics::bDrawBoneParticleInfo' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, bDrawProxySimulation) == 0x00100C, "Member 'FAnimNode_NikkiPhysics::bDrawProxySimulation' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiPhysics, DrawBoneParticleNames) == 0x001010, "Member 'FAnimNode_NikkiPhysics::DrawBoneParticleNames' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_PoseDriverAxisBone
 // 0x0040 (0x0040 - 0x0000)
@@ -2016,7 +2052,7 @@ static_assert(offsetof(FNikki_SimplePhysicsTarget, FollowBoneStiffness) == 0x000
 static_assert(offsetof(FNikki_SimplePhysicsTarget, bFollowBoneAwayOnly) == 0x00002C, "Member 'FNikki_SimplePhysicsTarget::bFollowBoneAwayOnly' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.AnimNode_NikkiSimplePhysics
-// 0x0200 (0x0210 - 0x0010)
+// 0x0220 (0x0230 - 0x0010)
 struct alignas(0x10) FAnimNode_NikkiSimplePhysics final : public FAnimNode_Base
 {
 public:
@@ -2029,11 +2065,12 @@ public:
 	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LinearScale;                                       // 0x0050(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AngularScale;                                      // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseTPose;                                         // 0x006C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6D[0x1A3];                                     // 0x006D(0x01A3)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         TeleportDistanceThreshold;                         // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseTPose;                                         // 0x0070(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x1BF];                                     // 0x0071(0x01BF)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_NikkiSimplePhysics) == 0x000010, "Wrong alignment on FAnimNode_NikkiSimplePhysics");
-static_assert(sizeof(FAnimNode_NikkiSimplePhysics) == 0x000210, "Wrong size on FAnimNode_NikkiSimplePhysics");
+static_assert(sizeof(FAnimNode_NikkiSimplePhysics) == 0x000230, "Wrong size on FAnimNode_NikkiSimplePhysics");
 static_assert(offsetof(FAnimNode_NikkiSimplePhysics, Source) == 0x000010, "Member 'FAnimNode_NikkiSimplePhysics::Source' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiSimplePhysics, alpha) == 0x000020, "Member 'FAnimNode_NikkiSimplePhysics::alpha' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiSimplePhysics, SimulateTargets) == 0x000028, "Member 'FAnimNode_NikkiSimplePhysics::SimulateTargets' has a wrong offset!");
@@ -2041,10 +2078,11 @@ static_assert(offsetof(FAnimNode_NikkiSimplePhysics, RefSpace) == 0x000038, "Mem
 static_assert(offsetof(FAnimNode_NikkiSimplePhysics, RefSpaceBone) == 0x00003C, "Member 'FAnimNode_NikkiSimplePhysics::RefSpaceBone' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiSimplePhysics, LinearScale) == 0x000050, "Member 'FAnimNode_NikkiSimplePhysics::LinearScale' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiSimplePhysics, AngularScale) == 0x000068, "Member 'FAnimNode_NikkiSimplePhysics::AngularScale' has a wrong offset!");
-static_assert(offsetof(FAnimNode_NikkiSimplePhysics, bUseTPose) == 0x00006C, "Member 'FAnimNode_NikkiSimplePhysics::bUseTPose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiSimplePhysics, TeleportDistanceThreshold) == 0x00006C, "Member 'FAnimNode_NikkiSimplePhysics::TeleportDistanceThreshold' has a wrong offset!");
+static_assert(offsetof(FAnimNode_NikkiSimplePhysics, bUseTPose) == 0x000070, "Member 'FAnimNode_NikkiSimplePhysics::bUseTPose' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.Nikki_PhysicsAutoHanging
-// 0x00A0 (0x00A0 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct FNikki_PhysicsAutoHanging final
 {
 public:
@@ -2055,16 +2093,18 @@ public:
 	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                BoneDir;                                           // 0x0038(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ArmBoneDir;                                        // 0x0050(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x38];                                      // 0x0068(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         OffsetAngle;                                       // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6C[0x3C];                                      // 0x006C(0x003C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FNikki_PhysicsAutoHanging) == 0x000008, "Wrong alignment on FNikki_PhysicsAutoHanging");
-static_assert(sizeof(FNikki_PhysicsAutoHanging) == 0x0000A0, "Wrong size on FNikki_PhysicsAutoHanging");
+static_assert(sizeof(FNikki_PhysicsAutoHanging) == 0x0000A8, "Wrong size on FNikki_PhysicsAutoHanging");
 static_assert(offsetof(FNikki_PhysicsAutoHanging, TargetBone) == 0x000000, "Member 'FNikki_PhysicsAutoHanging::TargetBone' has a wrong offset!");
 static_assert(offsetof(FNikki_PhysicsAutoHanging, UpperArm) == 0x000010, "Member 'FNikki_PhysicsAutoHanging::UpperArm' has a wrong offset!");
 static_assert(offsetof(FNikki_PhysicsAutoHanging, LowerArm) == 0x000020, "Member 'FNikki_PhysicsAutoHanging::LowerArm' has a wrong offset!");
 static_assert(offsetof(FNikki_PhysicsAutoHanging, FollowBone) == 0x000030, "Member 'FNikki_PhysicsAutoHanging::FollowBone' has a wrong offset!");
 static_assert(offsetof(FNikki_PhysicsAutoHanging, BoneDir) == 0x000038, "Member 'FNikki_PhysicsAutoHanging::BoneDir' has a wrong offset!");
 static_assert(offsetof(FNikki_PhysicsAutoHanging, ArmBoneDir) == 0x000050, "Member 'FNikki_PhysicsAutoHanging::ArmBoneDir' has a wrong offset!");
+static_assert(offsetof(FNikki_PhysicsAutoHanging, OffsetAngle) == 0x000068, "Member 'FNikki_PhysicsAutoHanging::OffsetAngle' has a wrong offset!");
 
 // ScriptStruct NikkiPhysics.AnimNode_NikkiSleeveRig
 // 0x00F8 (0x0108 - 0x0010)
@@ -2108,29 +2148,151 @@ static_assert(offsetof(FAnimNode_NikkiSleeveRig, BodyCheckRadius) == 0x000090, "
 static_assert(offsetof(FAnimNode_NikkiSleeveRig, CharacterMainBone) == 0x000094, "Member 'FAnimNode_NikkiSleeveRig::CharacterMainBone' has a wrong offset!");
 static_assert(offsetof(FAnimNode_NikkiSleeveRig, Sleeves) == 0x0000A8, "Member 'FAnimNode_NikkiSleeveRig::Sleeves' has a wrong offset!");
 
-// ScriptStruct NikkiPhysics.NikkiPlatformPhysicsSetting
-// 0x000C (0x000C - 0x0000)
-struct FNikkiPlatformPhysicsSetting final
+// ScriptStruct NikkiPhysics.NikkiPhysicsSettings
+// 0x01E0 (0x01E0 - 0x0000)
+struct FNikkiPhysicsSettings final
 {
 public:
-	float                                         CapsuleCollisionRange;                             // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableLenCorrection;                               // 0x0004(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnablePartSelfCollision;                          // 0x0005(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_HeightFieldMethod                      HeightFieldMethod;                                 // 0x0006(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_RotCorrectRef                          RotationCorrectionMethod;                          // 0x0007(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableCollisionFriction;                          // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableProxySim;                                   // 0x0009(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	ENikkiPhysicsPlatformType                     Platform;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_SolverType                             SolverType;                                        // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitWithTPose;                                    // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAttachment;                                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOptimized;                                        // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FrameRate;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxStepNumOneFrame;                                // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFixStep;                                    // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FNikki_LODSettings                     LODs;                                              // 0x0018(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bLongRangeConstraint;                              // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBendingConstraint;                                // 0x0069(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAnimDriveConstraint;                              // 0x006A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableShapeConstraint;                            // 0x006B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLengthCorrectWithAnim;                      // 0x006C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StepNum;                                           // 0x0070(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_ShapeMethod                            ShapeMethod;                                       // 0x0074(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RotCenterRatio;                                    // 0x0078(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DynamicRotAttenuation;                             // 0x007C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FixShapeAttenuation;                               // 0x0080(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableShapeInertia;                                // 0x0084(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_85[0x3];                                       // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ShapeApplyLimit;                                   // 0x0088(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableMaxAngleConstraint;                          // 0x008C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableSpring;                                      // 0x008D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableLenCorrection;                               // 0x008E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_LengthConstraintType                   LengthConsMethod;                                  // 0x008F(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LengthStiffness;                                   // 0x0090(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_RotCorrectRef                          RotationCorrectionMethod;                          // 0x0094(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RootBoneRotUpdateRatio;                            // 0x0098(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_HumanColMethod                         HumanCollisionMethod;                              // 0x009C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9D[0x3];                                       // 0x009D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CapsuleCollisionRange;                             // 0x00A0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_CapColMethod                           CapsulePushMethod;                                 // 0x00A4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BindDirAndNormalBlendAlpha;                        // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CriticalBindDirRotRatio;                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinStaticContactRadius;                            // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCapsuleSphereCheck;                         // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCapsuleSphereCheckInSpring;                 // 0x00B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableWeightedCollision;                          // 0x00B6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePlaneCollision;                             // 0x00B7(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePartSelfCollision;                          // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPartCollisionSettings                 PartCollisionSettings;                             // 0x00BC(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bUseFaceNormal;                                    // 0x00CC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableLayerConstraint;                            // 0x00CD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikki_ParticleConfig                  ParticleConfig;                                    // 0x00CE(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	ENikki_HeightFieldMethod                      HeightFieldMethod;                                 // 0x00CF(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikki_HeightField                     NikkiHeightField;                                  // 0x00D0(0x0068)(Edit, NativeAccessSpecifierPublic)
+	struct FNikki_HeighiFieldMap                  NikkiHeightFieldMap;                               // 0x0138(0x0018)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          EnableCollisionFriction;                           // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StaticFriction;                                    // 0x0154(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         KineticFriction;                                   // 0x0158(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableAnimInfClamp;                                // 0x015C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15D[0x3];                                      // 0x015D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         AnimMainBone;                                      // 0x0160(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         MaxAnimVelocity;                                   // 0x0170(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimLinearDamping;                                 // 0x0174(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxAnimRotVel;                                     // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimAngularDamping;                                // 0x017C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAnimationLimitPerParticle;                  // 0x0180(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UBlendProfile*>                  BlendMasks;                                        // 0x0188(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	TArray<struct FInputBlendPose>                LayerSetup;                                        // 0x0198(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FPerBoneBlendWeight>            PerBoneBlendWeights;                               // 0x01A8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGuid                                  SkeletonGuid;                                      // 0x01B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  VirtualSkeletonGuid;                               // 0x01C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCentrifugalforce;                           // 0x01D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D9[0x7];                                      // 0x01D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FNikkiPlatformPhysicsSetting) == 0x000004, "Wrong alignment on FNikkiPlatformPhysicsSetting");
-static_assert(sizeof(FNikkiPlatformPhysicsSetting) == 0x00000C, "Wrong size on FNikkiPlatformPhysicsSetting");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, CapsuleCollisionRange) == 0x000000, "Member 'FNikkiPlatformPhysicsSetting::CapsuleCollisionRange' has a wrong offset!");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, EnableLenCorrection) == 0x000004, "Member 'FNikkiPlatformPhysicsSetting::EnableLenCorrection' has a wrong offset!");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, bEnablePartSelfCollision) == 0x000005, "Member 'FNikkiPlatformPhysicsSetting::bEnablePartSelfCollision' has a wrong offset!");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, HeightFieldMethod) == 0x000006, "Member 'FNikkiPlatformPhysicsSetting::HeightFieldMethod' has a wrong offset!");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, RotationCorrectionMethod) == 0x000007, "Member 'FNikkiPlatformPhysicsSetting::RotationCorrectionMethod' has a wrong offset!");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, bEnableCollisionFriction) == 0x000008, "Member 'FNikkiPlatformPhysicsSetting::bEnableCollisionFriction' has a wrong offset!");
-static_assert(offsetof(FNikkiPlatformPhysicsSetting, bEnableProxySim) == 0x000009, "Member 'FNikkiPlatformPhysicsSetting::bEnableProxySim' has a wrong offset!");
+static_assert(alignof(FNikkiPhysicsSettings) == 0x000008, "Wrong alignment on FNikkiPhysicsSettings");
+static_assert(sizeof(FNikkiPhysicsSettings) == 0x0001E0, "Wrong size on FNikkiPhysicsSettings");
+static_assert(offsetof(FNikkiPhysicsSettings, Platform) == 0x000000, "Member 'FNikkiPhysicsSettings::Platform' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, SolverType) == 0x000001, "Member 'FNikkiPhysicsSettings::SolverType' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bInitWithTPose) == 0x000002, "Member 'FNikkiPhysicsSettings::bInitWithTPose' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bAttachment) == 0x000003, "Member 'FNikkiPhysicsSettings::bAttachment' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bOptimized) == 0x000004, "Member 'FNikkiPhysicsSettings::bOptimized' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, FrameRate) == 0x000008, "Member 'FNikkiPhysicsSettings::FrameRate' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, MaxStepNumOneFrame) == 0x00000C, "Member 'FNikkiPhysicsSettings::MaxStepNumOneFrame' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableFixStep) == 0x000010, "Member 'FNikkiPhysicsSettings::bEnableFixStep' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, LODs) == 0x000018, "Member 'FNikkiPhysicsSettings::LODs' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bLongRangeConstraint) == 0x000068, "Member 'FNikkiPhysicsSettings::bLongRangeConstraint' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bBendingConstraint) == 0x000069, "Member 'FNikkiPhysicsSettings::bBendingConstraint' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bAnimDriveConstraint) == 0x00006A, "Member 'FNikkiPhysicsSettings::bAnimDriveConstraint' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableShapeConstraint) == 0x00006B, "Member 'FNikkiPhysicsSettings::bEnableShapeConstraint' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableLengthCorrectWithAnim) == 0x00006C, "Member 'FNikkiPhysicsSettings::bEnableLengthCorrectWithAnim' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, StepNum) == 0x000070, "Member 'FNikkiPhysicsSettings::StepNum' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, ShapeMethod) == 0x000074, "Member 'FNikkiPhysicsSettings::ShapeMethod' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, RotCenterRatio) == 0x000078, "Member 'FNikkiPhysicsSettings::RotCenterRatio' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, DynamicRotAttenuation) == 0x00007C, "Member 'FNikkiPhysicsSettings::DynamicRotAttenuation' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, FixShapeAttenuation) == 0x000080, "Member 'FNikkiPhysicsSettings::FixShapeAttenuation' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, EnableShapeInertia) == 0x000084, "Member 'FNikkiPhysicsSettings::EnableShapeInertia' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, ShapeApplyLimit) == 0x000088, "Member 'FNikkiPhysicsSettings::ShapeApplyLimit' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, EnableMaxAngleConstraint) == 0x00008C, "Member 'FNikkiPhysicsSettings::EnableMaxAngleConstraint' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, EnableSpring) == 0x00008D, "Member 'FNikkiPhysicsSettings::EnableSpring' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, EnableLenCorrection) == 0x00008E, "Member 'FNikkiPhysicsSettings::EnableLenCorrection' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, LengthConsMethod) == 0x00008F, "Member 'FNikkiPhysicsSettings::LengthConsMethod' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, LengthStiffness) == 0x000090, "Member 'FNikkiPhysicsSettings::LengthStiffness' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, RotationCorrectionMethod) == 0x000094, "Member 'FNikkiPhysicsSettings::RotationCorrectionMethod' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, RootBoneRotUpdateRatio) == 0x000098, "Member 'FNikkiPhysicsSettings::RootBoneRotUpdateRatio' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, HumanCollisionMethod) == 0x00009C, "Member 'FNikkiPhysicsSettings::HumanCollisionMethod' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, CapsuleCollisionRange) == 0x0000A0, "Member 'FNikkiPhysicsSettings::CapsuleCollisionRange' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, CapsulePushMethod) == 0x0000A4, "Member 'FNikkiPhysicsSettings::CapsulePushMethod' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, BindDirAndNormalBlendAlpha) == 0x0000A8, "Member 'FNikkiPhysicsSettings::BindDirAndNormalBlendAlpha' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, CriticalBindDirRotRatio) == 0x0000AC, "Member 'FNikkiPhysicsSettings::CriticalBindDirRotRatio' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, MinStaticContactRadius) == 0x0000B0, "Member 'FNikkiPhysicsSettings::MinStaticContactRadius' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableCapsuleSphereCheck) == 0x0000B4, "Member 'FNikkiPhysicsSettings::bEnableCapsuleSphereCheck' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableCapsuleSphereCheckInSpring) == 0x0000B5, "Member 'FNikkiPhysicsSettings::bEnableCapsuleSphereCheckInSpring' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableWeightedCollision) == 0x0000B6, "Member 'FNikkiPhysicsSettings::bEnableWeightedCollision' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnablePlaneCollision) == 0x0000B7, "Member 'FNikkiPhysicsSettings::bEnablePlaneCollision' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnablePartSelfCollision) == 0x0000B8, "Member 'FNikkiPhysicsSettings::bEnablePartSelfCollision' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, PartCollisionSettings) == 0x0000BC, "Member 'FNikkiPhysicsSettings::PartCollisionSettings' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bUseFaceNormal) == 0x0000CC, "Member 'FNikkiPhysicsSettings::bUseFaceNormal' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableLayerConstraint) == 0x0000CD, "Member 'FNikkiPhysicsSettings::bEnableLayerConstraint' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, ParticleConfig) == 0x0000CE, "Member 'FNikkiPhysicsSettings::ParticleConfig' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, HeightFieldMethod) == 0x0000CF, "Member 'FNikkiPhysicsSettings::HeightFieldMethod' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, NikkiHeightField) == 0x0000D0, "Member 'FNikkiPhysicsSettings::NikkiHeightField' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, NikkiHeightFieldMap) == 0x000138, "Member 'FNikkiPhysicsSettings::NikkiHeightFieldMap' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, EnableCollisionFriction) == 0x000150, "Member 'FNikkiPhysicsSettings::EnableCollisionFriction' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, StaticFriction) == 0x000154, "Member 'FNikkiPhysicsSettings::StaticFriction' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, KineticFriction) == 0x000158, "Member 'FNikkiPhysicsSettings::KineticFriction' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, EnableAnimInfClamp) == 0x00015C, "Member 'FNikkiPhysicsSettings::EnableAnimInfClamp' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, AnimMainBone) == 0x000160, "Member 'FNikkiPhysicsSettings::AnimMainBone' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, MaxAnimVelocity) == 0x000170, "Member 'FNikkiPhysicsSettings::MaxAnimVelocity' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, AnimLinearDamping) == 0x000174, "Member 'FNikkiPhysicsSettings::AnimLinearDamping' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, MaxAnimRotVel) == 0x000178, "Member 'FNikkiPhysicsSettings::MaxAnimRotVel' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, AnimAngularDamping) == 0x00017C, "Member 'FNikkiPhysicsSettings::AnimAngularDamping' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableAnimationLimitPerParticle) == 0x000180, "Member 'FNikkiPhysicsSettings::bEnableAnimationLimitPerParticle' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, BlendMasks) == 0x000188, "Member 'FNikkiPhysicsSettings::BlendMasks' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, LayerSetup) == 0x000198, "Member 'FNikkiPhysicsSettings::LayerSetup' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, PerBoneBlendWeights) == 0x0001A8, "Member 'FNikkiPhysicsSettings::PerBoneBlendWeights' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, SkeletonGuid) == 0x0001B8, "Member 'FNikkiPhysicsSettings::SkeletonGuid' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, VirtualSkeletonGuid) == 0x0001C8, "Member 'FNikkiPhysicsSettings::VirtualSkeletonGuid' has a wrong offset!");
+static_assert(offsetof(FNikkiPhysicsSettings, bEnableCentrifugalforce) == 0x0001D8, "Member 'FNikkiPhysicsSettings::bEnableCentrifugalforce' has a wrong offset!");
 
 }
 

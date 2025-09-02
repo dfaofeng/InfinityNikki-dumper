@@ -14,28 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.SetUniqueId
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_UI_RedPoint_C_SetUniqueId final
-{
-public:
-	int32                                         UId_0;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_RedPoint_C_SetUniqueId) == 0x000004, "Wrong alignment on WBP_UI_RedPoint_C_SetUniqueId");
-static_assert(sizeof(WBP_UI_RedPoint_C_SetUniqueId) == 0x000004, "Wrong size on WBP_UI_RedPoint_C_SetUniqueId");
-static_assert(offsetof(WBP_UI_RedPoint_C_SetUniqueId, UId_0) == 0x000000, "Member 'WBP_UI_RedPoint_C_SetUniqueId::UId_0' has a wrong offset!");
-
-// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_UI_RedPoint_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_UI_RedPoint_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_RedPoint_C_PreConstruct");
-static_assert(sizeof(WBP_UI_RedPoint_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_RedPoint_C_PreConstruct");
-static_assert(offsetof(WBP_UI_RedPoint_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_RedPoint_C_PreConstruct::IsDesignTime' has a wrong offset!");
-
 // Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.ExecuteUbergraph_WBP_UI_RedPoint
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint final
@@ -48,6 +26,28 @@ static_assert(alignof(WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint) == 0x0
 static_assert(sizeof(WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint) == 0x000008, "Wrong size on WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint");
 static_assert(offsetof(WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint, EntryPoint) == 0x000000, "Member 'WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_UI_RedPoint_C_ExecuteUbergraph_WBP_UI_RedPoint::K2Node_Event_IsDesignTime' has a wrong offset!");
+
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_UI_RedPoint_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_RedPoint_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_UI_RedPoint_C_PreConstruct");
+static_assert(sizeof(WBP_UI_RedPoint_C_PreConstruct) == 0x000001, "Wrong size on WBP_UI_RedPoint_C_PreConstruct");
+static_assert(offsetof(WBP_UI_RedPoint_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_UI_RedPoint_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.SetUniqueId
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_UI_RedPoint_C_SetUniqueId final
+{
+public:
+	int32                                         UId_0;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_UI_RedPoint_C_SetUniqueId) == 0x000004, "Wrong alignment on WBP_UI_RedPoint_C_SetUniqueId");
+static_assert(sizeof(WBP_UI_RedPoint_C_SetUniqueId) == 0x000004, "Wrong size on WBP_UI_RedPoint_C_SetUniqueId");
+static_assert(offsetof(WBP_UI_RedPoint_C_SetUniqueId, UId_0) == 0x000000, "Member 'WBP_UI_RedPoint_C_SetUniqueId::UId_0' has a wrong offset!");
 
 // Function WBP_UI_RedPoint.WBP_UI_RedPoint_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

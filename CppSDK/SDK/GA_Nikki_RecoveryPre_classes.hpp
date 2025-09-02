@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "Enum_Recovery_BulletEffect_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "GA_AbilityMontageBase_classes.hpp"
-#include "Enum_Recovery_BulletEffect_structs.hpp"
 
 
 namespace SDK
@@ -40,26 +40,26 @@ public:
 	class UAnimMontage*                           PlayAM_FB;                                         // 0x05F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void VariableAssignment();
-	void StopFullBodyMontage();
-	void PlayFullBodyMontage();
-	void OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
-	void OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
-	void OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
-	void OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
-	void OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B(float CurTime);
-	void OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B(float CurTime);
-	void OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B(float CurTime);
-	void OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
-	void OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
-	void ModifyChargeTime();
-	void K2_OnEndAbility(bool bWasCancelled);
-	void K2_ActivateAbility();
-	void ExecuteUbergraph_GA_Nikki_RecoveryPre(int32 EntryPoint);
-	void ChargedTargetingPresetSelect();
-	void BP_SelectMontage();
-	void BP_PostActivateAbility();
 	void AssignmentByPerfume();
+	void BP_PostActivateAbility();
+	void BP_SelectMontage();
+	void ChargedTargetingPresetSelect();
+	void ExecuteUbergraph_GA_Nikki_RecoveryPre(int32 EntryPoint);
+	void K2_ActivateAbility();
+	void K2_OnEndAbility(bool bWasCancelled);
+	void ModifyChargeTime();
+	void OnBlendOut_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
+	void OnCancelled_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
+	void OnChargeUpFailed_D113857F4A278EE6D34C499F52817D4B(float CurTime);
+	void OnChargeUpFinish_D113857F4A278EE6D34C499F52817D4B(float CurTime);
+	void OnChargeUpPhaseComplete_D113857F4A278EE6D34C499F52817D4B(float CurTime);
+	void OnCompleted_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
+	void OnInterrupted_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
+	void OnNotifyBegin_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
+	void OnNotifyEnd_AE6E0E1740D6961EEAF473B4FD02F05E(class FName NotifyName);
+	void PlayFullBodyMontage();
+	void StopFullBodyMontage();
+	void VariableAssignment();
 
 	class FString GetModuleName() const;
 

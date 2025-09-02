@@ -36,28 +36,6 @@ static_assert(alignof(BakeInputMeshProperties_GetTargetUVLayerNamesFunc) == 0x00
 static_assert(sizeof(BakeInputMeshProperties_GetTargetUVLayerNamesFunc) == 0x000010, "Wrong size on BakeInputMeshProperties_GetTargetUVLayerNamesFunc");
 static_assert(offsetof(BakeInputMeshProperties_GetTargetUVLayerNamesFunc, ReturnValue) == 0x000000, "Member 'BakeInputMeshProperties_GetTargetUVLayerNamesFunc::ReturnValue' has a wrong offset!");
 
-// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventNormalFlipsEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct MeshConstraintProperties_IsPreventNormalFlipsEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeshConstraintProperties_IsPreventNormalFlipsEnabled) == 0x000001, "Wrong alignment on MeshConstraintProperties_IsPreventNormalFlipsEnabled");
-static_assert(sizeof(MeshConstraintProperties_IsPreventNormalFlipsEnabled) == 0x000001, "Wrong size on MeshConstraintProperties_IsPreventNormalFlipsEnabled");
-static_assert(offsetof(MeshConstraintProperties_IsPreventNormalFlipsEnabled, ReturnValue) == 0x000000, "Member 'MeshConstraintProperties_IsPreventNormalFlipsEnabled::ReturnValue' has a wrong offset!");
-
-// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventTinyTrianglesEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct MeshConstraintProperties_IsPreventTinyTrianglesEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MeshConstraintProperties_IsPreventTinyTrianglesEnabled) == 0x000001, "Wrong alignment on MeshConstraintProperties_IsPreventTinyTrianglesEnabled");
-static_assert(sizeof(MeshConstraintProperties_IsPreventTinyTrianglesEnabled) == 0x000001, "Wrong size on MeshConstraintProperties_IsPreventTinyTrianglesEnabled");
-static_assert(offsetof(MeshConstraintProperties_IsPreventTinyTrianglesEnabled, ReturnValue) == 0x000000, "Member 'MeshConstraintProperties_IsPreventTinyTrianglesEnabled::ReturnValue' has a wrong offset!");
-
 // Function MeshModelingToolsExp.BakeTexture2DProperties.GetUVLayerNamesFunc
 // 0x0010 (0x0010 - 0x0000)
 struct BakeTexture2DProperties_GetUVLayerNamesFunc final
@@ -80,16 +58,27 @@ static_assert(alignof(BakeMultiTexture2DProperties_GetUVLayerNamesFunc) == 0x000
 static_assert(sizeof(BakeMultiTexture2DProperties_GetUVLayerNamesFunc) == 0x000010, "Wrong size on BakeMultiTexture2DProperties_GetUVLayerNamesFunc");
 static_assert(offsetof(BakeMultiTexture2DProperties_GetUVLayerNamesFunc, ReturnValue) == 0x000000, "Member 'BakeMultiTexture2DProperties_GetUVLayerNamesFunc::ReturnValue' has a wrong offset!");
 
-// Function MeshModelingToolsExp.DisplaceMeshCommonProperties.GetWeightMapsFunc
-// 0x0010 (0x0010 - 0x0000)
-struct DisplaceMeshCommonProperties_GetWeightMapsFunc final
+// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventNormalFlipsEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MeshConstraintProperties_IsPreventNormalFlipsEnabled final
 {
 public:
-	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000008, "Wrong alignment on DisplaceMeshCommonProperties_GetWeightMapsFunc");
-static_assert(sizeof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000010, "Wrong size on DisplaceMeshCommonProperties_GetWeightMapsFunc");
-static_assert(offsetof(DisplaceMeshCommonProperties_GetWeightMapsFunc, ReturnValue) == 0x000000, "Member 'DisplaceMeshCommonProperties_GetWeightMapsFunc::ReturnValue' has a wrong offset!");
+static_assert(alignof(MeshConstraintProperties_IsPreventNormalFlipsEnabled) == 0x000001, "Wrong alignment on MeshConstraintProperties_IsPreventNormalFlipsEnabled");
+static_assert(sizeof(MeshConstraintProperties_IsPreventNormalFlipsEnabled) == 0x000001, "Wrong size on MeshConstraintProperties_IsPreventNormalFlipsEnabled");
+static_assert(offsetof(MeshConstraintProperties_IsPreventNormalFlipsEnabled, ReturnValue) == 0x000000, "Member 'MeshConstraintProperties_IsPreventNormalFlipsEnabled::ReturnValue' has a wrong offset!");
+
+// Function MeshModelingToolsExp.MeshConstraintProperties.IsPreventTinyTrianglesEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct MeshConstraintProperties_IsPreventTinyTrianglesEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MeshConstraintProperties_IsPreventTinyTrianglesEnabled) == 0x000001, "Wrong alignment on MeshConstraintProperties_IsPreventTinyTrianglesEnabled");
+static_assert(sizeof(MeshConstraintProperties_IsPreventTinyTrianglesEnabled) == 0x000001, "Wrong size on MeshConstraintProperties_IsPreventTinyTrianglesEnabled");
+static_assert(offsetof(MeshConstraintProperties_IsPreventTinyTrianglesEnabled, ReturnValue) == 0x000000, "Member 'MeshConstraintProperties_IsPreventTinyTrianglesEnabled::ReturnValue' has a wrong offset!");
 
 // Function MeshModelingToolsExp.BakeMeshAttributeMapsToolProperties.GetMapPreviewNamesFunc
 // 0x0010 (0x0010 - 0x0000)
@@ -134,6 +123,17 @@ public:
 static_assert(alignof(OutputPolygroupLayerProperties_GetGroupOptionsList) == 0x000008, "Wrong alignment on OutputPolygroupLayerProperties_GetGroupOptionsList");
 static_assert(sizeof(OutputPolygroupLayerProperties_GetGroupOptionsList) == 0x000010, "Wrong size on OutputPolygroupLayerProperties_GetGroupOptionsList");
 static_assert(offsetof(OutputPolygroupLayerProperties_GetGroupOptionsList, ReturnValue) == 0x000000, "Member 'OutputPolygroupLayerProperties_GetGroupOptionsList::ReturnValue' has a wrong offset!");
+
+// Function MeshModelingToolsExp.DisplaceMeshCommonProperties.GetWeightMapsFunc
+// 0x0010 (0x0010 - 0x0000)
+struct DisplaceMeshCommonProperties_GetWeightMapsFunc final
+{
+public:
+	TArray<class FString>                         ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000008, "Wrong alignment on DisplaceMeshCommonProperties_GetWeightMapsFunc");
+static_assert(sizeof(DisplaceMeshCommonProperties_GetWeightMapsFunc) == 0x000010, "Wrong size on DisplaceMeshCommonProperties_GetWeightMapsFunc");
+static_assert(offsetof(DisplaceMeshCommonProperties_GetWeightMapsFunc, ReturnValue) == 0x000000, "Member 'DisplaceMeshCommonProperties_GetWeightMapsFunc::ReturnValue' has a wrong offset!");
 
 // Function MeshModelingToolsExp.SelectiveTessellationProperties.GetMaterialIDsFunc
 // 0x0010 (0x0010 - 0x0000)

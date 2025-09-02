@@ -10,26 +10,26 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ControlRig_structs.hpp"
 #include "NikkiAnim_BPNew_structs.hpp"
-#include "NikkiPhysics_structs.hpp"
+#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "EPlayerMovementScenarios_structs.hpp"
+#include "ControlRig_structs.hpp"
 #include "X6Animation_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "EPlayerMovementScenarios_structs.hpp"
 #include "FEmotionPartBlendWeight_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "NikkiPhysics_structs.hpp"
 
 
 namespace SDK
 {
 
 // AnimBlueprintGeneratedClass NikkiAnim_BPNew.NikkiAnim_BPNew_C
-// 0xCEF0 (0xD370 - 0x0480)
+// 0xD710 (0xDB90 - 0x0480)
 class UNikkiAnim_BPNew_C final : public UX6NikkiMainAnimInstance
 {
 public:
@@ -80,540 +80,558 @@ public:
 	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_4;                    // 0x11A0(0x0048)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_2;                              // 0x11E8(0x0020)()
 	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose_1;                   // 0x1208(0x00B8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_40;                   // 0x12C0(0x0080)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_39;                   // 0x1340(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_41;                   // 0x12C0(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_40;                   // 0x1340(0x0080)()
 	struct FAnimNode_Root                         AnimGraphNode_Root_1;                              // 0x13C0(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_87;                    // 0x13E0(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_38;                   // 0x1408(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_86;                    // 0x1488(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_85;                    // 0x14B0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_89;                    // 0x13E0(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_39;                   // 0x1408(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_88;                    // 0x1488(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_87;                    // 0x14B0(0x0028)()
 	struct FAnimNode_MakeDynamicAdditive          AnimGraphNode_MakeDynamicAdditive_1;               // 0x14D8(0x0038)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_37;                   // 0x1510(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_84;                    // 0x1590(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_83;                    // 0x15B8(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_38;                   // 0x1510(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_86;                    // 0x1590(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_85;                    // 0x15B8(0x0028)()
 	struct FAnimNode_MakeDynamicAdditive          AnimGraphNode_MakeDynamicAdditive;                 // 0x15E0(0x0038)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_36;                   // 0x1618(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_37;                   // 0x1618(0x0080)()
 	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_16;                 // 0x1698(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_82;                    // 0x1788(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_81;                    // 0x17B0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_84;                    // 0x1788(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_83;                    // 0x17B0(0x0028)()
 	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive_4;            // 0x17D8(0x00D0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_35;                   // 0x18A8(0x0080)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_34;                   // 0x1928(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_80;                    // 0x19A8(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_36;                   // 0x18A8(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_35;                   // 0x1928(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_82;                    // 0x19A8(0x0028)()
 	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_4;                     // 0x19D0(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_79;                    // 0x1A98(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_33;                   // 0x1AC0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_78;                    // 0x1B40(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_77;                    // 0x1B68(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_81;                    // 0x1A98(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_34;                   // 0x1AC0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_80;                    // 0x1B40(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_79;                    // 0x1B68(0x0028)()
 	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_15;                 // 0x1B90(0x00F0)()
 	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_3;                     // 0x1C80(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_76;                    // 0x1D48(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_75;                    // 0x1D70(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_78;                    // 0x1D48(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_77;                    // 0x1D70(0x0028)()
 	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive_3;            // 0x1D98(0x00D0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_74;                    // 0x1E68(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_32;                   // 0x1E90(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_76;                    // 0x1E68(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_33;                   // 0x1E90(0x0080)()
 	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_14;                 // 0x1F10(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_73;                    // 0x2000(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_75;                    // 0x2000(0x0028)()
 	struct FAnimNode_X6PoseFilter                 AnimGraphNode_X6PoseFilter_1;                      // 0x2028(0x0038)()
 	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x2060(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_72;                    // 0x2118(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_71;                    // 0x2140(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_70;                    // 0x2168(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_74;                    // 0x2118(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_73;                    // 0x2140(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_72;                    // 0x2168(0x0028)()
 	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive_2;            // 0x2190(0x00D0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_31;                   // 0x2260(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_32;                   // 0x2260(0x0080)()
 	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive_1;            // 0x22E0(0x00D0)()
 	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_7;                       // 0x23B0(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_69;                    // 0x2478(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_68;                    // 0x24A0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_71;                    // 0x2478(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_70;                    // 0x24A0(0x0028)()
 	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_6;                       // 0x24C8(0x00C8)()
 	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_13;                 // 0x2590(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_67;                    // 0x2680(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_66;                    // 0x26A8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_65;                    // 0x26D0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_64;                    // 0x26F8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_69;                    // 0x2680(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_68;                    // 0x26A8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_67;                    // 0x26D0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_66;                    // 0x26F8(0x0028)()
 	struct FAnimNode_ApplyMeshSpaceAdditive       AnimGraphNode_ApplyMeshSpaceAdditive;              // 0x2720(0x00D0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_30;                   // 0x27F0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_63;                    // 0x2870(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_31;                   // 0x27F0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_65;                    // 0x2870(0x0028)()
 	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_5;                       // 0x2898(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_62;                    // 0x2960(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_61;                    // 0x2988(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_64;                    // 0x2960(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_63;                    // 0x2988(0x0028)()
 	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_12;                 // 0x29B0(0x00F0)()
 	struct FAnimNode_X6PoseFilter                 AnimGraphNode_X6PoseFilter;                        // 0x2AA0(0x0038)()
 	struct FAnimNode_Slot                         AnimGraphNode_Slot_13;                             // 0x2AD8(0x0048)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x2B20(0x0020)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_1;                   // 0x2B40(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_29;                   // 0x2B88(0x0080)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_12;                             // 0x2C08(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_11;                 // 0x2C50(0x00F0)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_11;                             // 0x2D40(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_28;                   // 0x2D88(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_60;                    // 0x2E08(0x0028)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_10;                             // 0x2E30(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_9;                              // 0x2E78(0x0048)()
-	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x2EC0(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_10;                 // 0x2F08(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_59;                    // 0x2FF8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_58;                    // 0x3020(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_27;                   // 0x3048(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_13;                  // 0x30C8(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_26;                   // 0x3110(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_12;                  // 0x3190(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_57;                    // 0x31D8(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_25;                   // 0x3200(0x0080)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_15;                  // 0x3280(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_14;                  // 0x3348(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_13;                  // 0x3410(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_12;                  // 0x34D8(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_11;                  // 0x35A0(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_10;                  // 0x3668(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_56;                    // 0x3730(0x0028)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_9;                   // 0x3758(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_55;                    // 0x3820(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_9;                        // 0x3848(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_24;                   // 0x3D18(0x0080)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_23;                   // 0x3D98(0x0080)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x3E18(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x3E40(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x3E68(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x3E90(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x3EB8(0x0028)()
-	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x3EE0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_54;                    // 0x3F08(0x0028)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x3F30(0x0020)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_53;                    // 0x3F50(0x0028)()
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x3F78(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x3F98(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_22;                   // 0x4060(0x0080)()
-	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x40E0(0x0450)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_8;                              // 0x4530(0x0048)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_2;                     // 0x4578(0x00C8)()
-	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_3;                      // 0x4640(0x0010)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_52;                    // 0x4650(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_51;                    // 0x4678(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_21;                   // 0x46A0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_50;                    // 0x4720(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_49;                    // 0x4748(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_20;                   // 0x4770(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_48;                    // 0x47F0(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x4818(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_8;                   // 0x4860(0x00C8)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_11;                  // 0x4928(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_7;                   // 0x4970(0x00C8)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_8;                        // 0x4A38(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_4;                       // 0x4F08(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_19;                   // 0x4FD0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_47;                    // 0x5050(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_46;                    // 0x5078(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_7;                        // 0x50A0(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_18;                   // 0x5570(0x0080)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_6;                        // 0x55F0(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_45;                    // 0x5AC0(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_10;                  // 0x5AE8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_44;                    // 0x5B30(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_5;                        // 0x5B58(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x6028(0x0020)()
-	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x6048(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_17;                   // 0x6110(0x0080)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_7;                              // 0x6190(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_9;                  // 0x61D8(0x00F0)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_16;                   // 0x62C8(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_43;                    // 0x6348(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_42;                    // 0x6370(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_15;                   // 0x6398(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_41;                    // 0x6418(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_40;                    // 0x6440(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_9;                   // 0x6468(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_39;                    // 0x64B0(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_4;                        // 0x64D8(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_6;                   // 0x69A8(0x00C8)()
-	struct FAnimNode_ModifyCurve                  AnimGraphNode_ModifyCurve;                         // 0x6A70(0x0120)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_8;                  // 0x6B90(0x00F0)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x6C80(0x0048)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_1;                     // 0x6CC8(0x00C8)()
-	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_2;                      // 0x6D90(0x0010)()
-	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x6DA0(0x0010)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_38;                    // 0x6DB0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_37;                    // 0x6DD8(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_3;                        // 0x6E00(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_7;                  // 0x72D0(0x00F0)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_5;                          // 0x73C0(0x00F0)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_4;                          // 0x74B0(0x00F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_2;             // 0x75A0(0x0020)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_2;             // 0x75C0(0x0020)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_14;                   // 0x75E0(0x0080)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_8;                   // 0x7660(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_13;                   // 0x76A8(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_36;                    // 0x7728(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_35;                    // 0x7750(0x0028)()
-	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x7778(0x0078)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_6;                  // 0x77F0(0x00F0)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_7;                   // 0x78E0(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_12;                   // 0x7928(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_34;                    // 0x79A8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_33;                    // 0x79D0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_32;                    // 0x79F8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_31;                    // 0x7A20(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_5;                  // 0x7A48(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_30;                    // 0x7B38(0x0028)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_5;                   // 0x7B60(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_4;                   // 0x7C28(0x00C8)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_6;                   // 0x7CF0(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_3;                   // 0x7D38(0x00C8)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_2;                   // 0x7E00(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_11;                   // 0x7EC8(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_29;                    // 0x7F48(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_28;                    // 0x7F70(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x7F98(0x0048)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_2;                        // 0x7FE0(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_1;                        // 0x84B0(0x04D0)(ContainsInstancedReference)
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_1;                   // 0x8980(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_10;                   // 0x8A48(0x0080)()
-	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x8AC8(0x00D8)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_5;                    // 0x8BA0(0x0258)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x8DF8(0x0048)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_4;                    // 0x8E40(0x0258)()
-	uint8                                         Pad_9098[0x8];                                     // 0x9098(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_PoseMatchRecorder            AnimGraphNode_PoseMatchRecorder;                   // 0x90A0(0x0150)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_5;                   // 0x91F0(0x0048)()
-	struct FAnimNode_X6AnimContext                AnimGraphNode_X6AnimContext;                       // 0x9238(0x00C0)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x92F8(0x00B8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_27;                    // 0x93B0(0x0028)()
-	struct FAnimNode_X6StylizedOverlayBlend       AnimGraphNode_X6OverlayBlend_Stylized_1;           // 0x93D8(0x0268)()
-	struct FAnimNode_X6StateMachineMarker         AnimGraphNode_X6StateMachineMarker;                // 0x9640(0x0090)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_9;                    // 0x96D0(0x0080)()
-	struct FAnimNode_X6StylizedOverlayBlend       AnimGraphNode_X6OverlayBlend_Stylized;             // 0x9750(0x0268)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_26;                    // 0x99B8(0x0028)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_3;                    // 0x99E0(0x0258)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_25;                    // 0x9C38(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0x9C60(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x9CA8(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_8;                    // 0x9CF0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_24;                    // 0x9D70(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_23;                    // 0x9D98(0x0028)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_4;                  // 0x9DC0(0x00F0)()
-	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x9EB0(0x00C8)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_3;                  // 0x9F78(0x00F0)()
-	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_1;                      // 0xA068(0x0010)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_2;                  // 0xA078(0x00F0)()
-	uint8                                         Pad_A168[0x8];                                     // 0xA168(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK;                           // 0xA170(0x0280)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0xA3F0(0x0020)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_3;                          // 0xA410(0x00F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0xA500(0x0020)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_7;                    // 0xA520(0x0080)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0xA5A0(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_22;                    // 0xA5E8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_21;                    // 0xA610(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_20;                    // 0xA638(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_6;                    // 0xA660(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_19;                    // 0xA6E0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_18;                    // 0xA708(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0xA730(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0xA778(0x0048)()
-	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose;                        // 0xA7C0(0x0010)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_5;                    // 0xA7D0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_17;                    // 0xA850(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0xA878(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_16;                    // 0xA8F8(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0xA920(0x0048)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0xA968(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_15;                    // 0xAA58(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_14;                    // 0xAA80(0x0028)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_2;                          // 0xAAA8(0x00F0)()
-	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0xAB98(0x0020)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_1;                          // 0xABB8(0x00F0)()
-	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone;                            // 0xACA8(0x00F0)()
-	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0xAD98(0x0020)()
-	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0xADB8(0x00F0)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0xAEA8(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0xAED0(0x0028)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_2;                    // 0xAEF8(0x0258)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0xB150(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0xB178(0x0048)()
-	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0xB1C0(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0xB288(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0xB308(0x0028)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_1;                    // 0xB330(0x0258)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0xB588(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0xB5D0(0x0028)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0xB5F8(0x0048)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0xB640(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0xB6C0(0x0028)()
-	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend;                      // 0xB6E8(0x0258)()
-	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0xB940(0x0048)()
-	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0xB988(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0xB9D0(0x0028)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0xB9F8(0x0048)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0xBA40(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_3;                       // 0xBA68(0x00C8)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0xBB30(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0xBBB0(0x0028)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0xBBD8(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_2;                       // 0xBC00(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0xBCC8(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0xBCF0(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0xBDB8(0x0028)()
-	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0xBDE0(0x0080)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0xBE60(0x0028)()
-	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0xBE88(0x00C8)()
-	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0xBF50(0x0028)()
-	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0xBF78(0x04D0)(ContainsInstancedReference)
-	bool                                          K2Node_PropertyAccess_9;                           // 0xC448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_8;                           // 0xC449(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_7;                           // 0xC44A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_6;                           // 0xC44B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C44C[0x4];                                     // 0xC44C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               __CustomProperty_LHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC450(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_LHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC468(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               __CustomProperty_RHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC480(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_RHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC498(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableRHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC4B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableRHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC4B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableLHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC4B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableLHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC4B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableHandIK_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xC4B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C4B5[0x3];                                     // 0xC4B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               __CustomProperty_LHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xC4B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_LHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xC4D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               __CustomProperty_RHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xC4E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_RHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xC500(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableRHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xC518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableRHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xC519(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableLHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xC51A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableLHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xC51B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableHandIK_A83644064C79A024AB8C7D8A45082E28; // 0xC51C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C51D[0x3];                                     // 0xC51D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFootIKFeatureTargetDataV2             K2Node_PropertyAccess_5;                           // 0xC520(0x00A0)(NoDestructor)
-	bool                                          __CustomProperty_bForceInitFootPlacementIKParam_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C5C1[0x7];                                     // 0xC5C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        __CustomProperty_SlopeAngle_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RightFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_LeftFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RightFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_LeftFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_PelvisWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_PelvisOffset_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC5F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               __CustomProperty_AnkleRightOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC610(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               __CustomProperty_AnkleLeftOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC628(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_AnkleRightOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC640(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_AnkleLeftOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xC658(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFootIKFeatureTargetDataV2             K2Node_PropertyAccess_4;                           // 0xC670(0x00A0)(NoDestructor)
-	bool                                          K2Node_PropertyAccess_3;                           // 0xC710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C711[0x7];                                     // 0xC711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        K2Node_PropertyAccess_2;                           // 0xC718(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess_1;                           // 0xC720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_PropertyAccess;                             // 0xC721(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C722[0x6];                                     // 0xC722(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        __CustomProperty_HeelHeight_BB387FD742265B193B50A88A47DACE2E; // 0xC728(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableRightHandIK_BB387FD742265B193B50A88A47DACE2E; // 0xC730(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bEnableLeftHandIK_BB387FD742265B193B50A88A47DACE2E; // 0xC731(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C732[0x6];                                     // 0xC732(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        __CustomProperty_HighHeelToeHeight_14776D5546D97ADC8A72698C13E7F85B; // 0xC738(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_ToesRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B; // 0xC740(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_AnkleRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B; // 0xC748(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_HighHeelHeight_14776D5546D97ADC8A72698C13E7F85B; // 0xC750(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_Clothes_Thickness_WristR_14776D5546D97ADC8A72698C13E7F85B; // 0xC758(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_Clothes_Thickness_WristL_14776D5546D97ADC8A72698C13E7F85B; // 0xC770(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_Clothes_Thickness_RootM_14776D5546D97ADC8A72698C13E7F85B; // 0xC788(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_Curve_IKAlpha_14776D5546D97ADC8A72698C13E7F85B; // 0xC7A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C7A8[0x8];                                     // 0xC7A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             __CustomProperty_AnkleRightCompTransform_14776D5546D97ADC8A72698C13E7F85B; // 0xC7B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             __CustomProperty_AnkleLeftCompTransform_14776D5546D97ADC8A72698C13E7F85B; // 0xC810(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             __CustomProperty_RootMCompTransform_14776D5546D97ADC8A72698C13E7F85B; // 0xC870(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RootM_Alpha_14776D5546D97ADC8A72698C13E7F85B; // 0xC8D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_bForceInitFootPlacementIKParam_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC8D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C8D9[0x7];                                     // 0xC8D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_Velocity_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC8E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_SlopeAngle_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC8F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RightFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC900(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_LeftFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC908(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_RightFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_LeftFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC918(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_PelvisWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC920(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_PelvisOffset_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC928(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               __CustomProperty_AnkleRightOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC940(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               __CustomProperty_AnkleLeftOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC958(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                __CustomProperty_AnkleRightOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC970(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_AnkleLeftOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xC988(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_HighHeel_Ankle_Angle_362258464F4E0990712B6C89FDD06BD0; // 0xC9A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C9A8[0x8];                                     // 0xC9A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  __CustomProperty_FootRotationR_362258464F4E0990712B6C89FDD06BD0; // 0xC9B0(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FQuat                                  __CustomProperty_FootRotationL_362258464F4E0990712B6C89FDD06BD0; // 0xC9D0(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_FootAlphaR_362258464F4E0990712B6C89FDD06BD0; // 0xC9F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        __CustomProperty_FootAlphaL_362258464F4E0990712B6C89FDD06BD0; // 0xC9F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_FootPositionR_362258464F4E0990712B6C89FDD06BD0; // 0xCA00(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                __CustomProperty_FootPostionL_362258464F4E0990712B6C89FDD06BD0; // 0xCA18(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               __CustomProperty_Lock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          __CustomProperty_isLock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA49[0x7];                                     // 0xCA49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_Lock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA50(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_isLock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA69[0x7];                                     // 0xCA69(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               __CustomProperty_Lock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          __CustomProperty_isLock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CA89[0x7];                                     // 0xCA89(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_Lock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCA90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_isLock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCAA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CAA9[0x7];                                     // 0xCAA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               __CustomProperty_Offset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCAB0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          __CustomProperty_isOffset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCAC8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CAC9[0x7];                                     // 0xCAC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               __CustomProperty_Offset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCAD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          __CustomProperty_isOffset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCAE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CAE9[0x7];                                     // 0xCAE9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_Offset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCAF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_isOffset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCB08(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB09[0x7];                                     // 0xCB09(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                __CustomProperty_Offset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCB10(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          __CustomProperty_isOffset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xCB28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB29[0x7];                                     // 0xCB29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimStatesComponent;                         // 0xCB30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLogicInStateInAir;                               // 0xCB38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB39[0x7];                                     // 0xCB39(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        HighHeelHeight;                                    // 0xCB40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HighHeelToeAngle;                                  // 0xCB48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        HighHeelAnkleAngle;                                // 0xCB50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PelvisOffset;                                      // 0xCB58(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        PelvisAlpha;                                       // 0xCB70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableFootIK;                                      // 0xCB78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB79[0x7];                                     // 0xCB79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CurrentFloorAngle;                                 // 0xCB80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EquipmentAdditiveEnabled;                       // 0xCB88(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_BehaviorAdditiveEnabled;                        // 0xCB89(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB8A[0x6];                                     // 0xCB8A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6OverlayData*                         EnvResponseOverlayData;                            // 0xCB90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	EPlayerGamePlayMovementMode                   BP_CurrentPlayerGameplayMode;                      // 0xCB98(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPlayerMovementScenarios                      MovementScenario;                                  // 0xCB99(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CB9A[0x6];                                     // 0xCB9A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Offset_L_Hand_IK_Position;                         // 0xCBA0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Offset_L_Hand_IK_Rotation;                         // 0xCBB8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                Offset_R_Hand_IK_Position;                         // 0xCBD0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Offset_R_Hand_IK_Rotation;                         // 0xCBE8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                Lock_L_Hand_IK_Position;                           // 0xCC00(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Lock_L_Hand_IK_Rotation;                           // 0xCC18(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	struct FVector                                Lock_R_Hand_IK_Position;                           // 0xCC30(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               Lock_R_Hand_IK_Rotation;                           // 0xCC48(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          Is_Offset_L_Hand_IK_Position;                      // 0xCC60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Offset_R_Hand_IK_Position;                      // 0xCC61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Offset_L_Hand_IK_Rotation;                      // 0xCC62(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Offset_R_Hand_IK_Rotation;                      // 0xCC63(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Lock_L_Hand_IK_Position;                        // 0xCC64(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Lock_L_Hand_IK_Rotation;                        // 0xCC65(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Lock_R_Hand_IK_Position;                        // 0xCC66(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Is_Lock_R_Hand_IK_Rotation;                        // 0xCC67(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        FinalFootPlacementIKRigAlpha;                      // 0xCC68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_EquipmentAdditiveBlendTime;                     // 0xCC70(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEnableInteractionPerformance;                     // 0xCC78(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC79[0x7];                                     // 0xCC79(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        VelocitySize;                                      // 0xCC80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBP_PlayerRegularInAirMovementComp_C*   PlayerRegularInAirMovementComp;                    // 0xCC88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     CurrentFloatingJumpStage;                          // 0xCC90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CC91[0x7];                                     // 0xCC91(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFEmotionPartBlendWeight               EmotionBaseBlendInfo;                              // 0xCC98(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFEmotionPartBlendWeight               One9AIBlendInfo;                                   // 0xCCD8(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFEmotionPartBlendWeight               Five2AIBlendInfo;                                  // 0xCD18(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEnableEmotionPerformance;                         // 0xCD58(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bHasBegunPlay;                                     // 0xCD59(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD5A[0x6];                                     // 0xCD5A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        HandIKCtrlRigAlpha;                                // 0xCD60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSkipInteractionPerformanceWhenEnable;             // 0xCD68(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_UseFacialAnimFromSpecialFullBody;               // 0xCD69(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD6A[0x6];                                     // 0xCD6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SlotName_RootM;                                    // 0xCD70(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	double                                        RootM_Alpha;                                       // 0xCD80(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CD88[0x8];                                     // 0xCD88(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             RootMCompTransform;                                // 0xCD90(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 SlotName_AnkleLeft;                                // 0xCDF0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FTransform                             AnkleLeftCompTransform;                            // 0xCE00(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 SlotName_AnkleRight;                               // 0xCE60(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	struct FTransform                             AnkleRightCompTransform;                           // 0xCE70(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CurveName_AdjustSittingPostureIK_Alpha;            // 0xCED0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        AdjustSittingPostureIK_Alpha;                      // 0xCED8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CurveName_AdjustSittingPosture_WristLeftHeight_Alpha; // 0xCEE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CurveName_AdjustSittingPosture_WristRightHeight_Alpha; // 0xCEE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Clothes_Thickness_RootM;                           // 0xCEF0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Clothes_Thickness_WristL;                          // 0xCF08(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Clothes_Thickness_WristR;                          // 0xCF20(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SKMeshComponent;                                   // 0xCF38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bEnableInteractionIK;                           // 0xCF40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_CF41[0x3];                                     // 0xCF41(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CurrentSkirtClothesId;                             // 0xCF44(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSet<int32>                                   BlackListClothesId_RootM;                          // 0xCF48(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FName                                   BodyAndUpperFaceSlotName;                          // 0xCF98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BodyAndUpperFaceSlotBlendAlpha;                    // 0xCFA0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        EyeBlinkWeight;                                    // 0xCFA8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TSet<int32>                                   BlackListClothesId_Wrist;                          // 0xCFB0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	EControlBoneType                              SitExecuteType;                                    // 0xD000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D001[0x7];                                     // 0xD001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        FacialSlotBlendAlpha;                              // 0xD008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               EyeOffsetRotator_ComponentSpace;                   // 0xD010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          bEnableAimOffsetEyeMotion;                         // 0xD028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          DynamicSwitch;                                     // 0xD029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D02A[0x6];                                     // 0xD02A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, double>                     LayedAdditiveCurveMap;                             // 0xD030(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        LeftArm_Add;                                       // 0xD080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        RightArm_Add;                                      // 0xD088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Arm_LS;                                            // 0xD090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bSelectedMirror;                                   // 0xD098(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D099[0x7];                                     // 0xD099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPoseAsset*                             AIFacialPoseAsset;                                 // 0xD0A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UX6OverlayData*                         WeaponOverlayData;                                 // 0xD0A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	double                                        DialogPerformanceBlendInTime;                      // 0xD0B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DialogPerformanceBlendOutTime;                     // 0xD0B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FFloatSpringState                      SpringState_FootPlacementIKAlpha;                  // 0xD0C0(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
-	uint8                                         Pad_D0CC[0x4];                                     // 0xD0CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDataTable*                             DT_LocomotionStyleAnims;                           // 0xD0D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMap<struct FGameplayTag, class UX6OverlayData*> LocomotionStyleOverlays;                        // 0xD0D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<struct FGameplayTag, class UX6OverlayData*> LocomotionStyleOverlaysBuffer;                  // 0xD128(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bRequireLocomotionStyleChange;                     // 0xD178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_30;                   // 0x2B40(0x0080)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_12;                             // 0x2BC0(0x0048)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_11;                 // 0x2C08(0x00F0)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_11;                             // 0x2CF8(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_29;                   // 0x2D40(0x0080)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_10;                             // 0x2DC0(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_9;                              // 0x2E08(0x0048)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum_1;                   // 0x2E50(0x0048)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_10;                       // 0x2E98(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_14;                  // 0x3368(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_28;                   // 0x33B0(0x0080)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_13;                  // 0x3430(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_62;                    // 0x3478(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_27;                   // 0x34A0(0x0080)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_15;                  // 0x3520(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_14;                  // 0x35E8(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_13;                  // 0x36B0(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_12;                  // 0x3778(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_11;                  // 0x3840(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_10;                  // 0x3908(0x00C8)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_3;             // 0x39D0(0x0020)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_3;             // 0x39F0(0x0020)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_6;                          // 0x3A10(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_61;                    // 0x3B00(0x0028)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_9;                   // 0x3B28(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_60;                    // 0x3BF0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_59;                    // 0x3C18(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_9;                        // 0x3C40(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_26;                   // 0x4110(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_25;                   // 0x4190(0x0080)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_5;                  // 0x4210(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_4;                  // 0x4238(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_3;                  // 0x4260(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_2;                  // 0x4288(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult_1;                  // 0x42B0(0x0028)()
+	struct FAnimNode_TransitionResult             AnimGraphNode_TransitionResult;                    // 0x42D8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_58;                    // 0x4300(0x0028)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_2;                       // 0x4328(0x0020)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_57;                    // 0x4348(0x0028)()
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult_1;                       // 0x4370(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine_1;                      // 0x4390(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_24;                   // 0x4458(0x0080)()
+	uint8                                         Pad_44D8[0x8];                                     // 0x44D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_Inertialization              AnimGraphNode_Inertialization;                     // 0x44E0(0x0450)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_8;                              // 0x4930(0x0048)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_2;                     // 0x4978(0x00C8)()
+	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_3;                      // 0x4A40(0x0010)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_56;                    // 0x4A50(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_55;                    // 0x4A78(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_54;                    // 0x4AA0(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_23;                   // 0x4AC8(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_53;                    // 0x4B48(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_52;                    // 0x4B70(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_22;                   // 0x4B98(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_51;                    // 0x4C18(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_3;                    // 0x4C40(0x0048)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_8;                   // 0x4C88(0x00C8)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_12;                  // 0x4D50(0x0048)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_7;                   // 0x4D98(0x00C8)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_8;                        // 0x4E60(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_4;                       // 0x5330(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_21;                   // 0x53F8(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_50;                    // 0x5478(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_49;                    // 0x54A0(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_7;                        // 0x54C8(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_20;                   // 0x5998(0x0080)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_6;                        // 0x5A18(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_48;                    // 0x5EE8(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_11;                  // 0x5F10(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_47;                    // 0x5F58(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_5;                        // 0x5F80(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x6450(0x0020)()
+	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x6470(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_19;                   // 0x6538(0x0080)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_18;                   // 0x65B8(0x0080)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_10;                  // 0x6638(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_7;                              // 0x6680(0x0048)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_10;                 // 0x66C8(0x00F0)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_17;                   // 0x67B8(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_46;                    // 0x6838(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_45;                    // 0x6860(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_16;                   // 0x6888(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_44;                    // 0x6908(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_43;                    // 0x6930(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_9;                   // 0x6958(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_42;                    // 0x69A0(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_4;                        // 0x69C8(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_6;                   // 0x6E98(0x00C8)()
+	struct FAnimNode_ModifyCurve                  AnimGraphNode_ModifyCurve;                         // 0x6F60(0x0120)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_9;                  // 0x7080(0x00F0)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_6;                              // 0x7170(0x0048)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive_1;                     // 0x71B8(0x00C8)()
+	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_2;                      // 0x7280(0x0010)()
+	struct FAnimNode_RefPose                      AnimGraphNode_LocalRefPose;                        // 0x7290(0x0010)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_41;                    // 0x72A0(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_3;                        // 0x72C8(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_8;                  // 0x7798(0x00F0)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_5;                          // 0x7888(0x00F0)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_4;                          // 0x7978(0x00F0)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_2;             // 0x7A68(0x0020)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_2;             // 0x7A88(0x0020)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_8;                   // 0x7AA8(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_15;                   // 0x7AF0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_40;                    // 0x7B70(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_39;                    // 0x7B98(0x0028)()
+	struct FAnimNode_BlendSpacePlayer             AnimGraphNode_BlendSpacePlayer;                    // 0x7BC0(0x0078)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_7;                  // 0x7C38(0x00F0)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_7;                   // 0x7D28(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_14;                   // 0x7D70(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_38;                    // 0x7DF0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_37;                    // 0x7E18(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_36;                    // 0x7E40(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_6;                  // 0x7E68(0x00F0)()
+	struct FAnimNode_BlendListByEnum              AnimGraphNode_BlendListByEnum;                     // 0x7F58(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_35;                    // 0x7FA0(0x0028)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_5;                   // 0x7FC8(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_4;                   // 0x8090(0x00C8)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_5;                  // 0x8158(0x00F0)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_3;                   // 0x8248(0x00C8)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_2;                   // 0x8310(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_13;                   // 0x83D8(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_34;                    // 0x8458(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_33;                    // 0x8480(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_2;                    // 0x84A8(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_32;                    // 0x84F0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_31;                    // 0x8518(0x0028)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer_1;                   // 0x8540(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_12;                   // 0x8608(0x0080)()
+	struct FAnimNode_PoseBlendNode                AnimGraphNode_PoseBlendNode;                       // 0x8688(0x00D8)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_5;                    // 0x8760(0x0258)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_5;                              // 0x89B8(0x0048)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_4;                    // 0x8A00(0x0258)()
+	uint8                                         Pad_8C58[0x8];                                     // 0x8C58(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_PoseMatchRecorder            AnimGraphNode_PoseMatchRecorder;                   // 0x8C60(0x0150)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_6;                   // 0x8DB0(0x0048)()
+	struct FAnimNode_X6AnimContext                AnimGraphNode_X6AnimContext;                       // 0x8DF8(0x00C0)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x8EB8(0x00B8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_30;                    // 0x8F70(0x0028)()
+	struct FAnimNode_X6StylizedOverlayBlend       AnimGraphNode_X6OverlayBlend_Stylized_1;           // 0x8F98(0x0268)()
+	struct FAnimNode_X6StateMachineMarker         AnimGraphNode_X6StateMachineMarker;                // 0x9200(0x0090)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_11;                   // 0x9290(0x0080)()
+	struct FAnimNode_X6StylizedOverlayBlend       AnimGraphNode_X6OverlayBlend_Stylized;             // 0x9310(0x0268)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_29;                    // 0x9578(0x0028)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_3;                    // 0x95A0(0x0258)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_28;                    // 0x97F8(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_5;                   // 0x9820(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_4;                              // 0x9868(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_10;                   // 0x98B0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_27;                    // 0x9930(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_26;                    // 0x9958(0x0028)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_4;                  // 0x9980(0x00F0)()
+	struct FAnimNode_ApplyAdditive                AnimGraphNode_ApplyAdditive;                       // 0x9A70(0x00C8)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_3;                  // 0x9B38(0x00F0)()
+	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose_1;                      // 0x9C28(0x0010)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_2;                  // 0x9C38(0x00F0)()
+	uint8                                         Pad_9D28[0x8];                                     // 0x9D28(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNode_TwoBoneIK                    AnimGraphNode_TwoBoneIK;                           // 0x9D30(0x0280)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;             // 0x9FB0(0x0020)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_3;                          // 0x9FD0(0x00F0)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;             // 0xA0C0(0x0020)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_9;                    // 0xA0E0(0x0080)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_3;                              // 0xA160(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_25;                    // 0xA1A8(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_24;                    // 0xA1D0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_23;                    // 0xA1F8(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_8;                    // 0xA220(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_22;                    // 0xA2A0(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_21;                    // 0xA2C8(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_4;                   // 0xA2F0(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_2;                              // 0xA338(0x0048)()
+	struct FAnimNode_RefPose                      AnimGraphNode_IdentityPose;                        // 0xA380(0x0010)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_7;                    // 0xA390(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_20;                    // 0xA410(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_6;                    // 0xA438(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_19;                    // 0xA4B8(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_3;                   // 0xA4E0(0x0048)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend_1;                  // 0xA528(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_18;                    // 0xA618(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_17;                    // 0xA640(0x0028)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_2;                          // 0xA668(0x00F0)()
+	struct FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;               // 0xA758(0x0020)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone_1;                          // 0xA778(0x00F0)()
+	struct FAnimNode_CopyBone                     AnimGraphNode_CopyBone;                            // 0xA868(0x00F0)()
+	struct FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;               // 0xA958(0x0020)()
+	struct FAnimNode_LayeredBoneBlend             AnimGraphNode_LayeredBoneBlend;                    // 0xA978(0x00F0)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_16;                    // 0xAA68(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_15;                    // 0xAA90(0x0028)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_2;                    // 0xAAB8(0x0258)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_14;                    // 0xAD10(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_2;                   // 0xAD38(0x0048)()
+	struct FAnimNode_LinkedAnimLayer              AnimGraphNode_LinkedAnimLayer;                     // 0xAD80(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_5;                    // 0xAE48(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_13;                    // 0xAEC8(0x0028)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend_1;                    // 0xAEF0(0x0258)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot_1;                              // 0xB148(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_12;                    // 0xB190(0x0028)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer_1;                    // 0xB1B8(0x0048)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_4;                    // 0xB200(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_11;                    // 0xB280(0x0028)()
+	struct FAnimNode_X6OverlayBlend               AnimGraphNode_X6OverlayBlend;                      // 0xB2A8(0x0258)()
+	struct FAnimNode_SequencePlayer               AnimGraphNode_SequencePlayer;                      // 0xB500(0x0048)()
+	struct FAnimNode_Slot                         AnimGraphNode_Slot;                                // 0xB548(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_10;                    // 0xB590(0x0028)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool_1;                   // 0xB5B8(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_9;                     // 0xB600(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_3;                       // 0xB628(0x00C8)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_3;                    // 0xB6F0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_8;                     // 0xB770(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_7;                     // 0xB798(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_2;                       // 0xB7C0(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_6;                     // 0xB888(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_1;                       // 0xB8B0(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_5;                     // 0xB978(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_2;                    // 0xB9A0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_4;                     // 0xBA20(0x0028)()
+	struct FAnimNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend;                         // 0xBA48(0x00C8)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_3;                     // 0xBB10(0x0028)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_2;                        // 0xBB38(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose_1;                    // 0xC008(0x0080)()
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig_1;                        // 0xC088(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_ControlRig                   AnimGraphNode_ControlRig;                          // 0xC558(0x04D0)(ContainsInstancedReference)
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0xCA28(0x0048)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_2;                     // 0xCA70(0x0028)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose_1;                     // 0xCA98(0x0028)()
+	struct FAnimNode_SaveCachedPose               AnimGraphNode_SaveCachedPose;                      // 0xCAC0(0x0080)()
+	struct FAnimNode_UseCachedPose                AnimGraphNode_UseCachedPose;                       // 0xCB40(0x0028)()
+	bool                                          K2Node_PropertyAccess_9;                           // 0xCB68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_8;                           // 0xCB69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_7;                           // 0xCB6A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_6;                           // 0xCB6B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CB6C[0x4];                                     // 0xCB6C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_DeltaLocation_81179BCD441E987CC19EEA93CA91C316; // 0xCB70(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_LHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCB88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_LHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBA0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_RHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBB8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_RHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBD0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableRHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBE8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableRHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBE9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableLHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBEA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableLHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBEB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableHandIK_FD6CE1A041C9D5E5C2C5CE8FFA07334E; // 0xCBEC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CBED[0x3];                                     // 0xCBED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               __CustomProperty_LHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xCBF0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_LHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xCC08(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_RHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xCC20(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_RHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xCC38(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableRHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xCC50(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableRHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xCC51(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableLHandIKPosition_A83644064C79A024AB8C7D8A45082E28; // 0xCC52(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableLHandIKRotation_A83644064C79A024AB8C7D8A45082E28; // 0xCC53(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableHandIK_A83644064C79A024AB8C7D8A45082E28; // 0xCC54(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CC55[0x3];                                     // 0xCC55(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFootIKFeatureTargetDataV2             K2Node_PropertyAccess_5;                           // 0xCC58(0x00A0)(NoDestructor)
+	bool                                          __CustomProperty_bForceInitFootPlacementIKParam_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCCF8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CCF9[0x7];                                     // 0xCCF9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        __CustomProperty_SlopeAngle_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD00(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RightFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD08(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_LeftFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD10(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RightFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD18(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_LeftFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD20(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_PelvisWeight_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD28(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_PelvisOffset_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD30(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_AnkleRightOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD48(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               __CustomProperty_AnkleLeftOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD60(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_AnkleRightOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD78(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_AnkleLeftOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49; // 0xCD90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFootIKFeatureTargetDataV2             K2Node_PropertyAccess_4;                           // 0xCDA8(0x00A0)(NoDestructor)
+	bool                                          K2Node_PropertyAccess_3;                           // 0xCE48(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE49[0x7];                                     // 0xCE49(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        K2Node_PropertyAccess_2;                           // 0xCE50(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess_1;                           // 0xCE58(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_PropertyAccess;                             // 0xCE59(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE5A[0x6];                                     // 0xCE5A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        __CustomProperty_HeelHeight_BB387FD742265B193B50A88A47DACE2E; // 0xCE60(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableRightHandIK_BB387FD742265B193B50A88A47DACE2E; // 0xCE68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bEnableLeftHandIK_BB387FD742265B193B50A88A47DACE2E; // 0xCE69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CE6A[0x6];                                     // 0xCE6A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        __CustomProperty_HighHeelToeHeight_14776D5546D97ADC8A72698C13E7F85B; // 0xCE70(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_ToesRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B; // 0xCE78(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_AnkleRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B; // 0xCE80(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_HighHeelHeight_14776D5546D97ADC8A72698C13E7F85B; // 0xCE88(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_Clothes_Thickness_WristR_14776D5546D97ADC8A72698C13E7F85B; // 0xCE90(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_Clothes_Thickness_WristL_14776D5546D97ADC8A72698C13E7F85B; // 0xCEA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_Clothes_Thickness_RootM_14776D5546D97ADC8A72698C13E7F85B; // 0xCEC0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_Curve_IKAlpha_14776D5546D97ADC8A72698C13E7F85B; // 0xCED8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             __CustomProperty_AnkleRightCompTransform_14776D5546D97ADC8A72698C13E7F85B; // 0xCEE0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             __CustomProperty_AnkleLeftCompTransform_14776D5546D97ADC8A72698C13E7F85B; // 0xCF40(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             __CustomProperty_RootMCompTransform_14776D5546D97ADC8A72698C13E7F85B; // 0xCFA0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RootM_Alpha_14776D5546D97ADC8A72698C13E7F85B; // 0xD000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_bForceInitFootPlacementIKParam_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D009[0x7];                                     // 0xD009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_Velocity_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_SlopeAngle_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RightFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_LeftFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_RightFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_LeftFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_PelvisWeight_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_PelvisOffset_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_AnkleRightOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               __CustomProperty_AnkleLeftOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                __CustomProperty_AnkleRightOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD0A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_AnkleLeftOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1; // 0xD0B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_HighHeel_Ankle_Angle_362258464F4E0990712B6C89FDD06BD0; // 0xD0D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D0D8[0x8];                                     // 0xD0D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  __CustomProperty_FootRotationR_362258464F4E0990712B6C89FDD06BD0; // 0xD0E0(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FQuat                                  __CustomProperty_FootRotationL_362258464F4E0990712B6C89FDD06BD0; // 0xD100(0x0020)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_FootAlphaR_362258464F4E0990712B6C89FDD06BD0; // 0xD120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        __CustomProperty_FootAlphaL_362258464F4E0990712B6C89FDD06BD0; // 0xD128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_FootPositionR_362258464F4E0990712B6C89FDD06BD0; // 0xD130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_FootPostionL_362258464F4E0990712B6C89FDD06BD0; // 0xD148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               __CustomProperty_Lock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          __CustomProperty_isLock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D179[0x7];                                     // 0xD179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DefaultEmotionRatio;                               // 0xD180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<struct FGameplayTag, class UX6OverlayData*> ClothesOverlays;                                // 0xD188(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<struct FGameplayTag, class UX6OverlayData*> ClothesOverlaysBuffer;                          // 0xD1D8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bRequireClothesOverlayChange;                      // 0xD228(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D229[0x7];                                     // 0xD229(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        SpineYaw_Add;                                      // 0xD230(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ClothesFrontThickness_Follow;                      // 0xD238(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ClothesBackThickness_Follow;                       // 0xD240(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ClothesFrontThickness_Splay;                       // 0xD248(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        ClothesBackThickness_Splay;                        // 0xD250(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_InPhotograph;                                   // 0xD258(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                __CustomProperty_Lock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD180(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_isLock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D199[0x7];                                     // 0xD199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               __CustomProperty_Lock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD1A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          __CustomProperty_isLock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD1B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1B9[0x7];                                     // 0xD1B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_Lock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD1C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_isLock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD1D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1D9[0x7];                                     // 0xD1D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               __CustomProperty_Offset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD1E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          __CustomProperty_isOffset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD1F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D1F9[0x7];                                     // 0xD1F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               __CustomProperty_Offset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD200(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          __CustomProperty_isOffset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D219[0x7];                                     // 0xD219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_Offset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_isOffset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D239[0x7];                                     // 0xD239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                __CustomProperty_Offset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          __CustomProperty_isOffset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9; // 0xD258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D259[0x7];                                     // 0xD259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6OverlayFrameSettings*                WeaponFrameSettings;                               // 0xD260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UX6OverlayFrameSettings*                PhotoWeaponFrameSettings;                          // 0xD268(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UX6CharacterMovementComponent*          X6CharacterMovementComp;                           // 0xD270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        CurrentFootIKRigAlpha_AnimOnly;                    // 0xD278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_ForceInitFootPlacementIKParam;                  // 0xD280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D281[0x7];                                     // 0xD281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SlotName_RelativeRootM;                            // 0xD288(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	bool                                          BP_UseWeaponAction;                                // 0xD298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D299[0x7];                                     // 0xD299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6OverlayData*                         PhotoOverlayData;                                  // 0xD2A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          BP_UsePhotoOverlay;                                // 0xD2A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerAnimStatesComponent_C*        PlayerAnimStatesComponent;                         // 0xD260(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLogicInStateInAir;                               // 0xD268(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D269[0x7];                                     // 0xD269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        HighHeelHeight;                                    // 0xD270(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HighHeelToeAngle;                                  // 0xD278(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        HighHeelAnkleAngle;                                // 0xD280(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PelvisOffset;                                      // 0xD288(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        PelvisAlpha;                                       // 0xD2A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableFootIK;                                      // 0xD2A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_D2A9[0x7];                                     // 0xD2A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        SpinePitchRoll_Add;                                // 0xD2B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_MirrorWeapon;                                   // 0xD2B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2B9[0x7];                                     // 0xD2B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           BP_OverlayMontage;                                 // 0xD2C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class UX6OverlayCustomModeData*               BP_OverlayMontageBlendData;                        // 0xD2C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableOverlayMontageBlend;                      // 0xD2D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2D1[0x7];                                     // 0xD2D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequenceBase*                      BP_OverlayMontageBaseAnim;                         // 0xD2D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          BP_EmoteEnabled;                                   // 0xD2E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2E1[0x7];                                     // 0xD2E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6OverlayCustomModeData*               BP_EmoteOverlayData;                               // 0xD2E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	double                                        HandIKCtrlRigAlphaTarget;                          // 0xD2F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableHandControlRig;                           // 0xD2F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableFootControlRig;                           // 0xD2F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_D2FA[0x6];                                     // 0xD2FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                BikeFootIKPelvisOffset;                            // 0xD300(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BikeFootIKPelvisAlpha;                             // 0xD318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BikeFootIkLeftFootTranslationAlpha;                // 0xD320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BikeFootIkRightFootTranslationAlpha;               // 0xD328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BikeFootIkRightFootRotationAlpha;                  // 0xD330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BikeFootIkLeftFootRotationAlpha;                   // 0xD338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BikeAnkleLeftOffsetLoc;                            // 0xD340(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BikeAnkleRightOffsetLoc;                           // 0xD358(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentFloorAngle;                                 // 0xD2B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EquipmentAdditiveEnabled;                       // 0xD2B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_BehaviorAdditiveEnabled;                        // 0xD2B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D2BA[0x6];                                     // 0xD2BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6OverlayData*                         EnvResponseOverlayData;                            // 0xD2C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	EPlayerGamePlayMovementMode                   BP_CurrentPlayerGameplayMode;                      // 0xD2C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPlayerMovementScenarios                      MovementScenario;                                  // 0xD2C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D2CA[0x6];                                     // 0xD2CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Offset_L_Hand_IK_Position;                         // 0xD2D0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Offset_L_Hand_IK_Rotation;                         // 0xD2E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                Offset_R_Hand_IK_Position;                         // 0xD300(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Offset_R_Hand_IK_Rotation;                         // 0xD318(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                Lock_L_Hand_IK_Position;                           // 0xD330(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Lock_L_Hand_IK_Rotation;                           // 0xD348(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FVector                                Lock_R_Hand_IK_Position;                           // 0xD360(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Lock_R_Hand_IK_Rotation;                           // 0xD378(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          Is_Offset_L_Hand_IK_Position;                      // 0xD390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Offset_R_Hand_IK_Position;                      // 0xD391(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Offset_L_Hand_IK_Rotation;                      // 0xD392(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Offset_R_Hand_IK_Rotation;                      // 0xD393(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Lock_L_Hand_IK_Position;                        // 0xD394(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Lock_L_Hand_IK_Rotation;                        // 0xD395(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Lock_R_Hand_IK_Position;                        // 0xD396(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Is_Lock_R_Hand_IK_Rotation;                        // 0xD397(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        FinalFootPlacementIKRigAlpha;                      // 0xD398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_EquipmentAdditiveBlendTime;                     // 0xD3A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableInteractionPerformance;                     // 0xD3A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D3A9[0x7];                                     // 0xD3A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        VelocitySize;                                      // 0xD3B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_PlayerRegularInAirMovementComp_C*   PlayerRegularInAirMovementComp;                    // 0xD3B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     CurrentFloatingJumpStage;                          // 0xD3C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D3C1[0x7];                                     // 0xD3C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFEmotionPartBlendWeight               EmotionBaseBlendInfo;                              // 0xD3C8(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFEmotionPartBlendWeight               One9AIBlendInfo;                                   // 0xD408(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFEmotionPartBlendWeight               Five2AIBlendInfo;                                  // 0xD448(0x0040)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableEmotionPerformance;                         // 0xD488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bHasBegunPlay;                                     // 0xD489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D48A[0x6];                                     // 0xD48A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        HandIKCtrlRigAlpha;                                // 0xD490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSkipInteractionPerformanceWhenEnable;             // 0xD498(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_UseFacialAnimFromSpecialFullBody;               // 0xD499(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D49A[0x6];                                     // 0xD49A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SlotName_RootM;                                    // 0xD4A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	double                                        RootM_Alpha;                                       // 0xD4B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D4B8[0x8];                                     // 0xD4B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RootMCompTransform;                                // 0xD4C0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SlotName_AnkleLeft;                                // 0xD520(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FTransform                             AnkleLeftCompTransform;                            // 0xD530(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 SlotName_AnkleRight;                               // 0xD590(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	struct FTransform                             AnkleRightCompTransform;                           // 0xD5A0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CurveName_AdjustSittingPostureIK_Alpha;            // 0xD600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        AdjustSittingPostureIK_Alpha;                      // 0xD608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CurveName_AdjustSittingPosture_WristLeftHeight_Alpha; // 0xD610(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CurveName_AdjustSittingPosture_WristRightHeight_Alpha; // 0xD618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Clothes_Thickness_RootM;                           // 0xD620(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Clothes_Thickness_WristL;                          // 0xD638(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Clothes_Thickness_WristR;                          // 0xD650(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SKMeshComponent;                                   // 0xD668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bEnableInteractionIK;                           // 0xD670(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D671[0x3];                                     // 0xD671(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentSkirtClothesId;                             // 0xD674(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSet<int32>                                   BlackListClothesId_RootM;                          // 0xD678(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FName                                   BodyAndUpperFaceSlotName;                          // 0xD6C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BodyAndUpperFaceSlotBlendAlpha;                    // 0xD6D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        EyeBlinkWeight;                                    // 0xD6D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSet<int32>                                   BlackListClothesId_Wrist;                          // 0xD6E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	EControlBoneType                              SitExecuteType;                                    // 0xD730(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D731[0x7];                                     // 0xD731(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        FacialSlotBlendAlpha;                              // 0xD738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               EyeOffsetRotator_ComponentSpace;                   // 0xD740(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bEnableAimOffsetEyeMotion;                         // 0xD758(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          DynamicSwitch;                                     // 0xD759(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D75A[0x6];                                     // 0xD75A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, double>                     LayedAdditiveCurveMap;                             // 0xD760(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        LeftArm_Add;                                       // 0xD7B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        RightArm_Add;                                      // 0xD7B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Arm_LS;                                            // 0xD7C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bSelectedMirror;                                   // 0xD7C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D7C9[0x7];                                     // 0xD7C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPoseAsset*                             AIFacialPoseAsset;                                 // 0xD7D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UX6OverlayData*                         WeaponOverlayData;                                 // 0xD7D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	double                                        DialogPerformanceBlendInTime;                      // 0xD7E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DialogPerformanceBlendOutTime;                     // 0xD7E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFloatSpringState                      SpringState_FootPlacementIKAlpha;                  // 0xD7F0(0x000C)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	uint8                                         Pad_D7FC[0x4];                                     // 0xD7FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDataTable*                             DT_LocomotionStyleAnims;                           // 0xD800(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMap<struct FGameplayTag, class UX6OverlayData*> LocomotionStyleOverlays;                        // 0xD808(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<struct FGameplayTag, class UX6OverlayData*> LocomotionStyleOverlaysBuffer;                  // 0xD858(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bRequireLocomotionStyleChange;                     // 0xD8A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D8A9[0x7];                                     // 0xD8A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DefaultEmotionRatio;                               // 0xD8B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<struct FGameplayTag, class UX6OverlayData*> ClothesOverlays;                                // 0xD8B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<struct FGameplayTag, class UX6OverlayData*> ClothesOverlaysBuffer;                          // 0xD908(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bRequireClothesOverlayChange;                      // 0xD958(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D959[0x7];                                     // 0xD959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SpineYaw_Add;                                      // 0xD960(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ClothesFrontThickness_Follow;                      // 0xD968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ClothesBackThickness_Follow;                       // 0xD970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ClothesFrontThickness_Splay;                       // 0xD978(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        ClothesBackThickness_Splay;                        // 0xD980(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_InPhotograph;                                   // 0xD988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D989[0x7];                                     // 0xD989(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6OverlayFrameSettings*                WeaponFrameSettings;                               // 0xD990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UX6OverlayFrameSettings*                PhotoWeaponFrameSettings;                          // 0xD998(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UX6CharacterMovementComponent*          X6CharacterMovementComp;                           // 0xD9A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        CurrentFootIKRigAlpha_AnimOnly;                    // 0xD9A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_ForceInitFootPlacementIKParam;                  // 0xD9B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9B1[0x7];                                     // 0xD9B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SlotName_RelativeRootM;                            // 0xD9B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          BP_UseWeaponAction;                                // 0xD9C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9C9[0x7];                                     // 0xD9C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6OverlayData*                         PhotoOverlayData;                                  // 0xD9D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          BP_UsePhotoOverlay;                                // 0xD9D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9D9[0x7];                                     // 0xD9D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SpinePitchRoll_Add;                                // 0xD9E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_MirrorWeapon;                                   // 0xD9E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9E9[0x7];                                     // 0xD9E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           BP_OverlayMontage;                                 // 0xD9F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class UX6OverlayCustomModeData*               BP_OverlayMontageBlendData;                        // 0xD9F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableOverlayMontageBlend;                      // 0xDA00(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA01[0x7];                                     // 0xDA01(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequenceBase*                      BP_OverlayMontageBaseAnim;                         // 0xDA08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	bool                                          BP_EmoteEnabled;                                   // 0xDA10(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA11[0x7];                                     // 0xDA11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6OverlayCustomModeData*               BP_EmoteOverlayData;                               // 0xDA18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	double                                        HandIKCtrlRigAlphaTarget;                          // 0xDA20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableHandControlRig;                           // 0xDA28(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableFootControlRig;                           // 0xDA29(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DA2A[0x6];                                     // 0xDA2A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BikeFootIKPelvisOffset;                            // 0xDA30(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BikeFootIKPelvisAlpha;                             // 0xDA48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BikeFootIkLeftFootTranslationAlpha;                // 0xDA50(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BikeFootIkRightFootTranslationAlpha;               // 0xDA58(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BikeFootIkRightFootRotationAlpha;                  // 0xDA60(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BikeFootIkLeftFootRotationAlpha;                   // 0xDA68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BikeAnkleLeftOffsetLoc;                            // 0xDA70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BikeAnkleRightOffsetLoc;                           // 0xDA88(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableMultiPerformIK_Left;                         // 0xDAA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableMultiPerformIK_Right;                        // 0xDAA1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableMultiPerformIK_Leader;                       // 0xDAA2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableMultiPerformIK_Follower;                     // 0xDAA3(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_DAA4[0x4];                                     // 0xDAA4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                MultiPerformIK_Delta;                              // 0xDAA8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             MultiPerformIK_Left_Delta;                         // 0xDAC0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             MultiPerformIK_Right_Delta;                        // 0xDB20(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableWeaponOverlay;                            // 0xDB80(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimationLayer_BaseMovement(struct FPoseLink* AnimationLayer_BaseMovement_0);
@@ -649,6 +667,7 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_8587D2D849FC2D2419CFF9804FB7C5EB();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_8DAD8B654CFDDE311A82E4B118D4EBB6();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_958B29A34796E9E2339AE0935CA4502B();
+	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_AC92D9434153A75D5FE91D92CF86DE6A();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_BlendListByBool_D97A7EB74CD3FC34EDBDE3953CEB0FC9();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_ControlRig_8087071C41AA2CE0A35BC08B4DC64E49();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_NikkiAnim_BPNew_AnimGraphNode_ControlRig_9C3CB6104FEEB92C4E76B49E09A60DE1();
@@ -700,7 +719,7 @@ public:
 	}
 };
 static_assert(alignof(UNikkiAnim_BPNew_C) == 0x000010, "Wrong alignment on UNikkiAnim_BPNew_C");
-static_assert(sizeof(UNikkiAnim_BPNew_C) == 0x00D370, "Wrong size on UNikkiAnim_BPNew_C");
+static_assert(sizeof(UNikkiAnim_BPNew_C) == 0x00DB90, "Wrong size on UNikkiAnim_BPNew_C");
 static_assert(offsetof(UNikkiAnim_BPNew_C, UberGraphFrame) == 0x000480, "Member 'UNikkiAnim_BPNew_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, __AnimBlueprintMutables) == 0x000488, "Member 'UNikkiAnim_BPNew_C::__AnimBlueprintMutables' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimBlueprintExtension_Tag) == 0x0004D0, "Member 'UNikkiAnim_BPNew_C::AnimBlueprintExtension_Tag' has a wrong offset!");
@@ -748,496 +767,513 @@ static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Root_3) == 0x001180, "M
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_4) == 0x0011A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_4' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Root_2) == 0x0011E8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Root_2' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedInputPose_1) == 0x001208, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedInputPose_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_40) == 0x0012C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_40' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_39) == 0x001340, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_39' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_41) == 0x0012C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_41' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_40) == 0x001340, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_40' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Root_1) == 0x0013C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Root_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_87) == 0x0013E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_87' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_38) == 0x001408, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_38' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_86) == 0x001488, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_86' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_85) == 0x0014B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_85' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_89) == 0x0013E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_89' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_39) == 0x001408, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_39' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_88) == 0x001488, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_88' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_87) == 0x0014B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_87' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_MakeDynamicAdditive_1) == 0x0014D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_MakeDynamicAdditive_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_37) == 0x001510, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_37' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_84) == 0x001590, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_84' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_83) == 0x0015B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_83' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_38) == 0x001510, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_38' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_86) == 0x001590, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_86' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_85) == 0x0015B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_85' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_MakeDynamicAdditive) == 0x0015E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_MakeDynamicAdditive' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_36) == 0x001618, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_36' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_37) == 0x001618, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_37' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_16) == 0x001698, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_16' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_82) == 0x001788, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_82' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_81) == 0x0017B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_81' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_84) == 0x001788, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_84' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_83) == 0x0017B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_83' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyMeshSpaceAdditive_4) == 0x0017D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyMeshSpaceAdditive_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_35) == 0x0018A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_35' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_34) == 0x001928, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_34' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_80) == 0x0019A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_80' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_36) == 0x0018A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_36' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_35) == 0x001928, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_35' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_82) == 0x0019A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_82' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive_4) == 0x0019D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_79) == 0x001A98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_79' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_33) == 0x001AC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_33' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_78) == 0x001B40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_78' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_77) == 0x001B68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_77' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_81) == 0x001A98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_81' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_34) == 0x001AC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_34' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_80) == 0x001B40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_80' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_79) == 0x001B68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_79' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_15) == 0x001B90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_15' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive_3) == 0x001C80, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_76) == 0x001D48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_76' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_75) == 0x001D70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_75' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_78) == 0x001D48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_78' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_77) == 0x001D70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_77' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyMeshSpaceAdditive_3) == 0x001D98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyMeshSpaceAdditive_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_74) == 0x001E68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_74' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_32) == 0x001E90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_32' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_76) == 0x001E68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_76' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_33) == 0x001E90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_33' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_14) == 0x001F10, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_14' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_73) == 0x002000, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_73' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_75) == 0x002000, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_75' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6PoseFilter_1) == 0x002028, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6PoseFilter_1' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedInputPose) == 0x002060, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_72) == 0x002118, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_72' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_71) == 0x002140, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_71' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_70) == 0x002168, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_70' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_74) == 0x002118, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_74' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_73) == 0x002140, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_73' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_72) == 0x002168, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_72' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyMeshSpaceAdditive_2) == 0x002190, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyMeshSpaceAdditive_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_31) == 0x002260, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_31' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_32) == 0x002260, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_32' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyMeshSpaceAdditive_1) == 0x0022E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyMeshSpaceAdditive_1' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_7) == 0x0023B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_69) == 0x002478, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_69' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_68) == 0x0024A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_68' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_71) == 0x002478, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_71' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_70) == 0x0024A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_70' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_6) == 0x0024C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_6' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_13) == 0x002590, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_13' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_67) == 0x002680, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_67' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_66) == 0x0026A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_66' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_65) == 0x0026D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_65' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_64) == 0x0026F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_64' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_69) == 0x002680, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_69' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_68) == 0x0026A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_68' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_67) == 0x0026D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_67' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_66) == 0x0026F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_66' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyMeshSpaceAdditive) == 0x002720, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyMeshSpaceAdditive' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_30) == 0x0027F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_30' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_63) == 0x002870, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_63' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_31) == 0x0027F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_31' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_65) == 0x002870, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_65' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_5) == 0x002898, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_62) == 0x002960, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_62' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_61) == 0x002988, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_61' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_64) == 0x002960, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_64' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_63) == 0x002988, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_63' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_12) == 0x0029B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_12' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6PoseFilter) == 0x002AA0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6PoseFilter' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_13) == 0x002AD8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_13' has a wrong offset!");
 static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Root) == 0x002B20, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByEnum_1) == 0x002B40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByEnum_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_29) == 0x002B88, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_29' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_12) == 0x002C08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_12' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_11) == 0x002C50, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_11' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_11) == 0x002D40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_11' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_28) == 0x002D88, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_60) == 0x002E08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_60' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_10) == 0x002E30, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_10' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_9) == 0x002E78, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByEnum) == 0x002EC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_10) == 0x002F08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_10' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_59) == 0x002FF8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_59' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_58) == 0x003020, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_58' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_27) == 0x003048, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_27' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_13) == 0x0030C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_13' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_26) == 0x003110, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_26' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_12) == 0x003190, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_12' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_57) == 0x0031D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_57' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_25) == 0x003200, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_25' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_15) == 0x003280, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_15' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_14) == 0x003348, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_14' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_13) == 0x003410, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_13' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_12) == 0x0034D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_12' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_11) == 0x0035A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_11' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_10) == 0x003668, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_10' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_56) == 0x003730, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_56' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_9) == 0x003758, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_55) == 0x003820, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_55' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_9) == 0x003848, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_24) == 0x003D18, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_24' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_23) == 0x003D98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_23' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_5) == 0x003E18, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_4) == 0x003E40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_3) == 0x003E68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_2) == 0x003E90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_1) == 0x003EB8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult) == 0x003EE0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_54) == 0x003F08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_54' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateResult_2) == 0x003F30, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateResult_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_53) == 0x003F50, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_53' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateResult_1) == 0x003F78, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateResult_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateMachine_1) == 0x003F98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_22) == 0x004060, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_22' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Inertialization) == 0x0040E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Inertialization' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_8) == 0x004530, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive_2) == 0x004578, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose_3) == 0x004640, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_52) == 0x004650, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_52' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_51) == 0x004678, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_51' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_21) == 0x0046A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_21' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_50) == 0x004720, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_50' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_49) == 0x004748, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_20) == 0x004770, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_20' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_48) == 0x0047F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_48' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_3) == 0x004818, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_8) == 0x004860, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_11) == 0x004928, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_11' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_7) == 0x004970, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_8) == 0x004A38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_4) == 0x004F08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_19) == 0x004FD0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_19' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_47) == 0x005050, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_47' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_46) == 0x005078, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_46' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_7) == 0x0050A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_18) == 0x005570, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_18' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_6) == 0x0055F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_45) == 0x005AC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_45' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_10) == 0x005AE8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_10' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_44) == 0x005B30, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_44' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_5) == 0x005B58, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateResult) == 0x006028, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateResult' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateMachine) == 0x006048, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateMachine' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_17) == 0x006110, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_17' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_7) == 0x006190, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_9) == 0x0061D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_16) == 0x0062C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_16' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_43) == 0x006348, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_43' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_42) == 0x006370, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_42' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_15) == 0x006398, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_15' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_41) == 0x006418, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_41' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_40) == 0x006440, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_40' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_9) == 0x006468, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_39) == 0x0064B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_39' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_4) == 0x0064D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_6) == 0x0069A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ModifyCurve) == 0x006A70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ModifyCurve' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_8) == 0x006B90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_6) == 0x006C80, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive_1) == 0x006CC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose_2) == 0x006D90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalRefPose) == 0x006DA0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_38) == 0x006DB0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_38' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_37) == 0x006DD8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_37' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_3) == 0x006E00, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_7) == 0x0072D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_5) == 0x0073C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_4) == 0x0074B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace_2) == 0x0075A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace_2) == 0x0075C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_14) == 0x0075E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_14' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_8) == 0x007660, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_13) == 0x0076A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_13' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_36) == 0x007728, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_36' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_35) == 0x007750, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_35' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendSpacePlayer) == 0x007778, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_6) == 0x0077F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_7) == 0x0078E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_12) == 0x007928, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_12' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_34) == 0x0079A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_34' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_33) == 0x0079D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_33' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_32) == 0x0079F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_32' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_31) == 0x007A20, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_31' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_5) == 0x007A48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_30) == 0x007B38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_30' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_5) == 0x007B60, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_4) == 0x007C28, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_6) == 0x007CF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_3) == 0x007D38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_2) == 0x007E00, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_11) == 0x007EC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_11' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_29) == 0x007F48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_29' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_28) == 0x007F70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_2) == 0x007F98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_2) == 0x007FE0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_1) == 0x0084B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_1) == 0x008980, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_10) == 0x008A48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_10' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_PoseBlendNode) == 0x008AC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_PoseBlendNode' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_5) == 0x008BA0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_5) == 0x008DF8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_4) == 0x008E40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_PoseMatchRecorder) == 0x0090A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_PoseMatchRecorder' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_5) == 0x0091F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6AnimContext) == 0x009238, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6AnimContext' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimGraph) == 0x0092F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_27) == 0x0093B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_27' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_Stylized_1) == 0x0093D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_Stylized_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6StateMachineMarker) == 0x009640, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6StateMachineMarker' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_9) == 0x0096D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_Stylized) == 0x009750, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_Stylized' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_26) == 0x0099B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_26' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_3) == 0x0099E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_25) == 0x009C38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_25' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_4) == 0x009C60, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_4) == 0x009CA8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_8) == 0x009CF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_24) == 0x009D70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_24' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_23) == 0x009D98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_23' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_4) == 0x009DC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive) == 0x009EB0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_3) == 0x009F78, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose_1) == 0x00A068, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_2) == 0x00A078, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoBoneIK) == 0x00A170, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoBoneIK' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x00A3F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_3) == 0x00A410, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace_1) == 0x00A500, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_7) == 0x00A520, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_3) == 0x00A5A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_22) == 0x00A5E8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_22' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_21) == 0x00A610, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_21' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_20) == 0x00A638, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_20' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_6) == 0x00A660, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_19) == 0x00A6E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_19' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_18) == 0x00A708, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_18' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_3) == 0x00A730, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_2) == 0x00A778, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose) == 0x00A7C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_5) == 0x00A7D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_17) == 0x00A850, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_4) == 0x00A878, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_16) == 0x00A8F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_2) == 0x00A920, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_1) == 0x00A968, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_15) == 0x00AA58, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_14) == 0x00AA80, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_2) == 0x00AAA8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace) == 0x00AB98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_1) == 0x00ABB8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone) == 0x00ACA8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace) == 0x00AD98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend) == 0x00ADB8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_13) == 0x00AEA8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_12) == 0x00AED0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_2) == 0x00AEF8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_11) == 0x00B150, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_1) == 0x00B178, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer) == 0x00B1C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_3) == 0x00B288, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_10) == 0x00B308, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_1) == 0x00B330, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_1) == 0x00B588, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_9) == 0x00B5D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_1) == 0x00B5F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_2) == 0x00B640, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_8) == 0x00B6C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend) == 0x00B6E8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer) == 0x00B940, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot) == 0x00B988, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_7) == 0x00B9D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool) == 0x00B9F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_6) == 0x00BA40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_3) == 0x00BA68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_1) == 0x00BB30, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_5) == 0x00BBB0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_4) == 0x00BBD8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_2) == 0x00BC00, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_3) == 0x00BCC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_1) == 0x00BCF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_2) == 0x00BDB8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose) == 0x00BDE0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_1) == 0x00BE60, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend) == 0x00BE88, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose) == 0x00BF50, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig) == 0x00BF78, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_9) == 0x00C448, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_8) == 0x00C449, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_8' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_7) == 0x00C44A, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_7' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_6) == 0x00C44B, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_6' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C450, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C468, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C480, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C498, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C4B0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C4B1, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C4B2, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C4B3, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableHandIK_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00C4B4, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableHandIK_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00C4B8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00C4D0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00C4E8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00C500, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00C518, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00C519, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00C51A, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00C51B, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableHandIK_A83644064C79A024AB8C7D8A45082E28) == 0x00C51C, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableHandIK_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_5) == 0x00C520, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_5' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bForceInitFootPlacementIKParam_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5C0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bForceInitFootPlacementIKParam_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_SlopeAngle_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5C8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_SlopeAngle_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5D0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5D8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5E0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5E8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5F0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisOffset_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C5F8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisOffset_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C610, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C628, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C640, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00C658, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_4) == 0x00C670, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_4' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_3) == 0x00C710, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_3' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_2) == 0x00C718, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_2' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_1) == 0x00C720, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess) == 0x00C721, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HeelHeight_BB387FD742265B193B50A88A47DACE2E) == 0x00C728, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HeelHeight_BB387FD742265B193B50A88A47DACE2E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRightHandIK_BB387FD742265B193B50A88A47DACE2E) == 0x00C730, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRightHandIK_BB387FD742265B193B50A88A47DACE2E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLeftHandIK_BB387FD742265B193B50A88A47DACE2E) == 0x00C731, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLeftHandIK_BB387FD742265B193B50A88A47DACE2E' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HighHeelToeHeight_14776D5546D97ADC8A72698C13E7F85B) == 0x00C738, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HighHeelToeHeight_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_ToesRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B) == 0x00C740, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_ToesRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B) == 0x00C748, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HighHeelHeight_14776D5546D97ADC8A72698C13E7F85B) == 0x00C750, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HighHeelHeight_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Clothes_Thickness_WristR_14776D5546D97ADC8A72698C13E7F85B) == 0x00C758, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Clothes_Thickness_WristR_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Clothes_Thickness_WristL_14776D5546D97ADC8A72698C13E7F85B) == 0x00C770, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Clothes_Thickness_WristL_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Clothes_Thickness_RootM_14776D5546D97ADC8A72698C13E7F85B) == 0x00C788, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Clothes_Thickness_RootM_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Curve_IKAlpha_14776D5546D97ADC8A72698C13E7F85B) == 0x00C7A0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Curve_IKAlpha_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightCompTransform_14776D5546D97ADC8A72698C13E7F85B) == 0x00C7B0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightCompTransform_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftCompTransform_14776D5546D97ADC8A72698C13E7F85B) == 0x00C810, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftCompTransform_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RootMCompTransform_14776D5546D97ADC8A72698C13E7F85B) == 0x00C870, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RootMCompTransform_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RootM_Alpha_14776D5546D97ADC8A72698C13E7F85B) == 0x00C8D0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RootM_Alpha_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bForceInitFootPlacementIKParam_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C8D8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bForceInitFootPlacementIKParam_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Velocity_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C8E0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Velocity_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_SlopeAngle_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C8F8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_SlopeAngle_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C900, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C908, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C910, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C918, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C920, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisOffset_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C928, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisOffset_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C940, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C958, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C970, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00C988, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HighHeel_Ankle_Angle_362258464F4E0990712B6C89FDD06BD0) == 0x00C9A0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HighHeel_Ankle_Angle_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootRotationR_362258464F4E0990712B6C89FDD06BD0) == 0x00C9B0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootRotationR_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootRotationL_362258464F4E0990712B6C89FDD06BD0) == 0x00C9D0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootRotationL_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootAlphaR_362258464F4E0990712B6C89FDD06BD0) == 0x00C9F0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootAlphaR_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootAlphaL_362258464F4E0990712B6C89FDD06BD0) == 0x00C9F8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootAlphaL_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootPositionR_362258464F4E0990712B6C89FDD06BD0) == 0x00CA00, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootPositionR_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootPostionL_362258464F4E0990712B6C89FDD06BD0) == 0x00CA18, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootPostionL_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA30, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA48, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA50, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA68, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA70, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA88, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CA90, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CAA8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CAB0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CAC8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CAD0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CAE8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CAF0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CB08, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CB10, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00CB28, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, PlayerAnimStatesComponent) == 0x00CB30, "Member 'UNikkiAnim_BPNew_C::PlayerAnimStatesComponent' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, IsLogicInStateInAir) == 0x00CB38, "Member 'UNikkiAnim_BPNew_C::IsLogicInStateInAir' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, HighHeelHeight) == 0x00CB40, "Member 'UNikkiAnim_BPNew_C::HighHeelHeight' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, HighHeelToeAngle) == 0x00CB48, "Member 'UNikkiAnim_BPNew_C::HighHeelToeAngle' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, HighHeelAnkleAngle) == 0x00CB50, "Member 'UNikkiAnim_BPNew_C::HighHeelAnkleAngle' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, PelvisOffset) == 0x00CB58, "Member 'UNikkiAnim_BPNew_C::PelvisOffset' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, PelvisAlpha) == 0x00CB70, "Member 'UNikkiAnim_BPNew_C::PelvisAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, EnableFootIK) == 0x00CB78, "Member 'UNikkiAnim_BPNew_C::EnableFootIK' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentFloorAngle) == 0x00CB80, "Member 'UNikkiAnim_BPNew_C::CurrentFloorAngle' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EquipmentAdditiveEnabled) == 0x00CB88, "Member 'UNikkiAnim_BPNew_C::BP_EquipmentAdditiveEnabled' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_BehaviorAdditiveEnabled) == 0x00CB89, "Member 'UNikkiAnim_BPNew_C::BP_BehaviorAdditiveEnabled' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, EnvResponseOverlayData) == 0x00CB90, "Member 'UNikkiAnim_BPNew_C::EnvResponseOverlayData' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_CurrentPlayerGameplayMode) == 0x00CB98, "Member 'UNikkiAnim_BPNew_C::BP_CurrentPlayerGameplayMode' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, MovementScenario) == 0x00CB99, "Member 'UNikkiAnim_BPNew_C::MovementScenario' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_L_Hand_IK_Position) == 0x00CBA0, "Member 'UNikkiAnim_BPNew_C::Offset_L_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_L_Hand_IK_Rotation) == 0x00CBB8, "Member 'UNikkiAnim_BPNew_C::Offset_L_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_R_Hand_IK_Position) == 0x00CBD0, "Member 'UNikkiAnim_BPNew_C::Offset_R_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_R_Hand_IK_Rotation) == 0x00CBE8, "Member 'UNikkiAnim_BPNew_C::Offset_R_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_L_Hand_IK_Position) == 0x00CC00, "Member 'UNikkiAnim_BPNew_C::Lock_L_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_L_Hand_IK_Rotation) == 0x00CC18, "Member 'UNikkiAnim_BPNew_C::Lock_L_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_R_Hand_IK_Position) == 0x00CC30, "Member 'UNikkiAnim_BPNew_C::Lock_R_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_R_Hand_IK_Rotation) == 0x00CC48, "Member 'UNikkiAnim_BPNew_C::Lock_R_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_L_Hand_IK_Position) == 0x00CC60, "Member 'UNikkiAnim_BPNew_C::Is_Offset_L_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_R_Hand_IK_Position) == 0x00CC61, "Member 'UNikkiAnim_BPNew_C::Is_Offset_R_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_L_Hand_IK_Rotation) == 0x00CC62, "Member 'UNikkiAnim_BPNew_C::Is_Offset_L_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_R_Hand_IK_Rotation) == 0x00CC63, "Member 'UNikkiAnim_BPNew_C::Is_Offset_R_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_L_Hand_IK_Position) == 0x00CC64, "Member 'UNikkiAnim_BPNew_C::Is_Lock_L_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_L_Hand_IK_Rotation) == 0x00CC65, "Member 'UNikkiAnim_BPNew_C::Is_Lock_L_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_R_Hand_IK_Position) == 0x00CC66, "Member 'UNikkiAnim_BPNew_C::Is_Lock_R_Hand_IK_Position' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_R_Hand_IK_Rotation) == 0x00CC67, "Member 'UNikkiAnim_BPNew_C::Is_Lock_R_Hand_IK_Rotation' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, FinalFootPlacementIKRigAlpha) == 0x00CC68, "Member 'UNikkiAnim_BPNew_C::FinalFootPlacementIKRigAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EquipmentAdditiveBlendTime) == 0x00CC70, "Member 'UNikkiAnim_BPNew_C::BP_EquipmentAdditiveBlendTime' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bEnableInteractionPerformance) == 0x00CC78, "Member 'UNikkiAnim_BPNew_C::bEnableInteractionPerformance' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, VelocitySize) == 0x00CC80, "Member 'UNikkiAnim_BPNew_C::VelocitySize' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, PlayerRegularInAirMovementComp) == 0x00CC88, "Member 'UNikkiAnim_BPNew_C::PlayerRegularInAirMovementComp' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentFloatingJumpStage) == 0x00CC90, "Member 'UNikkiAnim_BPNew_C::CurrentFloatingJumpStage' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, EmotionBaseBlendInfo) == 0x00CC98, "Member 'UNikkiAnim_BPNew_C::EmotionBaseBlendInfo' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, One9AIBlendInfo) == 0x00CCD8, "Member 'UNikkiAnim_BPNew_C::One9AIBlendInfo' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Five2AIBlendInfo) == 0x00CD18, "Member 'UNikkiAnim_BPNew_C::Five2AIBlendInfo' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bEnableEmotionPerformance) == 0x00CD58, "Member 'UNikkiAnim_BPNew_C::bEnableEmotionPerformance' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bHasBegunPlay) == 0x00CD59, "Member 'UNikkiAnim_BPNew_C::bHasBegunPlay' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, HandIKCtrlRigAlpha) == 0x00CD60, "Member 'UNikkiAnim_BPNew_C::HandIKCtrlRigAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bSkipInteractionPerformanceWhenEnable) == 0x00CD68, "Member 'UNikkiAnim_BPNew_C::bSkipInteractionPerformanceWhenEnable' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_UseFacialAnimFromSpecialFullBody) == 0x00CD69, "Member 'UNikkiAnim_BPNew_C::BP_UseFacialAnimFromSpecialFullBody' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_RootM) == 0x00CD70, "Member 'UNikkiAnim_BPNew_C::SlotName_RootM' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, RootM_Alpha) == 0x00CD80, "Member 'UNikkiAnim_BPNew_C::RootM_Alpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, RootMCompTransform) == 0x00CD90, "Member 'UNikkiAnim_BPNew_C::RootMCompTransform' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_AnkleLeft) == 0x00CDF0, "Member 'UNikkiAnim_BPNew_C::SlotName_AnkleLeft' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnkleLeftCompTransform) == 0x00CE00, "Member 'UNikkiAnim_BPNew_C::AnkleLeftCompTransform' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_AnkleRight) == 0x00CE60, "Member 'UNikkiAnim_BPNew_C::SlotName_AnkleRight' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AnkleRightCompTransform) == 0x00CE70, "Member 'UNikkiAnim_BPNew_C::AnkleRightCompTransform' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurveName_AdjustSittingPostureIK_Alpha) == 0x00CED0, "Member 'UNikkiAnim_BPNew_C::CurveName_AdjustSittingPostureIK_Alpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AdjustSittingPostureIK_Alpha) == 0x00CED8, "Member 'UNikkiAnim_BPNew_C::AdjustSittingPostureIK_Alpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurveName_AdjustSittingPosture_WristLeftHeight_Alpha) == 0x00CEE0, "Member 'UNikkiAnim_BPNew_C::CurveName_AdjustSittingPosture_WristLeftHeight_Alpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurveName_AdjustSittingPosture_WristRightHeight_Alpha) == 0x00CEE8, "Member 'UNikkiAnim_BPNew_C::CurveName_AdjustSittingPosture_WristRightHeight_Alpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Clothes_Thickness_RootM) == 0x00CEF0, "Member 'UNikkiAnim_BPNew_C::Clothes_Thickness_RootM' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Clothes_Thickness_WristL) == 0x00CF08, "Member 'UNikkiAnim_BPNew_C::Clothes_Thickness_WristL' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Clothes_Thickness_WristR) == 0x00CF20, "Member 'UNikkiAnim_BPNew_C::Clothes_Thickness_WristR' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SKMeshComponent) == 0x00CF38, "Member 'UNikkiAnim_BPNew_C::SKMeshComponent' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_bEnableInteractionIK) == 0x00CF40, "Member 'UNikkiAnim_BPNew_C::BP_bEnableInteractionIK' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentSkirtClothesId) == 0x00CF44, "Member 'UNikkiAnim_BPNew_C::CurrentSkirtClothesId' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BlackListClothesId_RootM) == 0x00CF48, "Member 'UNikkiAnim_BPNew_C::BlackListClothesId_RootM' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BodyAndUpperFaceSlotName) == 0x00CF98, "Member 'UNikkiAnim_BPNew_C::BodyAndUpperFaceSlotName' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BodyAndUpperFaceSlotBlendAlpha) == 0x00CFA0, "Member 'UNikkiAnim_BPNew_C::BodyAndUpperFaceSlotBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, EyeBlinkWeight) == 0x00CFA8, "Member 'UNikkiAnim_BPNew_C::EyeBlinkWeight' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BlackListClothesId_Wrist) == 0x00CFB0, "Member 'UNikkiAnim_BPNew_C::BlackListClothesId_Wrist' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SitExecuteType) == 0x00D000, "Member 'UNikkiAnim_BPNew_C::SitExecuteType' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, FacialSlotBlendAlpha) == 0x00D008, "Member 'UNikkiAnim_BPNew_C::FacialSlotBlendAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, EyeOffsetRotator_ComponentSpace) == 0x00D010, "Member 'UNikkiAnim_BPNew_C::EyeOffsetRotator_ComponentSpace' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bEnableAimOffsetEyeMotion) == 0x00D028, "Member 'UNikkiAnim_BPNew_C::bEnableAimOffsetEyeMotion' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, DynamicSwitch) == 0x00D029, "Member 'UNikkiAnim_BPNew_C::DynamicSwitch' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, LayedAdditiveCurveMap) == 0x00D030, "Member 'UNikkiAnim_BPNew_C::LayedAdditiveCurveMap' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, LeftArm_Add) == 0x00D080, "Member 'UNikkiAnim_BPNew_C::LeftArm_Add' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, RightArm_Add) == 0x00D088, "Member 'UNikkiAnim_BPNew_C::RightArm_Add' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, Arm_LS) == 0x00D090, "Member 'UNikkiAnim_BPNew_C::Arm_LS' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bSelectedMirror) == 0x00D098, "Member 'UNikkiAnim_BPNew_C::bSelectedMirror' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, AIFacialPoseAsset) == 0x00D0A0, "Member 'UNikkiAnim_BPNew_C::AIFacialPoseAsset' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, WeaponOverlayData) == 0x00D0A8, "Member 'UNikkiAnim_BPNew_C::WeaponOverlayData' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, DialogPerformanceBlendInTime) == 0x00D0B0, "Member 'UNikkiAnim_BPNew_C::DialogPerformanceBlendInTime' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, DialogPerformanceBlendOutTime) == 0x00D0B8, "Member 'UNikkiAnim_BPNew_C::DialogPerformanceBlendOutTime' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SpringState_FootPlacementIKAlpha) == 0x00D0C0, "Member 'UNikkiAnim_BPNew_C::SpringState_FootPlacementIKAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, DT_LocomotionStyleAnims) == 0x00D0D0, "Member 'UNikkiAnim_BPNew_C::DT_LocomotionStyleAnims' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, LocomotionStyleOverlays) == 0x00D0D8, "Member 'UNikkiAnim_BPNew_C::LocomotionStyleOverlays' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, LocomotionStyleOverlaysBuffer) == 0x00D128, "Member 'UNikkiAnim_BPNew_C::LocomotionStyleOverlaysBuffer' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bRequireLocomotionStyleChange) == 0x00D178, "Member 'UNikkiAnim_BPNew_C::bRequireLocomotionStyleChange' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, DefaultEmotionRatio) == 0x00D180, "Member 'UNikkiAnim_BPNew_C::DefaultEmotionRatio' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesOverlays) == 0x00D188, "Member 'UNikkiAnim_BPNew_C::ClothesOverlays' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesOverlaysBuffer) == 0x00D1D8, "Member 'UNikkiAnim_BPNew_C::ClothesOverlaysBuffer' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, bRequireClothesOverlayChange) == 0x00D228, "Member 'UNikkiAnim_BPNew_C::bRequireClothesOverlayChange' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SpineYaw_Add) == 0x00D230, "Member 'UNikkiAnim_BPNew_C::SpineYaw_Add' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesFrontThickness_Follow) == 0x00D238, "Member 'UNikkiAnim_BPNew_C::ClothesFrontThickness_Follow' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesBackThickness_Follow) == 0x00D240, "Member 'UNikkiAnim_BPNew_C::ClothesBackThickness_Follow' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesFrontThickness_Splay) == 0x00D248, "Member 'UNikkiAnim_BPNew_C::ClothesFrontThickness_Splay' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesBackThickness_Splay) == 0x00D250, "Member 'UNikkiAnim_BPNew_C::ClothesBackThickness_Splay' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_InPhotograph) == 0x00D258, "Member 'UNikkiAnim_BPNew_C::BP_InPhotograph' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, WeaponFrameSettings) == 0x00D260, "Member 'UNikkiAnim_BPNew_C::WeaponFrameSettings' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, PhotoWeaponFrameSettings) == 0x00D268, "Member 'UNikkiAnim_BPNew_C::PhotoWeaponFrameSettings' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, X6CharacterMovementComp) == 0x00D270, "Member 'UNikkiAnim_BPNew_C::X6CharacterMovementComp' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentFootIKRigAlpha_AnimOnly) == 0x00D278, "Member 'UNikkiAnim_BPNew_C::CurrentFootIKRigAlpha_AnimOnly' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_ForceInitFootPlacementIKParam) == 0x00D280, "Member 'UNikkiAnim_BPNew_C::BP_ForceInitFootPlacementIKParam' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_RelativeRootM) == 0x00D288, "Member 'UNikkiAnim_BPNew_C::SlotName_RelativeRootM' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_UseWeaponAction) == 0x00D298, "Member 'UNikkiAnim_BPNew_C::BP_UseWeaponAction' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, PhotoOverlayData) == 0x00D2A0, "Member 'UNikkiAnim_BPNew_C::PhotoOverlayData' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_UsePhotoOverlay) == 0x00D2A8, "Member 'UNikkiAnim_BPNew_C::BP_UsePhotoOverlay' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, SpinePitchRoll_Add) == 0x00D2B0, "Member 'UNikkiAnim_BPNew_C::SpinePitchRoll_Add' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_MirrorWeapon) == 0x00D2B8, "Member 'UNikkiAnim_BPNew_C::BP_MirrorWeapon' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_OverlayMontage) == 0x00D2C0, "Member 'UNikkiAnim_BPNew_C::BP_OverlayMontage' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_OverlayMontageBlendData) == 0x00D2C8, "Member 'UNikkiAnim_BPNew_C::BP_OverlayMontageBlendData' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableOverlayMontageBlend) == 0x00D2D0, "Member 'UNikkiAnim_BPNew_C::BP_EnableOverlayMontageBlend' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_OverlayMontageBaseAnim) == 0x00D2D8, "Member 'UNikkiAnim_BPNew_C::BP_OverlayMontageBaseAnim' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EmoteEnabled) == 0x00D2E0, "Member 'UNikkiAnim_BPNew_C::BP_EmoteEnabled' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EmoteOverlayData) == 0x00D2E8, "Member 'UNikkiAnim_BPNew_C::BP_EmoteOverlayData' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, HandIKCtrlRigAlphaTarget) == 0x00D2F0, "Member 'UNikkiAnim_BPNew_C::HandIKCtrlRigAlphaTarget' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableHandControlRig) == 0x00D2F8, "Member 'UNikkiAnim_BPNew_C::BP_EnableHandControlRig' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableFootControlRig) == 0x00D2F9, "Member 'UNikkiAnim_BPNew_C::BP_EnableFootControlRig' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIKPelvisOffset) == 0x00D300, "Member 'UNikkiAnim_BPNew_C::BikeFootIKPelvisOffset' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIKPelvisAlpha) == 0x00D318, "Member 'UNikkiAnim_BPNew_C::BikeFootIKPelvisAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkLeftFootTranslationAlpha) == 0x00D320, "Member 'UNikkiAnim_BPNew_C::BikeFootIkLeftFootTranslationAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkRightFootTranslationAlpha) == 0x00D328, "Member 'UNikkiAnim_BPNew_C::BikeFootIkRightFootTranslationAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkRightFootRotationAlpha) == 0x00D330, "Member 'UNikkiAnim_BPNew_C::BikeFootIkRightFootRotationAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkLeftFootRotationAlpha) == 0x00D338, "Member 'UNikkiAnim_BPNew_C::BikeFootIkLeftFootRotationAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeAnkleLeftOffsetLoc) == 0x00D340, "Member 'UNikkiAnim_BPNew_C::BikeAnkleLeftOffsetLoc' has a wrong offset!");
-static_assert(offsetof(UNikkiAnim_BPNew_C, BikeAnkleRightOffsetLoc) == 0x00D358, "Member 'UNikkiAnim_BPNew_C::BikeAnkleRightOffsetLoc' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_30) == 0x002B40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_30' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_12) == 0x002BC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_12' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_11) == 0x002C08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_11' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_11) == 0x002CF8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_11' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_29) == 0x002D40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_29' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_10) == 0x002DC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_9) == 0x002E08, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByEnum_1) == 0x002E50, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByEnum_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_10) == 0x002E98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_14) == 0x003368, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_14' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_28) == 0x0033B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_13) == 0x003430, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_13' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_62) == 0x003478, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_62' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_27) == 0x0034A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_27' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_15) == 0x003520, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_15' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_14) == 0x0035E8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_14' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_13) == 0x0036B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_13' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_12) == 0x003778, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_12' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_11) == 0x003840, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_11' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_10) == 0x003908, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace_3) == 0x0039D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace_3) == 0x0039F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_6) == 0x003A10, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_61) == 0x003B00, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_61' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_9) == 0x003B28, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_60) == 0x003BF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_60' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_59) == 0x003C18, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_59' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_9) == 0x003C40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_26) == 0x004110, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_26' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_25) == 0x004190, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_25' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_5) == 0x004210, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_4) == 0x004238, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_3) == 0x004260, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_2) == 0x004288, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult_1) == 0x0042B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TransitionResult) == 0x0042D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TransitionResult' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_58) == 0x004300, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_58' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateResult_2) == 0x004328, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateResult_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_57) == 0x004348, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_57' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateResult_1) == 0x004370, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateResult_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateMachine_1) == 0x004390, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateMachine_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_24) == 0x004458, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_24' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Inertialization) == 0x0044E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Inertialization' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_8) == 0x004930, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive_2) == 0x004978, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose_3) == 0x004A40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_56) == 0x004A50, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_56' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_55) == 0x004A78, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_55' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_54) == 0x004AA0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_54' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_23) == 0x004AC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_23' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_53) == 0x004B48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_53' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_52) == 0x004B70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_52' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_22) == 0x004B98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_22' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_51) == 0x004C18, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_51' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_3) == 0x004C40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_8) == 0x004C88, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_12) == 0x004D50, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_12' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_7) == 0x004D98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_8) == 0x004E60, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_4) == 0x005330, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_21) == 0x0053F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_21' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_50) == 0x005478, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_50' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_49) == 0x0054A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_7) == 0x0054C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_20) == 0x005998, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_20' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_6) == 0x005A18, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_48) == 0x005EE8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_48' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_11) == 0x005F10, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_11' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_47) == 0x005F58, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_47' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_5) == 0x005F80, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateResult) == 0x006450, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateResult' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_StateMachine) == 0x006470, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_StateMachine' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_19) == 0x006538, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_19' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_18) == 0x0065B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_18' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_10) == 0x006638, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_7) == 0x006680, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_10) == 0x0066C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_17) == 0x0067B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_17' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_46) == 0x006838, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_46' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_45) == 0x006860, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_45' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_16) == 0x006888, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_16' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_44) == 0x006908, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_44' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_43) == 0x006930, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_43' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_9) == 0x006958, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_42) == 0x0069A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_42' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_4) == 0x0069C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_6) == 0x006E98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ModifyCurve) == 0x006F60, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ModifyCurve' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_9) == 0x007080, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_6) == 0x007170, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive_1) == 0x0071B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose_2) == 0x007280, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalRefPose) == 0x007290, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalRefPose' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_41) == 0x0072A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_41' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_3) == 0x0072C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_8) == 0x007798, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_5) == 0x007888, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_4) == 0x007978, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace_2) == 0x007A68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace_2) == 0x007A88, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_8) == 0x007AA8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_15) == 0x007AF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_15' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_40) == 0x007B70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_40' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_39) == 0x007B98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_39' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendSpacePlayer) == 0x007BC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendSpacePlayer' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_7) == 0x007C38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_7) == 0x007D28, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_14) == 0x007D70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_14' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_38) == 0x007DF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_38' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_37) == 0x007E18, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_37' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_36) == 0x007E40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_36' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_6) == 0x007E68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByEnum) == 0x007F58, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByEnum' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_35) == 0x007FA0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_35' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_5) == 0x007FC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_4) == 0x008090, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_5) == 0x008158, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_3) == 0x008248, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_2) == 0x008310, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_13) == 0x0083D8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_13' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_34) == 0x008458, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_34' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_33) == 0x008480, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_33' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_2) == 0x0084A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_32) == 0x0084F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_32' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_31) == 0x008518, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_31' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer_1) == 0x008540, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_12) == 0x008608, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_12' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_PoseBlendNode) == 0x008688, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_PoseBlendNode' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_5) == 0x008760, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_5) == 0x0089B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_4) == 0x008A00, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_PoseMatchRecorder) == 0x008C60, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_PoseMatchRecorder' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_6) == 0x008DB0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6AnimContext) == 0x008DF8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6AnimContext' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimGraph) == 0x008EB8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_30) == 0x008F70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_30' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_Stylized_1) == 0x008F98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_Stylized_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6StateMachineMarker) == 0x009200, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6StateMachineMarker' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_11) == 0x009290, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_11' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_Stylized) == 0x009310, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_Stylized' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_29) == 0x009578, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_29' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_3) == 0x0095A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_28) == 0x0097F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_5) == 0x009820, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_4) == 0x009868, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_10) == 0x0098B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_27) == 0x009930, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_27' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_26) == 0x009958, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_26' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_4) == 0x009980, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ApplyAdditive) == 0x009A70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ApplyAdditive' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_3) == 0x009B38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose_1) == 0x009C28, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_2) == 0x009C38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoBoneIK) == 0x009D30, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoBoneIK' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace_1) == 0x009FB0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_3) == 0x009FD0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace_1) == 0x00A0C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_9) == 0x00A0E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_3) == 0x00A160, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_25) == 0x00A1A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_25' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_24) == 0x00A1D0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_24' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_23) == 0x00A1F8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_23' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_8) == 0x00A220, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_22) == 0x00A2A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_22' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_21) == 0x00A2C8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_21' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_4) == 0x00A2F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_2) == 0x00A338, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_IdentityPose) == 0x00A380, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_IdentityPose' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_7) == 0x00A390, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_20) == 0x00A410, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_20' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_6) == 0x00A438, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_19) == 0x00A4B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_19' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_3) == 0x00A4E0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend_1) == 0x00A528, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_18) == 0x00A618, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_18' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_17) == 0x00A640, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_17' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_2) == 0x00A668, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LocalToComponentSpace) == 0x00A758, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LocalToComponentSpace' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone_1) == 0x00A778, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_CopyBone) == 0x00A868, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_CopyBone' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ComponentToLocalSpace) == 0x00A958, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ComponentToLocalSpace' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LayeredBoneBlend) == 0x00A978, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LayeredBoneBlend' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_16) == 0x00AA68, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_16' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_15) == 0x00AA90, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_15' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_2) == 0x00AAB8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_14) == 0x00AD10, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_14' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_2) == 0x00AD38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_LinkedAnimLayer) == 0x00AD80, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_LinkedAnimLayer' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_5) == 0x00AE48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_13) == 0x00AEC8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_13' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend_1) == 0x00AEF0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot_1) == 0x00B148, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_12) == 0x00B190, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_12' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer_1) == 0x00B1B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_4) == 0x00B200, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_11) == 0x00B280, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_11' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_X6OverlayBlend) == 0x00B2A8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_X6OverlayBlend' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SequencePlayer) == 0x00B500, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_Slot) == 0x00B548, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_Slot' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_10) == 0x00B590, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_10' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool_1) == 0x00B5B8, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_9) == 0x00B600, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_3) == 0x00B628, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_3) == 0x00B6F0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_8) == 0x00B770, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_7) == 0x00B798, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_2) == 0x00B7C0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_6) == 0x00B888, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend_1) == 0x00B8B0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_5) == 0x00B978, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_2) == 0x00B9A0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_4) == 0x00BA20, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_TwoWayBlend) == 0x00BA48, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_TwoWayBlend' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_3) == 0x00BB10, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_2) == 0x00BB38, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose_1) == 0x00C008, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig_1) == 0x00C088, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_ControlRig) == 0x00C558, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_ControlRig' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_BlendListByBool) == 0x00CA28, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_2) == 0x00CA70, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose_1) == 0x00CA98, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_SaveCachedPose) == 0x00CAC0, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_SaveCachedPose' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnimGraphNode_UseCachedPose) == 0x00CB40, "Member 'UNikkiAnim_BPNew_C::AnimGraphNode_UseCachedPose' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_9) == 0x00CB68, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_8) == 0x00CB69, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_8' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_7) == 0x00CB6A, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_7' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_6) == 0x00CB6B, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_6' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_DeltaLocation_81179BCD441E987CC19EEA93CA91C316) == 0x00CB70, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_DeltaLocation_81179BCD441E987CC19EEA93CA91C316' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CB88, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBA0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBB8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBD0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBE8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBE9, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBEA, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKPosition_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBEB, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKRotation_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableHandIK_FD6CE1A041C9D5E5C2C5CE8FFA07334E) == 0x00CBEC, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableHandIK_FD6CE1A041C9D5E5C2C5CE8FFA07334E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00CBF0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00CC08, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00CC20, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00CC38, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00CC50, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00CC51, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKPosition_A83644064C79A024AB8C7D8A45082E28) == 0x00CC52, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKPosition_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLHandIKRotation_A83644064C79A024AB8C7D8A45082E28) == 0x00CC53, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLHandIKRotation_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableHandIK_A83644064C79A024AB8C7D8A45082E28) == 0x00CC54, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableHandIK_A83644064C79A024AB8C7D8A45082E28' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_5) == 0x00CC58, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_5' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bForceInitFootPlacementIKParam_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CCF8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bForceInitFootPlacementIKParam_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_SlopeAngle_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD00, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_SlopeAngle_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD08, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD10, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootRotationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD18, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD20, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootTranslationWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisWeight_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD28, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisWeight_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisOffset_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD30, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisOffset_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD48, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD60, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetRotation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD78, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49) == 0x00CD90, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetLocation_8087071C41AA2CE0A35BC08B4DC64E49' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_4) == 0x00CDA8, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_4' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_3) == 0x00CE48, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_3' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_2) == 0x00CE50, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_2' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess_1) == 0x00CE58, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess_1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, K2Node_PropertyAccess) == 0x00CE59, "Member 'UNikkiAnim_BPNew_C::K2Node_PropertyAccess' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HeelHeight_BB387FD742265B193B50A88A47DACE2E) == 0x00CE60, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HeelHeight_BB387FD742265B193B50A88A47DACE2E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableRightHandIK_BB387FD742265B193B50A88A47DACE2E) == 0x00CE68, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableRightHandIK_BB387FD742265B193B50A88A47DACE2E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bEnableLeftHandIK_BB387FD742265B193B50A88A47DACE2E) == 0x00CE69, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bEnableLeftHandIK_BB387FD742265B193B50A88A47DACE2E' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HighHeelToeHeight_14776D5546D97ADC8A72698C13E7F85B) == 0x00CE70, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HighHeelToeHeight_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_ToesRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B) == 0x00CE78, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_ToesRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B) == 0x00CE80, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRotaionYawOffset_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HighHeelHeight_14776D5546D97ADC8A72698C13E7F85B) == 0x00CE88, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HighHeelHeight_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Clothes_Thickness_WristR_14776D5546D97ADC8A72698C13E7F85B) == 0x00CE90, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Clothes_Thickness_WristR_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Clothes_Thickness_WristL_14776D5546D97ADC8A72698C13E7F85B) == 0x00CEA8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Clothes_Thickness_WristL_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Clothes_Thickness_RootM_14776D5546D97ADC8A72698C13E7F85B) == 0x00CEC0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Clothes_Thickness_RootM_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Curve_IKAlpha_14776D5546D97ADC8A72698C13E7F85B) == 0x00CED8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Curve_IKAlpha_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightCompTransform_14776D5546D97ADC8A72698C13E7F85B) == 0x00CEE0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightCompTransform_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftCompTransform_14776D5546D97ADC8A72698C13E7F85B) == 0x00CF40, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftCompTransform_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RootMCompTransform_14776D5546D97ADC8A72698C13E7F85B) == 0x00CFA0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RootMCompTransform_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RootM_Alpha_14776D5546D97ADC8A72698C13E7F85B) == 0x00D000, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RootM_Alpha_14776D5546D97ADC8A72698C13E7F85B' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_bForceInitFootPlacementIKParam_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D008, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_bForceInitFootPlacementIKParam_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Velocity_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D010, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Velocity_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_SlopeAngle_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D028, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_SlopeAngle_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D030, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D038, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootRotationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_RightFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D040, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_RightFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_LeftFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D048, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_LeftFootTranslationWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisWeight_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D050, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisWeight_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_PelvisOffset_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D058, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_PelvisOffset_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D070, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D088, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetRotation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleRightOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D0A0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleRightOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_AnkleLeftOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1) == 0x00D0B8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_AnkleLeftOffsetLocation_9C3CB6104FEEB92C4E76B49E09A60DE1' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_HighHeel_Ankle_Angle_362258464F4E0990712B6C89FDD06BD0) == 0x00D0D0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_HighHeel_Ankle_Angle_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootRotationR_362258464F4E0990712B6C89FDD06BD0) == 0x00D0E0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootRotationR_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootRotationL_362258464F4E0990712B6C89FDD06BD0) == 0x00D100, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootRotationL_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootAlphaR_362258464F4E0990712B6C89FDD06BD0) == 0x00D120, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootAlphaR_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootAlphaL_362258464F4E0990712B6C89FDD06BD0) == 0x00D128, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootAlphaL_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootPositionR_362258464F4E0990712B6C89FDD06BD0) == 0x00D130, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootPositionR_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_FootPostionL_362258464F4E0990712B6C89FDD06BD0) == 0x00D148, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_FootPostionL_362258464F4E0990712B6C89FDD06BD0' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D160, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D178, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D180, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D198, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D1A0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D1B8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Lock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D1C0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Lock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isLock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D1D8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isLock_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D1E0, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D1F8, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_R_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D200, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D218, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_L_Hand_IK_Rotation_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D220, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D238, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_R_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_Offset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D240, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_Offset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, __CustomProperty_isOffset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9) == 0x00D258, "Member 'UNikkiAnim_BPNew_C::__CustomProperty_isOffset_L_Hand_IK_Position_4CAA693F4D458C4D1C9B5B9AE3D03FA9' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, PlayerAnimStatesComponent) == 0x00D260, "Member 'UNikkiAnim_BPNew_C::PlayerAnimStatesComponent' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, IsLogicInStateInAir) == 0x00D268, "Member 'UNikkiAnim_BPNew_C::IsLogicInStateInAir' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, HighHeelHeight) == 0x00D270, "Member 'UNikkiAnim_BPNew_C::HighHeelHeight' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, HighHeelToeAngle) == 0x00D278, "Member 'UNikkiAnim_BPNew_C::HighHeelToeAngle' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, HighHeelAnkleAngle) == 0x00D280, "Member 'UNikkiAnim_BPNew_C::HighHeelAnkleAngle' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, PelvisOffset) == 0x00D288, "Member 'UNikkiAnim_BPNew_C::PelvisOffset' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, PelvisAlpha) == 0x00D2A0, "Member 'UNikkiAnim_BPNew_C::PelvisAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EnableFootIK) == 0x00D2A8, "Member 'UNikkiAnim_BPNew_C::EnableFootIK' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentFloorAngle) == 0x00D2B0, "Member 'UNikkiAnim_BPNew_C::CurrentFloorAngle' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EquipmentAdditiveEnabled) == 0x00D2B8, "Member 'UNikkiAnim_BPNew_C::BP_EquipmentAdditiveEnabled' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_BehaviorAdditiveEnabled) == 0x00D2B9, "Member 'UNikkiAnim_BPNew_C::BP_BehaviorAdditiveEnabled' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EnvResponseOverlayData) == 0x00D2C0, "Member 'UNikkiAnim_BPNew_C::EnvResponseOverlayData' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_CurrentPlayerGameplayMode) == 0x00D2C8, "Member 'UNikkiAnim_BPNew_C::BP_CurrentPlayerGameplayMode' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, MovementScenario) == 0x00D2C9, "Member 'UNikkiAnim_BPNew_C::MovementScenario' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_L_Hand_IK_Position) == 0x00D2D0, "Member 'UNikkiAnim_BPNew_C::Offset_L_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_L_Hand_IK_Rotation) == 0x00D2E8, "Member 'UNikkiAnim_BPNew_C::Offset_L_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_R_Hand_IK_Position) == 0x00D300, "Member 'UNikkiAnim_BPNew_C::Offset_R_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Offset_R_Hand_IK_Rotation) == 0x00D318, "Member 'UNikkiAnim_BPNew_C::Offset_R_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_L_Hand_IK_Position) == 0x00D330, "Member 'UNikkiAnim_BPNew_C::Lock_L_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_L_Hand_IK_Rotation) == 0x00D348, "Member 'UNikkiAnim_BPNew_C::Lock_L_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_R_Hand_IK_Position) == 0x00D360, "Member 'UNikkiAnim_BPNew_C::Lock_R_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Lock_R_Hand_IK_Rotation) == 0x00D378, "Member 'UNikkiAnim_BPNew_C::Lock_R_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_L_Hand_IK_Position) == 0x00D390, "Member 'UNikkiAnim_BPNew_C::Is_Offset_L_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_R_Hand_IK_Position) == 0x00D391, "Member 'UNikkiAnim_BPNew_C::Is_Offset_R_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_L_Hand_IK_Rotation) == 0x00D392, "Member 'UNikkiAnim_BPNew_C::Is_Offset_L_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Offset_R_Hand_IK_Rotation) == 0x00D393, "Member 'UNikkiAnim_BPNew_C::Is_Offset_R_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_L_Hand_IK_Position) == 0x00D394, "Member 'UNikkiAnim_BPNew_C::Is_Lock_L_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_L_Hand_IK_Rotation) == 0x00D395, "Member 'UNikkiAnim_BPNew_C::Is_Lock_L_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_R_Hand_IK_Position) == 0x00D396, "Member 'UNikkiAnim_BPNew_C::Is_Lock_R_Hand_IK_Position' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Is_Lock_R_Hand_IK_Rotation) == 0x00D397, "Member 'UNikkiAnim_BPNew_C::Is_Lock_R_Hand_IK_Rotation' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, FinalFootPlacementIKRigAlpha) == 0x00D398, "Member 'UNikkiAnim_BPNew_C::FinalFootPlacementIKRigAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EquipmentAdditiveBlendTime) == 0x00D3A0, "Member 'UNikkiAnim_BPNew_C::BP_EquipmentAdditiveBlendTime' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bEnableInteractionPerformance) == 0x00D3A8, "Member 'UNikkiAnim_BPNew_C::bEnableInteractionPerformance' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, VelocitySize) == 0x00D3B0, "Member 'UNikkiAnim_BPNew_C::VelocitySize' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, PlayerRegularInAirMovementComp) == 0x00D3B8, "Member 'UNikkiAnim_BPNew_C::PlayerRegularInAirMovementComp' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentFloatingJumpStage) == 0x00D3C0, "Member 'UNikkiAnim_BPNew_C::CurrentFloatingJumpStage' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EmotionBaseBlendInfo) == 0x00D3C8, "Member 'UNikkiAnim_BPNew_C::EmotionBaseBlendInfo' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, One9AIBlendInfo) == 0x00D408, "Member 'UNikkiAnim_BPNew_C::One9AIBlendInfo' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Five2AIBlendInfo) == 0x00D448, "Member 'UNikkiAnim_BPNew_C::Five2AIBlendInfo' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bEnableEmotionPerformance) == 0x00D488, "Member 'UNikkiAnim_BPNew_C::bEnableEmotionPerformance' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bHasBegunPlay) == 0x00D489, "Member 'UNikkiAnim_BPNew_C::bHasBegunPlay' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, HandIKCtrlRigAlpha) == 0x00D490, "Member 'UNikkiAnim_BPNew_C::HandIKCtrlRigAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bSkipInteractionPerformanceWhenEnable) == 0x00D498, "Member 'UNikkiAnim_BPNew_C::bSkipInteractionPerformanceWhenEnable' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_UseFacialAnimFromSpecialFullBody) == 0x00D499, "Member 'UNikkiAnim_BPNew_C::BP_UseFacialAnimFromSpecialFullBody' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_RootM) == 0x00D4A0, "Member 'UNikkiAnim_BPNew_C::SlotName_RootM' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, RootM_Alpha) == 0x00D4B0, "Member 'UNikkiAnim_BPNew_C::RootM_Alpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, RootMCompTransform) == 0x00D4C0, "Member 'UNikkiAnim_BPNew_C::RootMCompTransform' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_AnkleLeft) == 0x00D520, "Member 'UNikkiAnim_BPNew_C::SlotName_AnkleLeft' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnkleLeftCompTransform) == 0x00D530, "Member 'UNikkiAnim_BPNew_C::AnkleLeftCompTransform' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_AnkleRight) == 0x00D590, "Member 'UNikkiAnim_BPNew_C::SlotName_AnkleRight' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AnkleRightCompTransform) == 0x00D5A0, "Member 'UNikkiAnim_BPNew_C::AnkleRightCompTransform' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurveName_AdjustSittingPostureIK_Alpha) == 0x00D600, "Member 'UNikkiAnim_BPNew_C::CurveName_AdjustSittingPostureIK_Alpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AdjustSittingPostureIK_Alpha) == 0x00D608, "Member 'UNikkiAnim_BPNew_C::AdjustSittingPostureIK_Alpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurveName_AdjustSittingPosture_WristLeftHeight_Alpha) == 0x00D610, "Member 'UNikkiAnim_BPNew_C::CurveName_AdjustSittingPosture_WristLeftHeight_Alpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurveName_AdjustSittingPosture_WristRightHeight_Alpha) == 0x00D618, "Member 'UNikkiAnim_BPNew_C::CurveName_AdjustSittingPosture_WristRightHeight_Alpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Clothes_Thickness_RootM) == 0x00D620, "Member 'UNikkiAnim_BPNew_C::Clothes_Thickness_RootM' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Clothes_Thickness_WristL) == 0x00D638, "Member 'UNikkiAnim_BPNew_C::Clothes_Thickness_WristL' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Clothes_Thickness_WristR) == 0x00D650, "Member 'UNikkiAnim_BPNew_C::Clothes_Thickness_WristR' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SKMeshComponent) == 0x00D668, "Member 'UNikkiAnim_BPNew_C::SKMeshComponent' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_bEnableInteractionIK) == 0x00D670, "Member 'UNikkiAnim_BPNew_C::BP_bEnableInteractionIK' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentSkirtClothesId) == 0x00D674, "Member 'UNikkiAnim_BPNew_C::CurrentSkirtClothesId' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BlackListClothesId_RootM) == 0x00D678, "Member 'UNikkiAnim_BPNew_C::BlackListClothesId_RootM' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BodyAndUpperFaceSlotName) == 0x00D6C8, "Member 'UNikkiAnim_BPNew_C::BodyAndUpperFaceSlotName' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BodyAndUpperFaceSlotBlendAlpha) == 0x00D6D0, "Member 'UNikkiAnim_BPNew_C::BodyAndUpperFaceSlotBlendAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EyeBlinkWeight) == 0x00D6D8, "Member 'UNikkiAnim_BPNew_C::EyeBlinkWeight' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BlackListClothesId_Wrist) == 0x00D6E0, "Member 'UNikkiAnim_BPNew_C::BlackListClothesId_Wrist' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SitExecuteType) == 0x00D730, "Member 'UNikkiAnim_BPNew_C::SitExecuteType' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, FacialSlotBlendAlpha) == 0x00D738, "Member 'UNikkiAnim_BPNew_C::FacialSlotBlendAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EyeOffsetRotator_ComponentSpace) == 0x00D740, "Member 'UNikkiAnim_BPNew_C::EyeOffsetRotator_ComponentSpace' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bEnableAimOffsetEyeMotion) == 0x00D758, "Member 'UNikkiAnim_BPNew_C::bEnableAimOffsetEyeMotion' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, DynamicSwitch) == 0x00D759, "Member 'UNikkiAnim_BPNew_C::DynamicSwitch' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, LayedAdditiveCurveMap) == 0x00D760, "Member 'UNikkiAnim_BPNew_C::LayedAdditiveCurveMap' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, LeftArm_Add) == 0x00D7B0, "Member 'UNikkiAnim_BPNew_C::LeftArm_Add' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, RightArm_Add) == 0x00D7B8, "Member 'UNikkiAnim_BPNew_C::RightArm_Add' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, Arm_LS) == 0x00D7C0, "Member 'UNikkiAnim_BPNew_C::Arm_LS' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bSelectedMirror) == 0x00D7C8, "Member 'UNikkiAnim_BPNew_C::bSelectedMirror' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, AIFacialPoseAsset) == 0x00D7D0, "Member 'UNikkiAnim_BPNew_C::AIFacialPoseAsset' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, WeaponOverlayData) == 0x00D7D8, "Member 'UNikkiAnim_BPNew_C::WeaponOverlayData' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, DialogPerformanceBlendInTime) == 0x00D7E0, "Member 'UNikkiAnim_BPNew_C::DialogPerformanceBlendInTime' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, DialogPerformanceBlendOutTime) == 0x00D7E8, "Member 'UNikkiAnim_BPNew_C::DialogPerformanceBlendOutTime' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SpringState_FootPlacementIKAlpha) == 0x00D7F0, "Member 'UNikkiAnim_BPNew_C::SpringState_FootPlacementIKAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, DT_LocomotionStyleAnims) == 0x00D800, "Member 'UNikkiAnim_BPNew_C::DT_LocomotionStyleAnims' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, LocomotionStyleOverlays) == 0x00D808, "Member 'UNikkiAnim_BPNew_C::LocomotionStyleOverlays' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, LocomotionStyleOverlaysBuffer) == 0x00D858, "Member 'UNikkiAnim_BPNew_C::LocomotionStyleOverlaysBuffer' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bRequireLocomotionStyleChange) == 0x00D8A8, "Member 'UNikkiAnim_BPNew_C::bRequireLocomotionStyleChange' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, DefaultEmotionRatio) == 0x00D8B0, "Member 'UNikkiAnim_BPNew_C::DefaultEmotionRatio' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesOverlays) == 0x00D8B8, "Member 'UNikkiAnim_BPNew_C::ClothesOverlays' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesOverlaysBuffer) == 0x00D908, "Member 'UNikkiAnim_BPNew_C::ClothesOverlaysBuffer' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, bRequireClothesOverlayChange) == 0x00D958, "Member 'UNikkiAnim_BPNew_C::bRequireClothesOverlayChange' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SpineYaw_Add) == 0x00D960, "Member 'UNikkiAnim_BPNew_C::SpineYaw_Add' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesFrontThickness_Follow) == 0x00D968, "Member 'UNikkiAnim_BPNew_C::ClothesFrontThickness_Follow' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesBackThickness_Follow) == 0x00D970, "Member 'UNikkiAnim_BPNew_C::ClothesBackThickness_Follow' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesFrontThickness_Splay) == 0x00D978, "Member 'UNikkiAnim_BPNew_C::ClothesFrontThickness_Splay' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, ClothesBackThickness_Splay) == 0x00D980, "Member 'UNikkiAnim_BPNew_C::ClothesBackThickness_Splay' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_InPhotograph) == 0x00D988, "Member 'UNikkiAnim_BPNew_C::BP_InPhotograph' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, WeaponFrameSettings) == 0x00D990, "Member 'UNikkiAnim_BPNew_C::WeaponFrameSettings' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, PhotoWeaponFrameSettings) == 0x00D998, "Member 'UNikkiAnim_BPNew_C::PhotoWeaponFrameSettings' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, X6CharacterMovementComp) == 0x00D9A0, "Member 'UNikkiAnim_BPNew_C::X6CharacterMovementComp' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, CurrentFootIKRigAlpha_AnimOnly) == 0x00D9A8, "Member 'UNikkiAnim_BPNew_C::CurrentFootIKRigAlpha_AnimOnly' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_ForceInitFootPlacementIKParam) == 0x00D9B0, "Member 'UNikkiAnim_BPNew_C::BP_ForceInitFootPlacementIKParam' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SlotName_RelativeRootM) == 0x00D9B8, "Member 'UNikkiAnim_BPNew_C::SlotName_RelativeRootM' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_UseWeaponAction) == 0x00D9C8, "Member 'UNikkiAnim_BPNew_C::BP_UseWeaponAction' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, PhotoOverlayData) == 0x00D9D0, "Member 'UNikkiAnim_BPNew_C::PhotoOverlayData' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_UsePhotoOverlay) == 0x00D9D8, "Member 'UNikkiAnim_BPNew_C::BP_UsePhotoOverlay' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, SpinePitchRoll_Add) == 0x00D9E0, "Member 'UNikkiAnim_BPNew_C::SpinePitchRoll_Add' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_MirrorWeapon) == 0x00D9E8, "Member 'UNikkiAnim_BPNew_C::BP_MirrorWeapon' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_OverlayMontage) == 0x00D9F0, "Member 'UNikkiAnim_BPNew_C::BP_OverlayMontage' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_OverlayMontageBlendData) == 0x00D9F8, "Member 'UNikkiAnim_BPNew_C::BP_OverlayMontageBlendData' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableOverlayMontageBlend) == 0x00DA00, "Member 'UNikkiAnim_BPNew_C::BP_EnableOverlayMontageBlend' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_OverlayMontageBaseAnim) == 0x00DA08, "Member 'UNikkiAnim_BPNew_C::BP_OverlayMontageBaseAnim' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EmoteEnabled) == 0x00DA10, "Member 'UNikkiAnim_BPNew_C::BP_EmoteEnabled' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EmoteOverlayData) == 0x00DA18, "Member 'UNikkiAnim_BPNew_C::BP_EmoteOverlayData' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, HandIKCtrlRigAlphaTarget) == 0x00DA20, "Member 'UNikkiAnim_BPNew_C::HandIKCtrlRigAlphaTarget' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableHandControlRig) == 0x00DA28, "Member 'UNikkiAnim_BPNew_C::BP_EnableHandControlRig' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableFootControlRig) == 0x00DA29, "Member 'UNikkiAnim_BPNew_C::BP_EnableFootControlRig' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIKPelvisOffset) == 0x00DA30, "Member 'UNikkiAnim_BPNew_C::BikeFootIKPelvisOffset' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIKPelvisAlpha) == 0x00DA48, "Member 'UNikkiAnim_BPNew_C::BikeFootIKPelvisAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkLeftFootTranslationAlpha) == 0x00DA50, "Member 'UNikkiAnim_BPNew_C::BikeFootIkLeftFootTranslationAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkRightFootTranslationAlpha) == 0x00DA58, "Member 'UNikkiAnim_BPNew_C::BikeFootIkRightFootTranslationAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkRightFootRotationAlpha) == 0x00DA60, "Member 'UNikkiAnim_BPNew_C::BikeFootIkRightFootRotationAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeFootIkLeftFootRotationAlpha) == 0x00DA68, "Member 'UNikkiAnim_BPNew_C::BikeFootIkLeftFootRotationAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeAnkleLeftOffsetLoc) == 0x00DA70, "Member 'UNikkiAnim_BPNew_C::BikeAnkleLeftOffsetLoc' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BikeAnkleRightOffsetLoc) == 0x00DA88, "Member 'UNikkiAnim_BPNew_C::BikeAnkleRightOffsetLoc' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EnableMultiPerformIK_Left) == 0x00DAA0, "Member 'UNikkiAnim_BPNew_C::EnableMultiPerformIK_Left' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EnableMultiPerformIK_Right) == 0x00DAA1, "Member 'UNikkiAnim_BPNew_C::EnableMultiPerformIK_Right' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EnableMultiPerformIK_Leader) == 0x00DAA2, "Member 'UNikkiAnim_BPNew_C::EnableMultiPerformIK_Leader' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, EnableMultiPerformIK_Follower) == 0x00DAA3, "Member 'UNikkiAnim_BPNew_C::EnableMultiPerformIK_Follower' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, MultiPerformIK_Delta) == 0x00DAA8, "Member 'UNikkiAnim_BPNew_C::MultiPerformIK_Delta' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, MultiPerformIK_Left_Delta) == 0x00DAC0, "Member 'UNikkiAnim_BPNew_C::MultiPerformIK_Left_Delta' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, MultiPerformIK_Right_Delta) == 0x00DB20, "Member 'UNikkiAnim_BPNew_C::MultiPerformIK_Right_Delta' has a wrong offset!");
+static_assert(offsetof(UNikkiAnim_BPNew_C, BP_EnableWeaponOverlay) == 0x00DB80, "Member 'UNikkiAnim_BPNew_C::BP_EnableWeaponOverlay' has a wrong offset!");
 
 }
 

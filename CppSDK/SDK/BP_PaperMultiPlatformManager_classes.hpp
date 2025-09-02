@@ -25,9 +25,9 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0028(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void BP_OnConnectedControllersChange(int32 NewParam);
-	void ExecuteUbergraph_BP_PaperMultiPlatformManager(int32 EntryPoint);
 	void OnConnectedControllersChange();
+	void ExecuteUbergraph_BP_PaperMultiPlatformManager(int32 EntryPoint);
+	void BP_OnConnectedControllersChange(int32 NewParam);
 
 	class FString GetModuleName() const;
 

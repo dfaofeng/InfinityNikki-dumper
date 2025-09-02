@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_X6ActorComponent_classes.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C
-// 0x0138 (0x01E0 - 0x00A8)
+// 0x0148 (0x01F0 - 0x00A8)
 class UBP_MultiPlayerGroupMovementComponent_C final : public UBP_X6ActorComponent_C
 {
 public:
@@ -50,10 +50,12 @@ public:
 	bool                                          BP_EnableHandInHandGesture;                        // 0x0158(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             BP_CurrentTargetWorldAnchorPointTransform;         // 0x0160(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FVector>                        BP_Replicated_FollowersFallingBehindTargetSafetyPoints; // 0x01C0(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	TArray<struct FVector>                        BP_Replicated_FollowersFallingBehindTargetSafetyPoints; // 0x01C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          BP_Replicated_IsHoldingHandsFloatMoving;           // 0x01D0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_IsWaitingForOthersToCompleteInvitation;         // 0x01D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_Rep_LDCanDoAnchorPushWithWL;                    // 0x01D2(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1D3[0x5];                                      // 0x01D3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint; // 0x01D8(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_Get_BP_MaximumDistanceBetweenLeaderAndFollower(double* MaximumDistanceBetweenLeaderAndFollower);
@@ -83,6 +85,7 @@ public:
 	void OnRep_BP_Replicated_IsHoldingHands();
 	void OnRep_BP_Replicated_IsHoldingHandsFloatMoving();
 	void OnRep_BP_Replicated_IsInvitingToHoldHands();
+	void OnRep_BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint();
 	void ReceiveBeginPlay();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveTick(float DeltaSeconds);
@@ -100,7 +103,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_MultiPlayerGroupMovementComponent_C) == 0x000010, "Wrong alignment on UBP_MultiPlayerGroupMovementComponent_C");
-static_assert(sizeof(UBP_MultiPlayerGroupMovementComponent_C) == 0x0001E0, "Wrong size on UBP_MultiPlayerGroupMovementComponent_C");
+static_assert(sizeof(UBP_MultiPlayerGroupMovementComponent_C) == 0x0001F0, "Wrong size on UBP_MultiPlayerGroupMovementComponent_C");
 static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_MultiPlayerGroupMovementComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_Replicated_IsHoldingHands) == 0x0000B0, "Member 'UBP_MultiPlayerGroupMovementComponent_C::BP_Replicated_IsHoldingHands' has a wrong offset!");
 static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_AllPlayerManageAsGroup) == 0x0000B8, "Member 'UBP_MultiPlayerGroupMovementComponent_C::BP_AllPlayerManageAsGroup' has a wrong offset!");
@@ -127,6 +130,7 @@ static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_Replicated_Fo
 static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_Replicated_IsHoldingHandsFloatMoving) == 0x0001D0, "Member 'UBP_MultiPlayerGroupMovementComponent_C::BP_Replicated_IsHoldingHandsFloatMoving' has a wrong offset!");
 static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_IsWaitingForOthersToCompleteInvitation) == 0x0001D1, "Member 'UBP_MultiPlayerGroupMovementComponent_C::BP_IsWaitingForOthersToCompleteInvitation' has a wrong offset!");
 static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_Rep_LDCanDoAnchorPushWithWL) == 0x0001D2, "Member 'UBP_MultiPlayerGroupMovementComponent_C::BP_Rep_LDCanDoAnchorPushWithWL' has a wrong offset!");
+static_assert(offsetof(UBP_MultiPlayerGroupMovementComponent_C, BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint) == 0x0001D8, "Member 'UBP_MultiPlayerGroupMovementComponent_C::BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint' has a wrong offset!");
 
 }
 

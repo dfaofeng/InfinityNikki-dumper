@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "F_ImageRecognitionNpcInfo_structs.hpp"
-#include "F_ImageRecognitionSpawnerInfo_structs.hpp"
 #include "Enum_WeatherType_structs.hpp"
-#include "F_ImageRecognitionObjInfo_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "F_ImageRecognitionActorInfo_structs.hpp"
+#include "F_ImageRecognitionNpcInfo_structs.hpp"
 #include "F_ImageRecognitionGroupMinCheckInfo_structs.hpp"
-#include "F_ImageRecognitionPointsInfo_structs.hpp"
+#include "F_ImageRecognitionObjInfo_structs.hpp"
+#include "F_ImageRecognitionSpawnerInfo_structs.hpp"
+#include "F_ImageRecognitionActorInfo_structs.hpp"
 #include "F_ImageRecognitionNikkiPositionCheckInfo_structs.hpp"
+#include "F_ImageRecognitionPointsInfo_structs.hpp"
 #include "E_ImageRecognitionFinishType_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK

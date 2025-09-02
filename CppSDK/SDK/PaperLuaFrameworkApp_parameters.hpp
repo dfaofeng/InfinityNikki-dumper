@@ -404,6 +404,21 @@ static_assert(sizeof(PaperHotUpdateMgr_GetKeyChainNonDynamicGroups) == 0x000020,
 static_assert(offsetof(PaperHotUpdateMgr_GetKeyChainNonDynamicGroups, InKeyChainName) == 0x000000, "Member 'PaperHotUpdateMgr_GetKeyChainNonDynamicGroups::InKeyChainName' has a wrong offset!");
 static_assert(offsetof(PaperHotUpdateMgr_GetKeyChainNonDynamicGroups, ReturnValue) == 0x000010, "Member 'PaperHotUpdateMgr_GetKeyChainNonDynamicGroups::ReturnValue' has a wrong offset!");
 
+// Function PaperLuaFrameworkApp.PaperHotUpdateMgr.GetMetallibShaderSizeInfo
+// 0x0070 (0x0070 - 0x0000)
+struct PaperHotUpdateMgr_GetMetallibShaderSizeInfo final
+{
+public:
+	class FString                                 Version;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 InShaderCodeData;                                  // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TMap<class FString, int64>                    ReturnValue;                                       // 0x0020(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PaperHotUpdateMgr_GetMetallibShaderSizeInfo) == 0x000008, "Wrong alignment on PaperHotUpdateMgr_GetMetallibShaderSizeInfo");
+static_assert(sizeof(PaperHotUpdateMgr_GetMetallibShaderSizeInfo) == 0x000070, "Wrong size on PaperHotUpdateMgr_GetMetallibShaderSizeInfo");
+static_assert(offsetof(PaperHotUpdateMgr_GetMetallibShaderSizeInfo, Version) == 0x000000, "Member 'PaperHotUpdateMgr_GetMetallibShaderSizeInfo::Version' has a wrong offset!");
+static_assert(offsetof(PaperHotUpdateMgr_GetMetallibShaderSizeInfo, InShaderCodeData) == 0x000010, "Member 'PaperHotUpdateMgr_GetMetallibShaderSizeInfo::InShaderCodeData' has a wrong offset!");
+static_assert(offsetof(PaperHotUpdateMgr_GetMetallibShaderSizeInfo, ReturnValue) == 0x000020, "Member 'PaperHotUpdateMgr_GetMetallibShaderSizeInfo::ReturnValue' has a wrong offset!");
+
 // Function PaperLuaFrameworkApp.PaperHotUpdateMgr.GetMicroCodeVersion
 // 0x0010 (0x0010 - 0x0000)
 struct PaperHotUpdateMgr_GetMicroCodeVersion final
@@ -812,12 +827,12 @@ struct PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile 
 {
 public:
 	int32                                         QualityLevel;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         LevelID;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         LevelId;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile) == 0x000004, "Wrong alignment on PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile");
 static_assert(sizeof(PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile) == 0x000008, "Wrong size on PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile");
 static_assert(offsetof(PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile, QualityLevel) == 0x000000, "Member 'PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile::QualityLevel' has a wrong offset!");
-static_assert(offsetof(PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile, LevelID) == 0x000004, "Member 'PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile::LevelID' has a wrong offset!");
+static_assert(offsetof(PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile, LevelId) == 0x000004, "Member 'PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile::LevelId' has a wrong offset!");
 
 // Function PaperLuaFrameworkApp.PaperHotUpdateMgr.SetPSOCacheMaterialQualityLevelMaskForMobile
 // 0x0004 (0x0004 - 0x0000)

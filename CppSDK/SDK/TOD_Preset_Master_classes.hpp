@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TOD_Preset_Master.TOD_Preset_Master_C
-// 0x0008 (0x0A48 - 0x0A40)
+// 0x0008 (0x0A50 - 0x0A48)
 class UTOD_Preset_Master_C : public UTODPresetConfig
 {
 public:
-	double                                        TOD_DispalyTime;                                   // 0x0A40(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        TOD_DispalyTime;                                   // 0x0A48(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(UTOD_Preset_Master_C) == 0x000008, "Wrong alignment on UTOD_Preset_Master_C");
-static_assert(sizeof(UTOD_Preset_Master_C) == 0x000A48, "Wrong size on UTOD_Preset_Master_C");
-static_assert(offsetof(UTOD_Preset_Master_C, TOD_DispalyTime) == 0x000A40, "Member 'UTOD_Preset_Master_C::TOD_DispalyTime' has a wrong offset!");
+static_assert(sizeof(UTOD_Preset_Master_C) == 0x000A50, "Wrong size on UTOD_Preset_Master_C");
+static_assert(offsetof(UTOD_Preset_Master_C, TOD_DispalyTime) == 0x000A48, "Member 'UTOD_Preset_Master_C::TOD_DispalyTime' has a wrong offset!");
 
 }
 

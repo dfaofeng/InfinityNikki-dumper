@@ -37,11 +37,11 @@ public:
 public:
 	bool CanShapeTrace();
 
-	void K2_ProcessHitResults(const struct FVector& StartLocation, const struct FVector& EndLocation, const TArray<struct FHitResult>& HitResults) const;
-	void K2_OnAsyncLoadComplete() const;
-	void K2_Init() const;
-	void K2_Destroy() const;
 	class FString GetModuleName() const;
+	void K2_Destroy() const;
+	void K2_Init() const;
+	void K2_OnAsyncLoadComplete() const;
+	void K2_ProcessHitResults(const struct FVector& StartLocation, const struct FVector& EndLocation, const TArray<struct FHitResult>& HitResults) const;
 
 public:
 	static class UClass* StaticClass()

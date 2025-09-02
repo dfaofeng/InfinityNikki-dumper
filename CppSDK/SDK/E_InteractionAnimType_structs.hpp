@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum E_InteractionAnimType.E_InteractionAnimType
-// NumValues: 0x0016
+// NumValues: 0x0017
 enum class E_InteractionAnimType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -39,7 +39,8 @@ enum class E_InteractionAnimType : uint8
 	NewEnumerator22                          = 18,
 	NewEnumerator23                          = 19,
 	NewEnumerator24                          = 20,
-	E_MAX                                    = 21,
+	NewEnumerator26                          = 21,
+	E_MAX                                    = 22,
 };
 
 }

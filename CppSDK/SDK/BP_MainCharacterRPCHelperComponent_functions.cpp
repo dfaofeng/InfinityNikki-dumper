@@ -23,8 +23,9 @@ namespace SDK
 // int64                                   EntityID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int64                                   playerEntityID                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Multi_InteractiveObjActive_Type       multi_Type                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::BP_Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID)
+void UBP_MainCharacterRPCHelperComponent_C::BP_Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID, E_Multi_InteractiveObjActive_Type multi_Type)
 {
 	static class UFunction* Func = nullptr;
 
@@ -36,6 +37,51 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_Multi_InterObjActive(int64 Entity
 	Parms.EntityID = EntityID;
 	Parms.Data = std::move(Data);
 	Parms.playerEntityID = playerEntityID;
+	Parms.multi_Type = multi_Type;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_Multi_LaserMusicProcess
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bStart                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bImmediately                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_Multi_LaserMusicProcess(bool bStart, bool bImmediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_Multi_LaserMusicProcess");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_Multi_LaserMusicProcess Parms{};
+
+	Parms.bStart = bStart;
+	Parms.bImmediately = bImmediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_Multicast_MusicGame_SyncScore
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   addScore                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   totalScore                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_Multicast_MusicGame_SyncScore(int32 addScore, int32 totalScore)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_Multicast_MusicGame_SyncScore");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_Multicast_MusicGame_SyncScore Parms{};
+
+	Parms.addScore = addScore;
+	Parms.totalScore = totalScore;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -288,6 +334,28 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_AbilitySpawnNS(EAbili
 	Parms.NewParam2 = std::move(NewParam2);
 	Parms.NewParam3 = NewParam3;
 	Parms.NewParam4 = NewParam4;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_AddStar
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   EntityID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_AddStar(int64 EntityID, int32 Num)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_AddStar");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_AddStar Parms{};
+
+	Parms.EntityID = EntityID;
+	Parms.Num = Num;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -932,6 +1000,26 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_ChangeInstArticulatio
 		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_ChangeInstArticulation");
 
 	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_ChangeInstArticulation Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_ChangeTuneType
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// Enum_ElectricGuitar_TuneType            Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_ChangeTuneType(Enum_ElectricGuitar_TuneType Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_ChangeTuneType");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_ChangeTuneType Parms{};
 
 	Parms.Value = Value;
 
@@ -1811,6 +1899,156 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_GobangSetTurn(int32 P
 }
 
 
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtBindSecondNikki
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   RoleId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   UIID                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtBindSecondNikki(int64 RoleId, int32 UIID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtBindSecondNikki");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_HoopSkirtBindSecondNikki Parms{};
+
+	Parms.RoleId = RoleId;
+	Parms.UIID = UIID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtGameBeginPlay
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Mode                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   RoleId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   UIIID                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtGameBeginPlay(const struct FVector& Location, int32 Mode, int32 RoleId, int32 UIIID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtGameBeginPlay");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_HoopSkirtGameBeginPlay Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.Mode = Mode;
+	Parms.RoleId = RoleId;
+	Parms.UIIID = UIIID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtGameEndPlay
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtGameEndPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtGameEndPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtGameEndPlayNoWait
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtGameEndPlayNoWait()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtGameEndPlayNoWait");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtInputIndex
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtInputIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtInputIndex");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_HoopSkirtInputIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtSummonStageFinish
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Stage                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtSummonStageFinish(class AActor* Stage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtSummonStageFinish");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_HoopSkirtSummonStageFinish Parms{};
+
+	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtTeleportEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   RoleId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtTeleportEnd(int64 RoleId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtTeleportEnd");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_HoopSkirtTeleportEnd Parms{};
+
+	Parms.RoleId = RoleId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_HoopSkirtTogetherGameEndPlay
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_HoopSkirtTogetherGameEndPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_HoopSkirtTogetherGameEndPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_ImaginationFireworkBegin
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2002,11 +2240,11 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_InstrumentSpawnNS(con
 // Parameters:
 // E_InteractiveStageEnum                  InteractiveStage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // Enum_InteractiveProcessType             InteractiveProcessType                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int64                                   InteractObjEntityID                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   BP_InteractObjUniqueID_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   InteractObj_cfgID                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   InteractCharacterEntityID                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::BP_OnMultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 InteractObjEntityID, int64 InteractObj_cfgID, int64 InteractCharacterEntityID)
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjUniqueID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2017,7 +2255,7 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMultiCast_InteractProcessChange
 
 	Parms.InteractiveStage = InteractiveStage;
 	Parms.InteractiveProcessType = InteractiveProcessType;
-	Parms.InteractObjEntityID = InteractObjEntityID;
+	Parms.BP_InteractObjUniqueID_0 = BP_InteractObjUniqueID_0;
 	Parms.InteractObj_cfgID = InteractObj_cfgID;
 	Parms.InteractCharacterEntityID = InteractCharacterEntityID;
 
@@ -2180,10 +2418,10 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MidnightPromShowGhost
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_MultiCallVehicleFunction
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   VehicleEntityId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   VehicleEntityID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   FuncId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiCallVehicleFunction(int64 VehicleEntityId, int64 FuncId)
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiCallVehicleFunction(int64 VehicleEntityID, int64 FuncId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2192,7 +2430,7 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiCallVehicleFunct
 
 	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_MultiCallVehicleFunction Parms{};
 
-	Parms.VehicleEntityId = VehicleEntityId;
+	Parms.VehicleEntityID = VehicleEntityID;
 	Parms.FuncId = FuncId;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -2202,10 +2440,10 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiCallVehicleFunct
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_MultiPassengerBindEntity
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   VehicleEntityId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   VehicleEntityID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   PassenegerID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPassengerBindEntity(int64 VehicleEntityId, int64 PassenegerID)
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPassengerBindEntity(int64 VehicleEntityID, int64 PassenegerID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2214,7 +2452,7 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPassengerBindEnt
 
 	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_MultiPassengerBindEntity Parms{};
 
-	Parms.VehicleEntityId = VehicleEntityId;
+	Parms.VehicleEntityID = VehicleEntityID;
 	Parms.PassenegerID = PassenegerID;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -2289,9 +2527,9 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPhotographEnter(
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bController                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    UserName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Username                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPhotographExit(bool bController, const class FString& UserName)
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPhotographExit(bool bController, const class FString& Username)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2301,7 +2539,7 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_MultiPhotographExit(b
 	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_MultiPhotographExit Parms{};
 
 	Parms.bController = bController;
-	Parms.UserName = std::move(UserName);
+	Parms.Username = std::move(Username);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -3153,6 +3391,34 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_PlayEmoteMontage(int6
 }
 
 
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_PlayerGetOffVehicle
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   VehicleEntityID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bGetOffLeft                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bPlayAnimation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   GetOffLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  GetOffRotation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_PlayerGetOffVehicle(int64 VehicleEntityID, bool bGetOffLeft, bool bPlayAnimation, const struct FVector& GetOffLocation, const struct FRotator& GetOffRotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_PlayerGetOffVehicle");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_PlayerGetOffVehicle Parms{};
+
+	Parms.VehicleEntityID = VehicleEntityID;
+	Parms.bGetOffLeft = bGetOffLeft;
+	Parms.bPlayAnimation = bPlayAnimation;
+	Parms.GetOffLocation = std::move(GetOffLocation);
+	Parms.GetOffRotation = std::move(GetOffRotation);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_PlayFeatureSequence
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -3465,12 +3731,12 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_QuitRibbonFish()
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    ABPPath                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// TArray<struct FFallbackStruct>&         inNSGroup                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FF_RabbitMonster_NS>&     inNSGroup                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<TSoftObjectPtr<class UNiagaraSystem>>&inWeaponFX                                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FFallbackStruct>&         inNSGroupEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FFallbackStruct>&         inTreeGroup                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FF_RabbitMonster_NS>&     inNSGroupEnd                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FF_RabbitMonster_Mesh>&   inTreeGroup                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_RabbitMonsterBegin(const class FString& ABPPath, TArray<struct FFallbackStruct>& inNSGroup, TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, TArray<struct FFallbackStruct>& inNSGroupEnd, TArray<struct FFallbackStruct>& inTreeGroup)
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_RabbitMonsterBegin(const class FString& ABPPath, TArray<struct FF_RabbitMonster_NS>& inNSGroup, TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, TArray<struct FF_RabbitMonster_NS>& inNSGroupEnd, TArray<struct FF_RabbitMonster_Mesh>& inTreeGroup)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3537,6 +3803,28 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_RabbitMonsterSwitchSt
 	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_RabbitMonsterSwitchStage Parms{};
 
 	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_RainsOfStarBoom
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   nikki0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   nikki1                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_RainsOfStarBoom(int64 nikki0, int64 nikki1)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_RainsOfStarBoom");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_RainsOfStarBoom Parms{};
+
+	Parms.nikki0 = nikki0;
+	Parms.nikki1 = nikki1;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -4520,8 +4808,9 @@ void UBP_MainCharacterRPCHelperComponent_C::ExecuteUbergraph_BP_MainCharacterRPC
 // int64                                   EntityID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const class FString&                    Data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // int64                                   playerEntityID                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// E_Multi_InteractiveObjActive_Type       multi_Type                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID)
+void UBP_MainCharacterRPCHelperComponent_C::Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID, E_Multi_InteractiveObjActive_Type multi_Type)
 {
 	static class UFunction* Func = nullptr;
 
@@ -4533,8 +4822,43 @@ void UBP_MainCharacterRPCHelperComponent_C::Multi_InterObjActive(int64 EntityID,
 	Parms.EntityID = EntityID;
 	Parms.Data = std::move(Data);
 	Parms.playerEntityID = playerEntityID;
+	Parms.multi_Type = multi_Type;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multi_LaserMusicEnd
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bImmediately                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multi_LaserMusicEnd(bool bImmediately)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multi_LaserMusicEnd");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multi_LaserMusicEnd Parms{};
+
+	Parms.bImmediately = bImmediately;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multi_LaserMusicStart
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multi_LaserMusicStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multi_LaserMusicStart");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -4757,6 +5081,28 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_AbilitySpawnNS(EAbilityMul
 	Parms.Handle = std::move(Handle);
 	Parms.bAutoDestroy = bAutoDestroy;
 	Parms.bAutoActive = bAutoActive;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_AddStar
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   EntityID                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Num                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_AddStar(int64 EntityID, int32 Num)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_AddStar");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_AddStar Parms{};
+
+	Parms.EntityID = EntityID;
+	Parms.Num = Num;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -5355,6 +5701,26 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_ChangeInstArticulation(boo
 		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_ChangeInstArticulation");
 
 	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_ChangeInstArticulation Parms{};
+
+	Parms.Value = Value;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_ChangeTuneType
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// Enum_ElectricGuitar_TuneType            Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_ChangeTuneType(Enum_ElectricGuitar_TuneType Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_ChangeTuneType");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_ChangeTuneType Parms{};
 
 	Parms.Value = Value;
 
@@ -6058,6 +6424,156 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_GlowInsectNet(bool bGlow)
 }
 
 
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtBindSecondNikki
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   RoleId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   UIID                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtBindSecondNikki(int64 RoleId, int32 UIID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtBindSecondNikki");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_HoopSkirtBindSecondNikki Parms{};
+
+	Parms.RoleId = RoleId;
+	Parms.UIID = UIID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtGameBeginPlay
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVector&                   Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Mode                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   RoleId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   UIIID                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtGameBeginPlay(const struct FVector& Location, int32 Mode, int32 RoleId, int32 UIIID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtGameBeginPlay");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_HoopSkirtGameBeginPlay Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.Mode = Mode;
+	Parms.RoleId = RoleId;
+	Parms.UIIID = UIIID;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtGameEndPlay
+// (Net, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtGameEndPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtGameEndPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtGameEndPlayNoWait
+// (Net, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtGameEndPlayNoWait()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtGameEndPlayNoWait");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtInputIndex
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtInputIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtInputIndex");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_HoopSkirtInputIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtSummonStageFinish
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Stage                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtSummonStageFinish(class AActor* Stage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtSummonStageFinish");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_HoopSkirtSummonStageFinish Parms{};
+
+	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtTeleportEnd
+// (Net, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   RoleId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtTeleportEnd(int64 RoleId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtTeleportEnd");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_HoopSkirtTeleportEnd Parms{};
+
+	Parms.RoleId = RoleId;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_HoopSkirtTogetherGameEndPlay
+// (Net, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_HoopSkirtTogetherGameEndPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_HoopSkirtTogetherGameEndPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_ImaginationFireworkBegin
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -6235,11 +6751,11 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_InstrumentSpawnNS(const cl
 // Parameters:
 // E_InteractiveStageEnum                  InteractiveStage                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // Enum_InteractiveProcessType             InteractiveProcessType                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int64                                   BP_InteractObjEntityID_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   BP_InteractObjUniqueID_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   InteractObj_cfgID                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   InteractCharacterEntityID                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::MultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjEntityID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID)
+void UBP_MainCharacterRPCHelperComponent_C::MultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjUniqueID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6250,7 +6766,7 @@ void UBP_MainCharacterRPCHelperComponent_C::MultiCast_InteractProcessChange(E_In
 
 	Parms.InteractiveStage = InteractiveStage;
 	Parms.InteractiveProcessType = InteractiveProcessType;
-	Parms.BP_InteractObjEntityID_0 = BP_InteractObjEntityID_0;
+	Parms.BP_InteractObjUniqueID_0 = BP_InteractObjUniqueID_0;
 	Parms.InteractObj_cfgID = InteractObj_cfgID;
 	Parms.InteractCharacterEntityID = InteractCharacterEntityID;
 
@@ -6409,12 +6925,12 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MidnightPromShowGhost(cons
 
 
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_MultiCallVehicleFunction
-// (Net, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   VehicleEntityId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   VehicleEntityID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   FuncId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiCallVehicleFunction(int64 VehicleEntityId, int64 FuncId)
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiCallVehicleFunction(int64 VehicleEntityID, int64 FuncId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6423,7 +6939,7 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiCallVehicleFunction(i
 
 	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_MultiCallVehicleFunction Parms{};
 
-	Parms.VehicleEntityId = VehicleEntityId;
+	Parms.VehicleEntityID = VehicleEntityID;
 	Parms.FuncId = FuncId;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -6577,12 +7093,12 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiGobangSetTurn(int32 P
 
 
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_MultiPassengerBindEntity
-// (Net, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int64                                   VehicleEntityId                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   VehicleEntityID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int64                                   PassenegerID                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPassengerBindEntity(int64 VehicleEntityId, int64 PassenegerID)
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPassengerBindEntity(int64 VehicleEntityID, int64 PassenegerID)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6591,7 +7107,7 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPassengerBindEntity(i
 
 	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_MultiPassengerBindEntity Parms{};
 
-	Parms.VehicleEntityId = VehicleEntityId;
+	Parms.VehicleEntityID = VehicleEntityID;
 	Parms.PassenegerID = PassenegerID;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -6666,9 +7182,9 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPhotographEnter(const
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    bController                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const class FString&                    UserName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    Username                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPhotographExit(bool bController, const class FString& UserName)
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPhotographExit(bool bController, const class FString& Username)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6678,7 +7194,7 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MultiPhotographExit(bool b
 	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_MultiPhotographExit Parms{};
 
 	Parms.bController = bController;
-	Parms.UserName = std::move(UserName);
+	Parms.Username = std::move(Username);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -7111,6 +7627,28 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_MusicBoxCombatHypnosis(con
 
 	Parms.RemoveList = std::move(RemoveList);
 	Parms.AddList = std::move(AddList);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_MusicGame_SyncScore
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   addScore                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   totalScore                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_MusicGame_SyncScore(int32 addScore, int32 totalScore)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_MusicGame_SyncScore");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_MusicGame_SyncScore Parms{};
+
+	Parms.addScore = addScore;
+	Parms.totalScore = totalScore;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -7558,6 +8096,34 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_PlayEmoteMontage(int64 pla
 }
 
 
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_PlayerGetOffVehicle
+// (Net, NetReliable, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   VehicleEntityID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bGetOffLeft                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bPlayAnimation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   GetOffLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FRotator&                  GetOffRotation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_PlayerGetOffVehicle(int64 VehicleEntityID, bool bGetOffLeft, bool bPlayAnimation, const struct FVector& GetOffLocation, const struct FRotator& GetOffRotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_PlayerGetOffVehicle");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_PlayerGetOffVehicle Parms{};
+
+	Parms.VehicleEntityID = VehicleEntityID;
+	Parms.bGetOffLeft = bGetOffLeft;
+	Parms.bPlayAnimation = bPlayAnimation;
+	Parms.GetOffLocation = std::move(GetOffLocation);
+	Parms.GetOffRotation = std::move(GetOffRotation);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_PlayFeatureSequence
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -7870,12 +8436,12 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_QuitRibbonFish()
 // (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    ABPPath                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const TArray<struct FFallbackStruct>&   inNSGroup                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FF_RabbitMonster_NS>&inNSGroup                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // const TArray<TSoftObjectPtr<class UNiagaraSystem>>&inWeaponFX                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const TArray<struct FFallbackStruct>&   inNSGroupEnd                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FFallbackStruct>&         inTreeGroup                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FF_RabbitMonster_NS>&inNSGroupEnd                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FF_RabbitMonster_Mesh>&   inTreeGroup                                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UBP_MainCharacterRPCHelperComponent_C::Multicast_RabbitMonsterBegin(const class FString& ABPPath, const TArray<struct FFallbackStruct>& inNSGroup, const TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, const TArray<struct FFallbackStruct>& inNSGroupEnd, TArray<struct FFallbackStruct>& inTreeGroup)
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_RabbitMonsterBegin(const class FString& ABPPath, const TArray<struct FF_RabbitMonster_NS>& inNSGroup, const TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, const TArray<struct FF_RabbitMonster_NS>& inNSGroupEnd, TArray<struct FF_RabbitMonster_Mesh>& inTreeGroup)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7939,6 +8505,28 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_RabbitMonsterSwitchStage(E
 	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_RabbitMonsterSwitchStage Parms{};
 
 	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_RainsOfStarBoom
+// (Net, NetReliable, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int64                                   nikki0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int64                                   nikki1                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_RainsOfStarBoom(int64 nikki0, int64 nikki1)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_RainsOfStarBoom");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_RainsOfStarBoom Parms{};
+
+	Parms.nikki0 = nikki0;
+	Parms.nikki1 = nikki1;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

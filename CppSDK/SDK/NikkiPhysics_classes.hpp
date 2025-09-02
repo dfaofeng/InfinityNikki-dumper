@@ -10,10 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "NikkiPhysics_structs.hpp"
-#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -42,25 +40,30 @@ static_assert(alignof(INikkiPhysicsAttachmentInterface) == 0x000001, "Wrong alig
 static_assert(sizeof(INikkiPhysicsAttachmentInterface) == 0x000001, "Wrong size on INikkiPhysicsAttachmentInterface");
 
 // Class NikkiPhysics.NikkiPhysicsManagerComponent
-// 0x01E0 (0x0410 - 0x0230)
+// 0x0240 (0x0470 - 0x0230)
 class UNikkiPhysicsManagerComponent final : public USceneComponent
 {
 public:
-	bool                                          bEnableTickInEditor;                               // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_231[0x3];                                      // 0x0231(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableTickInEditor;                               // 0x0230(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseInputSuits;                                    // 0x0231(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_232[0x2];                                      // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NikkiPhysicsAlpha;                                 // 0x0234(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ENikki_SimSpaceType                           RuntimeRefSpace;                                   // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FNikki_PlaneShape>              PlaneColliders;                                    // 0x0240(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableDynamicWind;                                // 0x0250(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FNikki_WindSource                      DynamicWind;                                       // 0x0258(0x0028)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
-	ENikki_SpaceType                              WindSpace;                                         // 0x0280(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_WindAccumType                          WindAccumType;                                     // 0x0281(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_282[0x2];                                      // 0x0282(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LiftLegAlpha;                                      // 0x0284(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PressSkirtAlpha;                                   // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_28C[0x184];                                    // 0x028C(0x0184)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FNikki_WindSource                      DynamicWind;                                       // 0x0258(0x0030)(Edit, BlueprintVisible, Interp, NoDestructor, NativeAccessSpecifierPublic)
+	ENikki_SpaceType                              WindSpace;                                         // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_WindAccumType                          WindAccumType;                                     // 0x0289(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_28A[0x2];                                      // 0x028A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LiftLegAlpha;                                      // 0x028C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PressSkirtAlpha;                                   // 0x0290(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_294[0x1DC];                                    // 0x0294(0x01DC)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 GetParticleNumber();
+	void UpdateNikkiPhysicsSuitsInfo(const TMap<class FString, class USkeletalMeshComponent*>& SuitSlotToSkelMeshMap, bool bInForceUpdate);
 
 public:
 	static class UClass* StaticClass()
@@ -73,69 +76,45 @@ public:
 	}
 };
 static_assert(alignof(UNikkiPhysicsManagerComponent) == 0x000010, "Wrong alignment on UNikkiPhysicsManagerComponent");
-static_assert(sizeof(UNikkiPhysicsManagerComponent) == 0x000410, "Wrong size on UNikkiPhysicsManagerComponent");
+static_assert(sizeof(UNikkiPhysicsManagerComponent) == 0x000470, "Wrong size on UNikkiPhysicsManagerComponent");
 static_assert(offsetof(UNikkiPhysicsManagerComponent, bEnableTickInEditor) == 0x000230, "Member 'UNikkiPhysicsManagerComponent::bEnableTickInEditor' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsManagerComponent, bUseInputSuits) == 0x000231, "Member 'UNikkiPhysicsManagerComponent::bUseInputSuits' has a wrong offset!");
 static_assert(offsetof(UNikkiPhysicsManagerComponent, NikkiPhysicsAlpha) == 0x000234, "Member 'UNikkiPhysicsManagerComponent::NikkiPhysicsAlpha' has a wrong offset!");
 static_assert(offsetof(UNikkiPhysicsManagerComponent, RuntimeRefSpace) == 0x000238, "Member 'UNikkiPhysicsManagerComponent::RuntimeRefSpace' has a wrong offset!");
 static_assert(offsetof(UNikkiPhysicsManagerComponent, PlaneColliders) == 0x000240, "Member 'UNikkiPhysicsManagerComponent::PlaneColliders' has a wrong offset!");
 static_assert(offsetof(UNikkiPhysicsManagerComponent, bEnableDynamicWind) == 0x000250, "Member 'UNikkiPhysicsManagerComponent::bEnableDynamicWind' has a wrong offset!");
 static_assert(offsetof(UNikkiPhysicsManagerComponent, DynamicWind) == 0x000258, "Member 'UNikkiPhysicsManagerComponent::DynamicWind' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsManagerComponent, WindSpace) == 0x000280, "Member 'UNikkiPhysicsManagerComponent::WindSpace' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsManagerComponent, WindAccumType) == 0x000281, "Member 'UNikkiPhysicsManagerComponent::WindAccumType' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsManagerComponent, LiftLegAlpha) == 0x000284, "Member 'UNikkiPhysicsManagerComponent::LiftLegAlpha' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsManagerComponent, PressSkirtAlpha) == 0x000288, "Member 'UNikkiPhysicsManagerComponent::PressSkirtAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsManagerComponent, WindSpace) == 0x000288, "Member 'UNikkiPhysicsManagerComponent::WindSpace' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsManagerComponent, WindAccumType) == 0x000289, "Member 'UNikkiPhysicsManagerComponent::WindAccumType' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsManagerComponent, LiftLegAlpha) == 0x00028C, "Member 'UNikkiPhysicsManagerComponent::LiftLegAlpha' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsManagerComponent, PressSkirtAlpha) == 0x000290, "Member 'UNikkiPhysicsManagerComponent::PressSkirtAlpha' has a wrong offset!");
 
-// Class NikkiPhysics.NikkiPhysicsSettings
-// 0x0058 (0x0080 - 0x0028)
-class UNikkiPhysicsSettings final : public UObject
+// Class NikkiPhysics.NikkiPhysicsConfigDataAsset
+// 0x0250 (0x0280 - 0x0030)
+class UNikkiPhysicsConfigDataAsset final : public UDataAsset
 {
 public:
-	int32                                         FrameRate;                                         // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxStepNumOneFrame;                                // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PreDoStepTimes;                                    // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Gravity;                                           // 0x0038(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_SpaceType                              GravityType;                                       // 0x0050(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPerPlatformInt                        MinLOD;                                            // 0x0054(0x0004)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FNikki_LODSettings                     LODs;                                              // 0x0058(0x0010)(Edit, NativeAccessSpecifierPublic)
-	bool                                          bEnableSpring;                                     // 0x0068(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_HumanColMethod                         HumanCollisionMethod;                              // 0x0069(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_6A[0x2];                                       // 0x006A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CapsuleCollisionRange;                             // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMaxAngleConstraint;                         // 0x0070(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMaintainSide;                               // 0x0071(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableShapeInertia;                               // 0x0072(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableLenCorrection;                              // 0x0073(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNikkiPlatformPhysicsSetting           MobileSettings;                                    // 0x0074(0x000C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 ConfigName;                                        // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Description;                                       // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FNikkiPhysicsSettings                  DefaultConfig;                                     // 0x0050(0x01E0)(Edit, NativeAccessSpecifierPublic)
+	TMap<ENikkiPhysicsPlatformType, struct FNikkiPhysicsSettings> PlatformConfigs;                   // 0x0230(0x0050)(Edit, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NikkiPhysicsSettings">();
+		return StaticClassImpl<"NikkiPhysicsConfigDataAsset">();
 	}
-	static class UNikkiPhysicsSettings* GetDefaultObj()
+	static class UNikkiPhysicsConfigDataAsset* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNikkiPhysicsSettings>();
+		return GetDefaultObjImpl<UNikkiPhysicsConfigDataAsset>();
 	}
 };
-static_assert(alignof(UNikkiPhysicsSettings) == 0x000008, "Wrong alignment on UNikkiPhysicsSettings");
-static_assert(sizeof(UNikkiPhysicsSettings) == 0x000080, "Wrong size on UNikkiPhysicsSettings");
-static_assert(offsetof(UNikkiPhysicsSettings, FrameRate) == 0x000028, "Member 'UNikkiPhysicsSettings::FrameRate' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, MaxStepNumOneFrame) == 0x00002C, "Member 'UNikkiPhysicsSettings::MaxStepNumOneFrame' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, PreDoStepTimes) == 0x000030, "Member 'UNikkiPhysicsSettings::PreDoStepTimes' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, Gravity) == 0x000038, "Member 'UNikkiPhysicsSettings::Gravity' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, GravityType) == 0x000050, "Member 'UNikkiPhysicsSettings::GravityType' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, MinLOD) == 0x000054, "Member 'UNikkiPhysicsSettings::MinLOD' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, LODs) == 0x000058, "Member 'UNikkiPhysicsSettings::LODs' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, bEnableSpring) == 0x000068, "Member 'UNikkiPhysicsSettings::bEnableSpring' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, HumanCollisionMethod) == 0x000069, "Member 'UNikkiPhysicsSettings::HumanCollisionMethod' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, CapsuleCollisionRange) == 0x00006C, "Member 'UNikkiPhysicsSettings::CapsuleCollisionRange' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, bEnableMaxAngleConstraint) == 0x000070, "Member 'UNikkiPhysicsSettings::bEnableMaxAngleConstraint' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, bEnableMaintainSide) == 0x000071, "Member 'UNikkiPhysicsSettings::bEnableMaintainSide' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, bEnableShapeInertia) == 0x000072, "Member 'UNikkiPhysicsSettings::bEnableShapeInertia' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, bEnableLenCorrection) == 0x000073, "Member 'UNikkiPhysicsSettings::bEnableLenCorrection' has a wrong offset!");
-static_assert(offsetof(UNikkiPhysicsSettings, MobileSettings) == 0x000074, "Member 'UNikkiPhysicsSettings::MobileSettings' has a wrong offset!");
+static_assert(alignof(UNikkiPhysicsConfigDataAsset) == 0x000008, "Wrong alignment on UNikkiPhysicsConfigDataAsset");
+static_assert(sizeof(UNikkiPhysicsConfigDataAsset) == 0x000280, "Wrong size on UNikkiPhysicsConfigDataAsset");
+static_assert(offsetof(UNikkiPhysicsConfigDataAsset, ConfigName) == 0x000030, "Member 'UNikkiPhysicsConfigDataAsset::ConfigName' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsConfigDataAsset, Description) == 0x000040, "Member 'UNikkiPhysicsConfigDataAsset::Description' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsConfigDataAsset, DefaultConfig) == 0x000050, "Member 'UNikkiPhysicsConfigDataAsset::DefaultConfig' has a wrong offset!");
+static_assert(offsetof(UNikkiPhysicsConfigDataAsset, PlatformConfigs) == 0x000230, "Member 'UNikkiPhysicsConfigDataAsset::PlatformConfigs' has a wrong offset!");
 
 // Class NikkiPhysics.NikkiPhysicsFunctions
 // 0x0000 (0x0028 - 0x0028)

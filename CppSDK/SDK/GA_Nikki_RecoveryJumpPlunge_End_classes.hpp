@@ -25,8 +25,8 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Nikki_RecoveryJumpPlunge_End_C;  // 0x05F8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void K2_ActivateAbility();
 	void ExecuteUbergraph_GA_Nikki_RecoveryJumpPlunge_End(int32 EntryPoint);
+	void K2_ActivateAbility();
 
 	class FString GetModuleName() const;
 

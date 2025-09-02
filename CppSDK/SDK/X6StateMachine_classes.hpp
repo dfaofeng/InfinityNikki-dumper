@@ -31,11 +31,12 @@ public:
 	TArray<class FName>                           ArrStateName;                                      // 0x00D8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, EditConst, NativeAccessSpecifierPublic)
 	bool                                          IsLocalState;                                      // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bReplicated;                                       // 0x00E9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnEnter;                                           // 0x00EA(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnExit;                                            // 0x00EB(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnChangeState;                                     // 0x00EC(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             PostChangeState;                                   // 0x00ED(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_EE[0xB2];                                      // 0x00EE(0x00B2)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bInitState;                                        // 0x00EA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnEnter;                                           // 0x00EB(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnExit;                                            // 0x00EC(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnChangeState;                                     // 0x00ED(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             PostChangeState;                                   // 0x00EE(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EF[0xB1];                                      // 0x00EF(0x00B1)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CanSetServerState();
@@ -70,10 +71,11 @@ static_assert(offsetof(UX6StateMachineComponent, K2_Enumerator) == 0x0000D0, "Me
 static_assert(offsetof(UX6StateMachineComponent, ArrStateName) == 0x0000D8, "Member 'UX6StateMachineComponent::ArrStateName' has a wrong offset!");
 static_assert(offsetof(UX6StateMachineComponent, IsLocalState) == 0x0000E8, "Member 'UX6StateMachineComponent::IsLocalState' has a wrong offset!");
 static_assert(offsetof(UX6StateMachineComponent, bReplicated) == 0x0000E9, "Member 'UX6StateMachineComponent::bReplicated' has a wrong offset!");
-static_assert(offsetof(UX6StateMachineComponent, OnEnter) == 0x0000EA, "Member 'UX6StateMachineComponent::OnEnter' has a wrong offset!");
-static_assert(offsetof(UX6StateMachineComponent, OnExit) == 0x0000EB, "Member 'UX6StateMachineComponent::OnExit' has a wrong offset!");
-static_assert(offsetof(UX6StateMachineComponent, OnChangeState) == 0x0000EC, "Member 'UX6StateMachineComponent::OnChangeState' has a wrong offset!");
-static_assert(offsetof(UX6StateMachineComponent, PostChangeState) == 0x0000ED, "Member 'UX6StateMachineComponent::PostChangeState' has a wrong offset!");
+static_assert(offsetof(UX6StateMachineComponent, bInitState) == 0x0000EA, "Member 'UX6StateMachineComponent::bInitState' has a wrong offset!");
+static_assert(offsetof(UX6StateMachineComponent, OnEnter) == 0x0000EB, "Member 'UX6StateMachineComponent::OnEnter' has a wrong offset!");
+static_assert(offsetof(UX6StateMachineComponent, OnExit) == 0x0000EC, "Member 'UX6StateMachineComponent::OnExit' has a wrong offset!");
+static_assert(offsetof(UX6StateMachineComponent, OnChangeState) == 0x0000ED, "Member 'UX6StateMachineComponent::OnChangeState' has a wrong offset!");
+static_assert(offsetof(UX6StateMachineComponent, PostChangeState) == 0x0000EE, "Member 'UX6StateMachineComponent::PostChangeState' has a wrong offset!");
 
 }
 

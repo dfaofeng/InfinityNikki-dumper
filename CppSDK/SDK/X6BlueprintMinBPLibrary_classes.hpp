@@ -30,8 +30,8 @@ public:
 	static void TeleportPlayerByTag(const class FString& TeleportTag, bool bNoFadeOutIn, const struct FVector& PosOffset, double RotationOffsetY, bool bSkipLoadingCheck, bool bRotateCamera, class UObject* __WorldContext);
 	static void TeleportPlayer(class ACharacter* Player, const struct FVector& TargettLocation, const struct FRotator& TargetRotation, bool bNoFadeOutIn, class UObject* __WorldContext);
 	static void SpawnActor(class UClass* SpawnClass, const struct FVector& Position, const struct FRotator& Rotation, class UObject* __WorldContext, class AActor** Value);
-	static void ShowMessageOnScreen(double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, TArray<class FString>& MessageID, class UObject* __WorldContext);
-	static void ShowMessageHUDOnScreen(TArray<class FText>& Messages, double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, EMessageBoxModeEnum PopupMode, bool DaMiaoHudTextAutoEnd, TArray<class FString>& MessageID, class UObject* __WorldContext);
+	static void ShowMessageOnScreen(double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, TArray<class FString>& MessageId, class UObject* __WorldContext);
+	static void ShowMessageHUDOnScreen(TArray<class FText>& messages, double TextDuration, EMessageHUDEnum MessageType, EMessageHUDHead HeadImage, EMessageBoxModeEnum PopupMode, bool DaMiaoHudTextAutoEnd, TArray<class FString>& MessageId, class UObject* __WorldContext);
 	static void SetSimulatePhysics(class UPrimitiveComponent* Target, bool bSimulate, class UObject* __WorldContext);
 	static void SetMiniGameLvlSeqPlayed(class ABP_MiniGame_C* MiniGame, bool bPlayed, class UObject* __WorldContext);
 	static void ResumeGame(class UObject* __WorldContext);

@@ -429,6 +429,17 @@ static_assert(offsetof(NavigationSystemV1_RegisterNavigationInvoker, Invoker) ==
 static_assert(offsetof(NavigationSystemV1_RegisterNavigationInvoker, TileGenerationRadius) == 0x000008, "Member 'NavigationSystemV1_RegisterNavigationInvoker::TileGenerationRadius' has a wrong offset!");
 static_assert(offsetof(NavigationSystemV1_RegisterNavigationInvoker, TileRemovalRadius) == 0x00000C, "Member 'NavigationSystemV1_RegisterNavigationInvoker::TileRemovalRadius' has a wrong offset!");
 
+// Function NavigationSystem.NavigationSystemV1.RuntimeBuildNavMesh
+// 0x0008 (0x0008 - 0x0000)
+struct NavigationSystemV1_RuntimeBuildNavMesh final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavigationSystemV1_RuntimeBuildNavMesh) == 0x000008, "Wrong alignment on NavigationSystemV1_RuntimeBuildNavMesh");
+static_assert(sizeof(NavigationSystemV1_RuntimeBuildNavMesh) == 0x000008, "Wrong size on NavigationSystemV1_RuntimeBuildNavMesh");
+static_assert(offsetof(NavigationSystemV1_RuntimeBuildNavMesh, WorldContextObject) == 0x000000, "Member 'NavigationSystemV1_RuntimeBuildNavMesh::WorldContextObject' has a wrong offset!");
+
 // Function NavigationSystem.NavigationSystemV1.RuntimeChangeRuntimeGenerationModeToDynamic
 // 0x0008 (0x0008 - 0x0000)
 struct NavigationSystemV1_RuntimeChangeRuntimeGenerationModeToDynamic final

@@ -19,12 +19,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FocusOnTargetAdvancedCamera.BP_FocusOnTargetAdvancedCamera_C
-// 0x0170 (0x2E80 - 0x2D10)
+// 0x0170 (0x2F00 - 0x2D90)
 class UBP_FocusOnTargetAdvancedCamera_C final : public UAdvancedCamera
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2D10(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FCameraBaseParamsDefine                DefaultCameraConfigDefine;                         // 0x2D18(0x0160)(Edit, BlueprintVisible, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x2D90(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FCameraBaseParamsDefine                DefaultCameraConfigDefine;                         // 0x2D98(0x0168)(Edit, BlueprintVisible, NoDestructor)
 
 public:
 	void ReceiveTick(float DeltaSeconds);
@@ -45,9 +45,9 @@ public:
 	}
 };
 static_assert(alignof(UBP_FocusOnTargetAdvancedCamera_C) == 0x000010, "Wrong alignment on UBP_FocusOnTargetAdvancedCamera_C");
-static_assert(sizeof(UBP_FocusOnTargetAdvancedCamera_C) == 0x002E80, "Wrong size on UBP_FocusOnTargetAdvancedCamera_C");
-static_assert(offsetof(UBP_FocusOnTargetAdvancedCamera_C, UberGraphFrame) == 0x002D10, "Member 'UBP_FocusOnTargetAdvancedCamera_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UBP_FocusOnTargetAdvancedCamera_C, DefaultCameraConfigDefine) == 0x002D18, "Member 'UBP_FocusOnTargetAdvancedCamera_C::DefaultCameraConfigDefine' has a wrong offset!");
+static_assert(sizeof(UBP_FocusOnTargetAdvancedCamera_C) == 0x002F00, "Wrong size on UBP_FocusOnTargetAdvancedCamera_C");
+static_assert(offsetof(UBP_FocusOnTargetAdvancedCamera_C, UberGraphFrame) == 0x002D90, "Member 'UBP_FocusOnTargetAdvancedCamera_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UBP_FocusOnTargetAdvancedCamera_C, DefaultCameraConfigDefine) == 0x002D98, "Member 'UBP_FocusOnTargetAdvancedCamera_C::DefaultCameraConfigDefine' has a wrong offset!");
 
 }
 

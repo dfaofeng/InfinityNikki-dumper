@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // UserDefinedStruct F_ConstantForceParameters.F_ConstantForceParameters
-// 0x0068 (0x0068 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct FF_ConstantForceParameters final
 {
 public:
@@ -36,9 +36,10 @@ public:
 	int32                                         AccumulateMode_65_B8AE37584D1F2E7E3786199FE9471A2E; // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        MaxDist2D_68_D62317F845E4E86B8E8C66984221E62A;     // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxDist2DToBaseLine_72_525AF812470F5D64D62ED18641FA1CDD; // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FF_ConstantForceParameters) == 0x000008, "Wrong alignment on FF_ConstantForceParameters");
-static_assert(sizeof(FF_ConstantForceParameters) == 0x000068, "Wrong size on FF_ConstantForceParameters");
+static_assert(sizeof(FF_ConstantForceParameters) == 0x000070, "Wrong size on FF_ConstantForceParameters");
 static_assert(offsetof(FF_ConstantForceParameters, Direction_50_17A74E7142BEA024833F1AA45543D3C6) == 0x000000, "Member 'FF_ConstantForceParameters::Direction_50_17A74E7142BEA024833F1AA45543D3C6' has a wrong offset!");
 static_assert(offsetof(FF_ConstantForceParameters, RotationOffset_58_86A105E84446F481940FCF8FB07DA635) == 0x000018, "Member 'FF_ConstantForceParameters::RotationOffset_58_86A105E84446F481940FCF8FB07DA635' has a wrong offset!");
 static_assert(offsetof(FF_ConstantForceParameters, Speed_48_11B0979744D0ADA6507BB3B730193548) == 0x000030, "Member 'FF_ConstantForceParameters::Speed_48_11B0979744D0ADA6507BB3B730193548' has a wrong offset!");
@@ -51,6 +52,7 @@ static_assert(offsetof(FF_ConstantForceParameters, bDisableReplicateMovement_45_
 static_assert(offsetof(FF_ConstantForceParameters, bCancelAbilityAfterDuration_62_A8ABAB834A3125CA57F818BE940AB556) == 0x000055, "Member 'FF_ConstantForceParameters::bCancelAbilityAfterDuration_62_A8ABAB834A3125CA57F818BE940AB556' has a wrong offset!");
 static_assert(offsetof(FF_ConstantForceParameters, AccumulateMode_65_B8AE37584D1F2E7E3786199FE9471A2E) == 0x000058, "Member 'FF_ConstantForceParameters::AccumulateMode_65_B8AE37584D1F2E7E3786199FE9471A2E' has a wrong offset!");
 static_assert(offsetof(FF_ConstantForceParameters, MaxDist2D_68_D62317F845E4E86B8E8C66984221E62A) == 0x000060, "Member 'FF_ConstantForceParameters::MaxDist2D_68_D62317F845E4E86B8E8C66984221E62A' has a wrong offset!");
+static_assert(offsetof(FF_ConstantForceParameters, MaxDist2DToBaseLine_72_525AF812470F5D64D62ED18641FA1CDD) == 0x000068, "Member 'FF_ConstantForceParameters::MaxDist2DToBaseLine_72_525AF812470F5D64D62ED18641FA1CDD' has a wrong offset!");
 
 }
 

@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // ScriptStruct PSDKOss.PSOssUploadModel
-// 0x0078 (0x0078 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct FPSOssUploadModel final
 {
 public:
@@ -27,10 +27,11 @@ public:
 	class FString                                 Category;                                          // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Filename;                                          // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SizeLimited;                                       // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Timeout;                                           // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AuthCredential;                                    // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPSOssUploadModel) == 0x000008, "Wrong alignment on FPSOssUploadModel");
-static_assert(sizeof(FPSOssUploadModel) == 0x000078, "Wrong size on FPSOssUploadModel");
+static_assert(sizeof(FPSOssUploadModel) == 0x000088, "Wrong size on FPSOssUploadModel");
 static_assert(offsetof(FPSOssUploadModel, Nid) == 0x000000, "Member 'FPSOssUploadModel::Nid' has a wrong offset!");
 static_assert(offsetof(FPSOssUploadModel, Token) == 0x000010, "Member 'FPSOssUploadModel::Token' has a wrong offset!");
 static_assert(offsetof(FPSOssUploadModel, ChannelId) == 0x000020, "Member 'FPSOssUploadModel::ChannelId' has a wrong offset!");
@@ -39,6 +40,86 @@ static_assert(offsetof(FPSOssUploadModel, Ext) == 0x000040, "Member 'FPSOssUploa
 static_assert(offsetof(FPSOssUploadModel, Category) == 0x000050, "Member 'FPSOssUploadModel::Category' has a wrong offset!");
 static_assert(offsetof(FPSOssUploadModel, Filename) == 0x000060, "Member 'FPSOssUploadModel::Filename' has a wrong offset!");
 static_assert(offsetof(FPSOssUploadModel, SizeLimited) == 0x000070, "Member 'FPSOssUploadModel::SizeLimited' has a wrong offset!");
+static_assert(offsetof(FPSOssUploadModel, Timeout) == 0x000074, "Member 'FPSOssUploadModel::Timeout' has a wrong offset!");
+static_assert(offsetof(FPSOssUploadModel, AuthCredential) == 0x000078, "Member 'FPSOssUploadModel::AuthCredential' has a wrong offset!");
+
+// ScriptStruct PSDKOss.PSOssBatchUploadModel
+// 0x0048 (0x0048 - 0x0000)
+struct FPSOssBatchUploadModel final
+{
+public:
+	class FString                                 BatchID;                                           // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BasePath;                                          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SizeLimited;                                       // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FPSOssUploadModel>              Files;                                             // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPSOssBatchUploadModel) == 0x000008, "Wrong alignment on FPSOssBatchUploadModel");
+static_assert(sizeof(FPSOssBatchUploadModel) == 0x000048, "Wrong size on FPSOssBatchUploadModel");
+static_assert(offsetof(FPSOssBatchUploadModel, BatchID) == 0x000000, "Member 'FPSOssBatchUploadModel::BatchID' has a wrong offset!");
+static_assert(offsetof(FPSOssBatchUploadModel, BasePath) == 0x000010, "Member 'FPSOssBatchUploadModel::BasePath' has a wrong offset!");
+static_assert(offsetof(FPSOssBatchUploadModel, SizeLimited) == 0x000020, "Member 'FPSOssBatchUploadModel::SizeLimited' has a wrong offset!");
+static_assert(offsetof(FPSOssBatchUploadModel, Files) == 0x000028, "Member 'FPSOssBatchUploadModel::Files' has a wrong offset!");
+
+// ScriptStruct PSDKOss.PSOssBatchConfigModel
+// 0x0008 (0x0008 - 0x0000)
+struct FPSOssBatchConfigModel final
+{
+public:
+	int32                                         Level;                                             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BatchLimit;                                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSOssBatchConfigModel) == 0x000004, "Wrong alignment on FPSOssBatchConfigModel");
+static_assert(sizeof(FPSOssBatchConfigModel) == 0x000008, "Wrong size on FPSOssBatchConfigModel");
+static_assert(offsetof(FPSOssBatchConfigModel, Level) == 0x000000, "Member 'FPSOssBatchConfigModel::Level' has a wrong offset!");
+static_assert(offsetof(FPSOssBatchConfigModel, BatchLimit) == 0x000004, "Member 'FPSOssBatchConfigModel::BatchLimit' has a wrong offset!");
+
+// ScriptStruct PSDKOss.PSOssCancelModel
+// 0x0020 (0x0020 - 0x0000)
+struct FPSOssCancelModel final
+{
+public:
+	TArray<struct FPSOssUploadModel>              Files;                                             // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class FString                                 BasePath;                                          // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSOssCancelModel) == 0x000008, "Wrong alignment on FPSOssCancelModel");
+static_assert(sizeof(FPSOssCancelModel) == 0x000020, "Wrong size on FPSOssCancelModel");
+static_assert(offsetof(FPSOssCancelModel, Files) == 0x000000, "Member 'FPSOssCancelModel::Files' has a wrong offset!");
+static_assert(offsetof(FPSOssCancelModel, BasePath) == 0x000010, "Member 'FPSOssCancelModel::BasePath' has a wrong offset!");
+
+// ScriptStruct PSDKOss.PSDKBatchResult
+// 0x0028 (0x0028 - 0x0000)
+struct FPSDKBatchResult
+{
+public:
+	int32                                         Ret;                                               // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 msg;                                               // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BatchID;                                           // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSDKBatchResult) == 0x000008, "Wrong alignment on FPSDKBatchResult");
+static_assert(sizeof(FPSDKBatchResult) == 0x000028, "Wrong size on FPSDKBatchResult");
+static_assert(offsetof(FPSDKBatchResult, Ret) == 0x000000, "Member 'FPSDKBatchResult::Ret' has a wrong offset!");
+static_assert(offsetof(FPSDKBatchResult, msg) == 0x000008, "Member 'FPSDKBatchResult::msg' has a wrong offset!");
+static_assert(offsetof(FPSDKBatchResult, BatchID) == 0x000018, "Member 'FPSDKBatchResult::BatchID' has a wrong offset!");
+
+// ScriptStruct PSDKOss.PSDKBatchItemResult
+// 0x00B8 (0x00E0 - 0x0028)
+struct FPSDKBatchItemResult final : public FPSDKBatchResult
+{
+public:
+	class FString                                 URL;                                               // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BasePath;                                          // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Expires;                                           // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPSOssUploadModel                      File;                                              // 0x0058(0x0088)(NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPSDKBatchItemResult) == 0x000008, "Wrong alignment on FPSDKBatchItemResult");
+static_assert(sizeof(FPSDKBatchItemResult) == 0x0000E0, "Wrong size on FPSDKBatchItemResult");
+static_assert(offsetof(FPSDKBatchItemResult, URL) == 0x000028, "Member 'FPSDKBatchItemResult::URL' has a wrong offset!");
+static_assert(offsetof(FPSDKBatchItemResult, BasePath) == 0x000038, "Member 'FPSDKBatchItemResult::BasePath' has a wrong offset!");
+static_assert(offsetof(FPSDKBatchItemResult, Expires) == 0x000048, "Member 'FPSDKBatchItemResult::Expires' has a wrong offset!");
+static_assert(offsetof(FPSDKBatchItemResult, File) == 0x000058, "Member 'FPSDKBatchItemResult::File' has a wrong offset!");
 
 }
 

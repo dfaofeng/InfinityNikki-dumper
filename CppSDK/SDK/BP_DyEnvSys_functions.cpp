@@ -171,20 +171,6 @@ void ABP_DyEnvSys_C::TOD_StopUpdateSunRotationByAbility()
 }
 
 
-// Function BP_DyEnvSys.BP_DyEnvSys_C.Time Update LS
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_DyEnvSys_C::Time_Update_LS()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_DyEnvSys_C", "Time Update LS");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_DyEnvSys.BP_DyEnvSys_C.Time Update From Host
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Enum_TipsKeyTheme_structs.hpp"
+#include "Engine_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "UMG_classes.hpp"
 
@@ -38,16 +38,16 @@ public:
 	struct FKey                                   ShowKey;                                           // 0x0360(0x0018)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
-	void BP_SetEnableState(bool bEnable);
-	void BP_SetInputAction(class UX6InputAction* Action, bool bForceSimple);
-	void BP_SetJoinDark(bool bJoinDark);
-	void BP_SetTips(const class FText& Text);
-	void Construct();
-	void ExecuteUbergraph_WBP_UI_Common_KeyTips(int32 EntryPoint);
-	void PreConstruct(bool IsDesignTime);
-	void RefreshTextTips();
-	void SetKey(const struct FKey& Key);
 	void SetKeyByInputAction(const class FString& ActionPath);
+	void SetKey(const struct FKey& Key);
+	void RefreshTextTips();
+	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_UI_Common_KeyTips(int32 EntryPoint);
+	void Construct();
+	void BP_SetTips(const class FText& Text);
+	void BP_SetJoinDark(bool bJoinDark);
+	void BP_SetInputAction(class UX6InputAction* Action, bool bForceSimple);
+	void BP_SetEnableState(bool bEnable);
 
 	class FString GetModuleName() const;
 

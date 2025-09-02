@@ -17,21 +17,123 @@
 namespace SDK
 {
 
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.RemoveTickableTask
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.AddTickableTask
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBP_AgentTaskBase_C*              Task                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTaskTickComponent_C::RemoveTickableTask(class UBP_AgentTaskBase_C* Task)
+void UBP_AgentTaskTickComponent_C::AddTickableTask(class UBP_AgentTaskBase_C* Task)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "RemoveTickableTask");
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "AddTickableTask");
 
-	Params::BP_AgentTaskTickComponent_C_RemoveTickableTask Parms{};
+	Params::BP_AgentTaskTickComponent_C_AddTickableTask Parms{};
 
 	Parms.Task = Task;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ExecuteUbergraph_BP_AgentTaskTickComponent
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AgentTaskTickComponent_C::ExecuteUbergraph_BP_AgentTaskTickComponent(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "ExecuteUbergraph_BP_AgentTaskTickComponent");
+
+	Params::BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTaskTickComponent Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.OnPop
+// (Event, Public, BlueprintEvent)
+
+void UBP_AgentTaskTickComponent_C::OnPop()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "OnPop");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.OnPreCreated
+// (Event, Public, BlueprintEvent)
+
+void UBP_AgentTaskTickComponent_C::OnPreCreated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "OnPreCreated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.OnPush
+// (Event, Public, BlueprintEvent)
+
+void UBP_AgentTaskTickComponent_C::OnPush()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "OnPush");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AgentTaskTickComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "ReceiveEndPlay");
+
+	Params::BP_AgentTaskTickComponent_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_AgentTaskTickComponent_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "ReceiveTick");
+
+	Params::BP_AgentTaskTickComponent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -57,121 +159,19 @@ bool UBP_AgentTaskTickComponent_C::RejectRecycle()
 }
 
 
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AgentTaskTickComponent_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "ReceiveTick");
-
-	Params::BP_AgentTaskTickComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AgentTaskTickComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "ReceiveEndPlay");
-
-	Params::BP_AgentTaskTickComponent_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.OnPush
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentTaskTickComponent_C::OnPush()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "OnPush");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.OnPreCreated
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentTaskTickComponent_C::OnPreCreated()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "OnPreCreated");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.OnPop
-// (Event, Public, BlueprintEvent)
-
-void UBP_AgentTaskTickComponent_C::OnPop()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "OnPop");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.ExecuteUbergraph_BP_AgentTaskTickComponent
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_AgentTaskTickComponent_C::ExecuteUbergraph_BP_AgentTaskTickComponent(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "ExecuteUbergraph_BP_AgentTaskTickComponent");
-
-	Params::BP_AgentTaskTickComponent_C_ExecuteUbergraph_BP_AgentTaskTickComponent Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.AddTickableTask
+// Function BP_AgentTaskTickComponent.BP_AgentTaskTickComponent_C.RemoveTickableTask
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UBP_AgentTaskBase_C*              Task                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UBP_AgentTaskTickComponent_C::AddTickableTask(class UBP_AgentTaskBase_C* Task)
+void UBP_AgentTaskTickComponent_C::RemoveTickableTask(class UBP_AgentTaskBase_C* Task)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "AddTickableTask");
+		Func = Class->GetFunction("BP_AgentTaskTickComponent_C", "RemoveTickableTask");
 
-	Params::BP_AgentTaskTickComponent_C_AddTickableTask Parms{};
+	Params::BP_AgentTaskTickComponent_C_RemoveTickableTask Parms{};
 
 	Parms.Task = Task;
 

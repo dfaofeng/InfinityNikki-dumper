@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "X6StateMachine_structs.hpp"
-#include "E_InteractionProcess_structs.hpp"
 #include "EStarSeaDust_Type_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_InteractionProcess_structs.hpp"
+#include "X6StateMachine_structs.hpp"
 
 
 namespace SDK::Params

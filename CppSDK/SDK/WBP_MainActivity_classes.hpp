@@ -29,16 +29,16 @@ public:
 	double                                        ItemFadeOutInternal_Fold;                          // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void PlayFadeIn();
-	void OnLevelLoaded();
-	void OnItemClicked(class UBP_MainHudObtainedContainerData_C* Data);
-	void LoadStreamLevel();
-	void loadDesignDrawingWorld(const class FString& LevelPath);
-	void HandleOnLevelLoaded();
-	void ExecuteUbergraph_WBP_MainActivity(int32 EntryPoint);
-	void Construct();
 	void ChangePlayerClothes();
+	void Construct();
+	void ExecuteUbergraph_WBP_MainActivity(int32 EntryPoint);
+	void HandleOnLevelLoaded();
+	void loadDesignDrawingWorld(const class FString& LevelPath);
+	void LoadStreamLevel();
+	void OnItemClicked(class UBP_MainHudObtainedContainerData_C* Data);
+	void OnLevelLoaded();
+	void PlayFadeIn();
+	void PreConstruct(bool IsDesignTime);
 
 	class FString GetModuleName() const;
 

@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "ABP_PlayerStrafeMovement_structs.hpp"
-#include "AnimationWarpingRuntime_structs.hpp"
-#include "X6Animation_structs.hpp"
+#include "Engine_structs.hpp"
 #include "AnimStruct_CardinalDirections_structs.hpp"
+#include "AnimationWarpingRuntime_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "X6Animation_structs.hpp"
 #include "ECardinalDirections_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "X6Game_structs.hpp"
@@ -28,7 +28,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_PlayerStrafeMovement.ABP_PlayerStrafeMovement_C
-// 0x17B0 (0x1DB0 - 0x0600)
+// 0x17A0 (0x1DA0 - 0x0600)
 class UABP_PlayerStrafeMovement_C final : public UX6NikkiGroundAnimInstance
 {
 public:
@@ -149,8 +149,6 @@ public:
 	uint8                                         Pad_1D71[0x7];                                     // 0x1D71(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                PlayerVelocity;                                    // 0x1D78(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBP_PlayerRegularInAirMovementComp_C*   BP_RegularInAIrMovementComp;                       // 0x1D90(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        InputDeadZone;                                     // 0x1D98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bCustomHasMovementInput;                           // 0x1DA0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void AnimGraph(struct FPoseLink* AnimGraph_0);
@@ -205,7 +203,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_PlayerStrafeMovement_C) == 0x000010, "Wrong alignment on UABP_PlayerStrafeMovement_C");
-static_assert(sizeof(UABP_PlayerStrafeMovement_C) == 0x001DB0, "Wrong size on UABP_PlayerStrafeMovement_C");
+static_assert(sizeof(UABP_PlayerStrafeMovement_C) == 0x001DA0, "Wrong size on UABP_PlayerStrafeMovement_C");
 static_assert(offsetof(UABP_PlayerStrafeMovement_C, UberGraphFrame) == 0x000600, "Member 'UABP_PlayerStrafeMovement_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerStrafeMovement_C, __AnimBlueprintMutables) == 0x000608, "Member 'UABP_PlayerStrafeMovement_C::__AnimBlueprintMutables' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerStrafeMovement_C, AnimBlueprintExtension_PropertyAccess) == 0x000610, "Member 'UABP_PlayerStrafeMovement_C::AnimBlueprintExtension_PropertyAccess' has a wrong offset!");
@@ -314,8 +312,6 @@ static_assert(offsetof(UABP_PlayerStrafeMovement_C, BP_InAirMovementComp) == 0x0
 static_assert(offsetof(UABP_PlayerStrafeMovement_C, BP_JumpStage) == 0x001D70, "Member 'UABP_PlayerStrafeMovement_C::BP_JumpStage' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerStrafeMovement_C, PlayerVelocity) == 0x001D78, "Member 'UABP_PlayerStrafeMovement_C::PlayerVelocity' has a wrong offset!");
 static_assert(offsetof(UABP_PlayerStrafeMovement_C, BP_RegularInAIrMovementComp) == 0x001D90, "Member 'UABP_PlayerStrafeMovement_C::BP_RegularInAIrMovementComp' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerStrafeMovement_C, InputDeadZone) == 0x001D98, "Member 'UABP_PlayerStrafeMovement_C::InputDeadZone' has a wrong offset!");
-static_assert(offsetof(UABP_PlayerStrafeMovement_C, bCustomHasMovementInput) == 0x001DA0, "Member 'UABP_PlayerStrafeMovement_C::bCustomHasMovementInput' has a wrong offset!");
 
 }
 

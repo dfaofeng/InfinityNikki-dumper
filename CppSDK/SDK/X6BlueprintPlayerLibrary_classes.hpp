@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "EAbilityGroupType_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "EAbilityGroupType_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EX6EnvType_structs.hpp"
 #include "EPlayerActionTypes_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
+#include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "EClothesPropertyType_structs.hpp"
 #include "EClothesMinorType_structs.hpp"
 
@@ -40,6 +40,7 @@ public:
 	static void IsX6GameDaMiaoVisitor(class AActor* Actor, class UObject* __WorldContext, bool* Ret);
 	static void IsX6GameDaMiao(class AActor* Actor, bool includeVisitor, class UObject* __WorldContext, bool* IsDamiao);
 	static void IsLocalPlayerControllingPawn(class AActor* Actor, class UObject* __WorldContext, bool* IsControllingPawn);
+	static void IsGhostCharacter(class AActor* InActor, class UObject* __WorldContext, bool* isGhost);
 	static void GetX6GameNikkiPawn(class UObject* __WorldContext, class ACharacter** NikkiPawn);
 	static void GetPlayerControllingRole(class UObject* __WorldContext, class ACharacter** ControllingRole);
 	static void GetLocalPlayerPawn(class UObject* __WorldContext, class ACharacter** LocalPlayerPawn);
@@ -55,6 +56,7 @@ public:
 	static void BP_SyncNPCCurrentCharacteristicsState(class AActor* npcActor, uint8 State, class UObject* __WorldContext);
 	static void BP_SwitchGamePlayMovementMode(EPlayerGamePlayMovementMode NewGamePlayMovementMode, class AActor* ActorToSwitchMovement, class UObject* __WorldContext);
 	static void BP_StopPlayForceFeedback(class UForceFeedbackEffect* ForceFeedbackEffect, class FName TagName, class UObject* __WorldContext);
+	static void BP_SetWeaponOverlayEnabled(class AActor* InActor, bool bEnable, class UObject* __WorldContext);
 	static void BP_SetWeaponMirrorDisabled(class AActor* Actor, bool bDisabled, const class FString& InModuleTag, class UObject* __WorldContext);
 	static void BP_SetWeaponAppearanceDisabled(class AActor* Actor, bool bDisabled, bool bImmediateRequest, const class FString& InModuleTag, bool bLocal, class UObject* __WorldContext);
 	static void BP_SetNPCCurrentLocalCharacteristicsState(class AActor* npcActor, uint8 State, class UObject* __WorldContext);
@@ -77,7 +79,7 @@ public:
 	static void BP_GetCurrentWeaponID(class AActor* InActor, class UObject* __WorldContext, int32* WeaponID);
 	static void BP_GetCurrentWeaponActor(class AActor* InActor, class UObject* __WorldContext, class AActor** Weapon);
 	static void BP_ExitGamePlayMovementMode(EPlayerGamePlayMovementMode MovementModeToExit, class AActor* ActorToExitMovement, class UObject* __WorldContext);
-	static void BP_EquipWeaponByID(class AActor* InActor, const class FString& WeaponID, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext);
+	static void BP_EquipWeaponByID(class AActor* InActor, int64 WeaponID, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext);
 	static void BP_EquipWeaponByConfigPath(class AActor* InActor, const class FString& ConfigPath, const class FString& SlotType, bool ImmediateRequest, bool InSync, class UObject* __WorldContext);
 	static void BP_EquipWeaponByAbilityType(class AActor* Actor, EAbilityGroupType AbilityType, const class FString& SlotType, bool bImmediateRequest, bool bSync, class UObject* __WorldContext);
 	static void BP_DuplicateWeapon(class AActor* InActor, class UObject* __WorldContext, class AActor** DuplicatedWeapon);

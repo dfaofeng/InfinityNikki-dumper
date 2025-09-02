@@ -40,6 +40,23 @@ public:
 static_assert(alignof(UDatasmithObjectTemplate) == 0x000008, "Wrong alignment on UDatasmithObjectTemplate");
 static_assert(sizeof(UDatasmithObjectTemplate) == 0x000030, "Wrong size on UDatasmithObjectTemplate");
 
+// Class DatasmithContent.DatasmithSceneImportData
+// 0x0000 (0x0028 - 0x0028)
+class UDatasmithSceneImportData : public UAssetImportData
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DatasmithSceneImportData">();
+	}
+	static class UDatasmithSceneImportData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDatasmithSceneImportData>();
+	}
+};
+static_assert(alignof(UDatasmithSceneImportData) == 0x000008, "Wrong alignment on UDatasmithSceneImportData");
+static_assert(sizeof(UDatasmithSceneImportData) == 0x000028, "Wrong size on UDatasmithSceneImportData");
+
 // Class DatasmithContent.DatasmithActorTemplate
 // 0x00A0 (0x00D0 - 0x0030)
 class UDatasmithActorTemplate final : public UDatasmithObjectTemplate
@@ -62,23 +79,6 @@ static_assert(alignof(UDatasmithActorTemplate) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UDatasmithActorTemplate) == 0x0000D0, "Wrong size on UDatasmithActorTemplate");
 static_assert(offsetof(UDatasmithActorTemplate, Layers) == 0x000030, "Member 'UDatasmithActorTemplate::Layers' has a wrong offset!");
 static_assert(offsetof(UDatasmithActorTemplate, Tags) == 0x000080, "Member 'UDatasmithActorTemplate::Tags' has a wrong offset!");
-
-// Class DatasmithContent.DatasmithAdditionalData
-// 0x0000 (0x0028 - 0x0028)
-class UDatasmithAdditionalData final : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DatasmithAdditionalData">();
-	}
-	static class UDatasmithAdditionalData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDatasmithAdditionalData>();
-	}
-};
-static_assert(alignof(UDatasmithAdditionalData) == 0x000008, "Wrong alignment on UDatasmithAdditionalData");
-static_assert(sizeof(UDatasmithAdditionalData) == 0x000028, "Wrong size on UDatasmithAdditionalData");
 
 // Class DatasmithContent.DatasmithAreaLightActor
 // 0x0078 (0x0420 - 0x03A8)
@@ -137,6 +137,23 @@ static_assert(offsetof(ADatasmithAreaLightActor, SourceLength) == 0x00040C, "Mem
 static_assert(offsetof(ADatasmithAreaLightActor, AttenuationRadius) == 0x000410, "Member 'ADatasmithAreaLightActor::AttenuationRadius' has a wrong offset!");
 static_assert(offsetof(ADatasmithAreaLightActor, SpotlightInnerAngle) == 0x000414, "Member 'ADatasmithAreaLightActor::SpotlightInnerAngle' has a wrong offset!");
 static_assert(offsetof(ADatasmithAreaLightActor, SpotlightOuterAngle) == 0x000418, "Member 'ADatasmithAreaLightActor::SpotlightOuterAngle' has a wrong offset!");
+
+// Class DatasmithContent.DatasmithAdditionalData
+// 0x0000 (0x0028 - 0x0028)
+class UDatasmithAdditionalData final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DatasmithAdditionalData">();
+	}
+	static class UDatasmithAdditionalData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDatasmithAdditionalData>();
+	}
+};
+static_assert(alignof(UDatasmithAdditionalData) == 0x000008, "Wrong alignment on UDatasmithAdditionalData");
+static_assert(sizeof(UDatasmithAdditionalData) == 0x000028, "Wrong size on UDatasmithAdditionalData");
 
 // Class DatasmithContent.DatasmithAreaLightActorTemplate
 // 0x0090 (0x00C0 - 0x0030)
@@ -240,23 +257,6 @@ public:
 };
 static_assert(alignof(UDatasmithStaticMeshCADImportData) == 0x000008, "Wrong alignment on UDatasmithStaticMeshCADImportData");
 static_assert(sizeof(UDatasmithStaticMeshCADImportData) == 0x000028, "Wrong size on UDatasmithStaticMeshCADImportData");
-
-// Class DatasmithContent.DatasmithSceneImportData
-// 0x0000 (0x0028 - 0x0028)
-class UDatasmithSceneImportData : public UAssetImportData
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DatasmithSceneImportData">();
-	}
-	static class UDatasmithSceneImportData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDatasmithSceneImportData>();
-	}
-};
-static_assert(alignof(UDatasmithSceneImportData) == 0x000008, "Wrong alignment on UDatasmithSceneImportData");
-static_assert(sizeof(UDatasmithSceneImportData) == 0x000028, "Wrong size on UDatasmithSceneImportData");
 
 // Class DatasmithContent.DatasmithTranslatedSceneImportData
 // 0x0000 (0x0028 - 0x0028)

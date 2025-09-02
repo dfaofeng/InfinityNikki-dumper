@@ -82,12 +82,12 @@ static_assert(offsetof(FPSDKAntiCheatStartRequest, zoneId) == 0x0000D8, "Member 
 struct FSDKAntiCheatInitRequest final : public FJsonData
 {
 public:
-	uint32                                        GameId;                                            // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        gameId;                                            // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSDKAntiCheatInitRequest) == 0x000008, "Wrong alignment on FSDKAntiCheatInitRequest");
 static_assert(sizeof(FSDKAntiCheatInitRequest) == 0x0000C0, "Wrong size on FSDKAntiCheatInitRequest");
-static_assert(offsetof(FSDKAntiCheatInitRequest, GameId) == 0x0000B8, "Member 'FSDKAntiCheatInitRequest::GameId' has a wrong offset!");
+static_assert(offsetof(FSDKAntiCheatInitRequest, gameId) == 0x0000B8, "Member 'FSDKAntiCheatInitRequest::gameId' has a wrong offset!");
 
 // ScriptStruct PSDKAntiCheat.SDKAntiCheatPlayerControlRequest
 // 0x0040 (0x00F8 - 0x00B8)
@@ -97,7 +97,7 @@ public:
 	class FString                                 accountId;                                         // 0x00B8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFSDKAntiCheatAccountType                     AccountType;                                       // 0x00C8(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFSDKAntiCheatAccountPlatId                   PlatID;                                            // 0x00CA(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        GameId;                                            // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        gameId;                                            // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        worldId;                                           // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RoleId;                                            // 0x00D8(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -108,7 +108,7 @@ static_assert(sizeof(FSDKAntiCheatPlayerControlRequest) == 0x0000F8, "Wrong size
 static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, accountId) == 0x0000B8, "Member 'FSDKAntiCheatPlayerControlRequest::accountId' has a wrong offset!");
 static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, AccountType) == 0x0000C8, "Member 'FSDKAntiCheatPlayerControlRequest::AccountType' has a wrong offset!");
 static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, PlatID) == 0x0000CA, "Member 'FSDKAntiCheatPlayerControlRequest::PlatID' has a wrong offset!");
-static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, GameId) == 0x0000CC, "Member 'FSDKAntiCheatPlayerControlRequest::GameId' has a wrong offset!");
+static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, gameId) == 0x0000CC, "Member 'FSDKAntiCheatPlayerControlRequest::gameId' has a wrong offset!");
 static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, worldId) == 0x0000D0, "Member 'FSDKAntiCheatPlayerControlRequest::worldId' has a wrong offset!");
 static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, RoleId) == 0x0000D8, "Member 'FSDKAntiCheatPlayerControlRequest::RoleId' has a wrong offset!");
 static_assert(offsetof(FSDKAntiCheatPlayerControlRequest, zoneId) == 0x0000E8, "Member 'FSDKAntiCheatPlayerControlRequest::zoneId' has a wrong offset!");

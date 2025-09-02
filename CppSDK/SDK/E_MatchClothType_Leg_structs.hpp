@@ -15,18 +15,19 @@ namespace SDK
 {
 
 // UserDefinedEnum E_MatchClothType_Leg.E_MatchClothType_Leg
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class E_MatchClothType_Leg : uint8
 {
 	NewEnumerator4                           = 0,
 	NewEnumerator0                           = 1,
-	NewEnumerator7                           = 2,
-	NewEnumerator6                           = 3,
-	NewEnumerator1                           = 4,
-	NewEnumerator8                           = 5,
-	NewEnumerator2                           = 6,
-	NewEnumerator3                           = 7,
-	E_MatchClothType_MAX                     = 8,
+	NewEnumerator9                           = 2,
+	NewEnumerator7                           = 3,
+	NewEnumerator6                           = 4,
+	NewEnumerator1                           = 5,
+	NewEnumerator8                           = 6,
+	NewEnumerator2                           = 7,
+	NewEnumerator3                           = 8,
+	E_MatchClothType_MAX                     = 9,
 };
 
 }

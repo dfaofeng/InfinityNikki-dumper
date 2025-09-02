@@ -29,23 +29,23 @@ public:
 	TMulticastInlineDelegate<void(class FName NotifyName)> OnShootTrigger;                           // 0x05B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void StopFullBodyMontage();
-	void ShootTrigger(class FName NotifyName);
-	void PlayFullBodyMontage();
-	void OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358(class AActor* ReturnActor);
-	void OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358();
-	void OnNotifyEnd_D2E758E949A47204827D699A8392029B(class FName NotifyName);
-	void OnNotifyBegin_D2E758E949A47204827D699A8392029B(class FName NotifyName);
-	void OnInterrupted_D2E758E949A47204827D699A8392029B(class FName NotifyName);
-	void OnCompleted_D2E758E949A47204827D699A8392029B(class FName NotifyName);
-	void OnCancelled_D2E758E949A47204827D699A8392029B(class FName NotifyName);
-	void OnBlendOut_D2E758E949A47204827D699A8392029B(class FName NotifyName);
-	void K2_OnEndAbility(bool bWasCancelled);
-	void K2_ActivateAbility();
-	void ExecuteUbergraph_GA_Nikki_RecoveryClick_Base(int32 EntryPoint);
-	void BP_SpawnFirstBullet();
-	void BP_SelectMontage();
 	void BP_SelectBulletData();
+	void BP_SelectMontage();
+	void BP_SpawnFirstBullet();
+	void ExecuteUbergraph_GA_Nikki_RecoveryClick_Base(int32 EntryPoint);
+	void K2_ActivateAbility();
+	void K2_OnEndAbility(bool bWasCancelled);
+	void OnBlendOut_D2E758E949A47204827D699A8392029B(class FName NotifyName);
+	void OnCancelled_D2E758E949A47204827D699A8392029B(class FName NotifyName);
+	void OnCompleted_D2E758E949A47204827D699A8392029B(class FName NotifyName);
+	void OnInterrupted_D2E758E949A47204827D699A8392029B(class FName NotifyName);
+	void OnNotifyBegin_D2E758E949A47204827D699A8392029B(class FName NotifyName);
+	void OnNotifyEnd_D2E758E949A47204827D699A8392029B(class FName NotifyName);
+	void OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358();
+	void OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358(class AActor* ReturnActor);
+	void PlayFullBodyMontage();
+	void ShootTrigger(class FName NotifyName);
+	void StopFullBodyMontage();
 
 	class FString GetModuleName() const;
 

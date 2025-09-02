@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function CameraShootingPosition.CameraShootingPosition_C.DeletePhotographCamera_EditorOnly
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ACameraShootingPosition_C::DeletePhotographCamera_EditorOnly()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CameraShootingPosition_C", "DeletePhotographCamera_EditorOnly");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function CameraShootingPosition.CameraShootingPosition_C.SpawnPhotographCamera_EditorOnly
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -40,6 +26,20 @@ void ACameraShootingPosition_C::SpawnPhotographCamera_EditorOnly()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("CameraShootingPosition_C", "SpawnPhotographCamera_EditorOnly");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CameraShootingPosition.CameraShootingPosition_C.DeletePhotographCamera_EditorOnly
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ACameraShootingPosition_C::DeletePhotographCamera_EditorOnly()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraShootingPosition_C", "DeletePhotographCamera_EditorOnly");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

@@ -67,6 +67,58 @@ class USceneComponent* INikkiPhysicsAttachmentInterface::GetAttachmentComponent(
 }
 
 
+// Function NikkiPhysics.NikkiPhysicsManagerComponent.GetParticleNumber
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNikkiPhysicsManagerComponent::GetParticleNumber()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPhysicsManagerComponent", "GetParticleNumber");
+
+	Params::NikkiPhysicsManagerComponent_GetParticleNumber Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function NikkiPhysics.NikkiPhysicsManagerComponent.UpdateNikkiPhysicsSuitsInfo
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const TMap<class FString, class USkeletalMeshComponent*>&SuitSlotToSkelMeshMap                                  (ConstParm, Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    bInForceUpdate                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNikkiPhysicsManagerComponent::UpdateNikkiPhysicsSuitsInfo(const TMap<class FString, class USkeletalMeshComponent*>& SuitSlotToSkelMeshMap, bool bInForceUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NikkiPhysicsManagerComponent", "UpdateNikkiPhysicsSuitsInfo");
+
+	Params::NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo Parms{};
+
+	Parms.SuitSlotToSkelMeshMap = std::move(SuitSlotToSkelMeshMap);
+	Parms.bInForceUpdate = bInForceUpdate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function NikkiPhysics.NikkiPhysicsFunctions.AddDynamicWind
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:

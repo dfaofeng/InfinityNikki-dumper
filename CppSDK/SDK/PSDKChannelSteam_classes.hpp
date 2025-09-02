@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "PSDKLogin_classes.hpp"
 #include "UMG_classes.hpp"
 #include "SlateCore_structs.hpp"
 #include "PSDKBasic_classes.hpp"
+#include "PSDKLogin_classes.hpp"
 
 
 namespace SDK
@@ -56,6 +56,10 @@ public:
 	uint8                                         Pad_360[0x18];                                     // 0x0360(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPSdkLoginUIToastTipSteam*              ToastTip;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_380[0x10];                                     // 0x0380(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnPrivacyPolicyButtonReleased();
+	void OnUserContractButtonReleased();
 
 public:
 	static class UClass* StaticClass()
@@ -119,19 +123,24 @@ static_assert(offsetof(UPSdkLoginUIAccountNotExistSteam, UnableLoginButton) == 0
 static_assert(offsetof(UPSdkLoginUIAccountNotExistSteam, RegisterButton) == 0x0003E0, "Member 'UPSdkLoginUIAccountNotExistSteam::RegisterButton' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIAgreementDialogSteam
-// 0x0050 (0x03E0 - 0x0390)
+// 0x0078 (0x0408 - 0x0390)
 class UPSdkLoginUIAgreementDialogSteam final : public UPSdkLoginUIBaseSteam
 {
 public:
 	class UImage*                                 OverlayImage;                                      // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UBorder*                                BackgroundBorder;                                  // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         PromptRichText;                                    // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             PromptTitle;                                       // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             CancelTextBlock;                                   // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             AgreeTextBlock;                                    // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                AgreeButton;                                       // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                CancelButton;                                      // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3D0[0x10];                                     // 0x03D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UWidgetSwitcher*                        HyperLinkButtonSwitcher;                           // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   TwUserContract;                                    // 0x03A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   OverseasUserContract;                              // 0x03B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   OverseasPrivacyPolicy;                             // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWidgetSwitcher*                        KrPolicyPartSwitcher;                              // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PolicyPromptKrPart;                                // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PromptTitle;                                       // 0x03D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             CancelTextBlock;                                   // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             AgreeTextBlock;                                    // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                AgreeButton;                                       // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                CancelButton;                                      // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3F8[0x10];                                     // 0x03F8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnAgreeButtonClicked();
@@ -149,18 +158,23 @@ public:
 	}
 };
 static_assert(alignof(UPSdkLoginUIAgreementDialogSteam) == 0x000008, "Wrong alignment on UPSdkLoginUIAgreementDialogSteam");
-static_assert(sizeof(UPSdkLoginUIAgreementDialogSteam) == 0x0003E0, "Wrong size on UPSdkLoginUIAgreementDialogSteam");
+static_assert(sizeof(UPSdkLoginUIAgreementDialogSteam) == 0x000408, "Wrong size on UPSdkLoginUIAgreementDialogSteam");
 static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, OverlayImage) == 0x000390, "Member 'UPSdkLoginUIAgreementDialogSteam::OverlayImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, BackgroundBorder) == 0x000398, "Member 'UPSdkLoginUIAgreementDialogSteam::BackgroundBorder' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, PromptRichText) == 0x0003A0, "Member 'UPSdkLoginUIAgreementDialogSteam::PromptRichText' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, PromptTitle) == 0x0003A8, "Member 'UPSdkLoginUIAgreementDialogSteam::PromptTitle' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, CancelTextBlock) == 0x0003B0, "Member 'UPSdkLoginUIAgreementDialogSteam::CancelTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, AgreeTextBlock) == 0x0003B8, "Member 'UPSdkLoginUIAgreementDialogSteam::AgreeTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, AgreeButton) == 0x0003C0, "Member 'UPSdkLoginUIAgreementDialogSteam::AgreeButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, CancelButton) == 0x0003C8, "Member 'UPSdkLoginUIAgreementDialogSteam::CancelButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, HyperLinkButtonSwitcher) == 0x0003A0, "Member 'UPSdkLoginUIAgreementDialogSteam::HyperLinkButtonSwitcher' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, TwUserContract) == 0x0003A8, "Member 'UPSdkLoginUIAgreementDialogSteam::TwUserContract' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, OverseasUserContract) == 0x0003B0, "Member 'UPSdkLoginUIAgreementDialogSteam::OverseasUserContract' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, OverseasPrivacyPolicy) == 0x0003B8, "Member 'UPSdkLoginUIAgreementDialogSteam::OverseasPrivacyPolicy' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, KrPolicyPartSwitcher) == 0x0003C0, "Member 'UPSdkLoginUIAgreementDialogSteam::KrPolicyPartSwitcher' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, PolicyPromptKrPart) == 0x0003C8, "Member 'UPSdkLoginUIAgreementDialogSteam::PolicyPromptKrPart' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, PromptTitle) == 0x0003D0, "Member 'UPSdkLoginUIAgreementDialogSteam::PromptTitle' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, CancelTextBlock) == 0x0003D8, "Member 'UPSdkLoginUIAgreementDialogSteam::CancelTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, AgreeTextBlock) == 0x0003E0, "Member 'UPSdkLoginUIAgreementDialogSteam::AgreeTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, AgreeButton) == 0x0003E8, "Member 'UPSdkLoginUIAgreementDialogSteam::AgreeButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIAgreementDialogSteam, CancelButton) == 0x0003F0, "Member 'UPSdkLoginUIAgreementDialogSteam::CancelButton' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIBindExistingAccountSteam
-// 0x00A8 (0x0438 - 0x0390)
+// 0x00D0 (0x0460 - 0x0390)
 class UPSdkLoginUIBindExistingAccountSteam final : public UPSdkLoginUIBaseSteam
 {
 public:
@@ -175,20 +189,25 @@ public:
 	class UEditableTextBox*                       PasswordInputTextEdit;                             // 0x03D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UCheckBox*                              MaskCheckBoxBtn;                                   // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UCheckBox*                              AgreementCheckBoxBtn;                              // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         AgreementRichTextBlock;                            // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                BindButton;                                        // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             BindButtonTextBlock;                               // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                OtherIdLoginButton;                                // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             OtherIdLoginButtonTextBlock;                       // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                FaqButton;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             FaqButtonTextBlock;                                // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                RegisterButton;                                    // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             RegisterButtonTextBlock;                           // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWidgetSwitcher*                        PolicySwitcher;                                    // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             AgreementPolicyText1;                              // 0x03F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   TwUserContract;                                    // 0x0400(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             AgreementPolicyText2;                              // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   OverseasUserContract;                              // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   OverseasPrivacyPolicy;                             // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                BindButton;                                        // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             BindButtonTextBlock;                               // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                OtherIdLoginButton;                                // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             OtherIdLoginButtonTextBlock;                       // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                FaqButton;                                         // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             FaqButtonTextBlock;                                // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                RegisterButton;                                    // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             RegisterButtonTextBlock;                           // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void GoToRegisterUIDelegate();
 	void OnBindButtonClicked();
-	void OnCheckedButton(bool checked);
+	void OnCheckedButton(bool Checked);
 	void OnCloseButtonClicked();
 	void OnDelegate(bool bRes);
 	void OnFaqButtonClicked();
@@ -214,7 +233,7 @@ public:
 	}
 };
 static_assert(alignof(UPSdkLoginUIBindExistingAccountSteam) == 0x000008, "Wrong alignment on UPSdkLoginUIBindExistingAccountSteam");
-static_assert(sizeof(UPSdkLoginUIBindExistingAccountSteam) == 0x000438, "Wrong size on UPSdkLoginUIBindExistingAccountSteam");
+static_assert(sizeof(UPSdkLoginUIBindExistingAccountSteam) == 0x000460, "Wrong size on UPSdkLoginUIBindExistingAccountSteam");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OverlayImage) == 0x0003A0, "Member 'UPSdkLoginUIBindExistingAccountSteam::OverlayImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, BackgroundImage) == 0x0003A8, "Member 'UPSdkLoginUIBindExistingAccountSteam::BackgroundImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, LogoImg) == 0x0003B0, "Member 'UPSdkLoginUIBindExistingAccountSteam::LogoImg' has a wrong offset!");
@@ -225,18 +244,23 @@ static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, AccountInputTextEdi
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, PasswordInputTextEdit) == 0x0003D8, "Member 'UPSdkLoginUIBindExistingAccountSteam::PasswordInputTextEdit' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, MaskCheckBoxBtn) == 0x0003E0, "Member 'UPSdkLoginUIBindExistingAccountSteam::MaskCheckBoxBtn' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, AgreementCheckBoxBtn) == 0x0003E8, "Member 'UPSdkLoginUIBindExistingAccountSteam::AgreementCheckBoxBtn' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, AgreementRichTextBlock) == 0x0003F0, "Member 'UPSdkLoginUIBindExistingAccountSteam::AgreementRichTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, BindButton) == 0x0003F8, "Member 'UPSdkLoginUIBindExistingAccountSteam::BindButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, BindButtonTextBlock) == 0x000400, "Member 'UPSdkLoginUIBindExistingAccountSteam::BindButtonTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OtherIdLoginButton) == 0x000408, "Member 'UPSdkLoginUIBindExistingAccountSteam::OtherIdLoginButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OtherIdLoginButtonTextBlock) == 0x000410, "Member 'UPSdkLoginUIBindExistingAccountSteam::OtherIdLoginButtonTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, FaqButton) == 0x000418, "Member 'UPSdkLoginUIBindExistingAccountSteam::FaqButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, FaqButtonTextBlock) == 0x000420, "Member 'UPSdkLoginUIBindExistingAccountSteam::FaqButtonTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, RegisterButton) == 0x000428, "Member 'UPSdkLoginUIBindExistingAccountSteam::RegisterButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, RegisterButtonTextBlock) == 0x000430, "Member 'UPSdkLoginUIBindExistingAccountSteam::RegisterButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, PolicySwitcher) == 0x0003F0, "Member 'UPSdkLoginUIBindExistingAccountSteam::PolicySwitcher' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, AgreementPolicyText1) == 0x0003F8, "Member 'UPSdkLoginUIBindExistingAccountSteam::AgreementPolicyText1' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, TwUserContract) == 0x000400, "Member 'UPSdkLoginUIBindExistingAccountSteam::TwUserContract' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, AgreementPolicyText2) == 0x000408, "Member 'UPSdkLoginUIBindExistingAccountSteam::AgreementPolicyText2' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OverseasUserContract) == 0x000410, "Member 'UPSdkLoginUIBindExistingAccountSteam::OverseasUserContract' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OverseasPrivacyPolicy) == 0x000418, "Member 'UPSdkLoginUIBindExistingAccountSteam::OverseasPrivacyPolicy' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, BindButton) == 0x000420, "Member 'UPSdkLoginUIBindExistingAccountSteam::BindButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, BindButtonTextBlock) == 0x000428, "Member 'UPSdkLoginUIBindExistingAccountSteam::BindButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OtherIdLoginButton) == 0x000430, "Member 'UPSdkLoginUIBindExistingAccountSteam::OtherIdLoginButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, OtherIdLoginButtonTextBlock) == 0x000438, "Member 'UPSdkLoginUIBindExistingAccountSteam::OtherIdLoginButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, FaqButton) == 0x000440, "Member 'UPSdkLoginUIBindExistingAccountSteam::FaqButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, FaqButtonTextBlock) == 0x000448, "Member 'UPSdkLoginUIBindExistingAccountSteam::FaqButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, RegisterButton) == 0x000450, "Member 'UPSdkLoginUIBindExistingAccountSteam::RegisterButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteam, RegisterButtonTextBlock) == 0x000458, "Member 'UPSdkLoginUIBindExistingAccountSteam::RegisterButtonTextBlock' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIBindExistingAccountSteamKr
-// 0x0120 (0x04B0 - 0x0390)
+// 0x0140 (0x04D0 - 0x0390)
 class UPSdkLoginUIBindExistingAccountSteamKr final : public UPSdkLoginUIBaseSteam
 {
 public:
@@ -271,17 +295,21 @@ public:
 	class UTextBlock*                             PolicyTextBlock1;                                  // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UTextBlock*                             PolicyTextBlock2;                                  // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UTextBlock*                             PolicyTextBlock3;                                  // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         PolicyTextBlock4;                                  // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         PolicyTextBlock5;                                  // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             PolicyTextBlock6;                                  // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             PolicyTextBlock7;                                  // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             UserContractAgreeTx;                               // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   UserContractHyperLinkButton;                       // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             UserContractRequiredTx;                            // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PrivacyPolicyAgreeTx;                              // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   PrivacyPolicyHyperLinkButton;                      // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PrivacyPolicyRequiredTx;                           // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PolicyTextBlock6;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PolicyTextBlock7;                                  // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void GoToRegisterUIDelegate();
 	void OnBindButtonClicked();
 	void OnCheckedBox1Changed();
 	void OnCheckedBoxChanged();
-	void OnCheckedButton(bool checked);
+	void OnCheckedButton(bool Checked);
 	void OnCloseButtonClicked();
 	void OnDelegate(bool bRes);
 	void OnFaqButtonClicked();
@@ -311,7 +339,7 @@ public:
 	}
 };
 static_assert(alignof(UPSdkLoginUIBindExistingAccountSteamKr) == 0x000008, "Wrong alignment on UPSdkLoginUIBindExistingAccountSteamKr");
-static_assert(sizeof(UPSdkLoginUIBindExistingAccountSteamKr) == 0x0004B0, "Wrong size on UPSdkLoginUIBindExistingAccountSteamKr");
+static_assert(sizeof(UPSdkLoginUIBindExistingAccountSteamKr) == 0x0004D0, "Wrong size on UPSdkLoginUIBindExistingAccountSteamKr");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, OverlayImage) == 0x0003A0, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::OverlayImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, BackgroundImage) == 0x0003A8, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::BackgroundImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, LogoImg) == 0x0003B0, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::LogoImg' has a wrong offset!");
@@ -342,10 +370,14 @@ static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyButton4) ==
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock1) == 0x000478, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock1' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock2) == 0x000480, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock2' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock3) == 0x000488, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock3' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock4) == 0x000490, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock4' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock5) == 0x000498, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock5' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock6) == 0x0004A0, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock6' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock7) == 0x0004A8, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock7' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, UserContractAgreeTx) == 0x000490, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::UserContractAgreeTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, UserContractHyperLinkButton) == 0x000498, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::UserContractHyperLinkButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, UserContractRequiredTx) == 0x0004A0, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::UserContractRequiredTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PrivacyPolicyAgreeTx) == 0x0004A8, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PrivacyPolicyAgreeTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PrivacyPolicyHyperLinkButton) == 0x0004B0, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PrivacyPolicyHyperLinkButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PrivacyPolicyRequiredTx) == 0x0004B8, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PrivacyPolicyRequiredTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock6) == 0x0004C0, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock6' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIBindExistingAccountSteamKr, PolicyTextBlock7) == 0x0004C8, "Member 'UPSdkLoginUIBindExistingAccountSteamKr::PolicyTextBlock7' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIExitBindSteam
 // 0x0048 (0x03D8 - 0x0390)
@@ -390,7 +422,7 @@ static_assert(offsetof(UPSdkLoginUIExitBindSteam, ExitGameButton) == 0x0003C8, "
 static_assert(offsetof(UPSdkLoginUIExitBindSteam, ExitGameButtonButtonTextBlock) == 0x0003D0, "Member 'UPSdkLoginUIExitBindSteam::ExitGameButtonButtonTextBlock' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteam
-// 0x00E8 (0x0478 - 0x0390)
+// 0x0120 (0x04B0 - 0x0390)
 class UPSdkLoginUIRegisterAndBindSteam final : public UPSdkLoginUIBaseSteam
 {
 public:
@@ -411,19 +443,26 @@ public:
 	class UCheckBox*                              MaskCheckBoxBtn;                                   // 0x0408(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UCheckBox*                              MaskCheckBoxBtn2;                                  // 0x0410(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UCheckBox*                              AgreementCheckBoxBtn;                              // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         AgreementRichTextBlock;                            // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                RegisterAndBindButton;                             // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             RegisterAndBindButtonTextBlock;                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                RegisterExistAccountButton;                        // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             RegisterExistAccountButtonTextBlock;               // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UButton*                                FaqButton;                                         // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             FaqButtonTextBlock;                                // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             PasswordTipsTextBlock;                             // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UBorder*                                PasswordTips;                                      // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_468[0x10];                                     // 0x0468(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UWidgetSwitcher*                        PolicySwitcher;                                    // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             AgreementPolicyText1;                              // 0x0428(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   TwUserContract;                                    // 0x0430(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             AgreementPolicyText2;                              // 0x0438(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   OverseasUserContract;                              // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   OverseasPrivacyPolicy;                             // 0x0448(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCheckBox*                              SubscribeCheckBoxBtn;                              // 0x0450(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             SubscribeTextBlock;                                // 0x0458(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                RegisterAndBindButton;                             // 0x0460(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             RegisterAndBindButtonTextBlock;                    // 0x0468(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                RegisterExistAccountButton;                        // 0x0470(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             RegisterExistAccountButtonTextBlock;               // 0x0478(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UButton*                                FaqButton;                                         // 0x0480(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             FaqButtonTextBlock;                                // 0x0488(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PasswordTipsTextBlock;                             // 0x0490(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBorder*                                PasswordTips;                                      // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4A0[0x10];                                     // 0x04A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnCheckedButton(bool checked);
+	void OnCheckedButton(bool Checked);
 	void OnCloseButtonClicked();
 	void OnDelegate(bool bRes);
 	void OnFaqButtonClicked();
@@ -436,6 +475,7 @@ public:
 	void OnGetCodeButtonUnhovered();
 	void OnRegisterAndBindButtonClicked();
 	void OnRegisterExistAccountButtonClicked();
+	void OnSubscribeCheckedButton(bool Checked);
 	void TextBoxInputAccountCommit(const class FString& Text, const ETextCommit Type);
 	void TextBoxInputCodeChanged(const class FString& Text);
 	void TextBoxInputCodeCommit(const class FString& Text, const ETextCommit Type);
@@ -455,7 +495,7 @@ public:
 	}
 };
 static_assert(alignof(UPSdkLoginUIRegisterAndBindSteam) == 0x000008, "Wrong alignment on UPSdkLoginUIRegisterAndBindSteam");
-static_assert(sizeof(UPSdkLoginUIRegisterAndBindSteam) == 0x000478, "Wrong size on UPSdkLoginUIRegisterAndBindSteam");
+static_assert(sizeof(UPSdkLoginUIRegisterAndBindSteam) == 0x0004B0, "Wrong size on UPSdkLoginUIRegisterAndBindSteam");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, OverlayImage) == 0x0003A0, "Member 'UPSdkLoginUIRegisterAndBindSteam::OverlayImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, BackgroundImage) == 0x0003A8, "Member 'UPSdkLoginUIRegisterAndBindSteam::BackgroundImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, LogoImg) == 0x0003B0, "Member 'UPSdkLoginUIRegisterAndBindSteam::LogoImg' has a wrong offset!");
@@ -472,18 +512,25 @@ static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, PasswordInputTextEdit2)
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, MaskCheckBoxBtn) == 0x000408, "Member 'UPSdkLoginUIRegisterAndBindSteam::MaskCheckBoxBtn' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, MaskCheckBoxBtn2) == 0x000410, "Member 'UPSdkLoginUIRegisterAndBindSteam::MaskCheckBoxBtn2' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, AgreementCheckBoxBtn) == 0x000418, "Member 'UPSdkLoginUIRegisterAndBindSteam::AgreementCheckBoxBtn' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, AgreementRichTextBlock) == 0x000420, "Member 'UPSdkLoginUIRegisterAndBindSteam::AgreementRichTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterAndBindButton) == 0x000428, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterAndBindButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterAndBindButtonTextBlock) == 0x000430, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterAndBindButtonTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterExistAccountButton) == 0x000438, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterExistAccountButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterExistAccountButtonTextBlock) == 0x000440, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterExistAccountButtonTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, FaqButton) == 0x000448, "Member 'UPSdkLoginUIRegisterAndBindSteam::FaqButton' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, FaqButtonTextBlock) == 0x000450, "Member 'UPSdkLoginUIRegisterAndBindSteam::FaqButtonTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, PasswordTipsTextBlock) == 0x000458, "Member 'UPSdkLoginUIRegisterAndBindSteam::PasswordTipsTextBlock' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, PasswordTips) == 0x000460, "Member 'UPSdkLoginUIRegisterAndBindSteam::PasswordTips' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, PolicySwitcher) == 0x000420, "Member 'UPSdkLoginUIRegisterAndBindSteam::PolicySwitcher' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, AgreementPolicyText1) == 0x000428, "Member 'UPSdkLoginUIRegisterAndBindSteam::AgreementPolicyText1' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, TwUserContract) == 0x000430, "Member 'UPSdkLoginUIRegisterAndBindSteam::TwUserContract' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, AgreementPolicyText2) == 0x000438, "Member 'UPSdkLoginUIRegisterAndBindSteam::AgreementPolicyText2' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, OverseasUserContract) == 0x000440, "Member 'UPSdkLoginUIRegisterAndBindSteam::OverseasUserContract' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, OverseasPrivacyPolicy) == 0x000448, "Member 'UPSdkLoginUIRegisterAndBindSteam::OverseasPrivacyPolicy' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, SubscribeCheckBoxBtn) == 0x000450, "Member 'UPSdkLoginUIRegisterAndBindSteam::SubscribeCheckBoxBtn' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, SubscribeTextBlock) == 0x000458, "Member 'UPSdkLoginUIRegisterAndBindSteam::SubscribeTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterAndBindButton) == 0x000460, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterAndBindButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterAndBindButtonTextBlock) == 0x000468, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterAndBindButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterExistAccountButton) == 0x000470, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterExistAccountButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, RegisterExistAccountButtonTextBlock) == 0x000478, "Member 'UPSdkLoginUIRegisterAndBindSteam::RegisterExistAccountButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, FaqButton) == 0x000480, "Member 'UPSdkLoginUIRegisterAndBindSteam::FaqButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, FaqButtonTextBlock) == 0x000488, "Member 'UPSdkLoginUIRegisterAndBindSteam::FaqButtonTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, PasswordTipsTextBlock) == 0x000490, "Member 'UPSdkLoginUIRegisterAndBindSteam::PasswordTipsTextBlock' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteam, PasswordTips) == 0x000498, "Member 'UPSdkLoginUIRegisterAndBindSteam::PasswordTips' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIRegisterAndBindSteamKr
-// 0x0150 (0x04E0 - 0x0390)
+// 0x0180 (0x0510 - 0x0390)
 class UPSdkLoginUIRegisterAndBindSteamKr final : public UPSdkLoginUIBaseSteam
 {
 public:
@@ -522,11 +569,17 @@ public:
 	class UTextBlock*                             PolicyTextBlock1;                                  // 0x0498(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UTextBlock*                             PolicyTextBlock2;                                  // 0x04A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UTextBlock*                             PolicyTextBlock3;                                  // 0x04A8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         PolicyTextBlock4;                                  // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URichTextBlock*                         PolicyTextBlock5;                                  // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             PolicyTextBlock6;                                  // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTextBlock*                             PolicyTextBlock7;                                  // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4D0[0x10];                                     // 0x04D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UTextBlock*                             UserContractAgreeTx;                               // 0x04B0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   UserContractHyperLinkButton;                       // 0x04B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             UserContractRequiredTx;                            // 0x04C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PrivacyPolicyAgreeTx;                              // 0x04C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPSDKHyperLinkButton*                   PrivacyPolicyHyperLinkButton;                      // 0x04D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PrivacyPolicyRequiredTx;                           // 0x04D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PolicyTextBlock6;                                  // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             PolicyTextBlock7;                                  // 0x04E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCheckBox*                              SubscribeCheckBox;                                 // 0x04F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTextBlock*                             SubscribeTextBlock;                                // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_500[0x10];                                     // 0x0500(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnCheckedBox1Changed();
@@ -547,6 +600,8 @@ public:
 	void OnPolicyButton4Clicked();
 	void OnRegisterAndBindButtonClicked();
 	void OnRegisterExistAccountButtonClicked();
+	void OnSubscribeCheckedBoxChanged(bool Checked);
+	void OnSubscribeCheckedButton();
 	void TextBoxInputAccountCommit(const class FString& Text, const ETextCommit Type);
 	void TextBoxInputCodeChanged(const class FString& Text);
 	void TextBoxInputCodeCommit(const class FString& Text, const ETextCommit Type);
@@ -566,7 +621,7 @@ public:
 	}
 };
 static_assert(alignof(UPSdkLoginUIRegisterAndBindSteamKr) == 0x000008, "Wrong alignment on UPSdkLoginUIRegisterAndBindSteamKr");
-static_assert(sizeof(UPSdkLoginUIRegisterAndBindSteamKr) == 0x0004E0, "Wrong size on UPSdkLoginUIRegisterAndBindSteamKr");
+static_assert(sizeof(UPSdkLoginUIRegisterAndBindSteamKr) == 0x000510, "Wrong size on UPSdkLoginUIRegisterAndBindSteamKr");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, OverlayImage) == 0x0003A0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::OverlayImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, BackgroundImage) == 0x0003A8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::BackgroundImage' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, LogoImg) == 0x0003B0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::LogoImg' has a wrong offset!");
@@ -601,10 +656,16 @@ static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyButton4) == 0x0
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock1) == 0x000498, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock1' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock2) == 0x0004A0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock2' has a wrong offset!");
 static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock3) == 0x0004A8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock3' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock4) == 0x0004B0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock4' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock5) == 0x0004B8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock5' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock6) == 0x0004C0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock6' has a wrong offset!");
-static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock7) == 0x0004C8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock7' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, UserContractAgreeTx) == 0x0004B0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::UserContractAgreeTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, UserContractHyperLinkButton) == 0x0004B8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::UserContractHyperLinkButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, UserContractRequiredTx) == 0x0004C0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::UserContractRequiredTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PrivacyPolicyAgreeTx) == 0x0004C8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PrivacyPolicyAgreeTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PrivacyPolicyHyperLinkButton) == 0x0004D0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PrivacyPolicyHyperLinkButton' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PrivacyPolicyRequiredTx) == 0x0004D8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PrivacyPolicyRequiredTx' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock6) == 0x0004E0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock6' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, PolicyTextBlock7) == 0x0004E8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::PolicyTextBlock7' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, SubscribeCheckBox) == 0x0004F0, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::SubscribeCheckBox' has a wrong offset!");
+static_assert(offsetof(UPSdkLoginUIRegisterAndBindSteamKr, SubscribeTextBlock) == 0x0004F8, "Member 'UPSdkLoginUIRegisterAndBindSteamKr::SubscribeTextBlock' has a wrong offset!");
 
 // Class PSDKChannelSteam.PSdkLoginUIToastTipSteam
 // 0x0060 (0x0350 - 0x02F0)

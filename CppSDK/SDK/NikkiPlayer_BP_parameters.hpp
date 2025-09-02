@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "X6EnhancedInput_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "X6Game_structs.hpp"
 
 

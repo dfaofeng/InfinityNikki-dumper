@@ -17,179 +17,35 @@
 namespace SDK
 {
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.TestID
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_HUD_Collection_List_C::TestID(int32 ID)
+void UWBP_HUD_Collection_List_C::BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "TestID");
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
-	Params::WBP_HUD_Collection_List_C_TestID Parms{};
-
-	Parms.ID = ID;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.Collection_item_01_Event_0
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UWBP_UI_HUD_Collection_item_C*    Collection_item_01_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_Collection_List_C::SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0)
+void UWBP_HUD_Collection_List_C::Collection_item_01_Event_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0");
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "Collection_item_01_Event_0");
 
-	Params::WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0 Parms{};
+	Params::WBP_HUD_Collection_List_C_Collection_item_01_Event_0 Parms{};
 
 	Parms.Collection_item_01_0 = Collection_item_01_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWBP_UI_HUD_Collection_item_C*    Collection_item_01_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_Collection_List_C::SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List");
-
-	Params::WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List Parms{};
-
-	Parms.Collection_item_01_0 = Collection_item_01_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.PlayOutAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::PlayOutAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "PlayOutAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnOutDone
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::OnOutDone()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnOutDone");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnInDone
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::OnInDone()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnInDone");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeOut
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::OnFadeOut()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnFadeOut");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeIn
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::OnFadeIn()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnFadeIn");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInOtherCoin
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::FadeInOtherCoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "FadeInOtherCoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInMoonCoin
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_HUD_Collection_List_C::FadeInMoonCoin()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "FadeInMoonCoin");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.ExecuteUbergraph_WBP_HUD_Collection_List
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HUD_Collection_List_C::ExecuteUbergraph_WBP_HUD_Collection_List(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "ExecuteUbergraph_WBP_HUD_Collection_List");
-
-	Params::WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collection_List Parms{};
-
-	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -215,19 +71,137 @@ void UWBP_HUD_Collection_List_C::Collection_item_01_Event_1(class UWBP_UI_HUD_Co
 }
 
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.Collection_item_01_Event_0
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.ExecuteUbergraph_WBP_HUD_Collection_List
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class UWBP_UI_HUD_Collection_item_C*    Collection_item_01_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_Collection_List_C::Collection_item_01_Event_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0)
+void UWBP_HUD_Collection_List_C::ExecuteUbergraph_WBP_HUD_Collection_List(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "Collection_item_01_Event_0");
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "ExecuteUbergraph_WBP_HUD_Collection_List");
 
-	Params::WBP_HUD_Collection_List_C_Collection_item_01_Event_0 Parms{};
+	Params::WBP_HUD_Collection_List_C_ExecuteUbergraph_WBP_HUD_Collection_List Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInMoonCoin
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::FadeInMoonCoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "FadeInMoonCoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.FadeInOtherCoin
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::FadeInOtherCoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "FadeInOtherCoin");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeIn
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::OnFadeIn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnFadeIn");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnFadeOut
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::OnFadeOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnFadeOut");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnInDone
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::OnInDone()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnInDone");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.OnOutDone
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::OnOutDone()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "OnOutDone");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.PlayOutAnim
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_HUD_Collection_List_C::PlayOutAnim()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "PlayOutAnim");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_UI_HUD_Collection_item_C*    Collection_item_01_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_Collection_List_C::SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List");
+
+	Params::WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List Parms{};
 
 	Parms.Collection_item_01_0 = Collection_item_01_0;
 
@@ -235,17 +209,43 @@ void UWBP_HUD_Collection_List_C::Collection_item_01_Event_0(class UWBP_UI_HUD_Co
 }
 
 
-// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UWBP_UI_HUD_Collection_item_C*    Collection_item_01_0                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_HUD_Collection_List_C::BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UWBP_HUD_Collection_List_C::SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0(class UWBP_UI_HUD_Collection_item_C* Collection_item_01_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "BndEvt__WBP_HUD_Collection_List_Button_119_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_HUD_Collection_List_C_SequenceEvent__ENTRYPOINTWBP_HUD_Collection_List_0 Parms{};
+
+	Parms.Collection_item_01_0 = Collection_item_01_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HUD_Collection_List.WBP_HUD_Collection_List_C.TestID
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HUD_Collection_List_C::TestID(int32 ID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HUD_Collection_List_C", "TestID");
+
+	Params::WBP_HUD_Collection_List_C_TestID Parms{};
+
+	Parms.ID = ID;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

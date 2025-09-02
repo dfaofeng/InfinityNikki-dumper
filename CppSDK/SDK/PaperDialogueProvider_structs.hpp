@@ -25,21 +25,6 @@ enum class EPCDX6GestureType : uint8
 	EPCDX6GestureType_MAX                    = 2,
 };
 
-// ScriptStruct PaperDialogueProvider.PCDPresetCameraData
-// 0x0030 (0x0030 - 0x0000)
-struct FPCDPresetCameraData final
-{
-public:
-	class FName                                   CameraSetName;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   CameraShotName;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        CameraTemplateSequence;                            // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPCDPresetCameraData) == 0x000008, "Wrong alignment on FPCDPresetCameraData");
-static_assert(sizeof(FPCDPresetCameraData) == 0x000030, "Wrong size on FPCDPresetCameraData");
-static_assert(offsetof(FPCDPresetCameraData, CameraSetName) == 0x000000, "Member 'FPCDPresetCameraData::CameraSetName' has a wrong offset!");
-static_assert(offsetof(FPCDPresetCameraData, CameraShotName) == 0x000008, "Member 'FPCDPresetCameraData::CameraShotName' has a wrong offset!");
-static_assert(offsetof(FPCDPresetCameraData, CameraTemplateSequence) == 0x000010, "Member 'FPCDPresetCameraData::CameraTemplateSequence' has a wrong offset!");
-
 // ScriptStruct PaperDialogueProvider.PCDAnimSequenceData
 // 0x0038 (0x0038 - 0x0000)
 struct FPCDAnimSequenceData
@@ -82,14 +67,6 @@ static_assert(offsetof(FPCDDialogueData, VoicePath) == 0x000018, "Member 'FPCDDi
 static_assert(offsetof(FPCDDialogueData, RobotVoicePath) == 0x000028, "Member 'FPCDDialogueData::RobotVoicePath' has a wrong offset!");
 static_assert(offsetof(FPCDDialogueData, AnimSequenceDataMap) == 0x000038, "Member 'FPCDDialogueData::AnimSequenceDataMap' has a wrong offset!");
 
-// ScriptStruct PaperDialogueProvider.PCDX7DialogueData
-// 0x0000 (0x0088 - 0x0088)
-struct FPCDX7DialogueData final : public FPCDDialogueData
-{
-};
-static_assert(alignof(FPCDX7DialogueData) == 0x000008, "Wrong alignment on FPCDX7DialogueData");
-static_assert(sizeof(FPCDX7DialogueData) == 0x000088, "Wrong size on FPCDX7DialogueData");
-
 // ScriptStruct PaperDialogueProvider.PCDGroupSetupStatus
 // 0x0004 (0x0004 - 0x0000)
 struct FPCDGroupSetupStatus final
@@ -106,6 +83,21 @@ static_assert(offsetof(FPCDGroupSetupStatus, bFirstBegin) == 0x000000, "Member '
 static_assert(offsetof(FPCDGroupSetupStatus, bLineStart) == 0x000001, "Member 'FPCDGroupSetupStatus::bLineStart' has a wrong offset!");
 static_assert(offsetof(FPCDGroupSetupStatus, bLineEnd) == 0x000002, "Member 'FPCDGroupSetupStatus::bLineEnd' has a wrong offset!");
 static_assert(offsetof(FPCDGroupSetupStatus, bLineEndWithAudio) == 0x000003, "Member 'FPCDGroupSetupStatus::bLineEndWithAudio' has a wrong offset!");
+
+// ScriptStruct PaperDialogueProvider.PCDPresetCameraData
+// 0x0030 (0x0030 - 0x0000)
+struct FPCDPresetCameraData final
+{
+public:
+	class FName                                   CameraSetName;                                     // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   CameraShotName;                                    // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        CameraTemplateSequence;                            // 0x0010(0x0020)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCDPresetCameraData) == 0x000008, "Wrong alignment on FPCDPresetCameraData");
+static_assert(sizeof(FPCDPresetCameraData) == 0x000030, "Wrong size on FPCDPresetCameraData");
+static_assert(offsetof(FPCDPresetCameraData, CameraSetName) == 0x000000, "Member 'FPCDPresetCameraData::CameraSetName' has a wrong offset!");
+static_assert(offsetof(FPCDPresetCameraData, CameraShotName) == 0x000008, "Member 'FPCDPresetCameraData::CameraShotName' has a wrong offset!");
+static_assert(offsetof(FPCDPresetCameraData, CameraTemplateSequence) == 0x000010, "Member 'FPCDPresetCameraData::CameraTemplateSequence' has a wrong offset!");
 
 // ScriptStruct PaperDialogueProvider.PCDDialogueSetData
 // 0x0010 (0x0010 - 0x0000)
@@ -172,6 +164,14 @@ public:
 static_assert(alignof(FPCDX6DialogueData) == 0x000008, "Wrong alignment on FPCDX6DialogueData");
 static_assert(sizeof(FPCDX6DialogueData) == 0x000098, "Wrong size on FPCDX6DialogueData");
 static_assert(offsetof(FPCDX6DialogueData, FullBodyAnimSequencePath) == 0x000088, "Member 'FPCDX6DialogueData::FullBodyAnimSequencePath' has a wrong offset!");
+
+// ScriptStruct PaperDialogueProvider.PCDX7DialogueData
+// 0x0000 (0x0088 - 0x0088)
+struct FPCDX7DialogueData final : public FPCDDialogueData
+{
+};
+static_assert(alignof(FPCDX7DialogueData) == 0x000008, "Wrong alignment on FPCDX7DialogueData");
+static_assert(sizeof(FPCDX7DialogueData) == 0x000088, "Wrong size on FPCDX7DialogueData");
 
 // ScriptStruct PaperDialogueProvider.PCDX12ExtraDialogueBlendData
 // 0x0060 (0x0060 - 0x0000)

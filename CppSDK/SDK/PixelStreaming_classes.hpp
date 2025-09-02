@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "AudioMixer_classes.hpp"
+#include "MediaIOCore_classes.hpp"
 #include "Engine_classes.hpp"
 #include "CoreUObject_classes.hpp"
-#include "MediaIOCore_classes.hpp"
 
 
 namespace SDK

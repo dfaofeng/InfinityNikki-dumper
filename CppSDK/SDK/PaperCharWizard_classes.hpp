@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "PaperCharWizard_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "PaperCharWizard_structs.hpp"
 
 
 namespace SDK

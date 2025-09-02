@@ -17,161 +17,115 @@
 namespace SDK
 {
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.StopFullBodyMontage
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.BP_SelectBulletData
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryClick_Base_C::StopFullBodyMontage()
+void UGA_Nikki_RecoveryClick_Base_C::BP_SelectBulletData()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "StopFullBodyMontage");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "BP_SelectBulletData");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.ShootTrigger
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Nikki_RecoveryClick_Base_C::ShootTrigger(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "ShootTrigger");
-
-	Params::GA_Nikki_RecoveryClick_Base_C_ShootTrigger Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.PlayFullBodyMontage
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.BP_SelectMontage
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryClick_Base_C::PlayFullBodyMontage()
+void UGA_Nikki_RecoveryClick_Base_C::BP_SelectMontage()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "PlayFullBodyMontage");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "BP_SelectMontage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AActor*                           ReturnActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.BP_SpawnFirstBullet
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UGA_Nikki_RecoveryClick_Base_C::OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358(class AActor* ReturnActor)
+void UGA_Nikki_RecoveryClick_Base_C::BP_SpawnFirstBullet()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358");
-
-	Params::GA_Nikki_RecoveryClick_Base_C_OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358 Parms{};
-
-	Parms.ReturnActor = ReturnActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358
-// (BlueprintCallable, BlueprintEvent)
-
-void UGA_Nikki_RecoveryClick_Base_C::OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "BP_SpawnFirstBullet");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnNotifyEnd_D2E758E949A47204827D699A8392029B
-// (BlueprintCallable, BlueprintEvent)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.ExecuteUbergraph_GA_Nikki_RecoveryClick_Base
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::OnNotifyEnd_D2E758E949A47204827D699A8392029B(class FName NotifyName)
+void UGA_Nikki_RecoveryClick_Base_C::ExecuteUbergraph_GA_Nikki_RecoveryClick_Base(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnNotifyEnd_D2E758E949A47204827D699A8392029B");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "ExecuteUbergraph_GA_Nikki_RecoveryClick_Base");
 
-	Params::GA_Nikki_RecoveryClick_Base_C_OnNotifyEnd_D2E758E949A47204827D699A8392029B Parms{};
+	Params::GA_Nikki_RecoveryClick_Base_C_ExecuteUbergraph_GA_Nikki_RecoveryClick_Base Parms{};
 
-	Parms.NotifyName = NotifyName;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnNotifyBegin_D2E758E949A47204827D699A8392029B
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.K2_ActivateAbility
+// (Event, Protected, BlueprintEvent)
 
-void UGA_Nikki_RecoveryClick_Base_C::OnNotifyBegin_D2E758E949A47204827D699A8392029B(class FName NotifyName)
+void UGA_Nikki_RecoveryClick_Base_C::K2_ActivateAbility()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnNotifyBegin_D2E758E949A47204827D699A8392029B");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "K2_ActivateAbility");
 
-	Params::GA_Nikki_RecoveryClick_Base_C_OnNotifyBegin_D2E758E949A47204827D699A8392029B Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.NotifyName = NotifyName;
+
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.K2_OnEndAbility
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Nikki_RecoveryClick_Base_C::K2_OnEndAbility(bool bWasCancelled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "K2_OnEndAbility");
+
+	Params::GA_Nikki_RecoveryClick_Base_C_K2_OnEndAbility Parms{};
+
+	Parms.bWasCancelled = bWasCancelled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnInterrupted_D2E758E949A47204827D699A8392029B
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnBlendOut_D2E758E949A47204827D699A8392029B
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::OnInterrupted_D2E758E949A47204827D699A8392029B(class FName NotifyName)
+void UGA_Nikki_RecoveryClick_Base_C::OnBlendOut_D2E758E949A47204827D699A8392029B(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnInterrupted_D2E758E949A47204827D699A8392029B");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnBlendOut_D2E758E949A47204827D699A8392029B");
 
-	Params::GA_Nikki_RecoveryClick_Base_C_OnInterrupted_D2E758E949A47204827D699A8392029B Parms{};
-
-	Parms.NotifyName = NotifyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnCompleted_D2E758E949A47204827D699A8392029B
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UGA_Nikki_RecoveryClick_Base_C::OnCompleted_D2E758E949A47204827D699A8392029B(class FName NotifyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnCompleted_D2E758E949A47204827D699A8392029B");
-
-	Params::GA_Nikki_RecoveryClick_Base_C_OnCompleted_D2E758E949A47204827D699A8392029B Parms{};
+	Params::GA_Nikki_RecoveryClick_Base_C_OnBlendOut_D2E758E949A47204827D699A8392029B Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -199,19 +153,19 @@ void UGA_Nikki_RecoveryClick_Base_C::OnCancelled_D2E758E949A47204827D699A8392029
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnBlendOut_D2E758E949A47204827D699A8392029B
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnCompleted_D2E758E949A47204827D699A8392029B
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::OnBlendOut_D2E758E949A47204827D699A8392029B(class FName NotifyName)
+void UGA_Nikki_RecoveryClick_Base_C::OnCompleted_D2E758E949A47204827D699A8392029B(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnBlendOut_D2E758E949A47204827D699A8392029B");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnCompleted_D2E758E949A47204827D699A8392029B");
 
-	Params::GA_Nikki_RecoveryClick_Base_C_OnBlendOut_D2E758E949A47204827D699A8392029B Parms{};
+	Params::GA_Nikki_RecoveryClick_Base_C_OnCompleted_D2E758E949A47204827D699A8392029B Parms{};
 
 	Parms.NotifyName = NotifyName;
 
@@ -219,97 +173,143 @@ void UGA_Nikki_RecoveryClick_Base_C::OnBlendOut_D2E758E949A47204827D699A8392029B
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.K2_OnEndAbility
-// (Event, Protected, BlueprintEvent)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnInterrupted_D2E758E949A47204827D699A8392029B
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bWasCancelled                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::K2_OnEndAbility(bool bWasCancelled)
+void UGA_Nikki_RecoveryClick_Base_C::OnInterrupted_D2E758E949A47204827D699A8392029B(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "K2_OnEndAbility");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnInterrupted_D2E758E949A47204827D699A8392029B");
 
-	Params::GA_Nikki_RecoveryClick_Base_C_K2_OnEndAbility Parms{};
+	Params::GA_Nikki_RecoveryClick_Base_C_OnInterrupted_D2E758E949A47204827D699A8392029B Parms{};
 
-	Parms.bWasCancelled = bWasCancelled;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.K2_ActivateAbility
-// (Event, Protected, BlueprintEvent)
-
-void UGA_Nikki_RecoveryClick_Base_C::K2_ActivateAbility()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "K2_ActivateAbility");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.ExecuteUbergraph_GA_Nikki_RecoveryClick_Base
-// (Final, UbergraphFunction, HasDefaults)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnNotifyBegin_D2E758E949A47204827D699A8392029B
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::ExecuteUbergraph_GA_Nikki_RecoveryClick_Base(int32 EntryPoint)
+void UGA_Nikki_RecoveryClick_Base_C::OnNotifyBegin_D2E758E949A47204827D699A8392029B(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "ExecuteUbergraph_GA_Nikki_RecoveryClick_Base");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnNotifyBegin_D2E758E949A47204827D699A8392029B");
 
-	Params::GA_Nikki_RecoveryClick_Base_C_ExecuteUbergraph_GA_Nikki_RecoveryClick_Base Parms{};
+	Params::GA_Nikki_RecoveryClick_Base_C_OnNotifyBegin_D2E758E949A47204827D699A8392029B Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.NotifyName = NotifyName;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.BP_SpawnFirstBullet
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnNotifyEnd_D2E758E949A47204827D699A8392029B
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::BP_SpawnFirstBullet()
+void UGA_Nikki_RecoveryClick_Base_C::OnNotifyEnd_D2E758E949A47204827D699A8392029B(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "BP_SpawnFirstBullet");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnNotifyEnd_D2E758E949A47204827D699A8392029B");
+
+	Params::GA_Nikki_RecoveryClick_Base_C_OnNotifyEnd_D2E758E949A47204827D699A8392029B Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358
+// (BlueprintCallable, BlueprintEvent)
+
+void UGA_Nikki_RecoveryClick_Base_C::OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnSpawnFailed_2E8AB017498C192CCCD2D1AEB0ED5358");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.BP_SelectMontage
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           ReturnActor                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::BP_SelectMontage()
+void UGA_Nikki_RecoveryClick_Base_C::OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358(class AActor* ReturnActor)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "BP_SelectMontage");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358");
+
+	Params::GA_Nikki_RecoveryClick_Base_C_OnSpawnFinished_2E8AB017498C192CCCD2D1AEB0ED5358 Parms{};
+
+	Parms.ReturnActor = ReturnActor;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.PlayFullBodyMontage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_Nikki_RecoveryClick_Base_C::PlayFullBodyMontage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "PlayFullBodyMontage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.BP_SelectBulletData
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.ShootTrigger
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             NotifyName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UGA_Nikki_RecoveryClick_Base_C::BP_SelectBulletData()
+void UGA_Nikki_RecoveryClick_Base_C::ShootTrigger(class FName NotifyName)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "BP_SelectBulletData");
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "ShootTrigger");
+
+	Params::GA_Nikki_RecoveryClick_Base_C_ShootTrigger Parms{};
+
+	Parms.NotifyName = NotifyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function GA_Nikki_RecoveryClick_Base.GA_Nikki_RecoveryClick_Base_C.StopFullBodyMontage
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UGA_Nikki_RecoveryClick_Base_C::StopFullBodyMontage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Nikki_RecoveryClick_Base_C", "StopFullBodyMontage");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

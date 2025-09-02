@@ -20,17 +20,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EffectBulletBase_V2.BP_EffectBulletBase_V2_C
-// 0x0050 (0x0520 - 0x04D0)
+// 0x0050 (0x0570 - 0x0520)
 class ABP_EffectBulletBase_V2_C : public AX6BulletActorBase
 {
 public:
-	class UAkComponent*                           Ak;                                                // 0x04D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UBoxComponent*                          Box;                                               // 0x04D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      Niagara;                                           // 0x04E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int32 skillID, class AActor* BulletActor, class AActor* TargetActor, const struct FVector& HitDirection, const struct FVector& HitLocation, bool bHitDamage, ESkillFlag SkillFlag)> OnHitDamage; // 0x04E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TMulticastInlineDelegate<void(EnumBulletDestroyType DestroyType, class AActor* BulletActor)> OnDestroy; // 0x04F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class UNiagaraSystem*                         OverrideDestroyEffect;                             // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class AActor* CasterActor)> OnCreateActiveFinish;                  // 0x0510(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UAkComponent*                           Ak;                                                // 0x0520(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UBoxComponent*                          Box;                                               // 0x0528(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      Niagara;                                           // 0x0530(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int32 skillID, class AActor* BulletActor, class AActor* TargetActor, const struct FVector& HitDirection, const struct FVector& HitLocation, bool bHitDamage, ESkillFlag SkillFlag)> OnHitDamage; // 0x0538(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(EnumBulletDestroyType DestroyType, class AActor* BulletActor)> OnDestroy; // 0x0548(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class UNiagaraSystem*                         OverrideDestroyEffect;                             // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class AActor* CasterActor)> OnCreateActiveFinish;                  // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	class FString GetModuleName() const;
@@ -46,14 +46,14 @@ public:
 	}
 };
 static_assert(alignof(ABP_EffectBulletBase_V2_C) == 0x000008, "Wrong alignment on ABP_EffectBulletBase_V2_C");
-static_assert(sizeof(ABP_EffectBulletBase_V2_C) == 0x000520, "Wrong size on ABP_EffectBulletBase_V2_C");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, Ak) == 0x0004D0, "Member 'ABP_EffectBulletBase_V2_C::Ak' has a wrong offset!");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, Box) == 0x0004D8, "Member 'ABP_EffectBulletBase_V2_C::Box' has a wrong offset!");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, Niagara) == 0x0004E0, "Member 'ABP_EffectBulletBase_V2_C::Niagara' has a wrong offset!");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, OnHitDamage) == 0x0004E8, "Member 'ABP_EffectBulletBase_V2_C::OnHitDamage' has a wrong offset!");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, OnDestroy) == 0x0004F8, "Member 'ABP_EffectBulletBase_V2_C::OnDestroy' has a wrong offset!");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, OverrideDestroyEffect) == 0x000508, "Member 'ABP_EffectBulletBase_V2_C::OverrideDestroyEffect' has a wrong offset!");
-static_assert(offsetof(ABP_EffectBulletBase_V2_C, OnCreateActiveFinish) == 0x000510, "Member 'ABP_EffectBulletBase_V2_C::OnCreateActiveFinish' has a wrong offset!");
+static_assert(sizeof(ABP_EffectBulletBase_V2_C) == 0x000570, "Wrong size on ABP_EffectBulletBase_V2_C");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, Ak) == 0x000520, "Member 'ABP_EffectBulletBase_V2_C::Ak' has a wrong offset!");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, Box) == 0x000528, "Member 'ABP_EffectBulletBase_V2_C::Box' has a wrong offset!");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, Niagara) == 0x000530, "Member 'ABP_EffectBulletBase_V2_C::Niagara' has a wrong offset!");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, OnHitDamage) == 0x000538, "Member 'ABP_EffectBulletBase_V2_C::OnHitDamage' has a wrong offset!");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, OnDestroy) == 0x000548, "Member 'ABP_EffectBulletBase_V2_C::OnDestroy' has a wrong offset!");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, OverrideDestroyEffect) == 0x000558, "Member 'ABP_EffectBulletBase_V2_C::OverrideDestroyEffect' has a wrong offset!");
+static_assert(offsetof(ABP_EffectBulletBase_V2_C, OnCreateActiveFinish) == 0x000560, "Member 'ABP_EffectBulletBase_V2_C::OnCreateActiveFinish' has a wrong offset!");
 
 }
 

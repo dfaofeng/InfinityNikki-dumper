@@ -411,7 +411,7 @@ struct SentryLibrary_CreateSentryUser final
 public:
 	class FString                                 Email;                                             // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ID;                                                // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UserName;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Username;                                          // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ipAddress;                                         // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<class FString, class FString>            Data;                                              // 0x0040(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class USentryUser*                            ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -420,7 +420,7 @@ static_assert(alignof(SentryLibrary_CreateSentryUser) == 0x000008, "Wrong alignm
 static_assert(sizeof(SentryLibrary_CreateSentryUser) == 0x000098, "Wrong size on SentryLibrary_CreateSentryUser");
 static_assert(offsetof(SentryLibrary_CreateSentryUser, Email) == 0x000000, "Member 'SentryLibrary_CreateSentryUser::Email' has a wrong offset!");
 static_assert(offsetof(SentryLibrary_CreateSentryUser, ID) == 0x000010, "Member 'SentryLibrary_CreateSentryUser::ID' has a wrong offset!");
-static_assert(offsetof(SentryLibrary_CreateSentryUser, UserName) == 0x000020, "Member 'SentryLibrary_CreateSentryUser::UserName' has a wrong offset!");
+static_assert(offsetof(SentryLibrary_CreateSentryUser, Username) == 0x000020, "Member 'SentryLibrary_CreateSentryUser::Username' has a wrong offset!");
 static_assert(offsetof(SentryLibrary_CreateSentryUser, ipAddress) == 0x000030, "Member 'SentryLibrary_CreateSentryUser::ipAddress' has a wrong offset!");
 static_assert(offsetof(SentryLibrary_CreateSentryUser, Data) == 0x000040, "Member 'SentryLibrary_CreateSentryUser::Data' has a wrong offset!");
 static_assert(offsetof(SentryLibrary_CreateSentryUser, ReturnValue) == 0x000090, "Member 'SentryLibrary_CreateSentryUser::ReturnValue' has a wrong offset!");
@@ -567,11 +567,11 @@ static_assert(offsetof(SentryScope_SetEnvironment, Environment) == 0x000000, "Me
 struct SentryScope_SetExtras final
 {
 public:
-	TMap<class FString, class FString>            Extras;                                            // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            extras;                                            // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SentryScope_SetExtras) == 0x000008, "Wrong alignment on SentryScope_SetExtras");
 static_assert(sizeof(SentryScope_SetExtras) == 0x000050, "Wrong size on SentryScope_SetExtras");
-static_assert(offsetof(SentryScope_SetExtras, Extras) == 0x000000, "Member 'SentryScope_SetExtras::Extras' has a wrong offset!");
+static_assert(offsetof(SentryScope_SetExtras, extras) == 0x000000, "Member 'SentryScope_SetExtras::extras' has a wrong offset!");
 
 // Function Sentry.SentryScope.SetExtraValue
 // 0x0020 (0x0020 - 0x0000)
@@ -1109,11 +1109,11 @@ static_assert(offsetof(SentryUser_SetIpAddress, ipAddress) == 0x000000, "Member 
 struct SentryUser_SetUsername final
 {
 public:
-	class FString                                 UserName;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Username;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(SentryUser_SetUsername) == 0x000008, "Wrong alignment on SentryUser_SetUsername");
 static_assert(sizeof(SentryUser_SetUsername) == 0x000010, "Wrong size on SentryUser_SetUsername");
-static_assert(offsetof(SentryUser_SetUsername, UserName) == 0x000000, "Member 'SentryUser_SetUsername::UserName' has a wrong offset!");
+static_assert(offsetof(SentryUser_SetUsername, Username) == 0x000000, "Member 'SentryUser_SetUsername::Username' has a wrong offset!");
 
 // Function Sentry.SentryUser.GetData
 // 0x0050 (0x0050 - 0x0000)

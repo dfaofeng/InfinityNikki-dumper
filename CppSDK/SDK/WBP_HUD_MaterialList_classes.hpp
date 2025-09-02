@@ -52,10 +52,10 @@ public:
 	class UX6TileView*                            X6Data;                                            // 0x03C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void Get_Text_Complete_Text();
-	void ExecuteUbergraph_WBP_HUD_MaterialList(int32 EntryPoint);
-	void BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_HUD_MaterialList_Button_Name_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void ExecuteUbergraph_WBP_HUD_MaterialList(int32 EntryPoint);
+	void Get_Text_Complete_Text();
 
 	class FString GetModuleName() const;
 

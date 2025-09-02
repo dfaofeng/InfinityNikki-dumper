@@ -13,9 +13,9 @@
 #include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "PaperMovieScene_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "MovieSceneTracks_structs.hpp"
-#include "PaperMovieScene_structs.hpp"
 
 
 namespace SDK

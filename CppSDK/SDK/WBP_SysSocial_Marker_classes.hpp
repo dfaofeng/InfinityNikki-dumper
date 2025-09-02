@@ -31,8 +31,8 @@ public:
 	class UNiagaraSystemWidget*                   NS_Glow_Frame;                                     // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryPoint);
 	void PreConstruct(bool IsDesignTime);
+	void ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

@@ -14,16 +14,16 @@
 namespace SDK::Params
 {
 
-// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.GetAnimalTickManager
-// 0x0008 (0x0008 - 0x0000)
-struct BPI_AnimalTickManagement_C_GetAnimalTickManager final
+// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.ShouldRejectTickManagement
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_AnimalTickManagement_C_ShouldRejectTickManagement final
 {
 public:
-	class UBP_AnimalTickManager_C*                AnimalTickManager;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bReject;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_AnimalTickManagement_C_GetAnimalTickManager) == 0x000008, "Wrong alignment on BPI_AnimalTickManagement_C_GetAnimalTickManager");
-static_assert(sizeof(BPI_AnimalTickManagement_C_GetAnimalTickManager) == 0x000008, "Wrong size on BPI_AnimalTickManagement_C_GetAnimalTickManager");
-static_assert(offsetof(BPI_AnimalTickManagement_C_GetAnimalTickManager, AnimalTickManager) == 0x000000, "Member 'BPI_AnimalTickManagement_C_GetAnimalTickManager::AnimalTickManager' has a wrong offset!");
+static_assert(alignof(BPI_AnimalTickManagement_C_ShouldRejectTickManagement) == 0x000001, "Wrong alignment on BPI_AnimalTickManagement_C_ShouldRejectTickManagement");
+static_assert(sizeof(BPI_AnimalTickManagement_C_ShouldRejectTickManagement) == 0x000001, "Wrong size on BPI_AnimalTickManagement_C_ShouldRejectTickManagement");
+static_assert(offsetof(BPI_AnimalTickManagement_C_ShouldRejectTickManagement, bReject) == 0x000000, "Member 'BPI_AnimalTickManagement_C_ShouldRejectTickManagement::bReject' has a wrong offset!");
 
 // Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.SetAnimalTickEnabled
 // 0x0002 (0x0002 - 0x0000)
@@ -38,16 +38,16 @@ static_assert(sizeof(BPI_AnimalTickManagement_C_SetAnimalTickEnabled) == 0x00000
 static_assert(offsetof(BPI_AnimalTickManagement_C_SetAnimalTickEnabled, bEnabled) == 0x000000, "Member 'BPI_AnimalTickManagement_C_SetAnimalTickEnabled::bEnabled' has a wrong offset!");
 static_assert(offsetof(BPI_AnimalTickManagement_C_SetAnimalTickEnabled, bSuccess) == 0x000001, "Member 'BPI_AnimalTickManagement_C_SetAnimalTickEnabled::bSuccess' has a wrong offset!");
 
-// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.ShouldRejectTickManagement
-// 0x0001 (0x0001 - 0x0000)
-struct BPI_AnimalTickManagement_C_ShouldRejectTickManagement final
+// Function BPI_AnimalTickManagement.BPI_AnimalTickManagement_C.GetAnimalTickManager
+// 0x0008 (0x0008 - 0x0000)
+struct BPI_AnimalTickManagement_C_GetAnimalTickManager final
 {
 public:
-	bool                                          bReject;                                           // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_AnimalTickManager_C*                AnimalTickManager;                                 // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BPI_AnimalTickManagement_C_ShouldRejectTickManagement) == 0x000001, "Wrong alignment on BPI_AnimalTickManagement_C_ShouldRejectTickManagement");
-static_assert(sizeof(BPI_AnimalTickManagement_C_ShouldRejectTickManagement) == 0x000001, "Wrong size on BPI_AnimalTickManagement_C_ShouldRejectTickManagement");
-static_assert(offsetof(BPI_AnimalTickManagement_C_ShouldRejectTickManagement, bReject) == 0x000000, "Member 'BPI_AnimalTickManagement_C_ShouldRejectTickManagement::bReject' has a wrong offset!");
+static_assert(alignof(BPI_AnimalTickManagement_C_GetAnimalTickManager) == 0x000008, "Wrong alignment on BPI_AnimalTickManagement_C_GetAnimalTickManager");
+static_assert(sizeof(BPI_AnimalTickManagement_C_GetAnimalTickManager) == 0x000008, "Wrong size on BPI_AnimalTickManagement_C_GetAnimalTickManager");
+static_assert(offsetof(BPI_AnimalTickManagement_C_GetAnimalTickManager, AnimalTickManager) == 0x000000, "Member 'BPI_AnimalTickManagement_C_GetAnimalTickManager::AnimalTickManager' has a wrong offset!");
 
 }
 

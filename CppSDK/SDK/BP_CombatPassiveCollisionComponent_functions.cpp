@@ -111,6 +111,20 @@ void UBP_CombatPassiveCollisionComponent_C::BP_SetCustomCollisionForDamage(class
 }
 
 
+// Function BP_CombatPassiveCollisionComponent.BP_CombatPassiveCollisionComponent_C.BP_ApplyPainWhenEnable
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_CombatPassiveCollisionComponent_C::BP_ApplyPainWhenEnable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CombatPassiveCollisionComponent_C", "BP_ApplyPainWhenEnable");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_CombatPassiveCollisionComponent.BP_CombatPassiveCollisionComponent_C.BP_AddMeshCollisionForDamage
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

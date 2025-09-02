@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum ERedPointID.ERedPointID
-// NumValues: 0x005A
+// NumValues: 0x005C
 enum class ERedPointID : uint8
 {
 	NewEnumerator4                           = 0,
@@ -107,7 +107,9 @@ enum class ERedPointID : uint8
 	NewEnumerator89                          = 86,
 	NewEnumerator90                          = 87,
 	NewEnumerator91                          = 88,
-	ERedPointID_MAX                          = 89,
+	NewEnumerator92                          = 89,
+	NewEnumerator93                          = 90,
+	ERedPointID_MAX                          = 91,
 };
 
 }

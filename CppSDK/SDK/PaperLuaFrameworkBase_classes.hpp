@@ -15,8 +15,8 @@
 #include "NetCore_structs.hpp"
 #include "Engine_classes.hpp"
 #include "PaperLuaFrameworkBase_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
@@ -466,7 +466,7 @@ public:
 	void SetAesCryptMode(int32 InMode);
 	void SetConnectTimeout(float Timeout, bool autoDisconnect);
 	void SetHandlerMode(EPaperNetworkHandler Mode);
-	void SetHeartbeatInterval(float Interval);
+	void SetHeartbeatInterval(float interval);
 	void SetNetProtoId(int32 ProtoId);
 	void StartHeartbeatDataFromByteBuf();
 
@@ -597,7 +597,7 @@ static_assert(sizeof(UX6IpNetDriver) == 0x0009E0, "Wrong size on UX6IpNetDriver"
 static_assert(offsetof(UX6IpNetDriver, DefaultChannelReplicationPaused) == 0x0009D0, "Member 'UX6IpNetDriver::DefaultChannelReplicationPaused' has a wrong offset!");
 
 // Class PaperLuaFrameworkBase.X6IpNetDriverV2
-// 0x0038 (0x09B0 - 0x0978)
+// 0x0040 (0x09B8 - 0x0978)
 class UX6IpNetDriverV2 final : public UIpNetDriver
 {
 public:
@@ -606,10 +606,11 @@ public:
 	bool                                          CreateBufferConnection;                            // 0x0981(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_982[0x6];                                      // 0x0982(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        RPCProcessFrequency;                               // 0x0988(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_990[0x8];                                      // 0x0990(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6NetConnectionV2*                     BufferConnection;                                  // 0x0998(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UX6NetConnectionV2*                     RecvBufferConnection;                              // 0x09A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_9A8[0x8];                                      // 0x09A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableForceReplicateOptimization;                 // 0x0990(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_991[0xF];                                      // 0x0991(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6NetConnectionV2*                     BufferConnection;                                  // 0x09A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UX6NetConnectionV2*                     RecvBufferConnection;                              // 0x09A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_9B0[0x8];                                      // 0x09B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandleForceReplicate();
@@ -625,12 +626,13 @@ public:
 	}
 };
 static_assert(alignof(UX6IpNetDriverV2) == 0x000008, "Wrong alignment on UX6IpNetDriverV2");
-static_assert(sizeof(UX6IpNetDriverV2) == 0x0009B0, "Wrong size on UX6IpNetDriverV2");
+static_assert(sizeof(UX6IpNetDriverV2) == 0x0009B8, "Wrong size on UX6IpNetDriverV2");
 static_assert(offsetof(UX6IpNetDriverV2, ConnectionCharacteristic) == 0x000980, "Member 'UX6IpNetDriverV2::ConnectionCharacteristic' has a wrong offset!");
 static_assert(offsetof(UX6IpNetDriverV2, CreateBufferConnection) == 0x000981, "Member 'UX6IpNetDriverV2::CreateBufferConnection' has a wrong offset!");
 static_assert(offsetof(UX6IpNetDriverV2, RPCProcessFrequency) == 0x000988, "Member 'UX6IpNetDriverV2::RPCProcessFrequency' has a wrong offset!");
-static_assert(offsetof(UX6IpNetDriverV2, BufferConnection) == 0x000998, "Member 'UX6IpNetDriverV2::BufferConnection' has a wrong offset!");
-static_assert(offsetof(UX6IpNetDriverV2, RecvBufferConnection) == 0x0009A0, "Member 'UX6IpNetDriverV2::RecvBufferConnection' has a wrong offset!");
+static_assert(offsetof(UX6IpNetDriverV2, bEnableForceReplicateOptimization) == 0x000990, "Member 'UX6IpNetDriverV2::bEnableForceReplicateOptimization' has a wrong offset!");
+static_assert(offsetof(UX6IpNetDriverV2, BufferConnection) == 0x0009A0, "Member 'UX6IpNetDriverV2::BufferConnection' has a wrong offset!");
+static_assert(offsetof(UX6IpNetDriverV2, RecvBufferConnection) == 0x0009A8, "Member 'UX6IpNetDriverV2::RecvBufferConnection' has a wrong offset!");
 
 // Class PaperLuaFrameworkBase.X6NetClient
 // 0x02C8 (0x02F8 - 0x0030)
@@ -679,12 +681,12 @@ static_assert(sizeof(UX6NetClient) == 0x0002F8, "Wrong size on UX6NetClient");
 static_assert(offsetof(UX6NetClient, OnConnectionClose) == 0x000030, "Member 'UX6NetClient::OnConnectionClose' has a wrong offset!");
 
 // Class PaperLuaFrameworkBase.X6NetClientV2
-// 0x0310 (0x0340 - 0x0030)
+// 0x0400 (0x0430 - 0x0030)
 class UX6NetClientV2 final : public UGameInstanceSubsystem
 {
 public:
 	TDelegate<void(int64 NetID, ENetCloseResult CloseResult)> OnConnectionClose;                     // 0x0030(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x300];                                     // 0x0040(0x0300)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x3F0];                                     // 0x0040(0x03F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddPlayer(int64 NetID, int64 EntityID);
@@ -698,13 +700,13 @@ public:
 	void OnConnected();
 	void OnDisconnected();
 	void OnWorldBeginPlay();
-	void RegisterActorNetGUID_Lua(int64 NetID, class AActor* Actor);
+	void RegisterActorNetGUID_Lua(int64 NetID, class AActor* Actor, int64 OldNetID);
 	void RemovePlayer(int64 NetID);
 	void SetLocalNetID(int64 NetID);
 	void SetMultiPlayerMode(int32 Mode);
 	void SetNetProtoId(int32 SendProtoId, int32 RecvProtoId);
 	void SetPlayerCustomReplicate(const int64& playerId, const bool bCustomReplicate);
-	void SetPlayerForceReplicate(const int64& playerId);
+	void SetPlayerForceReplicate(const int64& playerId, const TArray<int64>& ActorEntityIDList);
 	void SetPlayerLightweight(const int64& playerId, const bool bLightweight);
 	void SetSeverTime(int64 Time);
 	void UnbindSimulatedActor(const int64& NetClientID);
@@ -722,18 +724,18 @@ public:
 	}
 };
 static_assert(alignof(UX6NetClientV2) == 0x000008, "Wrong alignment on UX6NetClientV2");
-static_assert(sizeof(UX6NetClientV2) == 0x000340, "Wrong size on UX6NetClientV2");
+static_assert(sizeof(UX6NetClientV2) == 0x000430, "Wrong size on UX6NetClientV2");
 static_assert(offsetof(UX6NetClientV2, OnConnectionClose) == 0x000030, "Member 'UX6NetClientV2::OnConnectionClose' has a wrong offset!");
 
 // Class PaperLuaFrameworkBase.X6NetConnection
-// 0x00D8 (0x1F78 - 0x1EA0)
+// 0x00D8 (0x1FA0 - 0x1EC8)
 class UX6NetConnection final : public UIpConnection
 {
 public:
-	TMap<float, double>                           FrequencyMap;                                      // 0x1EA0(0x0050)(Config, NativeAccessSpecifierPublic)
-	TArray<float>                                 PriorityMap;                                       // 0x1EF0(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	bool                                          OpenCongestionSchedule;                            // 0x1F00(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F01[0x77];                                    // 0x1F01(0x0077)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<float, double>                           FrequencyMap;                                      // 0x1EC8(0x0050)(Config, NativeAccessSpecifierPublic)
+	TArray<float>                                 PriorityMap;                                       // 0x1F18(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPublic)
+	bool                                          OpenCongestionSchedule;                            // 0x1F28(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F29[0x77];                                    // 0x1F29(0x0077)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -746,19 +748,19 @@ public:
 	}
 };
 static_assert(alignof(UX6NetConnection) == 0x000008, "Wrong alignment on UX6NetConnection");
-static_assert(sizeof(UX6NetConnection) == 0x001F78, "Wrong size on UX6NetConnection");
-static_assert(offsetof(UX6NetConnection, FrequencyMap) == 0x001EA0, "Member 'UX6NetConnection::FrequencyMap' has a wrong offset!");
-static_assert(offsetof(UX6NetConnection, PriorityMap) == 0x001EF0, "Member 'UX6NetConnection::PriorityMap' has a wrong offset!");
-static_assert(offsetof(UX6NetConnection, OpenCongestionSchedule) == 0x001F00, "Member 'UX6NetConnection::OpenCongestionSchedule' has a wrong offset!");
+static_assert(sizeof(UX6NetConnection) == 0x001FA0, "Wrong size on UX6NetConnection");
+static_assert(offsetof(UX6NetConnection, FrequencyMap) == 0x001EC8, "Member 'UX6NetConnection::FrequencyMap' has a wrong offset!");
+static_assert(offsetof(UX6NetConnection, PriorityMap) == 0x001F18, "Member 'UX6NetConnection::PriorityMap' has a wrong offset!");
+static_assert(offsetof(UX6NetConnection, OpenCongestionSchedule) == 0x001F28, "Member 'UX6NetConnection::OpenCongestionSchedule' has a wrong offset!");
 
 // Class PaperLuaFrameworkBase.X6NetConnectionV2
-// 0x0110 (0x1FB0 - 0x1EA0)
+// 0x0110 (0x1FD8 - 0x1EC8)
 class UX6NetConnectionV2 final : public UIpConnection
 {
 public:
-	TMap<double, double>                          FrequencyMap;                                      // 0x1EA0(0x0050)(Config, NativeAccessSpecifierPublic)
-	bool                                          OpenCongestionSchedule;                            // 0x1EF0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EF1[0xBF];                                    // 0x1EF1(0x00BF)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<double, double>                          FrequencyMap;                                      // 0x1EC8(0x0050)(Config, NativeAccessSpecifierPublic)
+	bool                                          OpenCongestionSchedule;                            // 0x1F18(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F19[0xBF];                                    // 0x1F19(0x00BF)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -771,9 +773,9 @@ public:
 	}
 };
 static_assert(alignof(UX6NetConnectionV2) == 0x000008, "Wrong alignment on UX6NetConnectionV2");
-static_assert(sizeof(UX6NetConnectionV2) == 0x001FB0, "Wrong size on UX6NetConnectionV2");
-static_assert(offsetof(UX6NetConnectionV2, FrequencyMap) == 0x001EA0, "Member 'UX6NetConnectionV2::FrequencyMap' has a wrong offset!");
-static_assert(offsetof(UX6NetConnectionV2, OpenCongestionSchedule) == 0x001EF0, "Member 'UX6NetConnectionV2::OpenCongestionSchedule' has a wrong offset!");
+static_assert(sizeof(UX6NetConnectionV2) == 0x001FD8, "Wrong size on UX6NetConnectionV2");
+static_assert(offsetof(UX6NetConnectionV2, FrequencyMap) == 0x001EC8, "Member 'UX6NetConnectionV2::FrequencyMap' has a wrong offset!");
+static_assert(offsetof(UX6NetConnectionV2, OpenCongestionSchedule) == 0x001F18, "Member 'UX6NetConnectionV2::OpenCongestionSchedule' has a wrong offset!");
 
 // Class PaperLuaFrameworkBase.X6NetLogSettings
 // 0x0030 (0x0058 - 0x0028)

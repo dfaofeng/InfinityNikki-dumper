@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "WwiseResourceLoader_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "WwiseResourceLoader_structs.hpp"
+#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -305,7 +305,7 @@ public:
 	uint8                                         Pad_C8[0x8];                                       // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	int32 ExecuteAction(const EAkActionOnEventType actionType, const class AActor* Actor, const int32 PlayingID, const int32 TransitionDuration, const EAkCurveInterpolation FadeCurve);
+	int32 ExecuteAction(const EAkActionOnEventType ActionType, const class AActor* Actor, const int32 PlayingID, const int32 TransitionDuration, const EAkCurveInterpolation FadeCurve);
 	float GetLocalizedMaximumDuration(const class FString& LanguageName);
 	int32 PostAtLocation(const struct FVector& Location, const struct FRotator& Orientation, const TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& Callback, const int32 CallbackMask, const class UObject* WorldContextObject);
 	int32 PostOnActor(const class AActor* Actor, const TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& Delegate, const int32 CallbackMask, const bool bStopWhenAttachedObjectDestroyed);
@@ -764,8 +764,8 @@ public:
 	static void CancelEventCallback(const TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback);
 	static void ClearBanks();
 	static void ClearSoundBanksAndMedia();
-	static void ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType actionType, class AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID);
-	static void ExecuteActionOnPlayingID(EAkActionOnEventType actionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve);
+	static void ExecuteActionOnEvent(class UAkAudioEvent* AkEvent, EAkActionOnEventType ActionType, class AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID);
+	static void ExecuteActionOnPlayingID(EAkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve);
 	static class UObject* GetAkAudioTypeUserData(const class UAkAudioType* Instance, const class UClass* Type);
 	static class UAkComponent* GetAkComponent(class USceneComponent* AttachToComponent, bool* ComponentCreated, class FName AttachPointName, const struct FVector& Location, EAttachLocation LocationType);
 	static TArray<class FString> GetAvailableAudioCultures();

@@ -42,11 +42,11 @@ public:
 	TSet<class UBP_DissolveActorComponent_C*>     DissolvingActorToRemove;                           // 0x05A8(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
 
 public:
-	void Return();
-	void OnInstancedFoliageDissolve(const TArray<struct FNeedDissolveItemInfo>& ISMs);
-	void Is_Actor_Instanced_Foliage(class AActor* Actor, bool* CanDissolve);
-	void Is_Actor_Dissolveable_Item(class AActor* Actor, bool* CanDissolve, class AActor** OutActor, bool* Dissolving, class UBP_DissolveActorComponent_C** DissolveActor);
 	void ExecuteUbergraph_BP_PaperDissolveManager(int32 EntryPoint);
+	void Is_Actor_Dissolveable_Item(class AActor* Actor, bool* CanDissolve, class AActor** OutActor, bool* Dissolving, class UBP_DissolveActorComponent_C** DissolveActor);
+	void Is_Actor_Instanced_Foliage(class AActor* Actor, bool* CanDissolve);
+	void OnInstancedFoliageDissolve(const TArray<struct FNeedDissolveItemInfo>& ISMs);
+	void Return();
 
 public:
 	static class UClass* StaticClass()

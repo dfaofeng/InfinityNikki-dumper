@@ -353,6 +353,31 @@ TSoftObjectPtr<class UAkSwitchValue> UX6AkBlueprintLibrary::GetSurfaceTypeSwitch
 }
 
 
+// Function WwiseExtension.X6AkBlueprintLibrary.IsX6DeviceMuted
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UX6AkBlueprintLibrary::IsX6DeviceMuted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6AkBlueprintLibrary", "IsX6DeviceMuted");
+
+	Params::X6AkBlueprintLibrary_IsX6DeviceMuted Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function WwiseExtension.X6AkBlueprintLibrary.PlayRunStepSoundEffectWithSwitch
 // (Final, BlueprintCosmetic, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:

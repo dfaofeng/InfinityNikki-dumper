@@ -10,18 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_InteractiveStageEnum_structs.hpp"
-#include "ETirpleStateObject_StateEnum_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Enum_ElectricGuitar_TuneType_structs.hpp"
 #include "Enum_InteractiveProcessType_structs.hpp"
-#include "EShepherdessAnimState_structs.hpp"
-#include "EPowerFrogStage_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "ETirpleStateObject_StateEnum_structs.hpp"
+#include "EPowerFrogStage_structs.hpp"
 #include "EAthenaShowState_structs.hpp"
+#include "EShepherdessAnimState_structs.hpp"
 #include "ECastPhantomStage_structs.hpp"
 #include "ECastGuardStage_structs.hpp"
 #include "EImaginationFireworkAnimState_structs.hpp"
 #include "EAbilityMultiPlayerHelperType_structs.hpp"
+#include "E_Multi_InteractiveObjActive_Type_structs.hpp"
 #include "Enum_InstrumentType_structs.hpp"
 
 
@@ -51,14 +53,16 @@ public:
 	E_InteractiveStageEnum                        BP_InteractiveStage;                               // 0x00FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	Enum_InteractiveProcessType                   BP_InteractiveProcessType;                         // 0x00FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int64                                         BP_InteractObjEntityID;                            // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int64                                         BP_InteractObjUniqueID;                            // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_IsInterProcessing_;                             // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_109[0x7];                                      // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         BP_InteractObj_cfgID;                              // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int64                                         BP_InteractCharacterEntityID;                      // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID);
+	void BP_Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID, E_Multi_InteractiveObjActive_Type multi_Type);
+	void BP_Multi_LaserMusicProcess(bool bStart, bool bImmediately);
+	void BP_Multicast_MusicGame_SyncScore(int32 addScore, int32 totalScore);
 	void BP_OnMulti_SitOnBubbleCableCar(int64 EntityID, int64 playerEntityID, int32 Action, int64 extraInfo, int64 extraInfo2);
 	void BP_OnMulticast_AbilityBegin(uint8 HelperType);
 	void BP_OnMulticast_AbilityClearActor(EAbilityMultiPlayerHelperType NewParam5);
@@ -70,6 +74,7 @@ public:
 	void BP_OnMulticast_AbilitySetActorMeshLocation(EAbilityMultiPlayerHelperType NewParam, const struct FVector& NewParam1);
 	void BP_OnMulticast_AbilitySpawnActor(EAbilityMultiPlayerHelperType NewParam5, const class FString& NewParam, const struct FTransform& NewParam1, const class FString& NewParam2);
 	void BP_OnMulticast_AbilitySpawnNS(EAbilityMultiPlayerHelperType NewParam5, const class FString& NewParam, const struct FTransform& NewParam1, const class FString& NewParam2, bool NewParam3, bool NewParam4);
+	void BP_OnMulticast_AddStar(int64 EntityID, int32 Num);
 	void BP_OnMulticast_AdjustTransform(const struct FF_AdjustTransformRPCParam& AdjustParam);
 	void BP_OnMulticast_AfkIdle(bool inAfk);
 	void BP_OnMulticast_AthenaAbilityBegin(const class FString& ABPPath, const class FString& SeatAniPath, const struct FVector& SeatOffset, const struct FVector& SeatRotation);
@@ -102,6 +107,7 @@ public:
 	void BP_OnMulticast_CelebrationPhantomEnd();
 	void BP_OnMulticast_CelebrationPhantomSwitchAnimStage(ECastPhantomStage NewParam);
 	void BP_OnMulticast_ChangeInstArticulation(bool Value);
+	void BP_OnMulticast_ChangeTuneType(Enum_ElectricGuitar_TuneType Value);
 	void BP_OnMulticast_ClaretStateChange(int32 State);
 	void BP_OnMulticast_CorollaDeerBegin();
 	void BP_OnMulticast_CorollaDeerEnd();
@@ -150,6 +156,14 @@ public:
 	void BP_OnMulticast_GobangRestartRequest();
 	void BP_OnMulticast_GobangSelect(int32 Row, int32 Column);
 	void BP_OnMulticast_GobangSetTurn(int32 PlayerTurn);
+	void BP_OnMulticast_HoopSkirtBindSecondNikki(int64 RoleId, int32 UIID);
+	void BP_OnMulticast_HoopSkirtGameBeginPlay(const struct FVector& Location, int32 Mode, int32 RoleId, int32 UIIID);
+	void BP_OnMulticast_HoopSkirtGameEndPlay();
+	void BP_OnMulticast_HoopSkirtGameEndPlayNoWait();
+	void BP_OnMulticast_HoopSkirtInputIndex(int32 Index_0);
+	void BP_OnMulticast_HoopSkirtSummonStageFinish(class AActor* Stage);
+	void BP_OnMulticast_HoopSkirtTeleportEnd(int64 RoleId);
+	void BP_OnMulticast_HoopSkirtTogetherGameEndPlay();
 	void BP_OnMulticast_ImaginationFireworkBegin(const class FString& NewParam, const class FString& NewParam1, const struct FVector& NewParam2, const struct FRotator& NewParam3, const class FString& NewParam4);
 	void BP_OnMulticast_ImaginationFireworkEnd();
 	void BP_OnMulticast_ImaginationFireworkSwitchStage(EImaginationFireworkAnimState NewParam, bool NewParam1, bool NewParam2);
@@ -159,7 +173,7 @@ public:
 	void BP_OnMulticast_InstrumentDestroyNS(const class FString& NewParam);
 	void BP_OnMulticast_InstrumentSpawnActor(const class FString& ActorClassPath, const struct FTransform& Transform, const class FString& Handle);
 	void BP_OnMulticast_InstrumentSpawnNS(const class FString& NewParam, const struct FTransform& NewParam1, const class FString& NewParam2, bool NewParam3, bool NewParam4);
-	void BP_OnMultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 InteractObjEntityID, int64 InteractObj_cfgID, int64 InteractCharacterEntityID);
+	void BP_OnMultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjUniqueID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID);
 	void BP_OnMulticast_MagicBanquetBegin();
 	void BP_OnMulticast_MagicBanquetDestroyTable();
 	void BP_OnMulticast_MagicBanquetEnd();
@@ -169,12 +183,12 @@ public:
 	void BP_OnMulticast_MapleLeavesEnd();
 	void BP_OnMulticast_MidnightPromDestroyGhost();
 	void BP_OnMulticast_MidnightPromShowGhost(const class FString& NewParam, const struct FVector& NewParam1, double NewParam2);
-	void BP_OnMulticast_MultiCallVehicleFunction(int64 VehicleEntityId, int64 FuncId);
-	void BP_OnMulticast_MultiPassengerBindEntity(int64 VehicleEntityId, int64 PassenegerID);
+	void BP_OnMulticast_MultiCallVehicleFunction(int64 VehicleEntityID, int64 FuncId);
+	void BP_OnMulticast_MultiPassengerBindEntity(int64 VehicleEntityID, int64 PassenegerID);
 	void BP_OnMulticast_MultiPhotographConfirmInvite(int64 FromRoleID, bool BAccept);
 	void BP_OnMulticast_MultiPhotographConfirmTransfer(bool BAccept, int64 PlyaerRoleID);
 	void BP_OnMulticast_MultiPhotographEnter(int64 PlayerRoleID);
-	void BP_OnMulticast_MultiPhotographExit(bool bController, const class FString& UserName);
+	void BP_OnMulticast_MultiPhotographExit(bool bController, const class FString& Username);
 	void BP_OnMulticast_MultiPhotographInvite(int64 PlayerRoleID);
 	void BP_OnMulticast_MultiPhotographInviteeReadyToInviter(int64 InviterRid);
 	void BP_OnMulticast_MultiPhotographLookAt(bool EnableLookAt);
@@ -216,6 +230,7 @@ public:
 	void BP_OnMulticast_PicnicBouequetTrigger(const class FString& NewParam1, const class FString& NewParam2, const class FString& NewParam3, TArray<class FString>& NewParam4, const struct FRotator& NewParam5);
 	void BP_OnMulticast_PillowStateChange(int32 State);
 	void BP_OnMulticast_PlayEmoteMontage(int64 playerId, int32 PoseID, const class FString& MontageName);
+	void BP_OnMulticast_PlayerGetOffVehicle(int64 VehicleEntityID, bool bGetOffLeft, bool bPlayAnimation, const struct FVector& GetOffLocation, const struct FRotator& GetOffRotation);
 	void BP_OnMulticast_PlayFeatureSequence(const class FString& LSPath);
 	void BP_OnMulticast_PlayHighAltitudeFireworks(const class FString& NiagaraPath, const struct FVector& EffectLocation, const struct FRotator& EffectRotator, const struct FVector& EffectScale, const class FString& NSVariableName, const struct FVector& currentEffectLocation);
 	void BP_OnMulticast_PlayLowAltitudeFireworks(const class FString& NiagaraPath, const struct FVector& EffectLocation, const struct FRotator& EffectRotator, const struct FVector& EffectScale);
@@ -231,10 +246,11 @@ public:
 	void BP_OnMulticast_PrincessKickEnd(const struct FVector& Location, const struct FVector& Velocity);
 	void BP_OnMulticast_QuickRelive(const struct FTransform& ReliveTransfom);
 	void BP_OnMulticast_QuitRibbonFish();
-	void BP_OnMulticast_RabbitMonsterBegin(const class FString& ABPPath, TArray<struct FFallbackStruct>& inNSGroup, TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, TArray<struct FFallbackStruct>& inNSGroupEnd, TArray<struct FFallbackStruct>& inTreeGroup);
+	void BP_OnMulticast_RabbitMonsterBegin(const class FString& ABPPath, TArray<struct FF_RabbitMonster_NS>& inNSGroup, TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, TArray<struct FF_RabbitMonster_NS>& inNSGroupEnd, TArray<struct FF_RabbitMonster_Mesh>& inTreeGroup);
 	void BP_OnMulticast_RabbitMonsterEnd();
 	void BP_OnMulticast_RabbitMonsterSpawnNS();
 	void BP_OnMulticast_RabbitMonsterSwitchStage(ETirpleStateObject_StateEnum Stage);
+	void BP_OnMulticast_RainsOfStarBoom(int64 nikki0, int64 nikki1);
 	void BP_OnMulticast_RainSwordsPrepareExit();
 	void BP_OnMulticast_ReleaseSyllable(Enum_InstrumentType InstrumentType, int32 Octace);
 	void BP_OnMulticast_RemoveGC(const struct FGameplayTag& CueTag);
@@ -285,7 +301,9 @@ public:
 	void BP_OnMulticastShadow_MusicBoxClimaxEnd();
 	void BP_OnMulticastShadow_MusicBoxClimaxStart();
 	void ExecuteUbergraph_BP_MainCharacterRPCHelperComponent(int32 EntryPoint);
-	void Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID);
+	void Multi_InterObjActive(int64 EntityID, const class FString& Data, int64 playerEntityID, E_Multi_InteractiveObjActive_Type multi_Type);
+	void Multi_LaserMusicEnd(bool bImmediately);
+	void Multi_LaserMusicStart();
 	void Multicast_AbilityBegin(uint8 HelperType);
 	void Multicast_AbilityClearActor(EAbilityMultiPlayerHelperType HelperType);
 	void Multicast_AbilityClearNS(EAbilityMultiPlayerHelperType HelperType);
@@ -296,6 +314,7 @@ public:
 	void Multicast_AbilitySetActorMeshLocation(EAbilityMultiPlayerHelperType HelperType, const struct FVector& RelativeLocation);
 	void Multicast_AbilitySpawnActor(EAbilityMultiPlayerHelperType HelperType, const class FString& AssetPath, const struct FTransform& Transform, const class FString& Handle);
 	void Multicast_AbilitySpawnNS(EAbilityMultiPlayerHelperType HelperType, const class FString& AssetPath, const struct FTransform& Transform, const class FString& Handle, bool bAutoDestroy, bool bAutoActive);
+	void Multicast_AddStar(int64 EntityID, int32 Num);
 	void Multicast_AdjustTransform(const struct FF_AdjustTransformRPCParam& AdjustParam);
 	void Multicast_AfkIdle(bool inAfk);
 	void Multicast_AthenaAbilityBegin(const class FString& ABPPath, const class FString& SeatAniPath, const struct FVector& SeatOffset, const struct FVector& SeatRotation);
@@ -326,6 +345,7 @@ public:
 	void Multicast_CelebrationPhantomBegin(const class FString& ABPPath);
 	void Multicast_CelebrationPhantomEnd();
 	void Multicast_ChangeInstArticulation(bool Value);
+	void Multicast_ChangeTuneType(Enum_ElectricGuitar_TuneType Value);
 	void Multicast_ClaretStateChange(int32 State);
 	void Multicast_CorollaDeerBegin();
 	void Multicast_CorollaDeerEnd();
@@ -363,6 +383,14 @@ public:
 	void Multicast_FrozenPathAbility_Init();
 	void Multicast_GameplayCue(const struct FGameplayTag& CueTag);
 	void Multicast_GlowInsectNet(bool bGlow);
+	void Multicast_HoopSkirtBindSecondNikki(int64 RoleId, int32 UIID);
+	void Multicast_HoopSkirtGameBeginPlay(const struct FVector& Location, int32 Mode, int32 RoleId, int32 UIIID);
+	void Multicast_HoopSkirtGameEndPlay();
+	void Multicast_HoopSkirtGameEndPlayNoWait();
+	void Multicast_HoopSkirtInputIndex(int32 Index_0);
+	void Multicast_HoopSkirtSummonStageFinish(class AActor* Stage);
+	void Multicast_HoopSkirtTeleportEnd(int64 RoleId);
+	void Multicast_HoopSkirtTogetherGameEndPlay();
 	void Multicast_ImaginationFireworkBegin(const class FString& ABPAssetPath, const class FString& NSTailPath, const struct FVector& TailLocation, const struct FRotator& TailRotation, const class FString& NSHandheldPath);
 	void Multicast_ImaginationFireworkEnd();
 	void Multicast_ImaginationFireworkSwitchStage(EImaginationFireworkAnimState Stage, bool bMoveState, bool bRelaxState);
@@ -371,7 +399,7 @@ public:
 	void Multicast_InstrumentDestroyNS(const class FString& Handle);
 	void Multicast_InstrumentSpawnActor(const class FString& ActorClassPath, const struct FTransform& Transform, const class FString& Handle);
 	void Multicast_InstrumentSpawnNS(const class FString& NSPath, const struct FTransform& Transform, const class FString& Handle, bool bAutoDestroy, bool bAutoActive);
-	void MultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjEntityID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID);
+	void MultiCast_InteractProcessChange(E_InteractiveStageEnum InteractiveStage, Enum_InteractiveProcessType InteractiveProcessType, int64 BP_InteractObjUniqueID_0, int64 InteractObj_cfgID, int64 InteractCharacterEntityID);
 	void Multicast_MagicBanquetBegin();
 	void Multicast_MagicBanquetDetroyTable();
 	void Multicast_MagicBanquetEnd();
@@ -381,7 +409,7 @@ public:
 	void Multicast_MapleLeavesEnd();
 	void Multicast_MidnightPromDestroyGhost();
 	void Multicast_MidnightPromShowGhost(const class FString& AssetPath, const struct FVector& RelativeLocation, double DissolveTime);
-	void Multicast_MultiCallVehicleFunction(int64 VehicleEntityId, int64 FuncId);
+	void Multicast_MultiCallVehicleFunction(int64 VehicleEntityID, int64 FuncId);
 	void Multicast_MultiEnterGobangGame();
 	void Multicast_MultiGobangConfirmSelect();
 	void Multicast_MultiGobangExchange();
@@ -391,11 +419,11 @@ public:
 	void Multicast_MultiGobangRestartRequest();
 	void Multicast_MultiGobangSelect(int32 Row, int32 Column);
 	void Multicast_MultiGobangSetTurn(int32 PlayerTurn);
-	void Multicast_MultiPassengerBindEntity(int64 VehicleEntityId, int64 PassenegerID);
+	void Multicast_MultiPassengerBindEntity(int64 VehicleEntityID, int64 PassenegerID);
 	void Multicast_MultiPhotographConfirmInvite(int64 FromRoleID, bool BAccept);
 	void Multicast_MultiPhotographConfirmTransfer(bool BAccept, int64 PlyaerRoleID);
 	void Multicast_MultiPhotographEnter(const int64 PlayerRoleID);
-	void Multicast_MultiPhotographExit(bool bController, const class FString& UserName);
+	void Multicast_MultiPhotographExit(bool bController, const class FString& Username);
 	void Multicast_MultiPhotographInvite(int64 PlayerRoleID);
 	void Multicast_MultiPhotographInviteeReadyToInviter(int64 InviterRid);
 	void Multicast_MultiPhotographLookAt(bool EnableLookAt);
@@ -418,6 +446,7 @@ public:
 	void Multicast_MusicBox_DestroyMusicBoxComponet();
 	void Multicast_MusicBox_UpdateBaseRing(bool bDisplay, int32 CurChargeLevel);
 	void Multicast_MusicBoxCombatHypnosis(const TArray<int64>& RemoveList, const TArray<int64>& AddList);
+	void Multicast_MusicGame_SyncScore(int32 addScore, int32 totalScore);
 	void Multicast_NetSyncGlide(int32 GlideState);
 	void Multicast_NetSyncWeapon(int64 RoleId, int32 WeaponID, const class FString& SlotType, int32 OverlayState, const class FString& CustomState);
 	void Multicast_NikkiUpdateOverlayData(int32 PawnAnimState, int32 UpdatedState, bool bAdded);
@@ -439,6 +468,7 @@ public:
 	void Multicast_PicnicBouequetTrigger(const class FString& MeshPath, const class FString& NSPath, const class FString& AnimPath, const TArray<class FString>& MatPathList, const struct FRotator& NSRotator);
 	void Multicast_PillowStateChange(int32 State);
 	void Multicast_PlayEmoteMontage(int64 playerId, int32 PoseID, const class FString& MontageName);
+	void Multicast_PlayerGetOffVehicle(int64 VehicleEntityID, bool bGetOffLeft, bool bPlayAnimation, const struct FVector& GetOffLocation, const struct FRotator& GetOffRotation);
 	void Multicast_PlayFeatureSequence(const class FString& LSPath);
 	void Multicast_PlayHighAltitudeFireworks(const class FString& NiagaraPath, const struct FVector& EffectLocation, const struct FRotator& EffectRotator, const struct FVector& EffectScale, const class FString& NSVariableName, const struct FVector& currentEffectLocation);
 	void Multicast_PlayLowAltitudeFireworks(const class FString& NiagaraPath, const struct FVector& EffectLocation, const struct FRotator& EffectRotator, const struct FVector& EffectScale);
@@ -454,10 +484,11 @@ public:
 	void Multicast_PrincessKickEnd(const struct FVector& Location, const struct FVector& Velocity);
 	void Multicast_QuickRelive(const struct FTransform& ReliveTransform);
 	void Multicast_QuitRibbonFish();
-	void Multicast_RabbitMonsterBegin(const class FString& ABPPath, const TArray<struct FFallbackStruct>& inNSGroup, const TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, const TArray<struct FFallbackStruct>& inNSGroupEnd, TArray<struct FFallbackStruct>& inTreeGroup);
+	void Multicast_RabbitMonsterBegin(const class FString& ABPPath, const TArray<struct FF_RabbitMonster_NS>& inNSGroup, const TArray<TSoftObjectPtr<class UNiagaraSystem>>& inWeaponFX, const TArray<struct FF_RabbitMonster_NS>& inNSGroupEnd, TArray<struct FF_RabbitMonster_Mesh>& inTreeGroup);
 	void Multicast_RabbitMonsterEnd();
 	void Multicast_RabbitMonsterSpawnNS();
 	void Multicast_RabbitMonsterSwitchStage(ETirpleStateObject_StateEnum Stage);
+	void Multicast_RainsOfStarBoom(int64 nikki0, int64 nikki1);
 	void Multicast_RainSwordsPrepareExit();
 	void Multicast_ReleaseSyllable(Enum_InstrumentType InstrumentType, int32 Octace);
 	void Multicast_RemoveSlotWeapon(const class FString& SlotType, bool bImmediateRequest, bool bInSync);
@@ -544,7 +575,7 @@ static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_bSeamlessCaveLo
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_bIsCopyMapReady) == 0x0000F9, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_bIsCopyMapReady' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractiveStage) == 0x0000FA, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractiveStage' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractiveProcessType) == 0x0000FB, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractiveProcessType' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractObjEntityID) == 0x000100, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractObjEntityID' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractObjUniqueID) == 0x000100, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractObjUniqueID' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_IsInterProcessing_) == 0x000108, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_IsInterProcessing_' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractObj_cfgID) == 0x000110, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractObj_cfgID' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterRPCHelperComponent_C, BP_InteractCharacterEntityID) == 0x000118, "Member 'UBP_MainCharacterRPCHelperComponent_C::BP_InteractCharacterEntityID' has a wrong offset!");

@@ -487,48 +487,48 @@ static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelSnapshot, 
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelSnapshot, WheelAngularVelocity) == 0x000024, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelSnapshot::WheelAngularVelocity' has a wrong offset!");
 
 // Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.BreakWheelStatus
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct ChaosWheeledVehicleMovementComponent_BreakWheelStatus final
 {
 public:
-	struct FWheelStatus                           Status;                                            // 0x0000(0x0088)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInContact;                                        // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ContactPoint;                                      // 0x0090(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPhysicalMaterial*                      PhysMaterial;                                      // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NormalizedSuspensionLength;                        // 0x00B0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SpringForce;                                       // 0x00B4(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SlipAngle;                                         // 0x00B8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSlipping;                                       // 0x00BC(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BD[0x3];                                       // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SlipMagnitude;                                     // 0x00C0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSkidding;                                       // 0x00C4(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C5[0x3];                                       // 0x00C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SkidMagnitude;                                     // 0x00C8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                SkidNormal;                                        // 0x00D0(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DriveTorque;                                       // 0x00E8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BrakeTorque;                                       // 0x00EC(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bABSActivated;                                     // 0x00F0(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FWheelStatus                           Status;                                            // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bInContact;                                        // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ContactPoint;                                      // 0x00C0(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPhysicalMaterial*                      PhysMaterial;                                      // 0x00D8(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NormalizedSuspensionLength;                        // 0x00E0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SpringForce;                                       // 0x00E4(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SlipAngle;                                         // 0x00E8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSlipping;                                       // 0x00EC(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_ED[0x3];                                       // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SlipMagnitude;                                     // 0x00F0(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSkidding;                                       // 0x00F4(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F5[0x3];                                       // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SkidMagnitude;                                     // 0x00F8(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                SkidNormal;                                        // 0x0100(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DriveTorque;                                       // 0x0118(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BrakeTorque;                                       // 0x011C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bABSActivated;                                     // 0x0120(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus) == 0x000008, "Wrong alignment on ChaosWheeledVehicleMovementComponent_BreakWheelStatus");
-static_assert(sizeof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus) == 0x0000F8, "Wrong size on ChaosWheeledVehicleMovementComponent_BreakWheelStatus");
+static_assert(sizeof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus) == 0x000128, "Wrong size on ChaosWheeledVehicleMovementComponent_BreakWheelStatus");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, Status) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::Status' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bInContact) == 0x000088, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bInContact' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, ContactPoint) == 0x000090, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::ContactPoint' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, PhysMaterial) == 0x0000A8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::PhysMaterial' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, NormalizedSuspensionLength) == 0x0000B0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::NormalizedSuspensionLength' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SpringForce) == 0x0000B4, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SpringForce' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SlipAngle) == 0x0000B8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SlipAngle' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bIsSlipping) == 0x0000BC, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bIsSlipping' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SlipMagnitude) == 0x0000C0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SlipMagnitude' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bIsSkidding) == 0x0000C4, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bIsSkidding' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SkidMagnitude) == 0x0000C8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SkidMagnitude' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SkidNormal) == 0x0000D0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SkidNormal' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, DriveTorque) == 0x0000E8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::DriveTorque' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, BrakeTorque) == 0x0000EC, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::BrakeTorque' has a wrong offset!");
-static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bABSActivated) == 0x0000F0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bABSActivated' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bInContact) == 0x0000B8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bInContact' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, ContactPoint) == 0x0000C0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::ContactPoint' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, PhysMaterial) == 0x0000D8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::PhysMaterial' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, NormalizedSuspensionLength) == 0x0000E0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::NormalizedSuspensionLength' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SpringForce) == 0x0000E4, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SpringForce' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SlipAngle) == 0x0000E8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SlipAngle' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bIsSlipping) == 0x0000EC, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bIsSlipping' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SlipMagnitude) == 0x0000F0, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SlipMagnitude' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bIsSkidding) == 0x0000F4, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bIsSkidding' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SkidMagnitude) == 0x0000F8, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SkidMagnitude' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, SkidNormal) == 0x000100, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::SkidNormal' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, DriveTorque) == 0x000118, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::DriveTorque' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, BrakeTorque) == 0x00011C, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::BrakeTorque' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_BreakWheelStatus, bABSActivated) == 0x000120, "Member 'ChaosWheeledVehicleMovementComponent_BreakWheelStatus::bABSActivated' has a wrong offset!");
 
 // Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.MakeWheeledSnapshot
 // 0x0160 (0x0160 - 0x0000)
@@ -576,7 +576,7 @@ static_assert(offsetof(ChaosWheeledVehicleMovementComponent_MakeWheelSnapshot, W
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_MakeWheelSnapshot, ReturnValue) == 0x000014, "Member 'ChaosWheeledVehicleMovementComponent_MakeWheelSnapshot::ReturnValue' has a wrong offset!");
 
 // Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.MakeWheelStatus
-// 0x00F8 (0x00F8 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct ChaosWheeledVehicleMovementComponent_MakeWheelStatus final
 {
 public:
@@ -599,10 +599,10 @@ public:
 	float                                         BrakeTorque;                                       // 0x0064(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bABSActivated;                                     // 0x0068(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWheelStatus                           ReturnValue;                                       // 0x0070(0x0088)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWheelStatus                           ReturnValue;                                       // 0x0070(0x00B8)(Parm, OutParm, ReturnParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ChaosWheeledVehicleMovementComponent_MakeWheelStatus) == 0x000008, "Wrong alignment on ChaosWheeledVehicleMovementComponent_MakeWheelStatus");
-static_assert(sizeof(ChaosWheeledVehicleMovementComponent_MakeWheelStatus) == 0x0000F8, "Wrong size on ChaosWheeledVehicleMovementComponent_MakeWheelStatus");
+static_assert(sizeof(ChaosWheeledVehicleMovementComponent_MakeWheelStatus) == 0x000128, "Wrong size on ChaosWheeledVehicleMovementComponent_MakeWheelStatus");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_MakeWheelStatus, bInContact) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_MakeWheelStatus::bInContact' has a wrong offset!");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_MakeWheelStatus, ContactPoint) == 0x000008, "Member 'ChaosWheeledVehicleMovementComponent_MakeWheelStatus::ContactPoint' has a wrong offset!");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_MakeWheelStatus, PhysMaterial) == 0x000020, "Member 'ChaosWheeledVehicleMovementComponent_MakeWheelStatus::PhysMaterial' has a wrong offset!");
@@ -651,6 +651,34 @@ public:
 static_assert(alignof(ChaosWheeledVehicleMovementComponent_EnableWheelFriction) == 0x000001, "Wrong alignment on ChaosWheeledVehicleMovementComponent_EnableWheelFriction");
 static_assert(sizeof(ChaosWheeledVehicleMovementComponent_EnableWheelFriction) == 0x000001, "Wrong size on ChaosWheeledVehicleMovementComponent_EnableWheelFriction");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_EnableWheelFriction, InState) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_EnableWheelFriction::InState' has a wrong offset!");
+
+// Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.GetWheelHitActorByIndex
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex final
+{
+public:
+	int32                                         InWheelIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex) == 0x000008, "Wrong alignment on ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex");
+static_assert(sizeof(ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex) == 0x000010, "Wrong size on ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex, InWheelIndex) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex::InWheelIndex' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex, ReturnValue) == 0x000008, "Member 'ChaosWheeledVehicleMovementComponent_GetWheelHitActorByIndex::ReturnValue' has a wrong offset!");
+
+// Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.GetWheelHitComponentByIndex
+// 0x0010 (0x0010 - 0x0000)
+struct ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex final
+{
+public:
+	int32                                         InWheelIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex) == 0x000008, "Wrong alignment on ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex");
+static_assert(sizeof(ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex) == 0x000010, "Wrong size on ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex, InWheelIndex) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex::InWheelIndex' has a wrong offset!");
+static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex, ReturnValue) == 0x000008, "Member 'ChaosWheeledVehicleMovementComponent_GetWheelHitComponentByIndex::ReturnValue' has a wrong offset!");
 
 // Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.SetABSEnabled
 // 0x0008 (0x0008 - 0x0000)
@@ -1000,16 +1028,16 @@ static_assert(sizeof(ChaosWheeledVehicleMovementComponent_GetSnapshot) == 0x0000
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetSnapshot, ReturnValue) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_GetSnapshot::ReturnValue' has a wrong offset!");
 
 // Function ChaosVehicles.ChaosWheeledVehicleMovementComponent.GetWheelState
-// 0x0090 (0x0090 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct ChaosWheeledVehicleMovementComponent_GetWheelState final
 {
 public:
 	int32                                         WheelIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWheelStatus                           ReturnValue;                                       // 0x0008(0x0088)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FWheelStatus                           ReturnValue;                                       // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ChaosWheeledVehicleMovementComponent_GetWheelState) == 0x000008, "Wrong alignment on ChaosWheeledVehicleMovementComponent_GetWheelState");
-static_assert(sizeof(ChaosWheeledVehicleMovementComponent_GetWheelState) == 0x000090, "Wrong size on ChaosWheeledVehicleMovementComponent_GetWheelState");
+static_assert(sizeof(ChaosWheeledVehicleMovementComponent_GetWheelState) == 0x0000C0, "Wrong size on ChaosWheeledVehicleMovementComponent_GetWheelState");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetWheelState, WheelIndex) == 0x000000, "Member 'ChaosWheeledVehicleMovementComponent_GetWheelState::WheelIndex' has a wrong offset!");
 static_assert(offsetof(ChaosWheeledVehicleMovementComponent_GetWheelState, ReturnValue) == 0x000008, "Member 'ChaosWheeledVehicleMovementComponent_GetWheelState::ReturnValue' has a wrong offset!");
 

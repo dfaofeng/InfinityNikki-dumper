@@ -527,6 +527,20 @@ void UBP_MultiPlayerGroupMovementComponent_C::OnRep_BP_Replicated_IsInvitingToHo
 }
 
 
+// Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.OnRep_BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MultiPlayerGroupMovementComponent_C::OnRep_BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MultiPlayerGroupMovementComponent_C", "OnRep_BP_Replicated_NewFollowersFallingBehindTargetSafetyPoint");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_MultiPlayerGroupMovementComponent.BP_MultiPlayerGroupMovementComponent_C.ReceiveBeginPlay
 // (Event, Public, BlueprintEvent)
 

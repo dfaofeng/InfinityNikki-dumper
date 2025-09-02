@@ -68,38 +68,6 @@ static_assert(alignof(UInterchangeSourceData) == 0x000008, "Wrong alignment on U
 static_assert(sizeof(UInterchangeSourceData) == 0x000050, "Wrong size on UInterchangeSourceData");
 static_assert(offsetof(UInterchangeSourceData, Filename) == 0x000028, "Member 'UInterchangeSourceData::Filename' has a wrong offset!");
 
-// Class InterchangeCore.InterchangeUserDefinedAttributesAPI
-// 0x0000 (0x0028 - 0x0028)
-class UInterchangeUserDefinedAttributesAPI final : public UObject
-{
-public:
-	static bool CreateUserDefinedAttribute_Boolean(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const bool& Value, const class FString& PayloadKey, bool RequiresDelegate);
-	static bool CreateUserDefinedAttribute_Double(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const double& Value, const class FString& PayloadKey, bool RequiresDelegate);
-	static bool CreateUserDefinedAttribute_Float(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const float& Value, const class FString& PayloadKey, bool RequiresDelegate);
-	static bool CreateUserDefinedAttribute_FString(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const class FString& Value, const class FString& PayloadKey, bool RequiresDelegate);
-	static bool CreateUserDefinedAttribute_Int32(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const int32& Value, const class FString& PayloadKey, bool RequiresDelegate);
-	static void DuplicateAllUserDefinedAttribute(const class UInterchangeBaseNode* InterchangeSourceNode, class UInterchangeBaseNode* InterchangeDestinationNode, bool bAddSourceNodeName);
-	static bool GetUserDefinedAttribute_Boolean(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, bool* OutValue, class FString* OutPayloadKey);
-	static bool GetUserDefinedAttribute_Double(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, double* OutValue, class FString* OutPayloadKey);
-	static bool GetUserDefinedAttribute_Float(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, float* OutValue, class FString* OutPayloadKey);
-	static bool GetUserDefinedAttribute_FString(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, class FString* OutValue, class FString* OutPayloadKey);
-	static bool GetUserDefinedAttribute_Int32(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, int32* OutValue, class FString* OutPayloadKey);
-	static void GetUserDefinedAttributeInfos(const class UInterchangeBaseNode* InterchangeNode, TArray<struct FInterchangeUserDefinedAttributeInfo>* UserDefinedAttributeInfos);
-	static bool RemoveUserDefinedAttribute(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InterchangeUserDefinedAttributesAPI">();
-	}
-	static class UInterchangeUserDefinedAttributesAPI* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInterchangeUserDefinedAttributesAPI>();
-	}
-};
-static_assert(alignof(UInterchangeUserDefinedAttributesAPI) == 0x000008, "Wrong alignment on UInterchangeUserDefinedAttributesAPI");
-static_assert(sizeof(UInterchangeUserDefinedAttributesAPI) == 0x000028, "Wrong size on UInterchangeUserDefinedAttributesAPI");
-
 // Class InterchangeCore.InterchangeWriterBase
 // 0x0000 (0x0028 - 0x0028)
 class UInterchangeWriterBase : public UObject
@@ -548,6 +516,38 @@ public:
 };
 static_assert(alignof(UInterchangeSourceNode) == 0x000008, "Wrong alignment on UInterchangeSourceNode");
 static_assert(sizeof(UInterchangeSourceNode) == 0x0000D0, "Wrong size on UInterchangeSourceNode");
+
+// Class InterchangeCore.InterchangeUserDefinedAttributesAPI
+// 0x0000 (0x0028 - 0x0028)
+class UInterchangeUserDefinedAttributesAPI final : public UObject
+{
+public:
+	static bool CreateUserDefinedAttribute_Boolean(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const bool& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_Double(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const double& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_Float(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const float& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_FString(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const class FString& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static bool CreateUserDefinedAttribute_Int32(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, const int32& Value, const class FString& PayloadKey, bool RequiresDelegate);
+	static void DuplicateAllUserDefinedAttribute(const class UInterchangeBaseNode* InterchangeSourceNode, class UInterchangeBaseNode* InterchangeDestinationNode, bool bAddSourceNodeName);
+	static bool GetUserDefinedAttribute_Boolean(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, bool* OutValue, class FString* OutPayloadKey);
+	static bool GetUserDefinedAttribute_Double(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, double* OutValue, class FString* OutPayloadKey);
+	static bool GetUserDefinedAttribute_Float(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, float* OutValue, class FString* OutPayloadKey);
+	static bool GetUserDefinedAttribute_FString(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, class FString* OutValue, class FString* OutPayloadKey);
+	static bool GetUserDefinedAttribute_Int32(const class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName, int32* OutValue, class FString* OutPayloadKey);
+	static void GetUserDefinedAttributeInfos(const class UInterchangeBaseNode* InterchangeNode, TArray<struct FInterchangeUserDefinedAttributeInfo>* UserDefinedAttributeInfos);
+	static bool RemoveUserDefinedAttribute(class UInterchangeBaseNode* InterchangeNode, const class FString& UserDefinedAttributeName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InterchangeUserDefinedAttributesAPI">();
+	}
+	static class UInterchangeUserDefinedAttributesAPI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInterchangeUserDefinedAttributesAPI>();
+	}
+};
+static_assert(alignof(UInterchangeUserDefinedAttributesAPI) == 0x000008, "Wrong alignment on UInterchangeUserDefinedAttributesAPI");
+static_assert(sizeof(UInterchangeUserDefinedAttributesAPI) == 0x000028, "Wrong size on UInterchangeUserDefinedAttributesAPI");
 
 }
 

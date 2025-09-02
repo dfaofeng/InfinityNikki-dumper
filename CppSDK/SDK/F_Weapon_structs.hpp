@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "F_WeaponPose_structs.hpp"
 #include "EInt32_WeaponEquipAnimType_structs.hpp"
-#include "EInt32_WeaponPoseAnimType_structs.hpp"
+#include "F_WeaponPose_structs.hpp"
 #include "Enum_WeaponHandMode_structs.hpp"
+#include "EInt32_WeaponPoseAnimType_structs.hpp"
 
 
 namespace SDK

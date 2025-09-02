@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "OpenColorIO_structs.hpp"
+#include "MovieRenderPipelineCore_structs.hpp"
 #include "UMG_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "OpenColorIO_structs.hpp"
 #include "StructUtils_structs.hpp"
-#include "MovieRenderPipelineCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
@@ -2764,7 +2764,7 @@ public:
 	void OnBeginFrame();
 	void OnExecutorErroredImpl(class UMoviePipeline* ErroredPipeline, bool bFatal, const class FText& ErrorReason);
 	void OnExecutorFinishedImpl();
-	int32 SendHTTPRequest(const class FString& InURL, const class FString& InVerb, const class FString& InMessage, const TMap<class FString, class FString>& InHeaders);
+	int32 SendHTTPRequest(const class FString& InUrl, const class FString& InVerb, const class FString& InMessage, const TMap<class FString, class FString>& InHeaders);
 	bool SendSocketMessage(const class FString& InMessage);
 	void SetMoviePipelineClass(class UClass* InPipelineClass);
 	void SetStatusMessage(const class FString& InStatus);

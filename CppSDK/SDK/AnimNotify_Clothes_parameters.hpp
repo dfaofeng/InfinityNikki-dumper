@@ -17,27 +17,6 @@
 namespace SDK::Params
 {
 
-// Function AnimNotify_Clothes.AnimNotify_Clothes_C.PreviewPostAkEvent
-// 0x0040 (0x0040 - 0x0000)
-struct AnimNotify_Clothes_C_PreviewPostAkEvent final
-{
-public:
-	class USceneComponent*                        Comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        AttachToComponent;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0010(0x0010)(ConstParm, ReferenceParm)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable; // 0x0028(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_X6PostEvent_PlayingID;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(AnimNotify_Clothes_C_PreviewPostAkEvent) == 0x000008, "Wrong alignment on AnimNotify_Clothes_C_PreviewPostAkEvent");
-static_assert(sizeof(AnimNotify_Clothes_C_PreviewPostAkEvent) == 0x000040, "Wrong size on AnimNotify_Clothes_C_PreviewPostAkEvent");
-static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, Comp) == 0x000000, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::Comp' has a wrong offset!");
-static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, AttachToComponent) == 0x000008, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::AttachToComponent' has a wrong offset!");
-static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, Temp_struct_Variable) == 0x000010, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, CallFunc_GetOwner_ReturnValue) == 0x000020, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, Temp_delegate_Variable) == 0x000028, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, CallFunc_X6PostEvent_PlayingID) == 0x000038, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::CallFunc_X6PostEvent_PlayingID' has a wrong offset!");
-
 // Function AnimNotify_Clothes.AnimNotify_Clothes_C.Received_Notify
 // 0x0060 (0x0060 - 0x0000)
 struct AnimNotify_Clothes_C_Received_Notify final
@@ -61,6 +40,27 @@ static_assert(offsetof(AnimNotify_Clothes_C_Received_Notify, ReturnValue) == 0x0
 static_assert(offsetof(AnimNotify_Clothes_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'AnimNotify_Clothes_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_Clothes_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000050, "Member 'AnimNotify_Clothes_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_Clothes_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'AnimNotify_Clothes_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function AnimNotify_Clothes.AnimNotify_Clothes_C.PreviewPostAkEvent
+// 0x0040 (0x0040 - 0x0000)
+struct AnimNotify_Clothes_C_PreviewPostAkEvent final
+{
+public:
+	class USceneComponent*                        Comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        AttachToComponent;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0010(0x0010)(ConstParm, ReferenceParm)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable; // 0x0028(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_X6PostEvent_PlayingID;                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(AnimNotify_Clothes_C_PreviewPostAkEvent) == 0x000008, "Wrong alignment on AnimNotify_Clothes_C_PreviewPostAkEvent");
+static_assert(sizeof(AnimNotify_Clothes_C_PreviewPostAkEvent) == 0x000040, "Wrong size on AnimNotify_Clothes_C_PreviewPostAkEvent");
+static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, Comp) == 0x000000, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::Comp' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, AttachToComponent) == 0x000008, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::AttachToComponent' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, Temp_struct_Variable) == 0x000010, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, CallFunc_GetOwner_ReturnValue) == 0x000020, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, Temp_delegate_Variable) == 0x000028, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(AnimNotify_Clothes_C_PreviewPostAkEvent, CallFunc_X6PostEvent_PlayingID) == 0x000038, "Member 'AnimNotify_Clothes_C_PreviewPostAkEvent::CallFunc_X6PostEvent_PlayingID' has a wrong offset!");
 
 }
 

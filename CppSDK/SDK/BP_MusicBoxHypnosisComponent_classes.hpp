@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "BP_X6ActorComponent_classes.hpp"
 #include "Engine_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK
@@ -28,11 +28,11 @@ public:
 	int32                                         AnimalIndex;                                       // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_MusicBoxHypnosisComponent(int32 EntryPoint);
-	void BP_RecoverFromHypnosis();
 	void BP_AnimToHypnosis();
+	void BP_RecoverFromHypnosis();
+	void ExecuteUbergraph_BP_MusicBoxHypnosisComponent(int32 EntryPoint);
+	void ReceiveBeginPlay();
+	void ReceiveTick(float DeltaSeconds);
 
 	class FString GetModuleName() const;
 

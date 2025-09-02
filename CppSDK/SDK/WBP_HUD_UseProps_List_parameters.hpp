@@ -16,6 +16,24 @@
 namespace SDK::Params
 {
 
+// Function WBP_HUD_UseProps_List.WBP_HUD_UseProps_List_C.DoCustomNavigation
+// 0x0028 (0x0028 - 0x0000)
+struct WBP_HUD_UseProps_List_C_DoCustomNavigation final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UUserWidget*>                    CallFunc_GetAllEntries_ReturnValue;                // 0x0010(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
+	class UWidget*                                CallFunc_WidgetsCustomNavigation_FocusRecipient;   // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HUD_UseProps_List_C_DoCustomNavigation) == 0x000008, "Wrong alignment on WBP_HUD_UseProps_List_C_DoCustomNavigation");
+static_assert(sizeof(WBP_HUD_UseProps_List_C_DoCustomNavigation) == 0x000028, "Wrong size on WBP_HUD_UseProps_List_C_DoCustomNavigation");
+static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, Navigation_0) == 0x000000, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, ReturnValue) == 0x000008, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, CallFunc_GetAllEntries_ReturnValue) == 0x000010, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::CallFunc_GetAllEntries_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, CallFunc_WidgetsCustomNavigation_FocusRecipient) == 0x000020, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::CallFunc_WidgetsCustomNavigation_FocusRecipient' has a wrong offset!");
+
 // Function WBP_HUD_UseProps_List.WBP_HUD_UseProps_List_C.ExecuteUbergraph_WBP_HUD_UseProps_List
 // 0x0028 (0x0028 - 0x0000)
 struct WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List final
@@ -35,24 +53,6 @@ static_assert(offsetof(WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps
 static_assert(offsetof(WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List, CallFunc_PlayAnimation_ReturnValue_2) == 0x000018, "Member 'WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List, CallFunc_PlayAnimation_ReturnValue_3) == 0x000020, "Member 'WBP_HUD_UseProps_List_C_ExecuteUbergraph_WBP_HUD_UseProps_List::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
-
-// Function WBP_HUD_UseProps_List.WBP_HUD_UseProps_List_C.DoCustomNavigation
-// 0x0028 (0x0028 - 0x0000)
-struct WBP_HUD_UseProps_List_C_DoCustomNavigation final
-{
-public:
-	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UUserWidget*>                    CallFunc_GetAllEntries_ReturnValue;                // 0x0010(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
-	class UWidget*                                CallFunc_WidgetsCustomNavigation_FocusRecipient;   // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HUD_UseProps_List_C_DoCustomNavigation) == 0x000008, "Wrong alignment on WBP_HUD_UseProps_List_C_DoCustomNavigation");
-static_assert(sizeof(WBP_HUD_UseProps_List_C_DoCustomNavigation) == 0x000028, "Wrong size on WBP_HUD_UseProps_List_C_DoCustomNavigation");
-static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, Navigation_0) == 0x000000, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::Navigation_0' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, ReturnValue) == 0x000008, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, CallFunc_GetAllEntries_ReturnValue) == 0x000010, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::CallFunc_GetAllEntries_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_HUD_UseProps_List_C_DoCustomNavigation, CallFunc_WidgetsCustomNavigation_FocusRecipient) == 0x000020, "Member 'WBP_HUD_UseProps_List_C_DoCustomNavigation::CallFunc_WidgetsCustomNavigation_FocusRecipient' has a wrong offset!");
 
 // Function WBP_HUD_UseProps_List.WBP_HUD_UseProps_List_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

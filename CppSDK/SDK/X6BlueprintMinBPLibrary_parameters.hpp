@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "MessageHUDHead_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "MessageHUDEnum_structs.hpp"
+#include "MessageHUDHead_structs.hpp"
 #include "MessageBoxModeEnum_structs.hpp"
 #include "Engine_structs.hpp"
 
@@ -144,7 +144,7 @@ public:
 	EMessageHUDEnum                               MessageType;                                       // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMessageHUDHead                               HeadImage;                                         // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         MessageID;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FString>                         MessageId;                                         // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen) == 0x000008, "Wrong alignment on X6BlueprintMinBPLibrary_C_ShowMessageOnScreen");
@@ -152,7 +152,7 @@ static_assert(sizeof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen) == 0x000028,
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, TextDuration) == 0x000000, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageOnScreen::TextDuration' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, MessageType) == 0x000008, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageOnScreen::MessageType' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, HeadImage) == 0x000009, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageOnScreen::HeadImage' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, MessageID) == 0x000010, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageOnScreen::MessageID' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, MessageId) == 0x000010, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageOnScreen::MessageId' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, __WorldContext) == 0x000020, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageOnScreen::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintMinBPLibrary.X6BlueprintMinBPLibrary_C.ShowMessageHUDOnScreen
@@ -160,25 +160,25 @@ static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageOnScreen, __WorldCon
 struct X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen final
 {
 public:
-	TArray<class FText>                           Messages;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FText>                           messages;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	double                                        TextDuration;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMessageHUDEnum                               MessageType;                                       // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMessageHUDHead                               HeadImage;                                         // 0x0019(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMessageBoxModeEnum                           PopupMode;                                         // 0x001A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DaMiaoHudTextAutoEnd;                              // 0x001B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         MessageID;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<class FString>                         MessageId;                                         // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen) == 0x000008, "Wrong alignment on X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen");
 static_assert(sizeof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen) == 0x000038, "Wrong size on X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen");
-static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, Messages) == 0x000000, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::Messages' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, messages) == 0x000000, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::messages' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, TextDuration) == 0x000010, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::TextDuration' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, MessageType) == 0x000018, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::MessageType' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, HeadImage) == 0x000019, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::HeadImage' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, PopupMode) == 0x00001A, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::PopupMode' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, DaMiaoHudTextAutoEnd) == 0x00001B, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::DaMiaoHudTextAutoEnd' has a wrong offset!");
-static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, MessageID) == 0x000020, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::MessageID' has a wrong offset!");
+static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, MessageId) == 0x000020, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::MessageId' has a wrong offset!");
 static_assert(offsetof(X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen, __WorldContext) == 0x000030, "Member 'X6BlueprintMinBPLibrary_C_ShowMessageHUDOnScreen::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintMinBPLibrary.X6BlueprintMinBPLibrary_C.SetSimulatePhysics

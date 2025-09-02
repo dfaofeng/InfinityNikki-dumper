@@ -14,43 +14,27 @@
 namespace SDK::Params
 {
 
-// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.UpdateUnlockState
-// 0x000C (0x000C - 0x0000)
-struct WBP_MainHudItemTab_C_UpdateUnlockState final
+// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_MainHudItemTab_C_BP_OnItemExpansionChanged final
 {
 public:
-	bool                                          isUnlocked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         unlockStyle;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_MainHudItemTab_C_UpdateUnlockState) == 0x000004, "Wrong alignment on WBP_MainHudItemTab_C_UpdateUnlockState");
-static_assert(sizeof(WBP_MainHudItemTab_C_UpdateUnlockState) == 0x00000C, "Wrong size on WBP_MainHudItemTab_C_UpdateUnlockState");
-static_assert(offsetof(WBP_MainHudItemTab_C_UpdateUnlockState, isUnlocked) == 0x000000, "Member 'WBP_MainHudItemTab_C_UpdateUnlockState::isUnlocked' has a wrong offset!");
-static_assert(offsetof(WBP_MainHudItemTab_C_UpdateUnlockState, unlockStyle) == 0x000004, "Member 'WBP_MainHudItemTab_C_UpdateUnlockState::unlockStyle' has a wrong offset!");
-static_assert(offsetof(WBP_MainHudItemTab_C_UpdateUnlockState, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000008, "Member 'WBP_MainHudItemTab_C_UpdateUnlockState::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_MainHudItemTab_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_MainHudItemTab_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WBP_MainHudItemTab_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_MainHudItemTab_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WBP_MainHudItemTab_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_MainHudItemTab_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
-// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.PlayUnlock
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_MainHudItemTab_C_PlayUnlock final
+// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_MainHudItemTab_C_BP_OnItemSelectionChanged final
 {
 public:
-	int32                                         unlockStyle;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_MainHudItemTab_C_PlayUnlock) == 0x000004, "Wrong alignment on WBP_MainHudItemTab_C_PlayUnlock");
-static_assert(sizeof(WBP_MainHudItemTab_C_PlayUnlock) == 0x000004, "Wrong size on WBP_MainHudItemTab_C_PlayUnlock");
-static_assert(offsetof(WBP_MainHudItemTab_C_PlayUnlock, unlockStyle) == 0x000000, "Member 'WBP_MainHudItemTab_C_PlayUnlock::unlockStyle' has a wrong offset!");
-
-// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_MainHudItemTab_C_OnListItemObjectSet final
-{
-public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_MainHudItemTab_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on WBP_MainHudItemTab_C_OnListItemObjectSet");
-static_assert(sizeof(WBP_MainHudItemTab_C_OnListItemObjectSet) == 0x000008, "Wrong size on WBP_MainHudItemTab_C_OnListItemObjectSet");
-static_assert(offsetof(WBP_MainHudItemTab_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WBP_MainHudItemTab_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
+static_assert(alignof(WBP_MainHudItemTab_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_MainHudItemTab_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WBP_MainHudItemTab_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_MainHudItemTab_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WBP_MainHudItemTab_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_MainHudItemTab_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
 // Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.ExecuteUbergraph_WBP_MainHudItemTab
 // 0x0028 (0x0028 - 0x0000)
@@ -79,27 +63,43 @@ static_assert(offsetof(WBP_MainHudItemTab_C_ExecuteUbergraph_WBP_MainHudItemTab,
 static_assert(offsetof(WBP_MainHudItemTab_C_ExecuteUbergraph_WBP_MainHudItemTab, CallFunc_PlayAnimation_ReturnValue) == 0x000018, "Member 'WBP_MainHudItemTab_C_ExecuteUbergraph_WBP_MainHudItemTab::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_MainHudItemTab_C_ExecuteUbergraph_WBP_MainHudItemTab, CallFunc_Delay_Duration_ImplicitCast) == 0x000020, "Member 'WBP_MainHudItemTab_C_ExecuteUbergraph_WBP_MainHudItemTab::CallFunc_Delay_Duration_ImplicitCast' has a wrong offset!");
 
-// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_MainHudItemTab_C_BP_OnItemSelectionChanged final
+// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_MainHudItemTab_C_OnListItemObjectSet final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_MainHudItemTab_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_MainHudItemTab_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WBP_MainHudItemTab_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_MainHudItemTab_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WBP_MainHudItemTab_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_MainHudItemTab_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WBP_MainHudItemTab_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on WBP_MainHudItemTab_C_OnListItemObjectSet");
+static_assert(sizeof(WBP_MainHudItemTab_C_OnListItemObjectSet) == 0x000008, "Wrong size on WBP_MainHudItemTab_C_OnListItemObjectSet");
+static_assert(offsetof(WBP_MainHudItemTab_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WBP_MainHudItemTab_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
 
-// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_MainHudItemTab_C_BP_OnItemExpansionChanged final
+// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.PlayUnlock
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_MainHudItemTab_C_PlayUnlock final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         unlockStyle;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_MainHudItemTab_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_MainHudItemTab_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WBP_MainHudItemTab_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_MainHudItemTab_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WBP_MainHudItemTab_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_MainHudItemTab_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WBP_MainHudItemTab_C_PlayUnlock) == 0x000004, "Wrong alignment on WBP_MainHudItemTab_C_PlayUnlock");
+static_assert(sizeof(WBP_MainHudItemTab_C_PlayUnlock) == 0x000004, "Wrong size on WBP_MainHudItemTab_C_PlayUnlock");
+static_assert(offsetof(WBP_MainHudItemTab_C_PlayUnlock, unlockStyle) == 0x000000, "Member 'WBP_MainHudItemTab_C_PlayUnlock::unlockStyle' has a wrong offset!");
+
+// Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.UpdateUnlockState
+// 0x000C (0x000C - 0x0000)
+struct WBP_MainHudItemTab_C_UpdateUnlockState final
+{
+public:
+	bool                                          isUnlocked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         unlockStyle;                                       // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_MainHudItemTab_C_UpdateUnlockState) == 0x000004, "Wrong alignment on WBP_MainHudItemTab_C_UpdateUnlockState");
+static_assert(sizeof(WBP_MainHudItemTab_C_UpdateUnlockState) == 0x00000C, "Wrong size on WBP_MainHudItemTab_C_UpdateUnlockState");
+static_assert(offsetof(WBP_MainHudItemTab_C_UpdateUnlockState, isUnlocked) == 0x000000, "Member 'WBP_MainHudItemTab_C_UpdateUnlockState::isUnlocked' has a wrong offset!");
+static_assert(offsetof(WBP_MainHudItemTab_C_UpdateUnlockState, unlockStyle) == 0x000004, "Member 'WBP_MainHudItemTab_C_UpdateUnlockState::unlockStyle' has a wrong offset!");
+static_assert(offsetof(WBP_MainHudItemTab_C_UpdateUnlockState, CallFunc_NotEqual_IntInt_ReturnValue) == 0x000008, "Member 'WBP_MainHudItemTab_C_UpdateUnlockState::CallFunc_NotEqual_IntInt_ReturnValue' has a wrong offset!");
 
 // Function WBP_MainHudItemTab.WBP_MainHudItemTab_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

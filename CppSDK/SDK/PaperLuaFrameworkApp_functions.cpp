@@ -136,6 +136,25 @@ void UPaperHotFixMgr::ReloadGamePlayCue()
 }
 
 
+// Function PaperLuaFrameworkApp.PaperHotUpdateGameInstance.Restart
+// (Final, Native, Public, BlueprintCallable)
+
+void UPaperHotUpdateGameInstance::Restart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperHotUpdateGameInstance", "Restart");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function PaperLuaFrameworkApp.PaperHotUpdateMgr.CopyPaksTo
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -911,6 +930,36 @@ TArray<class FString> UPaperHotUpdateMgr::GetKeyChainNonDynamicGroups(const clas
 	Params::PaperHotUpdateMgr_GetKeyChainNonDynamicGroups Parms{};
 
 	Parms.InKeyChainName = std::move(InKeyChainName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function PaperLuaFrameworkApp.PaperHotUpdateMgr.GetMetallibShaderSizeInfo
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FString&                    Version                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<uint8>&                    InShaderCodeData                                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TMap<class FString, int64>              ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TMap<class FString, int64> UPaperHotUpdateMgr::GetMetallibShaderSizeInfo(const class FString& Version, const TArray<uint8>& InShaderCodeData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PaperHotUpdateMgr", "GetMetallibShaderSizeInfo");
+
+	Params::PaperHotUpdateMgr_GetMetallibShaderSizeInfo Parms{};
+
+	Parms.Version = std::move(Version);
+	Parms.InShaderCodeData = std::move(InShaderCodeData);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1801,9 +1850,9 @@ void UPaperHotUpdateMgr::SetDynamicKeyChainHttpBaseURL(const class FString& InHt
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   QualityLevel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   LevelID                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   LevelId                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UPaperHotUpdateMgr::SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile(int32 QualityLevel, int32 LevelID)
+void UPaperHotUpdateMgr::SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile(int32 QualityLevel, int32 LevelId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1813,7 +1862,7 @@ void UPaperHotUpdateMgr::SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile(
 	Params::PaperHotUpdateMgr_SetPSOCacheMaterialQualityLevelAndLevelIDMaskForMobile Parms{};
 
 	Parms.QualityLevel = QualityLevel;
-	Parms.LevelID = LevelID;
+	Parms.LevelId = LevelId;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

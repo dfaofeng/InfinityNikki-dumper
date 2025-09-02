@@ -13,17 +13,62 @@
 #include "ModelingComponents_structs.hpp"
 #include "ModelingComponents_classes.hpp"
 #include "MeshModelingToolsExp_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "InteractiveToolsFramework_structs.hpp"
 #include "InteractiveToolsFramework_classes.hpp"
 #include "MeshModelingTools_structs.hpp"
 #include "MeshModelingTools_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "ModelingOperators_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class MeshModelingToolsExp.LatticeDeformerToolProperties
+// 0x0020 (0x00C8 - 0x00A8)
+class ULatticeDeformerToolProperties final : public UInteractiveToolPropertySet
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         XAxisResolution;                                   // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         YAxisResolution;                                   // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ZAxisResolution;                                   // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Padding;                                           // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELatticeInterpolationType                     InterpolationType;                                 // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeformNormals;                                    // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanChangeResolution;                              // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EToolContextCoordinateSystem                  GizmoCoordinateSystem;                             // 0x00C3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetPivotMode;                                     // 0x00C4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSoftDeformation;                                  // 0x00C5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C6[0x2];                                       // 0x00C6(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ClearConstraints();
+	void Constrain();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LatticeDeformerToolProperties">();
+	}
+	static class ULatticeDeformerToolProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULatticeDeformerToolProperties>();
+	}
+};
+static_assert(alignof(ULatticeDeformerToolProperties) == 0x000008, "Wrong alignment on ULatticeDeformerToolProperties");
+static_assert(sizeof(ULatticeDeformerToolProperties) == 0x0000C8, "Wrong size on ULatticeDeformerToolProperties");
+static_assert(offsetof(ULatticeDeformerToolProperties, XAxisResolution) == 0x0000B0, "Member 'ULatticeDeformerToolProperties::XAxisResolution' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, YAxisResolution) == 0x0000B4, "Member 'ULatticeDeformerToolProperties::YAxisResolution' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, ZAxisResolution) == 0x0000B8, "Member 'ULatticeDeformerToolProperties::ZAxisResolution' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, Padding) == 0x0000BC, "Member 'ULatticeDeformerToolProperties::Padding' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, InterpolationType) == 0x0000C0, "Member 'ULatticeDeformerToolProperties::InterpolationType' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, bDeformNormals) == 0x0000C1, "Member 'ULatticeDeformerToolProperties::bDeformNormals' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, bCanChangeResolution) == 0x0000C2, "Member 'ULatticeDeformerToolProperties::bCanChangeResolution' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, GizmoCoordinateSystem) == 0x0000C3, "Member 'ULatticeDeformerToolProperties::GizmoCoordinateSystem' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, bSetPivotMode) == 0x0000C4, "Member 'ULatticeDeformerToolProperties::bSetPivotMode' has a wrong offset!");
+static_assert(offsetof(ULatticeDeformerToolProperties, bSoftDeformation) == 0x0000C5, "Member 'ULatticeDeformerToolProperties::bSoftDeformation' has a wrong offset!");
 
 // Class MeshModelingToolsExp.BakeInputMeshProperties
 // 0x0098 (0x0140 - 0x00A8)
@@ -86,96 +131,71 @@ static_assert(offsetof(UBakeInputMeshProperties, bProjectionInWorldSpace) == 0x0
 static_assert(offsetof(UBakeInputMeshProperties, TargetUVLayerNamesList) == 0x000120, "Member 'UBakeInputMeshProperties::TargetUVLayerNamesList' has a wrong offset!");
 static_assert(offsetof(UBakeInputMeshProperties, SourceUVLayerNamesList) == 0x000130, "Member 'UBakeInputMeshProperties::SourceUVLayerNamesList' has a wrong offset!");
 
-// Class MeshModelingToolsExp.MeshConstraintProperties
-// 0x0008 (0x00B0 - 0x00A8)
-class UMeshConstraintProperties : public UInteractiveToolPropertySet
+// Class MeshModelingToolsExp.MeshSculptBrushOpProps
+// 0x0000 (0x00A8 - 0x00A8)
+class UMeshSculptBrushOpProps : public UInteractiveToolPropertySet
 {
 public:
-	bool                                          bPreserveSharpEdges;                               // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMeshBoundaryConstraint                       MeshBoundaryConstraint;                            // 0x00A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGroupBoundaryConstraint                      GroupBoundaryConstraint;                           // 0x00AA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMaterialBoundaryConstraint                   MaterialBoundaryConstraint;                        // 0x00AB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventNormalFlips;                               // 0x00AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreventTinyTriangles;                             // 0x00AD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshSculptBrushOpProps">();
+	}
+	static class UMeshSculptBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshSculptBrushOpProps>();
+	}
+};
+static_assert(alignof(UMeshSculptBrushOpProps) == 0x000008, "Wrong alignment on UMeshSculptBrushOpProps");
+static_assert(sizeof(UMeshSculptBrushOpProps) == 0x0000A8, "Wrong size on UMeshSculptBrushOpProps");
 
+// Class MeshModelingToolsExp.BaseKelvinletBrushOpProps
+// 0x0010 (0x00B8 - 0x00A8)
+class UBaseKelvinletBrushOpProps : public UMeshSculptBrushOpProps
+{
 public:
-	bool IsPreventNormalFlipsEnabled() const;
-	bool IsPreventTinyTrianglesEnabled() const;
+	float                                         Stiffness;                                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Incompressiblity;                                  // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BrushSteps;                                        // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshConstraintProperties">();
+		return StaticClassImpl<"BaseKelvinletBrushOpProps">();
 	}
-	static class UMeshConstraintProperties* GetDefaultObj()
+	static class UBaseKelvinletBrushOpProps* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMeshConstraintProperties>();
+		return GetDefaultObjImpl<UBaseKelvinletBrushOpProps>();
 	}
 };
-static_assert(alignof(UMeshConstraintProperties) == 0x000008, "Wrong alignment on UMeshConstraintProperties");
-static_assert(sizeof(UMeshConstraintProperties) == 0x0000B0, "Wrong size on UMeshConstraintProperties");
-static_assert(offsetof(UMeshConstraintProperties, bPreserveSharpEdges) == 0x0000A8, "Member 'UMeshConstraintProperties::bPreserveSharpEdges' has a wrong offset!");
-static_assert(offsetof(UMeshConstraintProperties, MeshBoundaryConstraint) == 0x0000A9, "Member 'UMeshConstraintProperties::MeshBoundaryConstraint' has a wrong offset!");
-static_assert(offsetof(UMeshConstraintProperties, GroupBoundaryConstraint) == 0x0000AA, "Member 'UMeshConstraintProperties::GroupBoundaryConstraint' has a wrong offset!");
-static_assert(offsetof(UMeshConstraintProperties, MaterialBoundaryConstraint) == 0x0000AB, "Member 'UMeshConstraintProperties::MaterialBoundaryConstraint' has a wrong offset!");
-static_assert(offsetof(UMeshConstraintProperties, bPreventNormalFlips) == 0x0000AC, "Member 'UMeshConstraintProperties::bPreventNormalFlips' has a wrong offset!");
-static_assert(offsetof(UMeshConstraintProperties, bPreventTinyTriangles) == 0x0000AD, "Member 'UMeshConstraintProperties::bPreventTinyTriangles' has a wrong offset!");
+static_assert(alignof(UBaseKelvinletBrushOpProps) == 0x000008, "Wrong alignment on UBaseKelvinletBrushOpProps");
+static_assert(sizeof(UBaseKelvinletBrushOpProps) == 0x0000B8, "Wrong size on UBaseKelvinletBrushOpProps");
+static_assert(offsetof(UBaseKelvinletBrushOpProps, Stiffness) == 0x0000A8, "Member 'UBaseKelvinletBrushOpProps::Stiffness' has a wrong offset!");
+static_assert(offsetof(UBaseKelvinletBrushOpProps, Incompressiblity) == 0x0000AC, "Member 'UBaseKelvinletBrushOpProps::Incompressiblity' has a wrong offset!");
+static_assert(offsetof(UBaseKelvinletBrushOpProps, BrushSteps) == 0x0000B0, "Member 'UBaseKelvinletBrushOpProps::BrushSteps' has a wrong offset!");
 
-// Class MeshModelingToolsExp.RemeshProperties
-// 0x0008 (0x00B8 - 0x00B0)
-class URemeshProperties : public UMeshConstraintProperties
+// Class MeshModelingToolsExp.ScaleKelvinletBrushOpProps
+// 0x0008 (0x00C0 - 0x00B8)
+class UScaleKelvinletBrushOpProps final : public UBaseKelvinletBrushOpProps
 {
 public:
-	float                                         SmoothingStrength;                                 // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlips;                                            // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSplits;                                           // 0x00B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCollapses;                                        // 0x00B6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Strength;                                          // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Falloff;                                           // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RemeshProperties">();
+		return StaticClassImpl<"ScaleKelvinletBrushOpProps">();
 	}
-	static class URemeshProperties* GetDefaultObj()
+	static class UScaleKelvinletBrushOpProps* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<URemeshProperties>();
+		return GetDefaultObjImpl<UScaleKelvinletBrushOpProps>();
 	}
 };
-static_assert(alignof(URemeshProperties) == 0x000008, "Wrong alignment on URemeshProperties");
-static_assert(sizeof(URemeshProperties) == 0x0000B8, "Wrong size on URemeshProperties");
-static_assert(offsetof(URemeshProperties, SmoothingStrength) == 0x0000B0, "Member 'URemeshProperties::SmoothingStrength' has a wrong offset!");
-static_assert(offsetof(URemeshProperties, bFlips) == 0x0000B4, "Member 'URemeshProperties::bFlips' has a wrong offset!");
-static_assert(offsetof(URemeshProperties, bSplits) == 0x0000B5, "Member 'URemeshProperties::bSplits' has a wrong offset!");
-static_assert(offsetof(URemeshProperties, bCollapses) == 0x0000B6, "Member 'URemeshProperties::bCollapses' has a wrong offset!");
-
-// Class MeshModelingToolsExp.AddPatchTool
-// 0x0088 (0x0128 - 0x00A0)
-class UAddPatchTool final : public USingleClickTool
-{
-public:
-	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAddPatchToolProperties*                ShapeSettings;                                     // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNewMeshMaterialProperties*             MaterialProperties;                                // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPreviewMesh*                           PreviewMesh;                                       // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_C0[0x68];                                      // 0x00C0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AddPatchTool">();
-	}
-	static class UAddPatchTool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAddPatchTool>();
-	}
-};
-static_assert(alignof(UAddPatchTool) == 0x000008, "Wrong alignment on UAddPatchTool");
-static_assert(sizeof(UAddPatchTool) == 0x000128, "Wrong size on UAddPatchTool");
-static_assert(offsetof(UAddPatchTool, ShapeSettings) == 0x0000A8, "Member 'UAddPatchTool::ShapeSettings' has a wrong offset!");
-static_assert(offsetof(UAddPatchTool, MaterialProperties) == 0x0000B0, "Member 'UAddPatchTool::MaterialProperties' has a wrong offset!");
-static_assert(offsetof(UAddPatchTool, PreviewMesh) == 0x0000B8, "Member 'UAddPatchTool::PreviewMesh' has a wrong offset!");
+static_assert(alignof(UScaleKelvinletBrushOpProps) == 0x000008, "Wrong alignment on UScaleKelvinletBrushOpProps");
+static_assert(sizeof(UScaleKelvinletBrushOpProps) == 0x0000C0, "Wrong size on UScaleKelvinletBrushOpProps");
+static_assert(offsetof(UScaleKelvinletBrushOpProps, Strength) == 0x0000B8, "Member 'UScaleKelvinletBrushOpProps::Strength' has a wrong offset!");
+static_assert(offsetof(UScaleKelvinletBrushOpProps, Falloff) == 0x0000BC, "Member 'UScaleKelvinletBrushOpProps::Falloff' has a wrong offset!");
 
 // Class MeshModelingToolsExp.BakeNormalMapToolProperties
 // 0x0000 (0x00A8 - 0x00A8)
@@ -194,92 +214,50 @@ public:
 static_assert(alignof(UBakeNormalMapToolProperties) == 0x000008, "Wrong alignment on UBakeNormalMapToolProperties");
 static_assert(sizeof(UBakeNormalMapToolProperties) == 0x0000A8, "Wrong size on UBakeNormalMapToolProperties");
 
-// Class MeshModelingToolsExp.MeshSculptToolBase
-// 0x0AA0 (0x0BA0 - 0x0100)
-class alignas(0x10) UMeshSculptToolBase : public UMeshSurfacePointTool
+// Class MeshModelingToolsExp.MoveBrushOpProps
+// 0x0010 (0x00B8 - 0x00A8)
+class UMoveBrushOpProps final : public UMeshSculptBrushOpProps
 {
 public:
-	class USculptBrushProperties*                 BrushProperties;                                   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWorkPlaneProperties*                   GizmoProperties;                                   // 0x0108(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_110[0x120];                                    // 0x0110(0x0120)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class UMeshSculptBrushOpProps*>   BrushOpPropSets;                                   // 0x0230(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_280[0x50];                                     // 0x0280(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class UMeshSculptBrushOpProps*>   SecondaryBrushOpPropSets;                          // 0x02D0(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_320[0x6F0];                                    // 0x0320(0x06F0)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshEditingViewProperties*             ViewProperties;                                    // 0x0A10(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               ActiveOverrideMaterial;                            // 0x0A18(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBrushStampIndicator*                   BrushIndicator;                                    // 0x0A20(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsVolumetricIndicator;                            // 0x0A28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_A29[0x7];                                      // 0x0A29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               BrushIndicatorMaterial;                            // 0x0A30(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPreviewMesh*                           BrushIndicatorMesh;                                // 0x0A38(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCombinedTransformGizmo*                PlaneTransformGizmo;                               // 0x0A40(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTransformProxy*                        PlaneTransformProxy;                               // 0x0A48(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A50[0x150];                                    // 0x0A50(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Depth;                                             // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FModelingToolsAxisFilter               AxisFilters;                                       // 0x00B4(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshSculptToolBase">();
+		return StaticClassImpl<"MoveBrushOpProps">();
 	}
-	static class UMeshSculptToolBase* GetDefaultObj()
+	static class UMoveBrushOpProps* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMeshSculptToolBase>();
+		return GetDefaultObjImpl<UMoveBrushOpProps>();
 	}
 };
-static_assert(alignof(UMeshSculptToolBase) == 0x000010, "Wrong alignment on UMeshSculptToolBase");
-static_assert(sizeof(UMeshSculptToolBase) == 0x000BA0, "Wrong size on UMeshSculptToolBase");
-static_assert(offsetof(UMeshSculptToolBase, BrushProperties) == 0x000100, "Member 'UMeshSculptToolBase::BrushProperties' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, GizmoProperties) == 0x000108, "Member 'UMeshSculptToolBase::GizmoProperties' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, BrushOpPropSets) == 0x000230, "Member 'UMeshSculptToolBase::BrushOpPropSets' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, SecondaryBrushOpPropSets) == 0x0002D0, "Member 'UMeshSculptToolBase::SecondaryBrushOpPropSets' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, ViewProperties) == 0x000A10, "Member 'UMeshSculptToolBase::ViewProperties' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, ActiveOverrideMaterial) == 0x000A18, "Member 'UMeshSculptToolBase::ActiveOverrideMaterial' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, BrushIndicator) == 0x000A20, "Member 'UMeshSculptToolBase::BrushIndicator' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, bIsVolumetricIndicator) == 0x000A28, "Member 'UMeshSculptToolBase::bIsVolumetricIndicator' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, BrushIndicatorMaterial) == 0x000A30, "Member 'UMeshSculptToolBase::BrushIndicatorMaterial' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, BrushIndicatorMesh) == 0x000A38, "Member 'UMeshSculptToolBase::BrushIndicatorMesh' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, PlaneTransformGizmo) == 0x000A40, "Member 'UMeshSculptToolBase::PlaneTransformGizmo' has a wrong offset!");
-static_assert(offsetof(UMeshSculptToolBase, PlaneTransformProxy) == 0x000A48, "Member 'UMeshSculptToolBase::PlaneTransformProxy' has a wrong offset!");
+static_assert(alignof(UMoveBrushOpProps) == 0x000008, "Wrong alignment on UMoveBrushOpProps");
+static_assert(sizeof(UMoveBrushOpProps) == 0x0000B8, "Wrong size on UMoveBrushOpProps");
+static_assert(offsetof(UMoveBrushOpProps, Strength) == 0x0000A8, "Member 'UMoveBrushOpProps::Strength' has a wrong offset!");
+static_assert(offsetof(UMoveBrushOpProps, Falloff) == 0x0000AC, "Member 'UMoveBrushOpProps::Falloff' has a wrong offset!");
+static_assert(offsetof(UMoveBrushOpProps, Depth) == 0x0000B0, "Member 'UMoveBrushOpProps::Depth' has a wrong offset!");
+static_assert(offsetof(UMoveBrushOpProps, AxisFilters) == 0x0000B4, "Member 'UMoveBrushOpProps::AxisFilters' has a wrong offset!");
 
-// Class MeshModelingToolsExp.MeshGroupPaintTool
-// 0x0440 (0x0FE0 - 0x0BA0)
-class UMeshGroupPaintTool final : public UMeshSculptToolBase
+// Class MeshModelingToolsExp.ConvertToPolygonsToolBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UConvertToPolygonsToolBuilder final : public USingleTargetWithSelectionToolBuilder
 {
-public:
-	class UPolygroupLayersProperties*             PolygroupLayerProperties;                          // 0x0BA0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGroupPaintBrushFilterProperties*       FilterProperties;                                  // 0x0BA8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGroupPaintBrushOpProps*                PaintBrushOpProperties;                            // 0x0BB0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UGroupEraseBrushOpProps*                EraseBrushOpProperties;                            // 0x0BB8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMeshGroupPaintToolFreezeActions*       FreezeActions;                                     // 0x0BC0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BC8[0x8];                                      // 0x0BC8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPolyLassoMarqueeMechanic*              PolyLassoMechanic;                                 // 0x0BD0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AInternalToolFrameworkActor*            PreviewMeshActor;                                  // 0x0BD8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDynamicMeshComponent*                  DynamicMeshComponent;                              // 0x0BE0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMeshElementsVisualizer*                MeshElementsDisplay;                               // 0x0BE8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_BF0[0x3F0];                                    // 0x0BF0(0x03F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshGroupPaintTool">();
+		return StaticClassImpl<"ConvertToPolygonsToolBuilder">();
 	}
-	static class UMeshGroupPaintTool* GetDefaultObj()
+	static class UConvertToPolygonsToolBuilder* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMeshGroupPaintTool>();
+		return GetDefaultObjImpl<UConvertToPolygonsToolBuilder>();
 	}
 };
-static_assert(alignof(UMeshGroupPaintTool) == 0x000010, "Wrong alignment on UMeshGroupPaintTool");
-static_assert(sizeof(UMeshGroupPaintTool) == 0x000FE0, "Wrong size on UMeshGroupPaintTool");
-static_assert(offsetof(UMeshGroupPaintTool, PolygroupLayerProperties) == 0x000BA0, "Member 'UMeshGroupPaintTool::PolygroupLayerProperties' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, FilterProperties) == 0x000BA8, "Member 'UMeshGroupPaintTool::FilterProperties' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, PaintBrushOpProperties) == 0x000BB0, "Member 'UMeshGroupPaintTool::PaintBrushOpProperties' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, EraseBrushOpProperties) == 0x000BB8, "Member 'UMeshGroupPaintTool::EraseBrushOpProperties' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, FreezeActions) == 0x000BC0, "Member 'UMeshGroupPaintTool::FreezeActions' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, PolyLassoMechanic) == 0x000BD0, "Member 'UMeshGroupPaintTool::PolyLassoMechanic' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, PreviewMeshActor) == 0x000BD8, "Member 'UMeshGroupPaintTool::PreviewMeshActor' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, DynamicMeshComponent) == 0x000BE0, "Member 'UMeshGroupPaintTool::DynamicMeshComponent' has a wrong offset!");
-static_assert(offsetof(UMeshGroupPaintTool, MeshElementsDisplay) == 0x000BE8, "Member 'UMeshGroupPaintTool::MeshElementsDisplay' has a wrong offset!");
+static_assert(alignof(UConvertToPolygonsToolBuilder) == 0x000008, "Wrong alignment on UConvertToPolygonsToolBuilder");
+static_assert(sizeof(UConvertToPolygonsToolBuilder) == 0x000028, "Wrong size on UConvertToPolygonsToolBuilder");
 
 // Class MeshModelingToolsExp.BakeOcclusionMapToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -368,27 +346,55 @@ static_assert(offsetof(UBakeCurvatureMapToolProperties, ColorRangeMultiplier) ==
 static_assert(offsetof(UBakeCurvatureMapToolProperties, MinRangeMultiplier) == 0x0000B4, "Member 'UBakeCurvatureMapToolProperties::MinRangeMultiplier' has a wrong offset!");
 static_assert(offsetof(UBakeCurvatureMapToolProperties, Clamping) == 0x0000B8, "Member 'UBakeCurvatureMapToolProperties::Clamping' has a wrong offset!");
 
-// Class MeshModelingToolsExp.MeshAttributePaintBrushOperationProperties
-// 0x0008 (0x00B0 - 0x00A8)
-class UMeshAttributePaintBrushOperationProperties final : public UInteractiveToolPropertySet
+// Class MeshModelingToolsExp.RevolveSplineToolBuilder
+// 0x0000 (0x0028 - 0x0028)
+class URevolveSplineToolBuilder final : public UInteractiveToolBuilder
 {
 public:
-	EBrushActionMode                              BrushAction;                                       // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RevolveSplineToolBuilder">();
+	}
+	static class URevolveSplineToolBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URevolveSplineToolBuilder>();
+	}
+};
+static_assert(alignof(URevolveSplineToolBuilder) == 0x000008, "Wrong alignment on URevolveSplineToolBuilder");
+static_assert(sizeof(URevolveSplineToolBuilder) == 0x000028, "Wrong size on URevolveSplineToolBuilder");
+
+// Class MeshModelingToolsExp.EditPivotToolActionPropertySet
+// 0x0010 (0x00B8 - 0x00A8)
+class UEditPivotToolActionPropertySet final : public UInteractiveToolPropertySet
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseWorldBox;                                      // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Back();
+	void Bottom();
+	void Center();
+	void Front();
+	void Left();
+	void Right();
+	void Top();
+	void WorldOrigin();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MeshAttributePaintBrushOperationProperties">();
+		return StaticClassImpl<"EditPivotToolActionPropertySet">();
 	}
-	static class UMeshAttributePaintBrushOperationProperties* GetDefaultObj()
+	static class UEditPivotToolActionPropertySet* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMeshAttributePaintBrushOperationProperties>();
+		return GetDefaultObjImpl<UEditPivotToolActionPropertySet>();
 	}
 };
-static_assert(alignof(UMeshAttributePaintBrushOperationProperties) == 0x000008, "Wrong alignment on UMeshAttributePaintBrushOperationProperties");
-static_assert(sizeof(UMeshAttributePaintBrushOperationProperties) == 0x0000B0, "Wrong size on UMeshAttributePaintBrushOperationProperties");
-static_assert(offsetof(UMeshAttributePaintBrushOperationProperties, BrushAction) == 0x0000A8, "Member 'UMeshAttributePaintBrushOperationProperties::BrushAction' has a wrong offset!");
+static_assert(alignof(UEditPivotToolActionPropertySet) == 0x000008, "Wrong alignment on UEditPivotToolActionPropertySet");
+static_assert(sizeof(UEditPivotToolActionPropertySet) == 0x0000B8, "Wrong size on UEditPivotToolActionPropertySet");
+static_assert(offsetof(UEditPivotToolActionPropertySet, bUseWorldBox) == 0x0000B0, "Member 'UEditPivotToolActionPropertySet::bUseWorldBox' has a wrong offset!");
 
 // Class MeshModelingToolsExp.BakeTexture2DProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -448,40 +454,6 @@ static_assert(offsetof(UBakeMultiTexture2DProperties, UVLayer) == 0x0000B8, "Mem
 static_assert(offsetof(UBakeMultiTexture2DProperties, UVLayerNamesList) == 0x0000C8, "Member 'UBakeMultiTexture2DProperties::UVLayerNamesList' has a wrong offset!");
 static_assert(offsetof(UBakeMultiTexture2DProperties, AllSourceTextures) == 0x0000D8, "Member 'UBakeMultiTexture2DProperties::AllSourceTextures' has a wrong offset!");
 
-// Class MeshModelingToolsExp.MeshInspectorTool
-// 0x01A0 (0x0250 - 0x00B0)
-class alignas(0x10) UMeshInspectorTool final : public USingleSelectionMeshEditingTool
-{
-public:
-	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshInspectorProperties*               Settings;                                          // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPolygroupLayersProperties*             PolygroupLayerProperties;                          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMeshInspectorMaterialProperties*       MaterialSettings;                                  // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPreviewMesh*                           PreviewMesh;                                       // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ULineSetComponent*                      DrawnLineSet;                                      // 0x00E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMaterialInterface*                     DefaultMaterial;                                   // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F0[0x160];                                     // 0x00F0(0x0160)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshInspectorTool">();
-	}
-	static class UMeshInspectorTool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshInspectorTool>();
-	}
-};
-static_assert(alignof(UMeshInspectorTool) == 0x000010, "Wrong alignment on UMeshInspectorTool");
-static_assert(sizeof(UMeshInspectorTool) == 0x000250, "Wrong size on UMeshInspectorTool");
-static_assert(offsetof(UMeshInspectorTool, Settings) == 0x0000B8, "Member 'UMeshInspectorTool::Settings' has a wrong offset!");
-static_assert(offsetof(UMeshInspectorTool, PolygroupLayerProperties) == 0x0000C0, "Member 'UMeshInspectorTool::PolygroupLayerProperties' has a wrong offset!");
-static_assert(offsetof(UMeshInspectorTool, MaterialSettings) == 0x0000C8, "Member 'UMeshInspectorTool::MaterialSettings' has a wrong offset!");
-static_assert(offsetof(UMeshInspectorTool, PreviewMesh) == 0x0000D8, "Member 'UMeshInspectorTool::PreviewMesh' has a wrong offset!");
-static_assert(offsetof(UMeshInspectorTool, DrawnLineSet) == 0x0000E0, "Member 'UMeshInspectorTool::DrawnLineSet' has a wrong offset!");
-static_assert(offsetof(UMeshInspectorTool, DefaultMaterial) == 0x0000E8, "Member 'UMeshInspectorTool::DefaultMaterial' has a wrong offset!");
-
 // Class MeshModelingToolsExp.BakeVisualizationProperties
 // 0x0010 (0x00B8 - 0x00A8)
 class UBakeVisualizationProperties final : public UInteractiveToolPropertySet
@@ -509,44 +481,6 @@ static_assert(offsetof(UBakeVisualizationProperties, bPreviewAsMaterial) == 0x00
 static_assert(offsetof(UBakeVisualizationProperties, Brightness) == 0x0000AC, "Member 'UBakeVisualizationProperties::Brightness' has a wrong offset!");
 static_assert(offsetof(UBakeVisualizationProperties, AOMultiplier) == 0x0000B0, "Member 'UBakeVisualizationProperties::AOMultiplier' has a wrong offset!");
 
-// Class MeshModelingToolsExp.RevolveSplineToolProperties
-// 0x0050 (0x0168 - 0x0118)
-class URevolveSplineToolProperties final : public URevolveProperties
-{
-public:
-	ERevolveSplineSampleMode                      SampleMode;                                        // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ErrorTolerance;                                    // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        MaxSampleDistance;                                 // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERevolvePropertiesCapFillMode                 CapFillMode;                                       // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClosePathToAxis;                                  // 0x0131(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                AxisOrigin;                                        // 0x0138(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              AxisOrientation;                                   // 0x0150(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResetAxisOnStart;                                 // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"RevolveSplineToolProperties">();
-	}
-	static class URevolveSplineToolProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<URevolveSplineToolProperties>();
-	}
-};
-static_assert(alignof(URevolveSplineToolProperties) == 0x000008, "Wrong alignment on URevolveSplineToolProperties");
-static_assert(sizeof(URevolveSplineToolProperties) == 0x000168, "Wrong size on URevolveSplineToolProperties");
-static_assert(offsetof(URevolveSplineToolProperties, SampleMode) == 0x000118, "Member 'URevolveSplineToolProperties::SampleMode' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, ErrorTolerance) == 0x000120, "Member 'URevolveSplineToolProperties::ErrorTolerance' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, MaxSampleDistance) == 0x000128, "Member 'URevolveSplineToolProperties::MaxSampleDistance' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, CapFillMode) == 0x000130, "Member 'URevolveSplineToolProperties::CapFillMode' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, bClosePathToAxis) == 0x000131, "Member 'URevolveSplineToolProperties::bClosePathToAxis' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, AxisOrigin) == 0x000138, "Member 'URevolveSplineToolProperties::AxisOrigin' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, AxisOrientation) == 0x000150, "Member 'URevolveSplineToolProperties::AxisOrientation' has a wrong offset!");
-static_assert(offsetof(URevolveSplineToolProperties, bResetAxisOnStart) == 0x000160, "Member 'URevolveSplineToolProperties::bResetAxisOnStart' has a wrong offset!");
-
 // Class MeshModelingToolsExp.ExtrudeMeshSelectionToolBuilder
 // 0x0000 (0x0028 - 0x0028)
 class UExtrudeMeshSelectionToolBuilder final : public USingleTargetWithSelectionToolBuilder
@@ -563,40 +497,6 @@ public:
 };
 static_assert(alignof(UExtrudeMeshSelectionToolBuilder) == 0x000008, "Wrong alignment on UExtrudeMeshSelectionToolBuilder");
 static_assert(sizeof(UExtrudeMeshSelectionToolBuilder) == 0x000028, "Wrong size on UExtrudeMeshSelectionToolBuilder");
-
-// Class MeshModelingToolsExp.AlignObjectsToolBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UAlignObjectsToolBuilder final : public UMultiSelectionMeshEditingToolBuilder
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AlignObjectsToolBuilder">();
-	}
-	static class UAlignObjectsToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAlignObjectsToolBuilder>();
-	}
-};
-static_assert(alignof(UAlignObjectsToolBuilder) == 0x000008, "Wrong alignment on UAlignObjectsToolBuilder");
-static_assert(sizeof(UAlignObjectsToolBuilder) == 0x000028, "Wrong size on UAlignObjectsToolBuilder");
-
-// Class MeshModelingToolsExp.HoleFillToolBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UHoleFillToolBuilder final : public USingleSelectionMeshEditingToolBuilder
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoleFillToolBuilder">();
-	}
-	static class UHoleFillToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoleFillToolBuilder>();
-	}
-};
-static_assert(alignof(UHoleFillToolBuilder) == 0x000008, "Wrong alignment on UHoleFillToolBuilder");
-static_assert(sizeof(UHoleFillToolBuilder) == 0x000028, "Wrong size on UHoleFillToolBuilder");
 
 // Class MeshModelingToolsExp.ExtrudeMeshSelectionToolProperties
 // 0x0048 (0x00F0 - 0x00A8)
@@ -682,217 +582,6 @@ static_assert(offsetof(UExtrudeMeshSelectionTool, EditCompute) == 0x000850, "Mem
 static_assert(offsetof(UExtrudeMeshSelectionTool, TransformGizmo) == 0x000858, "Member 'UExtrudeMeshSelectionTool::TransformGizmo' has a wrong offset!");
 static_assert(offsetof(UExtrudeMeshSelectionTool, TransformProxy) == 0x000860, "Member 'UExtrudeMeshSelectionTool::TransformProxy' has a wrong offset!");
 
-// Class MeshModelingToolsExp.MeshSculptBrushOpProps
-// 0x0000 (0x00A8 - 0x00A8)
-class UMeshSculptBrushOpProps : public UInteractiveToolPropertySet
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshSculptBrushOpProps">();
-	}
-	static class UMeshSculptBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshSculptBrushOpProps>();
-	}
-};
-static_assert(alignof(UMeshSculptBrushOpProps) == 0x000008, "Wrong alignment on UMeshSculptBrushOpProps");
-static_assert(sizeof(UMeshSculptBrushOpProps) == 0x0000A8, "Wrong size on UMeshSculptBrushOpProps");
-
-// Class MeshModelingToolsExp.SculptMaxBrushOpProps
-// 0x0018 (0x00C0 - 0x00A8)
-class USculptMaxBrushOpProps final : public UMeshSculptBrushOpProps
-{
-public:
-	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxHeight;                                         // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFixedHeight;                                   // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FixedHeight;                                       // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SculptMaxBrushOpProps">();
-	}
-	static class USculptMaxBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USculptMaxBrushOpProps>();
-	}
-};
-static_assert(alignof(USculptMaxBrushOpProps) == 0x000008, "Wrong alignment on USculptMaxBrushOpProps");
-static_assert(sizeof(USculptMaxBrushOpProps) == 0x0000C0, "Wrong size on USculptMaxBrushOpProps");
-static_assert(offsetof(USculptMaxBrushOpProps, Strength) == 0x0000A8, "Member 'USculptMaxBrushOpProps::Strength' has a wrong offset!");
-static_assert(offsetof(USculptMaxBrushOpProps, Falloff) == 0x0000AC, "Member 'USculptMaxBrushOpProps::Falloff' has a wrong offset!");
-static_assert(offsetof(USculptMaxBrushOpProps, MaxHeight) == 0x0000B0, "Member 'USculptMaxBrushOpProps::MaxHeight' has a wrong offset!");
-static_assert(offsetof(USculptMaxBrushOpProps, bUseFixedHeight) == 0x0000B4, "Member 'USculptMaxBrushOpProps::bUseFixedHeight' has a wrong offset!");
-static_assert(offsetof(USculptMaxBrushOpProps, FixedHeight) == 0x0000B8, "Member 'USculptMaxBrushOpProps::FixedHeight' has a wrong offset!");
-
-// Class MeshModelingToolsExp.CubeGridTool
-// 0x0588 (0x0620 - 0x0098)
-class alignas(0x10) UCubeGridTool final : public UInteractiveTool
-{
-public:
-	uint8                                         Pad_98[0x28];                                      // 0x0098(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCombinedTransformGizmo*                GridGizmo;                                         // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDragAlignmentMechanic*                 GridGizmoAlignmentMechanic;                        // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTransformProxy*                        GridGizmoTransformProxy;                           // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UPreviewGeometry*                       LineSets;                                          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UClickDragInputBehavior*                ClickDragBehavior;                                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMouseHoverBehavior*                    HoverBehavior;                                     // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ULocalSingleClickInputBehavior*         CtrlMiddleClickBehavior;                           // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ULocalClickDragInputBehavior*           MiddleClickDragBehavior;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCubeGridToolProperties*                Settings;                                          // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCubeGridToolActions*                   ToolActions;                                       // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNewMeshMaterialProperties*             MaterialProperties;                                // 0x0110(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCreateMeshObjectTypeProperties*        OutputTypeProperties;                              // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UToolTarget*                            Target;                                            // 0x0120(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_128[0x180];                                    // 0x0128(0x0180)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMeshOpPreviewWithBackgroundCompute*    Preview;                                           // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2B0[0x370];                                    // 0x02B0(0x0370)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"CubeGridTool">();
-	}
-	static class UCubeGridTool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UCubeGridTool>();
-	}
-};
-static_assert(alignof(UCubeGridTool) == 0x000010, "Wrong alignment on UCubeGridTool");
-static_assert(sizeof(UCubeGridTool) == 0x000620, "Wrong size on UCubeGridTool");
-static_assert(offsetof(UCubeGridTool, GridGizmo) == 0x0000C0, "Member 'UCubeGridTool::GridGizmo' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, GridGizmoAlignmentMechanic) == 0x0000C8, "Member 'UCubeGridTool::GridGizmoAlignmentMechanic' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, GridGizmoTransformProxy) == 0x0000D0, "Member 'UCubeGridTool::GridGizmoTransformProxy' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, LineSets) == 0x0000D8, "Member 'UCubeGridTool::LineSets' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, ClickDragBehavior) == 0x0000E0, "Member 'UCubeGridTool::ClickDragBehavior' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, HoverBehavior) == 0x0000E8, "Member 'UCubeGridTool::HoverBehavior' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, CtrlMiddleClickBehavior) == 0x0000F0, "Member 'UCubeGridTool::CtrlMiddleClickBehavior' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, MiddleClickDragBehavior) == 0x0000F8, "Member 'UCubeGridTool::MiddleClickDragBehavior' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, Settings) == 0x000100, "Member 'UCubeGridTool::Settings' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, ToolActions) == 0x000108, "Member 'UCubeGridTool::ToolActions' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, MaterialProperties) == 0x000110, "Member 'UCubeGridTool::MaterialProperties' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, OutputTypeProperties) == 0x000118, "Member 'UCubeGridTool::OutputTypeProperties' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, Target) == 0x000120, "Member 'UCubeGridTool::Target' has a wrong offset!");
-static_assert(offsetof(UCubeGridTool, Preview) == 0x0002A8, "Member 'UCubeGridTool::Preview' has a wrong offset!");
-
-// Class MeshModelingToolsExp.AddPatchToolBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UAddPatchToolBuilder final : public UInteractiveToolBuilder
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AddPatchToolBuilder">();
-	}
-	static class UAddPatchToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAddPatchToolBuilder>();
-	}
-};
-static_assert(alignof(UAddPatchToolBuilder) == 0x000008, "Wrong alignment on UAddPatchToolBuilder");
-static_assert(sizeof(UAddPatchToolBuilder) == 0x000028, "Wrong size on UAddPatchToolBuilder");
-
-// Class MeshModelingToolsExp.BaseKelvinletBrushOpProps
-// 0x0010 (0x00B8 - 0x00A8)
-class UBaseKelvinletBrushOpProps : public UMeshSculptBrushOpProps
-{
-public:
-	float                                         Stiffness;                                         // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Incompressiblity;                                  // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BrushSteps;                                        // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B4[0x4];                                       // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"BaseKelvinletBrushOpProps">();
-	}
-	static class UBaseKelvinletBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBaseKelvinletBrushOpProps>();
-	}
-};
-static_assert(alignof(UBaseKelvinletBrushOpProps) == 0x000008, "Wrong alignment on UBaseKelvinletBrushOpProps");
-static_assert(sizeof(UBaseKelvinletBrushOpProps) == 0x0000B8, "Wrong size on UBaseKelvinletBrushOpProps");
-static_assert(offsetof(UBaseKelvinletBrushOpProps, Stiffness) == 0x0000A8, "Member 'UBaseKelvinletBrushOpProps::Stiffness' has a wrong offset!");
-static_assert(offsetof(UBaseKelvinletBrushOpProps, Incompressiblity) == 0x0000AC, "Member 'UBaseKelvinletBrushOpProps::Incompressiblity' has a wrong offset!");
-static_assert(offsetof(UBaseKelvinletBrushOpProps, BrushSteps) == 0x0000B0, "Member 'UBaseKelvinletBrushOpProps::BrushSteps' has a wrong offset!");
-
-// Class MeshModelingToolsExp.MeshGroupPaintToolActionPropertySet
-// 0x0008 (0x00B0 - 0x00A8)
-class UMeshGroupPaintToolActionPropertySet : public UInteractiveToolPropertySet
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshGroupPaintToolActionPropertySet">();
-	}
-	static class UMeshGroupPaintToolActionPropertySet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshGroupPaintToolActionPropertySet>();
-	}
-};
-static_assert(alignof(UMeshGroupPaintToolActionPropertySet) == 0x000008, "Wrong alignment on UMeshGroupPaintToolActionPropertySet");
-static_assert(sizeof(UMeshGroupPaintToolActionPropertySet) == 0x0000B0, "Wrong size on UMeshGroupPaintToolActionPropertySet");
-
-// Class MeshModelingToolsExp.MeshGroupPaintToolFreezeActions
-// 0x0000 (0x00B0 - 0x00B0)
-class UMeshGroupPaintToolFreezeActions final : public UMeshGroupPaintToolActionPropertySet
-{
-public:
-	void ClearAll();
-	void ClearCurrent();
-	void FloodFillCurrent();
-	void FreezeCurrent();
-	void FreezeOthers();
-	void GrowCurrent();
-	void ShrinkCurrent();
-	void UnfreezeAll();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshGroupPaintToolFreezeActions">();
-	}
-	static class UMeshGroupPaintToolFreezeActions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshGroupPaintToolFreezeActions>();
-	}
-};
-static_assert(alignof(UMeshGroupPaintToolFreezeActions) == 0x000008, "Wrong alignment on UMeshGroupPaintToolFreezeActions");
-static_assert(sizeof(UMeshGroupPaintToolFreezeActions) == 0x0000B0, "Wrong size on UMeshGroupPaintToolFreezeActions");
-
-// Class MeshModelingToolsExp.ScaleKelvinletBrushOpProps
-// 0x0008 (0x00C0 - 0x00B8)
-class UScaleKelvinletBrushOpProps final : public UBaseKelvinletBrushOpProps
-{
-public:
-	float                                         Strength;                                          // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Falloff;                                           // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ScaleKelvinletBrushOpProps">();
-	}
-	static class UScaleKelvinletBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScaleKelvinletBrushOpProps>();
-	}
-};
-static_assert(alignof(UScaleKelvinletBrushOpProps) == 0x000008, "Wrong alignment on UScaleKelvinletBrushOpProps");
-static_assert(sizeof(UScaleKelvinletBrushOpProps) == 0x0000C0, "Wrong size on UScaleKelvinletBrushOpProps");
-static_assert(offsetof(UScaleKelvinletBrushOpProps, Strength) == 0x0000B8, "Member 'UScaleKelvinletBrushOpProps::Strength' has a wrong offset!");
-static_assert(offsetof(UScaleKelvinletBrushOpProps, Falloff) == 0x0000BC, "Member 'UScaleKelvinletBrushOpProps::Falloff' has a wrong offset!");
-
 // Class MeshModelingToolsExp.PullKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
 class UPullKelvinletBrushOpProps final : public UBaseKelvinletBrushOpProps
@@ -915,95 +604,6 @@ static_assert(alignof(UPullKelvinletBrushOpProps) == 0x000008, "Wrong alignment 
 static_assert(sizeof(UPullKelvinletBrushOpProps) == 0x0000C0, "Wrong size on UPullKelvinletBrushOpProps");
 static_assert(offsetof(UPullKelvinletBrushOpProps, Falloff) == 0x0000B8, "Member 'UPullKelvinletBrushOpProps::Falloff' has a wrong offset!");
 static_assert(offsetof(UPullKelvinletBrushOpProps, Depth) == 0x0000BC, "Member 'UPullKelvinletBrushOpProps::Depth' has a wrong offset!");
-
-// Class MeshModelingToolsExp.BaseSmoothBrushOpProps
-// 0x0000 (0x00A8 - 0x00A8)
-class UBaseSmoothBrushOpProps : public UMeshSculptBrushOpProps
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"BaseSmoothBrushOpProps">();
-	}
-	static class UBaseSmoothBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UBaseSmoothBrushOpProps>();
-	}
-};
-static_assert(alignof(UBaseSmoothBrushOpProps) == 0x000008, "Wrong alignment on UBaseSmoothBrushOpProps");
-static_assert(sizeof(UBaseSmoothBrushOpProps) == 0x0000A8, "Wrong size on UBaseSmoothBrushOpProps");
-
-// Class MeshModelingToolsExp.SmoothFillBrushOpProps
-// 0x0010 (0x00B8 - 0x00A8)
-class USmoothFillBrushOpProps final : public UBaseSmoothBrushOpProps
-{
-public:
-	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPreserveUVFlow;                                   // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SmoothFillBrushOpProps">();
-	}
-	static class USmoothFillBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USmoothFillBrushOpProps>();
-	}
-};
-static_assert(alignof(USmoothFillBrushOpProps) == 0x000008, "Wrong alignment on USmoothFillBrushOpProps");
-static_assert(sizeof(USmoothFillBrushOpProps) == 0x0000B8, "Wrong size on USmoothFillBrushOpProps");
-static_assert(offsetof(USmoothFillBrushOpProps, Strength) == 0x0000A8, "Member 'USmoothFillBrushOpProps::Strength' has a wrong offset!");
-static_assert(offsetof(USmoothFillBrushOpProps, Falloff) == 0x0000AC, "Member 'USmoothFillBrushOpProps::Falloff' has a wrong offset!");
-static_assert(offsetof(USmoothFillBrushOpProps, bPreserveUVFlow) == 0x0000B0, "Member 'USmoothFillBrushOpProps::bPreserveUVFlow' has a wrong offset!");
-
-// Class MeshModelingToolsExp.DisplaceMeshCommonProperties
-// 0x0038 (0x00E0 - 0x00A8)
-class UDisplaceMeshCommonProperties final : public UInteractiveToolPropertySet
-{
-public:
-	EDisplaceMeshToolDisplaceType                 DisplacementType;                                  // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DisplaceIntensity;                                 // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RandomSeed;                                        // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDisplaceMeshToolSubdivisionType              SubdivisionType;                                   // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Subdivisions;                                      // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   WeightMap;                                         // 0x00BC(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         WeightMapsList;                                    // 0x00C8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bInvertWeightMap;                                  // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowWireframe;                                    // 0x00D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDisableSizeWarning;                               // 0x00DA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DB[0x5];                                       // 0x00DB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	TArray<class FString> GetWeightMapsFunc();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DisplaceMeshCommonProperties">();
-	}
-	static class UDisplaceMeshCommonProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDisplaceMeshCommonProperties>();
-	}
-};
-static_assert(alignof(UDisplaceMeshCommonProperties) == 0x000008, "Wrong alignment on UDisplaceMeshCommonProperties");
-static_assert(sizeof(UDisplaceMeshCommonProperties) == 0x0000E0, "Wrong size on UDisplaceMeshCommonProperties");
-static_assert(offsetof(UDisplaceMeshCommonProperties, DisplacementType) == 0x0000A8, "Member 'UDisplaceMeshCommonProperties::DisplacementType' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, DisplaceIntensity) == 0x0000AC, "Member 'UDisplaceMeshCommonProperties::DisplaceIntensity' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, RandomSeed) == 0x0000B0, "Member 'UDisplaceMeshCommonProperties::RandomSeed' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, SubdivisionType) == 0x0000B4, "Member 'UDisplaceMeshCommonProperties::SubdivisionType' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, Subdivisions) == 0x0000B8, "Member 'UDisplaceMeshCommonProperties::Subdivisions' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, WeightMap) == 0x0000BC, "Member 'UDisplaceMeshCommonProperties::WeightMap' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, WeightMapsList) == 0x0000C8, "Member 'UDisplaceMeshCommonProperties::WeightMapsList' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, bInvertWeightMap) == 0x0000D8, "Member 'UDisplaceMeshCommonProperties::bInvertWeightMap' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, bShowWireframe) == 0x0000D9, "Member 'UDisplaceMeshCommonProperties::bShowWireframe' has a wrong offset!");
-static_assert(offsetof(UDisplaceMeshCommonProperties, bDisableSizeWarning) == 0x0000DA, "Member 'UDisplaceMeshCommonProperties::bDisableSizeWarning' has a wrong offset!");
 
 // Class MeshModelingToolsExp.SharpPullKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
@@ -1028,38 +628,6 @@ static_assert(sizeof(USharpPullKelvinletBrushOpProps) == 0x0000C0, "Wrong size o
 static_assert(offsetof(USharpPullKelvinletBrushOpProps, Falloff) == 0x0000B8, "Member 'USharpPullKelvinletBrushOpProps::Falloff' has a wrong offset!");
 static_assert(offsetof(USharpPullKelvinletBrushOpProps, Depth) == 0x0000BC, "Member 'USharpPullKelvinletBrushOpProps::Depth' has a wrong offset!");
 
-// Class MeshModelingToolsExp.AlignObjectsToolProperties
-// 0x0010 (0x00B8 - 0x00A8)
-class UAlignObjectsToolProperties final : public UInteractiveToolPropertySet
-{
-public:
-	EAlignObjectsAlignTypes                       AlignType;                                         // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAlignObjectsAlignToOptions                   AlignTo;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAlignObjectsBoxPoint                         BoxPosition;                                       // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlignX;                                           // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlignY;                                           // 0x00B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAlignZ;                                           // 0x00B6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AlignObjectsToolProperties">();
-	}
-	static class UAlignObjectsToolProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAlignObjectsToolProperties>();
-	}
-};
-static_assert(alignof(UAlignObjectsToolProperties) == 0x000008, "Wrong alignment on UAlignObjectsToolProperties");
-static_assert(sizeof(UAlignObjectsToolProperties) == 0x0000B8, "Wrong size on UAlignObjectsToolProperties");
-static_assert(offsetof(UAlignObjectsToolProperties, AlignType) == 0x0000A8, "Member 'UAlignObjectsToolProperties::AlignType' has a wrong offset!");
-static_assert(offsetof(UAlignObjectsToolProperties, AlignTo) == 0x0000AC, "Member 'UAlignObjectsToolProperties::AlignTo' has a wrong offset!");
-static_assert(offsetof(UAlignObjectsToolProperties, BoxPosition) == 0x0000B0, "Member 'UAlignObjectsToolProperties::BoxPosition' has a wrong offset!");
-static_assert(offsetof(UAlignObjectsToolProperties, bAlignX) == 0x0000B4, "Member 'UAlignObjectsToolProperties::bAlignX' has a wrong offset!");
-static_assert(offsetof(UAlignObjectsToolProperties, bAlignY) == 0x0000B5, "Member 'UAlignObjectsToolProperties::bAlignY' has a wrong offset!");
-static_assert(offsetof(UAlignObjectsToolProperties, bAlignZ) == 0x0000B6, "Member 'UAlignObjectsToolProperties::bAlignZ' has a wrong offset!");
-
 // Class MeshModelingToolsExp.TwistKelvinletBrushOpProps
 // 0x0008 (0x00C0 - 0x00B8)
 class UTwistKelvinletBrushOpProps final : public UBaseKelvinletBrushOpProps
@@ -1082,51 +650,6 @@ static_assert(alignof(UTwistKelvinletBrushOpProps) == 0x000008, "Wrong alignment
 static_assert(sizeof(UTwistKelvinletBrushOpProps) == 0x0000C0, "Wrong size on UTwistKelvinletBrushOpProps");
 static_assert(offsetof(UTwistKelvinletBrushOpProps, Strength) == 0x0000B8, "Member 'UTwistKelvinletBrushOpProps::Strength' has a wrong offset!");
 static_assert(offsetof(UTwistKelvinletBrushOpProps, Falloff) == 0x0000BC, "Member 'UTwistKelvinletBrushOpProps::Falloff' has a wrong offset!");
-
-// Class MeshModelingToolsExp.LatticeDeformerToolProperties
-// 0x0020 (0x00C8 - 0x00A8)
-class ULatticeDeformerToolProperties final : public UInteractiveToolPropertySet
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         XAxisResolution;                                   // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         YAxisResolution;                                   // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ZAxisResolution;                                   // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Padding;                                           // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELatticeInterpolationType                     InterpolationType;                                 // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeformNormals;                                    // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanChangeResolution;                              // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EToolContextCoordinateSystem                  GizmoCoordinateSystem;                             // 0x00C3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetPivotMode;                                     // 0x00C4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSoftDeformation;                                  // 0x00C5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C6[0x2];                                       // 0x00C6(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ClearConstraints();
-	void Constrain();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LatticeDeformerToolProperties">();
-	}
-	static class ULatticeDeformerToolProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULatticeDeformerToolProperties>();
-	}
-};
-static_assert(alignof(ULatticeDeformerToolProperties) == 0x000008, "Wrong alignment on ULatticeDeformerToolProperties");
-static_assert(sizeof(ULatticeDeformerToolProperties) == 0x0000C8, "Wrong size on ULatticeDeformerToolProperties");
-static_assert(offsetof(ULatticeDeformerToolProperties, XAxisResolution) == 0x0000B0, "Member 'ULatticeDeformerToolProperties::XAxisResolution' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, YAxisResolution) == 0x0000B4, "Member 'ULatticeDeformerToolProperties::YAxisResolution' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, ZAxisResolution) == 0x0000B8, "Member 'ULatticeDeformerToolProperties::ZAxisResolution' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, Padding) == 0x0000BC, "Member 'ULatticeDeformerToolProperties::Padding' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, InterpolationType) == 0x0000C0, "Member 'ULatticeDeformerToolProperties::InterpolationType' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, bDeformNormals) == 0x0000C1, "Member 'ULatticeDeformerToolProperties::bDeformNormals' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, bCanChangeResolution) == 0x0000C2, "Member 'ULatticeDeformerToolProperties::bCanChangeResolution' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, GizmoCoordinateSystem) == 0x0000C3, "Member 'ULatticeDeformerToolProperties::GizmoCoordinateSystem' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, bSetPivotMode) == 0x0000C4, "Member 'ULatticeDeformerToolProperties::bSetPivotMode' has a wrong offset!");
-static_assert(offsetof(ULatticeDeformerToolProperties, bSoftDeformation) == 0x0000C5, "Member 'ULatticeDeformerToolProperties::bSoftDeformation' has a wrong offset!");
 
 // Class MeshModelingToolsExp.GroupEraseBrushOpProps
 // 0x0048 (0x00F0 - 0x00A8)
@@ -1176,76 +699,6 @@ static_assert(sizeof(UGroupPaintBrushOpProps) == 0x0000B0, "Wrong size on UGroup
 static_assert(offsetof(UGroupPaintBrushOpProps, Group) == 0x0000A8, "Member 'UGroupPaintBrushOpProps::Group' has a wrong offset!");
 static_assert(offsetof(UGroupPaintBrushOpProps, bOnlyPaintUngrouped) == 0x0000AC, "Member 'UGroupPaintBrushOpProps::bOnlyPaintUngrouped' has a wrong offset!");
 
-// Class MeshModelingToolsExp.VertexColorBaseBrushOpProps
-// 0x0010 (0x00B8 - 0x00A8)
-class UVertexColorBaseBrushOpProps : public UMeshSculptBrushOpProps
-{
-public:
-	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVertexColorPaintBrushOpBlendMode             BlendMode;                                         // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bApplyFalloff;                                     // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VertexColorBaseBrushOpProps">();
-	}
-	static class UVertexColorBaseBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVertexColorBaseBrushOpProps>();
-	}
-};
-static_assert(alignof(UVertexColorBaseBrushOpProps) == 0x000008, "Wrong alignment on UVertexColorBaseBrushOpProps");
-static_assert(sizeof(UVertexColorBaseBrushOpProps) == 0x0000B8, "Wrong size on UVertexColorBaseBrushOpProps");
-static_assert(offsetof(UVertexColorBaseBrushOpProps, Strength) == 0x0000A8, "Member 'UVertexColorBaseBrushOpProps::Strength' has a wrong offset!");
-static_assert(offsetof(UVertexColorBaseBrushOpProps, Falloff) == 0x0000AC, "Member 'UVertexColorBaseBrushOpProps::Falloff' has a wrong offset!");
-static_assert(offsetof(UVertexColorBaseBrushOpProps, BlendMode) == 0x0000B0, "Member 'UVertexColorBaseBrushOpProps::BlendMode' has a wrong offset!");
-static_assert(offsetof(UVertexColorBaseBrushOpProps, bApplyFalloff) == 0x0000B4, "Member 'UVertexColorBaseBrushOpProps::bApplyFalloff' has a wrong offset!");
-
-// Class MeshModelingToolsExp.VertexColorPaintBrushOpProps
-// 0x0010 (0x00C8 - 0x00B8)
-class UVertexColorPaintBrushOpProps final : public UVertexColorBaseBrushOpProps
-{
-public:
-	struct FLinearColor                           Color;                                             // 0x00B8(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VertexColorPaintBrushOpProps">();
-	}
-	static class UVertexColorPaintBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVertexColorPaintBrushOpProps>();
-	}
-};
-static_assert(alignof(UVertexColorPaintBrushOpProps) == 0x000008, "Wrong alignment on UVertexColorPaintBrushOpProps");
-static_assert(sizeof(UVertexColorPaintBrushOpProps) == 0x0000C8, "Wrong size on UVertexColorPaintBrushOpProps");
-static_assert(offsetof(UVertexColorPaintBrushOpProps, Color) == 0x0000B8, "Member 'UVertexColorPaintBrushOpProps::Color' has a wrong offset!");
-
-// Class MeshModelingToolsExp.DisplaceMeshPerlinNoiseProperties
-// 0x0010 (0x00B8 - 0x00A8)
-class UDisplaceMeshPerlinNoiseProperties final : public UInteractiveToolPropertySet
-{
-public:
-	TArray<struct FPerlinLayerProperties>         PerlinLayerProperties;                             // 0x00A8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DisplaceMeshPerlinNoiseProperties">();
-	}
-	static class UDisplaceMeshPerlinNoiseProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDisplaceMeshPerlinNoiseProperties>();
-	}
-};
-static_assert(alignof(UDisplaceMeshPerlinNoiseProperties) == 0x000008, "Wrong alignment on UDisplaceMeshPerlinNoiseProperties");
-static_assert(sizeof(UDisplaceMeshPerlinNoiseProperties) == 0x0000B8, "Wrong size on UDisplaceMeshPerlinNoiseProperties");
-static_assert(offsetof(UDisplaceMeshPerlinNoiseProperties, PerlinLayerProperties) == 0x0000A8, "Member 'UDisplaceMeshPerlinNoiseProperties::PerlinLayerProperties' has a wrong offset!");
-
 // Class MeshModelingToolsExp.InflateBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
 class UInflateBrushOpProps final : public UMeshSculptBrushOpProps
@@ -1268,54 +721,6 @@ static_assert(alignof(UInflateBrushOpProps) == 0x000008, "Wrong alignment on UIn
 static_assert(sizeof(UInflateBrushOpProps) == 0x0000B0, "Wrong size on UInflateBrushOpProps");
 static_assert(offsetof(UInflateBrushOpProps, Strength) == 0x0000A8, "Member 'UInflateBrushOpProps::Strength' has a wrong offset!");
 static_assert(offsetof(UInflateBrushOpProps, Falloff) == 0x0000AC, "Member 'UInflateBrushOpProps::Falloff' has a wrong offset!");
-
-// Class MeshModelingToolsExp.MoveBrushOpProps
-// 0x0010 (0x00B8 - 0x00A8)
-class UMoveBrushOpProps final : public UMeshSculptBrushOpProps
-{
-public:
-	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Depth;                                             // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FModelingToolsAxisFilter               AxisFilters;                                       // 0x00B4(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MoveBrushOpProps">();
-	}
-	static class UMoveBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMoveBrushOpProps>();
-	}
-};
-static_assert(alignof(UMoveBrushOpProps) == 0x000008, "Wrong alignment on UMoveBrushOpProps");
-static_assert(sizeof(UMoveBrushOpProps) == 0x0000B8, "Wrong size on UMoveBrushOpProps");
-static_assert(offsetof(UMoveBrushOpProps, Strength) == 0x0000A8, "Member 'UMoveBrushOpProps::Strength' has a wrong offset!");
-static_assert(offsetof(UMoveBrushOpProps, Falloff) == 0x0000AC, "Member 'UMoveBrushOpProps::Falloff' has a wrong offset!");
-static_assert(offsetof(UMoveBrushOpProps, Depth) == 0x0000B0, "Member 'UMoveBrushOpProps::Depth' has a wrong offset!");
-static_assert(offsetof(UMoveBrushOpProps, AxisFilters) == 0x0000B4, "Member 'UMoveBrushOpProps::AxisFilters' has a wrong offset!");
-
-// Class MeshModelingToolsExp.MeshSelectionToolActionPropertySet
-// 0x0008 (0x00B0 - 0x00A8)
-class UMeshSelectionToolActionPropertySet : public UInteractiveToolPropertySet
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshSelectionToolActionPropertySet">();
-	}
-	static class UMeshSelectionToolActionPropertySet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshSelectionToolActionPropertySet>();
-	}
-};
-static_assert(alignof(UMeshSelectionToolActionPropertySet) == 0x000008, "Wrong alignment on UMeshSelectionToolActionPropertySet");
-static_assert(sizeof(UMeshSelectionToolActionPropertySet) == 0x0000B0, "Wrong size on UMeshSelectionToolActionPropertySet");
 
 // Class MeshModelingToolsExp.PinchBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1345,34 +750,6 @@ static_assert(offsetof(UPinchBrushOpProps, Falloff) == 0x0000AC, "Member 'UPinch
 static_assert(offsetof(UPinchBrushOpProps, Depth) == 0x0000B0, "Member 'UPinchBrushOpProps::Depth' has a wrong offset!");
 static_assert(offsetof(UPinchBrushOpProps, bPerpDamping) == 0x0000B4, "Member 'UPinchBrushOpProps::bPerpDamping' has a wrong offset!");
 
-// Class MeshModelingToolsExp.FlattenBrushOpProps
-// 0x0010 (0x00B8 - 0x00A8)
-class UFlattenBrushOpProps final : public UMeshSculptBrushOpProps
-{
-public:
-	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Depth;                                             // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPlaneBrushSideMode                           WhichSide;                                         // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"FlattenBrushOpProps">();
-	}
-	static class UFlattenBrushOpProps* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UFlattenBrushOpProps>();
-	}
-};
-static_assert(alignof(UFlattenBrushOpProps) == 0x000008, "Wrong alignment on UFlattenBrushOpProps");
-static_assert(sizeof(UFlattenBrushOpProps) == 0x0000B8, "Wrong size on UFlattenBrushOpProps");
-static_assert(offsetof(UFlattenBrushOpProps, Strength) == 0x0000A8, "Member 'UFlattenBrushOpProps::Strength' has a wrong offset!");
-static_assert(offsetof(UFlattenBrushOpProps, Falloff) == 0x0000AC, "Member 'UFlattenBrushOpProps::Falloff' has a wrong offset!");
-static_assert(offsetof(UFlattenBrushOpProps, Depth) == 0x0000B0, "Member 'UFlattenBrushOpProps::Depth' has a wrong offset!");
-static_assert(offsetof(UFlattenBrushOpProps, WhichSide) == 0x0000B4, "Member 'UFlattenBrushOpProps::WhichSide' has a wrong offset!");
-
 // Class MeshModelingToolsExp.BasePlaneBrushOpProps
 // 0x0000 (0x00A8 - 0x00A8)
 class UBasePlaneBrushOpProps : public UMeshSculptBrushOpProps
@@ -1389,72 +766,6 @@ public:
 };
 static_assert(alignof(UBasePlaneBrushOpProps) == 0x000008, "Wrong alignment on UBasePlaneBrushOpProps");
 static_assert(sizeof(UBasePlaneBrushOpProps) == 0x0000A8, "Wrong size on UBasePlaneBrushOpProps");
-
-// Class MeshModelingToolsExp.OffsetMeshSelectionToolProperties
-// 0x0038 (0x00E0 - 0x00A8)
-class UOffsetMeshSelectionToolProperties final : public UInteractiveToolPropertySet
-{
-public:
-	double                                        OffsetDistance;                                    // 0x00A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOffsetMeshSelectionDirectionMode             Direction;                                         // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumSubdivisions;                                   // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        CreaseAngle;                                       // 0x00B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShellsToSolids;                                   // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInferGroupsFromNbrs;                              // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bGroupPerSubdivision;                              // 0x00C2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bReplaceSelectionGroups;                           // 0x00C3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        UVScale;                                           // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUVIslandPerGroup;                                 // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInferMaterialID;                                  // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         SetMaterialID;                                     // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowInputMaterials;                               // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OffsetMeshSelectionToolProperties">();
-	}
-	static class UOffsetMeshSelectionToolProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOffsetMeshSelectionToolProperties>();
-	}
-};
-static_assert(alignof(UOffsetMeshSelectionToolProperties) == 0x000008, "Wrong alignment on UOffsetMeshSelectionToolProperties");
-static_assert(sizeof(UOffsetMeshSelectionToolProperties) == 0x0000E0, "Wrong size on UOffsetMeshSelectionToolProperties");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, OffsetDistance) == 0x0000A8, "Member 'UOffsetMeshSelectionToolProperties::OffsetDistance' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, Direction) == 0x0000B0, "Member 'UOffsetMeshSelectionToolProperties::Direction' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, NumSubdivisions) == 0x0000B4, "Member 'UOffsetMeshSelectionToolProperties::NumSubdivisions' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, CreaseAngle) == 0x0000B8, "Member 'UOffsetMeshSelectionToolProperties::CreaseAngle' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bShellsToSolids) == 0x0000C0, "Member 'UOffsetMeshSelectionToolProperties::bShellsToSolids' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bInferGroupsFromNbrs) == 0x0000C1, "Member 'UOffsetMeshSelectionToolProperties::bInferGroupsFromNbrs' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bGroupPerSubdivision) == 0x0000C2, "Member 'UOffsetMeshSelectionToolProperties::bGroupPerSubdivision' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bReplaceSelectionGroups) == 0x0000C3, "Member 'UOffsetMeshSelectionToolProperties::bReplaceSelectionGroups' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, UVScale) == 0x0000C8, "Member 'UOffsetMeshSelectionToolProperties::UVScale' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bUVIslandPerGroup) == 0x0000D0, "Member 'UOffsetMeshSelectionToolProperties::bUVIslandPerGroup' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bInferMaterialID) == 0x0000D1, "Member 'UOffsetMeshSelectionToolProperties::bInferMaterialID' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, SetMaterialID) == 0x0000D4, "Member 'UOffsetMeshSelectionToolProperties::SetMaterialID' has a wrong offset!");
-static_assert(offsetof(UOffsetMeshSelectionToolProperties, bShowInputMaterials) == 0x0000D8, "Member 'UOffsetMeshSelectionToolProperties::bShowInputMaterials' has a wrong offset!");
-
-// Class MeshModelingToolsExp.DrawPolyPathToolBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UDrawPolyPathToolBuilder final : public UInteractiveToolBuilder
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DrawPolyPathToolBuilder">();
-	}
-	static class UDrawPolyPathToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDrawPolyPathToolBuilder>();
-	}
-};
-static_assert(alignof(UDrawPolyPathToolBuilder) == 0x000008, "Wrong alignment on UDrawPolyPathToolBuilder");
-static_assert(sizeof(UDrawPolyPathToolBuilder) == 0x000028, "Wrong size on UDrawPolyPathToolBuilder");
 
 // Class MeshModelingToolsExp.PlaneBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1511,29 +822,6 @@ static_assert(offsetof(UViewAlignedPlaneBrushOpProps, Strength) == 0x0000A8, "Me
 static_assert(offsetof(UViewAlignedPlaneBrushOpProps, Falloff) == 0x0000AC, "Member 'UViewAlignedPlaneBrushOpProps::Falloff' has a wrong offset!");
 static_assert(offsetof(UViewAlignedPlaneBrushOpProps, Depth) == 0x0000B0, "Member 'UViewAlignedPlaneBrushOpProps::Depth' has a wrong offset!");
 static_assert(offsetof(UViewAlignedPlaneBrushOpProps, WhichSide) == 0x0000B4, "Member 'UViewAlignedPlaneBrushOpProps::WhichSide' has a wrong offset!");
-
-// Class MeshModelingToolsExp.MeshBoundaryToolBase
-// 0x00F0 (0x01A0 - 0x00B0)
-class alignas(0x10) UMeshBoundaryToolBase : public USingleSelectionMeshEditingTool
-{
-public:
-	uint8                                         Pad_B0[0xE0];                                      // 0x00B0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPolygonSelectionMechanic*              SelectionMechanic;                                 // 0x0190(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MeshBoundaryToolBase">();
-	}
-	static class UMeshBoundaryToolBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMeshBoundaryToolBase>();
-	}
-};
-static_assert(alignof(UMeshBoundaryToolBase) == 0x000010, "Wrong alignment on UMeshBoundaryToolBase");
-static_assert(sizeof(UMeshBoundaryToolBase) == 0x0001A0, "Wrong size on UMeshBoundaryToolBase");
-static_assert(offsetof(UMeshBoundaryToolBase, SelectionMechanic) == 0x000190, "Member 'UMeshBoundaryToolBase::SelectionMechanic' has a wrong offset!");
 
 // Class MeshModelingToolsExp.FixedPlaneBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
@@ -1609,6 +897,54 @@ static_assert(sizeof(UViewAlignedSculptBrushOpProps) == 0x0000B0, "Wrong size on
 static_assert(offsetof(UViewAlignedSculptBrushOpProps, Strength) == 0x0000A8, "Member 'UViewAlignedSculptBrushOpProps::Strength' has a wrong offset!");
 static_assert(offsetof(UViewAlignedSculptBrushOpProps, Falloff) == 0x0000AC, "Member 'UViewAlignedSculptBrushOpProps::Falloff' has a wrong offset!");
 
+// Class MeshModelingToolsExp.SculptMaxBrushOpProps
+// 0x0018 (0x00C0 - 0x00A8)
+class USculptMaxBrushOpProps final : public UMeshSculptBrushOpProps
+{
+public:
+	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxHeight;                                         // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFixedHeight;                                   // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FixedHeight;                                       // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BC[0x4];                                       // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SculptMaxBrushOpProps">();
+	}
+	static class USculptMaxBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USculptMaxBrushOpProps>();
+	}
+};
+static_assert(alignof(USculptMaxBrushOpProps) == 0x000008, "Wrong alignment on USculptMaxBrushOpProps");
+static_assert(sizeof(USculptMaxBrushOpProps) == 0x0000C0, "Wrong size on USculptMaxBrushOpProps");
+static_assert(offsetof(USculptMaxBrushOpProps, Strength) == 0x0000A8, "Member 'USculptMaxBrushOpProps::Strength' has a wrong offset!");
+static_assert(offsetof(USculptMaxBrushOpProps, Falloff) == 0x0000AC, "Member 'USculptMaxBrushOpProps::Falloff' has a wrong offset!");
+static_assert(offsetof(USculptMaxBrushOpProps, MaxHeight) == 0x0000B0, "Member 'USculptMaxBrushOpProps::MaxHeight' has a wrong offset!");
+static_assert(offsetof(USculptMaxBrushOpProps, bUseFixedHeight) == 0x0000B4, "Member 'USculptMaxBrushOpProps::bUseFixedHeight' has a wrong offset!");
+static_assert(offsetof(USculptMaxBrushOpProps, FixedHeight) == 0x0000B8, "Member 'USculptMaxBrushOpProps::FixedHeight' has a wrong offset!");
+
+// Class MeshModelingToolsExp.BaseSmoothBrushOpProps
+// 0x0000 (0x00A8 - 0x00A8)
+class UBaseSmoothBrushOpProps : public UMeshSculptBrushOpProps
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"BaseSmoothBrushOpProps">();
+	}
+	static class UBaseSmoothBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBaseSmoothBrushOpProps>();
+	}
+};
+static_assert(alignof(UBaseSmoothBrushOpProps) == 0x000008, "Wrong alignment on UBaseSmoothBrushOpProps");
+static_assert(sizeof(UBaseSmoothBrushOpProps) == 0x0000A8, "Wrong size on UBaseSmoothBrushOpProps");
+
 // Class MeshModelingToolsExp.SmoothBrushOpProps
 // 0x0010 (0x00B8 - 0x00A8)
 class USmoothBrushOpProps final : public UBaseSmoothBrushOpProps
@@ -1661,6 +997,60 @@ static_assert(offsetof(USecondarySmoothBrushOpProps, Strength) == 0x0000A8, "Mem
 static_assert(offsetof(USecondarySmoothBrushOpProps, Falloff) == 0x0000AC, "Member 'USecondarySmoothBrushOpProps::Falloff' has a wrong offset!");
 static_assert(offsetof(USecondarySmoothBrushOpProps, bPreserveUVFlow) == 0x0000B0, "Member 'USecondarySmoothBrushOpProps::bPreserveUVFlow' has a wrong offset!");
 
+// Class MeshModelingToolsExp.SmoothFillBrushOpProps
+// 0x0010 (0x00B8 - 0x00A8)
+class USmoothFillBrushOpProps final : public UBaseSmoothBrushOpProps
+{
+public:
+	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreserveUVFlow;                                   // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SmoothFillBrushOpProps">();
+	}
+	static class USmoothFillBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USmoothFillBrushOpProps>();
+	}
+};
+static_assert(alignof(USmoothFillBrushOpProps) == 0x000008, "Wrong alignment on USmoothFillBrushOpProps");
+static_assert(sizeof(USmoothFillBrushOpProps) == 0x0000B8, "Wrong size on USmoothFillBrushOpProps");
+static_assert(offsetof(USmoothFillBrushOpProps, Strength) == 0x0000A8, "Member 'USmoothFillBrushOpProps::Strength' has a wrong offset!");
+static_assert(offsetof(USmoothFillBrushOpProps, Falloff) == 0x0000AC, "Member 'USmoothFillBrushOpProps::Falloff' has a wrong offset!");
+static_assert(offsetof(USmoothFillBrushOpProps, bPreserveUVFlow) == 0x0000B0, "Member 'USmoothFillBrushOpProps::bPreserveUVFlow' has a wrong offset!");
+
+// Class MeshModelingToolsExp.FlattenBrushOpProps
+// 0x0010 (0x00B8 - 0x00A8)
+class UFlattenBrushOpProps final : public UMeshSculptBrushOpProps
+{
+public:
+	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Depth;                                             // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPlaneBrushSideMode                           WhichSide;                                         // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"FlattenBrushOpProps">();
+	}
+	static class UFlattenBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UFlattenBrushOpProps>();
+	}
+};
+static_assert(alignof(UFlattenBrushOpProps) == 0x000008, "Wrong alignment on UFlattenBrushOpProps");
+static_assert(sizeof(UFlattenBrushOpProps) == 0x0000B8, "Wrong size on UFlattenBrushOpProps");
+static_assert(offsetof(UFlattenBrushOpProps, Strength) == 0x0000A8, "Member 'UFlattenBrushOpProps::Strength' has a wrong offset!");
+static_assert(offsetof(UFlattenBrushOpProps, Falloff) == 0x0000AC, "Member 'UFlattenBrushOpProps::Falloff' has a wrong offset!");
+static_assert(offsetof(UFlattenBrushOpProps, Depth) == 0x0000B0, "Member 'UFlattenBrushOpProps::Depth' has a wrong offset!");
+static_assert(offsetof(UFlattenBrushOpProps, WhichSide) == 0x0000B4, "Member 'UFlattenBrushOpProps::WhichSide' has a wrong offset!");
+
 // Class MeshModelingToolsExp.EraseBrushOpProps
 // 0x0008 (0x00B0 - 0x00A8)
 class UEraseBrushOpProps final : public UMeshSculptBrushOpProps
@@ -1683,6 +1073,55 @@ static_assert(alignof(UEraseBrushOpProps) == 0x000008, "Wrong alignment on UEras
 static_assert(sizeof(UEraseBrushOpProps) == 0x0000B0, "Wrong size on UEraseBrushOpProps");
 static_assert(offsetof(UEraseBrushOpProps, Strength) == 0x0000A8, "Member 'UEraseBrushOpProps::Strength' has a wrong offset!");
 static_assert(offsetof(UEraseBrushOpProps, Falloff) == 0x0000AC, "Member 'UEraseBrushOpProps::Falloff' has a wrong offset!");
+
+// Class MeshModelingToolsExp.VertexColorBaseBrushOpProps
+// 0x0010 (0x00B8 - 0x00A8)
+class UVertexColorBaseBrushOpProps : public UMeshSculptBrushOpProps
+{
+public:
+	float                                         Strength;                                          // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Falloff;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVertexColorPaintBrushOpBlendMode             BlendMode;                                         // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyFalloff;                                     // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VertexColorBaseBrushOpProps">();
+	}
+	static class UVertexColorBaseBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVertexColorBaseBrushOpProps>();
+	}
+};
+static_assert(alignof(UVertexColorBaseBrushOpProps) == 0x000008, "Wrong alignment on UVertexColorBaseBrushOpProps");
+static_assert(sizeof(UVertexColorBaseBrushOpProps) == 0x0000B8, "Wrong size on UVertexColorBaseBrushOpProps");
+static_assert(offsetof(UVertexColorBaseBrushOpProps, Strength) == 0x0000A8, "Member 'UVertexColorBaseBrushOpProps::Strength' has a wrong offset!");
+static_assert(offsetof(UVertexColorBaseBrushOpProps, Falloff) == 0x0000AC, "Member 'UVertexColorBaseBrushOpProps::Falloff' has a wrong offset!");
+static_assert(offsetof(UVertexColorBaseBrushOpProps, BlendMode) == 0x0000B0, "Member 'UVertexColorBaseBrushOpProps::BlendMode' has a wrong offset!");
+static_assert(offsetof(UVertexColorBaseBrushOpProps, bApplyFalloff) == 0x0000B4, "Member 'UVertexColorBaseBrushOpProps::bApplyFalloff' has a wrong offset!");
+
+// Class MeshModelingToolsExp.VertexColorPaintBrushOpProps
+// 0x0010 (0x00C8 - 0x00B8)
+class UVertexColorPaintBrushOpProps final : public UVertexColorBaseBrushOpProps
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x00B8(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VertexColorPaintBrushOpProps">();
+	}
+	static class UVertexColorPaintBrushOpProps* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVertexColorPaintBrushOpProps>();
+	}
+};
+static_assert(alignof(UVertexColorPaintBrushOpProps) == 0x000008, "Wrong alignment on UVertexColorPaintBrushOpProps");
+static_assert(sizeof(UVertexColorPaintBrushOpProps) == 0x0000C8, "Wrong size on UVertexColorPaintBrushOpProps");
+static_assert(offsetof(UVertexColorPaintBrushOpProps, Color) == 0x0000B8, "Member 'UVertexColorPaintBrushOpProps::Color' has a wrong offset!");
 
 // Class MeshModelingToolsExp.VertexColorSoftenBrushOpProps
 // 0x0000 (0x00B8 - 0x00B8)
@@ -1734,6 +1173,55 @@ public:
 };
 static_assert(alignof(UOffsetMeshSelectionToolBuilder) == 0x000008, "Wrong alignment on UOffsetMeshSelectionToolBuilder");
 static_assert(sizeof(UOffsetMeshSelectionToolBuilder) == 0x000028, "Wrong size on UOffsetMeshSelectionToolBuilder");
+
+// Class MeshModelingToolsExp.OffsetMeshSelectionToolProperties
+// 0x0038 (0x00E0 - 0x00A8)
+class UOffsetMeshSelectionToolProperties final : public UInteractiveToolPropertySet
+{
+public:
+	double                                        OffsetDistance;                                    // 0x00A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOffsetMeshSelectionDirectionMode             Direction;                                         // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B1[0x3];                                       // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumSubdivisions;                                   // 0x00B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        CreaseAngle;                                       // 0x00B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShellsToSolids;                                   // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInferGroupsFromNbrs;                              // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGroupPerSubdivision;                              // 0x00C2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReplaceSelectionGroups;                           // 0x00C3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        UVScale;                                           // 0x00C8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUVIslandPerGroup;                                 // 0x00D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInferMaterialID;                                  // 0x00D1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SetMaterialID;                                     // 0x00D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowInputMaterials;                               // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D9[0x7];                                       // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OffsetMeshSelectionToolProperties">();
+	}
+	static class UOffsetMeshSelectionToolProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOffsetMeshSelectionToolProperties>();
+	}
+};
+static_assert(alignof(UOffsetMeshSelectionToolProperties) == 0x000008, "Wrong alignment on UOffsetMeshSelectionToolProperties");
+static_assert(sizeof(UOffsetMeshSelectionToolProperties) == 0x0000E0, "Wrong size on UOffsetMeshSelectionToolProperties");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, OffsetDistance) == 0x0000A8, "Member 'UOffsetMeshSelectionToolProperties::OffsetDistance' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, Direction) == 0x0000B0, "Member 'UOffsetMeshSelectionToolProperties::Direction' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, NumSubdivisions) == 0x0000B4, "Member 'UOffsetMeshSelectionToolProperties::NumSubdivisions' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, CreaseAngle) == 0x0000B8, "Member 'UOffsetMeshSelectionToolProperties::CreaseAngle' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bShellsToSolids) == 0x0000C0, "Member 'UOffsetMeshSelectionToolProperties::bShellsToSolids' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bInferGroupsFromNbrs) == 0x0000C1, "Member 'UOffsetMeshSelectionToolProperties::bInferGroupsFromNbrs' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bGroupPerSubdivision) == 0x0000C2, "Member 'UOffsetMeshSelectionToolProperties::bGroupPerSubdivision' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bReplaceSelectionGroups) == 0x0000C3, "Member 'UOffsetMeshSelectionToolProperties::bReplaceSelectionGroups' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, UVScale) == 0x0000C8, "Member 'UOffsetMeshSelectionToolProperties::UVScale' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bUVIslandPerGroup) == 0x0000D0, "Member 'UOffsetMeshSelectionToolProperties::bUVIslandPerGroup' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bInferMaterialID) == 0x0000D1, "Member 'UOffsetMeshSelectionToolProperties::bInferMaterialID' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, SetMaterialID) == 0x0000D4, "Member 'UOffsetMeshSelectionToolProperties::SetMaterialID' has a wrong offset!");
+static_assert(offsetof(UOffsetMeshSelectionToolProperties, bShowInputMaterials) == 0x0000D8, "Member 'UOffsetMeshSelectionToolProperties::bShowInputMaterials' has a wrong offset!");
 
 // Class MeshModelingToolsExp.OffsetMeshSelectionTool
 // 0x0738 (0x0858 - 0x0120)
@@ -2103,6 +1591,108 @@ static_assert(offsetof(UPatternTool, PlaneMechanic) == 0x0001D0, "Member 'UPatte
 static_assert(offsetof(UPatternTool, AllComponents) == 0x0003B8, "Member 'UPatternTool::AllComponents' has a wrong offset!");
 static_assert(offsetof(UPatternTool, PreviewGeometry) == 0x0004A8, "Member 'UPatternTool::PreviewGeometry' has a wrong offset!");
 
+// Class MeshModelingToolsExp.MeshConstraintProperties
+// 0x0008 (0x00B0 - 0x00A8)
+class UMeshConstraintProperties : public UInteractiveToolPropertySet
+{
+public:
+	bool                                          bPreserveSharpEdges;                               // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMeshBoundaryConstraint                       MeshBoundaryConstraint;                            // 0x00A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGroupBoundaryConstraint                      GroupBoundaryConstraint;                           // 0x00AA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMaterialBoundaryConstraint                   MaterialBoundaryConstraint;                        // 0x00AB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventNormalFlips;                               // 0x00AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPreventTinyTriangles;                             // 0x00AD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool IsPreventNormalFlipsEnabled() const;
+	bool IsPreventTinyTrianglesEnabled() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshConstraintProperties">();
+	}
+	static class UMeshConstraintProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshConstraintProperties>();
+	}
+};
+static_assert(alignof(UMeshConstraintProperties) == 0x000008, "Wrong alignment on UMeshConstraintProperties");
+static_assert(sizeof(UMeshConstraintProperties) == 0x0000B0, "Wrong size on UMeshConstraintProperties");
+static_assert(offsetof(UMeshConstraintProperties, bPreserveSharpEdges) == 0x0000A8, "Member 'UMeshConstraintProperties::bPreserveSharpEdges' has a wrong offset!");
+static_assert(offsetof(UMeshConstraintProperties, MeshBoundaryConstraint) == 0x0000A9, "Member 'UMeshConstraintProperties::MeshBoundaryConstraint' has a wrong offset!");
+static_assert(offsetof(UMeshConstraintProperties, GroupBoundaryConstraint) == 0x0000AA, "Member 'UMeshConstraintProperties::GroupBoundaryConstraint' has a wrong offset!");
+static_assert(offsetof(UMeshConstraintProperties, MaterialBoundaryConstraint) == 0x0000AB, "Member 'UMeshConstraintProperties::MaterialBoundaryConstraint' has a wrong offset!");
+static_assert(offsetof(UMeshConstraintProperties, bPreventNormalFlips) == 0x0000AC, "Member 'UMeshConstraintProperties::bPreventNormalFlips' has a wrong offset!");
+static_assert(offsetof(UMeshConstraintProperties, bPreventTinyTriangles) == 0x0000AD, "Member 'UMeshConstraintProperties::bPreventTinyTriangles' has a wrong offset!");
+
+// Class MeshModelingToolsExp.RemeshProperties
+// 0x0008 (0x00B8 - 0x00B0)
+class URemeshProperties : public UMeshConstraintProperties
+{
+public:
+	float                                         SmoothingStrength;                                 // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlips;                                            // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSplits;                                           // 0x00B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCollapses;                                        // 0x00B6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RemeshProperties">();
+	}
+	static class URemeshProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URemeshProperties>();
+	}
+};
+static_assert(alignof(URemeshProperties) == 0x000008, "Wrong alignment on URemeshProperties");
+static_assert(sizeof(URemeshProperties) == 0x0000B8, "Wrong size on URemeshProperties");
+static_assert(offsetof(URemeshProperties, SmoothingStrength) == 0x0000B0, "Member 'URemeshProperties::SmoothingStrength' has a wrong offset!");
+static_assert(offsetof(URemeshProperties, bFlips) == 0x0000B4, "Member 'URemeshProperties::bFlips' has a wrong offset!");
+static_assert(offsetof(URemeshProperties, bSplits) == 0x0000B5, "Member 'URemeshProperties::bSplits' has a wrong offset!");
+static_assert(offsetof(URemeshProperties, bCollapses) == 0x0000B6, "Member 'URemeshProperties::bCollapses' has a wrong offset!");
+
+// Class MeshModelingToolsExp.RevolveSplineToolProperties
+// 0x0050 (0x0168 - 0x0118)
+class URevolveSplineToolProperties final : public URevolveProperties
+{
+public:
+	ERevolveSplineSampleMode                      SampleMode;                                        // 0x0118(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ErrorTolerance;                                    // 0x0120(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MaxSampleDistance;                                 // 0x0128(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERevolvePropertiesCapFillMode                 CapFillMode;                                       // 0x0130(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClosePathToAxis;                                  // 0x0131(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                AxisOrigin;                                        // 0x0138(0x0018)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              AxisOrientation;                                   // 0x0150(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResetAxisOnStart;                                 // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0x7];                                      // 0x0161(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"RevolveSplineToolProperties">();
+	}
+	static class URevolveSplineToolProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<URevolveSplineToolProperties>();
+	}
+};
+static_assert(alignof(URevolveSplineToolProperties) == 0x000008, "Wrong alignment on URevolveSplineToolProperties");
+static_assert(sizeof(URevolveSplineToolProperties) == 0x000168, "Wrong size on URevolveSplineToolProperties");
+static_assert(offsetof(URevolveSplineToolProperties, SampleMode) == 0x000118, "Member 'URevolveSplineToolProperties::SampleMode' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, ErrorTolerance) == 0x000120, "Member 'URevolveSplineToolProperties::ErrorTolerance' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, MaxSampleDistance) == 0x000128, "Member 'URevolveSplineToolProperties::MaxSampleDistance' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, CapFillMode) == 0x000130, "Member 'URevolveSplineToolProperties::CapFillMode' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, bClosePathToAxis) == 0x000131, "Member 'URevolveSplineToolProperties::bClosePathToAxis' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, AxisOrigin) == 0x000138, "Member 'URevolveSplineToolProperties::AxisOrigin' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, AxisOrientation) == 0x000150, "Member 'URevolveSplineToolProperties::AxisOrientation' has a wrong offset!");
+static_assert(offsetof(URevolveSplineToolProperties, bResetAxisOnStart) == 0x000160, "Member 'URevolveSplineToolProperties::bResetAxisOnStart' has a wrong offset!");
+
 // Class MeshModelingToolsExp.RevolveSplineToolActionPropertySet
 // 0x0008 (0x00B0 - 0x00A8)
 class URevolveSplineToolActionPropertySet final : public UInteractiveToolPropertySet
@@ -2159,22 +1749,22 @@ static_assert(offsetof(URevolveSplineTool, ToolActions) == 0x0000C0, "Member 'UR
 static_assert(offsetof(URevolveSplineTool, Preview) == 0x0000C8, "Member 'URevolveSplineTool::Preview' has a wrong offset!");
 static_assert(offsetof(URevolveSplineTool, PlaneMechanic) == 0x0000D0, "Member 'URevolveSplineTool::PlaneMechanic' has a wrong offset!");
 
-// Class MeshModelingToolsExp.RevolveSplineToolBuilder
+// Class MeshModelingToolsExp.AddPatchToolBuilder
 // 0x0000 (0x0028 - 0x0028)
-class URevolveSplineToolBuilder final : public UInteractiveToolBuilder
+class UAddPatchToolBuilder final : public UInteractiveToolBuilder
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"RevolveSplineToolBuilder">();
+		return StaticClassImpl<"AddPatchToolBuilder">();
 	}
-	static class URevolveSplineToolBuilder* GetDefaultObj()
+	static class UAddPatchToolBuilder* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<URevolveSplineToolBuilder>();
+		return GetDefaultObjImpl<UAddPatchToolBuilder>();
 	}
 };
-static_assert(alignof(URevolveSplineToolBuilder) == 0x000008, "Wrong alignment on URevolveSplineToolBuilder");
-static_assert(sizeof(URevolveSplineToolBuilder) == 0x000028, "Wrong size on URevolveSplineToolBuilder");
+static_assert(alignof(UAddPatchToolBuilder) == 0x000008, "Wrong alignment on UAddPatchToolBuilder");
+static_assert(sizeof(UAddPatchToolBuilder) == 0x000028, "Wrong size on UAddPatchToolBuilder");
 
 // Class MeshModelingToolsExp.AddPatchToolProperties
 // 0x0010 (0x00B8 - 0x00A8)
@@ -2202,6 +1792,82 @@ static_assert(offsetof(UAddPatchToolProperties, Width) == 0x0000A8, "Member 'UAd
 static_assert(offsetof(UAddPatchToolProperties, Rotation) == 0x0000AC, "Member 'UAddPatchToolProperties::Rotation' has a wrong offset!");
 static_assert(offsetof(UAddPatchToolProperties, Subdivisions) == 0x0000B0, "Member 'UAddPatchToolProperties::Subdivisions' has a wrong offset!");
 static_assert(offsetof(UAddPatchToolProperties, Shift) == 0x0000B4, "Member 'UAddPatchToolProperties::Shift' has a wrong offset!");
+
+// Class MeshModelingToolsExp.AddPatchTool
+// 0x0088 (0x0128 - 0x00A0)
+class UAddPatchTool final : public USingleClickTool
+{
+public:
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAddPatchToolProperties*                ShapeSettings;                                     // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNewMeshMaterialProperties*             MaterialProperties;                                // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPreviewMesh*                           PreviewMesh;                                       // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_C0[0x68];                                      // 0x00C0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AddPatchTool">();
+	}
+	static class UAddPatchTool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAddPatchTool>();
+	}
+};
+static_assert(alignof(UAddPatchTool) == 0x000008, "Wrong alignment on UAddPatchTool");
+static_assert(sizeof(UAddPatchTool) == 0x000128, "Wrong size on UAddPatchTool");
+static_assert(offsetof(UAddPatchTool, ShapeSettings) == 0x0000A8, "Member 'UAddPatchTool::ShapeSettings' has a wrong offset!");
+static_assert(offsetof(UAddPatchTool, MaterialProperties) == 0x0000B0, "Member 'UAddPatchTool::MaterialProperties' has a wrong offset!");
+static_assert(offsetof(UAddPatchTool, PreviewMesh) == 0x0000B8, "Member 'UAddPatchTool::PreviewMesh' has a wrong offset!");
+
+// Class MeshModelingToolsExp.AlignObjectsToolBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UAlignObjectsToolBuilder final : public UMultiSelectionMeshEditingToolBuilder
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AlignObjectsToolBuilder">();
+	}
+	static class UAlignObjectsToolBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAlignObjectsToolBuilder>();
+	}
+};
+static_assert(alignof(UAlignObjectsToolBuilder) == 0x000008, "Wrong alignment on UAlignObjectsToolBuilder");
+static_assert(sizeof(UAlignObjectsToolBuilder) == 0x000028, "Wrong size on UAlignObjectsToolBuilder");
+
+// Class MeshModelingToolsExp.AlignObjectsToolProperties
+// 0x0010 (0x00B8 - 0x00A8)
+class UAlignObjectsToolProperties final : public UInteractiveToolPropertySet
+{
+public:
+	EAlignObjectsAlignTypes                       AlignType;                                         // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAlignObjectsAlignToOptions                   AlignTo;                                           // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAlignObjectsBoxPoint                         BoxPosition;                                       // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlignX;                                           // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlignY;                                           // 0x00B5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlignZ;                                           // 0x00B6(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B7[0x1];                                       // 0x00B7(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AlignObjectsToolProperties">();
+	}
+	static class UAlignObjectsToolProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAlignObjectsToolProperties>();
+	}
+};
+static_assert(alignof(UAlignObjectsToolProperties) == 0x000008, "Wrong alignment on UAlignObjectsToolProperties");
+static_assert(sizeof(UAlignObjectsToolProperties) == 0x0000B8, "Wrong size on UAlignObjectsToolProperties");
+static_assert(offsetof(UAlignObjectsToolProperties, AlignType) == 0x0000A8, "Member 'UAlignObjectsToolProperties::AlignType' has a wrong offset!");
+static_assert(offsetof(UAlignObjectsToolProperties, AlignTo) == 0x0000AC, "Member 'UAlignObjectsToolProperties::AlignTo' has a wrong offset!");
+static_assert(offsetof(UAlignObjectsToolProperties, BoxPosition) == 0x0000B0, "Member 'UAlignObjectsToolProperties::BoxPosition' has a wrong offset!");
+static_assert(offsetof(UAlignObjectsToolProperties, bAlignX) == 0x0000B4, "Member 'UAlignObjectsToolProperties::bAlignX' has a wrong offset!");
+static_assert(offsetof(UAlignObjectsToolProperties, bAlignY) == 0x0000B5, "Member 'UAlignObjectsToolProperties::bAlignY' has a wrong offset!");
+static_assert(offsetof(UAlignObjectsToolProperties, bAlignZ) == 0x0000B6, "Member 'UAlignObjectsToolProperties::bAlignZ' has a wrong offset!");
 
 // Class MeshModelingToolsExp.AlignObjectsTool
 // 0x00A0 (0x0158 - 0x00B8)
@@ -2745,23 +2411,6 @@ static_assert(offsetof(UConvertMeshesTool, BasicProperties) == 0x0000A0, "Member
 static_assert(offsetof(UConvertMeshesTool, OutputTypeProperties) == 0x0000A8, "Member 'UConvertMeshesTool::OutputTypeProperties' has a wrong offset!");
 static_assert(offsetof(UConvertMeshesTool, Inputs) == 0x0000B0, "Member 'UConvertMeshesTool::Inputs' has a wrong offset!");
 
-// Class MeshModelingToolsExp.ConvertToPolygonsToolBuilder
-// 0x0000 (0x0028 - 0x0028)
-class UConvertToPolygonsToolBuilder final : public USingleTargetWithSelectionToolBuilder
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ConvertToPolygonsToolBuilder">();
-	}
-	static class UConvertToPolygonsToolBuilder* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UConvertToPolygonsToolBuilder>();
-	}
-};
-static_assert(alignof(UConvertToPolygonsToolBuilder) == 0x000008, "Wrong alignment on UConvertToPolygonsToolBuilder");
-static_assert(sizeof(UConvertToPolygonsToolBuilder) == 0x000028, "Wrong size on UConvertToPolygonsToolBuilder");
-
 // Class MeshModelingToolsExp.ConvertToPolygonsToolProperties
 // 0x0030 (0x00D8 - 0x00A8)
 class UConvertToPolygonsToolProperties final : public UInteractiveToolPropertySet
@@ -3026,6 +2675,56 @@ static_assert(alignof(UCubeGridToolActions) == 0x000008, "Wrong alignment on UCu
 static_assert(sizeof(UCubeGridToolActions) == 0x0000B8, "Wrong size on UCubeGridToolActions");
 static_assert(offsetof(UCubeGridToolActions, GridSourceActor) == 0x0000B0, "Member 'UCubeGridToolActions::GridSourceActor' has a wrong offset!");
 
+// Class MeshModelingToolsExp.CubeGridTool
+// 0x0588 (0x0620 - 0x0098)
+class alignas(0x10) UCubeGridTool final : public UInteractiveTool
+{
+public:
+	uint8                                         Pad_98[0x28];                                      // 0x0098(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCombinedTransformGizmo*                GridGizmo;                                         // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDragAlignmentMechanic*                 GridGizmoAlignmentMechanic;                        // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTransformProxy*                        GridGizmoTransformProxy;                           // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPreviewGeometry*                       LineSets;                                          // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UClickDragInputBehavior*                ClickDragBehavior;                                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMouseHoverBehavior*                    HoverBehavior;                                     // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULocalSingleClickInputBehavior*         CtrlMiddleClickBehavior;                           // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULocalClickDragInputBehavior*           MiddleClickDragBehavior;                           // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCubeGridToolProperties*                Settings;                                          // 0x0100(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCubeGridToolActions*                   ToolActions;                                       // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNewMeshMaterialProperties*             MaterialProperties;                                // 0x0110(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCreateMeshObjectTypeProperties*        OutputTypeProperties;                              // 0x0118(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UToolTarget*                            Target;                                            // 0x0120(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_128[0x180];                                    // 0x0128(0x0180)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshOpPreviewWithBackgroundCompute*    Preview;                                           // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2B0[0x370];                                    // 0x02B0(0x0370)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"CubeGridTool">();
+	}
+	static class UCubeGridTool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UCubeGridTool>();
+	}
+};
+static_assert(alignof(UCubeGridTool) == 0x000010, "Wrong alignment on UCubeGridTool");
+static_assert(sizeof(UCubeGridTool) == 0x000620, "Wrong size on UCubeGridTool");
+static_assert(offsetof(UCubeGridTool, GridGizmo) == 0x0000C0, "Member 'UCubeGridTool::GridGizmo' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, GridGizmoAlignmentMechanic) == 0x0000C8, "Member 'UCubeGridTool::GridGizmoAlignmentMechanic' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, GridGizmoTransformProxy) == 0x0000D0, "Member 'UCubeGridTool::GridGizmoTransformProxy' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, LineSets) == 0x0000D8, "Member 'UCubeGridTool::LineSets' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, ClickDragBehavior) == 0x0000E0, "Member 'UCubeGridTool::ClickDragBehavior' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, HoverBehavior) == 0x0000E8, "Member 'UCubeGridTool::HoverBehavior' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, CtrlMiddleClickBehavior) == 0x0000F0, "Member 'UCubeGridTool::CtrlMiddleClickBehavior' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, MiddleClickDragBehavior) == 0x0000F8, "Member 'UCubeGridTool::MiddleClickDragBehavior' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, Settings) == 0x000100, "Member 'UCubeGridTool::Settings' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, ToolActions) == 0x000108, "Member 'UCubeGridTool::ToolActions' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, MaterialProperties) == 0x000110, "Member 'UCubeGridTool::MaterialProperties' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, OutputTypeProperties) == 0x000118, "Member 'UCubeGridTool::OutputTypeProperties' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, Target) == 0x000120, "Member 'UCubeGridTool::Target' has a wrong offset!");
+static_assert(offsetof(UCubeGridTool, Preview) == 0x0002A8, "Member 'UCubeGridTool::Preview' has a wrong offset!");
+
 // Class MeshModelingToolsExp.DeformMeshPolygonsToolBuilder
 // 0x0000 (0x0030 - 0x0030)
 class UDeformMeshPolygonsToolBuilder final : public UMeshSurfacePointMeshEditingToolBuilder
@@ -3109,6 +2808,52 @@ static_assert(sizeof(UDeformMeshPolygonsTool) == 0x001800, "Wrong size on UDefor
 static_assert(offsetof(UDeformMeshPolygonsTool, PreviewMeshActor) == 0x000110, "Member 'UDeformMeshPolygonsTool::PreviewMeshActor' has a wrong offset!");
 static_assert(offsetof(UDeformMeshPolygonsTool, DynamicMeshComponent) == 0x000118, "Member 'UDeformMeshPolygonsTool::DynamicMeshComponent' has a wrong offset!");
 static_assert(offsetof(UDeformMeshPolygonsTool, TransformProps) == 0x000120, "Member 'UDeformMeshPolygonsTool::TransformProps' has a wrong offset!");
+
+// Class MeshModelingToolsExp.DisplaceMeshCommonProperties
+// 0x0038 (0x00E0 - 0x00A8)
+class UDisplaceMeshCommonProperties final : public UInteractiveToolPropertySet
+{
+public:
+	EDisplaceMeshToolDisplaceType                 DisplacementType;                                  // 0x00A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DisplaceIntensity;                                 // 0x00AC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RandomSeed;                                        // 0x00B0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDisplaceMeshToolSubdivisionType              SubdivisionType;                                   // 0x00B4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Subdivisions;                                      // 0x00B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   WeightMap;                                         // 0x00BC(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         WeightMapsList;                                    // 0x00C8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bInvertWeightMap;                                  // 0x00D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowWireframe;                                    // 0x00D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDisableSizeWarning;                               // 0x00DA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_DB[0x5];                                       // 0x00DB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	TArray<class FString> GetWeightMapsFunc();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DisplaceMeshCommonProperties">();
+	}
+	static class UDisplaceMeshCommonProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDisplaceMeshCommonProperties>();
+	}
+};
+static_assert(alignof(UDisplaceMeshCommonProperties) == 0x000008, "Wrong alignment on UDisplaceMeshCommonProperties");
+static_assert(sizeof(UDisplaceMeshCommonProperties) == 0x0000E0, "Wrong size on UDisplaceMeshCommonProperties");
+static_assert(offsetof(UDisplaceMeshCommonProperties, DisplacementType) == 0x0000A8, "Member 'UDisplaceMeshCommonProperties::DisplacementType' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, DisplaceIntensity) == 0x0000AC, "Member 'UDisplaceMeshCommonProperties::DisplaceIntensity' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, RandomSeed) == 0x0000B0, "Member 'UDisplaceMeshCommonProperties::RandomSeed' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, SubdivisionType) == 0x0000B4, "Member 'UDisplaceMeshCommonProperties::SubdivisionType' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, Subdivisions) == 0x0000B8, "Member 'UDisplaceMeshCommonProperties::Subdivisions' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, WeightMap) == 0x0000BC, "Member 'UDisplaceMeshCommonProperties::WeightMap' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, WeightMapsList) == 0x0000C8, "Member 'UDisplaceMeshCommonProperties::WeightMapsList' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, bInvertWeightMap) == 0x0000D8, "Member 'UDisplaceMeshCommonProperties::bInvertWeightMap' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, bShowWireframe) == 0x0000D9, "Member 'UDisplaceMeshCommonProperties::bShowWireframe' has a wrong offset!");
+static_assert(offsetof(UDisplaceMeshCommonProperties, bDisableSizeWarning) == 0x0000DA, "Member 'UDisplaceMeshCommonProperties::bDisableSizeWarning' has a wrong offset!");
 
 // Class MeshModelingToolsExp.SelectiveTessellationProperties
 // 0x0020 (0x00C8 - 0x00A8)
@@ -3205,6 +2950,27 @@ static_assert(offsetof(UDisplaceMeshDirectionalFilterProperties, bEnableFilter) 
 static_assert(offsetof(UDisplaceMeshDirectionalFilterProperties, FilterDirection) == 0x0000B0, "Member 'UDisplaceMeshDirectionalFilterProperties::FilterDirection' has a wrong offset!");
 static_assert(offsetof(UDisplaceMeshDirectionalFilterProperties, FilterWidth) == 0x0000C8, "Member 'UDisplaceMeshDirectionalFilterProperties::FilterWidth' has a wrong offset!");
 
+// Class MeshModelingToolsExp.DisplaceMeshPerlinNoiseProperties
+// 0x0010 (0x00B8 - 0x00A8)
+class UDisplaceMeshPerlinNoiseProperties final : public UInteractiveToolPropertySet
+{
+public:
+	TArray<struct FPerlinLayerProperties>         PerlinLayerProperties;                             // 0x00A8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DisplaceMeshPerlinNoiseProperties">();
+	}
+	static class UDisplaceMeshPerlinNoiseProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDisplaceMeshPerlinNoiseProperties>();
+	}
+};
+static_assert(alignof(UDisplaceMeshPerlinNoiseProperties) == 0x000008, "Wrong alignment on UDisplaceMeshPerlinNoiseProperties");
+static_assert(sizeof(UDisplaceMeshPerlinNoiseProperties) == 0x0000B8, "Wrong size on UDisplaceMeshPerlinNoiseProperties");
+static_assert(offsetof(UDisplaceMeshPerlinNoiseProperties, PerlinLayerProperties) == 0x0000A8, "Member 'UDisplaceMeshPerlinNoiseProperties::PerlinLayerProperties' has a wrong offset!");
+
 // Class MeshModelingToolsExp.DisplaceMeshSineWaveProperties
 // 0x0020 (0x00C8 - 0x00A8)
 class UDisplaceMeshSineWaveProperties final : public UInteractiveToolPropertySet
@@ -3287,6 +3053,23 @@ static_assert(offsetof(UDisplaceMeshTool, ActiveContrastCurveTarget) == 0x0000E0
 static_assert(offsetof(UDisplaceMeshTool, MeshStatistics) == 0x0000E8, "Member 'UDisplaceMeshTool::MeshStatistics' has a wrong offset!");
 static_assert(offsetof(UDisplaceMeshTool, PreviewMeshActor) == 0x000430, "Member 'UDisplaceMeshTool::PreviewMeshActor' has a wrong offset!");
 static_assert(offsetof(UDisplaceMeshTool, DynamicMeshComponent) == 0x000438, "Member 'UDisplaceMeshTool::DynamicMeshComponent' has a wrong offset!");
+
+// Class MeshModelingToolsExp.DrawPolyPathToolBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UDrawPolyPathToolBuilder final : public UInteractiveToolBuilder
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"DrawPolyPathToolBuilder">();
+	}
+	static class UDrawPolyPathToolBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UDrawPolyPathToolBuilder>();
+	}
+};
+static_assert(alignof(UDrawPolyPathToolBuilder) == 0x000008, "Wrong alignment on UDrawPolyPathToolBuilder");
+static_assert(sizeof(UDrawPolyPathToolBuilder) == 0x000028, "Wrong size on UDrawPolyPathToolBuilder");
 
 // Class MeshModelingToolsExp.DrawPolyPathProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -3784,39 +3567,6 @@ static_assert(offsetof(UEditPivotToolProperties, bApplyToAllLODs) == 0x0000A8, "
 static_assert(offsetof(UEditPivotToolProperties, bEnableSnapDragging) == 0x0000A9, "Member 'UEditPivotToolProperties::bEnableSnapDragging' has a wrong offset!");
 static_assert(offsetof(UEditPivotToolProperties, RotationMode) == 0x0000AA, "Member 'UEditPivotToolProperties::RotationMode' has a wrong offset!");
 
-// Class MeshModelingToolsExp.EditPivotToolActionPropertySet
-// 0x0010 (0x00B8 - 0x00A8)
-class UEditPivotToolActionPropertySet final : public UInteractiveToolPropertySet
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bUseWorldBox;                                      // 0x00B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void Back();
-	void Bottom();
-	void Center();
-	void Front();
-	void Left();
-	void Right();
-	void Top();
-	void WorldOrigin();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"EditPivotToolActionPropertySet">();
-	}
-	static class UEditPivotToolActionPropertySet* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEditPivotToolActionPropertySet>();
-	}
-};
-static_assert(alignof(UEditPivotToolActionPropertySet) == 0x000008, "Wrong alignment on UEditPivotToolActionPropertySet");
-static_assert(sizeof(UEditPivotToolActionPropertySet) == 0x0000B8, "Wrong size on UEditPivotToolActionPropertySet");
-static_assert(offsetof(UEditPivotToolActionPropertySet, bUseWorldBox) == 0x0000B0, "Member 'UEditPivotToolActionPropertySet::bUseWorldBox' has a wrong offset!");
-
 // Class MeshModelingToolsExp.EditPivotTool
 // 0x0188 (0x0240 - 0x00B8)
 class alignas(0x10) UEditPivotTool final : public UMultiSelectionMeshEditingTool
@@ -3899,6 +3649,23 @@ static_assert(offsetof(UEditUVIslandsTool, DynamicMeshComponent) == 0x000120, "M
 static_assert(offsetof(UEditUVIslandsTool, SelectionMechanic) == 0x000128, "Member 'UEditUVIslandsTool::SelectionMechanic' has a wrong offset!");
 static_assert(offsetof(UEditUVIslandsTool, TransformGizmo) == 0x000138, "Member 'UEditUVIslandsTool::TransformGizmo' has a wrong offset!");
 static_assert(offsetof(UEditUVIslandsTool, TransformProxy) == 0x000140, "Member 'UEditUVIslandsTool::TransformProxy' has a wrong offset!");
+
+// Class MeshModelingToolsExp.HoleFillToolBuilder
+// 0x0000 (0x0028 - 0x0028)
+class UHoleFillToolBuilder final : public USingleSelectionMeshEditingToolBuilder
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoleFillToolBuilder">();
+	}
+	static class UHoleFillToolBuilder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoleFillToolBuilder>();
+	}
+};
+static_assert(alignof(UHoleFillToolBuilder) == 0x000008, "Wrong alignment on UHoleFillToolBuilder");
+static_assert(sizeof(UHoleFillToolBuilder) == 0x000028, "Wrong size on UHoleFillToolBuilder");
 
 // Class MeshModelingToolsExp.SmoothHoleFillProperties
 // 0x0028 (0x00D0 - 0x00A8)
@@ -4157,6 +3924,28 @@ public:
 static_assert(alignof(UMeshAttributePaintToolBuilder) == 0x000008, "Wrong alignment on UMeshAttributePaintToolBuilder");
 static_assert(sizeof(UMeshAttributePaintToolBuilder) == 0x000070, "Wrong size on UMeshAttributePaintToolBuilder");
 
+// Class MeshModelingToolsExp.MeshAttributePaintBrushOperationProperties
+// 0x0008 (0x00B0 - 0x00A8)
+class UMeshAttributePaintBrushOperationProperties final : public UInteractiveToolPropertySet
+{
+public:
+	EBrushActionMode                              BrushAction;                                       // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshAttributePaintBrushOperationProperties">();
+	}
+	static class UMeshAttributePaintBrushOperationProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshAttributePaintBrushOperationProperties>();
+	}
+};
+static_assert(alignof(UMeshAttributePaintBrushOperationProperties) == 0x000008, "Wrong alignment on UMeshAttributePaintBrushOperationProperties");
+static_assert(sizeof(UMeshAttributePaintBrushOperationProperties) == 0x0000B0, "Wrong size on UMeshAttributePaintBrushOperationProperties");
+static_assert(offsetof(UMeshAttributePaintBrushOperationProperties, BrushAction) == 0x0000A8, "Member 'UMeshAttributePaintBrushOperationProperties::BrushAction' has a wrong offset!");
+
 // Class MeshModelingToolsExp.MeshAttributePaintToolProperties
 // 0x0020 (0x00C8 - 0x00A8)
 class UMeshAttributePaintToolProperties final : public UInteractiveToolPropertySet
@@ -4227,6 +4016,29 @@ static_assert(sizeof(UMeshAttributePaintTool) == 0x000800, "Wrong size on UMeshA
 static_assert(offsetof(UMeshAttributePaintTool, BrushActionProps) == 0x0002E8, "Member 'UMeshAttributePaintTool::BrushActionProps' has a wrong offset!");
 static_assert(offsetof(UMeshAttributePaintTool, AttribProps) == 0x0002F0, "Member 'UMeshAttributePaintTool::AttribProps' has a wrong offset!");
 
+// Class MeshModelingToolsExp.MeshBoundaryToolBase
+// 0x00F0 (0x01A0 - 0x00B0)
+class alignas(0x10) UMeshBoundaryToolBase : public USingleSelectionMeshEditingTool
+{
+public:
+	uint8                                         Pad_B0[0xE0];                                      // 0x00B0(0x00E0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPolygonSelectionMechanic*              SelectionMechanic;                                 // 0x0190(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_198[0x8];                                      // 0x0198(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshBoundaryToolBase">();
+	}
+	static class UMeshBoundaryToolBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshBoundaryToolBase>();
+	}
+};
+static_assert(alignof(UMeshBoundaryToolBase) == 0x000010, "Wrong alignment on UMeshBoundaryToolBase");
+static_assert(sizeof(UMeshBoundaryToolBase) == 0x0001A0, "Wrong size on UMeshBoundaryToolBase");
+static_assert(offsetof(UMeshBoundaryToolBase, SelectionMechanic) == 0x000190, "Member 'UMeshBoundaryToolBase::SelectionMechanic' has a wrong offset!");
+
 // Class MeshModelingToolsExp.MeshGroupPaintToolBuilder
 // 0x0000 (0x0030 - 0x0030)
 class UMeshGroupPaintToolBuilder final : public UMeshSurfacePointMeshEditingToolBuilder
@@ -4243,6 +4055,34 @@ public:
 };
 static_assert(alignof(UMeshGroupPaintToolBuilder) == 0x000008, "Wrong alignment on UMeshGroupPaintToolBuilder");
 static_assert(sizeof(UMeshGroupPaintToolBuilder) == 0x000030, "Wrong size on UMeshGroupPaintToolBuilder");
+
+// Class MeshModelingToolsExp.WeldMeshEdgesTool
+// 0x0030 (0x00E0 - 0x00B0)
+class UWeldMeshEdgesTool final : public USingleSelectionMeshEditingTool
+{
+public:
+	class UWeldMeshEdgesToolProperties*           Settings;                                          // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMeshOpPreviewWithBackgroundCompute*    PreviewCompute;                                    // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMeshElementsVisualizer*                MeshElementsDisplay;                               // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UWeldMeshEdgesOperatorFactory*          OperatorFactory;                                   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"WeldMeshEdgesTool">();
+	}
+	static class UWeldMeshEdgesTool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWeldMeshEdgesTool>();
+	}
+};
+static_assert(alignof(UWeldMeshEdgesTool) == 0x000008, "Wrong alignment on UWeldMeshEdgesTool");
+static_assert(sizeof(UWeldMeshEdgesTool) == 0x0000E0, "Wrong size on UWeldMeshEdgesTool");
+static_assert(offsetof(UWeldMeshEdgesTool, Settings) == 0x0000B0, "Member 'UWeldMeshEdgesTool::Settings' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesTool, PreviewCompute) == 0x0000B8, "Member 'UWeldMeshEdgesTool::PreviewCompute' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesTool, MeshElementsDisplay) == 0x0000C0, "Member 'UWeldMeshEdgesTool::MeshElementsDisplay' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesTool, OperatorFactory) == 0x0000C8, "Member 'UWeldMeshEdgesTool::OperatorFactory' has a wrong offset!");
 
 // Class MeshModelingToolsExp.GroupPaintBrushFilterProperties
 // 0x0030 (0x00D8 - 0x00A8)
@@ -4301,6 +4141,140 @@ static_assert(offsetof(UGroupPaintBrushFilterProperties, MinTriVertCount) == 0x0
 static_assert(offsetof(UGroupPaintBrushFilterProperties, bShowHitGroup) == 0x0000D0, "Member 'UGroupPaintBrushFilterProperties::bShowHitGroup' has a wrong offset!");
 static_assert(offsetof(UGroupPaintBrushFilterProperties, bShowAllGroups) == 0x0000D1, "Member 'UGroupPaintBrushFilterProperties::bShowAllGroups' has a wrong offset!");
 
+// Class MeshModelingToolsExp.MeshGroupPaintToolActionPropertySet
+// 0x0008 (0x00B0 - 0x00A8)
+class UMeshGroupPaintToolActionPropertySet : public UInteractiveToolPropertySet
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshGroupPaintToolActionPropertySet">();
+	}
+	static class UMeshGroupPaintToolActionPropertySet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshGroupPaintToolActionPropertySet>();
+	}
+};
+static_assert(alignof(UMeshGroupPaintToolActionPropertySet) == 0x000008, "Wrong alignment on UMeshGroupPaintToolActionPropertySet");
+static_assert(sizeof(UMeshGroupPaintToolActionPropertySet) == 0x0000B0, "Wrong size on UMeshGroupPaintToolActionPropertySet");
+
+// Class MeshModelingToolsExp.MeshGroupPaintToolFreezeActions
+// 0x0000 (0x00B0 - 0x00B0)
+class UMeshGroupPaintToolFreezeActions final : public UMeshGroupPaintToolActionPropertySet
+{
+public:
+	void ClearAll();
+	void ClearCurrent();
+	void FloodFillCurrent();
+	void FreezeCurrent();
+	void FreezeOthers();
+	void GrowCurrent();
+	void ShrinkCurrent();
+	void UnfreezeAll();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshGroupPaintToolFreezeActions">();
+	}
+	static class UMeshGroupPaintToolFreezeActions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshGroupPaintToolFreezeActions>();
+	}
+};
+static_assert(alignof(UMeshGroupPaintToolFreezeActions) == 0x000008, "Wrong alignment on UMeshGroupPaintToolFreezeActions");
+static_assert(sizeof(UMeshGroupPaintToolFreezeActions) == 0x0000B0, "Wrong size on UMeshGroupPaintToolFreezeActions");
+
+// Class MeshModelingToolsExp.MeshSculptToolBase
+// 0x0AA0 (0x0BA0 - 0x0100)
+class alignas(0x10) UMeshSculptToolBase : public UMeshSurfacePointTool
+{
+public:
+	class USculptBrushProperties*                 BrushProperties;                                   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWorkPlaneProperties*                   GizmoProperties;                                   // 0x0108(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_110[0x120];                                    // 0x0110(0x0120)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, class UMeshSculptBrushOpProps*>   BrushOpPropSets;                                   // 0x0230(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_280[0x50];                                     // 0x0280(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, class UMeshSculptBrushOpProps*>   SecondaryBrushOpPropSets;                          // 0x02D0(0x0050)(Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_320[0x6F0];                                    // 0x0320(0x06F0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshEditingViewProperties*             ViewProperties;                                    // 0x0A10(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               ActiveOverrideMaterial;                            // 0x0A18(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBrushStampIndicator*                   BrushIndicator;                                    // 0x0A20(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsVolumetricIndicator;                            // 0x0A28(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A29[0x7];                                      // 0x0A29(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               BrushIndicatorMaterial;                            // 0x0A30(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPreviewMesh*                           BrushIndicatorMesh;                                // 0x0A38(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCombinedTransformGizmo*                PlaneTransformGizmo;                               // 0x0A40(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTransformProxy*                        PlaneTransformProxy;                               // 0x0A48(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A50[0x150];                                    // 0x0A50(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshSculptToolBase">();
+	}
+	static class UMeshSculptToolBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshSculptToolBase>();
+	}
+};
+static_assert(alignof(UMeshSculptToolBase) == 0x000010, "Wrong alignment on UMeshSculptToolBase");
+static_assert(sizeof(UMeshSculptToolBase) == 0x000BA0, "Wrong size on UMeshSculptToolBase");
+static_assert(offsetof(UMeshSculptToolBase, BrushProperties) == 0x000100, "Member 'UMeshSculptToolBase::BrushProperties' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, GizmoProperties) == 0x000108, "Member 'UMeshSculptToolBase::GizmoProperties' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, BrushOpPropSets) == 0x000230, "Member 'UMeshSculptToolBase::BrushOpPropSets' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, SecondaryBrushOpPropSets) == 0x0002D0, "Member 'UMeshSculptToolBase::SecondaryBrushOpPropSets' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, ViewProperties) == 0x000A10, "Member 'UMeshSculptToolBase::ViewProperties' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, ActiveOverrideMaterial) == 0x000A18, "Member 'UMeshSculptToolBase::ActiveOverrideMaterial' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, BrushIndicator) == 0x000A20, "Member 'UMeshSculptToolBase::BrushIndicator' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, bIsVolumetricIndicator) == 0x000A28, "Member 'UMeshSculptToolBase::bIsVolumetricIndicator' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, BrushIndicatorMaterial) == 0x000A30, "Member 'UMeshSculptToolBase::BrushIndicatorMaterial' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, BrushIndicatorMesh) == 0x000A38, "Member 'UMeshSculptToolBase::BrushIndicatorMesh' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, PlaneTransformGizmo) == 0x000A40, "Member 'UMeshSculptToolBase::PlaneTransformGizmo' has a wrong offset!");
+static_assert(offsetof(UMeshSculptToolBase, PlaneTransformProxy) == 0x000A48, "Member 'UMeshSculptToolBase::PlaneTransformProxy' has a wrong offset!");
+
+// Class MeshModelingToolsExp.MeshGroupPaintTool
+// 0x0440 (0x0FE0 - 0x0BA0)
+class UMeshGroupPaintTool final : public UMeshSculptToolBase
+{
+public:
+	class UPolygroupLayersProperties*             PolygroupLayerProperties;                          // 0x0BA0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGroupPaintBrushFilterProperties*       FilterProperties;                                  // 0x0BA8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGroupPaintBrushOpProps*                PaintBrushOpProperties;                            // 0x0BB0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UGroupEraseBrushOpProps*                EraseBrushOpProperties;                            // 0x0BB8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMeshGroupPaintToolFreezeActions*       FreezeActions;                                     // 0x0BC0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BC8[0x8];                                      // 0x0BC8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPolyLassoMarqueeMechanic*              PolyLassoMechanic;                                 // 0x0BD0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AInternalToolFrameworkActor*            PreviewMeshActor;                                  // 0x0BD8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDynamicMeshComponent*                  DynamicMeshComponent;                              // 0x0BE0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMeshElementsVisualizer*                MeshElementsDisplay;                               // 0x0BE8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_BF0[0x3F0];                                    // 0x0BF0(0x03F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshGroupPaintTool">();
+	}
+	static class UMeshGroupPaintTool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshGroupPaintTool>();
+	}
+};
+static_assert(alignof(UMeshGroupPaintTool) == 0x000010, "Wrong alignment on UMeshGroupPaintTool");
+static_assert(sizeof(UMeshGroupPaintTool) == 0x000FE0, "Wrong size on UMeshGroupPaintTool");
+static_assert(offsetof(UMeshGroupPaintTool, PolygroupLayerProperties) == 0x000BA0, "Member 'UMeshGroupPaintTool::PolygroupLayerProperties' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, FilterProperties) == 0x000BA8, "Member 'UMeshGroupPaintTool::FilterProperties' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, PaintBrushOpProperties) == 0x000BB0, "Member 'UMeshGroupPaintTool::PaintBrushOpProperties' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, EraseBrushOpProperties) == 0x000BB8, "Member 'UMeshGroupPaintTool::EraseBrushOpProperties' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, FreezeActions) == 0x000BC0, "Member 'UMeshGroupPaintTool::FreezeActions' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, PolyLassoMechanic) == 0x000BD0, "Member 'UMeshGroupPaintTool::PolyLassoMechanic' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, PreviewMeshActor) == 0x000BD8, "Member 'UMeshGroupPaintTool::PreviewMeshActor' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, DynamicMeshComponent) == 0x000BE0, "Member 'UMeshGroupPaintTool::DynamicMeshComponent' has a wrong offset!");
+static_assert(offsetof(UMeshGroupPaintTool, MeshElementsDisplay) == 0x000BE8, "Member 'UMeshGroupPaintTool::MeshElementsDisplay' has a wrong offset!");
+
 // Class MeshModelingToolsExp.MeshInspectorToolBuilder
 // 0x0000 (0x0028 - 0x0028)
 class UMeshInspectorToolBuilder final : public USingleSelectionMeshEditingToolBuilder
@@ -4317,6 +4291,48 @@ public:
 };
 static_assert(alignof(UMeshInspectorToolBuilder) == 0x000008, "Wrong alignment on UMeshInspectorToolBuilder");
 static_assert(sizeof(UMeshInspectorToolBuilder) == 0x000028, "Wrong size on UMeshInspectorToolBuilder");
+
+// Class MeshModelingToolsExp.WeldMeshEdgesToolProperties
+// 0x0028 (0x00D0 - 0x00A8)
+class UWeldMeshEdgesToolProperties final : public UInteractiveToolPropertySet
+{
+public:
+	float                                         Tolerance;                                         // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyUnique;                                       // 0x00AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bResolveTJunctions;                                // 0x00AD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InitialEdges;                                      // 0x00B0(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RemainingEdges;                                    // 0x00B4(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EWeldMeshEdgesAttributeUIMode                 AttrWeldingMode;                                   // 0x00B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SplitNormalThreshold;                              // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SplitTangentsThreshold;                            // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SplitUVThreshold;                                  // 0x00C4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SplitColorThreshold;                               // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"WeldMeshEdgesToolProperties">();
+	}
+	static class UWeldMeshEdgesToolProperties* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWeldMeshEdgesToolProperties>();
+	}
+};
+static_assert(alignof(UWeldMeshEdgesToolProperties) == 0x000008, "Wrong alignment on UWeldMeshEdgesToolProperties");
+static_assert(sizeof(UWeldMeshEdgesToolProperties) == 0x0000D0, "Wrong size on UWeldMeshEdgesToolProperties");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, Tolerance) == 0x0000A8, "Member 'UWeldMeshEdgesToolProperties::Tolerance' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, bOnlyUnique) == 0x0000AC, "Member 'UWeldMeshEdgesToolProperties::bOnlyUnique' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, bResolveTJunctions) == 0x0000AD, "Member 'UWeldMeshEdgesToolProperties::bResolveTJunctions' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, InitialEdges) == 0x0000B0, "Member 'UWeldMeshEdgesToolProperties::InitialEdges' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, RemainingEdges) == 0x0000B4, "Member 'UWeldMeshEdgesToolProperties::RemainingEdges' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, AttrWeldingMode) == 0x0000B8, "Member 'UWeldMeshEdgesToolProperties::AttrWeldingMode' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitNormalThreshold) == 0x0000BC, "Member 'UWeldMeshEdgesToolProperties::SplitNormalThreshold' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitTangentsThreshold) == 0x0000C0, "Member 'UWeldMeshEdgesToolProperties::SplitTangentsThreshold' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitUVThreshold) == 0x0000C4, "Member 'UWeldMeshEdgesToolProperties::SplitUVThreshold' has a wrong offset!");
+static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitColorThreshold) == 0x0000C8, "Member 'UWeldMeshEdgesToolProperties::SplitColorThreshold' has a wrong offset!");
 
 // Class MeshModelingToolsExp.MeshInspectorProperties
 // 0x0018 (0x00C0 - 0x00A8)
@@ -4418,6 +4434,40 @@ static_assert(offsetof(UMeshInspectorMaterialProperties, bTwoSided) == 0x000108,
 static_assert(offsetof(UMeshInspectorMaterialProperties, CheckerMaterial) == 0x000110, "Member 'UMeshInspectorMaterialProperties::CheckerMaterial' has a wrong offset!");
 static_assert(offsetof(UMeshInspectorMaterialProperties, ActiveCustomMaterial) == 0x000118, "Member 'UMeshInspectorMaterialProperties::ActiveCustomMaterial' has a wrong offset!");
 
+// Class MeshModelingToolsExp.MeshInspectorTool
+// 0x01A0 (0x0250 - 0x00B0)
+class alignas(0x10) UMeshInspectorTool final : public USingleSelectionMeshEditingTool
+{
+public:
+	uint8                                         Pad_B0[0x8];                                       // 0x00B0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMeshInspectorProperties*               Settings;                                          // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UPolygroupLayersProperties*             PolygroupLayerProperties;                          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMeshInspectorMaterialProperties*       MaterialSettings;                                  // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D0[0x8];                                       // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPreviewMesh*                           PreviewMesh;                                       // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ULineSetComponent*                      DrawnLineSet;                                      // 0x00E0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UMaterialInterface*                     DefaultMaterial;                                   // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F0[0x160];                                     // 0x00F0(0x0160)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshInspectorTool">();
+	}
+	static class UMeshInspectorTool* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshInspectorTool>();
+	}
+};
+static_assert(alignof(UMeshInspectorTool) == 0x000010, "Wrong alignment on UMeshInspectorTool");
+static_assert(sizeof(UMeshInspectorTool) == 0x000250, "Wrong size on UMeshInspectorTool");
+static_assert(offsetof(UMeshInspectorTool, Settings) == 0x0000B8, "Member 'UMeshInspectorTool::Settings' has a wrong offset!");
+static_assert(offsetof(UMeshInspectorTool, PolygroupLayerProperties) == 0x0000C0, "Member 'UMeshInspectorTool::PolygroupLayerProperties' has a wrong offset!");
+static_assert(offsetof(UMeshInspectorTool, MaterialSettings) == 0x0000C8, "Member 'UMeshInspectorTool::MaterialSettings' has a wrong offset!");
+static_assert(offsetof(UMeshInspectorTool, PreviewMesh) == 0x0000D8, "Member 'UMeshInspectorTool::PreviewMesh' has a wrong offset!");
+static_assert(offsetof(UMeshInspectorTool, DrawnLineSet) == 0x0000E0, "Member 'UMeshInspectorTool::DrawnLineSet' has a wrong offset!");
+static_assert(offsetof(UMeshInspectorTool, DefaultMaterial) == 0x0000E8, "Member 'UMeshInspectorTool::DefaultMaterial' has a wrong offset!");
+
 // Class MeshModelingToolsExp.MeshSelectionToolBuilder
 // 0x0000 (0x0030 - 0x0030)
 class UMeshSelectionToolBuilder final : public UMeshSurfacePointMeshEditingToolBuilder
@@ -4434,6 +4484,26 @@ public:
 };
 static_assert(alignof(UMeshSelectionToolBuilder) == 0x000008, "Wrong alignment on UMeshSelectionToolBuilder");
 static_assert(sizeof(UMeshSelectionToolBuilder) == 0x000030, "Wrong size on UMeshSelectionToolBuilder");
+
+// Class MeshModelingToolsExp.MeshSelectionToolActionPropertySet
+// 0x0008 (0x00B0 - 0x00A8)
+class UMeshSelectionToolActionPropertySet : public UInteractiveToolPropertySet
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MeshSelectionToolActionPropertySet">();
+	}
+	static class UMeshSelectionToolActionPropertySet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMeshSelectionToolActionPropertySet>();
+	}
+};
+static_assert(alignof(UMeshSelectionToolActionPropertySet) == 0x000008, "Wrong alignment on UMeshSelectionToolActionPropertySet");
+static_assert(sizeof(UMeshSelectionToolActionPropertySet) == 0x0000B0, "Wrong size on UMeshSelectionToolActionPropertySet");
 
 // Class MeshModelingToolsExp.MeshSelectionEditActions
 // 0x0000 (0x00B0 - 0x00B0)
@@ -7390,48 +7460,6 @@ public:
 static_assert(alignof(UWeldMeshEdgesToolBuilder) == 0x000008, "Wrong alignment on UWeldMeshEdgesToolBuilder");
 static_assert(sizeof(UWeldMeshEdgesToolBuilder) == 0x000028, "Wrong size on UWeldMeshEdgesToolBuilder");
 
-// Class MeshModelingToolsExp.WeldMeshEdgesToolProperties
-// 0x0028 (0x00D0 - 0x00A8)
-class UWeldMeshEdgesToolProperties final : public UInteractiveToolPropertySet
-{
-public:
-	float                                         Tolerance;                                         // 0x00A8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyUnique;                                       // 0x00AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bResolveTJunctions;                                // 0x00AD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AE[0x2];                                       // 0x00AE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InitialEdges;                                      // 0x00B0(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RemainingEdges;                                    // 0x00B4(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EWeldMeshEdgesAttributeUIMode                 AttrWeldingMode;                                   // 0x00B8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B9[0x3];                                       // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SplitNormalThreshold;                              // 0x00BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SplitTangentsThreshold;                            // 0x00C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SplitUVThreshold;                                  // 0x00C4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SplitColorThreshold;                               // 0x00C8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0x4];                                       // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeldMeshEdgesToolProperties">();
-	}
-	static class UWeldMeshEdgesToolProperties* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeldMeshEdgesToolProperties>();
-	}
-};
-static_assert(alignof(UWeldMeshEdgesToolProperties) == 0x000008, "Wrong alignment on UWeldMeshEdgesToolProperties");
-static_assert(sizeof(UWeldMeshEdgesToolProperties) == 0x0000D0, "Wrong size on UWeldMeshEdgesToolProperties");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, Tolerance) == 0x0000A8, "Member 'UWeldMeshEdgesToolProperties::Tolerance' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, bOnlyUnique) == 0x0000AC, "Member 'UWeldMeshEdgesToolProperties::bOnlyUnique' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, bResolveTJunctions) == 0x0000AD, "Member 'UWeldMeshEdgesToolProperties::bResolveTJunctions' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, InitialEdges) == 0x0000B0, "Member 'UWeldMeshEdgesToolProperties::InitialEdges' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, RemainingEdges) == 0x0000B4, "Member 'UWeldMeshEdgesToolProperties::RemainingEdges' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, AttrWeldingMode) == 0x0000B8, "Member 'UWeldMeshEdgesToolProperties::AttrWeldingMode' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitNormalThreshold) == 0x0000BC, "Member 'UWeldMeshEdgesToolProperties::SplitNormalThreshold' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitTangentsThreshold) == 0x0000C0, "Member 'UWeldMeshEdgesToolProperties::SplitTangentsThreshold' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitUVThreshold) == 0x0000C4, "Member 'UWeldMeshEdgesToolProperties::SplitUVThreshold' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesToolProperties, SplitColorThreshold) == 0x0000C8, "Member 'UWeldMeshEdgesToolProperties::SplitColorThreshold' has a wrong offset!");
-
 // Class MeshModelingToolsExp.WeldMeshEdgesOperatorFactory
 // 0x0010 (0x0038 - 0x0028)
 class UWeldMeshEdgesOperatorFactory final : public UObject
@@ -7453,34 +7481,6 @@ public:
 static_assert(alignof(UWeldMeshEdgesOperatorFactory) == 0x000008, "Wrong alignment on UWeldMeshEdgesOperatorFactory");
 static_assert(sizeof(UWeldMeshEdgesOperatorFactory) == 0x000038, "Wrong size on UWeldMeshEdgesOperatorFactory");
 static_assert(offsetof(UWeldMeshEdgesOperatorFactory, WeldMeshEdgesTool) == 0x000030, "Member 'UWeldMeshEdgesOperatorFactory::WeldMeshEdgesTool' has a wrong offset!");
-
-// Class MeshModelingToolsExp.WeldMeshEdgesTool
-// 0x0030 (0x00E0 - 0x00B0)
-class UWeldMeshEdgesTool final : public USingleSelectionMeshEditingTool
-{
-public:
-	class UWeldMeshEdgesToolProperties*           Settings;                                          // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMeshOpPreviewWithBackgroundCompute*    PreviewCompute;                                    // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UMeshElementsVisualizer*                MeshElementsDisplay;                               // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UWeldMeshEdgesOperatorFactory*          OperatorFactory;                                   // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeldMeshEdgesTool">();
-	}
-	static class UWeldMeshEdgesTool* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeldMeshEdgesTool>();
-	}
-};
-static_assert(alignof(UWeldMeshEdgesTool) == 0x000008, "Wrong alignment on UWeldMeshEdgesTool");
-static_assert(sizeof(UWeldMeshEdgesTool) == 0x0000E0, "Wrong size on UWeldMeshEdgesTool");
-static_assert(offsetof(UWeldMeshEdgesTool, Settings) == 0x0000B0, "Member 'UWeldMeshEdgesTool::Settings' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesTool, PreviewCompute) == 0x0000B8, "Member 'UWeldMeshEdgesTool::PreviewCompute' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesTool, MeshElementsDisplay) == 0x0000C0, "Member 'UWeldMeshEdgesTool::MeshElementsDisplay' has a wrong offset!");
-static_assert(offsetof(UWeldMeshEdgesTool, OperatorFactory) == 0x0000C8, "Member 'UWeldMeshEdgesTool::OperatorFactory' has a wrong offset!");
 
 }
 

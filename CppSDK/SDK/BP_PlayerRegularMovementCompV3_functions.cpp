@@ -541,6 +541,30 @@ void UBP_PlayerRegularMovementCompV3_C::BP_ResetOwnerMovementConfig()
 }
 
 
+// Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ResetOwnerDefaultMovementConfig
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bForceResetCurrentMovementConfig                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBP_MovementAllConfigTemplate_C** OldDefaultMovementConfigByModify                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerRegularMovementCompV3_C::BP_ResetOwnerDefaultMovementConfig(bool bForceResetCurrentMovementConfig, class UBP_MovementAllConfigTemplate_C** OldDefaultMovementConfigByModify)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularMovementCompV3_C", "BP_ResetOwnerDefaultMovementConfig");
+
+	Params::BP_PlayerRegularMovementCompV3_C_BP_ResetOwnerDefaultMovementConfig Parms{};
+
+	Parms.bForceResetCurrentMovementConfig = bForceResetCurrentMovementConfig;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OldDefaultMovementConfigByModify != nullptr)
+		*OldDefaultMovementConfigByModify = Parms.OldDefaultMovementConfigByModify;
+}
+
+
 // Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ResetMaxAccelerationConfigValue
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -659,6 +683,32 @@ void UBP_PlayerRegularMovementCompV3_C::BP_ModifyOwnerMovementConfigByDA(class U
 
 	if (OldDataAsset != nullptr)
 		*OldDataAsset = Parms.OldDataAsset;
+}
+
+
+// Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_ModifyOwnerDefaultMovementConfigByDA
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_MovementAllConfigTemplate_C*  NewDefaultMovementConfigByModify                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bForceResetCurrentMovementConfig                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBP_MovementAllConfigTemplate_C** OldDefaultMovementConfigByModify                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerRegularMovementCompV3_C::BP_ModifyOwnerDefaultMovementConfigByDA(class UBP_MovementAllConfigTemplate_C* NewDefaultMovementConfigByModify, bool bForceResetCurrentMovementConfig, class UBP_MovementAllConfigTemplate_C** OldDefaultMovementConfigByModify)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularMovementCompV3_C", "BP_ModifyOwnerDefaultMovementConfigByDA");
+
+	Params::BP_PlayerRegularMovementCompV3_C_BP_ModifyOwnerDefaultMovementConfigByDA Parms{};
+
+	Parms.NewDefaultMovementConfigByModify = NewDefaultMovementConfigByModify;
+	Parms.bForceResetCurrentMovementConfig = bForceResetCurrentMovementConfig;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (OldDefaultMovementConfigByModify != nullptr)
+		*OldDefaultMovementConfigByModify = Parms.OldDefaultMovementConfigByModify;
 }
 
 
@@ -921,6 +971,27 @@ void UBP_PlayerRegularMovementCompV3_C::BP_GetDesiredGait(ERegularLocomotionType
 
 	if (BP_CurrentAllowedGait_0 != nullptr)
 		*BP_CurrentAllowedGait_0 = Parms.BP_CurrentAllowedGait_0;
+}
+
+
+// Function BP_PlayerRegularMovementCompV3.BP_PlayerRegularMovementCompV3_C.BP_GetCurrentDefaultMovementConfig
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_MovementAllConfigTemplate_C** CurDefaultMovementConfig                               (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_PlayerRegularMovementCompV3_C::BP_GetCurrentDefaultMovementConfig(class UBP_MovementAllConfigTemplate_C** CurDefaultMovementConfig)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_PlayerRegularMovementCompV3_C", "BP_GetCurrentDefaultMovementConfig");
+
+	Params::BP_PlayerRegularMovementCompV3_C_BP_GetCurrentDefaultMovementConfig Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (CurDefaultMovementConfig != nullptr)
+		*CurDefaultMovementConfig = Parms.CurDefaultMovementConfig;
 }
 
 

@@ -12,39 +12,39 @@
 
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
+#include "CinematicCamera_classes.hpp"
+#include "StructUtils_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "AIModule_classes.hpp"
+#include "PaperPathFinding_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "TargetingSystem_structs.hpp"
-#include "TargetingSystem_classes.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Camera_structs.hpp"
 #include "X6Camera_classes.hpp"
 #include "X6Animation_structs.hpp"
 #include "X6Animation_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "MotionWarping_structs.hpp"
-#include "MotionWarping_classes.hpp"
 #include "NikkiPhysics_structs.hpp"
-#include "NiagaraAnimNotifies_classes.hpp"
 #include "InputCore_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
 #include "GameplayTags_structs.hpp"
-#include "PaperPathFinding_classes.hpp"
+#include "MotionWarping_structs.hpp"
+#include "MotionWarping_classes.hpp"
+#include "NiagaraAnimNotifies_classes.hpp"
+#include "GameFeatures_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
 #include "PaperLuaFrameworkBase_classes.hpp"
 #include "MovieScene_structs.hpp"
+#include "TargetingSystem_structs.hpp"
+#include "TargetingSystem_classes.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "X6ExportRuntime_structs.hpp"
 #include "UIPF_structs.hpp"
-#include "StructUtils_structs.hpp"
 #include "PaperLuaFrameworkApp_classes.hpp"
-#include "CinematicCamera_classes.hpp"
-#include "GameFeatures_classes.hpp"
 
 
 namespace SDK
@@ -81,7 +81,7 @@ public:
 	TDelegate<void(const struct FVector& Position, const struct FVector& RelativePosition)> ReceiveFlyingFollowPosition; // 0x0028(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
-	bool QueryFlyingFollowPosition(class AActor* GoalActor, class AActor* FollowingActor, const struct FQueryFlyingFollowPositionArgs& Args);
+	bool QueryFlyingFollowPosition(class AActor* GoalActor, class AActor* FollowingActor, const struct FQueryFlyingFollowPositionArgs& Args, const TArray<class AActor*>& ActorsToIgnore);
 
 public:
 	static class UClass* StaticClass()
@@ -161,13 +161,16 @@ static_assert(sizeof(UAnimNotifyState_NoTransToMove) == 0x000038, "Wrong size on
 static_assert(offsetof(UAnimNotifyState_NoTransToMove, AnimInstanceTag) == 0x000030, "Member 'UAnimNotifyState_NoTransToMove::AnimInstanceTag' has a wrong offset!");
 
 // Class X6Game.AnimNotifyState_SetActorEffect
-// 0x0028 (0x0058 - 0x0030)
+// 0x0030 (0x0060 - 0x0030)
 class UAnimNotifyState_SetActorEffect final : public UAnimNotifyState
 {
 public:
 	class FName                                   ParamName;                                         // 0x0030(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UCurveFloat*                            ParamCurve;                                        // 0x0038(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x18];                                      // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bOverrideParamOnInterrupted;                       // 0x0040(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ParamValueOnInterrupted;                           // 0x0044(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_48[0x18];                                      // 0x0048(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -180,17 +183,22 @@ public:
 	}
 };
 static_assert(alignof(UAnimNotifyState_SetActorEffect) == 0x000008, "Wrong alignment on UAnimNotifyState_SetActorEffect");
-static_assert(sizeof(UAnimNotifyState_SetActorEffect) == 0x000058, "Wrong size on UAnimNotifyState_SetActorEffect");
+static_assert(sizeof(UAnimNotifyState_SetActorEffect) == 0x000060, "Wrong size on UAnimNotifyState_SetActorEffect");
 static_assert(offsetof(UAnimNotifyState_SetActorEffect, ParamName) == 0x000030, "Member 'UAnimNotifyState_SetActorEffect::ParamName' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyState_SetActorEffect, ParamCurve) == 0x000038, "Member 'UAnimNotifyState_SetActorEffect::ParamCurve' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_SetActorEffect, bOverrideParamOnInterrupted) == 0x000040, "Member 'UAnimNotifyState_SetActorEffect::bOverrideParamOnInterrupted' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_SetActorEffect, ParamValueOnInterrupted) == 0x000044, "Member 'UAnimNotifyState_SetActorEffect::ParamValueOnInterrupted' has a wrong offset!");
 
 // Class X6Game.AnimNotifyState_SetCustomDissolve
-// 0x0028 (0x0058 - 0x0030)
+// 0x0030 (0x0060 - 0x0030)
 class UAnimNotifyState_SetCustomDissolve final : public UAnimNotifyState
 {
 public:
 	class UCurveFloat*                            ParamCurve;                                        // 0x0030(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x20];                                      // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bOverrideParamOnInterrupted;                       // 0x0038(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ParamValueOnInterrupted;                           // 0x003C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x20];                                      // 0x0040(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -203,8 +211,10 @@ public:
 	}
 };
 static_assert(alignof(UAnimNotifyState_SetCustomDissolve) == 0x000008, "Wrong alignment on UAnimNotifyState_SetCustomDissolve");
-static_assert(sizeof(UAnimNotifyState_SetCustomDissolve) == 0x000058, "Wrong size on UAnimNotifyState_SetCustomDissolve");
+static_assert(sizeof(UAnimNotifyState_SetCustomDissolve) == 0x000060, "Wrong size on UAnimNotifyState_SetCustomDissolve");
 static_assert(offsetof(UAnimNotifyState_SetCustomDissolve, ParamCurve) == 0x000030, "Member 'UAnimNotifyState_SetCustomDissolve::ParamCurve' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_SetCustomDissolve, bOverrideParamOnInterrupted) == 0x000038, "Member 'UAnimNotifyState_SetCustomDissolve::bOverrideParamOnInterrupted' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyState_SetCustomDissolve, ParamValueOnInterrupted) == 0x00003C, "Member 'UAnimNotifyState_SetCustomDissolve::ParamValueOnInterrupted' has a wrong offset!");
 
 // Class X6Game.AnimNotifyState_SkillHitFrame
 // 0x0010 (0x0040 - 0x0030)
@@ -1188,6 +1198,34 @@ static_assert(offsetof(UFixedStepSizeMovementComponent, MinStepSizeScale) == 0x0
 static_assert(offsetof(UFixedStepSizeMovementComponent, MaxStepSizeScale) == 0x0014FC, "Member 'UFixedStepSizeMovementComponent::MaxStepSizeScale' has a wrong offset!");
 static_assert(offsetof(UFixedStepSizeMovementComponent, CurrentStepScale) == 0x001500, "Member 'UFixedStepSizeMovementComponent::CurrentStepScale' has a wrong offset!");
 
+// Class X6Game.InteractiveObjectQuerySubsystem
+// 0x0108 (0x0138 - 0x0030)
+class UInteractiveObjectQuerySubsystem final : public UWorldSubsystem
+{
+public:
+	uint8                                         Pad_30[0xB8];                                      // 0x0030(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FInteractiveItem, struct FInteractiveObjectCache> InteractiveObjects;                // 0x00E8(0x0050)(NativeAccessSpecifierPrivate)
+
+public:
+	void AddInteractiveObject(class AActor* Object, float InteractiveRadius, int64 ActionType);
+	TArray<class AActor*> Query(const struct FBox& Bounds);
+	TArray<class AActor*> QueryByActionType(const struct FBox& Bounds, int64 ActionType);
+	void RemoveInteractiveObject(class AActor* Object);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InteractiveObjectQuerySubsystem">();
+	}
+	static class UInteractiveObjectQuerySubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInteractiveObjectQuerySubsystem>();
+	}
+};
+static_assert(alignof(UInteractiveObjectQuerySubsystem) == 0x000008, "Wrong alignment on UInteractiveObjectQuerySubsystem");
+static_assert(sizeof(UInteractiveObjectQuerySubsystem) == 0x000138, "Wrong size on UInteractiveObjectQuerySubsystem");
+static_assert(offsetof(UInteractiveObjectQuerySubsystem, InteractiveObjects) == 0x0000E8, "Member 'UInteractiveObjectQuerySubsystem::InteractiveObjects' has a wrong offset!");
+
 // Class X6Game.X6CircularListEntry
 // 0x0000 (0x0000 - 0x0000)
 class IX6CircularListEntry final : public IInterface
@@ -1277,7 +1315,7 @@ static_assert(alignof(ULocomotionRequestObjectBase) == 0x000008, "Wrong alignmen
 static_assert(sizeof(ULocomotionRequestObjectBase) == 0x000030, "Wrong size on ULocomotionRequestObjectBase");
 
 // Class X6Game.LookAtLogicHandler
-// 0x01C0 (0x01E8 - 0x0028)
+// 0x01F0 (0x0218 - 0x0028)
 class ULookAtLogicHandler : public UObject
 {
 public:
@@ -1301,10 +1339,10 @@ public:
 	struct FVector2D                              EyeDetailCoolDownRandomRange;                      // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EyeDetailMaxDistanceRange;                         // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EyeDetailAnimWeightMinRange;                       // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0xB4];                                      // 0x0090(0x00B4)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DefaultLookAtDistance;                             // 0x0144(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ELookAtEventType                              FaceTowardsLookAtEventType;                        // 0x0148(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_149[0x9F];                                     // 0x0149(0x009F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_90[0xCC];                                      // 0x0090(0x00CC)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DefaultLookAtDistance;                             // 0x015C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ELookAtEventType                              FaceTowardsLookAtEventType;                        // 0x0160(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0xB7];                                     // 0x0161(0x00B7)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BlueprintDeinit();
@@ -1334,7 +1372,7 @@ public:
 	}
 };
 static_assert(alignof(ULookAtLogicHandler) == 0x000008, "Wrong alignment on ULookAtLogicHandler");
-static_assert(sizeof(ULookAtLogicHandler) == 0x0001E8, "Wrong size on ULookAtLogicHandler");
+static_assert(sizeof(ULookAtLogicHandler) == 0x000218, "Wrong size on ULookAtLogicHandler");
 static_assert(offsetof(ULookAtLogicHandler, DA_FocusConfig) == 0x000028, "Member 'ULookAtLogicHandler::DA_FocusConfig' has a wrong offset!");
 static_assert(offsetof(ULookAtLogicHandler, DA_FocusEventDef) == 0x000030, "Member 'ULookAtLogicHandler::DA_FocusEventDef' has a wrong offset!");
 static_assert(offsetof(ULookAtLogicHandler, LookAtEventRefreshInterval) == 0x000038, "Member 'ULookAtLogicHandler::LookAtEventRefreshInterval' has a wrong offset!");
@@ -1353,8 +1391,8 @@ static_assert(offsetof(ULookAtLogicHandler, EyeBlinkCoolDownRandomRange) == 0x00
 static_assert(offsetof(ULookAtLogicHandler, EyeDetailCoolDownRandomRange) == 0x000078, "Member 'ULookAtLogicHandler::EyeDetailCoolDownRandomRange' has a wrong offset!");
 static_assert(offsetof(ULookAtLogicHandler, EyeDetailMaxDistanceRange) == 0x000088, "Member 'ULookAtLogicHandler::EyeDetailMaxDistanceRange' has a wrong offset!");
 static_assert(offsetof(ULookAtLogicHandler, EyeDetailAnimWeightMinRange) == 0x00008C, "Member 'ULookAtLogicHandler::EyeDetailAnimWeightMinRange' has a wrong offset!");
-static_assert(offsetof(ULookAtLogicHandler, DefaultLookAtDistance) == 0x000144, "Member 'ULookAtLogicHandler::DefaultLookAtDistance' has a wrong offset!");
-static_assert(offsetof(ULookAtLogicHandler, FaceTowardsLookAtEventType) == 0x000148, "Member 'ULookAtLogicHandler::FaceTowardsLookAtEventType' has a wrong offset!");
+static_assert(offsetof(ULookAtLogicHandler, DefaultLookAtDistance) == 0x00015C, "Member 'ULookAtLogicHandler::DefaultLookAtDistance' has a wrong offset!");
+static_assert(offsetof(ULookAtLogicHandler, FaceTowardsLookAtEventType) == 0x000160, "Member 'ULookAtLogicHandler::FaceTowardsLookAtEventType' has a wrong offset!");
 
 // Class X6Game.LookAtConfigTemplate
 // 0x0060 (0x0090 - 0x0030)
@@ -3500,7 +3538,7 @@ public:
 	struct FVector                                TapLocation;                                       // 0x0050(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETouchIndex                                   FingerIndex;                                       // 0x0068(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Interval;                                          // 0x006C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         interval;                                          // 0x006C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -3516,7 +3554,7 @@ static_assert(alignof(UTargetSwitchCommand_ActiveTryLocking) == 0x000008, "Wrong
 static_assert(sizeof(UTargetSwitchCommand_ActiveTryLocking) == 0x000070, "Wrong size on UTargetSwitchCommand_ActiveTryLocking");
 static_assert(offsetof(UTargetSwitchCommand_ActiveTryLocking, TapLocation) == 0x000050, "Member 'UTargetSwitchCommand_ActiveTryLocking::TapLocation' has a wrong offset!");
 static_assert(offsetof(UTargetSwitchCommand_ActiveTryLocking, FingerIndex) == 0x000068, "Member 'UTargetSwitchCommand_ActiveTryLocking::FingerIndex' has a wrong offset!");
-static_assert(offsetof(UTargetSwitchCommand_ActiveTryLocking, Interval) == 0x00006C, "Member 'UTargetSwitchCommand_ActiveTryLocking::Interval' has a wrong offset!");
+static_assert(offsetof(UTargetSwitchCommand_ActiveTryLocking, interval) == 0x00006C, "Member 'UTargetSwitchCommand_ActiveTryLocking::interval' has a wrong offset!");
 
 // Class X6Game.TargetSwitchCommand_Attacked
 // 0x0008 (0x0058 - 0x0050)
@@ -3944,7 +3982,7 @@ static_assert(offsetof(UX6AbilityTask_WaitAccelChange, OnAccelChange) == 0x00008
 static_assert(offsetof(UX6AbilityTask_WaitAccelChange, CachedMovementComponent) == 0x000090, "Member 'UX6AbilityTask_WaitAccelChange::CachedMovementComponent' has a wrong offset!");
 
 // Class X6Game.X6Actor
-// 0x0090 (0x0438 - 0x03A8)
+// 0x00E0 (0x0488 - 0x03A8)
 class AX6Actor : public AActor
 {
 public:
@@ -3952,7 +3990,7 @@ public:
 	uint8                                         Pad_3A9[0x7];                                      // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UX6EditInLinePropertyBase*>      EditInLinePropertyArray;                           // 0x03B0(0x0010)(Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TArray<class FName>                           X6Tags;                                            // 0x03C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3D0[0x68];                                     // 0x03D0(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0[0xB8];                                     // 0x03D0(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void PostServerInit(bool bServer);
@@ -3964,6 +4002,7 @@ public:
 	void X6_ClearTimerDelegate(TDelegate<void()> Delegate);
 	void X6_ClearTimerHandle(const struct FTimerHandle& Handle);
 	void X6_DeleteTag(const class FString& strTag);
+	bool X6_GetActorDisableCollisionFlags(TSet<int32>* OutFlags);
 	bool X6_GetActorHiddenFlags(TSet<int32>* OutFlags);
 	TArray<class FName> X6_GetTag();
 	float X6_GetTimerElapsedTime(class UObject* Object, const class FString& FunctionName);
@@ -3988,6 +4027,7 @@ public:
 	void X6_PauseTimerDelegate(TDelegate<void()> Delegate);
 	void X6_PauseTimerHandle(const struct FTimerHandle& Handle);
 	void X6_RequireActorFade(bool bFadeIn, int32 FadeOutHiddenFlag, bool bInView);
+	bool X6_SetActorDisableCollision(bool bDisableCollision, int32 Flag, bool bClearFlag);
 	bool X6_SetActorHiddenInGame(bool bNewHidden, int32 Flag, bool bClearFlag);
 	struct FTimerHandle X6_SetTimer(class UObject* Object, const class FString& FunctionName, float Time, bool bLooping, float InitialStartDelay, float InitialStartDelayVariance);
 	struct FTimerHandle X6_SetTimerDelegate(TDelegate<void()> Delegate, float Time, bool bLooping, float InitialStartDelay, float InitialStartDelayVariance);
@@ -4011,18 +4051,18 @@ public:
 	}
 };
 static_assert(alignof(AX6Actor) == 0x000008, "Wrong alignment on AX6Actor");
-static_assert(sizeof(AX6Actor) == 0x000438, "Wrong size on AX6Actor");
+static_assert(sizeof(AX6Actor) == 0x000488, "Wrong size on AX6Actor");
 static_assert(offsetof(AX6Actor, IsGround) == 0x0003A8, "Member 'AX6Actor::IsGround' has a wrong offset!");
 static_assert(offsetof(AX6Actor, EditInLinePropertyArray) == 0x0003B0, "Member 'AX6Actor::EditInLinePropertyArray' has a wrong offset!");
 static_assert(offsetof(AX6Actor, X6Tags) == 0x0003C0, "Member 'AX6Actor::X6Tags' has a wrong offset!");
 
 // Class X6Game.X6ActorWithTag
-// 0x0028 (0x0460 - 0x0438)
+// 0x0028 (0x04B0 - 0x0488)
 class AX6ActorWithTag : public AX6Actor
 {
 public:
-	uint8                                         Pad_438[0x8];                                      // 0x0438(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagContainer                  StaticGameplayTags;                                // 0x0440(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_488[0x8];                                      // 0x0488(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  StaticGameplayTags;                                // 0x0490(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -4035,8 +4075,8 @@ public:
 	}
 };
 static_assert(alignof(AX6ActorWithTag) == 0x000008, "Wrong alignment on AX6ActorWithTag");
-static_assert(sizeof(AX6ActorWithTag) == 0x000460, "Wrong size on AX6ActorWithTag");
-static_assert(offsetof(AX6ActorWithTag, StaticGameplayTags) == 0x000440, "Member 'AX6ActorWithTag::StaticGameplayTags' has a wrong offset!");
+static_assert(sizeof(AX6ActorWithTag) == 0x0004B0, "Wrong size on AX6ActorWithTag");
+static_assert(offsetof(AX6ActorWithTag, StaticGameplayTags) == 0x000490, "Member 'AX6ActorWithTag::StaticGameplayTags' has a wrong offset!");
 
 // Class X6Game.X6AdjustmentBlendWarpComponent
 // 0x0030 (0x00D8 - 0x00A8)
@@ -4339,6 +4379,136 @@ static_assert(offsetof(UX6AISenseModifier, Tag) == 0x000034, "Member 'UX6AISense
 static_assert(offsetof(UX6AISenseModifier, PropertyModifierMap) == 0x000040, "Member 'UX6AISenseModifier::PropertyModifierMap' has a wrong offset!");
 static_assert(offsetof(UX6AISenseModifier, ModifierIsValid) == 0x000090, "Member 'UX6AISenseModifier::ModifierIsValid' has a wrong offset!");
 
+// Class X6Game.X6BasicRegularMovementComponent
+// 0x0038 (0x00E0 - 0x00A8)
+class UX6BasicRegularMovementComponent : public UX6ActorComponent
+{
+public:
+	uint8                                         bEnableMovementBlockedBy : 1;                      // 0x00A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	FMulticastSparseDelegateProperty_             OnRegularMovementBlockedBy;                        // 0x00A9(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AA[0x26];                                      // 0x00AA(0x0026)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCharacterMovementComponent*            OwnerCharacterMovementComponent;                   // 0x00D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ACharacter*                             Character;                                         // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	float CalculateMovementBlockedByHeight(const struct FHitResult& HitResult, float BoundaryFromLowToHigh, float EnterBlockAngle);
+	void CheckExitMovementBlockedByState(float DeltaSeconds, float ExitBlockAngle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6BasicRegularMovementComponent">();
+	}
+	static class UX6BasicRegularMovementComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6BasicRegularMovementComponent>();
+	}
+};
+static_assert(alignof(UX6BasicRegularMovementComponent) == 0x000008, "Wrong alignment on UX6BasicRegularMovementComponent");
+static_assert(sizeof(UX6BasicRegularMovementComponent) == 0x0000E0, "Wrong size on UX6BasicRegularMovementComponent");
+static_assert(offsetof(UX6BasicRegularMovementComponent, OnRegularMovementBlockedBy) == 0x0000A9, "Member 'UX6BasicRegularMovementComponent::OnRegularMovementBlockedBy' has a wrong offset!");
+static_assert(offsetof(UX6BasicRegularMovementComponent, OwnerCharacterMovementComponent) == 0x0000D0, "Member 'UX6BasicRegularMovementComponent::OwnerCharacterMovementComponent' has a wrong offset!");
+static_assert(offsetof(UX6BasicRegularMovementComponent, Character) == 0x0000D8, "Member 'UX6BasicRegularMovementComponent::Character' has a wrong offset!");
+
+// Class X6Game.X6RMWalkingComponent
+// 0x00C8 (0x01A8 - 0x00E0)
+class UX6RMWalkingComponent : public UX6BasicRegularMovementComponent
+{
+public:
+	float                                         RMBlockedByAngleThreshold;                         // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class URMBaseLogicProcessor>      RMBaseLogicProcessorClass;                         // 0x00E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMConfigContext_OnGround>  RMConfigContextClass;                              // 0x00F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMStateInstructionContext> StateInstructionContextClass;                      // 0x00F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMPTickRecord_OnGround>    RMProxyTickRecordClass;                            // 0x0100(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMOutputContext_OnGround>  RMOutputContextClass;                              // 0x0108(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMBehaviorTreeProxyInterface> RMBehaviorTreeProxyClass;                       // 0x0110(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URegularMovementDebugContext> RMDebugContextClass;                             // 0x0118(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCanSyncAnimStates;                                // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMovementAffectedBySlopeFactor;                    // 0x0121(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_122[0x2];                                      // 0x0122(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurFloorAngle;                                     // 0x0124(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseStartMovingMovementCurve;                      // 0x0128(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OwnerAttribute_MaxWalkSpeed_GroundCorrectionFactor; // 0x012C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERegularLocomotionType                        CurrentActualGait;                                 // 0x0130(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERegularLocomotionType                        CurrentAllowedGait;                                // 0x0131(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class URMPTickRecord_OnGround*                CurRMProxyTickRecord;                              // 0x0138(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UX6NikkiCPPTickHelperComponent*         PlayerCPPTickHelperComp;                           // 0x0140(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URMBaseLogicProcessor*                  CurRMBaseLogicProcessor;                           // 0x0148(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class URMBehaviorTreeProxyInterface*          CurRMProxy_OnGround;                               // 0x0150(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FX6RMWalkingReplicatedMovementData     ReplicatedMovementData;                            // 0x0158(0x0028)(NoDestructor, NativeAccessSpecifierPrivate)
+	ERegularLocomotionType                        NP_ReplicatedAllowedGait;                          // 0x0180(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector_NetQuantize                    NP_ReplicatedInputMovingDirection;                 // 0x0188(0x0018)(Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         NP_ReplicatedTurnAroundAngleToInt;                 // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void Blueprint_PostUpdateRegularMovementBehavior(float DeltaSeconds);
+	void Blueprint_PreUpdateRegularMovementBehavior(float DeltaSeconds);
+	void ChangeDesiredGait(ERegularLocomotionType NewGait, bool bForceChangeOperationInput);
+	void DeinitRegularMovementBehaviorProxy();
+	float GetConfigMaxSpeedByCurAllowedGait();
+	void GetConfigMaxSpeedData(float* MaxSpeed_Walk, float* MaxSpeed_Run, float* MaxSpeed_Sprint);
+	float GetCurConfigMaxSpeed();
+	ERegularLocomotionType GetCurLocomotionTypeBySpeed(float Speed2D);
+	class URMBaseLogicProcessor* GetCurRMBaseLogicProcessor();
+	void InitRegularMovementBehaviorProxy();
+	void InitRMBaseLogicProcessor(class URMBaseLogicProcessor* RMBaseLogicProcessor);
+	bool IsValidReplicatedMovingDirection();
+	void NotifyBeforeMovementPropertyChanged(float* MaxWalkSpeed, float* MaxWalkSpeedCrouched, float* MinAnalogWalkSpeed, float* MaxAcceleration, float* BrakingDecelerationWalking, float* GroundFriction);
+	void NotifyCurActualGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType CurrentGait);
+	void NotifyCurAllowedGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType CurrentGait);
+	void NotifyCurReplicatedAllowedGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType CurrentGait);
+	void OnMovementBlockedBy(const struct FHitResult& Impact);
+	void OnRep_MovementData_AllowedGait();
+	void OnRep_MovementData_InputMovingDirection();
+	void OnRep_MovementData_TurnAroundAngle();
+	bool ShouldUpdateRegularMovementBehaviorTree();
+	void SyncAnimStatesWithTick();
+	void UpdateCurActualGait();
+	void UpdateCurAllowedGait();
+	void UpdateDynamicMovmentSettings(bool bForceUpdate);
+	void UpdateReplicatedMovementData();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6RMWalkingComponent">();
+	}
+	static class UX6RMWalkingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6RMWalkingComponent>();
+	}
+};
+static_assert(alignof(UX6RMWalkingComponent) == 0x000008, "Wrong alignment on UX6RMWalkingComponent");
+static_assert(sizeof(UX6RMWalkingComponent) == 0x0001A8, "Wrong size on UX6RMWalkingComponent");
+static_assert(offsetof(UX6RMWalkingComponent, RMBlockedByAngleThreshold) == 0x0000E0, "Member 'UX6RMWalkingComponent::RMBlockedByAngleThreshold' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, RMBaseLogicProcessorClass) == 0x0000E8, "Member 'UX6RMWalkingComponent::RMBaseLogicProcessorClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, RMConfigContextClass) == 0x0000F0, "Member 'UX6RMWalkingComponent::RMConfigContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, StateInstructionContextClass) == 0x0000F8, "Member 'UX6RMWalkingComponent::StateInstructionContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, RMProxyTickRecordClass) == 0x000100, "Member 'UX6RMWalkingComponent::RMProxyTickRecordClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, RMOutputContextClass) == 0x000108, "Member 'UX6RMWalkingComponent::RMOutputContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, RMBehaviorTreeProxyClass) == 0x000110, "Member 'UX6RMWalkingComponent::RMBehaviorTreeProxyClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, RMDebugContextClass) == 0x000118, "Member 'UX6RMWalkingComponent::RMDebugContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, bCanSyncAnimStates) == 0x000120, "Member 'UX6RMWalkingComponent::bCanSyncAnimStates' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, bMovementAffectedBySlopeFactor) == 0x000121, "Member 'UX6RMWalkingComponent::bMovementAffectedBySlopeFactor' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, CurFloorAngle) == 0x000124, "Member 'UX6RMWalkingComponent::CurFloorAngle' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, bUseStartMovingMovementCurve) == 0x000128, "Member 'UX6RMWalkingComponent::bUseStartMovingMovementCurve' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, OwnerAttribute_MaxWalkSpeed_GroundCorrectionFactor) == 0x00012C, "Member 'UX6RMWalkingComponent::OwnerAttribute_MaxWalkSpeed_GroundCorrectionFactor' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, CurrentActualGait) == 0x000130, "Member 'UX6RMWalkingComponent::CurrentActualGait' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, CurrentAllowedGait) == 0x000131, "Member 'UX6RMWalkingComponent::CurrentAllowedGait' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, CurRMProxyTickRecord) == 0x000138, "Member 'UX6RMWalkingComponent::CurRMProxyTickRecord' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, PlayerCPPTickHelperComp) == 0x000140, "Member 'UX6RMWalkingComponent::PlayerCPPTickHelperComp' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, CurRMBaseLogicProcessor) == 0x000148, "Member 'UX6RMWalkingComponent::CurRMBaseLogicProcessor' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, CurRMProxy_OnGround) == 0x000150, "Member 'UX6RMWalkingComponent::CurRMProxy_OnGround' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, ReplicatedMovementData) == 0x000158, "Member 'UX6RMWalkingComponent::ReplicatedMovementData' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, NP_ReplicatedAllowedGait) == 0x000180, "Member 'UX6RMWalkingComponent::NP_ReplicatedAllowedGait' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, NP_ReplicatedInputMovingDirection) == 0x000188, "Member 'UX6RMWalkingComponent::NP_ReplicatedInputMovingDirection' has a wrong offset!");
+static_assert(offsetof(UX6RMWalkingComponent, NP_ReplicatedTurnAroundAngleToInt) == 0x0001A0, "Member 'UX6RMWalkingComponent::NP_ReplicatedTurnAroundAngleToInt' has a wrong offset!");
+
 // Class X6Game.X6AISense_Sight
 // 0x00F8 (0x0170 - 0x0078)
 class UX6AISense_Sight : public UAISense
@@ -4409,6 +4579,23 @@ static_assert(offsetof(UX6AIStimuliSourceComponent, SamplePointKey) == 0x0000C0,
 static_assert(offsetof(UX6AIStimuliSourceComponent, SamplePoints) == 0x0000D0, "Member 'UX6AIStimuliSourceComponent::SamplePoints' has a wrong offset!");
 static_assert(offsetof(UX6AIStimuliSourceComponent, threshold) == 0x0000E0, "Member 'UX6AIStimuliSourceComponent::threshold' has a wrong offset!");
 
+// Class X6Game.InteractSlotDataAsset
+// 0x0000 (0x0030 - 0x0030)
+class UInteractSlotDataAsset final : public UPrimaryDataAsset
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InteractSlotDataAsset">();
+	}
+	static class UInteractSlotDataAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInteractSlotDataAsset>();
+	}
+};
+static_assert(alignof(UInteractSlotDataAsset) == 0x000008, "Wrong alignment on UInteractSlotDataAsset");
+static_assert(sizeof(UInteractSlotDataAsset) == 0x000030, "Wrong size on UInteractSlotDataAsset");
+
 // Class X6Game.X6AISubsystem
 // 0x0018 (0x0048 - 0x0030)
 class UX6AISubsystem final : public UGameInstanceSubsystem
@@ -4457,6 +4644,32 @@ static_assert(alignof(UX6AnimInstanceWithTag) == 0x000010, "Wrong alignment on U
 static_assert(sizeof(UX6AnimInstanceWithTag) == 0x0003F0, "Wrong size on UX6AnimInstanceWithTag");
 static_assert(offsetof(UX6AnimInstanceWithTag, GameplayTagPropertyMap) == 0x0003C8, "Member 'UX6AnimInstanceWithTag::GameplayTagPropertyMap' has a wrong offset!");
 
+// Class X6Game.X6TargetingSortTask_Base
+// 0x0010 (0x0038 - 0x0028)
+class UX6TargetingSortTask_Base : public UTargetingTask
+{
+public:
+	uint8                                         bAscending : 1;                                    // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Weight;                                            // 0x002C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         RefScore;                                          // 0x0030(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6TargetingSortTask_Base">();
+	}
+	static class UX6TargetingSortTask_Base* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6TargetingSortTask_Base>();
+	}
+};
+static_assert(alignof(UX6TargetingSortTask_Base) == 0x000008, "Wrong alignment on UX6TargetingSortTask_Base");
+static_assert(sizeof(UX6TargetingSortTask_Base) == 0x000038, "Wrong size on UX6TargetingSortTask_Base");
+static_assert(offsetof(UX6TargetingSortTask_Base, Weight) == 0x00002C, "Member 'UX6TargetingSortTask_Base::Weight' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_Base, RefScore) == 0x000030, "Member 'UX6TargetingSortTask_Base::RefScore' has a wrong offset!");
+
 // Class X6Game.X6AnimNotifyState_AllSocketTrail
 // 0x0000 (0x0058 - 0x0058)
 class UX6AnimNotifyState_AllSocketTrail final : public UAnimNotifyState_Trail
@@ -4496,6 +4709,39 @@ public:
 static_assert(alignof(UX6AnimNotifyState_ComboWithCache) == 0x000008, "Wrong alignment on UX6AnimNotifyState_ComboWithCache");
 static_assert(sizeof(UX6AnimNotifyState_ComboWithCache) == 0x0000B8, "Wrong size on UX6AnimNotifyState_ComboWithCache");
 static_assert(offsetof(UX6AnimNotifyState_ComboWithCache, InputData) == 0x0000A0, "Member 'UX6AnimNotifyState_ComboWithCache::InputData' has a wrong offset!");
+
+// Class X6Game.X6RichTextBlockNetImageDecorator
+// 0x00C8 (0x00F0 - 0x0028)
+class UX6RichTextBlockNetImageDecorator final : public URichTextBlockDecorator
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ResFolderPath;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                PlaceHolderImage;                                  // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USimpleDownloader*                      ResDownloader;                                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class UObject*>           LoadedImagesMap;                                   // 0x00A0(0x0050)(Protected, NativeAccessSpecifierProtected)
+
+public:
+	void OnResDownloaded(bool bSuccess, int32 ResponseCode, int32 Size, int32 RequestID, const class FString& CurrentDownloadFileName);
+	void ReleaseLoadedImages();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6RichTextBlockNetImageDecorator">();
+	}
+	static class UX6RichTextBlockNetImageDecorator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6RichTextBlockNetImageDecorator>();
+	}
+};
+static_assert(alignof(UX6RichTextBlockNetImageDecorator) == 0x000008, "Wrong alignment on UX6RichTextBlockNetImageDecorator");
+static_assert(sizeof(UX6RichTextBlockNetImageDecorator) == 0x0000F0, "Wrong size on UX6RichTextBlockNetImageDecorator");
+static_assert(offsetof(UX6RichTextBlockNetImageDecorator, ResFolderPath) == 0x000030, "Member 'UX6RichTextBlockNetImageDecorator::ResFolderPath' has a wrong offset!");
+static_assert(offsetof(UX6RichTextBlockNetImageDecorator, PlaceHolderImage) == 0x000040, "Member 'UX6RichTextBlockNetImageDecorator::PlaceHolderImage' has a wrong offset!");
+static_assert(offsetof(UX6RichTextBlockNetImageDecorator, ResDownloader) == 0x000048, "Member 'UX6RichTextBlockNetImageDecorator::ResDownloader' has a wrong offset!");
+static_assert(offsetof(UX6RichTextBlockNetImageDecorator, LoadedImagesMap) == 0x0000A0, "Member 'UX6RichTextBlockNetImageDecorator::LoadedImagesMap' has a wrong offset!");
 
 // Class X6Game.AsyncActionLoadSoftObjPath
 // 0x0078 (0x00A8 - 0x0030)
@@ -4542,6 +4788,54 @@ public:
 static_assert(alignof(UX6AssetManager) == 0x000008, "Wrong alignment on UX6AssetManager");
 static_assert(sizeof(UX6AssetManager) == 0x0006B0, "Wrong size on UX6AssetManager");
 
+// Class X6Game.X6InputProcessorHelper
+// 0x0010 (0x0038 - 0x0028)
+class UX6InputProcessorHelper final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void BindAnalogInputEvent(TDelegate<void(const struct FAnalogInputEvent& AnalogInputEvent)> InOnAnalogInput, int32 InPriority);
+	void BindGestureEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnGesture, int32 InPriority);
+	void BindInputDeviceEvent(TDelegate<void(EX6InputDeviceKeyType InputDeviceKeyType)> InOnInputDevice);
+	void BindKeyDownEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyDown, int32 InPriority);
+	void BindKeyUpEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyUp, int32 InPriority);
+	void BindMotionDetectedEvent(TDelegate<void(const struct FMotionEvent& MotionEvent)> InOnMotionDetected, int32 InPriority);
+	void BindMouseButtonDoubleClickEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDoubleClick, int32 InPriority);
+	void BindMouseButtonDownEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDown, int32 InPriority);
+	void BindMouseButtonUpEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonUp, int32 InPriority);
+	void BindMouseMoveEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseMove, int32 InPriority);
+	void BindMouseWheelEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseWheel, int32 InPriority);
+	EX6InputDeviceKeyType GetCurInputDeviceKeyType();
+	bool GetMouseResponseDisabled();
+	void SetInputDeviceIgnoreValue(float InInputDeviceIgnoreValue);
+	bool SetMouseResponseDisabled(bool bDisable);
+	void UnbindAnalogInputEvent(TDelegate<void(const struct FAnalogInputEvent& AnalogInputEvent)> InOnAnalogInput, int32 InPriority);
+	void UnbindGestureEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnGesture, int32 InPriority);
+	void UnbindInputDeviceEvent(TDelegate<void(EX6InputDeviceKeyType InputDeviceKeyType)> InOnInputDevice);
+	void UnbindKeyDownEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyDown, int32 InPriority);
+	void UnbindKeyUpEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyUp, int32 InPriority);
+	void UnbindMotionDetectedEvent(TDelegate<void(const struct FMotionEvent& MotionEvent)> InOnMotionDetected, int32 InPriority);
+	void UnbindMouseButtonDoubleClickEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDoubleClick, int32 InPriority);
+	void UnbindMouseButtonDownEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDown, int32 InPriority);
+	void UnbindMouseButtonUpEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonUp, int32 InPriority);
+	void UnbindMouseMoveEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseMove, int32 InPriority);
+	void UnbindMouseWheelEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseWheel, int32 InPriority);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6InputProcessorHelper">();
+	}
+	static class UX6InputProcessorHelper* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6InputProcessorHelper>();
+	}
+};
+static_assert(alignof(UX6InputProcessorHelper) == 0x000008, "Wrong alignment on UX6InputProcessorHelper");
+static_assert(sizeof(UX6InputProcessorHelper) == 0x000038, "Wrong size on UX6InputProcessorHelper");
+
 // Class X6Game.X6AssetUserDataBase
 // 0x0000 (0x0028 - 0x0028)
 class UX6AssetUserDataBase : public UAssetUserData
@@ -4575,6 +4869,63 @@ public:
 };
 static_assert(alignof(UX6ClothesAssetExtraData) == 0x000008, "Wrong alignment on UX6ClothesAssetExtraData");
 static_assert(sizeof(UX6ClothesAssetExtraData) == 0x000028, "Wrong size on UX6ClothesAssetExtraData");
+
+// Class X6Game.X6MapHudBase
+// 0x0068 (0x0358 - 0x02F0)
+class UX6MapHudBase : public UUserWidget
+{
+public:
+	double                                        nt_lastTime;                                       // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_cDeltaTime;                                     // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_minMapRootX;                                    // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_maxMapRootX;                                    // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_minMapRootY;                                    // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_maxMapRootY;                                    // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_customConstrainOffsetLeft;                      // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_customConstrainOffsetTop;                       // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_customConstrainOffsetRight;                     // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	double                                        nt_customConstrainOffsetBottom;                    // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          nt_isMoved;                                        // 0x0340(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCanvasPanel*                           MapContent;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCanvasPanel*                           MoveRoot;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void NT_CalculateTime();
+	void NT_OnPostMoveContentPosition(const struct FVector2D& Pos);
+	void NT_PostProcessMapMoveInternalNormal();
+	void NT_SetMoveContentPosition(const struct FVector2D& Pos);
+	void NT_UpdateMapRootConstraintInfo(const struct FGeometry& Geometry);
+
+	struct FVector2D NT_ConstraintMoveRootPos(const struct FVector2D& originPos) const;
+	struct FVector2D NT_ConvertMapPosToWindowPos(const struct FVector2D& mapPos) const;
+	struct FVector2D NT_ConvertWindowPosToMapPos(const struct FVector2D& windowPos) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6MapHudBase">();
+	}
+	static class UX6MapHudBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6MapHudBase>();
+	}
+};
+static_assert(alignof(UX6MapHudBase) == 0x000008, "Wrong alignment on UX6MapHudBase");
+static_assert(sizeof(UX6MapHudBase) == 0x000358, "Wrong size on UX6MapHudBase");
+static_assert(offsetof(UX6MapHudBase, nt_lastTime) == 0x0002F0, "Member 'UX6MapHudBase::nt_lastTime' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_cDeltaTime) == 0x0002F8, "Member 'UX6MapHudBase::nt_cDeltaTime' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_minMapRootX) == 0x000300, "Member 'UX6MapHudBase::nt_minMapRootX' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_maxMapRootX) == 0x000308, "Member 'UX6MapHudBase::nt_maxMapRootX' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_minMapRootY) == 0x000310, "Member 'UX6MapHudBase::nt_minMapRootY' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_maxMapRootY) == 0x000318, "Member 'UX6MapHudBase::nt_maxMapRootY' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetLeft) == 0x000320, "Member 'UX6MapHudBase::nt_customConstrainOffsetLeft' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetTop) == 0x000328, "Member 'UX6MapHudBase::nt_customConstrainOffsetTop' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetRight) == 0x000330, "Member 'UX6MapHudBase::nt_customConstrainOffsetRight' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetBottom) == 0x000338, "Member 'UX6MapHudBase::nt_customConstrainOffsetBottom' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, nt_isMoved) == 0x000340, "Member 'UX6MapHudBase::nt_isMoved' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, MapContent) == 0x000348, "Member 'UX6MapHudBase::MapContent' has a wrong offset!");
+static_assert(offsetof(UX6MapHudBase, MoveRoot) == 0x000350, "Member 'UX6MapHudBase::MoveRoot' has a wrong offset!");
 
 // Class X6Game.X6MakeUpMaterialData
 // 0x0000 (0x0028 - 0x0028)
@@ -4610,6 +4961,26 @@ public:
 static_assert(alignof(UX6HoldItemDetailData) == 0x000008, "Wrong alignment on UX6HoldItemDetailData");
 static_assert(sizeof(UX6HoldItemDetailData) == 0x000028, "Wrong size on UX6HoldItemDetailData");
 
+// Class X6Game.X6LevelSequencePreLoadObjectInterface
+// 0x0000 (0x0000 - 0x0000)
+class IX6LevelSequencePreLoadObjectInterface final : public IInterface
+{
+public:
+	void StartLoad(const class FString& LevelSequenceName, const TArray<struct FLoadProperty>& LoadProperties);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6LevelSequencePreLoadObjectInterface">();
+	}
+	static class IX6LevelSequencePreLoadObjectInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IX6LevelSequencePreLoadObjectInterface>();
+	}
+};
+static_assert(alignof(IX6LevelSequencePreLoadObjectInterface) == 0x000001, "Wrong alignment on IX6LevelSequencePreLoadObjectInterface");
+static_assert(sizeof(IX6LevelSequencePreLoadObjectInterface) == 0x000001, "Wrong size on IX6LevelSequencePreLoadObjectInterface");
+
 // Class X6Game.X6DlgBreathData
 // 0x0000 (0x0028 - 0x0028)
 class UX6DlgBreathData : public UX6AssetUserDataBase
@@ -4643,6 +5014,60 @@ public:
 };
 static_assert(alignof(UX6ClothesTypeData) == 0x000008, "Wrong alignment on UX6ClothesTypeData");
 static_assert(sizeof(UX6ClothesTypeData) == 0x000028, "Wrong size on UX6ClothesTypeData");
+
+// Class X6Game.X6HomeObject
+// 0x00C0 (0x0548 - 0x0488)
+class AX6HomeObject final : public AX6Actor
+{
+public:
+	uint8                                         Pad_488[0x8];                                      // 0x0488(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BP_ObjectConfigID;                                 // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BP_InstanceID;                                     // 0x0494(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BP_GroupID;                                        // 0x0498(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49C[0x4];                                      // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBox                                   BoundingBox;                                       // 0x04A0(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         BP_OverlayType;                                    // 0x04D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         BP_IsBuildingStruct : 1;                           // 0x04D9(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BP_IsPlaceObject : 1;                              // 0x04D9(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BP_IsVirtualMesh : 1;                              // 0x04D9(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BP_MobilityModifyEnable : 1;                       // 0x04D9(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_4DA[0x6];                                      // 0x04DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<uint8, uint8>                            BP_ColorIDMap;                                     // 0x04E0(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class USceneComponent*                        StaticMeshRoot;                                    // 0x0530(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USceneComponent*                        NiagaraEffectRoot;                                 // 0x0538(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USceneComponent*                        SkeletalMeshRoot;                                  // 0x0540(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void BP_FinishInitConfigData();
+	void BP_FinishInitInstanceData();
+	void BP_InitNiagaraEffectRoot();
+	void BP_InitSkeletalMeshRoot();
+	void BP_InitStaticMeshRoot();
+	void BP_SetBoundingBox(const struct FVector& BoundOrigin, const struct FVector& BoundExtent);
+	bool CanDelete();
+	void SetMobility(EComponentMobility NewMobility);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6HomeObject">();
+	}
+	static class AX6HomeObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6HomeObject>();
+	}
+};
+static_assert(alignof(AX6HomeObject) == 0x000008, "Wrong alignment on AX6HomeObject");
+static_assert(sizeof(AX6HomeObject) == 0x000548, "Wrong size on AX6HomeObject");
+static_assert(offsetof(AX6HomeObject, BP_ObjectConfigID) == 0x000490, "Member 'AX6HomeObject::BP_ObjectConfigID' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, BP_InstanceID) == 0x000494, "Member 'AX6HomeObject::BP_InstanceID' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, BP_GroupID) == 0x000498, "Member 'AX6HomeObject::BP_GroupID' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, BoundingBox) == 0x0004A0, "Member 'AX6HomeObject::BoundingBox' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, BP_OverlayType) == 0x0004D8, "Member 'AX6HomeObject::BP_OverlayType' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, BP_ColorIDMap) == 0x0004E0, "Member 'AX6HomeObject::BP_ColorIDMap' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, StaticMeshRoot) == 0x000530, "Member 'AX6HomeObject::StaticMeshRoot' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, NiagaraEffectRoot) == 0x000538, "Member 'AX6HomeObject::NiagaraEffectRoot' has a wrong offset!");
+static_assert(offsetof(AX6HomeObject, SkeletalMeshRoot) == 0x000540, "Member 'AX6HomeObject::SkeletalMeshRoot' has a wrong offset!");
 
 // Class X6Game.X6ClothesDecalData
 // 0x0000 (0x0028 - 0x0028)
@@ -4678,50 +5103,58 @@ public:
 static_assert(alignof(UX6ClothesTranslucentAndMaskedMatMobileSwitchData) == 0x000008, "Wrong alignment on UX6ClothesTranslucentAndMaskedMatMobileSwitchData");
 static_assert(sizeof(UX6ClothesTranslucentAndMaskedMatMobileSwitchData) == 0x000028, "Wrong size on UX6ClothesTranslucentAndMaskedMatMobileSwitchData");
 
-// Class X6Game.X6TileView
-// 0x0790 (0x1470 - 0x0CE0)
-class UX6TileView final : public UTileView
+// Class X6Game.X6ListView
+// 0x0790 (0x1440 - 0x0CB0)
+#pragma pack(push, 0x1)
+class alignas(0x10) UX6ListView : public UListView
 {
 public:
-	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x0CE0(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bHasMask;                                          // 0x1450(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1451[0x3];                                     // 0x1451(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TopMaskParameterName;                              // 0x1454(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BottomMaskParameterName;                           // 0x145C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1464[0xC];                                     // 0x1464(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x0CB0(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bHasMask;                                          // 0x1420(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1421[0x3];                                     // 0x1421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TopMaskParameterName;                              // 0x1424(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BottomMaskParameterName;                           // 0x142C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1434[0x4];                                     // 0x1434(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddAnItem();
-	void BP_NavigateToItemIndex(const int32& ItemIndex);
-	void BP_OnTileItemValueChanged(const int32& Index_0);
-	void BP_ScrollItemIndexIntoView(const int32& ItemIndex);
-	void BP_SetItemSelectionByIndex(const int32& Index_0, bool bSelected);
-	void BP_SetSelectedItemByIndex(const int32& Index_0);
-	void BP_SetTileItemCount(const int32& Count);
-	int32 GetLineOrientationItemNums();
-	float GetScrollVelocity();
-	void RemoveItemByIndex(const int32& Index_0);
+	void BP_NavigateToItemIndex(int32 ItemIndex);
+	void BP_OnListItemValueChanged(int32 Index_0);
+	void BP_ScrollItemIndexIntoView(int32 ItemIndex);
+	void BP_SetItemSelectionByIndex(int32 Index_0, bool bSelected);
+	void BP_SetListItemCount(int32 Count);
+	void BP_SetSelectedItemByIndex(int32 Index_0);
+	void RemoveItemByIndex(int32 Index_0);
+	void SetOverriddenItemLength(int32 Index_0, double Value);
+	void SetOverriddenItemLengthByArray(TArray<float>* ItemsLength, bool bClearOldData);
+	void SetOverriddenTotalLength(double TotalLength);
+	void SetScrollBarAlwaysVisible(bool bAlwaysShowScrollbar);
+	void SetScrollBarTrackAlwaysVisible(bool bAlwaysShowScrollbarTrack);
+	void SetScrollSizeNotBaseOnNumLines(bool bNotBaseOnNumLines);
 
 	int32 BP_GetSelectedIndex() const;
 	bool BP_GetSelectedItemsViaIndex(TArray<int32>* Items) const;
-	bool BP_IsItemVisibleByIndex(const int32& Index_0) const;
+	bool BP_IsItemVisibleByIndex(int32 Index_0) const;
+	float GetScrollDistance() const;
+	float GetScrollDistanceRemaining() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TileView">();
+		return StaticClassImpl<"X6ListView">();
 	}
-	static class UX6TileView* GetDefaultObj()
+	static class UX6ListView* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TileView>();
+		return GetDefaultObjImpl<UX6ListView>();
 	}
 };
-static_assert(alignof(UX6TileView) == 0x000010, "Wrong alignment on UX6TileView");
-static_assert(sizeof(UX6TileView) == 0x001470, "Wrong size on UX6TileView");
-static_assert(offsetof(UX6TileView, WidgetBarStyle) == 0x000CE0, "Member 'UX6TileView::WidgetBarStyle' has a wrong offset!");
-static_assert(offsetof(UX6TileView, bHasMask) == 0x001450, "Member 'UX6TileView::bHasMask' has a wrong offset!");
-static_assert(offsetof(UX6TileView, TopMaskParameterName) == 0x001454, "Member 'UX6TileView::TopMaskParameterName' has a wrong offset!");
-static_assert(offsetof(UX6TileView, BottomMaskParameterName) == 0x00145C, "Member 'UX6TileView::BottomMaskParameterName' has a wrong offset!");
+#pragma pack(pop)
+static_assert(alignof(UX6ListView) == 0x000010, "Wrong alignment on UX6ListView");
+static_assert(sizeof(UX6ListView) == 0x001440, "Wrong size on UX6ListView");
+static_assert(offsetof(UX6ListView, WidgetBarStyle) == 0x000CB0, "Member 'UX6ListView::WidgetBarStyle' has a wrong offset!");
+static_assert(offsetof(UX6ListView, bHasMask) == 0x001420, "Member 'UX6ListView::bHasMask' has a wrong offset!");
+static_assert(offsetof(UX6ListView, TopMaskParameterName) == 0x001424, "Member 'UX6ListView::TopMaskParameterName' has a wrong offset!");
+static_assert(offsetof(UX6ListView, BottomMaskParameterName) == 0x00142C, "Member 'UX6ListView::BottomMaskParameterName' has a wrong offset!");
 
 // Class X6Game.X6AsyncCollisionTraceSubSystem
 // 0x00A0 (0x00D0 - 0x0030)
@@ -4767,58 +5200,22 @@ public:
 static_assert(alignof(UX6AsyncCollisionTraceBlueprintLibrary) == 0x000008, "Wrong alignment on UX6AsyncCollisionTraceBlueprintLibrary");
 static_assert(sizeof(UX6AsyncCollisionTraceBlueprintLibrary) == 0x000028, "Wrong size on UX6AsyncCollisionTraceBlueprintLibrary");
 
-// Class X6Game.X6NavigationSubSystem
-// 0x0220 (0x0250 - 0x0030)
-class alignas(0x10) UX6NavigationSubSystem final : public UGameInstanceSubsystem
+// Class X6Game.X6NavigationRegionInterface
+// 0x0000 (0x0000 - 0x0000)
+class IX6NavigationRegionInterface final : public IInterface
 {
-public:
-	TMap<int64, class UX6SplineRoad*>             RoadUIDToRoadDataMapping;                          // 0x0030(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_80[0x58];                                      // 0x0080(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SegmentSampleStep;                                 // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         SegmentStepsMinDistanceSq;                         // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         RoadOffsetClampMin;                                // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         RoadOffsetClampMax;                                // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         SampleNumPerSegment;                               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_EC[0x164];                                     // 0x00EC(0x0164)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddRoad(class UX6SplineRoad* Road);
-	void AddRoadNodesToPathV2(TArray<struct FVector>* PathPoints, TArray<int32>* OffMeshIdxs, const TMap<int32, int64>& SplineNodes, bool DebugDraw, float DebugDrawDuration);
-	void DrawNavLink(class UWorld* InWorld, TArray<struct FNavigationLink>* NavLinks, const struct FLinearColor& Color, float Time);
-	void DrawNavMesh(class UWorld* InWorld, TArray<struct FVector>* Tiles, const struct FLinearColor& Color, float Time);
-	void GetNavigationRegionFilterFlags(int32* OutIncludeFlags, int32* OutExcludeFlags, const struct FVector& StartLocation, const struct FVector& GoalLocation);
-	void RemoveAllRoad();
-	void RemoveRoad(int64 RoadID);
-	void SetRoadOffsetClamp(float ClampMin, float ClampMax);
-	void SetSegmentSampleStep(const float NewStep);
-	void SetSegmentStepsMinDistance(float Distance);
-
-	class UX6SplineRoad* GetOwnerRoad(int64 NodeUID) const;
-	int64 GetOwnerRoadUID(int64 NodeUID) const;
-	float GetSegmentSampleStep() const;
-	float GetSegmentStepsMinDistanceSq() const;
-	bool HasRoadNode(int64 NodeUID) const;
-	class UX6NavigationPathPoints* MakeNavigationPathPoints(const TArray<struct FVector>& PointLocations, const TMap<int32, int64>& NavLinkMark, const TMap<int32, int64>& RoadNodeMark) const;
-	class UX6NavigationPathPoints* MakePureNavigationPathPoints(const TArray<struct FVector>& PointLocations) const;
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6NavigationSubSystem">();
+		return StaticClassImpl<"X6NavigationRegionInterface">();
 	}
-	static class UX6NavigationSubSystem* GetDefaultObj()
+	static class IX6NavigationRegionInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6NavigationSubSystem>();
+		return GetDefaultObjImpl<IX6NavigationRegionInterface>();
 	}
 };
-static_assert(alignof(UX6NavigationSubSystem) == 0x000010, "Wrong alignment on UX6NavigationSubSystem");
-static_assert(sizeof(UX6NavigationSubSystem) == 0x000250, "Wrong size on UX6NavigationSubSystem");
-static_assert(offsetof(UX6NavigationSubSystem, RoadUIDToRoadDataMapping) == 0x000030, "Member 'UX6NavigationSubSystem::RoadUIDToRoadDataMapping' has a wrong offset!");
-static_assert(offsetof(UX6NavigationSubSystem, SegmentSampleStep) == 0x0000D8, "Member 'UX6NavigationSubSystem::SegmentSampleStep' has a wrong offset!");
-static_assert(offsetof(UX6NavigationSubSystem, SegmentStepsMinDistanceSq) == 0x0000DC, "Member 'UX6NavigationSubSystem::SegmentStepsMinDistanceSq' has a wrong offset!");
-static_assert(offsetof(UX6NavigationSubSystem, RoadOffsetClampMin) == 0x0000E0, "Member 'UX6NavigationSubSystem::RoadOffsetClampMin' has a wrong offset!");
-static_assert(offsetof(UX6NavigationSubSystem, RoadOffsetClampMax) == 0x0000E4, "Member 'UX6NavigationSubSystem::RoadOffsetClampMax' has a wrong offset!");
-static_assert(offsetof(UX6NavigationSubSystem, SampleNumPerSegment) == 0x0000E8, "Member 'UX6NavigationSubSystem::SampleNumPerSegment' has a wrong offset!");
+static_assert(alignof(IX6NavigationRegionInterface) == 0x000001, "Wrong alignment on IX6NavigationRegionInterface");
+static_assert(sizeof(IX6NavigationRegionInterface) == 0x000001, "Wrong size on IX6NavigationRegionInterface");
 
 // Class X6Game.X6AvatarSubsystem
 // 0x0058 (0x0088 - 0x0030)
@@ -4875,27 +5272,33 @@ static_assert(offsetof(UAvatarComponent, OnCharacterGenAssetSetUp) == 0x0000A8, 
 static_assert(offsetof(UAvatarComponent, AvatarConfig) == 0x0000B8, "Member 'UAvatarComponent::AvatarConfig' has a wrong offset!");
 static_assert(offsetof(UAvatarComponent, AvatarTag) == 0x0000C0, "Member 'UAvatarComponent::AvatarTag' has a wrong offset!");
 
-// Class X6Game.X6VehicleSkeletalMeshComponent
-// 0x0000 (0x12D0 - 0x12D0)
-class UX6VehicleSkeletalMeshComponent final : public USkeletalMeshComponent
+// Class X6Game.X6MonsterAnimInstance
+// 0x0010 (0x0400 - 0x03F0)
+class UX6MonsterAnimInstance final : public UX6AnimInstanceWithTag
 {
 public:
-	bool                                          bEnableIgnoreMoveThreshold;                        // 0x12C8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C9[0x7];                                     // 0x12C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UX6CharacterMovementComponent> X6OwnerCharacterMovementComp;                // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UX6RMWalkingComponent>   X6OwnerRMWalkingComp;                              // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnAnimAssetSetEvent();
+	void PostOwnerBeginPlay(class AActor* OwnerActor);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6VehicleSkeletalMeshComponent">();
+		return StaticClassImpl<"X6MonsterAnimInstance">();
 	}
-	static class UX6VehicleSkeletalMeshComponent* GetDefaultObj()
+	static class UX6MonsterAnimInstance* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6VehicleSkeletalMeshComponent>();
+		return GetDefaultObjImpl<UX6MonsterAnimInstance>();
 	}
 };
-static_assert(alignof(UX6VehicleSkeletalMeshComponent) == 0x000010, "Wrong alignment on UX6VehicleSkeletalMeshComponent");
-static_assert(sizeof(UX6VehicleSkeletalMeshComponent) == 0x0012D0, "Wrong size on UX6VehicleSkeletalMeshComponent");
-static_assert(offsetof(UX6VehicleSkeletalMeshComponent, bEnableIgnoreMoveThreshold) == 0x0012C8, "Member 'UX6VehicleSkeletalMeshComponent::bEnableIgnoreMoveThreshold' has a wrong offset!");
+static_assert(alignof(UX6MonsterAnimInstance) == 0x000010, "Wrong alignment on UX6MonsterAnimInstance");
+static_assert(sizeof(UX6MonsterAnimInstance) == 0x000400, "Wrong size on UX6MonsterAnimInstance");
+static_assert(offsetof(UX6MonsterAnimInstance, X6OwnerCharacterMovementComp) == 0x0003E8, "Member 'UX6MonsterAnimInstance::X6OwnerCharacterMovementComp' has a wrong offset!");
+static_assert(offsetof(UX6MonsterAnimInstance, X6OwnerRMWalkingComp) == 0x0003F0, "Member 'UX6MonsterAnimInstance::X6OwnerRMWalkingComp' has a wrong offset!");
 
 // Class X6Game.X6AvatarPreviewSubsystem
 // 0x0070 (0x00A0 - 0x0030)
@@ -4958,46 +5361,27 @@ static_assert(offsetof(UX6AvatarPreviewComponent, HighHeel_Toe_Angle) == 0x0000B
 static_assert(offsetof(UX6AvatarPreviewComponent, HighHeel_Height) == 0x0000B4, "Member 'UX6AvatarPreviewComponent::HighHeel_Height' has a wrong offset!");
 static_assert(offsetof(UX6AvatarPreviewComponent, CurrentGenAsset) == 0x0000B8, "Member 'UX6AvatarPreviewComponent::CurrentGenAsset' has a wrong offset!");
 
-// Class X6Game.X6TargetingSelectionTask_ChargeUpBase
-// 0x0088 (0x00B0 - 0x0028)
-class UX6TargetingSelectionTask_ChargeUpBase : public UTargetingTask
+// Class X6Game.X6ListViewItem
+// 0x0008 (0x0030 - 0x0028)
+class UX6ListViewItem final : public UObject
 {
 public:
-	float                                         SlopeDegree;                                       // 0x0028(0x0004)(BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             BulletTransform;                                   // 0x0030(0x0060)(BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDrawDebugTrace                               DebugDraw;                                         // 0x0090(0x0001)(BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      SlopeTraceObjectTypes;                             // 0x0098(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool AddHitResult(const struct FTargetingRequestHandle& TargetingHandle, const struct FHitResult& HitResult) const;
-	bool AddSingleTargetComponentForPriority(const struct FTargetingRequestHandle& TargetingHandle, class UPrimitiveComponent* InTargetComponent) const;
-	bool AddTargetActor(const struct FTargetingRequestHandle& TargetingHandle, class AActor* InTargetActor) const;
-	bool AddTargetComponent(const struct FTargetingRequestHandle& TargetingHandle, class UPrimitiveComponent* InTargetComponent) const;
-	bool K2_CanSelect(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
-	bool K2_IsExistForwardTargets(const class AActor* SourceActor, const struct FVector& InHalfSize, const struct FVector& InOffset) const;
-	bool K2_IsResultsExistTargetActorOrComponent(const struct FTargetingRequestHandle& TargetingHandle, class AActor* InTargetActor, class UPrimitiveComponent* InTargetComponent) const;
-	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
-	void UpdateSelectingTransformInfo(const class AActor* SourceActor, const class FName& SocketName, const float DepthLength, const struct FVector& Offset) const;
+	int32                                         ItemIndex;                                         // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TargetingSelectionTask_ChargeUpBase">();
+		return StaticClassImpl<"X6ListViewItem">();
 	}
-	static class UX6TargetingSelectionTask_ChargeUpBase* GetDefaultObj()
+	static class UX6ListViewItem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TargetingSelectionTask_ChargeUpBase>();
+		return GetDefaultObjImpl<UX6ListViewItem>();
 	}
 };
-static_assert(alignof(UX6TargetingSelectionTask_ChargeUpBase) == 0x000010, "Wrong alignment on UX6TargetingSelectionTask_ChargeUpBase");
-static_assert(sizeof(UX6TargetingSelectionTask_ChargeUpBase) == 0x0000B0, "Wrong size on UX6TargetingSelectionTask_ChargeUpBase");
-static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, SlopeDegree) == 0x000028, "Member 'UX6TargetingSelectionTask_ChargeUpBase::SlopeDegree' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, BulletTransform) == 0x000030, "Member 'UX6TargetingSelectionTask_ChargeUpBase::BulletTransform' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, DebugDraw) == 0x000090, "Member 'UX6TargetingSelectionTask_ChargeUpBase::DebugDraw' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, SlopeTraceObjectTypes) == 0x000098, "Member 'UX6TargetingSelectionTask_ChargeUpBase::SlopeTraceObjectTypes' has a wrong offset!");
+static_assert(alignof(UX6ListViewItem) == 0x000008, "Wrong alignment on UX6ListViewItem");
+static_assert(sizeof(UX6ListViewItem) == 0x000030, "Wrong size on UX6ListViewItem");
+static_assert(offsetof(UX6ListViewItem, ItemIndex) == 0x000028, "Member 'UX6ListViewItem::ItemIndex' has a wrong offset!");
 
 // Class X6Game.CinePawnSettings
 // 0x0168 (0x01A0 - 0x0038)
@@ -5049,13 +5433,13 @@ static_assert(offsetof(UCinePawnSettings, CharacterList) == 0x000150, "Member 'U
 static_assert(offsetof(UCinePawnSettings, NPCNameFont) == 0x000178, "Member 'UCinePawnSettings::NPCNameFont' has a wrong offset!");
 
 // Class X6Game.X6BasePuzzleManager
-// 0x0058 (0x0490 - 0x0438)
+// 0x0058 (0x04E0 - 0x0488)
 class AX6BasePuzzleManager final : public AX6Actor
 {
 public:
-	FMulticastSparseDelegateProperty_             AllActorTypePropertiesBeginPlayCompleted;          // 0x0438(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSet<class AActor*>                           AllActorTypeProperties;                            // 0x0440(0x0050)(NativeAccessSpecifierPrivate)
+	FMulticastSparseDelegateProperty_             AllActorTypePropertiesBeginPlayCompleted;          // 0x0488(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_489[0x7];                                      // 0x0489(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class AActor*>                           AllActorTypeProperties;                            // 0x0490(0x0050)(NativeAccessSpecifierPrivate)
 
 public:
 	void HandleActorTypePropertiesBeginPlayCompleted();
@@ -5072,26 +5456,50 @@ public:
 	}
 };
 static_assert(alignof(AX6BasePuzzleManager) == 0x000008, "Wrong alignment on AX6BasePuzzleManager");
-static_assert(sizeof(AX6BasePuzzleManager) == 0x000490, "Wrong size on AX6BasePuzzleManager");
-static_assert(offsetof(AX6BasePuzzleManager, AllActorTypePropertiesBeginPlayCompleted) == 0x000438, "Member 'AX6BasePuzzleManager::AllActorTypePropertiesBeginPlayCompleted' has a wrong offset!");
-static_assert(offsetof(AX6BasePuzzleManager, AllActorTypeProperties) == 0x000440, "Member 'AX6BasePuzzleManager::AllActorTypeProperties' has a wrong offset!");
+static_assert(sizeof(AX6BasePuzzleManager) == 0x0004E0, "Wrong size on AX6BasePuzzleManager");
+static_assert(offsetof(AX6BasePuzzleManager, AllActorTypePropertiesBeginPlayCompleted) == 0x000488, "Member 'AX6BasePuzzleManager::AllActorTypePropertiesBeginPlayCompleted' has a wrong offset!");
+static_assert(offsetof(AX6BasePuzzleManager, AllActorTypeProperties) == 0x000490, "Member 'AX6BasePuzzleManager::AllActorTypeProperties' has a wrong offset!");
 
-// Class X6Game.X6NavigationRegionInterface
-// 0x0000 (0x0000 - 0x0000)
-class IX6NavigationRegionInterface final : public IInterface
+// Class X6Game.X6MultiPlayerSubSystem
+// 0x0238 (0x0268 - 0x0030)
+class UX6MultiPlayerSubSystem final : public UGameInstanceSubsystem
 {
+public:
+	uint8                                         Pad_30[0xF8];                                      // 0x0030(0x00F8)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int64, class AActor*>                    SpawnerIDActorMap;                                 // 0x0128(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class AActor*, int64>                    ActorSpawnerIDMap;                                 // 0x0178(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<int64, class AActor*>                    EntityIDActorMap;                                  // 0x01C8(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<class AActor*, int64>                    ActorEntityIDMap;                                  // 0x0218(0x0050)(NativeAccessSpecifierPrivate)
+
+public:
+	void GetAssetPath(const int32 InGuid, struct FSoftObjectPath* OutPath);
+	void RegisterEntity(const int64 EntityID, class AActor* Actor);
+	void RegisterSimulatedActor(int32 EntityID, class AActor* NewSimulatedActor);
+	void RegisterSpawner(const int64 SpawnerID, class AActor* Actor);
+	void UnregisterEntity(const int64 EntityID, class AActor* Actor);
+	void UnregisterSimulatedActor(int32 EntityID);
+	void UnregisterSpawner(const int64 SpawnerID, class AActor* Actor);
+
+	int32 GetAssetGuid(const struct FSoftObjectPath& InPath) const;
+	class FString GetAssetPathString(const int32 InGuid) const;
+	int32 GetPathStringGuid(const class FString& InPathString) const;
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6NavigationRegionInterface">();
+		return StaticClassImpl<"X6MultiPlayerSubSystem">();
 	}
-	static class IX6NavigationRegionInterface* GetDefaultObj()
+	static class UX6MultiPlayerSubSystem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IX6NavigationRegionInterface>();
+		return GetDefaultObjImpl<UX6MultiPlayerSubSystem>();
 	}
 };
-static_assert(alignof(IX6NavigationRegionInterface) == 0x000001, "Wrong alignment on IX6NavigationRegionInterface");
-static_assert(sizeof(IX6NavigationRegionInterface) == 0x000001, "Wrong size on IX6NavigationRegionInterface");
+static_assert(alignof(UX6MultiPlayerSubSystem) == 0x000008, "Wrong alignment on UX6MultiPlayerSubSystem");
+static_assert(sizeof(UX6MultiPlayerSubSystem) == 0x000268, "Wrong size on UX6MultiPlayerSubSystem");
+static_assert(offsetof(UX6MultiPlayerSubSystem, SpawnerIDActorMap) == 0x000128, "Member 'UX6MultiPlayerSubSystem::SpawnerIDActorMap' has a wrong offset!");
+static_assert(offsetof(UX6MultiPlayerSubSystem, ActorSpawnerIDMap) == 0x000178, "Member 'UX6MultiPlayerSubSystem::ActorSpawnerIDMap' has a wrong offset!");
+static_assert(offsetof(UX6MultiPlayerSubSystem, EntityIDActorMap) == 0x0001C8, "Member 'UX6MultiPlayerSubSystem::EntityIDActorMap' has a wrong offset!");
+static_assert(offsetof(UX6MultiPlayerSubSystem, ActorEntityIDMap) == 0x000218, "Member 'UX6MultiPlayerSubSystem::ActorEntityIDMap' has a wrong offset!");
 
 // Class X6Game.X6BaseSplineTrackComponent
 // 0x00C0 (0x0780 - 0x06C0)
@@ -5159,177 +5567,131 @@ public:
 static_assert(alignof(AX6BaseVolume) == 0x000008, "Wrong alignment on AX6BaseVolume");
 static_assert(sizeof(AX6BaseVolume) == 0x0003E0, "Wrong size on AX6BaseVolume");
 
-// Class X6Game.X6CharacterBase
-// 0x0120 (0x08B0 - 0x0790)
-class AX6CharacterBase : public ACharacter
+// Class X6Game.X6NikkiCPPTickHelperComponent
+// 0x01B0 (0x0258 - 0x00A8)
+class UX6NikkiCPPTickHelperComponent final : public UX6ActorComponent
 {
 public:
-	FMulticastSparseDelegateProperty_             OnX6CharacterPossessed;                            // 0x0788(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnX6CharacterUnPossessed;                          // 0x0789(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnX6CharacterWalkingOffLedge;                      // 0x078A(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnX6CharacterMoveBlockedBy;                        // 0x078B(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnX6CharacterFalling;                              // 0x078C(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnX6CharacterBaseChange;                           // 0x078D(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	FMulticastSparseDelegateProperty_             OnX6SimulateCharacterFirstRepMovement;             // 0x078E(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_78F[0x1];                                      // 0x078F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           X6Tags;                                            // 0x0790(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	bool                                          bUseDynamicCreateWalkLogicComponent;               // 0x07A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A1[0x7];                                      // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UX6RMWalkingComponent>      WalkLogicComponent;                                // 0x07A8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseDynamicCreateInAirLogicComponent;              // 0x07B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7B1[0x7];                                      // 0x07B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UX6RMInAirComponent>        InAirLogicComponent;                               // 0x07B8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSimulatedCharacterHasRepMovement;                 // 0x07C0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C1[0x5F];                                     // 0x07C1(0x005F)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bSimulatedReplicateMovement;                       // 0x0820(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bSimulatedReplicateAttachment;                     // 0x0821(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bUseLocalBaseIfUnresolved;                         // 0x0822(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_823[0x5];                                      // 0x0823(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FX6MovementBaseInfo                    X6ReplicatedMovementBase;                          // 0x0828(0x0040)(Net, RepNotify, Protected, NativeAccessSpecifierProtected)
-	struct FX6BasedMovementStateInfo              X6ReplicatedBasedMovementState;                    // 0x0868(0x0040)(Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8A8[0x8];                                      // 0x08A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseCustomizeTickGroup;                            // 0x00A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETickingGroup                                 CustomizeTickGroup;                                // 0x00A9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   LeftFootBoneName;                                  // 0x00AC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RightFootBoneName;                                 // 0x00B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LeftToesBoneName;                                  // 0x00BC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RightToesBoneName;                                 // 0x00C4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   MeshRootBoneName;                                  // 0x00CC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LeftVirtualFootBoneName;                           // 0x00D4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RightVirtualFootBoneName;                          // 0x00DC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LeftVirtualToesBoneName;                           // 0x00E4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RightVirtualToesBoneName;                          // 0x00EC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Debug_DrawPointSize;                               // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HeightfieldOffsetThrehold;                         // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             PlayerCharacter;                                   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UCapsuleComponent*                      OwnerCapsuleComponent;                             // 0x0108(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ACharacter*                             OwnerActor;                                        // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class AActor*>                         TraceIngoreActorArray;                             // 0x0120(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_130[0x2C];                                     // 0x0130(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurFloorAngle;                                     // 0x015C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FConfigMonitoringPointsWidth;                      // 0x0160(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FConfigMonitoringPointsDeltaHeight;                // 0x0164(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCalculateCurFloorAngleV2Debug;              // 0x0168(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 OwnerSkeletalMeshComp;                             // 0x0170(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UAnimInstance*                          OwnerAnimInstance;                                 // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_180[0x40];                                     // 0x0180(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         FootTraceIngoreActorArray;                         // 0x01C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1D0[0x29];                                     // 0x01D0(0x0029)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableAvoidMinorDisturbancesForOriginalFootLocation; // 0x01F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1FA[0x6];                                      // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DisturbanceThresholdForOriginalFootLocation;       // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxPelvisIKOffset;                                 // 0x0208(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LocomotionMaxPelvisIKOffset;                       // 0x020C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ChangeMaxPelvisIKOffsetInterpSpeed;                // 0x0210(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SwitchMovePelvisOffsetSpeed;                       // 0x0214(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FeetMaxDistance;                                   // 0x0218(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FootIKTraceUPOffset;                               // 0x021C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FootIKTraceDownOffset;                             // 0x0220(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FootIKResetLerpSpeed;                              // 0x0224(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FootIKTranceDistanceForAdjustAngle;                // 0x0228(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FConfigMaxPitchAngleForFeetOnTheGround;            // 0x022C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ConfigMaxPitchAngleForFeetOnIntorsion;             // 0x0230(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FConfigMaxRollAngleForFeetOnTheGround;             // 0x0234(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ConfigMaxRollAngleForFeetOnDownhill;               // 0x0238(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAdjustFootAngleByToesAdditionalCheck;       // 0x023C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAdjustFootAngleOnlyOneHit;                  // 0x023D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAdjustFootLocation;                         // 0x023E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23F[0x1];                                      // 0x023F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FConfigMaxAdjustHeight;                            // 0x0240(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TraceDistance;                                     // 0x0244(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFootPlacementIK;                            // 0x0248(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_249[0xF];                                      // 0x0249(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void OnRep_X6ReplicatedBasedMovementState();
-	void OnRep_X6ReplicatedMovementBase();
-	void PostSpawnerGroupSpawned();
-	void ReceiveMovementFromServer(const struct FX6ReplicatedMovement& InReplicatedMovement);
-	void ServerInit(bool bServer);
-	void SetLocalRole(ENetRole InRole);
-	void SetSimulatedReplicateMovement(const bool bInSimulatedReplicateMovement, const bool bRefreshReplication);
-	void X6_AddTag(const TArray<class FName>& NewX6Tags);
-	void X6_ClearAndInvalidateTimerHandle(struct FTimerHandle& Handle);
-	void X6_ClearTimer(class UObject* Object, const class FString& FunctionName);
-	void X6_ClearTimerDelegate(TDelegate<void()> Delegate);
-	void X6_ClearTimerHandle(const struct FTimerHandle& Handle);
-	void X6_DeleteTag(const class FString& strTag);
-	bool X6_GetActorHiddenFlags(TSet<int32>* OutFlags);
-	TArray<class FName> X6_GetTag();
-	float X6_GetTimerElapsedTime(class UObject* Object, const class FString& FunctionName);
-	float X6_GetTimerElapsedTimeDelegate(TDelegate<void()> Delegate);
-	float X6_GetTimerElapsedTimeDelegateEachTrigger(TDelegate<void()> Delegate);
-	float X6_GetTimerElapsedTimeEachTrigger(class UObject* Object, const class FString& FunctionName);
-	float X6_GetTimerElapsedTimeHandle(const struct FTimerHandle& Handle);
-	float X6_GetTimerElapsedTimeHandleEachTrigger(const struct FTimerHandle& Handle);
-	float X6_GetTimerRemainingTime(class UObject* Object, const class FString& FunctionName);
-	float X6_GetTimerRemainingTimeDelegate(TDelegate<void()> Delegate);
-	float X6_GetTimerRemainingTimeHandle(const struct FTimerHandle& Handle);
-	bool X6_HasTag(const class FString& strTag);
-	bool X6_IsTimerActive(class UObject* Object, const class FString& FunctionName);
-	bool X6_IsTimerActiveDelegate(TDelegate<void()> Delegate);
-	bool X6_IsTimerActiveHandle(const struct FTimerHandle& Handle);
-	bool X6_IsTimerPaused(class UObject* Object, const class FString& FunctionName);
-	bool X6_IsTimerPausedDelegate(TDelegate<void()> Delegate);
-	bool X6_IsTimerPausedHandle(const struct FTimerHandle& Handle);
-	bool X6_IsValidTimerHandle(const struct FTimerHandle& Handle);
-	void X6_PauseTimer(class UObject* Object, const class FString& FunctionName);
-	void X6_PauseTimerDelegate(TDelegate<void()> Delegate);
-	void X6_PauseTimerHandle(const struct FTimerHandle& Handle);
-	void X6_RequireActorFade(bool bFadeIn, int32 FadeOutHiddenFlag, bool bInView);
-	bool X6_SetActorHiddenInGame(bool bNewHidden, int32 Flag, bool bClearFlag);
-	struct FTimerHandle X6_SetTimer(class UObject* Object, const class FString& FunctionName, float Time, bool bLooping, float InitialStartDelay, float InitialStartDelayVariance);
-	struct FTimerHandle X6_SetTimerDelegate(TDelegate<void()> Delegate, float Time, bool bLooping, float InitialStartDelay, float InitialStartDelayVariance);
-	bool X6_TimerExists(class UObject* Object, const class FString& FunctionName);
-	bool X6_TimerExistsDelegate(TDelegate<void()> Delegate);
-	bool X6_TimerExistsHandle(const struct FTimerHandle& Handle);
-	void X6_UnPauseTimer(class UObject* Object, const class FString& FunctionName);
-	void X6_UnPauseTimerDelegate(TDelegate<void()> Delegate);
-	void X6_UnPauseTimerHandle(const struct FTimerHandle& Handle);
-
-	struct FVector GetMoveGoalOffsetInternal(const class AActor* MovingActor) const;
-	bool IsSimulatedReplicateAttachment() const;
-	bool IsSimulatedReplicateMovement() const;
+	float CalculateCurFloorAngleV2(bool bForceUpdate);
+	void GeneratedFeetIKFeatureTargetV2(struct FFootIKFeatureTargetDataV2* OutFootIKFeatureTarget);
+	struct FHitResult IsLandedGroundWithDeltaInAir();
+	void ResetIKOffsets(struct FVector* FootOffsetLLocation, struct FVector* FootOffsetRLocation, struct FRotator* FootOffsetLRotation, struct FRotator* FootOffsetRRotation);
+	void ResetPelvisIKOffsets(float* PelvisAlpha, struct FVector* PelvisOffset);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6CharacterBase">();
+		return StaticClassImpl<"X6NikkiCPPTickHelperComponent">();
 	}
-	static class AX6CharacterBase* GetDefaultObj()
+	static class UX6NikkiCPPTickHelperComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AX6CharacterBase>();
+		return GetDefaultObjImpl<UX6NikkiCPPTickHelperComponent>();
 	}
 };
-static_assert(alignof(AX6CharacterBase) == 0x000010, "Wrong alignment on AX6CharacterBase");
-static_assert(sizeof(AX6CharacterBase) == 0x0008B0, "Wrong size on AX6CharacterBase");
-static_assert(offsetof(AX6CharacterBase, OnX6CharacterPossessed) == 0x000788, "Member 'AX6CharacterBase::OnX6CharacterPossessed' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, OnX6CharacterUnPossessed) == 0x000789, "Member 'AX6CharacterBase::OnX6CharacterUnPossessed' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, OnX6CharacterWalkingOffLedge) == 0x00078A, "Member 'AX6CharacterBase::OnX6CharacterWalkingOffLedge' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, OnX6CharacterMoveBlockedBy) == 0x00078B, "Member 'AX6CharacterBase::OnX6CharacterMoveBlockedBy' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, OnX6CharacterFalling) == 0x00078C, "Member 'AX6CharacterBase::OnX6CharacterFalling' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, OnX6CharacterBaseChange) == 0x00078D, "Member 'AX6CharacterBase::OnX6CharacterBaseChange' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, OnX6SimulateCharacterFirstRepMovement) == 0x00078E, "Member 'AX6CharacterBase::OnX6SimulateCharacterFirstRepMovement' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, X6Tags) == 0x000790, "Member 'AX6CharacterBase::X6Tags' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, bUseDynamicCreateWalkLogicComponent) == 0x0007A0, "Member 'AX6CharacterBase::bUseDynamicCreateWalkLogicComponent' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, WalkLogicComponent) == 0x0007A8, "Member 'AX6CharacterBase::WalkLogicComponent' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, bUseDynamicCreateInAirLogicComponent) == 0x0007B0, "Member 'AX6CharacterBase::bUseDynamicCreateInAirLogicComponent' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, InAirLogicComponent) == 0x0007B8, "Member 'AX6CharacterBase::InAirLogicComponent' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, bSimulatedCharacterHasRepMovement) == 0x0007C0, "Member 'AX6CharacterBase::bSimulatedCharacterHasRepMovement' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, bSimulatedReplicateMovement) == 0x000820, "Member 'AX6CharacterBase::bSimulatedReplicateMovement' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, bSimulatedReplicateAttachment) == 0x000821, "Member 'AX6CharacterBase::bSimulatedReplicateAttachment' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, bUseLocalBaseIfUnresolved) == 0x000822, "Member 'AX6CharacterBase::bUseLocalBaseIfUnresolved' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, X6ReplicatedMovementBase) == 0x000828, "Member 'AX6CharacterBase::X6ReplicatedMovementBase' has a wrong offset!");
-static_assert(offsetof(AX6CharacterBase, X6ReplicatedBasedMovementState) == 0x000868, "Member 'AX6CharacterBase::X6ReplicatedBasedMovementState' has a wrong offset!");
-
-// Class X6Game.X6CharacterWithAbilities
-// 0x0020 (0x08D0 - 0x08B0)
-#pragma pack(push, 0x1)
-class alignas(0x10) AX6CharacterWithAbilities : public AX6CharacterBase
-{
-public:
-	uint8                                         Pad_8B0[0x10];                                     // 0x08B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6AbilitySystemComponent*              AbilitySystemComponent;                            // 0x08C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void K2_SetReplicatePriority(int32 NewReplicatePriority);
-	void K2_SetShouldForceReplicateProperty(bool bReplicate);
-
-	class UX6AbilitySystemComponent* GetX6AbilitySystemComponent() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6CharacterWithAbilities">();
-	}
-	static class AX6CharacterWithAbilities* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6CharacterWithAbilities>();
-	}
-};
-#pragma pack(pop)
-static_assert(alignof(AX6CharacterWithAbilities) == 0x000010, "Wrong alignment on AX6CharacterWithAbilities");
-static_assert(sizeof(AX6CharacterWithAbilities) == 0x0008D0, "Wrong size on AX6CharacterWithAbilities");
-static_assert(offsetof(AX6CharacterWithAbilities, AbilitySystemComponent) == 0x0008C0, "Member 'AX6CharacterWithAbilities::AbilitySystemComponent' has a wrong offset!");
-
-// Class X6Game.X6NikkiPawn
-// 0x0010 (0x08E0 - 0x08D0)
-class AX6NikkiPawn : public AX6CharacterWithAbilities
-{
-public:
-	bool                                          bCarryItem;                                        // 0x08C8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C9[0x7];                                      // 0x08C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNikkiMovementComponent*                NikkiMoveComp;                                     // 0x08D0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8D8[0x8];                                      // 0x08D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	int32 Client_GetCameraState();
-	bool IsCarryItem();
-	bool IsEnableFootIK();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NikkiPawn">();
-	}
-	static class AX6NikkiPawn* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6NikkiPawn>();
-	}
-};
-static_assert(alignof(AX6NikkiPawn) == 0x000010, "Wrong alignment on AX6NikkiPawn");
-static_assert(sizeof(AX6NikkiPawn) == 0x0008E0, "Wrong size on AX6NikkiPawn");
-static_assert(offsetof(AX6NikkiPawn, bCarryItem) == 0x0008C8, "Member 'AX6NikkiPawn::bCarryItem' has a wrong offset!");
-static_assert(offsetof(AX6NikkiPawn, NikkiMoveComp) == 0x0008D0, "Member 'AX6NikkiPawn::NikkiMoveComp' has a wrong offset!");
+static_assert(alignof(UX6NikkiCPPTickHelperComponent) == 0x000008, "Wrong alignment on UX6NikkiCPPTickHelperComponent");
+static_assert(sizeof(UX6NikkiCPPTickHelperComponent) == 0x000258, "Wrong size on UX6NikkiCPPTickHelperComponent");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bUseCustomizeTickGroup) == 0x0000A8, "Member 'UX6NikkiCPPTickHelperComponent::bUseCustomizeTickGroup' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, CustomizeTickGroup) == 0x0000A9, "Member 'UX6NikkiCPPTickHelperComponent::CustomizeTickGroup' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftFootBoneName) == 0x0000AC, "Member 'UX6NikkiCPPTickHelperComponent::LeftFootBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightFootBoneName) == 0x0000B4, "Member 'UX6NikkiCPPTickHelperComponent::RightFootBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftToesBoneName) == 0x0000BC, "Member 'UX6NikkiCPPTickHelperComponent::LeftToesBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightToesBoneName) == 0x0000C4, "Member 'UX6NikkiCPPTickHelperComponent::RightToesBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, MeshRootBoneName) == 0x0000CC, "Member 'UX6NikkiCPPTickHelperComponent::MeshRootBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftVirtualFootBoneName) == 0x0000D4, "Member 'UX6NikkiCPPTickHelperComponent::LeftVirtualFootBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightVirtualFootBoneName) == 0x0000DC, "Member 'UX6NikkiCPPTickHelperComponent::RightVirtualFootBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftVirtualToesBoneName) == 0x0000E4, "Member 'UX6NikkiCPPTickHelperComponent::LeftVirtualToesBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightVirtualToesBoneName) == 0x0000EC, "Member 'UX6NikkiCPPTickHelperComponent::RightVirtualToesBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, Debug_DrawPointSize) == 0x0000F4, "Member 'UX6NikkiCPPTickHelperComponent::Debug_DrawPointSize' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, HeightfieldOffsetThrehold) == 0x0000F8, "Member 'UX6NikkiCPPTickHelperComponent::HeightfieldOffsetThrehold' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, PlayerCharacter) == 0x000100, "Member 'UX6NikkiCPPTickHelperComponent::PlayerCharacter' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerCapsuleComponent) == 0x000108, "Member 'UX6NikkiCPPTickHelperComponent::OwnerCapsuleComponent' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerActor) == 0x000118, "Member 'UX6NikkiCPPTickHelperComponent::OwnerActor' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, TraceIngoreActorArray) == 0x000120, "Member 'UX6NikkiCPPTickHelperComponent::TraceIngoreActorArray' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, CurFloorAngle) == 0x00015C, "Member 'UX6NikkiCPPTickHelperComponent::CurFloorAngle' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMonitoringPointsWidth) == 0x000160, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMonitoringPointsWidth' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMonitoringPointsDeltaHeight) == 0x000164, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMonitoringPointsDeltaHeight' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableCalculateCurFloorAngleV2Debug) == 0x000168, "Member 'UX6NikkiCPPTickHelperComponent::bEnableCalculateCurFloorAngleV2Debug' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerSkeletalMeshComp) == 0x000170, "Member 'UX6NikkiCPPTickHelperComponent::OwnerSkeletalMeshComp' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerAnimInstance) == 0x000178, "Member 'UX6NikkiCPPTickHelperComponent::OwnerAnimInstance' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootTraceIngoreActorArray) == 0x0001C0, "Member 'UX6NikkiCPPTickHelperComponent::FootTraceIngoreActorArray' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAvoidMinorDisturbancesForOriginalFootLocation) == 0x0001F9, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAvoidMinorDisturbancesForOriginalFootLocation' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, DisturbanceThresholdForOriginalFootLocation) == 0x000200, "Member 'UX6NikkiCPPTickHelperComponent::DisturbanceThresholdForOriginalFootLocation' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, MaxPelvisIKOffset) == 0x000208, "Member 'UX6NikkiCPPTickHelperComponent::MaxPelvisIKOffset' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LocomotionMaxPelvisIKOffset) == 0x00020C, "Member 'UX6NikkiCPPTickHelperComponent::LocomotionMaxPelvisIKOffset' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, ChangeMaxPelvisIKOffsetInterpSpeed) == 0x000210, "Member 'UX6NikkiCPPTickHelperComponent::ChangeMaxPelvisIKOffsetInterpSpeed' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, SwitchMovePelvisOffsetSpeed) == 0x000214, "Member 'UX6NikkiCPPTickHelperComponent::SwitchMovePelvisOffsetSpeed' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FeetMaxDistance) == 0x000218, "Member 'UX6NikkiCPPTickHelperComponent::FeetMaxDistance' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKTraceUPOffset) == 0x00021C, "Member 'UX6NikkiCPPTickHelperComponent::FootIKTraceUPOffset' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKTraceDownOffset) == 0x000220, "Member 'UX6NikkiCPPTickHelperComponent::FootIKTraceDownOffset' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKResetLerpSpeed) == 0x000224, "Member 'UX6NikkiCPPTickHelperComponent::FootIKResetLerpSpeed' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKTranceDistanceForAdjustAngle) == 0x000228, "Member 'UX6NikkiCPPTickHelperComponent::FootIKTranceDistanceForAdjustAngle' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMaxPitchAngleForFeetOnTheGround) == 0x00022C, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMaxPitchAngleForFeetOnTheGround' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, ConfigMaxPitchAngleForFeetOnIntorsion) == 0x000230, "Member 'UX6NikkiCPPTickHelperComponent::ConfigMaxPitchAngleForFeetOnIntorsion' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMaxRollAngleForFeetOnTheGround) == 0x000234, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMaxRollAngleForFeetOnTheGround' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, ConfigMaxRollAngleForFeetOnDownhill) == 0x000238, "Member 'UX6NikkiCPPTickHelperComponent::ConfigMaxRollAngleForFeetOnDownhill' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAdjustFootAngleByToesAdditionalCheck) == 0x00023C, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAdjustFootAngleByToesAdditionalCheck' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAdjustFootAngleOnlyOneHit) == 0x00023D, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAdjustFootAngleOnlyOneHit' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAdjustFootLocation) == 0x00023E, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAdjustFootLocation' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMaxAdjustHeight) == 0x000240, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMaxAdjustHeight' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, TraceDistance) == 0x000244, "Member 'UX6NikkiCPPTickHelperComponent::TraceDistance' has a wrong offset!");
+static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableFootPlacementIK) == 0x000248, "Member 'UX6NikkiCPPTickHelperComponent::bEnableFootPlacementIK' has a wrong offset!");
 
 // Class X6Game.X6BasicMoveableComponent
 // 0x00C0 (0x0168 - 0x00A8)
@@ -5357,79 +5719,63 @@ static_assert(sizeof(UX6BasicMoveableComponent) == 0x000168, "Wrong size on UX6B
 static_assert(offsetof(UX6BasicMoveableComponent, CurRMInputContext) == 0x0000A8, "Member 'UX6BasicMoveableComponent::CurRMInputContext' has a wrong offset!");
 static_assert(offsetof(UX6BasicMoveableComponent, CharacterMovementComponent) == 0x000160, "Member 'UX6BasicMoveableComponent::CharacterMovementComponent' has a wrong offset!");
 
-// Class X6Game.X6BasicRegularMovementComponent
-// 0x0038 (0x00E0 - 0x00A8)
-class UX6BasicRegularMovementComponent : public UX6ActorComponent
+// Class X6Game.X6NavigationSubSystem
+// 0x03A0 (0x03D0 - 0x0030)
+class alignas(0x10) UX6NavigationSubSystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         bEnableMovementBlockedBy : 1;                      // 0x00A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	FMulticastSparseDelegateProperty_             OnRegularMovementBlockedBy;                        // 0x00A9(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA[0x26];                                      // 0x00AA(0x0026)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharacterMovementComponent*            OwnerCharacterMovementComponent;                   // 0x00D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ACharacter*                             Character;                                         // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<int64, class UX6SplineRoad*>             RoadUIDToRoadDataMapping;                          // 0x0030(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_80[0x58];                                      // 0x0080(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SegmentSampleStep;                                 // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         SegmentStepsMinDistanceSq;                         // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         RoadOffsetClampMin;                                // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         RoadOffsetClampMax;                                // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         SampleNumPerSegment;                               // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_EC[0x2E4];                                     // 0x00EC(0x02E4)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	float CalculateMovementBlockedByHeight(const struct FHitResult& HitResult, float BoundaryFromLowToHigh, float EnterBlockAngle);
-	void CheckExitMovementBlockedByState(float DeltaSeconds, float ExitBlockAngle);
+	void AddRoad(class UX6SplineRoad* Road);
+	void AddRoadNodesToPathV2(TArray<struct FVector>* PathPoints, TArray<int32>* OffMeshIdxs, const TMap<int32, int64>& SplineNodes, bool DebugDraw, float DebugDrawDuration);
+	bool ClientPathFindingRequest(int32 query_type, int32 agent_type, struct FVector* Result);
+	void DrawNavLink(class UWorld* InWorld, TArray<struct FNavigationLink>* NavLinks, const struct FLinearColor& Color, float Time);
+	void DrawNavMesh(class UWorld* InWorld, TArray<struct FVector>* Tiles, const struct FLinearColor& Color, float Time);
+	void GetNavigationRegionFilterFlags(int32* OutIncludeFlags, int32* OutExcludeFlags, const struct FVector& StartLocation, const struct FVector& GoalLocation);
+	void InitAngleWeights(int64 Hash, double Weight);
+	void InitClientPathFindRequest(const struct FVector& Pos, const struct FVector& tar_pos, const struct FVector& tar_dir, const struct FVector2D& effect_radius, const struct FVector2D& effect_angle, int64 pq_config, int64 aw_config, uint16 IncludeFlags, uint16 ExcludeFlags, double radius_min, double radius_max);
+	void InitNavMeshAgents(int32 agent_index, double walkable_slope_angle, double walkable_height, double walkable_climb, double walkable_radius);
+	void InitPositionOffsetList(int64 Hash, double query_degrees, double query_degrees_offset, double num_of_points, double inner_radius, double outer_radius, int32 split_numbers);
+	void RemoveAllRoad();
+	void RemoveRoad(int64 RoadID);
+	void SetRoadOffsetClamp(float ClampMin, float ClampMax);
+	void SetSegmentSampleStep(const float NewStep);
+	void SetSegmentStepsMinDistance(float Distance);
+
+	class UX6SplineRoad* GetOwnerRoad(int64 NodeUID) const;
+	int64 GetOwnerRoadUID(int64 NodeUID) const;
+	float GetSegmentSampleStep() const;
+	float GetSegmentStepsMinDistanceSq() const;
+	bool HasRoadNode(int64 NodeUID) const;
+	class UX6NavigationPathPoints* MakeNavigationPathPoints(const TArray<struct FVector>& PointLocations, const TMap<int32, int64>& NavLinkMark, const TMap<int32, int64>& RoadNodeMark) const;
+	class UX6NavigationPathPoints* MakePureNavigationPathPoints(const TArray<struct FVector>& PointLocations) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6BasicRegularMovementComponent">();
+		return StaticClassImpl<"X6NavigationSubSystem">();
 	}
-	static class UX6BasicRegularMovementComponent* GetDefaultObj()
+	static class UX6NavigationSubSystem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6BasicRegularMovementComponent>();
+		return GetDefaultObjImpl<UX6NavigationSubSystem>();
 	}
 };
-static_assert(alignof(UX6BasicRegularMovementComponent) == 0x000008, "Wrong alignment on UX6BasicRegularMovementComponent");
-static_assert(sizeof(UX6BasicRegularMovementComponent) == 0x0000E0, "Wrong size on UX6BasicRegularMovementComponent");
-static_assert(offsetof(UX6BasicRegularMovementComponent, OnRegularMovementBlockedBy) == 0x0000A9, "Member 'UX6BasicRegularMovementComponent::OnRegularMovementBlockedBy' has a wrong offset!");
-static_assert(offsetof(UX6BasicRegularMovementComponent, OwnerCharacterMovementComponent) == 0x0000D0, "Member 'UX6BasicRegularMovementComponent::OwnerCharacterMovementComponent' has a wrong offset!");
-static_assert(offsetof(UX6BasicRegularMovementComponent, Character) == 0x0000D8, "Member 'UX6BasicRegularMovementComponent::Character' has a wrong offset!");
-
-// Class X6Game.X6NiagaraEffectParam
-// 0x0008 (0x0030 - 0x0028)
-class UX6NiagaraEffectParam : public UObject
-{
-public:
-	class FName                                   ParameterName;                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NiagaraEffectParam">();
-	}
-	static class UX6NiagaraEffectParam* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6NiagaraEffectParam>();
-	}
-};
-static_assert(alignof(UX6NiagaraEffectParam) == 0x000008, "Wrong alignment on UX6NiagaraEffectParam");
-static_assert(sizeof(UX6NiagaraEffectParam) == 0x000030, "Wrong size on UX6NiagaraEffectParam");
-static_assert(offsetof(UX6NiagaraEffectParam, ParameterName) == 0x000028, "Member 'UX6NiagaraEffectParam::ParameterName' has a wrong offset!");
-
-// Class X6Game.X6NiagaraEffectParamFloat
-// 0x0008 (0x0038 - 0x0030)
-class UX6NiagaraEffectParamFloat final : public UX6NiagaraEffectParam
-{
-public:
-	float                                         Value;                                             // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NiagaraEffectParamFloat">();
-	}
-	static class UX6NiagaraEffectParamFloat* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6NiagaraEffectParamFloat>();
-	}
-};
-static_assert(alignof(UX6NiagaraEffectParamFloat) == 0x000008, "Wrong alignment on UX6NiagaraEffectParamFloat");
-static_assert(sizeof(UX6NiagaraEffectParamFloat) == 0x000038, "Wrong size on UX6NiagaraEffectParamFloat");
-static_assert(offsetof(UX6NiagaraEffectParamFloat, Value) == 0x000030, "Member 'UX6NiagaraEffectParamFloat::Value' has a wrong offset!");
+static_assert(alignof(UX6NavigationSubSystem) == 0x000010, "Wrong alignment on UX6NavigationSubSystem");
+static_assert(sizeof(UX6NavigationSubSystem) == 0x0003D0, "Wrong size on UX6NavigationSubSystem");
+static_assert(offsetof(UX6NavigationSubSystem, RoadUIDToRoadDataMapping) == 0x000030, "Member 'UX6NavigationSubSystem::RoadUIDToRoadDataMapping' has a wrong offset!");
+static_assert(offsetof(UX6NavigationSubSystem, SegmentSampleStep) == 0x0000D8, "Member 'UX6NavigationSubSystem::SegmentSampleStep' has a wrong offset!");
+static_assert(offsetof(UX6NavigationSubSystem, SegmentStepsMinDistanceSq) == 0x0000DC, "Member 'UX6NavigationSubSystem::SegmentStepsMinDistanceSq' has a wrong offset!");
+static_assert(offsetof(UX6NavigationSubSystem, RoadOffsetClampMin) == 0x0000E0, "Member 'UX6NavigationSubSystem::RoadOffsetClampMin' has a wrong offset!");
+static_assert(offsetof(UX6NavigationSubSystem, RoadOffsetClampMax) == 0x0000E4, "Member 'UX6NavigationSubSystem::RoadOffsetClampMax' has a wrong offset!");
+static_assert(offsetof(UX6NavigationSubSystem, SampleNumPerSegment) == 0x0000E8, "Member 'UX6NavigationSubSystem::SampleNumPerSegment' has a wrong offset!");
 
 // Class X6Game.X6CarrierDataContext
 // 0x0000 (0x0028 - 0x0028)
@@ -5549,40 +5895,26 @@ static_assert(offsetof(UX6BikeDataContext, bEnableHandLockPositionR) == 0x0000DD
 static_assert(offsetof(UX6BikeDataContext, bEnableHandLockRotateL) == 0x0000DE, "Member 'UX6BikeDataContext::bEnableHandLockRotateL' has a wrong offset!");
 static_assert(offsetof(UX6BikeDataContext, bEnableHandLockRotateR) == 0x0000DF, "Member 'UX6BikeDataContext::bEnableHandLockRotateR' has a wrong offset!");
 
-// Class X6Game.X6MultiPlayerSubSystem
-// 0x0198 (0x01C8 - 0x0030)
-class UX6MultiPlayerSubSystem final : public UGameInstanceSubsystem
+// Class X6Game.X6ReplicateAssetData
+// 0x0010 (0x0040 - 0x0030)
+class UX6ReplicateAssetData final : public UDataAsset
 {
 public:
-	uint8                                         Pad_30[0xF8];                                      // 0x0030(0x00F8)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int64, class AActor*>                    SpawnerIDActorMap;                                 // 0x0128(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<class AActor*, int64>                    ActorSpawnerIDMap;                                 // 0x0178(0x0050)(NativeAccessSpecifierPrivate)
-
-public:
-	void GetAssetPath(const int32 InGuid, struct FSoftObjectPath* OutPath);
-	void RegisterSimulatedActor(int32 EntityID, class AActor* NewSimulatedActor);
-	void RegisterSpawner(const int64 SpawnerID, class AActor* Actor);
-	void UnregisterSimulatedActor(int32 EntityID);
-	void UnregisterSpawner(const int64 SpawnerID, class AActor* Actor);
-
-	int32 GetAssetGuid(const struct FSoftObjectPath& InPath) const;
-	class FString GetAssetPathString(const int32 InGuid) const;
-	int32 GetPathStringGuid(const class FString& InPathString) const;
+	TArray<struct FSoftObjectPath>                AssetPaths;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6MultiPlayerSubSystem">();
+		return StaticClassImpl<"X6ReplicateAssetData">();
 	}
-	static class UX6MultiPlayerSubSystem* GetDefaultObj()
+	static class UX6ReplicateAssetData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6MultiPlayerSubSystem>();
+		return GetDefaultObjImpl<UX6ReplicateAssetData>();
 	}
 };
-static_assert(alignof(UX6MultiPlayerSubSystem) == 0x000008, "Wrong alignment on UX6MultiPlayerSubSystem");
-static_assert(sizeof(UX6MultiPlayerSubSystem) == 0x0001C8, "Wrong size on UX6MultiPlayerSubSystem");
-static_assert(offsetof(UX6MultiPlayerSubSystem, SpawnerIDActorMap) == 0x000128, "Member 'UX6MultiPlayerSubSystem::SpawnerIDActorMap' has a wrong offset!");
-static_assert(offsetof(UX6MultiPlayerSubSystem, ActorSpawnerIDMap) == 0x000178, "Member 'UX6MultiPlayerSubSystem::ActorSpawnerIDMap' has a wrong offset!");
+static_assert(alignof(UX6ReplicateAssetData) == 0x000008, "Wrong alignment on UX6ReplicateAssetData");
+static_assert(sizeof(UX6ReplicateAssetData) == 0x000040, "Wrong size on UX6ReplicateAssetData");
+static_assert(offsetof(UX6ReplicateAssetData, AssetPaths) == 0x000030, "Member 'UX6ReplicateAssetData::AssetPaths' has a wrong offset!");
 
 // Class X6Game.X6CarrierBaseProcessor
 // 0x0000 (0x0028 - 0x0028)
@@ -5734,31 +6066,6 @@ static_assert(offsetof(UX6BikePosturalCorrectionProcessor, bEnableTurnWithRoll) 
 static_assert(offsetof(UX6BikePosturalCorrectionProcessor, MaxRollAngleInTurn) == 0x000414, "Member 'UX6BikePosturalCorrectionProcessor::MaxRollAngleInTurn' has a wrong offset!");
 static_assert(offsetof(UX6BikePosturalCorrectionProcessor, TurnInPlaceInterpSpeed) == 0x000418, "Member 'UX6BikePosturalCorrectionProcessor::TurnInPlaceInterpSpeed' has a wrong offset!");
 
-// Class X6Game.X6NikkiGroundAnimInstance
-// 0x0010 (0x0600 - 0x05F0)
-class UX6NikkiGroundAnimInstance : public UNikkiGroundAnimInstance
-{
-public:
-	bool                                          bMovementBlocked;                                  // 0x05F0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5F1[0x3];                                      // 0x05F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         RelativeBlockedByHeight;                           // 0x05F4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5F8[0x8];                                      // 0x05F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NikkiGroundAnimInstance">();
-	}
-	static class UX6NikkiGroundAnimInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6NikkiGroundAnimInstance>();
-	}
-};
-static_assert(alignof(UX6NikkiGroundAnimInstance) == 0x000010, "Wrong alignment on UX6NikkiGroundAnimInstance");
-static_assert(sizeof(UX6NikkiGroundAnimInstance) == 0x000600, "Wrong size on UX6NikkiGroundAnimInstance");
-static_assert(offsetof(UX6NikkiGroundAnimInstance, bMovementBlocked) == 0x0005F0, "Member 'UX6NikkiGroundAnimInstance::bMovementBlocked' has a wrong offset!");
-static_assert(offsetof(UX6NikkiGroundAnimInstance, RelativeBlockedByHeight) == 0x0005F4, "Member 'UX6NikkiGroundAnimInstance::RelativeBlockedByHeight' has a wrong offset!");
-
 // Class X6Game.ClickNotification
 // 0x0020 (0x0048 - 0x0028)
 class UClickNotification final : public UObject
@@ -5805,22 +6112,44 @@ static_assert(alignof(UX6GetActiveAudioComponentOpertion) == 0x000008, "Wrong al
 static_assert(sizeof(UX6GetActiveAudioComponentOpertion) == 0x000038, "Wrong size on UX6GetActiveAudioComponentOpertion");
 static_assert(offsetof(UX6GetActiveAudioComponentOpertion, OnCompleted) == 0x000028, "Member 'UX6GetActiveAudioComponentOpertion::OnCompleted' has a wrong offset!");
 
-// Class X6Game.X6ObstacleInterface
-// 0x0000 (0x0000 - 0x0000)
-class IX6ObstacleInterface final : public IInterface
+// Class X6Game.X6ObjectOctree
+// 0x0080 (0x0428 - 0x03A8)
+class AX6ObjectOctree final : public AActor
 {
+public:
+	uint8                                         bEnableDrawing : 1;                                // 0x03A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_3A9[0x77];                                     // 0x03A9(0x0077)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6ObjectOctreeRenderingComp*           X6OctreeRenderComp;                                // 0x0420(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	bool AddOctreeElement(const struct FX6OctreeElement& inNewOctreeElement);
+	bool AddOctreeElementByActor(class AActor* Actor);
+	void GetActorsWithinBounds(const struct FBoxSphereBounds& BoundsQuery, TArray<class AActor*>* OutResult);
+	void GetElementsWithinBounds(const struct FBoxSphereBounds& BoundsQuery, TArray<struct FX6OctreeElement>* OutResult);
+	bool GetOctreeBoundsByActor(class AActor* Actor, struct FBoxSphereBounds* OutBounds);
+	bool GetOctreeIdByActor(class AActor* Actor, int32* OutNodeIndex, int32* OutElemenetIndex);
+	bool InitOctree(const struct FVector& Origin, float Radius, TSubclassOf<class AActor> Class_0);
+	bool IsReady();
+	bool ObserveMovableObjects(const TArray<class AActor*>& MoveableActos);
+	void PostActorEndPlay(class AActor* Actor, const EEndPlayReason EndPlayReason);
+	bool RemoveObservedMovableObjects(const TArray<class AActor*>& MoveableActos);
+	void RemoveOctreeElement(const struct FX6OctreeElement& inNewOctreeElement);
+	void RemoveOctreeElementByActor(class AActor* Actor);
+	void SetEnableDebugDraw(bool bEnable);
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6ObstacleInterface">();
+		return StaticClassImpl<"X6ObjectOctree">();
 	}
-	static class IX6ObstacleInterface* GetDefaultObj()
+	static class AX6ObjectOctree* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<IX6ObstacleInterface>();
+		return GetDefaultObjImpl<AX6ObjectOctree>();
 	}
 };
-static_assert(alignof(IX6ObstacleInterface) == 0x000001, "Wrong alignment on IX6ObstacleInterface");
-static_assert(sizeof(IX6ObstacleInterface) == 0x000001, "Wrong size on IX6ObstacleInterface");
+static_assert(alignof(AX6ObjectOctree) == 0x000008, "Wrong alignment on AX6ObjectOctree");
+static_assert(sizeof(AX6ObjectOctree) == 0x000428, "Wrong size on AX6ObjectOctree");
+static_assert(offsetof(AX6ObjectOctree, X6OctreeRenderComp) == 0x000420, "Member 'AX6ObjectOctree::X6OctreeRenderComp' has a wrong offset!");
 
 // Class X6Game.X6BlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -6062,58 +6391,6 @@ public:
 static_assert(alignof(UX6CombatCameraSynchronizerBase) == 0x000010, "Wrong alignment on UX6CombatCameraSynchronizerBase");
 static_assert(sizeof(UX6CombatCameraSynchronizerBase) == 0x0001E0, "Wrong size on UX6CombatCameraSynchronizerBase");
 
-// Class X6Game.X6PlayerControllerBase
-// 0x0030 (0x09C0 - 0x0990)
-class AX6PlayerControllerBase : public APlayerController
-{
-public:
-	TSubclassOf<class UX6UtcPlayerInputComponent> UtcInputComponentClass;                            // 0x0990(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_998[0x28];                                     // 0x0998(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetTouchInputEnable(bool Enable);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PlayerControllerBase">();
-	}
-	static class AX6PlayerControllerBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6PlayerControllerBase>();
-	}
-};
-static_assert(alignof(AX6PlayerControllerBase) == 0x000008, "Wrong alignment on AX6PlayerControllerBase");
-static_assert(sizeof(AX6PlayerControllerBase) == 0x0009C0, "Wrong size on AX6PlayerControllerBase");
-static_assert(offsetof(AX6PlayerControllerBase, UtcInputComponentClass) == 0x000990, "Member 'AX6PlayerControllerBase::UtcInputComponentClass' has a wrong offset!");
-
-// Class X6Game.X6NikkiPlayerController
-// 0x0010 (0x09D0 - 0x09C0)
-class AX6NikkiPlayerController : public AX6PlayerControllerBase
-{
-public:
-	bool                                          bCreatePlayerCameraManager;                        // 0x09C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9C1[0x7];                                      // 0x09C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  ControlPawn;                                       // 0x09C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	void SetControlPawn(class APawn* InPawn);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NikkiPlayerController">();
-	}
-	static class AX6NikkiPlayerController* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6NikkiPlayerController>();
-	}
-};
-static_assert(alignof(AX6NikkiPlayerController) == 0x000008, "Wrong alignment on AX6NikkiPlayerController");
-static_assert(sizeof(AX6NikkiPlayerController) == 0x0009D0, "Wrong size on AX6NikkiPlayerController");
-static_assert(offsetof(AX6NikkiPlayerController, bCreatePlayerCameraManager) == 0x0009C0, "Member 'AX6NikkiPlayerController::bCreatePlayerCameraManager' has a wrong offset!");
-static_assert(offsetof(AX6NikkiPlayerController, ControlPawn) == 0x0009C8, "Member 'AX6NikkiPlayerController::ControlPawn' has a wrong offset!");
-
 // Class X6Game.X6BossCameraSynchronizer
 // 0x0020 (0x0200 - 0x01E0)
 class UX6BossCameraSynchronizer final : public UX6CombatCameraSynchronizerBase
@@ -6169,32 +6446,6 @@ public:
 static_assert(alignof(UX6BTDecorator_BlueprintBase) == 0x000008, "Wrong alignment on UX6BTDecorator_BlueprintBase");
 static_assert(sizeof(UX6BTDecorator_BlueprintBase) == 0x0000A0, "Wrong size on UX6BTDecorator_BlueprintBase");
 
-// Class X6Game.X6NigaraBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UX6NigaraBlueprintLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static bool GetNiagaraUserBoolParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, bool* OutValue);
-	static bool GetNiagaraUserFloatParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, float* OutValue);
-	static bool GetNiagaraUserInt32Param(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, int32* OutValue);
-	static bool GetNiagaraUserLinearColorParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, struct FLinearColor* OutValue);
-	static bool GetNiagaraUserObjectParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, class UObject** OutValue);
-	static bool GetNiagaraUserVector2Param(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, struct FVector2D* OutValue);
-	static bool GetNiagaraUserVector3Param(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, struct FVector* OutValue);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NigaraBlueprintLibrary">();
-	}
-	static class UX6NigaraBlueprintLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6NigaraBlueprintLibrary>();
-	}
-};
-static_assert(alignof(UX6NigaraBlueprintLibrary) == 0x000008, "Wrong alignment on UX6NigaraBlueprintLibrary");
-static_assert(sizeof(UX6NigaraBlueprintLibrary) == 0x000028, "Wrong size on UX6NigaraBlueprintLibrary");
-
 // Class X6Game.X6BTDecorator_IsInRange
 // 0x0058 (0x00C0 - 0x0068)
 class UX6BTDecorator_IsInRange final : public UBTDecorator
@@ -6223,6 +6474,69 @@ static_assert(offsetof(UX6BTDecorator_IsInRange, Origin) == 0x000068, "Member 'U
 static_assert(offsetof(UX6BTDecorator_IsInRange, End) == 0x000090, "Member 'UX6BTDecorator_IsInRange::End' has a wrong offset!");
 static_assert(offsetof(UX6BTDecorator_IsInRange, Distance) == 0x0000B8, "Member 'UX6BTDecorator_IsInRange::Distance' has a wrong offset!");
 
+// Class X6Game.X6BTDecorator_QueryAvailableInteractiveObject
+// 0x0050 (0x00B8 - 0x0068)
+class UX6BTDecorator_QueryAvailableInteractiveObject final : public UBTDecorator
+{
+public:
+	struct FBlackboardKeySelector                 TestActor;                                         // 0x0068(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FBlackboardKeySelector                 OutResult;                                         // 0x0090(0x0028)(Edit, Protected, NativeAccessSpecifierProtected)
+
+public:
+	int64 GetActionType() const;
+	class AActor* PickAvailableInteractiveObject(const TArray<class AActor*>& InteractiveObject) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6BTDecorator_QueryAvailableInteractiveObject">();
+	}
+	static class UX6BTDecorator_QueryAvailableInteractiveObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6BTDecorator_QueryAvailableInteractiveObject>();
+	}
+};
+static_assert(alignof(UX6BTDecorator_QueryAvailableInteractiveObject) == 0x000008, "Wrong alignment on UX6BTDecorator_QueryAvailableInteractiveObject");
+static_assert(sizeof(UX6BTDecorator_QueryAvailableInteractiveObject) == 0x0000B8, "Wrong size on UX6BTDecorator_QueryAvailableInteractiveObject");
+static_assert(offsetof(UX6BTDecorator_QueryAvailableInteractiveObject, TestActor) == 0x000068, "Member 'UX6BTDecorator_QueryAvailableInteractiveObject::TestActor' has a wrong offset!");
+static_assert(offsetof(UX6BTDecorator_QueryAvailableInteractiveObject, OutResult) == 0x000090, "Member 'UX6BTDecorator_QueryAvailableInteractiveObject::OutResult' has a wrong offset!");
+
+// Class X6Game.X6NpcDataProcessor
+// 0x0198 (0x01C0 - 0x0028)
+class UX6NpcDataProcessor final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x108];                                     // 0x0028(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   MeshRootMBoneName;                                 // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class AActor*, bool>                     RegisteredActorShouldCheckMaterialCurve;           // 0x0138(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_188[0x20];                                     // 0x0188(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  PlayerPawn;                                        // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1B0[0x10];                                     // 0x01B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitFaceMaterialCurvesCheckParam(const TArray<class FName>& FaceMaterialCurvesArray, const float EnabledAngle, class FName NPCMainMeshTag);
+	bool RegisterActorShouldCheckMaterialCurve(class AActor* ActorShouldCheckMaterialCurve);
+	bool RegisterT2StaticNpcActors(const int64& SpawnerID, class AActor* GroupActor, const TArray<struct FT2NpcRadiusHalfHeightStruct>& T2NpcActors);
+	void SetNpcMainMeshTag(class FName NPCMainMeshTag);
+	bool UnregisterActorShouldCheckMaterialCurve(class AActor* ActorShouldCheckMaterialCurve);
+	bool UnregisterT2StaticNpcActors(const int64& SpawnerID);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NpcDataProcessor">();
+	}
+	static class UX6NpcDataProcessor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NpcDataProcessor>();
+	}
+};
+static_assert(alignof(UX6NpcDataProcessor) == 0x000008, "Wrong alignment on UX6NpcDataProcessor");
+static_assert(sizeof(UX6NpcDataProcessor) == 0x0001C0, "Wrong size on UX6NpcDataProcessor");
+static_assert(offsetof(UX6NpcDataProcessor, MeshRootMBoneName) == 0x000130, "Member 'UX6NpcDataProcessor::MeshRootMBoneName' has a wrong offset!");
+static_assert(offsetof(UX6NpcDataProcessor, RegisteredActorShouldCheckMaterialCurve) == 0x000138, "Member 'UX6NpcDataProcessor::RegisteredActorShouldCheckMaterialCurve' has a wrong offset!");
+static_assert(offsetof(UX6NpcDataProcessor, PlayerPawn) == 0x0001A8, "Member 'UX6NpcDataProcessor::PlayerPawn' has a wrong offset!");
+
 // Class X6Game.X6BTService_BlueprintBase
 // 0x0000 (0x0098 - 0x0098)
 class UX6BTService_BlueprintBase : public UBTService_BlueprintBase
@@ -6242,26 +6556,6 @@ public:
 };
 static_assert(alignof(UX6BTService_BlueprintBase) == 0x000008, "Wrong alignment on UX6BTService_BlueprintBase");
 static_assert(sizeof(UX6BTService_BlueprintBase) == 0x000098, "Wrong size on UX6BTService_BlueprintBase");
-
-// Class X6Game.X6ObjectOctreeRenderingComp
-// 0x0010 (0x05D0 - 0x05C0)
-class UX6ObjectOctreeRenderingComp final : public UPrimitiveComponent
-{
-public:
-	uint8                                         Pad_5B8[0x18];                                     // 0x05B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ObjectOctreeRenderingComp">();
-	}
-	static class UX6ObjectOctreeRenderingComp* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ObjectOctreeRenderingComp>();
-	}
-};
-static_assert(alignof(UX6ObjectOctreeRenderingComp) == 0x000010, "Wrong alignment on UX6ObjectOctreeRenderingComp");
-static_assert(sizeof(UX6ObjectOctreeRenderingComp) == 0x0005D0, "Wrong size on UX6ObjectOctreeRenderingComp");
 
 // Class X6Game.X6BTTask_BlueprintBase
 // 0x0008 (0x00B0 - 0x00A8)
@@ -6290,6 +6584,26 @@ public:
 };
 static_assert(alignof(UX6BTTask_BlueprintBase) == 0x000008, "Wrong alignment on UX6BTTask_BlueprintBase");
 static_assert(sizeof(UX6BTTask_BlueprintBase) == 0x0000B0, "Wrong size on UX6BTTask_BlueprintBase");
+
+// Class X6Game.NavLinkLaunchMove
+// 0x0050 (0x0090 - 0x0040)
+class UNavLinkLaunchMove final : public UCustomNavLinkMoveBase
+{
+public:
+	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavLinkLaunchMove">();
+	}
+	static class UNavLinkLaunchMove* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavLinkLaunchMove>();
+	}
+};
+static_assert(alignof(UNavLinkLaunchMove) == 0x000008, "Wrong alignment on UNavLinkLaunchMove");
+static_assert(sizeof(UNavLinkLaunchMove) == 0x000090, "Wrong size on UNavLinkLaunchMove");
 
 // Class X6Game.X6BTTask_PlayBlackboardAnimation
 // 0x0080 (0x00F0 - 0x0070)
@@ -6323,90 +6637,6 @@ static_assert(offsetof(UX6BTTask_PlayBlackboardAnimation, MinimumPlayTime) == 0x
 static_assert(offsetof(UX6BTTask_PlayBlackboardAnimation, MyOwnerComp) == 0x0000A8, "Member 'UX6BTTask_PlayBlackboardAnimation::MyOwnerComp' has a wrong offset!");
 static_assert(offsetof(UX6BTTask_PlayBlackboardAnimation, AnimInstance) == 0x0000B0, "Member 'UX6BTTask_PlayBlackboardAnimation::AnimInstance' has a wrong offset!");
 
-// Class X6Game.X6PlayerCameraManager
-// 0x01D0 (0x7450 - 0x7280)
-class AX6PlayerCameraManager : public AX6PlayerCameraManagerBase
-{
-public:
-	struct FCameraModifiersWrap                   ModifierObjects;                                   // 0x7280(0x0038)(NoDestructor, NativeAccessSpecifierPublic)
-	class UDataTable*                             DTCameraStateTransitionRule;                       // 0x72B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDataTable*                             DTCameraStatePriority;                             // 0x72C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_72C8[0x58];                                    // 0x72C8(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(ECameraState NewCameraState)> OnCameraStateChanged;                // 0x7320(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         bDissolveEnable : 1;                               // 0x7330(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_7331[0x7];                                     // 0x7331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FCameraModifierSpecHandle>      ActivateModifiers;                                 // 0x7338(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FCameraModifierEffectSpec>      CameraModifiers_External;                          // 0x7348(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class UDataTable*                             ModifiersConfig;                                   // 0x7358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FString, class UCameraModifiersDetailData*> ModifiersList;                            // 0x7360(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_73B0[0x50];                                    // 0x73B0(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     RadiusBlurMaterial;                                // 0x7400(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RadiusBlurVectorParamName;                         // 0x7408(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           RadiusBlurVectorParamValue;                        // 0x7410(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInstanceDynamic*               RadiusBlurMID;                                     // 0x7420(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(const class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams)> OnCameraCutBeginDelegate; // 0x7428(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams)> OnCameraCutEndDelegate; // 0x7438(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7448[0x8];                                     // 0x7448(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FCameraModifierSpecHandle ApplyCameraModifierEffectByKey(const class FString& Key);
-	void ApplyRadiusBlurToPostProcessSettings(const float InOffset, const float InRadius, const float InHardness, const float InSwitchDir, struct FPostProcessSettings* InOutPostProcessSettings, const float InBlendWeight);
-	void BlendToViewTargetWithParam(ECameraState CurrentCameraState, class AActor* CurrentTarget, ECameraState NewCameraState, class AActor* NewTarget, const struct FViewTargetTransitionParams& TransitionParams, bool bOverrideTransitionParams);
-	bool CheckIsBlendingToOtherTarget();
-	TArray<struct FDebugCameraModifierStackInfo> DEBUG_GetCameraModifierStackInfo();
-	struct FDebugCameraReviseParam DEBUG_GetCameraTransformParam();
-	void FixLastViewTargetOfLevelSequence();
-	float GetOutOfFrustumValue(const struct FVector& TargetWorldLoc, float InRangeMultiper);
-	bool K2_ApplyCameraModifierEffectByKey(const class FString& Key);
-	void K2_ChangeCameraStateTo(ECameraState NewCameraState, class AActor* NewTarget);
-	void K2_OnCameraModifierEffectToSelf(const struct FCameraModifierSpecHandle& ActiveHandle);
-	void K2_PopAndSwitchToLastCameraState(bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
-	void K2_PushAndSwitchToCameraState(ECameraState NewCameraState, class AActor* NewTarget, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
-	void K2_PushCameraState(ECameraState NewCameraState, class AActor* NewTarget);
-	void K2_SetViewTarget(class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams);
-	void K2_SwitchToCameraState(ECameraState NewCameraState, class AActor* NewTarget);
-	void OnAssignViewTarget(class AActor* NewTarget);
-	void OnSetViewTarget(class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams);
-	void RemoveCameraModifierEffectByHandle(int32 HandleID);
-	void RemoveCameraState(ECameraState CameraStateToRemove, class AActor* TargetToRemove, bool BlendToTop, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
-	void ResetCameraExitConditions();
-	void SetKeepCameraCutRotationWhenBlendOut(const bool bInKeepCameraCutRotationWhenBlendOut);
-	void SetResetCameraCutRotationWhenJumpOut(const bool bInResetCameraCutRotationWhenJumpCut);
-	void SetViewTargetInSequence(class UObject* WorldContextObject, class AActor* CameraActor, bool DoCollisionTest, float BlendTime, EViewTargetBlendFunction BlendFunc, float BlendExp, bool bLockOutgoing);
-
-	bool CheckCameraTransitionEnable(ECameraState SourceCameraState, ECameraState TargetCameraState) const;
-	class AActor* GetCurViewTarget() const;
-	struct FRotator GetDesiredTargetRotation() const;
-	struct FCameraTransitionConfig GetTransitionConfig(const ECameraState SourceCameraState, const ECameraState TargetCameraState) const;
-	bool IsPossessedByLevelSequence(const bool bIgnoreViewTargetDifference) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PlayerCameraManager">();
-	}
-	static class AX6PlayerCameraManager* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6PlayerCameraManager>();
-	}
-};
-static_assert(alignof(AX6PlayerCameraManager) == 0x000010, "Wrong alignment on AX6PlayerCameraManager");
-static_assert(sizeof(AX6PlayerCameraManager) == 0x007450, "Wrong size on AX6PlayerCameraManager");
-static_assert(offsetof(AX6PlayerCameraManager, ModifierObjects) == 0x007280, "Member 'AX6PlayerCameraManager::ModifierObjects' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, DTCameraStateTransitionRule) == 0x0072B8, "Member 'AX6PlayerCameraManager::DTCameraStateTransitionRule' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, DTCameraStatePriority) == 0x0072C0, "Member 'AX6PlayerCameraManager::DTCameraStatePriority' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, OnCameraStateChanged) == 0x007320, "Member 'AX6PlayerCameraManager::OnCameraStateChanged' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, ActivateModifiers) == 0x007338, "Member 'AX6PlayerCameraManager::ActivateModifiers' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, CameraModifiers_External) == 0x007348, "Member 'AX6PlayerCameraManager::CameraModifiers_External' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, ModifiersConfig) == 0x007358, "Member 'AX6PlayerCameraManager::ModifiersConfig' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, ModifiersList) == 0x007360, "Member 'AX6PlayerCameraManager::ModifiersList' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurMaterial) == 0x007400, "Member 'AX6PlayerCameraManager::RadiusBlurMaterial' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurVectorParamName) == 0x007408, "Member 'AX6PlayerCameraManager::RadiusBlurVectorParamName' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurVectorParamValue) == 0x007410, "Member 'AX6PlayerCameraManager::RadiusBlurVectorParamValue' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurMID) == 0x007420, "Member 'AX6PlayerCameraManager::RadiusBlurMID' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, OnCameraCutBeginDelegate) == 0x007428, "Member 'AX6PlayerCameraManager::OnCameraCutBeginDelegate' has a wrong offset!");
-static_assert(offsetof(AX6PlayerCameraManager, OnCameraCutEndDelegate) == 0x007438, "Member 'AX6PlayerCameraManager::OnCameraCutEndDelegate' has a wrong offset!");
-
 // Class X6Game.BTDaMiaoAvoidanceContext
 // 0x0058 (0x0080 - 0x0028)
 class UBTDaMiaoAvoidanceContext final : public UObject
@@ -6433,6 +6663,42 @@ static_assert(offsetof(UBTDaMiaoAvoidanceContext, CustomMoveCharacters) == 0x000
 static_assert(offsetof(UBTDaMiaoAvoidanceContext, CheckMoveTime) == 0x000078, "Member 'UBTDaMiaoAvoidanceContext::CheckMoveTime' has a wrong offset!");
 static_assert(offsetof(UBTDaMiaoAvoidanceContext, bRespMultiPlayer) == 0x00007C, "Member 'UBTDaMiaoAvoidanceContext::bRespMultiPlayer' has a wrong offset!");
 
+// Class X6Game.X6ObjectPoolSubSystem
+// 0x0080 (0x00B0 - 0x0030)
+class UX6ObjectPoolSubSystem final : public UGameInstanceSubsystem
+{
+public:
+	TDelegate<void(class UObject* ObjectToDestroy)> OnObjectPreDestroy;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_40[0x70];                                      // 0x0040(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void CleanUpPools(bool bTryCleanMoreObjects);
+	void CreatePoolByClass(class UClass* InClass);
+	void DestroyPoolByClass(class UClass* InClass);
+	const class FName GetFreeByPoolTag();
+	class UObject* GetObjectByClass(class UClass* InClass, class UObject* Outer_0, const class FString& ObjectName);
+	class UObject* GetObjectByClassEvenIfNoPool(class UClass* InClass, class UObject* Outer_0, const class FString& ObjectName);
+	bool HasPoolOfClass(class UClass* InClass);
+	bool IsPooledObject(class UObject* InObject);
+	bool IsVaildForUse(class UObject* InObject);
+	void PreCreateObjects(class UClass* InClass, int32 PreCreateNum);
+	bool RecycleObject(class UObject* InObject, const TArray<class FString>& ModifiedProperties);
+	void ReportMemoryUsage();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ObjectPoolSubSystem">();
+	}
+	static class UX6ObjectPoolSubSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6ObjectPoolSubSystem>();
+	}
+};
+static_assert(alignof(UX6ObjectPoolSubSystem) == 0x000008, "Wrong alignment on UX6ObjectPoolSubSystem");
+static_assert(sizeof(UX6ObjectPoolSubSystem) == 0x0000B0, "Wrong size on UX6ObjectPoolSubSystem");
+static_assert(offsetof(UX6ObjectPoolSubSystem, OnObjectPreDestroy) == 0x000030, "Member 'UX6ObjectPoolSubSystem::OnObjectPreDestroy' has a wrong offset!");
+
 // Class X6Game.X6BTDecorator_CheckDaMiaoAvoidance
 // 0x0030 (0x0098 - 0x0068)
 class UX6BTDecorator_CheckDaMiaoAvoidance final : public UBTDecorator
@@ -6455,28 +6721,6 @@ static_assert(alignof(UX6BTDecorator_CheckDaMiaoAvoidance) == 0x000008, "Wrong a
 static_assert(sizeof(UX6BTDecorator_CheckDaMiaoAvoidance) == 0x000098, "Wrong size on UX6BTDecorator_CheckDaMiaoAvoidance");
 static_assert(offsetof(UX6BTDecorator_CheckDaMiaoAvoidance, AvoidanceContextKey) == 0x000068, "Member 'UX6BTDecorator_CheckDaMiaoAvoidance::AvoidanceContextKey' has a wrong offset!");
 static_assert(offsetof(UX6BTDecorator_CheckDaMiaoAvoidance, CachedAvoidanceContext) == 0x000090, "Member 'UX6BTDecorator_CheckDaMiaoAvoidance::CachedAvoidanceContext' has a wrong offset!");
-
-// Class X6Game.X6PathfindingSetting
-// 0x0008 (0x0040 - 0x0038)
-class UX6PathfindingSetting final : public UDeveloperSettings
-{
-public:
-	ECollisionChannel                             DefaultAirPathfindingCollisionChannel;             // 0x0038(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PathfindingSetting">();
-	}
-	static class UX6PathfindingSetting* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PathfindingSetting>();
-	}
-};
-static_assert(alignof(UX6PathfindingSetting) == 0x000008, "Wrong alignment on UX6PathfindingSetting");
-static_assert(sizeof(UX6PathfindingSetting) == 0x000040, "Wrong size on UX6PathfindingSetting");
-static_assert(offsetof(UX6PathfindingSetting, DefaultAirPathfindingCollisionChannel) == 0x000038, "Member 'UX6PathfindingSetting::DefaultAirPathfindingCollisionChannel' has a wrong offset!");
 
 // Class X6Game.X6BTTask_DaMiaoAvoidance
 // 0x00B8 (0x0128 - 0x0070)
@@ -6518,6 +6762,31 @@ static_assert(offsetof(UX6BTTask_DaMiaoAvoidance, MyOwnerComp) == 0x000108, "Mem
 static_assert(offsetof(UX6BTTask_DaMiaoAvoidance, CachedForwardMontage) == 0x000110, "Member 'UX6BTTask_DaMiaoAvoidance::CachedForwardMontage' has a wrong offset!");
 static_assert(offsetof(UX6BTTask_DaMiaoAvoidance, CachedBackwardMontage) == 0x000118, "Member 'UX6BTTask_DaMiaoAvoidance::CachedBackwardMontage' has a wrong offset!");
 
+// Class X6Game.X6PlayerControllerBase
+// 0x0030 (0x09C0 - 0x0990)
+class AX6PlayerControllerBase : public APlayerController
+{
+public:
+	TSubclassOf<class UX6UtcPlayerInputComponent> UtcInputComponentClass;                            // 0x0990(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_998[0x28];                                     // 0x0998(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetTouchInputEnable(bool Enable);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PlayerControllerBase">();
+	}
+	static class AX6PlayerControllerBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6PlayerControllerBase>();
+	}
+};
+static_assert(alignof(AX6PlayerControllerBase) == 0x000008, "Wrong alignment on AX6PlayerControllerBase");
+static_assert(sizeof(AX6PlayerControllerBase) == 0x0009C0, "Wrong size on AX6PlayerControllerBase");
+static_assert(offsetof(AX6PlayerControllerBase, UtcInputComponentClass) == 0x000990, "Member 'AX6PlayerControllerBase::UtcInputComponentClass' has a wrong offset!");
+
 // Class X6Game.X6BuffDataAsset
 // 0x0010 (0x0040 - 0x0030)
 class UX6BuffDataAsset : public UPrimaryDataAsset
@@ -6539,23 +6808,6 @@ static_assert(alignof(UX6BuffDataAsset) == 0x000008, "Wrong alignment on UX6Buff
 static_assert(sizeof(UX6BuffDataAsset) == 0x000040, "Wrong size on UX6BuffDataAsset");
 static_assert(offsetof(UX6BuffDataAsset, BuffEffectModifier) == 0x000030, "Member 'UX6BuffDataAsset::BuffEffectModifier' has a wrong offset!");
 
-// Class X6Game.X6Object
-// 0x0000 (0x0028 - 0x0028)
-class UX6Object : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6Object">();
-	}
-	static class UX6Object* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6Object>();
-	}
-};
-static_assert(alignof(UX6Object) == 0x000008, "Wrong alignment on UX6Object");
-static_assert(sizeof(UX6Object) == 0x000028, "Wrong size on UX6Object");
-
 // Class X6Game.X6BuffEffectModifier
 // 0x0000 (0x0028 - 0x0028)
 class UX6BuffEffectModifier : public UObject
@@ -6573,28 +6825,53 @@ public:
 static_assert(alignof(UX6BuffEffectModifier) == 0x000008, "Wrong alignment on UX6BuffEffectModifier");
 static_assert(sizeof(UX6BuffEffectModifier) == 0x000028, "Wrong size on UX6BuffEffectModifier");
 
+// Class X6Game.X6PathfindingSubSystem
+// 0x00B0 (0x00E0 - 0x0030)
+class UX6PathfindingSubSystem final : public UGameInstanceSubsystem
+{
+public:
+	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FAIRequestID, struct FAirPathingRequest> AirPathFindingRequests;                     // 0x0038(0x0050)(NativeAccessSpecifierPrivate)
+	TMap<TWeakObjectPtr<class AAIController>, struct FRepathObserverInfo> RepathObserverMap;         // 0x0088(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PathfindingSubSystem">();
+	}
+	static class UX6PathfindingSubSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6PathfindingSubSystem>();
+	}
+};
+static_assert(alignof(UX6PathfindingSubSystem) == 0x000008, "Wrong alignment on UX6PathfindingSubSystem");
+static_assert(sizeof(UX6PathfindingSubSystem) == 0x0000E0, "Wrong size on UX6PathfindingSubSystem");
+static_assert(offsetof(UX6PathfindingSubSystem, AirPathFindingRequests) == 0x000038, "Member 'UX6PathfindingSubSystem::AirPathFindingRequests' has a wrong offset!");
+static_assert(offsetof(UX6PathfindingSubSystem, RepathObserverMap) == 0x000088, "Member 'UX6PathfindingSubSystem::RepathObserverMap' has a wrong offset!");
+
 // Class X6Game.X6BulletActorBase
-// 0x0098 (0x04D0 - 0x0438)
+// 0x0098 (0x0520 - 0x0488)
 class AX6BulletActorBase : public AX6Actor
 {
 public:
-	class AActor*                                 CasterActor;                                       // 0x0438(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UX6BulletDataAsset*                     BulletDataAsset;                                   // 0x0440(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USceneComponent*                        TargetComponent;                                   // 0x0448(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 TargetActor;                                       // 0x0450(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Velocity;                                          // 0x0458(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                NextLocation;                                      // 0x0470(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                DestroyHitImpactPoint;                             // 0x0488(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsBlockingDestroy;                                // 0x04A0(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6BulletDestroyType                          DestroyType;                                       // 0x04A1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A2[0x2];                                      // 0x04A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AccumulateSeconds;                                 // 0x04A4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsPendingDestroy;                                 // 0x04A8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4A9[0x7];                                      // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UX6BulletSimpleBasicModifier*>   BulletModifiers;                                   // 0x04B0(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	class UX6BulletMovementBasicModifier*         BulletMovementModifier;                            // 0x04C0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Duration;                                          // 0x04C8(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4CC[0x4];                                      // 0x04CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CasterActor;                                       // 0x0488(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UX6BulletDataAsset*                     BulletDataAsset;                                   // 0x0490(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USceneComponent*                        TargetComponent;                                   // 0x0498(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 TargetActor;                                       // 0x04A0(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Velocity;                                          // 0x04A8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NextLocation;                                      // 0x04C0(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                DestroyHitImpactPoint;                             // 0x04D8(0x0018)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsBlockingDestroy;                                // 0x04F0(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6BulletDestroyType                          DestroyType;                                       // 0x04F1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4F2[0x2];                                      // 0x04F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AccumulateSeconds;                                 // 0x04F4(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsPendingDestroy;                                 // 0x04F8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4F9[0x7];                                      // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UX6BulletSimpleBasicModifier*>   BulletModifiers;                                   // 0x0500(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	class UX6BulletMovementBasicModifier*         BulletMovementModifier;                            // 0x0510(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Duration;                                          // 0x0518(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_51C[0x4];                                      // 0x051C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitData(class AActor* InCasterActor, class UX6BulletDataAsset* InBulletDataAsset, class USceneComponent* InTargetComponent, class AActor* InTargetActor);
@@ -6623,29 +6900,29 @@ public:
 	}
 };
 static_assert(alignof(AX6BulletActorBase) == 0x000008, "Wrong alignment on AX6BulletActorBase");
-static_assert(sizeof(AX6BulletActorBase) == 0x0004D0, "Wrong size on AX6BulletActorBase");
-static_assert(offsetof(AX6BulletActorBase, CasterActor) == 0x000438, "Member 'AX6BulletActorBase::CasterActor' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, BulletDataAsset) == 0x000440, "Member 'AX6BulletActorBase::BulletDataAsset' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, TargetComponent) == 0x000448, "Member 'AX6BulletActorBase::TargetComponent' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, TargetActor) == 0x000450, "Member 'AX6BulletActorBase::TargetActor' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, Velocity) == 0x000458, "Member 'AX6BulletActorBase::Velocity' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, NextLocation) == 0x000470, "Member 'AX6BulletActorBase::NextLocation' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, DestroyHitImpactPoint) == 0x000488, "Member 'AX6BulletActorBase::DestroyHitImpactPoint' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, bIsBlockingDestroy) == 0x0004A0, "Member 'AX6BulletActorBase::bIsBlockingDestroy' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, DestroyType) == 0x0004A1, "Member 'AX6BulletActorBase::DestroyType' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, AccumulateSeconds) == 0x0004A4, "Member 'AX6BulletActorBase::AccumulateSeconds' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, bIsPendingDestroy) == 0x0004A8, "Member 'AX6BulletActorBase::bIsPendingDestroy' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, BulletModifiers) == 0x0004B0, "Member 'AX6BulletActorBase::BulletModifiers' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, BulletMovementModifier) == 0x0004C0, "Member 'AX6BulletActorBase::BulletMovementModifier' has a wrong offset!");
-static_assert(offsetof(AX6BulletActorBase, Duration) == 0x0004C8, "Member 'AX6BulletActorBase::Duration' has a wrong offset!");
+static_assert(sizeof(AX6BulletActorBase) == 0x000520, "Wrong size on AX6BulletActorBase");
+static_assert(offsetof(AX6BulletActorBase, CasterActor) == 0x000488, "Member 'AX6BulletActorBase::CasterActor' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, BulletDataAsset) == 0x000490, "Member 'AX6BulletActorBase::BulletDataAsset' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, TargetComponent) == 0x000498, "Member 'AX6BulletActorBase::TargetComponent' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, TargetActor) == 0x0004A0, "Member 'AX6BulletActorBase::TargetActor' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, Velocity) == 0x0004A8, "Member 'AX6BulletActorBase::Velocity' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, NextLocation) == 0x0004C0, "Member 'AX6BulletActorBase::NextLocation' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, DestroyHitImpactPoint) == 0x0004D8, "Member 'AX6BulletActorBase::DestroyHitImpactPoint' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, bIsBlockingDestroy) == 0x0004F0, "Member 'AX6BulletActorBase::bIsBlockingDestroy' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, DestroyType) == 0x0004F1, "Member 'AX6BulletActorBase::DestroyType' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, AccumulateSeconds) == 0x0004F4, "Member 'AX6BulletActorBase::AccumulateSeconds' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, bIsPendingDestroy) == 0x0004F8, "Member 'AX6BulletActorBase::bIsPendingDestroy' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, BulletModifiers) == 0x000500, "Member 'AX6BulletActorBase::BulletModifiers' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, BulletMovementModifier) == 0x000510, "Member 'AX6BulletActorBase::BulletMovementModifier' has a wrong offset!");
+static_assert(offsetof(AX6BulletActorBase, Duration) == 0x000518, "Member 'AX6BulletActorBase::Duration' has a wrong offset!");
 
 // Class X6Game.X6BulletBase
-// 0x0008 (0x0440 - 0x0438)
+// 0x0008 (0x0490 - 0x0488)
 class AX6BulletBase final : public AX6Actor
 {
 public:
-	EX6BulletClass                                BulletClass;                                       // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_439[0x7];                                      // 0x0439(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EX6BulletClass                                BulletClass;                                       // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_489[0x7];                                      // 0x0489(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -6658,8 +6935,32 @@ public:
 	}
 };
 static_assert(alignof(AX6BulletBase) == 0x000008, "Wrong alignment on AX6BulletBase");
-static_assert(sizeof(AX6BulletBase) == 0x000440, "Wrong size on AX6BulletBase");
-static_assert(offsetof(AX6BulletBase, BulletClass) == 0x000438, "Member 'AX6BulletBase::BulletClass' has a wrong offset!");
+static_assert(sizeof(AX6BulletBase) == 0x000490, "Wrong size on AX6BulletBase");
+static_assert(offsetof(AX6BulletBase, BulletClass) == 0x000488, "Member 'AX6BulletBase::BulletClass' has a wrong offset!");
+
+// Class X6Game.X6RadialListView
+// 0x0010 (0x1450 - 0x1440)
+class UX6RadialListView final : public UX6ListView
+{
+public:
+	float                                         Curvature;                                         // 0x1438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6ArcOrientation                             ArcOrientation;                                    // 0x143C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_143D[0x13];                                    // 0x143D(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6RadialListView">();
+	}
+	static class UX6RadialListView* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6RadialListView>();
+	}
+};
+static_assert(alignof(UX6RadialListView) == 0x000010, "Wrong alignment on UX6RadialListView");
+static_assert(sizeof(UX6RadialListView) == 0x001450, "Wrong size on UX6RadialListView");
+static_assert(offsetof(UX6RadialListView, Curvature) == 0x001438, "Member 'UX6RadialListView::Curvature' has a wrong offset!");
+static_assert(offsetof(UX6RadialListView, ArcOrientation) == 0x00143C, "Member 'UX6RadialListView::ArcOrientation' has a wrong offset!");
 
 // Class X6Game.X6BulletModifier
 // 0x0018 (0x0040 - 0x0028)
@@ -6700,29 +7001,6 @@ static_assert(offsetof(UX6BulletModifier, bActive) == 0x000028, "Member 'UX6Bull
 static_assert(offsetof(UX6BulletModifier, OwnerActor) == 0x000030, "Member 'UX6BulletModifier::OwnerActor' has a wrong offset!");
 static_assert(offsetof(UX6BulletModifier, BulletDataAsset) == 0x000038, "Member 'UX6BulletModifier::BulletDataAsset' has a wrong offset!");
 
-// Class X6Game.X6RecycableObjectInterface
-// 0x0000 (0x0000 - 0x0000)
-class IX6RecycableObjectInterface final : public IInterface
-{
-public:
-	void OnPop();
-	void OnPreCreated();
-	void OnPush();
-	bool RejectRecycle();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6RecycableObjectInterface">();
-	}
-	static class IX6RecycableObjectInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IX6RecycableObjectInterface>();
-	}
-};
-static_assert(alignof(IX6RecycableObjectInterface) == 0x000001, "Wrong alignment on IX6RecycableObjectInterface");
-static_assert(sizeof(IX6RecycableObjectInterface) == 0x000001, "Wrong size on IX6RecycableObjectInterface");
-
 // Class X6Game.X6BulletMovementBasicModifier
 // 0x0018 (0x0058 - 0x0040)
 class UX6BulletMovementBasicModifier : public UX6BulletModifier
@@ -6753,6 +7031,23 @@ static_assert(sizeof(UX6BulletMovementBasicModifier) == 0x000058, "Wrong size on
 static_assert(offsetof(UX6BulletMovementBasicModifier, BaseSpeed) == 0x000040, "Member 'UX6BulletMovementBasicModifier::BaseSpeed' has a wrong offset!");
 static_assert(offsetof(UX6BulletMovementBasicModifier, SpeedCurve) == 0x000048, "Member 'UX6BulletMovementBasicModifier::SpeedCurve' has a wrong offset!");
 static_assert(offsetof(UX6BulletMovementBasicModifier, DebugMoveDraw) == 0x000050, "Member 'UX6BulletMovementBasicModifier::DebugMoveDraw' has a wrong offset!");
+
+// Class X6Game.X6PhotographCameraComponent
+// 0x0000 (0x0C50 - 0x0C50)
+class UX6PhotographCameraComponent final : public UCineCameraComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PhotographCameraComponent">();
+	}
+	static class UX6PhotographCameraComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6PhotographCameraComponent>();
+	}
+};
+static_assert(alignof(UX6PhotographCameraComponent) == 0x000010, "Wrong alignment on UX6PhotographCameraComponent");
+static_assert(sizeof(UX6PhotographCameraComponent) == 0x000C50, "Wrong size on UX6PhotographCameraComponent");
 
 // Class X6Game.X6BulletCloseToFloorMovementModifier
 // 0x0020 (0x0078 - 0x0058)
@@ -6802,6 +7097,94 @@ public:
 };
 static_assert(alignof(UX6BulletSimpleBasicModifier) == 0x000008, "Wrong alignment on UX6BulletSimpleBasicModifier");
 static_assert(sizeof(UX6BulletSimpleBasicModifier) == 0x000040, "Wrong size on UX6BulletSimpleBasicModifier");
+
+// Class X6Game.X6PackageSettings
+// 0x0140 (0x0168 - 0x0028)
+class UX6PackageSettings final : public UCMSConfigProvider
+{
+public:
+	bool                                          bEnableDebugMenu;                                  // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableConsoleComand;                              // 0x0029(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableAdvConsoleComand;                           // 0x002A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableX6ConsoleCommandDisOrder;                   // 0x002B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableHeaderInfo;                                 // 0x002C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableQuickReportError;                           // 0x002D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseFormalLogin;                                   // 0x002E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShowServerList;                                   // 0x002F(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CMSApiUrl;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SensitiveWordApiUrl;                               // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SupportUrl;                                        // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReportUrl;                                         // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ProductQueryUrl;                                   // 0x0070(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ClientId;                                          // 0x0080(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ClientKey;                                         // 0x0090(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        RegionId;                                          // 0x00A0(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        RegionIdAudit;                                     // 0x00A2(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        ChannelId;                                         // 0x00A4(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        Role;                                              // 0x00A6(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 SDKLoginUrl;                                       // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint16                                        ChargeType;                                        // 0x00B8(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Environment;                                       // 0x00C0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AppID;                                             // 0x00D0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AppKey;                                            // 0x00E0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ApiServer;                                         // 0x00F0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BffEncryptionKey;                                  // 0x0100(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BffRiskUrl;                                        // 0x0110(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6GameArea                                   GameArea;                                          // 0x0120(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 OverseaRegion;                                     // 0x0128(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AccountCancellationURL_Mobile;                     // 0x0138(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AccountCancellationURL_PC_Console;                 // 0x0148(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DistributionChannelName;                           // 0x0158(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static const class UX6PackageSettings* GetX6PackageSettings();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PackageSettings">();
+	}
+	static class UX6PackageSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6PackageSettings>();
+	}
+};
+static_assert(alignof(UX6PackageSettings) == 0x000008, "Wrong alignment on UX6PackageSettings");
+static_assert(sizeof(UX6PackageSettings) == 0x000168, "Wrong size on UX6PackageSettings");
+static_assert(offsetof(UX6PackageSettings, bEnableDebugMenu) == 0x000028, "Member 'UX6PackageSettings::bEnableDebugMenu' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bEnableConsoleComand) == 0x000029, "Member 'UX6PackageSettings::bEnableConsoleComand' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bEnableAdvConsoleComand) == 0x00002A, "Member 'UX6PackageSettings::bEnableAdvConsoleComand' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bEnableX6ConsoleCommandDisOrder) == 0x00002B, "Member 'UX6PackageSettings::bEnableX6ConsoleCommandDisOrder' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bEnableHeaderInfo) == 0x00002C, "Member 'UX6PackageSettings::bEnableHeaderInfo' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bEnableQuickReportError) == 0x00002D, "Member 'UX6PackageSettings::bEnableQuickReportError' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bUseFormalLogin) == 0x00002E, "Member 'UX6PackageSettings::bUseFormalLogin' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, bShowServerList) == 0x00002F, "Member 'UX6PackageSettings::bShowServerList' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, CMSApiUrl) == 0x000030, "Member 'UX6PackageSettings::CMSApiUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, SensitiveWordApiUrl) == 0x000040, "Member 'UX6PackageSettings::SensitiveWordApiUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, SupportUrl) == 0x000050, "Member 'UX6PackageSettings::SupportUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ReportUrl) == 0x000060, "Member 'UX6PackageSettings::ReportUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ProductQueryUrl) == 0x000070, "Member 'UX6PackageSettings::ProductQueryUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ClientId) == 0x000080, "Member 'UX6PackageSettings::ClientId' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ClientKey) == 0x000090, "Member 'UX6PackageSettings::ClientKey' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, RegionId) == 0x0000A0, "Member 'UX6PackageSettings::RegionId' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, RegionIdAudit) == 0x0000A2, "Member 'UX6PackageSettings::RegionIdAudit' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ChannelId) == 0x0000A4, "Member 'UX6PackageSettings::ChannelId' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, Role) == 0x0000A6, "Member 'UX6PackageSettings::Role' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, SDKLoginUrl) == 0x0000A8, "Member 'UX6PackageSettings::SDKLoginUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ChargeType) == 0x0000B8, "Member 'UX6PackageSettings::ChargeType' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, Environment) == 0x0000C0, "Member 'UX6PackageSettings::Environment' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, AppID) == 0x0000D0, "Member 'UX6PackageSettings::AppID' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, AppKey) == 0x0000E0, "Member 'UX6PackageSettings::AppKey' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, ApiServer) == 0x0000F0, "Member 'UX6PackageSettings::ApiServer' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, BffEncryptionKey) == 0x000100, "Member 'UX6PackageSettings::BffEncryptionKey' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, BffRiskUrl) == 0x000110, "Member 'UX6PackageSettings::BffRiskUrl' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, GameArea) == 0x000120, "Member 'UX6PackageSettings::GameArea' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, OverseaRegion) == 0x000128, "Member 'UX6PackageSettings::OverseaRegion' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, AccountCancellationURL_Mobile) == 0x000138, "Member 'UX6PackageSettings::AccountCancellationURL_Mobile' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, AccountCancellationURL_PC_Console) == 0x000148, "Member 'UX6PackageSettings::AccountCancellationURL_PC_Console' has a wrong offset!");
+static_assert(offsetof(UX6PackageSettings, DistributionChannelName) == 0x000158, "Member 'UX6PackageSettings::DistributionChannelName' has a wrong offset!");
 
 // Class X6Game.X6BulletShapeTraceModifier
 // 0x0090 (0x00D0 - 0x0040)
@@ -6882,6 +7265,23 @@ static_assert(sizeof(UX6BulletCollisionModifier) == 0x0000D8, "Wrong size on UX6
 static_assert(offsetof(UX6BulletCollisionModifier, TraceType_SkillReceiver) == 0x0000D0, "Member 'UX6BulletCollisionModifier::TraceType_SkillReceiver' has a wrong offset!");
 static_assert(offsetof(UX6BulletCollisionModifier, DelayEffectiveTime) == 0x0000D4, "Member 'UX6BulletCollisionModifier::DelayEffectiveTime' has a wrong offset!");
 
+// Class X6Game.X6ProjectileMovementComponent
+// 0x0000 (0x0260 - 0x0260)
+class UX6ProjectileMovementComponent final : public UProjectileMovementComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ProjectileMovementComponent">();
+	}
+	static class UX6ProjectileMovementComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6ProjectileMovementComponent>();
+	}
+};
+static_assert(alignof(UX6ProjectileMovementComponent) == 0x000010, "Wrong alignment on UX6ProjectileMovementComponent");
+static_assert(sizeof(UX6ProjectileMovementComponent) == 0x000260, "Wrong size on UX6ProjectileMovementComponent");
+
 // Class X6Game.X6BulletDataAsset
 // 0x0080 (0x00B0 - 0x0030)
 class UX6BulletDataAsset : public UPrimaryDataAsset
@@ -6926,102 +7326,6 @@ static_assert(offsetof(UX6BulletDataAsset, DestroyEffectByNormalEnd) == 0x000088
 static_assert(offsetof(UX6BulletDataAsset, BulletMovementModifier) == 0x000090, "Member 'UX6BulletDataAsset::BulletMovementModifier' has a wrong offset!");
 static_assert(offsetof(UX6BulletDataAsset, bKeepInitRoll) == 0x000098, "Member 'UX6BulletDataAsset::bKeepInitRoll' has a wrong offset!");
 static_assert(offsetof(UX6BulletDataAsset, BulletModifies) == 0x0000A0, "Member 'UX6BulletDataAsset::BulletModifies' has a wrong offset!");
-
-// Class X6Game.X6RadialSlider
-// 0x08F8 (0x0A80 - 0x0188)
-class UX6RadialSlider final : public UWidget
-{
-public:
-	float                                         Value;                                             // 0x0188(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             ValueDelegate;                                     // 0x018C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCustomDefaultValue;                            // 0x019C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D[0x3];                                      // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CustomDefaultValue;                                // 0x01A0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     SliderRange;                                       // 0x01A8(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TArray<float>                                 ValueTags;                                         // 0x0230(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         SliderHandleStartAngle;                            // 0x0240(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SliderHandleEndAngle;                              // 0x0244(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AngularOffset;                                     // 0x0248(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FX6RadialSliderStyle                   WidgetStyle;                                       // 0x0250(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         SliderRadius;                                      // 0x09C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderBarColor;                                    // 0x09C4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderProgressColor;                               // 0x09D4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderHandleColor;                                 // 0x09E4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Locked;                                            // 0x09F4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          MouseUsesStep;                                     // 0x09F5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RequiresControllerLock;                            // 0x09F6(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9F7[0x1];                                      // 0x09F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StepSize;                                          // 0x09F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFocusable;                                       // 0x09FC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9FD[0x3];                                      // 0x09FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x0A00(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x0A10(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnControllerCaptureBegin;                          // 0x0A20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnControllerCaptureEnd;                            // 0x0A30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0A40(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnThumbPressed;                                    // 0x0A50(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void()>              OnThumbHovered;                                    // 0x0A60(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A70[0x10];                                     // 0x0A70(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetAngularOffset(float InValue);
-	void SetCustomDefaultValue(float InValue);
-	void SetLocked(bool InValue);
-	void SetSliderBarColor(const struct FLinearColor& InValue);
-	void SetSliderHandleColor(const struct FLinearColor& InValue);
-	void SetSliderHandleEndAngle(float InValue);
-	void SetSliderHandleStartAngle(float InValue);
-	void SetSliderProgressColor(const struct FLinearColor& InValue);
-	void SetSliderRadius(float InValue);
-	void SetSliderRange(const struct FRuntimeFloatCurve& InSliderRange);
-	void SetStepSize(float InValue);
-	void SetValue(float InValue);
-	void SetValueTags(const TArray<float>& InValueTags);
-
-	float GetCustomDefaultValue() const;
-	float GetNormalizedSliderHandlePosition() const;
-	float GetValue() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6RadialSlider">();
-	}
-	static class UX6RadialSlider* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6RadialSlider>();
-	}
-};
-static_assert(alignof(UX6RadialSlider) == 0x000010, "Wrong alignment on UX6RadialSlider");
-static_assert(sizeof(UX6RadialSlider) == 0x000A80, "Wrong size on UX6RadialSlider");
-static_assert(offsetof(UX6RadialSlider, Value) == 0x000188, "Member 'UX6RadialSlider::Value' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, ValueDelegate) == 0x00018C, "Member 'UX6RadialSlider::ValueDelegate' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, bUseCustomDefaultValue) == 0x00019C, "Member 'UX6RadialSlider::bUseCustomDefaultValue' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, CustomDefaultValue) == 0x0001A0, "Member 'UX6RadialSlider::CustomDefaultValue' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderRange) == 0x0001A8, "Member 'UX6RadialSlider::SliderRange' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, ValueTags) == 0x000230, "Member 'UX6RadialSlider::ValueTags' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderHandleStartAngle) == 0x000240, "Member 'UX6RadialSlider::SliderHandleStartAngle' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderHandleEndAngle) == 0x000244, "Member 'UX6RadialSlider::SliderHandleEndAngle' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, AngularOffset) == 0x000248, "Member 'UX6RadialSlider::AngularOffset' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, WidgetStyle) == 0x000250, "Member 'UX6RadialSlider::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderRadius) == 0x0009C0, "Member 'UX6RadialSlider::SliderRadius' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderBarColor) == 0x0009C4, "Member 'UX6RadialSlider::SliderBarColor' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderProgressColor) == 0x0009D4, "Member 'UX6RadialSlider::SliderProgressColor' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, SliderHandleColor) == 0x0009E4, "Member 'UX6RadialSlider::SliderHandleColor' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, Locked) == 0x0009F4, "Member 'UX6RadialSlider::Locked' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, MouseUsesStep) == 0x0009F5, "Member 'UX6RadialSlider::MouseUsesStep' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, RequiresControllerLock) == 0x0009F6, "Member 'UX6RadialSlider::RequiresControllerLock' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, StepSize) == 0x0009F8, "Member 'UX6RadialSlider::StepSize' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, IsFocusable) == 0x0009FC, "Member 'UX6RadialSlider::IsFocusable' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnMouseCaptureBegin) == 0x000A00, "Member 'UX6RadialSlider::OnMouseCaptureBegin' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnMouseCaptureEnd) == 0x000A10, "Member 'UX6RadialSlider::OnMouseCaptureEnd' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnControllerCaptureBegin) == 0x000A20, "Member 'UX6RadialSlider::OnControllerCaptureBegin' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnControllerCaptureEnd) == 0x000A30, "Member 'UX6RadialSlider::OnControllerCaptureEnd' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnValueChanged) == 0x000A40, "Member 'UX6RadialSlider::OnValueChanged' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnThumbPressed) == 0x000A50, "Member 'UX6RadialSlider::OnThumbPressed' has a wrong offset!");
-static_assert(offsetof(UX6RadialSlider, OnThumbHovered) == 0x000A60, "Member 'UX6RadialSlider::OnThumbHovered' has a wrong offset!");
 
 // Class X6Game.X6BulletEffectWindZoneModifier
 // 0x0060 (0x00A0 - 0x0040)
@@ -7071,9 +7375,42 @@ static_assert(offsetof(UX6BulletEffectWindZoneModifier, bShapeArc) == 0x000066, 
 static_assert(offsetof(UX6BulletEffectWindZoneModifier, LastLocation) == 0x000068, "Member 'UX6BulletEffectWindZoneModifier::LastLocation' has a wrong offset!");
 static_assert(offsetof(UX6BulletEffectWindZoneModifier, DebugDrawType) == 0x000080, "Member 'UX6BulletEffectWindZoneModifier::DebugDrawType' has a wrong offset!");
 
+// Class X6Game.X6ScrollBox
+// 0x0030 (0x0D40 - 0x0D10)
+class UX6ScrollBox final : public UScrollBox
+{
+public:
+	bool                                          bHasMask;                                          // 0x0D08(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D09[0x3];                                      // 0x0D09(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TopMaskParameterName;                              // 0x0D0C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BottomMaskParameterName;                           // 0x0D14(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1C[0x4];                                      // 0x0D1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnScrollBoxTouchEnded;                             // 0x0D20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D30[0x10];                                     // 0x0D30(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void HandleScollBoxScrolling();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ScrollBox">();
+	}
+	static class UX6ScrollBox* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6ScrollBox>();
+	}
+};
+static_assert(alignof(UX6ScrollBox) == 0x000010, "Wrong alignment on UX6ScrollBox");
+static_assert(sizeof(UX6ScrollBox) == 0x000D40, "Wrong size on UX6ScrollBox");
+static_assert(offsetof(UX6ScrollBox, bHasMask) == 0x000D08, "Member 'UX6ScrollBox::bHasMask' has a wrong offset!");
+static_assert(offsetof(UX6ScrollBox, TopMaskParameterName) == 0x000D0C, "Member 'UX6ScrollBox::TopMaskParameterName' has a wrong offset!");
+static_assert(offsetof(UX6ScrollBox, BottomMaskParameterName) == 0x000D14, "Member 'UX6ScrollBox::BottomMaskParameterName' has a wrong offset!");
+static_assert(offsetof(UX6ScrollBox, OnScrollBoxTouchEnded) == 0x000D20, "Member 'UX6ScrollBox::OnScrollBoxTouchEnded' has a wrong offset!");
+
 // Class X6Game.X6BulletFilterTargetingPresetModifier
 // 0x0060 (0x00A0 - 0x0040)
-class UX6BulletFilterTargetingPresetModifier : public UX6BulletSimpleBasicModifier
+class UX6BulletFilterTargetingPresetModifier final : public UX6BulletSimpleBasicModifier
 {
 public:
 	bool                                          bLoopTargetingPreset;                              // 0x0040(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
@@ -7104,52 +7441,6 @@ static_assert(offsetof(UX6BulletFilterTargetingPresetModifier, TargetingSourceCo
 static_assert(offsetof(UX6BulletFilterTargetingPresetModifier, bCheckObstacle) == 0x000090, "Member 'UX6BulletFilterTargetingPresetModifier::bCheckObstacle' has a wrong offset!");
 static_assert(offsetof(UX6BulletFilterTargetingPresetModifier, TargetingPreset) == 0x000098, "Member 'UX6BulletFilterTargetingPresetModifier::TargetingPreset' has a wrong offset!");
 
-// Class X6Game.X6TargetingSortTask_Base
-// 0x0010 (0x0038 - 0x0028)
-class UX6TargetingSortTask_Base : public UTargetingTask
-{
-public:
-	uint8                                         bAscending : 1;                                    // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Weight;                                            // 0x002C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         RefScore;                                          // 0x0030(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6TargetingSortTask_Base">();
-	}
-	static class UX6TargetingSortTask_Base* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6TargetingSortTask_Base>();
-	}
-};
-static_assert(alignof(UX6TargetingSortTask_Base) == 0x000008, "Wrong alignment on UX6TargetingSortTask_Base");
-static_assert(sizeof(UX6TargetingSortTask_Base) == 0x000038, "Wrong size on UX6TargetingSortTask_Base");
-static_assert(offsetof(UX6TargetingSortTask_Base, Weight) == 0x00002C, "Member 'UX6TargetingSortTask_Base::Weight' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_Base, RefScore) == 0x000030, "Member 'UX6TargetingSortTask_Base::RefScore' has a wrong offset!");
-
-// Class X6Game.X6SimpleTargetingSortTask
-// 0x0000 (0x0038 - 0x0038)
-class UX6SimpleTargetingSortTask final : public UX6TargetingSortTask_Base
-{
-public:
-	float BP_GetScoreForTarget(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingDefaultResultData& TargetData) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6SimpleTargetingSortTask">();
-	}
-	static class UX6SimpleTargetingSortTask* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6SimpleTargetingSortTask>();
-	}
-};
-static_assert(alignof(UX6SimpleTargetingSortTask) == 0x000008, "Wrong alignment on UX6SimpleTargetingSortTask");
-static_assert(sizeof(UX6SimpleTargetingSortTask) == 0x000038, "Wrong size on UX6SimpleTargetingSortTask");
-
 // Class X6Game.X6BulletFloorAndTargetOptionMovementModifier
 // 0x0008 (0x0080 - 0x0078)
 class UX6BulletFloorAndTargetOptionMovementModifier : public UX6BulletCloseToFloorMovementModifier
@@ -7169,6 +7460,33 @@ public:
 };
 static_assert(alignof(UX6BulletFloorAndTargetOptionMovementModifier) == 0x000008, "Wrong alignment on UX6BulletFloorAndTargetOptionMovementModifier");
 static_assert(sizeof(UX6BulletFloorAndTargetOptionMovementModifier) == 0x000080, "Wrong size on UX6BulletFloorAndTargetOptionMovementModifier");
+
+// Class X6Game.X6ReceiveSkillBaseComponent
+// 0x0008 (0x00B0 - 0x00A8)
+class UX6ReceiveSkillBaseComponent final : public UX6ActorComponent
+{
+public:
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetIsAlwaysChargeOutLineEffect(bool IsAlwaysChargeOutLineEffect);
+	void SetIsBulletAttachment(bool IsBulletAttachment);
+	void SetIsBulletDestroyWhenNotSimulation(bool IsBulletDestroyWhenNotSimulation);
+	void SetIsBulletPenetrateWhenSimulation(bool IsBulletPenetrateWhenSimulation);
+	void SetIsChargeOutLineEffect(bool IsChargeOutLineEffect);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ReceiveSkillBaseComponent">();
+	}
+	static class UX6ReceiveSkillBaseComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6ReceiveSkillBaseComponent>();
+	}
+};
+static_assert(alignof(UX6ReceiveSkillBaseComponent) == 0x000008, "Wrong alignment on UX6ReceiveSkillBaseComponent");
+static_assert(sizeof(UX6ReceiveSkillBaseComponent) == 0x0000B0, "Wrong size on UX6ReceiveSkillBaseComponent");
 
 // Class X6Game.X6BulletFollowTargetMovementModifier
 // 0x0060 (0x00D8 - 0x0078)
@@ -7206,84 +7524,6 @@ static_assert(offsetof(UX6BulletFollowTargetMovementModifier, FollowRefreshInter
 static_assert(offsetof(UX6BulletFollowTargetMovementModifier, FollowTargetRotator) == 0x0000A8, "Member 'UX6BulletFollowTargetMovementModifier::FollowTargetRotator' has a wrong offset!");
 static_assert(offsetof(UX6BulletFollowTargetMovementModifier, FollowCanRotator) == 0x0000C0, "Member 'UX6BulletFollowTargetMovementModifier::FollowCanRotator' has a wrong offset!");
 
-// Class X6Game.X6RMInAirComponent
-// 0x00E8 (0x01C8 - 0x00E0)
-class UX6RMInAirComponent : public UX6BasicRegularMovementComponent
-{
-public:
-	struct FX6RMInAirComponentPostPhysicsTickFunction PostPhysicsTickFunction;                       // 0x00E0(0x0038)(NativeAccessSpecifierPublic)
-	TSubclassOf<class URMBaseLogicProcessor>      RMBaseLogicProcessorClass;                         // 0x0118(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMConfigContext_InAir>     RMConfigContextClass;                              // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMStateInstructionContext> StateInstructionContextClass;                      // 0x0128(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMPTickRecord_InAir>       RMProxyTickRecordClass;                            // 0x0130(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMOutputContext_InAir>     RMOutputContextClass;                              // 0x0138(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMBehaviorTreeProxyInterface> RMBehaviorTreeProxyClass;                       // 0x0140(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URegularMovementDebugContext> RMDebugContextClass;                             // 0x0148(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMInputActionProcessor_InAir> InputActionProcessorClass;                      // 0x0150(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URMPTickRecord_InAir*                   CurRMProxyTickRecord;                              // 0x0158(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URMBaseLogicProcessor*                  CurRMBaseLogicProcessor;                           // 0x0160(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URMBehaviorTreeProxyInterface*          CurRMProxy_InAir;                                  // 0x0168(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URMInputActionProcessor_InAir*          InputActionProcessor;                              // 0x0170(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ERegularFloatingJumpStage                     ReplicatedFloatingJumpStage;                       // 0x0178(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FX6RMInAirReplicatedMovementData       ReplicatedMovementData;                            // 0x0180(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
-	ERegularJumpMode                              NP_ReplicatedJumpMode;                             // 0x01A0(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector_NetQuantize                    NP_ReplicatedInputMovingDirection;                 // 0x01A8(0x0018)(Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         NP_ReplicatedTurnAroundAngleToInt;                 // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void Blueprint_PostUpdateRegularMovementBehavior(float DeltaSeconds);
-	void Blueprint_PreUpdateRegularMovementBehavior(float DeltaSeconds);
-	void DeinitRegularMovementBehaviorProxy();
-	class URMBaseLogicProcessor* GetCurRMBaseLogicProcessor();
-	void InitRegularMovementBehaviorProxy();
-	void InitRMBaseLogicProcessor(class URMBaseLogicProcessor* RMBaseLogicProcessor);
-	bool IsValidReplicatedMovingDirection();
-	void MulticastRPC_ChangeJumpStage(ERegularFloatingJumpStage NewStage, bool bForceUpdate);
-	void MulticastRPC_ForceUpdateReplicatedMovementData();
-	void OnRep_FloatingJumpStage();
-	void OnRep_MovementData_InputMovingDirection();
-	void OnRep_MovementData_ReplicatedJumpMode();
-	void OnRep_MovementData_TurnAroundAngle();
-	void ReceivePostPhysicsTick(float DeltaTime);
-	void ResetInputActionProcessor(TSubclassOf<class URMInputActionProcessor_InAir> inInputActionProcessorClass);
-	void SetPostPhysicsTickFunctionEnable(bool bEnable);
-	void UpdateDynamicMovementSettings(bool bForceUpdate);
-	void UpdateReplicatedMovementData();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6RMInAirComponent">();
-	}
-	static class UX6RMInAirComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6RMInAirComponent>();
-	}
-};
-static_assert(alignof(UX6RMInAirComponent) == 0x000008, "Wrong alignment on UX6RMInAirComponent");
-static_assert(sizeof(UX6RMInAirComponent) == 0x0001C8, "Wrong size on UX6RMInAirComponent");
-static_assert(offsetof(UX6RMInAirComponent, PostPhysicsTickFunction) == 0x0000E0, "Member 'UX6RMInAirComponent::PostPhysicsTickFunction' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, RMBaseLogicProcessorClass) == 0x000118, "Member 'UX6RMInAirComponent::RMBaseLogicProcessorClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, RMConfigContextClass) == 0x000120, "Member 'UX6RMInAirComponent::RMConfigContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, StateInstructionContextClass) == 0x000128, "Member 'UX6RMInAirComponent::StateInstructionContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, RMProxyTickRecordClass) == 0x000130, "Member 'UX6RMInAirComponent::RMProxyTickRecordClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, RMOutputContextClass) == 0x000138, "Member 'UX6RMInAirComponent::RMOutputContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, RMBehaviorTreeProxyClass) == 0x000140, "Member 'UX6RMInAirComponent::RMBehaviorTreeProxyClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, RMDebugContextClass) == 0x000148, "Member 'UX6RMInAirComponent::RMDebugContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, InputActionProcessorClass) == 0x000150, "Member 'UX6RMInAirComponent::InputActionProcessorClass' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, CurRMProxyTickRecord) == 0x000158, "Member 'UX6RMInAirComponent::CurRMProxyTickRecord' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, CurRMBaseLogicProcessor) == 0x000160, "Member 'UX6RMInAirComponent::CurRMBaseLogicProcessor' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, CurRMProxy_InAir) == 0x000168, "Member 'UX6RMInAirComponent::CurRMProxy_InAir' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, InputActionProcessor) == 0x000170, "Member 'UX6RMInAirComponent::InputActionProcessor' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, ReplicatedFloatingJumpStage) == 0x000178, "Member 'UX6RMInAirComponent::ReplicatedFloatingJumpStage' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, ReplicatedMovementData) == 0x000180, "Member 'UX6RMInAirComponent::ReplicatedMovementData' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, NP_ReplicatedJumpMode) == 0x0001A0, "Member 'UX6RMInAirComponent::NP_ReplicatedJumpMode' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, NP_ReplicatedInputMovingDirection) == 0x0001A8, "Member 'UX6RMInAirComponent::NP_ReplicatedInputMovingDirection' has a wrong offset!");
-static_assert(offsetof(UX6RMInAirComponent, NP_ReplicatedTurnAroundAngleToInt) == 0x0001C0, "Member 'UX6RMInAirComponent::NP_ReplicatedTurnAroundAngleToInt' has a wrong offset!");
-
 // Class X6Game.X6BulletHitDamageModifier
 // 0x0008 (0x00D8 - 0x00D0)
 class UX6BulletHitDamageModifier : public UX6BulletShapeTraceModifier
@@ -7309,6 +7549,171 @@ static_assert(alignof(UX6BulletHitDamageModifier) == 0x000008, "Wrong alignment 
 static_assert(sizeof(UX6BulletHitDamageModifier) == 0x0000D8, "Wrong size on UX6BulletHitDamageModifier");
 static_assert(offsetof(UX6BulletHitDamageModifier, HitDestroyExtraDistance) == 0x0000D0, "Member 'UX6BulletHitDamageModifier::HitDestroyExtraDistance' has a wrong offset!");
 
+// Class X6Game.X6CharacterBase
+// 0x01C0 (0x0950 - 0x0790)
+class AX6CharacterBase : public ACharacter
+{
+public:
+	FMulticastSparseDelegateProperty_             OnX6CharacterPossessed;                            // 0x0788(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnX6CharacterUnPossessed;                          // 0x0789(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnX6CharacterWalkingOffLedge;                      // 0x078A(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnX6CharacterMoveBlockedBy;                        // 0x078B(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnX6CharacterFalling;                              // 0x078C(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnX6CharacterBaseChange;                           // 0x078D(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	FMulticastSparseDelegateProperty_             OnX6SimulateCharacterFirstRepMovement;             // 0x078E(0x0001)(InstancedReference, BlueprintAssignable, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_78F[0x1];                                      // 0x078F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           X6Tags;                                            // 0x0790(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	bool                                          bUseDynamicCreateWalkLogicComponent;               // 0x07A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7A1[0x7];                                      // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UX6RMWalkingComponent>      WalkLogicComponent;                                // 0x07A8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseDynamicCreateInAirLogicComponent;              // 0x07B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7B1[0x7];                                      // 0x07B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UX6RMInAirComponent>        InAirLogicComponent;                               // 0x07B8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSimulatedCharacterHasRepMovement;                 // 0x07C0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C1[0xAF];                                     // 0x07C1(0x00AF)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bSimulatedReplicateMovement;                       // 0x0870(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bSimulatedReplicateAttachment;                     // 0x0871(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_872[0x56];                                     // 0x0872(0x0056)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bUseLocalBaseIfUnresolved;                         // 0x08C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_8C9[0x7];                                      // 0x08C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FX6MovementBaseInfo                    X6ReplicatedMovementBase;                          // 0x08D0(0x0040)(Net, RepNotify, Protected, NativeAccessSpecifierProtected)
+	struct FX6BasedMovementStateInfo              X6ReplicatedBasedMovementState;                    // 0x0910(0x0040)(Net, RepNotify, NoDestructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void ClearSimulatedReplicateMovementDisabledTags();
+	void OnRep_X6ReplicatedBasedMovementState();
+	void OnRep_X6ReplicatedMovementBase();
+	void PostSpawnerGroupSpawned();
+	void ReceiveMovementFromServer(const struct FX6ReplicatedMovement& InReplicatedMovement);
+	void ServerInit(bool bServer);
+	void SetLocalRole(ENetRole InRole);
+	void SetSimulatedReplicateMovement(const bool bInSimulatedReplicateMovement, const bool bRefreshReplication, const class FName& SimulatedReplicateMovementDisabledTag);
+	void X6_AddTag(const TArray<class FName>& NewX6Tags);
+	void X6_ClearAndInvalidateTimerHandle(struct FTimerHandle& Handle);
+	void X6_ClearTimer(class UObject* Object, const class FString& FunctionName);
+	void X6_ClearTimerDelegate(TDelegate<void()> Delegate);
+	void X6_ClearTimerHandle(const struct FTimerHandle& Handle);
+	void X6_DeleteTag(const class FString& strTag);
+	bool X6_GetActorDisableCollisionFlags(TSet<int32>* OutFlags);
+	bool X6_GetActorHiddenFlags(TSet<int32>* OutFlags);
+	TArray<class FName> X6_GetTag();
+	float X6_GetTimerElapsedTime(class UObject* Object, const class FString& FunctionName);
+	float X6_GetTimerElapsedTimeDelegate(TDelegate<void()> Delegate);
+	float X6_GetTimerElapsedTimeDelegateEachTrigger(TDelegate<void()> Delegate);
+	float X6_GetTimerElapsedTimeEachTrigger(class UObject* Object, const class FString& FunctionName);
+	float X6_GetTimerElapsedTimeHandle(const struct FTimerHandle& Handle);
+	float X6_GetTimerElapsedTimeHandleEachTrigger(const struct FTimerHandle& Handle);
+	float X6_GetTimerRemainingTime(class UObject* Object, const class FString& FunctionName);
+	float X6_GetTimerRemainingTimeDelegate(TDelegate<void()> Delegate);
+	float X6_GetTimerRemainingTimeHandle(const struct FTimerHandle& Handle);
+	bool X6_HasTag(const class FString& strTag);
+	bool X6_IsTimerActive(class UObject* Object, const class FString& FunctionName);
+	bool X6_IsTimerActiveDelegate(TDelegate<void()> Delegate);
+	bool X6_IsTimerActiveHandle(const struct FTimerHandle& Handle);
+	bool X6_IsTimerPaused(class UObject* Object, const class FString& FunctionName);
+	bool X6_IsTimerPausedDelegate(TDelegate<void()> Delegate);
+	bool X6_IsTimerPausedHandle(const struct FTimerHandle& Handle);
+	bool X6_IsValidTimerHandle(const struct FTimerHandle& Handle);
+	void X6_PauseTimer(class UObject* Object, const class FString& FunctionName);
+	void X6_PauseTimerDelegate(TDelegate<void()> Delegate);
+	void X6_PauseTimerHandle(const struct FTimerHandle& Handle);
+	void X6_RequireActorFade(bool bFadeIn, int32 FadeOutHiddenFlag, bool bInView);
+	bool X6_SetActorDisableCollision(bool bDisableCollision, int32 Flag, bool bClearFlag);
+	bool X6_SetActorHiddenInGame(bool bNewHidden, int32 Flag, bool bClearFlag);
+	struct FTimerHandle X6_SetTimer(class UObject* Object, const class FString& FunctionName, float Time, bool bLooping, float InitialStartDelay, float InitialStartDelayVariance);
+	struct FTimerHandle X6_SetTimerDelegate(TDelegate<void()> Delegate, float Time, bool bLooping, float InitialStartDelay, float InitialStartDelayVariance);
+	bool X6_TimerExists(class UObject* Object, const class FString& FunctionName);
+	bool X6_TimerExistsDelegate(TDelegate<void()> Delegate);
+	bool X6_TimerExistsHandle(const struct FTimerHandle& Handle);
+	void X6_UnPauseTimer(class UObject* Object, const class FString& FunctionName);
+	void X6_UnPauseTimerDelegate(TDelegate<void()> Delegate);
+	void X6_UnPauseTimerHandle(const struct FTimerHandle& Handle);
+
+	struct FVector GetMoveGoalOffsetInternal(const class AActor* MovingActor) const;
+	bool IsSimulatedReplicateAttachment() const;
+	bool IsSimulatedReplicateMovement() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6CharacterBase">();
+	}
+	static class AX6CharacterBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6CharacterBase>();
+	}
+};
+static_assert(alignof(AX6CharacterBase) == 0x000010, "Wrong alignment on AX6CharacterBase");
+static_assert(sizeof(AX6CharacterBase) == 0x000950, "Wrong size on AX6CharacterBase");
+static_assert(offsetof(AX6CharacterBase, OnX6CharacterPossessed) == 0x000788, "Member 'AX6CharacterBase::OnX6CharacterPossessed' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, OnX6CharacterUnPossessed) == 0x000789, "Member 'AX6CharacterBase::OnX6CharacterUnPossessed' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, OnX6CharacterWalkingOffLedge) == 0x00078A, "Member 'AX6CharacterBase::OnX6CharacterWalkingOffLedge' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, OnX6CharacterMoveBlockedBy) == 0x00078B, "Member 'AX6CharacterBase::OnX6CharacterMoveBlockedBy' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, OnX6CharacterFalling) == 0x00078C, "Member 'AX6CharacterBase::OnX6CharacterFalling' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, OnX6CharacterBaseChange) == 0x00078D, "Member 'AX6CharacterBase::OnX6CharacterBaseChange' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, OnX6SimulateCharacterFirstRepMovement) == 0x00078E, "Member 'AX6CharacterBase::OnX6SimulateCharacterFirstRepMovement' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, X6Tags) == 0x000790, "Member 'AX6CharacterBase::X6Tags' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, bUseDynamicCreateWalkLogicComponent) == 0x0007A0, "Member 'AX6CharacterBase::bUseDynamicCreateWalkLogicComponent' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, WalkLogicComponent) == 0x0007A8, "Member 'AX6CharacterBase::WalkLogicComponent' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, bUseDynamicCreateInAirLogicComponent) == 0x0007B0, "Member 'AX6CharacterBase::bUseDynamicCreateInAirLogicComponent' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, InAirLogicComponent) == 0x0007B8, "Member 'AX6CharacterBase::InAirLogicComponent' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, bSimulatedCharacterHasRepMovement) == 0x0007C0, "Member 'AX6CharacterBase::bSimulatedCharacterHasRepMovement' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, bSimulatedReplicateMovement) == 0x000870, "Member 'AX6CharacterBase::bSimulatedReplicateMovement' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, bSimulatedReplicateAttachment) == 0x000871, "Member 'AX6CharacterBase::bSimulatedReplicateAttachment' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, bUseLocalBaseIfUnresolved) == 0x0008C8, "Member 'AX6CharacterBase::bUseLocalBaseIfUnresolved' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, X6ReplicatedMovementBase) == 0x0008D0, "Member 'AX6CharacterBase::X6ReplicatedMovementBase' has a wrong offset!");
+static_assert(offsetof(AX6CharacterBase, X6ReplicatedBasedMovementState) == 0x000910, "Member 'AX6CharacterBase::X6ReplicatedBasedMovementState' has a wrong offset!");
+
+// Class X6Game.X6CharacterWithAbilities
+// 0x0020 (0x0970 - 0x0950)
+class AX6CharacterWithAbilities : public AX6CharacterBase
+{
+public:
+	uint8                                         Pad_950[0x18];                                     // 0x0950(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6AbilitySystemComponent*              AbilitySystemComponent;                            // 0x0968(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void K2_SetReplicatePriority(int32 NewReplicatePriority);
+	void K2_SetShouldForceReplicateProperty(bool bReplicate);
+
+	class UX6AbilitySystemComponent* GetX6AbilitySystemComponent() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6CharacterWithAbilities">();
+	}
+	static class AX6CharacterWithAbilities* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6CharacterWithAbilities>();
+	}
+};
+static_assert(alignof(AX6CharacterWithAbilities) == 0x000010, "Wrong alignment on AX6CharacterWithAbilities");
+static_assert(sizeof(AX6CharacterWithAbilities) == 0x000970, "Wrong size on AX6CharacterWithAbilities");
+static_assert(offsetof(AX6CharacterWithAbilities, AbilitySystemComponent) == 0x000968, "Member 'AX6CharacterWithAbilities::AbilitySystemComponent' has a wrong offset!");
+
+// Class X6Game.X6PlayerCharacterBase
+// 0x0010 (0x0980 - 0x0970)
+class AX6PlayerCharacterBase : public AX6CharacterWithAbilities
+{
+public:
+	bool                                          bCanCombatFilterListener;                          // 0x0970(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_971[0xF];                                      // 0x0971(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PlayerCharacterBase">();
+	}
+	static class AX6PlayerCharacterBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6PlayerCharacterBase>();
+	}
+};
+static_assert(alignof(AX6PlayerCharacterBase) == 0x000010, "Wrong alignment on AX6PlayerCharacterBase");
+static_assert(sizeof(AX6PlayerCharacterBase) == 0x000980, "Wrong size on AX6PlayerCharacterBase");
+static_assert(offsetof(AX6PlayerCharacterBase, bCanCombatFilterListener) == 0x000970, "Member 'AX6PlayerCharacterBase::bCanCombatFilterListener' has a wrong offset!");
+
 // Class X6Game.X6BulletLineMovementModifier
 // 0x0000 (0x0058 - 0x0058)
 class UX6BulletLineMovementModifier final : public UX6BulletMovementBasicModifier
@@ -7325,66 +7730,6 @@ public:
 };
 static_assert(alignof(UX6BulletLineMovementModifier) == 0x000008, "Wrong alignment on UX6BulletLineMovementModifier");
 static_assert(sizeof(UX6BulletLineMovementModifier) == 0x000058, "Wrong size on UX6BulletLineMovementModifier");
-
-// Class X6Game.X6PushBoxMovementComponent
-// 0x02D8 (0x0460 - 0x0188)
-class alignas(0x10) UX6PushBoxMovementComponent final : public UPawnMovementComponent
-{
-public:
-	TArray<class AActor*>                         IgnoreActors;                                      // 0x0188(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bPositionCorrected : 1;                            // 0x0198(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FBoxDropDownTrackResult>        CacheCheckDropDownTrackResults;                    // 0x01A0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FBoxDropDownTrackResult                CacheCenterResult;                                 // 0x01B0(0x0108)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	ETraceTypeQuery                               LineTraceCheckVisibleChannel;                      // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPrimitiveComponent*                    MovementBase;                                      // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C8[0x168];                                    // 0x02C8(0x0168)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxSpeed;                                          // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Acceleration;                                      // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Deceleration;                                      // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TurningBoost;                                      // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoxExtentZ;                                        // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotateSpeed;                                       // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BoxMaxStepHeight;                                  // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FloorCheckMinHeight;                               // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FloorCheckMaxHeight;                               // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BoxPushPower;                                      // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMovedByPhysics;                                   // 0x0458(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDropDown;                                         // 0x0459(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMoveBlock;                                        // 0x045A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_45B[0x5];                                      // 0x045B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PushBoxMovementComponent">();
-	}
-	static class UX6PushBoxMovementComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PushBoxMovementComponent>();
-	}
-};
-static_assert(alignof(UX6PushBoxMovementComponent) == 0x000010, "Wrong alignment on UX6PushBoxMovementComponent");
-static_assert(sizeof(UX6PushBoxMovementComponent) == 0x000460, "Wrong size on UX6PushBoxMovementComponent");
-static_assert(offsetof(UX6PushBoxMovementComponent, IgnoreActors) == 0x000188, "Member 'UX6PushBoxMovementComponent::IgnoreActors' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, CacheCheckDropDownTrackResults) == 0x0001A0, "Member 'UX6PushBoxMovementComponent::CacheCheckDropDownTrackResults' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, CacheCenterResult) == 0x0001B0, "Member 'UX6PushBoxMovementComponent::CacheCenterResult' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, LineTraceCheckVisibleChannel) == 0x0002B8, "Member 'UX6PushBoxMovementComponent::LineTraceCheckVisibleChannel' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, MovementBase) == 0x0002C0, "Member 'UX6PushBoxMovementComponent::MovementBase' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, MaxSpeed) == 0x000430, "Member 'UX6PushBoxMovementComponent::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, Acceleration) == 0x000434, "Member 'UX6PushBoxMovementComponent::Acceleration' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, Deceleration) == 0x000438, "Member 'UX6PushBoxMovementComponent::Deceleration' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, TurningBoost) == 0x00043C, "Member 'UX6PushBoxMovementComponent::TurningBoost' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, BoxExtentZ) == 0x000440, "Member 'UX6PushBoxMovementComponent::BoxExtentZ' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, RotateSpeed) == 0x000444, "Member 'UX6PushBoxMovementComponent::RotateSpeed' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, BoxMaxStepHeight) == 0x000448, "Member 'UX6PushBoxMovementComponent::BoxMaxStepHeight' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, FloorCheckMinHeight) == 0x00044C, "Member 'UX6PushBoxMovementComponent::FloorCheckMinHeight' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, FloorCheckMaxHeight) == 0x000450, "Member 'UX6PushBoxMovementComponent::FloorCheckMaxHeight' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, BoxPushPower) == 0x000454, "Member 'UX6PushBoxMovementComponent::BoxPushPower' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, bMovedByPhysics) == 0x000458, "Member 'UX6PushBoxMovementComponent::bMovedByPhysics' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, bDropDown) == 0x000459, "Member 'UX6PushBoxMovementComponent::bDropDown' has a wrong offset!");
-static_assert(offsetof(UX6PushBoxMovementComponent, bMoveBlock) == 0x00045A, "Member 'UX6PushBoxMovementComponent::bMoveBlock' has a wrong offset!");
 
 // Class X6Game.X6BulletWindComponent
 // 0x0060 (0x0108 - 0x00A8)
@@ -7507,37 +7852,6 @@ static_assert(offsetof(UX6BuoyancyEffectComponent, ReferenceDisturbanceRotator) 
 static_assert(offsetof(UX6BuoyancyEffectComponent, CanDisturbanceAngle) == 0x0000F8, "Member 'UX6BuoyancyEffectComponent::CanDisturbanceAngle' has a wrong offset!");
 static_assert(offsetof(UX6BuoyancyEffectComponent, CanBeAutoCheckedByWater) == 0x0000F9, "Member 'UX6BuoyancyEffectComponent::CanBeAutoCheckedByWater' has a wrong offset!");
 
-// Class X6Game.X6SequencerBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UX6SequencerBlueprintLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static void AddBindingWithNamesAndActors(class ALevelSequenceActor* InLSActor, TMap<class FString, class AActor*>* InActorsAndNames);
-	static void CinematicActorLookAtActor(ELookAtEventType InEventType, class AActor* InPlayerActor, class AActor* InTargetActor, const struct FLookAtRequestParams& Params_0);
-	static void CinematicActorLookAtLocation(ELookAtEventType InEventType, class AActor* InPlayerActor, const struct FVector& InTargetLocation, const struct FLookAtRequestParams& Params_0);
-	static void GetAllSections(const class UMovieSceneSequence* MovieSceneSequence, TArray<class UMovieSceneSection*>* OutSections);
-	static void GetAllTracks(const class UMovieSceneSequence* MovieSceneSequence, TArray<class UMovieSceneTrack*>* OutTracks);
-	static void GetCastNamesInLevelSequenceByTag(const class ALevelSequenceActor* InLSActor, class FName InTag, TArray<class FString>* OutNames);
-	static TArray<struct FX6TrackContent> GetMasterTrackContents(const class ULevelSequence* LevelSequence, TSubclassOf<class UMovieSceneTrack> TrackClass);
-	static bool HasTrack(const class ALevelSequenceActor* LevelSequenceActor, class AActor* Actor, TSubclassOf<class UMovieSceneTrack> TrackClass);
-	static int32 PreLoadLevelSequence(class ULevelSequence* LevelSequence);
-	static void RemoveCinematicActorLookAt(ELookAtEventType InEventType, class AActor* InPlayerActor, class AActor* LookAtTargetActor);
-	static void SetPreAnimatedPreviewCameraRotation(const struct FRotator& InRotation);
-	static void SetSectionIsActiveByNetPolicy(class UMovieSceneSequence* MovieSceneSequence, EMovieSceneNetPolicy MovieSceneNetPolicy);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6SequencerBlueprintLibrary">();
-	}
-	static class UX6SequencerBlueprintLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6SequencerBlueprintLibrary>();
-	}
-};
-static_assert(alignof(UX6SequencerBlueprintLibrary) == 0x000008, "Wrong alignment on UX6SequencerBlueprintLibrary");
-static_assert(sizeof(UX6SequencerBlueprintLibrary) == 0x000028, "Wrong size on UX6SequencerBlueprintLibrary");
-
 // Class X6Game.X6CameraBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UX6CameraBlueprintLibrary final : public UBlueprintFunctionLibrary
@@ -7614,10 +7928,59 @@ public:
 static_assert(alignof(UX6CameraBlueprintLibrary) == 0x000008, "Wrong alignment on UX6CameraBlueprintLibrary");
 static_assert(sizeof(UX6CameraBlueprintLibrary) == 0x000028, "Wrong size on UX6CameraBlueprintLibrary");
 
+// Class X6Game.X6SuitDisplayComponent
+// 0x0048 (0x00F0 - 0x00A8)
+class UX6SuitDisplayComponent : public UX6ActorComponent
+{
+public:
+	bool                                          bEnableRaycastingShadow;                           // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableFurCurvePassing;                            // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AA[0xE];                                       // 0x00AA(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           MPC_TOD;                                           // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPaperFurComponent*                     FurComp;                                           // 0x00C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                AsyncResultObject;                                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static void CallPreivewFunction(class AActor* InActor, class FName InFunctionName, int32 InParams);
+	static void SetPreviewProperty(class AActor* InActor, class FName InPropertyName, int32 InPropertyValue);
+
+	void AsyncCallBPFunction(class FName FunctionName, const TArray<class USkeletalMesh*>& MeshArr);
+	class UObject* AsyncNewObject(TSubclassOf<class UObject> InObjectClass);
+	void NotifyCppClothID2ClothPath(const TMap<int64, class FString>& ClothPair);
+	void OnAsyncCallFinished(class UObject* AsyncResult);
+	void RenameComponent(class UActorComponent* InComponent, const class FString& InNewName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6SuitDisplayComponent">();
+	}
+	static class UX6SuitDisplayComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6SuitDisplayComponent>();
+	}
+};
+static_assert(alignof(UX6SuitDisplayComponent) == 0x000008, "Wrong alignment on UX6SuitDisplayComponent");
+static_assert(sizeof(UX6SuitDisplayComponent) == 0x0000F0, "Wrong size on UX6SuitDisplayComponent");
+static_assert(offsetof(UX6SuitDisplayComponent, bEnableRaycastingShadow) == 0x0000A8, "Member 'UX6SuitDisplayComponent::bEnableRaycastingShadow' has a wrong offset!");
+static_assert(offsetof(UX6SuitDisplayComponent, bEnableFurCurvePassing) == 0x0000A9, "Member 'UX6SuitDisplayComponent::bEnableFurCurvePassing' has a wrong offset!");
+static_assert(offsetof(UX6SuitDisplayComponent, MPC_TOD) == 0x0000B8, "Member 'UX6SuitDisplayComponent::MPC_TOD' has a wrong offset!");
+static_assert(offsetof(UX6SuitDisplayComponent, FurComp) == 0x0000C8, "Member 'UX6SuitDisplayComponent::FurComp' has a wrong offset!");
+static_assert(offsetof(UX6SuitDisplayComponent, AsyncResultObject) == 0x0000E0, "Member 'UX6SuitDisplayComponent::AsyncResultObject' has a wrong offset!");
+
 // Class X6Game.X6CameraComponent
-// 0x0000 (0x2D10 - 0x2D10)
+// 0x00F0 (0x2E80 - 0x2D90)
 class UX6CameraComponent : public UAdvancedCamera
 {
+public:
+	int32                                         BasedMovementEffectAttachHierarchy;                // 0x2D90(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D94[0x4];                                     // 0x2D94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 BasedMovementEffectTag;                            // 0x2D98(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2DA8[0xD8];                                    // 0x2DA8(0x00D8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -7629,28 +7992,9 @@ public:
 	}
 };
 static_assert(alignof(UX6CameraComponent) == 0x000010, "Wrong alignment on UX6CameraComponent");
-static_assert(sizeof(UX6CameraComponent) == 0x002D10, "Wrong size on UX6CameraComponent");
-
-// Class X6Game.X6TargetingFilter_AlwaysAiming
-// 0x0020 (0x0048 - 0x0028)
-class UX6TargetingFilter_AlwaysAiming final : public UTargetingFilterTask_BasicFilterTemplate
-{
-public:
-	struct FGameplayTagContainer                  TargetGameplayTags;                                // 0x0028(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6TargetingFilter_AlwaysAiming">();
-	}
-	static class UX6TargetingFilter_AlwaysAiming* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6TargetingFilter_AlwaysAiming>();
-	}
-};
-static_assert(alignof(UX6TargetingFilter_AlwaysAiming) == 0x000008, "Wrong alignment on UX6TargetingFilter_AlwaysAiming");
-static_assert(sizeof(UX6TargetingFilter_AlwaysAiming) == 0x000048, "Wrong size on UX6TargetingFilter_AlwaysAiming");
-static_assert(offsetof(UX6TargetingFilter_AlwaysAiming, TargetGameplayTags) == 0x000028, "Member 'UX6TargetingFilter_AlwaysAiming::TargetGameplayTags' has a wrong offset!");
+static_assert(sizeof(UX6CameraComponent) == 0x002E80, "Wrong size on UX6CameraComponent");
+static_assert(offsetof(UX6CameraComponent, BasedMovementEffectAttachHierarchy) == 0x002D90, "Member 'UX6CameraComponent::BasedMovementEffectAttachHierarchy' has a wrong offset!");
+static_assert(offsetof(UX6CameraComponent, BasedMovementEffectTag) == 0x002D98, "Member 'UX6CameraComponent::BasedMovementEffectTag' has a wrong offset!");
 
 // Class X6Game.X6CameraSpringArmComponent
 // 0x0160 (0x0490 - 0x0330)
@@ -7718,39 +8062,8 @@ public:
 static_assert(alignof(AX6CameraVolume) == 0x000008, "Wrong alignment on AX6CameraVolume");
 static_assert(sizeof(AX6CameraVolume) == 0x0003E0, "Wrong size on AX6CameraVolume");
 
-// Class X6Game.X6SpawnOnViewSubsystem
-// 0x0220 (0x0250 - 0x0030)
-class UX6SpawnOnViewSubsystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_30[0x220];                                     // 0x0030(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddCacheEntity(int64 EntityID, int64 SpawnerID, int64 GroupID, struct FVector* SpawnLocation, double SpawnDistSqr);
-	void AddSpawner(class AActor* Actor, int64 SpawnerID, int64 EntityID, class FName Cat);
-	void CheckEntitySpawnOnView(TArray<int64>* NeedSpawnEntities);
-	void ClearManagedEntityAndSpawners();
-	void ForceRemoveCahceEntity(int64 EntityID);
-	void GetSpawnSystemStatistics(int64* SpawnerNum, int64* SkippedNum);
-	void RemoveSpawner(class AActor* Actor, class FName Cat);
-	void ResetSpawnerGroup(int64 GroupID, TArray<int64>* SpawnerIDS);
-	void SetSystemParams(int32 OnScreenLimitHiddenFlag, float NearSpawnerDist);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6SpawnOnViewSubsystem">();
-	}
-	static class UX6SpawnOnViewSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6SpawnOnViewSubsystem>();
-	}
-};
-static_assert(alignof(UX6SpawnOnViewSubsystem) == 0x000008, "Wrong alignment on UX6SpawnOnViewSubsystem");
-static_assert(sizeof(UX6SpawnOnViewSubsystem) == 0x000250, "Wrong size on UX6SpawnOnViewSubsystem");
-
 // Class X6Game.X6CarrierCharacterBase
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0950 - 0x0950)
 class AX6CarrierCharacterBase : public AX6CharacterBase
 {
 public:
@@ -7767,30 +8080,10 @@ public:
 	}
 };
 static_assert(alignof(AX6CarrierCharacterBase) == 0x000010, "Wrong alignment on AX6CarrierCharacterBase");
-static_assert(sizeof(AX6CarrierCharacterBase) == 0x0008B0, "Wrong size on AX6CarrierCharacterBase");
-
-// Class X6Game.X6RootMotionModifier_SkewWarpWithMirror
-// 0x0000 (0x02D0 - 0x02D0)
-class UX6RootMotionModifier_SkewWarpWithMirror final : public URootMotionModifier_SkewWarp
-{
-public:
-	static class UX6RootMotionModifier_SkewWarpWithMirror* AddRootMotionModifierSkewWarpWithMirror(class UMotionWarpingComponent* InMotionWarpingComp, const class UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, class FName InWarpTargetName, EWarpPointAnimProvider InWarpPointAnimProvider, const struct FTransform& InWarpPointAnimTransform, class FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, EMotionWarpRotationType InRotationType, EMotionWarpRotationMethod InRotationMethod, float InWarpRotationTimeMultiplier, float InWarpMaxRotationRate);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6RootMotionModifier_SkewWarpWithMirror">();
-	}
-	static class UX6RootMotionModifier_SkewWarpWithMirror* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6RootMotionModifier_SkewWarpWithMirror>();
-	}
-};
-static_assert(alignof(UX6RootMotionModifier_SkewWarpWithMirror) == 0x000010, "Wrong alignment on UX6RootMotionModifier_SkewWarpWithMirror");
-static_assert(sizeof(UX6RootMotionModifier_SkewWarpWithMirror) == 0x0002D0, "Wrong size on UX6RootMotionModifier_SkewWarpWithMirror");
+static_assert(sizeof(AX6CarrierCharacterBase) == 0x000950, "Wrong size on AX6CarrierCharacterBase");
 
 // Class X6Game.X6CarrierCharacter
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0950 - 0x0950)
 class AX6CarrierCharacter final : public AX6CarrierCharacterBase
 {
 public:
@@ -7804,7 +8097,27 @@ public:
 	}
 };
 static_assert(alignof(AX6CarrierCharacter) == 0x000010, "Wrong alignment on AX6CarrierCharacter");
-static_assert(sizeof(AX6CarrierCharacter) == 0x0008B0, "Wrong size on AX6CarrierCharacter");
+static_assert(sizeof(AX6CarrierCharacter) == 0x000950, "Wrong size on AX6CarrierCharacter");
+
+// Class X6Game.X6SteamFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UX6SteamFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void UpdateAchievements(const TMap<class FString, int32>& InAchievements, const class FString& ChannelString);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6SteamFunctionLibrary">();
+	}
+	static class UX6SteamFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6SteamFunctionLibrary>();
+	}
+};
+static_assert(alignof(UX6SteamFunctionLibrary) == 0x000008, "Wrong alignment on UX6SteamFunctionLibrary");
+static_assert(sizeof(UX6SteamFunctionLibrary) == 0x000028, "Wrong size on UX6SteamFunctionLibrary");
 
 // Class X6Game.X6CarrierMovementComponent
 // 0x0000 (0x14E0 - 0x14E0)
@@ -7822,23 +8135,6 @@ public:
 };
 static_assert(alignof(UX6CarrierMovementComponent) == 0x000010, "Wrong alignment on UX6CarrierMovementComponent");
 static_assert(sizeof(UX6CarrierMovementComponent) == 0x0014E0, "Wrong size on UX6CarrierMovementComponent");
-
-// Class X6Game.X6T2NpcActorBase
-// 0x0000 (0x0438 - 0x0438)
-class AX6T2NpcActorBase final : public AX6Actor
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6T2NpcActorBase">();
-	}
-	static class AX6T2NpcActorBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6T2NpcActorBase>();
-	}
-};
-static_assert(alignof(AX6T2NpcActorBase) == 0x000008, "Wrong alignment on AX6T2NpcActorBase");
-static_assert(sizeof(AX6T2NpcActorBase) == 0x000438, "Wrong size on AX6T2NpcActorBase");
 
 // Class X6Game.X6CharacterLightBase
 // 0x0010 (0x03B8 - 0x03A8)
@@ -7863,6 +8159,49 @@ static_assert(sizeof(AX6CharacterLightBase) == 0x0003B8, "Wrong size on AX6Chara
 static_assert(offsetof(AX6CharacterLightBase, SpringArmComponent) == 0x0003A8, "Member 'AX6CharacterLightBase::SpringArmComponent' has a wrong offset!");
 static_assert(offsetof(AX6CharacterLightBase, LightComponent) == 0x0003B0, "Member 'AX6CharacterLightBase::LightComponent' has a wrong offset!");
 
+// Class X6Game.X6TargetingSortTask_ChargeUp
+// 0x0080 (0x00A8 - 0x0028)
+class UX6TargetingSortTask_ChargeUp final : public UTargetingTask
+{
+public:
+	uint8                                         bAngleAscending : 1;                               // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AngleWeight;                                       // 0x002C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         AngleRefScore;                                     // 0x0030(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bDisAscending : 1;                                 // 0x0034(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DisWeight;                                         // 0x0038(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         DisRefScore;                                       // 0x003C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bCharacterAscending : 1;                           // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CharacterWeight;                                   // 0x0044(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         CharacterRefScore;                                 // 0x0048(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FGameplayTag, float>              CharacterTagBaseScoreMap;                          // 0x0050(0x0050)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	float                                         OtherCharacterBaseScore;                           // 0x00A0(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6TargetingSortTask_ChargeUp">();
+	}
+	static class UX6TargetingSortTask_ChargeUp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6TargetingSortTask_ChargeUp>();
+	}
+};
+static_assert(alignof(UX6TargetingSortTask_ChargeUp) == 0x000008, "Wrong alignment on UX6TargetingSortTask_ChargeUp");
+static_assert(sizeof(UX6TargetingSortTask_ChargeUp) == 0x0000A8, "Wrong size on UX6TargetingSortTask_ChargeUp");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, AngleWeight) == 0x00002C, "Member 'UX6TargetingSortTask_ChargeUp::AngleWeight' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, AngleRefScore) == 0x000030, "Member 'UX6TargetingSortTask_ChargeUp::AngleRefScore' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, DisWeight) == 0x000038, "Member 'UX6TargetingSortTask_ChargeUp::DisWeight' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, DisRefScore) == 0x00003C, "Member 'UX6TargetingSortTask_ChargeUp::DisRefScore' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, CharacterWeight) == 0x000044, "Member 'UX6TargetingSortTask_ChargeUp::CharacterWeight' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, CharacterRefScore) == 0x000048, "Member 'UX6TargetingSortTask_ChargeUp::CharacterRefScore' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, CharacterTagBaseScoreMap) == 0x000050, "Member 'UX6TargetingSortTask_ChargeUp::CharacterTagBaseScoreMap' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSortTask_ChargeUp, OtherCharacterBaseScore) == 0x0000A0, "Member 'UX6TargetingSortTask_ChargeUp::OtherCharacterBaseScore' has a wrong offset!");
+
 // Class X6Game.X6CharacterDirectLight
 // 0x0000 (0x03B8 - 0x03B8)
 class AX6CharacterDirectLight final : public AX6CharacterLightBase
@@ -7879,26 +8218,6 @@ public:
 };
 static_assert(alignof(AX6CharacterDirectLight) == 0x000008, "Wrong alignment on AX6CharacterDirectLight");
 static_assert(sizeof(AX6CharacterDirectLight) == 0x0003B8, "Wrong size on AX6CharacterDirectLight");
-
-// Class X6Game.X6UtcPlayerInputComponent
-// 0x0000 (0x00A8 - 0x00A8)
-class UX6UtcPlayerInputComponent : public UX6ActorComponent
-{
-public:
-	void HandleTouchEvent(EX6InputTouchEvent X6InputTouchEvent, ETouchIndex FingerIndex, const struct FVector& Location);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6UtcPlayerInputComponent">();
-	}
-	static class UX6UtcPlayerInputComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6UtcPlayerInputComponent>();
-	}
-};
-static_assert(alignof(UX6UtcPlayerInputComponent) == 0x000008, "Wrong alignment on UX6UtcPlayerInputComponent");
-static_assert(sizeof(UX6UtcPlayerInputComponent) == 0x0000A8, "Wrong size on UX6UtcPlayerInputComponent");
 
 // Class X6Game.X6CharacterVisualEffectComponent
 // 0x0210 (0x02B8 - 0x00A8)
@@ -7963,6 +8282,28 @@ static_assert(offsetof(UX6CharacterVisualEffectComponent, DissolveByPitchMaxDist
 static_assert(offsetof(UX6CharacterVisualEffectComponent, DissolveInterpSpeed) == 0x000130, "Member 'UX6CharacterVisualEffectComponent::DissolveInterpSpeed' has a wrong offset!");
 static_assert(offsetof(UX6CharacterVisualEffectComponent, MaxDissolveValue) == 0x000134, "Member 'UX6CharacterVisualEffectComponent::MaxDissolveValue' has a wrong offset!");
 static_assert(offsetof(UX6CharacterVisualEffectComponent, DefaultSocketDissolveCondition) == 0x000190, "Member 'UX6CharacterVisualEffectComponent::DefaultSocketDissolveCondition' has a wrong offset!");
+
+// Class X6Game.X6TargetingFilterTask_Num
+// 0x0008 (0x0030 - 0x0028)
+class UX6TargetingFilterTask_Num final : public UTargetingTask
+{
+public:
+	int32                                         Num;                                               // 0x0028(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6TargetingFilterTask_Num">();
+	}
+	static class UX6TargetingFilterTask_Num* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6TargetingFilterTask_Num>();
+	}
+};
+static_assert(alignof(UX6TargetingFilterTask_Num) == 0x000008, "Wrong alignment on UX6TargetingFilterTask_Num");
+static_assert(sizeof(UX6TargetingFilterTask_Num) == 0x000030, "Wrong size on UX6TargetingFilterTask_Num");
+static_assert(offsetof(UX6TargetingFilterTask_Num, Num) == 0x000028, "Member 'UX6TargetingFilterTask_Num::Num' has a wrong offset!");
 
 // Class X6Game.X6CharacterEffectComponent
 // 0x0390 (0x0648 - 0x02B8)
@@ -8097,29 +8438,6 @@ static_assert(offsetof(UX6CharacterEffectComponent, PendingTemplateRefByTag) == 
 static_assert(offsetof(UX6CharacterEffectComponent, bInBush) == 0x000644, "Member 'UX6CharacterEffectComponent::bInBush' has a wrong offset!");
 static_assert(offsetof(UX6CharacterEffectComponent, ShrubTypeAsByte) == 0x000645, "Member 'UX6CharacterEffectComponent::ShrubTypeAsByte' has a wrong offset!");
 
-// Class X6Game.X6TargetingFilter_GamePlayTags
-// 0x0040 (0x0068 - 0x0028)
-class UX6TargetingFilter_GamePlayTags final : public UTargetingFilterTask_BasicFilterTemplate
-{
-public:
-	struct FGameplayTagContainer                  TargetGameplayTags;                                // 0x0028(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  ExcludeGamePlayTags;                               // 0x0048(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6TargetingFilter_GamePlayTags">();
-	}
-	static class UX6TargetingFilter_GamePlayTags* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6TargetingFilter_GamePlayTags>();
-	}
-};
-static_assert(alignof(UX6TargetingFilter_GamePlayTags) == 0x000008, "Wrong alignment on UX6TargetingFilter_GamePlayTags");
-static_assert(sizeof(UX6TargetingFilter_GamePlayTags) == 0x000068, "Wrong size on UX6TargetingFilter_GamePlayTags");
-static_assert(offsetof(UX6TargetingFilter_GamePlayTags, TargetGameplayTags) == 0x000028, "Member 'UX6TargetingFilter_GamePlayTags::TargetGameplayTags' has a wrong offset!");
-static_assert(offsetof(UX6TargetingFilter_GamePlayTags, ExcludeGamePlayTags) == 0x000048, "Member 'UX6TargetingFilter_GamePlayTags::ExcludeGamePlayTags' has a wrong offset!");
-
 // Class X6Game.X6CharacterPointLight
 // 0x0000 (0x03B8 - 0x03B8)
 class AX6CharacterPointLight final : public AX6CharacterLightBase
@@ -8136,6 +8454,38 @@ public:
 };
 static_assert(alignof(AX6CharacterPointLight) == 0x000008, "Wrong alignment on AX6CharacterPointLight");
 static_assert(sizeof(AX6CharacterPointLight) == 0x0003B8, "Wrong size on AX6CharacterPointLight");
+
+// Class X6Game.X6SoftRefWidget
+// 0x0048 (0x01D0 - 0x0188)
+class UX6SoftRefWidget final : public UWidget
+{
+public:
+	struct FSoftClassPath                         ContentWidgetSoftClassPath;                        // 0x0188(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class UUserWidget* ContentWidget)> OnContentWidgetLoaded;          // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UUserWidget*                            ContentWidget;                                     // 0x01B8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C0[0x10];                                     // 0x01C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ClearContentWidget();
+	class UUserWidget* GetContentWidget();
+	void LoadContentWidget(bool bSyncLoad, bool bNeedRecreate);
+	void OnLoaded(int32 AsyncId, const TArray<class UObject*>& InLoadedObjects);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6SoftRefWidget">();
+	}
+	static class UX6SoftRefWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6SoftRefWidget>();
+	}
+};
+static_assert(alignof(UX6SoftRefWidget) == 0x000008, "Wrong alignment on UX6SoftRefWidget");
+static_assert(sizeof(UX6SoftRefWidget) == 0x0001D0, "Wrong size on UX6SoftRefWidget");
+static_assert(offsetof(UX6SoftRefWidget, ContentWidgetSoftClassPath) == 0x000188, "Member 'UX6SoftRefWidget::ContentWidgetSoftClassPath' has a wrong offset!");
+static_assert(offsetof(UX6SoftRefWidget, OnContentWidgetLoaded) == 0x0001A8, "Member 'UX6SoftRefWidget::OnContentWidgetLoaded' has a wrong offset!");
+static_assert(offsetof(UX6SoftRefWidget, ContentWidget) == 0x0001B8, "Member 'UX6SoftRefWidget::ContentWidget' has a wrong offset!");
 
 // Class X6Game.X6CharacterSpotLight
 // 0x0000 (0x03B8 - 0x03B8)
@@ -8154,48 +8504,64 @@ public:
 static_assert(alignof(AX6CharacterSpotLight) == 0x000008, "Wrong alignment on AX6CharacterSpotLight");
 static_assert(sizeof(AX6CharacterSpotLight) == 0x0003B8, "Wrong size on AX6CharacterSpotLight");
 
-// Class X6Game.X6StrafeMovementComponent
-// 0x0038 (0x00E0 - 0x00A8)
-class UX6StrafeMovementComponent : public UX6ActorComponent
+// Class X6Game.X6TargetingSelectionTask_AOE
+// 0x00C0 (0x00E8 - 0x0028)
+class UX6TargetingSelectionTask_AOE : public UTargetingTask
 {
 public:
-	bool                                          bIsEnabled;                                        // 0x00A8(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInterrupted;                                      // 0x00A9(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurrentTurnAroundAngle;                            // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class APlayerCameraManager*                   CameraManager;                                     // 0x00B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class ACharacter*                             CharacterOwner;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UAdvancedCamera*                        AdCamera;                                          // 0x00C0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCharacterMovementComponent*            CharacterMovement;                                 // 0x00C8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UX6RMWalkingComponent*                  RMWalkingComp;                                     // 0x00D0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URMBaseLogicProcessor*                  CurRMBaseLogicProcessor;                           // 0x00D8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsDependencyPreTarget;                            // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bApplyMultipleComponentResult;                     // 0x0029(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EX6TargetingAOEShape                          ShapeType;                                         // 0x002A(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECollisionChannel                             CollisionChannel;                                  // 0x002B(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FCollisionProfileName                  CollisionProfileName;                              // 0x002C(0x0008)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      CollisionObjectTypes;                              // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FVector                                DefaultSourceOffset;                               // 0x0048(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   SocketName;                                        // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         bUseRelativeOffset : 1;                            // 0x0068(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIgnoreSourceActor : 1;                            // 0x0068(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bIgnoreInstigatorActor : 1;                        // 0x0068(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HalfExtent;                                        // 0x0070(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Angle;                                             // 0x0088(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         InnerRadius;                                       // 0x008C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         Radius;                                            // 0x0090(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	struct FScalableFloat                         HalfHeight;                                        // 0x00B8(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	class FName                                   ComponentTag;                                      // 0x00E0(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
-	void K2_UpdateMovingState(bool bNewMoveFlag);
-
-	float CalcTurnAroundAngle(const struct FVector& InputDirection, const struct FVector& ForwardVector) const;
+	void BP_GetTargetingResultDataByIndex(const struct FTargetingRequestHandle& TargetingHandle, const int32 Index_0, struct FTargetingDefaultResultData* ResultData) const;
+	struct FQuat GetOffsetRotationInEditor(const class AActor* Actor) const;
+	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6StrafeMovementComponent">();
+		return StaticClassImpl<"X6TargetingSelectionTask_AOE">();
 	}
-	static class UX6StrafeMovementComponent* GetDefaultObj()
+	static class UX6TargetingSelectionTask_AOE* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6StrafeMovementComponent>();
+		return GetDefaultObjImpl<UX6TargetingSelectionTask_AOE>();
 	}
 };
-static_assert(alignof(UX6StrafeMovementComponent) == 0x000008, "Wrong alignment on UX6StrafeMovementComponent");
-static_assert(sizeof(UX6StrafeMovementComponent) == 0x0000E0, "Wrong size on UX6StrafeMovementComponent");
-static_assert(offsetof(UX6StrafeMovementComponent, bIsEnabled) == 0x0000A8, "Member 'UX6StrafeMovementComponent::bIsEnabled' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, bInterrupted) == 0x0000A9, "Member 'UX6StrafeMovementComponent::bInterrupted' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, CurrentTurnAroundAngle) == 0x0000AC, "Member 'UX6StrafeMovementComponent::CurrentTurnAroundAngle' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, CameraManager) == 0x0000B0, "Member 'UX6StrafeMovementComponent::CameraManager' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, CharacterOwner) == 0x0000B8, "Member 'UX6StrafeMovementComponent::CharacterOwner' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, AdCamera) == 0x0000C0, "Member 'UX6StrafeMovementComponent::AdCamera' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, CharacterMovement) == 0x0000C8, "Member 'UX6StrafeMovementComponent::CharacterMovement' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, RMWalkingComp) == 0x0000D0, "Member 'UX6StrafeMovementComponent::RMWalkingComp' has a wrong offset!");
-static_assert(offsetof(UX6StrafeMovementComponent, CurRMBaseLogicProcessor) == 0x0000D8, "Member 'UX6StrafeMovementComponent::CurRMBaseLogicProcessor' has a wrong offset!");
+static_assert(alignof(UX6TargetingSelectionTask_AOE) == 0x000008, "Wrong alignment on UX6TargetingSelectionTask_AOE");
+static_assert(sizeof(UX6TargetingSelectionTask_AOE) == 0x0000E8, "Wrong size on UX6TargetingSelectionTask_AOE");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, bIsDependencyPreTarget) == 0x000028, "Member 'UX6TargetingSelectionTask_AOE::bIsDependencyPreTarget' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, bApplyMultipleComponentResult) == 0x000029, "Member 'UX6TargetingSelectionTask_AOE::bApplyMultipleComponentResult' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, ShapeType) == 0x00002A, "Member 'UX6TargetingSelectionTask_AOE::ShapeType' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, CollisionChannel) == 0x00002B, "Member 'UX6TargetingSelectionTask_AOE::CollisionChannel' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, CollisionProfileName) == 0x00002C, "Member 'UX6TargetingSelectionTask_AOE::CollisionProfileName' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, CollisionObjectTypes) == 0x000038, "Member 'UX6TargetingSelectionTask_AOE::CollisionObjectTypes' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, DefaultSourceOffset) == 0x000048, "Member 'UX6TargetingSelectionTask_AOE::DefaultSourceOffset' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, SocketName) == 0x000060, "Member 'UX6TargetingSelectionTask_AOE::SocketName' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, HalfExtent) == 0x000070, "Member 'UX6TargetingSelectionTask_AOE::HalfExtent' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, Angle) == 0x000088, "Member 'UX6TargetingSelectionTask_AOE::Angle' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, InnerRadius) == 0x00008C, "Member 'UX6TargetingSelectionTask_AOE::InnerRadius' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, Radius) == 0x000090, "Member 'UX6TargetingSelectionTask_AOE::Radius' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, HalfHeight) == 0x0000B8, "Member 'UX6TargetingSelectionTask_AOE::HalfHeight' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_AOE, ComponentTag) == 0x0000E0, "Member 'UX6TargetingSelectionTask_AOE::ComponentTag' has a wrong offset!");
 
 // Class X6Game.X6CheatManager
 // 0x0038 (0x00C0 - 0x0088)
@@ -8249,6 +8615,50 @@ static_assert(sizeof(ACinePawn) == 0x000440, "Wrong size on ACinePawn");
 static_assert(offsetof(ACinePawn, DefaultRootComponent) == 0x000430, "Member 'ACinePawn::DefaultRootComponent' has a wrong offset!");
 static_assert(offsetof(ACinePawn, mesh) == 0x000438, "Member 'ACinePawn::mesh' has a wrong offset!");
 
+// Class X6Game.X6WaterSimulationComponent
+// 0x0048 (0x00F0 - 0x00A8)
+class UX6WaterSimulationComponent final : public UX6ActorComponent
+{
+public:
+	ESimulateWaterFlowType                        WaterFlowType;                                     // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSimulateWaterFlowKeyPoint             TargetPointToToward;                               // 0x00B0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSimulateWaterFlowKeyPoint             PointToLeave;                                      // 0x00C0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FSimulateWaterFlowKeyPoint>     MovementTrackKeyPoints;                            // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         InitialConfigDensity;                              // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentWaterDensity;                               // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FSimulateWaterFlowKeyPoint GetPointToLeave();
+	struct FSimulateWaterFlowKeyPoint GetTargetPointToToward();
+	float GetWaterCurrentDensity();
+	float GetWaterSurfaceHeightInWorldCoordinate();
+	void UpdateWaterDensity(float NewDensity);
+	void UpdateWaterIceState(bool ToIceOrExit);
+	void UpdateWaterSurfaceHeight(float HeightOfffsetToUpdate);
+	void UpdateWaterSurfaceHeightInTime(float TimeDuration, float TotalHeightToUpdate);
+	void UpdateWaterSurfaceHeightWithSpeed(float UpdateHeightSpeed, float TotalHeightToUpdate);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6WaterSimulationComponent">();
+	}
+	static class UX6WaterSimulationComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6WaterSimulationComponent>();
+	}
+};
+static_assert(alignof(UX6WaterSimulationComponent) == 0x000008, "Wrong alignment on UX6WaterSimulationComponent");
+static_assert(sizeof(UX6WaterSimulationComponent) == 0x0000F0, "Wrong size on UX6WaterSimulationComponent");
+static_assert(offsetof(UX6WaterSimulationComponent, WaterFlowType) == 0x0000A8, "Member 'UX6WaterSimulationComponent::WaterFlowType' has a wrong offset!");
+static_assert(offsetof(UX6WaterSimulationComponent, TargetPointToToward) == 0x0000B0, "Member 'UX6WaterSimulationComponent::TargetPointToToward' has a wrong offset!");
+static_assert(offsetof(UX6WaterSimulationComponent, PointToLeave) == 0x0000C0, "Member 'UX6WaterSimulationComponent::PointToLeave' has a wrong offset!");
+static_assert(offsetof(UX6WaterSimulationComponent, MovementTrackKeyPoints) == 0x0000D0, "Member 'UX6WaterSimulationComponent::MovementTrackKeyPoints' has a wrong offset!");
+static_assert(offsetof(UX6WaterSimulationComponent, InitialConfigDensity) == 0x0000E0, "Member 'UX6WaterSimulationComponent::InitialConfigDensity' has a wrong offset!");
+static_assert(offsetof(UX6WaterSimulationComponent, CurrentWaterDensity) == 0x0000E4, "Member 'UX6WaterSimulationComponent::CurrentWaterDensity' has a wrong offset!");
+
 // Class X6Game.X6CircularListPanel
 // 0x0028 (0x01C8 - 0x01A0)
 class UX6CircularListPanel final : public UPanelWidget
@@ -8281,44 +8691,6 @@ static_assert(offsetof(UX6CircularListPanel, ItemAngle) == 0x0001AC, "Member 'UX
 static_assert(offsetof(UX6CircularListPanel, ItemAngleSpacing) == 0x0001B0, "Member 'UX6CircularListPanel::ItemAngleSpacing' has a wrong offset!");
 static_assert(offsetof(UX6CircularListPanel, FirstAngleOffset) == 0x0001B4, "Member 'UX6CircularListPanel::FirstAngleOffset' has a wrong offset!");
 
-// Class X6Game.X6AbilityTask_ApplyRootMotionAccelOrForward
-// 0x0030 (0x00F8 - 0x00C8)
-class UX6AbilityTask_ApplyRootMotionAccelOrForward final : public UAbilityTask_ApplyRootMotion_Base
-{
-public:
-	TMulticastInlineDelegate<void()>              OnFinish;                                          // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	float                                         InterpSpeed;                                       // 0x00D8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Strength;                                          // 0x00DC(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Duration;                                          // 0x00E0(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsAdditive;                                       // 0x00E4(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            StrengthOverTime;                                  // 0x00E8(0x0008)(Net, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableGravity;                                    // 0x00F0(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UX6AbilityTask_ApplyRootMotionAccelOrForward* ApplyRootMotionAccelOrForward(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, float InterpSpeed_0, float Strength_0, float Duration_0, bool bIsAdditive_0, class UCurveFloat* StrengthOverTime_0, ERootMotionFinishVelocityMode VelocityOnFinishMode, const struct FVector& SetVelocityOnFinish, float ClampVelocityOnFinish, bool bEnableGravity_0);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6AbilityTask_ApplyRootMotionAccelOrForward">();
-	}
-	static class UX6AbilityTask_ApplyRootMotionAccelOrForward* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6AbilityTask_ApplyRootMotionAccelOrForward>();
-	}
-};
-static_assert(alignof(UX6AbilityTask_ApplyRootMotionAccelOrForward) == 0x000008, "Wrong alignment on UX6AbilityTask_ApplyRootMotionAccelOrForward");
-static_assert(sizeof(UX6AbilityTask_ApplyRootMotionAccelOrForward) == 0x0000F8, "Wrong size on UX6AbilityTask_ApplyRootMotionAccelOrForward");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, OnFinish) == 0x0000C8, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::OnFinish' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, InterpSpeed) == 0x0000D8, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::InterpSpeed' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, Strength) == 0x0000DC, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::Strength' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, Duration) == 0x0000E0, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::Duration' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, bIsAdditive) == 0x0000E4, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::bIsAdditive' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, StrengthOverTime) == 0x0000E8, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::StrengthOverTime' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, bEnableGravity) == 0x0000F0, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::bEnableGravity' has a wrong offset!");
-
 // Class X6Game.X6CircularListSlot
 // 0x0008 (0x0040 - 0x0038)
 class UX6CircularListSlot final : public UPanelSlot
@@ -8338,6 +8710,41 @@ public:
 };
 static_assert(alignof(UX6CircularListSlot) == 0x000008, "Wrong alignment on UX6CircularListSlot");
 static_assert(sizeof(UX6CircularListSlot) == 0x000040, "Wrong size on UX6CircularListSlot");
+
+// Class X6Game.X6TRCBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UX6TRCBlueprintLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool ChangeActivityAvailability(const TArray<class FString>& AvailableIDs, const TArray<class FString>& UnavailableIDs);
+	static bool CheckPSPremium();
+	static void CheckPSPremiumAsync(TDelegate<void(bool Result)> Callback);
+	static bool EndActivity(const class FString& activityID);
+	static bool ExportToAlbum(const class FString& FromPath, const class FString& Filename);
+	static bool IsPremiumFeatureNotifying();
+	static void LaunchURLForPredeterminedContent(const class FString& URL);
+	static void RequestTRCWebApi(const class FString& ApiGroup, const class FString& ApiPath, const class FString& httpMethod, const class FString& JsonContent, TDelegate<void(int32 ResponceCode, const class FString& Content, float NextRequestTime)> Callback);
+	static bool ResetActivity(const class FString& activityID);
+	static void ShowCommerceDialog(EX6CommerceType CommerceType);
+	static void ShowSystemMsgDialog(EX6SystemMsgType MsgType);
+	static bool StartActivity(const class FString& activityID);
+	static void StartPSNotifyPremiumFeature(float TimeInterval);
+	static void StopPSNotifyPremiumFeature();
+	static void UpdateAchievements(const TMap<int32, int32>& Achievements);
+	static float X6GetDiskFreeSpace(const class FString& InPath);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6TRCBlueprintLibrary">();
+	}
+	static class UX6TRCBlueprintLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6TRCBlueprintLibrary>();
+	}
+};
+static_assert(alignof(UX6TRCBlueprintLibrary) == 0x000008, "Wrong alignment on UX6TRCBlueprintLibrary");
+static_assert(sizeof(UX6TRCBlueprintLibrary) == 0x000028, "Wrong size on UX6TRCBlueprintLibrary");
 
 // Class X6Game.CircularListViewDesignerPreviewItem
 // 0x0000 (0x0028 - 0x0028)
@@ -8486,9 +8893,30 @@ static_assert(offsetof(UX6CircularListView, BP_OnCenterItemChanged) == 0x000350,
 static_assert(offsetof(UX6CircularListView, BP_OnItemScrolledIntoView) == 0x000378, "Member 'UX6CircularListView::BP_OnItemScrolledIntoView' has a wrong offset!");
 static_assert(offsetof(UX6CircularListView, BP_OnItemIsHoveredChanged) == 0x000388, "Member 'UX6CircularListView::BP_OnItemIsHoveredChanged' has a wrong offset!");
 
+// Class X6Game.X6TargetingFilter_ChargeUpAiming
+// 0x0020 (0x0048 - 0x0028)
+class UX6TargetingFilter_ChargeUpAiming final : public UTargetingFilterTask_BasicFilterTemplate
+{
+public:
+	struct FGameplayTagContainer                  TargetGameplayTags;                                // 0x0028(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6TargetingFilter_ChargeUpAiming">();
+	}
+	static class UX6TargetingFilter_ChargeUpAiming* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6TargetingFilter_ChargeUpAiming>();
+	}
+};
+static_assert(alignof(UX6TargetingFilter_ChargeUpAiming) == 0x000008, "Wrong alignment on UX6TargetingFilter_ChargeUpAiming");
+static_assert(sizeof(UX6TargetingFilter_ChargeUpAiming) == 0x000048, "Wrong size on UX6TargetingFilter_ChargeUpAiming");
+static_assert(offsetof(UX6TargetingFilter_ChargeUpAiming, TargetGameplayTags) == 0x000028, "Member 'UX6TargetingFilter_ChargeUpAiming::TargetGameplayTags' has a wrong offset!");
+
 // Class X6Game.X6CombatBossSlotMgrComponent
 // 0x0068 (0x0110 - 0x00A8)
-class UX6CombatBossSlotMgrComponent : public UX6ActorComponent
+class UX6CombatBossSlotMgrComponent final : public UX6ActorComponent
 {
 public:
 	TArray<struct FAttachSlotDefinition>          Slots;                                             // 0x00A8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
@@ -8543,6 +8971,56 @@ static_assert(sizeof(UX6CombatBoxCollisionComponent) == 0x000610, "Wrong size on
 static_assert(offsetof(UX6CombatBoxCollisionComponent, bBulletFilter) == 0x000600, "Member 'UX6CombatBoxCollisionComponent::bBulletFilter' has a wrong offset!");
 static_assert(offsetof(UX6CombatBoxCollisionComponent, FilterPriority) == 0x000604, "Member 'UX6CombatBoxCollisionComponent::FilterPriority' has a wrong offset!");
 
+// Class X6Game.X6WaterBuoyancyManagerComponent
+// 0x0098 (0x0140 - 0x00A8)
+class UX6WaterBuoyancyManagerComponent final : public UActorComponent
+{
+public:
+	ESimulateWaterFlowType                        WaterFlowType;                                     // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSimulateWaterFlowKeyPoint             TargetPointToToward;                               // 0x00B0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FSimulateWaterFlowKeyPoint             PointToLeave;                                      // 0x00C0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FSimulateWaterFlowKeyPoint>     MovementTrackKeyPoints;                            // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         InitialConfigDensity;                              // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CurrentWaterDensity;                               // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E8[0x58];                                      // 0x00E8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void GenerateSplineTrackForWater();
+	struct FSimulateWaterFlowKeyPoint GetPointToLeave();
+	struct FSimulateWaterFlowKeyPoint GetTargetPointToToward();
+	float GetWaterCurrentDensity();
+	float GetWaterSurfaceHeightInWorldCoordinate();
+	void InitializeBuoyancyData();
+	void OnTriggerWaterOverlapCheck();
+	void OnUpdateWaterSurfaceHeight(float DeltaTime);
+	void OnWaterActorBeginOverlaped(class AActor* OverlappedActor, class AActor* OtherActor);
+	void OnWaterActorEndOverlaped(class AActor* OverlappedActor, class AActor* OtherActor);
+	void UpdateWaterDensity(float NewDensity);
+	void UpdateWaterIceState(bool ToIceOrExit);
+	void UpdateWaterSurfaceHeight(float HeightOfffsetToUpdate);
+	void UpdateWaterSurfaceHeightInTime(float TimeDuration, float TotalHeightToUpdate);
+	void UpdateWaterSurfaceHeightWithSpeed(float UpdateHeightSpeed, float TotalHeightToUpdate);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6WaterBuoyancyManagerComponent">();
+	}
+	static class UX6WaterBuoyancyManagerComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6WaterBuoyancyManagerComponent>();
+	}
+};
+static_assert(alignof(UX6WaterBuoyancyManagerComponent) == 0x000008, "Wrong alignment on UX6WaterBuoyancyManagerComponent");
+static_assert(sizeof(UX6WaterBuoyancyManagerComponent) == 0x000140, "Wrong size on UX6WaterBuoyancyManagerComponent");
+static_assert(offsetof(UX6WaterBuoyancyManagerComponent, WaterFlowType) == 0x0000A8, "Member 'UX6WaterBuoyancyManagerComponent::WaterFlowType' has a wrong offset!");
+static_assert(offsetof(UX6WaterBuoyancyManagerComponent, TargetPointToToward) == 0x0000B0, "Member 'UX6WaterBuoyancyManagerComponent::TargetPointToToward' has a wrong offset!");
+static_assert(offsetof(UX6WaterBuoyancyManagerComponent, PointToLeave) == 0x0000C0, "Member 'UX6WaterBuoyancyManagerComponent::PointToLeave' has a wrong offset!");
+static_assert(offsetof(UX6WaterBuoyancyManagerComponent, MovementTrackKeyPoints) == 0x0000D0, "Member 'UX6WaterBuoyancyManagerComponent::MovementTrackKeyPoints' has a wrong offset!");
+static_assert(offsetof(UX6WaterBuoyancyManagerComponent, InitialConfigDensity) == 0x0000E0, "Member 'UX6WaterBuoyancyManagerComponent::InitialConfigDensity' has a wrong offset!");
+static_assert(offsetof(UX6WaterBuoyancyManagerComponent, CurrentWaterDensity) == 0x0000E4, "Member 'UX6WaterBuoyancyManagerComponent::CurrentWaterDensity' has a wrong offset!");
+
 // Class X6Game.X6CombatCameraSynchronizer
 // 0x0010 (0x01F0 - 0x01E0)
 class UX6CombatCameraSynchronizer : public UX6CombatCameraSynchronizerBase
@@ -8566,23 +9044,6 @@ public:
 };
 static_assert(alignof(UX6CombatCameraSynchronizer) == 0x000010, "Wrong alignment on UX6CombatCameraSynchronizer");
 static_assert(sizeof(UX6CombatCameraSynchronizer) == 0x0001F0, "Wrong size on UX6CombatCameraSynchronizer");
-
-// Class X6Game.X6WorldCarriageCharacter
-// 0x0000 (0x08B0 - 0x08B0)
-class AX6WorldCarriageCharacter final : public AX6CharacterBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6WorldCarriageCharacter">();
-	}
-	static class AX6WorldCarriageCharacter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6WorldCarriageCharacter>();
-	}
-};
-static_assert(alignof(AX6WorldCarriageCharacter) == 0x000010, "Wrong alignment on AX6WorldCarriageCharacter");
-static_assert(sizeof(AX6WorldCarriageCharacter) == 0x0008B0, "Wrong size on AX6WorldCarriageCharacter");
 
 // Class X6Game.X6CombatCapsuleComponent
 // 0x0010 (0x0600 - 0x05F0)
@@ -8608,6 +9069,60 @@ static_assert(alignof(UX6CombatCapsuleComponent) == 0x000010, "Wrong alignment o
 static_assert(sizeof(UX6CombatCapsuleComponent) == 0x000600, "Wrong size on UX6CombatCapsuleComponent");
 static_assert(offsetof(UX6CombatCapsuleComponent, bBulletFilter) == 0x0005F0, "Member 'UX6CombatCapsuleComponent::bBulletFilter' has a wrong offset!");
 static_assert(offsetof(UX6CombatCapsuleComponent, FilterPriority) == 0x0005F4, "Member 'UX6CombatCapsuleComponent::FilterPriority' has a wrong offset!");
+
+// Class X6Game.MotionModifier_AdjustmentBlendWarp
+// 0x01D0 (0x0330 - 0x0160)
+class UMotionModifier_AdjustmentBlendWarp final : public URootMotionModifier
+{
+public:
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   WarpTargetName;                                    // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWarpTranslation;                                  // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreZAxis;                                      // 0x0169(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAlphaBlendOption                             AddTranslationEasingFunc;                          // 0x016A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16B[0x5];                                      // 0x016B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            AddTranslationEasingCurve;                         // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWarpRotation;                                     // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWarpIKBones;                                      // 0x0179(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17A[0x2];                                      // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TargetBone;                                        // 0x017C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendOutTime;                                      // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CachedTargetTransform;                             // 0x0190(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTransform                             CachedMeshTransform;                               // 0x01F0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTransform                             CachedMeshRelativeTransform;                       // 0x0250(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTransform                             CachedRootMotion;                                  // 0x02B0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FAnimSequenceTrackContainer            Result;                                            // 0x0310(0x0020)(Protected, NativeAccessSpecifierProtected)
+
+public:
+	static void GetAdjustmentBlendIKBoneTransformAndAlpha(const class USkeletalMeshComponent* OwnerComp, class FName BoneName, struct FTransform* OutTransform, float* OutAlpha);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MotionModifier_AdjustmentBlendWarp">();
+	}
+	static class UMotionModifier_AdjustmentBlendWarp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMotionModifier_AdjustmentBlendWarp>();
+	}
+};
+static_assert(alignof(UMotionModifier_AdjustmentBlendWarp) == 0x000010, "Wrong alignment on UMotionModifier_AdjustmentBlendWarp");
+static_assert(sizeof(UMotionModifier_AdjustmentBlendWarp) == 0x000330, "Wrong size on UMotionModifier_AdjustmentBlendWarp");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, WarpTargetName) == 0x000160, "Member 'UMotionModifier_AdjustmentBlendWarp::WarpTargetName' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bWarpTranslation) == 0x000168, "Member 'UMotionModifier_AdjustmentBlendWarp::bWarpTranslation' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bIgnoreZAxis) == 0x000169, "Member 'UMotionModifier_AdjustmentBlendWarp::bIgnoreZAxis' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, AddTranslationEasingFunc) == 0x00016A, "Member 'UMotionModifier_AdjustmentBlendWarp::AddTranslationEasingFunc' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, AddTranslationEasingCurve) == 0x000170, "Member 'UMotionModifier_AdjustmentBlendWarp::AddTranslationEasingCurve' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bWarpRotation) == 0x000178, "Member 'UMotionModifier_AdjustmentBlendWarp::bWarpRotation' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bWarpIKBones) == 0x000179, "Member 'UMotionModifier_AdjustmentBlendWarp::bWarpIKBones' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, TargetBone) == 0x00017C, "Member 'UMotionModifier_AdjustmentBlendWarp::TargetBone' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, BlendOutTime) == 0x000184, "Member 'UMotionModifier_AdjustmentBlendWarp::BlendOutTime' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedTargetTransform) == 0x000190, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedTargetTransform' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedMeshTransform) == 0x0001F0, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedMeshTransform' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedMeshRelativeTransform) == 0x000250, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedMeshRelativeTransform' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedRootMotion) == 0x0002B0, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedRootMotion' has a wrong offset!");
+static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, Result) == 0x000310, "Member 'UMotionModifier_AdjustmentBlendWarp::Result' has a wrong offset!");
 
 // Class X6Game.X6CombatComponent
 // 0x0010 (0x00B8 - 0x00A8)
@@ -8635,27 +9150,6 @@ static_assert(alignof(UX6CombatComponent) == 0x000008, "Wrong alignment on UX6Co
 static_assert(sizeof(UX6CombatComponent) == 0x0000B8, "Wrong size on UX6CombatComponent");
 static_assert(offsetof(UX6CombatComponent, X6AbilitySystemComponent) == 0x0000A8, "Member 'UX6CombatComponent::X6AbilitySystemComponent' has a wrong offset!");
 static_assert(offsetof(UX6CombatComponent, bEnableFilterOutline) == 0x0000B0, "Member 'UX6CombatComponent::bEnableFilterOutline' has a wrong offset!");
-
-// Class X6Game.X6AbilityTagRelationshipMapping
-// 0x0010 (0x0040 - 0x0030)
-class UX6AbilityTagRelationshipMapping final : public UDataAsset
-{
-public:
-	TArray<struct FX6AbilityTagRelationship>      AbilityTagRelationships;                           // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6AbilityTagRelationshipMapping">();
-	}
-	static class UX6AbilityTagRelationshipMapping* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6AbilityTagRelationshipMapping>();
-	}
-};
-static_assert(alignof(UX6AbilityTagRelationshipMapping) == 0x000008, "Wrong alignment on UX6AbilityTagRelationshipMapping");
-static_assert(sizeof(UX6AbilityTagRelationshipMapping) == 0x000040, "Wrong size on UX6AbilityTagRelationshipMapping");
-static_assert(offsetof(UX6AbilityTagRelationshipMapping, AbilityTagRelationships) == 0x000030, "Member 'UX6AbilityTagRelationshipMapping::AbilityTagRelationships' has a wrong offset!");
 
 // Class X6Game.X6CombatMovementComponent
 // 0x0068 (0x0110 - 0x00A8)
@@ -8714,6 +9208,23 @@ static_assert(offsetof(UX6CombatMovementComponent, CharacterMovement) == 0x0000F
 static_assert(offsetof(UX6CombatMovementComponent, CurRMBaseLogicProcessor) == 0x000100, "Member 'UX6CombatMovementComponent::CurRMBaseLogicProcessor' has a wrong offset!");
 static_assert(offsetof(UX6CombatMovementComponent, bCanWalkNow) == 0x000108, "Member 'UX6CombatMovementComponent::bCanWalkNow' has a wrong offset!");
 
+// Class X6Game.X6WorldCarriageCharacter
+// 0x0000 (0x0950 - 0x0950)
+class AX6WorldCarriageCharacter final : public AX6CharacterBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6WorldCarriageCharacter">();
+	}
+	static class AX6WorldCarriageCharacter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6WorldCarriageCharacter>();
+	}
+};
+static_assert(alignof(AX6WorldCarriageCharacter) == 0x000010, "Wrong alignment on AX6WorldCarriageCharacter");
+static_assert(sizeof(AX6WorldCarriageCharacter) == 0x000950, "Wrong size on AX6WorldCarriageCharacter");
+
 // Class X6Game.X6CombatPerformanceProcessorComponent
 // 0x0000 (0x00A8 - 0x00A8)
 class UX6CombatPerformanceProcessorComponent : public UActorComponent
@@ -8734,67 +9245,9 @@ public:
 static_assert(alignof(UX6CombatPerformanceProcessorComponent) == 0x000008, "Wrong alignment on UX6CombatPerformanceProcessorComponent");
 static_assert(sizeof(UX6CombatPerformanceProcessorComponent) == 0x0000A8, "Wrong size on UX6CombatPerformanceProcessorComponent");
 
-// Class X6Game.X6AbilityTask_PlayMontageAndWait
-// 0x00B0 (0x0130 - 0x0080)
-class UX6AbilityTask_PlayMontageAndWait final : public UAbilityTask
-{
-public:
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnCancelled;                              // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E0[0x28];                                      // 0x00E0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           MontageToPlay;                                     // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Rate;                                              // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   StartSection;                                      // 0x0114(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         AnimRootMotionTranslationScale;                    // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         StartTimeSeconds;                                  // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bStopWhenAbilityEnds;                              // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bMirror;                                           // 0x0125(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPlayWithShadow;                                   // 0x0126(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_127[0x9];                                      // 0x0127(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UX6AbilityTask_PlayMontageAndWait* CreatePlayMontageAndWaitProxy(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, class UAnimMontage* MontageToPlay_0, float Rate_0, class FName StartSection_0, bool bStopWhenAbilityEnds_0, float AnimRootMotionTranslationScale_0, float StartTimeSeconds_0, bool bMirror_0, bool bPlayWithShadow_0);
-
-	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
-	void OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted);
-	void OnMontageInterrupted();
-	void OnNotifyBeginReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
-	void OnNotifyEndReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6AbilityTask_PlayMontageAndWait">();
-	}
-	static class UX6AbilityTask_PlayMontageAndWait* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6AbilityTask_PlayMontageAndWait>();
-	}
-};
-static_assert(alignof(UX6AbilityTask_PlayMontageAndWait) == 0x000008, "Wrong alignment on UX6AbilityTask_PlayMontageAndWait");
-static_assert(sizeof(UX6AbilityTask_PlayMontageAndWait) == 0x000130, "Wrong size on UX6AbilityTask_PlayMontageAndWait");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnCompleted) == 0x000080, "Member 'UX6AbilityTask_PlayMontageAndWait::OnCompleted' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnBlendOut) == 0x000090, "Member 'UX6AbilityTask_PlayMontageAndWait::OnBlendOut' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnInterrupted) == 0x0000A0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnInterrupted' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnCancelled) == 0x0000B0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnCancelled' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnNotifyBegin) == 0x0000C0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnNotifyBegin' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnNotifyEnd) == 0x0000D0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnNotifyEnd' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, MontageToPlay) == 0x000108, "Member 'UX6AbilityTask_PlayMontageAndWait::MontageToPlay' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, Rate) == 0x000110, "Member 'UX6AbilityTask_PlayMontageAndWait::Rate' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, StartSection) == 0x000114, "Member 'UX6AbilityTask_PlayMontageAndWait::StartSection' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, AnimRootMotionTranslationScale) == 0x00011C, "Member 'UX6AbilityTask_PlayMontageAndWait::AnimRootMotionTranslationScale' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, StartTimeSeconds) == 0x000120, "Member 'UX6AbilityTask_PlayMontageAndWait::StartTimeSeconds' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bStopWhenAbilityEnds) == 0x000124, "Member 'UX6AbilityTask_PlayMontageAndWait::bStopWhenAbilityEnds' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bMirror) == 0x000125, "Member 'UX6AbilityTask_PlayMontageAndWait::bMirror' has a wrong offset!");
-static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bPlayWithShadow) == 0x000126, "Member 'UX6AbilityTask_PlayMontageAndWait::bPlayWithShadow' has a wrong offset!");
-
 // Class X6Game.X6CombatSummonBase
-// 0x0000 (0x0460 - 0x0460)
-class AX6CombatSummonBase : public AX6ActorWithTag
+// 0x0000 (0x04B0 - 0x04B0)
+class AX6CombatSummonBase final : public AX6ActorWithTag
 {
 public:
 	static class UClass* StaticClass()
@@ -8807,7 +9260,100 @@ public:
 	}
 };
 static_assert(alignof(AX6CombatSummonBase) == 0x000008, "Wrong alignment on AX6CombatSummonBase");
-static_assert(sizeof(AX6CombatSummonBase) == 0x000460, "Wrong size on AX6CombatSummonBase");
+static_assert(sizeof(AX6CombatSummonBase) == 0x0004B0, "Wrong size on AX6CombatSummonBase");
+
+// Class X6Game.X6VehicleBikeAnimInstace
+// 0x00A0 (0x0470 - 0x03D0)
+class UX6VehicleBikeAnimInstace final : public UAnimInstance
+{
+public:
+	TWeakObjectPtr<class UX6BikeDataContext>      BikeDataContext;                                   // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         BikeCyclingStateL1;                                // 0x03D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeStartRidingType;                               // 0x03D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeSpotTurnType;                                  // 0x03D2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeRidingType;                                    // 0x03D3(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeBrakeType;                                     // 0x03D4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeStartJumpType;                                 // 0x03D5(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeJumpEndType;                                   // 0x03D6(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeDebarkationType;                               // 0x03D7(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeCyclingInAirType;                              // 0x03D8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         BikeEnterBikeType;                                 // 0x03D9(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         PreBikeCyclingType;                                // 0x03DA(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bBikeIdleLeft;                                     // 0x03DB(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BikeSteeringValue;                                 // 0x03DC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BikeBodyLeanAngle;                                 // 0x03E0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         PlayerRootMOffset;                                 // 0x03E4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         RawBikeForeakeInput;                               // 0x03E8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         RawBikeHeelInput;                                  // 0x03EC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHaveValidComponent;                               // 0x03F0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPlayerAttachToBike;                               // 0x03F1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bBikeSwitchIdle;                                   // 0x03F2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableMoveMode;                                   // 0x03F3(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         CurrentSlopeAngle;                                 // 0x03F4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BikeSpeedValue;                                    // 0x03F8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bLaunchedInAir;                                    // 0x03FC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bDirectlyFall;                                     // 0x03FD(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3FE[0x2];                                      // 0x03FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TargetSteerValue;                                  // 0x0400(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                LHandLockPosition;                                 // 0x0408(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRotator                               LHandLockRotation;                                 // 0x0420(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	struct FVector                                RHandLockPosition;                                 // 0x0438(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FRotator                               RHandLockRotation;                                 // 0x0450(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	float                                         HandIKAlpha;                                       // 0x0468(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableHandLockPositionL;                          // 0x046C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableHandLockPositionR;                          // 0x046D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableHandLockRotateL;                            // 0x046E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableHandLockRotateR;                            // 0x046F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6VehicleBikeAnimInstace">();
+	}
+	static class UX6VehicleBikeAnimInstace* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6VehicleBikeAnimInstace>();
+	}
+};
+static_assert(alignof(UX6VehicleBikeAnimInstace) == 0x000010, "Wrong alignment on UX6VehicleBikeAnimInstace");
+static_assert(sizeof(UX6VehicleBikeAnimInstace) == 0x000470, "Wrong size on UX6VehicleBikeAnimInstace");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeDataContext) == 0x0003C8, "Member 'UX6VehicleBikeAnimInstace::BikeDataContext' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeCyclingStateL1) == 0x0003D0, "Member 'UX6VehicleBikeAnimInstace::BikeCyclingStateL1' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeStartRidingType) == 0x0003D1, "Member 'UX6VehicleBikeAnimInstace::BikeStartRidingType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeSpotTurnType) == 0x0003D2, "Member 'UX6VehicleBikeAnimInstace::BikeSpotTurnType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeRidingType) == 0x0003D3, "Member 'UX6VehicleBikeAnimInstace::BikeRidingType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeBrakeType) == 0x0003D4, "Member 'UX6VehicleBikeAnimInstace::BikeBrakeType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeStartJumpType) == 0x0003D5, "Member 'UX6VehicleBikeAnimInstace::BikeStartJumpType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeJumpEndType) == 0x0003D6, "Member 'UX6VehicleBikeAnimInstace::BikeJumpEndType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeDebarkationType) == 0x0003D7, "Member 'UX6VehicleBikeAnimInstace::BikeDebarkationType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeCyclingInAirType) == 0x0003D8, "Member 'UX6VehicleBikeAnimInstace::BikeCyclingInAirType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeEnterBikeType) == 0x0003D9, "Member 'UX6VehicleBikeAnimInstace::BikeEnterBikeType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, PreBikeCyclingType) == 0x0003DA, "Member 'UX6VehicleBikeAnimInstace::PreBikeCyclingType' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bBikeIdleLeft) == 0x0003DB, "Member 'UX6VehicleBikeAnimInstace::bBikeIdleLeft' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeSteeringValue) == 0x0003DC, "Member 'UX6VehicleBikeAnimInstace::BikeSteeringValue' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeBodyLeanAngle) == 0x0003E0, "Member 'UX6VehicleBikeAnimInstace::BikeBodyLeanAngle' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, PlayerRootMOffset) == 0x0003E4, "Member 'UX6VehicleBikeAnimInstace::PlayerRootMOffset' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, RawBikeForeakeInput) == 0x0003E8, "Member 'UX6VehicleBikeAnimInstace::RawBikeForeakeInput' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, RawBikeHeelInput) == 0x0003EC, "Member 'UX6VehicleBikeAnimInstace::RawBikeHeelInput' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bHaveValidComponent) == 0x0003F0, "Member 'UX6VehicleBikeAnimInstace::bHaveValidComponent' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bPlayerAttachToBike) == 0x0003F1, "Member 'UX6VehicleBikeAnimInstace::bPlayerAttachToBike' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bBikeSwitchIdle) == 0x0003F2, "Member 'UX6VehicleBikeAnimInstace::bBikeSwitchIdle' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableMoveMode) == 0x0003F3, "Member 'UX6VehicleBikeAnimInstace::bEnableMoveMode' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, CurrentSlopeAngle) == 0x0003F4, "Member 'UX6VehicleBikeAnimInstace::CurrentSlopeAngle' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeSpeedValue) == 0x0003F8, "Member 'UX6VehicleBikeAnimInstace::BikeSpeedValue' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bLaunchedInAir) == 0x0003FC, "Member 'UX6VehicleBikeAnimInstace::bLaunchedInAir' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bDirectlyFall) == 0x0003FD, "Member 'UX6VehicleBikeAnimInstace::bDirectlyFall' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, TargetSteerValue) == 0x000400, "Member 'UX6VehicleBikeAnimInstace::TargetSteerValue' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, LHandLockPosition) == 0x000408, "Member 'UX6VehicleBikeAnimInstace::LHandLockPosition' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, LHandLockRotation) == 0x000420, "Member 'UX6VehicleBikeAnimInstace::LHandLockRotation' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, RHandLockPosition) == 0x000438, "Member 'UX6VehicleBikeAnimInstace::RHandLockPosition' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, RHandLockRotation) == 0x000450, "Member 'UX6VehicleBikeAnimInstace::RHandLockRotation' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, HandIKAlpha) == 0x000468, "Member 'UX6VehicleBikeAnimInstace::HandIKAlpha' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockPositionL) == 0x00046C, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockPositionL' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockPositionR) == 0x00046D, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockPositionR' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockRotateL) == 0x00046E, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockRotateL' has a wrong offset!");
+static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockRotateR) == 0x00046F, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockRotateR' has a wrong offset!");
 
 // Class X6Game.X6CombatTargetingFilterSetting
 // 0x0110 (0x0148 - 0x0038)
@@ -8850,50 +9396,6 @@ static_assert(offsetof(UX6CombatTargetingFilterSetting, ReinforceTargetingPreset
 static_assert(offsetof(UX6CombatTargetingFilterSetting, ReinforceChargeUpPreTargetingPreset) == 0x0000E8, "Member 'UX6CombatTargetingFilterSetting::ReinforceChargeUpPreTargetingPreset' has a wrong offset!");
 static_assert(offsetof(UX6CombatTargetingFilterSetting, ReinforceChargeUpFinishTargetingPreset) == 0x000108, "Member 'UX6CombatTargetingFilterSetting::ReinforceChargeUpFinishTargetingPreset' has a wrong offset!");
 static_assert(offsetof(UX6CombatTargetingFilterSetting, BaseCrashTargetingPreset) == 0x000128, "Member 'UX6CombatTargetingFilterSetting::BaseCrashTargetingPreset' has a wrong offset!");
-
-// Class X6Game.X6WaterSimulationComponent
-// 0x0048 (0x00F0 - 0x00A8)
-class UX6WaterSimulationComponent final : public UX6ActorComponent
-{
-public:
-	ESimulateWaterFlowType                        WaterFlowType;                                     // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSimulateWaterFlowKeyPoint             TargetPointToToward;                               // 0x00B0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSimulateWaterFlowKeyPoint             PointToLeave;                                      // 0x00C0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FSimulateWaterFlowKeyPoint>     MovementTrackKeyPoints;                            // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         InitialConfigDensity;                              // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentWaterDensity;                               // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FSimulateWaterFlowKeyPoint GetPointToLeave();
-	struct FSimulateWaterFlowKeyPoint GetTargetPointToToward();
-	float GetWaterCurrentDensity();
-	float GetWaterSurfaceHeightInWorldCoordinate();
-	void UpdateWaterDensity(float NewDensity);
-	void UpdateWaterIceState(bool ToIceOrExit);
-	void UpdateWaterSurfaceHeight(float HeightOfffsetToUpdate);
-	void UpdateWaterSurfaceHeightInTime(float TimeDuration, float TotalHeightToUpdate);
-	void UpdateWaterSurfaceHeightWithSpeed(float UpdateHeightSpeed, float TotalHeightToUpdate);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6WaterSimulationComponent">();
-	}
-	static class UX6WaterSimulationComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6WaterSimulationComponent>();
-	}
-};
-static_assert(alignof(UX6WaterSimulationComponent) == 0x000008, "Wrong alignment on UX6WaterSimulationComponent");
-static_assert(sizeof(UX6WaterSimulationComponent) == 0x0000F0, "Wrong size on UX6WaterSimulationComponent");
-static_assert(offsetof(UX6WaterSimulationComponent, WaterFlowType) == 0x0000A8, "Member 'UX6WaterSimulationComponent::WaterFlowType' has a wrong offset!");
-static_assert(offsetof(UX6WaterSimulationComponent, TargetPointToToward) == 0x0000B0, "Member 'UX6WaterSimulationComponent::TargetPointToToward' has a wrong offset!");
-static_assert(offsetof(UX6WaterSimulationComponent, PointToLeave) == 0x0000C0, "Member 'UX6WaterSimulationComponent::PointToLeave' has a wrong offset!");
-static_assert(offsetof(UX6WaterSimulationComponent, MovementTrackKeyPoints) == 0x0000D0, "Member 'UX6WaterSimulationComponent::MovementTrackKeyPoints' has a wrong offset!");
-static_assert(offsetof(UX6WaterSimulationComponent, InitialConfigDensity) == 0x0000E0, "Member 'UX6WaterSimulationComponent::InitialConfigDensity' has a wrong offset!");
-static_assert(offsetof(UX6WaterSimulationComponent, CurrentWaterDensity) == 0x0000E4, "Member 'UX6WaterSimulationComponent::CurrentWaterDensity' has a wrong offset!");
 
 // Class X6Game.X6CombatTargetingFilterSubsystem
 // 0x0138 (0x0168 - 0x0030)
@@ -8954,6 +9456,34 @@ static_assert(offsetof(UX6CombatTargetingFilterSubsystem, CurStageTargetingPrese
 static_assert(offsetof(UX6CombatTargetingFilterSubsystem, CurrentOutlineTargets) == 0x0000F8, "Member 'UX6CombatTargetingFilterSubsystem::CurrentOutlineTargets' has a wrong offset!");
 static_assert(offsetof(UX6CombatTargetingFilterSubsystem, FilterListenerTargets) == 0x000108, "Member 'UX6CombatTargetingFilterSubsystem::FilterListenerTargets' has a wrong offset!");
 
+// Class X6Game.X6NiagaraProfilerSubsystem
+// 0x0128 (0x0158 - 0x0030)
+class UX6NiagaraProfilerSubsystem final : public UEngineSubsystem
+{
+public:
+	uint8                                         Pad_30[0x128];                                     // 0x0030(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void DestroyAllNiagaraComponentsInWorld(const class UObject* InWorldContextObject);
+	TArray<class UNiagaraComponent*> GetAllNiagaraComponentsInWorld(const class UObject* InWorldContextObject);
+	struct FX6NiagaraComponentProfilerData GetNiagaraComponentProfilerData(class UNiagaraComponent* InNiagaraComponent);
+	class FString GetObjectUniqueName(const class UObject* InObject);
+	TArray<struct FX6StatData> GetStatDataByGroup(const class FString& InGroupName);
+	bool IsNiagaraComponentActuallyActive(class UNiagaraComponent* InNiagaraComponent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NiagaraProfilerSubsystem">();
+	}
+	static class UX6NiagaraProfilerSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NiagaraProfilerSubsystem>();
+	}
+};
+static_assert(alignof(UX6NiagaraProfilerSubsystem) == 0x000008, "Wrong alignment on UX6NiagaraProfilerSubsystem");
+static_assert(sizeof(UX6NiagaraProfilerSubsystem) == 0x000158, "Wrong size on UX6NiagaraProfilerSubsystem");
+
 // Class X6Game.X6CustomLevelSequenceActor
 // 0x0008 (0x03B0 - 0x03A8)
 class AX6CustomLevelSequenceActor : public AActor
@@ -8977,48 +9507,6 @@ public:
 };
 static_assert(alignof(AX6CustomLevelSequenceActor) == 0x000008, "Wrong alignment on AX6CustomLevelSequenceActor");
 static_assert(sizeof(AX6CustomLevelSequenceActor) == 0x0003B0, "Wrong size on AX6CustomLevelSequenceActor");
-
-// Class X6Game.X6AbilitySystemBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UX6AbilitySystemBlueprintLibrary final : public UBlueprintFunctionLibrary
-{
-public:
-	static bool ActorDoesContainerMatchTagQuery(const class AActor* Actor, const struct FGameplayTagQuery& TagQuery);
-	static bool ActorHasAllGameplayTags(const class AActor* Actor, const struct FGameplayTagContainer& TagContainer);
-	static bool ActorHasAnyGameplayTags(const class AActor* Actor, const struct FGameplayTagContainer& TagContainer);
-	static bool ActorHasGameplayTag(const class AActor* Actor, const struct FGameplayTag& TagToCheck);
-	static bool ActorIsBoss(const class AActor* Actor);
-	static bool ActorIsEliteMonster(const class AActor* Actor);
-	static bool ActorIsMonster(const class AActor* Actor);
-	static bool ActorIsNormalMonster(const class AActor* Actor);
-	static bool AddLooseGameplayTag(class AActor* Actor, const struct FGameplayTag& GameplayTag);
-	static bool AddLooseGameplayTagName(class AActor* Actor, const class FName& GameplayTagName);
-	static int32 ApplyConstantForceRootMotion(const class AActor* Actor, const struct FVector& Force, class UCurveFloat* StrengthOverTime, float Duration, ERootMotionAccumulateMode AccumulateMode, bool bInLocalSpace, ERootMotionFinishVelocityMode FinishMode, float ClampVelocity, const struct FVector& SetVelocity, bool bEnableGravity, bool bDisablePartialEndTick, bool bUseSensitiveLiftoffCheck);
-	static bool CheckActorCanBeSeen(class AActor* Actor, const TArray<class AActor*>& IgnoreTraceActors);
-	static void CurrentMontageJumpToSection(class USkeletalMeshComponent* InSkeletalMeshComponent, class FName SectionName);
-	static void DrawTargetingSelectionTaskAOE(const class AActor* Actor, const class UTargetingPreset* TargetingPreset, const struct FColor& Color, const struct FColor& InnerRingColor);
-	static const TArray<struct FVector> GetRandomPointsFromSquare(const struct FVector& SquareCenter, float YawAngle, float XLength, float YLength, int32 XNum, int32 YNum);
-	static class UX6AbilitySystemComponent* GetX6AbilitySystemComponent(const class AActor* Actor);
-	static struct FTargetingSourceContext MakeTargetingSourceContextWithParam();
-	static bool RemoveLooseGameplayTag(class AActor* Actor, const struct FGameplayTag& GameplayTag);
-	static bool RemoveLooseGameplayTagName(class AActor* Actor, const class FName& GameplayTagName);
-	static void RemoveRootMotionBySourceID(const class AActor* Actor, int32 SourceId);
-	static bool SendGameplayEventToActorWithRet(class AActor* Actor, const struct FGameplayTag& EventTag, const struct FGameplayEventData& Payload);
-	static void StopAnimMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, const class UAnimMontage* Montage, float OverrideBlendOutTime);
-	static void UpdateConstantForceBySourceID(const class AActor* Actor, int32 SourceId, const struct FVector& NewForce);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6AbilitySystemBlueprintLibrary">();
-	}
-	static class UX6AbilitySystemBlueprintLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6AbilitySystemBlueprintLibrary>();
-	}
-};
-static_assert(alignof(UX6AbilitySystemBlueprintLibrary) == 0x000008, "Wrong alignment on UX6AbilitySystemBlueprintLibrary");
-static_assert(sizeof(UX6AbilitySystemBlueprintLibrary) == 0x000028, "Wrong size on UX6AbilitySystemBlueprintLibrary");
 
 // Class X6Game.X6DaMiaoMainAnimInstance
 // 0x00B0 (0x0480 - 0x03D0)
@@ -9050,6 +9538,45 @@ static_assert(sizeof(UX6DaMiaoMainAnimInstance) == 0x000480, "Wrong size on UX6D
 static_assert(offsetof(UX6DaMiaoMainAnimInstance, Timer_X6NikkiMainAnimInstancePrepare) == 0x0003C8, "Member 'UX6DaMiaoMainAnimInstance::Timer_X6NikkiMainAnimInstancePrepare' has a wrong offset!");
 static_assert(offsetof(UX6DaMiaoMainAnimInstance, X6NikkiCPPTickHelperComponent) == 0x0003D0, "Member 'UX6DaMiaoMainAnimInstance::X6NikkiCPPTickHelperComponent' has a wrong offset!");
 static_assert(offsetof(UX6DaMiaoMainAnimInstance, CurFootIKFeatureTargetData) == 0x0003D8, "Member 'UX6DaMiaoMainAnimInstance::CurFootIKFeatureTargetData' has a wrong offset!");
+
+// Class X6Game.X6AnimNotifyState_TimedNiagaraEffect
+// 0x0070 (0x00A0 - 0x0030)
+class UX6AnimNotifyState_TimedNiagaraEffect : public UAnimNotifyState
+{
+public:
+	class UNiagaraSystem*                         Template;                                          // 0x0030(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SocketName;                                        // 0x0038(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LocationOffset;                                    // 0x0040(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationOffset;                                    // 0x0058(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0070(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UX6NiagaraEffectParam*>          Parameters;                                        // 0x0088(0x0010)(Edit, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bDestroyAtEnd;                                     // 0x0098(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAttachParentBound;                             // 0x0099(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UFXSystemComponent* GetSpawnedEffect(class UMeshComponent* MeshComp) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6AnimNotifyState_TimedNiagaraEffect">();
+	}
+	static class UX6AnimNotifyState_TimedNiagaraEffect* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6AnimNotifyState_TimedNiagaraEffect>();
+	}
+};
+static_assert(alignof(UX6AnimNotifyState_TimedNiagaraEffect) == 0x000008, "Wrong alignment on UX6AnimNotifyState_TimedNiagaraEffect");
+static_assert(sizeof(UX6AnimNotifyState_TimedNiagaraEffect) == 0x0000A0, "Wrong size on UX6AnimNotifyState_TimedNiagaraEffect");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, Template) == 0x000030, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::Template' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, SocketName) == 0x000038, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::SocketName' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, LocationOffset) == 0x000040, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::LocationOffset' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, RotationOffset) == 0x000058, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::RotationOffset' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, Scale) == 0x000070, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::Scale' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, Parameters) == 0x000088, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::Parameters' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, bDestroyAtEnd) == 0x000098, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::bDestroyAtEnd' has a wrong offset!");
+static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, bUseAttachParentBound) == 0x000099, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::bUseAttachParentBound' has a wrong offset!");
 
 // Class X6Game.X6DispatchInputComponent
 // 0x0048 (0x00F0 - 0x00A8)
@@ -9084,27 +9611,6 @@ static_assert(offsetof(UX6DispatchInputComponent, JudgeSize) == 0x0000B8, "Membe
 static_assert(offsetof(UX6DispatchInputComponent, OwnerInputComp) == 0x0000D0, "Member 'UX6DispatchInputComponent::OwnerInputComp' has a wrong offset!");
 static_assert(offsetof(UX6DispatchInputComponent, BindedPlayerController) == 0x0000D8, "Member 'UX6DispatchInputComponent::BindedPlayerController' has a wrong offset!");
 
-// Class X6Game.GameFeatureAction_AddGameplayCuePath
-// 0x0010 (0x0038 - 0x0028)
-class UGameFeatureAction_AddGameplayCuePath final : public UGameFeatureAction
-{
-public:
-	TArray<struct FDirectoryPath>                 DirectoryPathsToAdd;                               // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction_AddGameplayCuePath">();
-	}
-	static class UGameFeatureAction_AddGameplayCuePath* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction_AddGameplayCuePath>();
-	}
-};
-static_assert(alignof(UGameFeatureAction_AddGameplayCuePath) == 0x000008, "Wrong alignment on UGameFeatureAction_AddGameplayCuePath");
-static_assert(sizeof(UGameFeatureAction_AddGameplayCuePath) == 0x000038, "Wrong size on UGameFeatureAction_AddGameplayCuePath");
-static_assert(offsetof(UGameFeatureAction_AddGameplayCuePath, DirectoryPathsToAdd) == 0x000028, "Member 'UGameFeatureAction_AddGameplayCuePath::DirectoryPathsToAdd' has a wrong offset!");
-
 // Class X6Game.X6DynamicObstacleComponent
 // 0x0030 (0x06F0 - 0x06C0)
 class UX6DynamicObstacleComponent final : public USplineComponent
@@ -9136,6 +9642,36 @@ static_assert(alignof(UX6DynamicObstacleComponent) == 0x000010, "Wrong alignment
 static_assert(sizeof(UX6DynamicObstacleComponent) == 0x0006F0, "Wrong size on UX6DynamicObstacleComponent");
 static_assert(offsetof(UX6DynamicObstacleComponent, FailsafeExtent) == 0x0006C8, "Member 'UX6DynamicObstacleComponent::FailsafeExtent' has a wrong offset!");
 
+// Class X6Game.X6NikkiMainAnimInstance
+// 0x00B0 (0x0480 - 0x03D0)
+class UX6NikkiMainAnimInstance : public UAnimInstance
+{
+public:
+	struct FTimerHandle                           Timer_X6NikkiMainAnimInstancePrepare;              // 0x03C8(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UX6NikkiCPPTickHelperComponent*         X6NikkiCPPTickHelperComponent;                     // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FFootIKFeatureTargetDataV2             CurFootIKFeatureTargetData;                        // 0x03D8(0x00A0)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_478[0x8];                                      // 0x0478(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FFootIKFeatureTargetDataV2 GetCurFootIKFeatureTargetData();
+	bool PrepareInitializationData();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NikkiMainAnimInstance">();
+	}
+	static class UX6NikkiMainAnimInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NikkiMainAnimInstance>();
+	}
+};
+static_assert(alignof(UX6NikkiMainAnimInstance) == 0x000010, "Wrong alignment on UX6NikkiMainAnimInstance");
+static_assert(sizeof(UX6NikkiMainAnimInstance) == 0x000480, "Wrong size on UX6NikkiMainAnimInstance");
+static_assert(offsetof(UX6NikkiMainAnimInstance, Timer_X6NikkiMainAnimInstancePrepare) == 0x0003C8, "Member 'UX6NikkiMainAnimInstance::Timer_X6NikkiMainAnimInstancePrepare' has a wrong offset!");
+static_assert(offsetof(UX6NikkiMainAnimInstance, X6NikkiCPPTickHelperComponent) == 0x0003D0, "Member 'UX6NikkiMainAnimInstance::X6NikkiCPPTickHelperComponent' has a wrong offset!");
+static_assert(offsetof(UX6NikkiMainAnimInstance, CurFootIKFeatureTargetData) == 0x0003D8, "Member 'UX6NikkiMainAnimInstance::CurFootIKFeatureTargetData' has a wrong offset!");
+
 // Class X6Game.X6EditableText
 // 0x0010 (0x0530 - 0x0520)
 class UX6EditableText final : public UEditableText
@@ -9163,29 +9699,6 @@ static_assert(alignof(UX6EditableText) == 0x000010, "Wrong alignment on UX6Edita
 static_assert(sizeof(UX6EditableText) == 0x000530, "Wrong size on UX6EditableText");
 static_assert(offsetof(UX6EditableText, OnTextComposed) == 0x000518, "Member 'UX6EditableText::OnTextComposed' has a wrong offset!");
 
-// Class X6Game.X6AnimNotifyState_ComboInputData
-// 0x0018 (0x0048 - 0x0030)
-class UX6AnimNotifyState_ComboInputData final : public UAnimNotifyState
-{
-public:
-	TArray<class UComboInputData*>                InputData;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         bInactivateWhenNotifyEnd : 1;                      // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6AnimNotifyState_ComboInputData">();
-	}
-	static class UX6AnimNotifyState_ComboInputData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6AnimNotifyState_ComboInputData>();
-	}
-};
-static_assert(alignof(UX6AnimNotifyState_ComboInputData) == 0x000008, "Wrong alignment on UX6AnimNotifyState_ComboInputData");
-static_assert(sizeof(UX6AnimNotifyState_ComboInputData) == 0x000048, "Wrong size on UX6AnimNotifyState_ComboInputData");
-static_assert(offsetof(UX6AnimNotifyState_ComboInputData, InputData) == 0x000030, "Member 'UX6AnimNotifyState_ComboInputData::InputData' has a wrong offset!");
-
 // Class X6Game.X6EditableTextBox
 // 0x0010 (0x10C0 - 0x10B0)
 class UX6EditableTextBox final : public UEditableTextBox
@@ -9210,6 +9723,49 @@ static_assert(alignof(UX6EditableTextBox) == 0x000010, "Wrong alignment on UX6Ed
 static_assert(sizeof(UX6EditableTextBox) == 0x0010C0, "Wrong size on UX6EditableTextBox");
 static_assert(offsetof(UX6EditableTextBox, OnTextComposed) == 0x0010B0, "Member 'UX6EditableTextBox::OnTextComposed' has a wrong offset!");
 
+// Class X6Game.X6NiagaraEffectParam
+// 0x0008 (0x0030 - 0x0028)
+class UX6NiagaraEffectParam : public UObject
+{
+public:
+	class FName                                   ParameterName;                                     // 0x0028(0x0008)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NiagaraEffectParam">();
+	}
+	static class UX6NiagaraEffectParam* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NiagaraEffectParam>();
+	}
+};
+static_assert(alignof(UX6NiagaraEffectParam) == 0x000008, "Wrong alignment on UX6NiagaraEffectParam");
+static_assert(sizeof(UX6NiagaraEffectParam) == 0x000030, "Wrong size on UX6NiagaraEffectParam");
+static_assert(offsetof(UX6NiagaraEffectParam, ParameterName) == 0x000028, "Member 'UX6NiagaraEffectParam::ParameterName' has a wrong offset!");
+
+// Class X6Game.X6NiagaraEffectParamFloat
+// 0x0008 (0x0038 - 0x0030)
+class UX6NiagaraEffectParamFloat final : public UX6NiagaraEffectParam
+{
+public:
+	float                                         Value;                                             // 0x0030(0x0004)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NiagaraEffectParamFloat">();
+	}
+	static class UX6NiagaraEffectParamFloat* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NiagaraEffectParamFloat>();
+	}
+};
+static_assert(alignof(UX6NiagaraEffectParamFloat) == 0x000008, "Wrong alignment on UX6NiagaraEffectParamFloat");
+static_assert(sizeof(UX6NiagaraEffectParamFloat) == 0x000038, "Wrong size on UX6NiagaraEffectParamFloat");
+static_assert(offsetof(UX6NiagaraEffectParamFloat, Value) == 0x000030, "Member 'UX6NiagaraEffectParamFloat::Value' has a wrong offset!");
+
 // Class X6Game.X6EditInLinePropertyBase
 // 0x0000 (0x0028 - 0x0028)
 class UX6EditInLinePropertyBase final : public UObject
@@ -9226,60 +9782,6 @@ public:
 };
 static_assert(alignof(UX6EditInLinePropertyBase) == 0x000008, "Wrong alignment on UX6EditInLinePropertyBase");
 static_assert(sizeof(UX6EditInLinePropertyBase) == 0x000028, "Wrong size on UX6EditInLinePropertyBase");
-
-// Class X6Game.MotionModifier_AdjustmentBlendWarp
-// 0x01D0 (0x0330 - 0x0160)
-class UMotionModifier_AdjustmentBlendWarp final : public URootMotionModifier
-{
-public:
-	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   WarpTargetName;                                    // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWarpTranslation;                                  // 0x0168(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIgnoreZAxis;                                      // 0x0169(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAlphaBlendOption                             AddTranslationEasingFunc;                          // 0x016A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16B[0x5];                                      // 0x016B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            AddTranslationEasingCurve;                         // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWarpRotation;                                     // 0x0178(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWarpIKBones;                                      // 0x0179(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17A[0x2];                                      // 0x017A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TargetBone;                                        // 0x017C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendOutTime;                                      // 0x0184(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CachedTargetTransform;                             // 0x0190(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTransform                             CachedMeshTransform;                               // 0x01F0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTransform                             CachedMeshRelativeTransform;                       // 0x0250(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTransform                             CachedRootMotion;                                  // 0x02B0(0x0060)(IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FAnimSequenceTrackContainer            Result;                                            // 0x0310(0x0020)(Protected, NativeAccessSpecifierProtected)
-
-public:
-	static void GetAdjustmentBlendIKBoneTransformAndAlpha(const class USkeletalMeshComponent* OwnerComp, class FName BoneName, struct FTransform* OutTransform, float* OutAlpha);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"MotionModifier_AdjustmentBlendWarp">();
-	}
-	static class UMotionModifier_AdjustmentBlendWarp* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMotionModifier_AdjustmentBlendWarp>();
-	}
-};
-static_assert(alignof(UMotionModifier_AdjustmentBlendWarp) == 0x000010, "Wrong alignment on UMotionModifier_AdjustmentBlendWarp");
-static_assert(sizeof(UMotionModifier_AdjustmentBlendWarp) == 0x000330, "Wrong size on UMotionModifier_AdjustmentBlendWarp");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, WarpTargetName) == 0x000160, "Member 'UMotionModifier_AdjustmentBlendWarp::WarpTargetName' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bWarpTranslation) == 0x000168, "Member 'UMotionModifier_AdjustmentBlendWarp::bWarpTranslation' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bIgnoreZAxis) == 0x000169, "Member 'UMotionModifier_AdjustmentBlendWarp::bIgnoreZAxis' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, AddTranslationEasingFunc) == 0x00016A, "Member 'UMotionModifier_AdjustmentBlendWarp::AddTranslationEasingFunc' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, AddTranslationEasingCurve) == 0x000170, "Member 'UMotionModifier_AdjustmentBlendWarp::AddTranslationEasingCurve' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bWarpRotation) == 0x000178, "Member 'UMotionModifier_AdjustmentBlendWarp::bWarpRotation' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, bWarpIKBones) == 0x000179, "Member 'UMotionModifier_AdjustmentBlendWarp::bWarpIKBones' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, TargetBone) == 0x00017C, "Member 'UMotionModifier_AdjustmentBlendWarp::TargetBone' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, BlendOutTime) == 0x000184, "Member 'UMotionModifier_AdjustmentBlendWarp::BlendOutTime' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedTargetTransform) == 0x000190, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedTargetTransform' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedMeshTransform) == 0x0001F0, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedMeshTransform' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedMeshRelativeTransform) == 0x000250, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedMeshRelativeTransform' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, CachedRootMotion) == 0x0002B0, "Member 'UMotionModifier_AdjustmentBlendWarp::CachedRootMotion' has a wrong offset!");
-static_assert(offsetof(UMotionModifier_AdjustmentBlendWarp, Result) == 0x000310, "Member 'UMotionModifier_AdjustmentBlendWarp::Result' has a wrong offset!");
 
 // Class X6Game.X6EffectWindZone
 // 0x0040 (0x03E8 - 0x03A8)
@@ -9317,12 +9819,35 @@ static_assert(offsetof(AX6EffectWindZone, Radius) == 0x0003B0, "Member 'AX6Effec
 static_assert(offsetof(AX6EffectWindZone, WindForceCurve) == 0x0003B8, "Member 'AX6EffectWindZone::WindForceCurve' has a wrong offset!");
 static_assert(offsetof(AX6EffectWindZone, WindDirection) == 0x0003C0, "Member 'AX6EffectWindZone::WindDirection' has a wrong offset!");
 
+// Class X6Game.X6AnimNotifyState_ComboInputData
+// 0x0018 (0x0048 - 0x0030)
+class UX6AnimNotifyState_ComboInputData final : public UAnimNotifyState
+{
+public:
+	TArray<class UComboInputData*>                InputData;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         bInactivateWhenNotifyEnd : 1;                      // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6AnimNotifyState_ComboInputData">();
+	}
+	static class UX6AnimNotifyState_ComboInputData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6AnimNotifyState_ComboInputData>();
+	}
+};
+static_assert(alignof(UX6AnimNotifyState_ComboInputData) == 0x000008, "Wrong alignment on UX6AnimNotifyState_ComboInputData");
+static_assert(sizeof(UX6AnimNotifyState_ComboInputData) == 0x000048, "Wrong size on UX6AnimNotifyState_ComboInputData");
+static_assert(offsetof(UX6AnimNotifyState_ComboInputData, InputData) == 0x000030, "Member 'UX6AnimNotifyState_ComboInputData::InputData' has a wrong offset!");
+
 // Class X6Game.X6EncounterManager
-// 0x0010 (0x0448 - 0x0438)
+// 0x0010 (0x0498 - 0x0488)
 class AX6EncounterManager final : public AX6Actor
 {
 public:
-	struct FX6SpawnerIDRef                        TriggerSpawnerID;                                  // 0x0438(0x0010)(Edit, DisableEditOnTemplate, NoDestructor, NativeAccessSpecifierPublic)
+	struct FX6SpawnerIDRef                        TriggerSpawnerID;                                  // 0x0488(0x0010)(Edit, DisableEditOnTemplate, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -9335,28 +9860,8 @@ public:
 	}
 };
 static_assert(alignof(AX6EncounterManager) == 0x000008, "Wrong alignment on AX6EncounterManager");
-static_assert(sizeof(AX6EncounterManager) == 0x000448, "Wrong size on AX6EncounterManager");
-static_assert(offsetof(AX6EncounterManager, TriggerSpawnerID) == 0x000438, "Member 'AX6EncounterManager::TriggerSpawnerID' has a wrong offset!");
-
-// Class X6Game.GameFeatureAction_WorldActionBase
-// 0x0050 (0x0078 - 0x0028)
-class UGameFeatureAction_WorldActionBase : public UGameFeatureAction
-{
-public:
-	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GameFeatureAction_WorldActionBase">();
-	}
-	static class UGameFeatureAction_WorldActionBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGameFeatureAction_WorldActionBase>();
-	}
-};
-static_assert(alignof(UGameFeatureAction_WorldActionBase) == 0x000008, "Wrong alignment on UGameFeatureAction_WorldActionBase");
-static_assert(sizeof(UGameFeatureAction_WorldActionBase) == 0x000078, "Wrong size on UGameFeatureAction_WorldActionBase");
+static_assert(sizeof(AX6EncounterManager) == 0x000498, "Wrong size on AX6EncounterManager");
+static_assert(offsetof(AX6EncounterManager, TriggerSpawnerID) == 0x000488, "Member 'AX6EncounterManager::TriggerSpawnerID' has a wrong offset!");
 
 // Class X6Game.X6FBoxesRenderingComp
 // 0x0010 (0x05D0 - 0x05C0)
@@ -9377,6 +9882,111 @@ public:
 };
 static_assert(alignof(UX6FBoxesRenderingComp) == 0x000010, "Wrong alignment on UX6FBoxesRenderingComp");
 static_assert(sizeof(UX6FBoxesRenderingComp) == 0x0005D0, "Wrong size on UX6FBoxesRenderingComp");
+
+// Class X6Game.X6ArcListView
+// 0x0288 (0x0550 - 0x02C8)
+class UX6ArcListView final : public UListViewBase
+{
+public:
+	uint8                                         Pad_2C8[0xD8];                                     // 0x02C8(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTableViewStyle                        WidgetStyle;                                       // 0x03A0(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	EConsumeMouseWheel                            ConsumeMouseWheel;                                 // 0x0480(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bClearSelectionOnClick;                            // 0x0481(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsFocusable;                                      // 0x0482(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EX6ArcOrientation                             ArcOrientation;                                    // 0x0483(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Curvature;                                         // 0x0488(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EntrySpacing;                                      // 0x048C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ScaleDecreasingPerItem;                            // 0x0490(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         ColorDecreasingPerItem;                            // 0x0494(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bSnapToSlot;                                       // 0x0498(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAlignToEdge;                                      // 0x0499(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCenterArrange;                                    // 0x049A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEntryRotate;                                      // 0x049B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableInertial;                                   // 0x049C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bReturnFocusToSelection;                           // 0x049D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasMask;                                          // 0x049E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_49F[0x1];                                      // 0x049F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TopMaskParameterName;                              // 0x04A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   BottomMaskParameterName;                           // 0x04A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UObject*>                        ListItems;                                         // 0x04B0(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_4C0[0x10];                                     // 0x04C0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class UObject* Item, class UUserWidget* Widget)> BP_OnEntryInitialized; // 0x04D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(class UObject* Item)> BP_OnItemClicked;                            // 0x04E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(class UObject* Item)> BP_OnItemDoubleClicked;                      // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(class UObject* Item, bool bIsHovered)> BP_OnItemIsHoveredChanged;  // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(class UObject* Item, bool bIsSelected)> BP_OnItemSelectionChanged; // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(class UObject* Item, class UUserWidget* Widget)> BP_OnItemScrolledIntoView; // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(class UObject* Item)> BP_OnItemSnapToSlot;                         // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_540[0x10];                                     // 0x0540(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddItem(class UObject* Item);
+	void BP_CancelScrollIntoView();
+	void BP_ClearSelection();
+	void BP_NavigateToItem(class UObject* Item);
+	void BP_NavigateToWidget(class UUserWidget* EntryWidget);
+	void BP_ScrollItemIntoView(class UObject* Item);
+	void BP_SetItemSelection(class UObject* Item, bool bSelected);
+	void BP_SetListItems(const TArray<class UObject*>& InListItems);
+	void BP_SetSelectedItem(class UObject* Item);
+	void ClearListItems();
+	void NavigateToIndex(int32 Index_0);
+	void OnListItemEndPlayed(class AActor* Item, EEndPlayReason EndPlayReason);
+	void OnListItemOuterEndPlayed(class AActor* ItemOuter, EEndPlayReason EndPlayReason);
+	void RemoveItem(class UObject* Item);
+	void ScrollIndexIntoView(int32 Index_0);
+	void SetSelectedIndex(int32 Index_0);
+
+	bool BP_CanScrollWithLoop() const;
+	int32 BP_GetNumItemsSelected() const;
+	class UObject* BP_GetSelectedItem() const;
+	bool BP_GetSelectedItems(TArray<class UObject*>* Items) const;
+	bool BP_IsItemVisible(class UObject* Item) const;
+	int32 GetIndexForItem(const class UObject* Item) const;
+	class UObject* GetItemAt(int32 Index_0) const;
+	const TArray<class UObject*> GetListItems() const;
+	int32 GetNumItems() const;
+	bool IsRefreshPending() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ArcListView">();
+	}
+	static class UX6ArcListView* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6ArcListView>();
+	}
+};
+static_assert(alignof(UX6ArcListView) == 0x000010, "Wrong alignment on UX6ArcListView");
+static_assert(sizeof(UX6ArcListView) == 0x000550, "Wrong size on UX6ArcListView");
+static_assert(offsetof(UX6ArcListView, WidgetStyle) == 0x0003A0, "Member 'UX6ArcListView::WidgetStyle' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, ConsumeMouseWheel) == 0x000480, "Member 'UX6ArcListView::ConsumeMouseWheel' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bClearSelectionOnClick) == 0x000481, "Member 'UX6ArcListView::bClearSelectionOnClick' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bIsFocusable) == 0x000482, "Member 'UX6ArcListView::bIsFocusable' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, ArcOrientation) == 0x000483, "Member 'UX6ArcListView::ArcOrientation' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, Curvature) == 0x000488, "Member 'UX6ArcListView::Curvature' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, EntrySpacing) == 0x00048C, "Member 'UX6ArcListView::EntrySpacing' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, ScaleDecreasingPerItem) == 0x000490, "Member 'UX6ArcListView::ScaleDecreasingPerItem' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, ColorDecreasingPerItem) == 0x000494, "Member 'UX6ArcListView::ColorDecreasingPerItem' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bSnapToSlot) == 0x000498, "Member 'UX6ArcListView::bSnapToSlot' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bAlignToEdge) == 0x000499, "Member 'UX6ArcListView::bAlignToEdge' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bCenterArrange) == 0x00049A, "Member 'UX6ArcListView::bCenterArrange' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bEntryRotate) == 0x00049B, "Member 'UX6ArcListView::bEntryRotate' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bEnableInertial) == 0x00049C, "Member 'UX6ArcListView::bEnableInertial' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bReturnFocusToSelection) == 0x00049D, "Member 'UX6ArcListView::bReturnFocusToSelection' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, bHasMask) == 0x00049E, "Member 'UX6ArcListView::bHasMask' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, TopMaskParameterName) == 0x0004A0, "Member 'UX6ArcListView::TopMaskParameterName' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BottomMaskParameterName) == 0x0004A8, "Member 'UX6ArcListView::BottomMaskParameterName' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, ListItems) == 0x0004B0, "Member 'UX6ArcListView::ListItems' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnEntryInitialized) == 0x0004D0, "Member 'UX6ArcListView::BP_OnEntryInitialized' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnItemClicked) == 0x0004E0, "Member 'UX6ArcListView::BP_OnItemClicked' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnItemDoubleClicked) == 0x0004F0, "Member 'UX6ArcListView::BP_OnItemDoubleClicked' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnItemIsHoveredChanged) == 0x000500, "Member 'UX6ArcListView::BP_OnItemIsHoveredChanged' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnItemSelectionChanged) == 0x000510, "Member 'UX6ArcListView::BP_OnItemSelectionChanged' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnItemScrolledIntoView) == 0x000520, "Member 'UX6ArcListView::BP_OnItemScrolledIntoView' has a wrong offset!");
+static_assert(offsetof(UX6ArcListView, BP_OnItemSnapToSlot) == 0x000530, "Member 'UX6ArcListView::BP_OnItemSnapToSlot' has a wrong offset!");
 
 // Class X6Game.X6FileBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -9402,6 +10012,7 @@ public:
 	static void ReadAsResizedTextureWithEncryptionCheckAsync(const class FString& TexPath, const float Ratio, const class FString& EncryptionKey, TDelegate<void(const class FString& Path, class UTexture2D* Tex)> Callback, bool bSingleUse);
 	static class UTexture2D* ReadAsTexture(const class FString& TexPath);
 	static void ReadAsTextureAsync(const class FString& TexPath, TDelegate<void(const class FString& Path, class UTexture2D* Tex)> Callback);
+	static class UTexture2D* ReadAsTextureEx(const class FString& TexPath);
 	static void ReadAsTextureWithEncryptionCheckAsync(const class FString& TexPath, const class FString& EncryptionKey, TDelegate<void(const class FString& Path, class UTexture2D* Tex)> Callback, bool bSingleUse);
 	static bool ReadFile(const class FString& FilePath, TArray<uint8>* Result);
 	static void ReadPhotosAsResizedTextureAsync(const TArray<class FString>& PhotoPaths, const float Ratio, TDelegate<void(const TArray<class FString>& Paths, const TArray<class UTexture2D*>& Tex)> Callback, bool bSingleUse);
@@ -9431,7 +10042,7 @@ static_assert(alignof(UX6FileBlueprintLibrary) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UX6FileBlueprintLibrary) == 0x000028, "Wrong size on UX6FileBlueprintLibrary");
 
 // Class X6Game.X6FixedStepSizeMoveCharacterBase
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0950 - 0x0950)
 class AX6FixedStepSizeMoveCharacterBase final : public AX6CharacterBase
 {
 public:
@@ -9445,7 +10056,27 @@ public:
 	}
 };
 static_assert(alignof(AX6FixedStepSizeMoveCharacterBase) == 0x000010, "Wrong alignment on AX6FixedStepSizeMoveCharacterBase");
-static_assert(sizeof(AX6FixedStepSizeMoveCharacterBase) == 0x0008B0, "Wrong size on AX6FixedStepSizeMoveCharacterBase");
+static_assert(sizeof(AX6FixedStepSizeMoveCharacterBase) == 0x000950, "Wrong size on AX6FixedStepSizeMoveCharacterBase");
+
+// Class X6Game.GameFeatureAction_WorldActionBase
+// 0x0050 (0x0078 - 0x0028)
+class UGameFeatureAction_WorldActionBase : public UGameFeatureAction
+{
+public:
+	uint8                                         Pad_28[0x50];                                      // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameFeatureAction_WorldActionBase">();
+	}
+	static class UGameFeatureAction_WorldActionBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameFeatureAction_WorldActionBase>();
+	}
+};
+static_assert(alignof(UGameFeatureAction_WorldActionBase) == 0x000008, "Wrong alignment on UGameFeatureAction_WorldActionBase");
+static_assert(sizeof(UGameFeatureAction_WorldActionBase) == 0x000078, "Wrong size on UGameFeatureAction_WorldActionBase");
 
 // Class X6Game.X6FlatCapsuleComponent
 // 0x0010 (0x0600 - 0x05F0)
@@ -9466,26 +10097,6 @@ public:
 };
 static_assert(alignof(UX6FlatCapsuleComponent) == 0x000010, "Wrong alignment on UX6FlatCapsuleComponent");
 static_assert(sizeof(UX6FlatCapsuleComponent) == 0x000600, "Wrong size on UX6FlatCapsuleComponent");
-
-// Class X6Game.X6GameFeature_AddGameplayCuePaths
-// 0x0008 (0x0030 - 0x0028)
-class UX6GameFeature_AddGameplayCuePaths final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6GameFeature_AddGameplayCuePaths">();
-	}
-	static class UX6GameFeature_AddGameplayCuePaths* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6GameFeature_AddGameplayCuePaths>();
-	}
-};
-static_assert(alignof(UX6GameFeature_AddGameplayCuePaths) == 0x000008, "Wrong alignment on UX6GameFeature_AddGameplayCuePaths");
-static_assert(sizeof(UX6GameFeature_AddGameplayCuePaths) == 0x000030, "Wrong size on UX6GameFeature_AddGameplayCuePaths");
 
 // Class X6Game.X6FlyItemLogicComponent
 // 0x0168 (0x0210 - 0x00A8)
@@ -9601,8 +10212,29 @@ static_assert(offsetof(UX6FlyItemLogicComponent, FollowRefreshInterval) == 0x000
 static_assert(offsetof(UX6FlyItemLogicComponent, FollowTargetRotator) == 0x0001E0, "Member 'UX6FlyItemLogicComponent::FollowTargetRotator' has a wrong offset!");
 static_assert(offsetof(UX6FlyItemLogicComponent, FollowCanRotator) == 0x0001F8, "Member 'UX6FlyItemLogicComponent::FollowCanRotator' has a wrong offset!");
 
+// Class X6Game.X6AbilityTagRelationshipMapping
+// 0x0010 (0x0040 - 0x0030)
+class UX6AbilityTagRelationshipMapping final : public UDataAsset
+{
+public:
+	TArray<struct FX6AbilityTagRelationship>      AbilityTagRelationships;                           // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6AbilityTagRelationshipMapping">();
+	}
+	static class UX6AbilityTagRelationshipMapping* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6AbilityTagRelationshipMapping>();
+	}
+};
+static_assert(alignof(UX6AbilityTagRelationshipMapping) == 0x000008, "Wrong alignment on UX6AbilityTagRelationshipMapping");
+static_assert(sizeof(UX6AbilityTagRelationshipMapping) == 0x000040, "Wrong size on UX6AbilityTagRelationshipMapping");
+static_assert(offsetof(UX6AbilityTagRelationshipMapping, AbilityTagRelationships) == 0x000030, "Member 'UX6AbilityTagRelationshipMapping::AbilityTagRelationships' has a wrong offset!");
+
 // Class X6Game.X6FollowSplineMoveCharacterBase
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0950 - 0x0950)
 class AX6FollowSplineMoveCharacterBase final : public AX6CharacterBase
 {
 public:
@@ -9616,46 +10248,7 @@ public:
 	}
 };
 static_assert(alignof(AX6FollowSplineMoveCharacterBase) == 0x000010, "Wrong alignment on AX6FollowSplineMoveCharacterBase");
-static_assert(sizeof(AX6FollowSplineMoveCharacterBase) == 0x0008B0, "Wrong size on AX6FollowSplineMoveCharacterBase");
-
-// Class X6Game.X6AnimNotifyState_TimedNiagaraEffect
-// 0x0070 (0x00A0 - 0x0030)
-class UX6AnimNotifyState_TimedNiagaraEffect : public UAnimNotifyState
-{
-public:
-	class UNiagaraSystem*                         Template;                                          // 0x0030(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SocketName;                                        // 0x0038(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LocationOffset;                                    // 0x0040(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationOffset;                                    // 0x0058(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0070(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UX6NiagaraEffectParam*>          Parameters;                                        // 0x0088(0x0010)(Edit, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bDestroyAtEnd;                                     // 0x0098(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseAttachParentBound;                             // 0x0099(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9A[0x6];                                       // 0x009A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UFXSystemComponent* GetSpawnedEffect(class UMeshComponent* MeshComp) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6AnimNotifyState_TimedNiagaraEffect">();
-	}
-	static class UX6AnimNotifyState_TimedNiagaraEffect* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6AnimNotifyState_TimedNiagaraEffect>();
-	}
-};
-static_assert(alignof(UX6AnimNotifyState_TimedNiagaraEffect) == 0x000008, "Wrong alignment on UX6AnimNotifyState_TimedNiagaraEffect");
-static_assert(sizeof(UX6AnimNotifyState_TimedNiagaraEffect) == 0x0000A0, "Wrong size on UX6AnimNotifyState_TimedNiagaraEffect");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, Template) == 0x000030, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::Template' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, SocketName) == 0x000038, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::SocketName' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, LocationOffset) == 0x000040, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::LocationOffset' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, RotationOffset) == 0x000058, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::RotationOffset' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, Scale) == 0x000070, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::Scale' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, Parameters) == 0x000088, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::Parameters' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, bDestroyAtEnd) == 0x000098, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::bDestroyAtEnd' has a wrong offset!");
-static_assert(offsetof(UX6AnimNotifyState_TimedNiagaraEffect, bUseAttachParentBound) == 0x000099, "Member 'UX6AnimNotifyState_TimedNiagaraEffect::bUseAttachParentBound' has a wrong offset!");
+static_assert(sizeof(AX6FollowSplineMoveCharacterBase) == 0x000950, "Wrong size on AX6FollowSplineMoveCharacterBase");
 
 // Class X6Game.X6FollowSplineMovementComponent
 // 0x05F0 (0x1AD0 - 0x14E0)
@@ -9771,6 +10364,26 @@ static_assert(offsetof(UX6FollowSplineMovementComponent, ShowTimeAnimSoftPath) =
 static_assert(offsetof(UX6FollowSplineMovementComponent, LocomotionABPInstance) == 0x001A70, "Member 'UX6FollowSplineMovementComponent::LocomotionABPInstance' has a wrong offset!");
 static_assert(offsetof(UX6FollowSplineMovementComponent, PathNodesConfigMap) == 0x001A78, "Member 'UX6FollowSplineMovementComponent::PathNodesConfigMap' has a wrong offset!");
 
+// Class X6Game.X6GameFeature_AddGameplayCuePaths
+// 0x0008 (0x0030 - 0x0028)
+class UX6GameFeature_AddGameplayCuePaths final : public UObject
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6GameFeature_AddGameplayCuePaths">();
+	}
+	static class UX6GameFeature_AddGameplayCuePaths* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6GameFeature_AddGameplayCuePaths>();
+	}
+};
+static_assert(alignof(UX6GameFeature_AddGameplayCuePaths) == 0x000008, "Wrong alignment on UX6GameFeature_AddGameplayCuePaths");
+static_assert(sizeof(UX6GameFeature_AddGameplayCuePaths) == 0x000030, "Wrong size on UX6GameFeature_AddGameplayCuePaths");
+
 // Class X6Game.X6GameInstance
 // 0x00C0 (0x0618 - 0x0558)
 class UX6GameInstance : public UPaperPlatformGameInstance
@@ -9834,40 +10447,6 @@ static_assert(offsetof(UX6GameInstance, UIPFManagerForFoliageClass) == 0x000600,
 static_assert(offsetof(UX6GameInstance, UIWSManagerForWaterInteractionClass) == 0x000608, "Member 'UX6GameInstance::UIWSManagerForWaterInteractionClass' has a wrong offset!");
 static_assert(offsetof(UX6GameInstance, UIPFManagerForMultiFoliageInteractionClass) == 0x000610, "Member 'UX6GameInstance::UIPFManagerForMultiFoliageInteractionClass' has a wrong offset!");
 
-// Class X6Game.X6Pawn
-// 0x0060 (0x0490 - 0x0430)
-class AX6Pawn : public APawn
-{
-public:
-	TArray<class FName>                           X6Tags;                                            // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_440[0x50];                                     // 0x0440(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AttributeChange(const class FString& AttributeName);
-	void PostServerInit(bool bServer);
-	void ServerInit(bool bServer);
-	void X6_AddTag(const TArray<class FName>& NewX6Tags);
-	void X6_DeleteTag(const class FString& strTag);
-	bool X6_GetActorHiddenFlags(TSet<int32>* OutFlags);
-	TArray<class FName> X6_GetTag();
-	bool X6_HasTag(const class FString& strTag);
-	void X6_RequireActorFade(bool bFadeIn, int32 FadeOutHiddenFlag, bool bInView);
-	bool X6_SetActorHiddenInGame(bool bNewHidden, int32 Flag, bool bClearFlag);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6Pawn">();
-	}
-	static class AX6Pawn* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6Pawn>();
-	}
-};
-static_assert(alignof(AX6Pawn) == 0x000008, "Wrong alignment on AX6Pawn");
-static_assert(sizeof(AX6Pawn) == 0x000490, "Wrong size on AX6Pawn");
-static_assert(offsetof(AX6Pawn, X6Tags) == 0x000430, "Member 'AX6Pawn::X6Tags' has a wrong offset!");
-
 // Class X6Game.ActivateCondition
 // 0x0000 (0x0028 - 0x0028)
 class UActivateCondition : public UObject
@@ -9930,6 +10509,60 @@ static_assert(offsetof(UComboInputData, InputTag) == 0x000038, "Member 'UComboIn
 static_assert(offsetof(UComboInputData, ActivateCondition) == 0x000040, "Member 'UComboInputData::ActivateCondition' has a wrong offset!");
 static_assert(offsetof(UComboInputData, ActivationDuration) == 0x000048, "Member 'UComboInputData::ActivationDuration' has a wrong offset!");
 
+// Class X6Game.X6HitThroughImage
+// 0x0188 (0x0310 - 0x0188)
+class UX6HitThroughImage final : public UWidget
+{
+public:
+	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            Brush;                                             // 0x0190(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             BrushDelegate;                                     // 0x0260(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ColorAndOpacity;                                   // 0x0270(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             ColorAndOpacityDelegate;                           // 0x0280(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFlipForRightToLeftFlowDirection;                  // 0x0290(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_291[0x3];                                      // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)> OnMouseButtonDownEvent; // 0x0294(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)> OnMouseButtonUpEvent; // 0x02A4(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)> OnMouseMoveEvent; // 0x02B4(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4[0x4C];                                     // 0x02C4(0x004C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class UMaterialInstanceDynamic* GetDynamicMaterial();
+	void SetBrush(const struct FSlateBrush& InBrush);
+	void SetBrushFromAsset(class USlateBrushAsset* Asset);
+	void SetBrushFromAtlasInterface(TScriptInterface<class ISlateTextureAtlasInterface> AtlasRegion, bool bMatchSize);
+	void SetBrushFromMaterial(class UMaterialInterface* Material);
+	void SetBrushFromSoftMaterial(TSoftObjectPtr<class UMaterialInterface> SoftMaterial);
+	void SetBrushFromSoftTexture(TSoftObjectPtr<class UTexture2D> SoftTexture, bool bMatchSize);
+	void SetBrushFromTexture(class UTexture2D* Texture, bool bMatchSize);
+	void SetBrushFromTextureDynamic(class UTexture2DDynamic* Texture, bool bMatchSize);
+	void SetBrushResourceObject(class UObject* ResourceObject);
+	void SetBrushTintColor(const struct FSlateColor& TintColor);
+	void SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity);
+	void SetDesiredSizeOverride(const struct FVector2D& DesiredSize);
+	void SetOpacity(float InOpacity);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6HitThroughImage">();
+	}
+	static class UX6HitThroughImage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6HitThroughImage>();
+	}
+};
+static_assert(alignof(UX6HitThroughImage) == 0x000010, "Wrong alignment on UX6HitThroughImage");
+static_assert(sizeof(UX6HitThroughImage) == 0x000310, "Wrong size on UX6HitThroughImage");
+static_assert(offsetof(UX6HitThroughImage, Brush) == 0x000190, "Member 'UX6HitThroughImage::Brush' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, BrushDelegate) == 0x000260, "Member 'UX6HitThroughImage::BrushDelegate' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, ColorAndOpacity) == 0x000270, "Member 'UX6HitThroughImage::ColorAndOpacity' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, ColorAndOpacityDelegate) == 0x000280, "Member 'UX6HitThroughImage::ColorAndOpacityDelegate' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, bFlipForRightToLeftFlowDirection) == 0x000290, "Member 'UX6HitThroughImage::bFlipForRightToLeftFlowDirection' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, OnMouseButtonDownEvent) == 0x000294, "Member 'UX6HitThroughImage::OnMouseButtonDownEvent' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, OnMouseButtonUpEvent) == 0x0002A4, "Member 'UX6HitThroughImage::OnMouseButtonUpEvent' has a wrong offset!");
+static_assert(offsetof(UX6HitThroughImage, OnMouseMoveEvent) == 0x0002B4, "Member 'UX6HitThroughImage::OnMouseMoveEvent' has a wrong offset!");
+
 // Class X6Game.ComboInputData_Montage
 // 0x0008 (0x0058 - 0x0050)
 class UComboInputData_Montage final : public UComboInputData
@@ -9951,194 +10584,6 @@ static_assert(alignof(UComboInputData_Montage) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UComboInputData_Montage) == 0x000058, "Wrong size on UComboInputData_Montage");
 static_assert(offsetof(UComboInputData_Montage, AnimTag) == 0x000050, "Member 'UComboInputData_Montage::AnimTag' has a wrong offset!");
 
-// Class X6Game.X6PlayerMantleComponent
-// 0x0318 (0x03C0 - 0x00A8)
-class UX6PlayerMantleComponent : public UX6ActorComponent
-{
-public:
-	bool                                          bWithNative;                                       // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsActivateMantleFeature;                           // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurDeltaSeconds;                                   // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMantleDebugLog;                             // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLocalPlayerHasState_Mantling;                     // 0x00B1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLocalPlayerCanDoAction_Mantling;                  // 0x00B2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMantleTypeNative                             CurrentMantleType;                                 // 0x00B3(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMotionWarping;                              // 0x00B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurrentMantleCostTime;                             // 0x00B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UPrimitiveComponent>     CurrentDynamicMovementBaseTobeAttached;            // 0x00BC(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCharacterMovementComponent*            OwnerCharacterMovementComponent;                   // 0x00C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                LastDynamicMovementBaseLocation;                   // 0x00D0(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          WithLastDynamicMovementBaseLocation;               // 0x00E8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PendingProcessActorLocationZDuringMantle;          // 0x00EC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CacheMantleHeight;                                 // 0x00F0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F4[0xC];                                       // 0x00F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CacheTargetTransform;                              // 0x0100(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPrimitiveComponent*                    CacheHitComponent;                                 // 0x0160(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CacheMantleTriggerStartLocation;                   // 0x0168(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             CacheHitResult;                                    // 0x0180(0x00F8)(BlueprintVisible, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	float                                         OriginalMaxStepHeight;                             // 0x0278(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OriginalMeshRelativeLocationZ;                     // 0x027C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                CurAdjustLength;                                   // 0x0280(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          CanAdjustActorToAnimTarget;                        // 0x0298(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             MovingToAnimStartTarget_InitialTansform;           // 0x02A0(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 MovingToAnimStartTarget_TargetActor;               // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                MovingToAnimStartTarget_TargetLocation;            // 0x0308(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               MovingToAnimStartTarget_TargetRotation;            // 0x0320(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         MovingToAnimStartTarget_Duration;                  // 0x0338(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         UpdateMovingToAnimStartTarget_CurrentTime;         // 0x033C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxLimitMantleTime;                                // 0x0340(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            SKMeshLerpSpeedCurve;                              // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DownwardTraceRadiusCfg;                            // 0x0350(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DownwardTraceForwardOffsetCfg;                     // 0x0354(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LeastHeightInFallingCfg;                           // 0x0358(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LeastHeightCheckCapsuleRadius;                     // 0x035C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                AdjustLengthCfg;                                   // 0x0360(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ZOffsetCfg;                                        // 0x0378(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableOnGroundCfg;                                 // 0x037C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableMustJumpOperationBeforeMantleCfg;            // 0x037D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETraceTypeQuery                               TraceTypeCfg;                                      // 0x037E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F[0x1];                                      // 0x037F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReachDistanceInFallingCfg;                         // 0x0380(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReachDistanceCfg;                                  // 0x0384(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ForwardTraceCapsuleRediusCfg;                      // 0x0388(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EDrawDebugTrace                               DrawDebugTypeCfg;                                  // 0x038C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38D[0x3];                                      // 0x038D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MaxDeflectionYawAngleCfg;                          // 0x0390(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableGradCheckCfg;                                // 0x0394(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_395[0x3];                                      // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GradCheckAccuracyCfg;                              // 0x0398(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MidToHighHeightBoundaryInFallingCfg;               // 0x039C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LowToMidHeightBoundaryInFallingCfg;                // 0x03A0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinToLowHeightBoundaryInFallingCfg;                // 0x03A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinLedgeHeightInFallingCfg;                        // 0x03A8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxLedgeHeightInFallingCfg;                        // 0x03AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MinimumLandingAreaSideLengthCfg;                   // 0x03B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECollisionChannel                             ValidMantleCollisionChannelCfg;                    // 0x03B4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3B5[0x3];                                      // 0x03B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurrentUpdateTime;                                 // 0x03B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          CanUpdate;                                         // 0x03BC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsInCooldown;                                     // 0x03BD(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHaveDoneJumpOrFloat;                              // 0x03BE(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3BF[0x1];                                      // 0x03BF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	bool CapsuleHasLargeEnoughAreaCheck(class UCapsuleComponent* CapsuleComponent, const struct FVector& TargetLocation, float HeightOffset, float RadiusOffset, const struct FRotator& TargetRotation);
-	bool CapsuleHasRoomCheck(class UCapsuleComponent* CapsuleComponent, const struct FVector& TargetLocation, float HeightOffset, float RadiusOffset);
-	void ForceEndCheck();
-	struct FVector GetCapsuleBaseLocation(float ZOffset);
-	struct FVector GetCapsuleTopLocation(float ZOffset);
-	struct FVector GetCurrentReachDistance(EMovementMode CurMovementMode, const struct FVector& CurInputDirection);
-	EMantleTypeNative GetMantleTypeByHeightAndMovementMode(float MantleHeight, EMovementMode MovementMode);
-	class ACharacter* GetOwnerCharacter();
-	bool Internal_MantleMainCheckInFalling(const struct FVector& CapsuleBaseLocation, const struct FVector& CurrentPlayerInputVector, const struct FVector& CurActorLocation, float MinLedgeHeight, float MaxLedgeHeight, float ZOffset, bool bJustCheck);
-	bool IsValidMantleTraceChannel(class UPrimitiveComponent* PrimitiveComponent, ECollisionChannel TraceChannel);
-	void Lua_AddMantlingState();
-	bool Lua_CurMantleInfoExist();
-	bool Lua_GetCurMantleInfo_KeyOperationIsRequired();
-	float Lua_GetCurMantleInfo_MontageAdjustHeightTime();
-	float Lua_GetCurrentMantleInfoByName(const class FString& Name_0, EMovementMode MovementMode);
-	bool Lua_IsCurWorldTypeInDoor();
-	float Lua_MantleJumpStart(float MantleHeight);
-	bool Lua_MantlePreCheck_InAir();
-	float Lua_MantleQuicklyStart(float MantleHeight, float DeltaTime);
-	float Lua_OnCurrentMantleTypeChanged();
-	bool Lua_OwnerMantleConfigExist();
-	void Lua_PostStart();
-	void Lua_PostStartMotionWarping();
-	void Lua_RemoveMantlingState();
-	struct FVector Lua_TryGetCurInputDirection();
-	bool MantleAllCheck(bool ReceivedInput);
-	void MantleJumpStart(float MantleHeight);
-	bool MantleMainCheck(float ZOffset);
-	bool MantleMainCheckInFalling(float ZOffset);
-	bool MantlePostCheck(bool ReceivedInput);
-	bool MantlePreCheck();
-	void MantleQuicklyStart(float MantleHeight, float DeltaTime);
-	void MantleUpdate(float DeltaSeconds);
-	void MantleUpdateMotionWarping(float DeltaSeconds);
-	void PostStart();
-	void PostStartMotionWarping();
-	bool ProcessTransitionMantle();
-	void UpdateDynamicMovementBaseTobeAttached();
-	void UpdateMovingToAnimStartTarget(float DeltaSeconds);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PlayerMantleComponent">();
-	}
-	static class UX6PlayerMantleComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PlayerMantleComponent>();
-	}
-};
-static_assert(alignof(UX6PlayerMantleComponent) == 0x000010, "Wrong alignment on UX6PlayerMantleComponent");
-static_assert(sizeof(UX6PlayerMantleComponent) == 0x0003C0, "Wrong size on UX6PlayerMantleComponent");
-static_assert(offsetof(UX6PlayerMantleComponent, bWithNative) == 0x0000A8, "Member 'UX6PlayerMantleComponent::bWithNative' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, IsActivateMantleFeature) == 0x0000A9, "Member 'UX6PlayerMantleComponent::IsActivateMantleFeature' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CurDeltaSeconds) == 0x0000AC, "Member 'UX6PlayerMantleComponent::CurDeltaSeconds' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, bEnableMantleDebugLog) == 0x0000B0, "Member 'UX6PlayerMantleComponent::bEnableMantleDebugLog' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, bLocalPlayerHasState_Mantling) == 0x0000B1, "Member 'UX6PlayerMantleComponent::bLocalPlayerHasState_Mantling' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, bLocalPlayerCanDoAction_Mantling) == 0x0000B2, "Member 'UX6PlayerMantleComponent::bLocalPlayerCanDoAction_Mantling' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CurrentMantleType) == 0x0000B3, "Member 'UX6PlayerMantleComponent::CurrentMantleType' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, bEnableMotionWarping) == 0x0000B4, "Member 'UX6PlayerMantleComponent::bEnableMotionWarping' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CurrentMantleCostTime) == 0x0000B8, "Member 'UX6PlayerMantleComponent::CurrentMantleCostTime' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CurrentDynamicMovementBaseTobeAttached) == 0x0000BC, "Member 'UX6PlayerMantleComponent::CurrentDynamicMovementBaseTobeAttached' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, OwnerCharacterMovementComponent) == 0x0000C8, "Member 'UX6PlayerMantleComponent::OwnerCharacterMovementComponent' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, LastDynamicMovementBaseLocation) == 0x0000D0, "Member 'UX6PlayerMantleComponent::LastDynamicMovementBaseLocation' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, WithLastDynamicMovementBaseLocation) == 0x0000E8, "Member 'UX6PlayerMantleComponent::WithLastDynamicMovementBaseLocation' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, PendingProcessActorLocationZDuringMantle) == 0x0000EC, "Member 'UX6PlayerMantleComponent::PendingProcessActorLocationZDuringMantle' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CacheMantleHeight) == 0x0000F0, "Member 'UX6PlayerMantleComponent::CacheMantleHeight' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CacheTargetTransform) == 0x000100, "Member 'UX6PlayerMantleComponent::CacheTargetTransform' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CacheHitComponent) == 0x000160, "Member 'UX6PlayerMantleComponent::CacheHitComponent' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CacheMantleTriggerStartLocation) == 0x000168, "Member 'UX6PlayerMantleComponent::CacheMantleTriggerStartLocation' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CacheHitResult) == 0x000180, "Member 'UX6PlayerMantleComponent::CacheHitResult' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, OriginalMaxStepHeight) == 0x000278, "Member 'UX6PlayerMantleComponent::OriginalMaxStepHeight' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, OriginalMeshRelativeLocationZ) == 0x00027C, "Member 'UX6PlayerMantleComponent::OriginalMeshRelativeLocationZ' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CurAdjustLength) == 0x000280, "Member 'UX6PlayerMantleComponent::CurAdjustLength' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CanAdjustActorToAnimTarget) == 0x000298, "Member 'UX6PlayerMantleComponent::CanAdjustActorToAnimTarget' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_InitialTansform) == 0x0002A0, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_InitialTansform' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_TargetActor) == 0x000300, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_TargetActor' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_TargetLocation) == 0x000308, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_TargetLocation' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_TargetRotation) == 0x000320, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_TargetRotation' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_Duration) == 0x000338, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_Duration' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, UpdateMovingToAnimStartTarget_CurrentTime) == 0x00033C, "Member 'UX6PlayerMantleComponent::UpdateMovingToAnimStartTarget_CurrentTime' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MaxLimitMantleTime) == 0x000340, "Member 'UX6PlayerMantleComponent::MaxLimitMantleTime' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, SKMeshLerpSpeedCurve) == 0x000348, "Member 'UX6PlayerMantleComponent::SKMeshLerpSpeedCurve' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, DownwardTraceRadiusCfg) == 0x000350, "Member 'UX6PlayerMantleComponent::DownwardTraceRadiusCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, DownwardTraceForwardOffsetCfg) == 0x000354, "Member 'UX6PlayerMantleComponent::DownwardTraceForwardOffsetCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, LeastHeightInFallingCfg) == 0x000358, "Member 'UX6PlayerMantleComponent::LeastHeightInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, LeastHeightCheckCapsuleRadius) == 0x00035C, "Member 'UX6PlayerMantleComponent::LeastHeightCheckCapsuleRadius' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, AdjustLengthCfg) == 0x000360, "Member 'UX6PlayerMantleComponent::AdjustLengthCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, ZOffsetCfg) == 0x000378, "Member 'UX6PlayerMantleComponent::ZOffsetCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, EnableOnGroundCfg) == 0x00037C, "Member 'UX6PlayerMantleComponent::EnableOnGroundCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, EnableMustJumpOperationBeforeMantleCfg) == 0x00037D, "Member 'UX6PlayerMantleComponent::EnableMustJumpOperationBeforeMantleCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, TraceTypeCfg) == 0x00037E, "Member 'UX6PlayerMantleComponent::TraceTypeCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, ReachDistanceInFallingCfg) == 0x000380, "Member 'UX6PlayerMantleComponent::ReachDistanceInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, ReachDistanceCfg) == 0x000384, "Member 'UX6PlayerMantleComponent::ReachDistanceCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, ForwardTraceCapsuleRediusCfg) == 0x000388, "Member 'UX6PlayerMantleComponent::ForwardTraceCapsuleRediusCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, DrawDebugTypeCfg) == 0x00038C, "Member 'UX6PlayerMantleComponent::DrawDebugTypeCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MaxDeflectionYawAngleCfg) == 0x000390, "Member 'UX6PlayerMantleComponent::MaxDeflectionYawAngleCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, EnableGradCheckCfg) == 0x000394, "Member 'UX6PlayerMantleComponent::EnableGradCheckCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, GradCheckAccuracyCfg) == 0x000398, "Member 'UX6PlayerMantleComponent::GradCheckAccuracyCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MidToHighHeightBoundaryInFallingCfg) == 0x00039C, "Member 'UX6PlayerMantleComponent::MidToHighHeightBoundaryInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, LowToMidHeightBoundaryInFallingCfg) == 0x0003A0, "Member 'UX6PlayerMantleComponent::LowToMidHeightBoundaryInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MinToLowHeightBoundaryInFallingCfg) == 0x0003A4, "Member 'UX6PlayerMantleComponent::MinToLowHeightBoundaryInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MinLedgeHeightInFallingCfg) == 0x0003A8, "Member 'UX6PlayerMantleComponent::MinLedgeHeightInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MaxLedgeHeightInFallingCfg) == 0x0003AC, "Member 'UX6PlayerMantleComponent::MaxLedgeHeightInFallingCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, MinimumLandingAreaSideLengthCfg) == 0x0003B0, "Member 'UX6PlayerMantleComponent::MinimumLandingAreaSideLengthCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, ValidMantleCollisionChannelCfg) == 0x0003B4, "Member 'UX6PlayerMantleComponent::ValidMantleCollisionChannelCfg' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CurrentUpdateTime) == 0x0003B8, "Member 'UX6PlayerMantleComponent::CurrentUpdateTime' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, CanUpdate) == 0x0003BC, "Member 'UX6PlayerMantleComponent::CanUpdate' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, bIsInCooldown) == 0x0003BD, "Member 'UX6PlayerMantleComponent::bIsInCooldown' has a wrong offset!");
-static_assert(offsetof(UX6PlayerMantleComponent, bHaveDoneJumpOrFloat) == 0x0003BE, "Member 'UX6PlayerMantleComponent::bHaveDoneJumpOrFloat' has a wrong offset!");
-
 // Class X6Game.ComboInputData_Ability
 // 0x0008 (0x0058 - 0x0050)
 class UComboInputData_Ability final : public UComboInputData
@@ -10159,6 +10604,27 @@ public:
 static_assert(alignof(UComboInputData_Ability) == 0x000008, "Wrong alignment on UComboInputData_Ability");
 static_assert(sizeof(UComboInputData_Ability) == 0x000058, "Wrong size on UComboInputData_Ability");
 static_assert(offsetof(UComboInputData_Ability, Ability) == 0x000050, "Member 'UComboInputData_Ability::Ability' has a wrong offset!");
+
+// Class X6Game.GameFeatureAction_AddGameplayCuePath
+// 0x0010 (0x0038 - 0x0028)
+class UGameFeatureAction_AddGameplayCuePath final : public UGameFeatureAction
+{
+public:
+	TArray<struct FDirectoryPath>                 DirectoryPathsToAdd;                               // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GameFeatureAction_AddGameplayCuePath">();
+	}
+	static class UGameFeatureAction_AddGameplayCuePath* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGameFeatureAction_AddGameplayCuePath>();
+	}
+};
+static_assert(alignof(UGameFeatureAction_AddGameplayCuePath) == 0x000008, "Wrong alignment on UGameFeatureAction_AddGameplayCuePath");
+static_assert(sizeof(UGameFeatureAction_AddGameplayCuePath) == 0x000038, "Wrong size on UGameFeatureAction_AddGameplayCuePath");
+static_assert(offsetof(UGameFeatureAction_AddGameplayCuePath, DirectoryPathsToAdd) == 0x000028, "Member 'UGameFeatureAction_AddGameplayCuePath::DirectoryPathsToAdd' has a wrong offset!");
 
 // Class X6Game.X6HandHeldObjTemplate
 // 0x0020 (0x0050 - 0x0030)
@@ -10183,66 +10649,8 @@ static_assert(sizeof(UX6HandHeldObjTemplate) == 0x000050, "Wrong size on UX6Hand
 static_assert(offsetof(UX6HandHeldObjTemplate, LeftHandObj) == 0x000030, "Member 'UX6HandHeldObjTemplate::LeftHandObj' has a wrong offset!");
 static_assert(offsetof(UX6HandHeldObjTemplate, RightHandObj) == 0x000040, "Member 'UX6HandHeldObjTemplate::RightHandObj' has a wrong offset!");
 
-// Class X6Game.X6PathFollowingComponent
-// 0x0128 (0x0438 - 0x0310)
-class UX6PathFollowingComponent final : public UServerPathFollowingComponent
-{
-public:
-	uint8                                         Pad_310[0xA0];                                     // 0x0310(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bUseCustomNavLinkMove : 1;                         // 0x03B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bDisablePhysicsRotationWhenFalling : 1;            // 0x03B0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         BitPad_3B0_2 : 6;                                  // 0x03B0(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
-	uint8                                         Pad_3B1[0x1F];                                     // 0x03B1(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         BitPad_3D0_0 : 3;                                  // 0x03D0(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
-	uint8                                         bPerformingCustomLinkMove : 1;                     // 0x03D0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bStopCheckingReachTargetInNavLink : 1;             // 0x03D0(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bDonNotWalkOffLedgesOnLastSegment : 1;             // 0x03D0(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bEnableLargeAngleRotationRate : 1;                 // 0x03D0(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               LargeAngleRotationRate;                            // 0x03D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	float                                         LargeAngleCos;                                     // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3F4[0x2C];                                     // 0x03F4(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6CharacterMovementComponent*          X6MovementComp;                                    // 0x0420(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UCustomNavLinkMoveBase>     CustomNavLinkMoveClass;                            // 0x0428(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UObject*                                CustomNavLinkMove;                                 // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void AddReachSegmentDelegate(int32 SegmentIndex, const TDelegate<void(int32 SegmentIndex)>& ReachSegmentDelegate);
-	void FinishCustomLinkMove();
-	struct FVector GetCurrentTargetPosition();
-	bool GetSmoothPathEnable();
-	void K2_SetBlockDetectionState(bool bEnable);
-	void RemoveCustomNavLinkMove();
-	void RemoveReachSegmentDelegate(int32 SegmentIndex, const TDelegate<void(int32 SegmentIndex)>& ReachSegmentDelegate);
-	void SetCustomNavLinkMove(class UObject* LinkMove);
-	void SetSmoothInterval(float Interval);
-	void SetSmoothPathDirectMoveParams(const struct FDirectMoveParams& NewSmoothPathDirectMoveParams);
-	void SetSmoothPathEnable(bool bEnable);
-	void SetSmoothPathParams(const struct FSmoothPathParams& NewSmoothPathParams);
-	void SetTargetMoveSegment(int32 TargetIndex);
-
-	struct FRotator GetFinalRotation() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PathFollowingComponent">();
-	}
-	static class UX6PathFollowingComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PathFollowingComponent>();
-	}
-};
-static_assert(alignof(UX6PathFollowingComponent) == 0x000008, "Wrong alignment on UX6PathFollowingComponent");
-static_assert(sizeof(UX6PathFollowingComponent) == 0x000438, "Wrong size on UX6PathFollowingComponent");
-static_assert(offsetof(UX6PathFollowingComponent, LargeAngleRotationRate) == 0x0003D8, "Member 'UX6PathFollowingComponent::LargeAngleRotationRate' has a wrong offset!");
-static_assert(offsetof(UX6PathFollowingComponent, LargeAngleCos) == 0x0003F0, "Member 'UX6PathFollowingComponent::LargeAngleCos' has a wrong offset!");
-static_assert(offsetof(UX6PathFollowingComponent, X6MovementComp) == 0x000420, "Member 'UX6PathFollowingComponent::X6MovementComp' has a wrong offset!");
-static_assert(offsetof(UX6PathFollowingComponent, CustomNavLinkMoveClass) == 0x000428, "Member 'UX6PathFollowingComponent::CustomNavLinkMoveClass' has a wrong offset!");
-static_assert(offsetof(UX6PathFollowingComponent, CustomNavLinkMove) == 0x000430, "Member 'UX6PathFollowingComponent::CustomNavLinkMove' has a wrong offset!");
-
 // Class X6Game.X6GameUserSettings
-// 0x0120 (0x0270 - 0x0150)
+// 0x0130 (0x0280 - 0x0150)
 class UX6GameUserSettings final : public UGameUserSettings
 {
 public:
@@ -10255,29 +10663,30 @@ public:
 	TMulticastInlineDelegate<void(int32 IntParam)> OnLightedPlayerMaxCountChangedDelegate;           // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1C0[0x10];                                     // 0x01C0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(float FloatParam)> OnX6GamePreLoadPoolMemoryThresholdScalarChanged; // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class FString                                 LastCPUBrand;                                      // 0x01E0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 LastGPUBrand;                                      // 0x01F0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseBloom;                                         // 0x0200(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseMotionBlur;                                    // 0x0201(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseAmbientOcclusion;                              // 0x0202(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EGUSAntiAliasingMethod                        AntiAliasingMethod;                                // 0x0203(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EGlobalIlluminationMethod                     GlobalIlluminationMethod;                          // 0x0204(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ESceneDetailMode                              SceneDetailMode;                                   // 0x0205(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EUpScaleMode                                  UpscaleMode;                                       // 0x0206(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_207[0x1];                                      // 0x0207(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CustomUpscaleRate;                                 // 0x0208(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         X6SaveDataVersion;                                 // 0x020C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint32                                        UIResolutionSizeX;                                 // 0x0210(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint32                                        UIResolutionSizeY;                                 // 0x0214(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         LastCPUBenchmarkMultiplier;                        // 0x0218(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         X6DisplayGamma;                                    // 0x021C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         MobileContentScaleFactor;                          // 0x0220(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseRayTracingReflections;                         // 0x0224(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseRayTracingAmbientOcclusion;                    // 0x0225(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUseRayTracingEnableInGame;                        // 0x0226(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_227[0x1];                                      // 0x0227(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         LastMaterialQualityLevel;                          // 0x0228(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_22C[0x44];                                     // 0x022C(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnPostX6SetAntiAliasingMethodCVar;                 // 0x01E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class FString                                 LastCPUBrand;                                      // 0x01F0(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LastGPUBrand;                                      // 0x0200(0x0010)(ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseBloom;                                         // 0x0210(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUseMotionBlur;                                    // 0x0211(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUseAmbientOcclusion;                              // 0x0212(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EGUSAntiAliasingMethod                        AntiAliasingMethod;                                // 0x0213(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EGlobalIlluminationMethod                     GlobalIlluminationMethod;                          // 0x0214(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ESceneDetailMode                              SceneDetailMode;                                   // 0x0215(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EUpScaleMode                                  UpscaleMode;                                       // 0x0216(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_217[0x1];                                      // 0x0217(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CustomUpscaleRate;                                 // 0x0218(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         X6SaveDataVersion;                                 // 0x021C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint32                                        UIResolutionSizeX;                                 // 0x0220(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint32                                        UIResolutionSizeY;                                 // 0x0224(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         LastCPUBenchmarkMultiplier;                        // 0x0228(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         X6DisplayGamma;                                    // 0x022C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         MobileContentScaleFactor;                          // 0x0230(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUseRayTracingReflections;                         // 0x0234(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUseRayTracingAmbientOcclusion;                    // 0x0235(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUseRayTracingEnableInGame;                        // 0x0236(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_237[0x1];                                      // 0x0237(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LastMaterialQualityLevel;                          // 0x0238(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_23C[0x44];                                     // 0x023C(0x0044)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ApplyResolutionQualityRate(float ResolutionQualityRate);
@@ -10285,6 +10694,7 @@ public:
 	float GetAnimCurveMDIParamDistance();
 	bool GetBenchmarkResultFromDeviceList();
 	float GetCustomUpScaleRate();
+	struct FX6GameDisplayMetrics GetDisplayMetrics();
 	bool GetEnableAbilityPreload();
 	bool GetEnableAllPreloadFeature();
 	bool GetEnableClothesPreload();
@@ -10356,7 +10766,7 @@ public:
 	}
 };
 static_assert(alignof(UX6GameUserSettings) == 0x000008, "Wrong alignment on UX6GameUserSettings");
-static_assert(sizeof(UX6GameUserSettings) == 0x000270, "Wrong size on UX6GameUserSettings");
+static_assert(sizeof(UX6GameUserSettings) == 0x000280, "Wrong size on UX6GameUserSettings");
 static_assert(offsetof(UX6GameUserSettings, OnSpawnDistanceChangedDelegate) == 0x000150, "Member 'UX6GameUserSettings::OnSpawnDistanceChangedDelegate' has a wrong offset!");
 static_assert(offsetof(UX6GameUserSettings, OnAnimCurveMDIParamDistanceChangedDelegate) == 0x000160, "Member 'UX6GameUserSettings::OnAnimCurveMDIParamDistanceChangedDelegate' has a wrong offset!");
 static_assert(offsetof(UX6GameUserSettings, OnT2NPCSpawnRateChangedDelegate) == 0x000170, "Member 'UX6GameUserSettings::OnT2NPCSpawnRateChangedDelegate' has a wrong offset!");
@@ -10365,26 +10775,27 @@ static_assert(offsetof(UX6GameUserSettings, OnEnableSkipUpdateAnimationChangedDe
 static_assert(offsetof(UX6GameUserSettings, OnAkMaxNumVoicesLimitChangedDelegate) == 0x0001A0, "Member 'UX6GameUserSettings::OnAkMaxNumVoicesLimitChangedDelegate' has a wrong offset!");
 static_assert(offsetof(UX6GameUserSettings, OnLightedPlayerMaxCountChangedDelegate) == 0x0001B0, "Member 'UX6GameUserSettings::OnLightedPlayerMaxCountChangedDelegate' has a wrong offset!");
 static_assert(offsetof(UX6GameUserSettings, OnX6GamePreLoadPoolMemoryThresholdScalarChanged) == 0x0001D0, "Member 'UX6GameUserSettings::OnX6GamePreLoadPoolMemoryThresholdScalarChanged' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, LastCPUBrand) == 0x0001E0, "Member 'UX6GameUserSettings::LastCPUBrand' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, LastGPUBrand) == 0x0001F0, "Member 'UX6GameUserSettings::LastGPUBrand' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, bUseBloom) == 0x000200, "Member 'UX6GameUserSettings::bUseBloom' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, bUseMotionBlur) == 0x000201, "Member 'UX6GameUserSettings::bUseMotionBlur' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, bUseAmbientOcclusion) == 0x000202, "Member 'UX6GameUserSettings::bUseAmbientOcclusion' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, AntiAliasingMethod) == 0x000203, "Member 'UX6GameUserSettings::AntiAliasingMethod' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, GlobalIlluminationMethod) == 0x000204, "Member 'UX6GameUserSettings::GlobalIlluminationMethod' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, SceneDetailMode) == 0x000205, "Member 'UX6GameUserSettings::SceneDetailMode' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, UpscaleMode) == 0x000206, "Member 'UX6GameUserSettings::UpscaleMode' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, CustomUpscaleRate) == 0x000208, "Member 'UX6GameUserSettings::CustomUpscaleRate' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, X6SaveDataVersion) == 0x00020C, "Member 'UX6GameUserSettings::X6SaveDataVersion' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, UIResolutionSizeX) == 0x000210, "Member 'UX6GameUserSettings::UIResolutionSizeX' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, UIResolutionSizeY) == 0x000214, "Member 'UX6GameUserSettings::UIResolutionSizeY' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, LastCPUBenchmarkMultiplier) == 0x000218, "Member 'UX6GameUserSettings::LastCPUBenchmarkMultiplier' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, X6DisplayGamma) == 0x00021C, "Member 'UX6GameUserSettings::X6DisplayGamma' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, MobileContentScaleFactor) == 0x000220, "Member 'UX6GameUserSettings::MobileContentScaleFactor' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, bUseRayTracingReflections) == 0x000224, "Member 'UX6GameUserSettings::bUseRayTracingReflections' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, bUseRayTracingAmbientOcclusion) == 0x000225, "Member 'UX6GameUserSettings::bUseRayTracingAmbientOcclusion' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, bUseRayTracingEnableInGame) == 0x000226, "Member 'UX6GameUserSettings::bUseRayTracingEnableInGame' has a wrong offset!");
-static_assert(offsetof(UX6GameUserSettings, LastMaterialQualityLevel) == 0x000228, "Member 'UX6GameUserSettings::LastMaterialQualityLevel' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, OnPostX6SetAntiAliasingMethodCVar) == 0x0001E0, "Member 'UX6GameUserSettings::OnPostX6SetAntiAliasingMethodCVar' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, LastCPUBrand) == 0x0001F0, "Member 'UX6GameUserSettings::LastCPUBrand' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, LastGPUBrand) == 0x000200, "Member 'UX6GameUserSettings::LastGPUBrand' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, bUseBloom) == 0x000210, "Member 'UX6GameUserSettings::bUseBloom' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, bUseMotionBlur) == 0x000211, "Member 'UX6GameUserSettings::bUseMotionBlur' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, bUseAmbientOcclusion) == 0x000212, "Member 'UX6GameUserSettings::bUseAmbientOcclusion' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, AntiAliasingMethod) == 0x000213, "Member 'UX6GameUserSettings::AntiAliasingMethod' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, GlobalIlluminationMethod) == 0x000214, "Member 'UX6GameUserSettings::GlobalIlluminationMethod' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, SceneDetailMode) == 0x000215, "Member 'UX6GameUserSettings::SceneDetailMode' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, UpscaleMode) == 0x000216, "Member 'UX6GameUserSettings::UpscaleMode' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, CustomUpscaleRate) == 0x000218, "Member 'UX6GameUserSettings::CustomUpscaleRate' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, X6SaveDataVersion) == 0x00021C, "Member 'UX6GameUserSettings::X6SaveDataVersion' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, UIResolutionSizeX) == 0x000220, "Member 'UX6GameUserSettings::UIResolutionSizeX' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, UIResolutionSizeY) == 0x000224, "Member 'UX6GameUserSettings::UIResolutionSizeY' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, LastCPUBenchmarkMultiplier) == 0x000228, "Member 'UX6GameUserSettings::LastCPUBenchmarkMultiplier' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, X6DisplayGamma) == 0x00022C, "Member 'UX6GameUserSettings::X6DisplayGamma' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, MobileContentScaleFactor) == 0x000230, "Member 'UX6GameUserSettings::MobileContentScaleFactor' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, bUseRayTracingReflections) == 0x000234, "Member 'UX6GameUserSettings::bUseRayTracingReflections' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, bUseRayTracingAmbientOcclusion) == 0x000235, "Member 'UX6GameUserSettings::bUseRayTracingAmbientOcclusion' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, bUseRayTracingEnableInGame) == 0x000236, "Member 'UX6GameUserSettings::bUseRayTracingEnableInGame' has a wrong offset!");
+static_assert(offsetof(UX6GameUserSettings, LastMaterialQualityLevel) == 0x000238, "Member 'UX6GameUserSettings::LastMaterialQualityLevel' has a wrong offset!");
 
 // Class X6Game.X6GameViewportClient
 // 0x0090 (0x0458 - 0x03C8)
@@ -10535,7 +10946,7 @@ static_assert(offsetof(UX6GeneralAnimationDataComponent, bStylizedDressIK) == 0x
 static_assert(offsetof(UX6GeneralAnimationDataComponent, T2MovableNPCFeetIKInfo) == 0x000270, "Member 'UX6GeneralAnimationDataComponent::T2MovableNPCFeetIKInfo' has a wrong offset!");
 
 // Class X6Game.X6GroundFlyCharacterBase
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0950 - 0x0950)
 class AX6GroundFlyCharacterBase final : public AX6CharacterBase
 {
 public:
@@ -10549,7 +10960,7 @@ public:
 	}
 };
 static_assert(alignof(AX6GroundFlyCharacterBase) == 0x000010, "Wrong alignment on AX6GroundFlyCharacterBase");
-static_assert(sizeof(AX6GroundFlyCharacterBase) == 0x0008B0, "Wrong size on AX6GroundFlyCharacterBase");
+static_assert(sizeof(AX6GroundFlyCharacterBase) == 0x000950, "Wrong size on AX6GroundFlyCharacterBase");
 
 // Class X6Game.X6GroundFlyMovementComponent
 // 0x0100 (0x15E0 - 0x14E0)
@@ -10791,54 +11202,6 @@ static_assert(alignof(UX6HyperLinkTextBlockDecorator) == 0x000010, "Wrong alignm
 static_assert(sizeof(UX6HyperLinkTextBlockDecorator) == 0x000780, "Wrong size on UX6HyperLinkTextBlockDecorator");
 static_assert(offsetof(UX6HyperLinkTextBlockDecorator, Style) == 0x000030, "Member 'UX6HyperLinkTextBlockDecorator::Style' has a wrong offset!");
 
-// Class X6Game.X6InputProcessorHelper
-// 0x0010 (0x0038 - 0x0028)
-class UX6InputProcessorHelper final : public UObject
-{
-public:
-	uint8                                         Pad_28[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void BindAnalogInputEvent(TDelegate<void(const struct FAnalogInputEvent& AnalogInputEvent)> InOnAnalogInput, int32 InPriority);
-	void BindGestureEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnGesture, int32 InPriority);
-	void BindInputDeviceEvent(TDelegate<void(EX6InputDeviceKeyType InputDeviceKeyType)> InOnInputDevice);
-	void BindKeyDownEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyDown, int32 InPriority);
-	void BindKeyUpEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyUp, int32 InPriority);
-	void BindMotionDetectedEvent(TDelegate<void(const struct FMotionEvent& MotionEvent)> InOnMotionDetected, int32 InPriority);
-	void BindMouseButtonDoubleClickEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDoubleClick, int32 InPriority);
-	void BindMouseButtonDownEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDown, int32 InPriority);
-	void BindMouseButtonUpEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonUp, int32 InPriority);
-	void BindMouseMoveEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseMove, int32 InPriority);
-	void BindMouseWheelEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseWheel, int32 InPriority);
-	EX6InputDeviceKeyType GetCurInputDeviceKeyType();
-	bool GetMouseResponseDisabled();
-	void SetInputDeviceIgnoreValue(float InInputDeviceIgnoreValue);
-	bool SetMouseResponseDisabled(bool bDisable);
-	void UnbindAnalogInputEvent(TDelegate<void(const struct FAnalogInputEvent& AnalogInputEvent)> InOnAnalogInput, int32 InPriority);
-	void UnbindGestureEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnGesture, int32 InPriority);
-	void UnbindInputDeviceEvent(TDelegate<void(EX6InputDeviceKeyType InputDeviceKeyType)> InOnInputDevice);
-	void UnbindKeyDownEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyDown, int32 InPriority);
-	void UnbindKeyUpEvent(TDelegate<void(const struct FKeyEvent& KeyEvent)> InOnKeyUp, int32 InPriority);
-	void UnbindMotionDetectedEvent(TDelegate<void(const struct FMotionEvent& MotionEvent)> InOnMotionDetected, int32 InPriority);
-	void UnbindMouseButtonDoubleClickEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDoubleClick, int32 InPriority);
-	void UnbindMouseButtonDownEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonDown, int32 InPriority);
-	void UnbindMouseButtonUpEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseButtonUp, int32 InPriority);
-	void UnbindMouseMoveEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseMove, int32 InPriority);
-	void UnbindMouseWheelEvent(TDelegate<void(const struct FPointerEvent& MouseEvent)> InOnMouseWheel, int32 InPriority);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6InputProcessorHelper">();
-	}
-	static class UX6InputProcessorHelper* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6InputProcessorHelper>();
-	}
-};
-static_assert(alignof(UX6InputProcessorHelper) == 0x000008, "Wrong alignment on UX6InputProcessorHelper");
-static_assert(sizeof(UX6InputProcessorHelper) == 0x000038, "Wrong size on UX6InputProcessorHelper");
-
 // Class X6Game.X6InputTouchDelegateBinding
 // 0x00B8 (0x00E0 - 0x0028)
 class UX6InputTouchDelegateBinding final : public UInputDelegateBinding
@@ -10866,23 +11229,6 @@ public:
 static_assert(alignof(UX6InputTouchDelegateBinding) == 0x000008, "Wrong alignment on UX6InputTouchDelegateBinding");
 static_assert(sizeof(UX6InputTouchDelegateBinding) == 0x0000E0, "Wrong size on UX6InputTouchDelegateBinding");
 static_assert(offsetof(UX6InputTouchDelegateBinding, InputTouchDelegateBindings) == 0x000028, "Member 'UX6InputTouchDelegateBinding::InputTouchDelegateBindings' has a wrong offset!");
-
-// Class X6Game.InteractSlotDataAsset
-// 0x0000 (0x0030 - 0x0030)
-class UInteractSlotDataAsset final : public UPrimaryDataAsset
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"InteractSlotDataAsset">();
-	}
-	static class UInteractSlotDataAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UInteractSlotDataAsset>();
-	}
-};
-static_assert(alignof(UInteractSlotDataAsset) == 0x000008, "Wrong alignment on UInteractSlotDataAsset");
-static_assert(sizeof(UInteractSlotDataAsset) == 0x000030, "Wrong size on UInteractSlotDataAsset");
 
 // Class X6Game.X6InteractiveActorComponent
 // 0x0088 (0x0130 - 0x00A8)
@@ -10925,26 +11271,6 @@ static_assert(offsetof(UX6InteractiveActorComponent, InteractWidgetAttachCompone
 static_assert(offsetof(UX6InteractiveActorComponent, ChatBubbleActive) == 0x0000F8, "Member 'UX6InteractiveActorComponent::ChatBubbleActive' has a wrong offset!");
 static_assert(offsetof(UX6InteractiveActorComponent, ChatBubbleSlot) == 0x000100, "Member 'UX6InteractiveActorComponent::ChatBubbleSlot' has a wrong offset!");
 
-// Class X6Game.X6LevelSequencePreLoadObjectInterface
-// 0x0000 (0x0000 - 0x0000)
-class IX6LevelSequencePreLoadObjectInterface final : public IInterface
-{
-public:
-	void StartLoad(const class FString& LevelSequenceName, const TArray<struct FLoadProperty>& LoadProperties);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6LevelSequencePreLoadObjectInterface">();
-	}
-	static class IX6LevelSequencePreLoadObjectInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IX6LevelSequencePreLoadObjectInterface>();
-	}
-};
-static_assert(alignof(IX6LevelSequencePreLoadObjectInterface) == 0x000001, "Wrong alignment on IX6LevelSequencePreLoadObjectInterface");
-static_assert(sizeof(IX6LevelSequencePreLoadObjectInterface) == 0x000001, "Wrong size on IX6LevelSequencePreLoadObjectInterface");
-
 // Class X6Game.X6LevelSequencePreLoadSectionInterface
 // 0x0000 (0x0000 - 0x0000)
 class IX6LevelSequencePreLoadSectionInterface final : public IInterface
@@ -10964,28 +11290,6 @@ public:
 };
 static_assert(alignof(IX6LevelSequencePreLoadSectionInterface) == 0x000001, "Wrong alignment on IX6LevelSequencePreLoadSectionInterface");
 static_assert(sizeof(IX6LevelSequencePreLoadSectionInterface) == 0x000001, "Wrong size on IX6LevelSequencePreLoadSectionInterface");
-
-// Class X6Game.X6ListViewItem
-// 0x0008 (0x0030 - 0x0028)
-class UX6ListViewItem final : public UObject
-{
-public:
-	int32                                         ItemIndex;                                         // 0x0028(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ListViewItem">();
-	}
-	static class UX6ListViewItem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ListViewItem>();
-	}
-};
-static_assert(alignof(UX6ListViewItem) == 0x000008, "Wrong alignment on UX6ListViewItem");
-static_assert(sizeof(UX6ListViewItem) == 0x000030, "Wrong size on UX6ListViewItem");
-static_assert(offsetof(UX6ListViewItem, ItemIndex) == 0x000028, "Member 'UX6ListViewItem::ItemIndex' has a wrong offset!");
 
 // Class X6Game.X6UserObjectListEntry
 // 0x0000 (0x0000 - 0x0000)
@@ -11007,59 +11311,6 @@ public:
 };
 static_assert(alignof(IX6UserObjectListEntry) == 0x000001, "Wrong alignment on IX6UserObjectListEntry");
 static_assert(sizeof(IX6UserObjectListEntry) == 0x000001, "Wrong size on IX6UserObjectListEntry");
-
-// Class X6Game.X6ListView
-// 0x0790 (0x1440 - 0x0CB0)
-#pragma pack(push, 0x1)
-class alignas(0x10) UX6ListView : public UListView
-{
-public:
-	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x0CB0(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          bHasMask;                                          // 0x1420(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1421[0x3];                                     // 0x1421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TopMaskParameterName;                              // 0x1424(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BottomMaskParameterName;                           // 0x142C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1434[0x4];                                     // 0x1434(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddAnItem();
-	void BP_NavigateToItemIndex(int32 ItemIndex);
-	void BP_OnListItemValueChanged(int32 Index_0);
-	void BP_ScrollItemIndexIntoView(int32 ItemIndex);
-	void BP_SetItemSelectionByIndex(int32 Index_0, bool bSelected);
-	void BP_SetListItemCount(int32 Count);
-	void BP_SetSelectedItemByIndex(int32 Index_0);
-	void RemoveItemByIndex(int32 Index_0);
-	void SetOverriddenItemLength(int32 Index_0, double Value);
-	void SetOverriddenItemLengthByArray(TArray<float>* ItemsLength, bool bClearOldData);
-	void SetOverriddenTotalLength(double TotalLength);
-	void SetScrollBarAlwaysVisible(bool bAlwaysShowScrollbar);
-	void SetScrollBarTrackAlwaysVisible(bool bAlwaysShowScrollbarTrack);
-	void SetScrollSizeNotBaseOnNumLines(bool bNotBaseOnNumLines);
-
-	int32 BP_GetSelectedIndex() const;
-	bool BP_GetSelectedItemsViaIndex(TArray<int32>* Items) const;
-	bool BP_IsItemVisibleByIndex(int32 Index_0) const;
-	float GetScrollDistance() const;
-	float GetScrollDistanceRemaining() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ListView">();
-	}
-	static class UX6ListView* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ListView>();
-	}
-};
-#pragma pack(pop)
-static_assert(alignof(UX6ListView) == 0x000010, "Wrong alignment on UX6ListView");
-static_assert(sizeof(UX6ListView) == 0x001440, "Wrong size on UX6ListView");
-static_assert(offsetof(UX6ListView, WidgetBarStyle) == 0x000CB0, "Member 'UX6ListView::WidgetBarStyle' has a wrong offset!");
-static_assert(offsetof(UX6ListView, bHasMask) == 0x001420, "Member 'UX6ListView::bHasMask' has a wrong offset!");
-static_assert(offsetof(UX6ListView, TopMaskParameterName) == 0x001424, "Member 'UX6ListView::TopMaskParameterName' has a wrong offset!");
-static_assert(offsetof(UX6ListView, BottomMaskParameterName) == 0x00142C, "Member 'UX6ListView::BottomMaskParameterName' has a wrong offset!");
 
 // Class X6Game.X6LocalizationSettings
 // 0x0060 (0x0088 - 0x0028)
@@ -11086,63 +11337,6 @@ static_assert(alignof(UX6LocalizationSettings) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UX6LocalizationSettings) == 0x000088, "Wrong size on UX6LocalizationSettings");
 static_assert(offsetof(UX6LocalizationSettings, MouthShapePaths) == 0x000028, "Member 'UX6LocalizationSettings::MouthShapePaths' has a wrong offset!");
 static_assert(offsetof(UX6LocalizationSettings, AreaMap) == 0x000038, "Member 'UX6LocalizationSettings::AreaMap' has a wrong offset!");
-
-// Class X6Game.X6MapHudBase
-// 0x0068 (0x0358 - 0x02F0)
-class UX6MapHudBase : public UUserWidget
-{
-public:
-	double                                        nt_lastTime;                                       // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_cDeltaTime;                                     // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_minMapRootX;                                    // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_maxMapRootX;                                    // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_minMapRootY;                                    // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_maxMapRootY;                                    // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_customConstrainOffsetLeft;                      // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_customConstrainOffsetTop;                       // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_customConstrainOffsetRight;                     // 0x0330(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	double                                        nt_customConstrainOffsetBottom;                    // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          nt_isMoved;                                        // 0x0340(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCanvasPanel*                           MapContent;                                        // 0x0348(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCanvasPanel*                           MoveRoot;                                          // 0x0350(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void NT_CalculateTime();
-	void NT_OnPostMoveContentPosition(const struct FVector2D& Pos);
-	void NT_PostProcessMapMoveInternalNormal();
-	void NT_SetMoveContentPosition(const struct FVector2D& Pos);
-	void NT_UpdateMapRootConstraintInfo(const struct FGeometry& Geometry);
-
-	struct FVector2D NT_ConstraintMoveRootPos(const struct FVector2D& originPos) const;
-	struct FVector2D NT_ConvertMapPosToWindowPos(const struct FVector2D& mapPos) const;
-	struct FVector2D NT_ConvertWindowPosToMapPos(const struct FVector2D& windowPos) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6MapHudBase">();
-	}
-	static class UX6MapHudBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6MapHudBase>();
-	}
-};
-static_assert(alignof(UX6MapHudBase) == 0x000008, "Wrong alignment on UX6MapHudBase");
-static_assert(sizeof(UX6MapHudBase) == 0x000358, "Wrong size on UX6MapHudBase");
-static_assert(offsetof(UX6MapHudBase, nt_lastTime) == 0x0002F0, "Member 'UX6MapHudBase::nt_lastTime' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_cDeltaTime) == 0x0002F8, "Member 'UX6MapHudBase::nt_cDeltaTime' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_minMapRootX) == 0x000300, "Member 'UX6MapHudBase::nt_minMapRootX' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_maxMapRootX) == 0x000308, "Member 'UX6MapHudBase::nt_maxMapRootX' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_minMapRootY) == 0x000310, "Member 'UX6MapHudBase::nt_minMapRootY' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_maxMapRootY) == 0x000318, "Member 'UX6MapHudBase::nt_maxMapRootY' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetLeft) == 0x000320, "Member 'UX6MapHudBase::nt_customConstrainOffsetLeft' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetTop) == 0x000328, "Member 'UX6MapHudBase::nt_customConstrainOffsetTop' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetRight) == 0x000330, "Member 'UX6MapHudBase::nt_customConstrainOffsetRight' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_customConstrainOffsetBottom) == 0x000338, "Member 'UX6MapHudBase::nt_customConstrainOffsetBottom' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, nt_isMoved) == 0x000340, "Member 'UX6MapHudBase::nt_isMoved' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, MapContent) == 0x000348, "Member 'UX6MapHudBase::MapContent' has a wrong offset!");
-static_assert(offsetof(UX6MapHudBase, MoveRoot) == 0x000350, "Member 'UX6MapHudBase::MoveRoot' has a wrong offset!");
 
 // Class X6Game.X6ModularFeaturesContainerComp
 // 0x0008 (0x00B0 - 0x00A8)
@@ -11174,34 +11368,6 @@ static_assert(alignof(UX6ModularFeaturesContainerComp) == 0x000008, "Wrong align
 static_assert(sizeof(UX6ModularFeaturesContainerComp) == 0x0000B0, "Wrong size on UX6ModularFeaturesContainerComp");
 static_assert(offsetof(UX6ModularFeaturesContainerComp, PlayerShadowDecalProcessor) == 0x0000A8, "Member 'UX6ModularFeaturesContainerComp::PlayerShadowDecalProcessor' has a wrong offset!");
 
-// Class X6Game.X6MonsterAnimInstance
-// 0x0010 (0x0400 - 0x03F0)
-class UX6MonsterAnimInstance : public UX6AnimInstanceWithTag
-{
-public:
-	TWeakObjectPtr<class UX6CharacterMovementComponent> X6OwnerCharacterMovementComp;                // 0x03E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UX6RMWalkingComponent>   X6OwnerRMWalkingComp;                              // 0x03F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void OnAnimAssetSetEvent();
-	void PostOwnerBeginPlay(class AActor* OwnerActor);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6MonsterAnimInstance">();
-	}
-	static class UX6MonsterAnimInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6MonsterAnimInstance>();
-	}
-};
-static_assert(alignof(UX6MonsterAnimInstance) == 0x000010, "Wrong alignment on UX6MonsterAnimInstance");
-static_assert(sizeof(UX6MonsterAnimInstance) == 0x000400, "Wrong size on UX6MonsterAnimInstance");
-static_assert(offsetof(UX6MonsterAnimInstance, X6OwnerCharacterMovementComp) == 0x0003E8, "Member 'UX6MonsterAnimInstance::X6OwnerCharacterMovementComp' has a wrong offset!");
-static_assert(offsetof(UX6MonsterAnimInstance, X6OwnerRMWalkingComp) == 0x0003F0, "Member 'UX6MonsterAnimInstance::X6OwnerRMWalkingComp' has a wrong offset!");
-
 // Class X6Game.X6MultiLineEditableText
 // 0x0010 (0x0580 - 0x0570)
 class UX6MultiLineEditableText final : public UMultiLineEditableText
@@ -11227,27 +11393,6 @@ public:
 static_assert(alignof(UX6MultiLineEditableText) == 0x000010, "Wrong alignment on UX6MultiLineEditableText");
 static_assert(sizeof(UX6MultiLineEditableText) == 0x000580, "Wrong size on UX6MultiLineEditableText");
 static_assert(offsetof(UX6MultiLineEditableText, OnTextComposed) == 0x000570, "Member 'UX6MultiLineEditableText::OnTextComposed' has a wrong offset!");
-
-// Class X6Game.X6ReplicateAssetData
-// 0x0010 (0x0040 - 0x0030)
-class UX6ReplicateAssetData final : public UDataAsset
-{
-public:
-	TArray<struct FSoftObjectPath>                AssetPaths;                                        // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ReplicateAssetData">();
-	}
-	static class UX6ReplicateAssetData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ReplicateAssetData>();
-	}
-};
-static_assert(alignof(UX6ReplicateAssetData) == 0x000008, "Wrong alignment on UX6ReplicateAssetData");
-static_assert(sizeof(UX6ReplicateAssetData) == 0x000040, "Wrong size on UX6ReplicateAssetData");
-static_assert(offsetof(UX6ReplicateAssetData, AssetPaths) == 0x000030, "Member 'UX6ReplicateAssetData::AssetPaths' has a wrong offset!");
 
 // Class X6Game.X6ReplicateAssetSetting
 // 0x0028 (0x0060 - 0x0038)
@@ -11354,798 +11499,977 @@ static_assert(alignof(UX6NiagaraEffectParamVector) == 0x000008, "Wrong alignment
 static_assert(sizeof(UX6NiagaraEffectParamVector) == 0x000048, "Wrong size on UX6NiagaraEffectParamVector");
 static_assert(offsetof(UX6NiagaraEffectParamVector, Value) == 0x000030, "Member 'UX6NiagaraEffectParamVector::Value' has a wrong offset!");
 
-// Class X6Game.X6NikkiCPPTickHelperComponent
-// 0x01B0 (0x0258 - 0x00A8)
-class UX6NikkiCPPTickHelperComponent final : public UX6ActorComponent
+// Class X6Game.X6NigaraBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UX6NigaraBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	bool                                          bUseCustomizeTickGroup;                            // 0x00A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETickingGroup                                 CustomizeTickGroup;                                // 0x00A9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	static bool GetNiagaraUserBoolParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, bool* OutValue);
+	static bool GetNiagaraUserFloatParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, float* OutValue);
+	static bool GetNiagaraUserInt32Param(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, int32* OutValue);
+	static bool GetNiagaraUserLinearColorParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, struct FLinearColor* OutValue);
+	static bool GetNiagaraUserObjectParam(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, class UObject** OutValue);
+	static bool GetNiagaraUserVector2Param(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, struct FVector2D* OutValue);
+	static bool GetNiagaraUserVector3Param(class UNiagaraSystem* InNiagaraSystem, class FName InUserParamName, struct FVector* OutValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NigaraBlueprintLibrary">();
+	}
+	static class UX6NigaraBlueprintLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NigaraBlueprintLibrary>();
+	}
+};
+static_assert(alignof(UX6NigaraBlueprintLibrary) == 0x000008, "Wrong alignment on UX6NigaraBlueprintLibrary");
+static_assert(sizeof(UX6NigaraBlueprintLibrary) == 0x000028, "Wrong size on UX6NigaraBlueprintLibrary");
+
+// Class X6Game.X6NikkiGroundAnimInstance
+// 0x0010 (0x0600 - 0x05F0)
+class UX6NikkiGroundAnimInstance : public UNikkiGroundAnimInstance
+{
+public:
+	bool                                          bMovementBlocked;                                  // 0x05F0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F1[0x3];                                      // 0x05F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         RelativeBlockedByHeight;                           // 0x05F4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5F8[0x8];                                      // 0x05F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NikkiGroundAnimInstance">();
+	}
+	static class UX6NikkiGroundAnimInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6NikkiGroundAnimInstance>();
+	}
+};
+static_assert(alignof(UX6NikkiGroundAnimInstance) == 0x000010, "Wrong alignment on UX6NikkiGroundAnimInstance");
+static_assert(sizeof(UX6NikkiGroundAnimInstance) == 0x000600, "Wrong size on UX6NikkiGroundAnimInstance");
+static_assert(offsetof(UX6NikkiGroundAnimInstance, bMovementBlocked) == 0x0005F0, "Member 'UX6NikkiGroundAnimInstance::bMovementBlocked' has a wrong offset!");
+static_assert(offsetof(UX6NikkiGroundAnimInstance, RelativeBlockedByHeight) == 0x0005F4, "Member 'UX6NikkiGroundAnimInstance::RelativeBlockedByHeight' has a wrong offset!");
+
+// Class X6Game.X6NikkiPawn
+// 0x0010 (0x0980 - 0x0970)
+class AX6NikkiPawn : public AX6CharacterWithAbilities
+{
+public:
+	bool                                          bCarryItem;                                        // 0x0970(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_971[0x7];                                      // 0x0971(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNikkiMovementComponent*                NikkiMoveComp;                                     // 0x0978(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	int32 Client_GetCameraState();
+	bool IsCarryItem();
+	bool IsEnableFootIK();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NikkiPawn">();
+	}
+	static class AX6NikkiPawn* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6NikkiPawn>();
+	}
+};
+static_assert(alignof(AX6NikkiPawn) == 0x000010, "Wrong alignment on AX6NikkiPawn");
+static_assert(sizeof(AX6NikkiPawn) == 0x000980, "Wrong size on AX6NikkiPawn");
+static_assert(offsetof(AX6NikkiPawn, bCarryItem) == 0x000970, "Member 'AX6NikkiPawn::bCarryItem' has a wrong offset!");
+static_assert(offsetof(AX6NikkiPawn, NikkiMoveComp) == 0x000978, "Member 'AX6NikkiPawn::NikkiMoveComp' has a wrong offset!");
+
+// Class X6Game.X6NikkiPlayerController
+// 0x0010 (0x09D0 - 0x09C0)
+class AX6NikkiPlayerController : public AX6PlayerControllerBase
+{
+public:
+	bool                                          bCreatePlayerCameraManager;                        // 0x09C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9C1[0x7];                                      // 0x09C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  ControlPawn;                                       // 0x09C8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	void SetControlPawn(class APawn* InPawn);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6NikkiPlayerController">();
+	}
+	static class AX6NikkiPlayerController* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6NikkiPlayerController>();
+	}
+};
+static_assert(alignof(AX6NikkiPlayerController) == 0x000008, "Wrong alignment on AX6NikkiPlayerController");
+static_assert(sizeof(AX6NikkiPlayerController) == 0x0009D0, "Wrong size on AX6NikkiPlayerController");
+static_assert(offsetof(AX6NikkiPlayerController, bCreatePlayerCameraManager) == 0x0009C0, "Member 'AX6NikkiPlayerController::bCreatePlayerCameraManager' has a wrong offset!");
+static_assert(offsetof(AX6NikkiPlayerController, ControlPawn) == 0x0009C8, "Member 'AX6NikkiPlayerController::ControlPawn' has a wrong offset!");
+
+// Class X6Game.X6Object
+// 0x0000 (0x0028 - 0x0028)
+class UX6Object : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6Object">();
+	}
+	static class UX6Object* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6Object>();
+	}
+};
+static_assert(alignof(UX6Object) == 0x000008, "Wrong alignment on UX6Object");
+static_assert(sizeof(UX6Object) == 0x000028, "Wrong size on UX6Object");
+
+// Class X6Game.X6ObjectOctreeRenderingComp
+// 0x0010 (0x05D0 - 0x05C0)
+class UX6ObjectOctreeRenderingComp final : public UPrimitiveComponent
+{
+public:
+	uint8                                         Pad_5B8[0x18];                                     // 0x05B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ObjectOctreeRenderingComp">();
+	}
+	static class UX6ObjectOctreeRenderingComp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6ObjectOctreeRenderingComp>();
+	}
+};
+static_assert(alignof(UX6ObjectOctreeRenderingComp) == 0x000010, "Wrong alignment on UX6ObjectOctreeRenderingComp");
+static_assert(sizeof(UX6ObjectOctreeRenderingComp) == 0x0005D0, "Wrong size on UX6ObjectOctreeRenderingComp");
+
+// Class X6Game.X6ObstacleInterface
+// 0x0000 (0x0000 - 0x0000)
+class IX6ObstacleInterface final : public IInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6ObstacleInterface">();
+	}
+	static class IX6ObstacleInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IX6ObstacleInterface>();
+	}
+};
+static_assert(alignof(IX6ObstacleInterface) == 0x000001, "Wrong alignment on IX6ObstacleInterface");
+static_assert(sizeof(IX6ObstacleInterface) == 0x000001, "Wrong size on IX6ObstacleInterface");
+
+// Class X6Game.X6PathfindingSetting
+// 0x0008 (0x0040 - 0x0038)
+class UX6PathfindingSetting final : public UDeveloperSettings
+{
+public:
+	ECollisionChannel                             DefaultAirPathfindingCollisionChannel;             // 0x0038(0x0001)(Edit, ZeroConstructor, Config, DisableEditOnInstance, GlobalConfig, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PathfindingSetting">();
+	}
+	static class UX6PathfindingSetting* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6PathfindingSetting>();
+	}
+};
+static_assert(alignof(UX6PathfindingSetting) == 0x000008, "Wrong alignment on UX6PathfindingSetting");
+static_assert(sizeof(UX6PathfindingSetting) == 0x000040, "Wrong size on UX6PathfindingSetting");
+static_assert(offsetof(UX6PathfindingSetting, DefaultAirPathfindingCollisionChannel) == 0x000038, "Member 'UX6PathfindingSetting::DefaultAirPathfindingCollisionChannel' has a wrong offset!");
+
+// Class X6Game.X6PathFollowingComponent
+// 0x0128 (0x0438 - 0x0310)
+class UX6PathFollowingComponent final : public UServerPathFollowingComponent
+{
+public:
+	uint8                                         Pad_310[0xA0];                                     // 0x0310(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bUseCustomNavLinkMove : 1;                         // 0x03B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDisablePhysicsRotationWhenFalling : 1;            // 0x03B0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         BitPad_3B0_2 : 6;                                  // 0x03B0(0x0001)(Fixing Bit-Field Size For New Byte [ Dumper-7 ])
+	uint8                                         Pad_3B1[0x1F];                                     // 0x03B1(0x001F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         BitPad_3D0_0 : 3;                                  // 0x03D0(0x0001)(Fixing Bit-Field Size Between Bits [ Dumper-7 ])
+	uint8                                         bPerformingCustomLinkMove : 1;                     // 0x03D0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bStopCheckingReachTargetInNavLink : 1;             // 0x03D0(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bDonNotWalkOffLedgesOnLastSegment : 1;             // 0x03D0(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bEnableLargeAngleRotationRate : 1;                 // 0x03D0(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_3D1[0x7];                                      // 0x03D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               LargeAngleRotationRate;                            // 0x03D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	float                                         LargeAngleCos;                                     // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3F4[0x2C];                                     // 0x03F4(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
+	class UX6CharacterMovementComponent*          X6MovementComp;                                    // 0x0420(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UCustomNavLinkMoveBase>     CustomNavLinkMoveClass;                            // 0x0428(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UObject*                                CustomNavLinkMove;                                 // 0x0430(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void AddReachSegmentDelegate(int32 SegmentIndex, const TDelegate<void(int32 SegmentIndex)>& ReachSegmentDelegate);
+	void FinishCustomLinkMove();
+	struct FVector GetCurrentTargetPosition();
+	bool GetSmoothPathEnable();
+	void K2_SetBlockDetectionState(bool bEnable);
+	void RemoveCustomNavLinkMove();
+	void RemoveReachSegmentDelegate(int32 SegmentIndex, const TDelegate<void(int32 SegmentIndex)>& ReachSegmentDelegate);
+	void SetCustomNavLinkMove(class UObject* LinkMove);
+	void SetSmoothInterval(float interval);
+	void SetSmoothPathDirectMoveParams(const struct FDirectMoveParams& NewSmoothPathDirectMoveParams);
+	void SetSmoothPathEnable(bool bEnable);
+	void SetSmoothPathParams(const struct FSmoothPathParams& NewSmoothPathParams);
+	void SetTargetMoveSegment(int32 TargetIndex);
+
+	struct FRotator GetFinalRotation() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PathFollowingComponent">();
+	}
+	static class UX6PathFollowingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6PathFollowingComponent>();
+	}
+};
+static_assert(alignof(UX6PathFollowingComponent) == 0x000008, "Wrong alignment on UX6PathFollowingComponent");
+static_assert(sizeof(UX6PathFollowingComponent) == 0x000438, "Wrong size on UX6PathFollowingComponent");
+static_assert(offsetof(UX6PathFollowingComponent, LargeAngleRotationRate) == 0x0003D8, "Member 'UX6PathFollowingComponent::LargeAngleRotationRate' has a wrong offset!");
+static_assert(offsetof(UX6PathFollowingComponent, LargeAngleCos) == 0x0003F0, "Member 'UX6PathFollowingComponent::LargeAngleCos' has a wrong offset!");
+static_assert(offsetof(UX6PathFollowingComponent, X6MovementComp) == 0x000420, "Member 'UX6PathFollowingComponent::X6MovementComp' has a wrong offset!");
+static_assert(offsetof(UX6PathFollowingComponent, CustomNavLinkMoveClass) == 0x000428, "Member 'UX6PathFollowingComponent::CustomNavLinkMoveClass' has a wrong offset!");
+static_assert(offsetof(UX6PathFollowingComponent, CustomNavLinkMove) == 0x000430, "Member 'UX6PathFollowingComponent::CustomNavLinkMove' has a wrong offset!");
+
+// Class X6Game.X6Pawn
+// 0x00B0 (0x04E0 - 0x0430)
+class AX6Pawn : public APawn
+{
+public:
+	TArray<class FName>                           X6Tags;                                            // 0x0430(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	uint8                                         Pad_440[0xA0];                                     // 0x0440(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AttributeChange(const class FString& AttributeName);
+	void PostServerInit(bool bServer);
+	void ServerInit(bool bServer);
+	void X6_AddTag(const TArray<class FName>& NewX6Tags);
+	void X6_DeleteTag(const class FString& strTag);
+	bool X6_GetActorDisableCollisionFlags(TSet<int32>* OutFlags);
+	bool X6_GetActorHiddenFlags(TSet<int32>* OutFlags);
+	TArray<class FName> X6_GetTag();
+	bool X6_HasTag(const class FString& strTag);
+	void X6_RequireActorFade(bool bFadeIn, int32 FadeOutHiddenFlag, bool bInView);
+	bool X6_SetActorDisableCollision(bool bDisableCollision, int32 Flag, bool bClearFlag);
+	bool X6_SetActorHiddenInGame(bool bNewHidden, int32 Flag, bool bClearFlag);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6Pawn">();
+	}
+	static class AX6Pawn* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6Pawn>();
+	}
+};
+static_assert(alignof(AX6Pawn) == 0x000008, "Wrong alignment on AX6Pawn");
+static_assert(sizeof(AX6Pawn) == 0x0004E0, "Wrong size on AX6Pawn");
+static_assert(offsetof(AX6Pawn, X6Tags) == 0x000430, "Member 'AX6Pawn::X6Tags' has a wrong offset!");
+
+// Class X6Game.X6PlayerCameraManager
+// 0x01D0 (0x75B0 - 0x73E0)
+class AX6PlayerCameraManager : public AX6PlayerCameraManagerBase
+{
+public:
+	struct FCameraModifiersWrap                   ModifierObjects;                                   // 0x73E0(0x0038)(NoDestructor, NativeAccessSpecifierPublic)
+	class UDataTable*                             DTCameraStateTransitionRule;                       // 0x7418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDataTable*                             DTCameraStatePriority;                             // 0x7420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7428[0x58];                                    // 0x7428(0x0058)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(ECameraState NewCameraState)> OnCameraStateChanged;                // 0x7480(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         bDissolveEnable : 1;                               // 0x7490(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_7491[0x7];                                     // 0x7491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FCameraModifierSpecHandle>      ActivateModifiers;                                 // 0x7498(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FCameraModifierEffectSpec>      CameraModifiers_External;                          // 0x74A8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class UDataTable*                             ModifiersConfig;                                   // 0x74B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FString, class UCameraModifiersDetailData*> ModifiersList;                            // 0x74C0(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_7510[0x50];                                    // 0x7510(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     RadiusBlurMaterial;                                // 0x7560(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RadiusBlurVectorParamName;                         // 0x7568(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           RadiusBlurVectorParamValue;                        // 0x7570(0x0010)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInstanceDynamic*               RadiusBlurMID;                                     // 0x7580(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TMulticastInlineDelegate<void(const class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams)> OnCameraCutBeginDelegate; // 0x7588(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams)> OnCameraCutEndDelegate; // 0x7598(0x0010)(ZeroConstructor, Transient, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_75A8[0x8];                                     // 0x75A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	struct FCameraModifierSpecHandle ApplyCameraModifierEffectByKey(const class FString& Key);
+	void ApplyRadiusBlurToPostProcessSettings(const float InOffset, const float InRadius, const float InHardness, const float InSwitchDir, struct FPostProcessSettings* InOutPostProcessSettings, const float InBlendWeight);
+	void BlendToViewTargetWithParam(ECameraState CurrentCameraState, class AActor* CurrentTarget, ECameraState NewCameraState, class AActor* NewTarget, const struct FViewTargetTransitionParams& TransitionParams, bool bOverrideTransitionParams);
+	bool CheckIsBlendingToOtherTarget();
+	TArray<struct FDebugCameraModifierStackInfo> DEBUG_GetCameraModifierStackInfo();
+	struct FDebugCameraReviseParam DEBUG_GetCameraTransformParam();
+	void FixLastViewTargetOfLevelSequence();
+	float GetOutOfFrustumValue(const struct FVector& TargetWorldLoc, float InRangeMultiper);
+	bool K2_ApplyCameraModifierEffectByKey(const class FString& Key);
+	void K2_ChangeCameraStateTo(ECameraState NewCameraState, class AActor* NewTarget);
+	void K2_OnCameraModifierEffectToSelf(const struct FCameraModifierSpecHandle& ActiveHandle);
+	void K2_PopAndSwitchToLastCameraState(bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
+	void K2_PushAndSwitchToCameraState(ECameraState NewCameraState, class AActor* NewTarget, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
+	void K2_PushCameraState(ECameraState NewCameraState, class AActor* NewTarget);
+	void K2_SetViewTarget(class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams);
+	void K2_SwitchToCameraState(ECameraState NewCameraState, class AActor* NewTarget);
+	void OnAssignViewTarget(class AActor* NewTarget);
+	void OnSetViewTarget(class AActor* NewViewTarget, const struct FViewTargetTransitionParams& TransitionParams);
+	void RemoveCameraModifierEffectByHandle(int32 HandleID);
+	void RemoveCameraState(ECameraState CameraStateToRemove, class AActor* TargetToRemove, bool BlendToTop, bool bOverrideTransitionParams, const struct FViewTargetTransitionParams& TransitionParams);
+	void ResetCameraExitConditions();
+	void SetKeepCameraCutRotationWhenBlendOut(const bool bInKeepCameraCutRotationWhenBlendOut);
+	void SetResetCameraCutRotationWhenJumpOut(const bool bInResetCameraCutRotationWhenJumpCut);
+	void SetViewTargetInSequence(class UObject* WorldContextObject, class AActor* CameraActor, bool DoCollisionTest, float BlendTime, EViewTargetBlendFunction BlendFunc, float BlendExp, bool bLockOutgoing);
+
+	bool CheckCameraTransitionEnable(ECameraState SourceCameraState, ECameraState TargetCameraState) const;
+	class AActor* GetCurViewTarget() const;
+	struct FRotator GetDesiredTargetRotation() const;
+	struct FCameraTransitionConfig GetTransitionConfig(const ECameraState SourceCameraState, const ECameraState TargetCameraState) const;
+	bool IsPossessedByLevelSequence(const bool bIgnoreViewTargetDifference) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6PlayerCameraManager">();
+	}
+	static class AX6PlayerCameraManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6PlayerCameraManager>();
+	}
+};
+static_assert(alignof(AX6PlayerCameraManager) == 0x000010, "Wrong alignment on AX6PlayerCameraManager");
+static_assert(sizeof(AX6PlayerCameraManager) == 0x0075B0, "Wrong size on AX6PlayerCameraManager");
+static_assert(offsetof(AX6PlayerCameraManager, ModifierObjects) == 0x0073E0, "Member 'AX6PlayerCameraManager::ModifierObjects' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, DTCameraStateTransitionRule) == 0x007418, "Member 'AX6PlayerCameraManager::DTCameraStateTransitionRule' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, DTCameraStatePriority) == 0x007420, "Member 'AX6PlayerCameraManager::DTCameraStatePriority' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, OnCameraStateChanged) == 0x007480, "Member 'AX6PlayerCameraManager::OnCameraStateChanged' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, ActivateModifiers) == 0x007498, "Member 'AX6PlayerCameraManager::ActivateModifiers' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, CameraModifiers_External) == 0x0074A8, "Member 'AX6PlayerCameraManager::CameraModifiers_External' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, ModifiersConfig) == 0x0074B8, "Member 'AX6PlayerCameraManager::ModifiersConfig' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, ModifiersList) == 0x0074C0, "Member 'AX6PlayerCameraManager::ModifiersList' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurMaterial) == 0x007560, "Member 'AX6PlayerCameraManager::RadiusBlurMaterial' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurVectorParamName) == 0x007568, "Member 'AX6PlayerCameraManager::RadiusBlurVectorParamName' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurVectorParamValue) == 0x007570, "Member 'AX6PlayerCameraManager::RadiusBlurVectorParamValue' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, RadiusBlurMID) == 0x007580, "Member 'AX6PlayerCameraManager::RadiusBlurMID' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, OnCameraCutBeginDelegate) == 0x007588, "Member 'AX6PlayerCameraManager::OnCameraCutBeginDelegate' has a wrong offset!");
+static_assert(offsetof(AX6PlayerCameraManager, OnCameraCutEndDelegate) == 0x007598, "Member 'AX6PlayerCameraManager::OnCameraCutEndDelegate' has a wrong offset!");
+
+// Class X6Game.X6PlayerMantleComponent
+// 0x0318 (0x03C0 - 0x00A8)
+class UX6PlayerMantleComponent : public UX6ActorComponent
+{
+public:
+	bool                                          bWithNative;                                       // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsActivateMantleFeature;                           // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   LeftFootBoneName;                                  // 0x00AC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RightFootBoneName;                                 // 0x00B4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LeftToesBoneName;                                  // 0x00BC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RightToesBoneName;                                 // 0x00C4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   MeshRootBoneName;                                  // 0x00CC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LeftVirtualFootBoneName;                           // 0x00D4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RightVirtualFootBoneName;                          // 0x00DC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LeftVirtualToesBoneName;                           // 0x00E4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RightVirtualToesBoneName;                          // 0x00EC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Debug_DrawPointSize;                               // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HeightfieldOffsetThrehold;                         // 0x00F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             PlayerCharacter;                                   // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UCapsuleComponent*                      OwnerCapsuleComponent;                             // 0x0108(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_110[0x8];                                      // 0x0110(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ACharacter*                             OwnerActor;                                        // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<class AActor*>                         TraceIngoreActorArray;                             // 0x0120(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_130[0x2C];                                     // 0x0130(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurFloorAngle;                                     // 0x015C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FConfigMonitoringPointsWidth;                      // 0x0160(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FConfigMonitoringPointsDeltaHeight;                // 0x0164(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableCalculateCurFloorAngleV2Debug;              // 0x0168(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 OwnerSkeletalMeshComp;                             // 0x0170(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UAnimInstance*                          OwnerAnimInstance;                                 // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_180[0x40];                                     // 0x0180(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         FootTraceIngoreActorArray;                         // 0x01C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D0[0x29];                                     // 0x01D0(0x0029)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bEnableAvoidMinorDisturbancesForOriginalFootLocation; // 0x01F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1FA[0x6];                                      // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DisturbanceThresholdForOriginalFootLocation;       // 0x0200(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxPelvisIKOffset;                                 // 0x0208(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LocomotionMaxPelvisIKOffset;                       // 0x020C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ChangeMaxPelvisIKOffsetInterpSpeed;                // 0x0210(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SwitchMovePelvisOffsetSpeed;                       // 0x0214(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FeetMaxDistance;                                   // 0x0218(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FootIKTraceUPOffset;                               // 0x021C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FootIKTraceDownOffset;                             // 0x0220(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FootIKResetLerpSpeed;                              // 0x0224(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FootIKTranceDistanceForAdjustAngle;                // 0x0228(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FConfigMaxPitchAngleForFeetOnTheGround;            // 0x022C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ConfigMaxPitchAngleForFeetOnIntorsion;             // 0x0230(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FConfigMaxRollAngleForFeetOnTheGround;             // 0x0234(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ConfigMaxRollAngleForFeetOnDownhill;               // 0x0238(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAdjustFootAngleByToesAdditionalCheck;       // 0x023C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAdjustFootAngleOnlyOneHit;                  // 0x023D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAdjustFootLocation;                         // 0x023E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_23F[0x1];                                      // 0x023F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FConfigMaxAdjustHeight;                            // 0x0240(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TraceDistance;                                     // 0x0244(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableFootPlacementIK;                            // 0x0248(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_249[0xF];                                      // 0x0249(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         CurDeltaSeconds;                                   // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableMantleDebugLog;                             // 0x00B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLocalPlayerHasState_Mantling;                     // 0x00B1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLocalPlayerCanDoAction_Mantling;                  // 0x00B2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMantleTypeNative                             CurrentMantleType;                                 // 0x00B3(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableMotionWarping;                              // 0x00B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B5[0x3];                                       // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurrentMantleCostTime;                             // 0x00B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UPrimitiveComponent>     CurrentDynamicMovementBaseTobeAttached;            // 0x00BC(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C4[0x4];                                       // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCharacterMovementComponent*            OwnerCharacterMovementComponent;                   // 0x00C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LastDynamicMovementBaseLocation;                   // 0x00D0(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          WithLastDynamicMovementBaseLocation;               // 0x00E8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PendingProcessActorLocationZDuringMantle;          // 0x00EC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CacheMantleHeight;                                 // 0x00F0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F4[0xC];                                       // 0x00F4(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CacheTargetTransform;                              // 0x0100(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPrimitiveComponent*                    CacheHitComponent;                                 // 0x0160(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CacheMantleTriggerStartLocation;                   // 0x0168(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             CacheHitResult;                                    // 0x0180(0x00F8)(BlueprintVisible, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         OriginalMaxStepHeight;                             // 0x0278(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OriginalMeshRelativeLocationZ;                     // 0x027C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CurAdjustLength;                                   // 0x0280(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          CanAdjustActorToAnimTarget;                        // 0x0298(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_299[0x7];                                      // 0x0299(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             MovingToAnimStartTarget_InitialTansform;           // 0x02A0(0x0060)(BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 MovingToAnimStartTarget_TargetActor;               // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                MovingToAnimStartTarget_TargetLocation;            // 0x0308(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               MovingToAnimStartTarget_TargetRotation;            // 0x0320(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         MovingToAnimStartTarget_Duration;                  // 0x0338(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         UpdateMovingToAnimStartTarget_CurrentTime;         // 0x033C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxLimitMantleTime;                                // 0x0340(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_344[0x4];                                      // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            SKMeshLerpSpeedCurve;                              // 0x0348(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DownwardTraceRadiusCfg;                            // 0x0350(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DownwardTraceForwardOffsetCfg;                     // 0x0354(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LeastHeightInFallingCfg;                           // 0x0358(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LeastHeightCheckCapsuleRadius;                     // 0x035C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                AdjustLengthCfg;                                   // 0x0360(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ZOffsetCfg;                                        // 0x0378(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableOnGroundCfg;                                 // 0x037C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableMustJumpOperationBeforeMantleCfg;            // 0x037D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETraceTypeQuery                               TraceTypeCfg;                                      // 0x037E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37F[0x1];                                      // 0x037F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReachDistanceInFallingCfg;                         // 0x0380(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReachDistanceCfg;                                  // 0x0384(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ForwardTraceCapsuleRediusCfg;                      // 0x0388(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDrawDebugTrace                               DrawDebugTypeCfg;                                  // 0x038C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38D[0x3];                                      // 0x038D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxDeflectionYawAngleCfg;                          // 0x0390(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableGradCheckCfg;                                // 0x0394(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_395[0x3];                                      // 0x0395(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GradCheckAccuracyCfg;                              // 0x0398(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MidToHighHeightBoundaryInFallingCfg;               // 0x039C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LowToMidHeightBoundaryInFallingCfg;                // 0x03A0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinToLowHeightBoundaryInFallingCfg;                // 0x03A4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinLedgeHeightInFallingCfg;                        // 0x03A8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxLedgeHeightInFallingCfg;                        // 0x03AC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinimumLandingAreaSideLengthCfg;                   // 0x03B0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollisionChannel                             ValidMantleCollisionChannelCfg;                    // 0x03B4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3B5[0x3];                                      // 0x03B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurrentUpdateTime;                                 // 0x03B8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          CanUpdate;                                         // 0x03BC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInCooldown;                                     // 0x03BD(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHaveDoneJumpOrFloat;                              // 0x03BE(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3BF[0x1];                                      // 0x03BF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	float CalculateCurFloorAngleV2(bool bForceUpdate);
-	void GeneratedFeetIKFeatureTargetV2(struct FFootIKFeatureTargetDataV2* OutFootIKFeatureTarget);
-	struct FHitResult IsLandedGroundWithDeltaInAir();
-	void ResetIKOffsets(struct FVector* FootOffsetLLocation, struct FVector* FootOffsetRLocation, struct FRotator* FootOffsetLRotation, struct FRotator* FootOffsetRRotation);
-	void ResetPelvisIKOffsets(float* PelvisAlpha, struct FVector* PelvisOffset);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6NikkiCPPTickHelperComponent">();
-	}
-	static class UX6NikkiCPPTickHelperComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6NikkiCPPTickHelperComponent>();
-	}
-};
-static_assert(alignof(UX6NikkiCPPTickHelperComponent) == 0x000008, "Wrong alignment on UX6NikkiCPPTickHelperComponent");
-static_assert(sizeof(UX6NikkiCPPTickHelperComponent) == 0x000258, "Wrong size on UX6NikkiCPPTickHelperComponent");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bUseCustomizeTickGroup) == 0x0000A8, "Member 'UX6NikkiCPPTickHelperComponent::bUseCustomizeTickGroup' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, CustomizeTickGroup) == 0x0000A9, "Member 'UX6NikkiCPPTickHelperComponent::CustomizeTickGroup' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftFootBoneName) == 0x0000AC, "Member 'UX6NikkiCPPTickHelperComponent::LeftFootBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightFootBoneName) == 0x0000B4, "Member 'UX6NikkiCPPTickHelperComponent::RightFootBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftToesBoneName) == 0x0000BC, "Member 'UX6NikkiCPPTickHelperComponent::LeftToesBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightToesBoneName) == 0x0000C4, "Member 'UX6NikkiCPPTickHelperComponent::RightToesBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, MeshRootBoneName) == 0x0000CC, "Member 'UX6NikkiCPPTickHelperComponent::MeshRootBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftVirtualFootBoneName) == 0x0000D4, "Member 'UX6NikkiCPPTickHelperComponent::LeftVirtualFootBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightVirtualFootBoneName) == 0x0000DC, "Member 'UX6NikkiCPPTickHelperComponent::RightVirtualFootBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LeftVirtualToesBoneName) == 0x0000E4, "Member 'UX6NikkiCPPTickHelperComponent::LeftVirtualToesBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, RightVirtualToesBoneName) == 0x0000EC, "Member 'UX6NikkiCPPTickHelperComponent::RightVirtualToesBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, Debug_DrawPointSize) == 0x0000F4, "Member 'UX6NikkiCPPTickHelperComponent::Debug_DrawPointSize' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, HeightfieldOffsetThrehold) == 0x0000F8, "Member 'UX6NikkiCPPTickHelperComponent::HeightfieldOffsetThrehold' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, PlayerCharacter) == 0x000100, "Member 'UX6NikkiCPPTickHelperComponent::PlayerCharacter' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerCapsuleComponent) == 0x000108, "Member 'UX6NikkiCPPTickHelperComponent::OwnerCapsuleComponent' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerActor) == 0x000118, "Member 'UX6NikkiCPPTickHelperComponent::OwnerActor' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, TraceIngoreActorArray) == 0x000120, "Member 'UX6NikkiCPPTickHelperComponent::TraceIngoreActorArray' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, CurFloorAngle) == 0x00015C, "Member 'UX6NikkiCPPTickHelperComponent::CurFloorAngle' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMonitoringPointsWidth) == 0x000160, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMonitoringPointsWidth' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMonitoringPointsDeltaHeight) == 0x000164, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMonitoringPointsDeltaHeight' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableCalculateCurFloorAngleV2Debug) == 0x000168, "Member 'UX6NikkiCPPTickHelperComponent::bEnableCalculateCurFloorAngleV2Debug' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerSkeletalMeshComp) == 0x000170, "Member 'UX6NikkiCPPTickHelperComponent::OwnerSkeletalMeshComp' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, OwnerAnimInstance) == 0x000178, "Member 'UX6NikkiCPPTickHelperComponent::OwnerAnimInstance' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootTraceIngoreActorArray) == 0x0001C0, "Member 'UX6NikkiCPPTickHelperComponent::FootTraceIngoreActorArray' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAvoidMinorDisturbancesForOriginalFootLocation) == 0x0001F9, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAvoidMinorDisturbancesForOriginalFootLocation' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, DisturbanceThresholdForOriginalFootLocation) == 0x000200, "Member 'UX6NikkiCPPTickHelperComponent::DisturbanceThresholdForOriginalFootLocation' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, MaxPelvisIKOffset) == 0x000208, "Member 'UX6NikkiCPPTickHelperComponent::MaxPelvisIKOffset' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, LocomotionMaxPelvisIKOffset) == 0x00020C, "Member 'UX6NikkiCPPTickHelperComponent::LocomotionMaxPelvisIKOffset' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, ChangeMaxPelvisIKOffsetInterpSpeed) == 0x000210, "Member 'UX6NikkiCPPTickHelperComponent::ChangeMaxPelvisIKOffsetInterpSpeed' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, SwitchMovePelvisOffsetSpeed) == 0x000214, "Member 'UX6NikkiCPPTickHelperComponent::SwitchMovePelvisOffsetSpeed' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FeetMaxDistance) == 0x000218, "Member 'UX6NikkiCPPTickHelperComponent::FeetMaxDistance' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKTraceUPOffset) == 0x00021C, "Member 'UX6NikkiCPPTickHelperComponent::FootIKTraceUPOffset' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKTraceDownOffset) == 0x000220, "Member 'UX6NikkiCPPTickHelperComponent::FootIKTraceDownOffset' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKResetLerpSpeed) == 0x000224, "Member 'UX6NikkiCPPTickHelperComponent::FootIKResetLerpSpeed' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FootIKTranceDistanceForAdjustAngle) == 0x000228, "Member 'UX6NikkiCPPTickHelperComponent::FootIKTranceDistanceForAdjustAngle' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMaxPitchAngleForFeetOnTheGround) == 0x00022C, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMaxPitchAngleForFeetOnTheGround' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, ConfigMaxPitchAngleForFeetOnIntorsion) == 0x000230, "Member 'UX6NikkiCPPTickHelperComponent::ConfigMaxPitchAngleForFeetOnIntorsion' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMaxRollAngleForFeetOnTheGround) == 0x000234, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMaxRollAngleForFeetOnTheGround' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, ConfigMaxRollAngleForFeetOnDownhill) == 0x000238, "Member 'UX6NikkiCPPTickHelperComponent::ConfigMaxRollAngleForFeetOnDownhill' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAdjustFootAngleByToesAdditionalCheck) == 0x00023C, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAdjustFootAngleByToesAdditionalCheck' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAdjustFootAngleOnlyOneHit) == 0x00023D, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAdjustFootAngleOnlyOneHit' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableAdjustFootLocation) == 0x00023E, "Member 'UX6NikkiCPPTickHelperComponent::bEnableAdjustFootLocation' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, FConfigMaxAdjustHeight) == 0x000240, "Member 'UX6NikkiCPPTickHelperComponent::FConfigMaxAdjustHeight' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, TraceDistance) == 0x000244, "Member 'UX6NikkiCPPTickHelperComponent::TraceDistance' has a wrong offset!");
-static_assert(offsetof(UX6NikkiCPPTickHelperComponent, bEnableFootPlacementIK) == 0x000248, "Member 'UX6NikkiCPPTickHelperComponent::bEnableFootPlacementIK' has a wrong offset!");
-
-// Class X6Game.X6NikkiMainAnimInstance
-// 0x00B0 (0x0480 - 0x03D0)
-class UX6NikkiMainAnimInstance : public UAnimInstance
-{
-public:
-	struct FTimerHandle                           Timer_X6NikkiMainAnimInstancePrepare;              // 0x03C8(0x0008)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UX6NikkiCPPTickHelperComponent*         X6NikkiCPPTickHelperComponent;                     // 0x03D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FFootIKFeatureTargetDataV2             CurFootIKFeatureTargetData;                        // 0x03D8(0x00A0)(BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_478[0x8];                                      // 0x0478(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	struct FFootIKFeatureTargetDataV2 GetCurFootIKFeatureTargetData();
-	bool PrepareInitializationData();
+	bool CapsuleHasLargeEnoughAreaCheck(class UCapsuleComponent* CapsuleComponent, const struct FVector& TargetLocation, float HeightOffset, float RadiusOffset, const struct FRotator& TargetRotation);
+	bool CapsuleHasRoomCheck(class UCapsuleComponent* CapsuleComponent, const struct FVector& TargetLocation, float HeightOffset, float RadiusOffset);
+	void ForceEndCheck();
+	struct FVector GetCapsuleBaseLocation(float ZOffset);
+	struct FVector GetCapsuleTopLocation(float ZOffset);
+	struct FVector GetCurrentReachDistance(EMovementMode CurMovementMode, const struct FVector& CurInputDirection);
+	EMantleTypeNative GetMantleTypeByHeightAndMovementMode(float MantleHeight, EMovementMode MovementMode);
+	class ACharacter* GetOwnerCharacter();
+	bool Internal_MantleMainCheckInFalling(const struct FVector& CapsuleBaseLocation, const struct FVector& CurrentPlayerInputVector, const struct FVector& CurActorLocation, float MinLedgeHeight, float MaxLedgeHeight, float ZOffset, bool bJustCheck);
+	bool IsValidMantleTraceChannel(class UPrimitiveComponent* PrimitiveComponent, ECollisionChannel TraceChannel);
+	void Lua_AddMantlingState();
+	bool Lua_CurMantleInfoExist();
+	bool Lua_GetCurMantleInfo_KeyOperationIsRequired();
+	float Lua_GetCurMantleInfo_MontageAdjustHeightTime();
+	float Lua_GetCurrentMantleInfoByName(const class FString& Name_0, EMovementMode MovementMode);
+	bool Lua_IsCurWorldTypeInDoor();
+	float Lua_MantleJumpStart(float MantleHeight);
+	bool Lua_MantlePreCheck_InAir();
+	float Lua_MantleQuicklyStart(float MantleHeight, float DeltaTime);
+	float Lua_OnCurrentMantleTypeChanged();
+	bool Lua_OwnerMantleConfigExist();
+	void Lua_PostStart();
+	void Lua_PostStartMotionWarping();
+	void Lua_RemoveMantlingState();
+	struct FVector Lua_TryGetCurInputDirection();
+	bool MantleAllCheck(bool ReceivedInput);
+	void MantleJumpStart(float MantleHeight);
+	bool MantleMainCheck(float ZOffset);
+	bool MantleMainCheckInFalling(float ZOffset);
+	bool MantlePostCheck(bool ReceivedInput);
+	bool MantlePreCheck();
+	void MantleQuicklyStart(float MantleHeight, float DeltaTime);
+	void MantleUpdate(float DeltaSeconds);
+	void MantleUpdateMotionWarping(float DeltaSeconds);
+	void PostStart();
+	void PostStartMotionWarping();
+	bool ProcessTransitionMantle();
+	void UpdateDynamicMovementBaseTobeAttached();
+	void UpdateMovingToAnimStartTarget(float DeltaSeconds);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6NikkiMainAnimInstance">();
+		return StaticClassImpl<"X6PlayerMantleComponent">();
 	}
-	static class UX6NikkiMainAnimInstance* GetDefaultObj()
+	static class UX6PlayerMantleComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6NikkiMainAnimInstance>();
+		return GetDefaultObjImpl<UX6PlayerMantleComponent>();
 	}
 };
-static_assert(alignof(UX6NikkiMainAnimInstance) == 0x000010, "Wrong alignment on UX6NikkiMainAnimInstance");
-static_assert(sizeof(UX6NikkiMainAnimInstance) == 0x000480, "Wrong size on UX6NikkiMainAnimInstance");
-static_assert(offsetof(UX6NikkiMainAnimInstance, Timer_X6NikkiMainAnimInstancePrepare) == 0x0003C8, "Member 'UX6NikkiMainAnimInstance::Timer_X6NikkiMainAnimInstancePrepare' has a wrong offset!");
-static_assert(offsetof(UX6NikkiMainAnimInstance, X6NikkiCPPTickHelperComponent) == 0x0003D0, "Member 'UX6NikkiMainAnimInstance::X6NikkiCPPTickHelperComponent' has a wrong offset!");
-static_assert(offsetof(UX6NikkiMainAnimInstance, CurFootIKFeatureTargetData) == 0x0003D8, "Member 'UX6NikkiMainAnimInstance::CurFootIKFeatureTargetData' has a wrong offset!");
+static_assert(alignof(UX6PlayerMantleComponent) == 0x000010, "Wrong alignment on UX6PlayerMantleComponent");
+static_assert(sizeof(UX6PlayerMantleComponent) == 0x0003C0, "Wrong size on UX6PlayerMantleComponent");
+static_assert(offsetof(UX6PlayerMantleComponent, bWithNative) == 0x0000A8, "Member 'UX6PlayerMantleComponent::bWithNative' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, IsActivateMantleFeature) == 0x0000A9, "Member 'UX6PlayerMantleComponent::IsActivateMantleFeature' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CurDeltaSeconds) == 0x0000AC, "Member 'UX6PlayerMantleComponent::CurDeltaSeconds' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, bEnableMantleDebugLog) == 0x0000B0, "Member 'UX6PlayerMantleComponent::bEnableMantleDebugLog' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, bLocalPlayerHasState_Mantling) == 0x0000B1, "Member 'UX6PlayerMantleComponent::bLocalPlayerHasState_Mantling' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, bLocalPlayerCanDoAction_Mantling) == 0x0000B2, "Member 'UX6PlayerMantleComponent::bLocalPlayerCanDoAction_Mantling' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CurrentMantleType) == 0x0000B3, "Member 'UX6PlayerMantleComponent::CurrentMantleType' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, bEnableMotionWarping) == 0x0000B4, "Member 'UX6PlayerMantleComponent::bEnableMotionWarping' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CurrentMantleCostTime) == 0x0000B8, "Member 'UX6PlayerMantleComponent::CurrentMantleCostTime' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CurrentDynamicMovementBaseTobeAttached) == 0x0000BC, "Member 'UX6PlayerMantleComponent::CurrentDynamicMovementBaseTobeAttached' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, OwnerCharacterMovementComponent) == 0x0000C8, "Member 'UX6PlayerMantleComponent::OwnerCharacterMovementComponent' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, LastDynamicMovementBaseLocation) == 0x0000D0, "Member 'UX6PlayerMantleComponent::LastDynamicMovementBaseLocation' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, WithLastDynamicMovementBaseLocation) == 0x0000E8, "Member 'UX6PlayerMantleComponent::WithLastDynamicMovementBaseLocation' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, PendingProcessActorLocationZDuringMantle) == 0x0000EC, "Member 'UX6PlayerMantleComponent::PendingProcessActorLocationZDuringMantle' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CacheMantleHeight) == 0x0000F0, "Member 'UX6PlayerMantleComponent::CacheMantleHeight' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CacheTargetTransform) == 0x000100, "Member 'UX6PlayerMantleComponent::CacheTargetTransform' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CacheHitComponent) == 0x000160, "Member 'UX6PlayerMantleComponent::CacheHitComponent' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CacheMantleTriggerStartLocation) == 0x000168, "Member 'UX6PlayerMantleComponent::CacheMantleTriggerStartLocation' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CacheHitResult) == 0x000180, "Member 'UX6PlayerMantleComponent::CacheHitResult' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, OriginalMaxStepHeight) == 0x000278, "Member 'UX6PlayerMantleComponent::OriginalMaxStepHeight' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, OriginalMeshRelativeLocationZ) == 0x00027C, "Member 'UX6PlayerMantleComponent::OriginalMeshRelativeLocationZ' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CurAdjustLength) == 0x000280, "Member 'UX6PlayerMantleComponent::CurAdjustLength' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CanAdjustActorToAnimTarget) == 0x000298, "Member 'UX6PlayerMantleComponent::CanAdjustActorToAnimTarget' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_InitialTansform) == 0x0002A0, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_InitialTansform' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_TargetActor) == 0x000300, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_TargetActor' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_TargetLocation) == 0x000308, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_TargetLocation' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_TargetRotation) == 0x000320, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_TargetRotation' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MovingToAnimStartTarget_Duration) == 0x000338, "Member 'UX6PlayerMantleComponent::MovingToAnimStartTarget_Duration' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, UpdateMovingToAnimStartTarget_CurrentTime) == 0x00033C, "Member 'UX6PlayerMantleComponent::UpdateMovingToAnimStartTarget_CurrentTime' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MaxLimitMantleTime) == 0x000340, "Member 'UX6PlayerMantleComponent::MaxLimitMantleTime' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, SKMeshLerpSpeedCurve) == 0x000348, "Member 'UX6PlayerMantleComponent::SKMeshLerpSpeedCurve' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, DownwardTraceRadiusCfg) == 0x000350, "Member 'UX6PlayerMantleComponent::DownwardTraceRadiusCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, DownwardTraceForwardOffsetCfg) == 0x000354, "Member 'UX6PlayerMantleComponent::DownwardTraceForwardOffsetCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, LeastHeightInFallingCfg) == 0x000358, "Member 'UX6PlayerMantleComponent::LeastHeightInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, LeastHeightCheckCapsuleRadius) == 0x00035C, "Member 'UX6PlayerMantleComponent::LeastHeightCheckCapsuleRadius' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, AdjustLengthCfg) == 0x000360, "Member 'UX6PlayerMantleComponent::AdjustLengthCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, ZOffsetCfg) == 0x000378, "Member 'UX6PlayerMantleComponent::ZOffsetCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, EnableOnGroundCfg) == 0x00037C, "Member 'UX6PlayerMantleComponent::EnableOnGroundCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, EnableMustJumpOperationBeforeMantleCfg) == 0x00037D, "Member 'UX6PlayerMantleComponent::EnableMustJumpOperationBeforeMantleCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, TraceTypeCfg) == 0x00037E, "Member 'UX6PlayerMantleComponent::TraceTypeCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, ReachDistanceInFallingCfg) == 0x000380, "Member 'UX6PlayerMantleComponent::ReachDistanceInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, ReachDistanceCfg) == 0x000384, "Member 'UX6PlayerMantleComponent::ReachDistanceCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, ForwardTraceCapsuleRediusCfg) == 0x000388, "Member 'UX6PlayerMantleComponent::ForwardTraceCapsuleRediusCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, DrawDebugTypeCfg) == 0x00038C, "Member 'UX6PlayerMantleComponent::DrawDebugTypeCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MaxDeflectionYawAngleCfg) == 0x000390, "Member 'UX6PlayerMantleComponent::MaxDeflectionYawAngleCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, EnableGradCheckCfg) == 0x000394, "Member 'UX6PlayerMantleComponent::EnableGradCheckCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, GradCheckAccuracyCfg) == 0x000398, "Member 'UX6PlayerMantleComponent::GradCheckAccuracyCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MidToHighHeightBoundaryInFallingCfg) == 0x00039C, "Member 'UX6PlayerMantleComponent::MidToHighHeightBoundaryInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, LowToMidHeightBoundaryInFallingCfg) == 0x0003A0, "Member 'UX6PlayerMantleComponent::LowToMidHeightBoundaryInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MinToLowHeightBoundaryInFallingCfg) == 0x0003A4, "Member 'UX6PlayerMantleComponent::MinToLowHeightBoundaryInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MinLedgeHeightInFallingCfg) == 0x0003A8, "Member 'UX6PlayerMantleComponent::MinLedgeHeightInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MaxLedgeHeightInFallingCfg) == 0x0003AC, "Member 'UX6PlayerMantleComponent::MaxLedgeHeightInFallingCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, MinimumLandingAreaSideLengthCfg) == 0x0003B0, "Member 'UX6PlayerMantleComponent::MinimumLandingAreaSideLengthCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, ValidMantleCollisionChannelCfg) == 0x0003B4, "Member 'UX6PlayerMantleComponent::ValidMantleCollisionChannelCfg' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CurrentUpdateTime) == 0x0003B8, "Member 'UX6PlayerMantleComponent::CurrentUpdateTime' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, CanUpdate) == 0x0003BC, "Member 'UX6PlayerMantleComponent::CanUpdate' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, bIsInCooldown) == 0x0003BD, "Member 'UX6PlayerMantleComponent::bIsInCooldown' has a wrong offset!");
+static_assert(offsetof(UX6PlayerMantleComponent, bHaveDoneJumpOrFloat) == 0x0003BE, "Member 'UX6PlayerMantleComponent::bHaveDoneJumpOrFloat' has a wrong offset!");
 
-// Class X6Game.X6NpcDataProcessor
-// 0x0198 (0x01C0 - 0x0028)
-class UX6NpcDataProcessor final : public UObject
+// Class X6Game.X6PushBoxMovementComponent
+// 0x02D8 (0x0460 - 0x0188)
+class alignas(0x10) UX6PushBoxMovementComponent final : public UPawnMovementComponent
 {
 public:
-	uint8                                         Pad_28[0x108];                                     // 0x0028(0x0108)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   MeshRootMBoneName;                                 // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class AActor*, bool>                     RegisteredActorShouldCheckMaterialCurve;           // 0x0138(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_188[0x20];                                     // 0x0188(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  PlayerPawn;                                        // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1B0[0x10];                                     // 0x01B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void InitFaceMaterialCurvesCheckParam(const TArray<class FName>& FaceMaterialCurvesArray, const float EnabledAngle, class FName NPCMainMeshTag);
-	bool RegisterActorShouldCheckMaterialCurve(class AActor* ActorShouldCheckMaterialCurve);
-	bool RegisterT2StaticNpcActors(const int64& SpawnerID, class AActor* GroupActor, const TArray<struct FT2NpcRadiusHalfHeightStruct>& T2NpcActors);
-	void SetNpcMainMeshTag(class FName NPCMainMeshTag);
-	bool UnregisterActorShouldCheckMaterialCurve(class AActor* ActorShouldCheckMaterialCurve);
-	bool UnregisterT2StaticNpcActors(const int64& SpawnerID);
+	TArray<class AActor*>                         IgnoreActors;                                      // 0x0188(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bPositionCorrected : 1;                            // 0x0198(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_199[0x7];                                      // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FBoxDropDownTrackResult>        CacheCheckDropDownTrackResults;                    // 0x01A0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	struct FBoxDropDownTrackResult                CacheCenterResult;                                 // 0x01B0(0x0108)(NoDestructor, Protected, NativeAccessSpecifierProtected)
+	ETraceTypeQuery                               LineTraceCheckVisibleChannel;                      // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2B9[0x7];                                      // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPrimitiveComponent*                    MovementBase;                                      // 0x02C0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C8[0x168];                                    // 0x02C8(0x0168)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxSpeed;                                          // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Acceleration;                                      // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Deceleration;                                      // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TurningBoost;                                      // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoxExtentZ;                                        // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotateSpeed;                                       // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BoxMaxStepHeight;                                  // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FloorCheckMinHeight;                               // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FloorCheckMaxHeight;                               // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BoxPushPower;                                      // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMovedByPhysics;                                   // 0x0458(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDropDown;                                         // 0x0459(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMoveBlock;                                        // 0x045A(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_45B[0x5];                                      // 0x045B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6NpcDataProcessor">();
+		return StaticClassImpl<"X6PushBoxMovementComponent">();
 	}
-	static class UX6NpcDataProcessor* GetDefaultObj()
+	static class UX6PushBoxMovementComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6NpcDataProcessor>();
+		return GetDefaultObjImpl<UX6PushBoxMovementComponent>();
 	}
 };
-static_assert(alignof(UX6NpcDataProcessor) == 0x000008, "Wrong alignment on UX6NpcDataProcessor");
-static_assert(sizeof(UX6NpcDataProcessor) == 0x0001C0, "Wrong size on UX6NpcDataProcessor");
-static_assert(offsetof(UX6NpcDataProcessor, MeshRootMBoneName) == 0x000130, "Member 'UX6NpcDataProcessor::MeshRootMBoneName' has a wrong offset!");
-static_assert(offsetof(UX6NpcDataProcessor, RegisteredActorShouldCheckMaterialCurve) == 0x000138, "Member 'UX6NpcDataProcessor::RegisteredActorShouldCheckMaterialCurve' has a wrong offset!");
-static_assert(offsetof(UX6NpcDataProcessor, PlayerPawn) == 0x0001A8, "Member 'UX6NpcDataProcessor::PlayerPawn' has a wrong offset!");
+static_assert(alignof(UX6PushBoxMovementComponent) == 0x000010, "Wrong alignment on UX6PushBoxMovementComponent");
+static_assert(sizeof(UX6PushBoxMovementComponent) == 0x000460, "Wrong size on UX6PushBoxMovementComponent");
+static_assert(offsetof(UX6PushBoxMovementComponent, IgnoreActors) == 0x000188, "Member 'UX6PushBoxMovementComponent::IgnoreActors' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, CacheCheckDropDownTrackResults) == 0x0001A0, "Member 'UX6PushBoxMovementComponent::CacheCheckDropDownTrackResults' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, CacheCenterResult) == 0x0001B0, "Member 'UX6PushBoxMovementComponent::CacheCenterResult' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, LineTraceCheckVisibleChannel) == 0x0002B8, "Member 'UX6PushBoxMovementComponent::LineTraceCheckVisibleChannel' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, MovementBase) == 0x0002C0, "Member 'UX6PushBoxMovementComponent::MovementBase' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, MaxSpeed) == 0x000430, "Member 'UX6PushBoxMovementComponent::MaxSpeed' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, Acceleration) == 0x000434, "Member 'UX6PushBoxMovementComponent::Acceleration' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, Deceleration) == 0x000438, "Member 'UX6PushBoxMovementComponent::Deceleration' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, TurningBoost) == 0x00043C, "Member 'UX6PushBoxMovementComponent::TurningBoost' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, BoxExtentZ) == 0x000440, "Member 'UX6PushBoxMovementComponent::BoxExtentZ' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, RotateSpeed) == 0x000444, "Member 'UX6PushBoxMovementComponent::RotateSpeed' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, BoxMaxStepHeight) == 0x000448, "Member 'UX6PushBoxMovementComponent::BoxMaxStepHeight' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, FloorCheckMinHeight) == 0x00044C, "Member 'UX6PushBoxMovementComponent::FloorCheckMinHeight' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, FloorCheckMaxHeight) == 0x000450, "Member 'UX6PushBoxMovementComponent::FloorCheckMaxHeight' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, BoxPushPower) == 0x000454, "Member 'UX6PushBoxMovementComponent::BoxPushPower' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, bMovedByPhysics) == 0x000458, "Member 'UX6PushBoxMovementComponent::bMovedByPhysics' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, bDropDown) == 0x000459, "Member 'UX6PushBoxMovementComponent::bDropDown' has a wrong offset!");
+static_assert(offsetof(UX6PushBoxMovementComponent, bMoveBlock) == 0x00045A, "Member 'UX6PushBoxMovementComponent::bMoveBlock' has a wrong offset!");
 
-// Class X6Game.X6ObjectOctree
-// 0x0080 (0x0428 - 0x03A8)
-class AX6ObjectOctree final : public AActor
+// Class X6Game.X6RadialSlider
+// 0x08F8 (0x0A80 - 0x0188)
+class UX6RadialSlider final : public UWidget
 {
 public:
-	uint8                                         bEnableDrawing : 1;                                // 0x03A8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_3A9[0x77];                                     // 0x03A9(0x0077)(Fixing Size After Last Property [ Dumper-7 ])
-	class UX6ObjectOctreeRenderingComp*           X6OctreeRenderComp;                                // 0x0420(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Value;                                             // 0x0188(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             ValueDelegate;                                     // 0x018C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCustomDefaultValue;                            // 0x019C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19D[0x3];                                      // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CustomDefaultValue;                                // 0x01A0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     SliderRange;                                       // 0x01A8(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TArray<float>                                 ValueTags;                                         // 0x0230(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         SliderHandleStartAngle;                            // 0x0240(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SliderHandleEndAngle;                              // 0x0244(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngularOffset;                                     // 0x0248(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FX6RadialSliderStyle                   WidgetStyle;                                       // 0x0250(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         SliderRadius;                                      // 0x09C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderBarColor;                                    // 0x09C4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderProgressColor;                               // 0x09D4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderHandleColor;                                 // 0x09E4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Locked;                                            // 0x09F4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MouseUsesStep;                                     // 0x09F5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RequiresControllerLock;                            // 0x09F6(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9F7[0x1];                                      // 0x09F7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StepSize;                                          // 0x09F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFocusable;                                       // 0x09FC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9FD[0x3];                                      // 0x09FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnMouseCaptureBegin;                               // 0x0A00(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnMouseCaptureEnd;                                 // 0x0A10(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnControllerCaptureBegin;                          // 0x0A20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnControllerCaptureEnd;                            // 0x0A30(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(float Value)>   OnValueChanged;                                    // 0x0A40(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnThumbPressed;                                    // 0x0A50(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnThumbHovered;                                    // 0x0A60(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A70[0x10];                                     // 0x0A70(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool AddOctreeElement(const struct FX6OctreeElement& inNewOctreeElement);
-	bool AddOctreeElementByActor(class AActor* Actor);
-	void GetActorsWithinBounds(const struct FBoxSphereBounds& BoundsQuery, TArray<class AActor*>* OutResult);
-	void GetElementsWithinBounds(const struct FBoxSphereBounds& BoundsQuery, TArray<struct FX6OctreeElement>* OutResult);
-	bool GetOctreeBoundsByActor(class AActor* Actor, struct FBoxSphereBounds* OutBounds);
-	bool GetOctreeIdByActor(class AActor* Actor, int32* OutNodeIndex, int32* OutElemenetIndex);
-	bool InitOctree(const struct FVector& Origin, float Radius, TSubclassOf<class AActor> Class_0);
-	bool IsReady();
-	bool ObserveMovableObjects(const TArray<class AActor*>& MoveableActos);
-	void PostActorEndPlay(class AActor* Actor, const EEndPlayReason EndPlayReason);
-	bool RemoveObservedMovableObjects(const TArray<class AActor*>& MoveableActos);
-	void RemoveOctreeElement(const struct FX6OctreeElement& inNewOctreeElement);
-	void RemoveOctreeElementByActor(class AActor* Actor);
-	void SetEnableDebugDraw(bool bEnable);
+	void SetAngularOffset(float InValue);
+	void SetCustomDefaultValue(float InValue);
+	void SetLocked(bool InValue);
+	void SetSliderBarColor(const struct FLinearColor& InValue);
+	void SetSliderHandleColor(const struct FLinearColor& InValue);
+	void SetSliderHandleEndAngle(float InValue);
+	void SetSliderHandleStartAngle(float InValue);
+	void SetSliderProgressColor(const struct FLinearColor& InValue);
+	void SetSliderRadius(float InValue);
+	void SetSliderRange(const struct FRuntimeFloatCurve& InSliderRange);
+	void SetStepSize(float InValue);
+	void SetValue(float InValue);
+	void SetValueTags(const TArray<float>& InValueTags);
+
+	float GetCustomDefaultValue() const;
+	float GetNormalizedSliderHandlePosition() const;
+	float GetValue() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6ObjectOctree">();
+		return StaticClassImpl<"X6RadialSlider">();
 	}
-	static class AX6ObjectOctree* GetDefaultObj()
+	static class UX6RadialSlider* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<AX6ObjectOctree>();
+		return GetDefaultObjImpl<UX6RadialSlider>();
 	}
 };
-static_assert(alignof(AX6ObjectOctree) == 0x000008, "Wrong alignment on AX6ObjectOctree");
-static_assert(sizeof(AX6ObjectOctree) == 0x000428, "Wrong size on AX6ObjectOctree");
-static_assert(offsetof(AX6ObjectOctree, X6OctreeRenderComp) == 0x000420, "Member 'AX6ObjectOctree::X6OctreeRenderComp' has a wrong offset!");
+static_assert(alignof(UX6RadialSlider) == 0x000010, "Wrong alignment on UX6RadialSlider");
+static_assert(sizeof(UX6RadialSlider) == 0x000A80, "Wrong size on UX6RadialSlider");
+static_assert(offsetof(UX6RadialSlider, Value) == 0x000188, "Member 'UX6RadialSlider::Value' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, ValueDelegate) == 0x00018C, "Member 'UX6RadialSlider::ValueDelegate' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, bUseCustomDefaultValue) == 0x00019C, "Member 'UX6RadialSlider::bUseCustomDefaultValue' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, CustomDefaultValue) == 0x0001A0, "Member 'UX6RadialSlider::CustomDefaultValue' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderRange) == 0x0001A8, "Member 'UX6RadialSlider::SliderRange' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, ValueTags) == 0x000230, "Member 'UX6RadialSlider::ValueTags' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderHandleStartAngle) == 0x000240, "Member 'UX6RadialSlider::SliderHandleStartAngle' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderHandleEndAngle) == 0x000244, "Member 'UX6RadialSlider::SliderHandleEndAngle' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, AngularOffset) == 0x000248, "Member 'UX6RadialSlider::AngularOffset' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, WidgetStyle) == 0x000250, "Member 'UX6RadialSlider::WidgetStyle' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderRadius) == 0x0009C0, "Member 'UX6RadialSlider::SliderRadius' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderBarColor) == 0x0009C4, "Member 'UX6RadialSlider::SliderBarColor' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderProgressColor) == 0x0009D4, "Member 'UX6RadialSlider::SliderProgressColor' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, SliderHandleColor) == 0x0009E4, "Member 'UX6RadialSlider::SliderHandleColor' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, Locked) == 0x0009F4, "Member 'UX6RadialSlider::Locked' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, MouseUsesStep) == 0x0009F5, "Member 'UX6RadialSlider::MouseUsesStep' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, RequiresControllerLock) == 0x0009F6, "Member 'UX6RadialSlider::RequiresControllerLock' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, StepSize) == 0x0009F8, "Member 'UX6RadialSlider::StepSize' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, IsFocusable) == 0x0009FC, "Member 'UX6RadialSlider::IsFocusable' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnMouseCaptureBegin) == 0x000A00, "Member 'UX6RadialSlider::OnMouseCaptureBegin' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnMouseCaptureEnd) == 0x000A10, "Member 'UX6RadialSlider::OnMouseCaptureEnd' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnControllerCaptureBegin) == 0x000A20, "Member 'UX6RadialSlider::OnControllerCaptureBegin' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnControllerCaptureEnd) == 0x000A30, "Member 'UX6RadialSlider::OnControllerCaptureEnd' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnValueChanged) == 0x000A40, "Member 'UX6RadialSlider::OnValueChanged' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnThumbPressed) == 0x000A50, "Member 'UX6RadialSlider::OnThumbPressed' has a wrong offset!");
+static_assert(offsetof(UX6RadialSlider, OnThumbHovered) == 0x000A60, "Member 'UX6RadialSlider::OnThumbHovered' has a wrong offset!");
 
-// Class X6Game.X6ObjectPoolSubSystem
-// 0x0080 (0x00B0 - 0x0030)
-class UX6ObjectPoolSubSystem final : public UGameInstanceSubsystem
+// Class X6Game.X6RecycableObjectInterface
+// 0x0000 (0x0000 - 0x0000)
+class IX6RecycableObjectInterface final : public IInterface
 {
 public:
-	TDelegate<void(class UObject* ObjectToDestroy)> OnObjectPreDestroy;                              // 0x0030(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_40[0x70];                                      // 0x0040(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void CleanUpPools(bool bTryCleanMoreObjects);
-	void CreatePoolByClass(class UClass* InClass);
-	void DestroyPoolByClass(class UClass* InClass);
-	const class FName GetFreeByPoolTag();
-	class UObject* GetObjectByClass(class UClass* InClass, class UObject* Outer_0, const class FString& ObjectName);
-	class UObject* GetObjectByClassEvenIfNoPool(class UClass* InClass, class UObject* Outer_0, const class FString& ObjectName);
-	bool HasPoolOfClass(class UClass* InClass);
-	bool IsPooledObject(class UObject* InObject);
-	bool IsVaildForUse(class UObject* InObject);
-	void PreCreateObjects(class UClass* InClass, int32 PreCreateNum);
-	bool RecycleObject(class UObject* InObject, const TArray<class FString>& ModifiedProperties);
-	void ReportMemoryUsage();
+	void OnPop();
+	void OnPreCreated();
+	void OnPush();
+	bool RejectRecycle();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6ObjectPoolSubSystem">();
+		return StaticClassImpl<"X6RecycableObjectInterface">();
 	}
-	static class UX6ObjectPoolSubSystem* GetDefaultObj()
+	static class IX6RecycableObjectInterface* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6ObjectPoolSubSystem>();
+		return GetDefaultObjImpl<IX6RecycableObjectInterface>();
 	}
 };
-static_assert(alignof(UX6ObjectPoolSubSystem) == 0x000008, "Wrong alignment on UX6ObjectPoolSubSystem");
-static_assert(sizeof(UX6ObjectPoolSubSystem) == 0x0000B0, "Wrong size on UX6ObjectPoolSubSystem");
-static_assert(offsetof(UX6ObjectPoolSubSystem, OnObjectPreDestroy) == 0x000030, "Member 'UX6ObjectPoolSubSystem::OnObjectPreDestroy' has a wrong offset!");
+static_assert(alignof(IX6RecycableObjectInterface) == 0x000001, "Wrong alignment on IX6RecycableObjectInterface");
+static_assert(sizeof(IX6RecycableObjectInterface) == 0x000001, "Wrong size on IX6RecycableObjectInterface");
 
-// Class X6Game.X6PackageSettings
-// 0x0140 (0x0168 - 0x0028)
-class UX6PackageSettings final : public UCMSConfigProvider
+// Class X6Game.X6RMInAirComponent
+// 0x00E8 (0x01C8 - 0x00E0)
+class UX6RMInAirComponent : public UX6BasicRegularMovementComponent
 {
 public:
-	bool                                          bEnableDebugMenu;                                  // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableConsoleComand;                              // 0x0029(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableAdvConsoleComand;                           // 0x002A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableX6ConsoleCommandDisOrder;                   // 0x002B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableHeaderInfo;                                 // 0x002C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableQuickReportError;                           // 0x002D(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseFormalLogin;                                   // 0x002E(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShowServerList;                                   // 0x002F(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CMSApiUrl;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SensitiveWordApiUrl;                               // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SupportUrl;                                        // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReportUrl;                                         // 0x0060(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ProductQueryUrl;                                   // 0x0070(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ClientID;                                          // 0x0080(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ClientKey;                                         // 0x0090(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        RegionId;                                          // 0x00A0(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        RegionIdAudit;                                     // 0x00A2(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        ChannelId;                                         // 0x00A4(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        Role;                                              // 0x00A6(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 SDKLoginUrl;                                       // 0x00A8(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint16                                        ChargeType;                                        // 0x00B8(0x0002)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Environment;                                       // 0x00C0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AppID;                                             // 0x00D0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AppKey;                                            // 0x00E0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ApiServer;                                         // 0x00F0(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BffEncryptionKey;                                  // 0x0100(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BffRiskUrl;                                        // 0x0110(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6GameArea                                   GameArea;                                          // 0x0120(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_121[0x7];                                      // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 OverseaRegion;                                     // 0x0128(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AccountCancellationURL_Mobile;                     // 0x0138(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AccountCancellationURL_PC_Console;                 // 0x0148(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DistributionChannelName;                           // 0x0158(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static const class UX6PackageSettings* GetX6PackageSettings();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PackageSettings">();
-	}
-	static class UX6PackageSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PackageSettings>();
-	}
-};
-static_assert(alignof(UX6PackageSettings) == 0x000008, "Wrong alignment on UX6PackageSettings");
-static_assert(sizeof(UX6PackageSettings) == 0x000168, "Wrong size on UX6PackageSettings");
-static_assert(offsetof(UX6PackageSettings, bEnableDebugMenu) == 0x000028, "Member 'UX6PackageSettings::bEnableDebugMenu' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bEnableConsoleComand) == 0x000029, "Member 'UX6PackageSettings::bEnableConsoleComand' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bEnableAdvConsoleComand) == 0x00002A, "Member 'UX6PackageSettings::bEnableAdvConsoleComand' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bEnableX6ConsoleCommandDisOrder) == 0x00002B, "Member 'UX6PackageSettings::bEnableX6ConsoleCommandDisOrder' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bEnableHeaderInfo) == 0x00002C, "Member 'UX6PackageSettings::bEnableHeaderInfo' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bEnableQuickReportError) == 0x00002D, "Member 'UX6PackageSettings::bEnableQuickReportError' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bUseFormalLogin) == 0x00002E, "Member 'UX6PackageSettings::bUseFormalLogin' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, bShowServerList) == 0x00002F, "Member 'UX6PackageSettings::bShowServerList' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, CMSApiUrl) == 0x000030, "Member 'UX6PackageSettings::CMSApiUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, SensitiveWordApiUrl) == 0x000040, "Member 'UX6PackageSettings::SensitiveWordApiUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, SupportUrl) == 0x000050, "Member 'UX6PackageSettings::SupportUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ReportUrl) == 0x000060, "Member 'UX6PackageSettings::ReportUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ProductQueryUrl) == 0x000070, "Member 'UX6PackageSettings::ProductQueryUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ClientID) == 0x000080, "Member 'UX6PackageSettings::ClientID' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ClientKey) == 0x000090, "Member 'UX6PackageSettings::ClientKey' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, RegionId) == 0x0000A0, "Member 'UX6PackageSettings::RegionId' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, RegionIdAudit) == 0x0000A2, "Member 'UX6PackageSettings::RegionIdAudit' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ChannelId) == 0x0000A4, "Member 'UX6PackageSettings::ChannelId' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, Role) == 0x0000A6, "Member 'UX6PackageSettings::Role' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, SDKLoginUrl) == 0x0000A8, "Member 'UX6PackageSettings::SDKLoginUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ChargeType) == 0x0000B8, "Member 'UX6PackageSettings::ChargeType' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, Environment) == 0x0000C0, "Member 'UX6PackageSettings::Environment' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, AppID) == 0x0000D0, "Member 'UX6PackageSettings::AppID' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, AppKey) == 0x0000E0, "Member 'UX6PackageSettings::AppKey' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, ApiServer) == 0x0000F0, "Member 'UX6PackageSettings::ApiServer' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, BffEncryptionKey) == 0x000100, "Member 'UX6PackageSettings::BffEncryptionKey' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, BffRiskUrl) == 0x000110, "Member 'UX6PackageSettings::BffRiskUrl' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, GameArea) == 0x000120, "Member 'UX6PackageSettings::GameArea' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, OverseaRegion) == 0x000128, "Member 'UX6PackageSettings::OverseaRegion' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, AccountCancellationURL_Mobile) == 0x000138, "Member 'UX6PackageSettings::AccountCancellationURL_Mobile' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, AccountCancellationURL_PC_Console) == 0x000148, "Member 'UX6PackageSettings::AccountCancellationURL_PC_Console' has a wrong offset!");
-static_assert(offsetof(UX6PackageSettings, DistributionChannelName) == 0x000158, "Member 'UX6PackageSettings::DistributionChannelName' has a wrong offset!");
-
-// Class X6Game.X6PathfindingSubSystem
-// 0x00B0 (0x00E0 - 0x0030)
-class UX6PathfindingSubSystem final : public UGameInstanceSubsystem
-{
-public:
-	uint8                                         Pad_30[0x8];                                       // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FAIRequestID, struct FAirPathingRequest> AirPathFindingRequests;                     // 0x0038(0x0050)(NativeAccessSpecifierPrivate)
-	TMap<TWeakObjectPtr<class AAIController>, struct FRepathObserverInfo> RepathObserverMap;         // 0x0088(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PathfindingSubSystem">();
-	}
-	static class UX6PathfindingSubSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PathfindingSubSystem>();
-	}
-};
-static_assert(alignof(UX6PathfindingSubSystem) == 0x000008, "Wrong alignment on UX6PathfindingSubSystem");
-static_assert(sizeof(UX6PathfindingSubSystem) == 0x0000E0, "Wrong size on UX6PathfindingSubSystem");
-static_assert(offsetof(UX6PathfindingSubSystem, AirPathFindingRequests) == 0x000038, "Member 'UX6PathfindingSubSystem::AirPathFindingRequests' has a wrong offset!");
-static_assert(offsetof(UX6PathfindingSubSystem, RepathObserverMap) == 0x000088, "Member 'UX6PathfindingSubSystem::RepathObserverMap' has a wrong offset!");
-
-// Class X6Game.NavLinkLaunchMove
-// 0x0050 (0x0090 - 0x0040)
-class UNavLinkLaunchMove final : public UCustomNavLinkMoveBase
-{
-public:
-	uint8                                         Pad_40[0x50];                                      // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NavLinkLaunchMove">();
-	}
-	static class UNavLinkLaunchMove* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNavLinkLaunchMove>();
-	}
-};
-static_assert(alignof(UNavLinkLaunchMove) == 0x000008, "Wrong alignment on UNavLinkLaunchMove");
-static_assert(sizeof(UNavLinkLaunchMove) == 0x000090, "Wrong size on UNavLinkLaunchMove");
-
-// Class X6Game.X6PhotographCameraComponent
-// 0x0000 (0x0C50 - 0x0C50)
-class UX6PhotographCameraComponent final : public UCineCameraComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PhotographCameraComponent">();
-	}
-	static class UX6PhotographCameraComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6PhotographCameraComponent>();
-	}
-};
-static_assert(alignof(UX6PhotographCameraComponent) == 0x000010, "Wrong alignment on UX6PhotographCameraComponent");
-static_assert(sizeof(UX6PhotographCameraComponent) == 0x000C50, "Wrong size on UX6PhotographCameraComponent");
-
-// Class X6Game.X6PlayerCharacterBase
-// 0x0000 (0x08D0 - 0x08D0)
-class AX6PlayerCharacterBase : public AX6CharacterWithAbilities
-{
-public:
-	bool                                          bCanCombatFilterListener;                          // 0x08C8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8C9[0x7];                                      // 0x08C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6PlayerCharacterBase">();
-	}
-	static class AX6PlayerCharacterBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AX6PlayerCharacterBase>();
-	}
-};
-static_assert(alignof(AX6PlayerCharacterBase) == 0x000010, "Wrong alignment on AX6PlayerCharacterBase");
-static_assert(sizeof(AX6PlayerCharacterBase) == 0x0008D0, "Wrong size on AX6PlayerCharacterBase");
-static_assert(offsetof(AX6PlayerCharacterBase, bCanCombatFilterListener) == 0x0008C8, "Member 'AX6PlayerCharacterBase::bCanCombatFilterListener' has a wrong offset!");
-
-// Class X6Game.X6ProjectileMovementComponent
-// 0x0000 (0x0260 - 0x0260)
-class UX6ProjectileMovementComponent final : public UProjectileMovementComponent
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ProjectileMovementComponent">();
-	}
-	static class UX6ProjectileMovementComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ProjectileMovementComponent>();
-	}
-};
-static_assert(alignof(UX6ProjectileMovementComponent) == 0x000010, "Wrong alignment on UX6ProjectileMovementComponent");
-static_assert(sizeof(UX6ProjectileMovementComponent) == 0x000260, "Wrong size on UX6ProjectileMovementComponent");
-
-// Class X6Game.X6RadialListView
-// 0x0010 (0x1450 - 0x1440)
-class UX6RadialListView final : public UX6ListView
-{
-public:
-	float                                         Curvature;                                         // 0x1438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EX6ArcOrientation                             ArcOrientation;                                    // 0x143C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_143D[0x13];                                    // 0x143D(0x0013)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6RadialListView">();
-	}
-	static class UX6RadialListView* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6RadialListView>();
-	}
-};
-static_assert(alignof(UX6RadialListView) == 0x000010, "Wrong alignment on UX6RadialListView");
-static_assert(sizeof(UX6RadialListView) == 0x001450, "Wrong size on UX6RadialListView");
-static_assert(offsetof(UX6RadialListView, Curvature) == 0x001438, "Member 'UX6RadialListView::Curvature' has a wrong offset!");
-static_assert(offsetof(UX6RadialListView, ArcOrientation) == 0x00143C, "Member 'UX6RadialListView::ArcOrientation' has a wrong offset!");
-
-// Class X6Game.X6ReceiveSkillBaseComponent
-// 0x0008 (0x00B0 - 0x00A8)
-class UX6ReceiveSkillBaseComponent : public UX6ActorComponent
-{
-public:
-	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetIsAlwaysChargeOutLineEffect(bool IsAlwaysChargeOutLineEffect);
-	void SetIsBulletAttachment(bool IsBulletAttachment);
-	void SetIsBulletDestroyWhenNotSimulation(bool IsBulletDestroyWhenNotSimulation);
-	void SetIsBulletPenetrateWhenSimulation(bool IsBulletPenetrateWhenSimulation);
-	void SetIsChargeOutLineEffect(bool IsChargeOutLineEffect);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ReceiveSkillBaseComponent">();
-	}
-	static class UX6ReceiveSkillBaseComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ReceiveSkillBaseComponent>();
-	}
-};
-static_assert(alignof(UX6ReceiveSkillBaseComponent) == 0x000008, "Wrong alignment on UX6ReceiveSkillBaseComponent");
-static_assert(sizeof(UX6ReceiveSkillBaseComponent) == 0x0000B0, "Wrong size on UX6ReceiveSkillBaseComponent");
-
-// Class X6Game.X6RichTextBlockNetImageDecorator
-// 0x00C8 (0x00F0 - 0x0028)
-class UX6RichTextBlockNetImageDecorator final : public URichTextBlockDecorator
-{
-public:
-	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 ResFolderPath;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UObject*                                PlaceHolderImage;                                  // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USimpleDownloader*                      ResDownloader;                                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, class UObject*>           LoadedImagesMap;                                   // 0x00A0(0x0050)(Protected, NativeAccessSpecifierProtected)
-
-public:
-	void OnResDownloaded(bool bSuccess, int32 ResponseCode, int32 Size, int32 RequestID, const class FString& CurrentDownloadFileName);
-	void ReleaseLoadedImages();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6RichTextBlockNetImageDecorator">();
-	}
-	static class UX6RichTextBlockNetImageDecorator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6RichTextBlockNetImageDecorator>();
-	}
-};
-static_assert(alignof(UX6RichTextBlockNetImageDecorator) == 0x000008, "Wrong alignment on UX6RichTextBlockNetImageDecorator");
-static_assert(sizeof(UX6RichTextBlockNetImageDecorator) == 0x0000F0, "Wrong size on UX6RichTextBlockNetImageDecorator");
-static_assert(offsetof(UX6RichTextBlockNetImageDecorator, ResFolderPath) == 0x000030, "Member 'UX6RichTextBlockNetImageDecorator::ResFolderPath' has a wrong offset!");
-static_assert(offsetof(UX6RichTextBlockNetImageDecorator, PlaceHolderImage) == 0x000040, "Member 'UX6RichTextBlockNetImageDecorator::PlaceHolderImage' has a wrong offset!");
-static_assert(offsetof(UX6RichTextBlockNetImageDecorator, ResDownloader) == 0x000048, "Member 'UX6RichTextBlockNetImageDecorator::ResDownloader' has a wrong offset!");
-static_assert(offsetof(UX6RichTextBlockNetImageDecorator, LoadedImagesMap) == 0x0000A0, "Member 'UX6RichTextBlockNetImageDecorator::LoadedImagesMap' has a wrong offset!");
-
-// Class X6Game.X6RMWalkingComponent
-// 0x00C8 (0x01A8 - 0x00E0)
-class UX6RMWalkingComponent : public UX6BasicRegularMovementComponent
-{
-public:
-	float                                         RMBlockedByAngleThreshold;                         // 0x00E0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class URMBaseLogicProcessor>      RMBaseLogicProcessorClass;                         // 0x00E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMConfigContext_OnGround>  RMConfigContextClass;                              // 0x00F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMStateInstructionContext> StateInstructionContextClass;                      // 0x00F8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMPTickRecord_OnGround>    RMProxyTickRecordClass;                            // 0x0100(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMOutputContext_OnGround>  RMOutputContextClass;                              // 0x0108(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URMBehaviorTreeProxyInterface> RMBehaviorTreeProxyClass;                       // 0x0110(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class URegularMovementDebugContext> RMDebugContextClass;                             // 0x0118(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCanSyncAnimStates;                                // 0x0120(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMovementAffectedBySlopeFactor;                    // 0x0121(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_122[0x2];                                      // 0x0122(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CurFloorAngle;                                     // 0x0124(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseStartMovingMovementCurve;                      // 0x0128(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         OwnerAttribute_MaxWalkSpeed_GroundCorrectionFactor; // 0x012C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERegularLocomotionType                        CurrentActualGait;                                 // 0x0130(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERegularLocomotionType                        CurrentAllowedGait;                                // 0x0131(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132[0x6];                                      // 0x0132(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class URMPTickRecord_OnGround*                CurRMProxyTickRecord;                              // 0x0138(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UX6NikkiCPPTickHelperComponent*         PlayerCPPTickHelperComp;                           // 0x0140(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class URMBaseLogicProcessor*                  CurRMBaseLogicProcessor;                           // 0x0148(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class URMBehaviorTreeProxyInterface*          CurRMProxy_OnGround;                               // 0x0150(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FX6RMWalkingReplicatedMovementData     ReplicatedMovementData;                            // 0x0158(0x0028)(NoDestructor, NativeAccessSpecifierPrivate)
-	ERegularLocomotionType                        NP_ReplicatedAllowedGait;                          // 0x0180(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_181[0x7];                                      // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector_NetQuantize                    NP_ReplicatedInputMovingDirection;                 // 0x0188(0x0018)(Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         NP_ReplicatedTurnAroundAngleToInt;                 // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1A4[0x4];                                      // 0x01A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FX6RMInAirComponentPostPhysicsTickFunction PostPhysicsTickFunction;                       // 0x00E0(0x0038)(NativeAccessSpecifierPublic)
+	TSubclassOf<class URMBaseLogicProcessor>      RMBaseLogicProcessorClass;                         // 0x0118(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMConfigContext_InAir>     RMConfigContextClass;                              // 0x0120(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMStateInstructionContext> StateInstructionContextClass;                      // 0x0128(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMPTickRecord_InAir>       RMProxyTickRecordClass;                            // 0x0130(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMOutputContext_InAir>     RMOutputContextClass;                              // 0x0138(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMBehaviorTreeProxyInterface> RMBehaviorTreeProxyClass;                       // 0x0140(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URegularMovementDebugContext> RMDebugContextClass;                             // 0x0148(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URMInputActionProcessor_InAir> InputActionProcessorClass;                      // 0x0150(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URMPTickRecord_InAir*                   CurRMProxyTickRecord;                              // 0x0158(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class URMBaseLogicProcessor*                  CurRMBaseLogicProcessor;                           // 0x0160(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class URMBehaviorTreeProxyInterface*          CurRMProxy_InAir;                                  // 0x0168(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class URMInputActionProcessor_InAir*          InputActionProcessor;                              // 0x0170(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ERegularFloatingJumpStage                     ReplicatedFloatingJumpStage;                       // 0x0178(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FX6RMInAirReplicatedMovementData       ReplicatedMovementData;                            // 0x0180(0x0020)(NoDestructor, NativeAccessSpecifierPrivate)
+	ERegularJumpMode                              NP_ReplicatedJumpMode;                             // 0x01A0(0x0001)(Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1A1[0x7];                                      // 0x01A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector_NetQuantize                    NP_ReplicatedInputMovingDirection;                 // 0x01A8(0x0018)(Net, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         NP_ReplicatedTurnAroundAngleToInt;                 // 0x01C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C4[0x4];                                      // 0x01C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Blueprint_PostUpdateRegularMovementBehavior(float DeltaSeconds);
 	void Blueprint_PreUpdateRegularMovementBehavior(float DeltaSeconds);
-	void ChangeDesiredGait(ERegularLocomotionType NewGait, bool bForceChangeOperationInput);
 	void DeinitRegularMovementBehaviorProxy();
-	float GetConfigMaxSpeedByCurAllowedGait();
-	void GetConfigMaxSpeedData(float* MaxSpeed_Walk, float* MaxSpeed_Run, float* MaxSpeed_Sprint);
-	float GetCurConfigMaxSpeed();
-	ERegularLocomotionType GetCurLocomotionTypeBySpeed(float Speed2D);
 	class URMBaseLogicProcessor* GetCurRMBaseLogicProcessor();
 	void InitRegularMovementBehaviorProxy();
 	void InitRMBaseLogicProcessor(class URMBaseLogicProcessor* RMBaseLogicProcessor);
 	bool IsValidReplicatedMovingDirection();
-	void NotifyBeforeMovementPropertyChanged(float* MaxWalkSpeed, float* MaxWalkSpeedCrouched, float* MinAnalogWalkSpeed, float* MaxAcceleration, float* BrakingDecelerationWalking, float* GroundFriction);
-	void NotifyCurActualGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType CurrentGait);
-	void NotifyCurAllowedGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType CurrentGait);
-	void NotifyCurReplicatedAllowedGaitChanged(ERegularLocomotionType NewGait, ERegularLocomotionType CurrentGait);
-	void OnMovementBlockedBy(const struct FHitResult& Impact);
-	void OnRep_MovementData_AllowedGait();
+	void MulticastRPC_ChangeJumpStage(ERegularFloatingJumpStage NewStage, bool bForceUpdate);
+	void MulticastRPC_ForceUpdateReplicatedMovementData();
+	void OnRep_FloatingJumpStage();
 	void OnRep_MovementData_InputMovingDirection();
+	void OnRep_MovementData_ReplicatedJumpMode();
 	void OnRep_MovementData_TurnAroundAngle();
-	bool ShouldUpdateRegularMovementBehaviorTree();
-	void SyncAnimStatesWithTick();
-	void UpdateCurActualGait();
-	void UpdateCurAllowedGait();
-	void UpdateDynamicMovmentSettings(bool bForceUpdate);
+	void ReceivePostPhysicsTick(float DeltaTime);
+	void ResetInputActionProcessor(TSubclassOf<class URMInputActionProcessor_InAir> inInputActionProcessorClass);
+	void SetPostPhysicsTickFunctionEnable(bool bEnable);
+	void UpdateDynamicMovementSettings(bool bForceUpdate);
 	void UpdateReplicatedMovementData();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6RMWalkingComponent">();
+		return StaticClassImpl<"X6RMInAirComponent">();
 	}
-	static class UX6RMWalkingComponent* GetDefaultObj()
+	static class UX6RMInAirComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6RMWalkingComponent>();
+		return GetDefaultObjImpl<UX6RMInAirComponent>();
 	}
 };
-static_assert(alignof(UX6RMWalkingComponent) == 0x000008, "Wrong alignment on UX6RMWalkingComponent");
-static_assert(sizeof(UX6RMWalkingComponent) == 0x0001A8, "Wrong size on UX6RMWalkingComponent");
-static_assert(offsetof(UX6RMWalkingComponent, RMBlockedByAngleThreshold) == 0x0000E0, "Member 'UX6RMWalkingComponent::RMBlockedByAngleThreshold' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, RMBaseLogicProcessorClass) == 0x0000E8, "Member 'UX6RMWalkingComponent::RMBaseLogicProcessorClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, RMConfigContextClass) == 0x0000F0, "Member 'UX6RMWalkingComponent::RMConfigContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, StateInstructionContextClass) == 0x0000F8, "Member 'UX6RMWalkingComponent::StateInstructionContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, RMProxyTickRecordClass) == 0x000100, "Member 'UX6RMWalkingComponent::RMProxyTickRecordClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, RMOutputContextClass) == 0x000108, "Member 'UX6RMWalkingComponent::RMOutputContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, RMBehaviorTreeProxyClass) == 0x000110, "Member 'UX6RMWalkingComponent::RMBehaviorTreeProxyClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, RMDebugContextClass) == 0x000118, "Member 'UX6RMWalkingComponent::RMDebugContextClass' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, bCanSyncAnimStates) == 0x000120, "Member 'UX6RMWalkingComponent::bCanSyncAnimStates' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, bMovementAffectedBySlopeFactor) == 0x000121, "Member 'UX6RMWalkingComponent::bMovementAffectedBySlopeFactor' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, CurFloorAngle) == 0x000124, "Member 'UX6RMWalkingComponent::CurFloorAngle' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, bUseStartMovingMovementCurve) == 0x000128, "Member 'UX6RMWalkingComponent::bUseStartMovingMovementCurve' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, OwnerAttribute_MaxWalkSpeed_GroundCorrectionFactor) == 0x00012C, "Member 'UX6RMWalkingComponent::OwnerAttribute_MaxWalkSpeed_GroundCorrectionFactor' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, CurrentActualGait) == 0x000130, "Member 'UX6RMWalkingComponent::CurrentActualGait' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, CurrentAllowedGait) == 0x000131, "Member 'UX6RMWalkingComponent::CurrentAllowedGait' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, CurRMProxyTickRecord) == 0x000138, "Member 'UX6RMWalkingComponent::CurRMProxyTickRecord' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, PlayerCPPTickHelperComp) == 0x000140, "Member 'UX6RMWalkingComponent::PlayerCPPTickHelperComp' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, CurRMBaseLogicProcessor) == 0x000148, "Member 'UX6RMWalkingComponent::CurRMBaseLogicProcessor' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, CurRMProxy_OnGround) == 0x000150, "Member 'UX6RMWalkingComponent::CurRMProxy_OnGround' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, ReplicatedMovementData) == 0x000158, "Member 'UX6RMWalkingComponent::ReplicatedMovementData' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, NP_ReplicatedAllowedGait) == 0x000180, "Member 'UX6RMWalkingComponent::NP_ReplicatedAllowedGait' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, NP_ReplicatedInputMovingDirection) == 0x000188, "Member 'UX6RMWalkingComponent::NP_ReplicatedInputMovingDirection' has a wrong offset!");
-static_assert(offsetof(UX6RMWalkingComponent, NP_ReplicatedTurnAroundAngleToInt) == 0x0001A0, "Member 'UX6RMWalkingComponent::NP_ReplicatedTurnAroundAngleToInt' has a wrong offset!");
+static_assert(alignof(UX6RMInAirComponent) == 0x000008, "Wrong alignment on UX6RMInAirComponent");
+static_assert(sizeof(UX6RMInAirComponent) == 0x0001C8, "Wrong size on UX6RMInAirComponent");
+static_assert(offsetof(UX6RMInAirComponent, PostPhysicsTickFunction) == 0x0000E0, "Member 'UX6RMInAirComponent::PostPhysicsTickFunction' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, RMBaseLogicProcessorClass) == 0x000118, "Member 'UX6RMInAirComponent::RMBaseLogicProcessorClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, RMConfigContextClass) == 0x000120, "Member 'UX6RMInAirComponent::RMConfigContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, StateInstructionContextClass) == 0x000128, "Member 'UX6RMInAirComponent::StateInstructionContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, RMProxyTickRecordClass) == 0x000130, "Member 'UX6RMInAirComponent::RMProxyTickRecordClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, RMOutputContextClass) == 0x000138, "Member 'UX6RMInAirComponent::RMOutputContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, RMBehaviorTreeProxyClass) == 0x000140, "Member 'UX6RMInAirComponent::RMBehaviorTreeProxyClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, RMDebugContextClass) == 0x000148, "Member 'UX6RMInAirComponent::RMDebugContextClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, InputActionProcessorClass) == 0x000150, "Member 'UX6RMInAirComponent::InputActionProcessorClass' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, CurRMProxyTickRecord) == 0x000158, "Member 'UX6RMInAirComponent::CurRMProxyTickRecord' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, CurRMBaseLogicProcessor) == 0x000160, "Member 'UX6RMInAirComponent::CurRMBaseLogicProcessor' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, CurRMProxy_InAir) == 0x000168, "Member 'UX6RMInAirComponent::CurRMProxy_InAir' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, InputActionProcessor) == 0x000170, "Member 'UX6RMInAirComponent::InputActionProcessor' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, ReplicatedFloatingJumpStage) == 0x000178, "Member 'UX6RMInAirComponent::ReplicatedFloatingJumpStage' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, ReplicatedMovementData) == 0x000180, "Member 'UX6RMInAirComponent::ReplicatedMovementData' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, NP_ReplicatedJumpMode) == 0x0001A0, "Member 'UX6RMInAirComponent::NP_ReplicatedJumpMode' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, NP_ReplicatedInputMovingDirection) == 0x0001A8, "Member 'UX6RMInAirComponent::NP_ReplicatedInputMovingDirection' has a wrong offset!");
+static_assert(offsetof(UX6RMInAirComponent, NP_ReplicatedTurnAroundAngleToInt) == 0x0001C0, "Member 'UX6RMInAirComponent::NP_ReplicatedTurnAroundAngleToInt' has a wrong offset!");
 
-// Class X6Game.X6ScrollBox
-// 0x0030 (0x0D40 - 0x0D10)
-class UX6ScrollBox final : public UScrollBox
+// Class X6Game.X6RootMotionModifier_SkewWarpWithMirror
+// 0x0000 (0x02D0 - 0x02D0)
+class UX6RootMotionModifier_SkewWarpWithMirror final : public URootMotionModifier_SkewWarp
 {
 public:
-	bool                                          bHasMask;                                          // 0x0D08(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D09[0x3];                                      // 0x0D09(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TopMaskParameterName;                              // 0x0D0C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BottomMaskParameterName;                           // 0x0D14(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D1C[0x4];                                      // 0x0D1C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnScrollBoxTouchEnded;                             // 0x0D20(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D30[0x10];                                     // 0x0D30(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void HandleScollBoxScrolling();
+	static class UX6RootMotionModifier_SkewWarpWithMirror* AddRootMotionModifierSkewWarpWithMirror(class UMotionWarpingComponent* InMotionWarpingComp, const class UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, class FName InWarpTargetName, EWarpPointAnimProvider InWarpPointAnimProvider, const struct FTransform& InWarpPointAnimTransform, class FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, EMotionWarpRotationType InRotationType, EMotionWarpRotationMethod InRotationMethod, float InWarpRotationTimeMultiplier, float InWarpMaxRotationRate);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6ScrollBox">();
+		return StaticClassImpl<"X6RootMotionModifier_SkewWarpWithMirror">();
 	}
-	static class UX6ScrollBox* GetDefaultObj()
+	static class UX6RootMotionModifier_SkewWarpWithMirror* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6ScrollBox>();
+		return GetDefaultObjImpl<UX6RootMotionModifier_SkewWarpWithMirror>();
 	}
 };
-static_assert(alignof(UX6ScrollBox) == 0x000010, "Wrong alignment on UX6ScrollBox");
-static_assert(sizeof(UX6ScrollBox) == 0x000D40, "Wrong size on UX6ScrollBox");
-static_assert(offsetof(UX6ScrollBox, bHasMask) == 0x000D08, "Member 'UX6ScrollBox::bHasMask' has a wrong offset!");
-static_assert(offsetof(UX6ScrollBox, TopMaskParameterName) == 0x000D0C, "Member 'UX6ScrollBox::TopMaskParameterName' has a wrong offset!");
-static_assert(offsetof(UX6ScrollBox, BottomMaskParameterName) == 0x000D14, "Member 'UX6ScrollBox::BottomMaskParameterName' has a wrong offset!");
-static_assert(offsetof(UX6ScrollBox, OnScrollBoxTouchEnded) == 0x000D20, "Member 'UX6ScrollBox::OnScrollBoxTouchEnded' has a wrong offset!");
+static_assert(alignof(UX6RootMotionModifier_SkewWarpWithMirror) == 0x000010, "Wrong alignment on UX6RootMotionModifier_SkewWarpWithMirror");
+static_assert(sizeof(UX6RootMotionModifier_SkewWarpWithMirror) == 0x0002D0, "Wrong size on UX6RootMotionModifier_SkewWarpWithMirror");
 
-// Class X6Game.X6SoftRefWidget
-// 0x0048 (0x01D0 - 0x0188)
-class UX6SoftRefWidget final : public UWidget
-{
-public:
-	struct FSoftClassPath                         ContentWidgetSoftClassPath;                        // 0x0188(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(class UUserWidget* ContentWidget)> OnContentWidgetLoaded;          // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UUserWidget*                            ContentWidget;                                     // 0x01B8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C0[0x10];                                     // 0x01C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void ClearContentWidget();
-	class UUserWidget* GetContentWidget();
-	void LoadContentWidget(bool bSyncLoad, bool bNeedRecreate);
-	void OnLoaded(int32 AsyncId, const TArray<class UObject*>& InLoadedObjects);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6SoftRefWidget">();
-	}
-	static class UX6SoftRefWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6SoftRefWidget>();
-	}
-};
-static_assert(alignof(UX6SoftRefWidget) == 0x000008, "Wrong alignment on UX6SoftRefWidget");
-static_assert(sizeof(UX6SoftRefWidget) == 0x0001D0, "Wrong size on UX6SoftRefWidget");
-static_assert(offsetof(UX6SoftRefWidget, ContentWidgetSoftClassPath) == 0x000188, "Member 'UX6SoftRefWidget::ContentWidgetSoftClassPath' has a wrong offset!");
-static_assert(offsetof(UX6SoftRefWidget, OnContentWidgetLoaded) == 0x0001A8, "Member 'UX6SoftRefWidget::OnContentWidgetLoaded' has a wrong offset!");
-static_assert(offsetof(UX6SoftRefWidget, ContentWidget) == 0x0001B8, "Member 'UX6SoftRefWidget::ContentWidget' has a wrong offset!");
-
-// Class X6Game.X6SteamFunctionLibrary
+// Class X6Game.X6SequencerBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
-class UX6SteamFunctionLibrary final : public UBlueprintFunctionLibrary
+class UX6SequencerBlueprintLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static void UpdateAchievements(const TMap<class FString, int32>& InAchievements, const class FString& ChannelString);
+	static void AddBindingWithNamesAndActors(class ALevelSequenceActor* InLSActor, TMap<class FString, class AActor*>* InActorsAndNames);
+	static void CinematicActorLookAtActor(ELookAtEventType InEventType, class AActor* InPlayerActor, class AActor* InTargetActor, const struct FLookAtRequestParams& Params_0);
+	static void CinematicActorLookAtLocation(ELookAtEventType InEventType, class AActor* InPlayerActor, const struct FVector& InTargetLocation, const struct FLookAtRequestParams& Params_0);
+	static void GetAllSections(const class UMovieSceneSequence* MovieSceneSequence, TArray<class UMovieSceneSection*>* OutSections);
+	static void GetAllTracks(const class UMovieSceneSequence* MovieSceneSequence, TArray<class UMovieSceneTrack*>* OutTracks);
+	static void GetCastNamesInLevelSequenceByTag(const class ALevelSequenceActor* InLSActor, class FName InTag, TArray<class FString>* OutNames);
+	static TArray<struct FX6TrackContent> GetMasterTrackContents(const class ULevelSequence* LevelSequence, TSubclassOf<class UMovieSceneTrack> TrackClass);
+	static bool HasTrack(const class ALevelSequenceActor* LevelSequenceActor, class AActor* Actor, TSubclassOf<class UMovieSceneTrack> TrackClass);
+	static int32 PreLoadLevelSequence(class ULevelSequence* LevelSequence);
+	static void RemoveCinematicActorLookAt(ELookAtEventType InEventType, class AActor* InPlayerActor, class AActor* LookAtTargetActor);
+	static void SetPreAnimatedPreviewCameraRotation(const struct FRotator& InRotation);
+	static void SetSectionIsActiveByNetPolicy(class UMovieSceneSequence* MovieSceneSequence, EMovieSceneNetPolicy MovieSceneNetPolicy);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6SteamFunctionLibrary">();
+		return StaticClassImpl<"X6SequencerBlueprintLibrary">();
 	}
-	static class UX6SteamFunctionLibrary* GetDefaultObj()
+	static class UX6SequencerBlueprintLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6SteamFunctionLibrary>();
+		return GetDefaultObjImpl<UX6SequencerBlueprintLibrary>();
 	}
 };
-static_assert(alignof(UX6SteamFunctionLibrary) == 0x000008, "Wrong alignment on UX6SteamFunctionLibrary");
-static_assert(sizeof(UX6SteamFunctionLibrary) == 0x000028, "Wrong size on UX6SteamFunctionLibrary");
+static_assert(alignof(UX6SequencerBlueprintLibrary) == 0x000008, "Wrong alignment on UX6SequencerBlueprintLibrary");
+static_assert(sizeof(UX6SequencerBlueprintLibrary) == 0x000028, "Wrong size on UX6SequencerBlueprintLibrary");
 
-// Class X6Game.X6SuitDisplayComponent
-// 0x0048 (0x00F0 - 0x00A8)
-class UX6SuitDisplayComponent : public UX6ActorComponent
+// Class X6Game.X6SimpleTargetingSortTask
+// 0x0000 (0x0038 - 0x0038)
+class UX6SimpleTargetingSortTask final : public UX6TargetingSortTask_Base
 {
 public:
-	bool                                          bEnableRaycastingShadow;                           // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableFurCurvePassing;                            // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AA[0xE];                                       // 0x00AA(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialParameterCollection*           MPC_TOD;                                           // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_C0[0x8];                                       // 0x00C0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPaperFurComponent*                     FurComp;                                           // 0x00C8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_D0[0x10];                                      // 0x00D0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                AsyncResultObject;                                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static void CallPreivewFunction(class AActor* InActor, class FName InFunctionName, int32 InParams);
-	static void SetPreviewProperty(class AActor* InActor, class FName InPropertyName, int32 InPropertyValue);
-
-	void AsyncCallBPFunction(class FName FunctionName, const TArray<class USkeletalMesh*>& MeshArr);
-	class UObject* AsyncNewObject(TSubclassOf<class UObject> InObjectClass);
-	void NotifyCppClothID2ClothPath(const TMap<int64, class FString>& ClothPair);
-	void OnAsyncCallFinished(class UObject* AsyncResult);
-	void RenameComponent(class UActorComponent* InComponent, const class FString& InNewName);
+	float BP_GetScoreForTarget(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingDefaultResultData& TargetData) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6SuitDisplayComponent">();
+		return StaticClassImpl<"X6SimpleTargetingSortTask">();
 	}
-	static class UX6SuitDisplayComponent* GetDefaultObj()
+	static class UX6SimpleTargetingSortTask* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6SuitDisplayComponent>();
+		return GetDefaultObjImpl<UX6SimpleTargetingSortTask>();
 	}
 };
-static_assert(alignof(UX6SuitDisplayComponent) == 0x000008, "Wrong alignment on UX6SuitDisplayComponent");
-static_assert(sizeof(UX6SuitDisplayComponent) == 0x0000F0, "Wrong size on UX6SuitDisplayComponent");
-static_assert(offsetof(UX6SuitDisplayComponent, bEnableRaycastingShadow) == 0x0000A8, "Member 'UX6SuitDisplayComponent::bEnableRaycastingShadow' has a wrong offset!");
-static_assert(offsetof(UX6SuitDisplayComponent, bEnableFurCurvePassing) == 0x0000A9, "Member 'UX6SuitDisplayComponent::bEnableFurCurvePassing' has a wrong offset!");
-static_assert(offsetof(UX6SuitDisplayComponent, MPC_TOD) == 0x0000B8, "Member 'UX6SuitDisplayComponent::MPC_TOD' has a wrong offset!");
-static_assert(offsetof(UX6SuitDisplayComponent, FurComp) == 0x0000C8, "Member 'UX6SuitDisplayComponent::FurComp' has a wrong offset!");
-static_assert(offsetof(UX6SuitDisplayComponent, AsyncResultObject) == 0x0000E0, "Member 'UX6SuitDisplayComponent::AsyncResultObject' has a wrong offset!");
+static_assert(alignof(UX6SimpleTargetingSortTask) == 0x000008, "Wrong alignment on UX6SimpleTargetingSortTask");
+static_assert(sizeof(UX6SimpleTargetingSortTask) == 0x000038, "Wrong size on UX6SimpleTargetingSortTask");
 
-// Class X6Game.X6TargetingFilterTask_Num
-// 0x0008 (0x0030 - 0x0028)
-class UX6TargetingFilterTask_Num final : public UTargetingTask
+// Class X6Game.X6SpawnOnViewSubsystem
+// 0x0220 (0x0250 - 0x0030)
+class UX6SpawnOnViewSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	int32                                         Num;                                               // 0x0028(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x220];                                     // 0x0030(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddCacheEntity(int64 EntityID, int64 SpawnerID, int64 GroupID, struct FVector* SpawnLocation, double SpawnDistSqr);
+	void AddSpawner(class AActor* Actor, int64 SpawnerID, int64 EntityID, class FName Cat);
+	void CheckEntitySpawnOnView(TArray<int64>* NeedSpawnEntities);
+	void ClearManagedEntityAndSpawners();
+	void ForceRemoveCahceEntity(int64 EntityID);
+	void GetSpawnSystemStatistics(int64* SpawnerNum, int64* SkippedNum);
+	void RemoveSpawner(class AActor* Actor, class FName Cat);
+	void ResetSpawnerGroup(int64 GroupID, TArray<int64>* SpawnerIDS);
+	void SetSystemParams(int32 OnScreenLimitHiddenFlag, float NearSpawnerDist);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TargetingFilterTask_Num">();
+		return StaticClassImpl<"X6SpawnOnViewSubsystem">();
 	}
-	static class UX6TargetingFilterTask_Num* GetDefaultObj()
+	static class UX6SpawnOnViewSubsystem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TargetingFilterTask_Num>();
+		return GetDefaultObjImpl<UX6SpawnOnViewSubsystem>();
 	}
 };
-static_assert(alignof(UX6TargetingFilterTask_Num) == 0x000008, "Wrong alignment on UX6TargetingFilterTask_Num");
-static_assert(sizeof(UX6TargetingFilterTask_Num) == 0x000030, "Wrong size on UX6TargetingFilterTask_Num");
-static_assert(offsetof(UX6TargetingFilterTask_Num, Num) == 0x000028, "Member 'UX6TargetingFilterTask_Num::Num' has a wrong offset!");
+static_assert(alignof(UX6SpawnOnViewSubsystem) == 0x000008, "Wrong alignment on UX6SpawnOnViewSubsystem");
+static_assert(sizeof(UX6SpawnOnViewSubsystem) == 0x000250, "Wrong size on UX6SpawnOnViewSubsystem");
 
-// Class X6Game.X6TargetingFilter_ChargeUpAiming
+// Class X6Game.X6StrafeMovementComponent
+// 0x0038 (0x00E0 - 0x00A8)
+class UX6StrafeMovementComponent : public UX6ActorComponent
+{
+public:
+	bool                                          bIsEnabled;                                        // 0x00A8(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x00A9(0x0001)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CurrentTurnAroundAngle;                            // 0x00AC(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class APlayerCameraManager*                   CameraManager;                                     // 0x00B0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class ACharacter*                             CharacterOwner;                                    // 0x00B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UAdvancedCamera*                        AdCamera;                                          // 0x00C0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCharacterMovementComponent*            CharacterMovement;                                 // 0x00C8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UX6RMWalkingComponent*                  RMWalkingComp;                                     // 0x00D0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class URMBaseLogicProcessor*                  CurRMBaseLogicProcessor;                           // 0x00D8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void K2_UpdateMovingState(bool bNewMoveFlag);
+
+	float CalcTurnAroundAngle(const struct FVector& InputDirection, const struct FVector& ForwardVector) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6StrafeMovementComponent">();
+	}
+	static class UX6StrafeMovementComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6StrafeMovementComponent>();
+	}
+};
+static_assert(alignof(UX6StrafeMovementComponent) == 0x000008, "Wrong alignment on UX6StrafeMovementComponent");
+static_assert(sizeof(UX6StrafeMovementComponent) == 0x0000E0, "Wrong size on UX6StrafeMovementComponent");
+static_assert(offsetof(UX6StrafeMovementComponent, bIsEnabled) == 0x0000A8, "Member 'UX6StrafeMovementComponent::bIsEnabled' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, bInterrupted) == 0x0000A9, "Member 'UX6StrafeMovementComponent::bInterrupted' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, CurrentTurnAroundAngle) == 0x0000AC, "Member 'UX6StrafeMovementComponent::CurrentTurnAroundAngle' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, CameraManager) == 0x0000B0, "Member 'UX6StrafeMovementComponent::CameraManager' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, CharacterOwner) == 0x0000B8, "Member 'UX6StrafeMovementComponent::CharacterOwner' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, AdCamera) == 0x0000C0, "Member 'UX6StrafeMovementComponent::AdCamera' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, CharacterMovement) == 0x0000C8, "Member 'UX6StrafeMovementComponent::CharacterMovement' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, RMWalkingComp) == 0x0000D0, "Member 'UX6StrafeMovementComponent::RMWalkingComp' has a wrong offset!");
+static_assert(offsetof(UX6StrafeMovementComponent, CurRMBaseLogicProcessor) == 0x0000D8, "Member 'UX6StrafeMovementComponent::CurRMBaseLogicProcessor' has a wrong offset!");
+
+// Class X6Game.X6T2NpcActorBase
+// 0x0000 (0x0488 - 0x0488)
+class AX6T2NpcActorBase final : public AX6Actor
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6T2NpcActorBase">();
+	}
+	static class AX6T2NpcActorBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AX6T2NpcActorBase>();
+	}
+};
+static_assert(alignof(AX6T2NpcActorBase) == 0x000008, "Wrong alignment on AX6T2NpcActorBase");
+static_assert(sizeof(AX6T2NpcActorBase) == 0x000488, "Wrong size on AX6T2NpcActorBase");
+
+// Class X6Game.X6TargetingFilter_AlwaysAiming
 // 0x0020 (0x0048 - 0x0028)
-class UX6TargetingFilter_ChargeUpAiming final : public UTargetingFilterTask_BasicFilterTemplate
+class UX6TargetingFilter_AlwaysAiming final : public UTargetingFilterTask_BasicFilterTemplate
 {
 public:
 	struct FGameplayTagContainer                  TargetGameplayTags;                                // 0x0028(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
@@ -12153,304 +12477,211 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TargetingFilter_ChargeUpAiming">();
+		return StaticClassImpl<"X6TargetingFilter_AlwaysAiming">();
 	}
-	static class UX6TargetingFilter_ChargeUpAiming* GetDefaultObj()
+	static class UX6TargetingFilter_AlwaysAiming* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TargetingFilter_ChargeUpAiming>();
+		return GetDefaultObjImpl<UX6TargetingFilter_AlwaysAiming>();
 	}
 };
-static_assert(alignof(UX6TargetingFilter_ChargeUpAiming) == 0x000008, "Wrong alignment on UX6TargetingFilter_ChargeUpAiming");
-static_assert(sizeof(UX6TargetingFilter_ChargeUpAiming) == 0x000048, "Wrong size on UX6TargetingFilter_ChargeUpAiming");
-static_assert(offsetof(UX6TargetingFilter_ChargeUpAiming, TargetGameplayTags) == 0x000028, "Member 'UX6TargetingFilter_ChargeUpAiming::TargetGameplayTags' has a wrong offset!");
+static_assert(alignof(UX6TargetingFilter_AlwaysAiming) == 0x000008, "Wrong alignment on UX6TargetingFilter_AlwaysAiming");
+static_assert(sizeof(UX6TargetingFilter_AlwaysAiming) == 0x000048, "Wrong size on UX6TargetingFilter_AlwaysAiming");
+static_assert(offsetof(UX6TargetingFilter_AlwaysAiming, TargetGameplayTags) == 0x000028, "Member 'UX6TargetingFilter_AlwaysAiming::TargetGameplayTags' has a wrong offset!");
 
-// Class X6Game.X6TargetingSelectionTask_AOE
-// 0x00C0 (0x00E8 - 0x0028)
-class UX6TargetingSelectionTask_AOE : public UTargetingTask
+// Class X6Game.X6TargetingFilter_GamePlayTags
+// 0x0040 (0x0068 - 0x0028)
+class UX6TargetingFilter_GamePlayTags final : public UTargetingFilterTask_BasicFilterTemplate
 {
 public:
-	bool                                          bIsDependencyPreTarget;                            // 0x0028(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bApplyMultipleComponentResult;                     // 0x0029(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EX6TargetingAOEShape                          ShapeType;                                         // 0x002A(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECollisionChannel                             CollisionChannel;                                  // 0x002B(0x0001)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FCollisionProfileName                  CollisionProfileName;                              // 0x002C(0x0008)(Edit, BlueprintReadOnly, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      CollisionObjectTypes;                              // 0x0038(0x0010)(Edit, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	struct FVector                                DefaultSourceOffset;                               // 0x0048(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   SocketName;                                        // 0x0060(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bUseRelativeOffset : 1;                            // 0x0068(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIgnoreSourceActor : 1;                            // 0x0068(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bIgnoreInstigatorActor : 1;                        // 0x0068(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                HalfExtent;                                        // 0x0070(0x0018)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         Angle;                                             // 0x0088(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         InnerRadius;                                       // 0x008C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         Radius;                                            // 0x0090(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FScalableFloat                         HalfHeight;                                        // 0x00B8(0x0028)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	class FName                                   ComponentTag;                                      // 0x00E0(0x0008)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	void BP_GetTargetingResultDataByIndex(const struct FTargetingRequestHandle& TargetingHandle, const int32 Index_0, struct FTargetingDefaultResultData* ResultData) const;
-	struct FQuat GetOffsetRotationInEditor(const class AActor* Actor) const;
-	struct FVector GetSourceLocation(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FVector GetSourceOffset(const struct FTargetingRequestHandle& TargetingHandle) const;
-	struct FQuat GetSourceRotation(const struct FTargetingRequestHandle& TargetingHandle) const;
+	struct FGameplayTagContainer                  TargetGameplayTags;                                // 0x0028(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  ExcludeGamePlayTags;                               // 0x0048(0x0020)(Edit, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TargetingSelectionTask_AOE">();
+		return StaticClassImpl<"X6TargetingFilter_GamePlayTags">();
 	}
-	static class UX6TargetingSelectionTask_AOE* GetDefaultObj()
+	static class UX6TargetingFilter_GamePlayTags* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TargetingSelectionTask_AOE>();
+		return GetDefaultObjImpl<UX6TargetingFilter_GamePlayTags>();
 	}
 };
-static_assert(alignof(UX6TargetingSelectionTask_AOE) == 0x000008, "Wrong alignment on UX6TargetingSelectionTask_AOE");
-static_assert(sizeof(UX6TargetingSelectionTask_AOE) == 0x0000E8, "Wrong size on UX6TargetingSelectionTask_AOE");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, bIsDependencyPreTarget) == 0x000028, "Member 'UX6TargetingSelectionTask_AOE::bIsDependencyPreTarget' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, bApplyMultipleComponentResult) == 0x000029, "Member 'UX6TargetingSelectionTask_AOE::bApplyMultipleComponentResult' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, ShapeType) == 0x00002A, "Member 'UX6TargetingSelectionTask_AOE::ShapeType' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, CollisionChannel) == 0x00002B, "Member 'UX6TargetingSelectionTask_AOE::CollisionChannel' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, CollisionProfileName) == 0x00002C, "Member 'UX6TargetingSelectionTask_AOE::CollisionProfileName' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, CollisionObjectTypes) == 0x000038, "Member 'UX6TargetingSelectionTask_AOE::CollisionObjectTypes' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, DefaultSourceOffset) == 0x000048, "Member 'UX6TargetingSelectionTask_AOE::DefaultSourceOffset' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, SocketName) == 0x000060, "Member 'UX6TargetingSelectionTask_AOE::SocketName' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, HalfExtent) == 0x000070, "Member 'UX6TargetingSelectionTask_AOE::HalfExtent' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, Angle) == 0x000088, "Member 'UX6TargetingSelectionTask_AOE::Angle' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, InnerRadius) == 0x00008C, "Member 'UX6TargetingSelectionTask_AOE::InnerRadius' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, Radius) == 0x000090, "Member 'UX6TargetingSelectionTask_AOE::Radius' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, HalfHeight) == 0x0000B8, "Member 'UX6TargetingSelectionTask_AOE::HalfHeight' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSelectionTask_AOE, ComponentTag) == 0x0000E0, "Member 'UX6TargetingSelectionTask_AOE::ComponentTag' has a wrong offset!");
+static_assert(alignof(UX6TargetingFilter_GamePlayTags) == 0x000008, "Wrong alignment on UX6TargetingFilter_GamePlayTags");
+static_assert(sizeof(UX6TargetingFilter_GamePlayTags) == 0x000068, "Wrong size on UX6TargetingFilter_GamePlayTags");
+static_assert(offsetof(UX6TargetingFilter_GamePlayTags, TargetGameplayTags) == 0x000028, "Member 'UX6TargetingFilter_GamePlayTags::TargetGameplayTags' has a wrong offset!");
+static_assert(offsetof(UX6TargetingFilter_GamePlayTags, ExcludeGamePlayTags) == 0x000048, "Member 'UX6TargetingFilter_GamePlayTags::ExcludeGamePlayTags' has a wrong offset!");
 
-// Class X6Game.X6TargetingSortTask_ChargeUp
-// 0x0080 (0x00A8 - 0x0028)
-class UX6TargetingSortTask_ChargeUp final : public UTargetingTask
+// Class X6Game.X6TargetingSelectionTask_ChargeUpBase
+// 0x0088 (0x00B0 - 0x0028)
+class UX6TargetingSelectionTask_ChargeUpBase : public UTargetingTask
 {
 public:
-	uint8                                         bAngleAscending : 1;                               // 0x0028(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         AngleWeight;                                       // 0x002C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         AngleRefScore;                                     // 0x0030(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bDisAscending : 1;                                 // 0x0034(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DisWeight;                                         // 0x0038(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         DisRefScore;                                       // 0x003C(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         bCharacterAscending : 1;                           // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CharacterWeight;                                   // 0x0044(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         CharacterRefScore;                                 // 0x0048(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FGameplayTag, float>              CharacterTagBaseScoreMap;                          // 0x0050(0x0050)(Edit, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	float                                         OtherCharacterBaseScore;                           // 0x00A0(0x0004)(Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         SlopeDegree;                                       // 0x0028(0x0004)(BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BulletTransform;                                   // 0x0030(0x0060)(BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDrawDebugTrace                               DebugDraw;                                         // 0x0090(0x0001)(BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      SlopeTraceObjectTypes;                             // 0x0098(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	bool AddHitResult(const struct FTargetingRequestHandle& TargetingHandle, const struct FHitResult& HitResult) const;
+	bool AddSingleTargetComponentForPriority(const struct FTargetingRequestHandle& TargetingHandle, class UPrimitiveComponent* InTargetComponent) const;
+	bool AddTargetActor(const struct FTargetingRequestHandle& TargetingHandle, class AActor* InTargetActor) const;
+	bool AddTargetComponent(const struct FTargetingRequestHandle& TargetingHandle, class UPrimitiveComponent* InTargetComponent) const;
+	bool K2_CanSelect(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
+	bool K2_IsExistForwardTargets(const class AActor* SourceActor, const struct FVector& InHalfSize, const struct FVector& InOffset) const;
+	bool K2_IsResultsExistTargetActorOrComponent(const struct FTargetingRequestHandle& TargetingHandle, class AActor* InTargetActor, class UPrimitiveComponent* InTargetComponent) const;
+	void SelectTargets(const struct FTargetingRequestHandle& TargetingHandle, const struct FTargetingSourceContext& SourceContext) const;
+	void UpdateSelectingTransformInfo(const class AActor* SourceActor, const class FName& SocketName, const float DepthLength, const struct FVector& Offset) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TargetingSortTask_ChargeUp">();
+		return StaticClassImpl<"X6TargetingSelectionTask_ChargeUpBase">();
 	}
-	static class UX6TargetingSortTask_ChargeUp* GetDefaultObj()
+	static class UX6TargetingSelectionTask_ChargeUpBase* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TargetingSortTask_ChargeUp>();
+		return GetDefaultObjImpl<UX6TargetingSelectionTask_ChargeUpBase>();
 	}
 };
-static_assert(alignof(UX6TargetingSortTask_ChargeUp) == 0x000008, "Wrong alignment on UX6TargetingSortTask_ChargeUp");
-static_assert(sizeof(UX6TargetingSortTask_ChargeUp) == 0x0000A8, "Wrong size on UX6TargetingSortTask_ChargeUp");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, AngleWeight) == 0x00002C, "Member 'UX6TargetingSortTask_ChargeUp::AngleWeight' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, AngleRefScore) == 0x000030, "Member 'UX6TargetingSortTask_ChargeUp::AngleRefScore' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, DisWeight) == 0x000038, "Member 'UX6TargetingSortTask_ChargeUp::DisWeight' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, DisRefScore) == 0x00003C, "Member 'UX6TargetingSortTask_ChargeUp::DisRefScore' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, CharacterWeight) == 0x000044, "Member 'UX6TargetingSortTask_ChargeUp::CharacterWeight' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, CharacterRefScore) == 0x000048, "Member 'UX6TargetingSortTask_ChargeUp::CharacterRefScore' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, CharacterTagBaseScoreMap) == 0x000050, "Member 'UX6TargetingSortTask_ChargeUp::CharacterTagBaseScoreMap' has a wrong offset!");
-static_assert(offsetof(UX6TargetingSortTask_ChargeUp, OtherCharacterBaseScore) == 0x0000A0, "Member 'UX6TargetingSortTask_ChargeUp::OtherCharacterBaseScore' has a wrong offset!");
+static_assert(alignof(UX6TargetingSelectionTask_ChargeUpBase) == 0x000010, "Wrong alignment on UX6TargetingSelectionTask_ChargeUpBase");
+static_assert(sizeof(UX6TargetingSelectionTask_ChargeUpBase) == 0x0000B0, "Wrong size on UX6TargetingSelectionTask_ChargeUpBase");
+static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, SlopeDegree) == 0x000028, "Member 'UX6TargetingSelectionTask_ChargeUpBase::SlopeDegree' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, BulletTransform) == 0x000030, "Member 'UX6TargetingSelectionTask_ChargeUpBase::BulletTransform' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, DebugDraw) == 0x000090, "Member 'UX6TargetingSelectionTask_ChargeUpBase::DebugDraw' has a wrong offset!");
+static_assert(offsetof(UX6TargetingSelectionTask_ChargeUpBase, SlopeTraceObjectTypes) == 0x000098, "Member 'UX6TargetingSelectionTask_ChargeUpBase::SlopeTraceObjectTypes' has a wrong offset!");
 
-// Class X6Game.X6TRCBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UX6TRCBlueprintLibrary final : public UBlueprintFunctionLibrary
+// Class X6Game.X6TileView
+// 0x0790 (0x1470 - 0x0CE0)
+class UX6TileView final : public UTileView
 {
 public:
-	static bool ChangeActivityAvailability(const TArray<class FString>& AvailableIDs, const TArray<class FString>& UnavailableIDs);
-	static bool CheckPSPremium();
-	static void CheckPSPremiumAsync(TDelegate<void(bool Result)> Callback);
-	static bool EndActivity(const class FString& activityID);
-	static bool ExportToAlbum(const class FString& FromPath, const class FString& Filename);
-	static bool IsPremiumFeatureNotifying();
-	static void LaunchURLForPredeterminedContent(const class FString& URL);
-	static void RequestTRCWebApi(const class FString& ApiGroup, const class FString& ApiPath, const class FString& httpMethod, const class FString& JsonContent, TDelegate<void(int32 ResponceCode, const class FString& Content, float NextRequestTime)> Callback);
-	static bool ResetActivity(const class FString& activityID);
-	static void ShowCommerceDialog(EX6CommerceType CommerceType);
-	static void ShowSystemMsgDialog(EX6SystemMsgType MsgType);
-	static bool StartActivity(const class FString& activityID);
-	static void StartPSNotifyPremiumFeature(float TimeInterval);
-	static void StopPSNotifyPremiumFeature();
-	static void UpdateAchievements(const TMap<int32, int32>& Achievements);
-	static float X6GetDiskFreeSpace(const class FString& InPath);
+	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x0CE0(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          bHasMask;                                          // 0x1450(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1451[0x3];                                     // 0x1451(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TopMaskParameterName;                              // 0x1454(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BottomMaskParameterName;                           // 0x145C(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1464[0xC];                                     // 0x1464(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddAnItem();
+	void BP_NavigateToItemIndex(const int32& ItemIndex);
+	void BP_OnTileItemValueChanged(const int32& Index_0);
+	void BP_ScrollItemIndexIntoView(const int32& ItemIndex);
+	void BP_SetItemSelectionByIndex(const int32& Index_0, bool bSelected);
+	void BP_SetSelectedItemByIndex(const int32& Index_0);
+	void BP_SetTileItemCount(const int32& Count);
+	int32 GetLineOrientationItemNums();
+	float GetScrollVelocity();
+	void RemoveItemByIndex(const int32& Index_0);
+
+	int32 BP_GetSelectedIndex() const;
+	bool BP_GetSelectedItemsViaIndex(TArray<int32>* Items) const;
+	bool BP_IsItemVisibleByIndex(const int32& Index_0) const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6TRCBlueprintLibrary">();
+		return StaticClassImpl<"X6TileView">();
 	}
-	static class UX6TRCBlueprintLibrary* GetDefaultObj()
+	static class UX6TileView* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6TRCBlueprintLibrary>();
+		return GetDefaultObjImpl<UX6TileView>();
 	}
 };
-static_assert(alignof(UX6TRCBlueprintLibrary) == 0x000008, "Wrong alignment on UX6TRCBlueprintLibrary");
-static_assert(sizeof(UX6TRCBlueprintLibrary) == 0x000028, "Wrong size on UX6TRCBlueprintLibrary");
+static_assert(alignof(UX6TileView) == 0x000010, "Wrong alignment on UX6TileView");
+static_assert(sizeof(UX6TileView) == 0x001470, "Wrong size on UX6TileView");
+static_assert(offsetof(UX6TileView, WidgetBarStyle) == 0x000CE0, "Member 'UX6TileView::WidgetBarStyle' has a wrong offset!");
+static_assert(offsetof(UX6TileView, bHasMask) == 0x001450, "Member 'UX6TileView::bHasMask' has a wrong offset!");
+static_assert(offsetof(UX6TileView, TopMaskParameterName) == 0x001454, "Member 'UX6TileView::TopMaskParameterName' has a wrong offset!");
+static_assert(offsetof(UX6TileView, BottomMaskParameterName) == 0x00145C, "Member 'UX6TileView::BottomMaskParameterName' has a wrong offset!");
 
-// Class X6Game.X6VehicleBikeAnimInstace
-// 0x00A0 (0x0470 - 0x03D0)
-class UX6VehicleBikeAnimInstace final : public UAnimInstance
+// Class X6Game.X6UtcPlayerInputComponent
+// 0x0000 (0x00A8 - 0x00A8)
+class UX6UtcPlayerInputComponent : public UX6ActorComponent
 {
 public:
-	TWeakObjectPtr<class UX6BikeDataContext>      BikeDataContext;                                   // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         BikeCyclingStateL1;                                // 0x03D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeStartRidingType;                               // 0x03D1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeSpotTurnType;                                  // 0x03D2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeRidingType;                                    // 0x03D3(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeBrakeType;                                     // 0x03D4(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeStartJumpType;                                 // 0x03D5(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeJumpEndType;                                   // 0x03D6(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeDebarkationType;                               // 0x03D7(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeCyclingInAirType;                              // 0x03D8(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         BikeEnterBikeType;                                 // 0x03D9(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         PreBikeCyclingType;                                // 0x03DA(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bBikeIdleLeft;                                     // 0x03DB(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BikeSteeringValue;                                 // 0x03DC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BikeBodyLeanAngle;                                 // 0x03E0(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         PlayerRootMOffset;                                 // 0x03E4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         RawBikeForeakeInput;                               // 0x03E8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         RawBikeHeelInput;                                  // 0x03EC(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHaveValidComponent;                               // 0x03F0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPlayerAttachToBike;                               // 0x03F1(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bBikeSwitchIdle;                                   // 0x03F2(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableMoveMode;                                   // 0x03F3(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         CurrentSlopeAngle;                                 // 0x03F4(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BikeSpeedValue;                                    // 0x03F8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bLaunchedInAir;                                    // 0x03FC(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bDirectlyFall;                                     // 0x03FD(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3FE[0x2];                                      // 0x03FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         TargetSteerValue;                                  // 0x0400(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_404[0x4];                                      // 0x0404(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                LHandLockPosition;                                 // 0x0408(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FRotator                               LHandLockRotation;                                 // 0x0420(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	struct FVector                                RHandLockPosition;                                 // 0x0438(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FRotator                               RHandLockRotation;                                 // 0x0450(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	float                                         HandIKAlpha;                                       // 0x0468(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableHandLockPositionL;                          // 0x046C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableHandLockPositionR;                          // 0x046D(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableHandLockRotateL;                            // 0x046E(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableHandLockRotateR;                            // 0x046F(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	void HandleTouchEvent(EX6InputTouchEvent X6InputTouchEvent, ETouchIndex FingerIndex, const struct FVector& Location);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6VehicleBikeAnimInstace">();
+		return StaticClassImpl<"X6UtcPlayerInputComponent">();
 	}
-	static class UX6VehicleBikeAnimInstace* GetDefaultObj()
+	static class UX6UtcPlayerInputComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6VehicleBikeAnimInstace>();
+		return GetDefaultObjImpl<UX6UtcPlayerInputComponent>();
 	}
 };
-static_assert(alignof(UX6VehicleBikeAnimInstace) == 0x000010, "Wrong alignment on UX6VehicleBikeAnimInstace");
-static_assert(sizeof(UX6VehicleBikeAnimInstace) == 0x000470, "Wrong size on UX6VehicleBikeAnimInstace");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeDataContext) == 0x0003C8, "Member 'UX6VehicleBikeAnimInstace::BikeDataContext' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeCyclingStateL1) == 0x0003D0, "Member 'UX6VehicleBikeAnimInstace::BikeCyclingStateL1' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeStartRidingType) == 0x0003D1, "Member 'UX6VehicleBikeAnimInstace::BikeStartRidingType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeSpotTurnType) == 0x0003D2, "Member 'UX6VehicleBikeAnimInstace::BikeSpotTurnType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeRidingType) == 0x0003D3, "Member 'UX6VehicleBikeAnimInstace::BikeRidingType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeBrakeType) == 0x0003D4, "Member 'UX6VehicleBikeAnimInstace::BikeBrakeType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeStartJumpType) == 0x0003D5, "Member 'UX6VehicleBikeAnimInstace::BikeStartJumpType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeJumpEndType) == 0x0003D6, "Member 'UX6VehicleBikeAnimInstace::BikeJumpEndType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeDebarkationType) == 0x0003D7, "Member 'UX6VehicleBikeAnimInstace::BikeDebarkationType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeCyclingInAirType) == 0x0003D8, "Member 'UX6VehicleBikeAnimInstace::BikeCyclingInAirType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeEnterBikeType) == 0x0003D9, "Member 'UX6VehicleBikeAnimInstace::BikeEnterBikeType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, PreBikeCyclingType) == 0x0003DA, "Member 'UX6VehicleBikeAnimInstace::PreBikeCyclingType' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bBikeIdleLeft) == 0x0003DB, "Member 'UX6VehicleBikeAnimInstace::bBikeIdleLeft' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeSteeringValue) == 0x0003DC, "Member 'UX6VehicleBikeAnimInstace::BikeSteeringValue' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeBodyLeanAngle) == 0x0003E0, "Member 'UX6VehicleBikeAnimInstace::BikeBodyLeanAngle' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, PlayerRootMOffset) == 0x0003E4, "Member 'UX6VehicleBikeAnimInstace::PlayerRootMOffset' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, RawBikeForeakeInput) == 0x0003E8, "Member 'UX6VehicleBikeAnimInstace::RawBikeForeakeInput' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, RawBikeHeelInput) == 0x0003EC, "Member 'UX6VehicleBikeAnimInstace::RawBikeHeelInput' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bHaveValidComponent) == 0x0003F0, "Member 'UX6VehicleBikeAnimInstace::bHaveValidComponent' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bPlayerAttachToBike) == 0x0003F1, "Member 'UX6VehicleBikeAnimInstace::bPlayerAttachToBike' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bBikeSwitchIdle) == 0x0003F2, "Member 'UX6VehicleBikeAnimInstace::bBikeSwitchIdle' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableMoveMode) == 0x0003F3, "Member 'UX6VehicleBikeAnimInstace::bEnableMoveMode' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, CurrentSlopeAngle) == 0x0003F4, "Member 'UX6VehicleBikeAnimInstace::CurrentSlopeAngle' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, BikeSpeedValue) == 0x0003F8, "Member 'UX6VehicleBikeAnimInstace::BikeSpeedValue' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bLaunchedInAir) == 0x0003FC, "Member 'UX6VehicleBikeAnimInstace::bLaunchedInAir' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bDirectlyFall) == 0x0003FD, "Member 'UX6VehicleBikeAnimInstace::bDirectlyFall' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, TargetSteerValue) == 0x000400, "Member 'UX6VehicleBikeAnimInstace::TargetSteerValue' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, LHandLockPosition) == 0x000408, "Member 'UX6VehicleBikeAnimInstace::LHandLockPosition' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, LHandLockRotation) == 0x000420, "Member 'UX6VehicleBikeAnimInstace::LHandLockRotation' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, RHandLockPosition) == 0x000438, "Member 'UX6VehicleBikeAnimInstace::RHandLockPosition' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, RHandLockRotation) == 0x000450, "Member 'UX6VehicleBikeAnimInstace::RHandLockRotation' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, HandIKAlpha) == 0x000468, "Member 'UX6VehicleBikeAnimInstace::HandIKAlpha' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockPositionL) == 0x00046C, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockPositionL' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockPositionR) == 0x00046D, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockPositionR' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockRotateL) == 0x00046E, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockRotateL' has a wrong offset!");
-static_assert(offsetof(UX6VehicleBikeAnimInstace, bEnableHandLockRotateR) == 0x00046F, "Member 'UX6VehicleBikeAnimInstace::bEnableHandLockRotateR' has a wrong offset!");
+static_assert(alignof(UX6UtcPlayerInputComponent) == 0x000008, "Wrong alignment on UX6UtcPlayerInputComponent");
+static_assert(sizeof(UX6UtcPlayerInputComponent) == 0x0000A8, "Wrong size on UX6UtcPlayerInputComponent");
 
-// Class X6Game.X6WaterBuoyancyManagerComponent
-// 0x0098 (0x0140 - 0x00A8)
-class UX6WaterBuoyancyManagerComponent final : public UActorComponent
+// Class X6Game.X6VehicleSkeletalMeshComponent
+// 0x0010 (0x1330 - 0x1320)
+class UX6VehicleSkeletalMeshComponent final : public USkeletalMeshComponent
 {
 public:
-	ESimulateWaterFlowType                        WaterFlowType;                                     // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSimulateWaterFlowKeyPoint             TargetPointToToward;                               // 0x00B0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FSimulateWaterFlowKeyPoint             PointToLeave;                                      // 0x00C0(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	TArray<struct FSimulateWaterFlowKeyPoint>     MovementTrackKeyPoints;                            // 0x00D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	float                                         InitialConfigDensity;                              // 0x00E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CurrentWaterDensity;                               // 0x00E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E8[0x58];                                      // 0x00E8(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void GenerateSplineTrackForWater();
-	struct FSimulateWaterFlowKeyPoint GetPointToLeave();
-	struct FSimulateWaterFlowKeyPoint GetTargetPointToToward();
-	float GetWaterCurrentDensity();
-	float GetWaterSurfaceHeightInWorldCoordinate();
-	void InitializeBuoyancyData();
-	void OnTriggerWaterOverlapCheck();
-	void OnUpdateWaterSurfaceHeight(float DeltaTime);
-	void OnWaterActorBeginOverlaped(class AActor* OverlappedActor, class AActor* OtherActor);
-	void OnWaterActorEndOverlaped(class AActor* OverlappedActor, class AActor* OtherActor);
-	void UpdateWaterDensity(float NewDensity);
-	void UpdateWaterIceState(bool ToIceOrExit);
-	void UpdateWaterSurfaceHeight(float HeightOfffsetToUpdate);
-	void UpdateWaterSurfaceHeightInTime(float TimeDuration, float TotalHeightToUpdate);
-	void UpdateWaterSurfaceHeightWithSpeed(float UpdateHeightSpeed, float TotalHeightToUpdate);
+	bool                                          bEnableIgnoreMoveThreshold;                        // 0x1320(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1321[0xF];                                     // 0x1321(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"X6WaterBuoyancyManagerComponent">();
+		return StaticClassImpl<"X6VehicleSkeletalMeshComponent">();
 	}
-	static class UX6WaterBuoyancyManagerComponent* GetDefaultObj()
+	static class UX6VehicleSkeletalMeshComponent* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UX6WaterBuoyancyManagerComponent>();
+		return GetDefaultObjImpl<UX6VehicleSkeletalMeshComponent>();
 	}
 };
-static_assert(alignof(UX6WaterBuoyancyManagerComponent) == 0x000008, "Wrong alignment on UX6WaterBuoyancyManagerComponent");
-static_assert(sizeof(UX6WaterBuoyancyManagerComponent) == 0x000140, "Wrong size on UX6WaterBuoyancyManagerComponent");
-static_assert(offsetof(UX6WaterBuoyancyManagerComponent, WaterFlowType) == 0x0000A8, "Member 'UX6WaterBuoyancyManagerComponent::WaterFlowType' has a wrong offset!");
-static_assert(offsetof(UX6WaterBuoyancyManagerComponent, TargetPointToToward) == 0x0000B0, "Member 'UX6WaterBuoyancyManagerComponent::TargetPointToToward' has a wrong offset!");
-static_assert(offsetof(UX6WaterBuoyancyManagerComponent, PointToLeave) == 0x0000C0, "Member 'UX6WaterBuoyancyManagerComponent::PointToLeave' has a wrong offset!");
-static_assert(offsetof(UX6WaterBuoyancyManagerComponent, MovementTrackKeyPoints) == 0x0000D0, "Member 'UX6WaterBuoyancyManagerComponent::MovementTrackKeyPoints' has a wrong offset!");
-static_assert(offsetof(UX6WaterBuoyancyManagerComponent, InitialConfigDensity) == 0x0000E0, "Member 'UX6WaterBuoyancyManagerComponent::InitialConfigDensity' has a wrong offset!");
-static_assert(offsetof(UX6WaterBuoyancyManagerComponent, CurrentWaterDensity) == 0x0000E4, "Member 'UX6WaterBuoyancyManagerComponent::CurrentWaterDensity' has a wrong offset!");
+static_assert(alignof(UX6VehicleSkeletalMeshComponent) == 0x000010, "Wrong alignment on UX6VehicleSkeletalMeshComponent");
+static_assert(sizeof(UX6VehicleSkeletalMeshComponent) == 0x001330, "Wrong size on UX6VehicleSkeletalMeshComponent");
+static_assert(offsetof(UX6VehicleSkeletalMeshComponent, bEnableIgnoreMoveThreshold) == 0x001320, "Member 'UX6VehicleSkeletalMeshComponent::bEnableIgnoreMoveThreshold' has a wrong offset!");
+
+// Class X6Game.X6WaterfallListView
+// 0x0020 (0x1460 - 0x1440)
+class UX6WaterfallListView final : public UX6ListView
+{
+public:
+	int32                                         NumItemsPerLine;                                   // 0x1438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EX6WaterfallLayoutRule                        ItemLayoutRule;                                    // 0x143C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_143D[0x3];                                     // 0x143D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ItemDefaultWidth;                                  // 0x1440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ItemDefaultHeight;                                 // 0x1448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1450[0x10];                                    // 0x1450(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void BP_RequestLayoutRefresh();
+
+	int32 BP_GetColumnIndex(int32 InItemIndex) const;
+	int32 BP_GetIndexForItem(const class UObject* Item) const;
+	int32 BP_GetRowIndex(int32 InItemIndex) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6WaterfallListView">();
+	}
+	static class UX6WaterfallListView* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6WaterfallListView>();
+	}
+};
+static_assert(alignof(UX6WaterfallListView) == 0x000010, "Wrong alignment on UX6WaterfallListView");
+static_assert(sizeof(UX6WaterfallListView) == 0x001460, "Wrong size on UX6WaterfallListView");
+static_assert(offsetof(UX6WaterfallListView, NumItemsPerLine) == 0x001438, "Member 'UX6WaterfallListView::NumItemsPerLine' has a wrong offset!");
+static_assert(offsetof(UX6WaterfallListView, ItemLayoutRule) == 0x00143C, "Member 'UX6WaterfallListView::ItemLayoutRule' has a wrong offset!");
+static_assert(offsetof(UX6WaterfallListView, ItemDefaultWidth) == 0x001440, "Member 'UX6WaterfallListView::ItemDefaultWidth' has a wrong offset!");
+static_assert(offsetof(UX6WaterfallListView, ItemDefaultHeight) == 0x001448, "Member 'UX6WaterfallListView::ItemDefaultHeight' has a wrong offset!");
 
 // Class X6Game.X6WheeledVehicle
-// 0x0010 (0x04A0 - 0x0490)
+// 0x0010 (0x04F0 - 0x04E0)
 class AX6WheeledVehicle final : public AX6Pawn
 {
 public:
-	class USkeletalMeshComponent*                 mesh;                                              // 0x0490(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UChaosWheeledVehicleMovementComponent*  VehicleMovement;                                   // 0x0498(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class USkeletalMeshComponent*                 mesh;                                              // 0x04E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UChaosWheeledVehicleMovementComponent*  VehicleMovement;                                   // 0x04E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -12463,9 +12694,9 @@ public:
 	}
 };
 static_assert(alignof(AX6WheeledVehicle) == 0x000008, "Wrong alignment on AX6WheeledVehicle");
-static_assert(sizeof(AX6WheeledVehicle) == 0x0004A0, "Wrong size on AX6WheeledVehicle");
-static_assert(offsetof(AX6WheeledVehicle, mesh) == 0x000490, "Member 'AX6WheeledVehicle::mesh' has a wrong offset!");
-static_assert(offsetof(AX6WheeledVehicle, VehicleMovement) == 0x000498, "Member 'AX6WheeledVehicle::VehicleMovement' has a wrong offset!");
+static_assert(sizeof(AX6WheeledVehicle) == 0x0004F0, "Wrong size on AX6WheeledVehicle");
+static_assert(offsetof(AX6WheeledVehicle, mesh) == 0x0004E0, "Member 'AX6WheeledVehicle::mesh' has a wrong offset!");
+static_assert(offsetof(AX6WheeledVehicle, VehicleMovement) == 0x0004E8, "Member 'AX6WheeledVehicle::VehicleMovement' has a wrong offset!");
 
 // Class X6Game.X6WorldCarriageMovementComponent
 // 0x00F0 (0x15D0 - 0x14E0)
@@ -12526,6 +12757,44 @@ static_assert(offsetof(UX6WorldCarriageMovementComponent, OnCarriageMoveStopped)
 static_assert(offsetof(UX6WorldCarriageMovementComponent, TargetSplinePathComponent) == 0x001528, "Member 'UX6WorldCarriageMovementComponent::TargetSplinePathComponent' has a wrong offset!");
 static_assert(offsetof(UX6WorldCarriageMovementComponent, LocomotionABPInstance) == 0x0015B8, "Member 'UX6WorldCarriageMovementComponent::LocomotionABPInstance' has a wrong offset!");
 
+// Class X6Game.X6AbilityTask_ApplyRootMotionAccelOrForward
+// 0x0030 (0x00F8 - 0x00C8)
+class UX6AbilityTask_ApplyRootMotionAccelOrForward final : public UAbilityTask_ApplyRootMotion_Base
+{
+public:
+	TMulticastInlineDelegate<void()>              OnFinish;                                          // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	float                                         InterpSpeed;                                       // 0x00D8(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Strength;                                          // 0x00DC(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Duration;                                          // 0x00E0(0x0004)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsAdditive;                                       // 0x00E4(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E5[0x3];                                       // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            StrengthOverTime;                                  // 0x00E8(0x0008)(Net, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableGravity;                                    // 0x00F0(0x0001)(Net, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UX6AbilityTask_ApplyRootMotionAccelOrForward* ApplyRootMotionAccelOrForward(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, float InterpSpeed_0, float Strength_0, float Duration_0, bool bIsAdditive_0, class UCurveFloat* StrengthOverTime_0, ERootMotionFinishVelocityMode VelocityOnFinishMode, const struct FVector& SetVelocityOnFinish, float ClampVelocityOnFinish, bool bEnableGravity_0);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6AbilityTask_ApplyRootMotionAccelOrForward">();
+	}
+	static class UX6AbilityTask_ApplyRootMotionAccelOrForward* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6AbilityTask_ApplyRootMotionAccelOrForward>();
+	}
+};
+static_assert(alignof(UX6AbilityTask_ApplyRootMotionAccelOrForward) == 0x000008, "Wrong alignment on UX6AbilityTask_ApplyRootMotionAccelOrForward");
+static_assert(sizeof(UX6AbilityTask_ApplyRootMotionAccelOrForward) == 0x0000F8, "Wrong size on UX6AbilityTask_ApplyRootMotionAccelOrForward");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, OnFinish) == 0x0000C8, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::OnFinish' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, InterpSpeed) == 0x0000D8, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::InterpSpeed' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, Strength) == 0x0000DC, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::Strength' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, Duration) == 0x0000E0, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::Duration' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, bIsAdditive) == 0x0000E4, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::bIsAdditive' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, StrengthOverTime) == 0x0000E8, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::StrengthOverTime' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_ApplyRootMotionAccelOrForward, bEnableGravity) == 0x0000F0, "Member 'UX6AbilityTask_ApplyRootMotionAccelOrForward::bEnableGravity' has a wrong offset!");
+
 // Class X6Game.X6AbilityTask_ApplyRootMotionJumpForce
 // 0x0068 (0x0130 - 0x00C8)
 class UX6AbilityTask_ApplyRootMotionJumpForce final : public UAbilityTask_ApplyRootMotion_Base
@@ -12572,6 +12841,64 @@ static_assert(offsetof(UX6AbilityTask_ApplyRootMotionJumpForce, MinimumLandedTri
 static_assert(offsetof(UX6AbilityTask_ApplyRootMotionJumpForce, bFinishOnLanded) == 0x000110, "Member 'UX6AbilityTask_ApplyRootMotionJumpForce::bFinishOnLanded' has a wrong offset!");
 static_assert(offsetof(UX6AbilityTask_ApplyRootMotionJumpForce, PathOffsetCurve) == 0x000118, "Member 'UX6AbilityTask_ApplyRootMotionJumpForce::PathOffsetCurve' has a wrong offset!");
 static_assert(offsetof(UX6AbilityTask_ApplyRootMotionJumpForce, TimeMappingCurve) == 0x000120, "Member 'UX6AbilityTask_ApplyRootMotionJumpForce::TimeMappingCurve' has a wrong offset!");
+
+// Class X6Game.X6AbilityTask_PlayMontageAndWait
+// 0x00B0 (0x0130 - 0x0080)
+class UX6AbilityTask_PlayMontageAndWait final : public UAbilityTask
+{
+public:
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnCompleted;                              // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnBlendOut;                               // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnInterrupted;                            // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnCancelled;                              // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyBegin;                            // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class FName NotifyName)> OnNotifyEnd;                              // 0x00D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E0[0x28];                                      // 0x00E0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           MontageToPlay;                                     // 0x0108(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         Rate;                                              // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   StartSection;                                      // 0x0114(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         AnimRootMotionTranslationScale;                    // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         StartTimeSeconds;                                  // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bStopWhenAbilityEnds;                              // 0x0124(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bMirror;                                           // 0x0125(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPlayWithShadow;                                   // 0x0126(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_127[0x9];                                      // 0x0127(0x0009)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UX6AbilityTask_PlayMontageAndWait* CreatePlayMontageAndWaitProxy(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, class UAnimMontage* MontageToPlay_0, float Rate_0, class FName StartSection_0, bool bStopWhenAbilityEnds_0, float AnimRootMotionTranslationScale_0, float StartTimeSeconds_0, bool bMirror_0, bool bPlayWithShadow_0);
+
+	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
+	void OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted);
+	void OnMontageInterrupted();
+	void OnNotifyBeginReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
+	void OnNotifyEndReceived(class FName NotifyName, const struct FBranchingPointNotifyPayload& BranchingPointNotifyPayload);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6AbilityTask_PlayMontageAndWait">();
+	}
+	static class UX6AbilityTask_PlayMontageAndWait* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6AbilityTask_PlayMontageAndWait>();
+	}
+};
+static_assert(alignof(UX6AbilityTask_PlayMontageAndWait) == 0x000008, "Wrong alignment on UX6AbilityTask_PlayMontageAndWait");
+static_assert(sizeof(UX6AbilityTask_PlayMontageAndWait) == 0x000130, "Wrong size on UX6AbilityTask_PlayMontageAndWait");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnCompleted) == 0x000080, "Member 'UX6AbilityTask_PlayMontageAndWait::OnCompleted' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnBlendOut) == 0x000090, "Member 'UX6AbilityTask_PlayMontageAndWait::OnBlendOut' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnInterrupted) == 0x0000A0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnInterrupted' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnCancelled) == 0x0000B0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnCancelled' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnNotifyBegin) == 0x0000C0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnNotifyBegin' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, OnNotifyEnd) == 0x0000D0, "Member 'UX6AbilityTask_PlayMontageAndWait::OnNotifyEnd' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, MontageToPlay) == 0x000108, "Member 'UX6AbilityTask_PlayMontageAndWait::MontageToPlay' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, Rate) == 0x000110, "Member 'UX6AbilityTask_PlayMontageAndWait::Rate' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, StartSection) == 0x000114, "Member 'UX6AbilityTask_PlayMontageAndWait::StartSection' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, AnimRootMotionTranslationScale) == 0x00011C, "Member 'UX6AbilityTask_PlayMontageAndWait::AnimRootMotionTranslationScale' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, StartTimeSeconds) == 0x000120, "Member 'UX6AbilityTask_PlayMontageAndWait::StartTimeSeconds' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bStopWhenAbilityEnds) == 0x000124, "Member 'UX6AbilityTask_PlayMontageAndWait::bStopWhenAbilityEnds' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bMirror) == 0x000125, "Member 'UX6AbilityTask_PlayMontageAndWait::bMirror' has a wrong offset!");
+static_assert(offsetof(UX6AbilityTask_PlayMontageAndWait, bPlayWithShadow) == 0x000126, "Member 'UX6AbilityTask_PlayMontageAndWait::bPlayWithShadow' has a wrong offset!");
 
 // Class X6Game.X6GameplayAbility
 // 0x00B8 (0x0468 - 0x03B0)
@@ -12650,6 +12977,48 @@ public:
 static_assert(alignof(UX6AbilitySet) == 0x000008, "Wrong alignment on UX6AbilitySet");
 static_assert(sizeof(UX6AbilitySet) == 0x000040, "Wrong size on UX6AbilitySet");
 static_assert(offsetof(UX6AbilitySet, GrantedGameplayAbilities) == 0x000030, "Member 'UX6AbilitySet::GrantedGameplayAbilities' has a wrong offset!");
+
+// Class X6Game.X6AbilitySystemBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UX6AbilitySystemBlueprintLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool ActorDoesContainerMatchTagQuery(const class AActor* Actor, const struct FGameplayTagQuery& TagQuery);
+	static bool ActorHasAllGameplayTags(const class AActor* Actor, const struct FGameplayTagContainer& TagContainer);
+	static bool ActorHasAnyGameplayTags(const class AActor* Actor, const struct FGameplayTagContainer& TagContainer);
+	static bool ActorHasGameplayTag(const class AActor* Actor, const struct FGameplayTag& TagToCheck);
+	static bool ActorIsBoss(const class AActor* Actor);
+	static bool ActorIsEliteMonster(const class AActor* Actor);
+	static bool ActorIsMonster(const class AActor* Actor);
+	static bool ActorIsNormalMonster(const class AActor* Actor);
+	static bool AddLooseGameplayTag(class AActor* Actor, const struct FGameplayTag& GameplayTag);
+	static bool AddLooseGameplayTagName(class AActor* Actor, const class FName& GameplayTagName);
+	static int32 ApplyConstantForceRootMotion(const class AActor* Actor, const struct FVector& Force, class UCurveFloat* StrengthOverTime, float Duration, ERootMotionAccumulateMode AccumulateMode, bool bInLocalSpace, ERootMotionFinishVelocityMode FinishMode, float ClampVelocity, const struct FVector& SetVelocity, bool bEnableGravity, bool bDisablePartialEndTick, bool bUseSensitiveLiftoffCheck);
+	static bool CheckActorCanBeSeen(class AActor* Actor, const TArray<class AActor*>& IgnoreTraceActors);
+	static void CurrentMontageJumpToSection(class USkeletalMeshComponent* InSkeletalMeshComponent, class FName SectionName);
+	static void DrawTargetingSelectionTaskAOE(const class AActor* Actor, const class UTargetingPreset* TargetingPreset, const struct FColor& Color, const struct FColor& InnerRingColor);
+	static const TArray<struct FVector> GetRandomPointsFromSquare(const struct FVector& SquareCenter, float YawAngle, float XLength, float YLength, int32 XNum, int32 YNum);
+	static class UX6AbilitySystemComponent* GetX6AbilitySystemComponent(const class AActor* Actor);
+	static struct FTargetingSourceContext MakeTargetingSourceContextWithParam();
+	static bool RemoveLooseGameplayTag(class AActor* Actor, const struct FGameplayTag& GameplayTag);
+	static bool RemoveLooseGameplayTagName(class AActor* Actor, const class FName& GameplayTagName);
+	static void RemoveRootMotionBySourceID(const class AActor* Actor, int32 SourceId);
+	static bool SendGameplayEventToActorWithRet(class AActor* Actor, const struct FGameplayTag& EventTag, const struct FGameplayEventData& Payload);
+	static void StopAnimMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, const class UAnimMontage* Montage, float OverrideBlendOutTime);
+	static void UpdateConstantForceBySourceID(const class AActor* Actor, int32 SourceId, const struct FVector& NewForce);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"X6AbilitySystemBlueprintLibrary">();
+	}
+	static class UX6AbilitySystemBlueprintLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UX6AbilitySystemBlueprintLibrary>();
+	}
+};
+static_assert(alignof(UX6AbilitySystemBlueprintLibrary) == 0x000008, "Wrong alignment on UX6AbilitySystemBlueprintLibrary");
+static_assert(sizeof(UX6AbilitySystemBlueprintLibrary) == 0x000028, "Wrong size on UX6AbilitySystemBlueprintLibrary");
 
 // Class X6Game.X6AbilitySystemComponent
 // 0x0120 (0x1388 - 0x1268)
@@ -12875,111 +13244,6 @@ public:
 static_assert(alignof(ICombatCollisionInterface) == 0x000001, "Wrong alignment on ICombatCollisionInterface");
 static_assert(sizeof(ICombatCollisionInterface) == 0x000001, "Wrong size on ICombatCollisionInterface");
 
-// Class X6Game.X6ArcListView
-// 0x0288 (0x0550 - 0x02C8)
-class UX6ArcListView final : public UListViewBase
-{
-public:
-	uint8                                         Pad_2C8[0xD8];                                     // 0x02C8(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTableViewStyle                        WidgetStyle;                                       // 0x03A0(0x00E0)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	EConsumeMouseWheel                            ConsumeMouseWheel;                                 // 0x0480(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bClearSelectionOnClick;                            // 0x0481(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsFocusable;                                      // 0x0482(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EX6ArcOrientation                             ArcOrientation;                                    // 0x0483(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_484[0x4];                                      // 0x0484(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Curvature;                                         // 0x0488(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         EntrySpacing;                                      // 0x048C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ScaleDecreasingPerItem;                            // 0x0490(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         ColorDecreasingPerItem;                            // 0x0494(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bSnapToSlot;                                       // 0x0498(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAlignToEdge;                                      // 0x0499(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCenterArrange;                                    // 0x049A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEntryRotate;                                      // 0x049B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableInertial;                                   // 0x049C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bReturnFocusToSelection;                           // 0x049D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasMask;                                          // 0x049E(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_49F[0x1];                                      // 0x049F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TopMaskParameterName;                              // 0x04A0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FName                                   BottomMaskParameterName;                           // 0x04A8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UObject*>                        ListItems;                                         // 0x04B0(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_4C0[0x10];                                     // 0x04C0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(class UObject* Item, class UUserWidget* Widget)> BP_OnEntryInitialized; // 0x04D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class UObject* Item)> BP_OnItemClicked;                            // 0x04E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class UObject* Item)> BP_OnItemDoubleClicked;                      // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class UObject* Item, bool bIsHovered)> BP_OnItemIsHoveredChanged;  // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class UObject* Item, bool bIsSelected)> BP_OnItemSelectionChanged; // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class UObject* Item, class UUserWidget* Widget)> BP_OnItemScrolledIntoView; // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	TMulticastInlineDelegate<void(class UObject* Item)> BP_OnItemSnapToSlot;                         // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_540[0x10];                                     // 0x0540(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddItem(class UObject* Item);
-	void BP_CancelScrollIntoView();
-	void BP_ClearSelection();
-	void BP_NavigateToItem(class UObject* Item);
-	void BP_NavigateToWidget(class UUserWidget* EntryWidget);
-	void BP_ScrollItemIntoView(class UObject* Item);
-	void BP_SetItemSelection(class UObject* Item, bool bSelected);
-	void BP_SetListItems(const TArray<class UObject*>& InListItems);
-	void BP_SetSelectedItem(class UObject* Item);
-	void ClearListItems();
-	void NavigateToIndex(int32 Index_0);
-	void OnListItemEndPlayed(class AActor* Item, EEndPlayReason EndPlayReason);
-	void OnListItemOuterEndPlayed(class AActor* ItemOuter, EEndPlayReason EndPlayReason);
-	void RemoveItem(class UObject* Item);
-	void ScrollIndexIntoView(int32 Index_0);
-	void SetSelectedIndex(int32 Index_0);
-
-	bool BP_CanScrollWithLoop() const;
-	int32 BP_GetNumItemsSelected() const;
-	class UObject* BP_GetSelectedItem() const;
-	bool BP_GetSelectedItems(TArray<class UObject*>* Items) const;
-	bool BP_IsItemVisible(class UObject* Item) const;
-	int32 GetIndexForItem(const class UObject* Item) const;
-	class UObject* GetItemAt(int32 Index_0) const;
-	const TArray<class UObject*> GetListItems() const;
-	int32 GetNumItems() const;
-	bool IsRefreshPending() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6ArcListView">();
-	}
-	static class UX6ArcListView* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6ArcListView>();
-	}
-};
-static_assert(alignof(UX6ArcListView) == 0x000010, "Wrong alignment on UX6ArcListView");
-static_assert(sizeof(UX6ArcListView) == 0x000550, "Wrong size on UX6ArcListView");
-static_assert(offsetof(UX6ArcListView, WidgetStyle) == 0x0003A0, "Member 'UX6ArcListView::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, ConsumeMouseWheel) == 0x000480, "Member 'UX6ArcListView::ConsumeMouseWheel' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bClearSelectionOnClick) == 0x000481, "Member 'UX6ArcListView::bClearSelectionOnClick' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bIsFocusable) == 0x000482, "Member 'UX6ArcListView::bIsFocusable' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, ArcOrientation) == 0x000483, "Member 'UX6ArcListView::ArcOrientation' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, Curvature) == 0x000488, "Member 'UX6ArcListView::Curvature' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, EntrySpacing) == 0x00048C, "Member 'UX6ArcListView::EntrySpacing' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, ScaleDecreasingPerItem) == 0x000490, "Member 'UX6ArcListView::ScaleDecreasingPerItem' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, ColorDecreasingPerItem) == 0x000494, "Member 'UX6ArcListView::ColorDecreasingPerItem' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bSnapToSlot) == 0x000498, "Member 'UX6ArcListView::bSnapToSlot' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bAlignToEdge) == 0x000499, "Member 'UX6ArcListView::bAlignToEdge' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bCenterArrange) == 0x00049A, "Member 'UX6ArcListView::bCenterArrange' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bEntryRotate) == 0x00049B, "Member 'UX6ArcListView::bEntryRotate' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bEnableInertial) == 0x00049C, "Member 'UX6ArcListView::bEnableInertial' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bReturnFocusToSelection) == 0x00049D, "Member 'UX6ArcListView::bReturnFocusToSelection' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, bHasMask) == 0x00049E, "Member 'UX6ArcListView::bHasMask' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, TopMaskParameterName) == 0x0004A0, "Member 'UX6ArcListView::TopMaskParameterName' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BottomMaskParameterName) == 0x0004A8, "Member 'UX6ArcListView::BottomMaskParameterName' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, ListItems) == 0x0004B0, "Member 'UX6ArcListView::ListItems' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnEntryInitialized) == 0x0004D0, "Member 'UX6ArcListView::BP_OnEntryInitialized' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnItemClicked) == 0x0004E0, "Member 'UX6ArcListView::BP_OnItemClicked' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnItemDoubleClicked) == 0x0004F0, "Member 'UX6ArcListView::BP_OnItemDoubleClicked' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnItemIsHoveredChanged) == 0x000500, "Member 'UX6ArcListView::BP_OnItemIsHoveredChanged' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnItemSelectionChanged) == 0x000510, "Member 'UX6ArcListView::BP_OnItemSelectionChanged' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnItemScrolledIntoView) == 0x000520, "Member 'UX6ArcListView::BP_OnItemScrolledIntoView' has a wrong offset!");
-static_assert(offsetof(UX6ArcListView, BP_OnItemSnapToSlot) == 0x000530, "Member 'UX6ArcListView::BP_OnItemSnapToSlot' has a wrong offset!");
-
 // Class X6Game.X6ArcListViewDesignerPreviewItem
 // 0x0000 (0x0028 - 0x0028)
 class UX6ArcListViewDesignerPreviewItem final : public UObject
@@ -12997,60 +13261,6 @@ public:
 static_assert(alignof(UX6ArcListViewDesignerPreviewItem) == 0x000008, "Wrong alignment on UX6ArcListViewDesignerPreviewItem");
 static_assert(sizeof(UX6ArcListViewDesignerPreviewItem) == 0x000028, "Wrong size on UX6ArcListViewDesignerPreviewItem");
 
-// Class X6Game.X6HitThroughImage
-// 0x0188 (0x0310 - 0x0188)
-class UX6HitThroughImage final : public UWidget
-{
-public:
-	uint8                                         Pad_188[0x8];                                      // 0x0188(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            Brush;                                             // 0x0190(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             BrushDelegate;                                     // 0x0260(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ColorAndOpacity;                                   // 0x0270(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             ColorAndOpacityDelegate;                           // 0x0280(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFlipForRightToLeftFlowDirection;                  // 0x0290(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_291[0x3];                                      // 0x0291(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)> OnMouseButtonDownEvent; // 0x0294(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)> OnMouseButtonUpEvent; // 0x02A4(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)> OnMouseMoveEvent; // 0x02B4(0x0010)(Edit, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C4[0x4C];                                     // 0x02C4(0x004C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UMaterialInstanceDynamic* GetDynamicMaterial();
-	void SetBrush(const struct FSlateBrush& InBrush);
-	void SetBrushFromAsset(class USlateBrushAsset* Asset);
-	void SetBrushFromAtlasInterface(TScriptInterface<class ISlateTextureAtlasInterface> AtlasRegion, bool bMatchSize);
-	void SetBrushFromMaterial(class UMaterialInterface* Material);
-	void SetBrushFromSoftMaterial(TSoftObjectPtr<class UMaterialInterface> SoftMaterial);
-	void SetBrushFromSoftTexture(TSoftObjectPtr<class UTexture2D> SoftTexture, bool bMatchSize);
-	void SetBrushFromTexture(class UTexture2D* Texture, bool bMatchSize);
-	void SetBrushFromTextureDynamic(class UTexture2DDynamic* Texture, bool bMatchSize);
-	void SetBrushResourceObject(class UObject* ResourceObject);
-	void SetBrushTintColor(const struct FSlateColor& TintColor);
-	void SetColorAndOpacity(const struct FLinearColor& InColorAndOpacity);
-	void SetDesiredSizeOverride(const struct FVector2D& DesiredSize);
-	void SetOpacity(float InOpacity);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"X6HitThroughImage">();
-	}
-	static class UX6HitThroughImage* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UX6HitThroughImage>();
-	}
-};
-static_assert(alignof(UX6HitThroughImage) == 0x000010, "Wrong alignment on UX6HitThroughImage");
-static_assert(sizeof(UX6HitThroughImage) == 0x000310, "Wrong size on UX6HitThroughImage");
-static_assert(offsetof(UX6HitThroughImage, Brush) == 0x000190, "Member 'UX6HitThroughImage::Brush' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, BrushDelegate) == 0x000260, "Member 'UX6HitThroughImage::BrushDelegate' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, ColorAndOpacity) == 0x000270, "Member 'UX6HitThroughImage::ColorAndOpacity' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, ColorAndOpacityDelegate) == 0x000280, "Member 'UX6HitThroughImage::ColorAndOpacityDelegate' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, bFlipForRightToLeftFlowDirection) == 0x000290, "Member 'UX6HitThroughImage::bFlipForRightToLeftFlowDirection' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, OnMouseButtonDownEvent) == 0x000294, "Member 'UX6HitThroughImage::OnMouseButtonDownEvent' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, OnMouseButtonUpEvent) == 0x0002A4, "Member 'UX6HitThroughImage::OnMouseButtonUpEvent' has a wrong offset!");
-static_assert(offsetof(UX6HitThroughImage, OnMouseMoveEvent) == 0x0002B4, "Member 'UX6HitThroughImage::OnMouseMoveEvent' has a wrong offset!");
-
 // Class X6Game.X6SoloLevelSubsystem
 // 0x0028 (0x0058 - 0x0030)
 class UX6SoloLevelSubsystem final : public UEngineSubsystem
@@ -13060,9 +13270,9 @@ public:
 
 public:
 	void BindSoloLevelPausedEvent(TDelegate<void(bool bPaused)> PausedDelegate);
-	bool IsInSoloLevelPausedMode(class UObject* InWorldContextObject);
+	bool IsInSoloLevelPausedState(class UObject* InWorldContextObject);
 	void SetDefaultSoloLevelPaused(class UObject* InWorldContextObject, bool bPaused);
-	void SetSoloLevelPauseEnabled(class UObject* InWorldContextObject, bool bEnabled);
+	void SetSoloLevelPauseModeEnabled(class UObject* InWorldContextObject, bool bEnabled);
 	void UnbindSoloLevelPausedEvent();
 
 public:

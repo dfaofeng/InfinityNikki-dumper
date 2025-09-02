@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "AIModule_structs.hpp"
+#include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -32,12 +32,12 @@ public:
 	class APawn*                                  ControlledPawn;                                    // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams(int32 EntryPoint);
-	void Fail_3733FB3D497423EB48C054A1059843F8();
-	void ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn_0);
-	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn_0, float DeltaSeconds);
-	void Success_3733FB3D497423EB48C054A1059843F8(const struct FVector& Loc);
 	void TaskBegin_3733FB3D497423EB48C054A1059843F8(class UX6TaskAsyncBase* Task);
+	void Success_3733FB3D497423EB48C054A1059843F8(const struct FVector& Loc);
+	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn_0, float DeltaSeconds);
+	void ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn_0);
+	void Fail_3733FB3D497423EB48C054A1059843F8();
+	void ExecuteUbergraph_BTS_QuadrupedAnimalReaction_UpdateFleeParams(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

@@ -39,26 +39,51 @@ static_assert(alignof(NikkiPhysicsAttachmentInterface_GetAttachmentComponent) ==
 static_assert(sizeof(NikkiPhysicsAttachmentInterface_GetAttachmentComponent) == 0x000008, "Wrong size on NikkiPhysicsAttachmentInterface_GetAttachmentComponent");
 static_assert(offsetof(NikkiPhysicsAttachmentInterface_GetAttachmentComponent, ReturnValue) == 0x000000, "Member 'NikkiPhysicsAttachmentInterface_GetAttachmentComponent::ReturnValue' has a wrong offset!");
 
+// Function NikkiPhysics.NikkiPhysicsManagerComponent.GetParticleNumber
+// 0x0004 (0x0004 - 0x0000)
+struct NikkiPhysicsManagerComponent_GetParticleNumber final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NikkiPhysicsManagerComponent_GetParticleNumber) == 0x000004, "Wrong alignment on NikkiPhysicsManagerComponent_GetParticleNumber");
+static_assert(sizeof(NikkiPhysicsManagerComponent_GetParticleNumber) == 0x000004, "Wrong size on NikkiPhysicsManagerComponent_GetParticleNumber");
+static_assert(offsetof(NikkiPhysicsManagerComponent_GetParticleNumber, ReturnValue) == 0x000000, "Member 'NikkiPhysicsManagerComponent_GetParticleNumber::ReturnValue' has a wrong offset!");
+
+// Function NikkiPhysics.NikkiPhysicsManagerComponent.UpdateNikkiPhysicsSuitsInfo
+// 0x0058 (0x0058 - 0x0000)
+struct NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo final
+{
+public:
+	TMap<class FString, class USkeletalMeshComponent*> SuitSlotToSkelMeshMap;                        // 0x0000(0x0050)(ConstParm, Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bInForceUpdate;                                    // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x7];                                       // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo) == 0x000008, "Wrong alignment on NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo");
+static_assert(sizeof(NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo) == 0x000058, "Wrong size on NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo");
+static_assert(offsetof(NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo, SuitSlotToSkelMeshMap) == 0x000000, "Member 'NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo::SuitSlotToSkelMeshMap' has a wrong offset!");
+static_assert(offsetof(NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo, bInForceUpdate) == 0x000050, "Member 'NikkiPhysicsManagerComponent_UpdateNikkiPhysicsSuitsInfo::bInForceUpdate' has a wrong offset!");
+
 // Function NikkiPhysics.NikkiPhysicsFunctions.AddDynamicWind
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct NikkiPhysicsFunctions_AddDynamicWind final
 {
 public:
 	bool                                          bEnableWind;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNikkiPhysicsManagerComponent*          NikkiPhyManager;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FNikki_WindSource                      WindSource;                                        // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	ENikki_SpaceType                              Space;                                             // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ENikki_WindAccumType                          WindAccumType;                                     // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FNikki_WindSource                      WindSource;                                        // 0x0010(0x0030)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	ENikki_SpaceType                              Space;                                             // 0x0040(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ENikki_WindAccumType                          WindAccumType;                                     // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(NikkiPhysicsFunctions_AddDynamicWind) == 0x000008, "Wrong alignment on NikkiPhysicsFunctions_AddDynamicWind");
-static_assert(sizeof(NikkiPhysicsFunctions_AddDynamicWind) == 0x000040, "Wrong size on NikkiPhysicsFunctions_AddDynamicWind");
+static_assert(sizeof(NikkiPhysicsFunctions_AddDynamicWind) == 0x000048, "Wrong size on NikkiPhysicsFunctions_AddDynamicWind");
 static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, bEnableWind) == 0x000000, "Member 'NikkiPhysicsFunctions_AddDynamicWind::bEnableWind' has a wrong offset!");
 static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, NikkiPhyManager) == 0x000008, "Member 'NikkiPhysicsFunctions_AddDynamicWind::NikkiPhyManager' has a wrong offset!");
 static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, WindSource) == 0x000010, "Member 'NikkiPhysicsFunctions_AddDynamicWind::WindSource' has a wrong offset!");
-static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, Space) == 0x000038, "Member 'NikkiPhysicsFunctions_AddDynamicWind::Space' has a wrong offset!");
-static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, WindAccumType) == 0x000039, "Member 'NikkiPhysicsFunctions_AddDynamicWind::WindAccumType' has a wrong offset!");
+static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, Space) == 0x000040, "Member 'NikkiPhysicsFunctions_AddDynamicWind::Space' has a wrong offset!");
+static_assert(offsetof(NikkiPhysicsFunctions_AddDynamicWind, WindAccumType) == 0x000041, "Member 'NikkiPhysicsFunctions_AddDynamicWind::WindAccumType' has a wrong offset!");
 
 // Function NikkiPhysics.NikkiPhysicsFunctions.ForceTickClothPhysics
 // 0x0008 (0x0008 - 0x0000)

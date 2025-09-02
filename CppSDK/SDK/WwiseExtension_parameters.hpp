@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "AkAudio_structs.hpp"
-#include "WwiseExtension_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 #include "Engine_structs.hpp"
+#include "WwiseExtension_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -180,6 +180,17 @@ static_assert(sizeof(X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue) == 0x000038
 static_assert(offsetof(X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue, WorldContextObject) == 0x000000, "Member 'X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue, InSurfaceType) == 0x000008, "Member 'X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue::InSurfaceType' has a wrong offset!");
 static_assert(offsetof(X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue, ReturnValue) == 0x000010, "Member 'X6AkBlueprintLibrary_GetSurfaceTypeSwitchValue::ReturnValue' has a wrong offset!");
+
+// Function WwiseExtension.X6AkBlueprintLibrary.IsX6DeviceMuted
+// 0x0001 (0x0001 - 0x0000)
+struct X6AkBlueprintLibrary_IsX6DeviceMuted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(X6AkBlueprintLibrary_IsX6DeviceMuted) == 0x000001, "Wrong alignment on X6AkBlueprintLibrary_IsX6DeviceMuted");
+static_assert(sizeof(X6AkBlueprintLibrary_IsX6DeviceMuted) == 0x000001, "Wrong size on X6AkBlueprintLibrary_IsX6DeviceMuted");
+static_assert(offsetof(X6AkBlueprintLibrary_IsX6DeviceMuted, ReturnValue) == 0x000000, "Member 'X6AkBlueprintLibrary_IsX6DeviceMuted::ReturnValue' has a wrong offset!");
 
 // Function WwiseExtension.X6AkBlueprintLibrary.PlayRunStepSoundEffectWithSwitch
 // 0x0050 (0x0050 - 0x0000)

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TOD_XinYuanShuLin_Midday.TOD_XinYuanShuLin_Midday_C
-// 0x0000 (0x0A48 - 0x0A48)
+// 0x0000 (0x0A50 - 0x0A50)
 class UTOD_XinYuanShuLin_Midday_C : public UTOD_WorldBase_Midday_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UTOD_XinYuanShuLin_Midday_C) == 0x000008, "Wrong alignment on UTOD_XinYuanShuLin_Midday_C");
-static_assert(sizeof(UTOD_XinYuanShuLin_Midday_C) == 0x000A48, "Wrong size on UTOD_XinYuanShuLin_Midday_C");
+static_assert(sizeof(UTOD_XinYuanShuLin_Midday_C) == 0x000A50, "Wrong size on UTOD_XinYuanShuLin_Midday_C");
 
 }
 

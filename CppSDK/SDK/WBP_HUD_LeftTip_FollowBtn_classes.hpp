@@ -34,8 +34,8 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_State;                              // 0x0338(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_HUD_LeftTip_FollowBtn(int32 EntryPoint);
 	void BndEvt__WBP_HUD_LeftTip_FollowBtn_Button_Follow_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void ExecuteUbergraph_WBP_HUD_LeftTip_FollowBtn(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_HotUpdateGameInstance.BP_HotUpdateGameInstance_C
-// 0x0000 (0x01D0 - 0x01D0)
+// 0x0000 (0x0208 - 0x0208)
 class UBP_HotUpdateGameInstance_C final : public UPaperHotUpdateGameInstance
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_HotUpdateGameInstance_C) == 0x000008, "Wrong alignment on UBP_HotUpdateGameInstance_C");
-static_assert(sizeof(UBP_HotUpdateGameInstance_C) == 0x0001D0, "Wrong size on UBP_HotUpdateGameInstance_C");
+static_assert(sizeof(UBP_HotUpdateGameInstance_C) == 0x000208, "Wrong size on UBP_HotUpdateGameInstance_C");
 
 }
 
