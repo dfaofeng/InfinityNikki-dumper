@@ -17,189 +17,21 @@
 namespace SDK
 {
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// class UX6StateMachineComponent*         TriggerComponent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// uint8                                   StateID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// uint8                                   PreviousStateID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             StateName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFSM_Transition                         Transition                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature(class UX6StateMachineComponent* TriggerComponent, uint8 StateID, uint8 PreviousStateID, class FName StateName, EFSM_Transition Transition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature");
-
-	Params::BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature Parms{};
-
-	Parms.TriggerComponent = TriggerComponent;
-	Parms.StateID = StateID;
-	Parms.PreviousStateID = PreviousStateID;
-	Parms.StateName = StateName;
-	Parms.Transition = Transition;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_ActiveSkMesh
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetIsLastActivate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bForce                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    opt                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CheckPointActorBase_C::BP_ActiveSkMesh(bool bForce)
+void ABP_CheckPointActorBase_C::SetIsLastActivate(bool opt)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_ActiveSkMesh");
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "SetIsLastActivate");
 
-	Params::BP_CheckPointActorBase_C_BP_ActiveSkMesh Parms{};
+	Params::BP_CheckPointActorBase_C_SetIsLastActivate Parms{};
 
-	Parms.bForce = bForce;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnServerInit
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    Server                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::BP_OnServerInit(bool Server)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_OnServerInit");
-
-	Params::BP_CheckPointActorBase_C_BP_OnServerInit Parms{};
-
-	Parms.Server = Server;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnSkillDetection
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECombatStimulateType                    Selection                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::BP_OnSkillDetection(ECombatStimulateType Selection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_OnSkillDetection");
-
-	Params::BP_CheckPointActorBase_C_BP_OnSkillDetection Parms{};
-
-	Parms.Selection = Selection;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetCanTeleport
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    CanTeleport                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::BP_SetCanTeleport(bool CanTeleport)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_SetCanTeleport");
-
-	Params::BP_CheckPointActorBase_C_BP_SetCanTeleport Parms{};
-
-	Parms.CanTeleport = CanTeleport;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetStateMachine
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EnumCheckpointStateType                 StateType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::BP_SetStateMachine(EnumCheckpointStateType StateType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_SetStateMachine");
-
-	Params::BP_CheckPointActorBase_C_BP_SetStateMachine Parms{};
-
-	Parms.StateType = StateType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ExecuteUbergraph_BP_CheckPointActorBase
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::ExecuteUbergraph_BP_CheckPointActorBase(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "ExecuteUbergraph_BP_CheckPointActorBase");
-
-	Params::BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointActorBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ServerInit
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bServer                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::ServerInit(bool bServer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "ServerInit");
-
-	Params::BP_CheckPointActorBase_C_ServerInit Parms{};
-
-	Parms.bServer = bServer;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetCurrentAnim
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    Pose                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-
-void ABP_CheckPointActorBase_C::SetCurrentAnim(const class FString& Pose)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "SetCurrentAnim");
-
-	Params::BP_CheckPointActorBase_C_SetCurrentAnim Parms{};
-
-	Parms.Pose = std::move(Pose);
+	Parms.opt = opt;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -225,21 +57,189 @@ void ABP_CheckPointActorBase_C::SetIsActivate(bool opt)
 }
 
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetIsLastActivate
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetCurrentAnim
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    opt                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Pose                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
-void ABP_CheckPointActorBase_C::SetIsLastActivate(bool opt)
+void ABP_CheckPointActorBase_C::SetCurrentAnim(const class FString& Pose)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CheckPointActorBase_C", "SetIsLastActivate");
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "SetCurrentAnim");
 
-	Params::BP_CheckPointActorBase_C_SetIsLastActivate Parms{};
+	Params::BP_CheckPointActorBase_C_SetCurrentAnim Parms{};
 
-	Parms.opt = opt;
+	Parms.Pose = std::move(Pose);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ServerInit
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bServer                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::ServerInit(bool bServer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "ServerInit");
+
+	Params::BP_CheckPointActorBase_C_ServerInit Parms{};
+
+	Parms.bServer = bServer;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ExecuteUbergraph_BP_CheckPointActorBase
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::ExecuteUbergraph_BP_CheckPointActorBase(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "ExecuteUbergraph_BP_CheckPointActorBase");
+
+	Params::BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointActorBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetStateMachine
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EnumCheckpointStateType                 StateType                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::BP_SetStateMachine(EnumCheckpointStateType StateType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_SetStateMachine");
+
+	Params::BP_CheckPointActorBase_C_BP_SetStateMachine Parms{};
+
+	Parms.StateType = StateType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetCanTeleport
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    CanTeleport                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::BP_SetCanTeleport(bool CanTeleport)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_SetCanTeleport");
+
+	Params::BP_CheckPointActorBase_C_BP_SetCanTeleport Parms{};
+
+	Parms.CanTeleport = CanTeleport;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnSkillDetection
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECombatStimulateType                    Selection                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::BP_OnSkillDetection(ECombatStimulateType Selection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_OnSkillDetection");
+
+	Params::BP_CheckPointActorBase_C_BP_OnSkillDetection Parms{};
+
+	Parms.Selection = Selection;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnServerInit
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Server                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::BP_OnServerInit(bool Server)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_OnServerInit");
+
+	Params::BP_CheckPointActorBase_C_BP_OnServerInit Parms{};
+
+	Parms.Server = Server;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_ActiveSkMesh
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bForce                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::BP_ActiveSkMesh(bool bForce)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BP_ActiveSkMesh");
+
+	Params::BP_CheckPointActorBase_C_BP_ActiveSkMesh Parms{};
+
+	Parms.bForce = bForce;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// class UX6StateMachineComponent*         TriggerComponent                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// uint8                                   StateID                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// uint8                                   PreviousStateID                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             StateName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFSM_Transition                         Transition                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CheckPointActorBase_C::BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature(class UX6StateMachineComponent* TriggerComponent, uint8 StateID, uint8 PreviousStateID, class FName StateName, EFSM_Transition Transition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CheckPointActorBase_C", "BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature");
+
+	Params::BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature Parms{};
+
+	Parms.TriggerComponent = TriggerComponent;
+	Parms.StateID = StateID;
+	Parms.PreviousStateID = PreviousStateID;
+	Parms.StateName = StateName;
+	Parms.Transition = Transition;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

@@ -14,45 +14,16 @@
 namespace SDK::Params
 {
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_ActivateNiagaraSystem
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem final
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.ExecuteUbergraph_WBP_Common_Spine_PlayerTitle
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle final
 {
 public:
-	bool                                          bActive;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem) == 0x000001, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem");
-static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem) == 0x000001, "Wrong size on WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem, bActive) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem::bActive' has a wrong offset!");
-
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_PlaySpine
-// 0x0020 (0x0020 - 0x0000)
-struct WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine final
-{
-public:
-	class FString                                 AnimName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          bLoop;                                             // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTrackEntry*                            CallFunc_SetAnimation_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine) == 0x000008, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine");
-static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine) == 0x000020, "Wrong size on WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine, AnimName) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine::AnimName' has a wrong offset!");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine, bLoop) == 0x000010, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine::bLoop' has a wrong offset!");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine, CallFunc_SetAnimation_ReturnValue) == 0x000018, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine::CallFunc_SetAnimation_ReturnValue' has a wrong offset!");
-
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_SetAtlasAndSkeleton
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton final
-{
-public:
-	class USpineAtlasAsset*                       Atlas;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USpineSkeletonDataAsset*                Skeleton;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton) == 0x000008, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton");
-static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton) == 0x000010, "Wrong size on WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton, Atlas) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton::Atlas' has a wrong offset!");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton, Skeleton) == 0x000008, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton::Skeleton' has a wrong offset!");
+static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle) == 0x000004, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle");
+static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle) == 0x000004, "Wrong size on WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle, EntryPoint) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle::EntryPoint' has a wrong offset!");
 
 // Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_UpdateNiagaraSystem
 // 0x0060 (0x0060 - 0x0000)
@@ -71,16 +42,45 @@ static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_UpdateNiagaraSystem, ns
 static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_UpdateNiagaraSystem, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue) == 0x000010, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_UpdateNiagaraSystem::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_UpdateNiagaraSystem, CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue_1) == 0x000038, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_UpdateNiagaraSystem::CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue_1' has a wrong offset!");
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.ExecuteUbergraph_WBP_Common_Spine_PlayerTitle
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle final
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_SetAtlasAndSkeleton
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USpineAtlasAsset*                       Atlas;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USpineSkeletonDataAsset*                Skeleton;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle) == 0x000004, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle");
-static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle) == 0x000004, "Wrong size on WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle");
-static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle, EntryPoint) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle::EntryPoint' has a wrong offset!");
+static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton) == 0x000008, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton");
+static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton) == 0x000010, "Wrong size on WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton, Atlas) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton::Atlas' has a wrong offset!");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton, Skeleton) == 0x000008, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton::Skeleton' has a wrong offset!");
+
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_PlaySpine
+// 0x0020 (0x0020 - 0x0000)
+struct WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine final
+{
+public:
+	class FString                                 AnimName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          bLoop;                                             // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTrackEntry*                            CallFunc_SetAnimation_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine) == 0x000008, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine");
+static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine) == 0x000020, "Wrong size on WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine, AnimName) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine::AnimName' has a wrong offset!");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine, bLoop) == 0x000010, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine::bLoop' has a wrong offset!");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine, CallFunc_SetAnimation_ReturnValue) == 0x000018, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine::CallFunc_SetAnimation_ReturnValue' has a wrong offset!");
+
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_ActivateNiagaraSystem
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem final
+{
+public:
+	bool                                          bActive;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem) == 0x000001, "Wrong alignment on WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem");
+static_assert(sizeof(WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem) == 0x000001, "Wrong size on WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem");
+static_assert(offsetof(WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem, bActive) == 0x000000, "Member 'WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem::bActive' has a wrong offset!");
 
 // Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

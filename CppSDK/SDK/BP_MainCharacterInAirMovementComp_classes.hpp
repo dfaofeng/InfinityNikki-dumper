@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EInt32PlayerPawnStateTypes_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_PlayerRegularInAirMovementComp_classes.hpp"
 
 
@@ -20,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C
-// 0x0258 (0x0548 - 0x02F0)
+// 0x0270 (0x0560 - 0x02F0)
 class UBP_MainCharacterInAirMovementComp_C final : public UBP_PlayerRegularInAirMovementComp_C
 {
 public:
@@ -65,23 +65,28 @@ public:
 	double                                        BP_MinAdvanceTime;                                 // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 BP_JumpPromptLineProcessorClass;                   // 0x0508(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UBP_PlayerJumpPromptLineProcessor_C*    CurJumpPromptLineProcessor;                        // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_UseSpecifyFoot;                                 // 0x0518(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_SpecifyStartToRightFoot;                        // 0x0519(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_51A[0x6];                                      // 0x051A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 BP_Replicated_PlayerFloatSetting;                  // 0x0520(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify)
-	bool                                          BP_Replicated_InPhxRebirthState;                   // 0x0530(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsPhxFloat;                                     // 0x0531(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_PhxUseJumpInAirToFloat;                         // 0x0532(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_533[0x5];                                      // 0x0533(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_HoldHandLeaderInput;                            // 0x0538(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_SkipFloatEnterAnim;                             // 0x0540(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_SkipJumpInAirAnim;                              // 0x0541(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_RegularJumpAnimConfig_C*            BP_OverrideRegularJumpAnimSet;                     // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_UseSpecifyFoot;                                 // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_SpecifyStartToRightFoot;                        // 0x0521(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_522[0x6];                                      // 0x0522(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 BP_Replicated_PlayerFloatSetting;                  // 0x0528(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify)
+	bool                                          BP_Replicated_InPhxRebirthState;                   // 0x0538(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsPhxFloat;                                     // 0x0539(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_PhxUseJumpInAirToFloat;                         // 0x053A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53B[0x5];                                      // 0x053B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_HoldHandLeaderInput;                            // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_SkipFloatEnterAnim;                             // 0x0548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_SkipJumpInAirAnim;                              // 0x0549(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54A[0x6];                                      // 0x054A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnRegularJumpAnimSetChanged;                       // 0x0550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void BP_GetumpPromptLineProcessor(class UBP_PlayerJumpPromptLineProcessor_C** CurJumpPromptLineProcessor_0);
 	void BP_OnMulticast_JumpRelease();
 	void BP_OnMulticast_PhxLeaderEnterFloat(bool bPhxFloat, int32 FloatCount);
 	void BP_OnMulticast_PlayPhxSwitchAnim();
+	void BP_OnMulticast_WitchJumpDash(int32 NewParam);
+	void BP_OnMulticast_WitchJumpPerform(int32 PerformType);
 	void BP_TryPointToPointJumping(const struct FVector& SourcePoint, const struct FVector& TargetPoint, float SteppingSimulationTime, float CosntGravityZ, float MaxSimulationTime, bool EnableDebugDraw, bool* bCanJump, struct FVector* OutVelocity);
 	void CaculateSinglePredictLineByGravityScaleCurve(TArray<struct FVector>& CurveTrack, double JumpVelocityZ, double InitVelocityZ, double InitStartTime, double TargetVelocityZ, class UCurveFloat* UpGravityScaleCurve, class UCurveFloat* DownGravityScaleCurve, double AddtiveUpGravityScale, double AddtiveDownGravityScale, const struct FVector& CurCharacterVelocity, double AdvanceTime, double ConstGravityZ, double MaxSimulationTime, struct FVector* EndLocation);
 	void CanDrawPredictJumpCurve(bool* Ret);
@@ -92,6 +97,8 @@ public:
 	void Multicast_JumpRelease();
 	void Multicast_PhxLeaderEnterFloat(bool bPhxFloat, int32 FloatCount);
 	void Multicast_PlayPhxSwitchAnim();
+	void Multicast_WitchJumpDash(int32 DashType);
+	void Multicast_WitchJumpPerform(int32 PerformType);
 	void OnEnableJumpPromptLineFeatureComplete_Event();
 	void OnRep_BP_Replicated_PlayerFloatSetting();
 	void ReceiveBeginPlay();
@@ -112,7 +119,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_MainCharacterInAirMovementComp_C) == 0x000008, "Wrong alignment on UBP_MainCharacterInAirMovementComp_C");
-static_assert(sizeof(UBP_MainCharacterInAirMovementComp_C) == 0x000548, "Wrong size on UBP_MainCharacterInAirMovementComp_C");
+static_assert(sizeof(UBP_MainCharacterInAirMovementComp_C) == 0x000560, "Wrong size on UBP_MainCharacterInAirMovementComp_C");
 static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, UberGraphFrame_BP_MainCharacterInAirMovementComp_C) == 0x0002F0, "Member 'UBP_MainCharacterInAirMovementComp_C::UberGraphFrame_BP_MainCharacterInAirMovementComp_C' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_FloatingJumpAnimSet) == 0x0002F8, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_FloatingJumpAnimSet' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, OnFloatSuitAbilityChanged) == 0x000300, "Member 'UBP_MainCharacterInAirMovementComp_C::OnFloatSuitAbilityChanged' has a wrong offset!");
@@ -148,15 +155,17 @@ static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_HideJumpPromptLi
 static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_MinAdvanceTime) == 0x000500, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_MinAdvanceTime' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_JumpPromptLineProcessorClass) == 0x000508, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_JumpPromptLineProcessorClass' has a wrong offset!");
 static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, CurJumpPromptLineProcessor) == 0x000510, "Member 'UBP_MainCharacterInAirMovementComp_C::CurJumpPromptLineProcessor' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_UseSpecifyFoot) == 0x000518, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_UseSpecifyFoot' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_SpecifyStartToRightFoot) == 0x000519, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_SpecifyStartToRightFoot' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_Replicated_PlayerFloatSetting) == 0x000520, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_Replicated_PlayerFloatSetting' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_Replicated_InPhxRebirthState) == 0x000530, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_Replicated_InPhxRebirthState' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_IsPhxFloat) == 0x000531, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_IsPhxFloat' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_PhxUseJumpInAirToFloat) == 0x000532, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_PhxUseJumpInAirToFloat' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_HoldHandLeaderInput) == 0x000538, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_HoldHandLeaderInput' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_SkipFloatEnterAnim) == 0x000540, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_SkipFloatEnterAnim' has a wrong offset!");
-static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_SkipJumpInAirAnim) == 0x000541, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_SkipJumpInAirAnim' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_OverrideRegularJumpAnimSet) == 0x000518, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_OverrideRegularJumpAnimSet' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_UseSpecifyFoot) == 0x000520, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_UseSpecifyFoot' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_SpecifyStartToRightFoot) == 0x000521, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_SpecifyStartToRightFoot' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_Replicated_PlayerFloatSetting) == 0x000528, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_Replicated_PlayerFloatSetting' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_Replicated_InPhxRebirthState) == 0x000538, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_Replicated_InPhxRebirthState' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_IsPhxFloat) == 0x000539, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_IsPhxFloat' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_PhxUseJumpInAirToFloat) == 0x00053A, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_PhxUseJumpInAirToFloat' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_HoldHandLeaderInput) == 0x000540, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_HoldHandLeaderInput' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_SkipFloatEnterAnim) == 0x000548, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_SkipFloatEnterAnim' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, BP_SkipJumpInAirAnim) == 0x000549, "Member 'UBP_MainCharacterInAirMovementComp_C::BP_SkipJumpInAirAnim' has a wrong offset!");
+static_assert(offsetof(UBP_MainCharacterInAirMovementComp_C, OnRegularJumpAnimSetChanged) == 0x000550, "Member 'UBP_MainCharacterInAirMovementComp_C::OnRegularJumpAnimSetChanged' has a wrong offset!");
 
 }
 

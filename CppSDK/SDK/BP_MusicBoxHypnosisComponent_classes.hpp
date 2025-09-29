@@ -18,14 +18,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_MusicBoxHypnosisComponent.BP_MusicBoxHypnosisComponent_C
-// 0x0020 (0x00C8 - 0x00A8)
+// 0x0018 (0x00C0 - 0x00A8)
 class UBP_MusicBoxHypnosisComponent_C final : public UBP_X6ActorComponent_C
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	double                                        StopHypnosisTime;                                  // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         HypnosisEffect;                                    // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         AnimalIndex;                                       // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         AnimalIndex;                                       // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void BP_AnimToHypnosis();
@@ -47,11 +46,10 @@ public:
 	}
 };
 static_assert(alignof(UBP_MusicBoxHypnosisComponent_C) == 0x000008, "Wrong alignment on UBP_MusicBoxHypnosisComponent_C");
-static_assert(sizeof(UBP_MusicBoxHypnosisComponent_C) == 0x0000C8, "Wrong size on UBP_MusicBoxHypnosisComponent_C");
+static_assert(sizeof(UBP_MusicBoxHypnosisComponent_C) == 0x0000C0, "Wrong size on UBP_MusicBoxHypnosisComponent_C");
 static_assert(offsetof(UBP_MusicBoxHypnosisComponent_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_MusicBoxHypnosisComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_MusicBoxHypnosisComponent_C, StopHypnosisTime) == 0x0000B0, "Member 'UBP_MusicBoxHypnosisComponent_C::StopHypnosisTime' has a wrong offset!");
-static_assert(offsetof(UBP_MusicBoxHypnosisComponent_C, HypnosisEffect) == 0x0000B8, "Member 'UBP_MusicBoxHypnosisComponent_C::HypnosisEffect' has a wrong offset!");
-static_assert(offsetof(UBP_MusicBoxHypnosisComponent_C, AnimalIndex) == 0x0000C0, "Member 'UBP_MusicBoxHypnosisComponent_C::AnimalIndex' has a wrong offset!");
+static_assert(offsetof(UBP_MusicBoxHypnosisComponent_C, AnimalIndex) == 0x0000B8, "Member 'UBP_MusicBoxHypnosisComponent_C::AnimalIndex' has a wrong offset!");
 
 }
 

@@ -14,6 +14,19 @@
 namespace SDK::Params
 {
 
+// Function WBP_CommonSys_EntryItem.WBP_CommonSys_EntryItem_C.UpdateRedPointPos
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_CommonSys_EntryItem_C_UpdateRedPointPos final
+{
+public:
+	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos) == 0x000004, "Wrong alignment on WBP_CommonSys_EntryItem_C_UpdateRedPointPos");
+static_assert(sizeof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos) == 0x000008, "Wrong size on WBP_CommonSys_EntryItem_C_UpdateRedPointPos");
+static_assert(offsetof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x000000, "Member 'WBP_CommonSys_EntryItem_C_UpdateRedPointPos::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000004, "Member 'WBP_CommonSys_EntryItem_C_UpdateRedPointPos::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
+
 // Function WBP_CommonSys_EntryItem.WBP_CommonSys_EntryItem_C.ExecuteUbergraph_WBP_CommonSys_EntryItem
 // 0x0018 (0x0018 - 0x0000)
 struct WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem final
@@ -29,19 +42,6 @@ static_assert(sizeof(WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_En
 static_assert(offsetof(WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem, EntryPoint) == 0x000000, "Member 'WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_CommonSys_EntryItem_C_ExecuteUbergraph_WBP_CommonSys_EntryItem::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_CommonSys_EntryItem.WBP_CommonSys_EntryItem_C.UpdateRedPointPos
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_CommonSys_EntryItem_C_UpdateRedPointPos final
-{
-public:
-	int32                                         CallFunc_GetActiveWidgetIndex_ReturnValue;         // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_32ByteByte_ReturnValue;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos) == 0x000004, "Wrong alignment on WBP_CommonSys_EntryItem_C_UpdateRedPointPos");
-static_assert(sizeof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos) == 0x000008, "Wrong size on WBP_CommonSys_EntryItem_C_UpdateRedPointPos");
-static_assert(offsetof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos, CallFunc_GetActiveWidgetIndex_ReturnValue) == 0x000000, "Member 'WBP_CommonSys_EntryItem_C_UpdateRedPointPos::CallFunc_GetActiveWidgetIndex_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_CommonSys_EntryItem_C_UpdateRedPointPos, CallFunc_EqualEqual_32ByteByte_ReturnValue) == 0x000004, "Member 'WBP_CommonSys_EntryItem_C_UpdateRedPointPos::CallFunc_EqualEqual_32ByteByte_ReturnValue' has a wrong offset!");
 
 }
 

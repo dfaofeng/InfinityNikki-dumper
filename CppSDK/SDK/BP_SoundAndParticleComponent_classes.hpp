@@ -14,8 +14,8 @@
 #include "Enum_ShrubEnum_structs.hpp"
 #include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "X6Game_structs.hpp"
-#include "BP_CharacterEffectBaseComponent_classes.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "BP_CharacterEffectBaseComponent_classes.hpp"
 
 
 namespace SDK

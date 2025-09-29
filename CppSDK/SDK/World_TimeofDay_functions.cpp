@@ -229,15 +229,15 @@ void AWorld_TimeofDay_C::OnLoaded_AC3D764F40D6E6BA6E0F169EBB0EC301(class UObject
 }
 
 
-// Function World_TimeofDay.World_TimeofDay_C.RAINBOW
+// Function World_TimeofDay.World_TimeofDay_C.rainbow
 // (BlueprintCallable, BlueprintEvent)
 
-void AWorld_TimeofDay_C::RAINBOW()
+void AWorld_TimeofDay_C::rainbow()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("World_TimeofDay_C", "RAINBOW");
+		Func = Class->GetFunction("World_TimeofDay_C", "rainbow");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

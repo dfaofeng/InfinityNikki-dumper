@@ -1162,6 +1162,56 @@ void UX6BlueprintCommonLibrary_C::BP_SetLevelChallengeSuccess(class UObject* __W
 }
 
 
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorTickEnabled_Force
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnabled                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_SetActorTickEnabled_Force(class AActor* Actor, bool bEnabled, const class FString& Tag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_SetActorTickEnabled_Force");
+
+	Params::X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force Parms{};
+
+	Parms.Actor = Actor;
+	Parms.bEnabled = bEnabled;
+	Parms.Tag = std::move(Tag);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorTickEnabled_ClearForce
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_SetActorTickEnabled_ClearForce(class AActor* Actor, const class FString& Tag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_SetActorTickEnabled_ClearForce");
+
+	Params::X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Tag = std::move(Tag);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorTickEnabled
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1181,6 +1231,56 @@ void UX6BlueprintCommonLibrary_C::BP_SetActorTickEnabled(class AActor* Actor, bo
 
 	Parms.Actor = Actor;
 	Parms.bEnabled = bEnabled;
+	Parms.Tag = std::move(Tag);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorHiddenInGame_Force
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bNewHidden                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_SetActorHiddenInGame_Force(class AActor* Actor, bool bNewHidden, const class FString& Tag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_SetActorHiddenInGame_Force");
+
+	Params::X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force Parms{};
+
+	Parms.Actor = Actor;
+	Parms.bNewHidden = bNewHidden;
+	Parms.Tag = std::move(Tag);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorHiddenInGame_ClearForce
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_SetActorHiddenInGame_ClearForce(class AActor* Actor, const class FString& Tag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_SetActorHiddenInGame_ClearForce");
+
+	Params::X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce Parms{};
+
+	Parms.Actor = Actor;
 	Parms.Tag = std::move(Tag);
 	Parms.__WorldContext = __WorldContext;
 
@@ -1259,6 +1359,56 @@ void UX6BlueprintCommonLibrary_C::BP_SetActorEnableGravity(class AActor* Actor, 
 
 	Parms.Actor = Actor;
 	Parms.bEnableGravity = bEnableGravity;
+	Parms.Tag = std::move(Tag);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorEnableCollision_Force
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnableCollision                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_SetActorEnableCollision_Force(class AActor* Actor, bool bEnableCollision, const class FString& Tag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_SetActorEnableCollision_Force");
+
+	Params::X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force Parms{};
+
+	Parms.Actor = Actor;
+	Parms.bEnableCollision = bEnableCollision;
+	Parms.Tag = std::move(Tag);
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorEnableCollision_ClearForce
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Tag                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintCommonLibrary_C::BP_SetActorEnableCollision_ClearForce(class AActor* Actor, const class FString& Tag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintCommonLibrary_C", "BP_SetActorEnableCollision_ClearForce");
+
+	Params::X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce Parms{};
+
+	Parms.Actor = Actor;
 	Parms.Tag = std::move(Tag);
 	Parms.__WorldContext = __WorldContext;
 

@@ -58,7 +58,7 @@ public:
 	void OnLoaded_556B8BD044371CBE530395858E5DEEF6(class UObject* Loaded);
 	void OnLoaded_A05238DB4B20CC692EFCBC816E6E854A(class UObject* Loaded);
 	void OnLoaded_AC3D764F40D6E6BA6E0F169EBB0EC301(class UObject* Loaded);
-	void RAINBOW();
+	void rainbow();
 	void Raining();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);

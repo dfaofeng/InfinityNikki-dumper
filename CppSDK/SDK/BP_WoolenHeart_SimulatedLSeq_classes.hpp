@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "F_SimulatedWoolenHeartPerformanceInfo_structs.hpp"
 #include "Engine_structs.hpp"
+#include "F_SimulatedWoolenHeartPerformanceInfo_structs.hpp"
 #include "X6Game_classes.hpp"
 
 
@@ -38,16 +38,16 @@ public:
 	TMulticastInlineDelegate<void(class ABP_WoolenHeart_SimulatedLSeq_C* SimulatedLSeqActor, class ACharacter* SimulatedNikki)> PostLSEndPlay; // 0x0638(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void BP_CheckDestroySelf();
-	void BP_Init(class AActor* SimulatedNikki, const struct FF_SimulatedWoolenHeartPerformanceInfo& PerformanceInfo, bool* bLSPlayed);
-	void BP_IsPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool* bPlaying);
-	void BP_PerformanceBeginPlay();
-	void BP_PerformanceEndPlay();
-	void BP_PlayFeatureSequence(class ULevelSequence* LSAsset, bool* bSuccess);
-	void BP_PlayWoolenHeartFlyPerformance(const struct FF_SimulatedWoolenHeartPerformanceInfo& PerformanceInfo);
-	void BP_SetPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool bPlaying);
-	void ExecuteUbergraph_BP_WoolenHeart_SimulatedLSeq(int32 EntryPoint);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void ExecuteUbergraph_BP_WoolenHeart_SimulatedLSeq(int32 EntryPoint);
+	void BP_SetPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool bPlaying);
+	void BP_PlayWoolenHeartFlyPerformance(const struct FF_SimulatedWoolenHeartPerformanceInfo& PerformanceInfo);
+	void BP_PlayFeatureSequence(class ULevelSequence* LSAsset, bool* bSuccess);
+	void BP_PerformanceEndPlay();
+	void BP_PerformanceBeginPlay();
+	void BP_IsPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool* bPlaying);
+	void BP_Init(class AActor* SimulatedNikki, const struct FF_SimulatedWoolenHeartPerformanceInfo& PerformanceInfo, bool* bLSPlayed);
+	void BP_CheckDestroySelf();
 
 	class FString GetModuleName() const;
 

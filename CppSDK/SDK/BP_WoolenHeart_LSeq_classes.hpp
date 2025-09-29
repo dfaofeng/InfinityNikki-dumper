@@ -55,32 +55,32 @@ public:
 	bool                                          bFollowerDisableConstraints;                       // 0x06C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void AsyncLoadRewardLS();
-	void BP_AddInvincibleBuff();
-	void BP_CanAdjustPlayerYaw(bool* bCanAdjust);
-	void BP_CreateTimeStopZone(TArray<class AActor*>& WhiteListActorArray, const struct FVector& Position, double Range);
-	void BP_DestroyTimeStopZone();
-	void BP_DisableRootMotion(bool* NewParam);
-	void BP_FireEventStartRewardUI(const class FText& Reward_Text);
-	void BP_GetHandHoldingPlayer(class AActor** HandHoldingPlayer);
-	void BP_GetSpawnWoolenHeartSKMeshTransform(struct FTransform* Transform);
-	void BP_IsPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool* bPlaying);
-	void BP_PlayFeatureSequence(class ULevelSequence* LevelSequenceAsset, bool HideHUD, class AActor* TransformActor, class ALevelSequenceActor** SequenceActor_0, class ULevelSequencePlayer** SequencePlayer_0);
-	void BP_RemoveInvincibleBuff();
-	void BP_RestoreRootMotionMode();
-	void BP_SetPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool bPlaying);
-	void BP_UpdateWoolenHeartRewardLS(bool bStartPlay);
-	void ExecuteUbergraph_BP_WoolenHeart_LSeq(int32 EntryPoint);
-	void OnLSBegainPlayNotInHUD();
-	void OnLSBeginPlay();
-	void OnLSFinishPlay();
-	void OnLSObjectSpawned(class UObject* Object);
-	void PushTips();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
-	void SetPerformacneInfo(const struct FF_GetWoolenHeartPerformanceInfo& PerformanceInfo_0);
-	void SetPlayLevelSeq(class ULevelSequence* PlayLS, const TMap<class FName, class AActor*>& AdditionalBindingTag2Actor_0);
-	void SetPlayUIText(const class FText& UIText);
 	void SetPossessedPlayer(class ACharacter* PossessedPlayer);
+	void SetPlayUIText(const class FText& UIText);
+	void SetPlayLevelSeq(class ULevelSequence* PlayLS, const TMap<class FName, class AActor*>& AdditionalBindingTag2Actor_0);
+	void SetPerformacneInfo(const struct FF_GetWoolenHeartPerformanceInfo& PerformanceInfo_0);
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void PushTips();
+	void OnLSObjectSpawned(class UObject* Object);
+	void OnLSFinishPlay();
+	void OnLSBeginPlay();
+	void OnLSBegainPlayNotInHUD();
+	void ExecuteUbergraph_BP_WoolenHeart_LSeq(int32 EntryPoint);
+	void BP_UpdateWoolenHeartRewardLS(bool bStartPlay);
+	void BP_SetPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool bPlaying);
+	void BP_RestoreRootMotionMode();
+	void BP_RemoveInvincibleBuff();
+	void BP_PlayFeatureSequence(class ULevelSequence* LevelSequenceAsset, bool HideHUD, class AActor* TransformActor, class ALevelSequenceActor** SequenceActor_0, class ULevelSequencePlayer** SequencePlayer_0);
+	void BP_IsPlayingGetWoolenHeartPerformance(int64 WoolenHeartEntiyID, bool* bPlaying);
+	void BP_GetSpawnWoolenHeartSKMeshTransform(struct FTransform* Transform);
+	void BP_GetHandHoldingPlayer(class AActor** HandHoldingPlayer);
+	void BP_FireEventStartRewardUI(const class FText& Reward_Text);
+	void BP_DisableRootMotion(bool* NewParam);
+	void BP_DestroyTimeStopZone();
+	void BP_CreateTimeStopZone(TArray<class AActor*>& WhiteListActorArray, const struct FVector& Position, double Range);
+	void BP_CanAdjustPlayerYaw(bool* bCanAdjust);
+	void BP_AddInvincibleBuff();
+	void AsyncLoadRewardLS();
 
 	class FString GetModuleName() const;
 

@@ -650,7 +650,7 @@ static_assert(offsetof(BP_RoleShadowCapture_C_SetSetScaleParam, CallFunc_IsValid
 static_assert(offsetof(BP_RoleShadowCapture_C_SetSetScaleParam, CallFunc_Less_IntInt_ReturnValue) == 0x00003D, "Member 'BP_RoleShadowCapture_C_SetSetScaleParam::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 
 // Function BP_RoleShadowCapture.BP_RoleShadowCapture_C.SoftShadowDecal
-// 0x0100 (0x0100 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct BP_RoleShadowCapture_C_SoftShadowDecal final
 {
 public:
@@ -658,31 +658,35 @@ public:
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue;     // 0x0038(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_1;   // 0x0048(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x0058(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetCharacterBoneLocation_ReturnValue;     // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_2;   // 0x0088(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetCharacterBoneLocation_ReturnValue_1;   // 0x0098(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_2;   // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_3;   // 0x00B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_1;          // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetCharacterBoneLocation_ReturnValue_1;   // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_2;          // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_4;   // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue_1;      // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Conv_VectorToLinearColor_ReturnValue_5;   // 0x0118(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_RoleShadowCapture_C_SoftShadowDecal) == 0x000008, "Wrong alignment on BP_RoleShadowCapture_C_SoftShadowDecal");
-static_assert(sizeof(BP_RoleShadowCapture_C_SoftShadowDecal) == 0x000100, "Wrong size on BP_RoleShadowCapture_C_SoftShadowDecal");
+static_assert(sizeof(BP_RoleShadowCapture_C_SoftShadowDecal) == 0x000128, "Wrong size on BP_RoleShadowCapture_C_SoftShadowDecal");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetX6GameNikkiPawn_NikkiPawn) == 0x000000, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetX6GameNikkiPawn_NikkiPawn' has a wrong offset!");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000008, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetSocketLocation_ReturnValue) == 0x000020, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue) == 0x000038, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000048, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x000060, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_1) == 0x000048, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetSocketLocation_ReturnValue_1) == 0x000058, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetCharacterBoneLocation_ReturnValue) == 0x000070, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetCharacterBoneLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_2) == 0x000088, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetCharacterBoneLocation_ReturnValue_1) == 0x000098, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetCharacterBoneLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Subtract_VectorVector_ReturnValue) == 0x000088, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_2) == 0x0000A0, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_3) == 0x0000B0, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetSocketLocation_ReturnValue_1) == 0x0000C0, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetSocketLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x0000D8, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetCharacterBoneLocation_ReturnValue_1) == 0x0000C0, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetCharacterBoneLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_GetSocketLocation_ReturnValue_2) == 0x0000D8, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_GetSocketLocation_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_4) == 0x0000F0, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Subtract_VectorVector_ReturnValue_1) == 0x000100, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Subtract_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_RoleShadowCapture_C_SoftShadowDecal, CallFunc_Conv_VectorToLinearColor_ReturnValue_5) == 0x000118, "Member 'BP_RoleShadowCapture_C_SoftShadowDecal::CallFunc_Conv_VectorToLinearColor_ReturnValue_5' has a wrong offset!");
 
 // Function BP_RoleShadowCapture.BP_RoleShadowCapture_C.TraceGroundDistance
 // 0x0290 (0x0290 - 0x0000)

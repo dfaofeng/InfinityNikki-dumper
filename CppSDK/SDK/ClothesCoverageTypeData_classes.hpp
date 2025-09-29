@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EClothesCoverageType_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EClothesCoverageType_structs.hpp"
 
 
 namespace SDK

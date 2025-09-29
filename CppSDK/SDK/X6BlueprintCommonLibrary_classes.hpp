@@ -12,13 +12,13 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ECharacterType_structs.hpp"
 #include "EScenarioHomeEventType_structs.hpp"
+#include "ECharacterType_structs.hpp"
+#include "Enum_InformID_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "MainHUDItem_structs.hpp"
-#include "E_SafezoneType_structs.hpp"
-#include "Enum_InformID_structs.hpp"
 #include "Enum_CenterInfoType_structs.hpp"
+#include "E_SafezoneType_structs.hpp"
 
 
 namespace SDK
@@ -73,10 +73,16 @@ public:
 	static void BP_SetLevelProcess(int32 LevelProcess, class UObject* __WorldContext);
 	static void BP_SetLevelPass(class UObject* __WorldContext);
 	static void BP_SetLevelChallengeSuccess(class UObject* __WorldContext);
+	static void BP_SetActorTickEnabled_Force(class AActor* Actor, bool bEnabled, const class FString& Tag, class UObject* __WorldContext);
+	static void BP_SetActorTickEnabled_ClearForce(class AActor* Actor, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorTickEnabled(class AActor* Actor, bool bEnabled, const class FString& Tag, class UObject* __WorldContext);
+	static void BP_SetActorHiddenInGame_Force(class AActor* Actor, bool bNewHidden, const class FString& Tag, class UObject* __WorldContext);
+	static void BP_SetActorHiddenInGame_ClearForce(class AActor* Actor, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorHiddenInGame(class AActor* Actor, bool bNewHidden, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorFrozen(class AActor* Actor, bool bFreeze, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorEnableGravity(class AActor* Actor, bool bEnableGravity, const class FString& Tag, class UObject* __WorldContext);
+	static void BP_SetActorEnableCollision_Force(class AActor* Actor, bool bEnableCollision, const class FString& Tag, class UObject* __WorldContext);
+	static void BP_SetActorEnableCollision_ClearForce(class AActor* Actor, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_SetActorEnableCollision(class AActor* Actor, bool bEnableCollision, const class FString& Tag, class UObject* __WorldContext);
 	static void BP_ScenarioHomeEventTrigger(EScenarioHomeEventType HomeEventType, class UObject* __WorldContext);
 	static void BP_RequestEnterBattle(int32 LevelId, class UObject* __WorldContext);

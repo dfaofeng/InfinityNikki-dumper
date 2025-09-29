@@ -29,6 +29,7 @@ public:
 public:
 	void BP_AddZoomedTargetOffsetZByReason(const class FString& ReasonName, double TargetOffsetZ);
 	void BP_RemoveZoomedTargetOffsetZByReason(const class FString& ReasonName);
+	void BP_SetReadZoomedTargetOffsetZFromAnimCurve(bool bReadFromAnimCurve, const class FString& Reason);
 	void ExecuteUbergraph_BP_AdvancedCamera(int32 EntryPoint);
 	void OnLookAtTargetBecomeViewTargetEvent();
 	void OnLookAtTargetEndViewTargetEvent();

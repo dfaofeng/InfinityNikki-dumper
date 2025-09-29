@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "UMG_structs.hpp"
 #include "Enum_TipsKeyTheme_structs.hpp"
-#include "Engine_structs.hpp"
 #include "WBP_Common_Backbtn_Base_classes.hpp"
 
 
@@ -49,21 +49,21 @@ public:
 	ESlateVisibility                              InfoVisibility;                                    // 0x03A2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_0_OnButtonReleasedEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_6_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature();
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void ExecuteUbergraph_WBP_Common_backbtn(int32 EntryPoint);
-	void OnListItemObjectSet(class UObject* ListItemObject);
-	void PreConstruct(bool IsDesignTime);
 	void Set_Title(const class FText& TitleText);
+	void PreConstruct(bool IsDesignTime);
+	void OnListItemObjectSet(class UObject* ListItemObject);
+	void ExecuteUbergraph_WBP_Common_backbtn(int32 EntryPoint);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
+	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_7_OnButtonReleasedEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_6_OnButtonPressedEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_5_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_Button_Info_K2Node_ComponentBoundEvent_4_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Common_backbtn_backBtn_K2Node_ComponentBoundEvent_0_OnButtonReleasedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

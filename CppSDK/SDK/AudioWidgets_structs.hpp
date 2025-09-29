@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -322,6 +322,23 @@ static_assert(offsetof(FAudioOscilloscopePanelStyle, ValueGridStyle) == 0x000280
 static_assert(offsetof(FAudioOscilloscopePanelStyle, WaveViewerStyle) == 0x000320, "Member 'FAudioOscilloscopePanelStyle::WaveViewerStyle' has a wrong offset!");
 static_assert(offsetof(FAudioOscilloscopePanelStyle, TriggerThresholdLineStyle) == 0x000480, "Member 'FAudioOscilloscopePanelStyle::TriggerThresholdLineStyle' has a wrong offset!");
 
+// ScriptStruct AudioWidgets.PlayheadOverlayStyle
+// 0x0020 (0x0028 - 0x0008)
+struct FPlayheadOverlayStyle final : public FSlateWidgetStyle
+{
+public:
+	struct FSlateColor                            PlayheadColor;                                     // 0x0008(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	float                                         PlayheadWidth;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DesiredWidth;                                      // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DesiredHeight;                                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPlayheadOverlayStyle) == 0x000008, "Wrong alignment on FPlayheadOverlayStyle");
+static_assert(sizeof(FPlayheadOverlayStyle) == 0x000028, "Wrong size on FPlayheadOverlayStyle");
+static_assert(offsetof(FPlayheadOverlayStyle, PlayheadColor) == 0x000008, "Member 'FPlayheadOverlayStyle::PlayheadColor' has a wrong offset!");
+static_assert(offsetof(FPlayheadOverlayStyle, PlayheadWidth) == 0x00001C, "Member 'FPlayheadOverlayStyle::PlayheadWidth' has a wrong offset!");
+static_assert(offsetof(FPlayheadOverlayStyle, DesiredWidth) == 0x000020, "Member 'FPlayheadOverlayStyle::DesiredWidth' has a wrong offset!");
+static_assert(offsetof(FPlayheadOverlayStyle, DesiredHeight) == 0x000024, "Member 'FPlayheadOverlayStyle::DesiredHeight' has a wrong offset!");
+
 // ScriptStruct AudioWidgets.AudioSpectrumPlotStyle
 // 0x00B8 (0x00C0 - 0x0008)
 struct FAudioSpectrumPlotStyle final : public FSlateWidgetStyle
@@ -410,23 +427,6 @@ static_assert(offsetof(FAudioRadialSliderStyle, SliderBarColor) == 0x000124, "Me
 static_assert(offsetof(FAudioRadialSliderStyle, SliderProgressColor) == 0x000138, "Member 'FAudioRadialSliderStyle::SliderProgressColor' has a wrong offset!");
 static_assert(offsetof(FAudioRadialSliderStyle, LabelPadding) == 0x00014C, "Member 'FAudioRadialSliderStyle::LabelPadding' has a wrong offset!");
 static_assert(offsetof(FAudioRadialSliderStyle, DefaultSliderRadius) == 0x000150, "Member 'FAudioRadialSliderStyle::DefaultSliderRadius' has a wrong offset!");
-
-// ScriptStruct AudioWidgets.PlayheadOverlayStyle
-// 0x0020 (0x0028 - 0x0008)
-struct FPlayheadOverlayStyle final : public FSlateWidgetStyle
-{
-public:
-	struct FSlateColor                            PlayheadColor;                                     // 0x0008(0x0014)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	float                                         PlayheadWidth;                                     // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DesiredWidth;                                      // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DesiredHeight;                                     // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPlayheadOverlayStyle) == 0x000008, "Wrong alignment on FPlayheadOverlayStyle");
-static_assert(sizeof(FPlayheadOverlayStyle) == 0x000028, "Wrong size on FPlayheadOverlayStyle");
-static_assert(offsetof(FPlayheadOverlayStyle, PlayheadColor) == 0x000008, "Member 'FPlayheadOverlayStyle::PlayheadColor' has a wrong offset!");
-static_assert(offsetof(FPlayheadOverlayStyle, PlayheadWidth) == 0x00001C, "Member 'FPlayheadOverlayStyle::PlayheadWidth' has a wrong offset!");
-static_assert(offsetof(FPlayheadOverlayStyle, DesiredWidth) == 0x000020, "Member 'FPlayheadOverlayStyle::DesiredWidth' has a wrong offset!");
-static_assert(offsetof(FPlayheadOverlayStyle, DesiredHeight) == 0x000024, "Member 'FPlayheadOverlayStyle::DesiredHeight' has a wrong offset!");
 
 }
 

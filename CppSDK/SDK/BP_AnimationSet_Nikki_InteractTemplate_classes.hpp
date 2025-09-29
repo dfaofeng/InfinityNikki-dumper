@@ -13,8 +13,8 @@
 #include "GameplayTags_structs.hpp"
 #include "F_PerformanceStanceInfo_structs.hpp"
 #include "F_PerformanceGestureInfo_structs.hpp"
-#include "F_PerformanceTransitionInfo_structs.hpp"
 #include "Engine_classes.hpp"
+#include "F_PerformanceTransitionInfo_structs.hpp"
 
 
 namespace SDK

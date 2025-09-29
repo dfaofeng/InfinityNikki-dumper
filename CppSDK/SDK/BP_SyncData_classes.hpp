@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "F_CorrectionAnim_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "F_CorrectionAnim_structs.hpp"
 
 
 namespace SDK

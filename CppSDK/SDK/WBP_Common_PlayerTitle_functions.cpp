@@ -17,75 +17,41 @@
 namespace SDK
 {
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnEntryReleased
-// (Event, Protected, BlueprintEvent)
-
-void UWBP_Common_PlayerTitle_C::BP_OnEntryReleased()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "BP_OnEntryReleased");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemExpansionChanged
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemValueChangedViaIndex
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_PlayerTitle_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+void UWBP_Common_PlayerTitle_C::OnListItemValueChangedViaIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "BP_OnItemExpansionChanged");
+		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "OnListItemValueChangedViaIndex");
 
-	Params::WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged Parms{};
+	Params::WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex Parms{};
 
-	Parms.bIsExpanded = bIsExpanded;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemSelectionChanged
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemObjectSetViaIndex
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_PlayerTitle_C::BP_OnItemSelectionChanged(bool bIsSelected)
+void UWBP_Common_PlayerTitle_C::OnListItemObjectSetViaIndex(int32 Index_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "BP_OnItemSelectionChanged");
+		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "OnListItemObjectSetViaIndex");
 
-	Params::WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged Parms{};
+	Params::WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex Parms{};
 
-	Parms.bIsSelected = bIsSelected;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.ExecuteUbergraph_WBP_Common_PlayerTitle
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Common_PlayerTitle_C::ExecuteUbergraph_WBP_Common_PlayerTitle(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "ExecuteUbergraph_WBP_Common_PlayerTitle");
-
-	Params::WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_PlayerTitle Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -113,43 +79,77 @@ void UWBP_Common_PlayerTitle_C::On_CheckBox_bg_Hovered(const struct FGeometry& M
 }
 
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemObjectSetViaIndex
-// (Event, Protected, BlueprintEvent)
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.ExecuteUbergraph_WBP_Common_PlayerTitle
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_PlayerTitle_C::OnListItemObjectSetViaIndex(int32 Index_0)
+void UWBP_Common_PlayerTitle_C::ExecuteUbergraph_WBP_Common_PlayerTitle(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "OnListItemObjectSetViaIndex");
+		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "ExecuteUbergraph_WBP_Common_PlayerTitle");
 
-	Params::WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex Parms{};
+	Params::WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_PlayerTitle Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemValueChangedViaIndex
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemSelectionChanged
 // (Event, Protected, BlueprintEvent)
 // Parameters:
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsSelected                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_PlayerTitle_C::OnListItemValueChangedViaIndex(int32 Index_0)
+void UWBP_Common_PlayerTitle_C::BP_OnItemSelectionChanged(bool bIsSelected)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "OnListItemValueChangedViaIndex");
+		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "BP_OnItemSelectionChanged");
 
-	Params::WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex Parms{};
+	Params::WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged Parms{};
 
-	Parms.Index_0 = Index_0;
+	Parms.bIsSelected = bIsSelected;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemExpansionChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                                    bIsExpanded                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Common_PlayerTitle_C::BP_OnItemExpansionChanged(bool bIsExpanded)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "BP_OnItemExpansionChanged");
+
+	Params::WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged Parms{};
+
+	Parms.bIsExpanded = bIsExpanded;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnEntryReleased
+// (Event, Protected, BlueprintEvent)
+
+void UWBP_Common_PlayerTitle_C::BP_OnEntryReleased()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_PlayerTitle_C", "BP_OnEntryReleased");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

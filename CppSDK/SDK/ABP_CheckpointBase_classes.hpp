@@ -51,11 +51,11 @@ public:
 	bool                                          bNeedReActiveAnim;                                 // 0x075B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void Active();
-	void AnimGraph(struct FPoseLink* AnimGraph_0);
-	void ExecuteUbergraph_ABP_CheckpointBase(int32 EntryPoint);
-	void ForceActive();
 	void OnUpdate(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node);
+	void ForceActive();
+	void ExecuteUbergraph_ABP_CheckpointBase(int32 EntryPoint);
+	void AnimGraph(struct FPoseLink* AnimGraph_0);
+	void Active();
 
 public:
 	static class UClass* StaticClass()

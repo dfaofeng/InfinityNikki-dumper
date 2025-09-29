@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "EUTCJoystickMode_structs.hpp"
 #include "Engine_structs.hpp"
 #include "UTCControlTypeEnum_structs.hpp"
 #include "UMG_classes.hpp"
-#include "EUTCJoystickMode_structs.hpp"
 
 
 namespace SDK

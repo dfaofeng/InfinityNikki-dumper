@@ -16,49 +16,19 @@
 namespace SDK::Params
 {
 
-// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ExecuteUbergraph_WBP_Pear_RightInfo
-// 0x0018 (0x0018 - 0x0000)
-struct WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo");
-static_assert(sizeof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo) == 0x000018, "Wrong size on WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo, EntryPoint) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo::EntryPoint' has a wrong offset!");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
-
-// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.OnLeftToTile
+// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ToRightArchive
 // 0x0010 (0x0010 - 0x0000)
-struct WBP_Pear_RightInfo_C_OnLeftToTile final
+struct WBP_Pear_RightInfo_C_ToRightArchive final
 {
 public:
 	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Pear_RightInfo_C_OnLeftToTile) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_OnLeftToTile");
-static_assert(sizeof(WBP_Pear_RightInfo_C_OnLeftToTile) == 0x000010, "Wrong size on WBP_Pear_RightInfo_C_OnLeftToTile");
-static_assert(offsetof(WBP_Pear_RightInfo_C_OnLeftToTile, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_OnLeftToTile::Navigation_0' has a wrong offset!");
-static_assert(offsetof(WBP_Pear_RightInfo_C_OnLeftToTile, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_OnLeftToTile::ReturnValue' has a wrong offset!");
-
-// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ToInfo
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Pear_RightInfo_C_ToInfo final
-{
-public:
-	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Pear_RightInfo_C_ToInfo) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_ToInfo");
-static_assert(sizeof(WBP_Pear_RightInfo_C_ToInfo) == 0x000010, "Wrong size on WBP_Pear_RightInfo_C_ToInfo");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ToInfo, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ToInfo::Navigation_0' has a wrong offset!");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ToInfo, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ToInfo::ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_Pear_RightInfo_C_ToRightArchive) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_ToRightArchive");
+static_assert(sizeof(WBP_Pear_RightInfo_C_ToRightArchive) == 0x000010, "Wrong size on WBP_Pear_RightInfo_C_ToRightArchive");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ToRightArchive, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ToRightArchive::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ToRightArchive, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ToRightArchive::ReturnValue' has a wrong offset!");
 
 // Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ToLeftArchive
 // 0x0010 (0x0010 - 0x0000)
@@ -74,19 +44,49 @@ static_assert(sizeof(WBP_Pear_RightInfo_C_ToLeftArchive) == 0x000010, "Wrong siz
 static_assert(offsetof(WBP_Pear_RightInfo_C_ToLeftArchive, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ToLeftArchive::Navigation_0' has a wrong offset!");
 static_assert(offsetof(WBP_Pear_RightInfo_C_ToLeftArchive, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ToLeftArchive::ReturnValue' has a wrong offset!");
 
-// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ToRightArchive
+// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ToInfo
 // 0x0010 (0x0010 - 0x0000)
-struct WBP_Pear_RightInfo_C_ToRightArchive final
+struct WBP_Pear_RightInfo_C_ToInfo final
 {
 public:
 	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Pear_RightInfo_C_ToRightArchive) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_ToRightArchive");
-static_assert(sizeof(WBP_Pear_RightInfo_C_ToRightArchive) == 0x000010, "Wrong size on WBP_Pear_RightInfo_C_ToRightArchive");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ToRightArchive, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ToRightArchive::Navigation_0' has a wrong offset!");
-static_assert(offsetof(WBP_Pear_RightInfo_C_ToRightArchive, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ToRightArchive::ReturnValue' has a wrong offset!");
+static_assert(alignof(WBP_Pear_RightInfo_C_ToInfo) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_ToInfo");
+static_assert(sizeof(WBP_Pear_RightInfo_C_ToInfo) == 0x000010, "Wrong size on WBP_Pear_RightInfo_C_ToInfo");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ToInfo, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ToInfo::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ToInfo, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ToInfo::ReturnValue' has a wrong offset!");
+
+// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.OnLeftToTile
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Pear_RightInfo_C_OnLeftToTile final
+{
+public:
+	EUINavigation                                 Navigation_0;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Pear_RightInfo_C_OnLeftToTile) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_OnLeftToTile");
+static_assert(sizeof(WBP_Pear_RightInfo_C_OnLeftToTile) == 0x000010, "Wrong size on WBP_Pear_RightInfo_C_OnLeftToTile");
+static_assert(offsetof(WBP_Pear_RightInfo_C_OnLeftToTile, Navigation_0) == 0x000000, "Member 'WBP_Pear_RightInfo_C_OnLeftToTile::Navigation_0' has a wrong offset!");
+static_assert(offsetof(WBP_Pear_RightInfo_C_OnLeftToTile, ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_OnLeftToTile::ReturnValue' has a wrong offset!");
+
+// Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.ExecuteUbergraph_WBP_Pear_RightInfo
+// 0x0018 (0x0018 - 0x0000)
+struct WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo) == 0x000008, "Wrong alignment on WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo");
+static_assert(sizeof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo) == 0x000018, "Wrong size on WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo, EntryPoint) == 0x000000, "Member 'WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo::EntryPoint' has a wrong offset!");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo, CallFunc_PlayAnimation_ReturnValue) == 0x000008, "Member 'WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo::CallFunc_PlayAnimation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo, CallFunc_PlayAnimation_ReturnValue_1) == 0x000010, "Member 'WBP_Pear_RightInfo_C_ExecuteUbergraph_WBP_Pear_RightInfo::CallFunc_PlayAnimation_ReturnValue_1' has a wrong offset!");
 
 // Function WBP_Pear_RightInfo.WBP_Pear_RightInfo_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

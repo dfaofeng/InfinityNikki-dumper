@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "X6Game_classes.hpp"
 #include "Struct_ClothesMobileMatSwitchPair_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK

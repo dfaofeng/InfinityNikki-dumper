@@ -18,7 +18,7 @@ namespace SDK
 
 // Class RichTextBlockInlineDecorator.RichTextBlockInlineDecorator
 // 0x0000 (0x0028 - 0x0028)
-class URichTextBlockInlineDecorator final : public URichTextBlockDecorator
+class URichTextBlockInlineDecorator : public URichTextBlockDecorator
 {
 public:
 	static class UClass* StaticClass()

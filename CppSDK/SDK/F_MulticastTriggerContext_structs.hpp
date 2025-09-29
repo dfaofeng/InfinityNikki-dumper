@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ESkillFlag_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "ESkillFlag_structs.hpp"
 #include "ESkillCDStartCondition_structs.hpp"
 
 

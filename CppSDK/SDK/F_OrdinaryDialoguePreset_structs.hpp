@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_DialogueSpeakerBodySize_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "E_DialogueSpeakerBodySize_structs.hpp"
 #include "EDlgCameraTargetPointType_structs.hpp"
 
 

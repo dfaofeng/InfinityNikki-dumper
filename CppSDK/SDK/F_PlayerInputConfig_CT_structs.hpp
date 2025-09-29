@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "F_PlayerInputConfigByDevice_CT_structs.hpp"
 #include "EInputDeviceKeyType_structs.hpp"
+#include "F_PlayerInputConfigByDevice_CT_structs.hpp"
 
 
 namespace SDK

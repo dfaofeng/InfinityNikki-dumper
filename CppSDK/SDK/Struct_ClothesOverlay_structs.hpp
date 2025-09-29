@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "GameplayTags_structs.hpp"
-#include "F_OverlayConfig_structs.hpp"
 #include "EClothesType_structs.hpp"
+#include "F_OverlayConfig_structs.hpp"
 
 
 namespace SDK

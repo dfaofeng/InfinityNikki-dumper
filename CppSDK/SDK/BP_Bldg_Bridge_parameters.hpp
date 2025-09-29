@@ -74,7 +74,9 @@ public:
 	class AActor*                                 K2Node_ComponentBoundEvent_OtherActor;             // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_ComponentBoundEvent_OtherComp;              // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_ComponentBoundEvent_OtherBodyIndex;         // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_13C[0x4];                                      // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_DoesPlayerHasState_Has;                   // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesPlayerHasState_Has_1;                 // 0x013D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13E[0x2];                                      // 0x013E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ANikkiPlayer_BP_C*                      K2Node_DynamicCast_AsNikki_Player_BP;              // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -100,6 +102,8 @@ static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_
 static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_ComponentBoundEvent_OtherActor) == 0x000128, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::K2Node_ComponentBoundEvent_OtherActor' has a wrong offset!");
 static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_ComponentBoundEvent_OtherComp) == 0x000130, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::K2Node_ComponentBoundEvent_OtherComp' has a wrong offset!");
 static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_ComponentBoundEvent_OtherBodyIndex) == 0x000138, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::K2Node_ComponentBoundEvent_OtherBodyIndex' has a wrong offset!");
+static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, CallFunc_DoesPlayerHasState_Has) == 0x00013C, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::CallFunc_DoesPlayerHasState_Has' has a wrong offset!");
+static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, CallFunc_DoesPlayerHasState_Has_1) == 0x00013D, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::CallFunc_DoesPlayerHasState_Has_1' has a wrong offset!");
 static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_DynamicCast_AsNikki_Player_BP) == 0x000140, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::K2Node_DynamicCast_AsNikki_Player_BP' has a wrong offset!");
 static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_DynamicCast_bSuccess) == 0x000148, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge, K2Node_DynamicCast_AsNikki_Player_BP_1) == 0x000150, "Member 'BP_Bldg_Bridge_C_ExecuteUbergraph_BP_Bldg_Bridge::K2Node_DynamicCast_AsNikki_Player_BP_1' has a wrong offset!");

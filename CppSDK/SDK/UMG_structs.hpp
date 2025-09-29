@@ -232,6 +232,16 @@ enum class EBindingKind : uint8
 	EBindingKind_MAX                         = 2,
 };
 
+// ScriptStruct UMG.EventReply
+// 0x00B8 (0x00B8 - 0x0000)
+struct alignas(0x08) FEventReply final
+{
+public:
+	uint8                                         Pad_0[0xB8];                                       // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FEventReply) == 0x000008, "Wrong alignment on FEventReply");
+static_assert(sizeof(FEventReply) == 0x0000B8, "Wrong size on FEventReply");
+
 // ScriptStruct UMG.UserWidgetPool
 // 0x0088 (0x0088 - 0x0000)
 struct FUserWidgetPool final
@@ -245,16 +255,6 @@ static_assert(alignof(FUserWidgetPool) == 0x000008, "Wrong alignment on FUserWid
 static_assert(sizeof(FUserWidgetPool) == 0x000088, "Wrong size on FUserWidgetPool");
 static_assert(offsetof(FUserWidgetPool, ActiveWidgets) == 0x000000, "Member 'FUserWidgetPool::ActiveWidgets' has a wrong offset!");
 static_assert(offsetof(FUserWidgetPool, InactiveWidgets) == 0x000010, "Member 'FUserWidgetPool::InactiveWidgets' has a wrong offset!");
-
-// ScriptStruct UMG.EventReply
-// 0x00B8 (0x00B8 - 0x0000)
-struct alignas(0x08) FEventReply final
-{
-public:
-	uint8                                         Pad_0[0xB8];                                       // 0x0000(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FEventReply) == 0x000008, "Wrong alignment on FEventReply");
-static_assert(sizeof(FEventReply) == 0x0000B8, "Wrong size on FEventReply");
 
 // ScriptStruct UMG.WidgetComponentInstanceData
 // 0x0010 (0x00C8 - 0x00B8)

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "X6CustomizableSequencerTracks_classes.hpp"
 #include "Engine_structs.hpp"
 #include "EPlatformType_structs.hpp"
+#include "X6CustomizableSequencerTracks_classes.hpp"
 
 
 namespace SDK

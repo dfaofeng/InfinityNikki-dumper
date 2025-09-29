@@ -32,13 +32,13 @@ public:
 	double                                        TimeRemaining;                                     // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_PlaySpine(const class FString& AnimName, bool bLoop);
-	void BP_SetAtlasAndSkeleton(class USpineAtlasAsset* Atlas, class USpineSkeletonDataAsset* Skeleton);
-	void BP_SetPosAndSize(const struct FVector2D& Position, const struct FVector2D& Size);
-	void BP_StopSpine();
-	void ExecuteUbergraph_wbp_pear_BtnGroup_spine_card(int32 EntryPoint);
-	void OnCurrentToLast();
 	void OnCurrentToNext();
+	void OnCurrentToLast();
+	void ExecuteUbergraph_wbp_pear_BtnGroup_spine_card(int32 EntryPoint);
+	void BP_StopSpine();
+	void BP_SetPosAndSize(const struct FVector2D& Position, const struct FVector2D& Size);
+	void BP_SetAtlasAndSkeleton(class USpineAtlasAsset* Atlas, class USpineSkeletonDataAsset* Skeleton);
+	void BP_PlaySpine(const class FString& AnimName, bool bLoop);
 
 	class FString GetModuleName() const;
 

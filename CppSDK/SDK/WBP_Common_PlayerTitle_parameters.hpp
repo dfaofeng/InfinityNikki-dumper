@@ -16,27 +16,40 @@
 namespace SDK::Params
 {
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged final
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemValueChangedViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex");
+static_assert(sizeof(WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex");
+static_assert(offsetof(WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged final
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemObjectSetViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex");
+static_assert(sizeof(WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex");
+static_assert(offsetof(WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
+
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.On_CheckBox_bg_Hovered
+// 0x00B0 (0x00B0 - 0x0000)
+struct WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered final
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+static_assert(alignof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered) == 0x000008, "Wrong alignment on WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered");
+static_assert(sizeof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered) == 0x0000B0, "Wrong size on WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered");
+static_assert(offsetof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered, MyGeometry) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered, MouseEvent) == 0x000038, "Member 'WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered::MouseEvent' has a wrong offset!");
 
 // Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.ExecuteUbergraph_WBP_Common_PlayerTitle
 // 0x0010 (0x0010 - 0x0000)
@@ -58,40 +71,27 @@ static_assert(offsetof(WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Play
 static_assert(offsetof(WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_PlayerTitle, K2Node_Event_bIsSelected) == 0x000009, "Member 'WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_PlayerTitle::K2Node_Event_bIsSelected' has a wrong offset!");
 static_assert(offsetof(WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_PlayerTitle, K2Node_Event_index_1) == 0x00000C, "Member 'WBP_Common_PlayerTitle_C_ExecuteUbergraph_WBP_Common_PlayerTitle::K2Node_Event_index_1' has a wrong offset!");
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.On_CheckBox_bg_Hovered
-// 0x00B0 (0x00B0 - 0x0000)
-struct WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered final
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged final
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered) == 0x000008, "Wrong alignment on WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered");
-static_assert(sizeof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered) == 0x0000B0, "Wrong size on WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered");
-static_assert(offsetof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered, MyGeometry) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered, MouseEvent) == 0x000038, "Member 'WBP_Common_PlayerTitle_C_On_CheckBox_bg_Hovered::MouseEvent' has a wrong offset!");
+static_assert(alignof(WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemObjectSetViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex final
+// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex");
-static_assert(sizeof(WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex");
-static_assert(offsetof(WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
-
-// Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.OnListItemValueChangedViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex");
-static_assert(sizeof(WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex");
-static_assert(offsetof(WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
+static_assert(alignof(WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_Common_PlayerTitle_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
 // Function WBP_Common_PlayerTitle.WBP_Common_PlayerTitle_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

@@ -16,8 +16,138 @@
 namespace SDK::Params
 {
 
+// Function X6ANS_Weapon_PlayIdleBreakAnim.X6ANS_Weapon_PlayIdleBreakAnim_C.Received_NotifyTick
+// 0x00E8 (0x00E8 - 0x0000)
+struct X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         FrameDeltaTime;                                    // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BP_IsIdlebreakEnabled_bEnable;            // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5D[0x3];                                       // 0x005D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0078(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TArray<class UNiagaraComponent*>              CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x00A0(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class USceneComponent*                        CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_BE[0x2];                                       // 0x00BE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraComponent*                      K2Node_DynamicCast_AsNiagara_Particle_System_Component; // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ComponentHasTag_ReturnValue;              // 0x00C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_CA[0x6];                                       // 0x00CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNiagaraSystem*                         CallFunc_GetAsset_ReturnValue;                     // 0x00D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick) == 0x000008, "Wrong alignment on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick");
+static_assert(sizeof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick) == 0x0000E8, "Wrong size on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, MeshComp) == 0x000000, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::MeshComp' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, Animation) == 0x000008, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::Animation' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, FrameDeltaTime) == 0x000010, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::FrameDeltaTime' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, EventReference) == 0x000018, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::EventReference' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, ReturnValue) == 0x000048, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_GetOwner_ReturnValue) == 0x000050, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, Temp_int_Loop_Counter_Variable) == 0x000058, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_BP_IsIdlebreakEnabled_bEnable) == 0x00005C, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_BP_IsIdlebreakEnabled_bEnable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, Temp_int_Array_Index_Variable) == 0x000064, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, Temp_int_Loop_Counter_Variable_1) == 0x000068, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::Temp_int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Add_IntInt_ReturnValue_1) == 0x00006C, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, Temp_int_Array_Index_Variable_1) == 0x000070, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::Temp_int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_GetChildrenComponents_Children) == 0x000078, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Array_Get_Item) == 0x000088, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_IsValidClass_ReturnValue) == 0x000090, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_GetOwner_ReturnValue_1) == 0x000098, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x0000A0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Array_Get_Item_1) == 0x0000B0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Array_Length_ReturnValue) == 0x0000B8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_IsValid_ReturnValue) == 0x0000BC, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Less_IntInt_ReturnValue) == 0x0000BD, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, K2Node_DynamicCast_AsNiagara_Particle_System_Component) == 0x0000C0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::K2Node_DynamicCast_AsNiagara_Particle_System_Component' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, K2Node_DynamicCast_bSuccess) == 0x0000C8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_ComponentHasTag_ReturnValue) == 0x0000C9, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_ComponentHasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_GetAsset_ReturnValue) == 0x0000D0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_GetAsset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Set_Contains_ReturnValue) == 0x0000D8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Set_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Array_Length_ReturnValue_1) == 0x0000DC, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick, CallFunc_Less_IntInt_ReturnValue_1) == 0x0000E0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyTick::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+
+// Function X6ANS_Weapon_PlayIdleBreakAnim.X6ANS_Weapon_PlayIdleBreakAnim_C.Received_NotifyEnd
+// 0x00B8 (0x00B8 - 0x0000)
+struct X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BP_GetCurrentWeaponActor_Weapon;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x0078(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class USceneComponent*                        CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_91[0x7];                                       // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_ComponentHasTag_ReturnValue;              // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AD[0x3];                                       // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd");
+static_assert(sizeof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd) == 0x0000B8, "Wrong size on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::Animation' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::EventReference' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, Temp_int_Array_Index_Variable) == 0x000044, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_BP_GetCurrentWeaponActor_Weapon) == 0x000050, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_BP_GetCurrentWeaponActor_Weapon' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetComponentByClass_ReturnValue) == 0x000058, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetAnimInstance_ReturnValue) == 0x000068, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetChildrenComponents_Children) == 0x000078, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetChildrenComponents_Children' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_Array_Get_Item) == 0x000088, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_IsValidClass_ReturnValue) == 0x000090, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue_1) == 0x000098, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_ComponentHasTag_ReturnValue) == 0x0000A0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_ComponentHasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_Array_Length_ReturnValue) == 0x0000A4, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, Temp_int_Loop_Counter_Variable) == 0x0000A8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_Less_IntInt_ReturnValue) == 0x0000AC, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_Add_IntInt_ReturnValue) == 0x0000B0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+
 // Function X6ANS_Weapon_PlayIdleBreakAnim.X6ANS_Weapon_PlayIdleBreakAnim_C.Received_NotifyBegin
-// 0x0078 (0x0078 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin final
 {
 public:
@@ -28,59 +158,53 @@ public:
 	struct FAnimNotifyEventReference              EventReference;                                    // 0x0018(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BP_GetCurrentWeaponActor_Weapon;          // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_72[0x2];                                       // 0x0072(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Montage_Play_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 SpawnedWeapon;                                     // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           WeaponActorTags;                                   // 0x0058(0x0010)(Edit, BlueprintVisible)
+	TArray<class FName>                           K2Node_MakeArray_Array;                            // 0x0068(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BP_GetCurrentWeaponActor_Weapon;          // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0090(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue_1;        // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B9[0x7];                                       // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetActorRelativeTransform_SweepHitResult; // 0x00C0(0x00F8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1B9[0x7];                                      // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_X6SpawnActor_ReturnValue;                 // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x01C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C9[0x3];                                      // 0x01C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Montage_Play_ReturnValue;                 // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin) == 0x000008, "Wrong alignment on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin");
-static_assert(sizeof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin) == 0x000078, "Wrong size on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin");
+static_assert(sizeof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin) == 0x0001D0, "Wrong size on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin");
 static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, MeshComp) == 0x000000, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::MeshComp' has a wrong offset!");
 static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, Animation) == 0x000008, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::Animation' has a wrong offset!");
 static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, TotalDuration) == 0x000010, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::TotalDuration' has a wrong offset!");
 static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, EventReference) == 0x000018, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::EventReference' has a wrong offset!");
 static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, ReturnValue) == 0x000048, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetOwner_ReturnValue) == 0x000050, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_BP_GetCurrentWeaponActor_Weapon) == 0x000058, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_BP_GetCurrentWeaponActor_Weapon' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetComponentByClass_ReturnValue) == 0x000060, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetAnimInstance_ReturnValue) == 0x000068, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue_1) == 0x000071, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_Montage_Play_ReturnValue) == 0x000074, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_Montage_Play_ReturnValue' has a wrong offset!");
-
-// Function X6ANS_Weapon_PlayIdleBreakAnim.X6ANS_Weapon_PlayIdleBreakAnim_C.Received_NotifyEnd
-// 0x0070 (0x0070 - 0x0000)
-struct X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd final
-{
-public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BP_GetCurrentWeaponActor_Weapon;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd");
-static_assert(sizeof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd) == 0x000070, "Wrong size on X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::Animation' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::EventReference' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_BP_GetCurrentWeaponActor_Weapon) == 0x000050, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_BP_GetCurrentWeaponActor_Weapon' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetComponentByClass_ReturnValue) == 0x000058, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_GetAnimInstance_ReturnValue) == 0x000060, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue) == 0x000068, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd, CallFunc_IsValid_ReturnValue_1) == 0x000069, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyEnd::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, SpawnedWeapon) == 0x000050, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::SpawnedWeapon' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, WeaponActorTags) == 0x000058, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::WeaponActorTags' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, K2Node_MakeArray_Array) == 0x000068, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetOwner_ReturnValue) == 0x000078, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_BP_GetCurrentWeaponActor_Weapon) == 0x000080, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_BP_GetCurrentWeaponActor_Weapon' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetComponentByClass_ReturnValue) == 0x000088, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000090, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue) == 0x000098, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetAnimInstance_ReturnValue) == 0x0000A0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue_1) == 0x0000A8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_GetComponentByClass_ReturnValue_1) == 0x0000B0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue_2) == 0x0000B8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_K2_SetActorRelativeTransform_SweepHitResult) == 0x0000C0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_K2_SetActorRelativeTransform_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0001B8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_X6SpawnActor_ReturnValue) == 0x0001C0, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_X6SpawnActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_IsValidClass_ReturnValue) == 0x0001C8, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_IsValidClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin, CallFunc_Montage_Play_ReturnValue) == 0x0001CC, "Member 'X6ANS_Weapon_PlayIdleBreakAnim_C_Received_NotifyBegin::CallFunc_Montage_Play_ReturnValue' has a wrong offset!");
 
 }
 

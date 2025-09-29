@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Enum_ShrubEnum_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "F_FootstepSurfaceTypeSoundStruct_structs.hpp"
-#include "X6Game_structs.hpp"
-#include "Enum_ShrubEnum_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "F_FootstepGaitTypeSoundStruct_structs.hpp"
+#include "X6Game_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "PhysicsCore_structs.hpp"
 

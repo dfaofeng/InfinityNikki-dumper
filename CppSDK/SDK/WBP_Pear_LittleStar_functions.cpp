@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function WBP_Pear_LittleStar.WBP_Pear_LittleStar_C.UI_Compendium_PearEvaluation_Star
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_Pear_LittleStar_C::UI_Compendium_PearEvaluation_Star()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Pear_LittleStar_C", "UI_Compendium_PearEvaluation_Star");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function WBP_Pear_LittleStar.WBP_Pear_LittleStar_C.ExecuteUbergraph_WBP_Pear_LittleStar
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -34,20 +48,6 @@ void UWBP_Pear_LittleStar_C::ExecuteUbergraph_WBP_Pear_LittleStar(int32 EntryPoi
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Pear_LittleStar.WBP_Pear_LittleStar_C.UI_Compendium_PearEvaluation_Star
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_Pear_LittleStar_C::UI_Compendium_PearEvaluation_Star()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Pear_LittleStar_C", "UI_Compendium_PearEvaluation_Star");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

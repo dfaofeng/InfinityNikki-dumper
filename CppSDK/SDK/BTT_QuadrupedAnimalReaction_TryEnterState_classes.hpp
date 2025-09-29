@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "EQuadrupedAnimalReactionState_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EQuadrupedAnimalReactionState_structs.hpp"
 
 
 namespace SDK

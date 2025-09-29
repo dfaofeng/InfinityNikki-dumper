@@ -33,13 +33,13 @@ public:
 	double                                        TimeRemaining;                                     // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_ActivateNiagaraSystem(bool bActive);
-	void BP_PlaySpine(const class FString& AnimName, bool bLoop);
-	void BP_SetAtlasAndSkeleton(class USpineAtlasAsset* Atlas, class USpineSkeletonDataAsset* Skeleton);
-	void BP_UpdateNiagaraSystem(class UNiagaraSystem* nsContent, class UNiagaraSystem* nsOutside);
-	void ExecuteUbergraph_WBP_Common_Spine_PlayerTitle(int32 EntryPoint);
-	void OnCurrentToLast();
 	void OnCurrentToNext();
+	void OnCurrentToLast();
+	void ExecuteUbergraph_WBP_Common_Spine_PlayerTitle(int32 EntryPoint);
+	void BP_UpdateNiagaraSystem(class UNiagaraSystem* nsContent, class UNiagaraSystem* nsOutside);
+	void BP_SetAtlasAndSkeleton(class USpineAtlasAsset* Atlas, class USpineSkeletonDataAsset* Skeleton);
+	void BP_PlaySpine(const class FString& AnimName, bool bLoop);
+	void BP_ActivateNiagaraSystem(bool bActive);
 
 	class FString GetModuleName() const;
 

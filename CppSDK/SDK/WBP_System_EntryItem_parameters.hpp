@@ -16,27 +16,38 @@
 namespace SDK::Params
 {
 
-// Function WBP_System_EntryItem.WBP_System_EntryItem_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_System_EntryItem_C_BP_OnItemExpansionChanged final
+// Function WBP_System_EntryItem.WBP_System_EntryItem_C.OnListItemValueChangedViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_System_EntryItem_C_OnListItemValueChangedViaIndex final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_System_EntryItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_System_EntryItem_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WBP_System_EntryItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_System_EntryItem_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WBP_System_EntryItem_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_System_EntryItem_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WBP_System_EntryItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_System_EntryItem_C_OnListItemValueChangedViaIndex");
+static_assert(sizeof(WBP_System_EntryItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_System_EntryItem_C_OnListItemValueChangedViaIndex");
+static_assert(offsetof(WBP_System_EntryItem_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_System_EntryItem_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
 
-// Function WBP_System_EntryItem.WBP_System_EntryItem_C.BP_OnItemSelectionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_System_EntryItem_C_BP_OnItemSelectionChanged final
+// Function WBP_System_EntryItem.WBP_System_EntryItem_C.OnListItemObjectSetViaIndex
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_System_EntryItem_C_OnListItemObjectSetViaIndex final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_System_EntryItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_System_EntryItem_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WBP_System_EntryItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_System_EntryItem_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WBP_System_EntryItem_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_System_EntryItem_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WBP_System_EntryItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_System_EntryItem_C_OnListItemObjectSetViaIndex");
+static_assert(sizeof(WBP_System_EntryItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_System_EntryItem_C_OnListItemObjectSetViaIndex");
+static_assert(offsetof(WBP_System_EntryItem_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_System_EntryItem_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
+
+// Function WBP_System_EntryItem.WBP_System_EntryItem_C.OnFocusLost
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_System_EntryItem_C_OnFocusLost final
+{
+public:
+	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+};
+static_assert(alignof(WBP_System_EntryItem_C_OnFocusLost) == 0x000004, "Wrong alignment on WBP_System_EntryItem_C_OnFocusLost");
+static_assert(sizeof(WBP_System_EntryItem_C_OnFocusLost) == 0x000008, "Wrong size on WBP_System_EntryItem_C_OnFocusLost");
+static_assert(offsetof(WBP_System_EntryItem_C_OnFocusLost, InFocusEvent) == 0x000000, "Member 'WBP_System_EntryItem_C_OnFocusLost::InFocusEvent' has a wrong offset!");
 
 // Function WBP_System_EntryItem.WBP_System_EntryItem_C.ExecuteUbergraph_WBP_System_EntryItem
 // 0x0030 (0x0030 - 0x0000)
@@ -66,38 +77,27 @@ static_assert(offsetof(WBP_System_EntryItem_C_ExecuteUbergraph_WBP_System_EntryI
 static_assert(offsetof(WBP_System_EntryItem_C_ExecuteUbergraph_WBP_System_EntryItem, CallFunc_PlayAnimation_ReturnValue_2) == 0x000020, "Member 'WBP_System_EntryItem_C_ExecuteUbergraph_WBP_System_EntryItem::CallFunc_PlayAnimation_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(WBP_System_EntryItem_C_ExecuteUbergraph_WBP_System_EntryItem, K2Node_Event_InFocusEvent) == 0x000028, "Member 'WBP_System_EntryItem_C_ExecuteUbergraph_WBP_System_EntryItem::K2Node_Event_InFocusEvent' has a wrong offset!");
 
-// Function WBP_System_EntryItem.WBP_System_EntryItem_C.OnFocusLost
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_System_EntryItem_C_OnFocusLost final
+// Function WBP_System_EntryItem.WBP_System_EntryItem_C.BP_OnItemSelectionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_System_EntryItem_C_BP_OnItemSelectionChanged final
 {
 public:
-	struct FFocusEvent                            InFocusEvent;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_System_EntryItem_C_OnFocusLost) == 0x000004, "Wrong alignment on WBP_System_EntryItem_C_OnFocusLost");
-static_assert(sizeof(WBP_System_EntryItem_C_OnFocusLost) == 0x000008, "Wrong size on WBP_System_EntryItem_C_OnFocusLost");
-static_assert(offsetof(WBP_System_EntryItem_C_OnFocusLost, InFocusEvent) == 0x000000, "Member 'WBP_System_EntryItem_C_OnFocusLost::InFocusEvent' has a wrong offset!");
+static_assert(alignof(WBP_System_EntryItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_System_EntryItem_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WBP_System_EntryItem_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_System_EntryItem_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WBP_System_EntryItem_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_System_EntryItem_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
-// Function WBP_System_EntryItem.WBP_System_EntryItem_C.OnListItemObjectSetViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_System_EntryItem_C_OnListItemObjectSetViaIndex final
+// Function WBP_System_EntryItem.WBP_System_EntryItem_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_System_EntryItem_C_BP_OnItemExpansionChanged final
 {
 public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_System_EntryItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong alignment on WBP_System_EntryItem_C_OnListItemObjectSetViaIndex");
-static_assert(sizeof(WBP_System_EntryItem_C_OnListItemObjectSetViaIndex) == 0x000004, "Wrong size on WBP_System_EntryItem_C_OnListItemObjectSetViaIndex");
-static_assert(offsetof(WBP_System_EntryItem_C_OnListItemObjectSetViaIndex, Index_0) == 0x000000, "Member 'WBP_System_EntryItem_C_OnListItemObjectSetViaIndex::Index_0' has a wrong offset!");
-
-// Function WBP_System_EntryItem.WBP_System_EntryItem_C.OnListItemValueChangedViaIndex
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_System_EntryItem_C_OnListItemValueChangedViaIndex final
-{
-public:
-	int32                                         Index_0;                                           // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_System_EntryItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong alignment on WBP_System_EntryItem_C_OnListItemValueChangedViaIndex");
-static_assert(sizeof(WBP_System_EntryItem_C_OnListItemValueChangedViaIndex) == 0x000004, "Wrong size on WBP_System_EntryItem_C_OnListItemValueChangedViaIndex");
-static_assert(offsetof(WBP_System_EntryItem_C_OnListItemValueChangedViaIndex, Index_0) == 0x000000, "Member 'WBP_System_EntryItem_C_OnListItemValueChangedViaIndex::Index_0' has a wrong offset!");
+static_assert(alignof(WBP_System_EntryItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_System_EntryItem_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WBP_System_EntryItem_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_System_EntryItem_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WBP_System_EntryItem_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_System_EntryItem_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
 // Function WBP_System_EntryItem.WBP_System_EntryItem_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

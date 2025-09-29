@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "BP_TODSystem_Master_classes.hpp"
 #include "S_UrbanLight_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "DynamicEnvironmentSystem_structs.hpp"
 #include "S_TimeRange_structs.hpp"
+#include "BP_TODSystem_Master_classes.hpp"
 
 
 namespace SDK

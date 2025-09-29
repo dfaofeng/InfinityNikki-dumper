@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "NikkiFitCloth_structs.hpp"
 #include "Struct_ClothMatchType_structs.hpp"
 #include "E_MatchClothType_structs.hpp"
-#include "NikkiFitCloth_structs.hpp"
 
 
 namespace SDK

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Enum_BlackScreenEvent_structs.hpp"
 #include "Enum_BlackScreenSource_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

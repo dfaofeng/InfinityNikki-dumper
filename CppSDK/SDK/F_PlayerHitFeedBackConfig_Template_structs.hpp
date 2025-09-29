@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EDamagePerformanceType_structs.hpp"
 #include "F_PlayerHitFeedBackSingleConfig_Template_structs.hpp"
+#include "EDamagePerformanceType_structs.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "UnrealYAML_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UnrealYAML_structs.hpp"
 
 
 namespace SDK::Params

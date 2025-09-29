@@ -102,17 +102,6 @@ enum class EChooserEvaluationFrequency : uint32
 	EChooserEvaluationFrequency_MAX          = 4,
 };
 
-// ScriptStruct Chooser.ChooserOutputObjectRowData
-// 0x0010 (0x0010 - 0x0000)
-struct FChooserOutputObjectRowData final
-{
-public:
-	struct FInstancedStruct                       Value;                                             // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FChooserOutputObjectRowData) == 0x000008, "Wrong alignment on FChooserOutputObjectRowData");
-static_assert(sizeof(FChooserOutputObjectRowData) == 0x000010, "Wrong size on FChooserOutputObjectRowData");
-static_assert(offsetof(FChooserOutputObjectRowData, Value) == 0x000000, "Member 'FChooserOutputObjectRowData::Value' has a wrong offset!");
-
 // ScriptStruct Chooser.ChooserParameterBase
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FChooserParameterBase
@@ -147,6 +136,33 @@ static_assert(offsetof(FChooserPropertyBinding, PropertyBindingChain) == 0x00000
 static_assert(offsetof(FChooserPropertyBinding, ContextIndex) == 0x000010, "Member 'FChooserPropertyBinding::ContextIndex' has a wrong offset!");
 static_assert(offsetof(FChooserPropertyBinding, IsBoundToRoot) == 0x000014, "Member 'FChooserPropertyBinding::IsBoundToRoot' has a wrong offset!");
 
+// ScriptStruct Chooser.ChooserStructPropertyBinding
+// 0x0000 (0x0028 - 0x0028)
+struct FChooserStructPropertyBinding final : public FChooserPropertyBinding
+{
+};
+static_assert(alignof(FChooserStructPropertyBinding) == 0x000008, "Wrong alignment on FChooserStructPropertyBinding");
+static_assert(sizeof(FChooserStructPropertyBinding) == 0x000028, "Wrong size on FChooserStructPropertyBinding");
+
+// ScriptStruct Chooser.ChooserParameterStructBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterStructBase : public FChooserParameterBase
+{
+};
+static_assert(alignof(FChooserParameterStructBase) == 0x000008, "Wrong alignment on FChooserParameterStructBase");
+static_assert(sizeof(FChooserParameterStructBase) == 0x000008, "Wrong size on FChooserParameterStructBase");
+
+// ScriptStruct Chooser.StructContextProperty
+// 0x0028 (0x0030 - 0x0008)
+struct FStructContextProperty final : public FChooserParameterStructBase
+{
+public:
+	struct FChooserStructPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStructContextProperty) == 0x000008, "Wrong alignment on FStructContextProperty");
+static_assert(sizeof(FStructContextProperty) == 0x000030, "Wrong size on FStructContextProperty");
+static_assert(offsetof(FStructContextProperty, Binding) == 0x000008, "Member 'FStructContextProperty::Binding' has a wrong offset!");
+
 // ScriptStruct Chooser.BoolContextProperty
 // 0x0038 (0x0040 - 0x0008)
 struct FBoolContextProperty final : public FChooserParameterBoolBase
@@ -159,85 +175,6 @@ static_assert(alignof(FBoolContextProperty) == 0x000008, "Wrong alignment on FBo
 static_assert(sizeof(FBoolContextProperty) == 0x000040, "Wrong size on FBoolContextProperty");
 static_assert(offsetof(FBoolContextProperty, PropertyBindingChain) == 0x000008, "Member 'FBoolContextProperty::PropertyBindingChain' has a wrong offset!");
 static_assert(offsetof(FBoolContextProperty, Binding) == 0x000018, "Member 'FBoolContextProperty::Binding' has a wrong offset!");
-
-// ScriptStruct Chooser.ChooserParameterRandomizeBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterRandomizeBase : public FChooserParameterBase
-{
-};
-static_assert(alignof(FChooserParameterRandomizeBase) == 0x000008, "Wrong alignment on FChooserParameterRandomizeBase");
-static_assert(sizeof(FChooserParameterRandomizeBase) == 0x000008, "Wrong size on FChooserParameterRandomizeBase");
-
-// ScriptStruct Chooser.RandomizeContextProperty
-// 0x0028 (0x0030 - 0x0008)
-struct FRandomizeContextProperty final : public FChooserParameterRandomizeBase
-{
-public:
-	struct FChooserPropertyBinding                Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRandomizeContextProperty) == 0x000008, "Wrong alignment on FRandomizeContextProperty");
-static_assert(sizeof(FRandomizeContextProperty) == 0x000030, "Wrong size on FRandomizeContextProperty");
-static_assert(offsetof(FRandomizeContextProperty, Binding) == 0x000008, "Member 'FRandomizeContextProperty::Binding' has a wrong offset!");
-
-// ScriptStruct Chooser.ChooserColumnBase
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FChooserColumnBase
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FChooserColumnBase) == 0x000008, "Wrong alignment on FChooserColumnBase");
-static_assert(sizeof(FChooserColumnBase) == 0x000008, "Wrong size on FChooserColumnBase");
-
-// ScriptStruct Chooser.ObjectChooserBase
-// 0x0008 (0x0008 - 0x0000)
-struct alignas(0x08) FObjectChooserBase
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FObjectChooserBase) == 0x000008, "Wrong alignment on FObjectChooserBase");
-static_assert(sizeof(FObjectChooserBase) == 0x000008, "Wrong size on FObjectChooserBase");
-
-// ScriptStruct Chooser.EvaluateChooser
-// 0x0008 (0x0010 - 0x0008)
-struct FEvaluateChooser final : public FObjectChooserBase
-{
-public:
-	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FEvaluateChooser) == 0x000008, "Wrong alignment on FEvaluateChooser");
-static_assert(sizeof(FEvaluateChooser) == 0x000010, "Wrong size on FEvaluateChooser");
-static_assert(offsetof(FEvaluateChooser, Chooser) == 0x000008, "Member 'FEvaluateChooser::Chooser' has a wrong offset!");
-
-// ScriptStruct Chooser.BoolColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FBoolColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<EBoolColumnCellValue>                  RowValuesWithAny;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FBoolColumn) == 0x000008, "Wrong alignment on FBoolColumn");
-static_assert(sizeof(FBoolColumn) == 0x000028, "Wrong size on FBoolColumn");
-static_assert(offsetof(FBoolColumn, InputValue) == 0x000008, "Member 'FBoolColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FBoolColumn, RowValuesWithAny) == 0x000018, "Member 'FBoolColumn::RowValuesWithAny' has a wrong offset!");
-
-// ScriptStruct Chooser.ChooserEnumPropertyBinding
-// 0x0000 (0x0028 - 0x0028)
-struct FChooserEnumPropertyBinding final : public FChooserPropertyBinding
-{
-};
-static_assert(alignof(FChooserEnumPropertyBinding) == 0x000008, "Wrong alignment on FChooserEnumPropertyBinding");
-static_assert(sizeof(FChooserEnumPropertyBinding) == 0x000028, "Wrong size on FChooserEnumPropertyBinding");
-
-// ScriptStruct Chooser.ChooserObjectPropertyBinding
-// 0x0000 (0x0028 - 0x0028)
-struct FChooserObjectPropertyBinding final : public FChooserPropertyBinding
-{
-};
-static_assert(alignof(FChooserObjectPropertyBinding) == 0x000008, "Wrong alignment on FChooserObjectPropertyBinding");
-static_assert(sizeof(FChooserObjectPropertyBinding) == 0x000028, "Wrong size on FChooserObjectPropertyBinding");
 
 // ScriptStruct Chooser.AnimCurveOverride
 // 0x000C (0x000C - 0x0000)
@@ -297,13 +234,73 @@ static_assert(offsetof(FChooserPlayerSettings, BlendProfile) == 0x000030, "Membe
 static_assert(offsetof(FChooserPlayerSettings, BlendOption) == 0x000038, "Member 'FChooserPlayerSettings::BlendOption' has a wrong offset!");
 static_assert(offsetof(FChooserPlayerSettings, bUseInertialBlend) == 0x000039, "Member 'FChooserPlayerSettings::bUseInertialBlend' has a wrong offset!");
 
-// ScriptStruct Chooser.ChooserStructPropertyBinding
+// ScriptStruct Chooser.AnimNode_ChooserPlayer
+// 0x0188 (0x0238 - 0x00B0)
+struct FAnimNode_ChooserPlayer final : public FAnimNode_BlendStack_Standalone
+{
+public:
+	uint8                                         Pad_B0[0x20];                                      // 0x00B0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	EChooserEvaluationFrequency                   EvaluationFrequency;                               // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInstancedStruct                       Chooser;                                           // 0x00D8(0x0010)(Edit, NativeAccessSpecifierPublic)
+	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x00E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendSpaceX;                                       // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendSpaceY;                                       // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FChooserPlayerSettings                 DefaultSettings;                                   // 0x0100(0x0040)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               ChooserContextDefinition;                          // 0x0140(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bStartFromMatchingPose;                            // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0xE7];                                     // 0x0151(0x00E7)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAnimNode_ChooserPlayer) == 0x000008, "Wrong alignment on FAnimNode_ChooserPlayer");
+static_assert(sizeof(FAnimNode_ChooserPlayer) == 0x000238, "Wrong size on FAnimNode_ChooserPlayer");
+static_assert(offsetof(FAnimNode_ChooserPlayer, EvaluationFrequency) == 0x0000D0, "Member 'FAnimNode_ChooserPlayer::EvaluationFrequency' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, Chooser) == 0x0000D8, "Member 'FAnimNode_ChooserPlayer::Chooser' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, MirrorDataTable) == 0x0000E8, "Member 'FAnimNode_ChooserPlayer::MirrorDataTable' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, BlendSpaceX) == 0x0000F0, "Member 'FAnimNode_ChooserPlayer::BlendSpaceX' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, BlendSpaceY) == 0x0000F4, "Member 'FAnimNode_ChooserPlayer::BlendSpaceY' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, DefaultSettings) == 0x000100, "Member 'FAnimNode_ChooserPlayer::DefaultSettings' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, ChooserContextDefinition) == 0x000140, "Member 'FAnimNode_ChooserPlayer::ChooserContextDefinition' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ChooserPlayer, bStartFromMatchingPose) == 0x000150, "Member 'FAnimNode_ChooserPlayer::bStartFromMatchingPose' has a wrong offset!");
+
+// ScriptStruct Chooser.ChooserColumnBase
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FChooserColumnBase
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FChooserColumnBase) == 0x000008, "Wrong alignment on FChooserColumnBase");
+static_assert(sizeof(FChooserColumnBase) == 0x000008, "Wrong size on FChooserColumnBase");
+
+// ScriptStruct Chooser.BoolColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FBoolColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<EBoolColumnCellValue>                  RowValuesWithAny;                                  // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FBoolColumn) == 0x000008, "Wrong alignment on FBoolColumn");
+static_assert(sizeof(FBoolColumn) == 0x000028, "Wrong size on FBoolColumn");
+static_assert(offsetof(FBoolColumn, InputValue) == 0x000008, "Member 'FBoolColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FBoolColumn, RowValuesWithAny) == 0x000018, "Member 'FBoolColumn::RowValuesWithAny' has a wrong offset!");
+
+// ScriptStruct Chooser.ChooserEnumPropertyBinding
 // 0x0000 (0x0028 - 0x0028)
-struct FChooserStructPropertyBinding final : public FChooserPropertyBinding
+struct FChooserEnumPropertyBinding final : public FChooserPropertyBinding
 {
 };
-static_assert(alignof(FChooserStructPropertyBinding) == 0x000008, "Wrong alignment on FChooserStructPropertyBinding");
-static_assert(sizeof(FChooserStructPropertyBinding) == 0x000028, "Wrong size on FChooserStructPropertyBinding");
+static_assert(alignof(FChooserEnumPropertyBinding) == 0x000008, "Wrong alignment on FChooserEnumPropertyBinding");
+static_assert(sizeof(FChooserEnumPropertyBinding) == 0x000028, "Wrong size on FChooserEnumPropertyBinding");
+
+// ScriptStruct Chooser.ChooserObjectPropertyBinding
+// 0x0000 (0x0028 - 0x0028)
+struct FChooserObjectPropertyBinding final : public FChooserPropertyBinding
+{
+};
+static_assert(alignof(FChooserObjectPropertyBinding) == 0x000008, "Wrong alignment on FChooserObjectPropertyBinding");
+static_assert(sizeof(FChooserObjectPropertyBinding) == 0x000028, "Wrong size on FChooserObjectPropertyBinding");
 
 // ScriptStruct Chooser.ContextObjectTypeBase
 // 0x0004 (0x0004 - 0x0000)
@@ -315,6 +312,27 @@ public:
 static_assert(alignof(FContextObjectTypeBase) == 0x000004, "Wrong alignment on FContextObjectTypeBase");
 static_assert(sizeof(FContextObjectTypeBase) == 0x000004, "Wrong size on FContextObjectTypeBase");
 static_assert(offsetof(FContextObjectTypeBase, Direction) == 0x000000, "Member 'FContextObjectTypeBase::Direction' has a wrong offset!");
+
+// ScriptStruct Chooser.ObjectChooserBase
+// 0x0008 (0x0008 - 0x0000)
+struct alignas(0x08) FObjectChooserBase
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FObjectChooserBase) == 0x000008, "Wrong alignment on FObjectChooserBase");
+static_assert(sizeof(FObjectChooserBase) == 0x000008, "Wrong size on FObjectChooserBase");
+
+// ScriptStruct Chooser.NestedChooser
+// 0x0008 (0x0010 - 0x0008)
+struct FNestedChooser final : public FObjectChooserBase
+{
+public:
+	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNestedChooser) == 0x000008, "Wrong alignment on FNestedChooser");
+static_assert(sizeof(FNestedChooser) == 0x000010, "Wrong size on FNestedChooser");
+static_assert(offsetof(FNestedChooser, Chooser) == 0x000008, "Member 'FNestedChooser::Chooser' has a wrong offset!");
 
 // ScriptStruct Chooser.ContextObjectTypeClass
 // 0x000C (0x0010 - 0x0004)
@@ -454,6 +472,20 @@ static_assert(sizeof(FFloatContextProperty) == 0x000040, "Wrong size on FFloatCo
 static_assert(offsetof(FFloatContextProperty, PropertyBindingChain) == 0x000008, "Member 'FFloatContextProperty::PropertyBindingChain' has a wrong offset!");
 static_assert(offsetof(FFloatContextProperty, Binding) == 0x000018, "Member 'FFloatContextProperty::Binding' has a wrong offset!");
 
+// ScriptStruct Chooser.ChooserObjectClassRowData
+// 0x0010 (0x0010 - 0x0000)
+struct FChooserObjectClassRowData final
+{
+public:
+	EObjectClassColumnCellValueComparison         Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UObject>                    Value;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FChooserObjectClassRowData) == 0x000008, "Wrong alignment on FChooserObjectClassRowData");
+static_assert(sizeof(FChooserObjectClassRowData) == 0x000010, "Wrong size on FChooserObjectClassRowData");
+static_assert(offsetof(FChooserObjectClassRowData, Comparison) == 0x000000, "Member 'FChooserObjectClassRowData::Comparison' has a wrong offset!");
+static_assert(offsetof(FChooserObjectClassRowData, Value) == 0x000008, "Member 'FChooserObjectClassRowData::Value' has a wrong offset!");
+
 // ScriptStruct Chooser.ChooserFloatRangeRowData
 // 0x000C (0x000C - 0x0000)
 struct FChooserFloatRangeRowData final
@@ -492,25 +524,6 @@ static_assert(offsetof(FFloatRangeColumn, MinValue) == 0x000020, "Member 'FFloat
 static_assert(offsetof(FFloatRangeColumn, MaxValue) == 0x000028, "Member 'FFloatRangeColumn::MaxValue' has a wrong offset!");
 static_assert(offsetof(FFloatRangeColumn, RowValues) == 0x000030, "Member 'FFloatRangeColumn::RowValues' has a wrong offset!");
 
-// ScriptStruct Chooser.ChooserParameterObjectBase
-// 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterObjectBase : public FChooserParameterBase
-{
-};
-static_assert(alignof(FChooserParameterObjectBase) == 0x000008, "Wrong alignment on FChooserParameterObjectBase");
-static_assert(sizeof(FChooserParameterObjectBase) == 0x000008, "Wrong size on FChooserParameterObjectBase");
-
-// ScriptStruct Chooser.ObjectContextProperty
-// 0x0028 (0x0030 - 0x0008)
-struct FObjectContextProperty final : public FChooserParameterObjectBase
-{
-public:
-	struct FChooserObjectPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FObjectContextProperty) == 0x000008, "Wrong alignment on FObjectContextProperty");
-static_assert(sizeof(FObjectContextProperty) == 0x000030, "Wrong size on FObjectContextProperty");
-static_assert(offsetof(FObjectContextProperty, Binding) == 0x000008, "Member 'FObjectContextProperty::Binding' has a wrong offset!");
-
 // ScriptStruct Chooser.ChooserParameterGameplayTagBase
 // 0x0000 (0x0008 - 0x0008)
 struct FChooserParameterGameplayTagBase : public FChooserParameterBase
@@ -531,6 +544,33 @@ static_assert(alignof(FGameplayTagContextProperty) == 0x000008, "Wrong alignment
 static_assert(sizeof(FGameplayTagContextProperty) == 0x000040, "Wrong size on FGameplayTagContextProperty");
 static_assert(offsetof(FGameplayTagContextProperty, PropertyBindingChain) == 0x000008, "Member 'FGameplayTagContextProperty::PropertyBindingChain' has a wrong offset!");
 static_assert(offsetof(FGameplayTagContextProperty, Binding) == 0x000018, "Member 'FGameplayTagContextProperty::Binding' has a wrong offset!");
+
+// ScriptStruct Chooser.ChooserObjectRowData
+// 0x0030 (0x0030 - 0x0000)
+struct FChooserObjectRowData final
+{
+public:
+	EObjectColumnCellValueComparison              Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UObject>                 Value;                                             // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FChooserObjectRowData) == 0x000008, "Wrong alignment on FChooserObjectRowData");
+static_assert(sizeof(FChooserObjectRowData) == 0x000030, "Wrong size on FChooserObjectRowData");
+static_assert(offsetof(FChooserObjectRowData, Comparison) == 0x000000, "Member 'FChooserObjectRowData::Comparison' has a wrong offset!");
+static_assert(offsetof(FChooserObjectRowData, Value) == 0x000008, "Member 'FChooserObjectRowData::Value' has a wrong offset!");
+
+// ScriptStruct Chooser.ObjectColumn
+// 0x0020 (0x0028 - 0x0008)
+struct FObjectColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	TArray<struct FChooserObjectRowData>          RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FObjectColumn) == 0x000008, "Wrong alignment on FObjectColumn");
+static_assert(sizeof(FObjectColumn) == 0x000028, "Wrong size on FObjectColumn");
+static_assert(offsetof(FObjectColumn, InputValue) == 0x000008, "Member 'FObjectColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FObjectColumn, RowValues) == 0x000018, "Member 'FObjectColumn::RowValues' has a wrong offset!");
 
 // ScriptStruct Chooser.GameplayTagColumn
 // 0x0028 (0x0030 - 0x0008)
@@ -554,16 +594,13 @@ static_assert(offsetof(FGameplayTagColumn, bMatchExact) == 0x00001A, "Member 'FG
 static_assert(offsetof(FGameplayTagColumn, bInvertMatchingLogic) == 0x00001B, "Member 'FGameplayTagColumn::bInvertMatchingLogic' has a wrong offset!");
 static_assert(offsetof(FGameplayTagColumn, RowValues) == 0x000020, "Member 'FGameplayTagColumn::RowValues' has a wrong offset!");
 
-// ScriptStruct Chooser.ChooserOutputEnumRowData
-// 0x0001 (0x0001 - 0x0000)
-struct FChooserOutputEnumRowData final
+// ScriptStruct Chooser.ChooserParameterObjectBase
+// 0x0000 (0x0008 - 0x0008)
+struct FChooserParameterObjectBase : public FChooserParameterBase
 {
-public:
-	uint8                                         Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FChooserOutputEnumRowData) == 0x000001, "Wrong alignment on FChooserOutputEnumRowData");
-static_assert(sizeof(FChooserOutputEnumRowData) == 0x000001, "Wrong size on FChooserOutputEnumRowData");
-static_assert(offsetof(FChooserOutputEnumRowData, Value) == 0x000000, "Member 'FChooserOutputEnumRowData::Value' has a wrong offset!");
+static_assert(alignof(FChooserParameterObjectBase) == 0x000008, "Wrong alignment on FChooserParameterObjectBase");
+static_assert(sizeof(FChooserParameterObjectBase) == 0x000008, "Wrong size on FChooserParameterObjectBase");
 
 // ScriptStruct Chooser.ChooserRandomizationContext
 // 0x0050 (0x0050 - 0x0000)
@@ -575,13 +612,28 @@ public:
 static_assert(alignof(FChooserRandomizationContext) == 0x000008, "Wrong alignment on FChooserRandomizationContext");
 static_assert(sizeof(FChooserRandomizationContext) == 0x000050, "Wrong size on FChooserRandomizationContext");
 
-// ScriptStruct Chooser.ChooserParameterStructBase
+// ScriptStruct Chooser.ChooserParameterRandomizeBase
 // 0x0000 (0x0008 - 0x0008)
-struct FChooserParameterStructBase : public FChooserParameterBase
+struct FChooserParameterRandomizeBase : public FChooserParameterBase
 {
 };
-static_assert(alignof(FChooserParameterStructBase) == 0x000008, "Wrong alignment on FChooserParameterStructBase");
-static_assert(sizeof(FChooserParameterStructBase) == 0x000008, "Wrong size on FChooserParameterStructBase");
+static_assert(alignof(FChooserParameterRandomizeBase) == 0x000008, "Wrong alignment on FChooserParameterRandomizeBase");
+static_assert(sizeof(FChooserParameterRandomizeBase) == 0x000008, "Wrong size on FChooserParameterRandomizeBase");
+
+// ScriptStruct Chooser.OutputFloatColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FOutputFloatColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
+	double                                        FallbackValue;                                     // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<double>                                RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOutputFloatColumn) == 0x000008, "Wrong alignment on FOutputFloatColumn");
+static_assert(sizeof(FOutputFloatColumn) == 0x000030, "Wrong size on FOutputFloatColumn");
+static_assert(offsetof(FOutputFloatColumn, InputValue) == 0x000008, "Member 'FOutputFloatColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FOutputFloatColumn, FallbackValue) == 0x000018, "Member 'FOutputFloatColumn::FallbackValue' has a wrong offset!");
+static_assert(offsetof(FOutputFloatColumn, RowValues) == 0x000020, "Member 'FOutputFloatColumn::RowValues' has a wrong offset!");
 
 // ScriptStruct Chooser.ChooserEvaluationInputObject
 // 0x0008 (0x0008 - 0x0000)
@@ -593,21 +645,6 @@ public:
 static_assert(alignof(FChooserEvaluationInputObject) == 0x000008, "Wrong alignment on FChooserEvaluationInputObject");
 static_assert(sizeof(FChooserEvaluationInputObject) == 0x000008, "Wrong size on FChooserEvaluationInputObject");
 
-// ScriptStruct Chooser.OutputObjectColumn
-// 0x0030 (0x0038 - 0x0008)
-struct FOutputObjectColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserOutputObjectRowData>    RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FChooserOutputObjectRowData            FallbackValue;                                     // 0x0028(0x0010)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOutputObjectColumn) == 0x000008, "Wrong alignment on FOutputObjectColumn");
-static_assert(sizeof(FOutputObjectColumn) == 0x000038, "Wrong size on FOutputObjectColumn");
-static_assert(offsetof(FOutputObjectColumn, InputValue) == 0x000008, "Member 'FOutputObjectColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FOutputObjectColumn, RowValues) == 0x000018, "Member 'FOutputObjectColumn::RowValues' has a wrong offset!");
-static_assert(offsetof(FOutputObjectColumn, FallbackValue) == 0x000028, "Member 'FOutputObjectColumn::FallbackValue' has a wrong offset!");
-
 // ScriptStruct Chooser.ChooserEvaluationContext
 // 0x0078 (0x0078 - 0x0000)
 struct alignas(0x08) FChooserEvaluationContext final
@@ -617,6 +654,37 @@ public:
 };
 static_assert(alignof(FChooserEvaluationContext) == 0x000008, "Wrong alignment on FChooserEvaluationContext");
 static_assert(sizeof(FChooserEvaluationContext) == 0x000078, "Wrong size on FChooserEvaluationContext");
+
+// ScriptStruct Chooser.OutputBoolColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FOutputBoolColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	bool                                          bFallbackValue;                                    // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOutputBoolColumn) == 0x000008, "Wrong alignment on FOutputBoolColumn");
+static_assert(sizeof(FOutputBoolColumn) == 0x000030, "Wrong size on FOutputBoolColumn");
+static_assert(offsetof(FOutputBoolColumn, InputValue) == 0x000008, "Member 'FOutputBoolColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FOutputBoolColumn, bFallbackValue) == 0x000018, "Member 'FOutputBoolColumn::bFallbackValue' has a wrong offset!");
+static_assert(offsetof(FOutputBoolColumn, RowValues) == 0x000020, "Member 'FOutputBoolColumn::RowValues' has a wrong offset!");
+
+// ScriptStruct Chooser.OutputStructColumn
+// 0x0030 (0x0038 - 0x0008)
+struct FOutputStructColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       FallbackValue;                                     // 0x0018(0x0010)(Edit, NativeAccessSpecifierPublic)
+	TArray<struct FInstancedStruct>               RowValues;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOutputStructColumn) == 0x000008, "Wrong alignment on FOutputStructColumn");
+static_assert(sizeof(FOutputStructColumn) == 0x000038, "Wrong size on FOutputStructColumn");
+static_assert(offsetof(FOutputStructColumn, InputValue) == 0x000008, "Member 'FOutputStructColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FOutputStructColumn, FallbackValue) == 0x000018, "Member 'FOutputStructColumn::FallbackValue' has a wrong offset!");
+static_assert(offsetof(FOutputStructColumn, RowValues) == 0x000028, "Member 'FOutputStructColumn::RowValues' has a wrong offset!");
 
 // ScriptStruct Chooser.ChooserMultiEnumRowData
 // 0x0004 (0x0004 - 0x0000)
@@ -628,22 +696,6 @@ public:
 static_assert(alignof(FChooserMultiEnumRowData) == 0x000004, "Wrong alignment on FChooserMultiEnumRowData");
 static_assert(sizeof(FChooserMultiEnumRowData) == 0x000004, "Wrong size on FChooserMultiEnumRowData");
 static_assert(offsetof(FChooserMultiEnumRowData, Value) == 0x000000, "Member 'FChooserMultiEnumRowData::Value' has a wrong offset!");
-
-// ScriptStruct Chooser.OutputEnumColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FOutputEnumColumn final : public FEnumColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	struct FChooserOutputEnumRowData              FallbackValue;                                     // 0x0018(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FChooserOutputEnumRowData>      RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOutputEnumColumn) == 0x000008, "Wrong alignment on FOutputEnumColumn");
-static_assert(sizeof(FOutputEnumColumn) == 0x000030, "Wrong size on FOutputEnumColumn");
-static_assert(offsetof(FOutputEnumColumn, InputValue) == 0x000008, "Member 'FOutputEnumColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FOutputEnumColumn, FallbackValue) == 0x000018, "Member 'FOutputEnumColumn::FallbackValue' has a wrong offset!");
-static_assert(offsetof(FOutputEnumColumn, RowValues) == 0x000020, "Member 'FOutputEnumColumn::RowValues' has a wrong offset!");
 
 // ScriptStruct Chooser.MultiEnumColumn
 // 0x0020 (0x0028 - 0x0008)
@@ -657,23 +709,6 @@ static_assert(alignof(FMultiEnumColumn) == 0x000008, "Wrong alignment on FMultiE
 static_assert(sizeof(FMultiEnumColumn) == 0x000028, "Wrong size on FMultiEnumColumn");
 static_assert(offsetof(FMultiEnumColumn, InputValue) == 0x000008, "Member 'FMultiEnumColumn::InputValue' has a wrong offset!");
 static_assert(offsetof(FMultiEnumColumn, RowValues) == 0x000018, "Member 'FMultiEnumColumn::RowValues' has a wrong offset!");
-
-// ScriptStruct Chooser.RandomizeColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FRandomizeColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	float                                         RepeatProbabilityMultiplier;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EqualCostThreshold;                                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<float>                                 RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FRandomizeColumn) == 0x000008, "Wrong alignment on FRandomizeColumn");
-static_assert(sizeof(FRandomizeColumn) == 0x000030, "Wrong size on FRandomizeColumn");
-static_assert(offsetof(FRandomizeColumn, InputValue) == 0x000008, "Member 'FRandomizeColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FRandomizeColumn, RepeatProbabilityMultiplier) == 0x000018, "Member 'FRandomizeColumn::RepeatProbabilityMultiplier' has a wrong offset!");
-static_assert(offsetof(FRandomizeColumn, EqualCostThreshold) == 0x00001C, "Member 'FRandomizeColumn::EqualCostThreshold' has a wrong offset!");
-static_assert(offsetof(FRandomizeColumn, RowValues) == 0x000020, "Member 'FRandomizeColumn::RowValues' has a wrong offset!");
 
 // ScriptStruct Chooser.AssetChooser
 // 0x0008 (0x0010 - 0x0008)
@@ -708,20 +743,6 @@ static_assert(alignof(FClassChooser) == 0x000008, "Wrong alignment on FClassChoo
 static_assert(sizeof(FClassChooser) == 0x000010, "Wrong size on FClassChooser");
 static_assert(offsetof(FClassChooser, Class) == 0x000008, "Member 'FClassChooser::Class' has a wrong offset!");
 
-// ScriptStruct Chooser.ChooserObjectClassRowData
-// 0x0010 (0x0010 - 0x0000)
-struct FChooserObjectClassRowData final
-{
-public:
-	EObjectClassColumnCellValueComparison         Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UObject>                    Value;                                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FChooserObjectClassRowData) == 0x000008, "Wrong alignment on FChooserObjectClassRowData");
-static_assert(sizeof(FChooserObjectClassRowData) == 0x000010, "Wrong size on FChooserObjectClassRowData");
-static_assert(offsetof(FChooserObjectClassRowData, Comparison) == 0x000000, "Member 'FChooserObjectClassRowData::Comparison' has a wrong offset!");
-static_assert(offsetof(FChooserObjectClassRowData, Value) == 0x000008, "Member 'FChooserObjectClassRowData::Value' has a wrong offset!");
-
 // ScriptStruct Chooser.ObjectClassColumn
 // 0x0020 (0x0028 - 0x0008)
 struct FObjectClassColumn final : public FChooserColumnBase
@@ -735,129 +756,108 @@ static_assert(sizeof(FObjectClassColumn) == 0x000028, "Wrong size on FObjectClas
 static_assert(offsetof(FObjectClassColumn, InputValue) == 0x000008, "Member 'FObjectClassColumn::InputValue' has a wrong offset!");
 static_assert(offsetof(FObjectClassColumn, RowValues) == 0x000018, "Member 'FObjectClassColumn::RowValues' has a wrong offset!");
 
-// ScriptStruct Chooser.ChooserObjectRowData
-// 0x0030 (0x0030 - 0x0000)
-struct FChooserObjectRowData final
-{
-public:
-	EObjectColumnCellValueComparison              Comparison;                                        // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UObject>                 Value;                                             // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FChooserObjectRowData) == 0x000008, "Wrong alignment on FChooserObjectRowData");
-static_assert(sizeof(FChooserObjectRowData) == 0x000030, "Wrong size on FChooserObjectRowData");
-static_assert(offsetof(FChooserObjectRowData, Comparison) == 0x000000, "Member 'FChooserObjectRowData::Comparison' has a wrong offset!");
-static_assert(offsetof(FChooserObjectRowData, Value) == 0x000008, "Member 'FChooserObjectRowData::Value' has a wrong offset!");
-
-// ScriptStruct Chooser.ObjectColumn
-// 0x0020 (0x0028 - 0x0008)
-struct FObjectColumn final : public FChooserColumnBase
-{
-public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	TArray<struct FChooserObjectRowData>          RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FObjectColumn) == 0x000008, "Wrong alignment on FObjectColumn");
-static_assert(sizeof(FObjectColumn) == 0x000028, "Wrong size on FObjectColumn");
-static_assert(offsetof(FObjectColumn, InputValue) == 0x000008, "Member 'FObjectColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FObjectColumn, RowValues) == 0x000018, "Member 'FObjectColumn::RowValues' has a wrong offset!");
-
-// ScriptStruct Chooser.OutputBoolColumn
+// ScriptStruct Chooser.ObjectContextProperty
 // 0x0028 (0x0030 - 0x0008)
-struct FOutputBoolColumn final : public FChooserColumnBase
+struct FObjectContextProperty final : public FChooserParameterObjectBase
+{
+public:
+	struct FChooserObjectPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FObjectContextProperty) == 0x000008, "Wrong alignment on FObjectContextProperty");
+static_assert(sizeof(FObjectContextProperty) == 0x000030, "Wrong size on FObjectContextProperty");
+static_assert(offsetof(FObjectContextProperty, Binding) == 0x000008, "Member 'FObjectContextProperty::Binding' has a wrong offset!");
+
+// ScriptStruct Chooser.ChooserOutputEnumRowData
+// 0x0001 (0x0001 - 0x0000)
+struct FChooserOutputEnumRowData final
+{
+public:
+	uint8                                         Value;                                             // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FChooserOutputEnumRowData) == 0x000001, "Wrong alignment on FChooserOutputEnumRowData");
+static_assert(sizeof(FChooserOutputEnumRowData) == 0x000001, "Wrong size on FChooserOutputEnumRowData");
+static_assert(offsetof(FChooserOutputEnumRowData, Value) == 0x000000, "Member 'FChooserOutputEnumRowData::Value' has a wrong offset!");
+
+// ScriptStruct Chooser.OutputEnumColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FOutputEnumColumn final : public FEnumColumnBase
 {
 public:
 	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	bool                                          bFallbackValue;                                    // 0x0018(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FChooserOutputEnumRowData              FallbackValue;                                     // 0x0018(0x0001)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FChooserOutputEnumRowData>      RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOutputBoolColumn) == 0x000008, "Wrong alignment on FOutputBoolColumn");
-static_assert(sizeof(FOutputBoolColumn) == 0x000030, "Wrong size on FOutputBoolColumn");
-static_assert(offsetof(FOutputBoolColumn, InputValue) == 0x000008, "Member 'FOutputBoolColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FOutputBoolColumn, bFallbackValue) == 0x000018, "Member 'FOutputBoolColumn::bFallbackValue' has a wrong offset!");
-static_assert(offsetof(FOutputBoolColumn, RowValues) == 0x000020, "Member 'FOutputBoolColumn::RowValues' has a wrong offset!");
+static_assert(alignof(FOutputEnumColumn) == 0x000008, "Wrong alignment on FOutputEnumColumn");
+static_assert(sizeof(FOutputEnumColumn) == 0x000030, "Wrong size on FOutputEnumColumn");
+static_assert(offsetof(FOutputEnumColumn, InputValue) == 0x000008, "Member 'FOutputEnumColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FOutputEnumColumn, FallbackValue) == 0x000018, "Member 'FOutputEnumColumn::FallbackValue' has a wrong offset!");
+static_assert(offsetof(FOutputEnumColumn, RowValues) == 0x000020, "Member 'FOutputEnumColumn::RowValues' has a wrong offset!");
 
-// ScriptStruct Chooser.OutputFloatColumn
-// 0x0028 (0x0030 - 0x0008)
-struct FOutputFloatColumn final : public FChooserColumnBase
+// ScriptStruct Chooser.ChooserOutputObjectRowData
+// 0x0010 (0x0010 - 0x0000)
+struct FChooserOutputObjectRowData final
 {
 public:
-	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NativeAccessSpecifierPublic)
-	double                                        FallbackValue;                                     // 0x0018(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<double>                                RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FInstancedStruct                       Value;                                             // 0x0000(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOutputFloatColumn) == 0x000008, "Wrong alignment on FOutputFloatColumn");
-static_assert(sizeof(FOutputFloatColumn) == 0x000030, "Wrong size on FOutputFloatColumn");
-static_assert(offsetof(FOutputFloatColumn, InputValue) == 0x000008, "Member 'FOutputFloatColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FOutputFloatColumn, FallbackValue) == 0x000018, "Member 'FOutputFloatColumn::FallbackValue' has a wrong offset!");
-static_assert(offsetof(FOutputFloatColumn, RowValues) == 0x000020, "Member 'FOutputFloatColumn::RowValues' has a wrong offset!");
+static_assert(alignof(FChooserOutputObjectRowData) == 0x000008, "Wrong alignment on FChooserOutputObjectRowData");
+static_assert(sizeof(FChooserOutputObjectRowData) == 0x000010, "Wrong size on FChooserOutputObjectRowData");
+static_assert(offsetof(FChooserOutputObjectRowData, Value) == 0x000000, "Member 'FChooserOutputObjectRowData::Value' has a wrong offset!");
 
-// ScriptStruct Chooser.StructContextProperty
-// 0x0028 (0x0030 - 0x0008)
-struct FStructContextProperty final : public FChooserParameterStructBase
-{
-public:
-	struct FChooserStructPropertyBinding          Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStructContextProperty) == 0x000008, "Wrong alignment on FStructContextProperty");
-static_assert(sizeof(FStructContextProperty) == 0x000030, "Wrong size on FStructContextProperty");
-static_assert(offsetof(FStructContextProperty, Binding) == 0x000008, "Member 'FStructContextProperty::Binding' has a wrong offset!");
-
-// ScriptStruct Chooser.OutputStructColumn
+// ScriptStruct Chooser.OutputObjectColumn
 // 0x0030 (0x0038 - 0x0008)
-struct FOutputStructColumn final : public FChooserColumnBase
+struct FOutputObjectColumn final : public FChooserColumnBase
 {
 public:
 	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
-	struct FInstancedStruct                       FallbackValue;                                     // 0x0018(0x0010)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               RowValues;                                         // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FChooserOutputObjectRowData>    RowValues;                                         // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FChooserOutputObjectRowData            FallbackValue;                                     // 0x0028(0x0010)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FOutputStructColumn) == 0x000008, "Wrong alignment on FOutputStructColumn");
-static_assert(sizeof(FOutputStructColumn) == 0x000038, "Wrong size on FOutputStructColumn");
-static_assert(offsetof(FOutputStructColumn, InputValue) == 0x000008, "Member 'FOutputStructColumn::InputValue' has a wrong offset!");
-static_assert(offsetof(FOutputStructColumn, FallbackValue) == 0x000018, "Member 'FOutputStructColumn::FallbackValue' has a wrong offset!");
-static_assert(offsetof(FOutputStructColumn, RowValues) == 0x000028, "Member 'FOutputStructColumn::RowValues' has a wrong offset!");
+static_assert(alignof(FOutputObjectColumn) == 0x000008, "Wrong alignment on FOutputObjectColumn");
+static_assert(sizeof(FOutputObjectColumn) == 0x000038, "Wrong size on FOutputObjectColumn");
+static_assert(offsetof(FOutputObjectColumn, InputValue) == 0x000008, "Member 'FOutputObjectColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FOutputObjectColumn, RowValues) == 0x000018, "Member 'FOutputObjectColumn::RowValues' has a wrong offset!");
+static_assert(offsetof(FOutputObjectColumn, FallbackValue) == 0x000028, "Member 'FOutputObjectColumn::FallbackValue' has a wrong offset!");
 
-// ScriptStruct Chooser.AnimNode_ChooserPlayer
-// 0x0188 (0x0238 - 0x00B0)
-struct FAnimNode_ChooserPlayer final : public FAnimNode_BlendStack_Standalone
+// ScriptStruct Chooser.RandomizeContextProperty
+// 0x0028 (0x0030 - 0x0008)
+struct FRandomizeContextProperty final : public FChooserParameterRandomizeBase
 {
 public:
-	uint8                                         Pad_B0[0x20];                                      // 0x00B0(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	EChooserEvaluationFrequency                   EvaluationFrequency;                               // 0x00D0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D4[0x4];                                       // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInstancedStruct                       Chooser;                                           // 0x00D8(0x0010)(Edit, NativeAccessSpecifierPublic)
-	class UMirrorDataTable*                       MirrorDataTable;                                   // 0x00E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendSpaceX;                                       // 0x00F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendSpaceY;                                       // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F8[0x8];                                       // 0x00F8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FChooserPlayerSettings                 DefaultSettings;                                   // 0x0100(0x0040)(Edit, NativeAccessSpecifierPublic)
-	TArray<struct FInstancedStruct>               ChooserContextDefinition;                          // 0x0140(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bStartFromMatchingPose;                            // 0x0150(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_151[0xE7];                                     // 0x0151(0x00E7)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FChooserPropertyBinding                Binding;                                           // 0x0008(0x0028)(Edit, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAnimNode_ChooserPlayer) == 0x000008, "Wrong alignment on FAnimNode_ChooserPlayer");
-static_assert(sizeof(FAnimNode_ChooserPlayer) == 0x000238, "Wrong size on FAnimNode_ChooserPlayer");
-static_assert(offsetof(FAnimNode_ChooserPlayer, EvaluationFrequency) == 0x0000D0, "Member 'FAnimNode_ChooserPlayer::EvaluationFrequency' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, Chooser) == 0x0000D8, "Member 'FAnimNode_ChooserPlayer::Chooser' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, MirrorDataTable) == 0x0000E8, "Member 'FAnimNode_ChooserPlayer::MirrorDataTable' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, BlendSpaceX) == 0x0000F0, "Member 'FAnimNode_ChooserPlayer::BlendSpaceX' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, BlendSpaceY) == 0x0000F4, "Member 'FAnimNode_ChooserPlayer::BlendSpaceY' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, DefaultSettings) == 0x000100, "Member 'FAnimNode_ChooserPlayer::DefaultSettings' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, ChooserContextDefinition) == 0x000140, "Member 'FAnimNode_ChooserPlayer::ChooserContextDefinition' has a wrong offset!");
-static_assert(offsetof(FAnimNode_ChooserPlayer, bStartFromMatchingPose) == 0x000150, "Member 'FAnimNode_ChooserPlayer::bStartFromMatchingPose' has a wrong offset!");
+static_assert(alignof(FRandomizeContextProperty) == 0x000008, "Wrong alignment on FRandomizeContextProperty");
+static_assert(sizeof(FRandomizeContextProperty) == 0x000030, "Wrong size on FRandomizeContextProperty");
+static_assert(offsetof(FRandomizeContextProperty, Binding) == 0x000008, "Member 'FRandomizeContextProperty::Binding' has a wrong offset!");
 
-// ScriptStruct Chooser.NestedChooser
+// ScriptStruct Chooser.RandomizeColumn
+// 0x0028 (0x0030 - 0x0008)
+struct FRandomizeColumn final : public FChooserColumnBase
+{
+public:
+	struct FInstancedStruct                       InputValue;                                        // 0x0008(0x0010)(Edit, NoClear, NativeAccessSpecifierPublic)
+	float                                         RepeatProbabilityMultiplier;                       // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EqualCostThreshold;                                // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 RowValues;                                         // 0x0020(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FRandomizeColumn) == 0x000008, "Wrong alignment on FRandomizeColumn");
+static_assert(sizeof(FRandomizeColumn) == 0x000030, "Wrong size on FRandomizeColumn");
+static_assert(offsetof(FRandomizeColumn, InputValue) == 0x000008, "Member 'FRandomizeColumn::InputValue' has a wrong offset!");
+static_assert(offsetof(FRandomizeColumn, RepeatProbabilityMultiplier) == 0x000018, "Member 'FRandomizeColumn::RepeatProbabilityMultiplier' has a wrong offset!");
+static_assert(offsetof(FRandomizeColumn, EqualCostThreshold) == 0x00001C, "Member 'FRandomizeColumn::EqualCostThreshold' has a wrong offset!");
+static_assert(offsetof(FRandomizeColumn, RowValues) == 0x000020, "Member 'FRandomizeColumn::RowValues' has a wrong offset!");
+
+// ScriptStruct Chooser.EvaluateChooser
 // 0x0008 (0x0010 - 0x0008)
-struct FNestedChooser final : public FObjectChooserBase
+struct FEvaluateChooser final : public FObjectChooserBase
 {
 public:
-	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UChooserTable*                          Chooser;                                           // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FNestedChooser) == 0x000008, "Wrong alignment on FNestedChooser");
-static_assert(sizeof(FNestedChooser) == 0x000010, "Wrong size on FNestedChooser");
-static_assert(offsetof(FNestedChooser, Chooser) == 0x000008, "Member 'FNestedChooser::Chooser' has a wrong offset!");
+static_assert(alignof(FEvaluateChooser) == 0x000008, "Wrong alignment on FEvaluateChooser");
+static_assert(sizeof(FEvaluateChooser) == 0x000010, "Wrong size on FEvaluateChooser");
+static_assert(offsetof(FEvaluateChooser, Chooser) == 0x000008, "Member 'FEvaluateChooser::Chooser' has a wrong offset!");
 
 }
 

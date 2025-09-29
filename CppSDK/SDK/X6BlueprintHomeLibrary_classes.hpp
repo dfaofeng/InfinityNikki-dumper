@@ -22,6 +22,7 @@ class UX6BlueprintHomeLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static void IsInSelfHome(class UObject* __WorldContext, bool* bInSelfHome);
+	static void IsInHomeWorld(class UObject* __WorldContext, bool* bInHomeWorld);
 
 public:
 	static class UClass* StaticClass()

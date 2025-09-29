@@ -42,6 +42,28 @@ static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_PhxLeade
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_PhxLeaderEnterFloat, bPhxFloat) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_PhxLeaderEnterFloat::bPhxFloat' has a wrong offset!");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_PhxLeaderEnterFloat, FloatCount) == 0x000004, "Member 'BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_PhxLeaderEnterFloat::FloatCount' has a wrong offset!");
 
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.BP_OnMulticast_WitchJumpDash
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash final
+{
+public:
+	int32                                         NewParam;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash) == 0x000004, "Wrong alignment on BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash");
+static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash) == 0x000004, "Wrong size on BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash, NewParam) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash::NewParam' has a wrong offset!");
+
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.BP_OnMulticast_WitchJumpPerform
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform final
+{
+public:
+	int32                                         PerformType;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform) == 0x000004, "Wrong alignment on BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform");
+static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform) == 0x000004, "Wrong size on BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform, PerformType) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform::PerformType' has a wrong offset!");
+
 // Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.BP_TryPointToPointJumping
 // 0x0078 (0x0078 - 0x0000)
 struct BP_MainCharacterInAirMovementComp_C_BP_TryPointToPointJumping final
@@ -325,7 +347,7 @@ static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_EnableJumpPromptLineF
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_EnableJumpPromptLineFeature, CallFunc_IsValid_ReturnValue) == 0x00001C, "Member 'BP_MainCharacterInAirMovementComp_C_EnableJumpPromptLineFeature::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.ExecuteUbergraph_BP_MainCharacterInAirMovementComp
-// 0x0060 (0x0060 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp final
 {
 public:
@@ -340,23 +362,25 @@ public:
 	bool                                          K2Node_CustomEvent_bPhxFloat;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_CustomEvent_FloatCount;                     // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaTime;                            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26[0x2];                                       // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetGravityZ_ReturnValue;                  // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_SafeDivide_A_ImplicitCast;                // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_DrawPredictJumpCurve_CosntGravityZ_ImplicitCast; // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_DashType;                       // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_CustomEvent_PerformType;                    // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTime;                            // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetGravityZ_ReturnValue;                  // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SafeDivide_ReturnValue;                   // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_B_ImplicitCast;                // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_SafeDivide_A_ImplicitCast;                // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_DrawPredictJumpCurve_CosntGravityZ_ImplicitCast; // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp) == 0x000008, "Wrong alignment on BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp");
-static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp) == 0x000060, "Wrong size on BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp");
+static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp) == 0x000068, "Wrong size on BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, EntryPoint) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_IsEnableJumpPromptLineFeature_ReturnValue) == 0x000004, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_IsEnableJumpPromptLineFeature_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
@@ -366,17 +390,19 @@ static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_M
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_BooleanAND_ReturnValue) == 0x000013, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_CustomEvent_bPhxFloat) == 0x000014, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_CustomEvent_bPhxFloat' has a wrong offset!");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_CustomEvent_FloatCount) == 0x000018, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_CustomEvent_FloatCount' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_Event_DeltaSeconds) == 0x00001C, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_Event_DeltaTime) == 0x000020, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_Event_DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_IsValid_ReturnValue_1) == 0x000024, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_IsValid_ReturnValue_2) == 0x000025, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_GetGravityZ_ReturnValue) == 0x000028, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_GetGravityZ_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SafeDivide_ReturnValue) == 0x000030, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000038, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SelectFloat_ReturnValue) == 0x000040, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SafeDivide_B_ImplicitCast) == 0x000048, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SafeDivide_A_ImplicitCast) == 0x000050, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SafeDivide_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_DrawPredictJumpCurve_CosntGravityZ_ImplicitCast) == 0x000058, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_DrawPredictJumpCurve_CosntGravityZ_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_CustomEvent_DashType) == 0x00001C, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_CustomEvent_DashType' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_CustomEvent_PerformType) == 0x000020, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_CustomEvent_PerformType' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_Event_DeltaSeconds) == 0x000024, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, K2Node_Event_DeltaTime) == 0x000028, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::K2Node_Event_DeltaTime' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_IsValid_ReturnValue_1) == 0x00002C, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_IsValid_ReturnValue_2) == 0x00002D, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_GetGravityZ_ReturnValue) == 0x000030, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_GetGravityZ_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SafeDivide_ReturnValue) == 0x000038, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SafeDivide_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000040, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SelectFloat_ReturnValue) == 0x000048, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SafeDivide_B_ImplicitCast) == 0x000050, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SafeDivide_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_SafeDivide_A_ImplicitCast) == 0x000058, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_SafeDivide_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp, CallFunc_DrawPredictJumpCurve_CosntGravityZ_ImplicitCast) == 0x000060, "Member 'BP_MainCharacterInAirMovementComp_C_ExecuteUbergraph_BP_MainCharacterInAirMovementComp::CallFunc_DrawPredictJumpCurve_CosntGravityZ_ImplicitCast' has a wrong offset!");
 
 // Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.Multicast_PhxLeaderEnterFloat
 // 0x0008 (0x0008 - 0x0000)
@@ -391,6 +417,28 @@ static_assert(alignof(BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnt
 static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnterFloat) == 0x000008, "Wrong size on BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnterFloat");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnterFloat, bPhxFloat) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnterFloat::bPhxFloat' has a wrong offset!");
 static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnterFloat, FloatCount) == 0x000004, "Member 'BP_MainCharacterInAirMovementComp_C_Multicast_PhxLeaderEnterFloat::FloatCount' has a wrong offset!");
+
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.Multicast_WitchJumpDash
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash final
+{
+public:
+	int32                                         DashType;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash) == 0x000004, "Wrong alignment on BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash");
+static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash) == 0x000004, "Wrong size on BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash, DashType) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash::DashType' has a wrong offset!");
+
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.Multicast_WitchJumpPerform
+// 0x0004 (0x0004 - 0x0000)
+struct BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform final
+{
+public:
+	int32                                         PerformType;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform) == 0x000004, "Wrong alignment on BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform");
+static_assert(sizeof(BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform) == 0x000004, "Wrong size on BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform");
+static_assert(offsetof(BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform, PerformType) == 0x000000, "Member 'BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform::PerformType' has a wrong offset!");
 
 // Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.ReceivePostPhysicsTick
 // 0x0004 (0x0004 - 0x0000)

@@ -158,6 +158,53 @@ enum class EMoviePipelineShutterTiming : uint8
 	EMoviePipelineShutterTiming_MAX          = 3,
 };
 
+// ScriptStruct MovieRenderPipelineCore.MovieGraphTimeStepData
+// 0x0068 (0x0068 - 0x0000)
+struct FMovieGraphTimeStepData final
+{
+public:
+	int32                                         OutputFrameNumber;                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ShotOutputFrameNumber;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         RenderedFrameNumber;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FrameDeltaTime;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WorldTimeDilation;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WorldSeconds;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MotionBlurFraction;                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameRate                             FrameRate;                                         // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TemporalSampleIndex;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TemporalSampleCount;                               // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsFirstTemporalSampleForFrame;                    // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLastTemporalSampleForFrame;                     // 0x002D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDiscardOutput;                                    // 0x002E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRequiresAccumulator;                              // 0x002F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieGraphEvaluatedConfig*             EvaluatedConfig;                                   // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimecode                              RootTimeCode;                                      // 0x0038(0x0014)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           RootFrameNumber;                                   // 0x004C(0x0004)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTimecode                              ShotTimeCode;                                      // 0x0050(0x0014)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFrameNumber                           ShotFrameNumber;                                   // 0x0064(0x0004)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieGraphTimeStepData) == 0x000008, "Wrong alignment on FMovieGraphTimeStepData");
+static_assert(sizeof(FMovieGraphTimeStepData) == 0x000068, "Wrong size on FMovieGraphTimeStepData");
+static_assert(offsetof(FMovieGraphTimeStepData, OutputFrameNumber) == 0x000000, "Member 'FMovieGraphTimeStepData::OutputFrameNumber' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, ShotOutputFrameNumber) == 0x000004, "Member 'FMovieGraphTimeStepData::ShotOutputFrameNumber' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, RenderedFrameNumber) == 0x000008, "Member 'FMovieGraphTimeStepData::RenderedFrameNumber' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, FrameDeltaTime) == 0x00000C, "Member 'FMovieGraphTimeStepData::FrameDeltaTime' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, WorldTimeDilation) == 0x000010, "Member 'FMovieGraphTimeStepData::WorldTimeDilation' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, WorldSeconds) == 0x000014, "Member 'FMovieGraphTimeStepData::WorldSeconds' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, MotionBlurFraction) == 0x000018, "Member 'FMovieGraphTimeStepData::MotionBlurFraction' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, FrameRate) == 0x00001C, "Member 'FMovieGraphTimeStepData::FrameRate' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, TemporalSampleIndex) == 0x000024, "Member 'FMovieGraphTimeStepData::TemporalSampleIndex' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, TemporalSampleCount) == 0x000028, "Member 'FMovieGraphTimeStepData::TemporalSampleCount' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, bIsFirstTemporalSampleForFrame) == 0x00002C, "Member 'FMovieGraphTimeStepData::bIsFirstTemporalSampleForFrame' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, bIsLastTemporalSampleForFrame) == 0x00002D, "Member 'FMovieGraphTimeStepData::bIsLastTemporalSampleForFrame' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, bDiscardOutput) == 0x00002E, "Member 'FMovieGraphTimeStepData::bDiscardOutput' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, bRequiresAccumulator) == 0x00002F, "Member 'FMovieGraphTimeStepData::bRequiresAccumulator' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, EvaluatedConfig) == 0x000030, "Member 'FMovieGraphTimeStepData::EvaluatedConfig' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, RootTimeCode) == 0x000038, "Member 'FMovieGraphTimeStepData::RootTimeCode' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, RootFrameNumber) == 0x00004C, "Member 'FMovieGraphTimeStepData::RootFrameNumber' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, ShotTimeCode) == 0x000050, "Member 'FMovieGraphTimeStepData::ShotTimeCode' has a wrong offset!");
+static_assert(offsetof(FMovieGraphTimeStepData, ShotFrameNumber) == 0x000064, "Member 'FMovieGraphTimeStepData::ShotFrameNumber' has a wrong offset!");
+
 // ScriptStruct MovieRenderPipelineCore.MoviePipelinePassIdentifier
 // 0x0020 (0x0020 - 0x0000)
 struct FMoviePipelinePassIdentifier final
@@ -258,24 +305,6 @@ static_assert(offsetof(FMoviePipelineOutputData, bSuccess) == 0x000010, "Member 
 static_assert(offsetof(FMoviePipelineOutputData, ShotData) == 0x000018, "Member 'FMoviePipelineOutputData::ShotData' has a wrong offset!");
 static_assert(offsetof(FMoviePipelineOutputData, GraphData) == 0x000028, "Member 'FMoviePipelineOutputData::GraphData' has a wrong offset!");
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphInitConfig
-// 0x0020 (0x0020 - 0x0000)
-struct FMovieGraphInitConfig final
-{
-public:
-	TSubclassOf<class UMovieGraphRendererBase>    RendererClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UMovieGraphDataSourceBase>  DataSourceClass;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UMovieGraphAudioRendererBase> AudioRendererClass;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRenderViewport;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FMovieGraphInitConfig) == 0x000008, "Wrong alignment on FMovieGraphInitConfig");
-static_assert(sizeof(FMovieGraphInitConfig) == 0x000020, "Wrong size on FMovieGraphInitConfig");
-static_assert(offsetof(FMovieGraphInitConfig, RendererClass) == 0x000000, "Member 'FMovieGraphInitConfig::RendererClass' has a wrong offset!");
-static_assert(offsetof(FMovieGraphInitConfig, DataSourceClass) == 0x000008, "Member 'FMovieGraphInitConfig::DataSourceClass' has a wrong offset!");
-static_assert(offsetof(FMovieGraphInitConfig, AudioRendererClass) == 0x000010, "Member 'FMovieGraphInitConfig::AudioRendererClass' has a wrong offset!");
-static_assert(offsetof(FMovieGraphInitConfig, bRenderViewport) == 0x000018, "Member 'FMovieGraphInitConfig::bRenderViewport' has a wrong offset!");
-
 // ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedSettingsStack
 // 0x0010 (0x0010 - 0x0000)
 struct FMovieGraphEvaluatedSettingsStack final
@@ -287,52 +316,50 @@ static_assert(alignof(FMovieGraphEvaluatedSettingsStack) == 0x000008, "Wrong ali
 static_assert(sizeof(FMovieGraphEvaluatedSettingsStack) == 0x000010, "Wrong size on FMovieGraphEvaluatedSettingsStack");
 static_assert(offsetof(FMovieGraphEvaluatedSettingsStack, NodeInstances) == 0x000000, "Member 'FMovieGraphEvaluatedSettingsStack::NodeInstances' has a wrong offset!");
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphTimeStepData
-// 0x0068 (0x0068 - 0x0000)
-struct FMovieGraphTimeStepData final
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluatedBranchConfig final
 {
 public:
-	int32                                         OutputFrameNumber;                                 // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ShotOutputFrameNumber;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         RenderedFrameNumber;                               // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FrameDeltaTime;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WorldTimeDilation;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WorldSeconds;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MotionBlurFraction;                                // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameRate                             FrameRate;                                         // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TemporalSampleIndex;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TemporalSampleCount;                               // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsFirstTemporalSampleForFrame;                    // 0x002C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLastTemporalSampleForFrame;                     // 0x002D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDiscardOutput;                                    // 0x002E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRequiresAccumulator;                              // 0x002F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieGraphEvaluatedConfig*             EvaluatedConfig;                                   // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimecode                              RootTimeCode;                                      // 0x0038(0x0014)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           RootFrameNumber;                                   // 0x004C(0x0004)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTimecode                              ShotTimeCode;                                      // 0x0050(0x0014)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFrameNumber                           ShotFrameNumber;                                   // 0x0064(0x0004)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
 };
-static_assert(alignof(FMovieGraphTimeStepData) == 0x000008, "Wrong alignment on FMovieGraphTimeStepData");
-static_assert(sizeof(FMovieGraphTimeStepData) == 0x000068, "Wrong size on FMovieGraphTimeStepData");
-static_assert(offsetof(FMovieGraphTimeStepData, OutputFrameNumber) == 0x000000, "Member 'FMovieGraphTimeStepData::OutputFrameNumber' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, ShotOutputFrameNumber) == 0x000004, "Member 'FMovieGraphTimeStepData::ShotOutputFrameNumber' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, RenderedFrameNumber) == 0x000008, "Member 'FMovieGraphTimeStepData::RenderedFrameNumber' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, FrameDeltaTime) == 0x00000C, "Member 'FMovieGraphTimeStepData::FrameDeltaTime' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, WorldTimeDilation) == 0x000010, "Member 'FMovieGraphTimeStepData::WorldTimeDilation' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, WorldSeconds) == 0x000014, "Member 'FMovieGraphTimeStepData::WorldSeconds' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, MotionBlurFraction) == 0x000018, "Member 'FMovieGraphTimeStepData::MotionBlurFraction' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, FrameRate) == 0x00001C, "Member 'FMovieGraphTimeStepData::FrameRate' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, TemporalSampleIndex) == 0x000024, "Member 'FMovieGraphTimeStepData::TemporalSampleIndex' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, TemporalSampleCount) == 0x000028, "Member 'FMovieGraphTimeStepData::TemporalSampleCount' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, bIsFirstTemporalSampleForFrame) == 0x00002C, "Member 'FMovieGraphTimeStepData::bIsFirstTemporalSampleForFrame' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, bIsLastTemporalSampleForFrame) == 0x00002D, "Member 'FMovieGraphTimeStepData::bIsLastTemporalSampleForFrame' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, bDiscardOutput) == 0x00002E, "Member 'FMovieGraphTimeStepData::bDiscardOutput' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, bRequiresAccumulator) == 0x00002F, "Member 'FMovieGraphTimeStepData::bRequiresAccumulator' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, EvaluatedConfig) == 0x000030, "Member 'FMovieGraphTimeStepData::EvaluatedConfig' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, RootTimeCode) == 0x000038, "Member 'FMovieGraphTimeStepData::RootTimeCode' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, RootFrameNumber) == 0x00004C, "Member 'FMovieGraphTimeStepData::RootFrameNumber' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, ShotTimeCode) == 0x000050, "Member 'FMovieGraphTimeStepData::ShotTimeCode' has a wrong offset!");
-static_assert(offsetof(FMovieGraphTimeStepData, ShotFrameNumber) == 0x000064, "Member 'FMovieGraphTimeStepData::ShotFrameNumber' has a wrong offset!");
+static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
+static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
+static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
+
+// ScriptStruct MovieRenderPipelineCore.MoviePipelineSegmentWorkMetrics
+// 0x0028 (0x0028 - 0x0000)
+struct FMoviePipelineSegmentWorkMetrics final
+{
+public:
+	class FString                                 SegmentName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutputFrameIndex;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalOutputFrameCount;                             // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         OutputSubSampleIndex;                              // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalSubSampleCount;                               // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EngineWarmUpFrameIndex;                            // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalEngineWarmUpFrameCount;                       // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMoviePipelineSegmentWorkMetrics) == 0x000008, "Wrong alignment on FMoviePipelineSegmentWorkMetrics");
+static_assert(sizeof(FMoviePipelineSegmentWorkMetrics) == 0x000028, "Wrong size on FMoviePipelineSegmentWorkMetrics");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, SegmentName) == 0x000000, "Member 'FMoviePipelineSegmentWorkMetrics::SegmentName' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, OutputFrameIndex) == 0x000010, "Member 'FMoviePipelineSegmentWorkMetrics::OutputFrameIndex' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, TotalOutputFrameCount) == 0x000014, "Member 'FMoviePipelineSegmentWorkMetrics::TotalOutputFrameCount' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, OutputSubSampleIndex) == 0x000018, "Member 'FMoviePipelineSegmentWorkMetrics::OutputSubSampleIndex' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, TotalSubSampleCount) == 0x00001C, "Member 'FMoviePipelineSegmentWorkMetrics::TotalSubSampleCount' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, EngineWarmUpFrameIndex) == 0x000020, "Member 'FMoviePipelineSegmentWorkMetrics::EngineWarmUpFrameIndex' has a wrong offset!");
+static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, TotalEngineWarmUpFrameCount) == 0x000024, "Member 'FMoviePipelineSegmentWorkMetrics::TotalEngineWarmUpFrameCount' has a wrong offset!");
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
+// 0x0050 (0x0050 - 0x0000)
+struct FMovieGraphEvaluationContext_VisitedNodeInfo final
+{
+public:
+	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000008, "Wrong alignment on FMovieGraphEvaluationContext_VisitedNodeInfo");
+static_assert(sizeof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000050, "Wrong size on FMovieGraphEvaluationContext_VisitedNodeInfo");
+static_assert(offsetof(FMovieGraphEvaluationContext_VisitedNodeInfo, VisitedNodes) == 0x000000, "Member 'FMovieGraphEvaluationContext_VisitedNodeInfo::VisitedNodes' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphTraversalContext
 // 0x00D0 (0x00D0 - 0x0000)
@@ -357,17 +384,6 @@ static_assert(offsetof(FMovieGraphTraversalContext, RootGraph) == 0x000018, "Mem
 static_assert(offsetof(FMovieGraphTraversalContext, RenderDataIdentifier) == 0x000020, "Member 'FMovieGraphTraversalContext::RenderDataIdentifier' has a wrong offset!");
 static_assert(offsetof(FMovieGraphTraversalContext, Time) == 0x000068, "Member 'FMovieGraphTraversalContext::Time' has a wrong offset!");
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext_VisitedNodeInfo
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluationContext_VisitedNodeInfo final
-{
-public:
-	TSet<class UMovieGraphNode*>                  VisitedNodes;                                      // 0x0000(0x0050)(UObjectWrapper, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000008, "Wrong alignment on FMovieGraphEvaluationContext_VisitedNodeInfo");
-static_assert(sizeof(FMovieGraphEvaluationContext_VisitedNodeInfo) == 0x000050, "Wrong size on FMovieGraphEvaluationContext_VisitedNodeInfo");
-static_assert(offsetof(FMovieGraphEvaluationContext_VisitedNodeInfo, VisitedNodes) == 0x000000, "Member 'FMovieGraphEvaluationContext_VisitedNodeInfo::VisitedNodes' has a wrong offset!");
-
 // ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluationContext
 // 0x0160 (0x0160 - 0x0000)
 struct FMovieGraphEvaluationContext final
@@ -391,17 +407,6 @@ static_assert(offsetof(FMovieGraphEvaluationContext, SubgraphStack) == 0x000128,
 static_assert(offsetof(FMovieGraphEvaluationContext, bCircularGraphReferenceFound) == 0x000138, "Member 'FMovieGraphEvaluationContext::bCircularGraphReferenceFound' has a wrong offset!");
 static_assert(offsetof(FMovieGraphEvaluationContext, TraversalError) == 0x000140, "Member 'FMovieGraphEvaluationContext::TraversalError' has a wrong offset!");
 
-// ScriptStruct MovieRenderPipelineCore.MovieGraphEvaluatedBranchConfig
-// 0x0050 (0x0050 - 0x0000)
-struct FMovieGraphEvaluatedBranchConfig final
-{
-public:
-	TMap<class FString, struct FMovieGraphEvaluatedSettingsStack> NamedNodes;                        // 0x0000(0x0050)(Transient, NativeAccessSpecifierPrivate)
-};
-static_assert(alignof(FMovieGraphEvaluatedBranchConfig) == 0x000008, "Wrong alignment on FMovieGraphEvaluatedBranchConfig");
-static_assert(sizeof(FMovieGraphEvaluatedBranchConfig) == 0x000050, "Wrong size on FMovieGraphEvaluatedBranchConfig");
-static_assert(offsetof(FMovieGraphEvaluatedBranchConfig, NamedNodes) == 0x000000, "Member 'FMovieGraphEvaluatedBranchConfig::NamedNodes' has a wrong offset!");
-
 // ScriptStruct MovieRenderPipelineCore.MovieGraphImagePreviewData
 // 0x0050 (0x0050 - 0x0000)
 struct FMovieGraphImagePreviewData final
@@ -414,6 +419,24 @@ static_assert(alignof(FMovieGraphImagePreviewData) == 0x000008, "Wrong alignment
 static_assert(sizeof(FMovieGraphImagePreviewData) == 0x000050, "Wrong size on FMovieGraphImagePreviewData");
 static_assert(offsetof(FMovieGraphImagePreviewData, Texture) == 0x000000, "Member 'FMovieGraphImagePreviewData::Texture' has a wrong offset!");
 static_assert(offsetof(FMovieGraphImagePreviewData, Identifier) == 0x000008, "Member 'FMovieGraphImagePreviewData::Identifier' has a wrong offset!");
+
+// ScriptStruct MovieRenderPipelineCore.MovieGraphInitConfig
+// 0x0020 (0x0020 - 0x0000)
+struct FMovieGraphInitConfig final
+{
+public:
+	TSubclassOf<class UMovieGraphRendererBase>    RendererClass;                                     // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMovieGraphDataSourceBase>  DataSourceClass;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UMovieGraphAudioRendererBase> AudioRendererClass;                              // 0x0010(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRenderViewport;                                   // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FMovieGraphInitConfig) == 0x000008, "Wrong alignment on FMovieGraphInitConfig");
+static_assert(sizeof(FMovieGraphInitConfig) == 0x000020, "Wrong size on FMovieGraphInitConfig");
+static_assert(offsetof(FMovieGraphInitConfig, RendererClass) == 0x000000, "Member 'FMovieGraphInitConfig::RendererClass' has a wrong offset!");
+static_assert(offsetof(FMovieGraphInitConfig, DataSourceClass) == 0x000008, "Member 'FMovieGraphInitConfig::DataSourceClass' has a wrong offset!");
+static_assert(offsetof(FMovieGraphInitConfig, AudioRendererClass) == 0x000010, "Member 'FMovieGraphInitConfig::AudioRendererClass' has a wrong offset!");
+static_assert(offsetof(FMovieGraphInitConfig, bRenderViewport) == 0x000018, "Member 'FMovieGraphInitConfig::bRenderViewport' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MovieGraphResolveArgs
 // 0x00A0 (0x00A0 - 0x0000)
@@ -573,29 +596,6 @@ static_assert(alignof(FMoviePipelineSidecarCamera) == 0x000008, "Wrong alignment
 static_assert(sizeof(FMoviePipelineSidecarCamera) == 0x000028, "Wrong size on FMoviePipelineSidecarCamera");
 static_assert(offsetof(FMoviePipelineSidecarCamera, BindingID) == 0x000000, "Member 'FMoviePipelineSidecarCamera::BindingID' has a wrong offset!");
 static_assert(offsetof(FMoviePipelineSidecarCamera, Name) == 0x000018, "Member 'FMoviePipelineSidecarCamera::Name' has a wrong offset!");
-
-// ScriptStruct MovieRenderPipelineCore.MoviePipelineSegmentWorkMetrics
-// 0x0028 (0x0028 - 0x0000)
-struct FMoviePipelineSegmentWorkMetrics final
-{
-public:
-	class FString                                 SegmentName;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutputFrameIndex;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalOutputFrameCount;                             // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         OutputSubSampleIndex;                              // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalSubSampleCount;                               // 0x001C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EngineWarmUpFrameIndex;                            // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalEngineWarmUpFrameCount;                       // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FMoviePipelineSegmentWorkMetrics) == 0x000008, "Wrong alignment on FMoviePipelineSegmentWorkMetrics");
-static_assert(sizeof(FMoviePipelineSegmentWorkMetrics) == 0x000028, "Wrong size on FMoviePipelineSegmentWorkMetrics");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, SegmentName) == 0x000000, "Member 'FMoviePipelineSegmentWorkMetrics::SegmentName' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, OutputFrameIndex) == 0x000010, "Member 'FMoviePipelineSegmentWorkMetrics::OutputFrameIndex' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, TotalOutputFrameCount) == 0x000014, "Member 'FMoviePipelineSegmentWorkMetrics::TotalOutputFrameCount' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, OutputSubSampleIndex) == 0x000018, "Member 'FMoviePipelineSegmentWorkMetrics::OutputSubSampleIndex' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, TotalSubSampleCount) == 0x00001C, "Member 'FMoviePipelineSegmentWorkMetrics::TotalSubSampleCount' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, EngineWarmUpFrameIndex) == 0x000020, "Member 'FMoviePipelineSegmentWorkMetrics::EngineWarmUpFrameIndex' has a wrong offset!");
-static_assert(offsetof(FMoviePipelineSegmentWorkMetrics, TotalEngineWarmUpFrameCount) == 0x000024, "Member 'FMoviePipelineSegmentWorkMetrics::TotalEngineWarmUpFrameCount' has a wrong offset!");
 
 // ScriptStruct MovieRenderPipelineCore.MoviePipelineCameraCutInfo
 // 0x00C8 (0x00C8 - 0x0000)

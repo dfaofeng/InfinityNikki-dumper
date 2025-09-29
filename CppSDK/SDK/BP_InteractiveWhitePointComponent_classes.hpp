@@ -29,8 +29,8 @@ public:
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_InteractiveWhitePointComponent(int32 EntryPoint);
 	void BP_TimerCheck();
+	void ExecuteUbergraph_BP_InteractiveWhitePointComponent(int32 EntryPoint);
 	void BP_StopCheckTimer();
 	void BP_StartCheckTimer();
 	void BP_LineTrace(const struct FVector& End, class AActor* WhitePointActor, class AActor* PlayerActor, bool* bHit);

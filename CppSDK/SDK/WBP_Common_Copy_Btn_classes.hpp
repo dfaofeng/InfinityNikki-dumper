@@ -30,11 +30,11 @@ public:
 	class UImage*                                 Delete_N;                                          // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature();
 	void ExecuteUbergraph_WBP_Common_Copy_Btn(int32 EntryPoint);
+	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_3_OnButtonReleasedEvent__DelegateSignature();
+	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_2_OnButtonPressedEvent__DelegateSignature();
+	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Common_Delete_Btn_Button_48_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

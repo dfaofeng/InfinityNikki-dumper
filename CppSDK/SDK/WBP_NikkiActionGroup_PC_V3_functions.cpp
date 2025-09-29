@@ -51,15 +51,15 @@ void UWBP_NikkiActionGroup_PC_V3_C::NotifyRefreshSuitIcon()
 }
 
 
-// Function WBP_NikkiActionGroup_PC_V3.WBP_NikkiActionGroup_PC_V3_C.SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3_0
+// Function WBP_NikkiActionGroup_PC_V3.WBP_NikkiActionGroup_PC_V3_C.SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_NikkiActionGroup_PC_V3_C::SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3_0()
+void UWBP_NikkiActionGroup_PC_V3_C::SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V3_C", "SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3_0");
+		Func = Class->GetFunction("WBP_NikkiActionGroup_PC_V3_C", "SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

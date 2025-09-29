@@ -14,19 +14,6 @@
 namespace SDK::Params
 {
 
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.OnBlackboardKeyValueChange
-// 0x0010 (0x0010 - 0x0000)
-struct BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange final
-{
-public:
-	const class UBlackboardComponent*             Blackboard;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   KeyName;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange) == 0x000008, "Wrong alignment on BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange");
-static_assert(sizeof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange) == 0x000010, "Wrong size on BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange");
-static_assert(offsetof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange, Blackboard) == 0x000000, "Member 'BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange::Blackboard' has a wrong offset!");
-static_assert(offsetof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange, KeyName) == 0x000008, "Member 'BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange::KeyName' has a wrong offset!");
-
 // Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ReceiveTickAI
 // 0x0018 (0x0018 - 0x0000)
 struct BTT_Quadruped_DoMove_C_ReceiveTickAI final
@@ -67,6 +54,19 @@ static_assert(alignof(BTT_Quadruped_DoMove_C_ReceiveAbortAI) == 0x000008, "Wrong
 static_assert(sizeof(BTT_Quadruped_DoMove_C_ReceiveAbortAI) == 0x000010, "Wrong size on BTT_Quadruped_DoMove_C_ReceiveAbortAI");
 static_assert(offsetof(BTT_Quadruped_DoMove_C_ReceiveAbortAI, OwnerController) == 0x000000, "Member 'BTT_Quadruped_DoMove_C_ReceiveAbortAI::OwnerController' has a wrong offset!");
 static_assert(offsetof(BTT_Quadruped_DoMove_C_ReceiveAbortAI, ControlledPawn) == 0x000008, "Member 'BTT_Quadruped_DoMove_C_ReceiveAbortAI::ControlledPawn' has a wrong offset!");
+
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.OnBlackboardKeyValueChange
+// 0x0010 (0x0010 - 0x0000)
+struct BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange final
+{
+public:
+	const class UBlackboardComponent*             Blackboard;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   KeyName;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange) == 0x000008, "Wrong alignment on BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange");
+static_assert(sizeof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange) == 0x000010, "Wrong size on BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange");
+static_assert(offsetof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange, Blackboard) == 0x000000, "Member 'BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange::Blackboard' has a wrong offset!");
+static_assert(offsetof(BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange, KeyName) == 0x000008, "Member 'BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange::KeyName' has a wrong offset!");
 
 // Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ExecuteUbergraph_BTT_Quadruped_DoMove
 // 0x0050 (0x0050 - 0x0000)

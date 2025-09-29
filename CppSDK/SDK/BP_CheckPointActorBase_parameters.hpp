@@ -18,94 +18,49 @@
 namespace SDK::Params
 {
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature
-// 0x0018 (0x0018 - 0x0000)
-struct BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature final
-{
-public:
-	class UX6StateMachineComponent*               TriggerComponent;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         StateID;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         PreviousStateID;                                   // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   StateName;                                         // 0x000C(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFSM_Transition                               Transition;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature) == 0x000008, "Wrong alignment on BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature");
-static_assert(sizeof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature) == 0x000018, "Wrong size on BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature");
-static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, TriggerComponent) == 0x000000, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::TriggerComponent' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, StateID) == 0x000008, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::StateID' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, PreviousStateID) == 0x000009, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::PreviousStateID' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, StateName) == 0x00000C, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::StateName' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, Transition) == 0x000014, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::Transition' has a wrong offset!");
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_ActiveSkMesh
-// 0x0030 (0x0030 - 0x0000)
-struct BP_CheckPointActorBase_C_BP_ActiveSkMesh final
-{
-public:
-	bool                                          bForce;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UABP_CheckpointBase_C*                  K2Node_DynamicCast_AsABP_Checkpoint_Base;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CheckPointActorBase_C_BP_ActiveSkMesh) == 0x000008, "Wrong alignment on BP_CheckPointActorBase_C_BP_ActiveSkMesh");
-static_assert(sizeof(BP_CheckPointActorBase_C_BP_ActiveSkMesh) == 0x000030, "Wrong size on BP_CheckPointActorBase_C_BP_ActiveSkMesh");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, bForce) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::bForce' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, CallFunc_GetComponentByClass_ReturnValue) == 0x000008, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, CallFunc_GetAnimInstance_ReturnValue) == 0x000018, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, K2Node_DynamicCast_AsABP_Checkpoint_Base) == 0x000020, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::K2Node_DynamicCast_AsABP_Checkpoint_Base' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnServerInit
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetIsLastActivate
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckPointActorBase_C_BP_OnServerInit final
+struct BP_CheckPointActorBase_C_SetIsLastActivate final
 {
 public:
-	bool                                          Server;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckPointActorBase_C_BP_OnServerInit) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_OnServerInit");
-static_assert(sizeof(BP_CheckPointActorBase_C_BP_OnServerInit) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_BP_OnServerInit");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_OnServerInit, Server) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_OnServerInit::Server' has a wrong offset!");
+static_assert(alignof(BP_CheckPointActorBase_C_SetIsLastActivate) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_SetIsLastActivate");
+static_assert(sizeof(BP_CheckPointActorBase_C_SetIsLastActivate) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_SetIsLastActivate");
+static_assert(offsetof(BP_CheckPointActorBase_C_SetIsLastActivate, opt) == 0x000000, "Member 'BP_CheckPointActorBase_C_SetIsLastActivate::opt' has a wrong offset!");
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnSkillDetection
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetIsActivate
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckPointActorBase_C_BP_OnSkillDetection final
+struct BP_CheckPointActorBase_C_SetIsActivate final
 {
 public:
-	ECombatStimulateType                          Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckPointActorBase_C_BP_OnSkillDetection) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_OnSkillDetection");
-static_assert(sizeof(BP_CheckPointActorBase_C_BP_OnSkillDetection) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_BP_OnSkillDetection");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_OnSkillDetection, Selection) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_OnSkillDetection::Selection' has a wrong offset!");
+static_assert(alignof(BP_CheckPointActorBase_C_SetIsActivate) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_SetIsActivate");
+static_assert(sizeof(BP_CheckPointActorBase_C_SetIsActivate) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_SetIsActivate");
+static_assert(offsetof(BP_CheckPointActorBase_C_SetIsActivate, opt) == 0x000000, "Member 'BP_CheckPointActorBase_C_SetIsActivate::opt' has a wrong offset!");
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetCanTeleport
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetCurrentAnim
+// 0x0010 (0x0010 - 0x0000)
+struct BP_CheckPointActorBase_C_SetCurrentAnim final
+{
+public:
+	class FString                                 Pose;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CheckPointActorBase_C_SetCurrentAnim) == 0x000008, "Wrong alignment on BP_CheckPointActorBase_C_SetCurrentAnim");
+static_assert(sizeof(BP_CheckPointActorBase_C_SetCurrentAnim) == 0x000010, "Wrong size on BP_CheckPointActorBase_C_SetCurrentAnim");
+static_assert(offsetof(BP_CheckPointActorBase_C_SetCurrentAnim, Pose) == 0x000000, "Member 'BP_CheckPointActorBase_C_SetCurrentAnim::Pose' has a wrong offset!");
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ServerInit
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckPointActorBase_C_BP_SetCanTeleport final
+struct BP_CheckPointActorBase_C_ServerInit final
 {
 public:
-	bool                                          CanTeleport;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bServer;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckPointActorBase_C_BP_SetCanTeleport) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_SetCanTeleport");
-static_assert(sizeof(BP_CheckPointActorBase_C_BP_SetCanTeleport) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_BP_SetCanTeleport");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_SetCanTeleport, CanTeleport) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_SetCanTeleport::CanTeleport' has a wrong offset!");
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetStateMachine
-// 0x0002 (0x0002 - 0x0000)
-struct BP_CheckPointActorBase_C_BP_SetStateMachine final
-{
-public:
-	EnumCheckpointStateType                       StateType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFSM_Transition                               CallFunc_SetStateByStateID_Transition;             // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CheckPointActorBase_C_BP_SetStateMachine) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_SetStateMachine");
-static_assert(sizeof(BP_CheckPointActorBase_C_BP_SetStateMachine) == 0x000002, "Wrong size on BP_CheckPointActorBase_C_BP_SetStateMachine");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_SetStateMachine, StateType) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_SetStateMachine::StateType' has a wrong offset!");
-static_assert(offsetof(BP_CheckPointActorBase_C_BP_SetStateMachine, CallFunc_SetStateByStateID_Transition) == 0x000001, "Member 'BP_CheckPointActorBase_C_BP_SetStateMachine::CallFunc_SetStateByStateID_Transition' has a wrong offset!");
+static_assert(alignof(BP_CheckPointActorBase_C_ServerInit) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_ServerInit");
+static_assert(sizeof(BP_CheckPointActorBase_C_ServerInit) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_ServerInit");
+static_assert(offsetof(BP_CheckPointActorBase_C_ServerInit, bServer) == 0x000000, "Member 'BP_CheckPointActorBase_C_ServerInit::bServer' has a wrong offset!");
 
 // Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ExecuteUbergraph_BP_CheckPointActorBase
 // 0x0020 (0x0020 - 0x0000)
@@ -132,49 +87,94 @@ static_assert(offsetof(BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointAc
 static_assert(offsetof(BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointActorBase, K2Node_ComponentBoundEvent_Transition) == 0x00001C, "Member 'BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointActorBase::K2Node_ComponentBoundEvent_Transition' has a wrong offset!");
 static_assert(offsetof(BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointActorBase, K2Node_Event_bServer) == 0x00001D, "Member 'BP_CheckPointActorBase_C_ExecuteUbergraph_BP_CheckPointActorBase::K2Node_Event_bServer' has a wrong offset!");
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.ServerInit
-// 0x0001 (0x0001 - 0x0000)
-struct BP_CheckPointActorBase_C_ServerInit final
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetStateMachine
+// 0x0002 (0x0002 - 0x0000)
+struct BP_CheckPointActorBase_C_BP_SetStateMachine final
 {
 public:
-	bool                                          bServer;                                           // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EnumCheckpointStateType                       StateType;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFSM_Transition                               CallFunc_SetStateByStateID_Transition;             // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckPointActorBase_C_ServerInit) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_ServerInit");
-static_assert(sizeof(BP_CheckPointActorBase_C_ServerInit) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_ServerInit");
-static_assert(offsetof(BP_CheckPointActorBase_C_ServerInit, bServer) == 0x000000, "Member 'BP_CheckPointActorBase_C_ServerInit::bServer' has a wrong offset!");
+static_assert(alignof(BP_CheckPointActorBase_C_BP_SetStateMachine) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_SetStateMachine");
+static_assert(sizeof(BP_CheckPointActorBase_C_BP_SetStateMachine) == 0x000002, "Wrong size on BP_CheckPointActorBase_C_BP_SetStateMachine");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_SetStateMachine, StateType) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_SetStateMachine::StateType' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_SetStateMachine, CallFunc_SetStateByStateID_Transition) == 0x000001, "Member 'BP_CheckPointActorBase_C_BP_SetStateMachine::CallFunc_SetStateByStateID_Transition' has a wrong offset!");
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetCurrentAnim
-// 0x0010 (0x0010 - 0x0000)
-struct BP_CheckPointActorBase_C_SetCurrentAnim final
-{
-public:
-	class FString                                 Pose;                                              // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_CheckPointActorBase_C_SetCurrentAnim) == 0x000008, "Wrong alignment on BP_CheckPointActorBase_C_SetCurrentAnim");
-static_assert(sizeof(BP_CheckPointActorBase_C_SetCurrentAnim) == 0x000010, "Wrong size on BP_CheckPointActorBase_C_SetCurrentAnim");
-static_assert(offsetof(BP_CheckPointActorBase_C_SetCurrentAnim, Pose) == 0x000000, "Member 'BP_CheckPointActorBase_C_SetCurrentAnim::Pose' has a wrong offset!");
-
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetIsActivate
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_SetCanTeleport
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckPointActorBase_C_SetIsActivate final
+struct BP_CheckPointActorBase_C_BP_SetCanTeleport final
 {
 public:
-	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CanTeleport;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckPointActorBase_C_SetIsActivate) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_SetIsActivate");
-static_assert(sizeof(BP_CheckPointActorBase_C_SetIsActivate) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_SetIsActivate");
-static_assert(offsetof(BP_CheckPointActorBase_C_SetIsActivate, opt) == 0x000000, "Member 'BP_CheckPointActorBase_C_SetIsActivate::opt' has a wrong offset!");
+static_assert(alignof(BP_CheckPointActorBase_C_BP_SetCanTeleport) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_SetCanTeleport");
+static_assert(sizeof(BP_CheckPointActorBase_C_BP_SetCanTeleport) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_BP_SetCanTeleport");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_SetCanTeleport, CanTeleport) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_SetCanTeleport::CanTeleport' has a wrong offset!");
 
-// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.SetIsLastActivate
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnSkillDetection
 // 0x0001 (0x0001 - 0x0000)
-struct BP_CheckPointActorBase_C_SetIsLastActivate final
+struct BP_CheckPointActorBase_C_BP_OnSkillDetection final
 {
 public:
-	bool                                          opt;                                               // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECombatStimulateType                          Selection;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_CheckPointActorBase_C_SetIsLastActivate) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_SetIsLastActivate");
-static_assert(sizeof(BP_CheckPointActorBase_C_SetIsLastActivate) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_SetIsLastActivate");
-static_assert(offsetof(BP_CheckPointActorBase_C_SetIsLastActivate, opt) == 0x000000, "Member 'BP_CheckPointActorBase_C_SetIsLastActivate::opt' has a wrong offset!");
+static_assert(alignof(BP_CheckPointActorBase_C_BP_OnSkillDetection) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_OnSkillDetection");
+static_assert(sizeof(BP_CheckPointActorBase_C_BP_OnSkillDetection) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_BP_OnSkillDetection");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_OnSkillDetection, Selection) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_OnSkillDetection::Selection' has a wrong offset!");
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_OnServerInit
+// 0x0001 (0x0001 - 0x0000)
+struct BP_CheckPointActorBase_C_BP_OnServerInit final
+{
+public:
+	bool                                          Server;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CheckPointActorBase_C_BP_OnServerInit) == 0x000001, "Wrong alignment on BP_CheckPointActorBase_C_BP_OnServerInit");
+static_assert(sizeof(BP_CheckPointActorBase_C_BP_OnServerInit) == 0x000001, "Wrong size on BP_CheckPointActorBase_C_BP_OnServerInit");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_OnServerInit, Server) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_OnServerInit::Server' has a wrong offset!");
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BP_ActiveSkMesh
+// 0x0030 (0x0030 - 0x0000)
+struct BP_CheckPointActorBase_C_BP_ActiveSkMesh final
+{
+public:
+	bool                                          bForce;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimInstance*                          CallFunc_GetAnimInstance_ReturnValue;              // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UABP_CheckpointBase_C*                  K2Node_DynamicCast_AsABP_Checkpoint_Base;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CheckPointActorBase_C_BP_ActiveSkMesh) == 0x000008, "Wrong alignment on BP_CheckPointActorBase_C_BP_ActiveSkMesh");
+static_assert(sizeof(BP_CheckPointActorBase_C_BP_ActiveSkMesh) == 0x000030, "Wrong size on BP_CheckPointActorBase_C_BP_ActiveSkMesh");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, bForce) == 0x000000, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::bForce' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, CallFunc_GetComponentByClass_ReturnValue) == 0x000008, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, CallFunc_GetAnimInstance_ReturnValue) == 0x000018, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, K2Node_DynamicCast_AsABP_Checkpoint_Base) == 0x000020, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::K2Node_DynamicCast_AsABP_Checkpoint_Base' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BP_ActiveSkMesh, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'BP_CheckPointActorBase_C_BP_ActiveSkMesh::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature final
+{
+public:
+	class UX6StateMachineComponent*               TriggerComponent;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         StateID;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         PreviousStateID;                                   // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   StateName;                                         // 0x000C(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFSM_Transition                               Transition;                                        // 0x0014(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature) == 0x000008, "Wrong alignment on BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature");
+static_assert(sizeof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature) == 0x000018, "Wrong size on BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature");
+static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, TriggerComponent) == 0x000000, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::TriggerComponent' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, StateID) == 0x000008, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::StateID' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, PreviousStateID) == 0x000009, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::PreviousStateID' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, StateName) == 0x00000C, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::StateName' has a wrong offset!");
+static_assert(offsetof(BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature, Transition) == 0x000014, "Member 'BP_CheckPointActorBase_C_BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature::Transition' has a wrong offset!");
 
 // Function BP_CheckPointActorBase.BP_CheckPointActorBase_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

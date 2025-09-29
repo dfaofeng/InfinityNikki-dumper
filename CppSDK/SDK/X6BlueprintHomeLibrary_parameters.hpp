@@ -27,5 +27,18 @@ static_assert(sizeof(X6BlueprintHomeLibrary_C_IsInSelfHome) == 0x000010, "Wrong 
 static_assert(offsetof(X6BlueprintHomeLibrary_C_IsInSelfHome, __WorldContext) == 0x000000, "Member 'X6BlueprintHomeLibrary_C_IsInSelfHome::__WorldContext' has a wrong offset!");
 static_assert(offsetof(X6BlueprintHomeLibrary_C_IsInSelfHome, bInSelfHome) == 0x000008, "Member 'X6BlueprintHomeLibrary_C_IsInSelfHome::bInSelfHome' has a wrong offset!");
 
+// Function X6BlueprintHomeLibrary.X6BlueprintHomeLibrary_C.IsInHomeWorld
+// 0x0010 (0x0010 - 0x0000)
+struct X6BlueprintHomeLibrary_C_IsInHomeWorld final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bInHomeWorld;                                      // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintHomeLibrary_C_IsInHomeWorld) == 0x000008, "Wrong alignment on X6BlueprintHomeLibrary_C_IsInHomeWorld");
+static_assert(sizeof(X6BlueprintHomeLibrary_C_IsInHomeWorld) == 0x000010, "Wrong size on X6BlueprintHomeLibrary_C_IsInHomeWorld");
+static_assert(offsetof(X6BlueprintHomeLibrary_C_IsInHomeWorld, __WorldContext) == 0x000000, "Member 'X6BlueprintHomeLibrary_C_IsInHomeWorld::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintHomeLibrary_C_IsInHomeWorld, bInHomeWorld) == 0x000008, "Member 'X6BlueprintHomeLibrary_C_IsInHomeWorld::bInHomeWorld' has a wrong offset!");
+
 }
 

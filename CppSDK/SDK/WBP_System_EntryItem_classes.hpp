@@ -41,7 +41,7 @@ public:
 	class UWBP_UI_RedPoint_C*                     NewRedPoint;                                       // 0x0370(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_UI_RedPoint_C*                     RedPoint;                                          // 0x0378(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UScaleBox*                              ScaleBox_Content;                                  // 0x0380(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UWidgetSwitcher*                        Switcher_text;                                     // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UWidgetSwitcher*                        Switcher_Text;                                     // 0x0388(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           SysEntry_Item;                                     // 0x0390(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           SysEntry_Item_Disable;                             // 0x0398(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UCanvasPanel*                           SysEntry_Item_Lock;                                // 0x03A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -50,21 +50,21 @@ public:
 	class UTextBlock*                             Text_SysName_special;                              // 0x03B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_System_EntryItem_Button_48_K2Node_ComponentBoundEvent_0_OnButtonReleasedEvent__DelegateSignature();
-	void BndEvt__WBP_System_EntryItem_Button_48_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_System_EntryItem_Button_48_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void ExecuteUbergraph_WBP_System_EntryItem(int32 EntryPoint);
-	void OnFocusLost(const struct FFocusEvent& InFocusEvent);
-	void OnListItemObjectSetViaIndex(int32 Index_0);
-	void OnListItemValueChangedViaIndex(int32 Index_0);
-	void SequenceEvent__ENTRYPOINTWBP_System_EntryItem();
-	void SequenceEvent__ENTRYPOINTWBP_System_EntryItem_0();
-	void SequenceEvent__ENTRYPOINTWBP_System_EntryItem_1();
-	void sfx1();
 	void sfx2();
+	void sfx1();
+	void SequenceEvent__ENTRYPOINTWBP_System_EntryItem_1();
+	void SequenceEvent__ENTRYPOINTWBP_System_EntryItem_0();
+	void SequenceEvent__ENTRYPOINTWBP_System_EntryItem();
+	void OnListItemValueChangedViaIndex(int32 Index_0);
+	void OnListItemObjectSetViaIndex(int32 Index_0);
+	void OnFocusLost(const struct FFocusEvent& InFocusEvent);
+	void ExecuteUbergraph_WBP_System_EntryItem(int32 EntryPoint);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
+	void BndEvt__WBP_System_EntryItem_Button_48_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_System_EntryItem_Button_48_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_System_EntryItem_Button_48_K2Node_ComponentBoundEvent_0_OnButtonReleasedEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 
@@ -99,7 +99,7 @@ static_assert(offsetof(UWBP_System_EntryItem_C, Image_SysIcon) == 0x000368, "Mem
 static_assert(offsetof(UWBP_System_EntryItem_C, NewRedPoint) == 0x000370, "Member 'UWBP_System_EntryItem_C::NewRedPoint' has a wrong offset!");
 static_assert(offsetof(UWBP_System_EntryItem_C, RedPoint) == 0x000378, "Member 'UWBP_System_EntryItem_C::RedPoint' has a wrong offset!");
 static_assert(offsetof(UWBP_System_EntryItem_C, ScaleBox_Content) == 0x000380, "Member 'UWBP_System_EntryItem_C::ScaleBox_Content' has a wrong offset!");
-static_assert(offsetof(UWBP_System_EntryItem_C, Switcher_text) == 0x000388, "Member 'UWBP_System_EntryItem_C::Switcher_text' has a wrong offset!");
+static_assert(offsetof(UWBP_System_EntryItem_C, Switcher_Text) == 0x000388, "Member 'UWBP_System_EntryItem_C::Switcher_Text' has a wrong offset!");
 static_assert(offsetof(UWBP_System_EntryItem_C, SysEntry_Item) == 0x000390, "Member 'UWBP_System_EntryItem_C::SysEntry_Item' has a wrong offset!");
 static_assert(offsetof(UWBP_System_EntryItem_C, SysEntry_Item_Disable) == 0x000398, "Member 'UWBP_System_EntryItem_C::SysEntry_Item_Disable' has a wrong offset!");
 static_assert(offsetof(UWBP_System_EntryItem_C, SysEntry_Item_Lock) == 0x0003A0, "Member 'UWBP_System_EntryItem_C::SysEntry_Item_Lock' has a wrong offset!");

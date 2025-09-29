@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "EStarSeaDust_Type_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "EStarSeaDust_Type_structs.hpp"
 #include "E_InteractionProcess_structs.hpp"
 #include "X6StateMachine_structs.hpp"
 

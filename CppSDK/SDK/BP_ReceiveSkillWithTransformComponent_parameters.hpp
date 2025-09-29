@@ -17,49 +17,16 @@
 namespace SDK::Params
 {
 
-// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent
-// 0x0004 (0x0004 - 0x0000)
-struct BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent) == 0x000004, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent");
-static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent) == 0x000004, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent");
-static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent, EntryPoint) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent::EntryPoint' has a wrong offset!");
-
-// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetPenetrateWhenSimulation
+// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetAlwaysOutLineEffect
 // 0x0001 (0x0001 - 0x0000)
-struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation final
+struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect final
 {
 public:
 	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation");
-static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation");
-static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation::NewValue' has a wrong offset!");
-
-// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetDestroyWhenNotSimulation
-// 0x0001 (0x0001 - 0x0000)
-struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation");
-static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation");
-static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation::NewValue' has a wrong offset!");
-
-// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetChargeOutLineEffect
-// 0x0001 (0x0001 - 0x0000)
-struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect final
-{
-public:
-	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect");
-static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect");
-static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect::NewValue' has a wrong offset!");
+static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect");
+static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect");
+static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect::NewValue' has a wrong offset!");
 
 // Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetAttachment
 // 0x0001 (0x0001 - 0x0000)
@@ -72,16 +39,49 @@ static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAttac
 static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAttachment) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAttachment");
 static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAttachment, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAttachment::NewValue' has a wrong offset!");
 
-// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetAlwaysOutLineEffect
+// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetChargeOutLineEffect
 // 0x0001 (0x0001 - 0x0000)
-struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect final
+struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect final
 {
 public:
 	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect");
-static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect");
-static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetAlwaysOutLineEffect::NewValue' has a wrong offset!");
+static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect");
+static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect");
+static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetChargeOutLineEffect::NewValue' has a wrong offset!");
+
+// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetDestroyWhenNotSimulation
+// 0x0001 (0x0001 - 0x0000)
+struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation");
+static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation");
+static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetDestroyWhenNotSimulation::NewValue' has a wrong offset!");
+
+// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.BP_RuntimeSetPenetrateWhenSimulation
+// 0x0001 (0x0001 - 0x0000)
+struct BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation final
+{
+public:
+	bool                                          NewValue;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation) == 0x000001, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation");
+static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation) == 0x000001, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation");
+static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation, NewValue) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_BP_RuntimeSetPenetrateWhenSimulation::NewValue' has a wrong offset!");
+
+// Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent
+// 0x0004 (0x0004 - 0x0000)
+struct BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent) == 0x000004, "Wrong alignment on BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent");
+static_assert(sizeof(BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent) == 0x000004, "Wrong size on BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent");
+static_assert(offsetof(BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent, EntryPoint) == 0x000000, "Member 'BP_ReceiveSkillWithTransformComponent_C_ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent::EntryPoint' has a wrong offset!");
 
 // Function BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

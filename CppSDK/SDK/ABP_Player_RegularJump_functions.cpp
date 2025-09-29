@@ -1122,6 +1122,28 @@ void UABP_Player_RegularJump_C::JumpState_SP_JumpInAirAnimation_OnUpdate(const s
 }
 
 
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.JumpState_SP_RegularJump_OnBecomeRelevant
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FAnimUpdateContext&        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UABP_Player_RegularJump_C::JumpState_SP_RegularJump_OnBecomeRelevant(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Player_RegularJump_C", "JumpState_SP_RegularJump_OnBecomeRelevant");
+
+	Params::ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Node = std::move(Node);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.On Movement Mode Changed
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1180,6 +1202,20 @@ void UABP_Player_RegularJump_C::OnContextualChanged(ECharacterSituationType Char
 }
 
 
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.OnRegularAnimSetChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UABP_Player_RegularJump_C::OnRegularAnimSetChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Player_RegularJump_C", "OnRegularAnimSetChanged");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.Prepare Components
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1197,6 +1233,50 @@ bool UABP_Player_RegularJump_C::Prepare_Components()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
+}
+
+
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.StartFall_SP_JumpToFall_OnBecomeRelevant
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FAnimUpdateContext&        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UABP_Player_RegularJump_C::StartFall_SP_JumpToFall_OnBecomeRelevant(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Player_RegularJump_C", "StartFall_SP_JumpToFall_OnBecomeRelevant");
+
+	Params::ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Node = std::move(Node);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.StartFall_SP_PlatformToFall_OnBecomeRelevant
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FAnimUpdateContext&        Context                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FAnimNodeReference&        Node                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+
+void UABP_Player_RegularJump_C::StartFall_SP_PlatformToFall_OnBecomeRelevant(const struct FAnimUpdateContext& Context, const struct FAnimNodeReference& Node)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ABP_Player_RegularJump_C", "StartFall_SP_PlatformToFall_OnBecomeRelevant");
+
+	Params::ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant Parms{};
+
+	Parms.Context = std::move(Context);
+	Parms.Node = std::move(Node);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

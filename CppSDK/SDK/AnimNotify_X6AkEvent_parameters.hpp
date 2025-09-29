@@ -26,7 +26,8 @@ public:
 	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsTriggeredByMirroredAnimation_ReturnValue; // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_43[0x5];                                       // 0x0043(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -44,6 +45,7 @@ static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, Animation) == 0x0
 static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, EventReference) == 0x000010, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::EventReference' has a wrong offset!");
 static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, ReturnValue) == 0x000040, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, Temp_bool_Variable) == 0x000041, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, CallFunc_IsTriggeredByMirroredAnimation_ReturnValue) == 0x000042, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::CallFunc_IsTriggeredByMirroredAnimation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000050, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
 static_assert(offsetof(AnimNotify_X6AkEvent_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'AnimNotify_X6AkEvent_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");

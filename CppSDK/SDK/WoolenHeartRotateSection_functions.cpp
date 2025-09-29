@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.ExecuteUbergraph_WoolenHeartRotateSection
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.K2_OnSectionUpdate
+// (Event, Protected, BlueprintEvent)
 
-void UWoolenHeartRotateSection_C::ExecuteUbergraph_WoolenHeartRotateSection(int32 EntryPoint)
+void UWoolenHeartRotateSection_C::K2_OnSectionUpdate()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WoolenHeartRotateSection_C", "ExecuteUbergraph_WoolenHeartRotateSection");
+		Func = Class->GetFunction("WoolenHeartRotateSection_C", "K2_OnSectionUpdate");
 
-	Params::WoolenHeartRotateSection_C_ExecuteUbergraph_WoolenHeartRotateSection Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -51,17 +45,23 @@ void UWoolenHeartRotateSection_C::K2_OnSectionBegin()
 }
 
 
-// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.K2_OnSectionUpdate
-// (Event, Protected, BlueprintEvent)
+// Function WoolenHeartRotateSection.WoolenHeartRotateSection_C.ExecuteUbergraph_WoolenHeartRotateSection
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWoolenHeartRotateSection_C::K2_OnSectionUpdate()
+void UWoolenHeartRotateSection_C::ExecuteUbergraph_WoolenHeartRotateSection(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WoolenHeartRotateSection_C", "K2_OnSectionUpdate");
+		Func = Class->GetFunction("WoolenHeartRotateSection_C", "ExecuteUbergraph_WoolenHeartRotateSection");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WoolenHeartRotateSection_C_ExecuteUbergraph_WoolenHeartRotateSection Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

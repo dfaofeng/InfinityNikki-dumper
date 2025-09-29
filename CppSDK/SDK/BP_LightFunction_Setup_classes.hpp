@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CineLightingStruct_structs.hpp"
 #include "Engine_classes.hpp"
+#include "CineLightingStruct_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

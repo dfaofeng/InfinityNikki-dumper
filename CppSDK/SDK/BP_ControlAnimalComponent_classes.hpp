@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "BP_SimpleAbilityBase_classes.hpp"
 #include "Enum_ControlAnimal_AnimationPerformance_structs.hpp"
 #include "Engine_structs.hpp"
+#include "BP_SimpleAbilityBase_classes.hpp"
 
 
 namespace SDK
@@ -38,8 +38,8 @@ public:
 	Enum_ControlAnimal_AnimationPerformance       PerformanceType;                                   // 0x0180(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_BP_ControlAnimalComponent(int32 EntryPoint);
 	void ReceiveTick(float DeltaSeconds);
+	void ExecuteUbergraph_BP_ControlAnimalComponent(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

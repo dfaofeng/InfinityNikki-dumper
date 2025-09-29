@@ -29,19 +29,19 @@ public:
 	class FString                                 ObjectiveTag;                                      // 0x03D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 
 public:
-	void DisableOverlap();
-	void EnableOverlap();
-	void ExecuteUbergraph_BP_GoToVolume(int32 EntryPoint);
-	void OnOverlapBegin(class AActor* Actor);
-	void OnOverlapEnd(class AActor* Actor);
-	void ReceiveActorBeginOverlap(class AActor* OtherActor);
-	void ReceiveActorEndOverlap(class AActor* OtherActor);
-	void ReceiveBeginPlay();
-	void ReceiveDestroyed();
-	void ReceiveTick(float DeltaSeconds);
-	void SetMeshType(int32 MeshType_0);
-	void SetTransformInfo(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale);
 	void ShowVolumn(bool CanShow);
+	void SetTransformInfo(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale);
+	void SetMeshType(int32 MeshType_0);
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveDestroyed();
+	void ReceiveBeginPlay();
+	void ReceiveActorEndOverlap(class AActor* OtherActor);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void OnOverlapEnd(class AActor* Actor);
+	void OnOverlapBegin(class AActor* Actor);
+	void ExecuteUbergraph_BP_GoToVolume(int32 EntryPoint);
+	void EnableOverlap();
+	void DisableOverlap();
 
 	class FString GetModuleName() const;
 

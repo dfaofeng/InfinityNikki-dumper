@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "EFeedBackReason_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EFeedBackReason_structs.hpp"
 
 
 namespace SDK

@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "E_InteractiveCorrectionMode_structs.hpp"
-#include "Enum_InteractiveProcessType_structs.hpp"
-#include "Enum_InteractWidgetType_structs.hpp"
-#include "Enum_StopInteractiion_Type_structs.hpp"
-#include "Enum_InteractiveTriggerType_structs.hpp"
 #include "E_InteractionAnimType_structs.hpp"
-#include "Enum_SubInteractionAction_structs.hpp"
+#include "Enum_InteractiveProcessType_structs.hpp"
+#include "Enum_InteractiveTriggerType_structs.hpp"
+#include "Enum_StopInteractiion_Type_structs.hpp"
+#include "Enum_InteractWidgetType_structs.hpp"
 #include "F_AdjustLerpSpeedModifer_structs.hpp"
+#include "Enum_SubInteractionAction_structs.hpp"
 #include "Engine_classes.hpp"
 
 

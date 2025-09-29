@@ -59,6 +59,28 @@ void UBP_AdvancedCamera_C::BP_RemoveZoomedTargetOffsetZByReason(const class FStr
 }
 
 
+// Function BP_AdvancedCamera.BP_AdvancedCamera_C.BP_SetReadZoomedTargetOffsetZFromAnimCurve
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bReadFromAnimCurve                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    Reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_AdvancedCamera_C::BP_SetReadZoomedTargetOffsetZFromAnimCurve(bool bReadFromAnimCurve, const class FString& Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_AdvancedCamera_C", "BP_SetReadZoomedTargetOffsetZFromAnimCurve");
+
+	Params::BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve Parms{};
+
+	Parms.bReadFromAnimCurve = bReadFromAnimCurve;
+	Parms.Reason = std::move(Reason);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_AdvancedCamera.BP_AdvancedCamera_C.ExecuteUbergraph_BP_AdvancedCamera
 // (Final, UbergraphFunction)
 // Parameters:

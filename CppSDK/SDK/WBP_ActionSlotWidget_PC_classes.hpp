@@ -119,7 +119,7 @@ public:
 	void ExecuteUbergraph_WBP_ActionSlotWidget_PC(int32 EntryPoint);
 	void NotifyIconRefresh();
 	void PreConstruct(bool IsDesignTime);
-	void SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC_0();
+	void SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC();
 
 	class FString GetModuleName() const;
 

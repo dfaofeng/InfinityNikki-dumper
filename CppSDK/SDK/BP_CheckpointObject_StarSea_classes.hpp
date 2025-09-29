@@ -44,17 +44,17 @@ public:
 	TSoftObjectPtr<class UAkAudioEvent>           BP_ActiveSoundLp;                                  // 0x05C0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 
 public:
-	void BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-	void BP_Empower(bool bDisplayFinal);
-	void BP_GetNiagaraPosition(double* Position);
-	void BP_TestLock();
-	void BP_TestUnlock();
-	void BP_UpdateEnergized(bool bEnergized);
-	void ExecuteUbergraph_BP_CheckpointObject_StarSea(int32 EntryPoint);
-	void ServerInit(bool bServer);
-	void SetIsActivate(bool opt);
-	void SetIsLastActivate(bool opt);
 	void UserConstructionScript();
+	void SetIsLastActivate(bool opt);
+	void SetIsActivate(bool opt);
+	void ServerInit(bool bServer);
+	void ExecuteUbergraph_BP_CheckpointObject_StarSea(int32 EntryPoint);
+	void BP_UpdateEnergized(bool bEnergized);
+	void BP_TestUnlock();
+	void BP_TestLock();
+	void BP_GetNiagaraPosition(double* Position);
+	void BP_Empower(bool bDisplayFinal);
+	void BndEvt__BP_CheckpointObject_SeaSnail_AudioTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 	class FString GetModuleName() const;
 

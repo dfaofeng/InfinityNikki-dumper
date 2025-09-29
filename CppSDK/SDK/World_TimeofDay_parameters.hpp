@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "S_WeatherState_structs.hpp"
 #include "DynamicEnvironmentSystem_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

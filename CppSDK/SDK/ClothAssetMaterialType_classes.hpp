@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Enum_ClothMaterialType_structs.hpp"
-#include "Enum_AccMaterialType_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "Enum_AccMaterialType_structs.hpp"
 
 
 namespace SDK

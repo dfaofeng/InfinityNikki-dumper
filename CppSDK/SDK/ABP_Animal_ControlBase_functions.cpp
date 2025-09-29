@@ -17,24 +17,23 @@
 namespace SDK
 {
 
-// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimGraph
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.ExecuteUbergraph_ABP_Animal_ControlBase
+// (Final, UbergraphFunction)
 // Parameters:
-// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABP_Animal_ControlBase_C::AnimGraph(struct FPoseLink* AnimGraph_0)
+void UABP_Animal_ControlBase_C::ExecuteUbergraph_ABP_Animal_ControlBase(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Animal_ControlBase_C", "AnimGraph");
+		Func = Class->GetFunction("ABP_Animal_ControlBase_C", "ExecuteUbergraph_ABP_Animal_ControlBase");
 
-	Params::ABP_Animal_ControlBase_C_AnimGraph Parms{};
+	Params::ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	if (AnimGraph_0 != nullptr)
-		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 
@@ -58,23 +57,24 @@ void UABP_Animal_ControlBase_C::BlueprintUpdateAnimation(float DeltaTimeX)
 }
 
 
-// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.ExecuteUbergraph_ABP_Animal_ControlBase
-// (Final, UbergraphFunction)
+// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimGraph
+// (HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FPoseLink*                       AnimGraph_0                                            (Parm, OutParm, NoDestructor)
 
-void UABP_Animal_ControlBase_C::ExecuteUbergraph_ABP_Animal_ControlBase(int32 EntryPoint)
+void UABP_Animal_ControlBase_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABP_Animal_ControlBase_C", "ExecuteUbergraph_ABP_Animal_ControlBase");
+		Func = Class->GetFunction("ABP_Animal_ControlBase_C", "AnimGraph");
 
-	Params::ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase Parms{};
-
-	Parms.EntryPoint = EntryPoint;
+	Params::ABP_Animal_ControlBase_C_AnimGraph Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	if (AnimGraph_0 != nullptr)
+		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
 }

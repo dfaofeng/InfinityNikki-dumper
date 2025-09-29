@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // UserDefinedStruct F_OutlineStyleSelector.F_OutlineStyleSelector
-// 0x0040 (0x0040 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct FF_OutlineStyleSelector final
 {
 public:
@@ -26,13 +26,17 @@ public:
 	struct FLinearColor                           OutlineColor_6_D208B0124179E21D9F67BF8CBFDD4217;   // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OutlineEdgeWith_PC_12_03825A4E4E519FA5EA663AB050F35747; // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OutlineEdgeWith_Mobile_14_43AF929C46F327C0EF7A15BC95D1EDFB; // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           GradientMask_PC_29_E07C70774A120EE60D2050A708F15BDF; // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           GradientMask_Mobile_30_800A198F4EAE7CA058F55BB7A1E7C188; // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FF_OutlineStyleSelector) == 0x000008, "Wrong alignment on FF_OutlineStyleSelector");
-static_assert(sizeof(FF_OutlineStyleSelector) == 0x000040, "Wrong size on FF_OutlineStyleSelector");
+static_assert(sizeof(FF_OutlineStyleSelector) == 0x000060, "Wrong size on FF_OutlineStyleSelector");
 static_assert(offsetof(FF_OutlineStyleSelector, ActivationRequiredTags_3_1777A1734B0A1D25533435B910A9BC37) == 0x000000, "Member 'FF_OutlineStyleSelector::ActivationRequiredTags_3_1777A1734B0A1D25533435B910A9BC37' has a wrong offset!");
 static_assert(offsetof(FF_OutlineStyleSelector, OutlineColor_6_D208B0124179E21D9F67BF8CBFDD4217) == 0x000020, "Member 'FF_OutlineStyleSelector::OutlineColor_6_D208B0124179E21D9F67BF8CBFDD4217' has a wrong offset!");
 static_assert(offsetof(FF_OutlineStyleSelector, OutlineEdgeWith_PC_12_03825A4E4E519FA5EA663AB050F35747) == 0x000030, "Member 'FF_OutlineStyleSelector::OutlineEdgeWith_PC_12_03825A4E4E519FA5EA663AB050F35747' has a wrong offset!");
 static_assert(offsetof(FF_OutlineStyleSelector, OutlineEdgeWith_Mobile_14_43AF929C46F327C0EF7A15BC95D1EDFB) == 0x000038, "Member 'FF_OutlineStyleSelector::OutlineEdgeWith_Mobile_14_43AF929C46F327C0EF7A15BC95D1EDFB' has a wrong offset!");
+static_assert(offsetof(FF_OutlineStyleSelector, GradientMask_PC_29_E07C70774A120EE60D2050A708F15BDF) == 0x000040, "Member 'FF_OutlineStyleSelector::GradientMask_PC_29_E07C70774A120EE60D2050A708F15BDF' has a wrong offset!");
+static_assert(offsetof(FF_OutlineStyleSelector, GradientMask_Mobile_30_800A198F4EAE7CA058F55BB7A1E7C188) == 0x000050, "Member 'FF_OutlineStyleSelector::GradientMask_Mobile_30_800A198F4EAE7CA058F55BB7A1E7C188' has a wrong offset!");
 
 }
 

@@ -11,15 +11,16 @@
 #include "Basic.hpp"
 
 #include "F_EquipModifierSet_structs.hpp"
-#include "F_SuitModifierSet_structs.hpp"
+#include "F_CommonDashModifierSet_structs.hpp"
 #include "Engine_classes.hpp"
+#include "F_SuitModifierSet_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EquipModifierMap.BP_EquipModifierMap_C
-// 0x0140 (0x0170 - 0x0030)
+// 0x0190 (0x01C0 - 0x0030)
 class UBP_EquipModifierMap_C final : public UPrimaryDataAsset
 {
 public:
@@ -27,6 +28,10 @@ public:
 	TMap<int32, struct FF_SuitModifierSet>        SuitModifierMap;                                   // 0x0080(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<int32, TSoftClassPtr<class UClass>>      EquipModifierToABP;                                // 0x00D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<int32, TSoftObjectPtr<class UNiagaraSystem>> EquipModifierPreLoad;                          // 0x0120(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, struct FF_CommonDashModifierSet> EnvironmentDashModifierMap;                   // 0x0170(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+
+public:
+	TArray<class FName> BP_GetDashEnvironment();
 
 public:
 	static class UClass* StaticClass()
@@ -39,11 +44,12 @@ public:
 	}
 };
 static_assert(alignof(UBP_EquipModifierMap_C) == 0x000008, "Wrong alignment on UBP_EquipModifierMap_C");
-static_assert(sizeof(UBP_EquipModifierMap_C) == 0x000170, "Wrong size on UBP_EquipModifierMap_C");
+static_assert(sizeof(UBP_EquipModifierMap_C) == 0x0001C0, "Wrong size on UBP_EquipModifierMap_C");
 static_assert(offsetof(UBP_EquipModifierMap_C, EquipModifierMap) == 0x000030, "Member 'UBP_EquipModifierMap_C::EquipModifierMap' has a wrong offset!");
 static_assert(offsetof(UBP_EquipModifierMap_C, SuitModifierMap) == 0x000080, "Member 'UBP_EquipModifierMap_C::SuitModifierMap' has a wrong offset!");
 static_assert(offsetof(UBP_EquipModifierMap_C, EquipModifierToABP) == 0x0000D0, "Member 'UBP_EquipModifierMap_C::EquipModifierToABP' has a wrong offset!");
 static_assert(offsetof(UBP_EquipModifierMap_C, EquipModifierPreLoad) == 0x000120, "Member 'UBP_EquipModifierMap_C::EquipModifierPreLoad' has a wrong offset!");
+static_assert(offsetof(UBP_EquipModifierMap_C, EnvironmentDashModifierMap) == 0x000170, "Member 'UBP_EquipModifierMap_C::EnvironmentDashModifierMap' has a wrong offset!");
 
 }
 

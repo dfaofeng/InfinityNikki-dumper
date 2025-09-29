@@ -29,6 +29,16 @@ enum class EDonNavigationQueryStatus : uint8
 	EDonNavigationQueryStatus_MAX            = 6,
 };
 
+// ScriptStruct DonAINavigation.DonNavigationDynamicCollisionPayload
+// 0x0048 (0x0048 - 0x0000)
+struct alignas(0x08) FDonNavigationDynamicCollisionPayload final
+{
+public:
+	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FDonNavigationDynamicCollisionPayload) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionPayload");
+static_assert(sizeof(FDonNavigationDynamicCollisionPayload) == 0x000048, "Wrong size on FDonNavigationDynamicCollisionPayload");
+
 // ScriptStruct DonAINavigation.DonNavigationVoxel
 // 0x0040 (0x0040 - 0x0000)
 struct alignas(0x08) FDonNavigationVoxel final
@@ -39,15 +49,17 @@ public:
 static_assert(alignof(FDonNavigationVoxel) == 0x000008, "Wrong alignment on FDonNavigationVoxel");
 static_assert(sizeof(FDonNavigationVoxel) == 0x000040, "Wrong size on FDonNavigationVoxel");
 
-// ScriptStruct DonAINavigation.DonNavigationDynamicCollisionPayload
-// 0x0048 (0x0048 - 0x0000)
-struct alignas(0x08) FDonNavigationDynamicCollisionPayload final
+// ScriptStruct DonAINavigation.DonNavigationDynamicCollisionNotifyee
+// 0x0058 (0x0058 - 0x0000)
+struct alignas(0x08) FDonNavigationDynamicCollisionNotifyee final
 {
 public:
-	uint8                                         Pad_0[0x48];                                       // 0x0000(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FDonNavigationDynamicCollisionPayload& Data)> Listener;              // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_10[0x48];                                      // 0x0010(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FDonNavigationDynamicCollisionPayload) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionPayload");
-static_assert(sizeof(FDonNavigationDynamicCollisionPayload) == 0x000048, "Wrong size on FDonNavigationDynamicCollisionPayload");
+static_assert(alignof(FDonNavigationDynamicCollisionNotifyee) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionNotifyee");
+static_assert(sizeof(FDonNavigationDynamicCollisionNotifyee) == 0x000058, "Wrong size on FDonNavigationDynamicCollisionNotifyee");
+static_assert(offsetof(FDonNavigationDynamicCollisionNotifyee, Listener) == 0x000000, "Member 'FDonNavigationDynamicCollisionNotifyee::Listener' has a wrong offset!");
 
 // ScriptStruct DonAINavigation.DoNNavigationQueryParams
 // 0x0028 (0x0028 - 0x0000)
@@ -108,18 +120,6 @@ static_assert(offsetof(FDoNNavigationQueryData, QueryParams) == 0x000040, "Membe
 static_assert(offsetof(FDoNNavigationQueryData, maxIterationsPerTask) == 0x0000C8, "Member 'FDoNNavigationQueryData::maxIterationsPerTask' has a wrong offset!");
 static_assert(offsetof(FDoNNavigationQueryData, PathSolutionOptimized) == 0x0002A8, "Member 'FDoNNavigationQueryData::PathSolutionOptimized' has a wrong offset!");
 static_assert(offsetof(FDoNNavigationQueryData, QueryStatus) == 0x0002B8, "Member 'FDoNNavigationQueryData::QueryStatus' has a wrong offset!");
-
-// ScriptStruct DonAINavigation.DonNavigationDynamicCollisionNotifyee
-// 0x0058 (0x0058 - 0x0000)
-struct alignas(0x08) FDonNavigationDynamicCollisionNotifyee final
-{
-public:
-	TDelegate<void(const struct FDonNavigationDynamicCollisionPayload& Data)> Listener;              // 0x0000(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10[0x48];                                      // 0x0010(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FDonNavigationDynamicCollisionNotifyee) == 0x000008, "Wrong alignment on FDonNavigationDynamicCollisionNotifyee");
-static_assert(sizeof(FDonNavigationDynamicCollisionNotifyee) == 0x000058, "Wrong size on FDonNavigationDynamicCollisionNotifyee");
-static_assert(offsetof(FDonNavigationDynamicCollisionNotifyee, Listener) == 0x000000, "Member 'FDonNavigationDynamicCollisionNotifyee::Listener' has a wrong offset!");
 
 // ScriptStruct DonAINavigation.DoNNavigationDebugParams
 // 0x000C (0x000C - 0x0000)

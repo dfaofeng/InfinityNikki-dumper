@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "E_InteractiveObjPhantomState_structs.hpp"
-#include "Engine_structs.hpp"
 #include "FInteractivePhantomMaterialConfig_structs.hpp"
+#include "Engine_structs.hpp"
+#include "E_InteractiveObjPhantomState_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

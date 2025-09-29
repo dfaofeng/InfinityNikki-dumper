@@ -223,6 +223,47 @@ static_assert(offsetof(FSmartObjectUserCapsuleParams, Radius) == 0x000000, "Memb
 static_assert(offsetof(FSmartObjectUserCapsuleParams, Height) == 0x000004, "Member 'FSmartObjectUserCapsuleParams::Height' has a wrong offset!");
 static_assert(offsetof(FSmartObjectUserCapsuleParams, StepHeight) == 0x000008, "Member 'FSmartObjectUserCapsuleParams::StepHeight' has a wrong offset!");
 
+// ScriptStruct SmartObjectsModule.SmartObjectRequestFilter
+// 0x00F0 (0x00F0 - 0x0000)
+struct alignas(0x10) FSmartObjectRequestFilter final
+{
+public:
+	class AActor*                                 UserActor;                                         // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  UserTags;                                          // 0x0008(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	ESmartObjectClaimPriority                     ClaimPriority;                                     // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0030(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<TSubclassOf<class USmartObjectBehaviorDefinition>> BehaviorDefinitionClasses;             // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	bool                                          bShouldEvaluateConditions;                         // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldIncludeClaimedSlots;                        // 0x0089(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bShouldIncludeDisabledSlots;                       // 0x008A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_8B[0x65];                                      // 0x008B(0x0065)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSmartObjectRequestFilter) == 0x000010, "Wrong alignment on FSmartObjectRequestFilter");
+static_assert(sizeof(FSmartObjectRequestFilter) == 0x0000F0, "Wrong size on FSmartObjectRequestFilter");
+static_assert(offsetof(FSmartObjectRequestFilter, UserActor) == 0x000000, "Member 'FSmartObjectRequestFilter::UserActor' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, UserTags) == 0x000008, "Member 'FSmartObjectRequestFilter::UserTags' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, ClaimPriority) == 0x000028, "Member 'FSmartObjectRequestFilter::ClaimPriority' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, ActivityRequirements) == 0x000030, "Member 'FSmartObjectRequestFilter::ActivityRequirements' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, BehaviorDefinitionClasses) == 0x000078, "Member 'FSmartObjectRequestFilter::BehaviorDefinitionClasses' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, bShouldEvaluateConditions) == 0x000088, "Member 'FSmartObjectRequestFilter::bShouldEvaluateConditions' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, bShouldIncludeClaimedSlots) == 0x000089, "Member 'FSmartObjectRequestFilter::bShouldIncludeClaimedSlots' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequestFilter, bShouldIncludeDisabledSlots) == 0x00008A, "Member 'FSmartObjectRequestFilter::bShouldIncludeDisabledSlots' has a wrong offset!");
+
+// ScriptStruct SmartObjectsModule.SmartObjectRequest
+// 0x0130 (0x0130 - 0x0000)
+struct FSmartObjectRequest final
+{
+public:
+	struct FBox                                   QueryBox;                                          // 0x0000(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSmartObjectRequestFilter              Filter;                                            // 0x0040(0x00F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSmartObjectRequest) == 0x000010, "Wrong alignment on FSmartObjectRequest");
+static_assert(sizeof(FSmartObjectRequest) == 0x000130, "Wrong size on FSmartObjectRequest");
+static_assert(offsetof(FSmartObjectRequest, QueryBox) == 0x000000, "Member 'FSmartObjectRequest::QueryBox' has a wrong offset!");
+static_assert(offsetof(FSmartObjectRequest, Filter) == 0x000040, "Member 'FSmartObjectRequest::Filter' has a wrong offset!");
+
 // ScriptStruct SmartObjectsModule.SmartObjectDefinitionData
 // 0x0008 (0x0008 - 0x0000)
 struct alignas(0x08) FSmartObjectDefinitionData
@@ -606,47 +647,6 @@ public:
 };
 static_assert(alignof(FSmartObjectSlotView) == 0x000008, "Wrong alignment on FSmartObjectSlotView");
 static_assert(sizeof(FSmartObjectSlotView) == 0x000020, "Wrong size on FSmartObjectSlotView");
-
-// ScriptStruct SmartObjectsModule.SmartObjectRequestFilter
-// 0x00F0 (0x00F0 - 0x0000)
-struct alignas(0x10) FSmartObjectRequestFilter final
-{
-public:
-	class AActor*                                 UserActor;                                         // 0x0000(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGameplayTagContainer                  UserTags;                                          // 0x0008(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	ESmartObjectClaimPriority                     ClaimPriority;                                     // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGameplayTagQuery                      ActivityRequirements;                              // 0x0030(0x0048)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<TSubclassOf<class USmartObjectBehaviorDefinition>> BehaviorDefinitionClasses;             // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	bool                                          bShouldEvaluateConditions;                         // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldIncludeClaimedSlots;                        // 0x0089(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bShouldIncludeDisabledSlots;                       // 0x008A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_8B[0x65];                                      // 0x008B(0x0065)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSmartObjectRequestFilter) == 0x000010, "Wrong alignment on FSmartObjectRequestFilter");
-static_assert(sizeof(FSmartObjectRequestFilter) == 0x0000F0, "Wrong size on FSmartObjectRequestFilter");
-static_assert(offsetof(FSmartObjectRequestFilter, UserActor) == 0x000000, "Member 'FSmartObjectRequestFilter::UserActor' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, UserTags) == 0x000008, "Member 'FSmartObjectRequestFilter::UserTags' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, ClaimPriority) == 0x000028, "Member 'FSmartObjectRequestFilter::ClaimPriority' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, ActivityRequirements) == 0x000030, "Member 'FSmartObjectRequestFilter::ActivityRequirements' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, BehaviorDefinitionClasses) == 0x000078, "Member 'FSmartObjectRequestFilter::BehaviorDefinitionClasses' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, bShouldEvaluateConditions) == 0x000088, "Member 'FSmartObjectRequestFilter::bShouldEvaluateConditions' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, bShouldIncludeClaimedSlots) == 0x000089, "Member 'FSmartObjectRequestFilter::bShouldIncludeClaimedSlots' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequestFilter, bShouldIncludeDisabledSlots) == 0x00008A, "Member 'FSmartObjectRequestFilter::bShouldIncludeDisabledSlots' has a wrong offset!");
-
-// ScriptStruct SmartObjectsModule.SmartObjectRequest
-// 0x0130 (0x0130 - 0x0000)
-struct FSmartObjectRequest final
-{
-public:
-	struct FBox                                   QueryBox;                                          // 0x0000(0x0038)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSmartObjectRequestFilter              Filter;                                            // 0x0040(0x00F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSmartObjectRequest) == 0x000010, "Wrong alignment on FSmartObjectRequest");
-static_assert(sizeof(FSmartObjectRequest) == 0x000130, "Wrong size on FSmartObjectRequest");
-static_assert(offsetof(FSmartObjectRequest, QueryBox) == 0x000000, "Member 'FSmartObjectRequest::QueryBox' has a wrong offset!");
-static_assert(offsetof(FSmartObjectRequest, Filter) == 0x000040, "Member 'FSmartObjectRequest::Filter' has a wrong offset!");
 
 // ScriptStruct SmartObjectsModule.SmartObjectRequestResult
 // 0x0018 (0x0018 - 0x0000)

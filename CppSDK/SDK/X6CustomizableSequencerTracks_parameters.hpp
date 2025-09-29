@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "X6CustomizableSequencerTracks_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
 
 

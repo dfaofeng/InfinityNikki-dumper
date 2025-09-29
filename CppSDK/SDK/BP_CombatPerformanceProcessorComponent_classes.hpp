@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "ECombatCatTailClothAnimType_structs.hpp"
 #include "EFeedBackReason_structs.hpp"
 #include "EHitReason_structs.hpp"
+#include "ECombatCatTailClothAnimType_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

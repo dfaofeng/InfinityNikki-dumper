@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GameplayTags_structs.hpp"
 #include "F_AbilityMontageSelector_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "GA_AbilityMontageBase_classes.hpp"
 
 

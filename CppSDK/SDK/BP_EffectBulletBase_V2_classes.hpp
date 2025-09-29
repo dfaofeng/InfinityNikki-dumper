@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ESkillFlag_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EnumBulletDestroyType_structs.hpp"
-#include "ESkillFlag_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

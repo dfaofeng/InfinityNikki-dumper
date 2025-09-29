@@ -2911,7 +2911,7 @@ static_assert(offsetof(URMInputActionProcessor_InAir, StateMachineContextClass) 
 
 // Class X6Game.RMOutputContext_InAir
 // 0x0078 (0x0100 - 0x0088)
-class URMOutputContext_InAir final : public URMOutputContextInterface
+class URMOutputContext_InAir : public URMOutputContextInterface
 {
 public:
 	ERegularFloatingJumpStage                     PreviousFloatingJumpState;                         // 0x0088(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4712,7 +4712,7 @@ static_assert(offsetof(UX6AnimNotifyState_ComboWithCache, InputData) == 0x0000A0
 
 // Class X6Game.X6RichTextBlockNetImageDecorator
 // 0x00C8 (0x00F0 - 0x0028)
-class UX6RichTextBlockNetImageDecorator final : public URichTextBlockDecorator
+class UX6RichTextBlockNetImageDecorator : public URichTextBlockDecorator
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
@@ -7463,7 +7463,7 @@ static_assert(sizeof(UX6BulletFloorAndTargetOptionMovementModifier) == 0x000080,
 
 // Class X6Game.X6ReceiveSkillBaseComponent
 // 0x0008 (0x00B0 - 0x00A8)
-class UX6ReceiveSkillBaseComponent final : public UX6ActorComponent
+class UX6ReceiveSkillBaseComponent : public UX6ActorComponent
 {
 public:
 	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -11179,7 +11179,7 @@ static_assert(offsetof(UX6HISMManagerSubSystem, InstanceGridDataMap) == 0x000080
 
 // Class X6Game.X6HyperLinkTextBlockDecorator
 // 0x0758 (0x0780 - 0x0028)
-class UX6HyperLinkTextBlockDecorator final : public URichTextBlockDecorator
+class UX6HyperLinkTextBlockDecorator : public URichTextBlockDecorator
 {
 public:
 	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])

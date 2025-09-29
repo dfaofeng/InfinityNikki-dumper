@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "X6Animation_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "ABP_Nikki_AimOffset_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

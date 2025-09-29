@@ -108,7 +108,7 @@ public:
 public:
 	void ExecuteUbergraph_WBP_NikkiActionGroup_PC_V3(int32 EntryPoint);
 	void NotifyRefreshSuitIcon();
-	void SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3_0();
+	void SequenceEvent__ENTRYPOINTWBP_NikkiActionGroup_PC_V3();
 	void SetDefaultActionIcon();
 
 	class FString GetModuleName() const;

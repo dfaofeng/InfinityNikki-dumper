@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "E_InteractiveActorType_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params

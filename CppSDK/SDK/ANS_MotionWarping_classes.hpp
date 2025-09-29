@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "EMotionWarpingCondition_structs.hpp"
+#include "MotionWarping_classes.hpp"
 #include "EMotionWarpingTargetType_structs.hpp"
 #include "EMotionWarpingFaceType_structs.hpp"
-#include "MotionWarping_classes.hpp"
 
 
 namespace SDK

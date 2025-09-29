@@ -37,57 +37,57 @@ void UWBP_Hud_LeftTip_C::ExecuteUbergraph_WBP_Hud_LeftTip(int32 EntryPoint)
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3()
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_0
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4()
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_0");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_1
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5()
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_1()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_1");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6
+// Function WBP_Hud_LeftTip.WBP_Hud_LeftTip_C.SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_2
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6()
+void UWBP_Hud_LeftTip_C::SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6");
+		Func = Class->GetFunction("WBP_Hud_LeftTip_C", "SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

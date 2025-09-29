@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterType_structs.hpp"
 #include "EScenarioHomeEventType_structs.hpp"
+#include "ECharacterType_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Enum_InformID_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Enum_CenterInfoType_structs.hpp"
 #include "E_SafezoneType_structs.hpp"
-#include "Enum_InformID_structs.hpp"
 #include "Engine_structs.hpp"
 #include "MainHUDItem_structs.hpp"
 
@@ -1339,6 +1339,39 @@ static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetLevelChallengeSuccess) ==
 static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetLevelChallengeSuccess) == 0x000008, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetLevelChallengeSuccess");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetLevelChallengeSuccess, __WorldContext) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetLevelChallengeSuccess::__WorldContext' has a wrong offset!");
 
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorTickEnabled_Force
+// 0x0028 (0x0028 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnabled;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Tag;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force) == 0x000028, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force, Actor) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force, bEnabled) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force::bEnabled' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force, Tag) == 0x000010, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force::Tag' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force, __WorldContext) == 0x000020, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_Force::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorTickEnabled_ClearForce
+// 0x0020 (0x0020 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Tag;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce) == 0x000020, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce, Actor) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce, Tag) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce::Tag' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce, __WorldContext) == 0x000018, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled_ClearForce::__WorldContext' has a wrong offset!");
+
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorTickEnabled
 // 0x0028 (0x0028 - 0x0000)
 struct X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled final
@@ -1356,6 +1389,39 @@ static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled, Actor)
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled, bEnabled) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled::bEnabled' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled, Tag) == 0x000010, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled::Tag' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled, __WorldContext) == 0x000020, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorTickEnabled::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorHiddenInGame_Force
+// 0x0028 (0x0028 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bNewHidden;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Tag;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force) == 0x000028, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force, Actor) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force, bNewHidden) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force::bNewHidden' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force, Tag) == 0x000010, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force::Tag' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force, __WorldContext) == 0x000020, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_Force::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorHiddenInGame_ClearForce
+// 0x0020 (0x0020 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Tag;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce) == 0x000020, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce, Actor) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce, Tag) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce::Tag' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce, __WorldContext) == 0x000018, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorHiddenInGame_ClearForce::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorHiddenInGame
 // 0x0028 (0x0028 - 0x0000)
@@ -1410,6 +1476,39 @@ static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity, Acto
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity, bEnableGravity) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity::bEnableGravity' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity, Tag) == 0x000010, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity::Tag' has a wrong offset!");
 static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity, __WorldContext) == 0x000020, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableGravity::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorEnableCollision_Force
+// 0x0028 (0x0028 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnableCollision;                                  // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Tag;                                               // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force) == 0x000028, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force, Actor) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force, bEnableCollision) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force::bEnableCollision' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force, Tag) == 0x000010, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force::Tag' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force, __WorldContext) == 0x000020, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_Force::__WorldContext' has a wrong offset!");
+
+// Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorEnableCollision_ClearForce
+// 0x0020 (0x0020 - 0x0000)
+struct X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Tag;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce) == 0x000008, "Wrong alignment on X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce");
+static_assert(sizeof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce) == 0x000020, "Wrong size on X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce, Actor) == 0x000000, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce::Actor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce, Tag) == 0x000008, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce::Tag' has a wrong offset!");
+static_assert(offsetof(X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce, __WorldContext) == 0x000018, "Member 'X6BlueprintCommonLibrary_C_BP_SetActorEnableCollision_ClearForce::__WorldContext' has a wrong offset!");
 
 // Function X6BlueprintCommonLibrary.X6BlueprintCommonLibrary_C.BP_SetActorEnableCollision
 // 0x0028 (0x0028 - 0x0000)

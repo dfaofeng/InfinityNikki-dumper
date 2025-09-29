@@ -10,31 +10,34 @@
 
 #include "Basic.hpp"
 
+#include "EPlayerRegularFlyingMovementType_structs.hpp"
 #include "SMSystem_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "EPlayerMovementScenarios_structs.hpp"
 #include "EPlayerRegularMovementType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "FStylizedMirror_structs.hpp"
 #include "X6Game_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "EPlayerMovementScenarios_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "E_ClothesAnimationStateType_structs.hpp"
-#include "X6Animation_structs.hpp"
-#include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "Enum_WeaponHandMode_structs.hpp"
-#include "FStylizedSimplyStartState_structs.hpp"
 #include "ENPC_BodyType_structs.hpp"
-#include "FStylizedSimplyPivotState_structs.hpp"
-#include "EPlayerRegularFlyingMovementType_structs.hpp"
+#include "FStylizedInplaceTurnState_structs.hpp"
+#include "X6Animation_structs.hpp"
 #include "EPawnAnimStateTypes_structs.hpp"
-#include "FStylizedMirror_structs.hpp"
+#include "FStylizedSimplyStartState_structs.hpp"
+#include "FStylizedSimplyPivotState_structs.hpp"
+#include "FStylizedSimplyLandState_structs.hpp"
+#include "FStylizedShuffleStopState_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_PlayerAnimStatesComponent.BP_PlayerAnimStatesComponent_C
-// 0x07E8 (0x0A90 - 0x02A8)
+// 0x0918 (0x0BC0 - 0x02A8)
 class UBP_PlayerAnimStatesComponent_C final : public UX6GeneralAnimationDataComponent
 {
 public:
@@ -173,48 +176,51 @@ public:
 	TMulticastInlineDelegate<void()>              OnPawnAnimStateChanged;                            // 0x0810(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FFStylizedSimplyStartState             BP_StylizedStartAnim;                              // 0x0820(0x0078)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FFStylizedSimplyPivotState             BP_Stylized_SimplyPivot;                           // 0x0898(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FFStylizedMirror                       BP_Stylized_Mirror;                                // 0x08B0(0x0002)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8B2[0x6];                                      // 0x08B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          BP_IdleTransitionAnim;                             // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class UAnimSequence* Animation, bool bAdd)> OnIdleBreakAnimChanged; // 0x08C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	TArray<class UAnimSequence*>                  BP_IdleBreakAnims;                                 // 0x08D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
-	double                                        BP_DialogBlendInTime;                              // 0x08E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_DialogBlendOutTime;                             // 0x08E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bCustomDialogBlendInOutTime;                    // 0x08F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableMaxAnkleAngleLimit;                       // 0x08F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_8F2[0x6];                                      // 0x08F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_ClothesFrontThickness_Follow;                   // 0x08F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_ClothesBackThickness_Follow;                    // 0x0900(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_ClothesFrontThickness_Splay;                    // 0x0908(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        BP_ClothesBackThickness_Splay;                     // 0x0910(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bDuringAdjustTransform;                         // 0x0918(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_919[0x7];                                      // 0x0919(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             BP_AdjustTargetTransform;                          // 0x0920(0x0060)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(bool EnableEmotionPerformance)> OnEmotionPerformanceChanged;       // 0x0980(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          BP_InPhotograph;                                   // 0x0990(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_HasHoldDressCurveValue;                         // 0x0991(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_RefreshClothData;                               // 0x0992(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_993[0x5];                                      // 0x0993(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void()>              OnClothThicknessDataChanged;                       // 0x0998(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	double                                        BP_NikkiRigLiftLegAlpha;                           // 0x09A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsLogicInWaitingCinematicState;                 // 0x09B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	bool                                          BP_bBikeHandIKLockPosL;                            // 0x09B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_bBikeHandIKLockPosR;                            // 0x09B2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9B3[0x5];                                      // 0x09B3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        BP_BikeHandIKAlpha;                                // 0x09B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BP_BikeHandLockPosL;                               // 0x09C0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BP_BikeHandLockPosR;                               // 0x09D8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableMultiPerformanceIKLeader;                 // 0x09F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableMultiPerformanceIKFollower;               // 0x09F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_9F2[0xE];                                      // 0x09F2(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             BP_MultiPerformHandDelta_Right;                    // 0x0A00(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableMultiPerformanceIK_LeftHand;              // 0x0A60(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_EnableMultiPerformanceIK_RightHand;             // 0x0A61(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_MultiPerformanceIK_LeftToLeft;                  // 0x0A62(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_MultiPerformanceIK_RightToLeft;                 // 0x0A63(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_A64[0x4];                                      // 0x0A64(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 BP_MultiPerformFollowerActor;                      // 0x0A68(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                BP_MultiPerform_DeltaLocation;                     // 0x0A70(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FFStylizedSimplyLandState              BP_Stylized_Land;                                  // 0x08B0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFStylizedShuffleStopState             BP_Stylized_ShuffleStop;                           // 0x08C8(0x00C8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFStylizedInplaceTurnState             BP_Stylized_InplaceTurn;                           // 0x0990(0x0048)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FFStylizedMirror                       BP_Stylized_Mirror;                                // 0x09D8(0x0002)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9DA[0x6];                                      // 0x09DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          BP_IdleTransitionAnim;                             // 0x09E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class UAnimSequence* Animation, bool bAdd)> OnIdleBreakAnimChanged; // 0x09E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TArray<class UAnimSequence*>                  BP_IdleBreakAnims;                                 // 0x09F8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	double                                        BP_DialogBlendInTime;                              // 0x0A08(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_DialogBlendOutTime;                             // 0x0A10(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bCustomDialogBlendInOutTime;                    // 0x0A18(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableMaxAnkleAngleLimit;                       // 0x0A19(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A1A[0x6];                                      // 0x0A1A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_ClothesFrontThickness_Follow;                   // 0x0A20(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_ClothesBackThickness_Follow;                    // 0x0A28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_ClothesFrontThickness_Splay;                    // 0x0A30(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        BP_ClothesBackThickness_Splay;                     // 0x0A38(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bDuringAdjustTransform;                         // 0x0A40(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A41[0xF];                                      // 0x0A41(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BP_AdjustTargetTransform;                          // 0x0A50(0x0060)(Edit, BlueprintVisible, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(bool EnableEmotionPerformance)> OnEmotionPerformanceChanged;       // 0x0AB0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          BP_InPhotograph;                                   // 0x0AC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_HasHoldDressCurveValue;                         // 0x0AC1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_RefreshClothData;                               // 0x0AC2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AC3[0x5];                                      // 0x0AC3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void()>              OnClothThicknessDataChanged;                       // 0x0AC8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	double                                        BP_NikkiRigLiftLegAlpha;                           // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsLogicInWaitingCinematicState;                 // 0x0AE0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	bool                                          BP_bBikeHandIKLockPosL;                            // 0x0AE1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_bBikeHandIKLockPosR;                            // 0x0AE2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AE3[0x5];                                      // 0x0AE3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        BP_BikeHandIKAlpha;                                // 0x0AE8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BP_BikeHandLockPosL;                               // 0x0AF0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BP_BikeHandLockPosR;                               // 0x0B08(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableMultiPerformanceIKLeader;                 // 0x0B20(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableMultiPerformanceIKFollower;               // 0x0B21(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B22[0xE];                                      // 0x0B22(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BP_MultiPerformHandDelta_Right;                    // 0x0B30(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableMultiPerformanceIK_LeftHand;              // 0x0B90(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_EnableMultiPerformanceIK_RightHand;             // 0x0B91(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_MultiPerformanceIK_LeftToLeft;                  // 0x0B92(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_MultiPerformanceIK_RightToLeft;                 // 0x0B93(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_B94[0x4];                                      // 0x0B94(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 BP_MultiPerformFollowerActor;                      // 0x0B98(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                BP_MultiPerform_DeltaLocation;                     // 0x0BA0(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ReceiveBeginPlay();
@@ -264,7 +270,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_PlayerAnimStatesComponent_C) == 0x000010, "Wrong alignment on UBP_PlayerAnimStatesComponent_C");
-static_assert(sizeof(UBP_PlayerAnimStatesComponent_C) == 0x000A90, "Wrong size on UBP_PlayerAnimStatesComponent_C");
+static_assert(sizeof(UBP_PlayerAnimStatesComponent_C) == 0x000BC0, "Wrong size on UBP_PlayerAnimStatesComponent_C");
 static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, UberGraphFrame) == 0x0002A8, "Member 'UBP_PlayerAnimStatesComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IsChangingCloth) == 0x0002B0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IsChangingCloth' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IsLogicInStateInAir) == 0x0002B1, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IsLogicInStateInAir' has a wrong offset!");
@@ -384,41 +390,44 @@ static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_PawnAnimState) == 0x0
 static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnPawnAnimStateChanged) == 0x000810, "Member 'UBP_PlayerAnimStatesComponent_C::OnPawnAnimStateChanged' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_StylizedStartAnim) == 0x000820, "Member 'UBP_PlayerAnimStatesComponent_C::BP_StylizedStartAnim' has a wrong offset!");
 static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_Stylized_SimplyPivot) == 0x000898, "Member 'UBP_PlayerAnimStatesComponent_C::BP_Stylized_SimplyPivot' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_Stylized_Mirror) == 0x0008B0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_Stylized_Mirror' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IdleTransitionAnim) == 0x0008B8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IdleTransitionAnim' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnIdleBreakAnimChanged) == 0x0008C0, "Member 'UBP_PlayerAnimStatesComponent_C::OnIdleBreakAnimChanged' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IdleBreakAnims) == 0x0008D0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IdleBreakAnims' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_DialogBlendInTime) == 0x0008E0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_DialogBlendInTime' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_DialogBlendOutTime) == 0x0008E8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_DialogBlendOutTime' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bCustomDialogBlendInOutTime) == 0x0008F0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bCustomDialogBlendInOutTime' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMaxAnkleAngleLimit) == 0x0008F1, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMaxAnkleAngleLimit' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesFrontThickness_Follow) == 0x0008F8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesFrontThickness_Follow' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesBackThickness_Follow) == 0x000900, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesBackThickness_Follow' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesFrontThickness_Splay) == 0x000908, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesFrontThickness_Splay' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesBackThickness_Splay) == 0x000910, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesBackThickness_Splay' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bDuringAdjustTransform) == 0x000918, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bDuringAdjustTransform' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_AdjustTargetTransform) == 0x000920, "Member 'UBP_PlayerAnimStatesComponent_C::BP_AdjustTargetTransform' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnEmotionPerformanceChanged) == 0x000980, "Member 'UBP_PlayerAnimStatesComponent_C::OnEmotionPerformanceChanged' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_InPhotograph) == 0x000990, "Member 'UBP_PlayerAnimStatesComponent_C::BP_InPhotograph' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_HasHoldDressCurveValue) == 0x000991, "Member 'UBP_PlayerAnimStatesComponent_C::BP_HasHoldDressCurveValue' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_RefreshClothData) == 0x000992, "Member 'UBP_PlayerAnimStatesComponent_C::BP_RefreshClothData' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnClothThicknessDataChanged) == 0x000998, "Member 'UBP_PlayerAnimStatesComponent_C::OnClothThicknessDataChanged' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_NikkiRigLiftLegAlpha) == 0x0009A8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_NikkiRigLiftLegAlpha' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IsLogicInWaitingCinematicState) == 0x0009B0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IsLogicInWaitingCinematicState' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bBikeHandIKLockPosL) == 0x0009B1, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bBikeHandIKLockPosL' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bBikeHandIKLockPosR) == 0x0009B2, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bBikeHandIKLockPosR' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_BikeHandIKAlpha) == 0x0009B8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_BikeHandIKAlpha' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_BikeHandLockPosL) == 0x0009C0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_BikeHandLockPosL' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_BikeHandLockPosR) == 0x0009D8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_BikeHandLockPosR' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIKLeader) == 0x0009F0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIKLeader' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIKFollower) == 0x0009F1, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIKFollower' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformHandDelta_Right) == 0x000A00, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformHandDelta_Right' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIK_LeftHand) == 0x000A60, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIK_LeftHand' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIK_RightHand) == 0x000A61, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIK_RightHand' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformanceIK_LeftToLeft) == 0x000A62, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformanceIK_LeftToLeft' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformanceIK_RightToLeft) == 0x000A63, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformanceIK_RightToLeft' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformFollowerActor) == 0x000A68, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformFollowerActor' has a wrong offset!");
-static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerform_DeltaLocation) == 0x000A70, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerform_DeltaLocation' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_Stylized_Land) == 0x0008B0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_Stylized_Land' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_Stylized_ShuffleStop) == 0x0008C8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_Stylized_ShuffleStop' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_Stylized_InplaceTurn) == 0x000990, "Member 'UBP_PlayerAnimStatesComponent_C::BP_Stylized_InplaceTurn' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_Stylized_Mirror) == 0x0009D8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_Stylized_Mirror' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IdleTransitionAnim) == 0x0009E0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IdleTransitionAnim' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnIdleBreakAnimChanged) == 0x0009E8, "Member 'UBP_PlayerAnimStatesComponent_C::OnIdleBreakAnimChanged' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IdleBreakAnims) == 0x0009F8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IdleBreakAnims' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_DialogBlendInTime) == 0x000A08, "Member 'UBP_PlayerAnimStatesComponent_C::BP_DialogBlendInTime' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_DialogBlendOutTime) == 0x000A10, "Member 'UBP_PlayerAnimStatesComponent_C::BP_DialogBlendOutTime' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bCustomDialogBlendInOutTime) == 0x000A18, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bCustomDialogBlendInOutTime' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMaxAnkleAngleLimit) == 0x000A19, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMaxAnkleAngleLimit' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesFrontThickness_Follow) == 0x000A20, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesFrontThickness_Follow' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesBackThickness_Follow) == 0x000A28, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesBackThickness_Follow' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesFrontThickness_Splay) == 0x000A30, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesFrontThickness_Splay' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_ClothesBackThickness_Splay) == 0x000A38, "Member 'UBP_PlayerAnimStatesComponent_C::BP_ClothesBackThickness_Splay' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bDuringAdjustTransform) == 0x000A40, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bDuringAdjustTransform' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_AdjustTargetTransform) == 0x000A50, "Member 'UBP_PlayerAnimStatesComponent_C::BP_AdjustTargetTransform' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnEmotionPerformanceChanged) == 0x000AB0, "Member 'UBP_PlayerAnimStatesComponent_C::OnEmotionPerformanceChanged' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_InPhotograph) == 0x000AC0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_InPhotograph' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_HasHoldDressCurveValue) == 0x000AC1, "Member 'UBP_PlayerAnimStatesComponent_C::BP_HasHoldDressCurveValue' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_RefreshClothData) == 0x000AC2, "Member 'UBP_PlayerAnimStatesComponent_C::BP_RefreshClothData' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, OnClothThicknessDataChanged) == 0x000AC8, "Member 'UBP_PlayerAnimStatesComponent_C::OnClothThicknessDataChanged' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_NikkiRigLiftLegAlpha) == 0x000AD8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_NikkiRigLiftLegAlpha' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_IsLogicInWaitingCinematicState) == 0x000AE0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_IsLogicInWaitingCinematicState' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bBikeHandIKLockPosL) == 0x000AE1, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bBikeHandIKLockPosL' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_bBikeHandIKLockPosR) == 0x000AE2, "Member 'UBP_PlayerAnimStatesComponent_C::BP_bBikeHandIKLockPosR' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_BikeHandIKAlpha) == 0x000AE8, "Member 'UBP_PlayerAnimStatesComponent_C::BP_BikeHandIKAlpha' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_BikeHandLockPosL) == 0x000AF0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_BikeHandLockPosL' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_BikeHandLockPosR) == 0x000B08, "Member 'UBP_PlayerAnimStatesComponent_C::BP_BikeHandLockPosR' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIKLeader) == 0x000B20, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIKLeader' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIKFollower) == 0x000B21, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIKFollower' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformHandDelta_Right) == 0x000B30, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformHandDelta_Right' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIK_LeftHand) == 0x000B90, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIK_LeftHand' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_EnableMultiPerformanceIK_RightHand) == 0x000B91, "Member 'UBP_PlayerAnimStatesComponent_C::BP_EnableMultiPerformanceIK_RightHand' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformanceIK_LeftToLeft) == 0x000B92, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformanceIK_LeftToLeft' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformanceIK_RightToLeft) == 0x000B93, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformanceIK_RightToLeft' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerformFollowerActor) == 0x000B98, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerformFollowerActor' has a wrong offset!");
+static_assert(offsetof(UBP_PlayerAnimStatesComponent_C, BP_MultiPerform_DeltaLocation) == 0x000BA0, "Member 'UBP_PlayerAnimStatesComponent_C::BP_MultiPerform_DeltaLocation' has a wrong offset!");
 
 }
 

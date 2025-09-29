@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_HumanPositions_structs.hpp"
 #include "E_NPCPhotoReactionAnimLookAtType_structs.hpp"
+#include "Enum_HumanPositions_structs.hpp"
 
 
 namespace SDK

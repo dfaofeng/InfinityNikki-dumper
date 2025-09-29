@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "ABP_Posedriver_Nikki_structs.hpp"
 #include "ControlRig_structs.hpp"
+#include "ABP_Posedriver_Nikki_structs.hpp"
 
 
 namespace SDK

@@ -40,5 +40,29 @@ void UX6BlueprintHomeLibrary_C::IsInSelfHome(class UObject* __WorldContext, bool
 		*bInSelfHome = Parms.bInSelfHome;
 }
 
+
+// Function X6BlueprintHomeLibrary.X6BlueprintHomeLibrary_C.IsInHomeWorld
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bInHomeWorld                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintHomeLibrary_C::IsInHomeWorld(class UObject* __WorldContext, bool* bInHomeWorld)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintHomeLibrary_C", "IsInHomeWorld");
+
+	Params::X6BlueprintHomeLibrary_C_IsInHomeWorld Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (bInHomeWorld != nullptr)
+		*bInHomeWorld = Parms.bInHomeWorld;
+}
+
 }
 

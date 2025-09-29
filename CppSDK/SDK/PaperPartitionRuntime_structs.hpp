@@ -127,6 +127,29 @@ static_assert(offsetof(FPPSocketInfo, RelativeLocation) == 0x000008, "Member 'FP
 static_assert(offsetof(FPPSocketInfo, RelativeRotation) == 0x000020, "Member 'FPPSocketInfo::RelativeRotation' has a wrong offset!");
 static_assert(offsetof(FPPSocketInfo, RelativeScale) == 0x000038, "Member 'FPPSocketInfo::RelativeScale' has a wrong offset!");
 
+// ScriptStruct PaperPartitionRuntime.PPVastStreamingActor
+// 0x00A8 (0x00A8 - 0x0000)
+struct FPPVastStreamingActor final
+{
+public:
+	struct FSoftObjectPath                        ActorPath;                                         // 0x0000(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ActorLocation;                                     // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ActorBounds;                                       // 0x0038(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         StreamingDistance;                                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   OriLevelName;                                      // 0x0074(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 WorldTag;                                          // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_90[0x18];                                      // 0x0090(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPPVastStreamingActor) == 0x000008, "Wrong alignment on FPPVastStreamingActor");
+static_assert(sizeof(FPPVastStreamingActor) == 0x0000A8, "Wrong size on FPPVastStreamingActor");
+static_assert(offsetof(FPPVastStreamingActor, ActorPath) == 0x000000, "Member 'FPPVastStreamingActor::ActorPath' has a wrong offset!");
+static_assert(offsetof(FPPVastStreamingActor, ActorLocation) == 0x000020, "Member 'FPPVastStreamingActor::ActorLocation' has a wrong offset!");
+static_assert(offsetof(FPPVastStreamingActor, ActorBounds) == 0x000038, "Member 'FPPVastStreamingActor::ActorBounds' has a wrong offset!");
+static_assert(offsetof(FPPVastStreamingActor, StreamingDistance) == 0x000070, "Member 'FPPVastStreamingActor::StreamingDistance' has a wrong offset!");
+static_assert(offsetof(FPPVastStreamingActor, OriLevelName) == 0x000074, "Member 'FPPVastStreamingActor::OriLevelName' has a wrong offset!");
+static_assert(offsetof(FPPVastStreamingActor, WorldTag) == 0x000080, "Member 'FPPVastStreamingActor::WorldTag' has a wrong offset!");
+
 // ScriptStruct PaperPartitionRuntime.PPSocketInfos
 // 0x0010 (0x0010 - 0x0000)
 struct FPPSocketInfos final
@@ -165,29 +188,6 @@ public:
 static_assert(alignof(FPPSubLevelActorReferenceInfos) == 0x000008, "Wrong alignment on FPPSubLevelActorReferenceInfos");
 static_assert(sizeof(FPPSubLevelActorReferenceInfos) == 0x000010, "Wrong size on FPPSubLevelActorReferenceInfos");
 static_assert(offsetof(FPPSubLevelActorReferenceInfos, ReferenceInfos) == 0x000000, "Member 'FPPSubLevelActorReferenceInfos::ReferenceInfos' has a wrong offset!");
-
-// ScriptStruct PaperPartitionRuntime.PPVastStreamingActor
-// 0x00A8 (0x00A8 - 0x0000)
-struct FPPVastStreamingActor final
-{
-public:
-	struct FSoftObjectPath                        ActorPath;                                         // 0x0000(0x0020)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ActorLocation;                                     // 0x0020(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   ActorBounds;                                       // 0x0038(0x0038)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         StreamingDistance;                                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   OriLevelName;                                      // 0x0074(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7C[0x4];                                       // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 WorldTag;                                          // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_90[0x18];                                      // 0x0090(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPPVastStreamingActor) == 0x000008, "Wrong alignment on FPPVastStreamingActor");
-static_assert(sizeof(FPPVastStreamingActor) == 0x0000A8, "Wrong size on FPPVastStreamingActor");
-static_assert(offsetof(FPPVastStreamingActor, ActorPath) == 0x000000, "Member 'FPPVastStreamingActor::ActorPath' has a wrong offset!");
-static_assert(offsetof(FPPVastStreamingActor, ActorLocation) == 0x000020, "Member 'FPPVastStreamingActor::ActorLocation' has a wrong offset!");
-static_assert(offsetof(FPPVastStreamingActor, ActorBounds) == 0x000038, "Member 'FPPVastStreamingActor::ActorBounds' has a wrong offset!");
-static_assert(offsetof(FPPVastStreamingActor, StreamingDistance) == 0x000070, "Member 'FPPVastStreamingActor::StreamingDistance' has a wrong offset!");
-static_assert(offsetof(FPPVastStreamingActor, OriLevelName) == 0x000074, "Member 'FPPVastStreamingActor::OriLevelName' has a wrong offset!");
-static_assert(offsetof(FPPVastStreamingActor, WorldTag) == 0x000080, "Member 'FPPVastStreamingActor::WorldTag' has a wrong offset!");
 
 }
 

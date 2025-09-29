@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // UserDefinedStruct F_ImageRecognitionObjInfo.F_ImageRecognitionObjInfo
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FF_ImageRecognitionObjInfo final
 {
 public:
@@ -31,9 +31,10 @@ public:
 	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         GroupID_36_408077C84977682D3749AE9C22403C04;       // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                           PerformanceTag_39_B6059F1D44BFA2CF80E4B695C305199D; // 0x0028(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	bool                                          NotCheckOverLap_41_146D9C8A4399085B963C1AA64240342A; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FF_ImageRecognitionObjInfo) == 0x000008, "Wrong alignment on FF_ImageRecognitionObjInfo");
-static_assert(sizeof(FF_ImageRecognitionObjInfo) == 0x000030, "Wrong size on FF_ImageRecognitionObjInfo");
+static_assert(sizeof(FF_ImageRecognitionObjInfo) == 0x000038, "Wrong size on FF_ImageRecognitionObjInfo");
 static_assert(offsetof(FF_ImageRecognitionObjInfo, ObjID_18_EFF2454244A9220426AC8995C6B1BC2E) == 0x000000, "Member 'FF_ImageRecognitionObjInfo::ObjID_18_EFF2454244A9220426AC8995C6B1BC2E' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionObjInfo, Num_21_806BB73E4B7D741F874BE7939D56001F) == 0x000004, "Member 'FF_ImageRecognitionObjInfo::Num_21_806BB73E4B7D741F874BE7939D56001F' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionObjInfo, HintText_24_0110F7534203A2A9FF6423B339B55AC0) == 0x000008, "Member 'FF_ImageRecognitionObjInfo::HintText_24_0110F7534203A2A9FF6423B339B55AC0' has a wrong offset!");
@@ -43,6 +44,7 @@ static_assert(offsetof(FF_ImageRecognitionObjInfo, NeedCheckDirtiness_31_796E43E
 static_assert(offsetof(FF_ImageRecognitionObjInfo, IsDirty_33_6E7A0F6540C07235472C8F9CD0A01B66) == 0x000022, "Member 'FF_ImageRecognitionObjInfo::IsDirty_33_6E7A0F6540C07235472C8F9CD0A01B66' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionObjInfo, GroupID_36_408077C84977682D3749AE9C22403C04) == 0x000024, "Member 'FF_ImageRecognitionObjInfo::GroupID_36_408077C84977682D3749AE9C22403C04' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionObjInfo, PerformanceTag_39_B6059F1D44BFA2CF80E4B695C305199D) == 0x000028, "Member 'FF_ImageRecognitionObjInfo::PerformanceTag_39_B6059F1D44BFA2CF80E4B695C305199D' has a wrong offset!");
+static_assert(offsetof(FF_ImageRecognitionObjInfo, NotCheckOverLap_41_146D9C8A4399085B963C1AA64240342A) == 0x000030, "Member 'FF_ImageRecognitionObjInfo::NotCheckOverLap_41_146D9C8A4399085B963C1AA64240342A' has a wrong offset!");
 
 }
 

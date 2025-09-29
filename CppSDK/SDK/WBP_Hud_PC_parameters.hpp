@@ -151,38 +151,38 @@ static_assert(alignof(WBP_Hud_PC_C_OnAnimationStarted) == 0x000008, "Wrong align
 static_assert(sizeof(WBP_Hud_PC_C_OnAnimationStarted) == 0x000008, "Wrong size on WBP_Hud_PC_C_OnAnimationStarted");
 static_assert(offsetof(WBP_Hud_PC_C_OnAnimationStarted, Animation) == 0x000000, "Member 'WBP_Hud_PC_C_OnAnimationStarted::Animation' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_17
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_4
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17 final
+struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4 final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17");
-static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17");
-static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_17::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4");
+static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4");
+static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_4::MainActivity_0' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_18
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_5
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18 final
+struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5 final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18");
-static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18");
-static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_18::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5");
+static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5");
+static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_5::MainActivity_0' has a wrong offset!");
 
-// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_19
+// Function WBP_Hud_PC.WBP_Hud_PC_C.SequenceEvent__ENTRYPOINTWBP_Hud_PC_6
 // 0x0008 (0x0008 - 0x0000)
-struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19 final
+struct WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6 final
 {
 public:
 	class UWBP_MainActivity_C*                    MainActivity_0;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19");
-static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19");
-static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_19::MainActivity_0' has a wrong offset!");
+static_assert(alignof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6) == 0x000008, "Wrong alignment on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6");
+static_assert(sizeof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6) == 0x000008, "Wrong size on WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6");
+static_assert(offsetof(WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6, MainActivity_0) == 0x000000, "Member 'WBP_Hud_PC_C_SequenceEvent__ENTRYPOINTWBP_Hud_PC_6::MainActivity_0' has a wrong offset!");
 
 // Function WBP_Hud_PC.WBP_Hud_PC_C.ShowHPParticle
 // 0x0008 (0x0008 - 0x0000)

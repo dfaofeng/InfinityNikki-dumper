@@ -71,6 +71,20 @@ void UBP_InteractiveWhitePointComponent_C::ReceiveBeginPlay()
 }
 
 
+// Function BP_InteractiveWhitePointComponent.BP_InteractiveWhitePointComponent_C.BP_TimerCheck
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_InteractiveWhitePointComponent_C::BP_TimerCheck()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractiveWhitePointComponent_C", "BP_TimerCheck");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_InteractiveWhitePointComponent.BP_InteractiveWhitePointComponent_C.ExecuteUbergraph_BP_InteractiveWhitePointComponent
 // (Final, UbergraphFunction)
 // Parameters:
@@ -88,20 +102,6 @@ void UBP_InteractiveWhitePointComponent_C::ExecuteUbergraph_BP_InteractiveWhiteP
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractiveWhitePointComponent.BP_InteractiveWhitePointComponent_C.BP_TimerCheck
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_InteractiveWhitePointComponent_C::BP_TimerCheck()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractiveWhitePointComponent_C", "BP_TimerCheck");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

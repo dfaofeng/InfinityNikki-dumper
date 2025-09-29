@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "ECombatHitMainType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "ECombatHitMainType_structs.hpp"
 #include "EPlayerPartMaterialType_structs.hpp"
 #include "ESkillFlag_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

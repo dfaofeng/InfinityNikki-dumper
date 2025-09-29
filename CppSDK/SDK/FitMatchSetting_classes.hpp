@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "E_MatchClothType_Body_structs.hpp"
-#include "E_MatchClothType_Arm_structs.hpp"
 #include "NikkiFitCloth_structs.hpp"
 #include "NikkiFitCloth_classes.hpp"
-#include "E_MatchClothType_Leg_structs.hpp"
+#include "E_MatchClothType_Arm_structs.hpp"
+#include "Struct_ClothMatchSectionPriority_structs.hpp"
+#include "E_MatchClothType_Body_structs.hpp"
 #include "E_MatchClothType_Head_structs.hpp"
+#include "E_MatchClothType_Leg_structs.hpp"
 #include "E_MatchClothType_Neck_structs.hpp"
 #include "E_MatchClothType_structs.hpp"
-#include "Struct_ClothMatchSectionPriority_structs.hpp"
 
 
 namespace SDK

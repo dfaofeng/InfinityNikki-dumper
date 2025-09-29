@@ -25,48 +25,6 @@ enum class EPCDX6GestureType : uint8
 	EPCDX6GestureType_MAX                    = 2,
 };
 
-// ScriptStruct PaperDialogueProvider.PCDAnimSequenceData
-// 0x0038 (0x0038 - 0x0000)
-struct FPCDAnimSequenceData
-{
-public:
-	float                                         InsertPosition;                                    // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 AnimSequencePath;                                  // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class FString>                         MultiAnimSequencePaths;                            // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         EaseInFrames;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         EaseOutFrames;                                     // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoRangeAsLine;                                  // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPCDAnimSequenceData) == 0x000008, "Wrong alignment on FPCDAnimSequenceData");
-static_assert(sizeof(FPCDAnimSequenceData) == 0x000038, "Wrong size on FPCDAnimSequenceData");
-static_assert(offsetof(FPCDAnimSequenceData, InsertPosition) == 0x000000, "Member 'FPCDAnimSequenceData::InsertPosition' has a wrong offset!");
-static_assert(offsetof(FPCDAnimSequenceData, AnimSequencePath) == 0x000008, "Member 'FPCDAnimSequenceData::AnimSequencePath' has a wrong offset!");
-static_assert(offsetof(FPCDAnimSequenceData, MultiAnimSequencePaths) == 0x000018, "Member 'FPCDAnimSequenceData::MultiAnimSequencePaths' has a wrong offset!");
-static_assert(offsetof(FPCDAnimSequenceData, EaseInFrames) == 0x000028, "Member 'FPCDAnimSequenceData::EaseInFrames' has a wrong offset!");
-static_assert(offsetof(FPCDAnimSequenceData, EaseOutFrames) == 0x00002C, "Member 'FPCDAnimSequenceData::EaseOutFrames' has a wrong offset!");
-static_assert(offsetof(FPCDAnimSequenceData, bAutoRangeAsLine) == 0x000030, "Member 'FPCDAnimSequenceData::bAutoRangeAsLine' has a wrong offset!");
-
-// ScriptStruct PaperDialogueProvider.PCDDialogueData
-// 0x0088 (0x0088 - 0x0000)
-struct FPCDDialogueData
-{
-public:
-	class FName                                   SpeakerTag;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   LineText;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FString                                 VoicePath;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 RobotVoicePath;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FPCDAnimSequenceData> AnimSequenceDataMap;                              // 0x0038(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FPCDDialogueData) == 0x000008, "Wrong alignment on FPCDDialogueData");
-static_assert(sizeof(FPCDDialogueData) == 0x000088, "Wrong size on FPCDDialogueData");
-static_assert(offsetof(FPCDDialogueData, SpeakerTag) == 0x000000, "Member 'FPCDDialogueData::SpeakerTag' has a wrong offset!");
-static_assert(offsetof(FPCDDialogueData, LineText) == 0x000008, "Member 'FPCDDialogueData::LineText' has a wrong offset!");
-static_assert(offsetof(FPCDDialogueData, VoicePath) == 0x000018, "Member 'FPCDDialogueData::VoicePath' has a wrong offset!");
-static_assert(offsetof(FPCDDialogueData, RobotVoicePath) == 0x000028, "Member 'FPCDDialogueData::RobotVoicePath' has a wrong offset!");
-static_assert(offsetof(FPCDDialogueData, AnimSequenceDataMap) == 0x000038, "Member 'FPCDDialogueData::AnimSequenceDataMap' has a wrong offset!");
-
 // ScriptStruct PaperDialogueProvider.PCDGroupSetupStatus
 // 0x0004 (0x0004 - 0x0000)
 struct FPCDGroupSetupStatus final
@@ -110,6 +68,29 @@ static_assert(alignof(FPCDDialogueSetData) == 0x000008, "Wrong alignment on FPCD
 static_assert(sizeof(FPCDDialogueSetData) == 0x000010, "Wrong size on FPCDDialogueSetData");
 static_assert(offsetof(FPCDDialogueSetData, CameraShotTags) == 0x000000, "Member 'FPCDDialogueSetData::CameraShotTags' has a wrong offset!");
 
+// ScriptStruct PaperDialogueProvider.PCDAnimSequenceData
+// 0x0038 (0x0038 - 0x0000)
+struct FPCDAnimSequenceData
+{
+public:
+	float                                         InsertPosition;                                    // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 AnimSequencePath;                                  // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FString>                         MultiAnimSequencePaths;                            // 0x0018(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         EaseInFrames;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EaseOutFrames;                                     // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoRangeAsLine;                                  // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPCDAnimSequenceData) == 0x000008, "Wrong alignment on FPCDAnimSequenceData");
+static_assert(sizeof(FPCDAnimSequenceData) == 0x000038, "Wrong size on FPCDAnimSequenceData");
+static_assert(offsetof(FPCDAnimSequenceData, InsertPosition) == 0x000000, "Member 'FPCDAnimSequenceData::InsertPosition' has a wrong offset!");
+static_assert(offsetof(FPCDAnimSequenceData, AnimSequencePath) == 0x000008, "Member 'FPCDAnimSequenceData::AnimSequencePath' has a wrong offset!");
+static_assert(offsetof(FPCDAnimSequenceData, MultiAnimSequencePaths) == 0x000018, "Member 'FPCDAnimSequenceData::MultiAnimSequencePaths' has a wrong offset!");
+static_assert(offsetof(FPCDAnimSequenceData, EaseInFrames) == 0x000028, "Member 'FPCDAnimSequenceData::EaseInFrames' has a wrong offset!");
+static_assert(offsetof(FPCDAnimSequenceData, EaseOutFrames) == 0x00002C, "Member 'FPCDAnimSequenceData::EaseOutFrames' has a wrong offset!");
+static_assert(offsetof(FPCDAnimSequenceData, bAutoRangeAsLine) == 0x000030, "Member 'FPCDAnimSequenceData::bAutoRangeAsLine' has a wrong offset!");
+
 // ScriptStruct PaperDialogueProvider.PCDX6EmotionAnimSequenceData
 // 0x0060 (0x0098 - 0x0038)
 struct FPCDX6EmotionAnimSequenceData final : public FPCDAnimSequenceData
@@ -130,6 +111,25 @@ static_assert(offsetof(FPCDX6EmotionAnimSequenceData, EmotionStartAnimSequencePa
 static_assert(offsetof(FPCDX6EmotionAnimSequenceData, EmotionLoopAnimSequencePath) == 0x000068, "Member 'FPCDX6EmotionAnimSequenceData::EmotionLoopAnimSequencePath' has a wrong offset!");
 static_assert(offsetof(FPCDX6EmotionAnimSequenceData, EmotionEndAnimSequencePath) == 0x000078, "Member 'FPCDX6EmotionAnimSequenceData::EmotionEndAnimSequencePath' has a wrong offset!");
 static_assert(offsetof(FPCDX6EmotionAnimSequenceData, EmotionIdleLoopAnimSequencePath) == 0x000088, "Member 'FPCDX6EmotionAnimSequenceData::EmotionIdleLoopAnimSequencePath' has a wrong offset!");
+
+// ScriptStruct PaperDialogueProvider.PCDDialogueData
+// 0x0088 (0x0088 - 0x0000)
+struct FPCDDialogueData
+{
+public:
+	class FName                                   SpeakerTag;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   LineText;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FString                                 VoicePath;                                         // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 RobotVoicePath;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FPCDAnimSequenceData> AnimSequenceDataMap;                              // 0x0038(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FPCDDialogueData) == 0x000008, "Wrong alignment on FPCDDialogueData");
+static_assert(sizeof(FPCDDialogueData) == 0x000088, "Wrong size on FPCDDialogueData");
+static_assert(offsetof(FPCDDialogueData, SpeakerTag) == 0x000000, "Member 'FPCDDialogueData::SpeakerTag' has a wrong offset!");
+static_assert(offsetof(FPCDDialogueData, LineText) == 0x000008, "Member 'FPCDDialogueData::LineText' has a wrong offset!");
+static_assert(offsetof(FPCDDialogueData, VoicePath) == 0x000018, "Member 'FPCDDialogueData::VoicePath' has a wrong offset!");
+static_assert(offsetof(FPCDDialogueData, RobotVoicePath) == 0x000028, "Member 'FPCDDialogueData::RobotVoicePath' has a wrong offset!");
+static_assert(offsetof(FPCDDialogueData, AnimSequenceDataMap) == 0x000038, "Member 'FPCDDialogueData::AnimSequenceDataMap' has a wrong offset!");
 
 // ScriptStruct PaperDialogueProvider.PCDExtraDialogueData
 // 0x0000 (0x0000 - 0x0000)

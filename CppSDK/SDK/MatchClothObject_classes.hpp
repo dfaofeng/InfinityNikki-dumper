@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Struct_ClothMatchStrsArray_structs.hpp"
 #include "Struct_ClothMatchNameArray_structs.hpp"
-#include "E_MatchClothType_structs.hpp"
+#include "Struct_ClothMatchStrsArray_structs.hpp"
 #include "Struct_ClothMatchSkelCompMap_structs.hpp"
 #include "Struct_ClothMatchSkelMap_structs.hpp"
+#include "E_MatchClothType_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
@@ -54,6 +54,7 @@ public:
 	void ComputeMatchCollectionV2(E_MatchClothType InMatchType, TArray<class USkeletalMesh*>* ResultSkelMeshArray);
 	void DebugInfo(TArray<class FString>& InString);
 	void GetAssetSetting(class USkeletalMesh* InputObject, bool* Result, class UClothsMatchSetting_C** Cloths_Match_Setting);
+	void GetHighHeelData(class USkeletalMesh* InputSkelMesh, TMap<class FName, struct FTransform>* HighHeelData);
 	void GetIgnoreMap();
 	void GetMatchClothesCombine();
 	bool IsIgnoreArm(class USkeletalMesh* InputObjectA, class USkeletalMesh* InputObjectB, E_MatchClothType InMatchType);

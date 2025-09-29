@@ -18,13 +18,14 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Exec.Exec_C
-// 0x0020 (0x03C8 - 0x03A8)
+// 0x0030 (0x03D8 - 0x03A8)
 class AExec_C final : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	TArray<class FString>                         cv;                                                // 0x03B8(0x0010)(Edit, BlueprintVisible)
+	TArray<class UTexture2D*>                     LevelTextures;                                     // 0x03C8(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_Exec(int32 EntryPoint);
@@ -43,10 +44,11 @@ public:
 	}
 };
 static_assert(alignof(AExec_C) == 0x000008, "Wrong alignment on AExec_C");
-static_assert(sizeof(AExec_C) == 0x0003C8, "Wrong size on AExec_C");
+static_assert(sizeof(AExec_C) == 0x0003D8, "Wrong size on AExec_C");
 static_assert(offsetof(AExec_C, UberGraphFrame) == 0x0003A8, "Member 'AExec_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(AExec_C, DefaultSceneRoot) == 0x0003B0, "Member 'AExec_C::DefaultSceneRoot' has a wrong offset!");
 static_assert(offsetof(AExec_C, cv) == 0x0003B8, "Member 'AExec_C::cv' has a wrong offset!");
+static_assert(offsetof(AExec_C, LevelTextures) == 0x0003C8, "Member 'AExec_C::LevelTextures' has a wrong offset!");
 
 }
 

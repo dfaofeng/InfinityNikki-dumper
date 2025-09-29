@@ -85,29 +85,29 @@ void UWBP_HUD_TopRightArea_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_1
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_1()
+void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_1");
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_2
+// Function WBP_HUD_TopRightArea.WBP_HUD_TopRightArea_C.SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_2()
+void UWBP_HUD_TopRightArea_C::SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_2");
+		Func = Class->GetFunction("WBP_HUD_TopRightArea_C", "SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

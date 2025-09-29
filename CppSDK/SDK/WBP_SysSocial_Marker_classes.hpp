@@ -33,6 +33,7 @@ public:
 public:
 	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryPoint);
+	void Bp_ScaleSet(bool IsMobile);
 
 	class FString GetModuleName() const;
 

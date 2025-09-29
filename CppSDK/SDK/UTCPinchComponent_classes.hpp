@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UTCComponent_classes.hpp"
 #include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "UTCComponent_classes.hpp"
 
 
 namespace SDK
@@ -62,11 +62,11 @@ public:
 	void UpdateBanAreaInfo(bool BanAreaEnable, const struct FVector& BanAreaLocation);
 	void Update_Debug_Widget();
 	void Uninitialize_Debug_Widget();
-	void Remove_Debug_Touch_Location();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void OnJoystickReleased(const struct FVector& Location);
+	void Remove_Debug_Touch_Location();
 	void On_Viewport_Size_Is_Changed();
+	void OnJoystickReleased(const struct FVector& Location);
 	void On_Event_Touch_Released(const struct FVector& Location, ETouchIndex FingerIndex);
 	void On_Event_Touch_Pressed(const struct FVector& Location, ETouchIndex FingerIndex);
 	void On_Event_Touch_Moved(const struct FVector& Location, ETouchIndex FingerIndex);

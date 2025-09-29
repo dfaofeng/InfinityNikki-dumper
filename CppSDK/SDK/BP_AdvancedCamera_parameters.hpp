@@ -40,6 +40,20 @@ static_assert(alignof(BP_AdvancedCamera_C_BP_RemoveZoomedTargetOffsetZByReason) 
 static_assert(sizeof(BP_AdvancedCamera_C_BP_RemoveZoomedTargetOffsetZByReason) == 0x000010, "Wrong size on BP_AdvancedCamera_C_BP_RemoveZoomedTargetOffsetZByReason");
 static_assert(offsetof(BP_AdvancedCamera_C_BP_RemoveZoomedTargetOffsetZByReason, ReasonName) == 0x000000, "Member 'BP_AdvancedCamera_C_BP_RemoveZoomedTargetOffsetZByReason::ReasonName' has a wrong offset!");
 
+// Function BP_AdvancedCamera.BP_AdvancedCamera_C.BP_SetReadZoomedTargetOffsetZFromAnimCurve
+// 0x0018 (0x0018 - 0x0000)
+struct BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve final
+{
+public:
+	bool                                          bReadFromAnimCurve;                                // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 Reason;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve) == 0x000008, "Wrong alignment on BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve");
+static_assert(sizeof(BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve) == 0x000018, "Wrong size on BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve");
+static_assert(offsetof(BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve, bReadFromAnimCurve) == 0x000000, "Member 'BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve::bReadFromAnimCurve' has a wrong offset!");
+static_assert(offsetof(BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve, Reason) == 0x000008, "Member 'BP_AdvancedCamera_C_BP_SetReadZoomedTargetOffsetZFromAnimCurve::Reason' has a wrong offset!");
+
 // Function BP_AdvancedCamera.BP_AdvancedCamera_C.ExecuteUbergraph_BP_AdvancedCamera
 // 0x0018 (0x0018 - 0x0000)
 struct BP_AdvancedCamera_C_ExecuteUbergraph_BP_AdvancedCamera final

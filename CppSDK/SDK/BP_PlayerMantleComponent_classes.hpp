@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EMantleType_structs.hpp"
-#include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
 
 

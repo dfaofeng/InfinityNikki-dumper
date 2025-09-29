@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "Engine_classes.hpp"
 #include "EAbilityGroupType_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EX6EnvType_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EPlayerActionTypes_structs.hpp"
-#include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "EClothesPropertyType_structs.hpp"
 #include "EClothesMinorType_structs.hpp"
 
@@ -62,6 +62,7 @@ public:
 	static void BP_SetNPCCurrentLocalCharacteristicsState(class AActor* npcActor, uint8 State, class UObject* __WorldContext);
 	static void BP_SetNPCCurrentCharacteristicsState(class AActor* npcActor, uint8 State, class UObject* __WorldContext);
 	static void BP_SetLoongMaskVisibility(class AActor* InActor, bool Visible, class UObject* __WorldContext);
+	static void BP_SetLocomotionOverlayEnabled(class AActor* InActor, bool bEnable, class UObject* __WorldContext);
 	static void BP_SetIdlebreakDisabled(class AActor* InActor, bool bDisable, const class FString& InModuleTag, class UObject* __WorldContext);
 	static void BP_SetEnvironmentType(class AActor* Actor, EX6EnvType EnvType, bool bEnable, class UObject* __WorldContext);
 	static void BP_SetCompCfgCameraChannel(class UPrimitiveComponent* Comp, class UObject* __WorldContext);
@@ -73,6 +74,7 @@ public:
 	static void BP_IsSuitCollected(int32 SuitId, class UObject* __WorldContext, bool* Result);
 	static void BP_IsLocalPlayerRiding(class UObject* __WorldContext, bool* IsRiding);
 	static void BP_IsLocalPlayerCarrier(class UObject* Actor, class UObject* __WorldContext, bool* IsCarrier);
+	static void BP_IsIdlebreakEnabled(class AActor* InActor, class UObject* __WorldContext, bool* bEnable);
 	static void BP_GetWeaponCustomState(class AActor* InActor, class UObject* __WorldContext, struct FGameplayTag* Tag);
 	static void BP_GetNPCCurrentCharacteristicsState(class AActor* npcActor, class UObject* __WorldContext, uint8* State);
 	static void BP_GetForceRelation(class AActor*& Actor1, class AActor*& Actor2, class UObject* __WorldContext, int32* Relation);

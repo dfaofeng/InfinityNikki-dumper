@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GA_AbilityMontageBase_classes.hpp"
 #include "X6Game_structs.hpp"
+#include "GA_AbilityMontageBase_classes.hpp"
 
 
 namespace SDK

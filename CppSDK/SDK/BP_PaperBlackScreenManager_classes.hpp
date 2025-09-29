@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Enum_BlackScreenSource_structs.hpp"
-#include "Enum_BlackScreenEvent_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Enum_BlackScreenEvent_structs.hpp"
 
 
 namespace SDK

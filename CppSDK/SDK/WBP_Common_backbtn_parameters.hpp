@@ -14,27 +14,38 @@
 namespace SDK::Params
 {
 
-// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BP_OnItemExpansionChanged
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Common_backbtn_C_BP_OnItemExpansionChanged final
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.Set Title
+// 0x0010 (0x0010 - 0x0000)
+struct WBP_Common_backbtn_C_Set_Title final
 {
 public:
-	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   TitleText;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
-static_assert(alignof(WBP_Common_backbtn_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_BP_OnItemExpansionChanged");
-static_assert(sizeof(WBP_Common_backbtn_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_Common_backbtn_C_BP_OnItemExpansionChanged");
-static_assert(offsetof(WBP_Common_backbtn_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_Common_backbtn_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
+static_assert(alignof(WBP_Common_backbtn_C_Set_Title) == 0x000008, "Wrong alignment on WBP_Common_backbtn_C_Set_Title");
+static_assert(sizeof(WBP_Common_backbtn_C_Set_Title) == 0x000010, "Wrong size on WBP_Common_backbtn_C_Set_Title");
+static_assert(offsetof(WBP_Common_backbtn_C_Set_Title, TitleText) == 0x000000, "Member 'WBP_Common_backbtn_C_Set_Title::TitleText' has a wrong offset!");
 
-// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BP_OnItemSelectionChanged
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.PreConstruct
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_Common_backbtn_C_BP_OnItemSelectionChanged final
+struct WBP_Common_backbtn_C_PreConstruct final
 {
 public:
-	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_BP_OnItemSelectionChanged");
-static_assert(sizeof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_Common_backbtn_C_BP_OnItemSelectionChanged");
-static_assert(offsetof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_Common_backbtn_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
+static_assert(alignof(WBP_Common_backbtn_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_PreConstruct");
+static_assert(sizeof(WBP_Common_backbtn_C_PreConstruct) == 0x000001, "Wrong size on WBP_Common_backbtn_C_PreConstruct");
+static_assert(offsetof(WBP_Common_backbtn_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_Common_backbtn_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.OnListItemObjectSet
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_Common_backbtn_C_OnListItemObjectSet final
+{
+public:
+	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Common_backbtn_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on WBP_Common_backbtn_C_OnListItemObjectSet");
+static_assert(sizeof(WBP_Common_backbtn_C_OnListItemObjectSet) == 0x000008, "Wrong size on WBP_Common_backbtn_C_OnListItemObjectSet");
+static_assert(offsetof(WBP_Common_backbtn_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WBP_Common_backbtn_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
 
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.ExecuteUbergraph_WBP_Common_backbtn
 // 0x0078 (0x0078 - 0x0000)
@@ -79,38 +90,27 @@ static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn,
 static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimationReverse_ReturnValue_3) == 0x000068, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimationReverse_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn, CallFunc_PlayAnimation_ReturnValue_3) == 0x000070, "Member 'WBP_Common_backbtn_C_ExecuteUbergraph_WBP_Common_backbtn::CallFunc_PlayAnimation_ReturnValue_3' has a wrong offset!");
 
-// Function WBP_Common_backbtn.WBP_Common_backbtn_C.OnListItemObjectSet
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_Common_backbtn_C_OnListItemObjectSet final
-{
-public:
-	class UObject*                                ListItemObject;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Common_backbtn_C_OnListItemObjectSet) == 0x000008, "Wrong alignment on WBP_Common_backbtn_C_OnListItemObjectSet");
-static_assert(sizeof(WBP_Common_backbtn_C_OnListItemObjectSet) == 0x000008, "Wrong size on WBP_Common_backbtn_C_OnListItemObjectSet");
-static_assert(offsetof(WBP_Common_backbtn_C_OnListItemObjectSet, ListItemObject) == 0x000000, "Member 'WBP_Common_backbtn_C_OnListItemObjectSet::ListItemObject' has a wrong offset!");
-
-// Function WBP_Common_backbtn.WBP_Common_backbtn_C.PreConstruct
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BP_OnItemSelectionChanged
 // 0x0001 (0x0001 - 0x0000)
-struct WBP_Common_backbtn_C_PreConstruct final
+struct WBP_Common_backbtn_C_BP_OnItemSelectionChanged final
 {
 public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bIsSelected;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_backbtn_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_PreConstruct");
-static_assert(sizeof(WBP_Common_backbtn_C_PreConstruct) == 0x000001, "Wrong size on WBP_Common_backbtn_C_PreConstruct");
-static_assert(offsetof(WBP_Common_backbtn_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_Common_backbtn_C_PreConstruct::IsDesignTime' has a wrong offset!");
+static_assert(alignof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_BP_OnItemSelectionChanged");
+static_assert(sizeof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged) == 0x000001, "Wrong size on WBP_Common_backbtn_C_BP_OnItemSelectionChanged");
+static_assert(offsetof(WBP_Common_backbtn_C_BP_OnItemSelectionChanged, bIsSelected) == 0x000000, "Member 'WBP_Common_backbtn_C_BP_OnItemSelectionChanged::bIsSelected' has a wrong offset!");
 
-// Function WBP_Common_backbtn.WBP_Common_backbtn_C.Set Title
-// 0x0010 (0x0010 - 0x0000)
-struct WBP_Common_backbtn_C_Set_Title final
+// Function WBP_Common_backbtn.WBP_Common_backbtn_C.BP_OnItemExpansionChanged
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Common_backbtn_C_BP_OnItemExpansionChanged final
 {
 public:
-	class FText                                   TitleText;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm)
+	bool                                          bIsExpanded;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_Common_backbtn_C_Set_Title) == 0x000008, "Wrong alignment on WBP_Common_backbtn_C_Set_Title");
-static_assert(sizeof(WBP_Common_backbtn_C_Set_Title) == 0x000010, "Wrong size on WBP_Common_backbtn_C_Set_Title");
-static_assert(offsetof(WBP_Common_backbtn_C_Set_Title, TitleText) == 0x000000, "Member 'WBP_Common_backbtn_C_Set_Title::TitleText' has a wrong offset!");
+static_assert(alignof(WBP_Common_backbtn_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong alignment on WBP_Common_backbtn_C_BP_OnItemExpansionChanged");
+static_assert(sizeof(WBP_Common_backbtn_C_BP_OnItemExpansionChanged) == 0x000001, "Wrong size on WBP_Common_backbtn_C_BP_OnItemExpansionChanged");
+static_assert(offsetof(WBP_Common_backbtn_C_BP_OnItemExpansionChanged, bIsExpanded) == 0x000000, "Member 'WBP_Common_backbtn_C_BP_OnItemExpansionChanged::bIsExpanded' has a wrong offset!");
 
 // Function WBP_Common_backbtn.WBP_Common_backbtn_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

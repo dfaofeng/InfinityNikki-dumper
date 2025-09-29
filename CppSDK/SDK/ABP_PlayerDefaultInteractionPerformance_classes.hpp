@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "SMSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ABP_PlayerDefaultInteractionPerformance_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 

@@ -68,13 +68,13 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_Tower2;                             // 0x0440(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_Pear_RightInfo_Button_Info_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_Pear_RightInfo_Button_Info_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void ExecuteUbergraph_WBP_Pear_RightInfo(int32 EntryPoint);
-	class UWidget* OnLeftToTile(EUINavigation Navigation_0);
-	class UWidget* ToInfo(EUINavigation Navigation_0);
-	class UWidget* ToLeftArchive(EUINavigation Navigation_0);
 	class UWidget* ToRightArchive(EUINavigation Navigation_0);
+	class UWidget* ToLeftArchive(EUINavigation Navigation_0);
+	class UWidget* ToInfo(EUINavigation Navigation_0);
+	class UWidget* OnLeftToTile(EUINavigation Navigation_0);
+	void ExecuteUbergraph_WBP_Pear_RightInfo(int32 EntryPoint);
+	void BndEvt__WBP_Pear_RightInfo_Button_Info_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_Pear_RightInfo_Button_Info_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
 
 	class FString GetModuleName() const;
 

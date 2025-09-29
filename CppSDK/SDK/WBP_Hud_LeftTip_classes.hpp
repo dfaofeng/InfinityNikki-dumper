@@ -80,10 +80,10 @@ public:
 
 public:
 	void ExecuteUbergraph_WBP_Hud_LeftTip(int32 EntryPoint);
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_3();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_4();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_5();
-	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_6();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_0();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_1();
+	void SequenceEvent__ENTRYPOINTWBP_Hud_LeftTip_2();
 	void sfx1();
 	void sfx2();
 

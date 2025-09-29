@@ -55,11 +55,11 @@ public:
 	double                                        TimeRemaining;                                     // 0x03D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Pear_Main_BtnGroup(int32 EntryPoint);
-	void OnCurrentToLast();
-	void OnCurrentToNext();
-	void SequenceEvent__ENTRYPOINTWBP_Pear_Main_BtnGroup();
 	void SequenceEvent__ENTRYPOINTWBP_Pear_Main_BtnGroup_0();
+	void SequenceEvent__ENTRYPOINTWBP_Pear_Main_BtnGroup();
+	void OnCurrentToNext();
+	void OnCurrentToLast();
+	void ExecuteUbergraph_WBP_Pear_Main_BtnGroup(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

@@ -25,10 +25,10 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 
 public:
-	void ExecuteUbergraph_WBP_Common_Backbtn_Base(int32 EntryPoint);
-	void Set_Size(double Size);
-	void Set_Title(const class FText& TitleText);
 	void SetSize(class UTextBlock* Text, double InputSize);
+	void Set_Title(const class FText& TitleText);
+	void Set_Size(double Size);
+	void ExecuteUbergraph_WBP_Common_Backbtn_Base(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

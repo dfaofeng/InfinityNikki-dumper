@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "F_WonderfulMomentSpawnerSetting_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "E_WonderfulMomentFinishType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "F_WonderfulMomentSpawnerSetting_structs.hpp"
 
 
 namespace SDK

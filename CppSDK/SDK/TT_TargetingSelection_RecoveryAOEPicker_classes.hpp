@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "F_TargetingWeightConfig_structs.hpp"
-#include "F_TargetingPickerConfig_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "F_TargetingPickerConfig_structs.hpp"
+#include "F_TargetingWeightConfig_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

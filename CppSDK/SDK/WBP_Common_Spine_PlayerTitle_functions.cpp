@@ -17,65 +17,49 @@
 namespace SDK
 {
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_ActivateNiagaraSystem
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bActive                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.OnCurrentToNext
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Common_Spine_PlayerTitle_C::BP_ActivateNiagaraSystem(bool bActive)
+void UWBP_Common_Spine_PlayerTitle_C::OnCurrentToNext()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "BP_ActivateNiagaraSystem");
+		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "OnCurrentToNext");
 
-	Params::WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem Parms{};
-
-	Parms.bActive = bActive;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_PlaySpine
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    AnimName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// bool                                    bLoop                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.OnCurrentToLast
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_Common_Spine_PlayerTitle_C::BP_PlaySpine(const class FString& AnimName, bool bLoop)
+void UWBP_Common_Spine_PlayerTitle_C::OnCurrentToLast()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "BP_PlaySpine");
+		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "OnCurrentToLast");
 
-	Params::WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine Parms{};
-
-	Parms.AnimName = std::move(AnimName);
-	Parms.bLoop = bLoop;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_SetAtlasAndSkeleton
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.ExecuteUbergraph_WBP_Common_Spine_PlayerTitle
+// (Final, UbergraphFunction)
 // Parameters:
-// class USpineAtlasAsset*                 Atlas                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class USpineSkeletonDataAsset*          Skeleton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_Spine_PlayerTitle_C::BP_SetAtlasAndSkeleton(class USpineAtlasAsset* Atlas, class USpineSkeletonDataAsset* Skeleton)
+void UWBP_Common_Spine_PlayerTitle_C::ExecuteUbergraph_WBP_Common_Spine_PlayerTitle(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "BP_SetAtlasAndSkeleton");
+		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "ExecuteUbergraph_WBP_Common_Spine_PlayerTitle");
 
-	Params::WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton Parms{};
+	Params::WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle Parms{};
 
-	Parms.Atlas = Atlas;
-	Parms.Skeleton = Skeleton;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -103,51 +87,67 @@ void UWBP_Common_Spine_PlayerTitle_C::BP_UpdateNiagaraSystem(class UNiagaraSyste
 }
 
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.ExecuteUbergraph_WBP_Common_Spine_PlayerTitle
-// (Final, UbergraphFunction)
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_SetAtlasAndSkeleton
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USpineAtlasAsset*                 Atlas                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USpineSkeletonDataAsset*          Skeleton                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_Spine_PlayerTitle_C::ExecuteUbergraph_WBP_Common_Spine_PlayerTitle(int32 EntryPoint)
+void UWBP_Common_Spine_PlayerTitle_C::BP_SetAtlasAndSkeleton(class USpineAtlasAsset* Atlas, class USpineSkeletonDataAsset* Skeleton)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "ExecuteUbergraph_WBP_Common_Spine_PlayerTitle");
+		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "BP_SetAtlasAndSkeleton");
 
-	Params::WBP_Common_Spine_PlayerTitle_C_ExecuteUbergraph_WBP_Common_Spine_PlayerTitle Parms{};
+	Params::WBP_Common_Spine_PlayerTitle_C_BP_SetAtlasAndSkeleton Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.Atlas = Atlas;
+	Parms.Skeleton = Skeleton;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.OnCurrentToLast
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_PlaySpine
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    AnimName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    bLoop                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_Spine_PlayerTitle_C::OnCurrentToLast()
+void UWBP_Common_Spine_PlayerTitle_C::BP_PlaySpine(const class FString& AnimName, bool bLoop)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "OnCurrentToLast");
+		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "BP_PlaySpine");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Common_Spine_PlayerTitle_C_BP_PlaySpine Parms{};
+
+	Parms.AnimName = std::move(AnimName);
+	Parms.bLoop = bLoop;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.OnCurrentToNext
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Common_Spine_PlayerTitle.WBP_Common_Spine_PlayerTitle_C.BP_ActivateNiagaraSystem
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bActive                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_Spine_PlayerTitle_C::OnCurrentToNext()
+void UWBP_Common_Spine_PlayerTitle_C::BP_ActivateNiagaraSystem(bool bActive)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "OnCurrentToNext");
+		Func = Class->GetFunction("WBP_Common_Spine_PlayerTitle_C", "BP_ActivateNiagaraSystem");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Common_Spine_PlayerTitle_C_BP_ActivateNiagaraSystem Parms{};
+
+	Parms.bActive = bActive;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

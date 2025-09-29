@@ -81,20 +81,6 @@ void UUTCPinchComponent_C::Uninitialize_Debug_Widget()
 }
 
 
-// Function UTCPinchComponent.UTCPinchComponent_C.Remove Debug Touch Location
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UUTCPinchComponent_C::Remove_Debug_Touch_Location()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UTCPinchComponent_C", "Remove Debug Touch Location");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UTCPinchComponent.UTCPinchComponent_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -129,6 +115,34 @@ void UUTCPinchComponent_C::ReceiveBeginPlay()
 }
 
 
+// Function UTCPinchComponent.UTCPinchComponent_C.Remove Debug Touch Location
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UUTCPinchComponent_C::Remove_Debug_Touch_Location()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UTCPinchComponent_C", "Remove Debug Touch Location");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UTCPinchComponent.UTCPinchComponent_C.On Viewport Size Is Changed
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UUTCPinchComponent_C::On_Viewport_Size_Is_Changed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UTCPinchComponent_C", "On Viewport Size Is Changed");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function UTCPinchComponent.UTCPinchComponent_C.OnJoystickReleased
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -146,20 +160,6 @@ void UUTCPinchComponent_C::OnJoystickReleased(const struct FVector& Location)
 	Parms.Location = std::move(Location);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UTCPinchComponent.UTCPinchComponent_C.On Viewport Size Is Changed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UUTCPinchComponent_C::On_Viewport_Size_Is_Changed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UTCPinchComponent_C", "On Viewport Size Is Changed");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 

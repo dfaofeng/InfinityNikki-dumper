@@ -16,34 +16,16 @@
 namespace SDK::Params
 {
 
-// Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.BP_PlaySpine
-// 0x0020 (0x0020 - 0x0000)
-struct wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine final
+// Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.ExecuteUbergraph_wbp_pear_BtnGroup_spine_card
+// 0x0004 (0x0004 - 0x0000)
+struct wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card final
 {
 public:
-	class FString                                 AnimName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          bLoop;                                             // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTrackEntry*                            CallFunc_SetAnimation_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine) == 0x000008, "Wrong alignment on wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine");
-static_assert(sizeof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine) == 0x000020, "Wrong size on wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine");
-static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine, AnimName) == 0x000000, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine::AnimName' has a wrong offset!");
-static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine, bLoop) == 0x000010, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine::bLoop' has a wrong offset!");
-static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine, CallFunc_SetAnimation_ReturnValue) == 0x000018, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine::CallFunc_SetAnimation_ReturnValue' has a wrong offset!");
-
-// Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.BP_SetAtlasAndSkeleton
-// 0x0010 (0x0010 - 0x0000)
-struct wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton final
-{
-public:
-	class USpineAtlasAsset*                       Atlas;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USpineSkeletonDataAsset*                Skeleton;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton) == 0x000008, "Wrong alignment on wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton");
-static_assert(sizeof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton) == 0x000010, "Wrong size on wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton");
-static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton, Atlas) == 0x000000, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton::Atlas' has a wrong offset!");
-static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton, Skeleton) == 0x000008, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton::Skeleton' has a wrong offset!");
+static_assert(alignof(wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card) == 0x000004, "Wrong alignment on wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card");
+static_assert(sizeof(wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card) == 0x000004, "Wrong size on wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card");
+static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card, EntryPoint) == 0x000000, "Member 'wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card::EntryPoint' has a wrong offset!");
 
 // Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.BP_SetPosAndSize
 // 0x0028 (0x0028 - 0x0000)
@@ -60,16 +42,34 @@ static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetPosAndSize, Position
 static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetPosAndSize, Size) == 0x000010, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_SetPosAndSize::Size' has a wrong offset!");
 static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetPosAndSize, CallFunc_SlotAsCanvasSlot_ReturnValue) == 0x000020, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_SetPosAndSize::CallFunc_SlotAsCanvasSlot_ReturnValue' has a wrong offset!");
 
-// Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.ExecuteUbergraph_wbp_pear_BtnGroup_spine_card
-// 0x0004 (0x0004 - 0x0000)
-struct wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card final
+// Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.BP_SetAtlasAndSkeleton
+// 0x0010 (0x0010 - 0x0000)
+struct wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton final
 {
 public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USpineAtlasAsset*                       Atlas;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USpineSkeletonDataAsset*                Skeleton;                                          // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card) == 0x000004, "Wrong alignment on wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card");
-static_assert(sizeof(wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card) == 0x000004, "Wrong size on wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card");
-static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card, EntryPoint) == 0x000000, "Member 'wbp_pear_BtnGroup_spine_card_C_ExecuteUbergraph_wbp_pear_BtnGroup_spine_card::EntryPoint' has a wrong offset!");
+static_assert(alignof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton) == 0x000008, "Wrong alignment on wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton");
+static_assert(sizeof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton) == 0x000010, "Wrong size on wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton");
+static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton, Atlas) == 0x000000, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton::Atlas' has a wrong offset!");
+static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton, Skeleton) == 0x000008, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_SetAtlasAndSkeleton::Skeleton' has a wrong offset!");
+
+// Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.BP_PlaySpine
+// 0x0020 (0x0020 - 0x0000)
+struct wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine final
+{
+public:
+	class FString                                 AnimName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          bLoop;                                             // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTrackEntry*                            CallFunc_SetAnimation_ReturnValue;                 // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine) == 0x000008, "Wrong alignment on wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine");
+static_assert(sizeof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine) == 0x000020, "Wrong size on wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine");
+static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine, AnimName) == 0x000000, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine::AnimName' has a wrong offset!");
+static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine, bLoop) == 0x000010, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine::bLoop' has a wrong offset!");
+static_assert(offsetof(wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine, CallFunc_SetAnimation_ReturnValue) == 0x000018, "Member 'wbp_pear_BtnGroup_spine_card_C_BP_PlaySpine::CallFunc_SetAnimation_ReturnValue' has a wrong offset!");
 
 // Function wbp_pear_BtnGroup_spine_card.wbp_pear_BtnGroup_spine_card_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

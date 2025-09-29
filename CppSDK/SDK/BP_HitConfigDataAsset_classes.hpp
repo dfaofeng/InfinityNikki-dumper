@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
-#include "ECombatHitMainType_structs.hpp"
-#include "F_DeathConfig_structs.hpp"
 #include "F_HitMainBodySet_structs.hpp"
-#include "F_HitOtherPartsSet_structs.hpp"
+#include "F_DeathConfig_structs.hpp"
+#include "ECombatHitMainType_structs.hpp"
 #include "F_HitFeedBackConfigs_structs.hpp"
+#include "F_HitOtherPartsSet_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK

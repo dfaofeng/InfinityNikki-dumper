@@ -885,6 +885,30 @@ void UX6BlueprintPlayerLibrary_C::BP_SetLoongMaskVisibility(class AActor* InActo
 }
 
 
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetLocomotionOverlayEnabled
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintPlayerLibrary_C::BP_SetLocomotionOverlayEnabled(class AActor* InActor, bool bEnable, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintPlayerLibrary_C", "BP_SetLocomotionOverlayEnabled");
+
+	Params::X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled Parms{};
+
+	Parms.InActor = InActor;
+	Parms.bEnable = bEnable;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetIdlebreakDisabled
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1158,6 +1182,32 @@ void UX6BlueprintPlayerLibrary_C::BP_IsLocalPlayerCarrier(class UObject* Actor, 
 
 	if (IsCarrier != nullptr)
 		*IsCarrier = Parms.IsCarrier;
+}
+
+
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_IsIdlebreakEnabled
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           InActor                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool*                                   bEnable                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UX6BlueprintPlayerLibrary_C::BP_IsIdlebreakEnabled(class AActor* InActor, class UObject* __WorldContext, bool* bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("X6BlueprintPlayerLibrary_C", "BP_IsIdlebreakEnabled");
+
+	Params::X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled Parms{};
+
+	Parms.InActor = InActor;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (bEnable != nullptr)
+		*bEnable = Parms.bEnable;
 }
 
 

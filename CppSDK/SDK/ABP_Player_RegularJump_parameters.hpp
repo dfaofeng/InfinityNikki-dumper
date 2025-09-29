@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EMantleType_structs.hpp"
 #include "X6Game_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -296,104 +296,102 @@ struct ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue; // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IBPI_Locomotion_FallState_C> CallFunc_BPI_Get_CurrentInAirStates_self_CastInput; // 0x0008(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERegularFloatingJumpStage                     CallFunc_BPI_Get_CurrentInAirStates_FallStage;     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BPI_Get_CurrentInAirStates_IsInSpecialJumpAnim; // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERegularJumpMode                              CallFunc_BPI_Get_CurrentInAirStates_RegularJumpMode; // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BPI_Get_CurrentInAirStates_IsJumpingInAir; // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x001D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x001E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x001F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_2;        // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue; // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_5;        // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_6;        // 0x002B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x002D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2E[0x2];                                       // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetInstanceStateWeight_ReturnValue;       // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_1;     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45[0x3];                                       // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_2;     // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_7;        // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_3;        // 0x0023(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_4;        // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_5;        // 0x0026(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0027(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetInstanceStateWeight_ReturnValue;       // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_1;     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_2;     // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_1;          // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_6;        // 0x0045(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46[0x2];                                       // 0x0046(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1; // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_7;        // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_8;        // 0x004E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F[0x1];                                       // 0x004F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_9;        // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_10;       // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_11;       // 0x0057(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_12;       // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2; // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_13;       // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_14;       // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_2;          // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0065(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0066(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0067(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_3;     // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_3;          // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_4;          // 0x006D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_6E[0x2];                                       // 0x006E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_9;        // 0x004F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_10;       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52[0x2];                                       // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2; // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue_1;     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_11;       // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_12;       // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_13;       // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_2;          // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_3;     // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_3;          // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_4;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_BoolToDouble_ReturnValue;            // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_82[0x2];                                       // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          Temp_bool_Variable_3;                              // 0x0082(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_83[0x1];                                       // 0x0083(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetInstanceCurrentStateElapsedTime_ReturnValue; // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBlendSpace*                            K2Node_Select_Default;                             // 0x0090(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FClamp_ReturnValue;                       // 0x00A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_AA[0x2];                                       // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_4;     // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UBlendSpace*                            K2Node_Select_Default_1;                           // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	TDelegate<void(EMovementMode PrevMode, EMovementMode NewMode)> K2Node_CreateDelegate_OutputDelegate; // 0x00C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Prepare_Components_ReturnValue;           // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_5;          // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_CustomEvent_Mode;                           // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_CustomEvent_PreMode;                        // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        K2Node_CustomEvent_NewGait;                        // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularLocomotionType                        K2Node_CustomEvent_OldGait;                        // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_6;          // 0x00DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     K2Node_CustomEvent_NewStage;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERegularFloatingJumpStage                     K2Node_CustomEvent_OldStage;                       // 0x00E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ECharacterSituationType                       K2Node_CustomEvent_CharacterSituationType;         // 0x00E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_AddOrRemove;                    // 0x00E3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DeterminTransToRightFoot_bTranstoRight;   // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_15;       // 0x00E5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_16;       // 0x00E6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_17;       // 0x00E7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue_1;      // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetInstanceStateWeight_ReturnValue_4;     // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A5[0x3];                                       // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendSpace*                            K2Node_Select_Default;                             // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
+	TDelegate<void(EMovementMode PrevMode, EMovementMode NewMode)> K2Node_CreateDelegate_OutputDelegate; // 0x00B8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Prepare_Components_ReturnValue;           // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_5;          // 0x00D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_CustomEvent_Mode;                           // 0x00D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_CustomEvent_PreMode;                        // 0x00D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        K2Node_CustomEvent_NewGait;                        // 0x00D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularLocomotionType                        K2Node_CustomEvent_OldGait;                        // 0x00D6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue_6;          // 0x00D7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     K2Node_CustomEvent_NewStage;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERegularFloatingJumpStage                     K2Node_CustomEvent_OldStage;                       // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ECharacterSituationType                       K2Node_CustomEvent_CharacterSituationType;         // 0x00DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_AddOrRemove;                    // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DeterminTransToRightFoot_bTranstoRight;   // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_14;       // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_15;       // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_16;       // 0x00DF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBlendSpace*                            K2Node_Select_Default_1;                           // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_5;                              // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_18;       // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_17;       // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimSequenceBase*                      K2Node_Select_Default_2;                           // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_19;       // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_18;       // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_19;       // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_20;       // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FB[0x5];                                       // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_BooleanAND_ReturnValue_4;                 // 0x00FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Less_DoubleDouble_A_ImplicitCast;         // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_StructMemberSet_Alpha_ImplicitCast;         // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -410,91 +408,91 @@ public:
 static_assert(alignof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump) == 0x000008, "Wrong alignment on ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump");
 static_assert(sizeof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump) == 0x000150, "Wrong size on ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, EntryPoint) == 0x000000, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::EntryPoint' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue) == 0x000004, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BPI_Get_CurrentInAirStates_self_CastInput) == 0x000008, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BPI_Get_CurrentInAirStates_self_CastInput' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BPI_Get_CurrentInAirStates_FallStage) == 0x000018, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BPI_Get_CurrentInAirStates_FallStage' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BPI_Get_CurrentInAirStates_IsInSpecialJumpAnim) == 0x000019, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BPI_Get_CurrentInAirStates_IsInSpecialJumpAnim' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BPI_Get_CurrentInAirStates_RegularJumpMode) == 0x00001A, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BPI_Get_CurrentInAirStates_RegularJumpMode' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BPI_Get_CurrentInAirStates_IsJumpingInAir) == 0x00001B, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BPI_Get_CurrentInAirStates_IsJumpingInAir' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_SwitchEnum_CmpSuccess) == 0x00001C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00001D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00001E, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x00001F, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Less_DoubleDouble_ReturnValue) == 0x00001C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_SwitchEnum_CmpSuccess) == 0x00001D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x00001E, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x00001F, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000020, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x000021, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_2) == 0x000021, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_SwitchEnum_CmpSuccess_1) == 0x000022, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue) == 0x000024, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000028, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x000029, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x00002A, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_6) == 0x00002B, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Not_PreBool_ReturnValue) == 0x00002C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue) == 0x00002D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue) == 0x000030, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000038, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_1) == 0x000040, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable) == 0x000044, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_2) == 0x000048, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_7) == 0x00004C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x00004D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_3) == 0x000023, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_4) == 0x000024, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Not_PreBool_ReturnValue) == 0x000025, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_5) == 0x000026, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue) == 0x000027, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue) == 0x000028, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000030, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_1) == 0x000038, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable) == 0x00003C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_2) == 0x000040, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_1) == 0x000044, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_6) == 0x000045, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1) == 0x000048, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x00004C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_7) == 0x00004D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_7' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_8) == 0x00004E, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1) == 0x000050, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_LessEqual_DoubleDouble_ReturnValue) == 0x000054, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_LessEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_9) == 0x000055, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_10) == 0x000056, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_11) == 0x000057, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanOR_ReturnValue) == 0x000058, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_12) == 0x000059, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2) == 0x00005C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x000060, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_13) == 0x000061, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_14) == 0x000062, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_2) == 0x000063, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_1) == 0x000064, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_2) == 0x000065, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Not_PreBool_ReturnValue_1) == 0x000066, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_3) == 0x000067, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_3) == 0x000068, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_3) == 0x00006C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_4) == 0x00006D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_9) == 0x00004F, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_10) == 0x000050, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanOR_ReturnValue) == 0x000051, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2) == 0x000054, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetRelevantAnimTimeRemaining_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_LessEqual_DoubleDouble_ReturnValue_1) == 0x000058, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_LessEqual_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_11) == 0x000059, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_12) == 0x00005A, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_13) == 0x00005B, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_2) == 0x00005C, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_1) == 0x00005D, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_2) == 0x00005E, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Not_PreBool_ReturnValue_1) == 0x00005F, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_3) == 0x000060, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_3) == 0x000064, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_3) == 0x000068, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_4) == 0x000069, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Conv_BoolToDouble_ReturnValue) == 0x000070, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Conv_BoolToDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Multiply_DoubleDouble_ReturnValue) == 0x000078, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Multiply_DoubleDouble_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_1) == 0x000080, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_1' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_2) == 0x000081, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_3) == 0x000082, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_3' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceCurrentStateElapsedTime_ReturnValue) == 0x000084, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceCurrentStateElapsedTime_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_3) == 0x000088, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Select_Default) == 0x000090, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000098, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_FClamp_ReturnValue) == 0x0000A0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_FClamp_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_4) == 0x0000A8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000A9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_4) == 0x0000AC, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000B0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Select_Default_1) == 0x0000B8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CreateDelegate_OutputDelegate) == 0x0000C0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Event_DeltaSeconds_1) == 0x0000D0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Event_DeltaSeconds) == 0x0000D4, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Prepare_Components_ReturnValue) == 0x0000D8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Prepare_Components_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000D9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_5) == 0x0000DA, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_Mode) == 0x0000DB, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_Mode' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_PreMode) == 0x0000DC, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_PreMode' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_NewGait) == 0x0000DD, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_NewGait' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_OldGait) == 0x0000DE, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_OldGait' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_6) == 0x0000DF, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_NewStage) == 0x0000E0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_NewStage' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_OldStage) == 0x0000E1, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_OldStage' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_CharacterSituationType) == 0x0000E2, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_CharacterSituationType' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_AddOrRemove) == 0x0000E3, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_AddOrRemove' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_DeterminTransToRightFoot_bTranstoRight) == 0x0000E4, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_DeterminTransToRightFoot_bTranstoRight' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_15) == 0x0000E5, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_16) == 0x0000E6, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_17) == 0x0000E7, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_17' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_4) == 0x000088, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Multiply_DoubleDouble_ReturnValue_1) == 0x000090, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Multiply_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_FClamp_ReturnValue) == 0x000098, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_FClamp_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_GetInstanceStateWeight_ReturnValue_4) == 0x0000A0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_GetInstanceStateWeight_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0000A4, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0000A8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Select_Default) == 0x0000B0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CreateDelegate_OutputDelegate) == 0x0000B8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Event_DeltaSeconds_1) == 0x0000C8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Event_DeltaSeconds) == 0x0000CC, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Prepare_Components_ReturnValue) == 0x0000D0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Prepare_Components_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Not_PreBool_ReturnValue_2) == 0x0000D1, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_5) == 0x0000D2, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_Mode) == 0x0000D3, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_Mode' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_PreMode) == 0x0000D4, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_PreMode' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_NewGait) == 0x0000D5, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_NewGait' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_OldGait) == 0x0000D6, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_OldGait' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_NotEqual_ByteByte_ReturnValue_6) == 0x0000D7, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_NotEqual_ByteByte_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_NewStage) == 0x0000D8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_NewStage' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_OldStage) == 0x0000D9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_OldStage' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_CharacterSituationType) == 0x0000DA, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_CharacterSituationType' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_CustomEvent_AddOrRemove) == 0x0000DB, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_CustomEvent_AddOrRemove' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_DeterminTransToRightFoot_bTranstoRight) == 0x0000DC, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_DeterminTransToRightFoot_bTranstoRight' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_14) == 0x0000DD, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_15) == 0x0000DE, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_16) == 0x0000DF, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Select_Default_1) == 0x0000E0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Select_Default_1' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, Temp_bool_Variable_5) == 0x0000E8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_18) == 0x0000E9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_18' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_17) == 0x0000E9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_17' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_Select_Default_2) == 0x0000F0, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_Select_Default_2' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_19) == 0x0000F8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_19' has a wrong offset!");
-static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_4) == 0x0000F9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_18) == 0x0000F8, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_18' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_19) == 0x0000F9, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_19' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_EqualEqual_ByteByte_ReturnValue_20) == 0x0000FA, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_EqualEqual_ByteByte_ReturnValue_20' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_BooleanAND_ReturnValue_4) == 0x0000FB, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_BooleanAND_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Less_DoubleDouble_A_ImplicitCast) == 0x000100, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Less_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, CallFunc_Subtract_DoubleDouble_B_ImplicitCast) == 0x000108, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::CallFunc_Subtract_DoubleDouble_B_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump, K2Node_StructMemberSet_Alpha_ImplicitCast) == 0x000110, "Member 'ABP_Player_RegularJump_C_ExecuteUbergraph_ABP_Player_RegularJump::K2Node_StructMemberSet_Alpha_ImplicitCast' has a wrong offset!");
@@ -572,6 +570,28 @@ static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_JumpInAirAnimation_
 static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_JumpInAirAnimation_OnUpdate, CallFunc_ConvertToSequencePlayerPure_Result) == 0x000030, "Member 'ABP_Player_RegularJump_C_JumpState_SP_JumpInAirAnimation_OnUpdate::CallFunc_ConvertToSequencePlayerPure_Result' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_JumpInAirAnimation_OnUpdate, CallFunc_GetAccumulatedTime_ReturnValue) == 0x000034, "Member 'ABP_Player_RegularJump_C_JumpState_SP_JumpInAirAnimation_OnUpdate::CallFunc_GetAccumulatedTime_ReturnValue' has a wrong offset!");
 
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.JumpState_SP_RegularJump_OnBecomeRelevant
+// 0x0050 (0x0050 - 0x0000)
+struct ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant final
+{
+public:
+	struct FAnimUpdateContext                     Context;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FAnimNodeReference                     Node;                                              // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	EAnimNodeReferenceConversionResult            CallFunc_ConvertToSequencePlayer_Result;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSequencePlayerReference               CallFunc_ConvertToSequencePlayer_ReturnValue;      // 0x0028(0x0010)(NoDestructor)
+	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0038(0x0010)(NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant) == 0x000008, "Wrong alignment on ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant");
+static_assert(sizeof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant) == 0x000050, "Wrong size on ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant");
+static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant, Context) == 0x000000, "Member 'ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant::Context' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant, Node) == 0x000010, "Member 'ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant::Node' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant, CallFunc_ConvertToSequencePlayer_Result) == 0x000020, "Member 'ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant::CallFunc_ConvertToSequencePlayer_Result' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant, CallFunc_ConvertToSequencePlayer_ReturnValue) == 0x000028, "Member 'ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant::CallFunc_ConvertToSequencePlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant, CallFunc_SetSequence_ReturnValue) == 0x000038, "Member 'ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant::CallFunc_SetSequence_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant, K2Node_SwitchEnum_CmpSuccess) == 0x000048, "Member 'ABP_Player_RegularJump_C_JumpState_SP_RegularJump_OnBecomeRelevant::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.On Movement Mode Changed
 // 0x0002 (0x0002 - 0x0000)
 struct ABP_Player_RegularJump_C_On_Movement_Mode_Changed final
@@ -586,21 +606,23 @@ static_assert(offsetof(ABP_Player_RegularJump_C_On_Movement_Mode_Changed, Mode) 
 static_assert(offsetof(ABP_Player_RegularJump_C_On_Movement_Mode_Changed, PreMode) == 0x000001, "Member 'ABP_Player_RegularJump_C_On_Movement_Mode_Changed::PreMode' has a wrong offset!");
 
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.On Prepare Finish
-// 0x0040 (0x0040 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct ABP_Player_RegularJump_C_On_Prepare_Finish final
 {
 public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(ECharacterSituationType CharacterSituationType, bool AddOrRemove)> K2Node_CreateDelegate_OutputDelegate_1; // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(ERegularFloatingJumpStage NewStage, ERegularFloatingJumpStage OldStage)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(ERegularLocomotionType NewGait, ERegularLocomotionType OldGait)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ECharacterSituationType CharacterSituationType, bool AddOrRemove)> K2Node_CreateDelegate_OutputDelegate_2; // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ERegularFloatingJumpStage NewStage, ERegularFloatingJumpStage OldStage)> K2Node_CreateDelegate_OutputDelegate_3; // 0x0030(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(ERegularLocomotionType NewGait, ERegularLocomotionType OldGait)> K2Node_CreateDelegate_OutputDelegate_4; // 0x0040(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ABP_Player_RegularJump_C_On_Prepare_Finish) == 0x000004, "Wrong alignment on ABP_Player_RegularJump_C_On_Prepare_Finish");
-static_assert(sizeof(ABP_Player_RegularJump_C_On_Prepare_Finish) == 0x000040, "Wrong size on ABP_Player_RegularJump_C_On_Prepare_Finish");
+static_assert(sizeof(ABP_Player_RegularJump_C_On_Prepare_Finish) == 0x000050, "Wrong size on ABP_Player_RegularJump_C_On_Prepare_Finish");
 static_assert(offsetof(ABP_Player_RegularJump_C_On_Prepare_Finish, K2Node_CreateDelegate_OutputDelegate) == 0x000000, "Member 'ABP_Player_RegularJump_C_On_Prepare_Finish::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_On_Prepare_Finish, K2Node_CreateDelegate_OutputDelegate_1) == 0x000010, "Member 'ABP_Player_RegularJump_C_On_Prepare_Finish::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_On_Prepare_Finish, K2Node_CreateDelegate_OutputDelegate_2) == 0x000020, "Member 'ABP_Player_RegularJump_C_On_Prepare_Finish::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_On_Prepare_Finish, K2Node_CreateDelegate_OutputDelegate_3) == 0x000030, "Member 'ABP_Player_RegularJump_C_On_Prepare_Finish::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_On_Prepare_Finish, K2Node_CreateDelegate_OutputDelegate_4) == 0x000040, "Member 'ABP_Player_RegularJump_C_On_Prepare_Finish::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
 
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.OnContextualChanged
 // 0x0002 (0x0002 - 0x0000)
@@ -614,6 +636,19 @@ static_assert(alignof(ABP_Player_RegularJump_C_OnContextualChanged) == 0x000001,
 static_assert(sizeof(ABP_Player_RegularJump_C_OnContextualChanged) == 0x000002, "Wrong size on ABP_Player_RegularJump_C_OnContextualChanged");
 static_assert(offsetof(ABP_Player_RegularJump_C_OnContextualChanged, CharacterSituationType) == 0x000000, "Member 'ABP_Player_RegularJump_C_OnContextualChanged::CharacterSituationType' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_OnContextualChanged, AddOrRemove) == 0x000001, "Member 'ABP_Player_RegularJump_C_OnContextualChanged::AddOrRemove' has a wrong offset!");
+
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.OnRegularAnimSetChanged
+// 0x0002 (0x0002 - 0x0000)
+struct ABP_Player_RegularJump_C_OnRegularAnimSetChanged final
+{
+public:
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Player_RegularJump_C_OnRegularAnimSetChanged) == 0x000001, "Wrong alignment on ABP_Player_RegularJump_C_OnRegularAnimSetChanged");
+static_assert(sizeof(ABP_Player_RegularJump_C_OnRegularAnimSetChanged) == 0x000002, "Wrong size on ABP_Player_RegularJump_C_OnRegularAnimSetChanged");
+static_assert(offsetof(ABP_Player_RegularJump_C_OnRegularAnimSetChanged, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'ABP_Player_RegularJump_C_OnRegularAnimSetChanged::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_OnRegularAnimSetChanged, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'ABP_Player_RegularJump_C_OnRegularAnimSetChanged::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.Prepare Components
 // 0x0070 (0x0070 - 0x0000)
@@ -679,6 +714,50 @@ static_assert(offsetof(ABP_Player_RegularJump_C_Prepare_Components, CallFunc_Get
 static_assert(offsetof(ABP_Player_RegularJump_C_Prepare_Components, CallFunc_GetComponentByClass_ReturnValue_5) == 0x000058, "Member 'ABP_Player_RegularJump_C_Prepare_Components::CallFunc_GetComponentByClass_ReturnValue_5' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_Prepare_Components, CallFunc_GetComponentByClass_ReturnValue_6) == 0x000060, "Member 'ABP_Player_RegularJump_C_Prepare_Components::CallFunc_GetComponentByClass_ReturnValue_6' has a wrong offset!");
 static_assert(offsetof(ABP_Player_RegularJump_C_Prepare_Components, CallFunc_GetComponentByClass_ReturnValue_7) == 0x000068, "Member 'ABP_Player_RegularJump_C_Prepare_Components::CallFunc_GetComponentByClass_ReturnValue_7' has a wrong offset!");
+
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.StartFall_SP_JumpToFall_OnBecomeRelevant
+// 0x0050 (0x0050 - 0x0000)
+struct ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant final
+{
+public:
+	struct FAnimUpdateContext                     Context;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FAnimNodeReference                     Node;                                              // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	EAnimNodeReferenceConversionResult            CallFunc_ConvertToSequencePlayer_Result;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSequencePlayerReference               CallFunc_ConvertToSequencePlayer_ReturnValue;      // 0x0028(0x0010)(NoDestructor)
+	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0038(0x0010)(NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant) == 0x000008, "Wrong alignment on ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant");
+static_assert(sizeof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant) == 0x000050, "Wrong size on ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant, Context) == 0x000000, "Member 'ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant::Context' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant, Node) == 0x000010, "Member 'ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant::Node' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant, CallFunc_ConvertToSequencePlayer_Result) == 0x000020, "Member 'ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant::CallFunc_ConvertToSequencePlayer_Result' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant, CallFunc_ConvertToSequencePlayer_ReturnValue) == 0x000028, "Member 'ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant::CallFunc_ConvertToSequencePlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant, CallFunc_SetSequence_ReturnValue) == 0x000038, "Member 'ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant::CallFunc_SetSequence_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant, K2Node_SwitchEnum_CmpSuccess) == 0x000048, "Member 'ABP_Player_RegularJump_C_StartFall_SP_JumpToFall_OnBecomeRelevant::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+
+// Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.StartFall_SP_PlatformToFall_OnBecomeRelevant
+// 0x0050 (0x0050 - 0x0000)
+struct ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant final
+{
+public:
+	struct FAnimUpdateContext                     Context;                                           // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FAnimNodeReference                     Node;                                              // 0x0010(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, NoDestructor)
+	EAnimNodeReferenceConversionResult            CallFunc_ConvertToSequencePlayer_Result;           // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSequencePlayerReference               CallFunc_ConvertToSequencePlayer_ReturnValue;      // 0x0028(0x0010)(NoDestructor)
+	struct FSequencePlayerReference               CallFunc_SetSequence_ReturnValue;                  // 0x0038(0x0010)(NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant) == 0x000008, "Wrong alignment on ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant");
+static_assert(sizeof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant) == 0x000050, "Wrong size on ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant, Context) == 0x000000, "Member 'ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant::Context' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant, Node) == 0x000010, "Member 'ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant::Node' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant, CallFunc_ConvertToSequencePlayer_Result) == 0x000020, "Member 'ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant::CallFunc_ConvertToSequencePlayer_Result' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant, CallFunc_ConvertToSequencePlayer_ReturnValue) == 0x000028, "Member 'ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant::CallFunc_ConvertToSequencePlayer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant, CallFunc_SetSequence_ReturnValue) == 0x000038, "Member 'ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant::CallFunc_SetSequence_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant, K2Node_SwitchEnum_CmpSuccess) == 0x000048, "Member 'ABP_Player_RegularJump_C_StartFall_SP_PlatformToFall_OnBecomeRelevant::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
 
 // Function ABP_Player_RegularJump.ABP_Player_RegularJump_C.Update Values
 // 0x0088 (0x0088 - 0x0000)

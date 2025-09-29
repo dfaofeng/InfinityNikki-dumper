@@ -226,6 +226,73 @@ static_assert(alignof(FAnimNode_SequencePlayerIgnorePose) == 0x000008, "Wrong al
 static_assert(sizeof(FAnimNode_SequencePlayerIgnorePose) == 0x000048, "Wrong size on FAnimNode_SequencePlayerIgnorePose");
 static_assert(offsetof(FAnimNode_SequencePlayerIgnorePose, Sequence) == 0x000040, "Member 'FAnimNode_SequencePlayerIgnorePose::Sequence' has a wrong offset!");
 
+// ScriptStruct X6Animation.AnimNode_CopyMotion
+// 0x0148 (0x0210 - 0x00C8)
+struct FAnimNode_CopyMotion final : public FAnimNode_SkeletalControlBase
+{
+public:
+	struct FComponentSpacePoseLink                BasePose;                                          // 0x00C8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FComponentSpacePoseLink                BasePoseReference;                                 // 0x00D8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bUseBasePose;                                      // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   PoseHistoryTag;                                    // 0x00EC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Delay;                                             // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         SourceBone;                                        // 0x00F8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         BoneToModify;                                      // 0x0108(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         CopySpace;                                         // 0x0118(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         ApplySpace;                                        // 0x0128(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               TranslationOffset;                                 // 0x0138(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               RotationOffset;                                    // 0x0150(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RotationPivot;                                     // 0x0168(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   CurvePrefix;                                       // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TargetCurveName;                                   // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetCurveScale;                                  // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECopyMotion_Component                         TargetCurveComponent;                              // 0x0194(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         TargetCurveRotationAxis;                           // 0x0195(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_196[0x2];                                      // 0x0196(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   TranslationX_CurveName;                            // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TranslationY_CurveName;                            // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TranslationZ_CurveName;                            // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RotationRoll_CurveName;                            // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RotationPitch_CurveName;                           // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   RotationYaw_CurveName;                             // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TranslationScale;                                  // 0x01C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCurveVector*                           TranslationRemapCurve;                             // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationScale;                                     // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            RotationRemapCurve;                                // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x18];                                     // 0x01F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAnimNode_CopyMotion) == 0x000008, "Wrong alignment on FAnimNode_CopyMotion");
+static_assert(sizeof(FAnimNode_CopyMotion) == 0x000210, "Wrong size on FAnimNode_CopyMotion");
+static_assert(offsetof(FAnimNode_CopyMotion, BasePose) == 0x0000C8, "Member 'FAnimNode_CopyMotion::BasePose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, BasePoseReference) == 0x0000D8, "Member 'FAnimNode_CopyMotion::BasePoseReference' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, bUseBasePose) == 0x0000E8, "Member 'FAnimNode_CopyMotion::bUseBasePose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, PoseHistoryTag) == 0x0000EC, "Member 'FAnimNode_CopyMotion::PoseHistoryTag' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, Delay) == 0x0000F4, "Member 'FAnimNode_CopyMotion::Delay' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, SourceBone) == 0x0000F8, "Member 'FAnimNode_CopyMotion::SourceBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, BoneToModify) == 0x000108, "Member 'FAnimNode_CopyMotion::BoneToModify' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, CopySpace) == 0x000118, "Member 'FAnimNode_CopyMotion::CopySpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, ApplySpace) == 0x000128, "Member 'FAnimNode_CopyMotion::ApplySpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TranslationOffset) == 0x000138, "Member 'FAnimNode_CopyMotion::TranslationOffset' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationOffset) == 0x000150, "Member 'FAnimNode_CopyMotion::RotationOffset' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationPivot) == 0x000168, "Member 'FAnimNode_CopyMotion::RotationPivot' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, CurvePrefix) == 0x000180, "Member 'FAnimNode_CopyMotion::CurvePrefix' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveName) == 0x000188, "Member 'FAnimNode_CopyMotion::TargetCurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveScale) == 0x000190, "Member 'FAnimNode_CopyMotion::TargetCurveScale' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveComponent) == 0x000194, "Member 'FAnimNode_CopyMotion::TargetCurveComponent' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveRotationAxis) == 0x000195, "Member 'FAnimNode_CopyMotion::TargetCurveRotationAxis' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TranslationX_CurveName) == 0x000198, "Member 'FAnimNode_CopyMotion::TranslationX_CurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TranslationY_CurveName) == 0x0001A0, "Member 'FAnimNode_CopyMotion::TranslationY_CurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TranslationZ_CurveName) == 0x0001A8, "Member 'FAnimNode_CopyMotion::TranslationZ_CurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationRoll_CurveName) == 0x0001B0, "Member 'FAnimNode_CopyMotion::RotationRoll_CurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationPitch_CurveName) == 0x0001B8, "Member 'FAnimNode_CopyMotion::RotationPitch_CurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationYaw_CurveName) == 0x0001C0, "Member 'FAnimNode_CopyMotion::RotationYaw_CurveName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TranslationScale) == 0x0001C8, "Member 'FAnimNode_CopyMotion::TranslationScale' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, TranslationRemapCurve) == 0x0001E0, "Member 'FAnimNode_CopyMotion::TranslationRemapCurve' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationScale) == 0x0001E8, "Member 'FAnimNode_CopyMotion::RotationScale' has a wrong offset!");
+static_assert(offsetof(FAnimNode_CopyMotion, RotationRemapCurve) == 0x0001F0, "Member 'FAnimNode_CopyMotion::RotationRemapCurve' has a wrong offset!");
+
 // ScriptStruct X6Animation.X6OverlayCurveData
 // 0x0018 (0x0018 - 0x0000)
 struct FX6OverlayCurveData final
@@ -325,14 +392,6 @@ static_assert(offsetof(FAnimNode_X6ActionBlend, TargetBone) == 0x000218, "Member
 static_assert(offsetof(FAnimNode_X6ActionBlend, RequestQueue) == 0x000258, "Member 'FAnimNode_X6ActionBlend::RequestQueue' has a wrong offset!");
 static_assert(offsetof(FAnimNode_X6ActionBlend, bEnabled) == 0x000308, "Member 'FAnimNode_X6ActionBlend::bEnabled' has a wrong offset!");
 static_assert(offsetof(FAnimNode_X6ActionBlend, bDisableNodeWithBlend) == 0x000309, "Member 'FAnimNode_X6ActionBlend::bDisableNodeWithBlend' has a wrong offset!");
-
-// ScriptStruct X6Animation.X6SequencePlayerReference
-// 0x0000 (0x0010 - 0x0010)
-struct FX6SequencePlayerReference final : public FAnimNodeReference
-{
-};
-static_assert(alignof(FX6SequencePlayerReference) == 0x000008, "Wrong alignment on FX6SequencePlayerReference");
-static_assert(sizeof(FX6SequencePlayerReference) == 0x000010, "Wrong size on FX6SequencePlayerReference");
 
 // ScriptStruct X6Animation.AnimNode_X6AimOffsetLookAt
 // 0x0030 (0x0210 - 0x01E0)
@@ -865,6 +924,23 @@ static_assert(offsetof(FFilterQuant_Rot, bAbandonPitch) == 0x000000, "Member 'FF
 static_assert(offsetof(FFilterQuant_Rot, bAbandonYaw) == 0x000001, "Member 'FFilterQuant_Rot::bAbandonYaw' has a wrong offset!");
 static_assert(offsetof(FFilterQuant_Rot, bAbandonRoll) == 0x000002, "Member 'FFilterQuant_Rot::bAbandonRoll' has a wrong offset!");
 
+// ScriptStruct X6Animation.X6RigUnit_HeightfieldReadback
+// 0x0080 (0x0088 - 0x0008)
+struct FX6RigUnit_HeightfieldReadback final : public FRigUnit
+{
+public:
+	struct FVector                                Position;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutHit;                                            // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutNormal;                                         // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigUnit_SphereTrace_WorkData          WorkData;                                          // 0x0050(0x0038)(NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6RigUnit_HeightfieldReadback) == 0x000008, "Wrong alignment on FX6RigUnit_HeightfieldReadback");
+static_assert(sizeof(FX6RigUnit_HeightfieldReadback) == 0x000088, "Wrong size on FX6RigUnit_HeightfieldReadback");
+static_assert(offsetof(FX6RigUnit_HeightfieldReadback, Position) == 0x000008, "Member 'FX6RigUnit_HeightfieldReadback::Position' has a wrong offset!");
+static_assert(offsetof(FX6RigUnit_HeightfieldReadback, OutHit) == 0x000020, "Member 'FX6RigUnit_HeightfieldReadback::OutHit' has a wrong offset!");
+static_assert(offsetof(FX6RigUnit_HeightfieldReadback, OutNormal) == 0x000038, "Member 'FX6RigUnit_HeightfieldReadback::OutNormal' has a wrong offset!");
+static_assert(offsetof(FX6RigUnit_HeightfieldReadback, WorkData) == 0x000050, "Member 'FX6RigUnit_HeightfieldReadback::WorkData' has a wrong offset!");
+
 // ScriptStruct X6Animation.AnimNode_X6PoseFilter
 // 0x0028 (0x0038 - 0x0010)
 struct FAnimNode_X6PoseFilter final : public FAnimNode_Base
@@ -918,19 +994,85 @@ static_assert(offsetof(FActorSpeedToAnimation, CurrentMaxSpeed) == 0x000024, "Me
 static_assert(offsetof(FActorSpeedToAnimation, CurrentConfigAllowSpeed) == 0x000028, "Member 'FActorSpeedToAnimation::CurrentConfigAllowSpeed' has a wrong offset!");
 static_assert(offsetof(FActorSpeedToAnimation, ActualSpeedFromCurrentInput) == 0x000038, "Member 'FActorSpeedToAnimation::ActualSpeedFromCurrentInput' has a wrong offset!");
 
-// ScriptStruct X6Animation.AnimNode_SequencePlayerModifier
-// 0x0018 (0x0028 - 0x0010)
-struct FAnimNode_SequencePlayerModifier final : public FAnimNode_Base
+// ScriptStruct X6Animation.StylizedStartState
+// 0x0010 (0x0010 - 0x0000)
+struct FStylizedStartState final
 {
 public:
-	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         PlayRateModifier;                                  // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseUpperArm;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          Start_Animation;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FAnimNode_SequencePlayerModifier) == 0x000008, "Wrong alignment on FAnimNode_SequencePlayerModifier");
-static_assert(sizeof(FAnimNode_SequencePlayerModifier) == 0x000028, "Wrong size on FAnimNode_SequencePlayerModifier");
-static_assert(offsetof(FAnimNode_SequencePlayerModifier, Source) == 0x000010, "Member 'FAnimNode_SequencePlayerModifier::Source' has a wrong offset!");
-static_assert(offsetof(FAnimNode_SequencePlayerModifier, PlayRateModifier) == 0x000020, "Member 'FAnimNode_SequencePlayerModifier::PlayRateModifier' has a wrong offset!");
+static_assert(alignof(FStylizedStartState) == 0x000008, "Wrong alignment on FStylizedStartState");
+static_assert(sizeof(FStylizedStartState) == 0x000010, "Wrong size on FStylizedStartState");
+static_assert(offsetof(FStylizedStartState, bUseUpperArm) == 0x000000, "Member 'FStylizedStartState::bUseUpperArm' has a wrong offset!");
+static_assert(offsetof(FStylizedStartState, Start_Animation) == 0x000008, "Member 'FStylizedStartState::Start_Animation' has a wrong offset!");
+
+// ScriptStruct X6Animation.StylizedLoopState
+// 0x0018 (0x0018 - 0x0000)
+struct FStylizedLoopState final
+{
+public:
+	class UAnimSequence*                          Loop_Animation;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBlendSpace*                            SlopeWithHeading;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UBlendSpace*                            Heading;                                           // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStylizedLoopState) == 0x000008, "Wrong alignment on FStylizedLoopState");
+static_assert(sizeof(FStylizedLoopState) == 0x000018, "Wrong size on FStylizedLoopState");
+static_assert(offsetof(FStylizedLoopState, Loop_Animation) == 0x000000, "Member 'FStylizedLoopState::Loop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedLoopState, SlopeWithHeading) == 0x000008, "Member 'FStylizedLoopState::SlopeWithHeading' has a wrong offset!");
+static_assert(offsetof(FStylizedLoopState, Heading) == 0x000010, "Member 'FStylizedLoopState::Heading' has a wrong offset!");
+
+// ScriptStruct X6Animation.StylizedStopState
+// 0x0040 (0x0040 - 0x0000)
+struct FStylizedStopState final
+{
+public:
+	bool                                          bUseAnimation;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimSequence*                          Sprint_Stop_Animation;                             // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          Jog_Stop_Animation;                                // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          Walk_Stop_Animation;                               // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          WalkSlow_Stop_Animation;                           // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          Jog_StepStop_Animation;                            // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          Walk_StepStop_Animation;                           // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          WalkSlow_StepStop_Animation;                       // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStylizedStopState) == 0x000008, "Wrong alignment on FStylizedStopState");
+static_assert(sizeof(FStylizedStopState) == 0x000040, "Wrong size on FStylizedStopState");
+static_assert(offsetof(FStylizedStopState, bUseAnimation) == 0x000000, "Member 'FStylizedStopState::bUseAnimation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, Sprint_Stop_Animation) == 0x000008, "Member 'FStylizedStopState::Sprint_Stop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, Jog_Stop_Animation) == 0x000010, "Member 'FStylizedStopState::Jog_Stop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, Walk_Stop_Animation) == 0x000018, "Member 'FStylizedStopState::Walk_Stop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, WalkSlow_Stop_Animation) == 0x000020, "Member 'FStylizedStopState::WalkSlow_Stop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, Jog_StepStop_Animation) == 0x000028, "Member 'FStylizedStopState::Jog_StepStop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, Walk_StepStop_Animation) == 0x000030, "Member 'FStylizedStopState::Walk_StepStop_Animation' has a wrong offset!");
+static_assert(offsetof(FStylizedStopState, WalkSlow_StepStop_Animation) == 0x000038, "Member 'FStylizedStopState::WalkSlow_StepStop_Animation' has a wrong offset!");
+
+// ScriptStruct X6Animation.AnimationStylizedCloth
+// 0x00C0 (0x00C8 - 0x0008)
+struct FAnimationStylizedCloth final : public FTableRowBase
+{
+public:
+	class UAnimSequence*                          Idle_Animation;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimSequence*                          Stylized_Idle_Animation;                           // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FStylizedStartState                    StartState;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStylizedLoopState                     WalkSlow_LoopState;                                // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStylizedLoopState                     Walk_LoopState;                                    // 0x0040(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStylizedLoopState                     Jog_LoopState;                                     // 0x0058(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStylizedLoopState                     Sprint_LoopState;                                  // 0x0070(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+	struct FStylizedStopState                     StopState;                                         // 0x0088(0x0040)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FAnimationStylizedCloth) == 0x000008, "Wrong alignment on FAnimationStylizedCloth");
+static_assert(sizeof(FAnimationStylizedCloth) == 0x0000C8, "Wrong size on FAnimationStylizedCloth");
+static_assert(offsetof(FAnimationStylizedCloth, Idle_Animation) == 0x000008, "Member 'FAnimationStylizedCloth::Idle_Animation' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, Stylized_Idle_Animation) == 0x000010, "Member 'FAnimationStylizedCloth::Stylized_Idle_Animation' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, StartState) == 0x000018, "Member 'FAnimationStylizedCloth::StartState' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, WalkSlow_LoopState) == 0x000028, "Member 'FAnimationStylizedCloth::WalkSlow_LoopState' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, Walk_LoopState) == 0x000040, "Member 'FAnimationStylizedCloth::Walk_LoopState' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, Jog_LoopState) == 0x000058, "Member 'FAnimationStylizedCloth::Jog_LoopState' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, Sprint_LoopState) == 0x000070, "Member 'FAnimationStylizedCloth::Sprint_LoopState' has a wrong offset!");
+static_assert(offsetof(FAnimationStylizedCloth, StopState) == 0x000088, "Member 'FAnimationStylizedCloth::StopState' has a wrong offset!");
 
 // ScriptStruct X6Animation.NikkiTransitionGait
 // 0x0020 (0x0020 - 0x0000)
@@ -963,6 +1105,49 @@ public:
 static_assert(alignof(FPoseMatchCost) == 0x000004, "Wrong alignment on FPoseMatchCost");
 static_assert(sizeof(FPoseMatchCost) == 0x000008, "Wrong size on FPoseMatchCost");
 
+// ScriptStruct X6Animation.PoseMatchRecorderData
+// 0x0038 (0x0038 - 0x0000)
+struct alignas(0x08) FPoseMatchRecorderData final
+{
+public:
+	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FPoseMatchRecorderData) == 0x000008, "Wrong alignment on FPoseMatchRecorderData");
+static_assert(sizeof(FPoseMatchRecorderData) == 0x000038, "Wrong size on FPoseMatchRecorderData");
+
+// ScriptStruct X6Animation.StylizedPivotState
+// 0x0001 (0x0001 - 0x0000)
+struct FStylizedPivotState final
+{
+public:
+	bool                                          bBlendWithIdleArm;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStylizedPivotState) == 0x000001, "Wrong alignment on FStylizedPivotState");
+static_assert(sizeof(FStylizedPivotState) == 0x000001, "Wrong size on FStylizedPivotState");
+static_assert(offsetof(FStylizedPivotState, bBlendWithIdleArm) == 0x000000, "Member 'FStylizedPivotState::bBlendWithIdleArm' has a wrong offset!");
+
+// ScriptStruct X6Animation.StylizedSpeedChangingState
+// 0x0001 (0x0001 - 0x0000)
+struct FStylizedSpeedChangingState final
+{
+public:
+	bool                                          bBlendWithIdleArm;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FStylizedSpeedChangingState) == 0x000001, "Wrong alignment on FStylizedSpeedChangingState");
+static_assert(sizeof(FStylizedSpeedChangingState) == 0x000001, "Wrong size on FStylizedSpeedChangingState");
+static_assert(offsetof(FStylizedSpeedChangingState, bBlendWithIdleArm) == 0x000000, "Member 'FStylizedSpeedChangingState::bBlendWithIdleArm' has a wrong offset!");
+
+// ScriptStruct X6Animation.X6LocomotionAnimOverride
+// 0x0050 (0x0058 - 0x0008)
+struct FX6LocomotionAnimOverride final : public FTableRowBase
+{
+public:
+	TMap<struct FGameplayTag, class UAnimationAsset*> AnimationOverride;                             // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FX6LocomotionAnimOverride) == 0x000008, "Wrong alignment on FX6LocomotionAnimOverride");
+static_assert(sizeof(FX6LocomotionAnimOverride) == 0x000058, "Wrong size on FX6LocomotionAnimOverride");
+static_assert(offsetof(FX6LocomotionAnimOverride, AnimationOverride) == 0x000008, "Member 'FX6LocomotionAnimOverride::AnimationOverride' has a wrong offset!");
+
 // ScriptStruct X6Animation.ClothExternalData
 // 0x0020 (0x0020 - 0x0000)
 struct FClothExternalData final
@@ -977,136 +1162,6 @@ static_assert(sizeof(FClothExternalData) == 0x000020, "Wrong size on FClothExter
 static_assert(offsetof(FClothExternalData, ClothExternalAcc) == 0x000000, "Member 'FClothExternalData::ClothExternalAcc' has a wrong offset!");
 static_assert(offsetof(FClothExternalData, ClothExternalAccDuration) == 0x000018, "Member 'FClothExternalData::ClothExternalAccDuration' has a wrong offset!");
 
-// ScriptStruct X6Animation.StylizedStartState
-// 0x0010 (0x0010 - 0x0000)
-struct FStylizedStartState final
-{
-public:
-	bool                                          bUseUpperArm;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          Start_Animation;                                   // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStylizedStartState) == 0x000008, "Wrong alignment on FStylizedStartState");
-static_assert(sizeof(FStylizedStartState) == 0x000010, "Wrong size on FStylizedStartState");
-static_assert(offsetof(FStylizedStartState, bUseUpperArm) == 0x000000, "Member 'FStylizedStartState::bUseUpperArm' has a wrong offset!");
-static_assert(offsetof(FStylizedStartState, Start_Animation) == 0x000008, "Member 'FStylizedStartState::Start_Animation' has a wrong offset!");
-
-// ScriptStruct X6Animation.StylizedStopState
-// 0x0040 (0x0040 - 0x0000)
-struct FStylizedStopState final
-{
-public:
-	bool                                          bUseAnimation;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimSequence*                          Sprint_Stop_Animation;                             // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          Jog_Stop_Animation;                                // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          Walk_Stop_Animation;                               // 0x0018(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          WalkSlow_Stop_Animation;                           // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          Jog_StepStop_Animation;                            // 0x0028(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          Walk_StepStop_Animation;                           // 0x0030(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          WalkSlow_StepStop_Animation;                       // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStylizedStopState) == 0x000008, "Wrong alignment on FStylizedStopState");
-static_assert(sizeof(FStylizedStopState) == 0x000040, "Wrong size on FStylizedStopState");
-static_assert(offsetof(FStylizedStopState, bUseAnimation) == 0x000000, "Member 'FStylizedStopState::bUseAnimation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, Sprint_Stop_Animation) == 0x000008, "Member 'FStylizedStopState::Sprint_Stop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, Jog_Stop_Animation) == 0x000010, "Member 'FStylizedStopState::Jog_Stop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, Walk_Stop_Animation) == 0x000018, "Member 'FStylizedStopState::Walk_Stop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, WalkSlow_Stop_Animation) == 0x000020, "Member 'FStylizedStopState::WalkSlow_Stop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, Jog_StepStop_Animation) == 0x000028, "Member 'FStylizedStopState::Jog_StepStop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, Walk_StepStop_Animation) == 0x000030, "Member 'FStylizedStopState::Walk_StepStop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedStopState, WalkSlow_StepStop_Animation) == 0x000038, "Member 'FStylizedStopState::WalkSlow_StepStop_Animation' has a wrong offset!");
-
-// ScriptStruct X6Animation.StylizedLoopState
-// 0x0018 (0x0018 - 0x0000)
-struct FStylizedLoopState final
-{
-public:
-	class UAnimSequence*                          Loop_Animation;                                    // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBlendSpace*                            SlopeWithHeading;                                  // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UBlendSpace*                            Heading;                                           // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStylizedLoopState) == 0x000008, "Wrong alignment on FStylizedLoopState");
-static_assert(sizeof(FStylizedLoopState) == 0x000018, "Wrong size on FStylizedLoopState");
-static_assert(offsetof(FStylizedLoopState, Loop_Animation) == 0x000000, "Member 'FStylizedLoopState::Loop_Animation' has a wrong offset!");
-static_assert(offsetof(FStylizedLoopState, SlopeWithHeading) == 0x000008, "Member 'FStylizedLoopState::SlopeWithHeading' has a wrong offset!");
-static_assert(offsetof(FStylizedLoopState, Heading) == 0x000010, "Member 'FStylizedLoopState::Heading' has a wrong offset!");
-
-// ScriptStruct X6Animation.StylizedPivotState
-// 0x0001 (0x0001 - 0x0000)
-struct FStylizedPivotState final
-{
-public:
-	bool                                          bBlendWithIdleArm;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStylizedPivotState) == 0x000001, "Wrong alignment on FStylizedPivotState");
-static_assert(sizeof(FStylizedPivotState) == 0x000001, "Wrong size on FStylizedPivotState");
-static_assert(offsetof(FStylizedPivotState, bBlendWithIdleArm) == 0x000000, "Member 'FStylizedPivotState::bBlendWithIdleArm' has a wrong offset!");
-
-// ScriptStruct X6Animation.X6RigUnit_HeightfieldReadback
-// 0x0080 (0x0088 - 0x0008)
-struct FX6RigUnit_HeightfieldReadback final : public FRigUnit
-{
-public:
-	struct FVector                                Position;                                          // 0x0008(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutHit;                                            // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutNormal;                                         // 0x0038(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigUnit_SphereTrace_WorkData          WorkData;                                          // 0x0050(0x0038)(NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6RigUnit_HeightfieldReadback) == 0x000008, "Wrong alignment on FX6RigUnit_HeightfieldReadback");
-static_assert(sizeof(FX6RigUnit_HeightfieldReadback) == 0x000088, "Wrong size on FX6RigUnit_HeightfieldReadback");
-static_assert(offsetof(FX6RigUnit_HeightfieldReadback, Position) == 0x000008, "Member 'FX6RigUnit_HeightfieldReadback::Position' has a wrong offset!");
-static_assert(offsetof(FX6RigUnit_HeightfieldReadback, OutHit) == 0x000020, "Member 'FX6RigUnit_HeightfieldReadback::OutHit' has a wrong offset!");
-static_assert(offsetof(FX6RigUnit_HeightfieldReadback, OutNormal) == 0x000038, "Member 'FX6RigUnit_HeightfieldReadback::OutNormal' has a wrong offset!");
-static_assert(offsetof(FX6RigUnit_HeightfieldReadback, WorkData) == 0x000050, "Member 'FX6RigUnit_HeightfieldReadback::WorkData' has a wrong offset!");
-
-// ScriptStruct X6Animation.StylizedSpeedChangingState
-// 0x0001 (0x0001 - 0x0000)
-struct FStylizedSpeedChangingState final
-{
-public:
-	bool                                          bBlendWithIdleArm;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FStylizedSpeedChangingState) == 0x000001, "Wrong alignment on FStylizedSpeedChangingState");
-static_assert(sizeof(FStylizedSpeedChangingState) == 0x000001, "Wrong size on FStylizedSpeedChangingState");
-static_assert(offsetof(FStylizedSpeedChangingState, bBlendWithIdleArm) == 0x000000, "Member 'FStylizedSpeedChangingState::bBlendWithIdleArm' has a wrong offset!");
-
-// ScriptStruct X6Animation.AnimationStylizedCloth
-// 0x00C0 (0x00C8 - 0x0008)
-struct FAnimationStylizedCloth final : public FTableRowBase
-{
-public:
-	class UAnimSequence*                          Idle_Animation;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimSequence*                          Stylized_Idle_Animation;                           // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FStylizedStartState                    StartState;                                        // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FStylizedLoopState                     WalkSlow_LoopState;                                // 0x0028(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FStylizedLoopState                     Walk_LoopState;                                    // 0x0040(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FStylizedLoopState                     Jog_LoopState;                                     // 0x0058(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FStylizedLoopState                     Sprint_LoopState;                                  // 0x0070(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-	struct FStylizedStopState                     StopState;                                         // 0x0088(0x0040)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FAnimationStylizedCloth) == 0x000008, "Wrong alignment on FAnimationStylizedCloth");
-static_assert(sizeof(FAnimationStylizedCloth) == 0x0000C8, "Wrong size on FAnimationStylizedCloth");
-static_assert(offsetof(FAnimationStylizedCloth, Idle_Animation) == 0x000008, "Member 'FAnimationStylizedCloth::Idle_Animation' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, Stylized_Idle_Animation) == 0x000010, "Member 'FAnimationStylizedCloth::Stylized_Idle_Animation' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, StartState) == 0x000018, "Member 'FAnimationStylizedCloth::StartState' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, WalkSlow_LoopState) == 0x000028, "Member 'FAnimationStylizedCloth::WalkSlow_LoopState' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, Walk_LoopState) == 0x000040, "Member 'FAnimationStylizedCloth::Walk_LoopState' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, Jog_LoopState) == 0x000058, "Member 'FAnimationStylizedCloth::Jog_LoopState' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, Sprint_LoopState) == 0x000070, "Member 'FAnimationStylizedCloth::Sprint_LoopState' has a wrong offset!");
-static_assert(offsetof(FAnimationStylizedCloth, StopState) == 0x000088, "Member 'FAnimationStylizedCloth::StopState' has a wrong offset!");
-
-// ScriptStruct X6Animation.X6LocomotionAnimOverride
-// 0x0050 (0x0058 - 0x0008)
-struct FX6LocomotionAnimOverride final : public FTableRowBase
-{
-public:
-	TMap<struct FGameplayTag, class UAnimationAsset*> AnimationOverride;                             // 0x0008(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FX6LocomotionAnimOverride) == 0x000008, "Wrong alignment on FX6LocomotionAnimOverride");
-static_assert(sizeof(FX6LocomotionAnimOverride) == 0x000058, "Wrong size on FX6LocomotionAnimOverride");
-static_assert(offsetof(FX6LocomotionAnimOverride, AnimationOverride) == 0x000008, "Member 'FX6LocomotionAnimOverride::AnimationOverride' has a wrong offset!");
-
 // ScriptStruct X6Animation.PoseMatchSerachConfig
 // 0x0008 (0x0008 - 0x0000)
 struct FPoseMatchSerachConfig final
@@ -1119,16 +1174,6 @@ static_assert(alignof(FPoseMatchSerachConfig) == 0x000004, "Wrong alignment on F
 static_assert(sizeof(FPoseMatchSerachConfig) == 0x000008, "Wrong size on FPoseMatchSerachConfig");
 static_assert(offsetof(FPoseMatchSerachConfig, VelocityWeight) == 0x000000, "Member 'FPoseMatchSerachConfig::VelocityWeight' has a wrong offset!");
 static_assert(offsetof(FPoseMatchSerachConfig, RootSpeedWeight) == 0x000004, "Member 'FPoseMatchSerachConfig::RootSpeedWeight' has a wrong offset!");
-
-// ScriptStruct X6Animation.PoseMatchRecorderData
-// 0x0038 (0x0038 - 0x0000)
-struct alignas(0x08) FPoseMatchRecorderData final
-{
-public:
-	uint8                                         Pad_0[0x38];                                       // 0x0000(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FPoseMatchRecorderData) == 0x000008, "Wrong alignment on FPoseMatchRecorderData");
-static_assert(sizeof(FPoseMatchRecorderData) == 0x000038, "Wrong size on FPoseMatchRecorderData");
 
 // ScriptStruct X6Animation.PoseMatchData
 // 0x0030 (0x0030 - 0x0000)
@@ -1166,6 +1211,20 @@ static_assert(offsetof(FAnimNode_HoldDress, EffectorLocation) == 0x0000E8, "Memb
 static_assert(offsetof(FAnimNode_HoldDress, MaxOffsetZ) == 0x000100, "Member 'FAnimNode_HoldDress::MaxOffsetZ' has a wrong offset!");
 static_assert(offsetof(FAnimNode_HoldDress, ParentBone) == 0x000104, "Member 'FAnimNode_HoldDress::ParentBone' has a wrong offset!");
 static_assert(offsetof(FAnimNode_HoldDress, TargetLocation) == 0x000118, "Member 'FAnimNode_HoldDress::TargetLocation' has a wrong offset!");
+
+// ScriptStruct X6Animation.AnimNode_SequencePlayerModifier
+// 0x0018 (0x0028 - 0x0010)
+struct FAnimNode_SequencePlayerModifier final : public FAnimNode_Base
+{
+public:
+	struct FPoseLink                              Source;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         PlayRateModifier;                                  // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAnimNode_SequencePlayerModifier) == 0x000008, "Wrong alignment on FAnimNode_SequencePlayerModifier");
+static_assert(sizeof(FAnimNode_SequencePlayerModifier) == 0x000028, "Wrong size on FAnimNode_SequencePlayerModifier");
+static_assert(offsetof(FAnimNode_SequencePlayerModifier, Source) == 0x000010, "Member 'FAnimNode_SequencePlayerModifier::Source' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SequencePlayerModifier, PlayRateModifier) == 0x000020, "Member 'FAnimNode_SequencePlayerModifier::PlayRateModifier' has a wrong offset!");
 
 // ScriptStruct X6Animation.X6StateMachineMarkInfo
 // 0x0060 (0x0060 - 0x0000)
@@ -1353,73 +1412,6 @@ static_assert(offsetof(FAnimNode_CopyBoneAdvanced, TranslationSpaceBone) == 0x00
 static_assert(offsetof(FAnimNode_CopyBoneAdvanced, bTranslationInCustomBoneSpace) == 0x00011C, "Member 'FAnimNode_CopyBoneAdvanced::bTranslationInCustomBoneSpace' has a wrong offset!");
 static_assert(offsetof(FAnimNode_CopyBoneAdvanced, bPropagateToChildren) == 0x00011D, "Member 'FAnimNode_CopyBoneAdvanced::bPropagateToChildren' has a wrong offset!");
 
-// ScriptStruct X6Animation.AnimNode_CopyMotion
-// 0x0148 (0x0210 - 0x00C8)
-struct FAnimNode_CopyMotion final : public FAnimNode_SkeletalControlBase
-{
-public:
-	struct FComponentSpacePoseLink                BasePose;                                          // 0x00C8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	struct FComponentSpacePoseLink                BasePoseReference;                                 // 0x00D8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bUseBasePose;                                      // 0x00E8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   PoseHistoryTag;                                    // 0x00EC(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Delay;                                             // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBoneReference                         SourceBone;                                        // 0x00F8(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         BoneToModify;                                      // 0x0108(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         CopySpace;                                         // 0x0118(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBoneReference                         ApplySpace;                                        // 0x0128(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               TranslationOffset;                                 // 0x0138(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               RotationOffset;                                    // 0x0150(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                RotationPivot;                                     // 0x0168(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   CurvePrefix;                                       // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TargetCurveName;                                   // 0x0188(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TargetCurveScale;                                  // 0x0190(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECopyMotion_Component                         TargetCurveComponent;                              // 0x0194(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAxis                                         TargetCurveRotationAxis;                           // 0x0195(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_196[0x2];                                      // 0x0196(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   TranslationX_CurveName;                            // 0x0198(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TranslationY_CurveName;                            // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   TranslationZ_CurveName;                            // 0x01A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RotationRoll_CurveName;                            // 0x01B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RotationPitch_CurveName;                           // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   RotationYaw_CurveName;                             // 0x01C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TranslationScale;                                  // 0x01C8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCurveVector*                           TranslationRemapCurve;                             // 0x01E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationScale;                                     // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            RotationRemapCurve;                                // 0x01F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1F8[0x18];                                     // 0x01F8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FAnimNode_CopyMotion) == 0x000008, "Wrong alignment on FAnimNode_CopyMotion");
-static_assert(sizeof(FAnimNode_CopyMotion) == 0x000210, "Wrong size on FAnimNode_CopyMotion");
-static_assert(offsetof(FAnimNode_CopyMotion, BasePose) == 0x0000C8, "Member 'FAnimNode_CopyMotion::BasePose' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, BasePoseReference) == 0x0000D8, "Member 'FAnimNode_CopyMotion::BasePoseReference' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, bUseBasePose) == 0x0000E8, "Member 'FAnimNode_CopyMotion::bUseBasePose' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, PoseHistoryTag) == 0x0000EC, "Member 'FAnimNode_CopyMotion::PoseHistoryTag' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, Delay) == 0x0000F4, "Member 'FAnimNode_CopyMotion::Delay' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, SourceBone) == 0x0000F8, "Member 'FAnimNode_CopyMotion::SourceBone' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, BoneToModify) == 0x000108, "Member 'FAnimNode_CopyMotion::BoneToModify' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, CopySpace) == 0x000118, "Member 'FAnimNode_CopyMotion::CopySpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, ApplySpace) == 0x000128, "Member 'FAnimNode_CopyMotion::ApplySpace' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TranslationOffset) == 0x000138, "Member 'FAnimNode_CopyMotion::TranslationOffset' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationOffset) == 0x000150, "Member 'FAnimNode_CopyMotion::RotationOffset' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationPivot) == 0x000168, "Member 'FAnimNode_CopyMotion::RotationPivot' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, CurvePrefix) == 0x000180, "Member 'FAnimNode_CopyMotion::CurvePrefix' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveName) == 0x000188, "Member 'FAnimNode_CopyMotion::TargetCurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveScale) == 0x000190, "Member 'FAnimNode_CopyMotion::TargetCurveScale' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveComponent) == 0x000194, "Member 'FAnimNode_CopyMotion::TargetCurveComponent' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TargetCurveRotationAxis) == 0x000195, "Member 'FAnimNode_CopyMotion::TargetCurveRotationAxis' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TranslationX_CurveName) == 0x000198, "Member 'FAnimNode_CopyMotion::TranslationX_CurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TranslationY_CurveName) == 0x0001A0, "Member 'FAnimNode_CopyMotion::TranslationY_CurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TranslationZ_CurveName) == 0x0001A8, "Member 'FAnimNode_CopyMotion::TranslationZ_CurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationRoll_CurveName) == 0x0001B0, "Member 'FAnimNode_CopyMotion::RotationRoll_CurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationPitch_CurveName) == 0x0001B8, "Member 'FAnimNode_CopyMotion::RotationPitch_CurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationYaw_CurveName) == 0x0001C0, "Member 'FAnimNode_CopyMotion::RotationYaw_CurveName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TranslationScale) == 0x0001C8, "Member 'FAnimNode_CopyMotion::TranslationScale' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, TranslationRemapCurve) == 0x0001E0, "Member 'FAnimNode_CopyMotion::TranslationRemapCurve' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationScale) == 0x0001E8, "Member 'FAnimNode_CopyMotion::RotationScale' has a wrong offset!");
-static_assert(offsetof(FAnimNode_CopyMotion, RotationRemapCurve) == 0x0001F0, "Member 'FAnimNode_CopyMotion::RotationRemapCurve' has a wrong offset!");
-
 // ScriptStruct X6Animation.X6PlayMontageParams
 // 0x0018 (0x0018 - 0x0000)
 struct FX6PlayMontageParams final
@@ -1439,6 +1431,14 @@ static_assert(offsetof(FX6PlayMontageParams, StartingPosition) == 0x000004, "Mem
 static_assert(offsetof(FX6PlayMontageParams, StartingSection) == 0x000008, "Member 'FX6PlayMontageParams::StartingSection' has a wrong offset!");
 static_assert(offsetof(FX6PlayMontageParams, bMirror) == 0x000010, "Member 'FX6PlayMontageParams::bMirror' has a wrong offset!");
 static_assert(offsetof(FX6PlayMontageParams, AnimRootMotionTranslationScale) == 0x000014, "Member 'FX6PlayMontageParams::AnimRootMotionTranslationScale' has a wrong offset!");
+
+// ScriptStruct X6Animation.X6SequencePlayerReference
+// 0x0000 (0x0010 - 0x0010)
+struct FX6SequencePlayerReference final : public FAnimNodeReference
+{
+};
+static_assert(alignof(FX6SequencePlayerReference) == 0x000008, "Wrong alignment on FX6SequencePlayerReference");
+static_assert(sizeof(FX6SequencePlayerReference) == 0x000010, "Wrong size on FX6SequencePlayerReference");
 
 // ScriptStruct X6Animation.X6OverlayBlendReference
 // 0x0000 (0x0010 - 0x0010)

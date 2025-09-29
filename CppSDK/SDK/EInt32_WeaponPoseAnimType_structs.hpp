@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EInt32_WeaponPoseAnimType.EInt32_WeaponPoseAnimType
-// NumValues: 0x00C2
+// NumValues: 0x00C5
 enum class EInt32_WeaponPoseAnimType : uint32
 {
 	NewEnumerator195                         = 189,
@@ -211,7 +211,10 @@ enum class EInt32_WeaponPoseAnimType : uint32
 	NewEnumerator196                         = 190,
 	NewEnumerator197                         = 191,
 	NewEnumerator198                         = 192,
-	EInt32_MAX                               = 193,
+	NewEnumerator199                         = 193,
+	NewEnumerator200                         = 194,
+	NewEnumerator201                         = 195,
+	EInt32_MAX                               = 196,
 };
 
 }

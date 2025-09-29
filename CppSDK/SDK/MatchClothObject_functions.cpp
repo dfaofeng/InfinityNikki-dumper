@@ -216,6 +216,30 @@ void UMatchClothObject_C::GetAssetSetting(class USkeletalMesh* InputObject, bool
 }
 
 
+// Function MatchClothObject.MatchClothObject_C.GetHighHeelData
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class USkeletalMesh*                    InputSkelMesh                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TMap<class FName, struct FTransform>*   HighHeelData                                           (Parm, OutParm)
+
+void UMatchClothObject_C::GetHighHeelData(class USkeletalMesh* InputSkelMesh, TMap<class FName, struct FTransform>* HighHeelData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MatchClothObject_C", "GetHighHeelData");
+
+	Params::MatchClothObject_C_GetHighHeelData Parms{};
+
+	Parms.InputSkelMesh = InputSkelMesh;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (HighHeelData != nullptr)
+		*HighHeelData = std::move(Parms.HighHeelData);
+}
+
+
 // Function MatchClothObject.MatchClothObject_C.GetIgnoreMap
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 

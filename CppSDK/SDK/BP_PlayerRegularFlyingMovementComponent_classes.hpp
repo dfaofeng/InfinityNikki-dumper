@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "EPlayerRegularFlyingMovementSpeedType_structs.hpp"
 #include "EPlayerRegularFlyingMovementType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EPlayerRegularFlyingMovementSpeedType_structs.hpp"
 
 
 namespace SDK

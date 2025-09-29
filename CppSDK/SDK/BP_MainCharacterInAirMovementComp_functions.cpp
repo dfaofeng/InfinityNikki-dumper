@@ -88,6 +88,46 @@ void UBP_MainCharacterInAirMovementComp_C::BP_OnMulticast_PlayPhxSwitchAnim()
 }
 
 
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.BP_OnMulticast_WitchJumpDash
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   NewParam                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterInAirMovementComp_C::BP_OnMulticast_WitchJumpDash(int32 NewParam)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterInAirMovementComp_C", "BP_OnMulticast_WitchJumpDash");
+
+	Params::BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpDash Parms{};
+
+	Parms.NewParam = NewParam;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.BP_OnMulticast_WitchJumpPerform
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PerformType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterInAirMovementComp_C::BP_OnMulticast_WitchJumpPerform(int32 PerformType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterInAirMovementComp_C", "BP_OnMulticast_WitchJumpPerform");
+
+	Params::BP_MainCharacterInAirMovementComp_C_BP_OnMulticast_WitchJumpPerform Parms{};
+
+	Parms.PerformType = PerformType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.BP_TryPointToPointJumping
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -336,6 +376,46 @@ void UBP_MainCharacterInAirMovementComp_C::Multicast_PlayPhxSwitchAnim()
 		Func = Class->GetFunction("BP_MainCharacterInAirMovementComp_C", "Multicast_PlayPhxSwitchAnim");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.Multicast_WitchJumpDash
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   DashType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterInAirMovementComp_C::Multicast_WitchJumpDash(int32 DashType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterInAirMovementComp_C", "Multicast_WitchJumpDash");
+
+	Params::BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpDash Parms{};
+
+	Parms.DashType = DashType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterInAirMovementComp.BP_MainCharacterInAirMovementComp_C.Multicast_WitchJumpPerform
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   PerformType                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterInAirMovementComp_C::Multicast_WitchJumpPerform(int32 PerformType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterInAirMovementComp_C", "Multicast_WitchJumpPerform");
+
+	Params::BP_MainCharacterInAirMovementComp_C_Multicast_WitchJumpPerform Parms{};
+
+	Parms.PerformType = PerformType;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

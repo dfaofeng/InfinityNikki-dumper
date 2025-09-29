@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "Enum_TipsKeyTheme_structs.hpp"
 #include "Engine_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "UMG_classes.hpp"
+#include "Enum_TipsKeyTheme_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK

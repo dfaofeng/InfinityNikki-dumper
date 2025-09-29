@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -17,15 +18,20 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass X6ANS_Weapon_PlayIdleBreakAnim.X6ANS_Weapon_PlayIdleBreakAnim_C
-// 0x0008 (0x0038 - 0x0030)
+// 0x00D0 (0x0100 - 0x0030)
 class UX6ANS_Weapon_PlayIdleBreakAnim_C final : public UAnimNotifyState
 {
 public:
 	class UAnimMontage*                           WeaponMontage;                                     // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CustomWeaponClass;                                 // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CustomWeaponTransform;                             // 0x0040(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CustomWeaponAttachSocketName;                      // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSet<class UNiagaraSystem*>                   NiagaraSystemsToClear;                             // 0x00A8(0x0050)(Edit, BlueprintVisible)
 
 public:
-	bool Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime, const struct FAnimNotifyEventReference& EventReference) const;
 	bool Received_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, const struct FAnimNotifyEventReference& EventReference) const;
+	bool Received_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration, const struct FAnimNotifyEventReference& EventReference) const;
 
 public:
 	static class UClass* StaticClass()
@@ -37,9 +43,13 @@ public:
 		return GetDefaultObjImpl<UX6ANS_Weapon_PlayIdleBreakAnim_C>();
 	}
 };
-static_assert(alignof(UX6ANS_Weapon_PlayIdleBreakAnim_C) == 0x000008, "Wrong alignment on UX6ANS_Weapon_PlayIdleBreakAnim_C");
-static_assert(sizeof(UX6ANS_Weapon_PlayIdleBreakAnim_C) == 0x000038, "Wrong size on UX6ANS_Weapon_PlayIdleBreakAnim_C");
+static_assert(alignof(UX6ANS_Weapon_PlayIdleBreakAnim_C) == 0x000010, "Wrong alignment on UX6ANS_Weapon_PlayIdleBreakAnim_C");
+static_assert(sizeof(UX6ANS_Weapon_PlayIdleBreakAnim_C) == 0x000100, "Wrong size on UX6ANS_Weapon_PlayIdleBreakAnim_C");
 static_assert(offsetof(UX6ANS_Weapon_PlayIdleBreakAnim_C, WeaponMontage) == 0x000030, "Member 'UX6ANS_Weapon_PlayIdleBreakAnim_C::WeaponMontage' has a wrong offset!");
+static_assert(offsetof(UX6ANS_Weapon_PlayIdleBreakAnim_C, CustomWeaponClass) == 0x000038, "Member 'UX6ANS_Weapon_PlayIdleBreakAnim_C::CustomWeaponClass' has a wrong offset!");
+static_assert(offsetof(UX6ANS_Weapon_PlayIdleBreakAnim_C, CustomWeaponTransform) == 0x000040, "Member 'UX6ANS_Weapon_PlayIdleBreakAnim_C::CustomWeaponTransform' has a wrong offset!");
+static_assert(offsetof(UX6ANS_Weapon_PlayIdleBreakAnim_C, CustomWeaponAttachSocketName) == 0x0000A0, "Member 'UX6ANS_Weapon_PlayIdleBreakAnim_C::CustomWeaponAttachSocketName' has a wrong offset!");
+static_assert(offsetof(UX6ANS_Weapon_PlayIdleBreakAnim_C, NiagaraSystemsToClear) == 0x0000A8, "Member 'UX6ANS_Weapon_PlayIdleBreakAnim_C::NiagaraSystemsToClear' has a wrong offset!");
 
 }
 

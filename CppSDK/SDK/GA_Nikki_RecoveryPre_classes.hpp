@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "Enum_Recovery_BulletEffect_structs.hpp"
 #include "Engine_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "Enum_Recovery_BulletEffect_structs.hpp"
 #include "GA_AbilityMontageBase_classes.hpp"
 
 

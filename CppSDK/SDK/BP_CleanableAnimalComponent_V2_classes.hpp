@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "E_CleaningAbilityType_structs.hpp"
-#include "BP_X6ActorComponent_classes.hpp"
 #include "ECleaningAnimalHeightType_structs.hpp"
+#include "Engine_structs.hpp"
+#include "E_CleaningAbilityType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "BP_X6ActorComponent_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_CleanableAnimalComponent_V2.BP_CleanableAnimalComponent_V2_C
-// 0x00E0 (0x0188 - 0x00A8)
+// 0x0100 (0x01A8 - 0x00A8)
 class UBP_CleanableAnimalComponent_V2_C final : public UBP_X6ActorComponent_C
 {
 public:
@@ -46,8 +46,8 @@ public:
 	uint8                                         Pad_149[0x7];                                      // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(class AActor* CleaningPlayer, E_CleaningAbilityType CleaningAbilityType)> PostCleaningAnimalFinished; // 0x0150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class UAnimSequence*>                  BP_TagList;                                        // 0x0160(0x0010)(Edit, BlueprintVisible)
-	class UClass*                                 JewelrySystemComponent;                            // 0x0170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         BP_TagStringList;                                  // 0x0178(0x0010)(Edit, BlueprintVisible)
+	TSoftClassPtr<class UClass>                   JewelrySystemComponent;                            // 0x0170(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TArray<class FString>                         BP_TagStringList;                                  // 0x0198(0x0010)(Edit, BlueprintVisible)
 
 public:
 	void ReceiveTick(float DeltaSeconds);
@@ -78,7 +78,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_CleanableAnimalComponent_V2_C) == 0x000008, "Wrong alignment on UBP_CleanableAnimalComponent_V2_C");
-static_assert(sizeof(UBP_CleanableAnimalComponent_V2_C) == 0x000188, "Wrong size on UBP_CleanableAnimalComponent_V2_C");
+static_assert(sizeof(UBP_CleanableAnimalComponent_V2_C) == 0x0001A8, "Wrong size on UBP_CleanableAnimalComponent_V2_C");
 static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, UberGraphFrame) == 0x0000A8, "Member 'UBP_CleanableAnimalComponent_V2_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, animalSize) == 0x0000B0, "Member 'UBP_CleanableAnimalComponent_V2_C::animalSize' has a wrong offset!");
 static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, slotsTransform) == 0x0000B8, "Member 'UBP_CleanableAnimalComponent_V2_C::slotsTransform' has a wrong offset!");
@@ -97,7 +97,7 @@ static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, BP_AfterCleanFaceToNik
 static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, PostCleaningAnimalFinished) == 0x000150, "Member 'UBP_CleanableAnimalComponent_V2_C::PostCleaningAnimalFinished' has a wrong offset!");
 static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, BP_TagList) == 0x000160, "Member 'UBP_CleanableAnimalComponent_V2_C::BP_TagList' has a wrong offset!");
 static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, JewelrySystemComponent) == 0x000170, "Member 'UBP_CleanableAnimalComponent_V2_C::JewelrySystemComponent' has a wrong offset!");
-static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, BP_TagStringList) == 0x000178, "Member 'UBP_CleanableAnimalComponent_V2_C::BP_TagStringList' has a wrong offset!");
+static_assert(offsetof(UBP_CleanableAnimalComponent_V2_C, BP_TagStringList) == 0x000198, "Member 'UBP_CleanableAnimalComponent_V2_C::BP_TagStringList' has a wrong offset!");
 
 }
 

@@ -46,17 +46,17 @@ public:
 	bool                                          BP_bInner;                                         // 0x0509(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature(class UX6StateMachineComponent* TriggerComponent, uint8 StateID, uint8 PreviousStateID, class FName StateName, EFSM_Transition Transition);
-	void BP_ActiveSkMesh(bool bForce);
-	void BP_OnServerInit(bool Server);
-	void BP_OnSkillDetection(ECombatStimulateType Selection);
-	void BP_SetCanTeleport(bool CanTeleport);
-	void BP_SetStateMachine(EnumCheckpointStateType StateType);
-	void ExecuteUbergraph_BP_CheckPointActorBase(int32 EntryPoint);
-	void ServerInit(bool bServer);
-	void SetCurrentAnim(const class FString& Pose);
-	void SetIsActivate(bool opt);
 	void SetIsLastActivate(bool opt);
+	void SetIsActivate(bool opt);
+	void SetCurrentAnim(const class FString& Pose);
+	void ServerInit(bool bServer);
+	void ExecuteUbergraph_BP_CheckPointActorBase(int32 EntryPoint);
+	void BP_SetStateMachine(EnumCheckpointStateType StateType);
+	void BP_SetCanTeleport(bool CanTeleport);
+	void BP_OnSkillDetection(ECombatStimulateType Selection);
+	void BP_OnServerInit(bool Server);
+	void BP_ActiveSkMesh(bool bForce);
+	void BndEvt__BP_CheckPointActorBase_CheckpointStateMachine_K2Node_ComponentBoundEvent_1_SM_BP_BeginState__DelegateSignature(class UX6StateMachineComponent* TriggerComponent, uint8 StateID, uint8 PreviousStateID, class FName StateName, EFSM_Transition Transition);
 
 	class FString GetModuleName() const;
 

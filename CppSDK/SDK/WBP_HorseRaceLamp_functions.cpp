@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.ExecuteUbergraph_WBP_HorseRaceLamp
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_HorseRaceLamp_C::ExecuteUbergraph_WBP_HorseRaceLamp(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_HorseRaceLamp_C", "ExecuteUbergraph_WBP_HorseRaceLamp");
-
-	Params::WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.PreConstruct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_HorseRaceLamp_C::PreConstruct(bool IsDesignTime)
 	Params::WBP_HorseRaceLamp_C_PreConstruct Parms{};
 
 	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.ExecuteUbergraph_WBP_HorseRaceLamp
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_HorseRaceLamp_C::ExecuteUbergraph_WBP_HorseRaceLamp(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_HorseRaceLamp_C", "ExecuteUbergraph_WBP_HorseRaceLamp");
+
+	Params::WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

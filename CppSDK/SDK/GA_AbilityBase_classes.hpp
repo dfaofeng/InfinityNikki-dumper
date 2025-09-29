@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "ESkillCDStartCondition_structs.hpp"
-#include "EPlayerActionTypes_structs.hpp"
+#include "ECombatForwardRule_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ESkillFlag_structs.hpp"
-#include "X6Game_classes.hpp"
+#include "ESkillCDStartCondition_structs.hpp"
 #include "EClothFlag_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
-#include "ECombatForwardRule_structs.hpp"
+#include "EPlayerActionTypes_structs.hpp"
+#include "X6Game_classes.hpp"
 
 
 namespace SDK

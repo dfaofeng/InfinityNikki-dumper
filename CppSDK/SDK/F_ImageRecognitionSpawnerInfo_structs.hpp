@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // UserDefinedStruct F_ImageRecognitionSpawnerInfo.F_ImageRecognitionSpawnerInfo
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FF_ImageRecognitionSpawnerInfo final
 {
 public:
@@ -30,9 +30,10 @@ public:
 	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         GroupID_41_9708BF1947712C5D614F0DB2FC88334B;       // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGameplayTag                           PerformanceTag_44_385B26844B5E8489879A82B3D4B51249; // 0x0028(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	bool                                          NotCheckOverLap_46_9146A90F4A911423D84A239F6E461041; // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FF_ImageRecognitionSpawnerInfo) == 0x000008, "Wrong alignment on FF_ImageRecognitionSpawnerInfo");
-static_assert(sizeof(FF_ImageRecognitionSpawnerInfo) == 0x000030, "Wrong size on FF_ImageRecognitionSpawnerInfo");
+static_assert(sizeof(FF_ImageRecognitionSpawnerInfo) == 0x000038, "Wrong size on FF_ImageRecognitionSpawnerInfo");
 static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, SpawnerID_37_EFF2454244A9220426AC8995C6B1BC2E) == 0x000000, "Member 'FF_ImageRecognitionSpawnerInfo::SpawnerID_37_EFF2454244A9220426AC8995C6B1BC2E' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, HintText_22_7F4DB3F74199197B9BD33DB090E81945) == 0x000008, "Member 'FF_ImageRecognitionSpawnerInfo::HintText_22_7F4DB3F74199197B9BD33DB090E81945' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, ScreenRatio_25_7D2250EC4FFCF245337AF2A50CB09C3D) == 0x000018, "Member 'FF_ImageRecognitionSpawnerInfo::ScreenRatio_25_7D2250EC4FFCF245337AF2A50CB09C3D' has a wrong offset!");
@@ -41,6 +42,7 @@ static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, NeedCheckDirtiness_35_BAE
 static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, IsDirty_36_9DC74FAC49DD9ADD392F929256714984) == 0x000022, "Member 'FF_ImageRecognitionSpawnerInfo::IsDirty_36_9DC74FAC49DD9ADD392F929256714984' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, GroupID_41_9708BF1947712C5D614F0DB2FC88334B) == 0x000024, "Member 'FF_ImageRecognitionSpawnerInfo::GroupID_41_9708BF1947712C5D614F0DB2FC88334B' has a wrong offset!");
 static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, PerformanceTag_44_385B26844B5E8489879A82B3D4B51249) == 0x000028, "Member 'FF_ImageRecognitionSpawnerInfo::PerformanceTag_44_385B26844B5E8489879A82B3D4B51249' has a wrong offset!");
+static_assert(offsetof(FF_ImageRecognitionSpawnerInfo, NotCheckOverLap_46_9146A90F4A911423D84A239F6E461041) == 0x000030, "Member 'FF_ImageRecognitionSpawnerInfo::NotCheckOverLap_46_9146A90F4A911423D84A239F6E461041' has a wrong offset!");
 
 }
 

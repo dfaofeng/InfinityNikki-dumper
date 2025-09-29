@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "X6Animation_structs.hpp"
 #include "NikkiPhysics_structs.hpp"
+#include "X6Animation_structs.hpp"
 
 
 namespace SDK::Params

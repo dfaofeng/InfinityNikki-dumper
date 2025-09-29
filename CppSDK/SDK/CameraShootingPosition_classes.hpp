@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EShootingStageThreeConidition_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "EShootingStageThreeConidition_structs.hpp"
 
 
 namespace SDK

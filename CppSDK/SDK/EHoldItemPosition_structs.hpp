@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EHoldItemPosition.EHoldItemPosition
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EHoldItemPosition : uint8
 {
 	NewEnumerator0                           = 0,
@@ -27,7 +27,8 @@ enum class EHoldItemPosition : uint8
 	NewEnumerator6                           = 6,
 	NewEnumerator8                           = 7,
 	NewEnumerator9                           = 8,
-	EHoldItemPosition_MAX                    = 9,
+	NewEnumerator10                          = 9,
+	EHoldItemPosition_MAX                    = 10,
 };
 
 }

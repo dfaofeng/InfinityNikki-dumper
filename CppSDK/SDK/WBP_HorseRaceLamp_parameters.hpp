@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.PreConstruct
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_HorseRaceLamp_C_PreConstruct final
+{
+public:
+	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_HorseRaceLamp_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_HorseRaceLamp_C_PreConstruct");
+static_assert(sizeof(WBP_HorseRaceLamp_C_PreConstruct) == 0x000001, "Wrong size on WBP_HorseRaceLamp_C_PreConstruct");
+static_assert(offsetof(WBP_HorseRaceLamp_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_HorseRaceLamp_C_PreConstruct::IsDesignTime' has a wrong offset!");
+
 // Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.ExecuteUbergraph_WBP_HorseRaceLamp
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp final
@@ -26,17 +37,6 @@ static_assert(alignof(WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp) ==
 static_assert(sizeof(WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp) == 0x000008, "Wrong size on WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp");
 static_assert(offsetof(WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp, EntryPoint) == 0x000000, "Member 'WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp, K2Node_Event_IsDesignTime) == 0x000004, "Member 'WBP_HorseRaceLamp_C_ExecuteUbergraph_WBP_HorseRaceLamp::K2Node_Event_IsDesignTime' has a wrong offset!");
-
-// Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.PreConstruct
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_HorseRaceLamp_C_PreConstruct final
-{
-public:
-	bool                                          IsDesignTime;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_HorseRaceLamp_C_PreConstruct) == 0x000001, "Wrong alignment on WBP_HorseRaceLamp_C_PreConstruct");
-static_assert(sizeof(WBP_HorseRaceLamp_C_PreConstruct) == 0x000001, "Wrong size on WBP_HorseRaceLamp_C_PreConstruct");
-static_assert(offsetof(WBP_HorseRaceLamp_C_PreConstruct, IsDesignTime) == 0x000000, "Member 'WBP_HorseRaceLamp_C_PreConstruct::IsDesignTime' has a wrong offset!");
 
 // Function WBP_HorseRaceLamp.WBP_HorseRaceLamp_C.GetModuleName
 // 0x0010 (0x0010 - 0x0000)

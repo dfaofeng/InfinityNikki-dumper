@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "EDeviceScreenSizeType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "EDeviceScreenSizeType_structs.hpp"
 
 
 namespace SDK

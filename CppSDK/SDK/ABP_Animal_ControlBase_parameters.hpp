@@ -17,28 +17,6 @@
 namespace SDK::Params
 {
 
-// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimGraph
-// 0x0010 (0x0010 - 0x0000)
-struct ABP_Animal_ControlBase_C_AnimGraph final
-{
-public:
-	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
-};
-static_assert(alignof(ABP_Animal_ControlBase_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Animal_ControlBase_C_AnimGraph");
-static_assert(sizeof(ABP_Animal_ControlBase_C_AnimGraph) == 0x000010, "Wrong size on ABP_Animal_ControlBase_C_AnimGraph");
-static_assert(offsetof(ABP_Animal_ControlBase_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_Animal_ControlBase_C_AnimGraph::AnimGraph_0' has a wrong offset!");
-
-// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.BlueprintUpdateAnimation
-// 0x0004 (0x0004 - 0x0000)
-struct ABP_Animal_ControlBase_C_BlueprintUpdateAnimation final
-{
-public:
-	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(ABP_Animal_ControlBase_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_Animal_ControlBase_C_BlueprintUpdateAnimation");
-static_assert(sizeof(ABP_Animal_ControlBase_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_Animal_ControlBase_C_BlueprintUpdateAnimation");
-static_assert(offsetof(ABP_Animal_ControlBase_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_Animal_ControlBase_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
-
 // Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.ExecuteUbergraph_ABP_Animal_ControlBase
 // 0x00E0 (0x00E0 - 0x0000)
 struct ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase final
@@ -90,6 +68,28 @@ static_assert(offsetof(ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_Cont
 static_assert(offsetof(ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase, CallFunc_BreakRotator_Yaw) == 0x0000C8, "Member 'ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase::CallFunc_BreakRotator_Yaw' has a wrong offset!");
 static_assert(offsetof(ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase, CallFunc_SelectFloat_ReturnValue) == 0x0000D0, "Member 'ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
 static_assert(offsetof(ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase, CallFunc_SelectFloat_A_ImplicitCast) == 0x0000D8, "Member 'ABP_Animal_ControlBase_C_ExecuteUbergraph_ABP_Animal_ControlBase::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
+
+// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.BlueprintUpdateAnimation
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_Animal_ControlBase_C_BlueprintUpdateAnimation final
+{
+public:
+	float                                         DeltaTimeX;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_Animal_ControlBase_C_BlueprintUpdateAnimation) == 0x000004, "Wrong alignment on ABP_Animal_ControlBase_C_BlueprintUpdateAnimation");
+static_assert(sizeof(ABP_Animal_ControlBase_C_BlueprintUpdateAnimation) == 0x000004, "Wrong size on ABP_Animal_ControlBase_C_BlueprintUpdateAnimation");
+static_assert(offsetof(ABP_Animal_ControlBase_C_BlueprintUpdateAnimation, DeltaTimeX) == 0x000000, "Member 'ABP_Animal_ControlBase_C_BlueprintUpdateAnimation::DeltaTimeX' has a wrong offset!");
+
+// Function ABP_Animal_ControlBase.ABP_Animal_ControlBase_C.AnimGraph
+// 0x0010 (0x0010 - 0x0000)
+struct ABP_Animal_ControlBase_C_AnimGraph final
+{
+public:
+	struct FPoseLink                              AnimGraph_0;                                       // 0x0000(0x0010)(Parm, OutParm, NoDestructor)
+};
+static_assert(alignof(ABP_Animal_ControlBase_C_AnimGraph) == 0x000008, "Wrong alignment on ABP_Animal_ControlBase_C_AnimGraph");
+static_assert(sizeof(ABP_Animal_ControlBase_C_AnimGraph) == 0x000010, "Wrong size on ABP_Animal_ControlBase_C_AnimGraph");
+static_assert(offsetof(ABP_Animal_ControlBase_C_AnimGraph, AnimGraph_0) == 0x000000, "Member 'ABP_Animal_ControlBase_C_AnimGraph::AnimGraph_0' has a wrong offset!");
 
 }
 

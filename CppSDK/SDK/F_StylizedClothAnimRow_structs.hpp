@@ -10,19 +10,22 @@
 
 #include "Basic.hpp"
 
-#include "F_StylizedStartAnimConfig_structs.hpp"
 #include "F_StylizedPivotAnimConfig_structs.hpp"
-#include "F_StylizedLoopAnimConfig_structs.hpp"
+#include "F_StylizedStartAnimConfig_structs.hpp"
 #include "FStylizedMirror_structs.hpp"
-#include "F_StylizedStopAnimConfig_structs.hpp"
+#include "F_StylizedLoopAnimConfig_structs.hpp"
 #include "F_OverlayConfig_structs.hpp"
+#include "F_StylizedShuffleStopAnimConfig_structs.hpp"
+#include "F_StylizedStopAnimConfig_structs.hpp"
+#include "F_StylizedInplaceTurnAnimConfig_structs.hpp"
+#include "F_StylizedLandAnimConfig_structs.hpp"
 
 
 namespace SDK
 {
 
 // UserDefinedStruct F_StylizedClothAnimRow.F_StylizedClothAnimRow
-// 0x0660 (0x0660 - 0x0000)
+// 0x0BC8 (0x0BC8 - 0x0000)
 struct FF_StylizedClothAnimRow final
 {
 public:
@@ -36,12 +39,15 @@ public:
 	struct FF_StylizedLoopAnimConfig              Jog_LoopState_21_F732DBA84AE3A83344591E991CFEB2B8; // 0x03E0(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FF_StylizedLoopAnimConfig              Sprint_LoopState_20_5B3A2B3F43A4454D7E2AD4B64C4BEA27; // 0x0458(0x0078)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FF_StylizedStopAnimConfig              StopState_29_F57A88454453F84F73E3718C567F5A10;     // 0x04D0(0x0120)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FF_StylizedPivotAnimConfig             PivotState_45_C634F3664C0F33C88469809B0172B4B9;    // 0x05F0(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FF_OverlayConfig                       OverlayData_33_DD566B5A4837EC2CEDDAECA148BB6F59;   // 0x0648(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	struct FFStylizedMirror                       MirrorSetting_48_398A7F78458FF4E154F1789DF906C4AF; // 0x0658(0x0002)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FF_StylizedShuffleStopAnimConfig       ShuffleStopState_54_0D9C294D480B6D5F8ACAFDBF30FB3946; // 0x05F0(0x03C8)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FF_StylizedInplaceTurnAnimConfig       InplaceTurnState_57_B0409DAE4835A4CCBA03E896AFEC3FCF; // 0x09B8(0x0148)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FF_StylizedPivotAnimConfig             PivotState_45_C634F3664C0F33C88469809B0172B4B9;    // 0x0B00(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FF_StylizedLandAnimConfig              LandState_51_B6977A214DD5A77491175ABEC427CBCA;     // 0x0B58(0x0058)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FF_OverlayConfig                       OverlayData_33_DD566B5A4837EC2CEDDAECA148BB6F59;   // 0x0BB0(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	struct FFStylizedMirror                       MirrorSetting_48_398A7F78458FF4E154F1789DF906C4AF; // 0x0BC0(0x0002)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FF_StylizedClothAnimRow) == 0x000008, "Wrong alignment on FF_StylizedClothAnimRow");
-static_assert(sizeof(FF_StylizedClothAnimRow) == 0x000660, "Wrong size on FF_StylizedClothAnimRow");
+static_assert(sizeof(FF_StylizedClothAnimRow) == 0x000BC8, "Wrong size on FF_StylizedClothAnimRow");
 static_assert(offsetof(FF_StylizedClothAnimRow, StyleName_41_9171C85E4972112D2935CD85F64FEEEA) == 0x000000, "Member 'FF_StylizedClothAnimRow::StyleName_41_9171C85E4972112D2935CD85F64FEEEA' has a wrong offset!");
 static_assert(offsetof(FF_StylizedClothAnimRow, Idle_Animation_2_DC8A4AB141E67C3DCDB666ADC6845AAF) == 0x000010, "Member 'FF_StylizedClothAnimRow::Idle_Animation_2_DC8A4AB141E67C3DCDB666ADC6845AAF' has a wrong offset!");
 static_assert(offsetof(FF_StylizedClothAnimRow, IdleTransition_42_D4833D7E48D9F84DCF0E339620760641) == 0x000038, "Member 'FF_StylizedClothAnimRow::IdleTransition_42_D4833D7E48D9F84DCF0E339620760641' has a wrong offset!");
@@ -52,9 +58,12 @@ static_assert(offsetof(FF_StylizedClothAnimRow, Walk_LoopState_22_281B5AF049F6EC
 static_assert(offsetof(FF_StylizedClothAnimRow, Jog_LoopState_21_F732DBA84AE3A83344591E991CFEB2B8) == 0x0003E0, "Member 'FF_StylizedClothAnimRow::Jog_LoopState_21_F732DBA84AE3A83344591E991CFEB2B8' has a wrong offset!");
 static_assert(offsetof(FF_StylizedClothAnimRow, Sprint_LoopState_20_5B3A2B3F43A4454D7E2AD4B64C4BEA27) == 0x000458, "Member 'FF_StylizedClothAnimRow::Sprint_LoopState_20_5B3A2B3F43A4454D7E2AD4B64C4BEA27' has a wrong offset!");
 static_assert(offsetof(FF_StylizedClothAnimRow, StopState_29_F57A88454453F84F73E3718C567F5A10) == 0x0004D0, "Member 'FF_StylizedClothAnimRow::StopState_29_F57A88454453F84F73E3718C567F5A10' has a wrong offset!");
-static_assert(offsetof(FF_StylizedClothAnimRow, PivotState_45_C634F3664C0F33C88469809B0172B4B9) == 0x0005F0, "Member 'FF_StylizedClothAnimRow::PivotState_45_C634F3664C0F33C88469809B0172B4B9' has a wrong offset!");
-static_assert(offsetof(FF_StylizedClothAnimRow, OverlayData_33_DD566B5A4837EC2CEDDAECA148BB6F59) == 0x000648, "Member 'FF_StylizedClothAnimRow::OverlayData_33_DD566B5A4837EC2CEDDAECA148BB6F59' has a wrong offset!");
-static_assert(offsetof(FF_StylizedClothAnimRow, MirrorSetting_48_398A7F78458FF4E154F1789DF906C4AF) == 0x000658, "Member 'FF_StylizedClothAnimRow::MirrorSetting_48_398A7F78458FF4E154F1789DF906C4AF' has a wrong offset!");
+static_assert(offsetof(FF_StylizedClothAnimRow, ShuffleStopState_54_0D9C294D480B6D5F8ACAFDBF30FB3946) == 0x0005F0, "Member 'FF_StylizedClothAnimRow::ShuffleStopState_54_0D9C294D480B6D5F8ACAFDBF30FB3946' has a wrong offset!");
+static_assert(offsetof(FF_StylizedClothAnimRow, InplaceTurnState_57_B0409DAE4835A4CCBA03E896AFEC3FCF) == 0x0009B8, "Member 'FF_StylizedClothAnimRow::InplaceTurnState_57_B0409DAE4835A4CCBA03E896AFEC3FCF' has a wrong offset!");
+static_assert(offsetof(FF_StylizedClothAnimRow, PivotState_45_C634F3664C0F33C88469809B0172B4B9) == 0x000B00, "Member 'FF_StylizedClothAnimRow::PivotState_45_C634F3664C0F33C88469809B0172B4B9' has a wrong offset!");
+static_assert(offsetof(FF_StylizedClothAnimRow, LandState_51_B6977A214DD5A77491175ABEC427CBCA) == 0x000B58, "Member 'FF_StylizedClothAnimRow::LandState_51_B6977A214DD5A77491175ABEC427CBCA' has a wrong offset!");
+static_assert(offsetof(FF_StylizedClothAnimRow, OverlayData_33_DD566B5A4837EC2CEDDAECA148BB6F59) == 0x000BB0, "Member 'FF_StylizedClothAnimRow::OverlayData_33_DD566B5A4837EC2CEDDAECA148BB6F59' has a wrong offset!");
+static_assert(offsetof(FF_StylizedClothAnimRow, MirrorSetting_48_398A7F78458FF4E154F1789DF906C4AF) == 0x000BC0, "Member 'FF_StylizedClothAnimRow::MirrorSetting_48_398A7F78458FF4E154F1789DF906C4AF' has a wrong offset!");
 
 }
 

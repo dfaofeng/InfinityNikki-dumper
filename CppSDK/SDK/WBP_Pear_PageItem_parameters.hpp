@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_Pear_PageItem.WBP_Pear_PageItem_C.BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature final
-{
-public:
-	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(sizeof(WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-static_assert(offsetof(WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
-
 // Function WBP_Pear_PageItem.WBP_Pear_PageItem_C.ExecuteUbergraph_WBP_Pear_PageItem
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem final
@@ -37,6 +26,17 @@ static_assert(alignof(WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem) ==
 static_assert(sizeof(WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem) == 0x000008, "Wrong size on WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem");
 static_assert(offsetof(WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem, EntryPoint) == 0x000000, "Member 'WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem::EntryPoint' has a wrong offset!");
 static_assert(offsetof(WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem, K2Node_ComponentBoundEvent_bIsChecked) == 0x000004, "Member 'WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem::K2Node_ComponentBoundEvent_bIsChecked' has a wrong offset!");
+
+// Function WBP_Pear_PageItem.WBP_Pear_PageItem_C.BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature final
+{
+public:
+	bool                                          bIsChecked;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong alignment on WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(sizeof(WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature) == 0x000001, "Wrong size on WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+static_assert(offsetof(WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature, bIsChecked) == 0x000000, "Member 'WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature::bIsChecked' has a wrong offset!");
 
 }
 

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ENPCDynamicGameplayState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "X6Game_classes.hpp"
+#include "ENPCDynamicGameplayState_structs.hpp"
 
 
 namespace SDK

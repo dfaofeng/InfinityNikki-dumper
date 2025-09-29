@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "WwiseExtension_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AkAudio_structs.hpp"
@@ -19,7 +20,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_X6AkAmbientSound_V2.BP_X6AkAmbientSound_V2_C
-// 0x0048 (0x03F0 - 0x03A8)
+// 0x0050 (0x03F8 - 0x03A8)
 class ABP_X6AkAmbientSound_V2_C final : public AActor
 {
 public:
@@ -29,6 +30,7 @@ public:
 	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UAkAudioEvent>           BeginPlayAkEvent;                                  // 0x03C0(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class UAkAudioEvent*                          EndPlayAkEvent;                                    // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EX6AkAudioContext                             AudioContext;                                      // 0x03F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_X6AkAmbientSound_V2(int32 EntryPoint);
@@ -46,12 +48,13 @@ public:
 	}
 };
 static_assert(alignof(ABP_X6AkAmbientSound_V2_C) == 0x000008, "Wrong alignment on ABP_X6AkAmbientSound_V2_C");
-static_assert(sizeof(ABP_X6AkAmbientSound_V2_C) == 0x0003F0, "Wrong size on ABP_X6AkAmbientSound_V2_C");
+static_assert(sizeof(ABP_X6AkAmbientSound_V2_C) == 0x0003F8, "Wrong size on ABP_X6AkAmbientSound_V2_C");
 static_assert(offsetof(ABP_X6AkAmbientSound_V2_C, UberGraphFrame) == 0x0003A8, "Member 'ABP_X6AkAmbientSound_V2_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_X6AkAmbientSound_V2_C, DefaultSceneRoot) == 0x0003B0, "Member 'ABP_X6AkAmbientSound_V2_C::DefaultSceneRoot' has a wrong offset!");
 static_assert(offsetof(ABP_X6AkAmbientSound_V2_C, bPostEventAtLocation) == 0x0003B8, "Member 'ABP_X6AkAmbientSound_V2_C::bPostEventAtLocation' has a wrong offset!");
 static_assert(offsetof(ABP_X6AkAmbientSound_V2_C, BeginPlayAkEvent) == 0x0003C0, "Member 'ABP_X6AkAmbientSound_V2_C::BeginPlayAkEvent' has a wrong offset!");
 static_assert(offsetof(ABP_X6AkAmbientSound_V2_C, EndPlayAkEvent) == 0x0003E8, "Member 'ABP_X6AkAmbientSound_V2_C::EndPlayAkEvent' has a wrong offset!");
+static_assert(offsetof(ABP_X6AkAmbientSound_V2_C, AudioContext) == 0x0003F0, "Member 'ABP_X6AkAmbientSound_V2_C::AudioContext' has a wrong offset!");
 
 }
 

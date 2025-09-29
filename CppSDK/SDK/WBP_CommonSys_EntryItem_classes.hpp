@@ -31,10 +31,10 @@ public:
 	class UWBP_UI_RedPoint_C*                     RedPoint;                                          // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_CommonSys_EntryItem_BtnSystem_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_CommonSys_EntryItem_BtnSystem_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void ExecuteUbergraph_WBP_CommonSys_EntryItem(int32 EntryPoint);
 	void UpdateRedPointPos();
+	void ExecuteUbergraph_WBP_CommonSys_EntryItem(int32 EntryPoint);
+	void BndEvt__WBP_CommonSys_EntryItem_BtnSystem_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
+	void BndEvt__WBP_CommonSys_EntryItem_BtnSystem_K2Node_ComponentBoundEvent_0_OnButtonHoverEvent__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

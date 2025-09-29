@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "EInt32_WeaponPoseAnimType_structs.hpp"
-#include "EInt32_WeaponEquipAnimType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EInt32_WeaponEquipAnimType_structs.hpp"
+#include "EInt32_WeaponPoseAnimType_structs.hpp"
 
 
 namespace SDK

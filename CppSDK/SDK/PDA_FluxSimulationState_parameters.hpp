@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "BS_FluxRectBlend_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params

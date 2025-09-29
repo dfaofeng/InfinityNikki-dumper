@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ReceiveSkillWithTransformComponent.BP_ReceiveSkillWithTransformComponent_C
-// 0x0050 (0x0100 - 0x00B0)
+// 0x0068 (0x0118 - 0x00B0)
 class UBP_ReceiveSkillWithTransformComponent_C final : public UX6ReceiveSkillBaseComponent
 {
 public:
@@ -33,16 +33,19 @@ public:
 	bool                                          BP_IsBulletDestroyWhenNotSimulation;               // 0x00FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_IsChargeOutLineEffect;                          // 0x00FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          BP_IsAlwaysOutLineEffect;                          // 0x00FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          BP_IsCheckWall;                                    // 0x00FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          BP_IsRecoveryCheckWall;                            // 0x00FD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_FE[0x2];                                       // 0x00FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(class AActor* Attacker, class AActor* Instigater, const struct FVector& HitDirection, const struct FVector& HitLocation, const struct FHitResult& HitResult)> OnReceiveHomeIntensity; // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          BP_IsCrashCheckWall;                               // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent(int32 EntryPoint);
-	void BP_RuntimeSetPenetrateWhenSimulation(bool NewValue);
-	void BP_RuntimeSetDestroyWhenNotSimulation(bool NewValue);
-	void BP_RuntimeSetChargeOutLineEffect(bool NewValue);
-	void BP_RuntimeSetAttachment(bool NewValue);
 	void BP_RuntimeSetAlwaysOutLineEffect(bool NewValue);
+	void BP_RuntimeSetAttachment(bool NewValue);
+	void BP_RuntimeSetChargeOutLineEffect(bool NewValue);
+	void BP_RuntimeSetDestroyWhenNotSimulation(bool NewValue);
+	void BP_RuntimeSetPenetrateWhenSimulation(bool NewValue);
+	void ExecuteUbergraph_BP_ReceiveSkillWithTransformComponent(int32 EntryPoint);
+	void ReceiveBeginPlay();
 
 	class FString GetModuleName() const;
 
@@ -57,7 +60,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_ReceiveSkillWithTransformComponent_C) == 0x000008, "Wrong alignment on UBP_ReceiveSkillWithTransformComponent_C");
-static_assert(sizeof(UBP_ReceiveSkillWithTransformComponent_C) == 0x000100, "Wrong size on UBP_ReceiveSkillWithTransformComponent_C");
+static_assert(sizeof(UBP_ReceiveSkillWithTransformComponent_C) == 0x000118, "Wrong size on UBP_ReceiveSkillWithTransformComponent_C");
 static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, UberGraphFrame) == 0x0000B0, "Member 'UBP_ReceiveSkillWithTransformComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, OnReceiveRecovery) == 0x0000B8, "Member 'UBP_ReceiveSkillWithTransformComponent_C::OnReceiveRecovery' has a wrong offset!");
 static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, OnReceiveCrash) == 0x0000C8, "Member 'UBP_ReceiveSkillWithTransformComponent_C::OnReceiveCrash' has a wrong offset!");
@@ -68,7 +71,9 @@ static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsBulletPene
 static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsBulletDestroyWhenNotSimulation) == 0x0000FA, "Member 'UBP_ReceiveSkillWithTransformComponent_C::BP_IsBulletDestroyWhenNotSimulation' has a wrong offset!");
 static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsChargeOutLineEffect) == 0x0000FB, "Member 'UBP_ReceiveSkillWithTransformComponent_C::BP_IsChargeOutLineEffect' has a wrong offset!");
 static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsAlwaysOutLineEffect) == 0x0000FC, "Member 'UBP_ReceiveSkillWithTransformComponent_C::BP_IsAlwaysOutLineEffect' has a wrong offset!");
-static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsCheckWall) == 0x0000FD, "Member 'UBP_ReceiveSkillWithTransformComponent_C::BP_IsCheckWall' has a wrong offset!");
+static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsRecoveryCheckWall) == 0x0000FD, "Member 'UBP_ReceiveSkillWithTransformComponent_C::BP_IsRecoveryCheckWall' has a wrong offset!");
+static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, OnReceiveHomeIntensity) == 0x000100, "Member 'UBP_ReceiveSkillWithTransformComponent_C::OnReceiveHomeIntensity' has a wrong offset!");
+static_assert(offsetof(UBP_ReceiveSkillWithTransformComponent_C, BP_IsCrashCheckWall) == 0x000110, "Member 'UBP_ReceiveSkillWithTransformComponent_C::BP_IsCrashCheckWall' has a wrong offset!");
 
 }
 

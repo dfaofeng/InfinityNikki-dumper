@@ -13,9 +13,9 @@
 #include "SMSystem_structs.hpp"
 #include "SMSystem_classes.hpp"
 #include "Engine_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "EQuadrupedAnimalReactionState_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EQuadrupedAnimalReactionState_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK

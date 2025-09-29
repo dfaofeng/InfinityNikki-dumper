@@ -71,15 +71,15 @@ void UWBP_ActionSlotWidget_PC_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC_0
+// Function WBP_ActionSlotWidget_PC.WBP_ActionSlotWidget_PC_C.SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWBP_ActionSlotWidget_PC_C::SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC_0()
+void UWBP_ActionSlotWidget_PC_C::SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC_0");
+		Func = Class->GetFunction("WBP_ActionSlotWidget_PC_C", "SequenceEvent__ENTRYPOINTWBP_ActionSlotWidget_PC");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

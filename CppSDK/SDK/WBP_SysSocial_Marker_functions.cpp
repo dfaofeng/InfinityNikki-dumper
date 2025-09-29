@@ -57,6 +57,26 @@ void UWBP_SysSocial_Marker_C::ExecuteUbergraph_WBP_SysSocial_Marker(int32 EntryP
 }
 
 
+// Function WBP_SysSocial_Marker.WBP_SysSocial_Marker_C.Bp_ScaleSet
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsMobile                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SysSocial_Marker_C::Bp_ScaleSet(bool IsMobile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SysSocial_Marker_C", "Bp_ScaleSet");
+
+	Params::WBP_SysSocial_Marker_C_Bp_ScaleSet Parms{};
+
+	Parms.IsMobile = IsMobile;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function WBP_SysSocial_Marker.WBP_SysSocial_Marker_C.GetModuleName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

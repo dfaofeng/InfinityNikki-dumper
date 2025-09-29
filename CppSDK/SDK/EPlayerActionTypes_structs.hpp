@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EPlayerActionTypes.EPlayerActionTypes
-// NumValues: 0x00A6
+// NumValues: 0x00BC
 enum class EPlayerActionTypes : uint8
 {
 	NewEnumerator0                           = 0,
@@ -183,7 +183,29 @@ enum class EPlayerActionTypes : uint8
 	NewEnumerator204                         = 162,
 	NewEnumerator205                         = 163,
 	NewEnumerator206                         = 164,
-	EPlayerActionTypes_MAX                   = 165,
+	NewEnumerator207                         = 165,
+	NewEnumerator208                         = 166,
+	NewEnumerator209                         = 167,
+	NewEnumerator210                         = 168,
+	NewEnumerator211                         = 169,
+	NewEnumerator212                         = 170,
+	NewEnumerator213                         = 171,
+	NewEnumerator214                         = 172,
+	NewEnumerator215                         = 173,
+	NewEnumerator216                         = 174,
+	NewEnumerator217                         = 175,
+	NewEnumerator218                         = 176,
+	NewEnumerator219                         = 177,
+	NewEnumerator220                         = 178,
+	NewEnumerator221                         = 179,
+	NewEnumerator222                         = 180,
+	NewEnumerator223                         = 181,
+	NewEnumerator224                         = 182,
+	NewEnumerator225                         = 183,
+	NewEnumerator226                         = 184,
+	NewEnumerator227                         = 185,
+	NewEnumerator228                         = 186,
+	EPlayerActionTypes_MAX                   = 187,
 };
 
 }

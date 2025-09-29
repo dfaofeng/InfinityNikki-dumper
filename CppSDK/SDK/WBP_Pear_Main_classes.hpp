@@ -63,11 +63,11 @@ public:
 	class UWBP_Pear_Main_Bg_C*                    WBP_Pear_Main_Bg;                                  // 0x0420(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Pear_Main(int32 EntryPoint);
-	void SequenceEvent();
-	void SequenceEvent_0();
-	void SequenceEvent__ENTRYPOINTWBP_Pear_Main();
 	void SequenceEvent__ENTRYPOINTWBP_Pear_Main_0();
+	void SequenceEvent__ENTRYPOINTWBP_Pear_Main();
+	void SequenceEvent_0();
+	void SequenceEvent();
+	void ExecuteUbergraph_WBP_Pear_Main(int32 EntryPoint);
 
 	class FString GetModuleName() const;
 

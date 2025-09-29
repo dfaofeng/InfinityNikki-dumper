@@ -29,8 +29,8 @@ public:
 	class UWidgetSwitcher*                        switch_star;                                       // 0x0308(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 
 public:
-	void ExecuteUbergraph_WBP_Pear_LittleStar(int32 EntryPoint);
 	void UI_Compendium_PearEvaluation_Star();
+	void ExecuteUbergraph_WBP_Pear_LittleStar(int32 EntryPoint);
 
 public:
 	static class UClass* StaticClass()

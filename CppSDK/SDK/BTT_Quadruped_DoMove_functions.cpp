@@ -17,42 +17,6 @@
 namespace SDK
 {
 
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.OnBlackboardKeyValueChange
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// const class UBlackboardComponent*       Blackboard                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             KeyName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBTT_Quadruped_DoMove_C::OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "OnBlackboardKeyValueChange");
-
-	Params::BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange Parms{};
-
-	Parms.Blackboard = Blackboard;
-	Parms.KeyName = KeyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.K2_OnInstanceDestroyed
-// (Event, Protected, BlueprintEvent)
-
-void UBTT_Quadruped_DoMove_C::K2_OnInstanceDestroyed()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "K2_OnInstanceDestroyed");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.ReceiveTickAI
 // (Event, Protected, BlueprintEvent)
 // Parameters:
@@ -118,6 +82,42 @@ void UBTT_Quadruped_DoMove_C::ReceiveAbortAI(class AAIController* OwnerControlle
 	Parms.ControlledPawn = ControlledPawn;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.OnBlackboardKeyValueChange
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// const class UBlackboardComponent*       Blackboard                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             KeyName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBTT_Quadruped_DoMove_C::OnBlackboardKeyValueChange(const class UBlackboardComponent* Blackboard, class FName KeyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "OnBlackboardKeyValueChange");
+
+	Params::BTT_Quadruped_DoMove_C_OnBlackboardKeyValueChange Parms{};
+
+	Parms.Blackboard = Blackboard;
+	Parms.KeyName = KeyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BTT_Quadruped_DoMove.BTT_Quadruped_DoMove_C.K2_OnInstanceDestroyed
+// (Event, Protected, BlueprintEvent)
+
+void UBTT_Quadruped_DoMove_C::K2_OnInstanceDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BTT_Quadruped_DoMove_C", "K2_OnInstanceDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

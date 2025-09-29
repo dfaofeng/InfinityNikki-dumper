@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "AudioPlatformConfiguration_structs.hpp"
 #include "AndroidRuntimeSettings_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "AudioPlatformConfiguration_structs.hpp"
 
 
 namespace SDK

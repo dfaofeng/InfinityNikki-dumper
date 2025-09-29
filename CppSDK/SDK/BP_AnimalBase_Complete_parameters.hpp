@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Struct_MultiplatformMeshScale_structs.hpp"
-#include "ECharacterType_structs.hpp"
-#include "E_Platform_structs.hpp"
 #include "F_AnimalKeeper_AnimalStatus_structs.hpp"
+#include "ECharacterType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Struct_MultiplatformMeshScale_structs.hpp"
+#include "E_Platform_structs.hpp"
 
 
 namespace SDK::Params

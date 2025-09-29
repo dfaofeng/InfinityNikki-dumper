@@ -34,13 +34,13 @@ public:
 	bool                                          IsCheckBoxHover;                                   // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BP_OnEntryReleased();
-	void BP_OnItemExpansionChanged(bool bIsExpanded);
-	void BP_OnItemSelectionChanged(bool bIsSelected);
-	void ExecuteUbergraph_WBP_Common_PlayerTitle(int32 EntryPoint);
-	void On_CheckBox_bg_Hovered(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
-	void OnListItemObjectSetViaIndex(int32 Index_0);
 	void OnListItemValueChangedViaIndex(int32 Index_0);
+	void OnListItemObjectSetViaIndex(int32 Index_0);
+	void On_CheckBox_bg_Hovered(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
+	void ExecuteUbergraph_WBP_Common_PlayerTitle(int32 EntryPoint);
+	void BP_OnItemSelectionChanged(bool bIsSelected);
+	void BP_OnItemExpansionChanged(bool bIsExpanded);
+	void BP_OnEntryReleased();
 
 	class FString GetModuleName() const;
 

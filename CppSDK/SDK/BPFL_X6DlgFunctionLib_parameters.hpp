@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ESubtitleSourceType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ESubtitleShowEffectType_structs.hpp"
-#include "ESubtitleSourceType_structs.hpp"
 
 
 namespace SDK::Params

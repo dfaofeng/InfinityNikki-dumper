@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_X6ActorComponent_classes.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 
 
 namespace SDK

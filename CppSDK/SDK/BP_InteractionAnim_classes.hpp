@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "E_InteractionAnimType_structs.hpp"
+#include "Engine_classes.hpp"
 #include "F_InteractionAnim_structs.hpp"
 
 

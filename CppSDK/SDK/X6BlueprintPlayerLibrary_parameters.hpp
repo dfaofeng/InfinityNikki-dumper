@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EPlayerGamePlayMovementMode_structs.hpp"
+#include "EClothesPropertyType_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "EAbilityGroupType_structs.hpp"
-#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EX6EnvType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EInt32PlayerPawnStateTypes_structs.hpp"
 #include "EPlayerActionTypes_structs.hpp"
-#include "EClothesPropertyType_structs.hpp"
+#include "EPlayerGamePlayMovementMode_structs.hpp"
 #include "EClothesMinorType_structs.hpp"
 
 
@@ -700,6 +700,22 @@ static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetLoongMaskVisibility, InA
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetLoongMaskVisibility, Visible) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_SetLoongMaskVisibility::Visible' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetLoongMaskVisibility, __WorldContext) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_SetLoongMaskVisibility::__WorldContext' has a wrong offset!");
 
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetLocomotionOverlayEnabled
+// 0x0018 (0x0018 - 0x0000)
+struct X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled final
+{
+public:
+	class AActor*                                 InActor;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnable;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled) == 0x000008, "Wrong alignment on X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled");
+static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled) == 0x000018, "Wrong size on X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled, InActor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled::InActor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled, bEnable) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled::bEnable' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled, __WorldContext) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_SetLocomotionOverlayEnabled::__WorldContext' has a wrong offset!");
+
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_SetIdlebreakDisabled
 // 0x0028 (0x0028 - 0x0000)
 struct X6BlueprintPlayerLibrary_C_BP_SetIdlebreakDisabled final
@@ -871,6 +887,21 @@ static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier) == 0x00
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier, Actor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier::Actor' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier, __WorldContext) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier::__WorldContext' has a wrong offset!");
 static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier, IsCarrier) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_IsLocalPlayerCarrier::IsCarrier' has a wrong offset!");
+
+// Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_IsIdlebreakEnabled
+// 0x0018 (0x0018 - 0x0000)
+struct X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled final
+{
+public:
+	class AActor*                                 InActor;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnable;                                           // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled) == 0x000008, "Wrong alignment on X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled");
+static_assert(sizeof(X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled) == 0x000018, "Wrong size on X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled, InActor) == 0x000000, "Member 'X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled::InActor' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled, __WorldContext) == 0x000008, "Member 'X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled::__WorldContext' has a wrong offset!");
+static_assert(offsetof(X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled, bEnable) == 0x000010, "Member 'X6BlueprintPlayerLibrary_C_BP_IsIdlebreakEnabled::bEnable' has a wrong offset!");
 
 // Function X6BlueprintPlayerLibrary.X6BlueprintPlayerLibrary_C.BP_GetWeaponCustomState
 // 0x0018 (0x0018 - 0x0000)

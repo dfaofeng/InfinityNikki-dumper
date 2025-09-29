@@ -17,6 +17,54 @@
 namespace SDK::Params
 {
 
+// Function X6ANS_Weapon_MaskLoongIdleBreak.X6ANS_Weapon_MaskLoongIdleBreak_C.Received_NotifyEnd
+// 0x00B0 (0x00B0 - 0x0000)
+struct X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd final
+{
+public:
+	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0058(0x0010)(ReferenceParm)
+	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AX6Actor*                               K2Node_DynamicCast_AsX6Actor;                      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class FName>                           CallFunc_X6_GetTag_ReturnValue;                    // 0x0088(0x0010)(ReferenceParm)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Temp_name_Variable;                                // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd");
+static_assert(sizeof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd) == 0x0000B0, "Wrong size on X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Animation' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::EventReference' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Temp_int_Array_Index_Variable) == 0x000050, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_GetAttachedActors_OutActors) == 0x000058, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Array_Get_Item) == 0x000068, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, K2Node_DynamicCast_AsX6Actor) == 0x000078, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::K2Node_DynamicCast_AsX6Actor' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Temp_int_Loop_Counter_Variable) == 0x000084, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_X6_GetTag_ReturnValue) == 0x000088, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_X6_GetTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Less_IntInt_ReturnValue) == 0x000098, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Add_IntInt_ReturnValue) == 0x00009C, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Temp_name_Variable) == 0x0000A0, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Temp_name_Variable' has a wrong offset!");
+static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Array_Contains_ReturnValue) == 0x0000A8, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
+
 // Function X6ANS_Weapon_MaskLoongIdleBreak.X6ANS_Weapon_MaskLoongIdleBreak_C.Received_NotifyBegin
 // 0x01C0 (0x01C0 - 0x0000)
 struct X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin final
@@ -73,54 +121,6 @@ static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin, C
 static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin, CallFunc_GetAnimInstance_ReturnValue) == 0x0001B0, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin::CallFunc_GetAnimInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin, CallFunc_IsValid_ReturnValue_1) == 0x0001B8, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin, CallFunc_Montage_Play_ReturnValue) == 0x0001BC, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyBegin::CallFunc_Montage_Play_ReturnValue' has a wrong offset!");
-
-// Function X6ANS_Weapon_MaskLoongIdleBreak.X6ANS_Weapon_MaskLoongIdleBreak_C.Received_NotifyEnd
-// 0x00B0 (0x00B0 - 0x0000)
-struct X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd final
-{
-public:
-	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AActor*>                         CallFunc_GetAttachedActors_OutActors;              // 0x0058(0x0010)(ReferenceParm)
-	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_74[0x4];                                       // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AX6Actor*                               K2Node_DynamicCast_AsX6Actor;                      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FName>                           CallFunc_X6_GetTag_ReturnValue;                    // 0x0088(0x0010)(ReferenceParm)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Temp_name_Variable;                                // 0x00A0(0x0008)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Array_Contains_ReturnValue;               // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd) == 0x000008, "Wrong alignment on X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd");
-static_assert(sizeof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd) == 0x0000B0, "Wrong size on X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, MeshComp) == 0x000000, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::MeshComp' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Animation) == 0x000008, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Animation' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, EventReference) == 0x000010, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::EventReference' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, ReturnValue) == 0x000040, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Temp_int_Array_Index_Variable) == 0x000050, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_GetAttachedActors_OutActors) == 0x000058, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_GetAttachedActors_OutActors' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Array_Get_Item) == 0x000068, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, K2Node_DynamicCast_AsX6Actor) == 0x000078, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::K2Node_DynamicCast_AsX6Actor' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, K2Node_DynamicCast_bSuccess) == 0x000080, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Temp_int_Loop_Counter_Variable) == 0x000084, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_X6_GetTag_ReturnValue) == 0x000088, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_X6_GetTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Less_IntInt_ReturnValue) == 0x000098, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Add_IntInt_ReturnValue) == 0x00009C, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, Temp_name_Variable) == 0x0000A0, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::Temp_name_Variable' has a wrong offset!");
-static_assert(offsetof(X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd, CallFunc_Array_Contains_ReturnValue) == 0x0000A8, "Member 'X6ANS_Weapon_MaskLoongIdleBreak_C_Received_NotifyEnd::CallFunc_Array_Contains_ReturnValue' has a wrong offset!");
 
 }
 

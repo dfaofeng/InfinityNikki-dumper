@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Enum_FootstepSoundType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Enum_FootstepSoundType_structs.hpp"
 
 
 namespace SDK

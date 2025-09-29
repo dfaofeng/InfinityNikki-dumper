@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "E_InteractiveStageEnum_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Enum_ElectricGuitar_TuneType_structs.hpp"
-#include "Enum_InteractiveProcessType_structs.hpp"
 #include "X6Game_classes.hpp"
-#include "ETirpleStateObject_StateEnum_structs.hpp"
 #include "EPowerFrogStage_structs.hpp"
+#include "E_InteractiveStageEnum_structs.hpp"
+#include "Enum_InteractiveProcessType_structs.hpp"
+#include "ETirpleStateObject_StateEnum_structs.hpp"
+#include "Enum_ElectricGuitar_TuneType_structs.hpp"
 #include "EAthenaShowState_structs.hpp"
 #include "EShepherdessAnimState_structs.hpp"
 #include "ECastPhantomStage_structs.hpp"
@@ -285,10 +285,18 @@ public:
 	void BP_OnMulticast_StopAnimLocomotionState();
 	void BP_OnMulticast_StopBlowBubble(bool bImmediately);
 	void BP_OnMulticast_StopEmoteMontage(int64 playerId);
+	void BP_OnMulticast_StrawmanAbilityBegin(const class FString& ABPPath, TArray<struct FF_AbilityNSSpawn>& inNSGroup, double inSkillRadius, double inTolerance, TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointBody, TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointFloor, int32 inNikkiHideFrames, const class FString& inHeadgear);
+	void BP_OnMulticast_StrawmanAbilityEnd();
+	void BP_OnMulticast_StrawmanAbilitySpawnNS();
+	void BP_OnMulticast_StrawmanAbilitySwitchStage(ETirpleStateObject_StateEnum Stage);
 	void BP_OnMulticast_SummonMotorcycleBegin();
 	void BP_OnMulticast_SummonMotorcycleEnd();
 	void BP_OnMulticast_SummonRainbowBegin();
 	void BP_OnMulticast_SummonRainbowEnd();
+	void BP_OnMulticast_SunnyDollAbilityBegin(const class FString& ABPPath, TArray<struct FF_AbilityNSSpawn>& inNSGroup, int32 inSummonFlag, const class FString& inSunnyDollClass, const class FString& inRainyDollClass, const struct FVector& inSummonOffset, double inSkillRadius, const class FString& inLightEffect);
+	void BP_OnMulticast_SunnyDollAbilityEnd();
+	void BP_OnMulticast_SunnyDollAbilitySpawnNS();
+	void BP_OnMulticast_SunnyDollSwitchStage(ETirpleStateObject_StateEnum Stage);
 	void BP_OnMulticast_SuonaToningChange(bool bIsToning);
 	void BP_OnMulticast_TriggerPerformAnim();
 	void BP_OnMulticast_TriggerPlaceableObjInteracted(int64 PlaceableEntityID, int64 FromPlayerEntityID, int64 ToPlayerEntityID, const class FString& String);
@@ -523,10 +531,18 @@ public:
 	void Multicast_StopBlowBubble(bool bImmediately);
 	void Multicast_StopBoxPhysics(int64 BoxID, const struct FTransform& FinalTrans);
 	void Multicast_StopEmoteMontage(int64 playerId);
+	void Multicast_StrawmanAbilityBegin(const class FString& ABPPath, const TArray<struct FF_AbilityNSSpawn>& inNSGroup, double inSkillRadius, double inTolerance, const TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointBody, const TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointFloor, int32 inNikkiHideFrames, const class FString& inHeadgear);
+	void Multicast_StrawmanAbilityEnd();
+	void Multicast_StrawmanAbilitySpawnNS();
+	void Multicast_StrawmanAbilitySwitchStage(ETirpleStateObject_StateEnum Stage);
 	void Multicast_SummonMotorcycleBegin();
 	void Multicast_SummonMotorcycleEnd();
 	void Multicast_SummonRainbowBegin();
 	void Multicast_SummonRainbowEnd();
+	void Multicast_SunnyDollAbilityBegin(const class FString& ABPPath, const TArray<struct FF_AbilityNSSpawn>& inNSGroup, int32 inSummonFlag, const class FString& inSunnyDollClass, const class FString& inRainyDollClass, const struct FVector& inSummonOffset, double inSkillRadius, const class FString& inLightEffect);
+	void Multicast_SunnyDollAbilityEnd();
+	void Multicast_SunnyDollAbilitySpawnNS();
+	void Multicast_SunnyDollSwitchStage(ETirpleStateObject_StateEnum Stage);
 	void Multicast_SuonaToningChange(bool bIsToning);
 	void Multicast_TriggerPerformAnim();
 	void Multicast_TriggerPlaceableObjInteracted(int64 PlaceableEntityID, int64 FromPlayerEntityID, int64 ToPlayerEntityID, const class FString& String);

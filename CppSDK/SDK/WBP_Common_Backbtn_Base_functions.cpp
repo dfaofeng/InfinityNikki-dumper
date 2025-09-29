@@ -17,41 +17,23 @@
 namespace SDK
 {
 
-// Function WBP_Common_Backbtn_Base.WBP_Common_Backbtn_Base_C.ExecuteUbergraph_WBP_Common_Backbtn_Base
-// (Final, UbergraphFunction, HasDefaults)
+// Function WBP_Common_Backbtn_Base.WBP_Common_Backbtn_Base_C.SetSize
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTextBlock*                       Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  InputSize                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_Backbtn_Base_C::ExecuteUbergraph_WBP_Common_Backbtn_Base(int32 EntryPoint)
+void UWBP_Common_Backbtn_Base_C::SetSize(class UTextBlock* Text, double InputSize)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Backbtn_Base_C", "ExecuteUbergraph_WBP_Common_Backbtn_Base");
+		Func = Class->GetFunction("WBP_Common_Backbtn_Base_C", "SetSize");
 
-	Params::WBP_Common_Backbtn_Base_C_ExecuteUbergraph_WBP_Common_Backbtn_Base Parms{};
+	Params::WBP_Common_Backbtn_Base_C_SetSize Parms{};
 
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Common_Backbtn_Base.WBP_Common_Backbtn_Base_C.Set Size
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// double                                  Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Common_Backbtn_Base_C::Set_Size(double Size)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Backbtn_Base_C", "Set Size");
-
-	Params::WBP_Common_Backbtn_Base_C_Set_Size Parms{};
-
-	Parms.Size = Size;
+	Parms.Text = Text;
+	Parms.InputSize = InputSize;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -77,23 +59,41 @@ void UWBP_Common_Backbtn_Base_C::Set_Title(const class FText& TitleText)
 }
 
 
-// Function WBP_Common_Backbtn_Base.WBP_Common_Backbtn_Base_C.SetSize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WBP_Common_Backbtn_Base.WBP_Common_Backbtn_Base_C.Set Size
+// (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UTextBlock*                       Text                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// double                                  InputSize                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Size                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Common_Backbtn_Base_C::SetSize(class UTextBlock* Text, double InputSize)
+void UWBP_Common_Backbtn_Base_C::Set_Size(double Size)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Common_Backbtn_Base_C", "SetSize");
+		Func = Class->GetFunction("WBP_Common_Backbtn_Base_C", "Set Size");
 
-	Params::WBP_Common_Backbtn_Base_C_SetSize Parms{};
+	Params::WBP_Common_Backbtn_Base_C_Set_Size Parms{};
 
-	Parms.Text = Text;
-	Parms.InputSize = InputSize;
+	Parms.Size = Size;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Common_Backbtn_Base.WBP_Common_Backbtn_Base_C.ExecuteUbergraph_WBP_Common_Backbtn_Base
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Common_Backbtn_Base_C::ExecuteUbergraph_WBP_Common_Backbtn_Base(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Common_Backbtn_Base_C", "ExecuteUbergraph_WBP_Common_Backbtn_Base");
+
+	Params::WBP_Common_Backbtn_Base_C_ExecuteUbergraph_WBP_Common_Backbtn_Base Parms{};
+
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

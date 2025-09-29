@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "E_InteractiveObjPhantomState_structs.hpp"
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "E_Multi_InteractiveObjActive_Type_structs.hpp"
-#include "X6Game_classes.hpp"
+#include "Engine_structs.hpp"
+#include "E_InteractiveObjPhantomState_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "E_EInteractSuccRet_structs.hpp"
+#include "X6Game_classes.hpp"
 #include "E_InteractionProcess_structs.hpp"
 #include "X6StateMachine_structs.hpp"
 

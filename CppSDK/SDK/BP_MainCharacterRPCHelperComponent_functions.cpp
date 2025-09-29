@@ -4512,6 +4512,92 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_StopEmoteMontage(int6
 }
 
 
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_StrawmanAbilityBegin
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ABPPath                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TArray<struct FF_AbilityNSSpawn>&       inNSGroup                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// double                                  inSkillRadius                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  inTolerance                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointBody                             (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointFloor                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   inNikkiHideFrames                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    inHeadgear                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_StrawmanAbilityBegin(const class FString& ABPPath, TArray<struct FF_AbilityNSSpawn>& inNSGroup, double inSkillRadius, double inTolerance, TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointBody, TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointFloor, int32 inNikkiHideFrames, const class FString& inHeadgear)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_StrawmanAbilityBegin");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_StrawmanAbilityBegin Parms{};
+
+	Parms.ABPPath = std::move(ABPPath);
+	Parms.inNSGroup = std::move(inNSGroup);
+	Parms.inSkillRadius = inSkillRadius;
+	Parms.inTolerance = inTolerance;
+	Parms.inStrawmanAttractPointBody = std::move(inStrawmanAttractPointBody);
+	Parms.inStrawmanAttractPointFloor = std::move(inStrawmanAttractPointFloor);
+	Parms.inNikkiHideFrames = inNikkiHideFrames;
+	Parms.inHeadgear = std::move(inHeadgear);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	inNSGroup = std::move(Parms.inNSGroup);
+	inStrawmanAttractPointBody = std::move(Parms.inStrawmanAttractPointBody);
+	inStrawmanAttractPointFloor = std::move(Parms.inStrawmanAttractPointFloor);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_StrawmanAbilityEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_StrawmanAbilityEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_StrawmanAbilityEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_StrawmanAbilitySpawnNS
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_StrawmanAbilitySpawnNS()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_StrawmanAbilitySpawnNS");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_StrawmanAbilitySwitchStage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETirpleStateObject_StateEnum            Stage                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_StrawmanAbilitySwitchStage(ETirpleStateObject_StateEnum Stage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_StrawmanAbilitySwitchStage");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_StrawmanAbilitySwitchStage Parms{};
+
+	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_SummonMotorcycleBegin
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -4565,6 +4651,90 @@ void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_SummonRainbowEnd()
 		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_SummonRainbowEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_SunnyDollAbilityBegin
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ABPPath                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// TArray<struct FF_AbilityNSSpawn>&       inNSGroup                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   inSummonFlag                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    inSunnyDollClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    inRainyDollClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FVector&                   inSummonOffset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  inSkillRadius                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    inLightEffect                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_SunnyDollAbilityBegin(const class FString& ABPPath, TArray<struct FF_AbilityNSSpawn>& inNSGroup, int32 inSummonFlag, const class FString& inSunnyDollClass, const class FString& inRainyDollClass, const struct FVector& inSummonOffset, double inSkillRadius, const class FString& inLightEffect)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_SunnyDollAbilityBegin");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_SunnyDollAbilityBegin Parms{};
+
+	Parms.ABPPath = std::move(ABPPath);
+	Parms.inNSGroup = std::move(inNSGroup);
+	Parms.inSummonFlag = inSummonFlag;
+	Parms.inSunnyDollClass = std::move(inSunnyDollClass);
+	Parms.inRainyDollClass = std::move(inRainyDollClass);
+	Parms.inSummonOffset = std::move(inSummonOffset);
+	Parms.inSkillRadius = inSkillRadius;
+	Parms.inLightEffect = std::move(inLightEffect);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	inNSGroup = std::move(Parms.inNSGroup);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_SunnyDollAbilityEnd
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_SunnyDollAbilityEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_SunnyDollAbilityEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_SunnyDollAbilitySpawnNS
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_SunnyDollAbilitySpawnNS()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_SunnyDollAbilitySpawnNS");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.BP_OnMulticast_SunnyDollSwitchStage
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETirpleStateObject_StateEnum            Stage                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::BP_OnMulticast_SunnyDollSwitchStage(ETirpleStateObject_StateEnum Stage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "BP_OnMulticast_SunnyDollSwitchStage");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_BP_OnMulticast_SunnyDollSwitchStage Parms{};
+
+	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -9228,6 +9398,88 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_StopEmoteMontage(int64 pla
 }
 
 
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_StrawmanAbilityBegin
+// (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ABPPath                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const TArray<struct FF_AbilityNSSpawn>& inNSGroup                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// double                                  inSkillRadius                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  inTolerance                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<struct FF_StrawmanAttractPoint>&inStrawmanAttractPointBody                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const TArray<struct FF_StrawmanAttractPoint>&inStrawmanAttractPointFloor                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   inNikkiHideFrames                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    inHeadgear                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_StrawmanAbilityBegin(const class FString& ABPPath, const TArray<struct FF_AbilityNSSpawn>& inNSGroup, double inSkillRadius, double inTolerance, const TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointBody, const TArray<struct FF_StrawmanAttractPoint>& inStrawmanAttractPointFloor, int32 inNikkiHideFrames, const class FString& inHeadgear)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_StrawmanAbilityBegin");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_StrawmanAbilityBegin Parms{};
+
+	Parms.ABPPath = std::move(ABPPath);
+	Parms.inNSGroup = std::move(inNSGroup);
+	Parms.inSkillRadius = inSkillRadius;
+	Parms.inTolerance = inTolerance;
+	Parms.inStrawmanAttractPointBody = std::move(inStrawmanAttractPointBody);
+	Parms.inStrawmanAttractPointFloor = std::move(inStrawmanAttractPointFloor);
+	Parms.inNikkiHideFrames = inNikkiHideFrames;
+	Parms.inHeadgear = std::move(inHeadgear);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_StrawmanAbilityEnd
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_StrawmanAbilityEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_StrawmanAbilityEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_StrawmanAbilitySpawnNS
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_StrawmanAbilitySpawnNS()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_StrawmanAbilitySpawnNS");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_StrawmanAbilitySwitchStage
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETirpleStateObject_StateEnum            Stage                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_StrawmanAbilitySwitchStage(ETirpleStateObject_StateEnum Stage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_StrawmanAbilitySwitchStage");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_StrawmanAbilitySwitchStage Parms{};
+
+	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_SummonMotorcycleBegin
 // (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
 
@@ -9281,6 +9533,88 @@ void UBP_MainCharacterRPCHelperComponent_C::Multicast_SummonRainbowEnd()
 		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_SummonRainbowEnd");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_SunnyDollAbilityBegin
+// (Net, NetMulticast, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    ABPPath                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const TArray<struct FF_AbilityNSSpawn>& inNSGroup                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   inSummonFlag                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    inSunnyDollClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    inRainyDollClass                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FVector&                   inSummonOffset                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  inSkillRadius                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    inLightEffect                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_SunnyDollAbilityBegin(const class FString& ABPPath, const TArray<struct FF_AbilityNSSpawn>& inNSGroup, int32 inSummonFlag, const class FString& inSunnyDollClass, const class FString& inRainyDollClass, const struct FVector& inSummonOffset, double inSkillRadius, const class FString& inLightEffect)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_SunnyDollAbilityBegin");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_SunnyDollAbilityBegin Parms{};
+
+	Parms.ABPPath = std::move(ABPPath);
+	Parms.inNSGroup = std::move(inNSGroup);
+	Parms.inSummonFlag = inSummonFlag;
+	Parms.inSunnyDollClass = std::move(inSunnyDollClass);
+	Parms.inRainyDollClass = std::move(inRainyDollClass);
+	Parms.inSummonOffset = std::move(inSummonOffset);
+	Parms.inSkillRadius = inSkillRadius;
+	Parms.inLightEffect = std::move(inLightEffect);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_SunnyDollAbilityEnd
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_SunnyDollAbilityEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_SunnyDollAbilityEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_SunnyDollAbilitySpawnNS
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_SunnyDollAbilitySpawnNS()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_SunnyDollAbilitySpawnNS");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_MainCharacterRPCHelperComponent.BP_MainCharacterRPCHelperComponent_C.Multicast_SunnyDollSwitchStage
+// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ETirpleStateObject_StateEnum            Stage                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_MainCharacterRPCHelperComponent_C::Multicast_SunnyDollSwitchStage(ETirpleStateObject_StateEnum Stage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_MainCharacterRPCHelperComponent_C", "Multicast_SunnyDollSwitchStage");
+
+	Params::BP_MainCharacterRPCHelperComponent_C_Multicast_SunnyDollSwitchStage Parms{};
+
+	Parms.Stage = Stage;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

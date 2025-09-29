@@ -17,23 +17,17 @@
 namespace SDK
 {
 
-// Function LS_Nikki_Std_FantasyStar_Get.LS_Nikki_Std_FantasyStar_Get_DirectorBP_C.ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function LS_Nikki_Std_FantasyStar_Get.LS_Nikki_Std_FantasyStar_Get_DirectorBP_C.ShowRewardUI
+// (BlueprintCallable, BlueprintEvent)
 
-void ULS_Nikki_Std_FantasyStar_Get_DirectorBP_C::ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP(int32 EntryPoint)
+void ULS_Nikki_Std_FantasyStar_Get_DirectorBP_C::ShowRewardUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_DirectorBP_C", "ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP");
+		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_DirectorBP_C", "ShowRewardUI");
 
-	Params::LS_Nikki_Std_FantasyStar_Get_DirectorBP_C_ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -51,17 +45,23 @@ void ULS_Nikki_Std_FantasyStar_Get_DirectorBP_C::SequenceEvent__ENTRYPOINTLS_Nik
 }
 
 
-// Function LS_Nikki_Std_FantasyStar_Get.LS_Nikki_Std_FantasyStar_Get_DirectorBP_C.ShowRewardUI
-// (BlueprintCallable, BlueprintEvent)
+// Function LS_Nikki_Std_FantasyStar_Get.LS_Nikki_Std_FantasyStar_Get_DirectorBP_C.ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULS_Nikki_Std_FantasyStar_Get_DirectorBP_C::ShowRewardUI()
+void ULS_Nikki_Std_FantasyStar_Get_DirectorBP_C::ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_DirectorBP_C", "ShowRewardUI");
+		Func = Class->GetFunction("LS_Nikki_Std_FantasyStar_Get_DirectorBP_C", "ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::LS_Nikki_Std_FantasyStar_Get_DirectorBP_C_ExecuteUbergraph_LS_Nikki_Std_FantasyStar_Get_DirectorBP Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

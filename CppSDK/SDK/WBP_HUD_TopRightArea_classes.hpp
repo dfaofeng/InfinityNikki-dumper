@@ -126,8 +126,8 @@ public:
 	void OnFadeInQuickShoot();
 	void OnFadeInStart();
 	void PreConstruct(bool IsDesignTime);
-	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_1();
-	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_2();
+	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea();
+	void SequenceEvent__ENTRYPOINTWBP_HUD_TopRightArea_0();
 
 	class FString GetModuleName() const;
 

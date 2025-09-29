@@ -29,20 +29,20 @@ public:
 	bool                                          IsAutoDestroy;                                     // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void DisableOverlap();
-	void EnableOverlap();
-	void ExecuteUbergraph_BP_GuideTriggerVolume(int32 EntryPoint);
-	void GetAutoDestroy(bool* IsAutoDestroy_0);
-	void GetVolumeID(int64* VolumeID_0);
-	void OnOverlapBegin(class AActor* Actor);
-	void OnOverlapEnd(class AActor* Actor);
-	void ReceiveActorBeginOverlap(class AActor* OtherActor);
-	void ReceiveActorEndOverlap(class AActor* OtherActor);
-	void SetAutoDestroy(bool IsAutoDestroy_0);
-	void SetMeshType(int32 MeshType_0);
-	void SetTransformInfo(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale);
-	void SetVolumeID(int64 VolumeID_0);
 	void ShowVolume(bool CanShow);
+	void SetVolumeID(int64 VolumeID_0);
+	void SetTransformInfo(const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale);
+	void SetMeshType(int32 MeshType_0);
+	void SetAutoDestroy(bool IsAutoDestroy_0);
+	void ReceiveActorEndOverlap(class AActor* OtherActor);
+	void ReceiveActorBeginOverlap(class AActor* OtherActor);
+	void OnOverlapEnd(class AActor* Actor);
+	void OnOverlapBegin(class AActor* Actor);
+	void GetVolumeID(int64* VolumeID_0);
+	void GetAutoDestroy(bool* IsAutoDestroy_0);
+	void ExecuteUbergraph_BP_GuideTriggerVolume(int32 EntryPoint);
+	void EnableOverlap();
+	void DisableOverlap();
 
 	class FString GetModuleName() const;
 

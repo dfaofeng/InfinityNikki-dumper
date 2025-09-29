@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "E_InteractiveStageEnum_structs.hpp"
 #include "Engine_structs.hpp"
+#include "E_InteractiveStageEnum_structs.hpp"
 #include "BP_X6ActorComponent_classes.hpp"
 
 

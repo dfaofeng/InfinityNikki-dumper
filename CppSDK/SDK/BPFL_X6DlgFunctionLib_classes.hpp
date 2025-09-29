@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "ESubtitleShowEffectType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ESubtitleShowEffectType_structs.hpp"
 #include "ESubtitleSourceType_structs.hpp"
 
 

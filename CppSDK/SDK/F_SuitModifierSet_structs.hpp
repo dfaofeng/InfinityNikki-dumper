@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "F_AbilitySoftRefSet_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "F_AbilitySoftRefSet_structs.hpp"
 
 
 namespace SDK

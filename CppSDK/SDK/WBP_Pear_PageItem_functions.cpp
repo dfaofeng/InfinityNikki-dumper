@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_Pear_PageItem.WBP_Pear_PageItem_C.BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
-// (BlueprintEvent)
-// Parameters:
-// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Pear_PageItem_C::BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Pear_PageItem_C", "BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
-
-	Params::WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
-
-	Parms.bIsChecked = bIsChecked;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function WBP_Pear_PageItem.WBP_Pear_PageItem_C.ExecuteUbergraph_WBP_Pear_PageItem
 // (Final, UbergraphFunction)
 // Parameters:
@@ -52,6 +32,26 @@ void UWBP_Pear_PageItem_C::ExecuteUbergraph_WBP_Pear_PageItem(int32 EntryPoint)
 	Params::WBP_Pear_PageItem_C_ExecuteUbergraph_WBP_Pear_PageItem Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Pear_PageItem.WBP_Pear_PageItem_C.BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                                    bIsChecked                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Pear_PageItem_C::BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Pear_PageItem_C", "BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature");
+
+	Params::WBP_Pear_PageItem_C_BndEvt__WBP_Pear_PageItem_BoxPage_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature Parms{};
+
+	Parms.bIsChecked = bIsChecked;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
